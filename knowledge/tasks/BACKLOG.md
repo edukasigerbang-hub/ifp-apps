@@ -8,7 +8,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | ID | Fase | Acceptance criteria ringkas | Status |
 |---|---|---|---|
 | A | Repo reconnaissance + ADR confirmation | Git init diputuskan, stack dikonfirmasi, ADR-0001/0002 tertulis | DONE (backend ditunda via ADR-0002) |
-| B | Device technical spike | DV gate §5: Tauri hello-world (2 OS), SQLite migrasi, document picker/managed folder, media+WebGL, Ed25519 verify, app update preserves data | TODO — blocked by device |
+| B | Device technical spike | DV gate §5: Tauri hello-world (2 OS), SQLite migrasi, document picker/managed folder, media+WebGL, Ed25519 verify, app update preserves data | PARTIAL — Android build PASS; install/launch & Win11 acceptance NOT RUN (hardware) |
 | C | Product configuration + app shell | `productConfig`, AppShell, navigasi, tema token, build kedua platform | PARTIAL — scaffold + web build PASS; build per-platform belum |
 | D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | DONE 2026-10-23 — 11 test PASS |
 | E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | DONE 2026-10-23 — 6 test Rust + E2E |

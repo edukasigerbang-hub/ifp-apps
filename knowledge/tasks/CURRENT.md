@@ -19,6 +19,7 @@
 | T-008 | Fase I — sinkronisasi | Outbox state native + engine TS + kontrak + mock server; 1 event acknowledged E2E |
 | T-008b | Backend sinkronisasi referensi | HTTP server TS + SQLite; auth, idempotensi, batas, rate limit; 11 test + E2E nyata |
 | T-010 | Review teknis konten | R11/R7/R10/R12; temuan kontras diperbaiki; laporan review ditulis |
+| T-009 | Device spike (readiness) | Android init + build debug PASS (APK 129 MB); install/launch & Windows 11 NOT RUN |
 
 ## Status prasyarat materi pembelajaran
 
@@ -41,7 +42,7 @@
 3. Product Owner + Curriculum Lead memutuskan D1–D7 → ADR-0004 → isi `curriculumRefs`.
 4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
 
-**T-009 — Device technical spike** (terpisah, butuh perangkat fisik).
+**T-009 acceptance — BLOCKED** (tidak ada perangkat Android 14 fisik / Windows 11 / panel 4K; lihat [readiness](../device/DEVICE_SPIKE_READINESS.md)).
 
 ## Verifikasi sesi ini
 
@@ -52,6 +53,9 @@
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
 | Review teknis konten | **PASS** — 1 temuan kontras diperbaiki (4.36 → 5.40); R10 masih BLOCKING |
 | Review pedagogis manusia | **BELUM** — R1–R5/R8–R9 butuh guru/Curriculum Lead |
+| Android build (debug) | **PASS** — APK universal 129 MB; Kotlin fallback dipakai |
+| Install/launch Android 14 | **NOT RUN** — `adb devices` kosong |
+| Windows 11 build/install | **NOT RUN** — mesin Windows 10 |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
 | Rust repository tests | **PASS** — 6/6 (termasuk rollback event duplikat & persistensi reopen) |

@@ -175,3 +175,16 @@
 - `reviewStatus` tetap `draft`; tidak ada klaim kurikulum.
 
 **Verifikasi:** `content:validate` VALID; `npm run build` PASS setelah perubahan warna.
+
+### T-009 — Device spike (readiness)
+
+**Status:** PARTIAL / BLOCKED (acceptance) · **Change class:** MEDIUM
+
+- `npx tauri android init --ci` → project Android + Rust targets (aarch64/armv7/i686/x86_64).
+- `npx tauri android build --debug -t aarch64` → **exit 0**; APK universal 129 MB + AAB.
+- Kotlin daemon sempat gagal (cache lintas-drive C:/F:); Gradle fallback tanpa daemon berhasil.
+- `adb devices` kosong → install/launch **NOT RUN**.
+- Mesin Windows 10 (target Windows 11) → DV-02 **NOT RUN**; layar 1920×1080 (4K tidak ada).
+- Laporan: [DEVICE_SPIKE_READINESS.md](../device/DEVICE_SPIKE_READINESS.md).
+
+**Tidak diklaim:** kompatibilitas Android/Windows 11, touch, 4K, codec, WebGL, license, update preservation.

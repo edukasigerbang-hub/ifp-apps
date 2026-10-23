@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T23:11:56+07:00",
+  "last_validated_at": "2026-10-23T23:33:14+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -101,6 +101,12 @@
       "command": "manual review + contrast script",
       "result": "PASS (R10 blocking)",
       "details": "R11/R7/R12 PASS; teal badge 4.36 → 5.40; R10 curriculumRefs kosong = BLOCKING; R1-R5/R8-R9 NOT REVIEWED (manusia)"
+    },
+    {
+      "name": "android_debug_build",
+      "command": "npx tauri android build --debug -t aarch64",
+      "result": "PASS",
+      "details": "Exit 0; APK universal 129 MB + AAB; Kotlin daemon fallback; install/launch NOT RUN (adb devices kosong)"
     },
     {
       "name": "content_validator_cli",
