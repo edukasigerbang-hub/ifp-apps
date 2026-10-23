@@ -20,6 +20,7 @@
 | T-008b | Backend sinkronisasi referensi | HTTP server TS + SQLite; auth, idempotensi, batas, rate limit; 11 test + E2E nyata |
 | T-010 | Review teknis konten | R11/R7/R10/R12; temuan kontras diperbaiki; laporan review ditulis |
 | T-009 | Device spike (readiness) | Android init + build debug PASS (APK 129 MB); install/launch & Windows 11 NOT RUN |
+| T-011 | Fase F — Content Manager | Impor folder, validasi native, staging, aktivasi atomik, rollback; E2E v1→v2→rollback PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -44,6 +45,8 @@
 
 **T-009 acceptance — BLOCKED** (tidak ada perangkat Android 14 fisik / Windows 11 / panel 4K; lihat [readiness](../device/DEVICE_SPIKE_READINESS.md)).
 
+**T-012 — Content Runtime wiring** (berikutnya): Player memuat versi aktif dari `content_packages`, bukan hanya bundled `import.meta.glob`.
+
 ## Verifikasi sesi ini
 
 | Check | Hasil |
@@ -56,6 +59,9 @@
 | Android build (debug) | **PASS** — APK universal 129 MB; Kotlin fallback dipakai |
 | Install/launch Android 14 | **NOT RUN** — `adb devices` kosong |
 | Windows 11 build/install | **NOT RUN** — mesin Windows 10 |
+| Content Manager tests | **PASS** — 5/5 Rust (impor, hash, traversal, duplikat, rollback) |
+| E2E Content Manager | **PASS** — impor v0.1.0 → v0.2.0 → rollback v0.1.0; UI status benar |
+| Player memuat paket impor | **BELUM** — T-012 Content Runtime wiring |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
 | Rust repository tests | **PASS** — 6/6 (termasuk rollback event duplikat & persistensi reopen) |

@@ -24,6 +24,18 @@ impl AppError {
         Self::new("SESSION_NOT_FOUND", "Sesi belajar tidak ditemukan.")
     }
 
+    pub fn content_invalid(message: &str) -> Self {
+        Self::new("CONTENT_PACKAGE_INVALID", message)
+    }
+
+    pub fn content_hash(message: &str) -> Self {
+        Self::new("CONTENT_ASSET_HASH_MISMATCH", message)
+    }
+
+    pub fn content_activation(message: &str) -> Self {
+        Self::new("CONTENT_ACTIVATION_FAILED", message)
+    }
+
     pub fn state_unavailable() -> Self {
         Self::new("STATE_UNAVAILABLE", "Penyimpanan lokal tidak tersedia.")
     }

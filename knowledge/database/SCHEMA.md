@@ -1,6 +1,6 @@
 # Database Schema — Lokal (SQLite)
 
-**Status:** IMPLEMENTED (Fase E + I) · **Migrasi:** `0001_init`, `0002_sync` · **Sejak:** 2026-10-23
+**Status:** IMPLEMENTED (Fase E + I + F) · **Migrasi:** `0001_init`, `0002_sync`, `0003_content_activation` · **Sejak:** 2026-10-23
 **Lokasi runtime:** `app_data_dir()/ifp.db` (WAL). Untuk pengujian: env `IFP_DATA_DIR`.
 
 ## Migrasi
@@ -16,7 +16,9 @@
 `id` PK, `display_name`, `profile_type` (`student|teacher|admin`), `created_at`, `updated_at`.
 
 ### `content_packages`
-PK (`package_id`, `version`); `source` (`bundled|imported|downloaded`), `status` (`discovered|validated|active|disabled|removed`), `manifest_hash`, `installed_at`.
+PK (`package_id`, `version`); `source` (`bundled|imported|downloaded`), `status` (`discovered|validated|active|disabled|removed`), `manifest_hash`, `installed_at`, `activated_at` (migrasi 0003).
+
+**Semantik aktivasi (Fase F):** satu versi `active` per paket; versi aktif sebelumnya menjadi `disabled`. Rollback memilih versi `disabled` hasil impor dengan `activated_at` lebih lama dan menukar status dalam satu transaksi. File versi tetap immutable di `app_data/content/packages/<packageId>/<version>/`; staging di `app_data/content/staging/`.
 
 ### `content_assets`
 PK (`package_id`, `version`, `asset_path`); `sha256`, `size_bytes`; FK ke `content_packages`.

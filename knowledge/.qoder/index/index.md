@@ -16,8 +16,10 @@ src/
   screens/ResultsScreen.tsx
   data/learningRepository.ts
   data/syncEngine.ts
+  data/contentRepository.ts
   data/__tests__/syncEngine.test.ts
   screens/SettingsScreen.tsx
+  screens/ContentScreen.tsx
   components/content/{ExplorationActivity,QuizActivity}.tsx
   content/
     activityRegistry.ts, validatePackage.ts, verifyAssets.ts, quiz.ts
@@ -26,8 +28,8 @@ src/
     __tests__/{validatePackage,quiz}.test.ts
   index.css, vite-env.d.ts
 src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/
-             src/{main,lib,db,error,learning,sync,validation}.rs
-             src/migrations/{0001_init.sql,0002_sync.sql}
+             src/{main,lib,db,error,learning,sync,validation,content}.rs
+             src/migrations/{0001_init.sql,0002_sync.sql,0003_content_activation.sql}
              icons/
 scripts/     validate-content.ts, export-content-schema.ts, check-fixtures.ts, mock-sync-server.mjs
 server/      src/{app,index,store}.ts + src/app.test.ts  (backend referensi)

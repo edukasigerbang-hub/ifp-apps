@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AppShell } from "./components/layout/AppShell";
 import { findNavItem, isScreenId, type ScreenId } from "./navigation";
+import { ContentScreen } from "./screens/ContentScreen";
 import { LessonPlayer } from "./screens/LessonPlayer";
 import { ResultsScreen } from "./screens/ResultsScreen";
 import { ScreenPlaceholder } from "./screens/ScreenPlaceholder";
@@ -28,6 +29,8 @@ export default function App() {
         <ResultsScreen />
       ) : activeScreen === "settings" ? (
         <SettingsScreen />
+      ) : activeScreen === "content" ? (
+        <ContentScreen />
       ) : (
         <ScreenPlaceholder item={activeItem} />
       )}

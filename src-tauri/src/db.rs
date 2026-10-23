@@ -44,7 +44,15 @@ const MIGRATIONS: &[Migration] = &[
         version: 2,
         sql: include_str!("migrations/0002_sync.sql"),
     },
+    Migration {
+        version: 3,
+        sql: include_str!("migrations/0003_content_activation.sql"),
+    },
 ];
+
+pub(crate) fn migration_count() -> i64 {
+    MIGRATIONS.len() as i64
+}
 
 pub fn open(path: &Path) -> Result<Connection, DbError> {
     let mut connection = Connection::open(path)?;

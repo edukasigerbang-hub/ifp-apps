@@ -51,6 +51,19 @@ Aturan native boundary: validasi argumen + batas ukuran; **tanpa** command gener
 
 Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/data/syncEngine.ts`; UI: Pengaturan. Server referensi: `server/` (`npm run server:dev`, ADR-0006) — belum produksi.
 
+## Content Manager (IMPLEMENTED — Fase F)
+
+| Command | Input | Output |
+|---|---|---|
+| `content_import_package` | `sourcePath` | `packageId`, `version`, `previousVersion`, `files`, `bytes` |
+| `content_list_packages` | — | daftar `packageId`, `version`, `status`, `source`, `installedAt`, `activatedAt` |
+| `content_rollback_package` | `packageId` | `packageId`, `activeVersion` |
+
+- Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
+- Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
+- Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.
+- UI: layar Konten & Pembaruan (folder picker via dialog plugin). Player belum memuat paket impor (ADR-0007).
+
 ## Server (konseptual) — USULAN
 
 | Method | Path |

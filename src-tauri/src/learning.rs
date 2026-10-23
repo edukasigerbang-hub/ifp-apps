@@ -552,7 +552,7 @@ mod tests {
         let applied: i64 = connection
             .query_row("SELECT COUNT(*) FROM schema_migrations", [], |row| row.get(0))
             .expect("count migrations");
-        assert_eq!(applied, 2);
+        assert_eq!(applied, crate::db::migration_count());
     }
 
     #[test]

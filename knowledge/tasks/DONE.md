@@ -188,3 +188,18 @@
 - Laporan: [DEVICE_SPIKE_READINESS.md](../device/DEVICE_SPIKE_READINESS.md).
 
 **Tidak diklaim:** kompatibilitas Android/Windows 11, touch, 4K, codec, WebGL, license, update preservation.
+
+### T-011 — Fase F: Content Manager
+
+**Status:** COMPLETED · **Change class:** LARGE
+
+- `content.rs`: impor folder → validasi (manifest, path, symlink, 5.000 file/2 GiB, SHA-256) → staging → `rename` atomik → aktivasi DB transaksional.
+- Migrasi `0003_content_activation`: `activated_at`; satu versi aktif per paket, versi lama `disabled`.
+- Rollback satu langkah memilih versi impor dengan `activated_at` lebih lama; UI menyembunyikan tombol bila tidak ada versi sebelumnya.
+- UI Konten & Pembaruan: folder picker (dialog plugin), daftar paket, impor, rollback, status.
+- Player **belum** memuat paket impor (T-012).
+
+**Verifikasi:**
+- `cargo test` 16/16 (5 content: impor, hash mismatch, traversal, duplikat, rollback).
+- E2E Tauri: impor v0.1.0 (8 file) → v0.2.0 (previous 0.1.0) → rollback; daftar/status sesuai; tombol rollback hilang setelah rollback.
+- `npm run build` PASS; `npm test` 34/34 + golden 4/4.

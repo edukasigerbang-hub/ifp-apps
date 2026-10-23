@@ -1,3 +1,4 @@
+mod content;
 mod db;
 mod error;
 mod learning;
@@ -9,6 +10,7 @@ use tauri::Manager;
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   tauri::Builder::default()
+    .plugin(tauri_plugin_dialog::init())
     .setup(|app| {
       if cfg!(debug_assertions) {
         app.handle().plugin(
@@ -23,8 +25,11 @@ pub fn run() {
         None => app.path().app_data_dir()?,
       };
       std::fs::create_dir_all(&data_dir)?;
+      let content_root = data_dir.join("content");
+      std::fs::create_dir_all(&content_root)?;
       let connection = db::open(&data_dir.join("ifp.db"))?;
       app.manage(db::DbState(std::sync::Mutex::new(connection)));
+      app.manage(content::ContentState { root: content_root });
 
       Ok(())
     })
@@ -37,7 +42,10 @@ pub fn run() {
       sync::sync_list_pending,
       sync::sync_mark_retry,
       sync::sync_mark_acknowledged,
-      sync::sync_get_status
+      sync::sync_get_status,
+      content::content_import_package,
+      content::content_list_packages,
+      content::content_rollback_package
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

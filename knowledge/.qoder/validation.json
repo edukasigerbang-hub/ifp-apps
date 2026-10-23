@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T23:33:14+07:00",
+  "last_validated_at": "2026-10-23T23:45:20+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -64,7 +64,7 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "11/11: 6 learning (termasuk rollback & persistensi) + 5 sync (eligibility, retry/dead-letter, ack idempotent, status, device id)"
+      "details": "16/16: 6 learning + 5 sync + 5 content (import, hash, traversal, duplicate, rollback)"
     },
     {
       "name": "e2e_learning_persistence",
@@ -107,6 +107,12 @@
       "command": "npx tauri android build --debug -t aarch64",
       "result": "PASS",
       "details": "Exit 0; APK universal 129 MB + AAB; Kotlin daemon fallback; install/launch NOT RUN (adb devices kosong)"
+    },
+    {
+      "name": "e2e_content_manager",
+      "command": "Tauri WebView CDP + IFP_DATA_DIR temp",
+      "result": "PASS",
+      "details": "Import v0.1.0 (8 file) → v0.2.0 (previous 0.1.0) → rollback v0.1.0; UI status active/disabled benar; tombol rollback hilang setelah rollback"
     },
     {
       "name": "content_validator_cli",
