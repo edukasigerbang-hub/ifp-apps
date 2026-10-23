@@ -387,3 +387,15 @@
 **Verifikasi:** `npm run a11y` PASS 12 pemeriksaan, 0 error/0 warning; `npm run build`, `npm test`, `npm run e2e`, `npm run e2e:profile` PASS.
 
 **Belum:** NVDA/TalkBack, zoom 200%/reflow, keadaan dinamis, target sentuh, preferensi gerak.
+
+### T-025 — E2E alur belajar
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Skenario `scripts/e2e/scenarios/learning-journey.mjs` (`npm run e2e:journey`): impor paket pilot via command, verifikasi Player memakai paket impor, selesaikan eksplorasi 4 langkah, jawab kuis, cek penyimpanan lokal.
+- Assertion state: 1 sesi, 1 percobaan, rata-rata 100, outbox 1 event, Hasil Belajar menampilkan skor 100.
+- Data dir tetap sementara; tidak menyentuh data pengguna.
+
+**Verifikasi:** `npm run e2e:journey` PASS 11 pemeriksaan (dua kali berturut-turut).
+
+**Belum:** impor lewat dialog native, rollback konten, dan alur lisensi belum menjadi skenario.
