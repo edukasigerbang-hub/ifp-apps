@@ -46,7 +46,7 @@
 | `tauri dev` native window | NOT RUN |
 | DV-01…DV-20 | NOT RUN — mesin dev Windows 10, target Windows 11/Android 14 |
 
-**Belum di-commit** — hanya commit baseline yang diotorisasi user.
+**Commit:** `5fdced1` — scaffold + Fase D + fixture golden (96 file).
 
 ### T-003 — Fase D: kontrak paket konten v1
 

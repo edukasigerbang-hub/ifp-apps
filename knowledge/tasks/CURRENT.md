@@ -52,7 +52,6 @@
 | OD-1 | Matriks mapel/kurikulum belum disetujui | Konten pilot tidak boleh diklaim selaras kurikulum |
 | — | Reviewer manusia belum ditunjuk | `reviewStatus: approved` tidak boleh disetel |
 | GAP-1 | Prototype `index.html` tidak ada | Referensi UI visual hilang |
-| — | Scaffold + Fase D belum di-commit | Belum ada baseline untuk perubahan ini |
 
 ## Handoff
 
