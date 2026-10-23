@@ -1,6 +1,6 @@
 # Database Schema — Lokal (SQLite)
 
-**Status:** IMPLEMENTED (Fase E) · **Migrasi:** `0001_init` · **Sejak:** 2026-10-23
+**Status:** IMPLEMENTED (Fase E + I) · **Migrasi:** `0001_init`, `0002_sync` · **Sejak:** 2026-10-23
 **Lokasi runtime:** `app_data_dir()/ifp.db` (WAL). Untuk pengujian: env `IFP_DATA_DIR`.
 
 ## Migrasi
@@ -34,10 +34,15 @@ PK (`package_id`, `version`, `asset_path`); `sha256`, `size_bytes`; FK ke `conte
 `id` PK; `profile_id` FK; `lesson_id`; `package_version`; `progress_json`; `updated_at`; UNIQUE (`profile_id`, `lesson_id`, `package_version`) → upsert.
 
 ### `sync_outbox`
-`id` PK; `event_id` **UNIQUE**; `event_type`; `payload_json`; `created_at`; `attempts` (≥0); `next_attempt_at`; `state` (`pending|sending|acknowledged|failed`); `last_error_code`.
+`id` PK; `event_id` **UNIQUE**; `event_type`; `payload_json`; `created_at`; `attempts` (≥0); `next_attempt_at`; `state` (`pending|sending|acknowledged|failed`); `last_error_code`; `acknowledged_at` (migrasi 0002).
+
+Transisi: `pending → acknowledged` (ack) atau `pending → failed` (retry, `attempts+1`, backoff) → dead-letter bila `attempts >= maxAttempts` (`next_attempt_at = NULL`). Event tidak pernah dihapus.
+
+### `app_meta` (migrasi 0002)
+`key` PK, `value`, `updated_at`; menyimpan `installation_id` (UUID v4) untuk sync.
 
 ### Index
-`learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)`.
+`learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)` · `sync_outbox(state, next_attempt_at, created_at)`. Indeks terakhir ditambahkan di migrasi 0002.
 
 ## Jaminan transaksi
 

@@ -11,7 +11,8 @@
     "fixtures:check": "tsx scripts/check-fixtures.ts",
     "content:validate": "tsx scripts/validate-content.ts",
     "content:schema": "tsx scripts/export-content-schema.ts",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "sync:mock": "node scripts/mock-sync-server.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",

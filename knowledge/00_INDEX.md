@@ -27,6 +27,7 @@
 | Alur data utama | [`architecture/DATA_FLOW.md`](architecture/DATA_FLOW.md) |
 | Skema database lokal | [`database/SCHEMA.md`](database/SCHEMA.md) |
 | Kontrak API & native commands | [`api/API.md`](api/API.md) |
+| Kontrak sinkronisasi | [`api/SYNC_CONTRACT.md`](api/SYNC_CONTRACT.md) |
 | Keamanan & privasi | [`security/SECURITY.md`](security/SECURITY.md) |
 | Kontrak konten v1 | [`content/SCHEMA.md`](content/SCHEMA.md) |
 | Katalog konten | [`content/CATALOG.md`](content/CATALOG.md) |
@@ -60,5 +61,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0002](decisions/ADR-0002-backend-deferred.md) | Backend ditunda sampai Fase I | Accepted (deferred) |
 | [ADR-0003](decisions/ADR-0003-content-package-contract.md) | Kontrak paket konten v1 (Zod) | Accepted (implemented) |
 | [ADR-0004](decisions/ADR-0004-local-persistence.md) | Persistensi lokal native (Rust + SQLite) | Accepted (implemented) |
+| [ADR-0005](decisions/ADR-0005-sync-client.md) | Arsitektur client sinkronisasi | Accepted (client implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

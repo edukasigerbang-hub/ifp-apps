@@ -4,6 +4,7 @@ import { findNavItem, isScreenId, type ScreenId } from "./navigation";
 import { LessonPlayer } from "./screens/LessonPlayer";
 import { ResultsScreen } from "./screens/ResultsScreen";
 import { ScreenPlaceholder } from "./screens/ScreenPlaceholder";
+import { SettingsScreen } from "./screens/SettingsScreen";
 
 function initialScreen(): ScreenId {
   const hash = window.location.hash.replace(/^#\/?/, "");
@@ -25,6 +26,8 @@ export default function App() {
         <LessonPlayer />
       ) : activeScreen === "results" ? (
         <ResultsScreen />
+      ) : activeScreen === "settings" ? (
+        <SettingsScreen />
       ) : (
         <ScreenPlaceholder item={activeItem} />
       )}

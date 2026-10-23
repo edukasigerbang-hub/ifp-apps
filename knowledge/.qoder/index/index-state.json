@@ -4,21 +4,21 @@
   "index_mode": "LIGHTWEIGHT_GREP",
   "index_version": 1,
   "schema_version": 1,
-  "indexed_commit": "31bac0e",
-  "generated_at": "2026-10-23T22:48:01+07:00",
-  "files_indexed": 95,
+  "indexed_commit": "b7ecd18",
+  "generated_at": "2026-10-23T22:59:45+07:00",
+  "files_indexed": 102,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
   "scope": ["src/", "src-tauri/", "scripts/", "content/"],
   "breakdown": {
-    "src": 30,
-    "src_tauri": 32,
-    "scripts": 4,
+    "src": 33,
+    "src_tauri": 35,
+    "scripts": 5,
     "content": 29,
-    "note": "src-tauri termasuk db/learning/error + migrasi SQL; Fase E belum di-commit saat snapshot ini"
+    "note": "src-tauri termasuk sync.rs, validation.rs, migrasi 0002; scripts termasuk mock sync server; Fase I belum di-commit"
   },
   "validation": {
-    "last_validated_at": "2026-10-23T22:48:01+07:00",
+    "last_validated_at": "2026-10-23T22:59:45+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },

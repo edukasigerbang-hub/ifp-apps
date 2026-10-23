@@ -128,3 +128,24 @@
 - `npm run build` + `npm test` (15/15 + 4/4 golden) PASS.
 
 **Catatan:** DB pengguna nyata (`%APPDATA%\id.gerbangedukasi.ifp`) masih menyimpan 2 sesi/1 attempt dari uji awal sebelum isolasi; pembersihan menunggu persetujuan.
+
+### T-008 — Fase I: sinkronisasi outbox + kontrak
+
+**Status:** COMPLETED (client) · **Change class:** LARGE
+
+- Migrasi `0002_sync`: `app_meta` (installation_id), `acknowledged_at`, index outbox.
+- Command: `sync_get_device_id`, `sync_list_pending`, `sync_mark_retry`, `sync_mark_acknowledged`, `sync_get_status`.
+- Engine TS: batching 20, backoff eksponensial + jitter (30s → 1 jam), max 5 attempt, dead-letter, ack hanya setelah diterima.
+- UI Pengaturan: status pending/failed/acknowledged + tombol sinkronkan; browser preview disabled.
+- Mock server `npm run sync:mock` + CORS dev; CSP dev mengizinkan `localhost:8787`.
+- Kontrak: [SYNC_CONTRACT.md](../api/SYNC_CONTRACT.md); ADR-0005.
+
+**Verifikasi:**
+- `cargo test` → **11/11 PASS** (6 learning + 5 sync).
+- `npm test` → **23/23** + golden 4/4.
+- E2E Tauri + mock: "1 event tersinkronisasi"; outbox `acknowledged`, counts Menunggu 0 / Gagal 0 / Tersinkron 1; device ID tersimpan.
+- Screenshot layar Pengaturan diperiksa.
+
+**Batas:** backend nyata belum ada (OD-7); CSP produksi belum mengizinkan host backend; token perangkat menunggu License Manager.
+
+**DB cleanup (disetujui user):** DB lama dibackup ke `.tmp-data/backups/`, lalu dihapus; app membuat DB baru bersih.

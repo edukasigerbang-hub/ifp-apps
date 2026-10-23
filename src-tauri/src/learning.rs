@@ -1,10 +1,10 @@
 use crate::db::DbState;
 use crate::error::AppError;
+use crate::validation::{validate_timestamp, validate_token};
 use rusqlite::{params, Connection, OptionalExtension};
 use serde::{Deserialize, Serialize};
 use tauri::State;
 
-const MAX_ID_LEN: usize = 100;
 const MAX_ANSWERS: usize = 200;
 
 #[derive(Debug, Deserialize)]
@@ -88,34 +88,12 @@ pub struct SummaryView {
     pub recent: Vec<RecentAttempt>,
 }
 
-fn validate_token(value: &str, label: &str) -> Result<(), AppError> {
-    let valid = !value.is_empty()
-        && value.len() <= MAX_ID_LEN
-        && value
-            .chars()
-            .all(|character| character.is_ascii_alphanumeric() || character == '-' || character == '_');
-
-    if valid {
-        Ok(())
-    } else {
-        Err(AppError::validation(&format!("{label} tidak valid.")))
+fn validate_score(score: f64) -> Result<(), AppError> {
+    if !score.is_finite() || !(0.0..=100.0).contains(&score) {
+        return Err(AppError::validation("Skor harus berada di antara 0 dan 100."));
     }
-}
-
-fn validate_timestamp(value: &str) -> Result<(), AppError> {
-    let valid = (10..=40).contains(&value.len())
-        && value
-            .chars()
-            .all(|character| character.is_ascii_digit() || matches!(character, '-' | ':' | '.' | 'T' | 'Z' | '+'));
-
-    if valid {
-        Ok(())
-    } else {
-        Err(AppError::validation("Waktu kejadian tidak valid."))
-    }
-}
-
-pub fn ensure_profile(connection: &Connection, input: &EnsureProfileInput) -> Result<ProfileView, AppError> {
+    Ok(())
+}pub fn ensure_profile(connection: &Connection, input: &EnsureProfileInput) -> Result<ProfileView, AppError> {
     validate_token(&input.profile_id, "ID profil")?;
 
     let display_name = input.display_name.trim();
@@ -201,9 +179,7 @@ pub fn save_attempt(connection: &mut Connection, input: &SaveAttemptInput) -> Re
         validate_token(value, label)?;
     }
 
-    if !input.score.is_finite() || !(0.0..=100.0).contains(&input.score) {
-        return Err(AppError::validation("Skor harus berada di antara 0 dan 100."));
-    }
+    validate_score(input.score)?;
     validate_timestamp(&input.occurred_at)?;
     if input.answers.is_empty() || input.answers.len() > MAX_ANSWERS {
         return Err(AppError::validation("Jumlah jawaban tidak valid."));
@@ -576,7 +552,7 @@ mod tests {
         let applied: i64 = connection
             .query_row("SELECT COUNT(*) FROM schema_migrations", [], |row| row.get(0))
             .expect("count migrations");
-        assert_eq!(applied, 1);
+        assert_eq!(applied, 2);
     }
 
     #[test]

@@ -15,6 +15,9 @@ src/
   screens/LessonPlayer.tsx
   screens/ResultsScreen.tsx
   data/learningRepository.ts
+  data/syncEngine.ts
+  data/__tests__/syncEngine.test.ts
+  screens/SettingsScreen.tsx
   components/content/{ExplorationActivity,QuizActivity}.tsx
   content/
     activityRegistry.ts, validatePackage.ts, verifyAssets.ts, quiz.ts
@@ -23,8 +26,8 @@ src/
     __tests__/{validatePackage,quiz}.test.ts
   index.css, vite-env.d.ts
 src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/
-             src/{main,lib,db,error,learning}.rs
-             src/migrations/0001_init.sql
+             src/{main,lib,db,error,learning,sync,validation}.rs
+             src/migrations/{0001_init.sql,0002_sync.sql}
              icons/
 scripts/     validate-content.ts, export-content-schema.ts
 content/     schema/*.json (generated), fixtures/*, packages/matematika-kelas3-pecahan/ (draft)

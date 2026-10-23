@@ -39,6 +39,18 @@ Aturan native boundary: validasi argumen + batas ukuran; **tanpa** command gener
 - Semua ID dibuat di klien (`crypto.randomUUID`); Rust memvalidasi bentuknya.
 - Hanya tersedia di runtime Tauri; pratinjau browser menampilkan status "tidak disimpan".
 
+## Sinkronisasi (IMPLEMENTED client — server pending)
+
+| Command | Input | Output |
+|---|---|---|
+| `sync_get_device_id` | — | UUID instalasi (stabil) |
+| `sync_list_pending` | `limit`, `maxAttempts` | event eligible (`outboxId`, `eventId`, `payloadJson`, `attempts`, `nextAttemptAt`) |
+| `sync_mark_retry` | `outboxId`, `errorCode`, `nextAttemptAt`, `maxAttempts` | `updated` |
+| `sync_mark_acknowledged` | `outboxId`, `acknowledgedAt` | `updated` (idempotent) |
+| `sync_get_status` | — | `pending`, `failed`, `acknowledged`, `nextAttemptAt` |
+
+Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/data/syncEngine.ts`; UI: Pengaturan.
+
 ## Server (konseptual) — USULAN
 
 | Method | Path |

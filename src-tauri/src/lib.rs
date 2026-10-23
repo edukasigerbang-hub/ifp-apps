@@ -1,6 +1,8 @@
 mod db;
 mod error;
 mod learning;
+mod sync;
+mod validation;
 
 use tauri::Manager;
 
@@ -30,7 +32,12 @@ pub fn run() {
       learning::learning_ensure_profile,
       learning::learning_start_session,
       learning::learning_save_attempt,
-      learning::learning_get_summary
+      learning::learning_get_summary,
+      sync::sync_get_device_id,
+      sync::sync_list_pending,
+      sync::sync_mark_retry,
+      sync::sync_mark_acknowledged,
+      sync::sync_get_status
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

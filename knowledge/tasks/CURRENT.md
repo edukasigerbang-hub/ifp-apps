@@ -16,6 +16,7 @@
 | T-005 | Pilot konten draft | `matematika-kelas3-pecahan` v0.1.0: 1 lesson, 2 aktivitas, 4 diagram; VALID |
 | T-006 | Pratinjau Player | Paket pilot dirender di layar Player: eksplorasi 4 langkah + kuis + skor; desktop & mobile lulus |
 | T-007 | Fase E — repository lokal | SQLite native + migrasi + 4 command; hasil kuis tersimpan atomik; layar Hasil Belajar |
+| T-008 | Fase I — sinkronisasi | Outbox state native + engine TS + kontrak + mock server; 1 event acknowledged E2E |
 
 ## Status prasyarat materi pembelajaran
 
@@ -38,7 +39,7 @@
 3. Product Owner + Curriculum Lead memutuskan D1–D7 → ADR-0004 → isi `curriculumRefs`.
 4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
 
-**T-008 — Device technical spike** (terpisah, butuh perangkat fisik).
+**T-009 — Device technical spike** (terpisah, butuh perangkat fisik).
 
 ## Verifikasi sesi ini
 
@@ -52,6 +53,10 @@
 | Rust repository tests | **PASS** — 6/6 (termasuk rollback event duplikat & persistensi reopen) |
 | E2E simpan hasil (Tauri WebView via CDP) | **PASS** — 1 sesi, 1 attempt, 4 respons, 1 outbox pending; Hasil Belajar menampilkan skor 100 |
 | Persistensi hasil belajar | **ADA** — `app_data_dir()/ifp.db`; sinkronisasi cloud belum |
+| Rust sync tests | **PASS** — 5/5 (eligibility, backoff/dead-letter, ack idempotent, status, device ID) |
+| Sync engine tests | **PASS** — 8/8 (accepted/duplicate, rejected, network, missing ack, empty, payload rusak, backoff) |
+| E2E sinkronisasi (mock server) | **PASS** — "1 event tersinkronisasi"; outbox `acknowledged`, counts 0/0/1 |
+| Backend sinkronisasi nyata | **BELUM** — OD-7; CSP produksi belum mengizinkan host backend |
 | DV-01…DV-20 | NOT RUN |
 
 ## Blocker

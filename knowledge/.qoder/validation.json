@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T22:48:01+07:00",
+  "last_validated_at": "2026-10-23T22:59:45+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -28,7 +28,7 @@
       "name": "frontend_typecheck_build",
       "command": "npm run build",
       "result": "PASS",
-      "details": "tsc --noEmit + vite build; build 372ms; 26 modules"
+      "details": "tsc --noEmit + vite build; 146 modules; build 4.05s"
     },
     {
       "name": "rust_cargo_check",
@@ -40,7 +40,7 @@
       "name": "content_unit_tests",
       "command": "npm test (vitest run && tsx scripts/check-fixtures.ts)",
       "result": "PASS",
-      "details": "15/15 unit test: schema (11) + skor kuis (4) + golden fixture 4/4"
+      "details": "23/23 unit test: schema 11 + kuis 4 + sync engine 8 + golden fixture 4/4"
     },
     {
       "name": "fixture_golden_check",
@@ -64,13 +64,19 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "6/6: simpan lengkap, rollback event duplikat, attempt_no naik, summary, migrasi idempoten, persistensi reopen"
+      "details": "11/11: 6 learning (termasuk rollback & persistensi) + 5 sync (eligibility, retry/dead-letter, ack idempotent, status, device id)"
     },
     {
       "name": "e2e_learning_persistence",
       "command": "WebView2 CDP (port 9223) + IFP_DATA_DIR=.tmp-data",
       "result": "PASS",
       "details": "Tersimpan lokal percobaan ke-1; DB: 1 profile, 1 session, 1 attempt, 4 responses, 1 progress, 1 outbox pending; Hasil Belajar menampilkan skor 100"
+    },
+    {
+      "name": "e2e_sync_mock",
+      "command": "Tauri WebView CDP + npm run sync:mock",
+      "result": "PASS",
+      "details": "1 event acknowledged; UI Menunggu 0 / Gagal 0 / Tersinkron 1; outbox state acknowledged, attempts 0, acknowledged_at terisi; device id 36 char"
     },
     {
       "name": "content_validator_cli",

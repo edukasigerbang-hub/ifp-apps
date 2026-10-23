@@ -7,6 +7,7 @@ src-tauri/target/
 
 # Local test data
 .tmp-data/
+.tmp-*/
 
 # Local env
 .env
