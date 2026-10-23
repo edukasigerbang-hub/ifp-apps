@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T00:31:56+07:00",
+  "last_validated_at": "2026-10-24T00:36:56+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -64,7 +64,7 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "33/33: 6 learning + 5 sync + 8 content + 11 license + 3 backup"
+      "details": "35/35: 6 learning + 5 sync + 8 content + 11 license + 3 backup + 2 diagnostics"
     },
     {
       "name": "e2e_learning_persistence",
@@ -149,6 +149,12 @@
       "command": "npm run tauri build",
       "result": "PASS",
       "details": "Exit 0; MSI 4.21 MiB sha 7887c29c…; NSIS 2.94 MiB sha 0c4d494c…; install/launch NOT RUN"
+    },
+    {
+      "name": "e2e_diagnostics",
+      "command": "Tauri WebView CDP + app_export_diagnostics",
+      "result": "PASS",
+      "details": "JSON 633 byte; counts/sync/license ringkas; machine ID diredaksi; tanpa license_json/signature/serial; UI tombol tersedia"
     },
     {
       "name": "content_validator_cli",

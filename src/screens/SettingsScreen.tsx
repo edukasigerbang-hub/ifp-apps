@@ -9,6 +9,7 @@ import {
   restoreBackup,
   type BackupSummary
 } from "../data/backupRepository";
+import { exportDiagnostics, pickDiagnosticsDestination } from "../data/diagnosticsRepository";
 import { getSyncStatus, isSyncConfigured, runSyncOnce, type SyncStatus } from "../data/syncEngine";
 
 type PageState =
@@ -39,6 +40,9 @@ export function SettingsScreen() {
   const [backupMessage, setBackupMessage] = useState<string | null>(null);
   const [backupError, setBackupError] = useState<string | null>(null);
   const [backupBusy, setBackupBusy] = useState(false);
+  const [diagnosticsBusy, setDiagnosticsBusy] = useState(false);
+  const [diagnosticsMessage, setDiagnosticsMessage] = useState<string | null>(null);
+  const [diagnosticsError, setDiagnosticsError] = useState<string | null>(null);
 
   async function refresh() {
     try {
@@ -125,6 +129,24 @@ export function SettingsScreen() {
       setBackupError(caught instanceof Error ? caught.message : "Restore gagal.");
     } finally {
       setBackupBusy(false);
+    }
+  }
+
+  async function handleDiagnosticsExport() {
+    setDiagnosticsError(null);
+    setDiagnosticsMessage(null);
+    try {
+      const destination = await pickDiagnosticsDestination(
+        `ifp-diagnostics-${new Date().toISOString().slice(0, 10)}.json`
+      );
+      if (!destination) return;
+      setDiagnosticsBusy(true);
+      const summary = await exportDiagnostics(destination);
+      setDiagnosticsMessage(`Diagnostik diekspor: ${summary.path} (${summary.bytes} byte)`);
+    } catch (caught) {
+      setDiagnosticsError(caught instanceof Error ? caught.message : "Ekspor diagnostik gagal.");
+    } finally {
+      setDiagnosticsBusy(false);
     }
   }
 
@@ -254,10 +276,34 @@ export function SettingsScreen() {
       )}
 
       <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Preferensi lain</h2>
+        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Preferensi & diagnostik</h2>
         <p className="mt-3 text-sm text-muted">
-          Preferensi tampilan, audio, animasi, dan ekspor diagnostik belum diimplementasikan.
+          Preferensi tampilan, audio, dan animasi belum diimplementasikan.
         </p>
+        {desktop && (
+          <>
+            <button
+              type="button"
+              onClick={() => void handleDiagnosticsExport()}
+              disabled={diagnosticsBusy}
+              className="mt-4 min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:opacity-40"
+            >
+              Ekspor diagnostik…
+            </button>
+            <p className="mt-2 text-xs text-muted">
+              Diagnostik memuat versi aplikasi, OS, jumlah data, status sinkronisasi/lisensi (ID perangkat
+              disamarkan); tanpa secret, nama profil, atau payload lisensi.
+            </p>
+            <p aria-live="polite" className="mt-2 text-sm text-muted">
+              {diagnosticsMessage ?? ""}
+            </p>
+            {diagnosticsError && (
+              <p className="mt-2 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+                {diagnosticsError}
+              </p>
+            )}
+          </>
+        )}
       </section>
     </div>
   );

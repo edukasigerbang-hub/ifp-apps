@@ -27,6 +27,7 @@
 | T-015 | License Service referensi | Aktivasi/refresh/verify/transfer/deactivate; serial hash; E2E aktivasi online PASS |
 | T-016 | Backup & Restore | SQLite backup API + manifest + integrity + restore dengan guard schema; UI Pengaturan |
 | T-017 | Windows release candidate | `tauri build` PASS; MSI 4.21 MiB + NSIS 2.94 MiB; belum install/sign/release |
+| T-018 | Diagnostics export | JSON native dengan counts/status; redaksi ID & tanpa secret; UI Pengaturan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -82,6 +83,7 @@
 | Restore otomatis/retensi | **BELUM** — manual; OD-4 |
 | Windows release build | **PASS** — MSI + NSIS dihasilkan; install/sign NOT RUN |
 | Android release build | **BELUM** — hanya debug APK |
+| Diagnostics export | **PASS** — 633 byte JSON, redaksi aman; UI tombol tersedia |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |

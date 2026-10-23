@@ -72,5 +72,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0010](decisions/ADR-0010-license-core.md) | License core (Ed25519, verifikasi native) | Accepted (core implemented) |
 | [ADR-0011](decisions/ADR-0011-license-service-reference.md) | License Service referensi | Accepted (reference only) |
 | [ADR-0012](decisions/ADR-0012-backup-restore.md) | Backup & Restore database lokal | Accepted (implemented) |
+| [ADR-0013](decisions/ADR-0013-diagnostics-export.md) | Diagnostics export tanpa secret | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

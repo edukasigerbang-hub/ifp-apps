@@ -1,6 +1,7 @@
 mod backup;
 mod content;
 mod db;
+mod diagnostics;
 mod error;
 mod learning;
 mod license;
@@ -63,7 +64,8 @@ pub fn run() {
       license::license_activate_online,
       backup::backup_export,
       backup::backup_inspect,
-      backup::backup_restore
+      backup::backup_restore,
+      diagnostics::app_export_diagnostics
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

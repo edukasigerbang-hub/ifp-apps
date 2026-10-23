@@ -297,3 +297,14 @@
 **Verifikasi:** build PASS; npm 43/43 + golden; cargo 33/33 (sebelum build).
 
 **Belum:** install/launch/upgrade, code signing, Windows 11 acceptance, Android release, updater, embedded license public key, production CSP. Lihat [RELEASE_CHECKLIST.md](../release/RELEASE_CHECKLIST.md).
+
+### T-018 — Diagnostics export
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Command `app_export_diagnostics`: JSON dengan versi, OS/arch, migrasi, counts, status sync, ringkasan lisensi, metadata paket.
+- Redaksi: tanpa nama profil, payload/signature/serial lisensi, ID perangkat penuh, atau path pengguna.
+- UI Pengaturan: tombol Ekspor diagnostik dengan dialog simpan.
+- ADR-0013.
+
+**Verifikasi:** Rust 35/35 (2 diagnostics); E2E ekspor 633 byte, isi sesuai, tanpa `license_json`/`signature`/`serial`; `npm run build` PASS.

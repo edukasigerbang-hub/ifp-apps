@@ -104,6 +104,16 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 - Error: `BACKUP_INVALID`, `BACKUP_FAILED`, `BACKUP_SCHEMA_TOO_NEW`.
 - Backup tidak menyertakan paket konten impor; tidak terenkripsi.
 
+## Diagnostics (IMPLEMENTED — ADR-0013)
+
+| Command | Input | Output |
+|---|---|---|
+| `app_export_diagnostics` | `destination` | path, bytes, sha256 |
+
+- JSON: versi, OS/arch, migrasi, counts, status sync, ringkasan lisensi, metadata paket.
+- Diredaksi: tanpa nama profil, payload/signature/serial lisensi, atau ID perangkat penuh.
+- Menolak menimpa file yang sudah ada.
+
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.
