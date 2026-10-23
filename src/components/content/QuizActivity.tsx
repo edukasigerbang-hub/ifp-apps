@@ -4,6 +4,18 @@ import type { Activity } from "../../content/schema/activity";
 
 interface QuizActivityProps {
   activity: Activity;
+  onGraded?: (outcome: QuizGradedOutcome) => void;
+}
+
+export interface QuizGradedAnswer {
+  questionId: string;
+  optionId: string | null;
+  isCorrect: boolean;
+}
+
+export interface QuizGradedOutcome {
+  score: number;
+  answers: QuizGradedAnswer[];
 }
 
 interface QuizResult {
@@ -11,7 +23,7 @@ interface QuizResult {
   passed: boolean;
 }
 
-export function QuizActivity({ activity }: QuizActivityProps) {
+export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
   const questions = activity.assessmentConfig?.questions ?? [];
   const passingScore = activity.assessmentConfig?.passingScore ?? 70;
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -31,6 +43,23 @@ export function QuizActivity({ activity }: QuizActivityProps) {
   function submit() {
     const outcome = scoreQuiz(questions, answers, passingScore);
     setResult({ score: outcome.score, passed: outcome.passed });
+
+    if (onGraded) {
+      onGraded({
+        score: outcome.score,
+        answers: questions.map((question) => {
+          const optionId = answers[question.questionId] ?? null;
+          return {
+            questionId: question.questionId,
+            optionId,
+            isCorrect:
+              typeof question.correctResponse === "string" &&
+              optionId !== null &&
+              answers[question.questionId] === question.correctResponse
+          };
+        })
+      });
+    }
   }
 
   function retry() {

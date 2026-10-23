@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AppShell } from "./components/layout/AppShell";
 import { findNavItem, isScreenId, type ScreenId } from "./navigation";
 import { LessonPlayer } from "./screens/LessonPlayer";
+import { ResultsScreen } from "./screens/ResultsScreen";
 import { ScreenPlaceholder } from "./screens/ScreenPlaceholder";
 
 function initialScreen(): ScreenId {
@@ -20,7 +21,13 @@ export default function App() {
 
   return (
     <AppShell activeScreen={activeScreen} onNavigate={navigate}>
-      {activeScreen === "player" ? <LessonPlayer /> : <ScreenPlaceholder item={activeItem} />}
+      {activeScreen === "player" ? (
+        <LessonPlayer />
+      ) : activeScreen === "results" ? (
+        <ResultsScreen />
+      ) : (
+        <ScreenPlaceholder item={activeItem} />
+      )}
     </AppShell>
   );
 }

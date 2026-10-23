@@ -15,6 +15,7 @@
 | T-004 | Prasyarat materi | Proposal OD-1, rubrik review pedagogis, ADR-0003 |
 | T-005 | Pilot konten draft | `matematika-kelas3-pecahan` v0.1.0: 1 lesson, 2 aktivitas, 4 diagram; VALID |
 | T-006 | Pratinjau Player | Paket pilot dirender di layar Player: eksplorasi 4 langkah + kuis + skor; desktop & mobile lulus |
+| T-007 | Fase E — repository lokal | SQLite native + migrasi + 4 command; hasil kuis tersimpan atomik; layar Hasil Belajar |
 
 ## Status prasyarat materi pembelajaran
 
@@ -26,6 +27,7 @@
 | Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
 | Rubrik review pedagogis | **READY (template)** | [REVIEW_RUBRIC.md](../content/REVIEW_RUBRIC.md) — 0 materi direview |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
+| Penyimpanan hasil lokal | **DONE** | SQLite native, transaksi attempt+respons+progress+outbox |
 | Hak/lisensi aset | **BELUM** | Belum ada aset produksi |
 
 ## Next task
@@ -36,7 +38,7 @@
 3. Product Owner + Curriculum Lead memutuskan D1–D7 → ADR-0004 → isi `curriculumRefs`.
 4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
 
-**T-007 — Device technical spike** (terpisah, butuh perangkat fisik).
+**T-008 — Device technical spike** (terpisah, butuh perangkat fisik).
 
 ## Verifikasi sesi ini
 
@@ -47,7 +49,9 @@
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
-| Persistensi hasil belajar | **BELUM** — belum ada SQLite/repository |
+| Rust repository tests | **PASS** — 6/6 (termasuk rollback event duplikat & persistensi reopen) |
+| E2E simpan hasil (Tauri WebView via CDP) | **PASS** — 1 sesi, 1 attempt, 4 respons, 1 outbox pending; Hasil Belajar menampilkan skor 100 |
+| Persistensi hasil belajar | **ADA** — `app_data_dir()/ifp.db`; sinkronisasi cloud belum |
 | DV-01…DV-20 | NOT RUN |
 
 ## Blocker
@@ -60,4 +64,4 @@
 
 ## Handoff
 
-Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft** dan tidak boleh dipublikasikan.
+Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft** dan tidak boleh dipublikasikan. Arsitektur penyimpanan: [ADR-0004](../decisions/ADR-0004-local-persistence.md).

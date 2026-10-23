@@ -43,7 +43,7 @@ Aplikasi mendukung mode dipandu guru dan mode belajar mandiri siswa, dengan mate
 | App shell | Tauri 2 + Rust | ADOPTED — scaffold; platform VALIDATE |
 | UI | React + TypeScript + Vite | ADOPTED (React 19, TS 7, Vite 8) |
 | Styling | Tailwind CSS | ADOPTED (v4) |
-| DB lokal | SQLite (migrasi bernomor) | PLANNED — belum ada |
+| DB lokal | SQLite (migrasi bernomor) | ADOPTED — rusqlite, migrasi 0001 |
 | Validasi TS | JSON Schema / Zod | Proposed |
 | Validasi native | Rust schema/boundary validation | Proposed |
 | Game 2D | HTML Canvas / Phaser | VALIDATE performa |

@@ -1,52 +1,62 @@
 # Database Schema — Lokal (SQLite)
 
-> **DERIVED** dari [LLD §6](../../LLD.md). Tabel belum dibuat — belum ada kode/migrasi.
-> Status: **PLANNED**. Tipe, constraint, index, retensi wajib dituangkan sebagai migrasi eksplisit.
+**Status:** IMPLEMENTED (Fase E) · **Migrasi:** `0001_init` · **Sejak:** 2026-10-23
+**Lokasi runtime:** `app_data_dir()/ifp.db` (WAL). Untuk pengujian: env `IFP_DATA_DIR`.
 
-## Tabel minimum
+## Migrasi
+
+- Runner native di `src-tauri/src/db.rs`; SQL di `src-tauri/src/migrations/0001_init.sql`.
+- Tabel `schema_migrations(version INTEGER PK, applied_at TEXT, checksum TEXT)`.
+- Checksum SHA-256 diverifikasi setiap startup; jika SQL migrasi berubah setelah diterapkan → startup gagal (mencegah skema basi).
+- Migrasi dijalankan dalam transaksi; `PRAGMA foreign_keys=ON`, `journal_mode=WAL`, `busy_timeout=5000`.
+
+## Tabel (aktual)
 
 ### `profiles`
-`id`, `display_name`, `profile_type`, `created_at`, `updated_at`
+`id` PK, `display_name`, `profile_type` (`student|teacher|admin`), `created_at`, `updated_at`.
 
 ### `content_packages`
-`package_id`, `version`, `source`, `status`, `manifest_hash`, `installed_at`
+PK (`package_id`, `version`); `source` (`bundled|imported|downloaded`), `status` (`discovered|validated|active|disabled|removed`), `manifest_hash`, `installed_at`.
 
 ### `content_assets`
-`package_id`, `version`, `asset_path`, `sha256`, `size_bytes`
+PK (`package_id`, `version`, `asset_path`); `sha256`, `size_bytes`; FK ke `content_packages`.
 
 ### `learning_sessions`
-`id`, `profile_id`, `lesson_id`, `package_id`, `package_version`, `started_at`, `completed_at`, `state`
+`id` PK; `profile_id` FK; `lesson_id`; `package_id` + `package_version` FK; `started_at`; `completed_at`; `state` (`active|completed|abandoned`).
 
 ### `activity_attempts`
-`id`, `session_id`, `activity_id`, `attempt_no`, `started_at`, `completed_at`, `score`, `state`
+`id` PK; `session_id` FK; `activity_id`; `attempt_no` (≥1); `started_at`; `completed_at`; `score` (0–100); `state` (`in-progress|completed|abandoned`); UNIQUE (`session_id`, `activity_id`, `attempt_no`).
 
 ### `assessment_responses`
-`id`, `attempt_id`, `question_id`, `response_json`, `is_correct`, `answered_at`
+`id` PK; `attempt_id` FK; `question_id`; `response_json`; `is_correct` (0/1); `answered_at`.
 
 ### `progress_snapshots`
-`id`, `profile_id`, `lesson_id`, `package_version`, `progress_json`, `updated_at`
+`id` PK; `profile_id` FK; `lesson_id`; `package_version`; `progress_json`; `updated_at`; UNIQUE (`profile_id`, `lesson_id`, `package_version`) → upsert.
 
 ### `sync_outbox`
-`id`, `event_id`, `event_type`, `payload_json`, `created_at`, `attempts`, `next_attempt_at`, `state`, `last_error_code`
+`id` PK; `event_id` **UNIQUE**; `event_type`; `payload_json`; `created_at`; `attempts` (≥0); `next_attempt_at`; `state` (`pending|sending|acknowledged|failed`); `last_error_code`.
 
-### `schema_migrations`
-`version`, `applied_at`, `checksum`
+### Index
+`learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)`.
 
-## Aturan transaksi (MENGIKAT)
+## Jaminan transaksi
 
-1. Respons/hasil + event outbox ditulis dalam **satu transaksi**.
-2. `sync_outbox.event_id` unik; server melakukan deduplication.
-3. Event outbox **tidak dihapus** sampai acknowledgement server tersimpan.
-4. Retry: exponential backoff + jitter + batas terkonfigurasi.
-5. Media biner besar tidak disimpan di SQLite.
-6. Backup konsisten dan **restore harus diuji**.
-7. Migrasi bernomor, diuji dari versi sebelumnya; kegagalan → `DATABASE_MIGRATION_FAILED`, tidak boleh meninggalkan state separuh jadi.
+`learning_save_attempt` menulis dalam **satu transaksi**:
+1. `activity_attempts` (attempt_no dihitung dari MAX+1),
+2. `assessment_responses` (satu baris per soal),
+3. `progress_snapshots` (upsert),
+4. `learning_sessions` → `completed`,
+5. `sync_outbox` (`event_id` unik, state `pending`).
 
-## Retensi & privasi
+Kegagalan di langkah mana pun (termasuk event duplikat) → rollback seluruh upaya.
 
-- Minimalkan data identitas siswa; jangan simpan yang tidak diperlukan.
-- Kebijakan retensi, ekspor, penghapusan profil **wajib ditetapkan sebelum produksi** (OPEN — lihat BACKLOG OD-4).
+## Bukti verifikasi
 
-## Server (PostgreSQL) — ringkas
+- `cargo test` → **6/6 PASS**: simpan lengkap, rollback duplikat event, attempt_no naik, agregasi summary, migrasi idempoten, persistensi antar-reopen.
+- E2E Tauri (CDP) → 1 sesi, 1 attempt, 4 respons, 1 progress, 1 outbox `pending`; Results menampilkan Sesi 1 / Percobaan 1 / skor 100.
 
-Katalog + versi paket, metadata aset & status publikasi, license records + hash serial + activation binding + audit transfer/deactivation, sync event IDs + idempotency, user administratif + role/permission, audit log dengan minimisasi data.
+## Batasan
+
+- Backup/restore belum diimplementasikan; retensi data siswa OPEN (OD-4).
+- Belum ada pengiriman outbox (Fase I) dan signature/verifikasi paket.
+- Media tetap di filesystem, bukan blob SQLite.

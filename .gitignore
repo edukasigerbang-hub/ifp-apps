@@ -5,6 +5,9 @@ node_modules/
 dist/
 src-tauri/target/
 
+# Local test data
+.tmp-data/
+
 # Local env
 .env
 .env.*

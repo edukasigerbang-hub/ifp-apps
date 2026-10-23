@@ -42,7 +42,8 @@ warnings:
 |---|---|
 | Review pedagogis R1–R12 | **BELUM** — butuh guru/curriculum lead |
 | Sign-off OD-1 / curriculumRefs | **BELUM** — proposal masih PROPOSED |
-| Tampilan di aplikasi | **ADA (pratinjau)** — layar Player merender paket; hasil belum disimpan ke DB |
+| Tampilan di aplikasi | **ADA** — Player + Hasil Belajar; hasil kuis tersimpan di SQLite lokal |
+| Sinkronisasi cloud | **BELUM** — outbox tersimpan `pending`, belum dikirim |
 | Signature paket | Null — kebijakan signature belum final |
 | Hak/lisensi aset | Aman untuk draft: dibuat sendiri, bukan aset pihak ketiga |
 

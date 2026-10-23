@@ -1,13 +1,34 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ExplorationActivity } from "../components/content/ExplorationActivity";
-import { QuizActivity } from "../components/content/QuizActivity";
+import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
-import { loadContentPackages } from "../content/loadPackages";
+import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
 import type { Activity } from "../content/schema/activity";
+import {
+  canPersistLocally,
+  ensureLocalProfile,
+  getOrStartSession,
+  saveAttempt
+} from "../data/learningRepository";
+
+type StorageStatus = "starting" | "ready" | "saving" | "saved" | "error" | "preview";
+
+interface StorageState {
+  status: StorageStatus;
+  message: string;
+}
+
+const storageClasses: Record<StorageStatus, string> = {
+  starting: "border-ink/10 bg-paper text-muted",
+  ready: "border-ink/10 bg-paper text-muted",
+  saving: "border-ink/10 bg-paper text-muted",
+  saved: "border-teal/30 bg-teal/5 text-ink",
+  error: "border-danger/30 bg-danger/5 text-danger",
+  preview: "border-warning/40 bg-warning/10 text-ink"
+};
 
 export function LessonPlayer() {
   const { packages, errors } = useMemo(() => loadContentPackages(), []);
-  const [activeActivityId, setActiveActivityId] = useState<string | null>(null);
 
   if (errors.length > 0) {
     return (
@@ -41,11 +62,61 @@ export function LessonPlayer() {
     );
   }
 
-  const contentPackage = packages[0];
+  return <LessonView contentPackage={packages[0]} />;
+}
+
+function LessonView({ contentPackage }: { contentPackage: LoadedContentPackage }) {
   const lesson = contentPackage.data.lessons[0];
   const activities = lesson.activityIds
     .map((activityId) => contentPackage.data.activities.find((activity) => activity.activityId === activityId))
     .filter((activity): activity is Activity => activity !== undefined);
+
+  const [activeActivityId, setActiveActivityId] = useState<string | null>(null);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [storage, setStorage] = useState<StorageState>({
+    status: "starting",
+    message: "Menyiapkan penyimpanan lokal..."
+  });
+
+  useEffect(() => {
+    if (!canPersistLocally()) {
+      setStorage({
+        status: "preview",
+        message:
+          "Pratinjau browser: hasil belajar tidak disimpan. Jalankan aplikasi desktop untuk menyimpan hasil."
+      });
+      return;
+    }
+
+    let cancelled = false;
+    (async () => {
+      try {
+        const profileId = await ensureLocalProfile();
+        const session = await getOrStartSession({
+          sessionId: crypto.randomUUID(),
+          profileId,
+          packageId: contentPackage.data.manifest.packageId,
+          packageVersion: contentPackage.data.manifest.packageVersion,
+          lessonId: lesson.lessonId
+        });
+        if (!cancelled) {
+          setSessionId(session.sessionId);
+          setStorage({ status: "ready", message: "Penyimpanan lokal siap." });
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setStorage({
+            status: "error",
+            message: error instanceof Error ? error.message : "Penyimpanan lokal tidak tersedia."
+          });
+        }
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [contentPackage, lesson.lessonId]);
 
   const activeActivity = activities.find((activity) => activity.activityId === activeActivityId) ?? activities[0];
   const assessmentActivityId = lesson.assessmentRefs.find((activityId) =>
@@ -70,6 +141,42 @@ export function LessonPlayer() {
     );
   }
 
+  async function handleGraded(activityId: string, outcome: QuizGradedOutcome) {
+    if (!canPersistLocally()) {
+      return;
+    }
+    if (!sessionId) {
+      setStorage({ status: "error", message: "Sesi belajar belum siap; hasil belum disimpan." });
+      return;
+    }
+
+    setStorage({ status: "saving", message: "Menyimpan hasil belajar..." });
+    try {
+      const attempt = await saveAttempt({
+        attemptId: crypto.randomUUID(),
+        progressId: crypto.randomUUID(),
+        outboxId: crypto.randomUUID(),
+        eventId: crypto.randomUUID(),
+        sessionId,
+        activityId,
+        score: outcome.score,
+        occurredAt: new Date().toISOString(),
+        answers: outcome.answers.map((answer) => ({
+          responseId: crypto.randomUUID(),
+          questionId: answer.questionId,
+          optionId: answer.optionId,
+          isCorrect: answer.isCorrect
+        }))
+      });
+      setStorage({ status: "saved", message: `Tersimpan lokal — percobaan ke-${attempt.attemptNo}.` });
+    } catch (error) {
+      setStorage({
+        status: "error",
+        message: error instanceof Error ? error.message : "Hasil belajar gagal disimpan."
+      });
+    }
+  }
+
   return (
     <div className="max-w-4xl">
       <div className="flex flex-wrap items-center gap-3">
@@ -82,6 +189,13 @@ export function LessonPlayer() {
 
       <h2 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h2>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
+
+      <p
+        aria-live="polite"
+        className={`mt-4 rounded-control border px-4 py-3 text-sm ${storageClasses[storage.status]}`}
+      >
+        {storage.message}
+      </p>
 
       <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
         <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Tujuan pembelajaran</h3>
@@ -123,7 +237,10 @@ export function LessonPlayer() {
             onFinish={assessmentActivityId ? () => setActiveActivityId(assessmentActivityId) : undefined}
           />
         ) : activeActivity.type === "multiple-choice" ? (
-          <QuizActivity activity={activeActivity} />
+          <QuizActivity
+            activity={activeActivity}
+            onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
+          />
         ) : (
           <p className="text-sm text-muted">
             Tipe aktivitas <code>{activeActivity.type}</code> belum didukung di pratinjau ini.
@@ -132,7 +249,9 @@ export function LessonPlayer() {
       </section>
 
       <p className="mt-4 text-xs text-muted">
-        Pratinjau konten lokal. Hasil belajar belum disimpan ke database dan belum disinkronkan.
+        {canPersistLocally()
+          ? "Hasil kuis disimpan di perangkat ini dan belum disinkronkan ke server."
+          : "Pratinjau browser: hasil tidak disimpan. Data hanya tersedia di aplikasi desktop."}
       </p>
     </div>
   );

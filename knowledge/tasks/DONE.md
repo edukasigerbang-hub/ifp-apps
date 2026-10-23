@@ -109,3 +109,22 @@
 - `npm test` 15/15 + golden 4/4 — PASS.
 - Screenshot desktop 1600×900 dan mobile 640×900 diperiksa — PASS.
 - Persistensi hasil: **BELUM** (tidak ada SQLite).
+
+### T-007 — Fase E: repository lokal + kontrak sesi
+
+**Status:** COMPLETED · **Change class:** LARGE
+
+- `rusqlite` (bundled) + `sha2`; migrasi native `0001_init` dengan checksum di `schema_migrations`.
+- Tabel: profiles, content_packages, content_assets, learning_sessions, activity_attempts, assessment_responses, progress_snapshots, sync_outbox + index.
+- Command: `learning_ensure_profile`, `learning_start_session`, `learning_save_attempt`, `learning_get_summary`.
+- `learning_save_attempt` menulis attempt + respons + progress + outbox + status sesi dalam **satu transaksi**; `event_id` unik.
+- UI: wrapper `learningRepository.ts`, status simpan di Player, layar **Hasil Belajar**, pratinjau browser tidak menyimpan.
+- Isolasi uji: `IFP_DATA_DIR` (default `app_data_dir()`), `.tmp-data/` gitignored.
+
+**Verifikasi:**
+- `cargo test` → **6/6 PASS** (simpan lengkap, rollback event duplikat, attempt_no naik, summary, migrasi idempoten, persistensi reopen).
+- E2E Tauri WebView (CDP) → "Tersimpan lokal — percobaan ke-1"; Hasil Belajar: Sesi 1, Percobaan 1, skor 100.
+- DB terisolasi: profiles 1, sessions 1, attempts 1, responses 4, progress 1, outbox 1 `pending`.
+- `npm run build` + `npm test` (15/15 + 4/4 golden) PASS.
+
+**Catatan:** DB pengguna nyata (`%APPDATA%\id.gerbangedukasi.ifp`) masih menyimpan 2 sesi/1 attempt dari uji awal sebelum isolasi; pembersihan menunggu persetujuan.

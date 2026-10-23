@@ -25,6 +25,20 @@
 
 Aturan native boundary: validasi argumen + batas ukuran; **tanpa** command generik shell/arbitrary path/arbitrary code; typed error tanpa panic/backtrace/secret; capability Tauri minimal + allowlist ketat.
 
+## Learning repository (IMPLEMENTED — Fase E)
+
+| Command | Input | Output |
+|---|---|---|
+| `learning_ensure_profile` | `profileId`, `displayName` | `profileId` |
+| `learning_start_session` | `sessionId`, `profileId`, `packageId`, `packageVersion`, `lessonId`, `manifestHash?` | `sessionId`, `startedAt` |
+| `learning_save_attempt` | `attemptId`, `progressId`, `outboxId`, `eventId`, `sessionId`, `activityId`, `score`, `occurredAt`, `answers[]` | `attemptId`, `attemptNo`, `score`, `outboxEventId` |
+| `learning_get_summary` | `profileId` | `sessions`, `attempts`, `averageScore`, `recent[]` |
+
+- `learning_save_attempt` menulis attempt + responses + progress + outbox dalam **satu transaksi** (lihat [SCHEMA.md](../database/SCHEMA.md)).
+- Error terketik: `VALIDATION_FAILED`, `SESSION_NOT_FOUND`, `STATE_UNAVAILABLE`, `DATABASE_WRITE_FAILED`, `DATABASE_READ_FAILED`.
+- Semua ID dibuat di klien (`crypto.randomUUID`); Rust memvalidasi bentuknya.
+- Hanya tersedia di runtime Tauri; pratinjau browser menampilkan status "tidak disimpan".
+
 ## Server (konseptual) — USULAN
 
 | Method | Path |

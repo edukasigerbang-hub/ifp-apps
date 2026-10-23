@@ -13,6 +13,8 @@ src/
   components/ui/{PageHeader,StatusBadge,OfflineIndicator}.tsx
   screens/ScreenPlaceholder.tsx
   screens/LessonPlayer.tsx
+  screens/ResultsScreen.tsx
+  data/learningRepository.ts
   components/content/{ExplorationActivity,QuizActivity}.tsx
   content/
     activityRegistry.ts, validatePackage.ts, verifyAssets.ts, quiz.ts
@@ -20,7 +22,10 @@ src/
     schema/{primitives,manifest,lesson,activity}.ts
     __tests__/{validatePackage,quiz}.test.ts
   index.css, vite-env.d.ts
-src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/, src/, icons/
+src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/
+             src/{main,lib,db,error,learning}.rs
+             src/migrations/0001_init.sql
+             icons/
 scripts/     validate-content.ts, export-content-schema.ts
 content/     schema/*.json (generated), fixtures/*, packages/matematika-kelas3-pecahan/ (draft)
 ```

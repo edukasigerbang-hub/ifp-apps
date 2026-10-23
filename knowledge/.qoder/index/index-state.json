@@ -1,26 +1,26 @@
 {
   "status": "DEGRADED",
-  "reason": "Tidak ada backend index SQLite; mode fallback LIGHTWEIGHT_GREP",
+  "reason": "Tidak ada backend index SQLite untuk kode; mode fallback LIGHTWEIGHT_GREP",
   "index_mode": "LIGHTWEIGHT_GREP",
   "index_version": 1,
   "schema_version": 1,
-  "indexed_commit": "7aef912",
-  "generated_at": "2026-10-23T22:34:14+07:00",
-  "files_indexed": 89,
+  "indexed_commit": "31bac0e",
+  "generated_at": "2026-10-23T22:48:01+07:00",
+  "files_indexed": 95,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
   "scope": ["src/", "src-tauri/", "scripts/", "content/"],
   "breakdown": {
-    "src": 28,
-    "src_tauri": 28,
+    "src": 30,
+    "src_tauri": 32,
     "scripts": 4,
     "content": 29,
-    "note": "src termasuk loader paket, player, dan test kuis; content termasuk paket pilot; target/ dikecualikan"
+    "note": "src-tauri termasuk db/learning/error + migrasi SQL; Fase E belum di-commit saat snapshot ini"
   },
   "validation": {
-    "last_validated_at": "2026-10-23T22:34:14+07:00",
+    "last_validated_at": "2026-10-23T22:48:01+07:00",
     "result": "PASS",
-    "details": "File enumeration konsisten; bukan index simbol"
+    "details": "Enumerasi file konsisten; bukan index simbol"
   },
-  "next_action": "Bangun index SQLite setelah Fase E (repository/schema stabil)"
+  "next_action": "Bangun index SQLite kode setelah struktur stabil; jangan mencampur dengan DB runtime di app_data"
 }

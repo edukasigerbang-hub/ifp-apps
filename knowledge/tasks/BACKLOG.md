@@ -11,9 +11,9 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | B | Device technical spike | DV gate §5: Tauri hello-world (2 OS), SQLite migrasi, document picker/managed folder, media+WebGL, Ed25519 verify, app update preserves data | TODO — blocked by device |
 | C | Product configuration + app shell | `productConfig`, AppShell, navigasi, tema token, build kedua platform | PARTIAL — scaffold + web build PASS; build per-platform belum |
 | D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | DONE 2026-10-23 — 11 test PASS |
-| E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | TODO |
+| E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | DONE 2026-10-23 — 6 test Rust + E2E |
 | F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | TODO |
-| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — pratinjau eksplorasi+kuis, tanpa persistensi/DB |
+| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — eksplorasi+kuis + persistensi lokal; lifecycle penuh & gaya guru belum |
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | TODO |
 | I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | TODO |
 | J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |

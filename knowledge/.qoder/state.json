@@ -30,15 +30,15 @@
   "index_commit": "5fdced1",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 5,
+  "context_version": 6,
   "skill_registry_version": 0,
   "current_task": "T-005b Review pilot + sign-off OD-1",
-  "last_task": "T-006 Pratinjau Player (eksplorasi + kuis)",
+  "last_task": "T-007 Fase E — repository lokal (SQLite native)",
   "last_session_id": "SESSION-2026-10-23-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T22:16:42+07:00",
-  "last_updated": "2026-10-23T22:34:14+07:00",
-  "last_validation": "npm test 15 unit + 4 golden PASS; pilot VALID; Player flow PASS (skor 100); build PASS; cargo check PASS",
+  "last_updated": "2026-10-23T22:48:01+07:00",
+  "last_validation": "cargo test 6/6; E2E simpan lokal PASS (1 sesi/1 attempt/4 respons/1 outbox); npm test 15+4; build PASS",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -47,5 +47,5 @@
   "drift_detected": true,
   "drift_types": ["DOC_DRIFT"],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Tunjuk reviewer; review R1–R12; sign-off D1–D7; isi curriculumRefs; T-007 device spike; persistensi hasil belajar belum ada"
+  "next_step": "T-008 device spike; review R1–R12 + sign-off OD-1; sinkronisasi outbox (Fase I); backup/restore & retensi (OD-4)"
 }

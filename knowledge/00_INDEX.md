@@ -59,5 +59,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0001](decisions/ADR-0001-app-shell.md) | App shell Tauri 2 + React/TS | Accepted (scaffolded) |
 | [ADR-0002](decisions/ADR-0002-backend-deferred.md) | Backend ditunda sampai Fase I | Accepted (deferred) |
 | [ADR-0003](decisions/ADR-0003-content-package-contract.md) | Kontrak paket konten v1 (Zod) | Accepted (implemented) |
+| [ADR-0004](decisions/ADR-0004-local-persistence.md) | Persistensi lokal native (Rust + SQLite) | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

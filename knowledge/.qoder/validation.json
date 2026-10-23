@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T22:34:14+07:00",
+  "last_validated_at": "2026-10-23T22:48:01+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -59,6 +59,18 @@
       "command": "browser-use evaluate_script pada http://localhost:1420/#player",
       "result": "PASS",
       "details": "Eksplorasi langkah 1-4, selesai, kuis, skor 100/Lulus, submit enabled; screenshot desktop 1600x900 dan mobile 640x900 diperiksa"
+    },
+    {
+      "name": "rust_repository_tests",
+      "command": "cargo test (src-tauri)",
+      "result": "PASS",
+      "details": "6/6: simpan lengkap, rollback event duplikat, attempt_no naik, summary, migrasi idempoten, persistensi reopen"
+    },
+    {
+      "name": "e2e_learning_persistence",
+      "command": "WebView2 CDP (port 9223) + IFP_DATA_DIR=.tmp-data",
+      "result": "PASS",
+      "details": "Tersimpan lokal percobaan ke-1; DB: 1 profile, 1 session, 1 attempt, 4 responses, 1 progress, 1 outbox pending; Hasil Belajar menampilkan skor 100"
     },
     {
       "name": "content_validator_cli",
