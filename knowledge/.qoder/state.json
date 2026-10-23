@@ -40,12 +40,12 @@
   "last_updated": "2026-10-24T01:25:00+07:00",
   "last_validation": "cargo 47/47; npm 43/43 + golden; a11y audit 0 error/0 warning; E2E smoke 7/7, profile 7/7; npm run ci PASS",
   "last_test_status": "pass",
-  "last_command": "IMPLEMENT",
+  "last_command": "CLOSE",
   "last_command_status": "COMPLETED",
   "open_wave": null,
   "dirty": true,
   "drift_detected": true,
   "drift_types": ["DOC_DRIFT"],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Release blocked: OD-6 signing/identifier, embedded license key, production backend+CSP (OD-7), DV devices, content review (OD-1)"
+  "next_step": "Aktifkan remote+CI; perluas skenario E2E; a11y manual; gate rilis OD-1/4/5/6/7, key lisensi, DV perangkat"
 }

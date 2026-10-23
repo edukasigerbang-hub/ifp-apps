@@ -125,4 +125,15 @@
 
 ## Handoff
 
-Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft** dan tidak boleh dipublikasikan. Arsitektur penyimpanan: [ADR-0004](../decisions/ADR-0004-local-persistence.md).
+**Sesi ditutup 2026-10-24 01:25 +07:00.** Working tree bersih pada `906a29d`; tidak ada gelombang terbuka; aplikasi dev dihentikan.
+
+### Next Session Handoff
+
+1. **Aktifkan CI**: tambahkan remote GitHub lalu push — workflow `.github/workflows/ci.yml` belum pernah berjalan di remote.
+2. **Perluas E2E**: pindahkan alur konten/kuis/lisensi ke `scripts/e2e/scenarios/` (smoke & profile sudah ada).
+3. **A11y manual**: NVDA/TalkBack, zoom 200%/reflow, state dinamis (hasil kuis, konfirmasi hapus), target sentuh.
+4. **Gate rilis**: OD-1 sign-off konten, OD-4 retensi/privasi, OD-5 kebijakan lisensi, OD-6 signing/identifier, OD-7 backend+CSP produksi, key lisensi produksi, DV-01…DV-20.
+
+Resume minimal: `.qoder/state.json` → `.qoder/index/index-state.json` → `.qoder/context.md` → `.qoder/memory.md` → `CURRENT.md`.
+
+Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft**. Arsitektur: [ADR-0004](../decisions/ADR-0004-local-persistence.md); profil [ADR-0015](../decisions/ADR-0015-profiles-preferences.md)/[ADR-0018](../decisions/ADR-0018-profile-lifecycle.md); testing [ADR-0017](../decisions/ADR-0017-ci-e2e-harness.md)/[ADR-0019](../decisions/ADR-0019-automated-a11y-audit.md).
