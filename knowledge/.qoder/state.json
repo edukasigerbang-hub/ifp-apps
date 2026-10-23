@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "d26d776",
+  "commit": "c4b39f5",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -27,7 +27,7 @@
   "docs_index": "knowledge/00_INDEX.md",
   "code_index": "knowledge/.qoder/index/code.db",
   "index_version": 1,
-  "index_commit": "d26d776",
+  "index_commit": "c4b39f5",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
   "context_version": 7,
