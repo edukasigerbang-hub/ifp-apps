@@ -40,6 +40,28 @@ fn validate_type(value: &str) -> Result<String, AppError> {
     }
 }
 
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct DeleteProfileResult {
+    pub deleted_id: String,
+    pub active_profile: ProfileView,
+}
+
+#[derive(Debug, Default)]
+struct ProfileDataCounts {
+    sessions: i64,
+    attempts: i64,
+    responses: i64,
+    progress: i64,
+    outbox: i64,
+}
+
+impl ProfileDataCounts {
+    fn total(&self) -> i64 {
+        self.sessions + self.attempts + self.responses + self.progress + self.outbox
+    }
+}
+
 fn find_profile(connection: &Connection, id: &str) -> Result<Option<ProfileView>, AppError> {
     connection
         .query_row(
@@ -129,6 +151,185 @@ pub fn set_active_profile(connection: &Connection, id: &str) -> Result<ProfileVi
     Ok(profile)
 }
 
+pub fn rename_profile(
+    connection: &Connection,
+    id: &str,
+    display_name: &str,
+) -> Result<ProfileView, AppError> {
+    let name = validate_name(display_name)?;
+    let current = find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)?;
+
+    let duplicate: Option<String> = connection
+        .query_row(
+            "SELECT id FROM profiles
+             WHERE id <> ?1 AND lower(trim(display_name)) = lower(?2)
+             LIMIT 1",
+            params![id, name],
+            |row| row.get(0),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+    if duplicate.is_some() {
+        return Err(AppError::profile_name_taken());
+    }
+
+    if current.display_name == name {
+        return Ok(current);
+    }
+
+    connection
+        .execute(
+            "UPDATE profiles
+             SET display_name = ?2, updated_at = strftime('%Y-%m-%dT%H:%M:%fZ','now')
+             WHERE id = ?1",
+            params![id, name],
+        )
+        .map_err(AppError::write)?;
+
+    find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)
+}
+
+fn profile_data_counts(
+    connection: &Connection,
+    profile_id: &str,
+) -> Result<ProfileDataCounts, AppError> {
+    let sessions: i64 = connection
+        .query_row(
+            "SELECT COUNT(*) FROM learning_sessions WHERE profile_id = ?1",
+            [profile_id],
+            |row| row.get(0),
+        )
+        .map_err(AppError::read)?;
+    let attempts: i64 = connection
+        .query_row(
+            "SELECT COUNT(*) FROM activity_attempts
+             WHERE session_id IN (SELECT id FROM learning_sessions WHERE profile_id = ?1)",
+            [profile_id],
+            |row| row.get(0),
+        )
+        .map_err(AppError::read)?;
+    let responses: i64 = connection
+        .query_row(
+            "SELECT COUNT(*) FROM assessment_responses
+             WHERE attempt_id IN (
+               SELECT a.id FROM activity_attempts a
+               JOIN learning_sessions s ON a.session_id = s.id
+               WHERE s.profile_id = ?1
+             )",
+            [profile_id],
+            |row| row.get(0),
+        )
+        .map_err(AppError::read)?;
+    let progress: i64 = connection
+        .query_row(
+            "SELECT COUNT(*) FROM progress_snapshots WHERE profile_id = ?1",
+            [profile_id],
+            |row| row.get(0),
+        )
+        .map_err(AppError::read)?;
+    let outbox: i64 = connection
+        .query_row(
+            "SELECT COUNT(*) FROM sync_outbox
+             WHERE json_extract(payload_json, '$.profileId') = ?1",
+            [profile_id],
+            |row| row.get(0),
+        )
+        .map_err(AppError::read)?;
+
+    Ok(ProfileDataCounts {
+        sessions,
+        attempts,
+        responses,
+        progress,
+        outbox,
+    })
+}
+
+pub fn delete_profile(
+    connection: &mut Connection,
+    id: &str,
+    delete_data: bool,
+) -> Result<DeleteProfileResult, AppError> {
+    let target = find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)?;
+
+    let total: i64 = connection
+        .query_row("SELECT COUNT(*) FROM profiles", [], |row| row.get(0))
+        .map_err(AppError::read)?;
+    if total <= 1 {
+        return Err(AppError::profile_last_remaining());
+    }
+
+    let counts = profile_data_counts(connection, id)?;
+    if counts.total() > 0 && !delete_data {
+        return Err(AppError::profile_has_data(&format!(
+            "Profil \"{}\" memiliki {} sesi, {} percobaan, dan {} progres. Hapus profil beserta datanya untuk melanjutkan.",
+            target.display_name, counts.sessions, counts.attempts, counts.progress
+        )));
+    }
+
+    let transaction = connection.transaction().map_err(AppError::write)?;
+    let was_active = app_meta::get(&transaction, ACTIVE_PROFILE_KEY)?.as_deref() == Some(id);
+
+    if delete_data {
+        transaction
+            .execute(
+                "DELETE FROM assessment_responses
+                 WHERE attempt_id IN (
+                   SELECT a.id FROM activity_attempts a
+                   JOIN learning_sessions s ON a.session_id = s.id
+                   WHERE s.profile_id = ?1
+                 )",
+                [id],
+            )
+            .map_err(AppError::write)?;
+        transaction
+            .execute(
+                "DELETE FROM activity_attempts
+                 WHERE session_id IN (SELECT id FROM learning_sessions WHERE profile_id = ?1)",
+                [id],
+            )
+            .map_err(AppError::write)?;
+        transaction
+            .execute("DELETE FROM progress_snapshots WHERE profile_id = ?1", [id])
+            .map_err(AppError::write)?;
+        transaction
+            .execute("DELETE FROM learning_sessions WHERE profile_id = ?1", [id])
+            .map_err(AppError::write)?;
+        transaction
+            .execute(
+                "DELETE FROM sync_outbox WHERE json_extract(payload_json, '$.profileId') = ?1",
+                [id],
+            )
+            .map_err(AppError::write)?;
+    }
+
+    transaction
+        .execute("DELETE FROM profiles WHERE id = ?1", [id])
+        .map_err(AppError::write)?;
+
+    if was_active {
+        let next_id: Option<String> = transaction
+            .query_row(
+                "SELECT id FROM profiles ORDER BY created_at ASC, id ASC LIMIT 1",
+                [],
+                |row| row.get(0),
+            )
+            .optional()
+            .map_err(AppError::read)?;
+        if let Some(next_id) = next_id {
+            app_meta::set(&transaction, ACTIVE_PROFILE_KEY, &next_id)?;
+        }
+    }
+
+    let active_profile = get_active_profile(&transaction)?;
+    transaction.commit().map_err(AppError::write)?;
+
+    Ok(DeleteProfileResult {
+        deleted_id: target.id,
+        active_profile,
+    })
+}
+
 #[tauri::command]
 pub fn profile_list(db: State<'_, DbState>) -> Result<Vec<ProfileView>, AppError> {
     let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
@@ -158,6 +359,26 @@ pub fn profile_get_active(db: State<'_, DbState>) -> Result<ProfileView, AppErro
 pub fn profile_set_active(db: State<'_, DbState>, profile_id: String) -> Result<ProfileView, AppError> {
     let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
     set_active_profile(&connection, &profile_id)
+}
+
+#[tauri::command]
+pub fn profile_rename(
+    db: State<'_, DbState>,
+    profile_id: String,
+    display_name: String,
+) -> Result<ProfileView, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    rename_profile(&connection, &profile_id, &display_name)
+}
+
+#[tauri::command]
+pub fn profile_delete(
+    db: State<'_, DbState>,
+    profile_id: String,
+    delete_data: Option<bool>,
+) -> Result<DeleteProfileResult, AppError> {
+    let mut connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    delete_profile(&mut connection, &profile_id, delete_data.unwrap_or(false))
 }
 
 #[cfg(test)]
@@ -200,5 +421,128 @@ mod tests {
         assert!(create_profile(&connection, "   ", "student").is_err());
         assert!(create_profile(&connection, "Budi", "admin").is_err());
         assert!(set_active_profile(&connection, "missing").is_err());
+    }
+
+    #[test]
+    fn renames_profile_and_rejects_duplicates() {
+        let connection = test_connection();
+        let first = get_active_profile(&connection).expect("first");
+        let budi = create_profile(&connection, "Budi", "student").expect("budi");
+
+        let renamed = rename_profile(&connection, &budi.id, "  Budi Santoso  ").expect("rename");
+        assert_eq!(renamed.display_name, "Budi Santoso");
+
+        let duplicate = rename_profile(&connection, &budi.id, "siswa lokal").expect_err("duplicate");
+        assert_eq!(duplicate.code, "PROFILE_NAME_TAKEN");
+
+        assert!(rename_profile(&connection, &budi.id, "   ").is_err());
+        assert_eq!(
+            rename_profile(&connection, &budi.id, "Budi Santoso")
+                .expect("same name")
+                .display_name,
+            "Budi Santoso"
+        );
+        assert_eq!(
+            find_profile(&connection, &first.id)
+                .expect("find")
+                .expect("exists")
+                .display_name,
+            "Siswa Lokal"
+        );
+    }
+
+    fn seed_learning_data(connection: &Connection, profile_id: &str) {
+        connection
+            .execute(
+                "INSERT INTO content_packages
+                   (package_id, version, source, status, installed_at)
+                 VALUES ('pkg-test', '1.0.0', 'bundled', 'active', '2026-10-24T00:00:00Z')",
+                [],
+            )
+            .expect("package");
+        connection
+            .execute(
+                "INSERT INTO learning_sessions
+                   (id, profile_id, lesson_id, package_id, package_version, started_at, state)
+                 VALUES ('s1', ?1, 'lesson-1', 'pkg-test', '1.0.0', '2026-10-24T00:00:00Z', 'active')",
+                [profile_id],
+            )
+            .expect("session");
+        connection
+            .execute(
+                "INSERT INTO activity_attempts
+                   (id, session_id, activity_id, attempt_no, started_at, completed_at, score, state)
+                 VALUES ('a1', 's1', 'activity-1', 1, '2026-10-24T00:00:00Z', '2026-10-24T00:01:00Z', 80, 'completed')",
+                [],
+            )
+            .expect("attempt");
+        connection
+            .execute(
+                "INSERT INTO assessment_responses
+                   (id, attempt_id, question_id, response_json, is_correct, answered_at)
+                 VALUES ('r1', 'a1', 'q1', '{\"optionId\":\"b\"}', 1, '2026-10-24T00:00:30Z')",
+                [],
+            )
+            .expect("response");
+        connection
+            .execute(
+                "INSERT INTO progress_snapshots
+                   (id, profile_id, lesson_id, package_version, progress_json, updated_at)
+                 VALUES ('p1', ?1, 'lesson-1', '1.0.0', '{}', '2026-10-24T00:01:00Z')",
+                [profile_id],
+            )
+            .expect("progress");
+        connection
+            .execute(
+                "INSERT INTO sync_outbox
+                   (id, event_id, event_type, payload_json, created_at, attempts, state)
+                 VALUES ('o1', 'e1', 'assessment.completed', ?1, '2026-10-24T00:01:00Z', 0, 'pending')",
+                [format!(
+                    "{{\"eventId\":\"e1\",\"profileId\":\"{profile_id}\"}}"
+                )],
+            )
+            .expect("outbox");
+    }
+
+    #[test]
+    fn deletes_profile_and_switches_active() {
+        let mut connection = test_connection();
+        let first = get_active_profile(&connection).expect("first");
+        let second = create_profile(&connection, "Budi", "student").expect("second");
+        assert_eq!(get_active_profile(&connection).expect("active").id, first.id);
+
+        let deleted = delete_profile(&mut connection, &first.id, false).expect("delete");
+        assert_eq!(deleted.deleted_id, first.id);
+        assert_eq!(deleted.active_profile.id, second.id);
+        assert_eq!(list_profiles(&connection).expect("list").len(), 1);
+
+        let last = delete_profile(&mut connection, &second.id, false).expect_err("last");
+        assert_eq!(last.code, "PROFILE_LAST_REMAINING");
+    }
+
+    #[test]
+    fn requires_confirmation_and_removes_profile_data() {
+        let mut connection = test_connection();
+        let first = get_active_profile(&connection).expect("first");
+        let second = create_profile(&connection, "Budi", "student").expect("second");
+        seed_learning_data(&connection, &first.id);
+
+        let refused = delete_profile(&mut connection, &first.id, false).expect_err("has data");
+        assert_eq!(refused.code, "PROFILE_HAS_DATA");
+        let counts = profile_data_counts(&connection, &first.id).expect("counts");
+        assert_eq!(counts.total(), 5);
+
+        let deleted = delete_profile(&mut connection, &first.id, true).expect("delete data");
+        assert_eq!(deleted.active_profile.id, second.id);
+        let counts = profile_data_counts(&connection, &first.id).expect("counts after");
+        assert_eq!(counts.total(), 0);
+        let sessions: i64 = connection
+            .query_row("SELECT COUNT(*) FROM learning_sessions", [], |row| row.get(0))
+            .expect("sessions");
+        assert_eq!(sessions, 0);
+        let outbox: i64 = connection
+            .query_row("SELECT COUNT(*) FROM sync_outbox", [], |row| row.get(0))
+            .expect("outbox");
+        assert_eq!(outbox, 0);
     }
 }

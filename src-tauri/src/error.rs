@@ -88,6 +88,22 @@ impl AppError {
         Self::new("STATE_UNAVAILABLE", "Penyimpanan lokal tidak tersedia.")
     }
 
+    pub fn profile_not_found() -> Self {
+        Self::new("PROFILE_NOT_FOUND", "Profil tidak ditemukan.")
+    }
+
+    pub fn profile_name_taken() -> Self {
+        Self::new("PROFILE_NAME_TAKEN", "Nama profil sudah dipakai.")
+    }
+
+    pub fn profile_last_remaining() -> Self {
+        Self::new("PROFILE_LAST_REMAINING", "Profil terakhir tidak dapat dihapus.")
+    }
+
+    pub fn profile_has_data(message: &str) -> Self {
+        Self::new("PROFILE_HAS_DATA", message)
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")

@@ -21,6 +21,8 @@
 | CI otomatis | `.github/workflows/ci.yml` (web + Rust) dan `npm run ci` lokal; belum pernah jalan di remote karena repo belum punya remote |
 | Harness E2E dapat diulang | `npm run e2e` — 7 pemeriksaan smoke PASS (bridge Tauri, navigasi, profil default, screenshot) |
 | Daftar profil kosong saat first run | Ditemukan harness E2E; `SettingsScreen` kini memuat profil aktif sebelum daftar |
+| Rename & hapus profil | 6 test Rust (unik, trim, profil terakhir, konfirmasi data, hapus transaksional) + E2E `npm run e2e:profile` |
+| Hapus profil berdata (UI) | Rust PASS; cabang `PROFILE_HAS_DATA` → panel kedua belum diotomasi (butuh sesi belajar nyata) |
 
 ## Terbuka
 

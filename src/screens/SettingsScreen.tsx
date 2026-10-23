@@ -12,8 +12,10 @@ import {
 import { exportDiagnostics, pickDiagnosticsDestination } from "../data/diagnosticsRepository";
 import {
   createProfile,
+  deleteProfile,
   getActiveProfile,
   listProfiles,
+  renameProfile,
   setActiveProfile,
   type Profile
 } from "../data/profileRepository";
@@ -31,6 +33,12 @@ type PageState =
   | { status: "preview" }
   | { status: "error"; message: string };
 
+interface DeleteCandidate {
+  profile: Profile;
+  requiresData: boolean;
+  message: string | null;
+}
+
 function formatDate(value: string | null): string {
   if (!value) {
     return "—";
@@ -40,6 +48,18 @@ function formatDate(value: string | null): string {
     return value;
   }
   return date.toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" });
+}
+
+function profileErrorDetails(caught: unknown): { code?: string; message: string } {
+  if (caught && typeof caught === "object") {
+    const typed = caught as { code?: unknown; message?: unknown };
+    return {
+      code: typeof typed.code === "string" ? typed.code : undefined,
+      message:
+        typeof typed.message === "string" ? typed.message : "Profil gagal diproses."
+    };
+  }
+  return { message: "Profil gagal diproses." };
 }
 
 export function SettingsScreen() {
@@ -63,6 +83,9 @@ export function SettingsScreen() {
   const [profileBusy, setProfileBusy] = useState(false);
   const [profileMessage, setProfileMessage] = useState<string | null>(null);
   const [profileError, setProfileError] = useState<string | null>(null);
+  const [renamingId, setRenamingId] = useState<string | null>(null);
+  const [renameValue, setRenameValue] = useState("");
+  const [deleteCandidate, setDeleteCandidate] = useState<DeleteCandidate | null>(null);
   const [preferences, setPreferencesState] = useState<Preferences | null>(null);
   const [preferencesMessage, setPreferencesMessage] = useState<string | null>(null);
   const [preferencesError, setPreferencesError] = useState<string | null>(null);
@@ -199,6 +222,12 @@ export function SettingsScreen() {
     }
   }
 
+  async function reloadProfiles() {
+    const [profileList, active] = await Promise.all([listProfiles(), getActiveProfile()]);
+    setProfiles(profileList);
+    setActiveProfileState(active);
+  }
+
   async function handleCreateProfile() {
     setProfileError(null);
     setProfileMessage(null);
@@ -206,13 +235,11 @@ export function SettingsScreen() {
     try {
       const created = await createProfile(newProfileName, newProfileType);
       await setActiveProfile(created.id);
-      const [profileList, active] = await Promise.all([listProfiles(), getActiveProfile()]);
-      setProfiles(profileList);
-      setActiveProfileState(active);
+      await reloadProfiles();
       setNewProfileName("");
       setProfileMessage(`Profil "${created.displayName}" dibuat dan diaktifkan.`);
     } catch (caught) {
-      setProfileError(caught instanceof Error ? caught.message : "Profil gagal dibuat.");
+      setProfileError(profileErrorDetails(caught).message);
     } finally {
       setProfileBusy(false);
     }
@@ -227,7 +254,60 @@ export function SettingsScreen() {
       setActiveProfileState(active);
       setProfileMessage(`Profil aktif: ${active.displayName}.`);
     } catch (caught) {
-      setProfileError(caught instanceof Error ? caught.message : "Profil gagal diaktifkan.");
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  function startRename(profile: Profile) {
+    setProfileError(null);
+    setProfileMessage(null);
+    setDeleteCandidate(null);
+    setRenamingId(profile.id);
+    setRenameValue(profile.displayName);
+  }
+
+  async function handleRename() {
+    if (!renamingId) return;
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const renamed = await renameProfile(renamingId, renameValue);
+      await reloadProfiles();
+      setRenamingId(null);
+      setRenameValue("");
+      setProfileMessage(`Nama profil diperbarui menjadi "${renamed.displayName}".`);
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleDeleteProfile(profile: Profile, deleteData: boolean) {
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const result = await deleteProfile(profile.id, deleteData);
+      await reloadProfiles();
+      setDeleteCandidate(null);
+      if (renamingId === profile.id) {
+        setRenamingId(null);
+      }
+      setProfileMessage(
+        `Profil "${profile.displayName}" dihapus. Profil aktif: ${result.activeProfile.displayName}.`
+      );
+    } catch (caught) {
+      const details = profileErrorDetails(caught);
+      if (details.code === "PROFILE_HAS_DATA") {
+        setDeleteCandidate({ profile, requiresData: true, message: details.message });
+      } else {
+        setDeleteCandidate(null);
+        setProfileError(details.message);
+      }
     } finally {
       setProfileBusy(false);
     }
@@ -261,28 +341,132 @@ export function SettingsScreen() {
           </p>
 
           {profiles.length > 0 && (
-            <div className="mt-3 flex flex-wrap gap-2">
+            <ul className="mt-3 space-y-2">
               {profiles.map((profile) => {
                 const active = activeProfile?.id === profile.id;
+                const isRenaming = renamingId === profile.id;
+                const candidate =
+                  deleteCandidate?.profile.id === profile.id ? deleteCandidate : null;
                 return (
-                  <button
+                  <li
                     key={profile.id}
-                    type="button"
-                    aria-pressed={active}
-                    disabled={profileBusy}
-                    onClick={() => void handleSelectProfile(profile.id)}
-                    className={`min-h-11 rounded-control px-4 py-2 text-left disabled:opacity-60 ${
-                      active ? "bg-navy text-white" : "border border-ink/15 bg-surface hover:bg-paper"
-                    }`}
+                    className="rounded-control border border-ink/10 bg-paper/60"
                   >
-                    <span className="block text-sm font-medium">{profile.displayName}</span>
-                    <span className={`block text-xs ${active ? "text-white/70" : "text-muted"}`}>
-                      {profile.profileType === "teacher" ? "Guru" : "Siswa"}
-                    </span>
-                  </button>
+                    <div className="flex flex-wrap items-center gap-2 p-2">
+                      <button
+                        type="button"
+                        aria-pressed={active}
+                        disabled={profileBusy || isRenaming}
+                        onClick={() => void handleSelectProfile(profile.id)}
+                        className={`min-h-11 flex-1 rounded-control px-3 py-2 text-left disabled:opacity-60 ${
+                          active
+                            ? "bg-navy text-white"
+                            : "border border-ink/15 bg-surface hover:bg-paper"
+                        }`}
+                      >
+                        <span className="block text-sm font-medium">{profile.displayName}</span>
+                        <span
+                          className={`block text-xs ${active ? "text-white/70" : "text-muted"}`}
+                        >
+                          {profile.profileType === "teacher" ? "Guru" : "Siswa"}
+                        </span>
+                      </button>
+
+                      {isRenaming ? (
+                        <form
+                          className="flex flex-wrap items-center gap-2"
+                          onSubmit={(event) => {
+                            event.preventDefault();
+                            void handleRename();
+                          }}
+                        >
+                          <input
+                            type="text"
+                            value={renameValue}
+                            autoFocus
+                            aria-label={`Nama baru untuk ${profile.displayName}`}
+                            onChange={(event) => setRenameValue(event.target.value)}
+                            className="min-h-11 w-48 rounded-control border border-ink/15 px-3 text-sm"
+                          />
+                          <button
+                            type="submit"
+                            disabled={profileBusy || renameValue.trim().length === 0}
+                            className="min-h-11 rounded-control bg-primary px-4 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
+                          >
+                            Simpan
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setRenamingId(null)}
+                            disabled={profileBusy}
+                            className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                          >
+                            Batal
+                          </button>
+                        </form>
+                      ) : (
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => startRename(profile)}
+                            disabled={profileBusy}
+                            className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                          >
+                            Ubah nama
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setDeleteCandidate({ profile, requiresData: false, message: null })
+                            }
+                            disabled={profileBusy || profiles.length <= 1}
+                            title={
+                              profiles.length <= 1
+                                ? "Profil terakhir tidak dapat dihapus"
+                                : undefined
+                            }
+                            className="min-h-11 rounded-control border border-danger/40 px-4 text-sm font-medium text-danger hover:bg-danger/5 disabled:opacity-40"
+                          >
+                            Hapus
+                          </button>
+                        </div>
+                      )}
+                    </div>
+
+                    {candidate && (
+                      <div className="border-t border-ink/10 p-3">
+                        {candidate.requiresData ? (
+                          <p className="text-sm text-danger">{candidate.message}</p>
+                        ) : (
+                          <p className="text-sm">
+                            Hapus profil "{profile.displayName}"? Tindakan ini tidak dapat
+                            dibatalkan.
+                          </p>
+                        )}
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          <button
+                            type="button"
+                            onClick={() => void handleDeleteProfile(profile, candidate.requiresData)}
+                            disabled={profileBusy}
+                            className="min-h-11 rounded-control bg-danger px-4 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
+                          >
+                            {candidate.requiresData ? "Hapus profil dan data" : "Hapus"}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setDeleteCandidate(null)}
+                            disabled={profileBusy}
+                            className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                          >
+                            Batal
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           )}
 
           <div className="mt-4 flex flex-wrap items-end gap-3">

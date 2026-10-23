@@ -26,3 +26,19 @@ export async function getActiveProfile(): Promise<Profile> {
 export async function setActiveProfile(profileId: string): Promise<Profile> {
   return invoke<Profile>("profile_set_active", { profileId });
 }
+
+export interface ProfileDeletionResult {
+  deletedId: string;
+  activeProfile: Profile;
+}
+
+export async function renameProfile(profileId: string, displayName: string): Promise<Profile> {
+  return invoke<Profile>("profile_rename", { profileId, displayName });
+}
+
+export async function deleteProfile(
+  profileId: string,
+  deleteData = false
+): Promise<ProfileDeletionResult> {
+  return invoke<ProfileDeletionResult>("profile_delete", { profileId, deleteData });
+}

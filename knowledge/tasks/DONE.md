@@ -362,3 +362,16 @@
 **Verifikasi:** `npm run ci` PASS (43 web + 20 server, build PASS); `npm run e2e` PASS 7 pemeriksaan. Harness menemukan dan menutup bug daftar profil kosong saat first run.
 
 **Belum:** workflow belum berjalan di remote (repo belum punya remote); skenario E2E baru smoke.
+
+### T-023 — Siklus hidup profil
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- `profile_rename`: trim, 1–80 karakter, unik case-insensitive, no-op bila sama.
+- `profile_delete`: menolak profil terakhir; menolak bila ada data kecuali `deleteData`; hapus respons→percobaan→progres→sesi→outbox→profil dalam satu transaksi; aktif pindah ke profil tertua tersisa.
+- UI Pengaturan: form rename inline, konfirmasi hapus dua langkah, peringatan data ikut terhapus.
+- ADR-0018.
+
+**Verifikasi:** `cargo test` 47/47 (3 test baru); `npm test` 43/43 + golden; `npm run build` PASS; `npm run e2e:profile` PASS 7 pemeriksaan.
+
+**Belum:** jalur konfirmasi hapus berdata belum diotomasi di UI; tanpa audit trail/undo.

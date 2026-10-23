@@ -75,6 +75,8 @@ pub fn run() {
       profile::profile_create,
       profile::profile_get_active,
       profile::profile_set_active,
+      profile::profile_rename,
+      profile::profile_delete,
       preferences::preferences_get,
       preferences::preferences_set
     ])
