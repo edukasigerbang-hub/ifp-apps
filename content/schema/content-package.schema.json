@@ -1,0 +1,595 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "manifestVersion": {
+          "type": "number",
+          "const": 1
+        },
+        "packageId": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 64,
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "packageVersion": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+        },
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 200
+        },
+        "locale": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"
+        },
+        "gradeLevels": {
+          "minItems": 1,
+          "maxItems": 6,
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          }
+        },
+        "subjects": {
+          "minItems": 1,
+          "maxItems": 24,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          }
+        },
+        "curriculumRefs": {
+          "maxItems": 24,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "framework": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 32
+              }
+            },
+            "required": [
+              "framework",
+              "id",
+              "version"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "assets": {
+          "maxItems": 5000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "mediaType": {
+                "type": "string",
+                "enum": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp",
+                  "image/avif",
+                  "audio/mpeg",
+                  "audio/wav",
+                  "audio/ogg",
+                  "video/mp4",
+                  "video/webm",
+                  "application/json",
+                  "text/plain"
+                ]
+              },
+              "sizeBytes": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 2147483648
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "mediaType",
+              "sizeBytes",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "dependencies": {
+          "maxItems": 64,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "packageId": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 64,
+                "pattern": "^[a-z0-9][a-z0-9-]*$"
+              },
+              "versionRange": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64
+              }
+            },
+            "required": [
+              "packageId",
+              "versionRange"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "signature": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 8192
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "releaseState": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "validated",
+            "approved",
+            "published",
+            "withdrawn"
+          ]
+        }
+      },
+      "required": [
+        "manifestVersion",
+        "packageId",
+        "packageVersion",
+        "schemaVersion",
+        "title",
+        "locale",
+        "gradeLevels",
+        "subjects",
+        "curriculumRefs",
+        "assets",
+        "dependencies",
+        "signature"
+      ],
+      "additionalProperties": false
+    },
+    "lessons": {
+      "minItems": 1,
+      "maxItems": 200,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lessonId": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "packageId": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 200
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "curriculumRefs": {
+            "default": [],
+            "maxItems": 24,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "framework": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 32
+                }
+              },
+              "required": [
+                "framework",
+                "id",
+                "version"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "learningObjectives": {
+            "minItems": 1,
+            "maxItems": 20,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          },
+          "activityIds": {
+            "minItems": 1,
+            "maxItems": 50,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            }
+          },
+          "assessmentRefs": {
+            "default": [],
+            "maxItems": 50,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 64,
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            }
+          },
+          "assetRefs": {
+            "default": [],
+            "maxItems": 200,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "accessibilityMetadata": {
+            "type": "object",
+            "properties": {
+              "altText": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "transcriptPath": {
+                "type": "string"
+              },
+              "captionsPath": {
+                "type": "string"
+              },
+              "reducedMotionSupported": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "contentVersion": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+          },
+          "reviewStatus": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "reviewed",
+              "approved"
+            ]
+          }
+        },
+        "required": [
+          "lessonId",
+          "packageId",
+          "title",
+          "summary",
+          "curriculumRefs",
+          "learningObjectives",
+          "activityIds",
+          "assessmentRefs",
+          "assetRefs",
+          "contentVersion",
+          "reviewStatus"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "activities": {
+      "minItems": 1,
+      "maxItems": 1000,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "multiple-choice",
+              "true-false",
+              "matching",
+              "ordering",
+              "short-answer",
+              "exploration"
+            ]
+          },
+          "schemaVersion": {
+            "type": "string",
+            "const": "1.0.0"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 200
+          },
+          "instructions": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "assets": {
+            "default": [],
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "interactionConfig": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {}
+          },
+          "assessmentConfig": {
+            "type": "object",
+            "properties": {
+              "questions": {
+                "minItems": 1,
+                "maxItems": 100,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "questionId": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 64,
+                      "pattern": "^[a-z0-9][a-z0-9-]*$"
+                    },
+                    "prompt": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2000
+                    },
+                    "responseType": {
+                      "type": "string",
+                      "enum": [
+                        "single-choice",
+                        "multiple-choice",
+                        "boolean",
+                        "text"
+                      ]
+                    },
+                    "options": {
+                      "minItems": 2,
+                      "maxItems": 12,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "optionId": {
+                            "type": "string",
+                            "minLength": 3,
+                            "maxLength": 64,
+                            "pattern": "^[a-z0-9][a-z0-9-]*$"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 500
+                          }
+                        },
+                        "required": [
+                          "optionId",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "correctResponse": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 500
+                        },
+                        {
+                          "minItems": 1,
+                          "maxItems": 12,
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "maxLength": 500
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "questionId",
+                    "prompt",
+                    "responseType"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "passingScore": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "questions"
+            ],
+            "additionalProperties": false
+          },
+          "completionPolicy": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "view",
+                  "complete-all",
+                  "score-threshold"
+                ]
+              },
+              "threshold": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "type"
+            ],
+            "additionalProperties": false
+          },
+          "feedbackPolicy": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string",
+                "enum": [
+                  "immediate",
+                  "after-attempt",
+                  "after-session"
+                ]
+              },
+              "allowRetry": {
+                "type": "boolean"
+              },
+              "showCorrectAnswer": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "mode",
+              "allowRetry",
+              "showCorrectAnswer"
+            ],
+            "additionalProperties": false
+          },
+          "runtimeCapabilities": {
+            "default": [],
+            "maxItems": 5,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "touch",
+                "keyboard",
+                "audio",
+                "video",
+                "webgl"
+              ]
+            }
+          },
+          "accessibilityMetadata": {
+            "type": "object",
+            "properties": {
+              "altText": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "transcriptPath": {
+                "type": "string"
+              },
+              "captionsPath": {
+                "type": "string"
+              },
+              "reducedMotionSupported": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "activityId",
+          "type",
+          "schemaVersion",
+          "title",
+          "instructions",
+          "assets",
+          "interactionConfig",
+          "completionPolicy",
+          "feedbackPolicy",
+          "runtimeCapabilities"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "manifest",
+    "lessons",
+    "activities"
+  ],
+  "additionalProperties": false
+}

@@ -9,6 +9,7 @@
     "status": "PROPOSED"
   },
   "phase": "A — pre-implementation",
+  "content_schema_version": "1.0.0",
   "detected_stack": {
     "source_code": false,
     "package_json": false,

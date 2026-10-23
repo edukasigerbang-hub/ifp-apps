@@ -1,0 +1,13 @@
+{
+  "lessonId": "lesson-referensi",
+  "packageId": "fixture-lain",
+  "title": "Fixture: Lesson dengan Referensi Rusak",
+  "summary": "Fixture negatif untuk menguji referensi aktivitas, asesmen, dan aset.",
+  "curriculumRefs": [],
+  "learningObjectives": ["Menguji referensi lintas berkas"],
+  "activityIds": ["activity-no-assessment", "activity-missing"],
+  "assessmentRefs": ["activity-no-assessment"],
+  "assetRefs": ["assets/tidak-ada.png"],
+  "contentVersion": "1.0.0",
+  "reviewStatus": "draft"
+}

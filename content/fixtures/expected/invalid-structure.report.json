@@ -1,0 +1,22 @@
+{
+  "package": null,
+  "status": "INVALID",
+  "issues": [
+    {
+      "code": "CONTENT_PACKAGE_INVALID",
+      "message": "field terlarang 'script' tidak boleh ada di paket konten",
+      "path": "activities[0].interactionConfig.script"
+    },
+    {
+      "code": "CONTENT_PACKAGE_INVALID",
+      "message": "path tidak boleh memuat segmen kosong, '.' atau '..'",
+      "path": "manifest.assets.0.path"
+    },
+    {
+      "code": "CONTENT_PACKAGE_INVALID",
+      "message": "activityId duplikat: activity-ok",
+      "path": "lessons.0.activityIds.1"
+    }
+  ],
+  "warnings": []
+}

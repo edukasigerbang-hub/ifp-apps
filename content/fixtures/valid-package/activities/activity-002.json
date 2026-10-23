@@ -1,0 +1,27 @@
+{
+  "activityId": "activity-kuis-pecahan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Fixture: Kuis Pilihan Ganda",
+  "instructions": "Contoh soal fiktif untuk menguji skema asesmen. Bukan bank soal produksi.",
+  "assets": [],
+  "interactionConfig": { "layout": "single-question" },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "q-contoh",
+        "prompt": "Contoh soal: pilih opsi kedua.",
+        "responseType": "single-choice",
+        "options": [
+          { "optionId": "opt-a", "text": "Opsi A" },
+          { "optionId": "opt-b", "text": "Opsi B" }
+        ],
+        "correctResponse": "opt-b"
+      }
+    ],
+    "passingScore": 70
+  },
+  "completionPolicy": { "type": "score-threshold", "threshold": 70 },
+  "feedbackPolicy": { "mode": "after-attempt", "allowRetry": true, "showCorrectAnswer": false },
+  "runtimeCapabilities": ["touch", "keyboard"]
+}

@@ -2,43 +2,58 @@
 
 **Sesi:** SESSION-2026-10-23-1
 **Autonomy:** L1 (BALANCED)
-**Change class sesi:** SMALL (dokumentasi/inisialisasi, tanpa kode)
-**Status:** COMPLETED (inisialisasi) → project WIP
+**Status:** WIP — prasyarat konten sebagian terpenuhi; menunggu keputusan manusia
 
-## Task aktif
+## Selesai sesi ini
 
-**T-000 — Inisialisasi project knowledge OS dari HLD & LLD** ✅ selesai 2026-10-23.
+| ID | Task | Hasil |
+|---|---|---|
+| T-000 | Inisialisasi knowledge OS | 20 artefak knowledge + state engine |
+| T-001 | Fase A — Git + ADR | Repo Git, commit `503c2fc`, ADR-0001/0002 |
+| T-002 | Fase C — app shell | Tauri 2 + React 19 + TS + Vite + Tailwind; 8 layar placeholder |
+| T-003 | Fase D — schema konten | Zod schema v1 + validator + verifikasi hash + CLI + JSON Schema |
+| T-004 | Prasyarat materi | Proposal OD-1, rubrik review pedagogis, ADR-0003 |
 
-Acceptance criteria:
-- [x] Artefak wajib `knowledge/` dibuat dengan isi nyata (bukan placeholder)
-- [x] State engine `.qoder/` dibuat dan valid
-- [x] Index kode dinyatakan UNAVAILABLE secara jujur (tidak ada kode)
-- [x] Gap & open decision tercatat di BACKLOG
-- [x] Handoff berikutnya ditentukan
+## Status prasyarat materi pembelajaran
 
-## Next task (belum dimulai — butuh keputusan user)
+| Prasyarat | Status | Bukti |
+|---|---|---|
+| Kontrak/schema paket konten | **DONE** | [SCHEMA.md](../content/SCHEMA.md), `schemaVersion 1.0.0` |
+| Validator + test | **DONE** | `npm test` → 11/11 PASS; fixture VALID |
+| Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
+| Rubrik review pedagogis | **READY (template)** | [REVIEW_RUBRIC.md](../content/REVIEW_RUBRIC.md) — 0 materi direview |
+| Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
+| Hak/lisensi aset | **BELUM** | Belum ada aset produksi |
 
-**T-001 — Fase A: Repo reconnaissance + ADR confirmation** (dari Implementation Contract §7)
-1. Putuskan: inisialisasi Git? (saat ini **bukan** repo)
-2. Putuskan app shell: Tauri 2 + Rust (HLD) — konfirmasi sebelum scaffold
-3. Catat ADR-0001 (stack & struktur repo), ADR-0002 (pilihan backend TS vs FastAPI)
-4. Setelah itu: Fase B technical spike perangkat (Tauri hello-world, SQLite, file picker, media/WebGL, Ed25519).
+## Next task
 
-## Konteks minimal untuk sesi berikutnya
+**T-005 — Sign-off OD-1 lalu pilot unit** (butuh keputusan user)
+1. Product Owner + Curriculum Lead memutuskan D1–D7 di proposal → catat ADR-0004.
+2. Tunjuk reviewer (curriculum + bahasa + aksesibilitas).
+3. Pilih 1 unit pilot (kelas, mapel, topik).
+4. Produksi pilot → `npm run content:validate` → review R1–R12 → baru boleh `approved`.
 
-- Sumber: `HLD.md` (v1.1), `LLD.md`, `IMPLEMENTATION_CONTRACT.md`, `DEVICE_VALIDATION.md`.
-- Tidak ada kode, tidak ada `package.json`, tidak ada `Cargo.toml`, tidak ada Git.
-- Jangan mengklaim kompatibilitas platform tanpa DV-01…DV-20 berstatus PASS (saat ini NOT RUN).
+## Verifikasi sesi ini
+
+| Check | Hasil |
+|---|---|
+| `npm test` | **PASS** — 11 unit test + 4 golden fixture |
+| `npm run fixtures:check` | **PASS** — 4/4 cocok dengan expected (VALID/3/7/1 issue) |
+| `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
+| `npm run content:schema` | **PASS** — 4 JSON Schema di `content/schema/` |
+| `npm run build` | **PASS** |
+| Review pedagogis | **NOT DONE** — tidak boleh diklaim |
+| DV-01…DV-20 | NOT RUN |
 
 ## Blocker
 
 | ID | Blocker | Dampak |
 |---|---|---|
-| OD-1 | Daftar resmi mata pelajaran & referensi kurikulum | Konten & schema kurikulum tidak bisa difinalkan |
-| OD-6 | Nama publisher resmi & identifier final | Rilis & signing |
-| OD-7 | API schema, auth, error contract | Backend & sync tidak bisa diimplementasikan |
-| GAP-1 | Prototype `index.html` dirujuk HLD §13 tetapi tidak ada | Referensi UI hilang |
+| OD-1 | Matriks mapel/kurikulum belum disetujui | Konten pilot tidak boleh diklaim selaras kurikulum |
+| — | Reviewer manusia belum ditunjuk | `reviewStatus: approved` tidak boleh disetel |
+| GAP-1 | Prototype `index.html` tidak ada | Referensi UI visual hilang |
+| — | Scaffold + Fase D belum di-commit | Belum ada baseline untuk perubahan ini |
 
 ## Handoff
 
-Mulai dari `knowledge/00_INDEX.md`, lalu tugas **T-001** di atas. Jangan scaffold kode sebelum user memilih Git + ADR app shell.
+Mulai dari [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7, produksi konten hanya boleh berupa **draft internal** yang tidak dipublikasikan.

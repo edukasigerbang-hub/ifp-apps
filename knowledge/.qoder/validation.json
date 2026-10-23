@@ -1,40 +1,119 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T21:58:06+07:00",
-  "validation_mode": "static-only",
+  "last_validated_at": "2026-10-23T22:16:42+07:00",
+  "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
       "name": "json_parse",
-      "target": ["knowledge/.qoder/state.json", "knowledge/.qoder/project.json", "knowledge/.qoder/context.json", "knowledge/.qoder/routing.json", "knowledge/.qoder/index/index-state.json"],
+      "target": [
+        "knowledge/.qoder/state.json",
+        "knowledge/.qoder/project.json",
+        "knowledge/.qoder/context.json",
+        "knowledge/.qoder/routing.json",
+        "knowledge/.qoder/index/index-state.json",
+        "knowledge/.qoder/validation.json"
+      ],
       "command": "node -e JSON.parse(...)",
       "result": "PASS",
-      "details": "5/5 parsed"
+      "details": "Semua JSON state terparse"
     },
     {
       "name": "source_documents_unchanged",
       "target": ["HLD.md", "LLD.md", "IMPLEMENTATION_CONTRACT.md", "DEVICE_VALIDATION.md"],
       "command": "sha256sum",
       "result": "PASS",
-      "details": "Hash sebelum dan sesudah inisialisasi identik"
+      "details": "Hash identik sebelum dan sesudah implementasi"
     },
     {
-      "name": "application_tests",
-      "target": ["src/", "src-tauri/"],
-      "command": "none",
-      "result": "NOT RUN",
-      "details": "Belum ada source code; tidak ada test runner"
+      "name": "frontend_typecheck_build",
+      "command": "npm run build",
+      "result": "PASS",
+      "details": "tsc --noEmit + vite build; build 372ms; 26 modules"
     },
     {
-      "name": "lint_typecheck_build",
+      "name": "rust_cargo_check",
+      "command": "cargo check (src-tauri)",
+      "result": "PASS",
+      "details": "Exit 0; build awal 4m07s; re-check 0.56s"
+    },
+    {
+      "name": "content_unit_tests",
+      "command": "npm test (vitest run && tsx scripts/check-fixtures.ts)",
+      "result": "PASS",
+      "details": "11/11 unit test: valid fixture, schema unsupported, traversal, forbidden field, duplicate, refs, assessment, hash"
+    },
+    {
+      "name": "fixture_golden_check",
+      "command": "npm run fixtures:check",
+      "result": "PASS",
+      "details": "4/4 fixture cocok: valid (0 issue), invalid-structure (3), invalid-references (7), unsupported-schema (1)"
+    },
+    {
+      "name": "content_validator_cli",
+      "command": "npm run content:validate -- content/fixtures/valid-package",
+      "result": "PASS",
+      "details": "status VALID; 2 warning (draft, curriculumRefs kosong)"
+    },
+    {
+      "name": "json_schema_export",
+      "command": "npm run content:schema",
+      "result": "PASS",
+      "details": "4 file: manifest, lesson, activity, content-package (draft 2020-12)"
+    },
+    {
+      "name": "ui_smoke_dev",
+      "command": "browser-use: navigate + click + snapshot",
+      "result": "PASS",
+      "details": "Navigasi + breadcrumb; 0 console error"
+    },
+    {
+      "name": "ui_desktop_layout",
+      "command": "Edge headless screenshot 1600x900",
+      "result": "PASS",
+      "details": "Sidebar, topbar, badge, kartu render benar"
+    },
+    {
+      "name": "production_preview",
+      "command": "npm run preview (4173)",
+      "result": "PASS",
+      "details": "HTTP 200; dist render benar"
+    },
+    {
+      "name": "tauri_native_window",
       "result": "NOT RUN",
-      "details": "Belum ada package.json / Cargo.toml"
+      "details": "`tauri dev` belum dijalankan (GUI)"
+    },
+    {
+      "name": "device_acceptance",
+      "result": "NOT RUN",
+      "details": "DV-01..DV-20 NOT RUN; mesin dev Windows 10, target Windows 11 + Android 14"
     },
     {
       "name": "security_scan",
       "result": "NOT RUN",
-      "details": "Belum ada repo/CI; tidak ada secret yang ditulis"
+      "details": "Belum ada CI/secret scanner; tidak ada secret yang ditulis"
+    },
+    {
+      "name": "pedagogical_review",
+      "result": "NOT RUN",
+      "details": "Butuh reviewer manusia; rubrik R1-R12 tersedia, 0 materi direview"
+    },
+    {
+      "name": "curriculum_signoff",
+      "result": "NOT RUN",
+      "details": "OD-1 berstatus PROPOSED; belum ada tanda tangan Product Owner/Curriculum Lead"
     }
   ],
+  "environment": {
+    "os": "Windows 10.0.19045 x86_64",
+    "webview2": "156.0.4314.42",
+    "msvc": "Visual Studio Build Tools 2022 / Community 2022",
+    "node": "22.15.0",
+    "npm": "11.3.0",
+    "rustc": "1.95.0",
+    "cargo": "1.95.0",
+    "target_product": "Windows 11 + Android 14 (VALIDATE)"
+  },
   "source_documents": [
     { "path": "HLD.md", "version": "1.1", "sha256": "06c85df1fa34bd2c0a2a346d88306a3b15538f42ed2359f66c204849ae4f027b", "role": "source-of-truth" },
     { "path": "LLD.md", "version": null, "sha256": "29f7fa3ef79911320bcf9f20df93abe50a36ee351823056349871b223af3f326", "role": "source-of-truth" },

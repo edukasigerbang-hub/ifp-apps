@@ -40,10 +40,10 @@ Aplikasi mendukung mode dipandu guru dan mode belajar mandiri siswa, dengan mate
 
 | Lapisan | Kandidat | Status |
 |---|---|---|
-| App shell | Tauri 2 + Rust | VALIDATE pada perangkat target |
-| UI | React + TypeScript + Vite | Proposed |
-| Styling | Tailwind CSS | Proposed |
-| DB lokal | SQLite (migrasi bernomor) | VALIDATE integrasi |
+| App shell | Tauri 2 + Rust | ADOPTED — scaffold; platform VALIDATE |
+| UI | React + TypeScript + Vite | ADOPTED (React 19, TS 7, Vite 8) |
+| Styling | Tailwind CSS | ADOPTED (v4) |
+| DB lokal | SQLite (migrasi bernomor) | PLANNED — belum ada |
 | Validasi TS | JSON Schema / Zod | Proposed |
 | Validasi native | Rust schema/boundary validation | Proposed |
 | Game 2D | HTML Canvas / Phaser | VALIDATE performa |
@@ -61,6 +61,7 @@ Aplikasi mendukung mode dipandu guru dan mode belajar mandiri siswa, dengan mate
 - Semua file/paket impor = input tidak tepercaya.
 - Perubahan DB = migrasi bernomor, diuji dari versi sebelumnya.
 - Error wajib punya `code`, `message` aman, `retryable`, `correlationId`.
+- Kontrak paket konten: `schemaVersion 1.0.0`, sumber Zod, JSON Schema di-generate (ADR-0003).
 
 ## Non-negotiable
 
@@ -75,23 +76,22 @@ Aplikasi mendukung mode dipandu guru dan mode belajar mandiri siswa, dengan mate
 
 | Item | Kondisi |
 |---|---|
-| Source code | **Tidak ada** (hanya 5 dokumen Markdown) |
-| Git | **Belum diinisialisasi** (`fatal: not a git repository`) |
-| `package.json` / lockfile | Tidak ada |
-| `Cargo.toml` | Tidak ada |
-| Node | v22.15.0 |
-| npm | 11.3.0 |
-| cargo | 1.95.0 |
-| Prototype `index.html` (dirujuk HLD §13) | **TIDAK ADA** → gap, lihat BACKLOG |
-| Code index | UNAVAILABLE (tidak ada kode) |
+| Source code | **Ada** — scaffold Fase C + schema konten Fase D |
+| Git | **Ada** — baseline commit `503c2fc` (main); scaffold belum di-commit |
+| `package.json` / `package-lock.json` | Ada |
+| `Cargo.toml` | Ada (`src-tauri`) |
+| Node / npm / cargo | v22.15.0 / 11.3.0 / 1.95.0 |
+| Prototype `index.html` (dirujuk HLD §13) | **TIDAK ADA** → GAP-1 |
+| Code index | LIGHTWEIGHT_GREP (61 file: src, src-tauri, scripts, content) |
 
-## Struktur target (PROPOSED — belum dibuat)
+## Struktur aktual (scaffold Fase C)
 
 ```text
-src/            # React + TypeScript (UI, learning engine)
-src-tauri/      # Rust: license, content manager, platform commands
-content/        # bundled content (build resource)
-knowledge/      # knowledge OS (dokumen ini)
+src/            # React 19 + TypeScript 7 (UI, navigasi, layout shell)
+src-tauri/      # Rust/Tauri 2: config, capabilities, icons
+index.html      # entry Vite (bukan prototype HLD)
+content/        # BELUM ADA — bundled content (Fase K)
+knowledge/      # knowledge OS
 ```
 
-Struktur final menunggu technical spike dan ADR app shell.
+Detail file: lihat [`.qoder/index/index.md`](.qoder/index/index.md). Struktur final menunggu device spike dan ADR konten/kurikulum.

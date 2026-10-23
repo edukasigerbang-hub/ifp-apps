@@ -7,10 +7,10 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 
 | ID | Fase | Acceptance criteria ringkas | Status |
 |---|---|---|---|
-| A | Repo reconnaissance + ADR confirmation | Git init diputuskan, stack dikonfirmasi, ADR-0001/0002 tertulis | TODO |
+| A | Repo reconnaissance + ADR confirmation | Git init diputuskan, stack dikonfirmasi, ADR-0001/0002 tertulis | DONE (backend ditunda via ADR-0002) |
 | B | Device technical spike | DV gate §5: Tauri hello-world (2 OS), SQLite migrasi, document picker/managed folder, media+WebGL, Ed25519 verify, app update preserves data | TODO — blocked by device |
-| C | Product configuration + app shell | `productConfig`, AppShell, navigasi, tema token, build kedua platform | TODO |
-| D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | TODO |
+| C | Product configuration + app shell | `productConfig`, AppShell, navigasi, tema token, build kedua platform | PARTIAL — scaffold + web build PASS; build per-platform belum |
+| D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | DONE 2026-10-23 — 11 test PASS |
 | E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | TODO |
 | F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | TODO |
 | G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | TODO |
@@ -24,7 +24,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 
 | ID | Keputusan | Memengaruhi | Status |
 |---|---|---|---|
-| OD-1 | Daftar resmi mata pelajaran + referensi kurikulum | Schema kurikulum, konten, validasi pedagogis | OPEN |
+| OD-1 | Daftar resmi mata pelajaran + referensi kurikulum | Schema kurikulum, konten, validasi pedagogis | **PROPOSED** — [matriks & opsi](../content/CURRICULUM_PROPOSAL.md), menunggu Product Owner + Curriculum Lead |
 | OD-2 | Model perangkat IFP nyata + arsitektur CPU | Build matrix, spike, DV | OPEN |
 | OD-3 | Batas ukuran paket, codec media, target performa numerik | Import limits, DV-11/12/20 | OPEN |
 | OD-4 | Kebijakan retensi, backup, ekspor, penghapusan data siswa | Privacy, DB, UI | OPEN |
@@ -38,9 +38,10 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | ID | Gap | Bukti | Dampak |
 |---|---|---|---|
 | GAP-1 | `index.html` prototype dirujuk HLD §13 tetapi tidak ada | `glob **/index.html` → 0 hasil | Referensi layout/perilaku UI hilang; tidak boleh dianggap ada |
-| GAP-2 | Repository belum Git | `git rev-parse` → fatal | Tidak ada baseline commit, diff, rollback, boundary guard |
+| GAP-2 | ~~Repository belum Git~~ | **TERTUTUP** 2026-10-23: baseline commit `503c2fc` | — |
 | GAP-3 | Backend stack belum dipilih (TS vs FastAPI) | HLD §7 | Fase I/J tidak bisa dimulai |
-| GAP-4 | Belum ada ADR sama sekali | `knowledge/decisions/` kosong | Keputusan arsitektural belum terlacak |
+| GAP-4 | ~~Belum ada ADR~~ | **TERTUTUP** 2026-10-23: ADR-0001, ADR-0002 | — |
+| GAP-5 | ~~Layout desktop belum diverifikasi visual~~ | **TERTUTUP** 2026-10-23: Edge headless 1600×900 | — |
 
 ## Validasi perangkat (semua NOT RUN)
 

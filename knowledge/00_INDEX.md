@@ -28,6 +28,11 @@
 | Skema database lokal | [`database/SCHEMA.md`](database/SCHEMA.md) |
 | Kontrak API & native commands | [`api/API.md`](api/API.md) |
 | Keamanan & privasi | [`security/SECURITY.md`](security/SECURITY.md) |
+| Kontrak konten v1 | [`content/SCHEMA.md`](content/SCHEMA.md) |
+| Fixture input/output validator | [`content/FIXTURES.md`](content/FIXTURES.md) |
+| Proposal kurikulum (OD-1) | [`content/CURRICULUM_PROPOSAL.md`](content/CURRICULUM_PROPOSAL.md) |
+| Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
+| Keputusan arsitektur | [`decisions/`](decisions/) |
 
 ## Operasional
 
@@ -48,4 +53,10 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 
 ## ADR
 
-Belum ada. Keputusan arsitektural pertama yang perlu dicatat: pemilihan stack backend dan model konten (lihat [`tasks/BACKLOG.md`](tasks/BACKLOG.md)).
+| ID | Keputusan | Status |
+|---|---|---|
+| [ADR-0001](decisions/ADR-0001-app-shell.md) | App shell Tauri 2 + React/TS | Accepted (scaffolded) |
+| [ADR-0002](decisions/ADR-0002-backend-deferred.md) | Backend ditunda sampai Fase I | Accepted (deferred) |
+| [ADR-0003](decisions/ADR-0003-content-package-contract.md) | Kontrak paket konten v1 (Zod) | Accepted (implemented) |
+
+Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

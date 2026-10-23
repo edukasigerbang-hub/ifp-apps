@@ -6,11 +6,74 @@
 
 **Status:** COMPLETED · **Change class:** SMALL (dokumentasi)
 
-**Hasil:**
-- `knowledge/` dibuat: 00_INDEX, 01_PROJECT, architecture (SYSTEM_CONTEXT, HLD, LLD, DATA_FLOW), database/SCHEMA, api/API, security/SECURITY, tasks (CURRENT, BACKLOG, DONE).
-- `.qoder/` dibuat: state.json, project.json, context.json, routing.json, validation.json, context.md, memory.md, index/index-state.json, index/index.md.
-- Sumber dokumen di-hash (SHA-256) untuk deteksi drift.
-- Index kode: UNAVAILABLE (tidak ada source code) — dicatat jujur.
-- Gap terverifikasi: prototype `index.html` tidak ada; repo belum Git; backend belum dipilih.
+- `knowledge/` + `.qoder/` dibuat (20 artefak), hash dokumen sumber dicatat.
+- Index kode: UNAVAILABLE saat itu (belum ada source).
+- Gap tercatat: prototype `index.html` tidak ada; repo belum Git; backend belum dipilih.
 
-**Tidak dikerjakan (sengaja):** scaffold kode, Git init, keputusan stack backend — menunggu keputusan user (gate Fase A).
+### T-001 — Fase A: Git + ADR
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- `git init -b main`; baseline commit `503c2fc` (28 file, 5575 insertions).
+- `.gitignore` untuk node_modules, dist, target, env, OS/editor.
+- [ADR-0001](../decisions/ADR-0001-app-shell.md): Tauri 2 + React/TS diterima (scaffolded).
+- [ADR-0002](../decisions/ADR-0002-backend-deferred.md): backend ditunda sampai Fase I (OD-7 tetap OPEN).
+
+### T-002 — Fase C: app shell scaffold
+
+**Status:** COMPLETED (scaffold) · **Change class:** LARGE
+
+**Stack terpasang:** React 19.3.1 · TypeScript 7.0.2 · Vite 8.3.5 · Tailwind 4.3.3 · Tauri 2.12.5 · tauri-build 2.7.4 · Rust 1.95.0 (MSVC).
+
+**Dibuat:**
+- `src/config/product.ts` — productConfig (LLD §2), ID masih PROPOSED.
+- `src/navigation.ts` — 8 layar + deskripsi + cakupan rencana.
+- `src/components/layout/` — AppShell, SidebarNavigation, TopBar, MobileNavigation.
+- `src/components/ui/` — PageHeader, StatusBadge, OfflineIndicator.
+- `src/screens/ScreenPlaceholder.tsx` — placeholder eksplisit, tanpa data palsu.
+- `src-tauri/` — konfigurasi Tauri, identifier `id.gerbangedukasi.ifp`, window 1600×900, CSP produksi dipisah dari `devCsp`, capability default.
+
+**Verifikasi aktual:**
+
+| Check | Hasil |
+|---|---|
+| `npm run build` (tsc + vite) | PASS |
+| `cargo check` | PASS (exit 0) |
+| UI smoke (dev, 632px) | PASS — navigasi + breadcrumb, 0 console error |
+| UI desktop 1600×900 (Edge headless) | PASS |
+| Preview produksi (4173, 1280×800) | PASS — HTTP 200, render benar |
+| Unit/integration test | NOT RUN (belum ada suite) |
+| `tauri dev` native window | NOT RUN |
+| DV-01…DV-20 | NOT RUN — mesin dev Windows 10, target Windows 11/Android 14 |
+
+**Belum di-commit** — hanya commit baseline yang diotorisasi user.
+
+### T-003 — Fase D: kontrak paket konten v1
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+**Dibuat:**
+- Zod schema: manifest, lesson, activity/assessment, primitive (ID, SemVer, SHA-256, path aman).
+- Registry tipe aktivitas (6 tipe) + aturan assessment wajib.
+- Validator lintas-field: referensi aset/aktivitas, duplikat, packageId, dependensi, pemindaian field eksekusi.
+- `verifyAssets`: SHA-256 + ukuran via WebCrypto.
+- CLI `npm run content:validate`, ekspor JSON Schema `npm run content:schema`.
+- Fixture `content/fixtures/valid-package/` + 11 test Vitest.
+
+**Verifikasi:**
+- `npm test` → 11/11 unit test PASS + 4/4 golden fixture PASS
+- `content:validate` → fixture VALID
+- `content:schema` → 4 file JSON Schema
+- `npm run build` → PASS
+
+**Fixture golden (ditambahkan):** `valid-package`, `invalid-structure` (traversal + `script` + duplikat), `invalid-references` (7 issue termasuk hash mismatch), `unsupported-schema`; expected report di `content/fixtures/expected/`; checker `npm run fixtures:check`. Dokumentasi lengkap: [FIXTURES.md](../content/FIXTURES.md).
+
+### T-004 — Prasyarat materi: OD-1 + rubrik review
+
+**Status:** COMPLETED (dokumen) · **Change class:** SMALL
+
+- Proposal OD-1: opsi kurikulum, keputusan D1–D7, template matriks (TBD), kriteria penerimaan — status **PROPOSED**, bukan keputusan.
+- Rubrik review pedagogis R1–R12 — template, 0 materi direview.
+- ADR-0003: kontrak paket konten (Zod sumber tunggal, referensi aktivitas, larangan eksekusi kode).
+
+**Tidak dikerjakan (sengaja):** mengisi matriks mapel, menandai review, membuat materi — menunggu keputusan/reviewer manusia.

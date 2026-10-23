@@ -1,0 +1,16 @@
+{
+  "activityId": "activity-eksplorasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Fixture: Eksplorasi",
+  "instructions": "Aktivitas contoh untuk menguji referensi aset. Bukan materi produksi.",
+  "assets": ["assets/pixel.png"],
+  "interactionConfig": {
+    "steps": [
+      { "prompt": "Amati gambar contoh", "hint": "Ganti dengan konten nyata pada produksi" }
+    ]
+  },
+  "completionPolicy": { "type": "view" },
+  "feedbackPolicy": { "mode": "immediate", "allowRetry": true, "showCorrectAnswer": true },
+  "runtimeCapabilities": ["touch"]
+}

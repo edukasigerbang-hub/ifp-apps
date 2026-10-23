@@ -1,0 +1,45 @@
+{
+  "package": "fixture-invalid-references",
+  "status": "INVALID",
+  "issues": [
+    {
+      "code": "CONTENT_DEPENDENCY_MISSING",
+      "message": "aset aktivitas tidak ada di manifest: assets/missing-activity.png",
+      "path": "activities.0.assets.0"
+    },
+    {
+      "code": "CONTENT_PACKAGE_INVALID",
+      "message": "lesson.packageId 'fixture-lain' tidak cocok dengan manifest 'fixture-invalid-references'",
+      "path": "lessons.0.packageId"
+    },
+    {
+      "code": "CONTENT_DEPENDENCY_MISSING",
+      "message": "activityId tidak ditemukan: activity-missing",
+      "path": "lessons.0.activityIds.1"
+    },
+    {
+      "code": "CONTENT_PACKAGE_INVALID",
+      "message": "assessmentRef 'activity-no-assessment' tidak memiliki assessmentConfig",
+      "path": "lessons.0.assessmentRefs.0"
+    },
+    {
+      "code": "CONTENT_DEPENDENCY_MISSING",
+      "message": "assetRef tidak ada di manifest: assets/tidak-ada.png",
+      "path": "lessons.0.assetRefs.0"
+    },
+    {
+      "code": "CONTENT_PACKAGE_INVALID",
+      "message": "paket tidak boleh bergantung pada dirinya sendiri",
+      "path": "manifest.dependencies.0.packageId"
+    },
+    {
+      "code": "CONTENT_ASSET_HASH_MISMATCH",
+      "message": "SHA-256 tidak cocok untuk assets/pixel.png",
+      "path": "manifest.assets.0.sha256"
+    }
+  ],
+  "warnings": [
+    "lesson 'lesson-referensi' masih berstatus draft dan belum boleh dianggap materi produksi",
+    "manifest tidak memiliki curriculumRefs; jangan mengklaim kesesuaian kurikulum"
+  ]
+}

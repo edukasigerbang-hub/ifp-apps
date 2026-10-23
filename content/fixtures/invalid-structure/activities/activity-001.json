@@ -1,0 +1,14 @@
+{
+  "activityId": "activity-ok",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Fixture: Field Terlarang",
+  "instructions": "Fixture negatif yang memuat field eksekusi.",
+  "assets": [],
+  "interactionConfig": {
+    "script": "alert(1)"
+  },
+  "completionPolicy": { "type": "view" },
+  "feedbackPolicy": { "mode": "immediate", "allowRetry": true, "showCorrectAnswer": true },
+  "runtimeCapabilities": ["touch"]
+}

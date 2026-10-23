@@ -1,0 +1,9 @@
+{
+  "package": "demo-pecahan-kelas3",
+  "status": "VALID",
+  "issues": [],
+  "warnings": [
+    "lesson 'lesson-contoh' masih berstatus draft dan belum boleh dianggap materi produksi",
+    "manifest tidak memiliki curriculumRefs; jangan mengklaim kesesuaian kurikulum"
+  ]
+}

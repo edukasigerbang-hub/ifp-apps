@@ -1,0 +1,12 @@
+{
+  "package": null,
+  "status": "INVALID",
+  "issues": [
+    {
+      "code": "CONTENT_SCHEMA_UNSUPPORTED",
+      "message": "schemaVersion '2.0.0' tidak didukung (harus 1.0.0)",
+      "path": "manifest.schemaVersion"
+    }
+  ],
+  "warnings": []
+}

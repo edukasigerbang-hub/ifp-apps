@@ -1,0 +1,13 @@
+{
+  "lessonId": "lesson-struktur",
+  "packageId": "fixture-invalid-structure",
+  "title": "Fixture: Lesson dengan activityId duplikat",
+  "summary": "Fixture negatif untuk menguji deteksi duplikat.",
+  "curriculumRefs": [],
+  "learningObjectives": ["Menguji deteksi duplikat activityId"],
+  "activityIds": ["activity-ok", "activity-ok"],
+  "assessmentRefs": [],
+  "assetRefs": [],
+  "contentVersion": "1.0.0",
+  "reviewStatus": "draft"
+}

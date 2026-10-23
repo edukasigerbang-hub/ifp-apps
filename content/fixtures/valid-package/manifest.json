@@ -1,0 +1,21 @@
+{
+  "manifestVersion": 1,
+  "packageId": "demo-pecahan-kelas3",
+  "packageVersion": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "title": "Fixture: Unit Contoh (BUKAN materi produksi)",
+  "locale": "id-ID",
+  "gradeLevels": [3],
+  "subjects": ["matematika"],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/pixel.png",
+      "mediaType": "image/png",
+      "sizeBytes": 70,
+      "sha256": "c414cd0e204de974f73753c7e28d7638e7b3691bb8b1a2bab6b25bb7fed7ce77"
+    }
+  ],
+  "dependencies": [],
+  "signature": null
+}

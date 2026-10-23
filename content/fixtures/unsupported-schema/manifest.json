@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "packageId": "fixture-unsupported-schema",
+  "packageVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
+  "title": "Fixture: Schema Tidak Didukung",
+  "locale": "id-ID",
+  "gradeLevels": [3],
+  "subjects": ["matematika"],
+  "curriculumRefs": [],
+  "assets": [],
+  "dependencies": [],
+  "signature": null
+}

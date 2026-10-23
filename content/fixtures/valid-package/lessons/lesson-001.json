@@ -1,0 +1,13 @@
+{
+  "lessonId": "lesson-contoh",
+  "packageId": "demo-pecahan-kelas3",
+  "title": "Fixture: Struktur Lesson (DRAFT)",
+  "summary": "Hanya untuk menguji validator; bukan materi pembelajaran dan tidak mengklaim kesesuaian kurikulum.",
+  "curriculumRefs": [],
+  "learningObjectives": ["Menguji bahwa lesson dapat direferensikan oleh aktivitas"],
+  "activityIds": ["activity-eksplorasi", "activity-kuis-pecahan"],
+  "assessmentRefs": ["activity-kuis-pecahan"],
+  "assetRefs": ["assets/pixel.png"],
+  "contentVersion": "1.0.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "activityId": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "multiple-choice",
+        "true-false",
+        "matching",
+        "ordering",
+        "short-answer",
+        "exploration"
+      ]
+    },
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "instructions": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "assets": {
+      "default": [],
+      "maxItems": 100,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interactionConfig": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "assessmentConfig": {
+      "type": "object",
+      "properties": {
+        "questions": {
+          "minItems": 1,
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "questionId": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 64,
+                "pattern": "^[a-z0-9][a-z0-9-]*$"
+              },
+              "prompt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "responseType": {
+                "type": "string",
+                "enum": [
+                  "single-choice",
+                  "multiple-choice",
+                  "boolean",
+                  "text"
+                ]
+              },
+              "options": {
+                "minItems": 2,
+                "maxItems": 12,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "optionId": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 64,
+                      "pattern": "^[a-z0-9][a-z0-9-]*$"
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 500
+                    }
+                  },
+                  "required": [
+                    "optionId",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "correctResponse": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 500
+                  },
+                  {
+                    "minItems": 1,
+                    "maxItems": 12,
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 500
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "questionId",
+              "prompt",
+              "responseType"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "passingScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "questions"
+      ],
+      "additionalProperties": false
+    },
+    "completionPolicy": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "view",
+            "complete-all",
+            "score-threshold"
+          ]
+        },
+        "threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "feedbackPolicy": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "immediate",
+            "after-attempt",
+            "after-session"
+          ]
+        },
+        "allowRetry": {
+          "type": "boolean"
+        },
+        "showCorrectAnswer": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "mode",
+        "allowRetry",
+        "showCorrectAnswer"
+      ],
+      "additionalProperties": false
+    },
+    "runtimeCapabilities": {
+      "default": [],
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "touch",
+          "keyboard",
+          "audio",
+          "video",
+          "webgl"
+        ]
+      }
+    },
+    "accessibilityMetadata": {
+      "type": "object",
+      "properties": {
+        "altText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "transcriptPath": {
+          "type": "string"
+        },
+        "captionsPath": {
+          "type": "string"
+        },
+        "reducedMotionSupported": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "activityId",
+    "type",
+    "schemaVersion",
+    "title",
+    "instructions",
+    "assets",
+    "interactionConfig",
+    "completionPolicy",
+    "feedbackPolicy",
+    "runtimeCapabilities"
+  ],
+  "additionalProperties": false
+}

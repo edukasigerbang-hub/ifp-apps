@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "lessonId": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "packageId": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "curriculumRefs": {
+      "default": [],
+      "maxItems": 24,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "framework": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          }
+        },
+        "required": [
+          "framework",
+          "id",
+          "version"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "learningObjectives": {
+      "minItems": 1,
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    },
+    "activityIds": {
+      "minItems": 1,
+      "maxItems": 50,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 64,
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      }
+    },
+    "assessmentRefs": {
+      "default": [],
+      "maxItems": 50,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 64,
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      }
+    },
+    "assetRefs": {
+      "default": [],
+      "maxItems": 200,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "accessibilityMetadata": {
+      "type": "object",
+      "properties": {
+        "altText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "transcriptPath": {
+          "type": "string"
+        },
+        "captionsPath": {
+          "type": "string"
+        },
+        "reducedMotionSupported": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "contentVersion": {
+      "type": "string",
+      "maxLength": 64,
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "reviewStatus": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "reviewed",
+        "approved"
+      ]
+    }
+  },
+  "required": [
+    "lessonId",
+    "packageId",
+    "title",
+    "summary",
+    "curriculumRefs",
+    "learningObjectives",
+    "activityIds",
+    "assessmentRefs",
+    "assetRefs",
+    "contentVersion",
+    "reviewStatus"
+  ],
+  "additionalProperties": false
+}

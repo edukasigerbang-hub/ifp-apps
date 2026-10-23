@@ -1,0 +1,12 @@
+{
+  "activityId": "activity-no-assessment",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Fixture: Eksplorasi Tanpa Asesmen",
+  "instructions": "Fixture negatif dengan referensi aset yang tidak ada di manifest.",
+  "assets": ["assets/missing-activity.png"],
+  "interactionConfig": { "steps": [] },
+  "completionPolicy": { "type": "view" },
+  "feedbackPolicy": { "mode": "immediate", "allowRetry": true, "showCorrectAnswer": true },
+  "runtimeCapabilities": ["touch"]
+}
