@@ -22,7 +22,7 @@
   - Aktivitas eksplorasi 4 langkah dengan 4 diagram.
   - Kuis 4 soal pilihan ganda, nilai lulus 75, boleh mencoba lagi.
   - 4 aset PNG dibuat deterministik (bukan AI image) dan diverifikasi visual: bagian benar-benar sama besar.
-- **Impor:** dapat diimpor via layar Konten & Pembaruan (validasi native + aktivasi/rollback). Player masih memuat paket bundled; wiring runtime = T-012.
+- **Impor:** dapat diimpor via layar Konten & Pembaruan (validasi native + aktivasi/rollback). Player memuat paket impor aktif lebih dulu, lalu bundled (ADR-0008).
 - **Aset:** 800×600 px, palet sesuai design token HLD §13.5 (teal/navy), tanpa teks di dalam gambar (teks ada di instruksi).
 
 ## Hasil validasi

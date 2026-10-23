@@ -66,5 +66,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0005](decisions/ADR-0005-sync-client.md) | Arsitektur client sinkronisasi | Accepted (client implemented) |
 | [ADR-0006](decisions/ADR-0006-sync-backend-reference.md) | Backend sinkronisasi referensi | Accepted (reference only) |
 | [ADR-0007](decisions/ADR-0007-content-manager.md) | Content Manager: staging + aktivasi atomik | Accepted (implemented) |
+| [ADR-0008](decisions/ADR-0008-content-runtime.md) | Content Runtime: muat paket impor aktif | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

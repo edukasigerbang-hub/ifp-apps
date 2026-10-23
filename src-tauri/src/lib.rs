@@ -45,7 +45,9 @@ pub fn run() {
       sync::sync_get_status,
       content::content_import_package,
       content::content_list_packages,
-      content::content_rollback_package
+      content::content_rollback_package,
+      content::content_get_active,
+      content::content_read_asset
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

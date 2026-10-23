@@ -58,11 +58,13 @@ Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/dat
 | `content_import_package` | `sourcePath` | `packageId`, `version`, `previousVersion`, `files`, `bytes` |
 | `content_list_packages` | — | daftar `packageId`, `version`, `status`, `source`, `installedAt`, `activatedAt` |
 | `content_rollback_package` | `packageId` | `packageId`, `activeVersion` |
+| `content_get_active` | — | manifest, lessons, activities, assets versi impor aktif |
+| `content_read_asset` | `packageId`, `version`, `path` | byte aset (hanya versi aktif, maks 64 MB) |
 
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.
-- UI: layar Konten & Pembaruan (folder picker via dialog plugin). Player belum memuat paket impor (ADR-0007).
+- UI: layar Konten & Pembaruan (folder picker via dialog plugin). Player memuat paket impor aktif lebih dulu, lalu bundled (ADR-0008).
 
 ## Server (konseptual) — USULAN
 

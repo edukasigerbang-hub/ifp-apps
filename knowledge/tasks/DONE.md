@@ -203,3 +203,19 @@
 - `cargo test` 16/16 (5 content: impor, hash mismatch, traversal, duplikat, rollback).
 - E2E Tauri: impor v0.1.0 (8 file) → v0.2.0 (previous 0.1.0) → rollback; daftar/status sesuai; tombol rollback hilang setelah rollback.
 - `npm run build` PASS; `npm test` 34/34 + golden 4/4.
+
+### T-012 — Content Runtime wiring
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Command native `content_get_active` (manifest/lessons/activities/metadata aset) dan `content_read_asset` (hanya versi aktif, maks 64 MB).
+- Player memuat paket impor aktif lebih dulu; bundled sebagai fallback; validasi skema ulang sebelum render.
+- Aset diubah menjadi Blob URL dan dicabut saat unmount; badge sumber “Paket impor vX” / “Paket bawaan build”.
+- ADR-0008.
+
+**Verifikasi:**
+- `cargo test` 18/18 (2 test runtime: load aktif, aset versi non-aktif ditolak).
+- E2E: tanpa impor → bundled; impor v0.1.0 → managed; impor v0.2.0 berjudul “EDISI IMPOR” → Player menampilkan judul baru; gambar blob 800×600; rollback → judul kembali v0.1.0.
+- `npm run build` / `npm test` PASS.
+
+**Batas:** satu paket impor aktif global; belum ada pemilihan multi-paket (T-013); aset besar belum streaming.

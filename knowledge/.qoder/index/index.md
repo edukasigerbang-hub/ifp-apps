@@ -18,6 +18,7 @@ src/
   data/syncEngine.ts
   data/contentRepository.ts
   data/__tests__/syncEngine.test.ts
+  content/loadManagedPackage.ts
   screens/SettingsScreen.tsx
   screens/ContentScreen.tsx
   components/content/{ExplorationActivity,QuizActivity}.tsx

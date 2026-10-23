@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T23:45:20+07:00",
+  "last_validated_at": "2026-10-23T23:54:37+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -64,7 +64,7 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "16/16: 6 learning + 5 sync + 5 content (import, hash, traversal, duplicate, rollback)"
+      "details": "18/18: 6 learning + 5 sync + 7 content (import, hash, traversal, duplicate, rollback, active load, inactive asset)"
     },
     {
       "name": "e2e_learning_persistence",
@@ -113,6 +113,12 @@
       "command": "Tauri WebView CDP + IFP_DATA_DIR temp",
       "result": "PASS",
       "details": "Import v0.1.0 (8 file) → v0.2.0 (previous 0.1.0) → rollback v0.1.0; UI status active/disabled benar; tombol rollback hilang setelah rollback"
+    },
+    {
+      "name": "e2e_content_runtime",
+      "command": "Tauri WebView CDP + IFP_DATA_DIR temp",
+      "result": "PASS",
+      "details": "Tanpa impor → bundled; v0.1.0 → managed; v0.2.0 judul EDISI IMPOR tampil; aset blob 800px; rollback → v0.1.0"
     },
     {
       "name": "content_validator_cli",

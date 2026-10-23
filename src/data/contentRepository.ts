@@ -24,6 +24,21 @@ export interface RollbackResult {
   activeVersion: string;
 }
 
+export interface ActiveAsset {
+  path: string;
+  mediaType: string;
+  sizeBytes: number;
+}
+
+export interface ActivePackageRecord {
+  packageId: string;
+  version: string;
+  manifest: unknown;
+  lessons: unknown[];
+  activities: unknown[];
+  assets: ActiveAsset[];
+}
+
 export async function pickContentPackageFolder(): Promise<string | null> {
   if (!canPersistLocally()) {
     return null;
@@ -46,4 +61,12 @@ export async function listPackages(): Promise<PackageRecord[]> {
 
 export async function rollbackPackage(packageId: string): Promise<RollbackResult> {
   return invoke<RollbackResult>("content_rollback_package", { packageId });
+}
+
+export async function getActivePackage(): Promise<ActivePackageRecord | null> {
+  return invoke<ActivePackageRecord | null>("content_get_active");
+}
+
+export async function readAsset(packageId: string, version: string, path: string): Promise<number[]> {
+  return invoke<number[]>("content_read_asset", { input: { packageId, version, path } });
 }

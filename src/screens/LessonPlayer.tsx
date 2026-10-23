@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ExplorationActivity } from "../components/content/ExplorationActivity";
 import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
+import { loadManagedPackage } from "../content/loadManagedPackage";
 import type { Activity } from "../content/schema/activity";
 import {
   canPersistLocally,
@@ -27,45 +28,110 @@ const storageClasses: Record<StorageStatus, string> = {
   preview: "border-warning/40 bg-warning/10 text-ink"
 };
 
-export function LessonPlayer() {
-  const { packages, errors } = useMemo(() => loadContentPackages(), []);
+type ContentLoadState =
+  | { status: "loading" }
+  | { status: "ready"; contentPackage: LoadedContentPackage; source: "managed" | "bundled" }
+  | { status: "error"; message: string }
+  | { status: "empty" };
 
-  if (errors.length > 0) {
+export function LessonPlayer() {
+  const [state, setState] = useState<ContentLoadState>({ status: "loading" });
+
+  useEffect(() => {
+    let cancelled = false;
+    let objectUrls: string[] = [];
+
+    (async () => {
+      try {
+        if (canPersistLocally()) {
+          const managed = await loadManagedPackage();
+          if (managed) {
+            objectUrls = managed.objectUrls;
+            if (!cancelled) {
+              setState({ status: "ready", contentPackage: managed, source: "managed" });
+            }
+            return;
+          }
+        }
+
+        const { packages, errors } = loadContentPackages();
+        if (errors.length > 0) {
+          const detail = errors
+            .flatMap((error) => error.issues.map((issue) => `${issue.code}: ${issue.message}`))
+            .join("; ");
+          if (!cancelled) {
+            setState({ status: "error", message: `Paket bawaan gagal divalidasi. ${detail}` });
+          }
+          return;
+        }
+
+        if (packages.length === 0) {
+          if (!cancelled) setState({ status: "empty" });
+          return;
+        }
+
+        if (!cancelled) {
+          setState({ status: "ready", contentPackage: packages[0], source: "bundled" });
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setState({
+            status: "error",
+            message: error instanceof Error ? error.message : "Konten gagal dimuat."
+          });
+        }
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+      for (const url of objectUrls) {
+        URL.revokeObjectURL(url);
+      }
+    };
+  }, []);
+
+  if (state.status === "loading") {
     return (
-      <div className="max-w-4xl rounded-card border border-danger/30 bg-danger/5 p-6">
-        <h2 className="text-lg font-semibold">Paket konten tidak dapat dimuat</h2>
-        <p className="mt-2 text-sm text-muted">
-          Validator menolak paket berikut. Perbaiki konten lalu jalankan <code>npm run content:validate</code>.
-        </p>
-        <ul className="mt-4 space-y-2 text-sm">
-          {errors.flatMap((error) =>
-            error.issues.map((issue) => (
-              <li key={`${error.packageDir}-${issue.path}-${issue.message}`}>
-                <span className="font-mono text-xs">{issue.code}</span> — {issue.message}
-                {issue.path && <span className="text-muted"> ({issue.path})</span>}
-              </li>
-            ))
-          )}
-        </ul>
+      <div className="max-w-4xl rounded-card border border-ink/10 bg-surface p-8">
+        <p className="text-sm text-muted">Memuat konten…</p>
       </div>
     );
   }
 
-  if (packages.length === 0) {
+  if (state.status === "empty") {
     return (
       <div className="max-w-4xl rounded-card border border-ink/10 bg-surface p-8">
         <h2 className="text-lg font-semibold">Belum ada paket konten</h2>
         <p className="mt-2 text-sm text-muted">
-          Tambahkan paket ke <code>content/packages/</code>, lalu muat ulang aplikasi.
+          Tambahkan paket ke <code>content/packages/</code> atau impor lewat Konten & Pembaruan.
         </p>
       </div>
     );
   }
 
-  return <LessonView contentPackage={packages[0]} />;
+  if (state.status === "error") {
+    return (
+      <div className="max-w-4xl rounded-card border border-danger/30 bg-danger/5 p-6">
+        <h2 className="text-lg font-semibold">Konten tidak dapat dimuat</h2>
+        <p className="mt-2 text-sm text-muted">{state.message}</p>
+        <p className="mt-3 text-sm text-muted">
+          Periksa validasi paket atau gunakan rollback di layar Konten & Pembaruan.
+        </p>
+      </div>
+    );
+  }
+
+  return <LessonView contentPackage={state.contentPackage} source={state.source} />;
 }
 
-function LessonView({ contentPackage }: { contentPackage: LoadedContentPackage }) {
+function LessonView({
+  contentPackage,
+  source
+}: {
+  contentPackage: LoadedContentPackage;
+  source: "managed" | "bundled";
+}) {
   const lesson = contentPackage.data.lessons[0];
   const activities = lesson.activityIds
     .map((activityId) => contentPackage.data.activities.find((activity) => activity.activityId === activityId))
@@ -181,6 +247,14 @@ function LessonView({ contentPackage }: { contentPackage: LoadedContentPackage }
     <div className="max-w-4xl">
       <div className="flex flex-wrap items-center gap-3">
         <StatusBadge tone={reviewTone} label={reviewLabel} />
+        <StatusBadge
+          tone="neutral"
+          label={
+            source === "managed"
+              ? `Paket impor v${contentPackage.data.manifest.packageVersion}`
+              : "Paket bawaan build"
+          }
+        />
         <span className="text-sm text-muted">
           Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
           {contentPackage.data.manifest.subjects.join(", ")} · v{contentPackage.data.manifest.packageVersion}

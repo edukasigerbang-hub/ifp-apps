@@ -13,7 +13,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | DONE 2026-10-23 — 11 test PASS |
 | E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | DONE 2026-10-23 — 6 test Rust + E2E |
 | F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | DONE 2026-10-23 — 5 test Rust + E2E; runtime wiring T-012 |
-| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — eksplorasi+kuis + persistensi lokal; lifecycle penuh & gaya guru belum |
+| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — runtime memuat paket impor aktif; multi-paket & gaya guru belum |
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | TODO |
 | I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + server referensi PASS; stack produksi pending OD-7 |
 | J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |

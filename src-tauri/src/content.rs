@@ -52,6 +52,33 @@ pub struct RollbackResult {
     pub active_version: String,
 }
 
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ActiveAssetView {
+    pub path: String,
+    pub media_type: String,
+    pub size_bytes: u64,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ActivePackageView {
+    pub package_id: String,
+    pub version: String,
+    pub manifest: serde_json::Value,
+    pub lessons: Vec<serde_json::Value>,
+    pub activities: Vec<serde_json::Value>,
+    pub assets: Vec<ActiveAssetView>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AssetInput {
+    pub package_id: String,
+    pub version: String,
+    pub path: String,
+}
+
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
 struct Manifest {
@@ -381,8 +408,7 @@ pub fn rollback_package(
     connection: &mut Connection,
     root: &Path,
     package_id: &str,
-) -> Result<RollbackResult, AppError> {
-    validate_token(package_id, "ID paket")?;
+) -> Result<RollbackResult, AppError> {    validate_token(package_id, "ID paket")?;
 
     let active: Option<(String, Option<String>)> = connection
         .query_row(
@@ -446,6 +472,131 @@ pub fn rollback_package(
     })
 }
 
+fn read_json_directory(path: &Path) -> Result<Vec<serde_json::Value>, AppError> {
+    let mut entries: Vec<PathBuf> = fs::read_dir(path)
+        .map_err(|_| AppError::content_invalid("Direktori paket tidak dapat dibaca."))?
+        .filter_map(|entry| entry.ok())
+        .map(|entry| entry.path())
+        .filter(|entry| entry.extension().is_some_and(|extension| extension == "json"))
+        .collect();
+    entries.sort();
+
+    entries
+        .iter()
+        .map(|entry| {
+            let raw = fs::read(entry)
+                .map_err(|_| AppError::content_invalid("Isi paket tidak dapat dibaca."))?;
+            serde_json::from_slice(&raw)
+                .map_err(|_| AppError::content_invalid("JSON paket tidak valid."))
+        })
+        .collect()
+}
+
+pub fn get_active_package(
+    connection: &Connection,
+    root: &Path,
+) -> Result<Option<ActivePackageView>, AppError> {
+    let active: Option<(String, String)> = connection
+        .query_row(
+            "SELECT package_id, version FROM content_packages
+             WHERE status = 'active' AND source = 'imported'
+             ORDER BY activated_at DESC LIMIT 1",
+            [],
+            |row| Ok((row.get(0)?, row.get(1)?)),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+
+    let Some((package_id, version)) = active else {
+        return Ok(None);
+    };
+
+    let directory = root.join("packages").join(&package_id).join(&version);
+    if !directory.is_dir() {
+        return Err(AppError::content_invalid("Paket aktif tidak ditemukan di disk."));
+    }
+
+    let manifest_raw = fs::read(directory.join("manifest.json"))
+        .map_err(|_| AppError::content_invalid("Manifest paket aktif tidak ditemukan."))?;
+    let manifest: serde_json::Value = serde_json::from_slice(&manifest_raw)
+        .map_err(|_| AppError::content_invalid("Manifest paket aktif tidak valid."))?;
+
+    let lessons = read_json_directory(&directory.join("lessons"))?;
+    let activities = read_json_directory(&directory.join("activities"))?;
+
+    let mut assets = Vec::new();
+    if let Some(items) = manifest.get("assets").and_then(|value| value.as_array()) {
+        for item in items {
+            let path = item
+                .get("path")
+                .and_then(|value| value.as_str())
+                .ok_or_else(|| AppError::content_invalid("Aset manifest tidak valid."))?;
+            let media_type = item
+                .get("mediaType")
+                .and_then(|value| value.as_str())
+                .unwrap_or("application/octet-stream");
+            let size_bytes = item
+                .get("sizeBytes")
+                .and_then(|value| value.as_u64())
+                .unwrap_or(0);
+            assets.push(ActiveAssetView {
+                path: path.to_string(),
+                media_type: media_type.to_string(),
+                size_bytes,
+            });
+        }
+    }
+
+    Ok(Some(ActivePackageView {
+        package_id,
+        version,
+        manifest,
+        lessons,
+        activities,
+        assets,
+    }))
+}
+
+pub fn read_asset(
+    connection: &Connection,
+    root: &Path,
+    input: &AssetInput,
+) -> Result<Vec<u8>, AppError> {
+    validate_token(&input.package_id, "ID paket")?;
+    validate_version(&input.version)?;
+    validate_relative_path(&input.path)?;
+
+    let active: Option<String> = connection
+        .query_row(
+            "SELECT version FROM content_packages
+             WHERE package_id = ?1 AND version = ?2 AND status = 'active' AND source = 'imported'",
+            params![input.package_id, input.version],
+            |row| row.get(0),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+
+    if active.is_none() {
+        return Err(AppError::content_activation("Paket tidak aktif."));
+    }
+
+    let full = root
+        .join("packages")
+        .join(&input.package_id)
+        .join(&input.version)
+        .join(&input.path);
+
+    let metadata = fs::metadata(&full).map_err(|_| AppError::content_invalid("Aset tidak ditemukan."))?;
+    if !metadata.is_file() {
+        return Err(AppError::content_invalid("Aset bukan file."));
+    }
+    if metadata.len() > 67_108_864 {
+        return Err(AppError::content_invalid("Aset terlalu besar untuk dimuat."));
+    }
+
+    fs::read(&full).map_err(|_| AppError::content_invalid("Aset tidak dapat dibaca."))
+}
+
 #[tauri::command]
 pub fn content_import_package(
     db: State<'_, DbState>,
@@ -470,6 +621,25 @@ pub fn content_rollback_package(
 ) -> Result<RollbackResult, AppError> {
     let mut connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
     rollback_package(&mut connection, &content.root, &package_id)
+}
+
+#[tauri::command]
+pub fn content_get_active(
+    db: State<'_, DbState>,
+    content: State<'_, ContentState>,
+) -> Result<Option<ActivePackageView>, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    get_active_package(&connection, &content.root)
+}
+
+#[tauri::command]
+pub fn content_read_asset(
+    db: State<'_, DbState>,
+    content: State<'_, ContentState>,
+    input: AssetInput,
+) -> Result<Vec<u8>, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    read_asset(&connection, &content.root, &input)
 }
 
 #[cfg(test)]
@@ -624,6 +794,69 @@ mod tests {
         assert_eq!(packages.len(), 2);
         assert!(packages.iter().any(|row| row.version == "0.1.0" && row.status == "active"));
         assert!(packages.iter().any(|row| row.version == "0.2.0" && row.status == "disabled"));
+
+        let _ = fs::remove_dir_all(&root);
+    }
+
+    #[test]
+    fn active_package_loads_after_import() {
+        let mut connection = test_connection();
+        let root = temp_root("active");
+
+        assert!(get_active_package(&connection, &root).expect("none").is_none());
+
+        import_package(&mut connection, &root, &fixture()).expect("import");
+        let active = get_active_package(&connection, &root)
+            .expect("load")
+            .expect("active package");
+
+        assert_eq!(active.package_id, "matematika-kelas3-pecahan");
+        assert_eq!(active.version, "0.1.0");
+        assert_eq!(active.lessons.len(), 1);
+        assert_eq!(active.activities.len(), 2);
+        assert_eq!(active.assets.len(), 4);
+
+        let bytes = read_asset(
+            &connection,
+            &root,
+            &AssetInput {
+                package_id: active.package_id.clone(),
+                version: active.version.clone(),
+                path: "assets/pecahan-setengah.png".to_string(),
+            },
+        )
+        .expect("asset");
+
+        assert_eq!(bytes.len(), 17_860);
+
+        let _ = fs::remove_dir_all(&root);
+    }
+
+    #[test]
+    fn inactive_version_assets_are_rejected() {
+        let mut connection = test_connection();
+        let root = temp_root("inactive");
+
+        import_package(&mut connection, &root, &fixture()).expect("v1");
+
+        let source_v2 = source_copy(&root);
+        let mut manifest = manifest_value(&source_v2);
+        manifest["packageVersion"] = serde_json::Value::String("0.2.0".to_string());
+        write_manifest(&source_v2, &manifest);
+        import_package(&mut connection, &root, &source_v2).expect("v2");
+
+        let error = read_asset(
+            &connection,
+            &root,
+            &AssetInput {
+                package_id: "matematika-kelas3-pecahan".to_string(),
+                version: "0.1.0".to_string(),
+                path: "assets/pecahan-setengah.png".to_string(),
+            },
+        )
+        .expect_err("inactive must fail");
+
+        assert_eq!(error.code, "CONTENT_ACTIVATION_FAILED");
 
         let _ = fs::remove_dir_all(&root);
     }
