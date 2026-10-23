@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T00:07:56+07:00",
+  "last_validated_at": "2026-10-24T00:16:04+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -40,7 +40,7 @@
       "name": "content_unit_tests",
       "command": "npm test (vitest run && tsx scripts/check-fixtures.ts)",
       "result": "PASS",
-      "details": "34/34 unit test: schema 11 + kuis 4 + sync engine 8 + server 11 + golden fixture 4/4"
+      "details": "43/43: frontend 23 (schema 11 + quiz 4 + sync 8) + server 20 (sync 11 + license 9) + golden 4/4"
     },
     {
       "name": "fixture_golden_check",
@@ -131,6 +131,12 @@
       "command": "Tauri WebView CDP + scripts/license-issuer.mjs",
       "result": "PASS",
       "details": "Lisensi Ed25519 untuk machine ID diimpor; UI Berlaku; entitlements core; request aktivasi berisi machineId; private key uji dihapus"
+    },
+    {
+      "name": "e2e_license_online",
+      "command": "Tauri WebView CDP + server referensi + serial seed",
+      "result": "PASS",
+      "details": "Serial DEV-SERIAL-1 → server menandatangani → client verifikasi native → UI Berlaku; server DB: binding machine + audit activated"
     },
     {
       "name": "content_validator_cli",

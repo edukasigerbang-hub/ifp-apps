@@ -5,8 +5,8 @@
   "index_version": 1,
   "schema_version": 1,
   "indexed_commit": "fe0f326",
-  "generated_at": "2026-10-24T00:07:56+07:00",
-  "files_indexed": 112,
+  "generated_at": "2026-10-24T00:16:04+07:00",
+  "files_indexed": 114,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
   "scope": ["src/", "src-tauri/", "scripts/", "server/", "content/"],
@@ -14,12 +14,12 @@
     "src": 38,
     "src_tauri": 35,
     "scripts": 6,
-    "server": 4,
+    "server": 6,
     "content": 29,
-    "note": "src-tauri/gen dan target dikecualikan; Fase H belum di-commit saat snapshot"
+    "note": "server termasuk license.ts + license.test.ts; src-tauri/gen dan target dikecualikan"
   },
   "validation": {
-    "last_validated_at": "2026-10-24T00:07:56+07:00",
+    "last_validated_at": "2026-10-24T00:16:04+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },

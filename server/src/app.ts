@@ -1,10 +1,11 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from "node:http";
 import { z } from "zod";
+import { LicenseService, type LicenseFile } from "./license";
 import type { SyncStore } from "./store";
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-const TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
+const TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
 
 const eventSchema = z.strictObject({
   eventId: z.string().regex(UUID_PATTERN, "eventId harus UUID"),
@@ -19,6 +20,35 @@ const batchSchema = z.strictObject({
   events: z.array(eventSchema).min(1).max(100)
 });
 
+const activationSchema = z.strictObject({
+  schemaVersion: z.literal("1.0.0"),
+  productId: z.string().min(1).max(64),
+  machineId: z.string().regex(UUID_PATTERN, "machineId harus UUID"),
+  serial: z.string().min(4).max(128),
+  requestId: z.string().regex(UUID_PATTERN),
+  nonce: z.string().regex(UUID_PATTERN),
+  createdAt: z.string().regex(TIMESTAMP_PATTERN)
+});
+
+const refreshSchema = z.strictObject({
+  licenseId: z.string().regex(UUID_PATTERN),
+  machineId: z.string().regex(UUID_PATTERN)
+});
+
+const transferSchema = z.strictObject({
+  licenseId: z.string().regex(UUID_PATTERN),
+  machineId: z.string().regex(UUID_PATTERN)
+});
+
+const deactivateSchema = z.strictObject({
+  licenseId: z.string().regex(UUID_PATTERN)
+});
+
+const licenseFileSchema = z.object({
+  payload: z.record(z.string(), z.unknown()),
+  signature: z.string().min(1)
+});
+
 export interface SyncAppOptions {
   store: SyncStore;
   token: string;
@@ -26,6 +56,7 @@ export interface SyncAppOptions {
   maxEventBytes?: number;
   rateLimit?: { limit: number; windowMs: number };
   corsOrigin?: string;
+  license?: { service: LicenseService; adminToken: string };
 }
 
 interface Acknowledgement {
@@ -88,6 +119,86 @@ async function readBody(
   return { ok: true, value: Buffer.concat(chunks).toString("utf8") };
 }
 
+interface RouteResult {
+  status: number;
+  body: unknown;
+}
+
+function errorResult(status: number, code: string, message: string): RouteResult {
+  return { status, body: { error: { code, message } } };
+}
+
+function handleLicense(
+  service: LicenseService,
+  adminToken: string,
+  path: string,
+  rawBody: unknown,
+  authorization: string,
+  now: Date
+): RouteResult {
+  if (path === "/v1/activations") {
+    const parsed = activationSchema.safeParse(rawBody);
+    if (!parsed.success) {
+      return errorResult(400, "LICENSE_INVALID_REQUEST", "Permintaan aktivasi tidak valid.");
+    }
+    const result = service.activate(parsed.data.serial, parsed.data.machineId, now);
+    return result.ok
+      ? { status: 200, body: result.license }
+      : errorResult(result.status, result.code, result.message);
+  }
+
+  if (path === "/v1/licenses/refresh") {
+    const parsed = refreshSchema.safeParse(rawBody);
+    if (!parsed.success) {
+      return errorResult(400, "LICENSE_INVALID_REQUEST", "Permintaan refresh tidak valid.");
+    }
+    const result = service.refresh(parsed.data.licenseId, parsed.data.machineId, now);
+    return result.ok
+      ? { status: 200, body: result.license }
+      : errorResult(result.status, result.code, result.message);
+  }
+
+  if (path === "/v1/licenses/verify") {
+    const parsed = licenseFileSchema.safeParse(rawBody);
+    if (!parsed.success) {
+      return errorResult(400, "LICENSE_INVALID_REQUEST", "File lisensi tidak valid.");
+    }
+    const valid = service.verify(parsed.data as unknown as LicenseFile, now);
+    return { status: 200, body: { valid } };
+  }
+
+  const adminAuthorized =
+    authorization.startsWith("Bearer ") && tokenMatches(authorization.slice(7), adminToken);
+
+  if (path === "/v1/licenses/transfer" || path === "/v1/activations/deactivate") {
+    if (!adminAuthorized) {
+      return errorResult(401, "LICENSE_UNAUTHORIZED_ADMIN", "Otorisasi admin diperlukan.");
+    }
+
+    if (path === "/v1/licenses/transfer") {
+      const parsed = transferSchema.safeParse(rawBody);
+      if (!parsed.success) {
+        return errorResult(400, "LICENSE_INVALID_REQUEST", "Permintaan transfer tidak valid.");
+      }
+      const record = service.transfer(parsed.data.licenseId, parsed.data.machineId, now);
+      return record
+        ? { status: 200, body: { licenseId: record.licenseId, machineId: record.machineId } }
+        : errorResult(404, "LICENSE_NOT_FOUND", "Lisensi tidak ditemukan.");
+    }
+
+    const parsed = deactivateSchema.safeParse(rawBody);
+    if (!parsed.success) {
+      return errorResult(400, "LICENSE_INVALID_REQUEST", "Permintaan deaktivasi tidak valid.");
+    }
+    const record = service.deactivate(parsed.data.licenseId, now);
+    return record
+      ? { status: 200, body: { licenseId: record.licenseId, machineId: record.machineId } }
+      : errorResult(404, "LICENSE_NOT_FOUND", "Lisensi tidak ditemukan.");
+  }
+
+  return errorResult(404, "NOT_FOUND", "Endpoint tidak ditemukan.");
+}
+
 export function createSyncServer(options: SyncAppOptions): Server {
   const maxBodyBytes = options.maxBodyBytes ?? 1_048_576;
   const maxEventBytes = options.maxEventBytes ?? 262_144;
@@ -108,6 +219,50 @@ export function createSyncServer(options: SyncAppOptions): Server {
     try {
       if (request.method === "GET" && request.url === "/health") {
         send(response, 200, { ok: true });
+        return;
+      }
+
+      if (request.url?.startsWith("/v1/activations") || request.url?.startsWith("/v1/licenses")) {
+        if (request.method !== "POST") {
+          send(response, 404, { error: { code: "NOT_FOUND" } });
+          return;
+        }
+        if (limiter && !limiter.allow(request.socket.remoteAddress ?? "unknown", Date.now())) {
+          response.setHeader("retry-after", "60");
+          send(response, 429, { error: { code: "SYNC_RATE_LIMITED" } });
+          return;
+        }
+        if (!options.license) {
+          send(response, 503, {
+            error: { code: "LICENSE_SERVICE_UNAVAILABLE", message: "Layanan lisensi belum dikonfigurasi." }
+          });
+          return;
+        }
+
+        const licenseBody = await readBody(request, maxBodyBytes);
+        if (!licenseBody.ok) {
+          request.resume();
+          send(response, 413, { error: { code: "LICENSE_BODY_TOO_LARGE" } });
+          return;
+        }
+
+        let licenseJson: unknown;
+        try {
+          licenseJson = JSON.parse(licenseBody.value);
+        } catch {
+          send(response, 400, { error: { code: "LICENSE_INVALID_BODY" } });
+          return;
+        }
+
+        const result = handleLicense(
+          options.license.service,
+          options.license.adminToken,
+          request.url,
+          licenseJson,
+          request.headers.authorization ?? "",
+          new Date()
+        );
+        send(response, result.status, result.body);
         return;
       }
 

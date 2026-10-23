@@ -77,6 +77,20 @@ Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/dat
 
 Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`, `LICENSE_WRONG_PRODUCT`, `LICENSE_DEVICE_MISMATCH`, `LICENSE_EXPIRED`, `LICENSE_NOT_YET_VALID`, `LICENSE_SERVER_UNAVAILABLE`. Detail: [ADR-0010](../decisions/ADR-0010-license-core.md).
 
+## License Service (server referensi — ADR-0011)
+
+| Method | Path | Auth | Body → Respons |
+|---|---|---|---|
+| POST | `/v1/activations` | serial | schemaVersion, productId, machineId, serial, requestId, nonce, createdAt → license file |
+| POST | `/v1/licenses/refresh` | licenseId+machine | licenseId, machineId → license file baru |
+| POST | `/v1/licenses/verify` | signature | license file → `{valid}` |
+| POST | `/v1/licenses/transfer` | admin bearer | licenseId, machineId → binding baru |
+| POST | `/v1/activations/deactivate` | admin bearer | licenseId → machine dilepas |
+
+- Serial disimpan sebagai SHA-256; aktivasi mengikat machine secara atomik; audit di `license_audit`.
+- Env: `LICENSE_SIGNING_KEY_PATH`, `LICENSE_KEY_ID`, `LICENSE_SEED_SERIALS`, `LICENSE_ADMIN_TOKEN`, `LICENSE_SUBSCRIPTION_DAYS`, `LICENSE_GRACE_DAYS`.
+- Bukan produksi (tanpa TLS, token admin statis, seed via env). Client: `VITE_LICENSE_SERVER_URL` + tombol Aktivasi online.
+
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.

@@ -1,6 +1,6 @@
 # ADR-0010 — License core: payload Ed25519 dan verifikasi native
 
-- **Status:** Accepted (core implemented; online service pending) · **Tanggal:** 2026-10-24
+- **Status:** Accepted (core implemented; online reference implemented in ADR-0011) · **Tanggal:** 2026-10-24
 - **Konteks:** Fase H membutuhkan lisensi yang diverifikasi native, mendukung aktivasi offline, dan tidak bergantung pada UI. Kebijakan komersial (OD-5) dan server lisensi (OD-7) belum final.
 
 ## Keputusan

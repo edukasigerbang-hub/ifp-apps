@@ -36,7 +36,7 @@ src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/
              icons/
 scripts/     validate-content.ts, export-content-schema.ts, check-fixtures.ts,
              mock-sync-server.mjs, license-issuer.mjs
-server/      src/{app,index,store}.ts + src/app.test.ts  (backend referensi)
+server/      src/{app,index,store,license}.ts + src/{app,license}.test.ts  (backend referensi)
 content/     schema/*.json (generated), fixtures/*, packages/matematika-kelas3-pecahan/ (draft)
 ```
 

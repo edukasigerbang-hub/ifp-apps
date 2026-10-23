@@ -3,9 +3,11 @@ import { PageHeader } from "../components/ui/PageHeader";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { canPersistLocally } from "../data/learningRepository";
 import {
+  activateOnline,
   exportActivationRequest,
   getLicenseStatus,
   importLicenseFile,
+  isLicenseServerConfigured,
   pickLicenseFile,
   refreshLicense,
   type LicenseStatus
@@ -34,6 +36,7 @@ export function LicenseScreen() {
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [request, setRequest] = useState<string | null>(null);
+  const [serial, setSerial] = useState("");
   const desktop = canPersistLocally();
 
   useEffect(() => {
@@ -97,6 +100,26 @@ export function LicenseScreen() {
       setMessage("Permintaan aktivasi dibuat. Kirim JSON ini ke issuer lisensi.");
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : "Permintaan aktivasi gagal dibuat.");
+    }
+  }
+
+  async function handleOnlineActivation() {
+    setError(null);
+    setMessage(null);
+    setBusy("Mengaktivasi online...");
+    try {
+      const current = await activateOnline(serial.trim());
+      setStatus(current);
+      setMessage(
+        current.valid ? "Aktivasi online berhasil dan lisensi diverifikasi." : current.message ?? "Lisensi tidak valid."
+      );
+      if (current.valid) {
+        setSerial("");
+      }
+    } catch (caught) {
+      setError(caught instanceof Error ? caught.message : "Aktivasi online gagal.");
+    } finally {
+      setBusy(null);
     }
   }
 
@@ -219,9 +242,37 @@ export function LicenseScreen() {
 
           <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
             <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Aktivasi online</h2>
-            <p className="mt-3 text-sm text-muted">
-              Belum tersedia: License Service (server) belum diimplementasikan (OD-7). Gunakan aktivasi offline.
-            </p>
+            {isLicenseServerConfigured() ? (
+              <>
+                <div className="mt-3 flex flex-wrap items-end gap-3">
+                  <label className="text-sm">
+                    Serial perangkat
+                    <input
+                      type="text"
+                      value={serial}
+                      onChange={(event) => setSerial(event.target.value)}
+                      placeholder="DEV-SERIAL-1"
+                      className="mt-1 block min-h-11 w-64 rounded-control border border-ink/15 px-3 font-mono text-sm"
+                    />
+                  </label>
+                  <button
+                    type="button"
+                    onClick={() => void handleOnlineActivation()}
+                    disabled={busy !== null || serial.trim().length === 0}
+                    className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
+                  >
+                    Aktivasi online
+                  </button>
+                </div>
+                <p className="mt-2 text-xs text-muted">
+                  Serial dikirim ke server referensi; lisensi ditandatangani server dan diverifikasi ulang secara native.
+                </p>
+              </>
+            ) : (
+              <p className="mt-3 text-sm text-muted">
+                Server lisensi belum dikonfigurasi (<code>VITE_LICENSE_SERVER_URL</code>). Gunakan aktivasi offline.
+              </p>
+            )}
           </section>
         </>
       )}

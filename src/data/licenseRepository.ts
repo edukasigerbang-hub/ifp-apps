@@ -53,3 +53,45 @@ export async function pickLicenseFile(): Promise<string | null> {
   });
   return typeof selected === "string" ? selected : null;
 }
+
+export function licenseServerUrl(): string {
+  return (import.meta.env.VITE_LICENSE_SERVER_URL ?? "").trim();
+}
+
+export function isLicenseServerConfigured(): boolean {
+  return licenseServerUrl().length > 0;
+}
+
+export async function activateOnline(serial: string): Promise<LicenseStatus> {
+  const baseUrl = licenseServerUrl();
+  if (!baseUrl) {
+    throw new Error("Server lisensi belum dikonfigurasi (VITE_LICENSE_SERVER_URL).");
+  }
+
+  const request = await exportActivationRequest();
+  const response = await fetch(`${baseUrl.replace(/\/+$/, "")}/v1/activations`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      ...request,
+      createdAt: new Date().toISOString(),
+      serial
+    })
+  });
+
+  let body: unknown = null;
+  try {
+    body = await response.json();
+  } catch {
+    body = null;
+  }
+
+  if (!response.ok) {
+    const error = body as { error?: { code?: string; message?: string } } | null;
+    throw new Error(
+      `${error?.error?.code ?? "LICENSE_ACTIVATION_FAILED"}: ${error?.error?.message ?? `HTTP ${response.status}`}`
+    );
+  }
+
+  return invoke<LicenseStatus>("license_import_json", { input: { json: JSON.stringify(body) } });
+}

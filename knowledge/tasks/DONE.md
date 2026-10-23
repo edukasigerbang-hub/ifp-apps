@@ -253,3 +253,19 @@
 - `npm run build` / `npm test` PASS.
 
 **Belum:** License Service online, transfer/deactivation, revocation, clock-rollback detection, key publik produksi embedded.
+
+### T-015 — License Service referensi
+
+**Status:** COMPLETED (reference) · **Change class:** LARGE
+
+- Endpoint server: `/v1/activations`, `/v1/licenses/refresh`, `/v1/licenses/verify`, `/v1/licenses/transfer` (admin), `/v1/activations/deactivate` (admin).
+- Serial disimpan sebagai SHA-256; binding machine atomik; audit `license_audit`; lisensi ditandatangani Ed25519.
+- Client: `VITE_LICENSE_SERVER_URL`, tombol Aktivasi online, respons diimpor via `license_import_json` (verifikasi native).
+- ADR-0011; server dapat menonaktifkan endpoint lisensi jika signing key tidak dikonfigurasi (503).
+
+**Verifikasi:**
+- Server typecheck PASS; 20/20 test server (9 license).
+- E2E: serial `DEV-SERIAL-1` → aktivasi online → UI “Berlaku”, machine binding + audit `activated` di DB server.
+- `npm run build` PASS; Rust 30/30.
+
+**Belum:** TLS/produksi, penerbitan serial via admin UI, rotasi key, UI transfer/deaktivasi, revocation endpoint.
