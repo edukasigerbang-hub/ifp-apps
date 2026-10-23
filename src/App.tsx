@@ -3,6 +3,7 @@ import { AppShell } from "./components/layout/AppShell";
 import { findNavItem, isScreenId, type ScreenId } from "./navigation";
 import { ContentScreen } from "./screens/ContentScreen";
 import { LessonPlayer } from "./screens/LessonPlayer";
+import { LicenseScreen } from "./screens/LicenseScreen";
 import { ResultsScreen } from "./screens/ResultsScreen";
 import { ScreenPlaceholder } from "./screens/ScreenPlaceholder";
 import { SettingsScreen } from "./screens/SettingsScreen";
@@ -31,6 +32,8 @@ export default function App() {
         <SettingsScreen />
       ) : activeScreen === "content" ? (
         <ContentScreen />
+      ) : activeScreen === "license" ? (
+        <LicenseScreen />
       ) : (
         <ScreenPlaceholder item={activeItem} />
       )}

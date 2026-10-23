@@ -23,6 +23,7 @@
 | T-011 | Fase F — Content Manager | Impor folder, validasi native, staging, aktivasi atomik, rollback; E2E v1→v2→rollback PASS |
 | T-012 | Content Runtime wiring | Player memuat paket impor aktif (managed-first) + aset via blob; E2E judul v2 & rollback PASS |
 | T-013 | Katalog multi-paket | `content_list_active` + pemilih paket; E2E 2 paket (Matematika & IPA) ganti judul PASS |
+| T-014 | Fase H — License core | Ed25519 canonical, verifikasi native, import offline, status UI, test vectors; E2E PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -49,8 +50,9 @@
 
 **T-012 Content Runtime wiring — DONE.**
 **T-013 Katalog multi-paket — DONE.**
+**Fase H License core — DONE (online service belum).**
 
-**Fase H — License core** (berikutnya): installation ID, signed payload Ed25519, verifikasi native, test vectors; kebijakan OD-5 tetap terbuka.
+**Berikutnya:** License Service online + transfer/revocation (OD-5/OD-7), key publik produksi di-embed saat rilis, review manusia/OD-1.
 
 ## Verifikasi sesi ini
 
@@ -68,6 +70,9 @@
 | E2E Content Manager | **PASS** — impor v0.1.0 → v0.2.0 → rollback v0.1.0; UI status benar |
 | E2E Content Runtime | **PASS** — Player menampilkan v0.2.0 (judul impor), aset blob 800px, rollback kembali v0.1.0 |
 | E2E katalog multi-paket | **PASS** — 2 kartu paket; ganti Matematika ↔ IPA mengubah judul |
+| License core tests | **PASS** — 11/11 (valid, grace, expired, not-yet, product, device, tamper, key, perpetual, DB) |
+| E2E lisensi | **PASS** — lisensi Ed25519 diimpor; UI Berlaku; entitlements; request aktivasi |
+| License online/transfer | **BELUM** — server belum ada (OD-5/OD-7) |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |

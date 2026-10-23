@@ -2,6 +2,7 @@ mod content;
 mod db;
 mod error;
 mod learning;
+mod license;
 mod sync;
 mod validation;
 
@@ -30,6 +31,7 @@ pub fn run() {
       let connection = db::open(&data_dir.join("ifp.db"))?;
       app.manage(db::DbState(std::sync::Mutex::new(connection)));
       app.manage(content::ContentState { root: content_root });
+      app.manage(license::LicenseState::from_env());
 
       Ok(())
     })
@@ -49,7 +51,14 @@ pub fn run() {
       content::content_get_active,
       content::content_read_asset,
       content::content_list_active,
-      content::content_get_package
+      content::content_get_package,
+      license::license_get_machine_id,
+      license::license_get_status,
+      license::license_import_file,
+      license::license_get_entitlements,
+      license::license_export_request,
+      license::license_refresh,
+      license::license_activate_online
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

@@ -63,6 +63,20 @@ Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/dat
 | `content_list_active` | — | ringkasan semua paket impor aktif |
 | `content_get_package` | `packageId`, `version` | manifest, lessons, activities, assets paket aktif tertentu |
 
+## License (IMPLEMENTED core — server pending)
+
+| Command | Input | Output |
+|---|---|---|
+| `license_get_machine_id` | — | installation ID (UUID) |
+| `license_get_status` | — | configured/valid, lisensi, expiry, entitlements, inGrace, kode/message |
+| `license_import_file` | `path` | status setelah verifikasi + simpan |
+| `license_get_entitlements` | — | daftar entitlement bila valid |
+| `license_export_request` | — | productId, machineId, requestId, nonce, createdAt |
+| `license_refresh` | — | verifikasi ulang status |
+| `license_activate_online` | — | `LICENSE_SERVER_UNAVAILABLE` (belum ada server) |
+
+Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`, `LICENSE_WRONG_PRODUCT`, `LICENSE_DEVICE_MISMATCH`, `LICENSE_EXPIRED`, `LICENSE_NOT_YET_VALID`, `LICENSE_SERVER_UNAVAILABLE`. Detail: [ADR-0010](../decisions/ADR-0010-license-core.md).
+
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.

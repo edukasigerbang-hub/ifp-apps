@@ -233,3 +233,23 @@
 - `cargo test` 19/19 (list 2 paket, load by id, tolak versi tidak aktif).
 - E2E: impor Matematika + IPA → 2 kartu; default IPA; pilih Matematika → judul berubah; kembali IPA; gambar blob 800px.
 - `npm run build` / `npm test` PASS.
+
+### T-014 — Fase H: License core
+
+**Status:** COMPLETED (core) · **Change class:** LARGE
+
+- Installation ID = `app_meta.installation_id` (UUID, tanpa hardware fingerprint).
+- Payload lisensi LLD + signature **Ed25519** atas canonical JSON (sorted keys, integer).
+- Verifikasi native: schema, product, machine, notBefore, expiry + grace, keyId, signature.
+- Public key dari `IFP_LICENSE_KEYS` (JSON base64 raw 32) + product env; tanpa key → `LICENSE_NOT_CONFIGURED`.
+- Migrasi `0004_license`; lisensi tersimpan di `license_state` dan diverifikasi ulang saat status/refresh.
+- UI Lisensi: status, expiry, entitlements, machine ID, impor file, ekspor request, catatan online belum tersedia.
+- `scripts/license-issuer.mjs` untuk keypair + penerbitan lisensi dev (private key dihapus setelah uji).
+- ADR-0010.
+
+**Verifikasi:**
+- `cargo test` 30/30 (11 license: valid, grace, expired, not-yet, product, device, tamper, unknown key, perpetual, DB import, unconfigured).
+- E2E: machine ID → terbitkan lisensi Ed25519 → impor → UI “Berlaku”, entitlements `core`, request aktivasi berisi machineId.
+- `npm run build` / `npm test` PASS.
+
+**Belum:** License Service online, transfer/deactivation, revocation, clock-rollback detection, key publik produksi embedded.

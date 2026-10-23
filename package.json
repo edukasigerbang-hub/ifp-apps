@@ -15,7 +15,8 @@
     "sync:mock": "node scripts/mock-sync-server.mjs",
     "server:dev": "tsx server/src/index.ts",
     "server:test": "vitest run server/src",
-    "server:typecheck": "tsc -p tsconfig.server.json"
+    "server:typecheck": "tsc -p tsconfig.server.json",
+    "license:tool": "node scripts/license-issuer.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",

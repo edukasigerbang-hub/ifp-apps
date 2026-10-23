@@ -36,6 +36,38 @@ impl AppError {
         Self::new("CONTENT_ACTIVATION_FAILED", message)
     }
 
+    pub fn license_not_configured() -> Self {
+        Self::new("LICENSE_NOT_CONFIGURED", "Kunci publik lisensi belum dikonfigurasi.")
+    }
+
+    pub fn license_invalid(message: &str) -> Self {
+        Self::new("LICENSE_INVALID", message)
+    }
+
+    pub fn license_signature() -> Self {
+        Self::new("LICENSE_SIGNATURE_INVALID", "Tanda tangan lisensi tidak valid.")
+    }
+
+    pub fn license_wrong_product() -> Self {
+        Self::new("LICENSE_WRONG_PRODUCT", "Lisensi bukan untuk produk ini.")
+    }
+
+    pub fn license_device_mismatch() -> Self {
+        Self::new("LICENSE_DEVICE_MISMATCH", "Lisensi tidak terikat ke perangkat ini.")
+    }
+
+    pub fn license_expired() -> Self {
+        Self::new("LICENSE_EXPIRED", "Lisensi sudah kedaluwarsa.")
+    }
+
+    pub fn license_not_yet_valid() -> Self {
+        Self::new("LICENSE_NOT_YET_VALID", "Lisensi belum berlaku.")
+    }
+
+    pub fn license_server_unavailable() -> Self {
+        Self::new("LICENSE_SERVER_UNAVAILABLE", "Server aktivasi lisensi belum tersedia.")
+    }
+
     pub fn state_unavailable() -> Self {
         Self::new("STATE_UNAVAILABLE", "Penyimpanan lokal tidak tersedia.")
     }

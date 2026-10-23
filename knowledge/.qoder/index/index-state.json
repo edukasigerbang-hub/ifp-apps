@@ -5,21 +5,21 @@
   "index_version": 1,
   "schema_version": 1,
   "indexed_commit": "0b5b77a",
-  "generated_at": "2026-10-23T23:59:26+07:00",
-  "files_indexed": 107,
+  "generated_at": "2026-10-24T00:07:56+07:00",
+  "files_indexed": 112,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
   "scope": ["src/", "src-tauri/", "scripts/", "server/", "content/"],
   "breakdown": {
-    "src": 36,
-    "src_tauri": 33,
-    "scripts": 5,
+    "src": 38,
+    "src_tauri": 35,
+    "scripts": 6,
     "server": 4,
     "content": 29,
-    "note": "src-tauri/gen dan target dikecualikan; T-012 belum di-commit saat snapshot"
+    "note": "src-tauri/gen dan target dikecualikan; Fase H belum di-commit saat snapshot"
   },
   "validation": {
-    "last_validated_at": "2026-10-23T23:54:37+07:00",
+    "last_validated_at": "2026-10-24T00:07:56+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },

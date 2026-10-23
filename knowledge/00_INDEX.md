@@ -68,5 +68,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0007](decisions/ADR-0007-content-manager.md) | Content Manager: staging + aktivasi atomik | Accepted (implemented) |
 | [ADR-0008](decisions/ADR-0008-content-runtime.md) | Content Runtime: muat paket impor aktif | Accepted (implemented) |
 | [ADR-0009](decisions/ADR-0009-content-catalog.md) | Katalog multi-paket di Player | Accepted (implemented) |
+| [ADR-0010](decisions/ADR-0010-license-core.md) | License core (Ed25519, verifikasi native) | Accepted (core implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

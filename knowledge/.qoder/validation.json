@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T23:59:26+07:00",
+  "last_validated_at": "2026-10-24T00:07:56+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -64,7 +64,7 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "19/19: 6 learning + 5 sync + 8 content (import, hash, traversal, duplicate, rollback, active load, inactive asset, catalog)"
+      "details": "30/30: 6 learning + 5 sync + 8 content + 11 license (valid/grace/expired/tamper/product/device/key/perpetual/DB/unconfigured)"
     },
     {
       "name": "e2e_learning_persistence",
@@ -125,6 +125,12 @@
       "command": "Tauri WebView CDP + dua paket impor",
       "result": "PASS",
       "details": "Matematika + IPA aktif → 2 kartu; default IPA; ganti ke Matematika mengubah judul; kembali IPA; aset blob 800px"
+    },
+    {
+      "name": "e2e_license",
+      "command": "Tauri WebView CDP + scripts/license-issuer.mjs",
+      "result": "PASS",
+      "details": "Lisensi Ed25519 untuk machine ID diimpor; UI Berlaku; entitlements core; request aktivasi berisi machineId; private key uji dihapus"
     },
     {
       "name": "content_validator_cli",

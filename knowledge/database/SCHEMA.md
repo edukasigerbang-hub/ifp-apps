@@ -1,6 +1,6 @@
 # Database Schema — Lokal (SQLite)
 
-**Status:** IMPLEMENTED (Fase E + I + F) · **Migrasi:** `0001_init`, `0002_sync`, `0003_content_activation` · **Sejak:** 2026-10-23
+**Status:** IMPLEMENTED (Fase E + I + F + H) · **Migrasi:** `0001_init`, `0002_sync`, `0003_content_activation`, `0004_license` · **Sejak:** 2026-10-23
 **Lokasi runtime:** `app_data_dir()/ifp.db` (WAL). Untuk pengujian: env `IFP_DATA_DIR`.
 
 ## Migrasi
@@ -41,7 +41,10 @@ PK (`package_id`, `version`, `asset_path`); `sha256`, `size_bytes`; FK ke `conte
 Transisi: `pending → acknowledged` (ack) atau `pending → failed` (retry, `attempts+1`, backoff) → dead-letter bila `attempts >= maxAttempts` (`next_attempt_at = NULL`). Event tidak pernah dihapus.
 
 ### `app_meta` (migrasi 0002)
-`key` PK, `value`, `updated_at`; menyimpan `installation_id` (UUID v4) untuk sync.
+`key` PK, `value`, `updated_at`; menyimpan `installation_id` (UUID v4) untuk sync dan lisensi.
+
+### `license_state` (migrasi 0004)
+Satu baris (`id=1`): `license_json`, `license_id`, `license_type`, `product_id`, `machine_id`, `key_id`, `expires_at`, `imported_at`, `last_verified_at`. Lisensi diverifikasi ulang saat status/refresh; data UI bukan sumber otoritatif.
 
 ### Index
 `learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)` · `sync_outbox(state, next_attempt_at, created_at)`. Indeks terakhir ditambahkan di migrasi 0002.
