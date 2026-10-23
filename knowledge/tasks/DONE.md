@@ -338,3 +338,14 @@
 - `npm run build` / `npm test` PASS.
 
 **Belum:** hapus/rename profil, PIN/orang tua, preferensi per profil, preferensi suara.
+
+### T-021 — Sinkronisasi otomatis
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Hook `useSyncScheduler`: pemicu 10 dtk setelah mount, event `online`, event `ifp:outbox-changed` (debounce 2 dtk), dan interval 5 menit.
+- Koalesensi via flag modul; hanya saat desktop, terkonfigurasi, dan online.
+- `notifyOutboxChanged()` dipanggil setelah hasil belajar tersimpan.
+- ADR-0016.
+
+**Verifikasi:** E2E dengan backend referensi — kuis disimpan, tanpa klik sinkronisasi, 6 dtk kemudian Pengaturan menampilkan Tersinkron 1; client outbox `acknowledged`; server 1 event. `npm run build` PASS.

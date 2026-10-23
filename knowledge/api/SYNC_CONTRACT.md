@@ -76,6 +76,7 @@ Batas (usulan, wajib dikonfirmasi backend): maksimal **100 event** per batch, **
 6. Setelah `maxAttempts` (5), `next_attempt_at = NULL` → dead-letter; tidak dikirim lagi otomatis.
 7. **Event tidak pernah dihapus** sebelum ack; outbox dipertahankan untuk audit/rekonsiliasi.
 8. Kegagalan sinkronisasi tidak boleh menghalangi belajar atau menyimpan hasil lokal.
+9. Scheduler client memicu sinkronisasi saat aplikasi dibuka, kembali online, setelah outbox berubah, dan setiap 5 menit (ADR-0016).
 
 ## Kode error
 

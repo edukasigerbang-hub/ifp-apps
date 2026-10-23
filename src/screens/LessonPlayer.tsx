@@ -4,6 +4,7 @@ import { QuizActivity, type QuizGradedOutcome } from "../components/content/Quiz
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
 import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
+import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
 import type { Activity } from "../content/schema/activity";
 import type { ActivePackageSummary } from "../data/contentRepository";
 import {
@@ -333,6 +334,7 @@ function LessonView({
         }))
       });
       setStorage({ status: "saved", message: `Tersimpan lokal — percobaan ke-${attempt.attemptNo}.` });
+      notifyOutboxChanged();
     } catch (error) {
       setStorage({
         status: "error",

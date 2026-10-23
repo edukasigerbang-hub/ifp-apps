@@ -24,6 +24,7 @@ src/
   data/profileRepository.ts
   data/preferencesRepository.ts
   data/__tests__/syncEngine.test.ts
+  hooks/useSyncScheduler.ts
   content/loadManagedPackage.ts
   screens/SettingsScreen.tsx
   screens/ContentScreen.tsx

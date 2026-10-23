@@ -15,7 +15,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | DONE 2026-10-23 — 5 test Rust + E2E; runtime wiring T-012 |
 | G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — runtime memuat semua paket aktif + pemilih; gaya guru & tipe aktivitas lain belum |
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | PARTIAL — core + server referensi PASS; produksi/TLS/rotasi key/transfer UI pending |
-| I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + server referensi PASS; stack produksi pending OD-7 |
+| I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + auto-schedule + server referensi PASS; stack produksi pending OD-7 |
 | J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |
 | K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | PARTIAL — 1 pilot draft; review teknis PASS, review manusia & OD-1 pending |
 | L | Device hardening & release | DV-01…DV-20 PASS, installer/updater, backup/restore teruji | PARTIAL — backup & Windows RC build PASS; install/DV/signing/updater pending |

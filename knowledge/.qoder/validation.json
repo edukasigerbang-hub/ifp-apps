@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T00:55:25+07:00",
+  "last_validated_at": "2026-10-24T01:08:12+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -167,6 +167,12 @@
       "command": "Tauri WebView CDP + IFP_DATA_DIR temp",
       "result": "PASS",
       "details": "Profil Budi dibuat/aktif (2 profil); root class reduce-motion font-large; kuis tersimpan; Hasil Belajar profil Budi, 1 sesi/1 attempt"
+    },
+    {
+      "name": "e2e_auto_sync",
+      "command": "Tauri WebView CDP + server referensi + outbox trigger",
+      "result": "PASS",
+      "details": "Setelah simpan hasil tanpa klik: outbox acknowledged, server 1 event, Pengaturan Tersinkron 1 dalam ±6 dtk"
     },
     {
       "name": "content_validator_cli",

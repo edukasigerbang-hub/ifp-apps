@@ -12,6 +12,7 @@
 | Impor/aktivasi/rollback konten | 8 test Rust + E2E v1→v2→rollback |
 | Runtime paket impor & katalog | E2E managed/bundled, ganti paket, blob asset |
 | Sync client + backend | 5+9 test + E2E ack; delivery server tersimpan |
+| Sinkronisasi otomatis | E2E tanpa klik: outbox acknowledged + server 1 event setelah simpan |
 | Lisensi offline + online | 11+9 test + E2E impor file dan aktivasi serial |
 | Backup/inspect/restore | 3 test + E2E export/inspect |
 | Diagnostics | 2 test + E2E redaksi |

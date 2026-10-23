@@ -368,6 +368,9 @@ export function SettingsScreen() {
             <p className="mt-3 text-sm text-muted">
               Percobaan berikutnya: {formatDate(state.sync.nextAttemptAt)}
             </p>
+            <p className="mt-1 text-xs text-muted">
+              Sinkronisasi otomatis dicoba saat aplikasi dibuka, saat kembali online, dan setiap 5 menit.
+            </p>
 
             {!configured && (
               <p className="mt-3 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm">

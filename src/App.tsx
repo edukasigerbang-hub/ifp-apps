@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AppShell } from "./components/layout/AppShell";
 import { canPersistLocally } from "./data/learningRepository";
 import { applyPreferences, getPreferences } from "./data/preferencesRepository";
+import { useSyncScheduler } from "./hooks/useSyncScheduler";
 import { findNavItem, isScreenId, type ScreenId } from "./navigation";
 import { ContentScreen } from "./screens/ContentScreen";
 import { LessonPlayer } from "./screens/LessonPlayer";
@@ -18,6 +19,7 @@ function initialScreen(): ScreenId {
 export default function App() {
   const [activeScreen, setActiveScreen] = useState<ScreenId>(initialScreen);
   const activeItem = findNavItem(activeScreen);
+  useSyncScheduler();
 
   useEffect(() => {
     if (!canPersistLocally()) {
