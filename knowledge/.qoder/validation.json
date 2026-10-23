@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T00:23:01+07:00",
+  "last_validated_at": "2026-10-24T00:31:56+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -143,6 +143,12 @@
       "command": "Tauri WebView CDP + backup_export/inspect",
       "result": "PASS",
       "details": "Backup 131 KB + manifest sha256/migrasi 1-4; inspect valid; UI Pengaturan menampilkan bagian Backup & Restore"
+    },
+    {
+      "name": "windows_release_build",
+      "command": "npm run tauri build",
+      "result": "PASS",
+      "details": "Exit 0; MSI 4.21 MiB sha 7887c29c…; NSIS 2.94 MiB sha 0c4d494c…; install/launch NOT RUN"
     },
     {
       "name": "content_validator_cli",

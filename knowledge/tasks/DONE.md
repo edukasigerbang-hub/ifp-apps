@@ -285,3 +285,15 @@
 - `npm run build` / `npm test` PASS.
 
 **Belum:** backup terjadwal/retensi otomatis, enkripsi, sertakan konten impor (OD-4).
+
+### T-017 — Windows release candidate
+
+**Status:** COMPLETED (build only) · **Change class:** MEDIUM
+
+- `npm run tauri build` exit 0; MSI 4.21 MiB dan NSIS 2.94 MiB dihasilkan.
+- Hash artefak dicatat; artefak tetap di `target/` (gitignored).
+- Release checklist dibuat dengan 11 blocker dan gate rilis.
+
+**Verifikasi:** build PASS; npm 43/43 + golden; cargo 33/33 (sebelum build).
+
+**Belum:** install/launch/upgrade, code signing, Windows 11 acceptance, Android release, updater, embedded license public key, production CSP. Lihat [RELEASE_CHECKLIST.md](../release/RELEASE_CHECKLIST.md).

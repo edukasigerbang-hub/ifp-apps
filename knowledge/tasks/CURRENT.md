@@ -26,6 +26,7 @@
 | T-014 | Fase H — License core | Ed25519 canonical, verifikasi native, import offline, status UI, test vectors; E2E PASS |
 | T-015 | License Service referensi | Aktivasi/refresh/verify/transfer/deactivate; serial hash; E2E aktivasi online PASS |
 | T-016 | Backup & Restore | SQLite backup API + manifest + integrity + restore dengan guard schema; UI Pengaturan |
+| T-017 | Windows release candidate | `tauri build` PASS; MSI 4.21 MiB + NSIS 2.94 MiB; belum install/sign/release |
 
 ## Status prasyarat materi pembelajaran
 
@@ -54,7 +55,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** Fase J (Studio/admin) atau K (produksi konten) — keduanya butuh keputusan produk; produksi License Service + TLS; review manusia/OD-1; device acceptance.
+**Berikutnya:** rilis memblokir pada keputusan/hardware: OD-6 signing & identifier, public key lisensi produksi, backend produksi + CSP (OD-7), DV perangkat, konten/review (OD-1).
 
 ## Verifikasi sesi ini
 
@@ -79,6 +80,8 @@
 | License online/transfer | **ADA (referensi)** — server referensi; produksi/TLS/rotasi key belum |
 | Backup/restore | **PASS** — Rust 3 test + E2E export/inspect; UI ringkasan sebelum restore |
 | Restore otomatis/retensi | **BELUM** — manual; OD-4 |
+| Windows release build | **PASS** — MSI + NSIS dihasilkan; install/sign NOT RUN |
+| Android release build | **BELUM** — hanya debug APK |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
