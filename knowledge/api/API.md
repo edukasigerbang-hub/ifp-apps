@@ -91,6 +91,19 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 - Env: `LICENSE_SIGNING_KEY_PATH`, `LICENSE_KEY_ID`, `LICENSE_SEED_SERIALS`, `LICENSE_ADMIN_TOKEN`, `LICENSE_SUBSCRIPTION_DAYS`, `LICENSE_GRACE_DAYS`.
 - Bukan produksi (tanpa TLS, token admin statis, seed via env). Client: `VITE_LICENSE_SERVER_URL` + tombol Aktivasi online.
 
+## Backup & Restore (IMPLEMENTED — ADR-0012)
+
+| Command | Input | Output |
+|---|---|---|
+| `backup_export` | `destination` | path, bytes, sha256, migrations, counts |
+| `backup_inspect` | `path` | ringkasan terverifikasi (integrity check) |
+| `backup_restore` | `path` | ringkasan setelah restore |
+
+- Backup memakai SQLite backup API; file tujuan tidak boleh sudah ada.
+- Restore menolak backup dengan schema lebih baru; jalankan ulang aplikasi setelah restore.
+- Error: `BACKUP_INVALID`, `BACKUP_FAILED`, `BACKUP_SCHEMA_TOO_NEW`.
+- Backup tidak menyertakan paket konten impor; tidak terenkripsi.
+
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.

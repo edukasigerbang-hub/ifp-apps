@@ -68,6 +68,18 @@ impl AppError {
         Self::new("LICENSE_SERVER_UNAVAILABLE", "Server aktivasi lisensi belum tersedia.")
     }
 
+    pub fn backup_invalid(message: &str) -> Self {
+        Self::new("BACKUP_INVALID", message)
+    }
+
+    pub fn backup_failed(message: &str) -> Self {
+        Self::new("BACKUP_FAILED", message)
+    }
+
+    pub fn backup_schema_too_new() -> Self {
+        Self::new("BACKUP_SCHEMA_TOO_NEW", "Backup berasal dari versi aplikasi yang lebih baru.")
+    }
+
     pub fn state_unavailable() -> Self {
         Self::new("STATE_UNAVAILABLE", "Penyimpanan lokal tidak tersedia.")
     }

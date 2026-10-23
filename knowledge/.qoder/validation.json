@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T00:16:04+07:00",
+  "last_validated_at": "2026-10-24T00:23:01+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -64,7 +64,7 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "30/30: 6 learning + 5 sync + 8 content + 11 license (valid/grace/expired/tamper/product/device/key/perpetual/DB/unconfigured)"
+      "details": "33/33: 6 learning + 5 sync + 8 content + 11 license + 3 backup"
     },
     {
       "name": "e2e_learning_persistence",
@@ -137,6 +137,12 @@
       "command": "Tauri WebView CDP + server referensi + serial seed",
       "result": "PASS",
       "details": "Serial DEV-SERIAL-1 → server menandatangani → client verifikasi native → UI Berlaku; server DB: binding machine + audit activated"
+    },
+    {
+      "name": "e2e_backup_restore",
+      "command": "Tauri WebView CDP + backup_export/inspect",
+      "result": "PASS",
+      "details": "Backup 131 KB + manifest sha256/migrasi 1-4; inspect valid; UI Pengaturan menampilkan bagian Backup & Restore"
     },
     {
       "name": "content_validator_cli",

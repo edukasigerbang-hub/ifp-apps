@@ -25,6 +25,7 @@
 | T-013 | Katalog multi-paket | `content_list_active` + pemilih paket; E2E 2 paket (Matematika & IPA) ganti judul PASS |
 | T-014 | Fase H — License core | Ed25519 canonical, verifikasi native, import offline, status UI, test vectors; E2E PASS |
 | T-015 | License Service referensi | Aktivasi/refresh/verify/transfer/deactivate; serial hash; E2E aktivasi online PASS |
+| T-016 | Backup & Restore | SQLite backup API + manifest + integrity + restore dengan guard schema; UI Pengaturan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -53,7 +54,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** produksi License Service (TLS, penerbitan serial/akun, rotasi key), UI transfer/deaktivasi dari API, OD-5, review manusia/OD-1, device acceptance.
+**Berikutnya:** Fase J (Studio/admin) atau K (produksi konten) — keduanya butuh keputusan produk; produksi License Service + TLS; review manusia/OD-1; device acceptance.
 
 ## Verifikasi sesi ini
 
@@ -76,6 +77,8 @@
 | License Service tests | **PASS** — 9/9 (aktivasi, konflik binding, revoked, refresh, verify, transfer/deactivate admin, 503, hash serial) |
 | E2E aktivasi online | **PASS** — serial → server menandatangani → client verifikasi native → UI Berlaku; audit `activated` |
 | License online/transfer | **ADA (referensi)** — server referensi; produksi/TLS/rotasi key belum |
+| Backup/restore | **PASS** — Rust 3 test + E2E export/inspect; UI ringkasan sebelum restore |
+| Restore otomatis/retensi | **BELUM** — manual; OD-4 |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |

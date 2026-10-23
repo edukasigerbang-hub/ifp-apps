@@ -1,3 +1,4 @@
+mod backup;
 mod content;
 mod db;
 mod error;
@@ -59,7 +60,10 @@ pub fn run() {
       license::license_get_entitlements,
       license::license_export_request,
       license::license_refresh,
-      license::license_activate_online
+      license::license_activate_online,
+      backup::backup_export,
+      backup::backup_inspect,
+      backup::backup_restore
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

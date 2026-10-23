@@ -269,3 +269,19 @@
 - `npm run build` PASS; Rust 30/30.
 
 **Belum:** TLS/produksi, penerbitan serial via admin UI, rotasi key, UI transfer/deaktivasi, revocation endpoint.
+
+### T-016 — Backup & Restore database lokal
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- `backup.rs`: SQLite backup API, tolak overwrite, finalisasi `journal_mode=DELETE`, manifest sidecar (sha256, migrasi, counts).
+- `backup_inspect`: integrity check + schema/counts; `backup_restore`: guard schema tidak lebih baru, restore ke koneksi aktif, migrasi lanjutan.
+- UI Pengaturan: Buat backup, pilih/inspect, ringkasan, tombol Pulihkan, peringatan restart.
+- ADR-0012.
+
+**Verifikasi:**
+- `cargo test` 33/33 (3 backup: export/inspect/restore, invalid file, refuse overwrite).
+- E2E: backup_export + inspect dari WebView; manifest + migrasi 1–4; UI menampilkan bagian Backup & Restore.
+- `npm run build` / `npm test` PASS.
+
+**Belum:** backup terjadwal/retensi otomatis, enkripsi, sertakan konten impor (OD-4).

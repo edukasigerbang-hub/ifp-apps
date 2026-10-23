@@ -18,6 +18,7 @@ src/
   data/syncEngine.ts
   data/contentRepository.ts
   data/licenseRepository.ts
+  data/backupRepository.ts
   data/__tests__/syncEngine.test.ts
   content/loadManagedPackage.ts
   screens/SettingsScreen.tsx
@@ -31,7 +32,7 @@ src/
     __tests__/{validatePackage,quiz}.test.ts
   index.css, vite-env.d.ts
 src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/
-             src/{main,lib,db,error,learning,license,sync,validation,content}.rs
+             src/{main,lib,db,error,learning,license,sync,validation,content,backup}.rs
              src/migrations/{0001_init.sql,0002_sync.sql,0003_content_activation.sql,0004_license.sql}
              icons/
 scripts/     validate-content.ts, export-content-schema.ts, check-fixtures.ts,
