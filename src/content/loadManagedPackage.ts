@@ -1,4 +1,10 @@
-import { getActivePackage, readAsset } from "../data/contentRepository";
+import {
+  getPackage,
+  listActivePackages,
+  readAsset,
+  type ActivePackageRecord,
+  type ActivePackageSummary
+} from "../data/contentRepository";
 import type { LoadedContentPackage } from "./loadPackages";
 import { validateContentPackage } from "./validatePackage";
 
@@ -7,8 +13,26 @@ export interface ManagedContentPackage extends LoadedContentPackage {
   objectUrls: string[];
 }
 
-export async function loadManagedPackage(): Promise<ManagedContentPackage | null> {
-  const active = await getActivePackage();
+export async function listManagedPackages(): Promise<ActivePackageSummary[]> {
+  return listActivePackages();
+}
+
+export async function loadManagedPackage(
+  packageId?: string,
+  version?: string
+): Promise<ManagedContentPackage | null> {
+  let active: ActivePackageRecord | null;
+
+  if (packageId && version) {
+    active = await getPackage(packageId, version);
+  } else {
+    const summaries = await listActivePackages();
+    if (summaries.length === 0) {
+      return null;
+    }
+    active = await getPackage(summaries[0].packageId, summaries[0].version);
+  }
+
   if (!active) {
     return null;
   }

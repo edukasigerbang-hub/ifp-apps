@@ -22,6 +22,7 @@
 | T-009 | Device spike (readiness) | Android init + build debug PASS (APK 129 MB); install/launch & Windows 11 NOT RUN |
 | T-011 | Fase F — Content Manager | Impor folder, validasi native, staging, aktivasi atomik, rollback; E2E v1→v2→rollback PASS |
 | T-012 | Content Runtime wiring | Player memuat paket impor aktif (managed-first) + aset via blob; E2E judul v2 & rollback PASS |
+| T-013 | Katalog multi-paket | `content_list_active` + pemilih paket; E2E 2 paket (Matematika & IPA) ganti judul PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -47,8 +48,9 @@
 **T-009 acceptance — BLOCKED** (tidak ada perangkat Android 14 fisik / Windows 11 / panel 4K; lihat [readiness](../device/DEVICE_SPIKE_READINESS.md)).
 
 **T-012 Content Runtime wiring — DONE.**
+**T-013 Katalog multi-paket — DONE.**
 
-**T-013 — Katalog multi-paket** (berikutnya): Player memilih paket/mapel aktif, bukan hanya satu paket impor global.
+**Fase H — License core** (berikutnya): installation ID, signed payload Ed25519, verifikasi native, test vectors; kebijakan OD-5 tetap terbuka.
 
 ## Verifikasi sesi ini
 
@@ -65,7 +67,8 @@
 | Content Manager tests | **PASS** — 5/5 Rust (impor, hash, traversal, duplikat, rollback) |
 | E2E Content Manager | **PASS** — impor v0.1.0 → v0.2.0 → rollback v0.1.0; UI status benar |
 | E2E Content Runtime | **PASS** — Player menampilkan v0.2.0 (judul impor), aset blob 800px, rollback kembali v0.1.0 |
-| Player memuat paket impor | **ADA** — satu paket impor aktif global; multi-paket belum (T-013) |
+| E2E katalog multi-paket | **PASS** — 2 kartu paket; ganti Matematika ↔ IPA mengubah judul |
+| Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
 | Rust repository tests | **PASS** — 6/6 (termasuk rollback event duplikat & persistensi reopen) |

@@ -58,8 +58,10 @@ Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/dat
 | `content_import_package` | `sourcePath` | `packageId`, `version`, `previousVersion`, `files`, `bytes` |
 | `content_list_packages` | — | daftar `packageId`, `version`, `status`, `source`, `installedAt`, `activatedAt` |
 | `content_rollback_package` | `packageId` | `packageId`, `activeVersion` |
-| `content_get_active` | — | manifest, lessons, activities, assets versi impor aktif |
+| `content_get_active` | — | manifest, lessons, activities, assets versi impor aktif (terbaru) |
 | `content_read_asset` | `packageId`, `version`, `path` | byte aset (hanya versi aktif, maks 64 MB) |
+| `content_list_active` | — | ringkasan semua paket impor aktif |
+| `content_get_package` | `packageId`, `version` | manifest, lessons, activities, assets paket aktif tertentu |
 
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.

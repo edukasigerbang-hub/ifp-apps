@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ExplorationActivity } from "../components/content/ExplorationActivity";
 import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
-import { loadManagedPackage } from "../content/loadManagedPackage";
+import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
 import type { Activity } from "../content/schema/activity";
+import type { ActivePackageSummary } from "../data/contentRepository";
 import {
   canPersistLocally,
   ensureLocalProfile,
@@ -30,27 +31,51 @@ const storageClasses: Record<StorageStatus, string> = {
 
 type ContentLoadState =
   | { status: "loading" }
-  | { status: "ready"; contentPackage: LoadedContentPackage; source: "managed" | "bundled" }
+  | {
+      status: "ready";
+      contentPackage: LoadedContentPackage;
+      source: "managed" | "bundled";
+      summaries: ActivePackageSummary[];
+      selected: { packageId: string; version: string } | null;
+    }
   | { status: "error"; message: string }
   | { status: "empty" };
 
 export function LessonPlayer() {
   const [state, setState] = useState<ContentLoadState>({ status: "loading" });
+  const [switching, setSwitching] = useState(false);
+  const objectUrlsRef = useRef<string[]>([]);
+
+  function releaseObjectUrls() {
+    for (const url of objectUrlsRef.current) {
+      URL.revokeObjectURL(url);
+    }
+    objectUrlsRef.current = [];
+  }
 
   useEffect(() => {
     let cancelled = false;
-    let objectUrls: string[] = [];
 
     (async () => {
       try {
         if (canPersistLocally()) {
-          const managed = await loadManagedPackage();
-          if (managed) {
-            objectUrls = managed.objectUrls;
-            if (!cancelled) {
-              setState({ status: "ready", contentPackage: managed, source: "managed" });
+          const summaries = await listManagedPackages();
+          if (summaries.length > 0) {
+            const first = summaries[0];
+            const managed = await loadManagedPackage(first.packageId, first.version);
+            if (managed) {
+              objectUrlsRef.current = managed.objectUrls;
+              if (!cancelled) {
+                setState({
+                  status: "ready",
+                  contentPackage: managed,
+                  source: "managed",
+                  summaries,
+                  selected: { packageId: first.packageId, version: first.version }
+                });
+              }
+              return;
             }
-            return;
           }
         }
 
@@ -71,7 +96,13 @@ export function LessonPlayer() {
         }
 
         if (!cancelled) {
-          setState({ status: "ready", contentPackage: packages[0], source: "bundled" });
+          setState({
+            status: "ready",
+            contentPackage: packages[0],
+            source: "bundled",
+            summaries: [],
+            selected: null
+          });
         }
       } catch (error) {
         if (!cancelled) {
@@ -85,11 +116,39 @@ export function LessonPlayer() {
 
     return () => {
       cancelled = true;
-      for (const url of objectUrls) {
-        URL.revokeObjectURL(url);
-      }
+      releaseObjectUrls();
     };
   }, []);
+
+  async function selectPackage(summary: ActivePackageSummary) {
+    if (state.status !== "ready" || state.source !== "managed") {
+      return;
+    }
+
+    setSwitching(true);
+    try {
+      const managed = await loadManagedPackage(summary.packageId, summary.version);
+      if (!managed) {
+        return;
+      }
+      releaseObjectUrls();
+      objectUrlsRef.current = managed.objectUrls;
+      setState({
+        status: "ready",
+        contentPackage: managed,
+        source: "managed",
+        summaries: state.summaries,
+        selected: { packageId: summary.packageId, version: summary.version }
+      });
+    } catch (error) {
+      setState({
+        status: "error",
+        message: error instanceof Error ? error.message : "Paket gagal dimuat."
+      });
+    } finally {
+      setSwitching(false);
+    }
+  }
 
   if (state.status === "loading") {
     return (
@@ -122,7 +181,46 @@ export function LessonPlayer() {
     );
   }
 
-  return <LessonView contentPackage={state.contentPackage} source={state.source} />;
+  return (
+    <div className="max-w-4xl">
+      {state.source === "managed" && state.summaries.length > 1 && (
+        <section aria-label="Pilih paket konten" className="mb-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Pilih paket</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {state.summaries.map((summary) => {
+              const active = state.selected?.packageId === summary.packageId;
+              return (
+                <button
+                  key={`${summary.packageId}@${summary.version}`}
+                  type="button"
+                  aria-pressed={active}
+                  disabled={switching}
+                  onClick={() => void selectPackage(summary)}
+                  className={`min-h-11 rounded-control px-4 py-2 text-left disabled:opacity-60 ${
+                    active
+                      ? "bg-navy text-white"
+                      : "border border-ink/15 bg-surface hover:bg-paper"
+                  }`}
+                >
+                  <span className="block text-sm font-medium">{summary.title}</span>
+                  <span className={`mt-0.5 block text-xs ${active ? "text-white/70" : "text-muted"}`}>
+                    Kelas {summary.gradeLevels.join(", ")} · {summary.subjects.join(", ")} · v
+                    {summary.version}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      <LessonView
+        key={state.selected ? `${state.selected.packageId}@${state.selected.version}` : "bundled"}
+        contentPackage={state.contentPackage}
+        source={state.source}
+      />
+    </div>
+  );
 }
 
 function LessonView({

@@ -1,6 +1,6 @@
 # ADR-0008 — Content Runtime: memuat paket impor aktif
 
-- **Status:** Accepted (implemented) · **Tanggal:** 2026-10-23
+- **Status:** Accepted (implemented; multi-paket dilanjutkan di ADR-0009) · **Tanggal:** 2026-10-23
 - **Konteks:** Content Manager (ADR-0007) sudah bisa mengimpor dan mengaktifkan paket, tetapi Player masih memuat paket bundled melalui `import.meta.glob`.
 
 ## Keputusan

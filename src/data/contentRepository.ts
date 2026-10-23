@@ -39,6 +39,15 @@ export interface ActivePackageRecord {
   assets: ActiveAsset[];
 }
 
+export interface ActivePackageSummary {
+  packageId: string;
+  version: string;
+  title: string;
+  gradeLevels: number[];
+  subjects: string[];
+  lessonCount: number;
+}
+
 export async function pickContentPackageFolder(): Promise<string | null> {
   if (!canPersistLocally()) {
     return null;
@@ -65,6 +74,14 @@ export async function rollbackPackage(packageId: string): Promise<RollbackResult
 
 export async function getActivePackage(): Promise<ActivePackageRecord | null> {
   return invoke<ActivePackageRecord | null>("content_get_active");
+}
+
+export async function listActivePackages(): Promise<ActivePackageSummary[]> {
+  return invoke<ActivePackageSummary[]>("content_list_active");
+}
+
+export async function getPackage(packageId: string, version: string): Promise<ActivePackageRecord> {
+  return invoke<ActivePackageRecord>("content_get_package", { packageId, version });
 }
 
 export async function readAsset(packageId: string, version: string, path: string): Promise<number[]> {

@@ -33,12 +33,12 @@
   "context_version": 7,
   "skill_registry_version": 0,
   "current_task": "T-005b Review pilot + sign-off OD-1",
-  "last_task": "T-012 Content Runtime (paket impor aktif)",
+  "last_task": "T-013 Katalog multi-paket",
   "last_session_id": "SESSION-2026-10-23-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-23T23:55:36+07:00",
-  "last_validation": "cargo 18/18; npm 34/34 + golden 4/4; E2E content + runtime (v2 title/rollback) PASS; backend sync E2E PASS; build PASS",
+  "last_updated": "2026-10-23T23:59:26+07:00",
+  "last_validation": "cargo 19/19; npm 34/34 + golden 4/4; E2E content/runtime/catalog PASS; sync backend E2E PASS; build PASS",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -47,5 +47,5 @@
   "drift_detected": true,
   "drift_types": ["DOC_DRIFT"],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "T-013 katalog multi-paket; review manusia + OD-1; backend produksi OD-7; device acceptance blocked"
+  "next_step": "Fase H license core (Ed25519, test vectors); review manusia + OD-1; backend produksi OD-7; device acceptance blocked"
 }

@@ -219,3 +219,17 @@
 - `npm run build` / `npm test` PASS.
 
 **Batas:** satu paket impor aktif global; belum ada pemilihan multi-paket (T-013); aset besar belum streaming.
+
+### T-013 — Katalog multi-paket
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Command `content_list_active` (ringkasan semua paket impor aktif) dan `content_get_package(packageId, version)`.
+- Player menampilkan pemilih paket bila >1; default paket pertama; mengganti paket me-remount lesson agar sesi tidak tercampur.
+- Blob URL paket lama dicabut; aset per paket.
+- ADR-0009.
+
+**Verifikasi:**
+- `cargo test` 19/19 (list 2 paket, load by id, tolak versi tidak aktif).
+- E2E: impor Matematika + IPA → 2 kartu; default IPA; pilih Matematika → judul berubah; kembali IPA; gambar blob 800px.
+- `npm run build` / `npm test` PASS.

@@ -71,6 +71,17 @@ pub struct ActivePackageView {
     pub assets: Vec<ActiveAssetView>,
 }
 
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ActivePackageSummary {
+    pub package_id: String,
+    pub version: String,
+    pub title: String,
+    pub grade_levels: Vec<u64>,
+    pub subjects: Vec<String>,
+    pub lesson_count: usize,
+}
+
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct AssetInput {
@@ -492,26 +503,12 @@ fn read_json_directory(path: &Path) -> Result<Vec<serde_json::Value>, AppError> 
         .collect()
 }
 
-pub fn get_active_package(
-    connection: &Connection,
+fn load_package_view(
     root: &Path,
-) -> Result<Option<ActivePackageView>, AppError> {
-    let active: Option<(String, String)> = connection
-        .query_row(
-            "SELECT package_id, version FROM content_packages
-             WHERE status = 'active' AND source = 'imported'
-             ORDER BY activated_at DESC LIMIT 1",
-            [],
-            |row| Ok((row.get(0)?, row.get(1)?)),
-        )
-        .optional()
-        .map_err(AppError::read)?;
-
-    let Some((package_id, version)) = active else {
-        return Ok(None);
-    };
-
-    let directory = root.join("packages").join(&package_id).join(&version);
+    package_id: &str,
+    version: &str,
+) -> Result<ActivePackageView, AppError> {
+    let directory = root.join("packages").join(package_id).join(version);
     if !directory.is_dir() {
         return Err(AppError::content_invalid("Paket aktif tidak ditemukan di disk."));
     }
@@ -547,14 +544,133 @@ pub fn get_active_package(
         }
     }
 
-    Ok(Some(ActivePackageView {
-        package_id,
-        version,
+    Ok(ActivePackageView {
+        package_id: package_id.to_string(),
+        version: version.to_string(),
         manifest,
         lessons,
         activities,
         assets,
-    }))
+    })
+}
+
+pub fn get_active_package(
+    connection: &Connection,
+    root: &Path,
+) -> Result<Option<ActivePackageView>, AppError> {
+    let active: Option<(String, String)> = connection
+        .query_row(
+            "SELECT package_id, version FROM content_packages
+             WHERE status = 'active' AND source = 'imported'
+             ORDER BY activated_at DESC LIMIT 1",
+            [],
+            |row| Ok((row.get(0)?, row.get(1)?)),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+
+    match active {
+        Some((package_id, version)) => Ok(Some(load_package_view(root, &package_id, &version)?)),
+        None => Ok(None),
+    }
+}
+
+fn read_manifest(directory: &Path) -> Result<serde_json::Value, AppError> {
+    let raw = fs::read(directory.join("manifest.json"))
+        .map_err(|_| AppError::content_invalid("Manifest paket tidak ditemukan."))?;
+    serde_json::from_slice(&raw).map_err(|_| AppError::content_invalid("Manifest paket tidak valid."))
+}
+
+fn count_json_files(directory: &Path) -> Result<usize, AppError> {
+    let entries = fs::read_dir(directory)
+        .map_err(|_| AppError::content_invalid("Direktori paket tidak dapat dibaca."))?;
+    Ok(entries
+        .filter_map(|entry| entry.ok())
+        .filter(|entry| entry.path().extension().is_some_and(|extension| extension == "json"))
+        .count())
+}
+
+pub fn list_active_packages(
+    connection: &Connection,
+    root: &Path,
+) -> Result<Vec<ActivePackageSummary>, AppError> {
+    let mut statement = connection
+        .prepare(
+            "SELECT package_id, version FROM content_packages
+             WHERE status = 'active' AND source = 'imported'
+             ORDER BY package_id ASC",
+        )
+        .map_err(AppError::read)?;
+
+    let rows = statement
+        .query_map([], |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?)))
+        .map_err(AppError::read)?
+        .collect::<Result<Vec<_>, _>>()
+        .map_err(AppError::read)?;
+
+    let mut summaries = Vec::new();
+    for (package_id, version) in rows {
+        let directory = root.join("packages").join(&package_id).join(&version);
+        let manifest = read_manifest(&directory)?;
+        let title = manifest
+            .get("title")
+            .and_then(|value| value.as_str())
+            .unwrap_or(&package_id)
+            .to_string();
+        let grade_levels = manifest
+            .get("gradeLevels")
+            .and_then(|value| value.as_array())
+            .map(|items| items.iter().filter_map(|item| item.as_u64()).collect())
+            .unwrap_or_default();
+        let subjects = manifest
+            .get("subjects")
+            .and_then(|value| value.as_array())
+            .map(|items| {
+                items
+                    .iter()
+                    .filter_map(|item| item.as_str().map(str::to_string))
+                    .collect()
+            })
+            .unwrap_or_default();
+        let lesson_count = count_json_files(&directory.join("lessons"))?;
+
+        summaries.push(ActivePackageSummary {
+            package_id,
+            version,
+            title,
+            grade_levels,
+            subjects,
+            lesson_count,
+        });
+    }
+
+    Ok(summaries)
+}
+
+pub fn get_package(
+    connection: &Connection,
+    root: &Path,
+    package_id: &str,
+    version: &str,
+) -> Result<ActivePackageView, AppError> {
+    validate_token(package_id, "ID paket")?;
+    validate_version(version)?;
+
+    let active: Option<i64> = connection
+        .query_row(
+            "SELECT 1 FROM content_packages
+             WHERE package_id = ?1 AND version = ?2 AND status = 'active' AND source = 'imported'",
+            params![package_id, version],
+            |row| row.get(0),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+
+    if active.is_none() {
+        return Err(AppError::content_activation("Paket tidak aktif."));
+    }
+
+    load_package_view(root, package_id, version)
 }
 
 pub fn read_asset(
@@ -642,6 +758,26 @@ pub fn content_read_asset(
     read_asset(&connection, &content.root, &input)
 }
 
+#[tauri::command]
+pub fn content_list_active(
+    db: State<'_, DbState>,
+    content: State<'_, ContentState>,
+) -> Result<Vec<ActivePackageSummary>, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    list_active_packages(&connection, &content.root)
+}
+
+#[tauri::command]
+pub fn content_get_package(
+    db: State<'_, DbState>,
+    content: State<'_, ContentState>,
+    package_id: String,
+    version: String,
+) -> Result<ActivePackageView, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    get_package(&connection, &content.root, &package_id, &version)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -686,6 +822,27 @@ mod tests {
             serde_json::to_vec_pretty(value).expect("serialize"),
         )
         .expect("write manifest");
+    }
+
+    fn second_package(root: &Path) -> PathBuf {
+        let target = root.join("source-ipa");
+        copy_dir(&fixture(), &target);
+
+        let mut manifest = manifest_value(&target);
+        manifest["packageId"] = serde_json::Value::String("ipa-kelas3-demo".to_string());
+        manifest["title"] = serde_json::Value::String("Demo IPA Kelas 3".to_string());
+        manifest["subjects"] = serde_json::json!(["ipa"]);
+        write_manifest(&target, &manifest);
+
+        let lesson_path = target.join("lessons/lesson-001.json");
+        let mut lesson: serde_json::Value =
+            serde_json::from_slice(&fs::read(&lesson_path).expect("lesson")).expect("lesson json");
+        lesson["packageId"] = serde_json::Value::String("ipa-kelas3-demo".to_string());
+        lesson["title"] = serde_json::Value::String("Demo IPA Kelas 3".to_string());
+        fs::write(&lesson_path, serde_json::to_vec_pretty(&lesson).expect("serialize lesson"))
+            .expect("write lesson");
+
+        target
     }
 
     fn active_version(connection: &Connection) -> Option<String> {
@@ -856,6 +1013,36 @@ mod tests {
         )
         .expect_err("inactive must fail");
 
+        assert_eq!(error.code, "CONTENT_ACTIVATION_FAILED");
+
+        let _ = fs::remove_dir_all(&root);
+    }
+
+    #[test]
+    fn lists_active_packages_and_loads_by_id() {
+        let mut connection = test_connection();
+        let root = temp_root("catalog");
+
+        import_package(&mut connection, &root, &fixture()).expect("math");
+        import_package(&mut connection, &root, &second_package(&root)).expect("ipa");
+
+        let packages = list_active_packages(&connection, &root).expect("list");
+        assert_eq!(packages.len(), 2);
+
+        let ipa = packages
+            .iter()
+            .find(|summary| summary.package_id == "ipa-kelas3-demo")
+            .expect("ipa summary");
+        assert_eq!(ipa.title, "Demo IPA Kelas 3");
+        assert_eq!(ipa.subjects, vec!["ipa"]);
+        assert_eq!(ipa.lesson_count, 1);
+
+        let view = get_package(&connection, &root, "ipa-kelas3-demo", "0.1.0").expect("load ipa");
+        assert_eq!(view.lessons.len(), 1);
+        assert_eq!(view.assets.len(), 4);
+
+        let error = get_package(&connection, &root, "matematika-kelas3-pecahan", "9.9.9")
+            .expect_err("unknown must fail");
         assert_eq!(error.code, "CONTENT_ACTIVATION_FAILED");
 
         let _ = fs::remove_dir_all(&root);
