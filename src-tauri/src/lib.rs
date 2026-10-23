@@ -55,6 +55,7 @@ pub fn run() {
       license::license_get_machine_id,
       license::license_get_status,
       license::license_import_file,
+      license::license_import_json,
       license::license_get_entitlements,
       license::license_export_request,
       license::license_refresh,

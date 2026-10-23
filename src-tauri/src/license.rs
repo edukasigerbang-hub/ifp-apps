@@ -91,6 +91,12 @@ pub struct ImportLicenseInput {
 
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
+pub struct ImportLicenseJsonInput {
+    pub json: String,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
 struct KeyEntry {
     key_id: String,
     public_key: String,
@@ -343,6 +349,29 @@ pub fn get_status(
     Ok(view)
 }
 
+pub fn import_license_json(
+    connection: &Connection,
+    state: &LicenseState,
+    raw: &str,
+    now: DateTime<Utc>,
+) -> Result<LicenseStatusView, AppError> {
+    if state.keys.is_empty() {
+        return Err(AppError::license_not_configured());
+    }
+    if raw.len() as u64 > MAX_LICENSE_BYTES {
+        return Err(AppError::license_invalid("File lisensi terlalu besar."));
+    }
+
+    let file: LicenseFile =
+        serde_json::from_str(raw).map_err(|_| AppError::license_invalid("Format lisensi tidak valid."))?;
+
+    let machine_id = crate::sync::get_device_id(connection)?;
+    let verified = verify_license(&file, &state.keys, &state.product_id, &machine_id, now)?;
+    store_license(connection, raw, &verified, &now.to_rfc3339())?;
+
+    get_status(connection, state, now)
+}
+
 pub fn import_license_file(
     connection: &Connection,
     state: &LicenseState,
@@ -359,14 +388,7 @@ pub fn import_license_file(
     }
 
     let raw = fs::read_to_string(path).map_err(|_| AppError::license_invalid("File lisensi tidak dapat dibaca."))?;
-    let file: LicenseFile =
-        serde_json::from_str(&raw).map_err(|_| AppError::license_invalid("Format lisensi tidak valid."))?;
-
-    let machine_id = crate::sync::get_device_id(connection)?;
-    let verified = verify_license(&file, &state.keys, &state.product_id, &machine_id, now)?;
-    store_license(connection, &raw, &verified, &now.to_rfc3339())?;
-
-    get_status(connection, state, now)
+    import_license_json(connection, state, &raw, now)
 }
 
 pub fn get_entitlements(
@@ -417,6 +439,16 @@ pub fn license_import_file(
 ) -> Result<LicenseStatusView, AppError> {
     let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
     import_license_file(&connection, &license, Path::new(&input.path), Utc::now())
+}
+
+#[tauri::command]
+pub fn license_import_json(
+    db: State<'_, DbState>,
+    license: State<'_, LicenseState>,
+    input: ImportLicenseJsonInput,
+) -> Result<LicenseStatusView, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    import_license_json(&connection, &license, &input.json, Utc::now())
 }
 
 #[tauri::command]
