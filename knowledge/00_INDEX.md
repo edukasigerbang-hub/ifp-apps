@@ -51,7 +51,7 @@
 | Konteks aktif (L0) | [`.qoder/context.md`](.qoder/context.md) |
 | State mesin | [`.qoder/state.json`](.qoder/state.json) |
 | Status index kode | [`.qoder/index/index-state.json`](.qoder/index/index-state.json) |
-| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) |
+| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) |
 
 ## Modul
 
@@ -77,5 +77,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0014](decisions/ADR-0014-results-export.md) | Ekspor laporan hasil belajar CSV | Accepted (implemented) |
 | [ADR-0015](decisions/ADR-0015-profiles-preferences.md) | Profil lokal dan preferensi | Accepted (implemented) |
 | [ADR-0016](decisions/ADR-0016-auto-sync.md) | Penjadwalan sinkronisasi otomatis | Accepted (implemented) |
+| [ADR-0017](decisions/ADR-0017-ci-e2e-harness.md) | CI pipeline + harness E2E | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

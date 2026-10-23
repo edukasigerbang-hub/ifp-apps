@@ -52,4 +52,4 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 
 - Retensi & index DB belum dirancang (menunggu OD-4).
 - Skema `sync_outbox` state enum belum ditetapkan.
-- Belum ada CI (belum ada repo).
+- Belum ada remote Git; workflow CI sudah ada tetapi belum pernah berjalan otomatis.

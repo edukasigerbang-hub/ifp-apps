@@ -349,3 +349,16 @@
 - ADR-0016.
 
 **Verifikasi:** E2E dengan backend referensi — kuis disimpan, tanpa klik sinkronisasi, 6 dtk kemudian Pengaturan menampilkan Tersinkron 1; client outbox `acknowledged`; server 1 event. `npm run build` PASS.
+
+### T-022 — CI pipeline + harness E2E
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- `.github/workflows/ci.yml`: job web (ubuntu) dan rust (windows) + cache.
+- `npm run ci` untuk rangkaian lokal; `scripts/e2e/` (CDP) dengan `IFP_DATA_DIR` sementara.
+- Skenario `smoke`: bridge Tauri, navigasi, profil default, screenshot; artefak di `.tmp-e2e/`.
+- ADR-0017.
+
+**Verifikasi:** `npm run ci` PASS (43 web + 20 server, build PASS); `npm run e2e` PASS 7 pemeriksaan. Harness menemukan dan menutup bug daftar profil kosong saat first run.
+
+**Belum:** workflow belum berjalan di remote (repo belum punya remote); skenario E2E baru smoke.

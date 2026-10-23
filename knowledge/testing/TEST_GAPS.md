@@ -18,6 +18,9 @@
 | Diagnostics | 2 test + E2E redaksi |
 | CSV hasil | 3 test |
 | Build Windows RC | `tauri build` PASS + hash artefak |
+| CI otomatis | `.github/workflows/ci.yml` (web + Rust) dan `npm run ci` lokal; belum pernah jalan di remote karena repo belum punya remote |
+| Harness E2E dapat diulang | `npm run e2e` — 7 pemeriksaan smoke PASS (bridge Tauri, navigasi, profil default, screenshot) |
+| Daftar profil kosong saat first run | Ditemukan harness E2E; `SettingsScreen` kini memuat profil aktif sebelum daftar |
 
 ## Terbuka
 
@@ -29,7 +32,7 @@
 | DV-01…DV-20 | Tidak ada perangkat Android 14/Windows 11/4K | Device acceptance plan |
 | Screen reader & keyboard penuh | Belum ada audit aksesibilitas menyeluruh | Audit + axe/manual |
 | Updater & update preservation | Belum dikonfigurasi | Fase L |
-| CI otomatis | E2E CDP saat ini ad-hoc, tidak masuk `npm test` | Pipeline CI + harness CDP |
+| Cakupan skenario E2E | Baru smoke + profil; alur konten/kuis/lisensi belum dipindahkan ke harness | Tambah skenario per alur |
 | Review konten manusia | Butuh guru/Curriculum Lead | OD-1/review |
 
 ## Perintah uji
@@ -39,6 +42,8 @@ npm test          # 43 test frontend/server + golden 4/4
 cargo test        # 44 test (learning/sync/content/license/backup/diagnostics/results/profile/preferences)
 npm run build     # typecheck + build
 npm run server:typecheck
+npm run ci        # rangkaian web + server
+npm run e2e       # harness CDP (Windows desktop, aplikasi dev harus berhenti)
 ```
 
 > Klaim PASS hanya dari output aktual. E2E manual via CDP tidak menggantikan device acceptance.

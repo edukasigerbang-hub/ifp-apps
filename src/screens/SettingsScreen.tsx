@@ -94,11 +94,8 @@ export function SettingsScreen() {
     let cancelled = false;
     (async () => {
       try {
-        const [profileList, active, prefs] = await Promise.all([
-          listProfiles(),
-          getActiveProfile(),
-          getPreferences()
-        ]);
+        const active = await getActiveProfile();
+        const [profileList, prefs] = await Promise.all([listProfiles(), getPreferences()]);
         if (!cancelled) {
           setProfiles(profileList);
           setActiveProfileState(active);

@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    name: Web + server tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Unit tests + golden fixtures
+        run: npm test
+      - name: Typecheck + production build
+        run: npm run build
+      - name: Server typecheck
+        run: npm run server:typecheck
+      - name: Server tests
+        run: npm run server:test
+
+  rust:
+    name: Rust tests
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri -> target
+      - run: npm ci
+      - name: Build frontend assets (required by tauri context)
+        run: npm run build
+      - name: Cargo tests
+        run: cargo test --manifest-path src-tauri/Cargo.toml
+
+  # Harness E2E (`npm run e2e`) butuh sesi desktop Windows + WebView2 runtime,
+  # sehingga sengaja tidak dijalankan di runner CI headless. Jalankan lokal.

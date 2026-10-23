@@ -31,6 +31,7 @@
 | T-019 | Ekspor hasil belajar CSV | CSV BOM/CRLF, escaping + anti injection; UI Hasil Belajar |
 | T-020 | Profil, sesi, preferensi | Profil lokal + aktif, sesi per profil, preferensi animasi/teks; E2E PASS |
 | T-021 | Sinkronisasi otomatis | Scheduler 10 dtk/online/outbox/5 menit; E2E tanpa klik → server menerima 1 event |
+| T-022 | CI + harness E2E | Workflow web+Rust, `npm run ci`, `npm run e2e` (CDP, data terisolasi); smoke 7 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -91,6 +92,9 @@
 | Profil & sesi | **PASS** — 3 test profil; E2E buat Budi, sesi & attempt terikat, Hasil menampilkan Budi |
 | Preferensi | **PASS** — 3 test; E2E root `reduce-motion font-large` |
 | Sinkronisasi otomatis | **PASS** — setelah simpan hasil, outbox acknowledged & server menerima 1 event tanpa klik |
+| CI lokal (`npm run ci`) | **PASS** — 43 web + 20 server test, build PASS |
+| Harness E2E (`npm run e2e`) | **PASS** — smoke 7 pemeriksaan; screenshot & result.json di `.tmp-e2e/` |
+| Workflow CI remote | **BELUM DIJALANKAN** — repo belum punya remote GitHub |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
