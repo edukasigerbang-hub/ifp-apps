@@ -80,6 +80,10 @@ impl AppError {
         Self::new("BACKUP_SCHEMA_TOO_NEW", "Backup berasal dari versi aplikasi yang lebih baru.")
     }
 
+    pub fn export_failed(message: &str) -> Self {
+        Self::new("EXPORT_FAILED", message)
+    }
+
     pub fn state_unavailable() -> Self {
         Self::new("STATE_UNAVAILABLE", "Penyimpanan lokal tidak tersedia.")
     }

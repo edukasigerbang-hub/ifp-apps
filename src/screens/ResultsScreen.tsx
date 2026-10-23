@@ -6,6 +6,7 @@ import {
   getLearningSummary,
   type LearningSummary
 } from "../data/learningRepository";
+import { exportResultsCsv, pickResultsDestination } from "../data/resultsRepository";
 
 type ResultsState =
   | { status: "loading" }
@@ -26,6 +27,10 @@ function formatDate(value: string | null): string {
 
 export function ResultsScreen() {
   const [state, setState] = useState<ResultsState>({ status: "loading" });
+  const [exportBusy, setExportBusy] = useState(false);
+  const [exportMessage, setExportMessage] = useState<string | null>(null);
+  const [exportError, setExportError] = useState<string | null>(null);
+  const desktop = canPersistLocally();
 
   useEffect(() => {
     if (!canPersistLocally()) {
@@ -56,12 +61,51 @@ export function ResultsScreen() {
     };
   }, []);
 
+  async function handleExport() {
+    setExportError(null);
+    setExportMessage(null);
+    try {
+      const destination = await pickResultsDestination(
+        `hasil-belajar-${new Date().toISOString().slice(0, 10)}.csv`
+      );
+      if (!destination) return;
+      setExportBusy(true);
+      const summary = await exportResultsCsv(destination);
+      setExportMessage(`Laporan diekspor: ${summary.path} (${summary.rows} baris)`);
+    } catch (caught) {
+      setExportError(caught instanceof Error ? caught.message : "Ekspor laporan gagal.");
+    } finally {
+      setExportBusy(false);
+    }
+  }
+
   return (
     <div className="max-w-4xl">
       <PageHeader
         title="Hasil Belajar"
         description="Ringkasan hasil yang tersimpan di perangkat ini. Belum ada sinkronisasi cloud."
       />
+
+      {desktop && (
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onClick={() => void handleExport()}
+            disabled={exportBusy}
+            className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:opacity-40"
+          >
+            Ekspor laporan CSV…
+          </button>
+          <p aria-live="polite" className="text-sm text-muted">
+            {exportMessage ?? ""}
+          </p>
+        </div>
+      )}
+      {exportError && (
+        <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+          {exportError}
+        </p>
+      )}
 
       {state.status === "loading" && <p className="mt-6 text-sm text-muted">Memuat hasil belajar…</p>}
 

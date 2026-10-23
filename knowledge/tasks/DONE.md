@@ -308,3 +308,16 @@
 - ADR-0013.
 
 **Verifikasi:** Rust 35/35 (2 diagnostics); E2E ekspor 633 byte, isi sesuai, tanpa `license_json`/`signature`/`serial`; `npm run build` PASS.
+
+### T-019 — Ekspor hasil belajar CSV
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- `results.rs`: CSV UTF-8 BOM + CRLF, kolom profil/lesson/activity/percobaan/skor/selesai_pada.
+- Escaping CSV + anti formula injection; menolak menimpa file.
+- UI Hasil Belajar: tombol Ekspor laporan CSV (dialog simpan).
+- ADR-0014.
+
+**Verifikasi:** Rust 38/38 (3 results: escaping+injection, empty header, refuse overwrite); `npm run build` PASS.
+
+**Belum:** filter tanggal/kelas, lokalisasi waktu, XLSX; file berisi PII lokal.

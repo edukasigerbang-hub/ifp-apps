@@ -73,5 +73,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0011](decisions/ADR-0011-license-service-reference.md) | License Service referensi | Accepted (reference only) |
 | [ADR-0012](decisions/ADR-0012-backup-restore.md) | Backup & Restore database lokal | Accepted (implemented) |
 | [ADR-0013](decisions/ADR-0013-diagnostics-export.md) | Diagnostics export tanpa secret | Accepted (implemented) |
+| [ADR-0014](decisions/ADR-0014-results-export.md) | Ekspor laporan hasil belajar CSV | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

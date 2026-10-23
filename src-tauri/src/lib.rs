@@ -5,6 +5,7 @@ mod diagnostics;
 mod error;
 mod learning;
 mod license;
+mod results;
 mod sync;
 mod validation;
 
@@ -65,7 +66,8 @@ pub fn run() {
       backup::backup_export,
       backup::backup_inspect,
       backup::backup_restore,
-      diagnostics::app_export_diagnostics
+      diagnostics::app_export_diagnostics,
+      results::results_export_csv
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

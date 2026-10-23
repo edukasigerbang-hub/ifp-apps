@@ -114,6 +114,16 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 - Diredaksi: tanpa nama profil, payload/signature/serial lisensi, atau ID perangkat penuh.
 - Menolak menimpa file yang sudah ada.
 
+## Hasil Belajar (IMPLEMENTED — ADR-0014)
+
+| Command | Input | Output |
+|---|---|---|
+| `results_export_csv` | `destination` | path, rows, bytes |
+
+- CSV UTF-8 BOM + CRLF; kolom profil/lesson/activity/percobaan/skor/selesai_pada.
+- Escaping CSV + anti formula injection; menolak menimpa file.
+- Memuat nama profil lokal (PII); tidak diunggah otomatis.
+
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.
