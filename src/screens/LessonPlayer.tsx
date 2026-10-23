@@ -361,7 +361,7 @@ function LessonView({
         </span>
       </div>
 
-      <h2 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h2>
+      <h1 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
 
       <p
@@ -372,7 +372,7 @@ function LessonView({
       </p>
 
       <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
-        <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Tujuan pembelajaran</h3>
+        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Tujuan pembelajaran</h2>
         <ul className="mt-3 space-y-2">
           {lesson.learningObjectives.map((objective) => (
             <li key={objective} className="flex items-start gap-3 text-sm">
@@ -389,9 +389,41 @@ function LessonView({
           return (
             <button
               key={activity.activityId}
+              id={`activity-tab-${activity.activityId}`}
               type="button"
               role="tab"
               aria-selected={isActive}
+              aria-controls="activity-panel"
+              tabIndex={isActive ? 0 : -1}
+              onKeyDown={(event) => {
+                if (
+                  event.key !== "ArrowRight" &&
+                  event.key !== "ArrowLeft" &&
+                  event.key !== "Home" &&
+                  event.key !== "End"
+                ) {
+                  return;
+                }
+                event.preventDefault();
+                const currentIndex = activities.findIndex(
+                  (entry) => entry.activityId === activity.activityId
+                );
+                let nextIndex = currentIndex;
+                if (event.key === "ArrowRight") {
+                  nextIndex = (currentIndex + 1) % activities.length;
+                } else if (event.key === "ArrowLeft") {
+                  nextIndex = (currentIndex - 1 + activities.length) % activities.length;
+                } else if (event.key === "Home") {
+                  nextIndex = 0;
+                } else if (event.key === "End") {
+                  nextIndex = activities.length - 1;
+                }
+                const next = activities[nextIndex];
+                setActiveActivityId(next.activityId);
+                requestAnimationFrame(() => {
+                  document.getElementById(`activity-tab-${next.activityId}`)?.focus();
+                });
+              }}
               onClick={() => setActiveActivityId(activity.activityId)}
               className={`min-h-11 rounded-control px-4 text-sm font-medium ${
                 isActive ? "bg-navy text-white" : "border border-ink/15 bg-surface text-ink hover:bg-paper"
@@ -403,7 +435,13 @@ function LessonView({
         })}
       </div>
 
-      <section className="mt-4 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
+      <section
+        id="activity-panel"
+        role="tabpanel"
+        aria-labelledby={`activity-tab-${activeActivity.activityId}`}
+        tabIndex={0}
+        className="mt-4 rounded-card border border-ink/10 bg-surface p-5 md:p-6"
+      >
         {activeActivity.type === "exploration" ? (
           <ExplorationActivity
             activity={activeActivity}

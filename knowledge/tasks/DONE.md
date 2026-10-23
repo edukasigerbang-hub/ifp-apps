@@ -375,3 +375,15 @@
 **Verifikasi:** `cargo test` 47/47 (3 test baru); `npm test` 43/43 + golden; `npm run build` PASS; `npm run e2e:profile` PASS 7 pemeriksaan.
 
 **Belum:** jalur konfirmasi hapus berdata belum diotomasi di UI; tanpa audit trail/undo.
+
+### T-024 — Audit aksesibilitas otomatis
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Skenario `npm run a11y`: 8 layar, nama aksesibel, alt, ID unik, heading, landmark, tab, kontras, skip link, 10 langkah Tab.
+- Perbaikan: `--color-muted` 4.47→4.76:1; `<h1>` di Player; tab aktivitas `aria-controls`/`tabpanel` + panah/Home/End.
+- ADR-0019.
+
+**Verifikasi:** `npm run a11y` PASS 12 pemeriksaan, 0 error/0 warning; `npm run build`, `npm test`, `npm run e2e`, `npm run e2e:profile` PASS.
+
+**Belum:** NVDA/TalkBack, zoom 200%/reflow, keadaan dinamis, target sentuh, preferensi gerak.

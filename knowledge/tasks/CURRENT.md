@@ -33,6 +33,7 @@
 | T-021 | Sinkronisasi otomatis | Scheduler 10 dtk/online/outbox/5 menit; E2E tanpa klik → server menerima 1 event |
 | T-022 | CI + harness E2E | Workflow web+Rust, `npm run ci`, `npm run e2e` (CDP, data terisolasi); smoke 7 pemeriksaan |
 | T-023 | Siklus hidup profil | Rename (unik, 1–80) + hapus dua langkah; proteksi profil terakhir; hapus data transaksional; E2E PASS |
+| T-024 | Audit aksesibilitas | `npm run a11y` 8 layar + keyboard; kontras & heading diperbaiki; 0 error/0 warning |
 
 ## Status prasyarat materi pembelajaran
 
@@ -98,6 +99,8 @@
 | Workflow CI remote | **BELUM DIJALANKAN** — repo belum punya remote GitHub |
 | Profil: rename & hapus | **PASS** — Rust 6 test; E2E Budi→Budi Santoso, hapus profil tanpa data, proteksi profil terakhir |
 | Hapus profil berdata (UI) | **UNIT PASS / E2E BELUM** — jalur `PROFILE_HAS_DATA` diuji Rust; langkah UI kedua belum diotomasi |
+| Audit aksesibilitas (`npm run a11y`) | **PASS** — 8 layar, 0 error/0 warning; skip link + 10 langkah Tab bernama |
+| Screen reader / zoom / dialog | **BELUM** — audit heuristik; NVDA, reflow 200%, dan state dinamis belum diuji |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
