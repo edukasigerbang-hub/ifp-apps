@@ -17,7 +17,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | TODO |
 | I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + server referensi PASS; stack produksi pending OD-7 |
 | J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |
-| K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | PARTIAL — 1 pilot draft, belum direview |
+| K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | PARTIAL — 1 pilot draft; review teknis PASS, review manusia & OD-1 pending |
 | L | Device hardening & release | DV-01…DV-20 PASS, installer/updater, backup/restore teruji | TODO |
 
 ## Keputusan terbuka (HLD §16)

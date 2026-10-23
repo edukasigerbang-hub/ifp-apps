@@ -108,7 +108,7 @@ export function ResultsScreen() {
                         {attempt.lessonId} · {formatDate(attempt.completedAt)}
                       </p>
                     </div>
-                    <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold text-[#0e7f78]">
+                    <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold text-[#0b6f69]">
                       Skor {Math.round(attempt.score)}
                     </span>
                   </li>

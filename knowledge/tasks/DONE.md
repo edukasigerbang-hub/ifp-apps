@@ -162,3 +162,16 @@
 **Verifikasi:** server typecheck PASS; 11/11 test; E2E Tauri → server menyimpan 1 event, client outbox `acknowledged`; UI Menunggu 0 / Gagal 0 / Tersinkron 1.
 
 **Batas:** bukan produksi (tanpa TLS, single-process, rate limit in-memory, token env, retensi belum ditetapkan); stack produksi tetap OD-7.
+
+### T-010 — Review teknis konten pilot
+
+**Status:** COMPLETED (technical only) · **Change class:** SMALL
+
+- R11 validator + hash: PASS. R7 aksesibilitas: PASS setelah perbaikan.
+- Temuan F1: teks badge teal 4.36:1 → diganti `#0B6F69` = 5.40:1 (StatusBadge + skor Hasil Belajar).
+- R10 `curriculumRefs` kosong: **BLOCKING** (OD-1).
+- R1–R5/R8–R9: NOT REVIEWED (manusia).
+- Laporan: [REVIEW_REPORT_2026-10-23.md](../content/REVIEW_REPORT_2026-10-23.md); katalog diperbarui.
+- `reviewStatus` tetap `draft`; tidak ada klaim kurikulum.
+
+**Verifikasi:** `content:validate` VALID; `npm run build` PASS setelah perubahan warna.

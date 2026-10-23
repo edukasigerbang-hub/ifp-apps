@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T23:08:14+07:00",
+  "last_validated_at": "2026-10-23T23:11:56+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -95,6 +95,12 @@
       "command": "Tauri WebView CDP + npm run server:dev (:8788)",
       "result": "PASS",
       "details": "Server menyimpan 1 event; client outbox acknowledged; UI Menunggu 0 / Gagal 0 / Tersinkron 1"
+    },
+    {
+      "name": "content_review_technical",
+      "command": "manual review + contrast script",
+      "result": "PASS (R10 blocking)",
+      "details": "R11/R7/R12 PASS; teal badge 4.36 → 5.40; R10 curriculumRefs kosong = BLOCKING; R1-R5/R8-R9 NOT REVIEWED (manusia)"
     },
     {
       "name": "content_validator_cli",

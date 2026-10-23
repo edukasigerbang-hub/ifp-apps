@@ -1,7 +1,7 @@
 export type StatusTone = "positive" | "warning" | "neutral";
 
 const toneClasses: Record<StatusTone, string> = {
-  positive: "bg-teal/10 text-[#0e7f78]",
+  positive: "bg-teal/10 text-[#0b6f69]",
   warning: "bg-warning/15 text-[#8a5a12]",
   neutral: "bg-ink/5 text-muted"
 };

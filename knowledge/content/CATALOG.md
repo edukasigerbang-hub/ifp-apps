@@ -1,10 +1,12 @@
 # Katalog Konten
 
-**Status:** 1 paket draft · 0 paket disetujui · 0 materi direview
+**Status:** 1 paket draft · 0 paket disetujui · review teknis selesai (review manusia belum)
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
-| `matematika-kelas3-pecahan` | 0.1.0 | 3 | matematika | Pecahan 1/2, 1/3, 1/4 | **DRAFT** | VALID (2 warning) | Belum ditunjuk |
+| `matematika-kelas3-pecahan` | 0.1.0 | 3 | matematika | Pecahan 1/2, 1/3, 1/4 | **DRAFT** | VALID (2 warning) | Teknis PASS* / manusia belum |
+
+\* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
 ## `matematika-kelas3-pecahan` v0.1.0
 

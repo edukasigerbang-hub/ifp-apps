@@ -34,6 +34,7 @@
 | Fixture input/output validator | [`content/FIXTURES.md`](content/FIXTURES.md) |
 | Proposal kurikulum (OD-1) | [`content/CURRICULUM_PROPOSAL.md`](content/CURRICULUM_PROPOSAL.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
+| Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |
 | Keputusan arsitektur | [`decisions/`](decisions/) |
 
 ## Operasional

@@ -18,6 +18,7 @@
 | T-007 | Fase E — repository lokal | SQLite native + migrasi + 4 command; hasil kuis tersimpan atomik; layar Hasil Belajar |
 | T-008 | Fase I — sinkronisasi | Outbox state native + engine TS + kontrak + mock server; 1 event acknowledged E2E |
 | T-008b | Backend sinkronisasi referensi | HTTP server TS + SQLite; auth, idempotensi, batas, rate limit; 11 test + E2E nyata |
+| T-010 | Review teknis konten | R11/R7/R10/R12; temuan kontras diperbaiki; laporan review ditulis |
 
 ## Status prasyarat materi pembelajaran
 
@@ -27,7 +28,7 @@
 | Validator + test | **DONE** | `npm test` → 11/11 PASS; fixture VALID |
 | Pilot konten draft | **DONE (draft)** | [Katalog](../content/CATALOG.md): `matematika-kelas3-pecahan` v0.1.0, VALID + 2 warning |
 | Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
-| Rubrik review pedagogis | **READY (template)** | [REVIEW_RUBRIC.md](../content/REVIEW_RUBRIC.md) — 0 materi direview |
+| Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Laporan review](../content/REVIEW_REPORT_2026-10-23.md) — R10 curriculumRefs masih BLOCKING |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
 | Penyimpanan hasil lokal | **DONE** | SQLite native, transaksi attempt+respons+progress+outbox |
 | Hak/lisensi aset | **BELUM** | Belum ada aset produksi |
@@ -49,6 +50,8 @@
 | `npm test` | **PASS** — 15 unit test + 4 golden fixture |
 | `npm run fixtures:check` | **PASS** — 4/4 cocok dengan expected (VALID/3/7/1 issue) |
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
+| Review teknis konten | **PASS** — 1 temuan kontras diperbaiki (4.36 → 5.40); R10 masih BLOCKING |
+| Review pedagogis manusia | **BELUM** — R1–R5/R8–R9 butuh guru/Curriculum Lead |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
 | Rust repository tests | **PASS** — 6/6 (termasuk rollback event duplikat & persistensi reopen) |
