@@ -10,6 +10,19 @@ import {
   type BackupSummary
 } from "../data/backupRepository";
 import { exportDiagnostics, pickDiagnosticsDestination } from "../data/diagnosticsRepository";
+import {
+  createProfile,
+  getActiveProfile,
+  listProfiles,
+  setActiveProfile,
+  type Profile
+} from "../data/profileRepository";
+import {
+  applyPreferences,
+  getPreferences,
+  setPreferences,
+  type Preferences
+} from "../data/preferencesRepository";
 import { getSyncStatus, isSyncConfigured, runSyncOnce, type SyncStatus } from "../data/syncEngine";
 
 type PageState =
@@ -43,6 +56,16 @@ export function SettingsScreen() {
   const [diagnosticsBusy, setDiagnosticsBusy] = useState(false);
   const [diagnosticsMessage, setDiagnosticsMessage] = useState<string | null>(null);
   const [diagnosticsError, setDiagnosticsError] = useState<string | null>(null);
+  const [profiles, setProfiles] = useState<Profile[]>([]);
+  const [activeProfile, setActiveProfileState] = useState<Profile | null>(null);
+  const [newProfileName, setNewProfileName] = useState("");
+  const [newProfileType, setNewProfileType] = useState<"student" | "teacher">("student");
+  const [profileBusy, setProfileBusy] = useState(false);
+  const [profileMessage, setProfileMessage] = useState<string | null>(null);
+  const [profileError, setProfileError] = useState<string | null>(null);
+  const [preferences, setPreferencesState] = useState<Preferences | null>(null);
+  const [preferencesMessage, setPreferencesMessage] = useState<string | null>(null);
+  const [preferencesError, setPreferencesError] = useState<string | null>(null);
 
   async function refresh() {
     try {
@@ -63,6 +86,35 @@ export function SettingsScreen() {
     }
     void refresh();
   }, []);
+
+  useEffect(() => {
+    if (!desktop) {
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const [profileList, active, prefs] = await Promise.all([
+          listProfiles(),
+          getActiveProfile(),
+          getPreferences()
+        ]);
+        if (!cancelled) {
+          setProfiles(profileList);
+          setActiveProfileState(active);
+          setPreferencesState(prefs);
+          applyPreferences(prefs);
+        }
+      } catch (caught) {
+        if (!cancelled) {
+          setProfileError(caught instanceof Error ? caught.message : "Profil tidak dapat dimuat.");
+        }
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [desktop]);
 
   async function syncNow() {
     setRunning(true);
@@ -150,12 +202,134 @@ export function SettingsScreen() {
     }
   }
 
+  async function handleCreateProfile() {
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const created = await createProfile(newProfileName, newProfileType);
+      await setActiveProfile(created.id);
+      const [profileList, active] = await Promise.all([listProfiles(), getActiveProfile()]);
+      setProfiles(profileList);
+      setActiveProfileState(active);
+      setNewProfileName("");
+      setProfileMessage(`Profil "${created.displayName}" dibuat dan diaktifkan.`);
+    } catch (caught) {
+      setProfileError(caught instanceof Error ? caught.message : "Profil gagal dibuat.");
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleSelectProfile(profileId: string) {
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const active = await setActiveProfile(profileId);
+      setActiveProfileState(active);
+      setProfileMessage(`Profil aktif: ${active.displayName}.`);
+    } catch (caught) {
+      setProfileError(caught instanceof Error ? caught.message : "Profil gagal diaktifkan.");
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handlePreferences(next: Preferences) {
+    setPreferencesError(null);
+    setPreferencesMessage(null);
+    setPreferencesState(next);
+    applyPreferences(next);
+    try {
+      await setPreferences(next);
+      setPreferencesMessage("Preferensi disimpan.");
+    } catch (caught) {
+      setPreferencesError(caught instanceof Error ? caught.message : "Preferensi gagal disimpan.");
+    }
+  }
+
   return (
     <div className="max-w-4xl">
       <PageHeader
         title="Pengaturan"
-        description="Preferensi perangkat dan status sinkronisasi hasil belajar."
+        description="Profil, preferensi perangkat, dan status sinkronisasi hasil belajar."
       />
+
+      {desktop && (
+        <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Profil</h2>
+          <p className="mt-3 text-sm text-muted">
+            Profil aktif menentukan sesi dan hasil belajar yang ditampilkan di perangkat ini.
+          </p>
+
+          {profiles.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {profiles.map((profile) => {
+                const active = activeProfile?.id === profile.id;
+                return (
+                  <button
+                    key={profile.id}
+                    type="button"
+                    aria-pressed={active}
+                    disabled={profileBusy}
+                    onClick={() => void handleSelectProfile(profile.id)}
+                    className={`min-h-11 rounded-control px-4 py-2 text-left disabled:opacity-60 ${
+                      active ? "bg-navy text-white" : "border border-ink/15 bg-surface hover:bg-paper"
+                    }`}
+                  >
+                    <span className="block text-sm font-medium">{profile.displayName}</span>
+                    <span className={`block text-xs ${active ? "text-white/70" : "text-muted"}`}>
+                      {profile.profileType === "teacher" ? "Guru" : "Siswa"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          <div className="mt-4 flex flex-wrap items-end gap-3">
+            <label className="text-sm">
+              Nama profil
+              <input
+                type="text"
+                value={newProfileName}
+                onChange={(event) => setNewProfileName(event.target.value)}
+                placeholder="Nama siswa atau guru"
+                className="mt-1 block min-h-11 w-64 rounded-control border border-ink/15 px-3 text-sm"
+              />
+            </label>
+            <label className="text-sm">
+              Tipe
+              <select
+                value={newProfileType}
+                onChange={(event) => setNewProfileType(event.target.value as "student" | "teacher")}
+                className="mt-1 block min-h-11 rounded-control border border-ink/15 px-3 text-sm"
+              >
+                <option value="student">Siswa</option>
+                <option value="teacher">Guru</option>
+              </select>
+            </label>
+            <button
+              type="button"
+              onClick={() => void handleCreateProfile()}
+              disabled={profileBusy || newProfileName.trim().length === 0}
+              className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
+            >
+              Tambah profil
+            </button>
+          </div>
+
+          <p aria-live="polite" className="mt-3 text-sm text-muted">
+            {profileMessage ?? ""}
+          </p>
+          {profileError && (
+            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              {profileError}
+            </p>
+          )}
+        </section>
+      )}
 
       <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
         <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Sinkronisasi hasil belajar</h2>
@@ -277,8 +451,47 @@ export function SettingsScreen() {
 
       <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
         <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Preferensi & diagnostik</h2>
-        <p className="mt-3 text-sm text-muted">
-          Preferensi tampilan, audio, dan animasi belum diimplementasikan.
+        {preferences && (
+          <div className="mt-4 space-y-3">
+            <label className="flex min-h-11 items-center gap-3 text-sm">
+              <input
+                type="checkbox"
+                checked={preferences.reducedMotion}
+                onChange={(event) =>
+                  void handlePreferences({ ...preferences, reducedMotion: event.target.checked })
+                }
+                className="h-4 w-4"
+              />
+              Kurangi animasi
+            </label>
+            <label className="flex min-h-11 items-center gap-3 text-sm">
+              Ukuran teks
+              <select
+                value={preferences.fontScale}
+                onChange={(event) =>
+                  void handlePreferences({
+                    ...preferences,
+                    fontScale: event.target.value as "normal" | "large"
+                  })
+                }
+                className="min-h-9 rounded-control border border-ink/15 px-3 text-sm"
+              >
+                <option value="normal">Normal</option>
+                <option value="large">Besar</option>
+              </select>
+            </label>
+            <p aria-live="polite" className="text-sm text-muted">
+              {preferencesMessage ?? ""}
+            </p>
+            {preferencesError && (
+              <p className="rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+                {preferencesError}
+              </p>
+            )}
+          </div>
+        )}
+        <p className="mt-3 text-xs text-muted">
+          Preferensi suara dan animasi lanjutan belum tersedia.
         </p>
         {desktop && (
           <>

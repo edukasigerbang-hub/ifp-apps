@@ -1,3 +1,4 @@
+mod app_meta;
 mod backup;
 mod content;
 mod db;
@@ -5,6 +6,8 @@ mod diagnostics;
 mod error;
 mod learning;
 mod license;
+mod preferences;
+mod profile;
 mod results;
 mod sync;
 mod validation;
@@ -67,7 +70,13 @@ pub fn run() {
       backup::backup_inspect,
       backup::backup_restore,
       diagnostics::app_export_diagnostics,
-      results::results_export_csv
+      results::results_export_csv,
+      profile::profile_list,
+      profile::profile_create,
+      profile::profile_get_active,
+      profile::profile_set_active,
+      preferences::preferences_get,
+      preferences::preferences_set
     ])
     .run(tauri::generate_context!())
     .expect("error while building tauri application");

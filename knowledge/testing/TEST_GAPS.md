@@ -1,0 +1,43 @@
+# Register Test Gap
+
+**Status:** 2026-10-24 · Diperbarui setelah profil, preferensi, dan journey diuji.
+
+## Tertutup (dengan bukti)
+
+| Gap sebelumnya | Bukti |
+|---|---|
+| Profil hanya hardcoded “Siswa Lokal” | `profile.rs` 3 test + E2E buat “Budi”, 2 profil, active tersimpan |
+| Preferensi belum ada | `preferences.rs` 3 test + E2E `reduce-motion`/`font-large` pada root |
+| Sesi tidak terikat profil terpilih | E2E: sesi + attempt tercatat pada profile Budi; Hasil Belajar menampilkan “Profil aktif: Budi” |
+| Impor/aktivasi/rollback konten | 8 test Rust + E2E v1→v2→rollback |
+| Runtime paket impor & katalog | E2E managed/bundled, ganti paket, blob asset |
+| Sync client + backend | 5+9 test + E2E ack; delivery server tersimpan |
+| Lisensi offline + online | 11+9 test + E2E impor file dan aktivasi serial |
+| Backup/inspect/restore | 3 test + E2E export/inspect |
+| Diagnostics | 2 test + E2E redaksi |
+| CSV hasil | 3 test |
+| Build Windows RC | `tauri build` PASS + hash artefak |
+
+## Terbuka
+
+| Gap | Alasan | Rencana |
+|---|---|---|
+| Restore lewat dialog UI | Dialog native tidak dapat diotomasi CDP | Uji manual; command sudah diuji Rust |
+| Import lisensi/konten lewat dialog | Sama seperti di atas | Uji manual; command diuji |
+| Transfer/deaktivasi lisensi UI | Belum ada UI | Tambah setelah kebijakan OD-5 |
+| DV-01…DV-20 | Tidak ada perangkat Android 14/Windows 11/4K | Device acceptance plan |
+| Screen reader & keyboard penuh | Belum ada audit aksesibilitas menyeluruh | Audit + axe/manual |
+| Updater & update preservation | Belum dikonfigurasi | Fase L |
+| CI otomatis | E2E CDP saat ini ad-hoc, tidak masuk `npm test` | Pipeline CI + harness CDP |
+| Review konten manusia | Butuh guru/Curriculum Lead | OD-1/review |
+
+## Perintah uji
+
+```bash
+npm test          # 43 test frontend/server + golden 4/4
+cargo test        # 44 test (learning/sync/content/license/backup/diagnostics/results/profile/preferences)
+npm run build     # typecheck + build
+npm run server:typecheck
+```
+
+> Klaim PASS hanya dari output aktual. E2E manual via CDP tidak menggantikan device acceptance.

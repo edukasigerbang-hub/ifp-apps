@@ -29,6 +29,7 @@
 | T-017 | Windows release candidate | `tauri build` PASS; MSI 4.21 MiB + NSIS 2.94 MiB; belum install/sign/release |
 | T-018 | Diagnostics export | JSON native dengan counts/status; redaksi ID & tanpa secret; UI Pengaturan |
 | T-019 | Ekspor hasil belajar CSV | CSV BOM/CRLF, escaping + anti injection; UI Hasil Belajar |
+| T-020 | Profil, sesi, preferensi | Profil lokal + aktif, sesi per profil, preferensi animasi/teks; E2E PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -57,7 +58,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** rilis memblokir pada keputusan/hardware: OD-6 signing & identifier, public key lisensi produksi, backend produksi + CSP (OD-7), DV perangkat, konten/review (OD-1).
+**Berikutnya:** release blockers (OD-6/OD-7, key produksi, DV perangkat, konten/OD-1). Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 
 ## Verifikasi sesi ini
 
@@ -86,6 +87,8 @@
 | Android release build | **BELUM** — hanya debug APK |
 | Diagnostics export | **PASS** — 633 byte JSON, redaksi aman; UI tombol tersedia |
 | Ekspor CSV hasil | **PASS** — 3 test (escaping/injection/overwrite); UI tombol |
+| Profil & sesi | **PASS** — 3 test profil; E2E buat Budi, sesi & attempt terikat, Hasil menampilkan Budi |
+| Preferensi | **PASS** — 3 test; E2E root `reduce-motion font-large` |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |

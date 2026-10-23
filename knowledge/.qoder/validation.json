@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T00:41:23+07:00",
+  "last_validated_at": "2026-10-24T00:55:25+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -64,7 +64,7 @@
       "name": "rust_repository_tests",
       "command": "cargo test (src-tauri)",
       "result": "PASS",
-      "details": "38/38: 6 learning + 5 sync + 8 content + 11 license + 3 backup + 2 diagnostics + 3 results"
+      "details": "44/44: 6 learning + 5 sync + 8 content + 11 license + 3 backup + 2 diagnostics + 3 results + 3 profiles + 3 preferences"
     },
     {
       "name": "e2e_learning_persistence",
@@ -161,6 +161,12 @@
       "command": "cargo test results::",
       "result": "PASS",
       "details": "3/3: escaping + anti formula injection, header-only kosong, tolak overwrite; UI build PASS"
+    },
+    {
+      "name": "e2e_profile_preferences_session",
+      "command": "Tauri WebView CDP + IFP_DATA_DIR temp",
+      "result": "PASS",
+      "details": "Profil Budi dibuat/aktif (2 profil); root class reduce-motion font-large; kuis tersimpan; Hasil Belajar profil Budi, 1 sesi/1 attempt"
     },
     {
       "name": "content_validator_cli",

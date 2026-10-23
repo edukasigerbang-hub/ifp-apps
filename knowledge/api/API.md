@@ -124,6 +124,19 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 - Escaping CSV + anti formula injection; menolak menimpa file.
 - Memuat nama profil lokal (PII); tidak diunggah otomatis.
 
+## Profil & preferensi (IMPLEMENTED — ADR-0015)
+
+| Command | Input | Output |
+|---|---|---|
+| `profile_list` | — | daftar profil |
+| `profile_create` | `displayName`, `profileType` | profil baru |
+| `profile_get_active` | — | profil aktif (buat default bila kosong) |
+| `profile_set_active` | `profileId` | profil aktif |
+| `preferences_get` | — | `reducedMotion`, `fontScale` |
+| `preferences_set` | `reducedMotion`, `fontScale` | preferensi tersimpan |
+
+- Profil aktif mengikat sesi/hasil belajar; preferensi diterapkan ke `<html>` (`reduce-motion`, `font-large`).
+
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
 - Error: `CONTENT_PACKAGE_INVALID`, `CONTENT_ASSET_HASH_MISMATCH`, `CONTENT_ACTIVATION_FAILED`.

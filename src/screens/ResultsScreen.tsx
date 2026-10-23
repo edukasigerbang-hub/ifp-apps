@@ -7,6 +7,7 @@ import {
   type LearningSummary
 } from "../data/learningRepository";
 import { exportResultsCsv, pickResultsDestination } from "../data/resultsRepository";
+import { getActiveProfile } from "../data/profileRepository";
 
 type ResultsState =
   | { status: "loading" }
@@ -30,6 +31,7 @@ export function ResultsScreen() {
   const [exportBusy, setExportBusy] = useState(false);
   const [exportMessage, setExportMessage] = useState<string | null>(null);
   const [exportError, setExportError] = useState<string | null>(null);
+  const [profileName, setProfileName] = useState<string | null>(null);
   const desktop = canPersistLocally();
 
   useEffect(() => {
@@ -42,8 +44,10 @@ export function ResultsScreen() {
     (async () => {
       try {
         const profileId = await ensureLocalProfile();
+        const profile = await getActiveProfile();
         const summary = await getLearningSummary(profileId);
         if (!cancelled) {
+          setProfileName(profile.displayName);
           setState({ status: "ready", summary });
         }
       } catch (error) {
@@ -85,6 +89,12 @@ export function ResultsScreen() {
         title="Hasil Belajar"
         description="Ringkasan hasil yang tersimpan di perangkat ini. Belum ada sinkronisasi cloud."
       />
+
+      {profileName && (
+        <p className="mt-2 text-sm text-muted">
+          Profil aktif: <span className="font-medium text-ink">{profileName}</span>
+        </p>
+      )}
 
       {desktop && (
         <div className="mt-4 flex flex-wrap items-center gap-3">

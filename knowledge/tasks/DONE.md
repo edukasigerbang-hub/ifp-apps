@@ -321,3 +321,20 @@
 **Verifikasi:** Rust 38/38 (3 results: escaping+injection, empty header, refuse overwrite); `npm run build` PASS.
 
 **Belum:** filter tanggal/kelas, lokalisasi waktu, XLSX; file berisi PII lokal.
+
+### T-020 — Profil lokal, sesi per profil, dan preferensi
+
+**Status:** COMPLETED · **Change class:** LARGE
+
+- `profile.rs`: list/create/get-active/set-active; profil default otomatis; profil aktif di `app_meta`.
+- `preferences.rs`: `reducedMotion` + `fontScale` di `app_meta`; diterapkan sebagai kelas `<html>`.
+- Sesi belajar memakai profil aktif; Hasil Belajar menampilkan profil.
+- UI Pengaturan: daftar/aktifkan profil, tambah profil, toggle animasi, ukuran teks.
+- ADR-0015; register gap diperbarui.
+
+**Verifikasi:**
+- `cargo test` 44/44 (3 profile, 3 preferences).
+- E2E: buat “Budi” (2 profil, aktif), preferensi `reduce-motion font-large`, kuis tersimpan, Hasil Belajar “Profil aktif: Budi” + 1 sesi/1 attempt.
+- `npm run build` / `npm test` PASS.
+
+**Belum:** hapus/rename profil, PIN/orang tua, preferensi per profil, preferensi suara.

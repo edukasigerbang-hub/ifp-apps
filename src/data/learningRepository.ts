@@ -1,4 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
+import { getActiveProfile } from "./profileRepository";
 
 export interface SessionRecord {
   sessionId: string;
@@ -64,22 +65,10 @@ export class LearningStorageError extends Error {
   }
 }
 
-const PROFILE_KEY = "ifp.localProfileId";
-
-export const LOCAL_PROFILE_NAME = "Siswa Lokal";
+let previewProfileId: string | null = null;
 
 export function canPersistLocally(): boolean {
   return typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
-}
-
-export function getLocalProfileId(): string {
-  const existing = window.localStorage.getItem(PROFILE_KEY);
-  if (existing) {
-    return existing;
-  }
-  const created = crypto.randomUUID();
-  window.localStorage.setItem(PROFILE_KEY, created);
-  return created;
 }
 
 async function call<T>(command: string, args: Record<string, unknown>): Promise<T> {
@@ -95,11 +84,14 @@ async function call<T>(command: string, args: Record<string, unknown>): Promise<
 }
 
 export async function ensureLocalProfile(): Promise<string> {
-  const profileId = getLocalProfileId();
-  await call<{ profileId: string }>("learning_ensure_profile", {
-    input: { profileId, displayName: LOCAL_PROFILE_NAME }
-  });
-  return profileId;
+  if (!canPersistLocally()) {
+    if (!previewProfileId) {
+      previewProfileId = crypto.randomUUID();
+    }
+    return previewProfileId;
+  }
+  const profile = await getActiveProfile();
+  return profile.id;
 }
 
 export async function startLearningSession(input: StartSessionInput): Promise<SessionRecord> {

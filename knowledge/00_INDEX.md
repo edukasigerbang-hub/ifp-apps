@@ -37,6 +37,7 @@
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |
 | Device spike readiness | [`device/DEVICE_SPIKE_READINESS.md`](device/DEVICE_SPIKE_READINESS.md) |
 | Release checklist (Windows RC) | [`release/RELEASE_CHECKLIST.md`](release/RELEASE_CHECKLIST.md) |
+| Register test gap | [`testing/TEST_GAPS.md`](testing/TEST_GAPS.md) |
 | Keputusan arsitektur | [`decisions/`](decisions/) |
 
 ## Operasional
@@ -74,5 +75,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0012](decisions/ADR-0012-backup-restore.md) | Backup & Restore database lokal | Accepted (implemented) |
 | [ADR-0013](decisions/ADR-0013-diagnostics-export.md) | Diagnostics export tanpa secret | Accepted (implemented) |
 | [ADR-0014](decisions/ADR-0014-results-export.md) | Ekspor laporan hasil belajar CSV | Accepted (implemented) |
+| [ADR-0015](decisions/ADR-0015-profiles-preferences.md) | Profil lokal dan preferensi | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
