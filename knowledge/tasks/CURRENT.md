@@ -97,7 +97,7 @@
 | Sinkronisasi otomatis | **PASS** — setelah simpan hasil, outbox acknowledged & server menerima 1 event tanpa klik |
 | CI lokal (`npm run ci`) | **PASS** — 43 web + 20 server test, build PASS |
 | Harness E2E (`npm run e2e`) | **PASS** — smoke 7 pemeriksaan; screenshot & result.json di `.tmp-e2e/` |
-| Workflow CI remote | **BELUM DIJALANKAN** — repo belum punya remote GitHub |
+| Workflow CI remote | **PASS** — push `c51af2f` → run `40040384407`: web+server & Rust sukses (2026-10-24) |
 | Profil: rename & hapus | **PASS** — Rust 6 test; E2E Budi→Budi Santoso, hapus profil tanpa data, proteksi profil terakhir |
 | Hapus profil berdata (UI) | **UNIT PASS / E2E BELUM** — jalur `PROFILE_HAS_DATA` diuji Rust; langkah UI kedua belum diotomasi |
 | Audit aksesibilitas (`npm run a11y`) | **PASS** — 8 layar, 0 error/0 warning; skip link + 10 langkah Tab bernama |
@@ -127,11 +127,11 @@
 
 ## Handoff
 
-**Sesi ditutup 2026-10-24 01:25 +07:00.** Working tree bersih pada `906a29d`; tidak ada gelombang terbuka; aplikasi dev dihentikan.
+**Sesi ditutup 2026-10-24 01:25 +07:00, dibuka kembali 06:30 +07:00.** Working tree bersih pada `c51af2f`; tidak ada gelombang terbuka; aplikasi dev berjalan.
 
 ### Next Session Handoff
 
-1. **Aktifkan CI**: tambahkan remote GitHub lalu push — workflow `.github/workflows/ci.yml` belum pernah berjalan di remote.
+1. **Jaga CI hijau**: remote `origin` aktif dan run pertama PASS; pantau setiap push (`gh run list`).
 2. **Perluas E2E**: smoke, profil, alur belajar, dan a11y sudah ada; tambahkan rollback konten dan alur lisensi.
 3. **A11y manual**: NVDA/TalkBack, zoom 200%/reflow, state dinamis (hasil kuis, konfirmasi hapus), target sentuh.
 4. **Gate rilis**: OD-1 sign-off konten, OD-4 retensi/privasi, OD-5 kebijakan lisensi, OD-6 signing/identifier, OD-7 backend+CSP produksi, key lisensi produksi, DV-01…DV-20.

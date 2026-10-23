@@ -18,7 +18,7 @@
 | Diagnostics | 2 test + E2E redaksi |
 | CSV hasil | 3 test |
 | Build Windows RC | `tauri build` PASS + hash artefak |
-| CI otomatis | `.github/workflows/ci.yml` (web + Rust) dan `npm run ci` lokal; belum pernah jalan di remote karena repo belum punya remote |
+| CI otomatis | `.github/workflows/ci.yml` (web + Rust) berjalan di remote: run `40040384407` (2026-10-24) PASS; `npm run ci` lokal juga PASS |
 | Harness E2E dapat diulang | `npm run e2e` — 7 pemeriksaan smoke PASS (bridge Tauri, navigasi, profil default, screenshot) |
 | Daftar profil kosong saat first run | Ditemukan harness E2E; `SettingsScreen` kini memuat profil aktif sebelum daftar |
 | Rename & hapus profil | 6 test Rust (unik, trim, profil terakhir, konfirmasi data, hapus transaksional) + E2E `npm run e2e:profile` |
