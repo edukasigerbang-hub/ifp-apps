@@ -13,11 +13,11 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | DONE 2026-10-23 — 11 test PASS |
 | E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | TODO |
 | F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | TODO |
-| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | TODO |
+| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — pratinjau eksplorasi+kuis, tanpa persistensi/DB |
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | TODO |
 | I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | TODO |
 | J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |
-| K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | TODO |
+| K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | PARTIAL — 1 pilot draft, belum direview |
 | L | Device hardening & release | DV-01…DV-20 PASS, installer/updater, backup/restore teruji | TODO |
 
 ## Keputusan terbuka (HLD §16)

@@ -4,21 +4,21 @@
   "index_mode": "LIGHTWEIGHT_GREP",
   "index_version": 1,
   "schema_version": 1,
-  "indexed_commit": "5fdced1",
-  "generated_at": "2026-10-23T22:18:10+07:00",
-  "files_indexed": 75,
+  "indexed_commit": "7aef912",
+  "generated_at": "2026-10-23T22:34:14+07:00",
+  "files_indexed": 89,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
   "scope": ["src/", "src-tauri/", "scripts/", "content/"],
   "breakdown": {
-    "src": 22,
+    "src": 28,
     "src_tauri": 28,
     "scripts": 4,
-    "content": 21,
-    "note": "content termasuk 4 JSON Schema + 4 paket fixture + 4 expected report; target/ dikecualikan"
+    "content": 29,
+    "note": "src termasuk loader paket, player, dan test kuis; content termasuk paket pilot; target/ dikecualikan"
   },
   "validation": {
-    "last_validated_at": "2026-10-23T22:16:42+07:00",
+    "last_validated_at": "2026-10-23T22:34:14+07:00",
     "result": "PASS",
     "details": "File enumeration konsisten; bukan index simbol"
   },

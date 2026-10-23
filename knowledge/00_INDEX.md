@@ -29,6 +29,7 @@
 | Kontrak API & native commands | [`api/API.md`](api/API.md) |
 | Keamanan & privasi | [`security/SECURITY.md`](security/SECURITY.md) |
 | Kontrak konten v1 | [`content/SCHEMA.md`](content/SCHEMA.md) |
+| Katalog konten | [`content/CATALOG.md`](content/CATALOG.md) |
 | Fixture input/output validator | [`content/FIXTURES.md`](content/FIXTURES.md) |
 | Proposal kurikulum (OD-1) | [`content/CURRICULUM_PROPOSAL.md`](content/CURRICULUM_PROPOSAL.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |

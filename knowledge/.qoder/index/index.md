@@ -12,16 +12,17 @@ src/
   components/layout/{AppShell,SidebarNavigation,TopBar,MobileNavigation}.tsx
   components/ui/{PageHeader,StatusBadge,OfflineIndicator}.tsx
   screens/ScreenPlaceholder.tsx
+  screens/LessonPlayer.tsx
+  components/content/{ExplorationActivity,QuizActivity}.tsx
   content/
-    activityRegistry.ts
-    validatePackage.ts
-    verifyAssets.ts
+    activityRegistry.ts, validatePackage.ts, verifyAssets.ts, quiz.ts
+    loadPackages.ts
     schema/{primitives,manifest,lesson,activity}.ts
-    __tests__/validatePackage.test.ts
+    __tests__/{validatePackage,quiz}.test.ts
   index.css, vite-env.d.ts
 src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/, src/, icons/
 scripts/     validate-content.ts, export-content-schema.ts
-content/     schema/*.json (generated), fixtures/{valid-package,invalid-structure,invalid-references,unsupported-schema}, fixtures/expected/*.report.json
+content/     schema/*.json (generated), fixtures/*, packages/matematika-kelas3-pecahan/ (draft)
 ```
 
 ## Keterbatasan

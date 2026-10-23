@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T22:16:42+07:00",
+  "last_validated_at": "2026-10-23T22:34:14+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -40,13 +40,25 @@
       "name": "content_unit_tests",
       "command": "npm test (vitest run && tsx scripts/check-fixtures.ts)",
       "result": "PASS",
-      "details": "11/11 unit test: valid fixture, schema unsupported, traversal, forbidden field, duplicate, refs, assessment, hash"
+      "details": "15/15 unit test: schema (11) + skor kuis (4) + golden fixture 4/4"
     },
     {
       "name": "fixture_golden_check",
       "command": "npm run fixtures:check",
       "result": "PASS",
       "details": "4/4 fixture cocok: valid (0 issue), invalid-structure (3), invalid-references (7), unsupported-schema (1)"
+    },
+    {
+      "name": "content_pilot_validation",
+      "command": "npm run content:validate -- content/packages/matematika-kelas3-pecahan",
+      "result": "PASS",
+      "details": "VALID, 0 issue, 2 warning (draft, curriculumRefs kosong); 4 hash aset cocok"
+    },
+    {
+      "name": "ui_player_flow",
+      "command": "browser-use evaluate_script pada http://localhost:1420/#player",
+      "result": "PASS",
+      "details": "Eksplorasi langkah 1-4, selesai, kuis, skor 100/Lulus, submit enabled; screenshot desktop 1600x900 dan mobile 640x900 diperiksa"
     },
     {
       "name": "content_validator_cli",

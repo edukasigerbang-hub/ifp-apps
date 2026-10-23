@@ -82,3 +82,7 @@ export function findNavItem(id: ScreenId): NavItem {
   }
   return item;
 }
+
+export function isScreenId(value: string): value is ScreenId {
+  return navigationItems.some((item) => item.id === value);
+}

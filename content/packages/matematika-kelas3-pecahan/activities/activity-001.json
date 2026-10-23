@@ -1,0 +1,51 @@
+{
+  "activityId": "aktivitas-mengamati-pecahan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bagian yang Diwarnai",
+  "instructions": "Perhatikan setiap gambar. Hitung berapa bagian sama besar seluruhnya, lalu hitung berapa bagian yang diwarnai. Tekan lanjut setelah kamu siap.",
+  "assets": [
+    "assets/pecahan-setengah.png",
+    "assets/pecahan-sepertiga.png",
+    "assets/pecahan-dua-per-tiga.png",
+    "assets/pecahan-seperempat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Lingkaran ini dibagi menjadi berapa bagian sama besar? Berapa bagian yang diwarnai?",
+        "assetPath": "assets/pecahan-setengah.png",
+        "altText": "Lingkaran dibagi dua bagian sama besar; bagian kanan berwarna.",
+        "reveal": "Ada 2 bagian sama besar. 1 bagian diwarnai, jadi bagian berwarna adalah 1/2 (setengah).",
+        "hint": "Hitung semua bagian lebih dulu, lalu hitung bagian berwarna."
+      },
+      {
+        "prompt": "Persegi panjang ini dibagi menjadi berapa bagian sama besar? Berapa bagian yang diwarnai?",
+        "assetPath": "assets/pecahan-sepertiga.png",
+        "altText": "Persegi panjang dibagi tiga bagian sama besar; bagian kiri berwarna.",
+        "reveal": "Ada 3 bagian sama besar. 1 bagian diwarnai, jadi bagian berwarna adalah 1/3 (sepertiga).",
+        "hint": "Bandingkan lebar setiap bagian; semuanya sama."
+      },
+      {
+        "prompt": "Sekarang ada 3 bagian sama besar dan 2 bagian diwarnai. Pecahan apa yang menunjukkan bagian berwarna?",
+        "assetPath": "assets/pecahan-dua-per-tiga.png",
+        "altText": "Persegi panjang dibagi tiga bagian sama besar; dua bagian kiri berwarna.",
+        "reveal": "Ada 3 bagian sama besar. 2 bagian diwarnai, jadi bagian berwarna adalah 2/3 (dua per tiga).",
+        "hint": "Angka bawah menunjukkan jumlah semua bagian; angka atas menunjukkan bagian berwarna."
+      },
+      {
+        "prompt": "Persegi ini dibagi menjadi berapa bagian sama besar? Berapa bagian yang diwarnai?",
+        "assetPath": "assets/pecahan-seperempat.png",
+        "altText": "Persegi dibagi empat bagian sama besar; satu bagian kiri atas berwarna.",
+        "reveal": "Ada 4 bagian sama besar. 1 bagian diwarnai, jadi bagian berwarna adalah 1/4 (seperempat).",
+        "hint": "Perhatikan bahwa keempat bagian memiliki ukuran yang sama."
+      }
+    ]
+  },
+  "completionPolicy": { "type": "view" },
+  "feedbackPolicy": { "mode": "immediate", "allowRetry": true, "showCorrectAnswer": true },
+  "runtimeCapabilities": ["touch", "keyboard"],
+  "accessibilityMetadata": {
+    "altText": "Empat diagram: lingkaran dibagi 2 bagian dengan 1 bagian berwarna; persegi panjang dibagi 3 bagian dengan 1 bagian berwarna; persegi panjang dibagi 3 bagian dengan 2 bagian berwarna; persegi dibagi 4 bagian dengan 1 bagian berwarna."
+  }
+}

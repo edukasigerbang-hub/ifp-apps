@@ -1,13 +1,13 @@
-type Tone = "positive" | "warning" | "neutral";
+export type StatusTone = "positive" | "warning" | "neutral";
 
-const toneClasses: Record<Tone, string> = {
+const toneClasses: Record<StatusTone, string> = {
   positive: "bg-teal/10 text-[#0e7f78]",
   warning: "bg-warning/15 text-[#8a5a12]",
   neutral: "bg-ink/5 text-muted"
 };
 
 interface StatusBadgeProps {
-  tone?: Tone;
+  tone?: StatusTone;
   label: string;
   title?: string;
 }

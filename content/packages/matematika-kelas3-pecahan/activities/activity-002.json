@@ -1,0 +1,61 @@
+{
+  "activityId": "kuis-pecahan-sederhana",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Pecahan Sederhana",
+  "instructions": "Pilih satu jawaban yang paling tepat. Kamu boleh mencoba lagi jika belum mencapai nilai kelulusan.",
+  "assets": [],
+  "interactionConfig": { "layout": "single-question" },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-setengah",
+        "prompt": "Satu bagian dari dua bagian sama besar disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          { "optionId": "opsi-setengah", "text": "setengah (1/2)" },
+          { "optionId": "opsi-sepertiga", "text": "sepertiga (1/3)" },
+          { "optionId": "opsi-seperempat", "text": "seperempat (1/4)" }
+        ],
+        "correctResponse": "opsi-setengah"
+      },
+      {
+        "questionId": "soal-seperempat",
+        "prompt": "Satu bagian dari empat bagian sama besar ditulis ...",
+        "responseType": "single-choice",
+        "options": [
+          { "optionId": "opsi-1-2", "text": "1/2" },
+          { "optionId": "opsi-1-3", "text": "1/3" },
+          { "optionId": "opsi-1-4", "text": "1/4" }
+        ],
+        "correctResponse": "opsi-1-4"
+      },
+      {
+        "questionId": "soal-bandingkan",
+        "prompt": "Dua lingkaran berukuran sama. Lingkaran pertama dibagi 2, lingkaran kedua dibagi 4. Bagian 1/2 lebih ... daripada 1/4.",
+        "responseType": "single-choice",
+        "options": [
+          { "optionId": "opsi-besar", "text": "besar" },
+          { "optionId": "opsi-kecil", "text": "kecil" },
+          { "optionId": "opsi-sama", "text": "sama besar" }
+        ],
+        "correctResponse": "opsi-besar"
+      },
+      {
+        "questionId": "soal-dua-per-tiga",
+        "prompt": "Dua bagian dari tiga bagian sama besar ditulis ...",
+        "responseType": "single-choice",
+        "options": [
+          { "optionId": "opsi-2-3", "text": "2/3" },
+          { "optionId": "opsi-3-2", "text": "3/2" },
+          { "optionId": "opsi-1-3", "text": "1/3" }
+        ],
+        "correctResponse": "opsi-2-3"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": { "type": "score-threshold", "threshold": 75 },
+  "feedbackPolicy": { "mode": "after-attempt", "allowRetry": true, "showCorrectAnswer": false },
+  "runtimeCapabilities": ["touch", "keyboard"]
+}

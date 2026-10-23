@@ -77,3 +77,35 @@
 - ADR-0003: kontrak paket konten (Zod sumber tunggal, referensi aktivitas, larangan eksekusi kode).
 
 **Tidak dikerjakan (sengaja):** mengisi matriks mapel, menandai review, membuat materi — menunggu keputusan/reviewer manusia.
+
+### T-005 — Pilot konten: Matematika kelas 3, pecahan
+
+**Status:** COMPLETED (draft) · **Change class:** MEDIUM
+
+**Paket:** `content/packages/matematika-kelas3-pecahan/` v0.1.0
+- 1 lesson "Mengenal Pecahan 1/2, 1/3, dan 1/4" dengan 3 tujuan pembelajaran.
+- Aktivitas eksplorasi 4 langkah + kuis 4 soal pilihan ganda (lulus 75, boleh retry).
+- 4 diagram PNG 800×600 dibuat deterministik via System.Drawing; diverifikasi visual (bagian sama besar, jumlah bagian berwarna benar).
+- `curriculumRefs: []`, `reviewStatus: draft`, `signature: null`.
+
+**Verifikasi:**
+- `npm run content:validate -- content/packages/matematika-kelas3-pecahan` → VALID, 0 issue, 2 warning (draft & tanpa curriculumRefs).
+- Hash 4 aset cocok dengan manifest.
+
+**Belum:** review R1–R12, sign-off OD-1, tampilan di aplikasi (player masih placeholder).
+
+### T-006 — Pratinjau Player
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Loader paket via `import.meta.glob` + validasi runtime (`loadPackages.ts`); aset di-bundle Vite (bukan dari `public/`).
+- Layar Player menampilkan lesson pilot: badge DRAFT, metadata, tujuan, tab aktivitas.
+- Komponen `ExplorationActivity` (4 langkah, petunjuk, penjelasan, progress) dan `QuizActivity` (soal, skor, ambang lulus, retry, feedback suportif).
+- Deep link `#player` untuk membuka layar langsung.
+- Logika skor diekstrak ke `scoreQuiz` + 4 unit test (benar semua, gagal, ambang batas, kuis kosong).
+
+**Verifikasi:**
+- Alur UI: langkah 1→4, selesai, kuis, skor **100/Lulus** — PASS.
+- `npm test` 15/15 + golden 4/4 — PASS.
+- Screenshot desktop 1600×900 dan mobile 640×900 diperiksa — PASS.
+- Persistensi hasil: **BELUM** (tidak ada SQLite).

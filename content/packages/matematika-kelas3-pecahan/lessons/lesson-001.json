@@ -1,0 +1,25 @@
+{
+  "lessonId": "pecahan-sederhana",
+  "packageId": "matematika-kelas3-pecahan",
+  "title": "Mengenal Pecahan 1/2, 1/3, dan 1/4",
+  "summary": "Mengenal pecahan sederhana melalui gambar yang dibagi menjadi bagian sama besar, lalu berlatih menuliskan dan membandingkannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menunjukkan pecahan 1/2, 1/3, dan 1/4 dari gambar yang dibagi menjadi bagian sama besar.",
+    "Menuliskan pecahan sederhana sesuai gambar yang ditunjukkan.",
+    "Membandingkan 1/2 dan 1/4 menggunakan dua gambar berukuran sama."
+  ],
+  "activityIds": ["aktivitas-mengamati-pecahan", "kuis-pecahan-sederhana"],
+  "assessmentRefs": ["kuis-pecahan-sederhana"],
+  "assetRefs": [
+    "assets/pecahan-setengah.png",
+    "assets/pecahan-sepertiga.png",
+    "assets/pecahan-dua-per-tiga.png",
+    "assets/pecahan-seperempat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kumpulan diagram pecahan sederhana dengan bagian berwarna yang jelas dan kontras."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

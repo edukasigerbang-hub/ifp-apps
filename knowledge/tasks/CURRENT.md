@@ -13,6 +13,8 @@
 | T-002 | Fase C — app shell | Tauri 2 + React 19 + TS + Vite + Tailwind; 8 layar placeholder |
 | T-003 | Fase D — schema konten | Zod schema v1 + validator + verifikasi hash + CLI + JSON Schema |
 | T-004 | Prasyarat materi | Proposal OD-1, rubrik review pedagogis, ADR-0003 |
+| T-005 | Pilot konten draft | `matematika-kelas3-pecahan` v0.1.0: 1 lesson, 2 aktivitas, 4 diagram; VALID |
+| T-006 | Pratinjau Player | Paket pilot dirender di layar Player: eksplorasi 4 langkah + kuis + skor; desktop & mobile lulus |
 
 ## Status prasyarat materi pembelajaran
 
@@ -20,6 +22,7 @@
 |---|---|---|
 | Kontrak/schema paket konten | **DONE** | [SCHEMA.md](../content/SCHEMA.md), `schemaVersion 1.0.0` |
 | Validator + test | **DONE** | `npm test` → 11/11 PASS; fixture VALID |
+| Pilot konten draft | **DONE (draft)** | [Katalog](../content/CATALOG.md): `matematika-kelas3-pecahan` v0.1.0, VALID + 2 warning |
 | Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
 | Rubrik review pedagogis | **READY (template)** | [REVIEW_RUBRIC.md](../content/REVIEW_RUBRIC.md) — 0 materi direview |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
@@ -27,22 +30,24 @@
 
 ## Next task
 
-**T-005 — Sign-off OD-1 lalu pilot unit** (butuh keputusan user)
-1. Product Owner + Curriculum Lead memutuskan D1–D7 di proposal → catat ADR-0004.
-2. Tunjuk reviewer (curriculum + bahasa + aksesibilitas).
-3. Pilih 1 unit pilot (kelas, mapel, topik).
-4. Produksi pilot → `npm run content:validate` → review R1–R12 → baru boleh `approved`.
+**T-005b — Review pilot + sign-off OD-1** (butuh keputusan/reviewer manusia)
+1. Tunjuk reviewer (curriculum + bahasa + aksesibilitas).
+2. Review `matematika-kelas3-pecahan` dengan [rubrik R1–R12](../content/REVIEW_RUBRIC.md); isi temuan.
+3. Product Owner + Curriculum Lead memutuskan D1–D7 → ADR-0004 → isi `curriculumRefs`.
+4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
+
+**T-007 — Device technical spike** (terpisah, butuh perangkat fisik).
 
 ## Verifikasi sesi ini
 
 | Check | Hasil |
 |---|---|
-| `npm test` | **PASS** — 11 unit test + 4 golden fixture |
+| `npm test` | **PASS** — 15 unit test + 4 golden fixture |
 | `npm run fixtures:check` | **PASS** — 4/4 cocok dengan expected (VALID/3/7/1 issue) |
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
-| `npm run content:schema` | **PASS** — 4 JSON Schema di `content/schema/` |
-| `npm run build` | **PASS** |
-| Review pedagogis | **NOT DONE** — tidak boleh diklaim |
+| Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
+| Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
+| Persistensi hasil belajar | **BELUM** — belum ada SQLite/repository |
 | DV-01…DV-20 | NOT RUN |
 
 ## Blocker
@@ -55,4 +60,4 @@
 
 ## Handoff
 
-Mulai dari [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7, produksi konten hanya boleh berupa **draft internal** yang tidak dipublikasikan.
+Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft** dan tidak boleh dipublikasikan.

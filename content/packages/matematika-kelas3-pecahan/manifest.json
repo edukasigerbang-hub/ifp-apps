@@ -1,0 +1,40 @@
+{
+  "manifestVersion": 1,
+  "packageId": "matematika-kelas3-pecahan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pecahan Sederhana — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [3],
+  "subjects": ["matematika"],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/pecahan-setengah.png",
+      "mediaType": "image/png",
+      "sizeBytes": 17860,
+      "sha256": "eba86b3d9a2d596514a324099aa5c6951f230eb1c8c61339e6270c8d91f27a08"
+    },
+    {
+      "path": "assets/pecahan-sepertiga.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6935,
+      "sha256": "5dac32f926047e8cdbe02ea005f088c37753c046c9e8a1417928a241ace5c202"
+    },
+    {
+      "path": "assets/pecahan-dua-per-tiga.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6934,
+      "sha256": "260aca340cff14a47b38485226c9cb9b988cfe079731d91bc73ecdc2f21fb4dd"
+    },
+    {
+      "path": "assets/pecahan-seperempat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7764,
+      "sha256": "a3d9595a087b2a4cefe68d789ab455e1bf2f708bb2d61ddecc5ac8d3d3f91dd4"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}
