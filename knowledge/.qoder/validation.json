@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "last_validated_at": "2026-10-23T21:58:06+07:00",
+  "validation_mode": "static-only",
+  "checks": [
+    {
+      "name": "json_parse",
+      "target": ["knowledge/.qoder/state.json", "knowledge/.qoder/project.json", "knowledge/.qoder/context.json", "knowledge/.qoder/routing.json", "knowledge/.qoder/index/index-state.json"],
+      "command": "node -e JSON.parse(...)",
+      "result": "PASS",
+      "details": "5/5 parsed"
+    },
+    {
+      "name": "source_documents_unchanged",
+      "target": ["HLD.md", "LLD.md", "IMPLEMENTATION_CONTRACT.md", "DEVICE_VALIDATION.md"],
+      "command": "sha256sum",
+      "result": "PASS",
+      "details": "Hash sebelum dan sesudah inisialisasi identik"
+    },
+    {
+      "name": "application_tests",
+      "target": ["src/", "src-tauri/"],
+      "command": "none",
+      "result": "NOT RUN",
+      "details": "Belum ada source code; tidak ada test runner"
+    },
+    {
+      "name": "lint_typecheck_build",
+      "result": "NOT RUN",
+      "details": "Belum ada package.json / Cargo.toml"
+    },
+    {
+      "name": "security_scan",
+      "result": "NOT RUN",
+      "details": "Belum ada repo/CI; tidak ada secret yang ditulis"
+    }
+  ],
+  "source_documents": [
+    { "path": "HLD.md", "version": "1.1", "sha256": "06c85df1fa34bd2c0a2a346d88306a3b15538f42ed2359f66c204849ae4f027b", "role": "source-of-truth" },
+    { "path": "LLD.md", "version": null, "sha256": "29f7fa3ef79911320bcf9f20df93abe50a36ee351823056349871b223af3f326", "role": "source-of-truth" },
+    { "path": "IMPLEMENTATION_CONTRACT.md", "version": null, "sha256": "356c1ae697a66f36ae29e04cbcaa36dd41b7751a27bdfcb1a4ec9c855c5b17b5", "role": "agent-contract" },
+    { "path": "DEVICE_VALIDATION.md", "version": null, "sha256": "c59df7be08e97440ca14ff8e04c470ce5425e8e8a933f3048021355a6b2069c4", "role": "device-plan" }
+  ],
+  "platform_claims": {
+    "windows_11": "VALIDATE",
+    "android_14": "VALIDATE",
+    "device_tests": "DV-01..DV-20 NOT RUN"
+  }
+}

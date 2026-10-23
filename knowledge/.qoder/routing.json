@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "project_type": "greenfield-desktop-app",
+  "routing": [
+    { "intent": "konten/paket/manifest/aktivitas", "read": ["knowledge/architecture/LLD.md", "knowledge/architecture/DATA_FLOW.md"] },
+    { "intent": "database/migrasi/transaksi", "read": ["knowledge/database/SCHEMA.md"] },
+    { "intent": "lisensi/aktivasi/transfer", "read": ["knowledge/security/SECURITY.md", "knowledge/api/API.md", "knowledge/architecture/LLD.md"] },
+    { "intent": "sync/offline/outbox", "read": ["knowledge/architecture/DATA_FLOW.md", "knowledge/database/SCHEMA.md"] },
+    { "intent": "ui/ux/aksesibilitas", "read": ["../HLD.md#13-rancangan-uiux-dan-kontrak-antarmuka"] },
+    { "intent": "platform/device/validasi", "read": ["../DEVICE_VALIDATION.md"] },
+    { "intent": "aturan kerja agent", "read": ["../IMPLEMENTATION_CONTRACT.md"] }
+  ],
+  "paths": {
+    "source_of_truth": ["HLD.md", "LLD.md"],
+    "planned_code_roots": ["src/", "src-tauri/"]
+  }
+}

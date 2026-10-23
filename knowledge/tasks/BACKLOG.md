@@ -1,0 +1,54 @@
+# BACKLOG — Antrean Kerja
+
+Urutan fase **MENGIKAT** dari [IMPLEMENTATION_CONTRACT §7](../../IMPLEMENTATION_CONTRACT.md).
+Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptance criteria dan review.
+
+## Fase implementasi
+
+| ID | Fase | Acceptance criteria ringkas | Status |
+|---|---|---|---|
+| A | Repo reconnaissance + ADR confirmation | Git init diputuskan, stack dikonfirmasi, ADR-0001/0002 tertulis | TODO |
+| B | Device technical spike | DV gate §5: Tauri hello-world (2 OS), SQLite migrasi, document picker/managed folder, media+WebGL, Ed25519 verify, app update preserves data | TODO — blocked by device |
+| C | Product configuration + app shell | `productConfig`, AppShell, navigasi, tema token, build kedua platform | TODO |
+| D | Content schema + validator | Schema terversi, validator manifest/asset/hash/dependency, test malformed/traversal/oversize | TODO |
+| E | Local repository + learning session contracts | Migrasi SQLite + repository; sesi/attempt/response; transaksi hasil+outbox | TODO |
+| F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | TODO |
+| G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | TODO |
+| H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | TODO |
+| I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | TODO |
+| J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |
+| K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | TODO |
+| L | Device hardening & release | DV-01…DV-20 PASS, installer/updater, backup/restore teruji | TODO |
+
+## Keputusan terbuka (HLD §16)
+
+| ID | Keputusan | Memengaruhi | Status |
+|---|---|---|---|
+| OD-1 | Daftar resmi mata pelajaran + referensi kurikulum | Schema kurikulum, konten, validasi pedagogis | OPEN |
+| OD-2 | Model perangkat IFP nyata + arsitektur CPU | Build matrix, spike, DV | OPEN |
+| OD-3 | Batas ukuran paket, codec media, target performa numerik | Import limits, DV-11/12/20 | OPEN |
+| OD-4 | Kebijakan retensi, backup, ekspor, penghapusan data siswa | Privacy, DB, UI | OPEN |
+| OD-5 | Grace period subscription offline, transfer perangkat, clock rollback policy | License semantics | OPEN |
+| OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | OPEN |
+| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | OPEN |
+| OD-8 | Standar "konten lengkap" per mapel/unit | Gerbang rilis konten | OPEN |
+
+## Gap terverifikasi
+
+| ID | Gap | Bukti | Dampak |
+|---|---|---|---|
+| GAP-1 | `index.html` prototype dirujuk HLD §13 tetapi tidak ada | `glob **/index.html` → 0 hasil | Referensi layout/perilaku UI hilang; tidak boleh dianggap ada |
+| GAP-2 | Repository belum Git | `git rev-parse` → fatal | Tidak ada baseline commit, diff, rollback, boundary guard |
+| GAP-3 | Backend stack belum dipilih (TS vs FastAPI) | HLD §7 | Fase I/J tidak bisa dimulai |
+| GAP-4 | Belum ada ADR sama sekali | `knowledge/decisions/` kosong | Keputusan arsitektural belum terlacak |
+
+## Validasi perangkat (semua NOT RUN)
+
+DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDATION.md).
+**Dilarang** mengklaim dukungan platform sebelum ada evidence build/test pada perangkat fisik.
+
+## Utang teknis yang sudah diketahui
+
+- Retensi & index DB belum dirancang (menunggu OD-4).
+- Skema `sync_outbox` state enum belum ditetapkan.
+- Belum ada CI (belum ada repo).

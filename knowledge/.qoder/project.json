@@ -1,0 +1,36 @@
+{
+  "project": "Gerbang Edukasi — IFP Apps",
+  "product_id": "ifp-learning",
+  "display_name": "Gerbang Edukasi – IFP Apps",
+  "platforms": ["windows-11", "android-14"],
+  "identifiers": {
+    "windows": "id.gerbangedukasi.ifp",
+    "android": "id.gerbangedukasi.ifp",
+    "status": "PROPOSED"
+  },
+  "phase": "A — pre-implementation",
+  "detected_stack": {
+    "source_code": false,
+    "package_json": false,
+    "cargo_toml": false,
+    "git": false,
+    "runtime": {
+      "node": "v22.15.0",
+      "npm": "11.3.0",
+      "cargo": "1.95.0"
+    }
+  },
+  "planned_stack": {
+    "app_shell": { "name": "Tauri 2 + Rust", "status": "VALIDATE" },
+    "ui": { "name": "React + TypeScript + Vite", "status": "PROPOSED" },
+    "styling": { "name": "Tailwind CSS", "status": "PROPOSED" },
+    "local_db": { "name": "SQLite", "status": "VALIDATE" },
+    "backend": { "name": "TypeScript OR FastAPI", "status": "UNDECIDED" }
+  },
+  "source_documents": {
+    "HLD.md": "06c85df1fa34bd2c0a2a346d88306a3b15538f42ed2359f66c204849ae4f027b",
+    "LLD.md": "29f7fa3ef79911320bcf9f20df93abe50a36ee351823056349871b223af3f326",
+    "IMPLEMENTATION_CONTRACT.md": "356c1ae697a66f36ae29e04cbcaa36dd41b7751a27bdfcb1a4ec9c855c5b17b5",
+    "DEVICE_VALIDATION.md": "c59df7be08e97440ca14ff8e04c470ce5425e8e8a933f3048021355a6b2069c4"
+  }
+}

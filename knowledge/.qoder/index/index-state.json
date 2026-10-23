@@ -1,0 +1,18 @@
+{
+  "status": "UNAVAILABLE",
+  "reason": "Belum ada source code di repository; tidak ada yang bisa diindeks",
+  "index_mode": "UNAVAILABLE",
+  "index_version": 1,
+  "schema_version": 1,
+  "indexed_commit": null,
+  "generated_at": null,
+  "files_indexed": 0,
+  "symbols_indexed": 0,
+  "dependencies_indexed": 0,
+  "scope": [],
+  "validation": {
+    "last_validated_at": null,
+    "result": "NOT RUN"
+  },
+  "next_action": "Setelah scaffold Fase C, jalankan INDEX ingest awal untuk src/ dan src-tauri/"
+}
