@@ -62,5 +62,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0003](decisions/ADR-0003-content-package-contract.md) | Kontrak paket konten v1 (Zod) | Accepted (implemented) |
 | [ADR-0004](decisions/ADR-0004-local-persistence.md) | Persistensi lokal native (Rust + SQLite) | Accepted (implemented) |
 | [ADR-0005](decisions/ADR-0005-sync-client.md) | Arsitektur client sinkronisasi | Accepted (client implemented) |
+| [ADR-0006](decisions/ADR-0006-sync-backend-reference.md) | Backend sinkronisasi referensi | Accepted (reference only) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

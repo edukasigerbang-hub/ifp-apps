@@ -15,7 +15,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | F | Content importer + atomic activation | staging → validate → activate → rollback; state machine teruji | TODO |
 | G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — eksplorasi+kuis + persistensi lokal; lifecycle penuh & gaya guru belum |
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | TODO |
-| I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + kontrak + mock PASS; server/backend belum (OD-7) |
+| I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + server referensi PASS; stack produksi pending OD-7 |
 | J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |
 | K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | PARTIAL — 1 pilot draft, belum direview |
 | L | Device hardening & release | DV-01…DV-20 PASS, installer/updater, backup/restore teruji | TODO |

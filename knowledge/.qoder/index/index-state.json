@@ -4,23 +4,24 @@
   "index_mode": "LIGHTWEIGHT_GREP",
   "index_version": 1,
   "schema_version": 1,
-  "indexed_commit": "085cdae",
-  "generated_at": "2026-10-23T22:59:45+07:00",
-  "files_indexed": 102,
+  "indexed_commit": "65be280",
+  "generated_at": "2026-10-23T23:08:14+07:00",
+  "files_indexed": 106,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
-  "scope": ["src/", "src-tauri/", "scripts/", "content/"],
+  "scope": ["src/", "src-tauri/", "scripts/", "server/", "content/"],
   "breakdown": {
     "src": 33,
     "src_tauri": 35,
     "scripts": 5,
+    "server": 4,
     "content": 29,
-    "note": "src-tauri termasuk sync.rs, validation.rs, migrasi 0002; scripts termasuk mock sync server; Fase I belum di-commit"
+    "note": "server/ adalah backend referensi; Fase backend belum di-commit saat snapshot"
   },
   "validation": {
-    "last_validated_at": "2026-10-23T22:59:45+07:00",
+    "last_validated_at": "2026-10-23T23:08:14+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },
-  "next_action": "Bangun index SQLite kode setelah struktur stabil; jangan mencampur dengan DB runtime di app_data"
+  "next_action": "Index SQLite kode setelah struktur stabil; pisahkan dari DB runtime"
 }

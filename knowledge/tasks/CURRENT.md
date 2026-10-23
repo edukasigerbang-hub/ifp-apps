@@ -17,6 +17,7 @@
 | T-006 | Pratinjau Player | Paket pilot dirender di layar Player: eksplorasi 4 langkah + kuis + skor; desktop & mobile lulus |
 | T-007 | Fase E — repository lokal | SQLite native + migrasi + 4 command; hasil kuis tersimpan atomik; layar Hasil Belajar |
 | T-008 | Fase I — sinkronisasi | Outbox state native + engine TS + kontrak + mock server; 1 event acknowledged E2E |
+| T-008b | Backend sinkronisasi referensi | HTTP server TS + SQLite; auth, idempotensi, batas, rate limit; 11 test + E2E nyata |
 
 ## Status prasyarat materi pembelajaran
 
@@ -56,7 +57,9 @@
 | Rust sync tests | **PASS** — 5/5 (eligibility, backoff/dead-letter, ack idempotent, status, device ID) |
 | Sync engine tests | **PASS** — 8/8 (accepted/duplicate, rejected, network, missing ack, empty, payload rusak, backoff) |
 | E2E sinkronisasi (mock server) | **PASS** — "1 event tersinkronisasi"; outbox `acknowledged`, counts 0/0/1 |
-| Backend sinkronisasi nyata | **BELUM** — OD-7; CSP produksi belum mengizinkan host backend |
+| Server referensi | **PASS** — 11/11 test; typecheck PASS |
+| E2E backend nyata | **PASS** — 1 event tersimpan di server + outbox client `acknowledged` |
+| Backend produksi | **BELUM** — OD-7; server referensi bukan produksi |
 | DV-01…DV-20 | NOT RUN |
 
 ## Blocker

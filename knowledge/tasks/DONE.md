@@ -149,3 +149,16 @@
 **Batas:** backend nyata belum ada (OD-7); CSP produksi belum mengizinkan host backend; token perangkat menunggu License Manager.
 
 **DB cleanup (disetujui user):** DB lama dibackup ke `.tmp-data/backups/`, lalu dihapus; app membuat DB baru bersih.
+
+### T-008b — Backend sinkronisasi referensi
+
+**Status:** COMPLETED (reference) · **Change class:** LARGE
+
+- `server/`: TypeScript + `node:http` + `node:sqlite` + Zod (ADR-0006).
+- `POST /v1/sync/events`: bearer token, validasi batch, idempotensi `event_id`, batas body/payload, rate limit 60/menit, CORS dev.
+- `sync_events` menyimpan payload; event sama + device berbeda → rejected.
+- Test Vitest 11 kasus; typecheck `tsconfig.server.json`.
+
+**Verifikasi:** server typecheck PASS; 11/11 test; E2E Tauri → server menyimpan 1 event, client outbox `acknowledged`; UI Menunggu 0 / Gagal 0 / Tersinkron 1.
+
+**Batas:** bukan produksi (tanpa TLS, single-process, rate limit in-memory, token env, retensi belum ditetapkan); stack produksi tetap OD-7.

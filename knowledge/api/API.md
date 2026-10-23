@@ -49,7 +49,7 @@ Aturan native boundary: validasi argumen + batas ukuran; **tanpa** command gener
 | `sync_mark_acknowledged` | `outboxId`, `acknowledgedAt` | `updated` (idempotent) |
 | `sync_get_status` | — | `pending`, `failed`, `acknowledged`, `nextAttemptAt` |
 
-Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/data/syncEngine.ts`; UI: Pengaturan.
+Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/data/syncEngine.ts`; UI: Pengaturan. Server referensi: `server/` (`npm run server:dev`, ADR-0006) — belum produksi.
 
 ## Server (konseptual) — USULAN
 

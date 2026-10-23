@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-23T22:59:45+07:00",
+  "last_validated_at": "2026-10-23T23:08:14+07:00",
   "validation_mode": "static+web-smoke+unit",
   "checks": [
     {
@@ -40,7 +40,7 @@
       "name": "content_unit_tests",
       "command": "npm test (vitest run && tsx scripts/check-fixtures.ts)",
       "result": "PASS",
-      "details": "23/23 unit test: schema 11 + kuis 4 + sync engine 8 + golden fixture 4/4"
+      "details": "34/34 unit test: schema 11 + kuis 4 + sync engine 8 + server 11 + golden fixture 4/4"
     },
     {
       "name": "fixture_golden_check",
@@ -77,6 +77,24 @@
       "command": "Tauri WebView CDP + npm run sync:mock",
       "result": "PASS",
       "details": "1 event acknowledged; UI Menunggu 0 / Gagal 0 / Tersinkron 1; outbox state acknowledged, attempts 0, acknowledged_at terisi; device id 36 char"
+    },
+    {
+      "name": "server_typecheck",
+      "command": "npm run server:typecheck",
+      "result": "PASS",
+      "details": "tsc -p tsconfig.server.json exit 0"
+    },
+    {
+      "name": "server_tests",
+      "command": "npm run server:test",
+      "result": "PASS",
+      "details": "11/11: health, auth, accepted, duplicate, conflict, schema, UUID, 100-event limit, body limit, event limit, rate limit"
+    },
+    {
+      "name": "e2e_sync_backend",
+      "command": "Tauri WebView CDP + npm run server:dev (:8788)",
+      "result": "PASS",
+      "details": "Server menyimpan 1 event; client outbox acknowledged; UI Menunggu 0 / Gagal 0 / Tersinkron 1"
     },
     {
       "name": "content_validator_cli",

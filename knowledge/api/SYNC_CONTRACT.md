@@ -1,9 +1,9 @@
 # Kontrak Sinkronisasi v1
 
-**Status:** Client IMPLEMENTED (Fase I) · Server **BELUM ADA** · schema `1.0.0`
-**Terkait:** [ADR-0005](../decisions/ADR-0005-sync-client.md) · [SCHEMA.md](../database/SCHEMA.md)
+**Status:** Client IMPLEMENTED · Server **referensi IMPLEMENTED** (bukan produksi) · schema `1.0.0`
+**Terkait:** [ADR-0005](../decisions/ADR-0005-sync-client.md) · [ADR-0006](../decisions/ADR-0006-sync-backend-reference.md) · [SCHEMA.md](../database/SCHEMA.md)
 
-Server belum diimplementasikan. Kontrak ini mengikat perilaku client dan menjadi acuan backend saat OD-7 diputuskan.
+Server referensi tersedia di `server/` untuk memvalidasi kontrak; stack produksi tetap menunggu OD-7.
 
 ## Endpoint
 
@@ -98,6 +98,22 @@ Batas (usulan, wajib dikonfirmasi backend): maksimal **100 event** per batch, **
 - Payload tidak memuat nama/serial siswa; ID profil lokal tidak dipetakan ke identitas cloud sampai proses linking eksplisit (LLD §7).
 - Jangan mencatat token, serial, atau payload mentah berisi data siswa.
 - Retensi & penghapusan data server: **OPEN (OD-4)**.
+
+## Implementasi referensi (`server/`)
+
+```bash
+SYNC_TOKEN=dev-token SYNC_DB_PATH=/tmp/ifp-sync.db npm run server:dev   # :8788
+VITE_SYNC_BASE_URL=http://localhost:8788 VITE_SYNC_TOKEN=dev-token npm run tauri dev
+```
+
+- TypeScript + `node:http` + `node:sqlite` + Zod.
+- Tabel `sync_events(event_id PK, device_id, event_type, payload_json, received_at)`.
+- Idempotensi: event sama + device sama → `duplicate`; device berbeda → `rejected`.
+- Batas: body 1 MB · payload/event 256 KB · 100 event/batch · rate limit 60/menit (in-memory).
+- CORS default `http://localhost:1420`; token dari env.
+- Terverifikasi: 11 test server + E2E Tauri → 1 event tersimpan dan di-ack; outbox client `acknowledged`.
+
+**Bukan produksi:** tanpa TLS, single-process, rate limit in-memory, token statis, retensi/privasi belum ditetapkan.
 
 ## Dev / mock
 
