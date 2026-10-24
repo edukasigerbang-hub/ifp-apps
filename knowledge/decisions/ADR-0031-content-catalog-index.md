@@ -19,3 +19,4 @@ Katalog bawaan memuat 320 paket. Implementasi lama memanggil `loadContentPackage
 - Katalog menampilkan **320 materi**; pencarian dan E2E `home-catalog` (9 pemeriksaan) PASS.
 - Bundle utama tetap **416,03 kB**; indeks 150 kB dimuat terpisah.
 - Risiko: indeks bisa basi bila konten diubah tanpa menjalankan `content:catalog`; mitigasi: hook `predev`/`prebuild` dan audit 320/320 VALID.
+- Konsistensi ditegakkan otomatis: `npm test` menjalankan `scripts/check-catalog-index.mjs`; gagal bila ada entri hilang, basi, duplikat, atau field berbeda, dengan instruksi `npm run content:catalog`. Negative test (satu entri dihapus) menghasilkan exit 1.

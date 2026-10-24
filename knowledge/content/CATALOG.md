@@ -753,3 +753,10 @@ Menambahkan 42 paket sisa Kelas 2 (B02–B08 untuk 6 mapel).
 - `loadCatalog()` membaca satu JSON (di-cache); paket impor tetap divalidasi runtime.
 - Hasil: Beranda siap **8,7 detik** termasuk cold start (sebelumnya timeout >180 detik); katalog 320 materi; E2E home 9/9 PASS.
 - Detail keputusan: [ADR-0031](../decisions/ADR-0031-content-catalog-index.md).
+
+### Pemeriksaan konsistensi indeks
+
+- `npm run content:catalog:check` membandingkan `public/content-catalog.json` dengan 320 paket.
+- Ikut berjalan otomatis di `npm test`.
+- Gagal bila ada entri hilang, basi, duplikat, atau field berbeda; perbaiki dengan `npm run content:catalog`.
+- Status 2026-10-25: **OK — 320 entri, 320 paket**; negative test (1 entri dihapus) → exit 1.

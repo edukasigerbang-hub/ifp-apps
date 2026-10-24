@@ -70,6 +70,7 @@
 | T-058 | Blocker B-03: transfer/deactivate Worker | `licenseAdmin.ts` + token admin provisial (ADR-0032); 13/13 Worker test; typecheck PASS; deploy menunggu secret |
 | T-059 | Checklist B-01 & B-04 | Checklist signing Windows/Android/updater + SMTP/DNS/reset end-to-end; siap dijalankan saat kredensial tersedia |
 | T-060 | Checklist B-02/05/06/07/08 | Runbook backup/rotasi kunci, DV perangkat, review R1–R12, pembersihan secret, keputusan signature konten |
+| T-061 | Cek konsistensi indeks katalog | Checker membandingkan 320 entri vs paket; masuk `npm test`; negative test exit 1; status OK 320/320 |
 
 ## Status prasyarat materi pembelajaran
 
