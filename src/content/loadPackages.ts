@@ -1,23 +1,5 @@
 import { validateContentPackage, type ContentIssue, type ContentPackage } from "./validatePackage";
 
-const manifestModules = import.meta.glob("../../content/packages/*/manifest.json", {
-  eager: true,
-  import: "default"
-}) as Record<string, unknown>;
-
-const lessonModules = import.meta.glob("../../content/packages/*/lessons/*.json", {
-  import: "default"
-}) as Record<string, () => Promise<unknown>>;
-
-const activityModules = import.meta.glob("../../content/packages/*/activities/*.json", {
-  import: "default"
-}) as Record<string, () => Promise<unknown>>;
-
-const assetModules = import.meta.glob("../../content/packages/*/assets/*", {
-  query: "?url",
-  import: "default"
-}) as Record<string, () => Promise<string>>;
-
 export interface LoadedContentPackage {
   data: ContentPackage;
   assets: Record<string, string>;
@@ -42,11 +24,17 @@ function entriesIn<T>(dir: string, modules: Record<string, T>, subdirectory: str
 }
 
 export async function loadContentPackages(): Promise<ContentLoadResult> {
+  const { manifestModules, lessonModules, activityModules, assetModules } = await import(
+    "./packageModules"
+  );
   const directories = [...new Set(Object.keys(manifestModules).map(packageDirOf))].sort();
+  const manifests = await Promise.all(
+    directories.map((dir) => manifestModules[`${dir}/manifest.json`]())
+  );
   const packages: LoadedContentPackage[] = [];
   const errors: ContentLoadError[] = [];
 
-  for (const dir of directories) {
+  for (const [index, dir] of directories.entries()) {
     const lessonEntries = entriesIn(dir, lessonModules, "lessons");
     const activityEntries = entriesIn(dir, activityModules, "activities");
     const assetEntries = entriesIn(dir, assetModules, "assets");
@@ -58,7 +46,7 @@ export async function loadContentPackages(): Promise<ContentLoadResult> {
     ]);
 
     const result = validateContentPackage({
-      manifest: manifestModules[`${dir}/manifest.json`],
+      manifest: manifests[index],
       lessons,
       activities
     });

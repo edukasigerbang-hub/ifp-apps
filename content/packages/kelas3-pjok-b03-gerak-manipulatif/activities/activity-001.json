@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gerak-manipulatif",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Lempar dan Tangkap",
+  "instructions": "Amati gambar, lalu diskusikan gerak dengan bola.",
+  "assets": [
+    "assets/gerak-manipulatif-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak manipulatif?",
+        "assetPath": "assets/gerak-manipulatif-kelas3.png",
+        "altText": "Dua anak melempar dan menangkap bola.",
+        "reveal": "Gerak yang menggunakan alat atau benda.",
+        "hint": "Contohnya melempar dan menangkap."
+      },
+      {
+        "prompt": "Bagaimana menangkap bola dengan aman?",
+        "assetPath": "assets/gerak-manipulatif-kelas3.png",
+        "altText": "Dua anak melempar dan menangkap bola.",
+        "reveal": "Pandangan ke bola, tangan siap, dan siku sedikit menekuk.",
+        "hint": "Tangkap dengan dua tangan."
+      },
+      {
+        "prompt": "Mengapa kerja sama penting?",
+        "assetPath": "assets/gerak-manipulatif-kelas3.png",
+        "altText": "Dua anak melempar dan menangkap bola.",
+        "reveal": "Agar permainan berjalan lancar.",
+        "hint": "Beri isyarat sebelum melempar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak melempar dan menangkap bola."
+  }
+}

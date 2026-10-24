@@ -1,0 +1,25 @@
+{
+  "lessonId": "hak-kewajiban",
+  "packageId": "kelas3-pendidikan-pancasila-b03-hak-kewajiban",
+  "title": "Hak dan Kewajiban Anggota Keluarga",
+  "summary": "Membedakan hak dan kewajiban serta melaksanakannya di keluarga.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan hak dan kewajiban.",
+    "Menyebutkan hak dan kewajiban di keluarga.",
+    "Melaksanakan kewajiban sebelum menuntut hak."
+  ],
+  "activityIds": [
+    "eksplorasi-hak-kewajiban",
+    "matching-hak-kewajiban"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/hak-kewajiban-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan membantu orang tua di rumah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

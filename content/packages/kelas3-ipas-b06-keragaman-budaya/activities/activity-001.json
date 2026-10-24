@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-keragaman-budaya",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Budaya Daerah",
+  "instructions": "Amati gambar, lalu diskusikan budaya daerah dan sikap menghargainya.",
+  "assets": [
+    "assets/keragaman-budaya-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Budaya apa yang terlihat?",
+        "assetPath": "assets/keragaman-budaya-kelas3.png",
+        "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah.",
+        "reveal": "Rumah adat, pakaian adat, tarian, dan makanan khas.",
+        "hint": "Amati bentuk dan warnanya."
+      },
+      {
+        "prompt": "Mengapa budaya berbeda?",
+        "assetPath": "assets/keragaman-budaya-kelas3.png",
+        "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah.",
+        "reveal": "Setiap daerah memiliki kebiasaan dan lingkungan berbeda.",
+        "hint": "Keragaman adalah kekayaan."
+      },
+      {
+        "prompt": "Bagaimana menghargai budaya lain?",
+        "assetPath": "assets/keragaman-budaya-kelas3.png",
+        "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah.",
+        "reveal": "Mengenal, tidak mengejek, dan ikut melestarikan.",
+        "hint": "Bersikap toleran."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah."
+  }
+}

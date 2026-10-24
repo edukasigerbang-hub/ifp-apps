@@ -1,0 +1,25 @@
+{
+  "lessonId": "atletik-dasar",
+  "packageId": "kelas3-pjok-b07-atletik-dasar",
+  "title": "Atletik Dasar",
+  "summary": "Mengenal nomor atletik dasar dan mempraktikkan lari serta lompat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan nomor atletik.",
+    "Mempraktikkan lari dan lompat sederhana.",
+    "Menunjukkan sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-atletik",
+    "matching-atletik"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/atletik-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak pasir lompat, dan pita finis."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

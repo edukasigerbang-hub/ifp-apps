@@ -1,0 +1,25 @@
+{
+  "lessonId": "waktu-panjang-berat",
+  "packageId": "kelas3-matematika-b07-waktu-panjang-berat",
+  "title": "Waktu, Panjang, dan Berat",
+  "summary": "Mengenal dan mengubah satuan waktu, panjang, serta berat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengubah satuan waktu.",
+    "Mengubah satuan panjang.",
+    "Mengubah satuan berat."
+  ],
+  "activityIds": [
+    "eksplorasi-ukuran",
+    "matching-ukuran"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/waktu-panjang-berat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

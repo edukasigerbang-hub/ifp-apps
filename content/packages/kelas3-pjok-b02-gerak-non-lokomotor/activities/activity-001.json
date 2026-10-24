@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gerak-non-lokomotor",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak di Tempat",
+  "instructions": "Amati gambar, lalu diskusikan gerak yang tidak berpindah tempat.",
+  "assets": [
+    "assets/gerak-non-lokomotor.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak non-lokomotor?",
+        "assetPath": "assets/gerak-non-lokomotor.png",
+        "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki.",
+        "reveal": "Gerak yang dilakukan di tempat.",
+        "hint": "Contohnya menekuk dan memutar."
+      },
+      {
+        "prompt": "Gerak apa yang melatih keseimbangan?",
+        "assetPath": "assets/gerak-non-lokomotor.png",
+        "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki.",
+        "reveal": "Berdiri satu kaki.",
+        "hint": "Buka tangan untuk membantu keseimbangan."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/gerak-non-lokomotor.png",
+        "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki.",
+        "reveal": "Mencegah cedera otot.",
+        "hint": "Lakukan gerakan ringan dahulu."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki."
+  }
+}

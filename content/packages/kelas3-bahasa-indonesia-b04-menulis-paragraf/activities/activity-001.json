@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menulis-paragraf",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Paragraf",
+  "instructions": "Amati gambar, lalu diskusikan bagian-bagian paragraf.",
+  "assets": [
+    "assets/menulis-paragraf.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa bagian pertama paragraf?",
+        "assetPath": "assets/menulis-paragraf.png",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "reveal": "Kalimat topik.",
+        "hint": "Berisi ide utama."
+      },
+      {
+        "prompt": "Bagaimana kalimat pendukung bekerja?",
+        "assetPath": "assets/menulis-paragraf.png",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "reveal": "Menjelaskan kalimat topik.",
+        "hint": "Tambahkan contoh atau ciri."
+      },
+      {
+        "prompt": "Apa yang perlu diperiksa setelah menulis?",
+        "assetPath": "assets/menulis-paragraf.png",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "reveal": "Huruf kapital, tanda baca, dan ejaan.",
+        "hint": "Baca ulang dengan suara pelan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+  }
+}

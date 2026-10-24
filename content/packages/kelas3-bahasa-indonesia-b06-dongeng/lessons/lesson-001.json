@@ -1,0 +1,27 @@
+{
+  "lessonId": "dongeng",
+  "packageId": "kelas3-bahasa-indonesia-b06-dongeng",
+  "title": "Dongeng dan Pesan Cerita",
+  "summary": "Mengenal dongeng, tokohnya, dan pesan yang terkandung di dalamnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal ciri dongeng.",
+    "Menyebutkan tokoh dan sifatnya.",
+    "Menemukan pesan cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-dongeng",
+    "kuis-dongeng"
+  ],
+  "assessmentRefs": [
+    "kuis-dongeng"
+  ],
+  "assetRefs": [
+    "assets/dongeng-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

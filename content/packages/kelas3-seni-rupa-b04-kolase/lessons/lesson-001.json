@@ -1,0 +1,25 @@
+{
+  "lessonId": "kolase",
+  "packageId": "kelas3-seni-rupa-b04-kolase",
+  "title": "Kolase dari Bahan Alam",
+  "summary": "Membuat kolase sederhana dari bahan alam di sekitar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti kolase.",
+    "Memilih bahan alam untuk kolase.",
+    "Membuat kolase sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-kolase",
+    "ordering-kolase"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kolase-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

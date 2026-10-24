@@ -1,0 +1,27 @@
+{
+  "lessonId": "penjumlahan-pengurangan",
+  "packageId": "kelas3-matematika-b02-penjumlahan-pengurangan",
+  "title": "Penjumlahan dan Pengurangan",
+  "summary": "Menjumlahkan dan mengurangkan bilangan sampai 10.000 dengan teknik menyimpan dan meminjam.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjumlahkan bilangan sampai 10.000 dengan teknik menyimpan.",
+    "Mengurangkan bilangan dengan teknik meminjam.",
+    "Menyelesaikan soal cerita penjumlahan dan pengurangan."
+  ],
+  "activityIds": [
+    "eksplorasi-penjumlahan-pengurangan",
+    "kuis-penjumlahan-pengurangan"
+  ],
+  "assessmentRefs": [
+    "kuis-penjumlahan-pengurangan"
+  ],
+  "assetRefs": [
+    "assets/penjumlahan-pengurangan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

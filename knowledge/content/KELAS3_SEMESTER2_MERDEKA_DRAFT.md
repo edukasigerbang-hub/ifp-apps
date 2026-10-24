@@ -2,7 +2,7 @@
 
 **Status:** `DRAFT-UNVERIFIED` · **Fase:** B · **Tanggal:** 2026-10-24
 **Induk:** [OUTLINE_KELAS3_MERDEKA_DRAFT.md](OUTLINE_KELAS3_MERDEKA_DRAFT.md)
-**Catatan:** Urutan bab adalah usulan produksi, bukan klaim kesesuaian resmi. Belum ada paket yang diproduksi untuk semester ini.
+**Catatan:** Urutan bab adalah usulan produksi, bukan klaim kesesuaian resmi. **28 paket draft selesai** (2026-10-24).
 
 ## Matematika
 | Bab | Topik inti | Aktivitas |

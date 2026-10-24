@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-gerak-lokomotor",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Gerak Lokomotor",
+  "instructions": "Pasangkan setiap gerak dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jalan",
+        "left": "Jalan",
+        "right": "Berpindah dengan kaki"
+      },
+      {
+        "pairId": "pasangan-lari",
+        "left": "Lari",
+        "right": "Berpindah cepat"
+      },
+      {
+        "pairId": "pasangan-lompat",
+        "left": "Lompat",
+        "right": "Bertolak dan mendarat"
+      },
+      {
+        "pairId": "pasangan-melompat",
+        "left": "Melompat",
+        "right": "Ke atas atau ke depan"
+      },
+      {
+        "pairId": "pasangan-pemanasan",
+        "left": "Pemanasan",
+        "right": "Mencegah cedera"
+      },
+      {
+        "pairId": "pasangan-ruang",
+        "left": "Ruang aman",
+        "right": "Tidak menabrak teman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  }
+}

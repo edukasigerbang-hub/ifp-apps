@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menulis-paragraf",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menulis Paragraf",
+  "instructions": "Susun langkah menulis paragraf dengan benar.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-ide",
+        "text": "Menentukan ide pokok"
+      },
+      {
+        "itemId": "langkah-topik",
+        "text": "Menulis kalimat topik"
+      },
+      {
+        "itemId": "langkah-pendukung",
+        "text": "Menulis kalimat pendukung"
+      },
+      {
+        "itemId": "langkah-periksa",
+        "text": "Memeriksa ejaan dan tanda baca"
+      },
+      {
+        "itemId": "langkah-baca",
+        "text": "Membaca ulang paragraf"
+      }
+    ],
+    "correctOrder": [
+      "langkah-ide",
+      "langkah-topik",
+      "langkah-pendukung",
+      "langkah-periksa",
+      "langkah-baca"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+  }
+}

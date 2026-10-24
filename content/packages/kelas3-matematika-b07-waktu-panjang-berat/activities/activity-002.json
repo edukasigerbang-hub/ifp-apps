@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-ukuran",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Satuan",
+  "instructions": "Pasangkan setiap satuan dengan nilai yang setara.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jam",
+        "left": "1 jam",
+        "right": "60 menit"
+      },
+      {
+        "pairId": "pasangan-meter",
+        "left": "1 m",
+        "right": "100 cm"
+      },
+      {
+        "pairId": "pasangan-kg",
+        "left": "1 kg",
+        "right": "1.000 g"
+      },
+      {
+        "pairId": "pasangan-hari",
+        "left": "1 hari",
+        "right": "24 jam"
+      },
+      {
+        "pairId": "pasangan-km",
+        "left": "1 km",
+        "right": "1.000 m"
+      },
+      {
+        "pairId": "pasangan-abad",
+        "left": "1 abad",
+        "right": "100 tahun"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat."
+  }
+}

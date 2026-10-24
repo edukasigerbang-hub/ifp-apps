@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-senam-dasar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Senam",
+  "instructions": "Amati gambar, lalu diskusikan teknik dan keselamatannya.",
+  "assets": [
+    "assets/senam-dasar-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/senam-dasar-kelas3.png",
+        "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Gerakkan leher, lengan, dan kaki."
+      },
+      {
+        "prompt": "Apa gerak senam pada gambar?",
+        "assetPath": "assets/senam-dasar-kelas3.png",
+        "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras.",
+        "reveal": "Guling depan, peregangan, dan keseimbangan.",
+        "hint": "Amati posisi tubuh."
+      },
+      {
+        "prompt": "Apa yang disiapkan agar aman?",
+        "assetPath": "assets/senam-dasar-kelas3.png",
+        "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras.",
+        "reveal": "Matras dan pendamping.",
+        "hint": "Jangan bercanda."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+  }
+}

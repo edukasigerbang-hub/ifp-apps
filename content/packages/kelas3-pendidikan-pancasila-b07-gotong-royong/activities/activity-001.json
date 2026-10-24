@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gotong-royong",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kerja Bersama",
+  "instructions": "Amati gambar, lalu diskusikan kegiatan gotong royong.",
+  "assets": [
+    "assets/gotong-royong-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gotong royong?",
+        "assetPath": "assets/gotong-royong-kelas3.png",
+        "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan.",
+        "reveal": "Bekerja bersama untuk kepentingan bersama.",
+        "hint": "Tanpa mengharap upah."
+      },
+      {
+        "prompt": "Contoh gotong royong di sekolah?",
+        "assetPath": "assets/gotong-royong-kelas3.png",
+        "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan.",
+        "reveal": "Membersihkan kelas dan menata kursi.",
+        "hint": "Dibagi tugas."
+      },
+      {
+        "prompt": "Apa manfaat gotong royong?",
+        "assetPath": "assets/gotong-royong-kelas3.png",
+        "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan.",
+        "reveal": "Pekerjaan cepat selesai dan mempererat persaudaraan.",
+        "hint": "Semua merasa memiliki."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan."
+  }
+}

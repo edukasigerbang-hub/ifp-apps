@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ekonomi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kegiatan Ekonomi",
+  "instructions": "Amati gambar, lalu diskusikan kegiatan ekonomi yang terlihat.",
+  "assets": [
+    "assets/ekonomi-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu produksi?",
+        "assetPath": "assets/ekonomi-kelas3.png",
+        "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
+        "reveal": "Kegiatan membuat atau menghasilkan barang.",
+        "hint": "Contohnya petani menanam padi."
+      },
+      {
+        "prompt": "Apa itu distribusi?",
+        "assetPath": "assets/ekonomi-kelas3.png",
+        "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
+        "reveal": "Kegiatan mengantar barang dari produsen ke pembeli.",
+        "hint": "Contohnya pedagang mengantar barang."
+      },
+      {
+        "prompt": "Apa itu konsumsi?",
+        "assetPath": "assets/ekonomi-kelas3.png",
+        "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
+        "reveal": "Kegiatan menggunakan barang atau jasa.",
+        "hint": "Contohnya makan nasi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang."
+  }
+}

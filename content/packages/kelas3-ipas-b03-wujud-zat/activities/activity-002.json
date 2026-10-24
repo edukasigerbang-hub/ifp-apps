@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-wujud-zat",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Wujud Zat",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-padat",
+        "prompt": "Zat yang bentuk dan volumenya tetap adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-batu",
+            "text": "Batu"
+          },
+          {
+            "optionId": "opsi-air",
+            "text": "Air"
+          },
+          {
+            "optionId": "opsi-udara",
+            "text": "Udara"
+          },
+          {
+            "optionId": "opsi-asap",
+            "text": "Asap"
+          }
+        ],
+        "correctResponse": "opsi-batu"
+      },
+      {
+        "questionId": "soal-membeku",
+        "prompt": "Air menjadi es disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-membeku",
+            "text": "Membeku"
+          },
+          {
+            "optionId": "opsi-mencair",
+            "text": "Mencair"
+          },
+          {
+            "optionId": "opsi-menguap",
+            "text": "Menguap"
+          },
+          {
+            "optionId": "opsi-mengembun",
+            "text": "Mengembun"
+          }
+        ],
+        "correctResponse": "opsi-membeku"
+      },
+      {
+        "questionId": "soal-gas",
+        "prompt": "Benda gas memiliki sifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mengisi",
+            "text": "Mengisi seluruh ruang"
+          },
+          {
+            "optionId": "opsi-tetap",
+            "text": "Bentuk dan volume tetap"
+          },
+          {
+            "optionId": "opsi-wadah",
+            "text": "Bentuk mengikuti wadah, volume tetap"
+          },
+          {
+            "optionId": "opsi-keras",
+            "text": "Selalu keras"
+          }
+        ],
+        "correctResponse": "opsi-mengisi"
+      },
+      {
+        "questionId": "soal-mengembun",
+        "prompt": "Uap air menjadi titik-titik air disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mengembun",
+            "text": "Mengembun"
+          },
+          {
+            "optionId": "opsi-menguap",
+            "text": "Menguap"
+          },
+          {
+            "optionId": "opsi-membeku",
+            "text": "Membeku"
+          },
+          {
+            "optionId": "opsi-mencair",
+            "text": "Mencair"
+          }
+        ],
+        "correctResponse": "opsi-mengembun"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b06-keliling-luas",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Keliling dan Luas Sederhana — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/keliling-luas.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5817,
+      "sha256": "47ab76c223b4332488e1a75fefaf0da76a67c711fb4fbe09294738050d4a1ba0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

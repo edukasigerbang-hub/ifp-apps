@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kalimat-efektif",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca di Sudut Baca",
+  "instructions": "Amati gambar, lalu diskusikan kalimat yang jelas dan kosakata baru.",
+  "assets": [
+    "assets/sudut-baca-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri kalimat efektif?",
+        "assetPath": "assets/sudut-baca-kelas3.png",
+        "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca.",
+        "reveal": "Singkat, jelas, dan tidak berulang.",
+        "hint": "Satu kalimat satu ide pokok."
+      },
+      {
+        "prompt": "Mengapa kosakata baru perlu dicari artinya?",
+        "assetPath": "assets/sudut-baca-kelas3.png",
+        "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca.",
+        "reveal": "Agar kalimat mudah dipahami.",
+        "hint": "Gunakan kamus."
+      },
+      {
+        "prompt": "Bagaimana memperbaiki kalimat berulang?",
+        "assetPath": "assets/sudut-baca-kelas3.png",
+        "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca.",
+        "reveal": "Hapus kata yang tidak perlu.",
+        "hint": "Baca ulang kalimatnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca."
+  }
+}

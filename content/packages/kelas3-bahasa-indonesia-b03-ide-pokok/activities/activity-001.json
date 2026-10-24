@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ide-pokok",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyimak Cerita",
+  "instructions": "Amati gambar, lalu diskusikan cara menyimak dan menemukan ide pokok.",
+  "assets": [
+    "assets/mendengarkan-cerita-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu ide pokok?",
+        "assetPath": "assets/mendengarkan-cerita-kelas3.png",
+        "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas.",
+        "reveal": "Gagasan utama sebuah paragraf.",
+        "hint": "Biasanya ada di kalimat pertama."
+      },
+      {
+        "prompt": "Bagaimana menyimak cerita dengan baik?",
+        "assetPath": "assets/mendengarkan-cerita-kelas3.png",
+        "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas.",
+        "reveal": "Dengarkan dengan tenang dan catat peristiwa penting.",
+        "hint": "Jangan memotong pembicara."
+      },
+      {
+        "prompt": "Mengapa urutan peristiwa penting?",
+        "assetPath": "assets/mendengarkan-cerita-kelas3.png",
+        "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas.",
+        "reveal": "Agar cerita mudah dipahami.",
+        "hint": "Mulai dari awal, tengah, akhir."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
+  }
+}

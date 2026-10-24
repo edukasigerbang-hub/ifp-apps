@@ -1,0 +1,27 @@
+{
+  "lessonId": "kalimat-efektif",
+  "packageId": "kelas3-bahasa-indonesia-b02-kalimat-efektif",
+  "title": "Kalimat Efektif dan Kosakata Baru",
+  "summary": "Mengenali kalimat efektif dan menggunakan kosakata baru dengan tepat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri kalimat efektif.",
+    "Menggunakan kosakata baru dengan tepat.",
+    "Memperbaiki kalimat yang tidak efektif."
+  ],
+  "activityIds": [
+    "eksplorasi-kalimat-efektif",
+    "kuis-kalimat-efektif"
+  ],
+  "assessmentRefs": [
+    "kuis-kalimat-efektif"
+  ],
+  "assetRefs": [
+    "assets/sudut-baca-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

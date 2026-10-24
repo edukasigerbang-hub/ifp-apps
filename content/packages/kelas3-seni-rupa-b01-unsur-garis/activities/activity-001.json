@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-unsur-garis",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis dan Warna",
+  "instructions": "Amati gambar, lalu diskusikan jenis garis dan warna.",
+  "assets": [
+    "assets/unsur-garis-warna.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Garis apa saja yang terlihat?",
+        "assetPath": "assets/unsur-garis-warna.png",
+        "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
+        "reveal": "Garis lurus, lengkung, dan zigzag.",
+        "hint": "Amati arah dan bentuknya."
+      },
+      {
+        "prompt": "Apa saja warna primer?",
+        "assetPath": "assets/unsur-garis-warna.png",
+        "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
+        "reveal": "Merah, kuning, dan biru.",
+        "hint": "Warna dasar yang tidak dicampur."
+      },
+      {
+        "prompt": "Apa hasil campuran merah dan kuning?",
+        "assetPath": "assets/unsur-garis-warna.png",
+        "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
+        "reveal": "Oranye.",
+        "hint": "Coba campur cat di palet."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru."
+  }
+}

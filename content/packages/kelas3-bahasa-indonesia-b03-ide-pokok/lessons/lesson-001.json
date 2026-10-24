@@ -1,0 +1,25 @@
+{
+  "lessonId": "ide-pokok",
+  "packageId": "kelas3-bahasa-indonesia-b03-ide-pokok",
+  "title": "Ide Pokok dan Menyimak Cerita",
+  "summary": "Menemukan ide pokok dan menyusun urutan peristiwa dari cerita yang disimak.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menemukan ide pokok paragraf.",
+    "Menyimak cerita dengan saksama.",
+    "Menyusun urutan peristiwa cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-ide-pokok",
+    "ordering-ide-pokok"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/mendengarkan-cerita-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

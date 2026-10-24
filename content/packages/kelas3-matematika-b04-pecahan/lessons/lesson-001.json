@@ -1,0 +1,25 @@
+{
+  "lessonId": "pecahan-sederhana",
+  "packageId": "kelas3-matematika-b04-pecahan",
+  "title": "Pecahan Sederhana",
+  "summary": "Mengenal pecahan 1/2, 1/3, dan 1/4 melalui gambar bagian sama besar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal pecahan 1/2, 1/3, dan 1/4.",
+    "Menuliskan pecahan sesuai gambar.",
+    "Membandingkan pecahan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-pecahan-sederhana",
+    "matching-pecahan-sederhana"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/pecahan-sederhana.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

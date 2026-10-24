@@ -1877,6 +1877,152 @@ function pancasilaSymbols() {
   return px;
 }
 
+function additionSubtractionScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 60, 200, 740, 200, colors.navy, 5);
+  for (let x = 60; x <= 740; x += 40) line(px, x, 190, x, 210, colors.navy, 3);
+  arc(px, 200, 200, 70, -170, -20, colors.orange, 6);
+  arc(px, 360, 260, 70, 200, 340, colors.green, 6);
+  rect(px, 70, 330, 240, 180, colors.sky);
+  for (let i = 0; i < 7; i += 1) {
+    circle(px, 110 + (i % 4) * 50, 390 + Math.floor(i / 4) * 60, 18, colors.red);
+  }
+  rect(px, 350, 412, 50, 12, colors.navy);
+  rect(px, 369, 393, 12, 50, colors.navy);
+  rect(px, 470, 330, 240, 180, colors.sky);
+  for (let i = 0; i < 5; i += 1) {
+    circle(px, 510 + (i % 3) * 50, 390 + Math.floor(i / 3) * 60, 18, colors.green);
+  }
+  return px;
+}
+
+function multiplicationGroupsScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const boxes = [60, 300, 540];
+  for (const x of boxes) {
+    rect(px, x, 110, 200, 220, colors.sky);
+    rect(px, x, 110, 200, 5, colors.navy);
+    rect(px, x, 325, 200, 5, colors.navy);
+    rect(px, x, 110, 5, 220, colors.navy);
+    rect(px, x + 195, 110, 5, 220, colors.navy);
+    for (let i = 0; i < 4; i += 1) {
+      star(px, x + 60 + (i % 2) * 80, 175 + Math.floor(i / 2) * 90, 30, 13, colors.sun);
+    }
+  }
+  const groupBoxes = [70, 300, 530];
+  for (const x of groupBoxes) {
+    rect(px, x, 400, 180, 120, colors.sand);
+    for (let i = 0; i < 4; i += 1) circle(px, x + 35 + i * 37, 460, 14, colors.orange);
+  }
+  return px;
+}
+
+function lifeCycleScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  arc(px, 400, 310, 190, -70, 20, colors.navy, 5);
+  arc(px, 400, 310, 190, 110, 200, colors.navy, 5);
+  arc(px, 400, 310, 190, 20, 110, colors.navy, 5);
+  arc(px, 400, 310, 190, 200, 290, colors.navy, 5);
+  // telur
+  ellipse(px, 400, 120, 26, 34, colors.white);
+  ellipse(px, 400, 120, 26, 34, colors.sand);
+  // ulat
+  for (let i = 0; i < 5; i += 1) circle(px, 530 + i * 24, 280, 17, colors.green);
+  circle(px, 650, 280, 19, colors.greenDark);
+  // arah daur (chevron pada lingkaran)
+  for (let k = 0; k < 4; k += 1) {
+    const angle = -Math.PI / 4 + (k * Math.PI) / 2;
+    const x = 400 + Math.cos(angle) * 190;
+    const y = 310 + Math.sin(angle) * 190;
+    const tangent = angle + Math.PI / 2;
+    const tipX = x + Math.cos(tangent) * 14;
+    const tipY = y + Math.sin(tangent) * 14;
+    const baseX = x - Math.cos(tangent) * 8;
+    const baseY = y - Math.sin(tangent) * 8;
+    const normalX = Math.cos(tangent + Math.PI / 2) * 9;
+    const normalY = Math.sin(tangent + Math.PI / 2) * 9;
+    triangle(px, baseX + normalX, baseY + normalY, baseX - normalX, baseY - normalY, tipX, tipY, colors.orange);
+  }
+  // kepompong
+  ellipse(px, 400, 500, 24, 48, colors.soil);
+  line(px, 400, 452, 400, 430, colors.soil, 4);
+  // kupu-kupu
+  ellipse(px, 150, 300, 30, 22, colors.orange);
+  ellipse(px, 200, 300, 30, 22, colors.orange);
+  line(px, 175, 275, 175, 325, colors.navy, 4);
+  return px;
+}
+
+function perimeterAreaScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const cell = 40;
+  for (let row = 0; row < 5; row += 1) {
+    for (let col = 0; col < 8; col += 1) {
+      rect(px, 90 + col * cell, 140 + row * cell, cell - 2, cell - 2, colors.sky);
+    }
+  }
+  for (let i = 0; i <= 8; i += 1) line(px, 90 + i * cell, 140, 90 + i * cell, 340, colors.navy, 2);
+  for (let i = 0; i <= 5; i += 1) line(px, 90, 140 + i * cell, 410, 140 + i * cell, colors.navy, 2);
+  rect(px, 86, 136, 8 * cell, 8, colors.orange);
+  rect(px, 86, 336, 8 * cell, 8, colors.orange);
+  rect(px, 86, 136, 8, 5 * cell, colors.orange);
+  rect(px, 406, 136, 8, 5 * cell, colors.orange);
+  const cell2 = 34;
+  for (let row = 0; row < 6; row += 1) {
+    for (let col = 0; col < 6; col += 1) {
+      rect(px, 500 + col * cell2, 170 + row * cell2, cell2 - 2, cell2 - 2, colors.tealLight);
+    }
+  }
+  for (let i = 0; i <= 6; i += 1) line(px, 500 + i * cell2, 170, 500 + i * cell2, 374, colors.navy, 2);
+  for (let i = 0; i <= 6; i += 1) line(px, 500, 170 + i * cell2, 704, 170 + i * cell2, colors.navy, 2);
+  rect(px, 496, 166, 6 * cell2, 7, colors.green);
+  rect(px, 496, 370, 6 * cell2, 7, colors.green);
+  rect(px, 496, 166, 7, 6 * cell2, colors.green);
+  rect(px, 700, 166, 7, 6 * cell2, colors.green);
+  return px;
+}
+
+function weatherScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 290, 540];
+  for (const x of panels) {
+    rect(px, x, 100, 220, 430, colors.sky);
+    rect(px, x, 100, 220, 5, colors.navy);
+    rect(px, x, 525, 220, 5, colors.navy);
+    rect(px, x, 100, 5, 430, colors.navy);
+    rect(px, x + 215, 100, 5, 430, colors.navy);
+  }
+  circle(px, 150, 200, 52, colors.sun);
+  for (let i = 0; i < 8; i += 1) {
+    const angle = (i * Math.PI) / 4;
+    line(px, 150 + Math.cos(angle) * 66, 200 + Math.sin(angle) * 66, 150 + Math.cos(angle) * 90, 200 + Math.sin(angle) * 90, colors.sun, 5);
+  }
+  ellipse(px, 400, 210, 80, 46, colors.white);
+  ellipse(px, 360, 230, 48, 30, colors.white);
+  ellipse(px, 440, 230, 48, 30, colors.white);
+  for (let i = 0; i < 5; i += 1) line(px, 340 + i * 30, 280, 330 + i * 30, 330, colors.blue, 4);
+  rect(px, 370, 390, 60, 40, colors.orange);
+  arc(px, 400, 390, 30, 180, 360, colors.orange, 8);
+  line(px, 400, 430, 400, 480, colors.soil, 6);
+  for (let i = 0; i < 4; i += 1) {
+    arc(px, 620 + i * 20, 200 + i * 45, 40, 120, 260, colors.teal, 4);
+  }
+  line(px, 640, 470, 640, 330, colors.soil, 8);
+  ellipse(px, 610, 330, 45, 28, colors.green);
+  ellipse(px, 670, 290, 45, 28, colors.green);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -1925,3 +2071,55 @@ write("content/packages/kelas3-matematika-b01-bilangan-10000/assets/nilai-tempat
 write("content/packages/kelas3-bahasa-indonesia-b01-teks-deskripsi/assets/taman-sekolah.png", descriptionGarden());
 write("content/packages/kelas3-ipas-b01-makhluk-hidup/assets/makhluk-hidup-sekitar.png", livingThingsGarden());
 write("content/packages/kelas3-pendidikan-pancasila-b01-pancasila/assets/simbol-pancasila.png", pancasilaSymbols());
+write("content/packages/kelas3-matematika-b02-penjumlahan-pengurangan/assets/penjumlahan-pengurangan.png", additionSubtractionScene());
+write("content/packages/kelas3-matematika-b03-perkalian-pembagian/assets/perkalian-pembagian.png", multiplicationGroupsScene());
+write("content/packages/kelas3-matematika-b04-pecahan/assets/pecahan-sederhana.png", mathFractionBars());
+write("content/packages/kelas3-bahasa-indonesia-b02-kalimat-efektif/assets/sudut-baca-kelas3.png", readingCorner());
+write("content/packages/kelas3-bahasa-indonesia-b03-ide-pokok/assets/mendengarkan-cerita-kelas3.png", storyListening());
+write("content/packages/kelas3-bahasa-indonesia-b04-menulis-paragraf/assets/menulis-paragraf.png", writingScene());
+write("content/packages/kelas3-ipas-b02-daur-hidup/assets/daur-hidup.png", lifeCycleScene());
+write("content/packages/kelas3-ipas-b03-wujud-zat/assets/wujud-zat-kelas3.png", statesOfMatter());
+write("content/packages/kelas3-ipas-b04-gaya-gerak/assets/gaya-gerak-kelas3.png", forceMotion());
+write("content/packages/kelas3-pendidikan-pancasila-b02-aturan/assets/antrean-kelas3.png", queueScene());
+write("content/packages/kelas3-pendidikan-pancasila-b03-hak-kewajiban/assets/hak-kewajiban-kelas3.png", rightsDuties());
+write("content/packages/kelas3-pendidikan-pancasila-b04-musyawarah/assets/musyawarah-kelas3.png", discussionScene());
+write("content/packages/kelas3-seni-rupa-b01-unsur-garis/assets/unsur-garis-warna.png", artElements());
+write("content/packages/kelas3-seni-rupa-b02-menggambar-bentuk/assets/menggambar-bentuk-kelas3.png", drawingShapes());
+write("content/packages/kelas3-seni-rupa-b03-tekstur-bahan/assets/tekstur-bahan.png", colorTexture());
+write("content/packages/kelas3-seni-rupa-b04-kolase/assets/kolase-kelas3.png", collageScene());
+write("content/packages/kelas3-pjok-b01-gerak-lokomotor/assets/gerak-lokomotor.png", movementScene());
+write("content/packages/kelas3-pjok-b02-gerak-non-lokomotor/assets/gerak-non-lokomotor.png", fitnessScene());
+write("content/packages/kelas3-pjok-b03-gerak-manipulatif/assets/gerak-manipulatif-kelas3.png", manipulativeScene());
+write("content/packages/kelas3-pjok-b04-kebugaran/assets/kebugaran-kelas3.png", fitnessScene());
+write("content/packages/kelas3-pai-b01-surah-pendek/assets/membaca-quran-kelas3.png", quranScene());
+write("content/packages/kelas3-pai-b02-iman/assets/iman-kelas3.png", imanScene());
+write("content/packages/kelas3-pai-b03-akhlak/assets/akhlak-kelas3.png", akhlakScene());
+write("content/packages/kelas3-pai-b04-salat/assets/salat-kelas3.png", prayerScene());
+write("content/packages/kelas3-matematika-b05-bangun-datar/assets/bangun-datar-kelas3.png", planeShapes());
+write("content/packages/kelas3-matematika-b06-keliling-luas/assets/keliling-luas.png", perimeterAreaScene());
+write("content/packages/kelas3-matematika-b07-waktu-panjang-berat/assets/waktu-panjang-berat.png", measurementScene());
+write("content/packages/kelas3-matematika-b08-penyajian-data/assets/penyajian-data-kelas3.png", timeVolumeData());
+write("content/packages/kelas3-bahasa-indonesia-b05-teks-prosedur/assets/teks-prosedur-kelas3.png", plantingSteps());
+write("content/packages/kelas3-bahasa-indonesia-b06-dongeng/assets/dongeng-kelas3.png", narrativeScene());
+write("content/packages/kelas3-bahasa-indonesia-b07-wawancara/assets/wawancara-kelas3.png", interviewScene());
+write("content/packages/kelas3-bahasa-indonesia-b08-menulis-cerita/assets/menulis-cerita-kelas3.png", writingScene());
+write("content/packages/kelas3-ipas-b05-cuaca-musim/assets/cuaca-musim.png", weatherScene());
+write("content/packages/kelas3-ipas-b06-keragaman-budaya/assets/keragaman-budaya-kelas3.png", cultureScene());
+write("content/packages/kelas3-ipas-b07-lingkungan-pelestarian/assets/lingkungan-pelestarian.png", economyScene());
+write("content/packages/kelas3-ipas-b08-ekonomi/assets/ekonomi-kelas3.png", economyScene());
+write("content/packages/kelas3-pendidikan-pancasila-b05-keberagaman/assets/keberagaman-kelas3.png", bhinnekaScene());
+write("content/packages/kelas3-pendidikan-pancasila-b06-nkri/assets/nkri-kelas3.png", flagCeremonyScene());
+write("content/packages/kelas3-pendidikan-pancasila-b07-gotong-royong/assets/gotong-royong-kelas3.png", communityScene());
+write("content/packages/kelas3-pendidikan-pancasila-b08-proyek-kewargaan/assets/proyek-kewargaan-kelas3.png", civicProjectScene());
+write("content/packages/kelas3-seni-rupa-b05-seni-cetak/assets/seni-cetak-kelas3.png", printmakingScene());
+write("content/packages/kelas3-seni-rupa-b06-kerajinan-bahan-alam/assets/kerajinan-kelas3.png", naturalCraftScene());
+write("content/packages/kelas3-seni-rupa-b07-apresiasi-karya/assets/apresiasi-kelas3.png", artAppreciationScene());
+write("content/packages/kelas3-seni-rupa-b08-pameran-kelas/assets/pameran-kelas3.png", exhibitionScene());
+write("content/packages/kelas3-pjok-b05-bola-kecil/assets/bola-kecil-kelas3.png", smallBallScene());
+write("content/packages/kelas3-pjok-b06-senam-dasar/assets/senam-dasar-kelas3.png", basicGymnasticsScene());
+write("content/packages/kelas3-pjok-b07-atletik-dasar/assets/atletik-kelas3.png", athleticsScene());
+write("content/packages/kelas3-pjok-b08-kesehatan/assets/kesehatan-kelas3.png", hygieneScene());
+write("content/packages/kelas3-pai-b05-puasa/assets/puasa-kelas3.png", fastingScene());
+write("content/packages/kelas3-pai-b06-zakat-infak/assets/zakat-infak-kelas3.png", charityScene());
+write("content/packages/kelas3-pai-b07-sejarah-islam/assets/sejarah-islam-kelas3.png", islamHistoryScene());
+write("content/packages/kelas3-pai-b08-adab-kisah-teladan/assets/adab-kelas3.png", goodMannersScene());

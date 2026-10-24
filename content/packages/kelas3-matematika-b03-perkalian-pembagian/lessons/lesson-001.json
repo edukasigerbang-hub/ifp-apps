@@ -1,0 +1,25 @@
+{
+  "lessonId": "perkalian-pembagian",
+  "packageId": "kelas3-matematika-b03-perkalian-pembagian",
+  "title": "Perkalian dan Pembagian",
+  "summary": "Memahami perkalian sebagai penjumlahan berulang dan pembagian sebagai kebalikannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memahami perkalian sebagai penjumlahan berulang.",
+    "Mengingat tabel perkalian 2 sampai 9.",
+    "Memahami pembagian sebagai kebalikan perkalian."
+  ],
+  "activityIds": [
+    "eksplorasi-perkalian-pembagian",
+    "matching-perkalian-pembagian"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/perkalian-pembagian.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

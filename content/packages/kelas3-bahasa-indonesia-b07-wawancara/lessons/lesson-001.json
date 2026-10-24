@@ -1,0 +1,25 @@
+{
+  "lessonId": "wawancara",
+  "packageId": "kelas3-bahasa-indonesia-b07-wawancara",
+  "title": "Wawancara Sederhana",
+  "summary": "Menyusun pertanyaan dan melakukan wawancara sederhana dengan sopan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyusun pertanyaan wawancara.",
+    "Melakukan wawancara dengan sopan.",
+    "Mencatat jawaban narasumber."
+  ],
+  "activityIds": [
+    "eksplorasi-wawancara",
+    "ordering-wawancara"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/wawancara-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak mewawancarai narasumber dengan sopan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

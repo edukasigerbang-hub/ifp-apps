@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-zakat-infak",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Zakat dan Infak",
+  "instructions": "Amati gambar, lalu diskusikan pengertian dan manfaatnya.",
+  "assets": [
+    "assets/zakat-infak-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu zakat?",
+        "assetPath": "assets/zakat-infak-kelas3.png",
+        "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak.",
+        "reveal": "Harta wajib yang dikeluarkan bagi yang mampu.",
+        "hint": "Ada syarat dan kadarnya."
+      },
+      {
+        "prompt": "Apa itu infak?",
+        "assetPath": "assets/zakat-infak-kelas3.png",
+        "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak.",
+        "reveal": "Pemberian sukarela kapan saja.",
+        "hint": "Tidak terikat kadar."
+      },
+      {
+        "prompt": "Apa manfaatnya?",
+        "assetPath": "assets/zakat-infak-kelas3.png",
+        "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak.",
+        "reveal": "Membantu yang membutuhkan.",
+        "hint": "Melatih kepedulian."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak."
+  }
+}

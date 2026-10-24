@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pai-b01-surah-pendek",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Surah Pendek — PAI Kelas 3 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/membaca-quran-kelas3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5306,
+      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

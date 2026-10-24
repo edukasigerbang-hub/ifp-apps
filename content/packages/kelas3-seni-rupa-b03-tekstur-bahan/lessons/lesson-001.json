@@ -1,0 +1,27 @@
+{
+  "lessonId": "tekstur-bahan",
+  "packageId": "kelas3-seni-rupa-b03-tekstur-bahan",
+  "title": "Tekstur dan Bahan",
+  "summary": "Mengenal tekstur kasar dan halus serta memilih bahan untuk karya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal tekstur kasar dan halus.",
+    "Memilih bahan sesuai tekstur.",
+    "Menempel bahan pada karya."
+  ],
+  "activityIds": [
+    "eksplorasi-tekstur-bahan",
+    "kuis-tekstur-bahan"
+  ],
+  "assessmentRefs": [
+    "kuis-tekstur-bahan"
+  ],
+  "assetRefs": [
+    "assets/tekstur-bahan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

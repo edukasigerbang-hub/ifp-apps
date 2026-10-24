@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-bahasa-indonesia-b07-wawancara",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Wawancara Sederhana — Bahasa Indonesia Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/wawancara-kelas3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6128,
+      "sha256": "14c31549f8712d3ed3b8cfc0939b9c9987f4c3c13d54d508259fbba96106afd6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

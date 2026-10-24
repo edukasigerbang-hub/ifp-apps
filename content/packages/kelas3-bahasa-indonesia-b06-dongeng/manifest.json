@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-bahasa-indonesia-b06-dongeng",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Dongeng dan Pesan Cerita — Bahasa Indonesia Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/dongeng-kelas3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7908,
+      "sha256": "a7bea868c4e223e23ede989ccaaae987cb0d0cbcb3044d699923b466cd91225e"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

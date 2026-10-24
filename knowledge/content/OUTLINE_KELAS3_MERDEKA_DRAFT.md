@@ -36,6 +36,7 @@
 - **Tidak ada paket produksi Kelas 3.** Pilot `matematika-kelas3-pecahan` berada di `scripts/e2e/fixtures/pilot-pecahan-kelas3` dan hanya dipakai E2E.
 - Pilot dapat menjadi rujukan tingkat kesulitan (pecahan 1/2, 1/3, 1/4) tetapi tidak dibundel dan tidak dihitung ke katalog.
 - Pola paket Kelas 4 (1 lesson + 2 aktivitas + 1 PNG 800×600) dipakai ulang; kedalaman materi disesuaikan untuk Kelas 3.
+- **Produksi selesai (2026-10-24):** 56 paket draft (S1 28 + S2 28), semua VALID dan terimpor. Status tetap `draft` sampai review R1–R12 dan OD-1.
 
 ## Prioritas paket starter (batch 1)
 

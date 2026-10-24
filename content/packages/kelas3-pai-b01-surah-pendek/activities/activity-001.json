@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-surah-pendek",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bacaan Al-Qur'an",
+  "instructions": "Amati gambar, lalu diskusikan adab dan cara membaca surah.",
+  "assets": [
+    "assets/membaca-quran-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Surah apa yang menjadi pembuka Al-Qur'an?",
+        "assetPath": "assets/membaca-quran-kelas3.png",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "reveal": "Al-Fatihah.",
+        "hint": "Memiliki tujuh ayat."
+      },
+      {
+        "prompt": "Apa arti tartil?",
+        "assetPath": "assets/membaca-quran-kelas3.png",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "reveal": "Membaca dengan pelan dan jelas.",
+        "hint": "Perhatikan panjang pendek."
+      },
+      {
+        "prompt": "Apa adab saat membaca Al-Qur'an?",
+        "assetPath": "assets/membaca-quran-kelas3.png",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "reveal": "Bersih, sopan, dan menghadap dengan tenang.",
+        "hint": "Mulai dengan ta'awuz."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-atletik",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Nomor Atletik",
+  "instructions": "Pasangkan setiap nomor dengan istilahnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lari",
+        "left": "Lari cepat",
+        "right": "Start jongkok"
+      },
+      {
+        "pairId": "pasangan-lompat",
+        "left": "Lompat jauh",
+        "right": "Bak pasir"
+      },
+      {
+        "pairId": "pasangan-lempar",
+        "left": "Lempar bola",
+        "right": "Awalan dan lempar"
+      },
+      {
+        "pairId": "pasangan-finis",
+        "left": "Garis finis",
+        "right": "Pita finis"
+      },
+      {
+        "pairId": "pasangan-pemanasan",
+        "left": "Pemanasan",
+        "right": "Mencegah cedera"
+      },
+      {
+        "pairId": "pasangan-sportif",
+        "left": "Sportivitas",
+        "right": "Menghargai lawan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak pasir lompat, dan pita finis."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-ipas-b02-daur-hidup",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Daur Hidup Makhluk Hidup — IPAS Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/daur-hidup.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6273,
+      "sha256": "1162f22f629514cd8f8ce40df1a79d2449156b93c107c9efc8fdc9d95786682d"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -63,7 +63,7 @@ export async function run({ page, artifactDir, log }) {
     label: "sapaan Beranda"
   });
   await page.waitFor(
-    `document.body.textContent.includes("Matematika") && document.body.textContent.includes("4 materi")`,
+    `document.body.textContent.includes("Matematika") && /\\d+ materi/.test(document.body.textContent)`,
     { label: "kartu mata pelajaran di Beranda" }
   );
 
@@ -103,9 +103,10 @@ export async function run({ page, artifactDir, log }) {
   log("Pencarian tanpa hasil menampilkan empty state.");
 
   assert(await page.evaluate(fillSearch("pecahan")), "Input pencarian tidak ditemukan.");
-  await page.waitFor(`document.body.textContent.includes("2 materi ditemukan")`, {
-    label: "hasil pencarian pecahan"
-  });
+  await page.waitFor(
+    `document.body.textContent.includes("Pecahan Sederhana") && document.body.textContent.includes("Mengenal Pecahan")`,
+    { label: "hasil pencarian pecahan" }
+  );
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
 
   assert(await page.evaluate(selectFilter("Filter kelas", "3")), "Filter kelas tidak ditemukan.");
@@ -113,12 +114,29 @@ export async function run({ page, artifactDir, log }) {
     await page.evaluate(selectFilter("Filter mata pelajaran", "matematika")),
     "Filter mata pelajaran tidak ditemukan."
   );
-  await page.waitFor(`document.body.textContent.includes("1 materi ditemukan")`, {
+  await page.waitFor(`document.body.textContent.includes("Bilangan sampai 10.000")`, {
     label: "hasil filter"
   });
   log("Filter kelas 3 + matematika tetap menampilkan materi.");
 
-  await clickButton(page, "Buka materi");
+  const clickedPilot = await page.evaluate(`
+    (() => {
+      const buttons = [...document.querySelectorAll("button")].filter(
+        (button) => button.textContent.trim() === "Buka materi"
+      );
+      const target = buttons.find((button) => {
+        let node = button;
+        for (let depth = 0; depth < 6 && node; depth += 1, node = node.parentElement) {
+          if (node.textContent.includes("Mengenal Pecahan 1/2")) return true;
+        }
+        return false;
+      });
+      if (!target) return "missing";
+      target.click();
+      return "clicked";
+    })()
+  `);
+  assert(clickedPilot === "clicked", `Tombol Buka materi pilot tidak ditemukan (${clickedPilot}).`);
   await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
     label: "Player dibuka"
   });

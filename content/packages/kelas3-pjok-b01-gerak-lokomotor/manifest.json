@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pjok-b01-gerak-lokomotor",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gerak Lokomotor — PJOK Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/gerak-lokomotor.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9314,
+      "sha256": "378bb297592a69945aa4d07585f1af520baf28d2e102fdded37533151951180a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

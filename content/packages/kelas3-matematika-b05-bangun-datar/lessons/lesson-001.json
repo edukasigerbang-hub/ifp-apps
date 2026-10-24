@@ -1,0 +1,25 @@
+{
+  "lessonId": "bangun-datar",
+  "packageId": "kelas3-matematika-b05-bangun-datar",
+  "title": "Bangun Datar dan Cirinya",
+  "summary": "Mengenal bangun datar serta ciri sisi dan sudutnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bangun datar.",
+    "Menjelaskan ciri sisi dan sudut.",
+    "Mengelompokkan bangun datar."
+  ],
+  "activityIds": [
+    "eksplorasi-bangun-datar",
+    "matching-bangun-datar"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/bangun-datar-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

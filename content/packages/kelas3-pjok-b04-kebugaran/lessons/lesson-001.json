@@ -1,0 +1,25 @@
+{
+  "lessonId": "kebugaran",
+  "packageId": "kelas3-pjok-b04-kebugaran",
+  "title": "Kebugaran dan Kebersihan Diri",
+  "summary": "Menjaga kebugaran tubuh dan kebersihan diri setiap hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara menjaga kebugaran.",
+    "Mempraktikkan gerakan ringan.",
+    "Menjaga kebersihan diri."
+  ],
+  "activityIds": [
+    "eksplorasi-kebugaran",
+    "matching-kebugaran"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kebugaran-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

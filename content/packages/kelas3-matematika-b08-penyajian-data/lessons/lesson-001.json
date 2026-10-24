@@ -1,0 +1,27 @@
+{
+  "lessonId": "penyajian-data",
+  "packageId": "kelas3-matematika-b08-penyajian-data",
+  "title": "Penyajian Data Sederhana",
+  "summary": "Membaca dan menyajikan data dalam tabel serta diagram batang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca data pada tabel.",
+    "Membaca diagram batang.",
+    "Menyajikan data sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-penyajian-data",
+    "kuis-penyajian-data"
+  ],
+  "assessmentRefs": [
+    "kuis-penyajian-data"
+  ],
+  "assetRefs": [
+    "assets/penyajian-data-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

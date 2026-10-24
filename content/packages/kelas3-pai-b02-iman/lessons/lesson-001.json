@@ -1,0 +1,27 @@
+{
+  "lessonId": "iman",
+  "packageId": "kelas3-pai-b02-iman",
+  "title": "Iman kepada Allah",
+  "summary": "Memahami arti iman dan mewujudkannya dalam perilaku sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti iman.",
+    "Menyebutkan sifat Allah.",
+    "Menunjukkan perilaku baik sebagai wujud iman."
+  ],
+  "activityIds": [
+    "eksplorasi-iman",
+    "kuis-iman"
+  ],
+  "assessmentRefs": [
+    "kuis-iman"
+  ],
+  "assetRefs": [
+    "assets/iman-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

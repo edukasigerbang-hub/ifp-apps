@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-penyajian-data",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Data",
+  "instructions": "Amati gambar, lalu diskusikan cara membaca tabel dan diagram.",
+  "assets": [
+    "assets/penyajian-data-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa isi tabel data?",
+        "assetPath": "assets/penyajian-data-kelas3.png",
+        "altText": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Keterangan dan jumlah.",
+        "hint": "Baca judul dan angkanya."
+      },
+      {
+        "prompt": "Apa yang ditunjukkan diagram batang?",
+        "assetPath": "assets/penyajian-data-kelas3.png",
+        "altText": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Banyak data pada setiap kelompok.",
+        "hint": "Bandingkan tinggi batang."
+      },
+      {
+        "prompt": "Bagaimana mencari data terbanyak?",
+        "assetPath": "assets/penyajian-data-kelas3.png",
+        "altText": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Lihat batang tertinggi.",
+        "hint": "Baca angka pada sumbu."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  }
+}

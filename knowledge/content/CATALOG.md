@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 60 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 112 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -64,6 +64,58 @@
 | `kelas3-bahasa-indonesia-b01-teks-deskripsi` | 0.1.0 | 3 | bahasa-indonesia | Teks deskripsi sederhana | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-ipas-b01-makhluk-hidup` | 0.1.0 | 3 | ipas | Makhluk hidup di sekitar | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pendidikan-pancasila-b01-pancasila` | 0.1.0 | 3 | pendidikan-pancasila | Simbol & makna Pancasila | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b02-kalimat-efektif` | 0.1.0 | 3 | bahasa-indonesia | Kalimat Efektif dan Kosakata Baru | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b03-ide-pokok` | 0.1.0 | 3 | bahasa-indonesia | Ide Pokok dan Menyimak Cerita | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b04-menulis-paragraf` | 0.1.0 | 3 | bahasa-indonesia | Menulis Paragraf Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b05-teks-prosedur` | 0.1.0 | 3 | bahasa-indonesia | Teks Prosedur Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b06-dongeng` | 0.1.0 | 3 | bahasa-indonesia | Dongeng dan Pesan Cerita | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b07-wawancara` | 0.1.0 | 3 | bahasa-indonesia | Wawancara Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b08-menulis-cerita` | 0.1.0 | 3 | bahasa-indonesia | Menulis Cerita Pengalaman | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b02-daur-hidup` | 0.1.0 | 3 | ipas | Daur Hidup Makhluk Hidup | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b03-wujud-zat` | 0.1.0 | 3 | ipas | Wujud Zat dan Perubahannya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b04-gaya-gerak` | 0.1.0 | 3 | ipas | Gaya dan Gerak di Sekitar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b05-cuaca-musim` | 0.1.0 | 3 | ipas | Cuaca dan Musim | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b06-keragaman-budaya` | 0.1.0 | 3 | ipas | Keragaman Budaya di Sekitar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b07-lingkungan-pelestarian` | 0.1.0 | 3 | ipas | Lingkungan dan Pelestariannya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b08-ekonomi` | 0.1.0 | 3 | ipas | Kegiatan Ekonomi Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b02-penjumlahan-pengurangan` | 0.1.0 | 3 | matematika | Penjumlahan dan Pengurangan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b03-perkalian-pembagian` | 0.1.0 | 3 | matematika | Perkalian dan Pembagian | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b04-pecahan` | 0.1.0 | 3 | matematika | Pecahan Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b05-bangun-datar` | 0.1.0 | 3 | matematika | Bangun Datar dan Cirinya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b06-keliling-luas` | 0.1.0 | 3 | matematika | Keliling dan Luas Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b07-waktu-panjang-berat` | 0.1.0 | 3 | matematika | Waktu, Panjang, dan Berat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b08-penyajian-data` | 0.1.0 | 3 | matematika | Penyajian Data Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b01-surah-pendek` | 0.1.0 | 3 | pai | Membaca Surah Pendek | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b02-iman` | 0.1.0 | 3 | pai | Iman kepada Allah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b03-akhlak` | 0.1.0 | 3 | pai | Akhlak Terpuji | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b04-salat` | 0.1.0 | 3 | pai | Salat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b05-puasa` | 0.1.0 | 3 | pai | Puasa | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b06-zakat-infak` | 0.1.0 | 3 | pai | Zakat dan Infak | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b07-sejarah-islam` | 0.1.0 | 3 | pai | Sejarah Islam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pai-b08-adab-kisah-teladan` | 0.1.0 | 3 | pai | Adab dan Kisah Teladan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b02-aturan` | 0.1.0 | 3 | pendidikan-pancasila | Aturan di Rumah dan Sekolah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b03-hak-kewajiban` | 0.1.0 | 3 | pendidikan-pancasila | Hak dan Kewajiban Anggota Keluarga | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b04-musyawarah` | 0.1.0 | 3 | pendidikan-pancasila | Musyawarah di Kelas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b05-keberagaman` | 0.1.0 | 3 | pendidikan-pancasila | Keberagaman di Sekolah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b06-nkri` | 0.1.0 | 3 | pendidikan-pancasila | NKRI dan Simbol Negara | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b07-gotong-royong` | 0.1.0 | 3 | pendidikan-pancasila | Gotong Royong | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b08-proyek-kewargaan` | 0.1.0 | 3 | pendidikan-pancasila | Proyek Kewargaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b01-gerak-lokomotor` | 0.1.0 | 3 | pjok | Gerak Lokomotor | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b02-gerak-non-lokomotor` | 0.1.0 | 3 | pjok | Gerak Non-Lokomotor | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b03-gerak-manipulatif` | 0.1.0 | 3 | pjok | Gerak Manipulatif | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b04-kebugaran` | 0.1.0 | 3 | pjok | Kebugaran dan Kebersihan Diri | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b05-bola-kecil` | 0.1.0 | 3 | pjok | Permainan Bola Kecil | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b06-senam-dasar` | 0.1.0 | 3 | pjok | Senam Dasar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b07-atletik-dasar` | 0.1.0 | 3 | pjok | Atletik Dasar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pjok-b08-kesehatan` | 0.1.0 | 3 | pjok | Kesehatan dan Kebersihan Diri | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b01-unsur-garis` | 0.1.0 | 3 | seni-rupa | Unsur Garis dan Warna | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b02-menggambar-bentuk` | 0.1.0 | 3 | seni-rupa | Menggambar Bentuk Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b03-tekstur-bahan` | 0.1.0 | 3 | seni-rupa | Tekstur dan Bahan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b04-kolase` | 0.1.0 | 3 | seni-rupa | Kolase dari Bahan Alam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b05-seni-cetak` | 0.1.0 | 3 | seni-rupa | Seni Cetak Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b06-kerajinan-bahan-alam` | 0.1.0 | 3 | seni-rupa | Kerajinan Bahan Alam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b07-apresiasi-karya` | 0.1.0 | 3 | seni-rupa | Mengapresiasi Karya Seni | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-seni-rupa-b08-pameran-kelas` | 0.1.0 | 3 | seni-rupa | Pameran Kelas | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -71,10 +123,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4 lengkap (56 paket draft); Kelas 3 batch 1 sudah dibuat (4 paket). Lanjutkan Kelas 3 S1 batch 2 (Seni Rupa, PJOK, PAI B01 + Matematika B02).
+1. Kelas 4 dan Kelas 3 lengkap (112 paket draft). Gelombang berikutnya sesuai jadwal: **G3 Fase C — Kelas 5 S1**.
 2. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Pantau ukuran bundle saat paket bertambah; lazy load konten sudah aktif (chunk utama 484,7 kB).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 86,3 kB (map 112 paket).
 5. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
 ## Paket starter Kelas 4 (2026-10-24)
@@ -321,3 +373,17 @@ Rencana urutan produksi seluruh kelas: [PRODUCTION_SCHEDULE.md](PRODUCTION_SCHED
 - `npm test`: 83/83 PASS + 4/4 golden fixture PASS.
 - `npm run build`: PASS; chunk utama 484,65 kB.
 - Total katalog: **60 paket** (Kelas 4 56 + Kelas 3 4).
+
+## Batch 15 Kelas 3 — Semester 1 & 2 lengkap (2026-10-24)
+
+Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/PJOK/PAI, 16 paket S2 inti, 12 paket S2 Seni/PJOK/PAI).
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID** untuk 52/52 paket (0 issue, 2 warning/paket).
+- Impor: `content_import_package` **56/56 paket Kelas 3 PASS** (5 file/paket, `active`).
+- UI: pencarian menemukan lesson S2; kartu Kelas 3 tampil di katalog (screenshot terverifikasi).
+- `npm test`: 83/83 PASS + 4/4 golden fixture.
+- E2E `home-catalog`: **PASS** 9 pemeriksaan (skenario diperbarui untuk katalog 112 paket).
+- Build: chunk utama **415,32 kB**; `packageModules` lazy **86,28 kB**. Manifest konten dipindah ke chunk lazy agar 112 manifest tidak membebani chunk utama.
+- **Kelas 3 lengkap: 56 paket draft** (S1 28 + S2 28).
+- **Total katalog: 112 paket draft** (Kelas 4 56 + Kelas 3 56).

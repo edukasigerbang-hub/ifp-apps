@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-nkri",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Simbol Negara",
+  "instructions": "Amati gambar, lalu diskusikan simbol dan sikap cinta tanah air.",
+  "assets": [
+    "assets/nkri-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti NKRI?",
+        "assetPath": "assets/nkri-kelas3.png",
+        "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda.",
+        "reveal": "Negara Kesatuan Republik Indonesia.",
+        "hint": "Satu negara dengan banyak daerah."
+      },
+      {
+        "prompt": "Apa bendera Indonesia?",
+        "assetPath": "assets/nkri-kelas3.png",
+        "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda.",
+        "reveal": "Merah Putih.",
+        "hint": "Dikibarkan saat upacara."
+      },
+      {
+        "prompt": "Apa lambang negara?",
+        "assetPath": "assets/nkri-kelas3.png",
+        "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda.",
+        "reveal": "Garuda Pancasila.",
+        "hint": "Memuat simbol sila Pancasila."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
+  }
+}

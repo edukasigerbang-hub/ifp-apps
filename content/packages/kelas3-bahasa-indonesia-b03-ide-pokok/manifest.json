@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-bahasa-indonesia-b03-ide-pokok",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Ide Pokok dan Menyimak Cerita — Bahasa Indonesia Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/mendengarkan-cerita-kelas3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5394,
+      "sha256": "6e1233743d87e4cef342c4f6de4a37649d556b9e5137ceaa10a8e619be800d75"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-nkri",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis NKRI dan Simbol Negara",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-nkri",
+        "prompt": "NKRI adalah singkatan dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-benar",
+            "text": "Negara Kesatuan Republik Indonesia"
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "Negara Kuat Republik Indonesia"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Negara Kesatuan Rakyat Indonesia"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Negara Kepulauan Republik Indonesia"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-bendera",
+        "prompt": "Bendera Indonesia berwarna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-merah-putih",
+            "text": "Merah Putih"
+          },
+          {
+            "optionId": "opsi-merah-biru",
+            "text": "Merah Biru"
+          },
+          {
+            "optionId": "opsi-putih-hijau",
+            "text": "Putih Hijau"
+          },
+          {
+            "optionId": "opsi-kuning-merah",
+            "text": "Kuning Merah"
+          }
+        ],
+        "correctResponse": "opsi-merah-putih"
+      },
+      {
+        "questionId": "soal-lambang",
+        "prompt": "Lambang negara Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-garuda",
+            "text": "Garuda Pancasila"
+          },
+          {
+            "optionId": "opsi-banteng",
+            "text": "Kepala banteng"
+          },
+          {
+            "optionId": "opsi-padi",
+            "text": "Padi dan kapas"
+          },
+          {
+            "optionId": "opsi-bintang",
+            "text": "Bintang"
+          }
+        ],
+        "correctResponse": "opsi-garuda"
+      },
+      {
+        "questionId": "soal-bahasa",
+        "prompt": "Bahasa persatuan Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-indonesia",
+            "text": "Bahasa Indonesia"
+          },
+          {
+            "optionId": "opsi-daerah",
+            "text": "Bahasa daerah"
+          },
+          {
+            "optionId": "opsi-inggris",
+            "text": "Bahasa Inggris"
+          },
+          {
+            "optionId": "opsi-asing",
+            "text": "Bahasa asing"
+          }
+        ],
+        "correctResponse": "opsi-indonesia"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
+  }
+}

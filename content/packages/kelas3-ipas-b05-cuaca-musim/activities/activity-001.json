@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-cuaca-musim",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Cuaca",
+  "instructions": "Amati gambar, lalu diskusikan tanda dan kegiatan pada setiap cuaca.",
+  "assets": [
+    "assets/cuaca-musim.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Cuaca apa saja yang terlihat?",
+        "assetPath": "assets/cuaca-musim.png",
+        "altText": "Tiga panel cuaca: cerah, hujan, dan berangin.",
+        "reveal": "Cerah, hujan, dan berangin.",
+        "hint": "Amati langit dan benda di sekitar."
+      },
+      {
+        "prompt": "Apa tanda cuaca hujan?",
+        "assetPath": "assets/cuaca-musim.png",
+        "altText": "Tiga panel cuaca: cerah, hujan, dan berangin.",
+        "reveal": "Awan gelap dan titik air turun.",
+        "hint": "Siapkan payung."
+      },
+      {
+        "prompt": "Apa musim di Indonesia?",
+        "assetPath": "assets/cuaca-musim.png",
+        "altText": "Tiga panel cuaca: cerah, hujan, dan berangin.",
+        "reveal": "Musim hujan dan musim kemarau.",
+        "hint": "Berganti setiap beberapa bulan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."
+  }
+}

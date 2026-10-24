@@ -1,0 +1,25 @@
+{
+  "lessonId": "lingkungan-pelestarian",
+  "packageId": "kelas3-ipas-b07-lingkungan-pelestarian",
+  "title": "Lingkungan dan Pelestariannya",
+  "summary": "Menjaga lingkungan bersih dan melestarikannya di sekitar kita.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pentingnya lingkungan bersih.",
+    "Menyebutkan cara menjaga lingkungan.",
+    "Mempraktikkan menjaga lingkungan."
+  ],
+  "activityIds": [
+    "eksplorasi-lingkungan",
+    "ordering-lingkungan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/lingkungan-pelestarian.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

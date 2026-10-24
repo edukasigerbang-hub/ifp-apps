@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-teks-prosedur",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menanam Biji",
+  "instructions": "Susun langkah menanam biji dengan benar.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pot",
+        "text": "Menyiapkan pot dan tanah"
+      },
+      {
+        "itemId": "langkah-biji",
+        "text": "Menanam biji"
+      },
+      {
+        "itemId": "langkah-siram",
+        "text": "Menyiram biji"
+      },
+      {
+        "itemId": "langkah-terang",
+        "text": "Meletakkan di tempat terang"
+      },
+      {
+        "itemId": "langkah-rawat",
+        "text": "Merawat tanaman"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pot",
+      "langkah-biji",
+      "langkah-siram",
+      "langkah-terang",
+      "langkah-rawat"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  }
+}

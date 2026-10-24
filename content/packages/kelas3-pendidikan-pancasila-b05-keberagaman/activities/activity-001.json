@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-keberagaman",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Keberagaman",
+  "instructions": "Amati gambar, lalu diskusikan perbedaan dan sikap yang tepat.",
+  "assets": [
+    "assets/keberagaman-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Keberagaman apa yang terlihat?",
+        "assetPath": "assets/keberagaman-kelas3.png",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "reveal": "Perbedaan suku, agama, dan budaya.",
+        "hint": "Amati teman-teman di kelas."
+      },
+      {
+        "prompt": "Bagaimana sikap terhadap perbedaan?",
+        "assetPath": "assets/keberagaman-kelas3.png",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "reveal": "Menghargai dan tidak mengejek.",
+        "hint": "Semua sama-sama belajar."
+      },
+      {
+        "prompt": "Apa manfaat keberagaman?",
+        "assetPath": "assets/keberagaman-kelas3.png",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "reveal": "Belajar banyak hal baru dan mempererat persaudaraan.",
+        "hint": "Bekerja sama."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  }
+}

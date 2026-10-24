@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-seni-rupa-b05-seni-cetak",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Seni Cetak Sederhana — Seni Rupa Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/seni-cetak-kelas3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7411,
+      "sha256": "9901f272e38cfc7492c8c6e5648666ab904037f2c0e3008af5db214539f5e10d"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

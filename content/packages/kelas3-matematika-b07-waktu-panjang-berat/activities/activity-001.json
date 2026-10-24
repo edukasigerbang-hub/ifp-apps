@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ukuran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Ukur",
+  "instructions": "Amati gambar, lalu diskusikan satuan pada alat ukur.",
+  "assets": [
+    "assets/waktu-panjang-berat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa menit dalam 1 jam?",
+        "assetPath": "assets/waktu-panjang-berat.png",
+        "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
+        "reveal": "60 menit.",
+        "hint": "Lihat angka pada jam."
+      },
+      {
+        "prompt": "Berapa sentimeter dalam 1 meter?",
+        "assetPath": "assets/waktu-panjang-berat.png",
+        "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
+        "reveal": "100 cm.",
+        "hint": "Lihat penggaris."
+      },
+      {
+        "prompt": "Berapa gram dalam 1 kilogram?",
+        "assetPath": "assets/waktu-panjang-berat.png",
+        "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
+        "reveal": "1.000 gram.",
+        "hint": "Lihat timbangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat."
+  }
+}

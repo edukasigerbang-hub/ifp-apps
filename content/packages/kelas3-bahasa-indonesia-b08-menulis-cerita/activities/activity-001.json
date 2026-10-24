@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menulis-cerita",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Cerita",
+  "instructions": "Amati gambar, lalu diskusikan bagian-bagian cerita.",
+  "assets": [
+    "assets/menulis-cerita-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tema cerita?",
+        "assetPath": "assets/menulis-cerita-kelas3.png",
+        "altText": "Anak menulis cerita pengalaman di buku.",
+        "reveal": "Ide utama cerita.",
+        "hint": "Pilih pengalaman yang diingat."
+      },
+      {
+        "prompt": "Bagaimana urutan cerita?",
+        "assetPath": "assets/menulis-cerita-kelas3.png",
+        "altText": "Anak menulis cerita pengalaman di buku.",
+        "reveal": "Awal, tengah, dan akhir.",
+        "hint": "Awal mengenalkan, tengah berisi masalah, akhir penyelesaian."
+      },
+      {
+        "prompt": "Apa yang diperiksa setelah menulis?",
+        "assetPath": "assets/menulis-cerita-kelas3.png",
+        "altText": "Anak menulis cerita pengalaman di buku.",
+        "reveal": "Ejaan, huruf kapital, dan tanda baca.",
+        "hint": "Baca ulang cerita."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita pengalaman di buku."
+  }
+}

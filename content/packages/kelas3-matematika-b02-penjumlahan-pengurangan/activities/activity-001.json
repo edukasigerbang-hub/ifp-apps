@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-penjumlahan-pengurangan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Lompatan Bilangan",
+  "instructions": "Amati garis bilangan dan kelompok benda, lalu diskusikan cara berhitungnya.",
+  "assets": [
+    "assets/penjumlahan-pengurangan.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa hasil 2.450 + 1.275?",
+        "assetPath": "assets/penjumlahan-pengurangan.png",
+        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "reveal": "3.725.",
+        "hint": "Jumlahkan satuan dahulu, simpan jika lebih dari 9."
+      },
+      {
+        "prompt": "Kapan kita menyimpan?",
+        "assetPath": "assets/penjumlahan-pengurangan.png",
+        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "reveal": "Saat jumlah satu tempat lebih dari 9.",
+        "hint": "Contoh: 8 + 5 = 13, tulis 3 simpan 1."
+      },
+      {
+        "prompt": "Kapan kita meminjam saat mengurangi?",
+        "assetPath": "assets/penjumlahan-pengurangan.png",
+        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "reveal": "Saat angka atas lebih kecil dari angka bawah.",
+        "hint": "Pinjam 1 dari tempat di sebelah kiri."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+  }
+}

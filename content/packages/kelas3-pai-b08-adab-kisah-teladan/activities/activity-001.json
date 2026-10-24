@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-adab",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Adab Sehari-hari",
+  "instructions": "Amati gambar, lalu diskusikan adab dan sifat teladan.",
+  "assets": [
+    "assets/adab-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana adab kepada orang tua?",
+        "assetPath": "assets/adab-kelas3.png",
+        "altText": "Anak menyapa orang tua dan membantu teman.",
+        "reveal": "Menghormati dan membantu.",
+        "hint": "Gunakan bahasa sopan."
+      },
+      {
+        "prompt": "Bagaimana adab kepada guru?",
+        "assetPath": "assets/adab-kelas3.png",
+        "altText": "Anak menyapa orang tua dan membantu teman.",
+        "reveal": "Sopan dan mendengarkan.",
+        "hint": "Angkat tangan sebelum bertanya."
+      },
+      {
+        "prompt": "Sifat apa yang diteladani?",
+        "assetPath": "assets/adab-kelas3.png",
+        "altText": "Anak menyapa orang tua dan membantu teman.",
+        "reveal": "Jujur, sabar, dan peduli.",
+        "hint": "Terapkan setiap hari."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  }
+}

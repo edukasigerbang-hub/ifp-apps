@@ -1,0 +1,27 @@
+{
+  "lessonId": "keliling-luas",
+  "packageId": "kelas3-matematika-b06-keliling-luas",
+  "title": "Keliling dan Luas Sederhana",
+  "summary": "Menghitung keliling dan luas persegi serta persegi panjang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menghitung keliling bangun datar.",
+    "Menghitung luas persegi dan persegi panjang.",
+    "Menggunakan satuan panjang dan luas."
+  ],
+  "activityIds": [
+    "eksplorasi-keliling-luas",
+    "kuis-keliling-luas"
+  ],
+  "assessmentRefs": [
+    "kuis-keliling-luas"
+  ],
+  "assetRefs": [
+    "assets/keliling-luas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

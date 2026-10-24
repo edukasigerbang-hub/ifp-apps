@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-dongeng",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyimak Dongeng",
+  "instructions": "Amati gambar, lalu diskusikan tokoh dan pesan dongeng.",
+  "assets": [
+    "assets/dongeng-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu dongeng?",
+        "assetPath": "assets/dongeng-kelas3.png",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
+        "reveal": "Cerita khayalan yang diwariskan turun-temurun.",
+        "hint": "Sering berisi hewan yang dapat berbicara."
+      },
+      {
+        "prompt": "Siapa tokoh dalam dongeng?",
+        "assetPath": "assets/dongeng-kelas3.png",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
+        "reveal": "Pelaku dalam cerita.",
+        "hint": "Ada tokoh baik dan tokoh jahat."
+      },
+      {
+        "prompt": "Apa pesan cerita?",
+        "assetPath": "assets/dongeng-kelas3.png",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
+        "reveal": "Nasihat atau pelajaran dari cerita.",
+        "hint": "Biasanya ada di akhir cerita."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+  }
+}

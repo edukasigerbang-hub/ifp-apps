@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-seni-cetak",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Cetakan Pola",
+  "instructions": "Amati gambar, lalu diskusikan cara membuat dan mencetak pola.",
+  "assets": [
+    "assets/seni-cetak-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu seni cetak?",
+        "assetPath": "assets/seni-cetak-kelas3.png",
+        "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun.",
+        "reveal": "Membuat gambar berulang dengan alat cetak.",
+        "hint": "Perhatikan pola yang sama."
+      },
+      {
+        "prompt": "Bahan apa yang dapat dijadikan cap?",
+        "assetPath": "assets/seni-cetak-kelas3.png",
+        "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun.",
+        "reveal": "Kentang, pelepah pisang, atau tutup botol.",
+        "hint": "Bahan yang permukaannya rata."
+      },
+      {
+        "prompt": "Bagaimana cara mencetak?",
+        "assetPath": "assets/seni-cetak-kelas3.png",
+        "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun.",
+        "reveal": "Oleskan cat, tekan ke kertas, lalu angkat perlahan.",
+        "hint": "Jangan terlalu banyak cat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun."
+  }
+}

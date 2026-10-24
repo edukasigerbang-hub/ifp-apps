@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-iman",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Iman",
+  "instructions": "Amati gambar, lalu diskusikan arti iman dan perilakunya.",
+  "assets": [
+    "assets/iman-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti iman?",
+        "assetPath": "assets/iman-kelas3.png",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "reveal": "Percaya dan yakin kepada Allah.",
+        "hint": "Diucapkan, diyakini, dan dilakukan."
+      },
+      {
+        "prompt": "Apa sifat Allah yang Maha Pengasih?",
+        "assetPath": "assets/iman-kelas3.png",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "reveal": "Ar-Rahman.",
+        "hint": "Allah mengasihi semua makhluk."
+      },
+      {
+        "prompt": "Bagaimana wujud iman sehari-hari?",
+        "assetPath": "assets/iman-kelas3.png",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "reveal": "Rajin salat, jujur, dan berbuat baik.",
+        "hint": "Iman tampak dalam perbuatan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+  }
+}

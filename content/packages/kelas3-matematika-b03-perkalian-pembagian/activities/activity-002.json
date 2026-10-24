@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-perkalian-pembagian",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Perkalian dan Pembagian",
+  "instructions": "Pasangkan setiap operasi dengan hasil atau maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-3x4",
+        "left": "3 × 4",
+        "right": "12"
+      },
+      {
+        "pairId": "pasangan-5x2",
+        "left": "5 × 2",
+        "right": "10"
+      },
+      {
+        "pairId": "pasangan-12bagi3",
+        "left": "12 : 3",
+        "right": "4"
+      },
+      {
+        "pairId": "pasangan-10bagi5",
+        "left": "10 : 5",
+        "right": "2"
+      },
+      {
+        "pairId": "pasangan-kali",
+        "left": "Perkalian",
+        "right": "Penjumlahan berulang"
+      },
+      {
+        "pairId": "pasangan-bagi",
+        "left": "Pembagian",
+        "right": "Kebalikan perkalian"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian."
+  }
+}

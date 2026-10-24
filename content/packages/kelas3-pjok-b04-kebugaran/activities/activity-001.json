@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebugaran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan menjaga kebugaran dan kebersihan.",
+  "assets": [
+    "assets/kebugaran-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang membuat tubuh bugar?",
+        "assetPath": "assets/kebugaran-kelas3.png",
+        "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat.",
+        "reveal": "Olahraga teratur, makan bergizi, dan istirahat cukup.",
+        "hint": "Lakukan setiap hari."
+      },
+      {
+        "prompt": "Kapan kita mencuci tangan?",
+        "assetPath": "assets/kebugaran-kelas3.png",
+        "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat.",
+        "reveal": "Sebelum makan dan setelah bermain.",
+        "hint": "Gunakan sabun dan air bersih."
+      },
+      {
+        "prompt": "Mengapa perlu mandi?",
+        "assetPath": "assets/kebugaran-kelas3.png",
+        "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat.",
+        "reveal": "Agar tubuh bersih dan sehat.",
+        "hint": "Mandi dua kali sehari."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat."
+  }
+}

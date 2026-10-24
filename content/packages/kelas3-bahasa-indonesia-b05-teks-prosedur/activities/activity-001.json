@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-teks-prosedur",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Langkah Menanam",
+  "instructions": "Amati gambar, lalu diskusikan urutan langkah menanam biji.",
+  "assets": [
+    "assets/teks-prosedur-kelas3.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan teks prosedur?",
+        "assetPath": "assets/teks-prosedur-kelas3.png",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
+        "reveal": "Memberi petunjuk melakukan sesuatu.",
+        "hint": "Ada alat dan langkah."
+      },
+      {
+        "prompt": "Bagaimana urutan langkah ditulis?",
+        "assetPath": "assets/teks-prosedur-kelas3.png",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
+        "reveal": "Berurutan dari awal sampai akhir.",
+        "hint": "Gunakan kata pertama, lalu, kemudian."
+      },
+      {
+        "prompt": "Kata apa yang biasa dipakai?",
+        "assetPath": "assets/teks-prosedur-kelas3.png",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
+        "reveal": "Kata perintah seperti siapkan, masukkan, siram.",
+        "hint": "Mulai dengan kata kerja."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  }
+}

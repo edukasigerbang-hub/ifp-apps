@@ -1,0 +1,25 @@
+{
+  "lessonId": "unsur-garis",
+  "packageId": "kelas3-seni-rupa-b01-unsur-garis",
+  "title": "Unsur Garis dan Warna",
+  "summary": "Mengenal jenis garis dan warna dasar untuk membuat karya seni.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal jenis garis.",
+    "Mengenal warna primer.",
+    "Membuat karya dari garis dan warna."
+  ],
+  "activityIds": [
+    "eksplorasi-unsur-garis",
+    "matching-unsur-garis"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/unsur-garis-warna.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

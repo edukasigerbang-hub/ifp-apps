@@ -1,0 +1,27 @@
+{
+  "lessonId": "cuaca-musim",
+  "packageId": "kelas3-ipas-b05-cuaca-musim",
+  "title": "Cuaca dan Musim",
+  "summary": "Mengenal jenis cuaca, tanda-tandanya, dan kegiatan yang sesuai.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis cuaca.",
+    "Menjelaskan tanda-tanda cuaca.",
+    "Menyesuaikan kegiatan dengan cuaca."
+  ],
+  "activityIds": [
+    "eksplorasi-cuaca-musim",
+    "kuis-cuaca-musim"
+  ],
+  "assessmentRefs": [
+    "kuis-cuaca-musim"
+  ],
+  "assetRefs": [
+    "assets/cuaca-musim.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

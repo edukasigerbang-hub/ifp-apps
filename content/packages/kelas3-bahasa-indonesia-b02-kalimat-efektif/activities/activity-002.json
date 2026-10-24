@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-kalimat-efektif",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Kalimat Efektif",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-efektif",
+        "prompt": "Kalimat efektif adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-a",
+            "text": "Siti membaca buku di perpustakaan."
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Siti dia membaca buku buku di perpustakaan."
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Membaca Siti buku di perpustakaan sekolahnya sekolah."
+          },
+          {
+            "optionId": "opsi-d",
+            "text": "Buku membaca Siti di perpustakaan buku."
+          }
+        ],
+        "correctResponse": "opsi-a"
+      },
+      {
+        "questionId": "soal-sinonim",
+        "prompt": "Sinonim kata indah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cantik",
+            "text": "Cantik"
+          },
+          {
+            "optionId": "opsi-jelek",
+            "text": "Jelek"
+          },
+          {
+            "optionId": "opsi-besar",
+            "text": "Besar"
+          },
+          {
+            "optionId": "opsi-cepat",
+            "text": "Cepat"
+          }
+        ],
+        "correctResponse": "opsi-cantik"
+      },
+      {
+        "questionId": "soal-tidak-efektif",
+        "prompt": "Kalimat yang tidak efektif adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-a",
+            "text": "Budi dia sedang belajar belajar."
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Budi sedang belajar."
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Budi belajar matematika."
+          },
+          {
+            "optionId": "opsi-d",
+            "text": "Budi rajin belajar."
+          }
+        ],
+        "correctResponse": "opsi-a"
+      },
+      {
+        "questionId": "soal-tekun",
+        "prompt": "Arti kata tekun adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-rajin",
+            "text": "Rajin dan bersungguh-sungguh"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Malas"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Cepat marah"
+          },
+          {
+            "optionId": "opsi-main",
+            "text": "Suka bermain"
+          }
+        ],
+        "correctResponse": "opsi-rajin"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca."
+  }
+}

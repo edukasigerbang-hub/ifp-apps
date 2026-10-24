@@ -1,0 +1,25 @@
+{
+  "lessonId": "keberagaman",
+  "packageId": "kelas3-pendidikan-pancasila-b05-keberagaman",
+  "title": "Keberagaman di Sekolah",
+  "summary": "Menghargai keberagaman suku, agama, dan budaya di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bentuk keberagaman.",
+    "Menghargai perbedaan.",
+    "Bekerja sama dalam keberagaman."
+  ],
+  "activityIds": [
+    "eksplorasi-keberagaman",
+    "matching-keberagaman"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/keberagaman-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

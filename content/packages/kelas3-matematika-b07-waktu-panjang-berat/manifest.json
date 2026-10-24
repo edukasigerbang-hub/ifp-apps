@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b07-waktu-panjang-berat",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Waktu, Panjang, dan Berat — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/waktu-panjang-berat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5229,
+      "sha256": "e21de68d447ddec784ff718c27fbbb542859a7dfbd7cc1afc95889e32ffcd3de"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

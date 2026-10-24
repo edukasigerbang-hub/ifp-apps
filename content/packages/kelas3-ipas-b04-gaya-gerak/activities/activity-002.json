@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-gaya-gerak",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Gaya dan Pengaruhnya",
+  "instructions": "Pasangkan setiap jenis gaya dengan pengaruhnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-dorong",
+        "left": "Dorongan",
+        "right": "Menjauhkan benda"
+      },
+      {
+        "pairId": "pasangan-tarik",
+        "left": "Tarikan",
+        "right": "Mendekatkan benda"
+      },
+      {
+        "pairId": "pasangan-gesek",
+        "left": "Gaya gesek",
+        "right": "Memperlambat gerak"
+      },
+      {
+        "pairId": "pasangan-gravitasi",
+        "left": "Gaya gravitasi",
+        "right": "Menarik ke bawah"
+      },
+      {
+        "pairId": "pasangan-magnet",
+        "left": "Gaya magnet",
+        "right": "Menarik benda logam"
+      },
+      {
+        "pairId": "pasangan-pegas",
+        "left": "Gaya pegas",
+        "right": "Mengembalikan bentuk"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku."
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-aturan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Aturan",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-rumah",
+        "prompt": "Contoh aturan di rumah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-rapi",
+            "text": "Merapikan tempat tidur"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari di dalam kelas"
+          },
+          {
+            "optionId": "opsi-coret",
+            "text": "Mencoret dinding"
+          },
+          {
+            "optionId": "opsi-teriak",
+            "text": "Berteriak di perpustakaan"
+          }
+        ],
+        "correctResponse": "opsi-rapi"
+      },
+      {
+        "questionId": "soal-manfaat",
+        "prompt": "Manfaat aturan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tertib",
+            "text": "Hidup tertib dan aman"
+          },
+          {
+            "optionId": "opsi-bebas",
+            "text": "Membuat semua bebas"
+          },
+          {
+            "optionId": "opsi-masalah",
+            "text": "Menambah masalah"
+          },
+          {
+            "optionId": "opsi-hak",
+            "text": "Menghilangkan hak"
+          }
+        ],
+        "correctResponse": "opsi-tertib"
+      },
+      {
+        "questionId": "soal-sekolah",
+        "prompt": "Contoh aturan di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tepat",
+            "text": "Datang tepat waktu"
+          },
+          {
+            "optionId": "opsi-bolos",
+            "text": "Tidak masuk tanpa izin"
+          },
+          {
+            "optionId": "opsi-ribut",
+            "text": "Ribut saat pelajaran"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang sampah sembarangan"
+          }
+        ],
+        "correctResponse": "opsi-tepat"
+      },
+      {
+        "questionId": "soal-teman",
+        "prompt": "Sikap saat teman melanggar aturan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ingat",
+            "text": "Mengingatkan dengan sopan"
+          },
+          {
+            "optionId": "opsi-ikut",
+            "text": "Ikut melanggar"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam saja dan menertawakan"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Memarahi dengan kasar"
+          }
+        ],
+        "correctResponse": "opsi-ingat"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di depan kelas."
+  }
+}

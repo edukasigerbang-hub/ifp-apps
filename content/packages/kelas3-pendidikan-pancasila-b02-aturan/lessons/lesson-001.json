@@ -1,0 +1,27 @@
+{
+  "lessonId": "aturan",
+  "packageId": "kelas3-pendidikan-pancasila-b02-aturan",
+  "title": "Aturan di Rumah dan Sekolah",
+  "summary": "Mengenal aturan di rumah dan sekolah serta manfaat melaksanakannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan aturan di rumah dan sekolah.",
+    "Menjelaskan manfaat aturan.",
+    "Melaksanakan aturan dengan tanggung jawab."
+  ],
+  "activityIds": [
+    "eksplorasi-aturan",
+    "kuis-aturan"
+  ],
+  "assessmentRefs": [
+    "kuis-aturan"
+  ],
+  "assetRefs": [
+    "assets/antrean-kelas3.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di depan kelas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

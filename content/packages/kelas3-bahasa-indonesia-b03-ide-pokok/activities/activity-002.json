@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-ide-pokok",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menyimak Cerita",
+  "instructions": "Susun langkah menyimak dan menceritakan kembali.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-dengar",
+        "text": "Menyimak cerita dengan tenang"
+      },
+      {
+        "itemId": "langkah-catat",
+        "text": "Mencatat peristiwa penting"
+      },
+      {
+        "itemId": "langkah-ide",
+        "text": "Menentukan ide pokok"
+      },
+      {
+        "itemId": "langkah-urut",
+        "text": "Menyusun urutan peristiwa"
+      },
+      {
+        "itemId": "langkah-cerita",
+        "text": "Menceritakan kembali"
+      }
+    ],
+    "correctOrder": [
+      "langkah-dengar",
+      "langkah-catat",
+      "langkah-ide",
+      "langkah-urut",
+      "langkah-cerita"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
+  }
+}
