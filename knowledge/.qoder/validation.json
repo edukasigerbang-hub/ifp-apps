@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T19:17:04+07:00",
+  "last_validated_at": "2026-10-24T19:24:42+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -347,6 +347,12 @@
       "command": "content:validate x3; content_import_package; npm run build; npm test",
       "result": "PASS",
       "details": "seni-b04, pjok-b04, pai-b04 VALID; import 5 files each active; 28 grade-4 packages total; build PASS with chunk-size warning"
+    },
+    {
+      "name": "content_lazy_loading",
+      "command": "async import.meta.glob; npm test; npm run build; E2E home-catalog/learning-journey",
+      "result": "PASS",
+      "details": "main chunk 447 kB; no >500 kB warning; home-catalog 9 checks + journey 11 checks PASS"
     }
   ],
   "environment": {

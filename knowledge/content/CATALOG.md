@@ -41,7 +41,7 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 1. Semester 1 lengkap (28 paket draft). Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 2. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-3. Atasi ukuran bundle (>500 kB) dengan lazy load/code splitting sebelum produksi penuh.
+3. Pantau ukuran bundle saat paket bertambah; lazy load konten sudah aktif (chunk utama 447 kB).
 4. Setelah review, lanjut Semester 2 (B05–B08).
 
 ## Paket starter Kelas 4 (2026-10-24)
