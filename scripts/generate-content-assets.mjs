@@ -678,6 +678,100 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function planeShapes() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // grid
+  for (let x = 0; x <= W; x += 40) line(px, x, 60, x, 600, colors.sky, 1);
+  for (let y = 60; y <= 600; y += 40) line(px, 0, y, W, y, colors.sky, 1);
+  rect(px, 80, 120, 160, 160, colors.orange);
+  rect(px, 300, 160, 220, 120, colors.teal);
+  triangle(px, 560, 280, 700, 280, 630, 140, colors.sun);
+  circle(px, 180, 430, 90, colors.red);
+  return px;
+}
+
+function waterCycle() {
+  const px = canvas();
+  fill(px, colors.sky);
+  circle(px, 680, 100, 55, colors.sun);
+  for (let a = 0; a < 360; a += 45) {
+    const r = (a * Math.PI) / 180;
+    line(px, 680 + Math.cos(r) * 65, 100 + Math.sin(r) * 65, 680 + Math.cos(r) * 88, 100 + Math.sin(r) * 88, colors.sun, 5);
+  }
+  // tanah, gunung, lalu laut
+  rect(px, 0, 420, W, 180, colors.green);
+  triangle(px, 380, 420, 700, 420, 540, 220, colors.greenDark);
+  rect(px, 0, 380, 420, 80, colors.blue);
+  rect(px, 0, 380, 420, 12, colors.teal);
+  // awan
+  for (const [x, y] of [[220, 180], [280, 170], [340, 185], [260, 200]]) circle(px, x, y, 36, colors.white);
+  // hujan
+  for (let i = 0; i < 6; i += 1) line(px, 230 + i * 24, 230, 215 + i * 24, 280, colors.blue, 4);
+  // panah penguapan dan hujan
+  line(px, 120, 390, 160, 250, colors.red, 6);
+  line(px, 160, 250, 145, 275, colors.red, 6);
+  line(px, 160, 250, 180, 270, colors.red, 6);
+  line(px, 420, 250, 420, 380, colors.red, 6);
+  line(px, 420, 380, 405, 355, colors.red, 6);
+  line(px, 420, 380, 435, 355, colors.red, 6);
+  return px;
+}
+
+function plantingSteps() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 290, 540];
+  for (const x of panels) {
+    rect(px, x, 100, 220, 420, colors.sky);
+    rect(px, x, 100, 220, 5, colors.navy);
+    rect(px, x, 515, 220, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 215, 100, 5, 420, colors.navy);
+  }
+  // panci pot + tanah
+  rect(px, 90, 380, 120, 100, colors.orange);
+  rect(px, 100, 380, 100, 30, colors.soil);
+  // biji
+  rect(px, 340, 390, 120, 90, colors.orange);
+  rect(px, 350, 390, 100, 30, colors.soil);
+  circle(px, 400, 380, 14, colors.soil);
+  // tunas + penyiram
+  rect(px, 590, 380, 120, 90, colors.orange);
+  rect(px, 600, 380, 100, 30, colors.soil);
+  rect(px, 645, 300, 10, 60, colors.greenDark);
+  ellipse(px, 630, 320, 24, 12, colors.green);
+  ellipse(px, 670, 340, 24, 12, colors.green);
+  rect(px, 560, 220, 70, 40, colors.blue);
+  line(px, 630, 240, 660, 260, colors.blue, 6);
+  for (const [x, y] of [[665, 280], [675, 300], [655, 305]]) ellipse(px, x, y, 5, 8, colors.blue);
+  return px;
+}
+
+function bhinnekaScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 440, W, 160, colors.green);
+  rect(px, 380, 140, 8, 300, colors.navy);
+  rect(px, 388, 145, 80, 26, colors.red);
+  rect(px, 388, 171, 80, 26, colors.white);
+  circle(px, 680, 100, 40, colors.sun);
+  const kids = [
+    [120, colors.teal], [240, colors.orange], [480, colors.blue], [600, colors.red], [360, colors.green]
+  ];
+  for (const [x, shirt] of kids) {
+    circle(px, x, 300, 32, colors.skin1);
+    rect(px, x - 28, 334, 56, 100, shirt);
+    rect(px, x - 26, 434, 18, 60, colors.navy);
+    rect(px, x + 8, 434, 18, 60, colors.navy);
+    line(px, x - 28, 360, x - 60, 390, colors.skin1, 8);
+    line(px, x + 28, 360, x + 60, 390, colors.skin1, 8);
+  }
+  return px;
+}
+
 function exhibitionScene() {
   const px = canvas();
   fill(px, colors.sand);
@@ -1061,3 +1155,7 @@ write("content/packages/kelas4-pai-b03-akhlak/assets/akhlak-terpuji.png", akhlak
 write("content/packages/kelas4-seni-rupa-b04-pameran-kelas/assets/pameran-kelas.png", exhibitionScene());
 write("content/packages/kelas4-pjok-b04-kesehatan/assets/kebersihan-diri.png", hygieneScene());
 write("content/packages/kelas4-pai-b04-shalat/assets/shalat-ilustrasi.png", prayerScene());
+write("content/packages/kelas4-matematika-b05-bangun-datar/assets/bangun-datar.png", planeShapes());
+write("content/packages/kelas4-ipas-b05-siklus-air/assets/siklus-air.png", waterCycle());
+write("content/packages/kelas4-bahasa-indonesia-b05-teks-prosedur/assets/menanam-biji.png", plantingSteps());
+write("content/packages/kelas4-pendidikan-pancasila-b05-bhinneka/assets/bhinneka.png", bhinnekaScene());

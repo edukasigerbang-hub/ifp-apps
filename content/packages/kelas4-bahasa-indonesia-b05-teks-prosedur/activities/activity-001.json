@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-teks-prosedur",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Langkah Menanam Biji",
+  "instructions": "Amati tiga panel gambar, lalu diskusikan ciri teks prosedur.",
+  "assets": [
+    "assets/menanam-biji.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan anak pada gambar?",
+        "assetPath": "assets/menanam-biji.png",
+        "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas.",
+        "reveal": "Menanam biji: menyiapkan pot, menanam biji, lalu menyiram.",
+        "hint": "Perhatikan urutan panel."
+      },
+      {
+        "prompt": "Mengapa langkah harus berurutan?",
+        "assetPath": "assets/menanam-biji.png",
+        "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas.",
+        "reveal": "Agar kegiatan berhasil dan mudah diikuti orang lain.",
+        "hint": "Bayangkan jika menyiram dilakukan sebelum menanam."
+      },
+      {
+        "prompt": "Sebutkan ciri teks prosedur.",
+        "assetPath": "assets/menanam-biji.png",
+        "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas.",
+        "reveal": "Berisi langkah berurutan, kata perintah, serta alat dan bahan.",
+        "hint": "Perhatikan kata kerja seperti siapkan, tanam, siram."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas."
+  }
+}

@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 28 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 32 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -32,6 +32,10 @@
 | `kelas4-seni-rupa-b04-pameran-kelas` | 0.1.0 | 4 | seni-rupa | Pameran kelas | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pjok-b04-kesehatan` | 0.1.0 | 4 | pjok | Kesehatan & kebersihan diri | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b04-shalat` | 0.1.0 | 4 | pai | Shalat (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b05-bangun-datar` | 0.1.0 | 4 | matematika | Bangun datar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b05-siklus-air` | 0.1.0 | 4 | ipas | Bumi, cuaca, siklus air | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b05-teks-prosedur` | 0.1.0 | 4 | bahasa-indonesia | Teks prosedur | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b05-bhinneka` | 0.1.0 | 4 | pendidikan-pancasila | Bhinneka Tunggal Ika | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -159,6 +163,21 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
 - **Semester 1 Kelas 4 lengkap: 28 paket draft** (7 mapel inti × 4 bab; PAI varian Islam).
 - Bundle: konten diubah menjadi lazy chunk (`loadPackages` async); chunk utama turun ke **447 kB** (<500 kB). E2E home-catalog + learning-journey PASS.
+
+## Batch 9 Kelas 4 (2026-10-24) — Semester 2 dimulai
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b05-bangun-datar` | Sifat, Keliling, dan Luas Bangun Datar | eksplorasi + MCQ (4 soal) | `bangun-datar.png` |
+| `kelas4-ipas-b05-siklus-air` | Bumi, Cuaca, dan Siklus Air | eksplorasi + ordering (5 tahap) | `siklus-air.png` |
+| `kelas4-bahasa-indonesia-b05-teks-prosedur` | Memahami dan Menulis Teks Prosedur | eksplorasi + ordering (5 langkah) | `menanam-biji.png` |
+| `kelas4-pendidikan-pancasila-b05-bhinneka` | Bhinneka Tunggal Ika | eksplorasi + matching (5 pasangan) | `bhinneka.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
+- Bundle utama 452 kB (<500 kB) setelah lazy load.
+- Sisa Semester 2: B06–B08 untuk 7 mapel (21 paket) + opsi Bahasa Inggris.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

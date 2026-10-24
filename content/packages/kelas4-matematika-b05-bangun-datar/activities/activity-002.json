@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-bangun-datar",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bangun Datar",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-tiga-sisi",
+        "prompt": "Bangun datar yang memiliki tiga sisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-segitiga",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-persegi",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-lingkaran",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-persegi-panjang",
+            "text": "persegi panjang"
+          }
+        ],
+        "correctResponse": "opsi-segitiga"
+      },
+      {
+        "questionId": "soal-keliling-persegi",
+        "prompt": "Keliling persegi dengan sisi 5 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-10",
+            "text": "10 cm"
+          },
+          {
+            "optionId": "opsi-15",
+            "text": "15 cm"
+          },
+          {
+            "optionId": "opsi-20",
+            "text": "20 cm"
+          },
+          {
+            "optionId": "opsi-25",
+            "text": "25 cm"
+          }
+        ],
+        "correctResponse": "opsi-20"
+      },
+      {
+        "questionId": "soal-luas-persegi-panjang",
+        "prompt": "Luas persegi panjang 8 cm × 4 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-12",
+            "text": "12 cm²"
+          },
+          {
+            "optionId": "opsi-24",
+            "text": "24 cm²"
+          },
+          {
+            "optionId": "opsi-32",
+            "text": "32 cm²"
+          },
+          {
+            "optionId": "opsi-40",
+            "text": "40 cm²"
+          }
+        ],
+        "correctResponse": "opsi-32"
+      },
+      {
+        "questionId": "soal-sifat-persegi",
+        "prompt": "Bangun dengan empat sisi sama panjang dan sudut siku-siku adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-persegi",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-segitiga",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-lingkaran",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-trapesium",
+            "text": "trapesium"
+          }
+        ],
+        "correctResponse": "opsi-persegi"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

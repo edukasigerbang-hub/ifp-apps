@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-siklus-air",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Siklus Air",
+  "instructions": "Amati gambar siklus air, lalu jawab pertanyaan tentang tahapannya.",
+  "assets": [
+    "assets/siklus-air.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang terjadi pada air laut saat terkena panas matahari?",
+        "assetPath": "assets/siklus-air.png",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
+        "reveal": "Air menguap menjadi uap air (evaporasi).",
+        "hint": "Perhatikan panah naik dari laut."
+      },
+      {
+        "prompt": "Apa yang terjadi pada uap air di atmosfer?",
+        "assetPath": "assets/siklus-air.png",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
+        "reveal": "Uap air mengembun menjadi titik-titik air dan membentuk awan (kondensasi).",
+        "hint": "Perhatikan awan di langit."
+      },
+      {
+        "prompt": "Mengapa hujan turun?",
+        "assetPath": "assets/siklus-air.png",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
+        "reveal": "Awan yang jenuh air menjatuhkan titik air sebagai hujan (presipitasi), lalu air kembali ke laut atau sungai.",
+        "hint": "Perhatikan panah turun dari awan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+  }
+}

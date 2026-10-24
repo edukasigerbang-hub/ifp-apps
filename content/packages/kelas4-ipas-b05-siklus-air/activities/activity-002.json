@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-siklus-air",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Siklus Air",
+  "instructions": "Susun tahapan siklus air dalam urutan yang benar.",
+  "assets": [
+    "assets/siklus-air.png"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-penguapan",
+        "text": "Penguapan air laut"
+      },
+      {
+        "itemId": "item-pengembunan",
+        "text": "Pengembunan uap air"
+      },
+      {
+        "itemId": "item-awan",
+        "text": "Pembentukan awan"
+      },
+      {
+        "itemId": "item-hujan",
+        "text": "Hujan turun"
+      },
+      {
+        "itemId": "item-kembali",
+        "text": "Air kembali ke laut atau sungai"
+      }
+    ],
+    "correctOrder": [
+      "item-penguapan",
+      "item-pengembunan",
+      "item-awan",
+      "item-hujan",
+      "item-kembali"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+  }
+}

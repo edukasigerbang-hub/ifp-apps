@@ -1,0 +1,25 @@
+{
+  "lessonId": "bhinneka",
+  "packageId": "kelas4-pendidikan-pancasila-b05-bhinneka",
+  "title": "Bhinneka Tunggal Ika",
+  "summary": "Menghargai keberagaman suku, agama, bahasa, dan budaya dalam semangat persatuan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti Bhinneka Tunggal Ika.",
+    "Menyebutkan contoh keberagaman di Indonesia.",
+    "Menunjukkan sikap menghargai perbedaan."
+  ],
+  "activityIds": [
+    "eksplorasi-bhinneka",
+    "matching-bhinneka"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/bhinneka.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

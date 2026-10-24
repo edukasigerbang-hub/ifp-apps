@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bhinneka",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Keberagaman",
+  "instructions": "Amati gambar, lalu diskusikan arti dan sikap terhadap keberagaman.",
+  "assets": [
+    "assets/bhinneka.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan anak-anak pada gambar?",
+        "assetPath": "assets/bhinneka.png",
+        "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
+        "reveal": "Mereka bergandengan tangan meskipun berbeda warna pakaian.",
+        "hint": "Perhatikan sikap tangan mereka."
+      },
+      {
+        "prompt": "Apa arti Bhinneka Tunggal Ika?",
+        "assetPath": "assets/bhinneka.png",
+        "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
+        "reveal": "Berbeda-beda tetapi tetap satu; keberagaman tidak memecah persatuan.",
+        "hint": "Hubungkan dengan semboyan bangsa."
+      },
+      {
+        "prompt": "Bagaimana sikap kita terhadap perbedaan?",
+        "assetPath": "assets/bhinneka.png",
+        "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
+        "reveal": "Menghormati, tidak membeda-bedakan, dan mau bekerja sama.",
+        "hint": "Bayangkan jika semua orang saling menghina."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
+  }
+}

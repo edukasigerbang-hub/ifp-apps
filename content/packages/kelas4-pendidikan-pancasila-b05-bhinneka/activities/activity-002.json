@@ -1,0 +1,54 @@
+{
+  "activityId": "matching-bhinneka",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Keberagaman dan Sikap",
+  "instructions": "Pasangkan setiap bentuk keberagaman dengan sikap yang tepat.",
+  "assets": [
+    "assets/bhinneka.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-suku",
+        "left": "Suku berbeda",
+        "right": "Saling menghormati"
+      },
+      {
+        "pairId": "pasangan-agama",
+        "left": "Agama berbeda",
+        "right": "Menghormati ibadah"
+      },
+      {
+        "pairId": "pasangan-bahasa",
+        "left": "Bahasa daerah",
+        "right": "Melestarikan"
+      },
+      {
+        "pairId": "pasangan-budaya",
+        "left": "Budaya berbeda",
+        "right": "Saling mengenal"
+      },
+      {
+        "pairId": "pasangan-pendapat",
+        "left": "Pendapat berbeda",
+        "right": "Bermusyawarah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
+  }
+}
