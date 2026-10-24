@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pameran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pameran Kelas",
+  "instructions": "Amati gambar pameran kelas, lalu diskusikan cara menata karya.",
+  "assets": [
+    "assets/pameran-kelas.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dipamerkan di kelas?",
+        "assetPath": "assets/pameran-kelas.png",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
+        "reveal": "Karya seni siswa, seperti gambar dan karya tiga dimensi.",
+        "hint": "Perhatikan dinding dan meja."
+      },
+      {
+        "prompt": "Bagaimana karya ditata agar menarik?",
+        "assetPath": "assets/pameran-kelas.png",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
+        "reveal": "Karya dikelompokkan, diberi label, dan tidak berdesakan.",
+        "hint": "Perhatikan jarak antar-karya."
+      },
+      {
+        "prompt": "Mengapa pameran kelas bermanfaat?",
+        "assetPath": "assets/pameran-kelas.png",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
+        "reveal": "Melatih percaya diri, menghargai karya teman, dan berbagi hasil belajar.",
+        "hint": "Hubungkan dengan perasaan bangga dan saling menghargai."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+  }
+}

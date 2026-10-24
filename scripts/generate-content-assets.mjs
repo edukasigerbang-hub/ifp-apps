@@ -678,6 +678,99 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function exhibitionScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 0, 470, W, 130, colors.tealLight);
+  // karya di dinding
+  const frames = [
+    [80, 120, 150, 120, colors.teal],
+    [280, 100, 180, 150, colors.orange],
+    [520, 130, 160, 110, colors.red]
+  ];
+  for (const [x, y, w, h, c] of frames) {
+    rect(px, x - 8, y - 8, w + 16, h + 16, colors.navy);
+    rect(px, x, y, w, h, colors.white);
+    circle(px, x + w / 2, y + h / 2, Math.min(w, h) / 3, c);
+    line(px, x + 10, y + h - 15, x + w - 10, y + 20, colors.sky, 3);
+  }
+  // meja karya
+  rect(px, 250, 390, 300, 16, colors.orange);
+  rect(px, 270, 406, 14, 70, colors.navy);
+  rect(px, 516, 406, 14, 70, colors.navy);
+  circle(px, 310, 360, 26, colors.teal);
+  rect(px, 370, 340, 50, 50, colors.sun);
+  rect(px, 460, 345, 40, 45, colors.red);
+  // pengunjung
+  for (const [x, c] of [[660, colors.blue], [720, colors.green]]) {
+    circle(px, x, 260, 28, colors.skin1);
+    rect(px, x - 24, 290, 48, 110, c);
+  }
+  return px;
+}
+
+function hygieneScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 240, 440, 640];
+  for (const x of panels) {
+    rect(px, x, 100, 150, 420, colors.sky);
+    rect(px, x, 100, 150, 5, colors.navy);
+    rect(px, x, 515, 150, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 145, 100, 5, 420, colors.navy);
+  }
+  // cuci tangan
+  rect(px, 75, 390, 90, 40, colors.white);
+  rect(px, 110, 330, 14, 60, colors.navy);
+  rect(px, 90, 320, 50, 14, colors.navy);
+  circle(px, 105, 440, 16, colors.skin1);
+  circle(px, 135, 440, 16, colors.skin1);
+  for (const [x, y] of [[100, 370], [120, 380], [140, 370]]) ellipse(px, x, y, 6, 9, colors.blue);
+  // sikat gigi
+  rect(px, 275, 360, 80, 16, colors.blue);
+  rect(px, 345, 352, 24, 32, colors.white);
+  line(px, 350, 352, 350, 340, colors.navy, 3);
+  line(px, 358, 352, 358, 340, colors.navy, 3);
+  rect(px, 270, 420, 60, 40, colors.white);
+  line(px, 280, 440, 320, 440, colors.sky, 3);
+  // buah
+  circle(px, 500, 380, 30, colors.red);
+  circle(px, 545, 395, 26, colors.orange);
+  ellipse(px, 590, 385, 30, 14, colors.sun);
+  // tidur
+  rect(px, 660, 400, 120, 40, colors.teal);
+  rect(px, 660, 380, 30, 20, colors.white);
+  ellipse(px, 740, 310, 22, 22, colors.sun);
+  circle(px, 755, 300, 18, colors.sky);
+  for (const [x, y] of [[700, 300], [720, 280], [680, 280]]) circle(px, x, y, 3, colors.sun);
+  return px;
+}
+
+function prayerScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // siluet masjid
+  rect(px, 80, 280, 260, 120, colors.navy);
+  ellipse(px, 210, 280, 70, 60, colors.navy);
+  rect(px, 330, 240, 20, 160, colors.navy);
+  ellipse(px, 340, 240, 20, 26, colors.navy);
+  // sajadah
+  rect(px, 200, 430, 400, 130, colors.teal);
+  rect(px, 220, 450, 360, 90, colors.tealLight);
+  // lentera
+  rect(px, 650, 120, 60, 90, colors.sun);
+  circle(px, 680, 200, 16, colors.white);
+  // jam
+  circle(px, 600, 300, 40, colors.white);
+  line(px, 600, 300, 600, 272, colors.navy, 4);
+  line(px, 600, 300, 622, 310, colors.navy, 4);
+  return px;
+}
+
 function colorTexture() {
   const px = canvas();
   fill(px, colors.white);
@@ -965,3 +1058,6 @@ write("content/packages/kelas4-pai-b02-iman/assets/iman-ilustrasi.png", imanScen
 write("content/packages/kelas4-seni-rupa-b03-warna-tekstur/assets/warna-tekstur.png", colorTexture());
 write("content/packages/kelas4-pjok-b03-kebugaran/assets/kebugaran.png", fitnessScene());
 write("content/packages/kelas4-pai-b03-akhlak/assets/akhlak-terpuji.png", akhlakScene());
+write("content/packages/kelas4-seni-rupa-b04-pameran-kelas/assets/pameran-kelas.png", exhibitionScene());
+write("content/packages/kelas4-pjok-b04-kesehatan/assets/kebersihan-diri.png", hygieneScene());
+write("content/packages/kelas4-pai-b04-shalat/assets/shalat-ilustrasi.png", prayerScene());

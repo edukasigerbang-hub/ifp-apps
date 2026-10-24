@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 25 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 28 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -29,6 +29,9 @@
 | `kelas4-seni-rupa-b03-warna-tekstur` | 0.1.0 | 4 | seni-rupa | Warna & tekstur | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pjok-b03-kebugaran` | 0.1.0 | 4 | pjok | Kebugaran jasmani | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b03-akhlak` | 0.1.0 | 4 | pai | Akhlak terpuji (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b04-pameran-kelas` | 0.1.0 | 4 | seni-rupa | Pameran kelas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b04-kesehatan` | 0.1.0 | 4 | pjok | Kesehatan & kebersihan diri | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b04-shalat` | 0.1.0 | 4 | pai | Shalat (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -36,10 +39,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Lengkapi Seni Rupa, PJOK, dan PAI B04 (3 paket) untuk menutup Semester 1.
-2. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
-3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Atasi ukuran bundle (>500 kB) dengan lazy load/code splitting sebelum produksi penuh.
+1. Semester 1 lengkap (28 paket draft). Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
+2. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
+3. Atasi ukuran bundle (>500 kB) dengan lazy load/code splitting sebelum produksi penuh.
+4. Setelah review, lanjut Semester 2 (B05–B08).
 
 ## Paket starter Kelas 4 (2026-10-24)
 
@@ -142,6 +145,20 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
 - Catatan build: bundle JS melewati 500 kB setelah 25 paket ter-bundle; perlu code-splitting/lazy load konten sebelum produksi penuh.
 - Sisa Semester 1: Seni Rupa, PJOK, dan PAI B04 (3 paket).
+
+## Batch 8 Kelas 4 (2026-10-24) — Semester 1 lengkap
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-seni-rupa-b04-pameran-kelas` | Pameran Kelas | eksplorasi + ordering (5 langkah) | `pameran-kelas.png` |
+| `kelas4-pjok-b04-kesehatan` | Kesehatan dan Kebersihan Diri | eksplorasi + matching (6 pasangan) | `kebersihan-diri.png` |
+| `kelas4-pai-b04-shalat` | Shalat | eksplorasi + ordering (5 shalat) | `shalat-ilustrasi.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
+- **Semester 1 Kelas 4 lengkap: 28 paket draft** (7 mapel inti × 4 bab; PAI varian Islam).
+- Build masih memberi warning chunk JS >500 kB; perlu lazy load/code splitting.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

@@ -1,0 +1,25 @@
+{
+  "lessonId": "kesehatan-kebersihan",
+  "packageId": "kelas4-pjok-b04-kesehatan",
+  "title": "Kesehatan dan Kebersihan Diri",
+  "summary": "Membiasakan kebersihan diri dan pola hidup sehat untuk mencegah penyakit.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan kebiasaan kebersihan diri.",
+    "Menjelaskan manfaat pola hidup sehat.",
+    "Menerapkan kebiasaan sehat setiap hari."
+  ],
+  "activityIds": [
+    "eksplorasi-kebersihan",
+    "matching-kebersihan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kebersihan-diri.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

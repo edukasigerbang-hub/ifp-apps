@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebersihan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati empat panel gambar, lalu hubungkan dengan manfaatnya.",
+  "assets": [
+    "assets/kebersihan-diri.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan anak pada panel pertama?",
+        "assetPath": "assets/kebersihan-diri.png",
+        "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
+        "reveal": "Mencuci tangan dengan air dan sabun.",
+        "hint": "Perhatikan air dan tangan."
+      },
+      {
+        "prompt": "Mengapa menyikat gigi penting?",
+        "assetPath": "assets/kebersihan-diri.png",
+        "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
+        "reveal": "Menjaga kesehatan gigi dan mulut serta mencegah gigi berlubang.",
+        "hint": "Lakukan pagi dan sebelum tidur."
+      },
+      {
+        "prompt": "Kebiasaan sehat apa lagi yang terlihat?",
+        "assetPath": "assets/kebersihan-diri.png",
+        "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
+        "reveal": "Makan buah dan tidur cukup agar tubuh tetap sehat.",
+        "hint": "Perhatikan panel ketiga dan keempat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup."
+  }
+}

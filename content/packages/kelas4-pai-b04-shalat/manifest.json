@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pai-b04-shalat",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Shalat — PAI Kelas 4 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/shalat-ilustrasi.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4621,
+      "sha256": "5eed3951d0be92cf7676f2ca4d808ecb3a3b55cdde6d6a926443d36b34d370d2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

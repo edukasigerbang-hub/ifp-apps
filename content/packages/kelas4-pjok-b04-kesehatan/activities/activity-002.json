@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-kebersihan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kebiasaan dan Manfaat",
+  "instructions": "Pasangkan setiap kebiasaan sehat dengan manfaatnya.",
+  "assets": [
+    "assets/kebersihan-diri.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-cuci-tangan",
+        "left": "Mencuci tangan",
+        "right": "Mencegah kuman"
+      },
+      {
+        "pairId": "pasangan-sikat-gigi",
+        "left": "Menyikat gigi",
+        "right": "Menjaga kesehatan gigi"
+      },
+      {
+        "pairId": "pasangan-buah",
+        "left": "Makan buah dan sayur",
+        "right": "Memenuhi gizi"
+      },
+      {
+        "pairId": "pasangan-tidur",
+        "left": "Tidur cukup",
+        "right": "Memulihkan tubuh"
+      },
+      {
+        "pairId": "pasangan-olahraga",
+        "left": "Olahraga rutin",
+        "right": "Menjaga kebugaran"
+      },
+      {
+        "pairId": "pasangan-air",
+        "left": "Minum air putih",
+        "right": "Mencegah dehidrasi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup."
+  }
+}

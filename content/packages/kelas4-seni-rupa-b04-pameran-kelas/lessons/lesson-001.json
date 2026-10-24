@@ -1,0 +1,25 @@
+{
+  "lessonId": "pameran-kelas",
+  "packageId": "kelas4-seni-rupa-b04-pameran-kelas",
+  "title": "Pameran Kelas",
+  "summary": "Merencanakan, menata, dan menyajikan karya seni dalam pameran kelas sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan tujuan pameran kelas.",
+    "Menata karya seni agar mudah dilihat dan dinikmati.",
+    "Memberikan apresiasi terhadap karya teman."
+  ],
+  "activityIds": [
+    "eksplorasi-pameran",
+    "ordering-pameran"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/pameran-kelas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
