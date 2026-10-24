@@ -1,6 +1,13 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from "node:http";
 import { z } from "zod";
+import {
+  enrollmentCodeMatches,
+  isDeviceId,
+  newDeviceId,
+  signDeviceToken,
+  verifyDeviceToken
+} from "./auth";
 import { LicenseService, type LicenseFile } from "./license";
 import type { SyncStore } from "./store";
 
@@ -49,6 +56,11 @@ const licenseFileSchema = z.object({
   signature: z.string().min(1)
 });
 
+const enrollSchema = z.strictObject({
+  enrollmentCode: z.string().min(1).max(256),
+  deviceId: z.string().regex(UUID_PATTERN).optional()
+});
+
 export interface SyncAppOptions {
   store: SyncStore;
   token: string;
@@ -57,6 +69,7 @@ export interface SyncAppOptions {
   rateLimit?: { limit: number; windowMs: number };
   corsOrigin?: string;
   license?: { service: LicenseService; adminToken: string };
+  deviceAuth?: { enrollmentCode: string; tokenSecret: string; ttlSeconds?: number };
 }
 
 interface Acknowledgement {
@@ -217,8 +230,69 @@ export function createSyncServer(options: SyncAppOptions): Server {
     }
 
     try {
-      if (request.method === "GET" && request.url === "/health") {
+      if (request.method === "GET" && (request.url === "/health" || request.url === "/healthz")) {
         send(response, 200, { ok: true });
+        return;
+      }
+
+      if (request.method === "POST" && request.url === "/v1/devices/enroll") {
+        if (limiter && !limiter.allow(request.socket.remoteAddress ?? "unknown", Date.now())) {
+          response.setHeader("retry-after", "60");
+          send(response, 429, { error: { code: "SYNC_RATE_LIMITED" } });
+          return;
+        }
+        if (!options.deviceAuth) {
+          send(response, 503, {
+            error: {
+              code: "DEVICE_AUTH_UNAVAILABLE",
+              message: "Enrollment perangkat belum dikonfigurasi."
+            }
+          });
+          return;
+        }
+
+        const enrollBody = await readBody(request, maxBodyBytes);
+        if (!enrollBody.ok) {
+          request.resume();
+          send(response, 413, { error: { code: "DEVICE_BODY_TOO_LARGE" } });
+          return;
+        }
+
+        let enrollJson: unknown;
+        try {
+          enrollJson = JSON.parse(enrollBody.value);
+        } catch {
+          send(response, 400, { error: { code: "DEVICE_INVALID_BODY" } });
+          return;
+        }
+
+        const parsedEnroll = enrollSchema.safeParse(enrollJson);
+        if (!parsedEnroll.success) {
+          send(response, 400, { error: { code: "DEVICE_INVALID_REQUEST" } });
+          return;
+        }
+        if (
+          !enrollmentCodeMatches(
+            parsedEnroll.data.enrollmentCode,
+            options.deviceAuth.enrollmentCode
+          )
+        ) {
+          send(response, 401, { error: { code: "DEVICE_ENROLLMENT_INVALID" } });
+          return;
+        }
+
+        const deviceId = parsedEnroll.data.deviceId ?? newDeviceId();
+        const issued = signDeviceToken({
+          deviceId,
+          secret: options.deviceAuth.tokenSecret,
+          ttlSeconds: options.deviceAuth.ttlSeconds
+        });
+        send(response, 201, {
+          deviceId: issued.deviceId,
+          token: issued.token,
+          tokenType: "Bearer",
+          expiresAt: issued.expiresAt
+        });
         return;
       }
 
@@ -278,10 +352,17 @@ export function createSyncServer(options: SyncAppOptions): Server {
       }
 
       const authorization = request.headers.authorization ?? "";
-      if (!authorization.startsWith("Bearer ") || !tokenMatches(authorization.slice(7), options.token)) {
+      const bearer = authorization.startsWith("Bearer ") ? authorization.slice(7) : "";
+      const legacyTokenValid = Boolean(bearer) && tokenMatches(bearer, options.token);
+      const devicePayload =
+        bearer && options.deviceAuth
+          ? verifyDeviceToken(bearer, options.deviceAuth.tokenSecret)
+          : null;
+      if (!legacyTokenValid && !devicePayload) {
         send(response, 401, { error: { code: "SYNC_UNAUTHORIZED" } });
         return;
       }
+      const tokenDeviceId = devicePayload?.deviceId ?? null;
 
       const body = await readBody(request, maxBodyBytes);
       if (!body.ok) {
@@ -311,6 +392,10 @@ export function createSyncServer(options: SyncAppOptions): Server {
       }
 
       const batch = parsed.data;
+      if (tokenDeviceId && batch.deviceId !== tokenDeviceId) {
+        send(response, 403, { error: { code: "DEVICE_MISMATCH" } });
+        return;
+      }
       for (const event of batch.events) {
         if (Buffer.byteLength(JSON.stringify(event.payload)) > maxEventBytes) {
           send(response, 400, {

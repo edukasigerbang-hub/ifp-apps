@@ -87,6 +87,7 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0024](decisions/ADR-0024-local-content-review.md) | Review konten lokal (Fase J increment 1) | Accepted (implemented) |
 | [ADR-0025](decisions/ADR-0025-privacy-defaults.md) | Default privasi & retensi (provisional, OD-4) | Accepted (provisional) |
 | [ADR-0026](decisions/ADR-0026-license-policy-defaults.md) | Default kebijakan lisensi (provisional, OD-5) | Accepted (provisional) |
+| [ADR-0027](decisions/ADR-0027-device-auth-openapi.md) | OD-7 increment 1: auth perangkat & OpenAPI | Accepted (reference) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
 

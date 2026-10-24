@@ -3,6 +3,13 @@
 > **DERIVED** dari [LLD §7–§10](../../LLD.md). Semua endpoint masih **KONSEPTUAL**.
 > Auth, request/response schema, rate limit, dan error contract **wajib dirinci sebelum implementasi backend**.
 
+## Server (referensi) — auth & kontrak
+
+- Spesifikasi: [`server/openapi.v1.yaml`](../../server/openapi.v1.yaml); panduan: [`server/README.md`](../../server/README.md).
+- `POST /v1/devices/enroll`: kode enrollment → `deviceId` + token Bearer HMAC (24 jam default).
+- `/v1/sync/events`: menerima token perangkat atau `SYNC_TOKEN` (referensi); `deviceId` batch harus cocok dengan token.
+- `GET /healthz`: health check.
+
 ## Native (Tauri commands) — USULAN
 
 | Command | Arah | Catatan |

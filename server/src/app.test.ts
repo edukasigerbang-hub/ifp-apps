@@ -171,3 +171,76 @@ describe("sync backend", () => {
     expect(second.headers.get("retry-after")).toBe("60");
   });
 });
+
+describe("device enrollment", () => {
+  const deviceAuth = {
+    enrollmentCode: "enroll-test",
+    tokenSecret: "device-secret-test",
+    ttlSeconds: 3600
+  };
+
+  async function enroll(base: string, code: string) {
+    return fetch(`${base}/v1/devices/enroll`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ enrollmentCode: code })
+    });
+  }
+
+  it("menjawab /healthz", async () => {
+    const { base } = await start();
+    const response = await fetch(`${base}/healthz`);
+    expect(response.status).toBe(200);
+  });
+
+  it("menerbitkan token perangkat dan menolak kode salah", async () => {
+    const { base } = await start({ deviceAuth });
+
+    const wrong = await enroll(base, "salah");
+    expect(wrong.status).toBe(401);
+
+    const response = await enroll(base, "enroll-test");
+    expect(response.status).toBe(201);
+    const body = (await response.json()) as {
+      deviceId: string;
+      token: string;
+      tokenType: string;
+      expiresAt: string;
+    };
+    expect(body.deviceId).toMatch(/^[0-9a-f-]{36}$/);
+    expect(body.token).toContain(".");
+    expect(body.tokenType).toBe("Bearer");
+    expect(Number.isNaN(Date.parse(body.expiresAt))).toBe(false);
+  });
+
+  it("menolak enrollment bila belum dikonfigurasi", async () => {
+    const { base } = await start();
+    const response = await enroll(base, "enroll-test");
+    expect(response.status).toBe(503);
+    const body = (await response.json()) as TestBody;
+    expect(body.error?.code).toBe("DEVICE_AUTH_UNAVAILABLE");
+  });
+
+  it("menerima token perangkat dan menolak deviceId yang tidak cocok", async () => {
+    const { base } = await start({ deviceAuth });
+    const enrolled = (await (await enroll(base, "enroll-test")).json()) as {
+      deviceId: string;
+      token: string;
+    };
+
+    const accepted = await post(
+      base,
+      batch({ deviceId: enrolled.deviceId }),
+      enrolled.token
+    );
+    expect(accepted.status).toBe(200);
+
+    const mismatched = await post(base, batch(), enrolled.token);
+    expect(mismatched.status).toBe(403);
+    const body = (await mismatched.json()) as TestBody;
+    expect(body.error?.code).toBe("DEVICE_MISMATCH");
+
+    const legacy = await post(base, batch());
+    expect(legacy.status).toBe(200);
+  });
+});
