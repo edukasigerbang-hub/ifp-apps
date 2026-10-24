@@ -80,5 +80,6 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0017](decisions/ADR-0017-ci-e2e-harness.md) | CI pipeline + harness E2E | Accepted (implemented) |
 | [ADR-0018](decisions/ADR-0018-profile-lifecycle.md) | Rename & hapus profil | Accepted (implemented) |
 | [ADR-0019](decisions/ADR-0019-automated-a11y-audit.md) | Audit aksesibilitas otomatis | Accepted (implemented) |
+| [ADR-0020](decisions/ADR-0020-home-catalog.md) | Beranda & Jelajah Materi berbasis katalog | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).

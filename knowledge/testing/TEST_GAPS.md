@@ -32,6 +32,7 @@
 | Rollback konten | `npm run e2e:rollback` 9 pemeriksaan: v0.1.0 → v0.2.0 → rollback → v0.1.0; status paket active/disabled |
 | Lisensi end-to-end | `npm run e2e:license` 8 pemeriksaan: key per run, impor valid, expired & signature rusak ditolak, lisensi lama tetap aktif |
 | Aktivasi online | `npm run e2e:license-online` 7 pemeriksaan: server referensi nyata, aktivasi + audit server, serial tak dikenal ditolak |
+| Beranda & katalog | `npm run e2e:home` 8 pemeriksaan: sapaan, kartu mapel, cari/filter, buka lesson, kuis, kartu lanjutkan; 6 unit test katalog |
 
 ## Terbuka
 
@@ -49,7 +50,7 @@
 ## Perintah uji
 
 ```bash
-npm test          # 43 test frontend/server + golden 4/4
+npm test          # 49 test frontend/server + golden 4/4
 cargo test        # 44 test (learning/sync/content/license/backup/diagnostics/results/profile/preferences)
 npm run build     # typecheck + build
 npm run server:typecheck
@@ -60,6 +61,7 @@ npm run e2e:journey  # impor paket → eksplorasi → kuis → hasil → outbox
 npm run e2e:rollback # impor v1 → v2 → rollback
 npm run e2e:license # lisensi: valid, expired, signature rusak
 npm run e2e:license-online # aktivasi via server referensi
+npm run e2e:home  # Beranda + katalog + lanjutkan belajar
 npm run a11y      # audit aksesibilitas 8 layar + keyboard
 ```
 

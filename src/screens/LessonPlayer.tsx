@@ -3,6 +3,7 @@ import { ExplorationActivity } from "../components/content/ExplorationActivity";
 import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
+import { consumePlaybackSelection } from "../state/playbackSelection";
 import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
 import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
 import type { Activity } from "../content/schema/activity";
@@ -38,6 +39,7 @@ type ContentLoadState =
       source: "managed" | "bundled";
       summaries: ActivePackageSummary[];
       selected: { packageId: string; version: string } | null;
+      lessonId: string | null;
     }
   | { status: "error"; message: string }
   | { status: "empty" };
@@ -58,12 +60,19 @@ export function LessonPlayer() {
     let cancelled = false;
 
     (async () => {
+      const requested = consumePlaybackSelection();
       try {
         if (canPersistLocally()) {
           const summaries = await listManagedPackages();
-          if (summaries.length > 0) {
-            const first = summaries[0];
-            const managed = await loadManagedPackage(first.packageId, first.version);
+          const pick = requested
+            ? summaries.find(
+                (summary) =>
+                  summary.packageId === requested.packageId &&
+                  (!requested.version || summary.version === requested.version)
+              )
+            : summaries[0];
+          if (pick) {
+            const managed = await loadManagedPackage(pick.packageId, pick.version);
             if (managed) {
               objectUrlsRef.current = managed.objectUrls;
               if (!cancelled) {
@@ -72,7 +81,8 @@ export function LessonPlayer() {
                   contentPackage: managed,
                   source: "managed",
                   summaries,
-                  selected: { packageId: first.packageId, version: first.version }
+                  selected: { packageId: pick.packageId, version: pick.version },
+                  lessonId: requested?.lessonId ?? null
                 });
               }
               return;
@@ -96,13 +106,24 @@ export function LessonPlayer() {
           return;
         }
 
+        const chosen =
+          (requested
+            ? packages.find(
+                (pkg) => pkg.data.manifest.packageId === requested.packageId
+              )
+            : undefined) ?? packages[0];
+
         if (!cancelled) {
           setState({
             status: "ready",
-            contentPackage: packages[0],
+            contentPackage: chosen,
             source: "bundled",
             summaries: [],
-            selected: null
+            selected: null,
+            lessonId:
+              requested && chosen.data.manifest.packageId === requested.packageId
+                ? requested.lessonId ?? null
+                : null
           });
         }
       } catch (error) {
@@ -139,7 +160,8 @@ export function LessonPlayer() {
         contentPackage: managed,
         source: "managed",
         summaries: state.summaries,
-        selected: { packageId: summary.packageId, version: summary.version }
+        selected: { packageId: summary.packageId, version: summary.version },
+        lessonId: null
       });
     } catch (error) {
       setState({
@@ -216,9 +238,10 @@ export function LessonPlayer() {
       )}
 
       <LessonView
-        key={state.selected ? `${state.selected.packageId}@${state.selected.version}` : "bundled"}
+        key={`${state.selected ? `${state.selected.packageId}@${state.selected.version}` : "bundled"}:${state.lessonId ?? "first"}`}
         contentPackage={state.contentPackage}
         source={state.source}
+        lessonId={state.lessonId}
       />
     </div>
   );
@@ -226,12 +249,17 @@ export function LessonPlayer() {
 
 function LessonView({
   contentPackage,
-  source
+  source,
+  lessonId
 }: {
   contentPackage: LoadedContentPackage;
   source: "managed" | "bundled";
+  lessonId: string | null;
 }) {
-  const lesson = contentPackage.data.lessons[0];
+  const lesson =
+    (lessonId
+      ? contentPackage.data.lessons.find((entry) => entry.lessonId === lessonId)
+      : undefined) ?? contentPackage.data.lessons[0];
   const activities = lesson.activityIds
     .map((activityId) => contentPackage.data.activities.find((activity) => activity.activityId === activityId))
     .filter((activity): activity is Activity => activity !== undefined);

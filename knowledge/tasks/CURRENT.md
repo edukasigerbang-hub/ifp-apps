@@ -39,6 +39,7 @@
 | T-027 | E2E lisensi | `npm run e2e:license`: key Ed25519 per run via `IFP_LICENSE_KEYS`; impor valid, expired ditolak, signature rusak ditolak, lisensi lama tetap aktif; 8 pemeriksaan |
 | T-028 | E2E aktivasi online | `npm run e2e:license-online`: server referensi + key sementara; aktivasi serial → native verify → server audit; serial tak dikenal ditolak; 7 pemeriksaan |
 | T-029 | A11y reflow & state dinamis | `npm run a11y`: 8 layar + reflow 320/640 + teks 200% + target sentuh + konfirmasi hapus; 15 pemeriksaan, 0 warning |
+| T-030 | Beranda & Jelajah Materi | Katalog per lesson (bundled + impor, managed menang), filter kelas/mapel/cari, pilih lesson → Player, kartu “Lanjutkan belajar”; 6 unit test + E2E 8 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -68,7 +69,6 @@
 **Fase H License core — DONE (online service referensi juga).**
 
 **Berikutnya:** release blockers (OD-6/OD-7, key produksi, DV perangkat, konten/OD-1). Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
-
 ## Verifikasi sesi ini
 
 | Check | Hasil |
@@ -114,6 +114,8 @@
 | Reflow & teks 200% | **PASS** — 8 layar pada 640/320 px tanpa overflow; teks 200% tanpa overflow |
 | Target sentuh | **PASS** — semua target ≥44 px setelah select preferensi diperbaiki dari 36 px |
 | State dinamis konfirmasi hapus | **PASS** — 0 error/0 warning |
+| Beranda & katalog | **PASS** — katalog 1 materi bawaan; cari/filter; buka lesson; kuis 100; kartu “Lanjutkan belajar” membuka lesson terakhir |
+| Unit test katalog | **PASS** — 6 test baru; total 49/49 |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
