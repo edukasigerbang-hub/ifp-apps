@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "c91dbb6",
+  "commit": "5c733d8",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Set ADMIN_API_TOKEN + deploy Worker, uji transfer/deactivate; B-01/02/04/05/06/08 tetap butuh keputusan/kredensial/hardware"
+  "next_step": "Jalankan checklist B-01/B-04 (kredensial user); B-03 deploy menunggu ADMIN_API_TOKEN; B-05/B-06 tetap eksternal"
 }
