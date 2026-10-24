@@ -1,0 +1,25 @@
+{
+  "lessonId": "sistem-pernapasan",
+  "packageId": "kelas5-ipas-b02-sistem-pernapasan",
+  "title": "Sistem Pernapasan Manusia",
+  "summary": "Mengenal organ pernapasan, pertukaran gas, dan cara menjaga kesehatannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan urutan organ pernapasan.",
+    "Menjelaskan fungsi alveolus.",
+    "Menjaga kesehatan sistem pernapasan."
+  ],
+  "activityIds": [
+    "eksplorasi-sistem-pernapasan",
+    "matching-sistem-pernapasan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/sistem-pernapasan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

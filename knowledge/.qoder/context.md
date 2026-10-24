@@ -6,8 +6,8 @@
 
 - Git `main`, HEAD `085cdae` (sync client). Working tree bersih setelah commit.
 - App shell Tauri 2 + React 19 + TS 7 + Vite 8 + Tailwind 4.
-- Konten: 120 paket draft — Kelas 4 lengkap (56), Kelas 3 lengkap (56), Kelas 5 batch 1–2 (8); outline ketiga kelas tersedia. Pilot kelas 3 dipindahkan ke `scripts/e2e/fixtures/pilot-pecahan-kelas3` (fixture E2E, tidak dibundel).
-- Review teknis: 120/120 VALID, alt text lengkap, packageId unik; `curriculumRefs` kosong menunggu D6. Blocker rilis: 8 item terdaftar (OD-6/OD-7, SMTP, DV, review manusia).
+- Konten: 124 paket draft — Kelas 4 lengkap (56), Kelas 3 lengkap (56), Kelas 5 batch 1–3 (12); outline ketiga kelas tersedia. Pilot kelas 3 dipindahkan ke `scripts/e2e/fixtures/pilot-pecahan-kelas3` (fixture E2E, tidak dibundel).
+- Review teknis: 124/124 VALID, alt text lengkap, packageId unik; `curriculumRefs` kosong menunggu D6. Blocker rilis: 8 item terdaftar (OD-6/OD-7, SMTP, DV, review manusia).
 - Player: eksplorasi + kuis; nilai disimpan ke SQLite native.
 - DB pengguna bersih (0 baris); backup uji di `.tmp-data/backups/db-20261023-225208/`.
 - Sinkronisasi client: outbox native + engine TS + mock server; E2E 1 event acknowledged.

@@ -2118,6 +2118,28 @@ function pancasilaHistoryScene() {
   return px;
 }
 
+function respiratoryScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 400, 120, 46, colors.skin1);
+  rect(px, 375, 160, 50, 40, colors.skin1);
+  rect(px, 300, 190, 200, 330, colors.sand);
+  // trakea dan bronkus
+  rect(px, 392, 180, 16, 130, colors.red);
+  line(px, 400, 300, 340, 340, colors.red, 10);
+  line(px, 400, 300, 460, 340, colors.red, 10);
+  // paru-paru
+  ellipse(px, 345, 370, 60, 85, colors.red);
+  ellipse(px, 455, 370, 60, 85, colors.red);
+  for (const [x, y] of [[320, 350], [340, 400], [370, 320], [480, 350], [460, 400], [430, 320]]) {
+    circle(px, x, y, 10, colors.sky);
+  }
+  // diafragma
+  arc(px, 400, 470, 110, 200, 340, colors.orange, 8);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2226,3 +2248,7 @@ write("content/packages/kelas5-seni-rupa-b01-unsur-prinsip/assets/unsur-prinsip-
 write("content/packages/kelas5-pjok-b01-bola-besar/assets/bola-besar-kelas5.png", bigBallScene());
 write("content/packages/kelas5-pai-b01-quran-tajwid/assets/quran-kelas5.png", quranScene());
 write("content/packages/kelas5-matematika-b02-operasi-pecahan/assets/operasi-pecahan.png", mathFractionBars());
+write("content/packages/kelas5-bahasa-indonesia-b02-teks-narasi/assets/teks-narasi-kelas5.png", narrativeScene());
+write("content/packages/kelas5-ipas-b02-sistem-pernapasan/assets/sistem-pernapasan.png", respiratoryScene());
+write("content/packages/kelas5-pendidikan-pancasila-b02-nilai-pancasila/assets/nilai-pancasila.png", bhinnekaScene());
+write("content/packages/kelas5-matematika-b03-faktor-kelipatan/assets/faktor-kelipatan-kelas5.png", factorVenn());

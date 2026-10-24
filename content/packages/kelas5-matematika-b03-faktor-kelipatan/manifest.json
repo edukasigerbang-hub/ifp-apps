@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b03-faktor-kelipatan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Faktor, Kelipatan, KPK, dan FPB — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/faktor-kelipatan-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8496,
+      "sha256": "559023ded44be103bcaca145339e56cc64ae6c444d6a52de44a2f8ece4760cdd"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

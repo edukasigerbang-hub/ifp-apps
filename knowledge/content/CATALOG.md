@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 120 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 124 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -108,6 +108,10 @@
 | `kelas5-pjok-b01-bola-besar` | 0.1.0 | 5 | pjok | Permainan Bola Besar | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-pai-b01-quran-tajwid` | 0.1.0 | 5 | pai | Al-Qur'an dan Tajwid Dasar | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-matematika-b02-operasi-pecahan` | 0.1.0 | 5 | matematika | Operasi Hitung Pecahan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b02-teks-narasi` | 0.1.0 | 5 | bahasa-indonesia | Teks Narasi: Tokoh dan Alur | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b02-sistem-pernapasan` | 0.1.0 | 5 | ipas | Sistem Pernapasan Manusia | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b02-nilai-pancasila` | 0.1.0 | 5 | pendidikan-pancasila | Nilai Pancasila dalam Kehidupan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b03-faktor-kelipatan` | 0.1.0 | 5 | matematika | Faktor, Kelipatan, KPK, dan FPB | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b01-gerak-lokomotor` | 0.1.0 | 3 | pjok | Gerak Lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b02-gerak-non-lokomotor` | 0.1.0 | 3 | pjok | Gerak Non-Lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b03-gerak-manipulatif` | 0.1.0 | 3 | pjok | Gerak Manipulatif | **DRAFT** | VALID (2 warning) | belum |
@@ -131,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4 dan Kelas 3 lengkap; Kelas 5 batch 1–2 sudah dibuat (8 paket). Lanjutkan **Kelas 5 S1 batch 3** (sisa B02–B04).
+1. Kelas 4 dan Kelas 3 lengkap; Kelas 5 batch 1–3 sudah dibuat (12 paket). Lanjutkan **Kelas 5 S1 batch 4** (sisa B02–B04: 16 paket).
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 92,6 kB (map 120 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 95,8 kB (map 124 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -425,3 +429,17 @@ Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/
 - `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **92,55 kB**.
 - Review teknis ulang: **120/120 VALID**, alt lengkap, packageId unik.
 - Total katalog: **120 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 8).
+
+## Batch 18 Kelas 5 — Semester 1 batch 3 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas5-bahasa-indonesia-b02-teks-narasi` | Teks Narasi: Tokoh dan Alur | eksplorasi + ordering (5 langkah) | `teks-narasi-kelas5.png` |
+| `kelas5-ipas-b02-sistem-pernapasan` | Sistem Pernapasan Manusia | eksplorasi + matching (6 pasangan) | `sistem-pernapasan.png` |
+| `kelas5-pendidikan-pancasila-b02-nilai-pancasila` | Nilai Pancasila dalam Kehidupan | eksplorasi + matching (6 pasangan) | `nilai-pancasila.png` |
+| `kelas5-matematika-b03-faktor-kelipatan` | Faktor, Kelipatan, KPK, dan FPB | eksplorasi + MCQ (4 soal) | `faktor-kelipatan-kelas5.png` |
+
+- Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); pencarian UI terverifikasi.
+- `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **95,76 kB**.
+- Review teknis ulang: **124/124 VALID**, alt lengkap, packageId unik.
+- Total katalog: **124 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 12).

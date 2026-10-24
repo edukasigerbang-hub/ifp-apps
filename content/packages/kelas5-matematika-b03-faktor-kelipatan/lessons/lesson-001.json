@@ -1,0 +1,27 @@
+{
+  "lessonId": "faktor-kelipatan-kelas5",
+  "packageId": "kelas5-matematika-b03-faktor-kelipatan",
+  "title": "Faktor, Kelipatan, KPK, dan FPB",
+  "summary": "Menentukan faktor, kelipatan, KPK, dan FPB dua bilangan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan faktor dan kelipatan.",
+    "Menentukan KPK dua bilangan.",
+    "Menentukan FPB dua bilangan."
+  ],
+  "activityIds": [
+    "eksplorasi-faktor-kelipatan",
+    "kuis-faktor-kelipatan"
+  ],
+  "assessmentRefs": [
+    "kuis-faktor-kelipatan"
+  ],
+  "assetRefs": [
+    "assets/faktor-kelipatan-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram Venn faktor dan kelipatan dua bilangan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

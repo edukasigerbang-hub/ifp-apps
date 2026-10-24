@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b02-sistem-pernapasan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Sistem Pernapasan Manusia — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/sistem-pernapasan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5662,
+      "sha256": "a82c4941d8e69cf817dea524980fb24efa871573ef44503c85a4e5ac24ee17a0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

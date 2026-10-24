@@ -6,10 +6,10 @@
 
 ## Ringkasan
 
-- Total paket: **120**
-- VALID: **120** · INVALID: **0**
-- Alt text lengkap: **120/120**
-- `curriculumRefs` kosong: **120/120** (diharapkan sampai D6 disetujui)
+- Total paket: **124**
+- VALID: **124** · INVALID: **0**
+- Alt text lengkap: **124/124**
+- `curriculumRefs` kosong: **124/124** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
@@ -18,17 +18,17 @@
 |---|---:|
 | 3 | 56 |
 | 4 | 56 |
-| 5 | 8 |
+| 5 | 12 |
 
 ### Sebaran per mapel
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 17 |
-| ipas | 17 |
-| matematika | 18 |
+| bahasa-indonesia | 18 |
+| ipas | 18 |
+| matematika | 19 |
 | pai | 17 |
-| pendidikan-pancasila | 17 |
+| pendidikan-pancasila | 18 |
 | pjok | 17 |
 | seni-rupa | 17 |
 
@@ -153,11 +153,15 @@
 | `kelas4-seni-rupa-b07-apresiasi-karya` | 4 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas4-seni-rupa-b08-pameran-kelas` | 4 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-bahasa-indonesia-b01-teks-deskripsi` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-bahasa-indonesia-b02-teks-narasi` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-ipas-b01-sistem-pencernaan` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-ipas-b02-sistem-pernapasan` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-matematika-b01-bilangan-1000000` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-matematika-b02-operasi-pecahan` | 5 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-matematika-b03-faktor-kelipatan` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-pai-b01-quran-tajwid` | 5 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pendidikan-pancasila-b01-sejarah-pancasila` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-pendidikan-pancasila-b02-nilai-pancasila` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pjok-b01-bola-besar` | 5 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-seni-rupa-b01-unsur-prinsip` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 

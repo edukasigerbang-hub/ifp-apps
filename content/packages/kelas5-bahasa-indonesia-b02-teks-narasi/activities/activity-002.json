@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-teks-narasi-kelas5",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menulis Narasi",
+  "instructions": "Susun langkah menulis teks narasi.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tema",
+        "text": "Menentukan tema"
+      },
+      {
+        "itemId": "langkah-tokoh",
+        "text": "Memilih tokoh"
+      },
+      {
+        "itemId": "langkah-alur",
+        "text": "Menyusun alur"
+      },
+      {
+        "itemId": "langkah-tulis",
+        "text": "Menulis cerita"
+      },
+      {
+        "itemId": "langkah-periksa",
+        "text": "Memeriksa ejaan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tema",
+      "langkah-tokoh",
+      "langkah-alur",
+      "langkah-tulis",
+      "langkah-periksa"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
+  }
+}

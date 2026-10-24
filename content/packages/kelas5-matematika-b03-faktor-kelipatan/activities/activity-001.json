@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-faktor-kelipatan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Faktor dan Kelipatan",
+  "instructions": "Amati diagram, lalu diskusikan faktor dan kelipatan.",
+  "assets": [
+    "assets/faktor-kelipatan-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa faktor dari 12?",
+        "assetPath": "assets/faktor-kelipatan-kelas5.png",
+        "altText": "Diagram Venn faktor dan kelipatan dua bilangan.",
+        "reveal": "1, 2, 3, 4, 6, dan 12.",
+        "hint": "Bilangan yang membagi habis."
+      },
+      {
+        "prompt": "Apa kelipatan 4?",
+        "assetPath": "assets/faktor-kelipatan-kelas5.png",
+        "altText": "Diagram Venn faktor dan kelipatan dua bilangan.",
+        "reveal": "4, 8, 12, 16, ...",
+        "hint": "Kalikan dengan bilangan cacah."
+      },
+      {
+        "prompt": "Berapa KPK 4 dan 6?",
+        "assetPath": "assets/faktor-kelipatan-kelas5.png",
+        "altText": "Diagram Venn faktor dan kelipatan dua bilangan.",
+        "reveal": "12.",
+        "hint": "Kelipatan persekutuan terkecil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram Venn faktor dan kelipatan dua bilangan."
+  }
+}

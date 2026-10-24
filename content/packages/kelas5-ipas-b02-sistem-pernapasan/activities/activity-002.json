@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-sistem-pernapasan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Organ dan Fungsi",
+  "instructions": "Pasangkan setiap organ dengan fungsinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hidung",
+        "left": "Hidung",
+        "right": "Menyaring udara"
+      },
+      {
+        "pairId": "pasangan-tenggorokan",
+        "left": "Tenggorokan",
+        "right": "Saluran udara"
+      },
+      {
+        "pairId": "pasangan-paru",
+        "left": "Paru-paru",
+        "right": "Organ pernapasan"
+      },
+      {
+        "pairId": "pasangan-alveolus",
+        "left": "Alveolus",
+        "right": "Pertukaran gas"
+      },
+      {
+        "pairId": "pasangan-diafragma",
+        "left": "Diafragma",
+        "right": "Membantu bernapas"
+      },
+      {
+        "pairId": "pasangan-oksigen",
+        "left": "Oksigen",
+        "right": "Dibutuhkan tubuh"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+  }
+}

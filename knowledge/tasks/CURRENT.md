@@ -57,6 +57,7 @@
 | T-045 | Konten Kelas 5 batch 1 | Outline S1/S2; 4 paket B01 (Matematika, Bahasa Indonesia, IPAS, Pancasila) VALID + impor PASS; filter Kelas 5 terverifikasi; total 116 paket |
 | T-046 | Review teknis 116 paket + register blocker | Audit aktual: 116/116 VALID, alt lengkap, packageId unik; laporan review + 8 blocker rilis (0 selesai) |
 | T-047 | Konten Kelas 5 batch 2 | 4 paket (Seni Rupa, PJOK, PAI B01 + Matematika B02) VALID + impor PASS; audit 120/120 VALID; total 120 paket |
+| T-048 | Konten Kelas 5 batch 3 | 4 paket (Bahasa, IPAS, Pancasila B02 + Matematika B03) VALID + impor PASS; audit 124/124 VALID; total 124 paket |
 
 ## Status prasyarat materi pembelajaran
 
@@ -66,7 +67,7 @@
 | Validator + test | **DONE** | `npm test` → 11/11 PASS; fixture VALID |
 | Konten Kelas 4 draft | **DONE (draft)** | [Katalog](../content/CATALOG.md): 56 paket Kelas 4 (S1 28 + S2 28), VALID + 2 warning per paket; pilot kelas 3 dipindah ke fixture E2E |
 | Konten Kelas 3 draft | **DONE (draft)** | 56 paket (S1 28 + S2 28), VALID + 2 warning per paket; impor 56/56 PASS |
-| Konten Kelas 5 draft | **BATCH 1–2 (draft)** | 8 paket S1 + outline S1/S2; sisa 48 paket Kelas 5 belum |
+| Konten Kelas 5 draft | **BATCH 1–3 (draft)** | 12 paket S1 + outline S1/S2; sisa 44 paket Kelas 5 belum |
 | Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
 | Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Laporan review](../content/REVIEW_REPORT_2026-10-23.md) — R10 curriculumRefs masih BLOCKING |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
@@ -77,7 +78,7 @@
 
 **T-005b — Review Kelas 4 + sign-off OD-1** (butuh keputusan/reviewer manusia)
 1. Tunjuk reviewer (curriculum + bahasa + aksesibilitas).
-2. Review 120 paket draft dengan [rubrik R1–R12](../content/REVIEW_RUBRIC.md); lembar kerja teknis: [laporan audit](../content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md).
+2. Review 124 paket draft dengan [rubrik R1–R12](../content/REVIEW_RUBRIC.md); lembar kerja teknis: [laporan audit](../content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md).
 3. Product Owner + Curriculum Lead memutuskan D3–D7 → isi `curriculumRefs`.
 4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
 
@@ -87,7 +88,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** **Kelas 5 S1 batch 3** (sisa B02–B04), berdampingan dengan review R1–R12. Blocker rilis terdaftar di [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** **Kelas 5 S1 batch 4** (sisa B02–B04, 16 paket), berdampingan dengan review R1–R12. Blocker rilis terdaftar di [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
