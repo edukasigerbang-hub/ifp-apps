@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "af6022e",
+  "commit": "6ff5e6b",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -42,10 +42,10 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-24T14:18:58+07:00",
-  "last_validation": "cargo 62/62; npm 79/79 (8 file); server 24/24 + typecheck; worker 7/7 + typecheck; web 13/13 + next/OpenNext build + lint; E2E 11/11 skenario (102 pemeriksaan) PASS",
+  "last_updated": "2026-10-24T15:12:22+07:00",
+  "last_validation": "worker gerbangedukasi-api deployed; /healthz 200; enroll invalid 401; sync invalid token 401; CORS *; typecheck PASS; 7/7 worker tests",
   "last_test_status": "pass",
-  "last_command": "TEST",
+  "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
   "open_wave": null,
   "dirty": true,
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Buat project Supabase + deploy Worker (secret); lanjut endpoint lisensi/konten & RBAC admin"
+  "next_step": "Set env/secret produksi Cloudflare untuk web (Supabase + peppers) lalu retry deploy; isi admin_roles; uji enrollment + aktivasi live"
 }

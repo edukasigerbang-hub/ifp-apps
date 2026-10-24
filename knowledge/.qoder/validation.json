@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T14:18:58+07:00",
+  "last_validated_at": "2026-10-24T15:12:22+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -239,6 +239,12 @@
       "command": "cargo test; npm test; server:typecheck; server:test; worker:typecheck; (web) npm test; npm run build; npm run lint; node scripts/e2e/run.mjs <11 scenarios>",
       "result": "PASS",
       "details": "cargo 62; npm 79 (8 files); server 24; worker 7; web 13; next+OpenNext build; lint PASS; E2E: smoke 8, profile-lifecycle 7, learning-journey 11, content-rollback 9, license 10, license-online 7, home-catalog 8, activities 8, backup-restore 9, content-review 9, a11y 16 = 102 checks, 0 fail"
+    },
+    {
+      "name": "worker_api_production_deploy",
+      "command": "npx wrangler secret put (3 secrets); npx wrangler deploy; curl /healthz;/v1/devices/enroll;/v1/sync/events",
+      "result": "PASS",
+      "details": "https://gerbangedukasi-api.edukasigerbang.workers.dev — /healthz 200 {ok:true}; invalid enrollment 401 DEVICE_ENROLLMENT_INVALID; invalid token 401 SYNC_UNAUTHORIZED; CORS * (sementara); version 94c81a2b"
     }
   ],
   "environment": {
