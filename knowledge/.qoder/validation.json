@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T17:19:25+07:00",
+  "last_validated_at": "2026-10-24T17:21:03+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -263,6 +263,12 @@
       "command": "POST enrollment_codes (service role); curl POST /v1/devices/enroll; GET ifp_devices; DELETE test rows",
       "result": "PASS",
       "details": "code 201; enroll 201; response deviceId/token/tokenType/expiresAt; ifp_devices row status=active platform=windows owner_id=null; cleanup OK"
+    },
+    {
+      "name": "e2e_activation_live",
+      "command": "insert licenses test row; curl POST /api/activation twice; GET licenses/ifp_devices/activations/license_audit",
+      "result": "PASS",
+      "details": "license 1fb82320 trial→active; device d787259e active owner=admin; idempotent second call; audit rows 2"
     }
   ],
   "environment": {
