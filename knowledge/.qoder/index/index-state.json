@@ -4,23 +4,23 @@
   "index_mode": "LIGHTWEIGHT_GREP",
   "index_version": 1,
   "schema_version": 1,
-  "indexed_commit": "4ea3484",
-  "generated_at": "2026-10-24T07:04:32+07:00",
-  "files_indexed": 136,
+  "indexed_commit": "d2ae0a0",
+  "generated_at": "2026-10-24T07:16:00+07:00",
+  "files_indexed": 137,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
   "scope": ["src/", "src-tauri/", "scripts/", "server/", "content/", ".github/"],
   "breakdown": {
     "src": 44,
     "src_tauri": 41,
-    "scripts": 15,
+    "scripts": 16,
     "server": 6,
     "content": 29,
     "github": 1,
     "note": "scripts termasuk e2e/{app,cdp,run}.mjs + scenarios/smoke.mjs; src-tauri/gen dan target dikecualikan"
   },
   "validation": {
-    "last_validated_at": "2026-10-24T07:04:32+07:00",
+    "last_validated_at": "2026-10-24T07:16:00+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },

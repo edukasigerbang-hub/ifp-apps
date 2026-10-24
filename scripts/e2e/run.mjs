@@ -31,12 +31,17 @@ console.log(`E2E "${scenarioName}" — ${artifactDir}`);
 
 let handle;
 let page;
+let setup;
 let failed = false;
 try {
-  handle = await launchApp({ artifactDir, extraEnv: scenario.env });
+  setup = await scenario.setup?.({ artifactDir });
+  handle = await launchApp({
+    artifactDir,
+    extraEnv: { ...(scenario.env ?? {}), ...(setup?.env ?? {}) }
+  });
   page = await connect(handle.target.webSocketDebuggerUrl);
   await page.waitFor("document.readyState === 'complete'", { label: "dokumen siap" });
-  await scenario.run({ page, artifactDir, log });
+  await scenario.run({ page, artifactDir, log, setup });
 } catch (error) {
   failed = true;
   console.error(`\nE2E GAGAL: ${error.message}`);
@@ -57,6 +62,14 @@ try {
     page.close();
   }
   await stopApp(handle);
+  if (scenario.teardown) {
+    try {
+      await scenario.teardown(setup);
+    } catch (error) {
+      failed = true;
+      console.error(`Teardown gagal: ${error.message}`);
+    }
+  }
   await writeFile(
     path.join(artifactDir, "result.json"),
     JSON.stringify(
