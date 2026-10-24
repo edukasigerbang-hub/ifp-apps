@@ -30,7 +30,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | OD-4 | Kebijakan retensi, backup, ekspor, penghapusan data siswa | Privacy, DB, UI | **PROPOSED** — [brief privasi/retensi](../decisions/PROPOSAL-OD-4-privacy-retention.md); default sementara diterapkan ([ADR-0025](../decisions/ADR-0025-privacy-defaults.md)); persetujuan legal belum |
 | OD-5 | Grace period subscription offline, transfer perangkat, clock rollback policy | License semantics | **PROPOSED** — [brief kebijakan lisensi](../decisions/PROPOSAL-OD-5-license-policy.md); default sementara diterapkan ([ADR-0026](../decisions/ADR-0026-license-policy-defaults.md)); keputusan komersial belum |
 | OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | **PROPOSED** — [brief identitas rilis & signing](../decisions/PROPOSAL-OD-6-release-identity.md) |
-| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | **PARTIAL** — [proposal](../api/PRODUCTION_BACKEND_PROPOSAL.md); OpenAPI v1 + enrollment/token perangkat di server referensi ([ADR-0027](../decisions/ADR-0027-device-auth-openapi.md)); hosting/RBAC/admin masih terbuka |
+| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | **PARTIAL** — Supabase + Cloudflare dipilih; OpenAPI v1, Worker enrollment/sync, skema RLS ([ADR-0027](../decisions/ADR-0027-device-auth-openapi.md), [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md)); lisensi di Worker, RBAC admin, signing konten belum |
 | OD-8 | Standar "konten lengkap" per mapel/unit | Gerbang rilis konten | OPEN |
 
 ## Gap terverifikasi

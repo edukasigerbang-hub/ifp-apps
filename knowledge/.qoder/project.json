@@ -4,6 +4,12 @@
   "display_name": "Gerbang Edukasi – IFP Apps",
   "platforms": ["windows-11", "android-14"],
   "repository": "https://github.com/edukasigerbang-hub/ifp-apps",
+  "webRepository": "https://github.com/edukasigerbang-hub/web",
+  "hosting": {
+    "database": "supabase",
+    "edge": "cloudflare-workers-pages",
+    "marketing": "https://gerbangedukasi.edukasigerbang.workers.dev/"
+  },
   "identifiers": {
     "windows": "id.gerbangedukasi.ifp",
     "android": "id.gerbangedukasi.ifp",

@@ -1,0 +1,6 @@
+# Salin ke .dev.vars (jangan commit) untuk `wrangler dev`.
+SUPABASE_URL="https://PROJECT.supabase.co"
+SUPABASE_SERVICE_ROLE_KEY="service-role-key"
+DEVICE_TOKEN_SECRET="ganti-dengan-acak"
+ENROLLMENT_CODE_PEPPER="ganti-dengan-acak"
+CORS_ORIGIN="http://localhost:1420"

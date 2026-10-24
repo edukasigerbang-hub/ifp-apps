@@ -29,6 +29,8 @@ jobs:
         run: npm run server:typecheck
       - name: Server tests
         run: npm run server:test
+      - name: Worker typecheck
+        run: npm run worker:typecheck
 
   rust:
     name: Rust tests

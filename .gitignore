@@ -15,6 +15,10 @@ server/data/
 .env.*
 !.env.example
 *.local
+.dev.vars
+workers/api/.wrangler/
+supabase/.branches/
+supabase/.temp/
 
 # OS
 .DS_Store

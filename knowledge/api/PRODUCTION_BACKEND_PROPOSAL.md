@@ -3,6 +3,11 @@
 **Status:** DRAFT untuk keputusan · **Tanggal:** 2026-10-24 · **Pemilik keputusan:** Product Owner + Tech Lead
 **Bukan implementasi.** Dokumen ini merangkum opsi, rekomendasi arsitektur, dan keputusan yang harus diambil sebelum Fase J (publish) dan Fase I (sinkronisasi produksi) dilanjutkan.
 
+> **Keputusan 2026-10-24:** Product Owner memilih **Supabase + Cloudflare Workers/Pages**.
+> Repo [`edukasigerbang-hub/web`](https://github.com/edukasigerbang-hub/web) sudah memiliki skema Supabase (`0001_init.sql`: profiles, licenses, devices, activations, partners, content, orders) dan route aktivasi placeholder.
+> Increment implementasi di repo ini: `supabase/migrations/0002_app_backend.sql` (**aditif**, dijalankan setelah `0001_init.sql` web), Worker `workers/api` (enrollment perangkat + sync), dan situs marketing `https://gerbangedukasi.edukasigerbang.workers.dev/`. Lihat [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md).
+> Endpoint lisensi di Worker masih 501; signing/KMS dan RBAC admin belum.
+
 ## 1. Lingkup
 
 | Area | Wajib untuk rilis? | Catatan |

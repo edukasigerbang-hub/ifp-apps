@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run && tsx scripts/check-fixtures.ts",
-    "ci": "npm test && npm run server:typecheck && npm run server:test && npm run build",
+    "ci": "npm test && npm run server:typecheck && npm run server:test && npm run worker:typecheck && npm run build",
     "e2e": "node scripts/e2e/run.mjs smoke",
     "e2e:profile": "node scripts/e2e/run.mjs profile-lifecycle",
     "e2e:journey": "node scripts/e2e/run.mjs learning-journey",
@@ -28,6 +28,7 @@
     "server:dev": "tsx server/src/index.ts",
     "server:test": "vitest run server/src",
     "server:typecheck": "tsc -p tsconfig.server.json",
+    "worker:typecheck": "tsc -p workers/api/tsconfig.json",
     "license:tool": "node scripts/license-issuer.mjs"
   },
   "dependencies": {
