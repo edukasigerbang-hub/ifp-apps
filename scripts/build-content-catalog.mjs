@@ -46,6 +46,6 @@ entries.sort((left, right) => {
 
 writeFileSync(
   target,
-  `${JSON.stringify({ generatedAt: new Date().toISOString(), entries })}\n`
+  `${JSON.stringify({ entries })}\n`
 );
 console.log(`catalog: ${entries.length} lesson dari ${readdirSync(root).length} paket`);
