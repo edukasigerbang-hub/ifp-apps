@@ -7,8 +7,8 @@
 Repo [`edukasigerbang-hub/web`](https://github.com/edukasigerbang-hub/web) sudah memiliki `supabase/migrations/0001_init.sql` (profiles, licenses, devices, activations, partners, content, orders).
 
 1. Jalankan `0001_init.sql` (web) pada project Supabase.
-2. Jalankan `supabase/migrations/0002_app_backend.sql` (repo ini) — aditif: `enrollment_codes`, `sync_events`, `license_audit`, `admin_roles`, kolom lisensi tambahan.
-3. Worker memakai `public.devices.device_id` (text unik) dan `platform` (`windows|android`).
+2. Jalankan `supabase/migrations/0002_app_backend.sql` lalu `0003_ifp_devices.sql` (repo ini) — aditif: `enrollment_codes`, `sync_events`, `license_audit`, `admin_roles`, kolom lisensi tambahan, dan tabel `ifp_devices`.
+3. Worker memakai `public.ifp_devices.device_id` (text unik) dan `platform` (`windows|android`). Tabel `public.devices` milik project Fanakon tidak dipakai.
 
 ## Menjalankan lokal
 

@@ -72,7 +72,7 @@ describe("cloudflare worker", () => {
           status: 200
         });
       }
-      if (url.includes("/rest/v1/devices")) {
+      if (url.includes("/rest/v1/ifp_devices")) {
         return new Response(null, { status: 201 });
       }
       return new Response("unexpected", { status: 500 });
@@ -115,7 +115,7 @@ describe("cloudflare worker", () => {
         inserts += 1;
         return new Response(inserts === 1 ? JSON.stringify([{ id: 1 }]) : "[]", { status: 201 });
       }
-      if (url.includes("/rest/v1/devices")) {
+      if (url.includes("/rest/v1/ifp_devices")) {
         return new Response(null, { status: 204 });
       }
       return new Response("unexpected", { status: 500 });

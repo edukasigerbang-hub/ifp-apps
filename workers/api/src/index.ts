@@ -82,7 +82,7 @@ async function handleEnroll(request: Request, env: Env, corsOrigin: string): Pro
   }
 
   const deviceId = parsed.data.deviceId ?? crypto.randomUUID();
-  await rest(env, "/devices?on_conflict=device_id", {
+  await rest(env, "/ifp_devices?on_conflict=device_id", {
     method: "POST",
     prefer: "resolution=merge-duplicates,return=minimal",
     body: {
@@ -155,7 +155,7 @@ async function handleSync(request: Request, env: Env, corsOrigin: string): Promi
     acknowledgements.push({ eventId: event.eventId, status, errorCode: null });
   }
 
-  await rest(env, `/devices?device_id=eq.${payload.deviceId}`, {
+  await rest(env, `/ifp_devices?device_id=eq.${payload.deviceId}`, {
     method: "PATCH",
     prefer: "return=minimal",
     body: { last_seen_at: new Date().toISOString() }
