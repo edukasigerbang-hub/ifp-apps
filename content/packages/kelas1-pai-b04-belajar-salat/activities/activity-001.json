@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-belajar-salat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerakan Salat",
+  "instructions": "Amati gambar, lalu tirukan gerakan salat.",
+  "assets": [
+    "assets/belajar-salat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan sebelum salat?",
+        "assetPath": "assets/belajar-salat.png",
+        "altText": "Anak berwudu dan belajar gerakan salat.",
+        "reveal": "Berwudu.",
+        "hint": "Membersihkan diri."
+      },
+      {
+        "prompt": "Apa gerakan pertama salat?",
+        "assetPath": "assets/belajar-salat.png",
+        "altText": "Anak berwudu dan belajar gerakan salat.",
+        "reveal": "Takbiratul ihram.",
+        "hint": "Mengangkat tangan."
+      },
+      {
+        "prompt": "Apa gerakan terakhir?",
+        "assetPath": "assets/belajar-salat.png",
+        "altText": "Anak berwudu dan belajar gerakan salat.",
+        "reveal": "Salam.",
+        "hint": "Menoleh ke kanan dan kiri."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan belajar gerakan salat."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "penjumlahan-10",
+  "packageId": "kelas1-matematika-b02-penjumlahan-10",
+  "title": "Penjumlahan dan Pengurangan sampai 10",
+  "summary": "Menjumlahkan dan mengurangkan bilangan sampai 10.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjumlahkan sampai 10.",
+    "Mengurangkan sampai 10.",
+    "Menyelesaikan soal cerita sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-penjumlahan-10",
+    "matching-penjumlahan-10"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/penjumlahan-10.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

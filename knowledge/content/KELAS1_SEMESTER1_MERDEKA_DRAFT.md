@@ -55,5 +55,7 @@
 
 | Batch | Isi | Status |
 |---|---|---|
-| 1 | B01 enam mapel | **draft dibuat** (2026-10-24) |
-| 2–7 | Sisa B02–B04 (18 paket) | belum |
+| 1 | B01 enam mapel | **draft selesai** (2026-10-24) |
+| 2–7 | Sisa B02–B04 (18 paket) | **draft selesai** (2026-10-24) |
+
+**Semester 1 lengkap: 24 paket draft** (6 mapel × 4 bab).

@@ -1,0 +1,27 @@
+{
+  "lessonId": "aturan-rumah",
+  "packageId": "kelas1-pendidikan-pancasila-b02-aturan-rumah",
+  "title": "Aturan di Rumah",
+  "summary": "Mengenal dan melaksanakan aturan di rumah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan aturan di rumah.",
+    "Menjelaskan manfaat aturan.",
+    "Melaksanakan aturan."
+  ],
+  "activityIds": [
+    "eksplorasi-aturan-rumah",
+    "kuis-aturan-rumah"
+  ],
+  "assessmentRefs": [
+    "kuis-aturan-rumah"
+  ],
+  "assetRefs": [
+    "assets/aturan-rumah.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak merapikan tempat tidur dan membantu di rumah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "keseimbangan",
+  "packageId": "kelas1-pjok-b03-keseimbangan",
+  "title": "Gerak Keseimbangan",
+  "summary": "Mempraktikkan gerak keseimbangan sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan berdiri satu kaki.",
+    "Menjaga keseimbangan.",
+    "Menjaga keselamatan."
+  ],
+  "activityIds": [
+    "eksplorasi-keseimbangan",
+    "ordering-keseimbangan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/keseimbangan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdiri satu kaki dan merentangkan tangan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

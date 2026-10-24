@@ -1,0 +1,25 @@
+{
+  "lessonId": "belajar-salat",
+  "packageId": "kelas1-pai-b04-belajar-salat",
+  "title": "Belajar Salat",
+  "summary": "Mengenal wudu dan gerakan salat sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal wudu.",
+    "Mengenal gerakan salat.",
+    "Membiasakan salat."
+  ],
+  "activityIds": [
+    "eksplorasi-belajar-salat",
+    "ordering-belajar-salat"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/belajar-salat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan belajar gerakan salat."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

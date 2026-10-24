@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kolase",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kolase",
+  "instructions": "Amati gambar, lalu diskusikan bahan kolase.",
+  "assets": [
+    "assets/kolase-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu kolase?",
+        "assetPath": "assets/kolase-kelas1.png",
+        "altText": "Kolase dari daun dan kertas yang ditempel.",
+        "reveal": "Karya dari bahan yang ditempel.",
+        "hint": "Bisa daun atau kertas."
+      },
+      {
+        "prompt": "Bahan apa yang dipakai?",
+        "assetPath": "assets/kolase-kelas1.png",
+        "altText": "Kolase dari daun dan kertas yang ditempel.",
+        "reveal": "Daun kering dan kertas.",
+        "hint": "Pilih yang aman."
+      },
+      {
+        "prompt": "Bagaimana menempel?",
+        "assetPath": "assets/kolase-kelas1.png",
+        "altText": "Kolase dari daun dan kertas yang ditempel.",
+        "reveal": "Oles lem lalu tempel.",
+        "hint": "Tekan pelan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun dan kertas yang ditempel."
+  }
+}

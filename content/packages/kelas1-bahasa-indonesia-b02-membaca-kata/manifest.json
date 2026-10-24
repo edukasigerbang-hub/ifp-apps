@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-bahasa-indonesia-b02-membaca-kata",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Kata Sederhana — Bahasa Indonesia Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/membaca-kata.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6003,
+      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

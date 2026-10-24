@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pendidikan-pancasila-b03-hak-kewajiban-rumah",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Hak dan Kewajiban di Rumah — Pendidikan Pancasila Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/hak-kewajiban-rumah.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5788,
+      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

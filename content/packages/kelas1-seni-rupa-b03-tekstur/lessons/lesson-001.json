@@ -1,0 +1,27 @@
+{
+  "lessonId": "tekstur",
+  "packageId": "kelas1-seni-rupa-b03-tekstur",
+  "title": "Tekstur Sederhana",
+  "summary": "Mengenal tekstur kasar dan halus.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal tekstur kasar.",
+    "Mengenal tekstur halus.",
+    "Menempel bahan bertekstur."
+  ],
+  "activityIds": [
+    "eksplorasi-tekstur",
+    "kuis-tekstur"
+  ],
+  "assessmentRefs": [
+    "kuis-tekstur"
+  ],
+  "assetRefs": [
+    "assets/tekstur-kelas1.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

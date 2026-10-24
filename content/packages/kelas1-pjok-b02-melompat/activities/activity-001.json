@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-melompat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Melompat",
+  "instructions": "Amati gambar, lalu tirukan gerak melompat.",
+  "assets": [
+    "assets/melompat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Melompat menggunakan ...",
+        "assetPath": "assets/melompat.png",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Kaki.",
+        "hint": "Tolakkan kaki."
+      },
+      {
+        "prompt": "Bagaimana mendarat?",
+        "assetPath": "assets/melompat.png",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Lutut ditekuk sedikit.",
+        "hint": "Mendarat pelan."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum melompat?",
+        "assetPath": "assets/melompat.png",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Pemanasan.",
+        "hint": "Agar tidak cedera."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-aturan-rumah",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Aturan di Rumah",
+  "instructions": "Amati gambar, lalu diskusikan aturan di rumah.",
+  "assets": [
+    "assets/aturan-rumah.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa contoh aturan di rumah?",
+        "assetPath": "assets/aturan-rumah.png",
+        "altText": "Anak merapikan tempat tidur dan membantu di rumah.",
+        "reveal": "Merapikan tempat tidur.",
+        "hint": "Bangun pagi."
+      },
+      {
+        "prompt": "Mengapa aturan penting?",
+        "assetPath": "assets/aturan-rumah.png",
+        "altText": "Anak merapikan tempat tidur dan membantu di rumah.",
+        "reveal": "Agar rumah tertib dan nyaman.",
+        "hint": "Semua senang."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum pergi?",
+        "assetPath": "assets/aturan-rumah.png",
+        "altText": "Anak merapikan tempat tidur dan membantu di rumah.",
+        "reveal": "Meminta izin orang tua.",
+        "hint": "Beri tahu tujuan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak merapikan tempat tidur dan membantu di rumah."
+  }
+}

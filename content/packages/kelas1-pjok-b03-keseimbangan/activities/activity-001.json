@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-keseimbangan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Keseimbangan",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/keseimbangan.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana berdiri satu kaki?",
+        "assetPath": "assets/keseimbangan.png",
+        "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
+        "reveal": "Angkat satu kaki.",
+        "hint": "Pandangan ke depan."
+      },
+      {
+        "prompt": "Apa yang membantu keseimbangan?",
+        "assetPath": "assets/keseimbangan.png",
+        "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
+        "reveal": "Merentangkan tangan.",
+        "hint": "Tubuh tetap tegak."
+      },
+      {
+        "prompt": "Berapa lama berlatih?",
+        "assetPath": "assets/keseimbangan.png",
+        "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
+        "reveal": "Hitung sampai lima.",
+        "hint": "Lalu ganti kaki."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdiri satu kaki dan merentangkan tangan."
+  }
+}

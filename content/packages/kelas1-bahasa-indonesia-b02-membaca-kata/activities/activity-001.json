@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-membaca-kata",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Bersama",
+  "instructions": "Amati gambar, lalu baca kata bersama-sama.",
+  "assets": [
+    "assets/membaca-kata.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Baca kata bu-ku.",
+        "assetPath": "assets/membaca-kata.png",
+        "altText": "Anak membaca kata sederhana di sudut baca.",
+        "reveal": "buku.",
+        "hint": "Gabungkan suku katanya."
+      },
+      {
+        "prompt": "Baca kata ma-ta.",
+        "assetPath": "assets/membaca-kata.png",
+        "altText": "Anak membaca kata sederhana di sudut baca.",
+        "reveal": "mata.",
+        "hint": "Ulangi pelan-pelan."
+      },
+      {
+        "prompt": "Berapa suku kata pada kata buku?",
+        "assetPath": "assets/membaca-kata.png",
+        "altText": "Anak membaca kata sederhana di sudut baca.",
+        "reveal": "Dua.",
+        "hint": "bu dan ku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kata sederhana di sudut baca."
+  }
+}

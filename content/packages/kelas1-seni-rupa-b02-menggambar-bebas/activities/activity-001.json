@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menggambar-bebas",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gambar",
+  "instructions": "Amati gambar, lalu diskusikan alat dan langkahnya.",
+  "assets": [
+    "assets/menggambar-bebas.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Alat apa yang dipakai?",
+        "assetPath": "assets/menggambar-bebas.png",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
+        "reveal": "Pensil, krayon, dan kertas.",
+        "hint": "Pilih yang aman."
+      },
+      {
+        "prompt": "Apa yang digambar?",
+        "assetPath": "assets/menggambar-bebas.png",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
+        "reveal": "Bebas sesuai ide.",
+        "hint": "Bisa rumah atau hewan."
+      },
+      {
+        "prompt": "Apa langkah terakhir?",
+        "assetPath": "assets/menggambar-bebas.png",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
+        "reveal": "Mewarnai.",
+        "hint": "Rapikan hasil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  }
+}

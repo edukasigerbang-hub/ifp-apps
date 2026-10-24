@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pengukuran-kelas1",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Ukur",
+  "instructions": "Amati gambar, lalu diskusikan alat ukurnya.",
+  "assets": [
+    "assets/pengukuran-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Alat ukur panjang sederhana adalah ...",
+        "assetPath": "assets/pengukuran-kelas1.png",
+        "altText": "Jam, penggaris, dan timbangan sederhana.",
+        "reveal": "Jengkal.",
+        "hint": "Dari ibu jari ke jari kelingking."
+      },
+      {
+        "prompt": "Alat ukur berat adalah ...",
+        "assetPath": "assets/pengukuran-kelas1.png",
+        "altText": "Jam, penggaris, dan timbangan sederhana.",
+        "reveal": "Timbangan.",
+        "hint": "Untuk mengetahui berat."
+      },
+      {
+        "prompt": "Alat penunjuk waktu adalah ...",
+        "assetPath": "assets/pengukuran-kelas1.png",
+        "altText": "Jam, penggaris, dan timbangan sederhana.",
+        "reveal": "Jam.",
+        "hint": "Menunjukkan pukul berapa."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam, penggaris, dan timbangan sederhana."
+  }
+}

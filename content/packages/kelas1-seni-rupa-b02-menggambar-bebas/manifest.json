@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-seni-rupa-b02-menggambar-bebas",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menggambar Bebas — Seni Rupa Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/menggambar-bebas.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5490,
+      "sha256": "c85e2d499ba466cc1ffbbcc143dca3928ad4e1f52dc6d4af2b85268cbe5c7635"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

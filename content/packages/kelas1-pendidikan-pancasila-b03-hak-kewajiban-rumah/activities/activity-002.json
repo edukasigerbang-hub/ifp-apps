@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-hak-kewajiban-rumah",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Hak dan Kewajiban",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hak",
+        "left": "Hak",
+        "right": "Yang diterima"
+      },
+      {
+        "pairId": "pasangan-kewajiban",
+        "left": "Kewajiban",
+        "right": "Yang dilakukan"
+      },
+      {
+        "pairId": "pasangan-kasih",
+        "left": "Kasih sayang",
+        "right": "Hak anak"
+      },
+      {
+        "pairId": "pasangan-bantu",
+        "left": "Membantu orang tua",
+        "right": "Kewajiban anak"
+      },
+      {
+        "pairId": "pasangan-belajar",
+        "left": "Belajar",
+        "right": "Kewajiban"
+      },
+      {
+        "pairId": "pasangan-makan",
+        "left": "Makanan",
+        "right": "Hak anak"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan membantu orang tua di rumah."
+  }
+}

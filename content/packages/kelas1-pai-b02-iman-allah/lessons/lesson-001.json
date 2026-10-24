@@ -1,0 +1,25 @@
+{
+  "lessonId": "iman-allah",
+  "packageId": "kelas1-pai-b02-iman-allah",
+  "title": "Iman kepada Allah",
+  "summary": "Mengenal iman kepada Allah dan wujudnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti iman.",
+    "Menyebutkan sifat Allah.",
+    "Menunjukkan wujud iman."
+  ],
+  "activityIds": [
+    "eksplorasi-iman-allah",
+    "matching-iman-allah"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/iman-allah-kelas1.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada Allah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

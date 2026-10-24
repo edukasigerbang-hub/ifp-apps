@@ -1,0 +1,25 @@
+{
+  "lessonId": "menulis-kata",
+  "packageId": "kelas1-bahasa-indonesia-b04-menulis-kata",
+  "title": "Menulis Huruf dan Kata",
+  "summary": "Menulis huruf, suku kata, dan kata sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menulis huruf dengan rapi.",
+    "Menulis suku kata.",
+    "Menulis kata sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-kata",
+    "ordering-menulis-kata"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/menulis-kata.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis huruf dan kata di buku."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

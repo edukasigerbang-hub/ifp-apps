@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 230 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 248 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -135,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. **Fase B dan Fase C lengkap** (Kelas 3–6). Fase A dimulai: Kelas 1 batch 1 (6 paket). Lanjutkan **Kelas 1 S1 batch 2**.
+1. **Fase B dan Fase C lengkap** (Kelas 3–6). **Kelas 1 Semester 1 lengkap** (24 paket). Lanjutkan **Kelas 1 Semester 2**.
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 177,0 kB (map 230 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 190,7 kB (map 248 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -598,6 +598,24 @@ Menambahkan 56 paket Kelas 6 (28 S1 + 28 S2) untuk 7 mapel.
 | `kelas1-seni-rupa-b01-garis-warna` | Garis dan Warna | eksplorasi + matching (6 pasangan) | `garis-warna-kelas1.png` |
 | `kelas1-pjok-b01-jalan-lari` | Gerak Jalan dan Lari | eksplorasi + matching (6 pasangan) | `jalan-lari.png` |
 | `kelas1-pai-b01-huruf-hijaiyah` | Mengenal Huruf Hijaiyah | eksplorasi + matching (6 pasangan) | `huruf-hijaiyah.png` |
+| `kelas1-bahasa-indonesia-b02-membaca-kata` | 0.1.0 | 1 | bahasa-indonesia | Membaca Kata Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-bahasa-indonesia-b03-menyimak-cerita` | 0.1.0 | 1 | bahasa-indonesia | Menyimak Cerita | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-bahasa-indonesia-b04-menulis-kata` | 0.1.0 | 1 | bahasa-indonesia | Menulis Huruf dan Kata | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b02-penjumlahan-10` | 0.1.0 | 1 | matematika | Penjumlahan dan Pengurangan sampai 10 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b03-bentuk-pola` | 0.1.0 | 1 | matematika | Bentuk dan Pola | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b04-pengukuran` | 0.1.0 | 1 | matematika | Pengukuran Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b02-iman-allah` | 0.1.0 | 1 | pai | Iman kepada Allah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b03-akhlak` | 0.1.0 | 1 | pai | Akhlak Terpuji | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b04-belajar-salat` | 0.1.0 | 1 | pai | Belajar Salat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b02-aturan-rumah` | 0.1.0 | 1 | pendidikan-pancasila | Aturan di Rumah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b03-hak-kewajiban-rumah` | 0.1.0 | 1 | pendidikan-pancasila | Hak dan Kewajiban di Rumah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b04-kebersamaan` | 0.1.0 | 1 | pendidikan-pancasila | Kebersamaan di Sekolah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b02-melompat` | 0.1.0 | 1 | pjok | Gerak Melompat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b03-keseimbangan` | 0.1.0 | 1 | pjok | Gerak Keseimbangan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b04-kebersihan` | 0.1.0 | 1 | pjok | Kebersihan Diri | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b02-menggambar-bebas` | 0.1.0 | 1 | seni-rupa | Menggambar Bebas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b03-tekstur` | 0.1.0 | 1 | seni-rupa | Tekstur Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b04-kolase` | 0.1.0 | 1 | seni-rupa | Kolase Sederhana | **DRAFT** | VALID (2 warning) | belum |
 
 - Outline baru: [OUTLINE_KELAS1_MERDEKA_DRAFT.md](OUTLINE_KELAS1_MERDEKA_DRAFT.md), [S1](KELAS1_SEMESTER1_MERDEKA_DRAFT.md), [S2](KELAS1_SEMESTER2_MERDEKA_DRAFT.md).
 - Fase A memakai 6 mapel inti (tanpa IPAS).
@@ -605,3 +623,14 @@ Menambahkan 56 paket Kelas 6 (28 S1 + 28 S2) untuk 7 mapel.
 - `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **176,95 kB**.
 - Audit ulang: **230/230 VALID**, alt lengkap, packageId unik.
 - Total katalog: **230 paket** (Fase B/C 224 + Kelas 1 6).
+
+## Batch 23 Kelas 1 — Semester 1 lengkap (2026-10-24)
+
+Menambahkan 18 paket sisa Semester 1 (B02–B04 untuk 6 mapel).
+
+- Validasi: **VALID** 18/18; impor seluruh Kelas 1 **24/24 PASS** (5 file/paket, `active`).
+- UI: pencarian “Bilangan 1” menemukan materi; screenshot terverifikasi.
+- Audit ulang: **248/248 VALID**, alt lengkap, packageId unik.
+- `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **190,74 kB**.
+- **Kelas 1 Semester 1 lengkap: 24 paket draft.**
+- Total katalog: **248 paket**.

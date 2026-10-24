@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-penjumlahan-10",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menghitung Bersama",
+  "instructions": "Amati gambar, lalu hitung bersama-sama.",
+  "assets": [
+    "assets/penjumlahan-10.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 2 + 3?",
+        "assetPath": "assets/penjumlahan-10.png",
+        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "reveal": "5.",
+        "hint": "Hitung 2 lalu tambah 3."
+      },
+      {
+        "prompt": "Berapa 5 − 2?",
+        "assetPath": "assets/penjumlahan-10.png",
+        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "reveal": "3.",
+        "hint": "Ambil 2 dari 5."
+      },
+      {
+        "prompt": "Bagaimana menghitung dengan jari?",
+        "assetPath": "assets/penjumlahan-10.png",
+        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "reveal": "Buka jari sesuai bilangan.",
+        "hint": "Hitung satu per satu."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+  }
+}

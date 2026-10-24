@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pjok-b03-keseimbangan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gerak Keseimbangan — PJOK Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/keseimbangan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9721,
+      "sha256": "001c405ce7b10069eddc4f885cea402f96de958c020be5b27589789b14574b15"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

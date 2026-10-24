@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menggambar-bebas",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menggambar",
+  "instructions": "Susun langkah menggambar.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-alat",
+        "text": "Menyiapkan alat"
+      },
+      {
+        "itemId": "langkah-tema",
+        "text": "Memilih tema"
+      },
+      {
+        "itemId": "langkah-sketsa",
+        "text": "Membuat sketsa"
+      },
+      {
+        "itemId": "langkah-warna",
+        "text": "Mewarnai"
+      },
+      {
+        "itemId": "langkah-rapi",
+        "text": "Merapikan alat"
+      }
+    ],
+    "correctOrder": [
+      "langkah-alat",
+      "langkah-tema",
+      "langkah-sketsa",
+      "langkah-warna",
+      "langkah-rapi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  }
+}

@@ -6,17 +6,17 @@
 
 ## Ringkasan
 
-- Total paket: **230**
-- VALID: **230** · INVALID: **0**
-- Alt text lengkap: **230/230**
-- `curriculumRefs` kosong: **230/230** (diharapkan sampai D6 disetujui)
+- Total paket: **248**
+- VALID: **248** · INVALID: **0**
+- Alt text lengkap: **248/248**
+- `curriculumRefs` kosong: **248/248** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
 
 | Kelas | Paket |
 |---|---:|
-| 1 | 6 |
+| 1 | 24 |
 | 3 | 56 |
 | 4 | 56 |
 | 5 | 56 |
@@ -26,13 +26,13 @@
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 33 |
+| bahasa-indonesia | 36 |
 | ipas | 32 |
-| matematika | 33 |
-| pai | 33 |
-| pendidikan-pancasila | 33 |
-| pjok | 33 |
-| seni-rupa | 33 |
+| matematika | 36 |
+| pai | 36 |
+| pendidikan-pancasila | 36 |
+| pjok | 36 |
+| seni-rupa | 36 |
 
 ## Temuan yang perlu ditindaklanjuti
 
@@ -43,11 +43,29 @@
 | packageId | Kelas | Mapel | Status | Issue | Warning | Aktivitas | Alt | refs kosong |
 |---|---:|---|---|---:|---:|---|---|---|
 | `kelas1-bahasa-indonesia-b01-huruf-suku-kata` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-bahasa-indonesia-b02-membaca-kata` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-bahasa-indonesia-b03-menyimak-cerita` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-bahasa-indonesia-b04-menulis-kata` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-matematika-b01-bilangan-1-10` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-matematika-b02-penjumlahan-10` | 1 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-matematika-b03-bentuk-pola` | 1 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-matematika-b04-pengukuran` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-pai-b01-huruf-hijaiyah` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pai-b02-iman-allah` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pai-b03-akhlak` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pai-b04-belajar-salat` | 1 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-pendidikan-pancasila-b01-simbol-pancasila` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pendidikan-pancasila-b02-aturan-rumah` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-pendidikan-pancasila-b03-hak-kewajiban-rumah` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pendidikan-pancasila-b04-kebersamaan` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-pjok-b01-jalan-lari` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pjok-b02-melompat` | 1 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-pjok-b03-keseimbangan` | 1 | pjok | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-pjok-b04-kebersihan` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-seni-rupa-b01-garis-warna` | 1 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-seni-rupa-b02-menggambar-bebas` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-seni-rupa-b03-tekstur` | 1 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-seni-rupa-b04-kolase` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas3-bahasa-indonesia-b01-teks-deskripsi` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas3-bahasa-indonesia-b02-kalimat-efektif` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas3-bahasa-indonesia-b03-ide-pokok` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |

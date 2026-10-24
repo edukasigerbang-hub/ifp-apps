@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pendidikan-pancasila-b04-kebersamaan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kebersamaan di Sekolah — Pendidikan Pancasila Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/kebersamaan-kelas1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6602,
+      "sha256": "ae584cb2aab112dc3b5e60008e6a705bf7b99f4b3558eea964857494765f6948"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menulis-kata",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Belajar Menulis",
+  "instructions": "Susun langkah belajar menulis.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pensil",
+        "text": "Memegang pensil"
+      },
+      {
+        "itemId": "langkah-huruf",
+        "text": "Menulis huruf"
+      },
+      {
+        "itemId": "langkah-suku",
+        "text": "Menulis suku kata"
+      },
+      {
+        "itemId": "langkah-kata",
+        "text": "Menulis kata"
+      },
+      {
+        "itemId": "langkah-periksa",
+        "text": "Memeriksa tulisan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pensil",
+      "langkah-huruf",
+      "langkah-suku",
+      "langkah-kata",
+      "langkah-periksa"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis huruf dan kata di buku."
+  }
+}

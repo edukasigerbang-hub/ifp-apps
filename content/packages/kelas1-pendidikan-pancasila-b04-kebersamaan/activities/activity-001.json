@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebersamaan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebersamaan",
+  "instructions": "Amati gambar, lalu diskusikan kegiatan bersama.",
+  "assets": [
+    "assets/kebersamaan-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu kebersamaan?",
+        "assetPath": "assets/kebersamaan-kelas1.png",
+        "altText": "Siswa belajar dan bermain bersama di sekolah.",
+        "reveal": "Melakukan sesuatu bersama-sama.",
+        "hint": "Saling membantu."
+      },
+      {
+        "prompt": "Contoh kebersamaan di sekolah?",
+        "assetPath": "assets/kebersamaan-kelas1.png",
+        "altText": "Siswa belajar dan bermain bersama di sekolah.",
+        "reveal": "Belajar dan bermain bersama.",
+        "hint": "Berbagi alat tulis."
+      },
+      {
+        "prompt": "Bagaimana menjaga kebersamaan?",
+        "assetPath": "assets/kebersamaan-kelas1.png",
+        "altText": "Siswa belajar dan bermain bersama di sekolah.",
+        "reveal": "Tidak bertengkar.",
+        "hint": "Menghargai teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa belajar dan bermain bersama di sekolah."
+  }
+}

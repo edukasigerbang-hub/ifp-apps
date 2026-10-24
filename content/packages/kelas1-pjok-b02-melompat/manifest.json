@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pjok-b02-melompat",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gerak Melompat — PJOK Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/melompat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9314,
+      "sha256": "378bb297592a69945aa4d07585f1af520baf28d2e102fdded37533151951180a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "menggambar-bebas",
+  "packageId": "kelas1-seni-rupa-b02-menggambar-bebas",
+  "title": "Menggambar Bebas",
+  "summary": "Menggambar bebas dengan alat sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyiapkan alat menggambar.",
+    "Menggambar sesuai ide.",
+    "Mewarnai gambar."
+  ],
+  "activityIds": [
+    "eksplorasi-menggambar-bebas",
+    "ordering-menggambar-bebas"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/menggambar-bebas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

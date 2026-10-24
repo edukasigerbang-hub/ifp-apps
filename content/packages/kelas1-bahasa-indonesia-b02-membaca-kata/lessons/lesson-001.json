@@ -1,0 +1,27 @@
+{
+  "lessonId": "membaca-kata",
+  "packageId": "kelas1-bahasa-indonesia-b02-membaca-kata",
+  "title": "Membaca Kata Sederhana",
+  "summary": "Membaca kata sederhana dari gabungan suku kata.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca suku kata.",
+    "Menggabungkan suku kata menjadi kata.",
+    "Membaca kata dengan lancar."
+  ],
+  "activityIds": [
+    "eksplorasi-membaca-kata",
+    "kuis-membaca-kata"
+  ],
+  "assessmentRefs": [
+    "kuis-membaca-kata"
+  ],
+  "assetRefs": [
+    "assets/membaca-kata.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kata sederhana di sudut baca."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-aturan-rumah",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Aturan di Rumah",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-contoh",
+        "prompt": "Contoh aturan di rumah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-rapi",
+            "text": "Merapikan tempat tidur"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari di dalam rumah"
+          },
+          {
+            "optionId": "opsi-teriak",
+            "text": "Berteriak"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang sampah sembarangan"
+          }
+        ],
+        "correctResponse": "opsi-rapi"
+      },
+      {
+        "questionId": "soal-manfaat",
+        "prompt": "Manfaat aturan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tertib",
+            "text": "Rumah tertib"
+          },
+          {
+            "optionId": "opsi-ribut",
+            "text": "Rumah ribut"
+          },
+          {
+            "optionId": "opsi-kotor",
+            "text": "Rumah kotor"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Semua marah"
+          }
+        ],
+        "correctResponse": "opsi-tertib"
+      },
+      {
+        "questionId": "soal-izin",
+        "prompt": "Sebelum pergi, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-izin",
+            "text": "Meminta izin"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam saja"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Langsung pergi"
+          },
+          {
+            "optionId": "opsi-sembunyi",
+            "text": "Bersembunyi"
+          }
+        ],
+        "correctResponse": "opsi-izin"
+      },
+      {
+        "questionId": "soal-nasihat",
+        "prompt": "Saat dinasihati orang tua, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dengar",
+            "text": "Mendengarkan"
+          },
+          {
+            "optionId": "opsi-bantah",
+            "text": "Membantah"
+          },
+          {
+            "optionId": "opsi-tutup",
+            "text": "Menutup telinga"
+          },
+          {
+            "optionId": "opsi-pergi",
+            "text": "Pergi"
+          }
+        ],
+        "correctResponse": "opsi-dengar"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak merapikan tempat tidur dan membantu di rumah."
+  }
+}

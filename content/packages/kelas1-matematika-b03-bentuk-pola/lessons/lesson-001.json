@@ -1,0 +1,25 @@
+{
+  "lessonId": "bentuk-pola",
+  "packageId": "kelas1-matematika-b03-bentuk-pola",
+  "title": "Bentuk dan Pola",
+  "summary": "Mengenal bentuk datar dan melanjutkan pola.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bentuk datar.",
+    "Mengenal pola berulang.",
+    "Melanjutkan pola."
+  ],
+  "activityIds": [
+    "eksplorasi-bentuk-pola",
+    "matching-bentuk-pola"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/bentuk-pola.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bangun datar lingkaran, persegi, dan segitiga."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebersihan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Bersih",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan bersih.",
+  "assets": [
+    "assets/kebersihan-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kapan mandi?",
+        "assetPath": "assets/kebersihan-kelas1.png",
+        "altText": "Anak mandi, sikat gigi, dan mencuci tangan.",
+        "reveal": "Pagi dan sore.",
+        "hint": "Gunakan sabun."
+      },
+      {
+        "prompt": "Kapan sikat gigi?",
+        "assetPath": "assets/kebersihan-kelas1.png",
+        "altText": "Anak mandi, sikat gigi, dan mencuci tangan.",
+        "reveal": "Pagi dan sebelum tidur.",
+        "hint": "Gosok dengan benar."
+      },
+      {
+        "prompt": "Kapan cuci tangan?",
+        "assetPath": "assets/kebersihan-kelas1.png",
+        "altText": "Anak mandi, sikat gigi, dan mencuci tangan.",
+        "reveal": "Sebelum makan.",
+        "hint": "Setelah bermain."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mandi, sikat gigi, dan mencuci tangan."
+  }
+}

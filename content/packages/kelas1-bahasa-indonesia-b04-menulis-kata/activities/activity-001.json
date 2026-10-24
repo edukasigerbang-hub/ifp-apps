@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menulis-kata",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Menulis",
+  "instructions": "Amati gambar, lalu tirukan menulis bersama.",
+  "assets": [
+    "assets/menulis-kata.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana memegang pensil?",
+        "assetPath": "assets/menulis-kata.png",
+        "altText": "Anak menulis huruf dan kata di buku.",
+        "reveal": "Dengan tiga jari.",
+        "hint": "Jangan terlalu kuat."
+      },
+      {
+        "prompt": "Apa yang ditulis pertama?",
+        "assetPath": "assets/menulis-kata.png",
+        "altText": "Anak menulis huruf dan kata di buku.",
+        "reveal": "Huruf.",
+        "hint": "Mulai dari huruf mudah."
+      },
+      {
+        "prompt": "Apa yang ditulis setelah suku kata?",
+        "assetPath": "assets/menulis-kata.png",
+        "altText": "Anak menulis huruf dan kata di buku.",
+        "reveal": "Kata.",
+        "hint": "Gabungkan suku kata."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis huruf dan kata di buku."
+  }
+}
