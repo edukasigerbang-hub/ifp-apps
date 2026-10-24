@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T19:04:26+07:00",
+  "last_validated_at": "2026-10-24T19:09:34+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -335,6 +335,12 @@
       "command": "content:validate x3; content_import_package; npm run build; npm test",
       "result": "PASS",
       "details": "seni-b03, pjok-b03, pai-b03 VALID; import 5 files each active; build PASS (chunk >500 kB warning)"
+    },
+    {
+      "name": "pilot_moved_to_fixture",
+      "command": "git mv; update E2E paths + Rust test; npm test; cargo test; E2E activities/journey/rollback/review",
+      "result": "PASS",
+      "details": "pilot removed from content/packages; fixture path works; 4 E2E PASS; catalog 25 Kelas 4 packages"
     }
   ],
   "environment": {
