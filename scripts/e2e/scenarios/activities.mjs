@@ -137,6 +137,45 @@ async function buildPackage(artifactDir) {
     runtimeCapabilities: ["touch", "keyboard"]
   };
 
+  const matching = {
+    activityId: "aktivitas-mencocokkan",
+    type: "matching",
+    schemaVersion: "1.0.0",
+    title: "Mencocokkan Pecahan",
+    instructions: "Pasangkan setiap pecahan dengan namanya.",
+    assets: [],
+    interactionConfig: {
+      pairs: [
+        { pairId: "pasangan-setengah", left: "1/2", right: "Setengah" },
+        { pairId: "pasangan-seperempat", left: "1/4", right: "Seperempat" },
+        { pairId: "pasangan-sepertiga", left: "1/3", right: "Sepertiga" }
+      ]
+    },
+    completionPolicy: { type: "score-threshold", threshold: 100 },
+    feedbackPolicy: { mode: "after-attempt", allowRetry: true, showCorrectAnswer: false },
+    runtimeCapabilities: ["touch", "keyboard"]
+  };
+
+  const ordering = {
+    activityId: "aktivitas-mengurutkan",
+    type: "ordering",
+    schemaVersion: "1.0.0",
+    title: "Mengurutkan Angka",
+    instructions: "Urutkan angka dari terkecil ke terbesar.",
+    assets: [],
+    interactionConfig: {
+      items: [
+        { itemId: "angka-3", text: "Angka 3" },
+        { itemId: "angka-1", text: "Angka 1" },
+        { itemId: "angka-2", text: "Angka 2" }
+      ],
+      correctOrder: ["angka-1", "angka-2", "angka-3"]
+    },
+    completionPolicy: { type: "score-threshold", threshold: 100 },
+    feedbackPolicy: { mode: "after-attempt", allowRetry: true, showCorrectAnswer: false },
+    runtimeCapabilities: ["touch", "keyboard"]
+  };
+
   await writeFile(
     path.join(activitiesDir, "activity-tf.json"),
     `${JSON.stringify(trueFalse, null, 2)}\n`,
@@ -150,6 +189,16 @@ async function buildPackage(artifactDir) {
   await writeFile(
     path.join(activitiesDir, "activity-mg.json"),
     `${JSON.stringify(multiAnswer, null, 2)}\n`,
+    "utf8"
+  );
+  await writeFile(
+    path.join(activitiesDir, "activity-matching.json"),
+    `${JSON.stringify(matching, null, 2)}\n`,
+    "utf8"
+  );
+  await writeFile(
+    path.join(activitiesDir, "activity-ordering.json"),
+    `${JSON.stringify(ordering, null, 2)}\n`,
     "utf8"
   );
 
@@ -166,7 +215,9 @@ async function buildPackage(artifactDir) {
   lesson.activityIds = [
     trueFalse.activityId,
     shortAnswer.activityId,
-    multiAnswer.activityId
+    multiAnswer.activityId,
+    matching.activityId,
+    ordering.activityId
   ];
   lesson.assessmentRefs = [
     trueFalse.activityId,
@@ -218,6 +269,35 @@ async function chooseCheckbox(page, name, value) {
       return input.checked;
     })()
   `);
+}
+
+async function choosePair(page, left, pairId) {
+  return page.evaluate(`
+    (() => {
+      const select = document.querySelector('select[aria-label=${JSON.stringify(`Pasangkan ${left}`)}]');
+      if (!select) return false;
+      const setter = Object.getOwnPropertyDescriptor(
+        window.HTMLSelectElement.prototype,
+        "value"
+      ).set;
+      setter.call(select, ${JSON.stringify(pairId)});
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      return select.value === ${JSON.stringify(pairId)};
+    })()
+  `);
+}
+
+async function clickByAriaLabel(page, label) {
+  const result = await page.evaluate(`
+    (() => {
+      const button = document.querySelector('button[aria-label=${JSON.stringify(label)}]');
+      if (!button) return "missing";
+      if (button.disabled) return "disabled";
+      button.click();
+      return "clicked";
+    })()
+  `);
+  assert(result === "clicked", `Tombol "${label}" tidak dapat diklik (${result}).`);
 }
 
 export async function run({ page, artifactDir, log }) {
@@ -309,6 +389,43 @@ export async function run({ page, artifactDir, log }) {
   });
   log("Aktivitas pilihan ganda multi-jawaban dinilai 100 dan tersimpan.");
 
+  await clickButton(page, "Mencocokkan Pecahan");
+  await page.waitFor(`document.body.textContent.includes("Pasangkan setiap pecahan")`, {
+    label: "aktivitas mencocokkan"
+  });
+  for (const [left, pairId] of [
+    ["1/2", "pasangan-setengah"],
+    ["1/4", "pasangan-seperempat"],
+    ["1/3", "pasangan-sepertiga"]
+  ]) {
+    assert(await choosePair(page, left, pairId), `Pasangan ${left} gagal dipilih.`);
+  }
+  await clickButton(page, "Periksa pasangan");
+  await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
+    label: "skor mencocokkan"
+  });
+  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
+    label: "simpan mencocokkan",
+    timeoutMs: 30_000
+  });
+  log("Aktivitas mencocokkan dinilai 100 dan tersimpan.");
+
+  await clickButton(page, "Mengurutkan Angka");
+  await page.waitFor(`document.body.textContent.includes("Urutkan angka dari terkecil")`, {
+    label: "aktivitas mengurutkan"
+  });
+  await clickByAriaLabel(page, "Naikkan Angka 1");
+  await clickByAriaLabel(page, "Naikkan Angka 2");
+  await clickButton(page, "Periksa urutan");
+  await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
+    label: "skor mengurutkan"
+  });
+  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
+    label: "simpan mengurutkan",
+    timeoutMs: 30_000
+  });
+  log("Aktivitas mengurutkan dinilai 100 dan tersimpan.");
+
   const profileId = await page.evaluate(
     `window.__TAURI_INTERNALS__.invoke("profile_get_active").then((profile) => profile.id)`
   );
@@ -317,7 +434,7 @@ export async function run({ page, artifactDir, log }) {
       profileId: ${JSON.stringify(profileId)}
     })
   `);
-  assert(summary.attempts === 3, `Percobaan tersimpan ${summary.attempts}, harus 3.`);
+  assert(summary.attempts === 5, `Percobaan tersimpan ${summary.attempts}, harus 5.`);
   assert(summary.averageScore === 100, `Rata-rata ${summary.averageScore}, harus 100.`);
   log(`Ringkasan: ${summary.sessions} sesi, ${summary.attempts} percobaan, rata-rata ${summary.averageScore}.`);
 
