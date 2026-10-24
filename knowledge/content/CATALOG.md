@@ -73,3 +73,5 @@ Penyesuaian sebelum membuat paket baru:
 5. Setelah D6, isi juga `curriculumRefs` pilot kelas 3 agar R10 bisa ditutup.
 6. Setiap paket baru harus ditambahkan ke tabel katalog dan `00_INDEX`.
 
+Rencana urutan produksi seluruh kelas: [PRODUCTION_SCHEDULE.md](PRODUCTION_SCHEDULE.md).
+
