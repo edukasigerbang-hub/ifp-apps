@@ -11,6 +11,7 @@
     "content:catalog": "node scripts/build-content-catalog.mjs",
     "content:catalog:check": "node scripts/check-catalog-index.mjs",
     "content:review-sheet": "node scripts/generate-review-worksheet.mjs",
+    "content:quality-gap": "node scripts/analyze-content-quality.mjs",
     "preview": "vite preview",
     "test": "vitest run && tsx scripts/check-fixtures.ts && node scripts/check-catalog-index.mjs",
     "ci": "npm test && npm run server:typecheck && npm run server:test && npm run worker:typecheck && npm run build",

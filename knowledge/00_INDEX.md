@@ -44,6 +44,7 @@
 | Checklist B-01 signing & B-04 SMTP (2026-10-25) | [`release/CHECKLIST_B01_B04_2026-10-25.md`](release/CHECKLIST_B01_B04_2026-10-25.md) |
 | Checklist B-02, B-05, B-06, B-07, B-08 (2026-10-25) | [`release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md`](release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md) |
 | Lembar kerja review R1–R12 (2026-10-25) | [panduan](release/REVIEW_WORKSHEET_2026-10-25.md) · [CSV](release/review-worksheet-2026-10-25.csv) |
+| Analisis gap kualitas 320 paket (2026-10-25) | [`content/QUALITY_GAP_2026-10-25.md`](content/QUALITY_GAP_2026-10-25.md) · [JSON](content/quality-gap-2026-10-25.json) |
 | Jadwal produksi konten Kelas 1–6 | [`content/PRODUCTION_SCHEDULE.md`](content/PRODUCTION_SCHEDULE.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |

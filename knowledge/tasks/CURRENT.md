@@ -73,6 +73,7 @@
 | T-061 | Cek konsistensi indeks katalog | Checker membandingkan 320 entri vs paket; masuk `npm test`; negative test exit 1; status OK 320/320 |
 | T-062 | Lembar kerja review R1–R12 | CSV 320 baris + panduan Markdown per kelas/mapel; R10 BLOCKED-D6, R11 pre-verified |
 | T-063 | Verifikasi P0 | Worker live masih 501; 3 file secret `%TEMP%` masih ada; backup kunci belum ditemukan; urutan B-02→B-07→B-03 |
+| T-064 | Analisis gap kualitas 320 paket | 0/320 memenuhi G1–G12; semua 3 langkah/2 aktivitas/4–6 item; 16 paket aktivitas identik; 61 aset dipakai ulang; 54 tujuan belum tercakup penuh |
 
 ## Status prasyarat materi pembelajaran
 
