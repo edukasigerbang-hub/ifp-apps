@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebugaran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Latihan Kebugaran",
+  "instructions": "Amati empat panel latihan, lalu tentukan komponen kebugaran yang dilatih.",
+  "assets": [
+    "assets/kebugaran.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Gerakan apa pada panel pertama?",
+        "assetPath": "assets/kebugaran.png",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "reveal": "Push-up melatih kekuatan otot.",
+        "hint": "Perhatikan tumpuan tubuh."
+      },
+      {
+        "prompt": "Gerakan apa pada panel kedua?",
+        "assetPath": "assets/kebugaran.png",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "reveal": "Lari melatih daya tahan jantung dan paru-paru.",
+        "hint": "Gerakan dilakukan terus-menerus."
+      },
+      {
+        "prompt": "Mengapa kelenturan dan kecepatan juga penting?",
+        "assetPath": "assets/kebugaran.png",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "reveal": "Kelenturan memudahkan gerak dan mengurangi cedera; kecepatan membantu aktivitas yang membutuhkan gerak cepat.",
+        "hint": "Hubungkan dengan kegiatan sehari-hari."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+  }
+}

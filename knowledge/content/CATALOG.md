@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 23 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 26 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -27,6 +27,9 @@
 | `kelas4-seni-rupa-b02-menggambar-bentuk` | 0.1.0 | 4 | seni-rupa | Menggambar bentuk | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pjok-b02-gerak-manipulatif` | 0.1.0 | 4 | pjok | Gerak manipulatif | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b02-iman` | 0.1.0 | 4 | pai | Iman kepada Allah & rasul (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b03-warna-tekstur` | 0.1.0 | 4 | seni-rupa | Warna & tekstur | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b03-kebugaran` | 0.1.0 | 4 | pjok | Kebugaran jasmani | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b03-akhlak` | 0.1.0 | 4 | pai | Akhlak terpuji (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 
 \* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
@@ -165,6 +168,20 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
 - PAI varian Islam; agama lain memerlukan paket terpisah.
 - Sisa Semester 1: Seni Rupa, PJOK, dan PAI B03–B04 (6 paket).
+
+## Batch 7 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-seni-rupa-b03-warna-tekstur` | Warna dan Tekstur | eksplorasi + matching (6 pasangan) | `warna-tekstur.png` |
+| `kelas4-pjok-b03-kebugaran` | Kebugaran Jasmani | eksplorasi + matching (6 pasangan) | `kebugaran.png` |
+| `kelas4-pai-b03-akhlak` | Akhlak Terpuji | eksplorasi + matching (6 pasangan) | `akhlak-terpuji.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
+- Catatan build: bundle JS melewati 500 kB setelah 25 paket ter-bundle; perlu code-splitting/lazy load konten sebelum produksi penuh.
+- Sisa Semester 1: Seni Rupa, PJOK, dan PAI B04 (3 paket).
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

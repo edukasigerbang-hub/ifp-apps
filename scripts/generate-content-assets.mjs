@@ -678,6 +678,103 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function colorTexture() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const wheel = [
+    [400, 180, colors.red],
+    [490, 240, colors.orange],
+    [490, 330, colors.sun],
+    [400, 390, colors.green],
+    [310, 330, colors.blue],
+    [310, 240, [128, 90, 213, 255]]
+  ];
+  for (const [x, y, c] of wheel) circle(px, x, y, 46, c);
+  circle(px, 400, 285, 32, colors.white);
+  // tekstur: titik, garis, halus
+  rect(px, 80, 330, 130, 130, colors.sky);
+  for (let y = 0; y < 5; y += 1) for (let x = 0; x < 5; x += 1) circle(px, 100 + x * 24, 350 + y * 24, 6, colors.greenDark);
+  rect(px, 240, 330, 130, 130, colors.sand);
+  for (let i = 0; i < 6; i += 1) line(px, 255, 345 + i * 20, 355, 345 + i * 20, colors.soil, 6);
+  rect(px, 400, 470, 300, 90, colors.tealLight);
+  return px;
+}
+
+function fitnessScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 240, 440, 640];
+  for (const x of panels) {
+    rect(px, x, 100, 150, 420, colors.sky);
+    rect(px, x, 100, 150, 5, colors.navy);
+    rect(px, x, 515, 150, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 145, 100, 5, 420, colors.navy);
+  }
+  // push-up
+  circle(px, 100, 330, 22, colors.skin1);
+  line(px, 100, 352, 170, 380, colors.teal, 14);
+  line(px, 110, 370, 90, 440, colors.navy, 9);
+  line(px, 160, 378, 150, 445, colors.navy, 9);
+  line(px, 170, 380, 200, 380, colors.skin1, 8);
+  // lari
+  circle(px, 315, 240, 22, colors.skin2);
+  line(px, 315, 262, 315, 350, colors.orange, 12);
+  line(px, 315, 290, 285, 330, colors.navy, 8);
+  line(px, 315, 290, 345, 330, colors.navy, 8);
+  line(px, 315, 350, 285, 420, colors.navy, 8);
+  line(px, 315, 350, 350, 415, colors.navy, 8);
+  line(px, 260, 280, 295, 280, colors.navy, 4);
+  line(px, 250, 310, 290, 310, colors.navy, 4);
+  // duduk menjangkau
+  circle(px, 515, 300, 22, colors.skin3);
+  line(px, 515, 322, 515, 400, colors.blue, 14);
+  line(px, 515, 400, 470, 450, colors.navy, 9);
+  line(px, 515, 400, 560, 450, colors.navy, 9);
+  line(px, 515, 350, 580, 400, colors.skin3, 8);
+  rect(px, 580, 390, 40, 15, colors.orange);
+  // lari cepat
+  circle(px, 715, 240, 22, colors.skin1);
+  line(px, 715, 262, 715, 350, colors.red, 12);
+  line(px, 715, 290, 680, 320, colors.navy, 8);
+  line(px, 715, 290, 750, 320, colors.navy, 8);
+  line(px, 715, 350, 680, 420, colors.navy, 8);
+  line(px, 715, 350, 750, 415, colors.navy, 8);
+  line(px, 660, 270, 695, 270, colors.orange, 4);
+  line(px, 650, 300, 690, 300, colors.orange, 4);
+  return px;
+}
+
+function akhlakScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 400, 60, 400, 600, colors.navy, 4);
+  rect(px, 0, 450, 400, 150, colors.sand);
+  rect(px, 400, 450, 400, 150, colors.sand);
+  // panel 1: mengembalikan buku
+  circle(px, 120, 250, 34, colors.skin1);
+  rect(px, 86, 284, 68, 110, colors.teal);
+  circle(px, 280, 250, 34, colors.skin3);
+  rect(px, 246, 284, 68, 110, colors.orange);
+  rect(px, 178, 312, 68, 54, colors.navy);
+  rect(px, 183, 317, 58, 44, colors.sun);
+  line(px, 190, 330, 234, 330, colors.navy, 4);
+  line(px, 190, 344, 228, 344, colors.navy, 4);
+  line(px, 150, 330, 178, 330, colors.skin1, 8);
+  // panel 2: menolong teman
+  circle(px, 520, 240, 34, colors.skin2);
+  rect(px, 486, 274, 68, 110, colors.blue);
+  circle(px, 620, 290, 34, colors.skin1);
+  rect(px, 586, 324, 68, 100, colors.green);
+  line(px, 554, 300, 600, 340, colors.skin2, 10);
+  line(px, 600, 420, 620, 470, colors.navy, 9);
+  line(px, 650, 424, 660, 470, colors.navy, 9);
+  return px;
+}
+
 function drawingShapes() {
   const px = canvas();
   fill(px, colors.sand);
@@ -865,3 +962,6 @@ write("content/packages/kelas4-pai-b01-surah-pendek/assets/membaca-quran.png", q
 write("content/packages/kelas4-seni-rupa-b02-menggambar-bentuk/assets/menggambar-bentuk.png", drawingShapes());
 write("content/packages/kelas4-pjok-b02-gerak-manipulatif/assets/gerak-manipulatif.png", manipulativeScene());
 write("content/packages/kelas4-pai-b02-iman/assets/iman-ilustrasi.png", imanScene());
+write("content/packages/kelas4-seni-rupa-b03-warna-tekstur/assets/warna-tekstur.png", colorTexture());
+write("content/packages/kelas4-pjok-b03-kebugaran/assets/kebugaran.png", fitnessScene());
+write("content/packages/kelas4-pai-b03-akhlak/assets/akhlak-terpuji.png", akhlakScene());

@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-akhlak",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Akhlak dan Contohnya",
+  "instructions": "Pasangkan setiap akhlak terpuji dengan contoh perilakunya.",
+  "assets": [
+    "assets/akhlak-terpuji.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jujur",
+        "left": "Jujur",
+        "right": "Berkata sesuai kenyataan"
+      },
+      {
+        "pairId": "pasangan-amanah",
+        "left": "Amanah",
+        "right": "Menjalankan tugas dengan tanggung jawab"
+      },
+      {
+        "pairId": "pasangan-santun",
+        "left": "Santun",
+        "right": "Berbicara dengan sopan"
+      },
+      {
+        "pairId": "pasangan-tolong",
+        "left": "Tolong-menolong",
+        "right": "Membantu teman yang kesulitan"
+      },
+      {
+        "pairId": "pasangan-sabar",
+        "left": "Sabar",
+        "right": "Menahan diri saat marah"
+      },
+      {
+        "pairId": "pasangan-pemaaf",
+        "left": "Pemaaf",
+        "right": "Memaafkan kesalahan orang lain"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan."
+  }
+}

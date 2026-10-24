@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-warna-tekstur",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Warna dan Tekstur",
+  "instructions": "Pasangkan setiap istilah dengan contoh yang sesuai.",
+  "assets": [
+    "assets/warna-tekstur.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-merah-kuning",
+        "left": "Merah + kuning",
+        "right": "Oranye"
+      },
+      {
+        "pairId": "pasangan-biru-kuning",
+        "left": "Biru + kuning",
+        "right": "Hijau"
+      },
+      {
+        "pairId": "pasangan-merah-biru",
+        "left": "Merah + biru",
+        "right": "Ungu"
+      },
+      {
+        "pairId": "pasangan-hangat",
+        "left": "Warna hangat",
+        "right": "Merah, kuning, oranye"
+      },
+      {
+        "pairId": "pasangan-dingin",
+        "left": "Warna dingin",
+        "right": "Biru, hijau, ungu"
+      },
+      {
+        "pairId": "pasangan-kasar",
+        "left": "Tekstur kasar",
+        "right": "Permukaan berbutir"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus."
+  }
+}
