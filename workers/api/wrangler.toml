@@ -1,0 +1,12 @@
+name = "gerbangedukasi-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-24"
+
+[vars]
+SUPABASE_URL = "https://PROJECT.supabase.co"
+CORS_ORIGIN = "http://localhost:1420"
+
+# Secrets (jangan commit):
+#   wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+#   wrangler secret put DEVICE_TOKEN_SECRET
+#   wrangler secret put ENROLLMENT_CODE_PEPPER

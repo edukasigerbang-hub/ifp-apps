@@ -594,3 +594,16 @@
 **Verifikasi:** `npm run server:typecheck` PASS; server tests 24/24.
 
 **Belum:** enrollment klien, rotasi/revocation token, RBAC/OIDC admin, hosting produksi, signing konten.
+
+### T-041 — OD-7 increment 2: Supabase + Cloudflare Worker
+
+**Status:** COMPLETED (scaffold) · **Change class:** MEDIUM
+
+- Keputusan stack: Supabase + Cloudflare Workers/Pages; situs marketing dicatat di `productConfig.links.marketing`.
+- `supabase/migrations/0001_backend.sql`: devices, enrollment_codes (hash), sync_events, licenses, license_audit, admin_roles; RLS tanpa policy publik; RPC `consume_enrollment_code` atomik.
+- `workers/api`: Worker (WebCrypto HMAC, Supabase REST service role) untuk `/healthz`, `/v1/devices/enroll`, `/v1/sync/events`; endpoint lisensi 501 sampai signing/KMS diputuskan.
+- 7 test Worker + typecheck; CI menambah langkah worker typecheck.
+
+**Verifikasi:** `npm run worker:typecheck` PASS; worker tests 7/7; `npm test` 79/79; build PASS.
+
+**Belum:** migrasi dijalankan ke project Supabase, secret deployment, endpoint lisensi/konten, RBAC admin, rate limit edge.

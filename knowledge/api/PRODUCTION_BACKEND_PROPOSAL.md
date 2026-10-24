@@ -3,6 +3,11 @@
 **Status:** DRAFT untuk keputusan · **Tanggal:** 2026-10-24 · **Pemilik keputusan:** Product Owner + Tech Lead
 **Bukan implementasi.** Dokumen ini merangkum opsi, rekomendasi arsitektur, dan keputusan yang harus diambil sebelum Fase J (publish) dan Fase I (sinkronisasi produksi) dilanjutkan.
 
+> **Keputusan 2026-10-24:** Product Owner memilih **Supabase + Cloudflare Workers/Pages**.
+> Increment implementasi: skema `supabase/migrations/0001_backend.sql`, Worker `workers/api` (enrollment perangkat + sync),
+> dan situs marketing `https://gerbangedukasi.edukasigerbang.workers.dev/`. Lihat [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md).
+> Endpoint lisensi di Worker masih 501; signing/KMS dan RBAC admin belum.
+
 ## 1. Lingkup
 
 | Area | Wajib untuk rilis? | Catatan |

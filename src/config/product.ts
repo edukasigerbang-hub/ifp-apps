@@ -10,6 +10,9 @@ export const productConfig = {
   },
   licensing: {
     productId: "ifp-learning"
+  },
+  links: {
+    marketing: "https://gerbangedukasi.edukasigerbang.workers.dev/"
   }
 } as const;
 

@@ -88,6 +88,7 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0025](decisions/ADR-0025-privacy-defaults.md) | Default privasi & retensi (provisional, OD-4) | Accepted (provisional) |
 | [ADR-0026](decisions/ADR-0026-license-policy-defaults.md) | Default kebijakan lisensi (provisional, OD-5) | Accepted (provisional) |
 | [ADR-0027](decisions/ADR-0027-device-auth-openapi.md) | OD-7 increment 1: auth perangkat & OpenAPI | Accepted (reference) |
+| [ADR-0028](decisions/ADR-0028-supabase-cloudflare.md) | Stack backend: Supabase + Cloudflare | Accepted (increment 2) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
 
