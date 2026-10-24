@@ -662,6 +662,108 @@ write("content/packages/kelas4-matematika-b02-faktor-kelipatan/assets/faktor-kel
 write("content/packages/kelas4-ipas-b03-gaya-gerak/assets/gaya-gerak.png", forceMotion());
 write("content/packages/kelas4-bahasa-indonesia-b03-ide-pokok/assets/mendengarkan-cerita.png", storyListening());
 write("content/packages/kelas4-pendidikan-pancasila-b03-hak-kewajiban/assets/belajar-dan-bertugas.png", rightsDuties());
+function triangle(px, x1, y1, x2, y2, x3, y3, color) {
+  const minX = Math.min(x1, x2, x3);
+  const maxX = Math.max(x1, x2, x3);
+  const minY = Math.min(y1, y2, y3);
+  const maxY = Math.max(y1, y2, y3);
+  const area = (x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1);
+  for (let y = minY; y <= maxY; y += 1) {
+    for (let x = minX; x <= maxX; x += 1) {
+      const w1 = ((x2 - x) * (y3 - y) - (x3 - x) * (y2 - y)) / area;
+      const w2 = ((x3 - x) * (y1 - y) - (x1 - x) * (y3 - y)) / area;
+      const w3 = 1 - w1 - w2;
+      if (w1 >= 0 && w2 >= 0 && w3 >= 0) set(px, x, y, color);
+    }
+  }
+}
+
+function drawingShapes() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 90, 100, 38, colors.sun);
+  for (let a = 0; a < 360; a += 45) {
+    const r = (a * Math.PI) / 180;
+    line(px, 90 + Math.cos(r) * 48, 100 + Math.sin(r) * 48, 90 + Math.cos(r) * 66, 100 + Math.sin(r) * 66, colors.sun, 4);
+  }
+  rect(px, 60, 470, 680, 24, colors.soil);
+  rect(px, 110, 300, 140, 170, colors.orange);
+  rect(px, 130, 270, 140, 30, colors.sun);
+  line(px, 250, 300, 270, 270, colors.navy, 3);
+  line(px, 250, 470, 270, 440, colors.navy, 3);
+  line(px, 110, 300, 130, 270, colors.navy, 3);
+  circle(px, 390, 380, 90, colors.teal);
+  circle(px, 360, 345, 20, colors.white);
+  line(px, 480, 470, 590, 470, colors.soil, 8);
+  rect(px, 500, 280, 100, 170, colors.tealLight);
+  ellipse(px, 550, 280, 50, 18, colors.teal);
+  ellipse(px, 550, 450, 50, 18, colors.teal);
+  return px;
+}
+
+function manipulativeScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 240, 440, 640];
+  for (const x of panels) {
+    rect(px, x, 100, 150, 420, colors.sky);
+    rect(px, x, 100, 150, 5, colors.navy);
+    rect(px, x, 515, 150, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 145, 100, 5, 420, colors.navy);
+  }
+  const kid = (cx, cy, shirt) => {
+    circle(px, cx, cy, 24, colors.skin1);
+    rect(px, cx - 14, cy + 24, 28, 90, shirt);
+    line(px, cx - 10, cy + 114, cx - 24, cy + 170, colors.navy, 9);
+    line(px, cx + 10, cy + 114, cx + 24, cy + 170, colors.navy, 9);
+  };
+  // lempar
+  kid(115, 200, colors.teal);
+  line(px, 115, 240, 150, 170, colors.skin1, 9);
+  circle(px, 165, 150, 18, colors.orange);
+  // tangkap
+  kid(315, 200, colors.orange);
+  line(px, 315, 240, 270, 260, colors.skin1, 9);
+  line(px, 315, 240, 360, 260, colors.skin1, 9);
+  circle(px, 315, 275, 18, colors.orange);
+  // tendang
+  kid(515, 200, colors.blue);
+  line(px, 515, 300, 550, 350, colors.navy, 12);
+  circle(px, 570, 360, 18, colors.orange);
+  // menggiring
+  kid(715, 200, colors.red);
+  line(px, 715, 250, 680, 310, colors.skin1, 9);
+  circle(px, 665, 330, 18, colors.orange);
+  line(px, 620, 300, 655, 300, colors.navy, 4);
+  line(px, 610, 340, 650, 340, colors.navy, 4);
+  return px;
+}
+
+function imanScene() {
+  const px = canvas();
+  fill(px, colors.navy);
+  circle(px, 400, 300, 170, [30, 41, 59, 255]);
+  circle(px, 360, 270, 55, colors.red);
+  circle(px, 440, 270, 55, colors.red);
+  triangle(px, 305, 290, 495, 290, 400, 410, colors.red);
+  // lentera
+  rect(px, 90, 120, 70, 110, colors.sun);
+  rect(px, 105, 100, 40, 20, colors.sun);
+  circle(px, 125, 175, 20, colors.white);
+  // bintang
+  for (let i = 0; i < 6; i += 1) {
+    const angle = (i * 60 * Math.PI) / 180;
+    const x = 400 + Math.cos(angle) * 230;
+    const y = 300 + Math.sin(angle) * 190;
+    line(px, x - 14, y, x + 14, y, colors.sun, 5);
+    line(px, x, y - 14, x, y + 14, colors.sun, 5);
+  }
+  return px;
+}
+
 function artElements() {
   const px = canvas();
   fill(px, colors.sand);
@@ -760,3 +862,6 @@ write("content/packages/kelas4-pendidikan-pancasila-b04-musyawarah/assets/musyaw
 write("content/packages/kelas4-seni-rupa-b01-unsur-prinsip/assets/unsur-seni.png", artElements());
 write("content/packages/kelas4-pjok-b01-gerak-dasar/assets/gerak-dasar.png", movementScene());
 write("content/packages/kelas4-pai-b01-surah-pendek/assets/membaca-quran.png", quranScene());
+write("content/packages/kelas4-seni-rupa-b02-menggambar-bentuk/assets/menggambar-bentuk.png", drawingShapes());
+write("content/packages/kelas4-pjok-b02-gerak-manipulatif/assets/gerak-manipulatif.png", manipulativeScene());
+write("content/packages/kelas4-pai-b02-iman/assets/iman-ilustrasi.png", imanScene());

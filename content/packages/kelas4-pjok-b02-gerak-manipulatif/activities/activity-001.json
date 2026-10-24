@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gerak-manipulatif",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak dengan Bola",
+  "instructions": "Amati empat panel gerak, lalu tentukan gerakan yang dilakukan.",
+  "assets": [
+    "assets/gerak-manipulatif.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Gerakan apa pada panel pertama dan kedua?",
+        "assetPath": "assets/gerak-manipulatif.png",
+        "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola.",
+        "reveal": "Melempar dan menangkap bola.",
+        "hint": "Perhatikan posisi lengan dan bola."
+      },
+      {
+        "prompt": "Gerakan apa pada panel ketiga?",
+        "assetPath": "assets/gerak-manipulatif.png",
+        "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola.",
+        "reveal": "Menendang bola dengan kaki.",
+        "hint": "Perhatikan ayunan kaki ke arah bola."
+      },
+      {
+        "prompt": "Apa yang perlu diperhatikan saat menggiring bola?",
+        "assetPath": "assets/gerak-manipulatif.png",
+        "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola.",
+        "reveal": "Pandangan ke depan, kontrol bola dengan kaki, dan jaga keselamatan sekitar.",
+        "hint": "Perhatikan panel keempat dan gerak bola."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola."
+  }
+}

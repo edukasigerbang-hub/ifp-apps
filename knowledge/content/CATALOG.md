@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 20 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 23 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -24,6 +24,9 @@
 | `kelas4-seni-rupa-b01-unsur-prinsip` | 0.1.0 | 4 | seni-rupa | Unsur & prinsip seni rupa | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pjok-b01-gerak-dasar` | 0.1.0 | 4 | pjok | Gerak lokomotor & non-lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b01-surah-pendek` | 0.1.0 | 4 | pai | Surah pendek & adab (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b02-menggambar-bentuk` | 0.1.0 | 4 | seni-rupa | Menggambar bentuk | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b02-gerak-manipulatif` | 0.1.0 | 4 | pjok | Gerak manipulatif | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b02-iman` | 0.1.0 | 4 | pai | Iman kepada Allah & rasul (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 
 \* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
@@ -148,6 +151,20 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
 - PAI di sini adalah **varian Islam**; agama lain memerlukan paket terpisah sesuai kebijakan sekolah (D5/OD-1).
 - Sisa Semester 1: Seni Rupa, PJOK, dan PAI B02–B04 (9 paket).
+
+## Batch 6 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-seni-rupa-b02-menggambar-bentuk` | Menggambar Bentuk Sederhana | eksplorasi + MCQ (4 soal) | `menggambar-bentuk.png` |
+| `kelas4-pjok-b02-gerak-manipulatif` | Gerak Manipulatif dengan Bola | eksplorasi + matching (6 pasangan) | `gerak-manipulatif.png` |
+| `kelas4-pai-b02-iman` | Iman kepada Allah dan Rasul-Nya | eksplorasi + matching (6 pasangan) | `iman-ilustrasi.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
+- PAI varian Islam; agama lain memerlukan paket terpisah.
+- Sisa Semester 1: Seni Rupa, PJOK, dan PAI B03–B04 (6 paket).
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

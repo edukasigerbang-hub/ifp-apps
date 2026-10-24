@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-menggambar-bentuk",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Menggambar Bentuk",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-bola",
+        "prompt": "Bola digambar dari bentuk dasar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lingkaran",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-persegi",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-segitiga",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-tabung",
+            "text": "tabung"
+          }
+        ],
+        "correctResponse": "opsi-lingkaran"
+      },
+      {
+        "questionId": "soal-alat",
+        "prompt": "Alat yang tepat untuk membuat garis tipis adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pensil",
+            "text": "pensil"
+          },
+          {
+            "optionId": "opsi-kuas",
+            "text": "kuas lebar"
+          },
+          {
+            "optionId": "opsi-jari",
+            "text": "jari tangan"
+          },
+          {
+            "optionId": "opsi-penghapus",
+            "text": "penghapus"
+          }
+        ],
+        "correctResponse": "opsi-pensil"
+      },
+      {
+        "questionId": "soal-cahaya",
+        "prompt": "Jika cahaya datang dari kiri, bagian yang lebih terang adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kiri",
+            "text": "sisi kiri"
+          },
+          {
+            "optionId": "opsi-kanan",
+            "text": "sisi kanan"
+          },
+          {
+            "optionId": "opsi-bawah",
+            "text": "sisi bawah"
+          },
+          {
+            "optionId": "opsi-belakang",
+            "text": "sisi belakang"
+          }
+        ],
+        "correctResponse": "opsi-kiri"
+      },
+      {
+        "questionId": "soal-proporsi",
+        "prompt": "Proporsi dalam menggambar berarti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-perbandingan",
+            "text": "perbandingan ukuran bagian"
+          },
+          {
+            "optionId": "opsi-warna",
+            "text": "pemilihan warna"
+          },
+          {
+            "optionId": "opsi-bingkai",
+            "text": "pemilihan bingkai"
+          },
+          {
+            "optionId": "opsi-judul",
+            "text": "penulisan judul"
+          }
+        ],
+        "correctResponse": "opsi-perbandingan"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

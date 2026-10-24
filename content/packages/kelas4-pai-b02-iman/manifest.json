@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pai-b02-iman",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Iman kepada Allah dan Rasul-Nya — PAI Kelas 4 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/iman-ilustrasi.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5292,
+      "sha256": "7f269925c376edfea92bb28102222ddac334c23325c7b89504636597215014fb"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

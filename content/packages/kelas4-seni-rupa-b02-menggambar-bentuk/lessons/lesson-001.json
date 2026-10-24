@@ -1,0 +1,27 @@
+{
+  "lessonId": "menggambar-bentuk",
+  "packageId": "kelas4-seni-rupa-b02-menggambar-bentuk",
+  "title": "Menggambar Bentuk Sederhana",
+  "summary": "Mengamati bentuk dasar, menggambar dengan proporsi, dan memberi gelap-terang agar terkesan tiga dimensi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali bentuk dasar kubus, bola, dan tabung.",
+    "Menggambar bentuk dengan proporsi yang wajar.",
+    "Menerapkan gelap-terang sederhana pada gambar."
+  ],
+  "activityIds": [
+    "eksplorasi-menggambar-bentuk",
+    "kuis-menggambar-bentuk"
+  ],
+  "assessmentRefs": [
+    "kuis-menggambar-bentuk"
+  ],
+  "assetRefs": [
+    "assets/menggambar-bentuk.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menggambar-bentuk",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bentuk dan Cahaya",
+  "instructions": "Amati benda pada gambar, lalu perhatikan bentuk dasar dan arah cahayanya.",
+  "assets": [
+    "assets/menggambar-bentuk.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bentuk dasar apa saja yang kamu lihat?",
+        "assetPath": "assets/menggambar-bentuk.png",
+        "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas.",
+        "reveal": "Kubus, bola, dan tabung.",
+        "hint": "Sederhanakan benda menjadi bangun ruang dasar."
+      },
+      {
+        "prompt": "Dari arah mana cahaya datang?",
+        "assetPath": "assets/menggambar-bentuk.png",
+        "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas.",
+        "reveal": "Cahaya datang dari kiri atas; sisi kiri lebih terang dan bayangan jatuh ke kanan.",
+        "hint": "Perhatikan bagian yang paling terang."
+      },
+      {
+        "prompt": "Mengapa bayangan perlu digambar?",
+        "assetPath": "assets/menggambar-bentuk.png",
+        "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas.",
+        "reveal": "Bayangan memberi kesan tiga dimensi dan membuat gambar lebih hidup.",
+        "hint": "Bandingkan benda yang memiliki bayangan dengan yang tidak."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
+  }
+}

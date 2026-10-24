@@ -1,0 +1,25 @@
+{
+  "lessonId": "iman-allah-rasul",
+  "packageId": "kelas4-pai-b02-iman",
+  "title": "Iman kepada Allah dan Rasul-Nya",
+  "summary": "Memahami arti iman, enam rukun iman, dan cara meneladani akhlak Rasul dalam kehidupan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti iman.",
+    "Menyebutkan enam rukun iman.",
+    "Menunjukkan contoh meneladani akhlak Rasul."
+  ],
+  "activityIds": [
+    "eksplorasi-iman",
+    "matching-iman"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/iman-ilustrasi.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
