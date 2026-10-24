@@ -215,7 +215,7 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Validasi: **VALID**, 0 issue, 2 warning per paket.
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
 - Bundle utama 461,6 kB (<500 kB).
-- Sisa Semester 2: B08 untuk 7 mapel (7 paket) + opsi Bahasa Inggris.
+- Sisa Semester 2: B07 untuk Seni Rupa/PJOK/PAI (3 paket) + B08 untuk 7 mapel (7 paket) + opsi Bahasa Inggris (10 paket).
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 
