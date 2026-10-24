@@ -34,6 +34,7 @@
 | Ekspor audit review | `e2e:review` memeriksa CSV (BOM/CRLF/isi), guru-only, tolak overwrite via test Rust |
 | Default privasi (OD-4) | `e2e` smoke 8 pemeriksaan: bagian “Privasi & data” + default retensi tampil; peringatan PII di ekspor |
 | Policy lisensi (OD-5) | 4 test Rust (clock rollback, last_seen, transfer request) + `e2e:license` 10 pemeriksaan |
+| Auth perangkat (OD-7) | 4 test server: enrollment, kode salah, token sync, device mismatch, healthz |
 | Navigasi keyboard dasar | Tab pertama = tautan lewati; 10 langkah Tab bernama, semua punya indikator fokus |
 | Alur belajar end-to-end | `npm run e2e:journey` 11 pemeriksaan: impor paket → Player managed-first → eksplorasi 4 langkah → kuis 100 → 1 sesi/1 percobaan → outbox 1 event → Hasil Belajar |
 | Rollback konten | `npm run e2e:rollback` 9 pemeriksaan: v0.1.0 → v0.2.0 → rollback → v0.1.0; status paket active/disabled |

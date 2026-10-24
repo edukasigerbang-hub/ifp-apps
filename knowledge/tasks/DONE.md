@@ -580,3 +580,17 @@
 **Verifikasi:** `cargo test` 62/62; `npm run build` PASS; `npm run e2e:license` PASS 10 pemeriksaan (dua kali); a11y 16 pemeriksaan.
 
 **Belum:** auto-refresh terjadwal, antrean transfer di server, kebijakan final (grace/limit/refund) menunggu OD-5.
+
+### T-040 — OD-7 increment 1: auth perangkat & OpenAPI
+
+**Status:** COMPLETED (reference) · **Change class:** MEDIUM
+
+- `server/openapi.v1.yaml` (OpenAPI 3.1) + `server/README.md`.
+- `server/src/auth.ts`: token perangkat HMAC-SHA256 (deviceId, iat, exp), verifikasi constant-time.
+- `POST /v1/devices/enroll` (kode enrollment env; 503 bila belum dikonfigurasi); `GET /healthz`.
+- Sync menerima token perangkat; `SYNC_TOKEN` tetap untuk referensi; deviceId batch harus cocok (`DEVICE_MISMATCH`).
+- ADR-0027; 4 test server baru.
+
+**Verifikasi:** `npm run server:typecheck` PASS; server tests 24/24.
+
+**Belum:** enrollment klien, rotasi/revocation token, RBAC/OIDC admin, hosting produksi, signing konten.

@@ -53,12 +53,27 @@ if (signingKeyPath) {
   console.warn("LICENSE_SIGNING_KEY_PATH tidak diset; endpoint lisensi dinonaktifkan (503).");
 }
 
+const enrollmentCode = process.env.DEVICE_ENROLLMENT_CODE;
+const tokenSecret = process.env.DEVICE_TOKEN_SECRET;
+const deviceAuth =
+  enrollmentCode && tokenSecret
+    ? {
+        enrollmentCode,
+        tokenSecret,
+        ttlSeconds: Number(process.env.DEVICE_TOKEN_TTL_SECONDS ?? 86_400)
+      }
+    : undefined;
+if (enrollmentCode && !tokenSecret) {
+  console.warn("DEVICE_TOKEN_SECRET tidak diset; endpoint enrollment dinonaktifkan.");
+}
+
 const store = new SqliteSyncStore(dbPath);
 const server = createSyncServer({
   store,
   token,
   corsOrigin,
   license: licenseOptions,
+  deviceAuth,
   rateLimit: { limit: Number(process.env.SYNC_RATE_LIMIT ?? 60), windowMs: 60_000 }
 });
 

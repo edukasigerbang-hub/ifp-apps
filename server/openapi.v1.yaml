@@ -1,0 +1,301 @@
+openapi: 3.1.0
+info:
+  title: Gerbang Edukasi — Backend API (referensi)
+  version: 1.0.0
+  description: >
+    Kontrak v1 untuk sinkronisasi hasil belajar, lisensi perangkat, dan enrollment perangkat.
+    Status: DRAFT untuk OD-7. Hosting, TLS, dan penerbitan token produksi belum diputuskan.
+servers:
+  - url: http://localhost:8788
+    description: Server referensi lokal
+tags:
+  - name: health
+  - name: devices
+  - name: sync
+  - name: license
+paths:
+  /healthz:
+    get:
+      operationId: health
+      tags: [health]
+      responses:
+        "200":
+          description: Layanan aktif
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok: { type: boolean }
+                required: [ok]
+  /v1/devices/enroll:
+    post:
+      operationId: enrollDevice
+      tags: [devices]
+      summary: Menukar kode enrollment dengan token perangkat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                enrollmentCode: { type: string, minLength: 1, maxLength: 256 }
+                deviceId: { type: string, format: uuid }
+              required: [enrollmentCode]
+      responses:
+        "201":
+          description: Perangkat terdaftar
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeviceToken"
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "503":
+          description: Enrollment belum dikonfigurasi
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+  /v1/sync/events:
+    post:
+      operationId: pushSyncEvents
+      tags: [sync]
+      summary: Mengirim batch event hasil belajar
+      security:
+        - deviceToken: []
+        - syncToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SyncBatch"
+      responses:
+        "200":
+          description: Batch diproses (per event ack)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  acknowledgements:
+                    type: array
+                    items: { $ref: "#/components/schemas/Acknowledgement" }
+                required: [acknowledgements]
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "403":
+          description: deviceId tidak cocok dengan token perangkat
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "429": { $ref: "#/components/responses/RateLimited" }
+  /v1/activations:
+    post:
+      operationId: activateLicense
+      tags: [license]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ActivationRequest" }
+      responses:
+        "200":
+          description: Lisensi bertanda tangan
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/LicenseFile" }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "404": { $ref: "#/components/responses/NotFound" }
+  /v1/licenses/refresh:
+    post:
+      operationId: refreshLicense
+      tags: [license]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/LicenseLookup" }
+      responses:
+        "200":
+          description: Lisensi diperbarui
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/LicenseFile" }
+        "404": { $ref: "#/components/responses/NotFound" }
+  /v1/licenses/verify:
+    post:
+      operationId: verifyLicense
+      tags: [license]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/LicenseLookup" }
+      responses:
+        "200":
+          description: Status lisensi
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid: { type: boolean }
+                  status: { type: string }
+                  expiresAt: { type: [string, "null"] }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "404": { $ref: "#/components/responses/NotFound" }
+  /v1/licenses/transfer:
+    post:
+      operationId: transferLicense
+      tags: [license]
+      summary: Admin memindahkan lisensi ke perangkat lain
+      security:
+        - adminToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/LicenseLookup" }
+      responses:
+        "200":
+          description: Lisensi dipindahkan
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/LicenseFile" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+  /v1/activations/deactivate:
+    post:
+      operationId: deactivateLicense
+      tags: [license]
+      summary: Admin menonaktifkan lisensi
+      security:
+        - adminToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                licenseId: { type: string, format: uuid }
+              required: [licenseId]
+      responses:
+        "200":
+          description: Lisensi dinonaktifkan
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+components:
+  securitySchemes:
+    deviceToken:
+      type: http
+      scheme: bearer
+      bearerFormat: HMAC-SHA256
+      description: Token perangkat dari /v1/devices/enroll
+    syncToken:
+      type: http
+      scheme: bearer
+      description: Token statis server referensi (tidak untuk produksi)
+    adminToken:
+      type: http
+      scheme: bearer
+      description: Token admin (produksi harus memakai identitas admin yang teraudit)
+  schemas:
+    DeviceToken:
+      type: object
+      properties:
+        deviceId: { type: string, format: uuid }
+        token: { type: string }
+        tokenType: { type: string, const: Bearer }
+        expiresAt: { type: string, format: date-time }
+      required: [deviceId, token, tokenType, expiresAt]
+    SyncBatch:
+      type: object
+      additionalProperties: false
+      properties:
+        deviceId: { type: string, format: uuid }
+        schemaVersion: { type: string, const: "1.0.0" }
+        events:
+          type: array
+          minItems: 1
+          maxItems: 100
+          items: { $ref: "#/components/schemas/SyncEvent" }
+      required: [deviceId, schemaVersion, events]
+    SyncEvent:
+      type: object
+      additionalProperties: false
+      properties:
+        eventId: { type: string, format: uuid }
+        eventType: { type: string, const: assessment.completed }
+        createdAt: { type: string, format: date-time }
+        payload: { type: object }
+      required: [eventId, eventType, createdAt, payload]
+    Acknowledgement:
+      type: object
+      properties:
+        eventId: { type: string, format: uuid }
+        status: { type: string, enum: [accepted, duplicate, rejected] }
+        errorCode: { type: [string, "null"] }
+      required: [eventId, status, errorCode]
+    ActivationRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        schemaVersion: { type: string, const: "1.0.0" }
+        productId: { type: string }
+        machineId: { type: string, format: uuid }
+        serial: { type: string, minLength: 4, maxLength: 128 }
+        requestId: { type: string, format: uuid }
+        nonce: { type: string, format: uuid }
+        createdAt: { type: string, format: date-time }
+      required: [schemaVersion, productId, machineId, serial, requestId, nonce, createdAt]
+    LicenseLookup:
+      type: object
+      additionalProperties: false
+      properties:
+        licenseId: { type: string, format: uuid }
+        machineId: { type: string, format: uuid }
+      required: [licenseId, machineId]
+    LicenseFile:
+      type: object
+      properties:
+        payload: { type: object }
+        signature: { type: string }
+      required: [payload, signature]
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code: { type: string }
+            message: { type: string }
+          required: [code]
+      required: [error]
+  responses:
+    Unauthorized:
+      description: Tidak terautentikasi
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    BadRequest:
+      description: Permintaan tidak valid
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    NotFound:
+      description: Tidak ditemukan
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    RateLimited:
+      description: Terlalu banyak permintaan
+      headers:
+        retry-after:
+          schema: { type: string }
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
