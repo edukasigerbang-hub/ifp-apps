@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T19:00:14+07:00",
+  "last_validated_at": "2026-10-24T19:04:26+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -329,6 +329,12 @@
       "command": "content:validate x3; content_import_package via CDP; npm run build; npm test",
       "result": "PASS",
       "details": "seni-rupa-b02, pjok-b02, pai-b02 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch7_packages",
+      "command": "content:validate x3; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "seni-b03, pjok-b03, pai-b03 VALID; import 5 files each active; build PASS (chunk >500 kB warning)"
     }
   ],
   "environment": {
