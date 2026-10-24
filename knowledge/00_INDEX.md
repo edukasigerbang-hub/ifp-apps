@@ -42,6 +42,7 @@
 | Review teknis seluruh paket draft (2026-10-24) | [`content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md`](content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md) |
 | Register blocker rilis (2026-10-24) | [`api/RELEASE_BLOCKERS_2026-10-24.md`](api/RELEASE_BLOCKERS_2026-10-24.md) |
 | Checklist B-01 signing & B-04 SMTP (2026-10-25) | [`release/CHECKLIST_B01_B04_2026-10-25.md`](release/CHECKLIST_B01_B04_2026-10-25.md) |
+| Checklist B-02, B-05, B-06, B-07, B-08 (2026-10-25) | [`release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md`](release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md) |
 | Jadwal produksi konten Kelas 1–6 | [`content/PRODUCTION_SCHEDULE.md`](content/PRODUCTION_SCHEDULE.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |

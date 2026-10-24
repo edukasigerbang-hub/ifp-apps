@@ -74,3 +74,4 @@ B-07 adalah tindakan user (file sementara sudah teridentifikasi).
 
 - **B-01 (identitas & signing):** [CHECKLIST_B01_B04_2026-10-25.md](../release/CHECKLIST_B01_B04_2026-10-25.md#b-01--identitas-rilis--code-signing)
 - **B-04 (SMTP):** [CHECKLIST_B01_B04_2026-10-25.md](../release/CHECKLIST_B01_B04_2026-10-25.md#b-04--smtp-kustom-untuk-reset-password)
+- **B-02, B-05, B-06, B-07, B-08:** [CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md](../release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md)

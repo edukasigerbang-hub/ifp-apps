@@ -69,6 +69,7 @@
 | T-057 | Performa katalog 320 paket | Indeks `public/content-catalog.json` build-time (ADR-0031); Beranda 8,7 dtk (sebelumnya timeout >180 dtk); E2E home 9/9 PASS |
 | T-058 | Blocker B-03: transfer/deactivate Worker | `licenseAdmin.ts` + token admin provisial (ADR-0032); 13/13 Worker test; typecheck PASS; deploy menunggu secret |
 | T-059 | Checklist B-01 & B-04 | Checklist signing Windows/Android/updater + SMTP/DNS/reset end-to-end; siap dijalankan saat kredensial tersedia |
+| T-060 | Checklist B-02/05/06/07/08 | Runbook backup/rotasi kunci, DV perangkat, review R1–R12, pembersihan secret, keputusan signature konten |
 
 ## Status prasyarat materi pembelajaran
 
