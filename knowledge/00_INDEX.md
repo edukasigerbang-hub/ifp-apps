@@ -85,6 +85,7 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0022](decisions/ADR-0022-multi-answer-mcq.md) | Pilihan ganda multi-jawaban | Accepted (implemented) |
 | [ADR-0023](decisions/ADR-0023-matching-ordering.md) | Kontrak aktivitas matching & ordering | Accepted (implemented) |
 | [ADR-0024](decisions/ADR-0024-local-content-review.md) | Review konten lokal (Fase J increment 1) | Accepted (implemented) |
+| [ADR-0025](decisions/ADR-0025-privacy-defaults.md) | Default privasi & retensi (provisional, OD-4) | Accepted (provisional) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
 

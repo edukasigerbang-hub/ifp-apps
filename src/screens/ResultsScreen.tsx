@@ -111,6 +111,12 @@ export function ResultsScreen() {
           </p>
         </div>
       )}
+      {desktop && (
+        <p className="mt-2 text-xs text-muted">
+          Berkas CSV memuat nama profil dan hasil belajar (data pribadi). File yang sudah diekspor
+          tidak ikut terhapus saat profil dihapus.
+        </p>
+      )}
       {exportError && (
         <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
           {exportError}

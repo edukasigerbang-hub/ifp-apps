@@ -273,6 +273,7 @@ export function ContentScreen() {
         <p className="mt-3 text-sm text-muted">
           Review dicatat di perangkat ini sebagai audit lokal. Ini tidak mengubah berkas paket, tidak menandai
           publikasi, dan tidak menggantikan review manusia sesuai rubrik. Publikasi server tetap memerlukan OD-7.
+          CSV ekspor memuat nama reviewer dan catatan (data pribadi).
         </p>
 
         {!desktop ? (
