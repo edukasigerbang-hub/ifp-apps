@@ -35,6 +35,7 @@
 | T-023 | Siklus hidup profil | Rename (unik, 1–80) + hapus dua langkah; proteksi profil terakhir; hapus data transaksional; E2E PASS |
 | T-024 | Audit aksesibilitas | `npm run a11y` 8 layar + keyboard; kontras & heading diperbaiki; 0 error/0 warning |
 | T-025 | E2E alur belajar | `npm run e2e:journey`: impor paket, Player managed, eksplorasi, kuis 100, sesi/attempt/outbox, Hasil Belajar; 11 pemeriksaan |
+| T-026 | E2E rollback konten | `npm run e2e:rollback`: impor v0.1.0 → v0.2.0 → rollback → v0.1.0; badge/judul/status paket; 9 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -104,6 +105,7 @@
 | Audit aksesibilitas (`npm run a11y`) | **PASS** — 8 layar, 0 error/0 warning; skip link + 10 langkah Tab bernama |
 | Screen reader / zoom / dialog | **BELUM** — audit heuristik; NVDA, reflow 200%, dan state dinamis belum diuji |
 | E2E alur belajar | **PASS** — impor 8 file, managed-first, eksplorasi, kuis 100, 1 sesi/1 attempt, outbox 1, skor tampil |
+| E2E rollback konten | **PASS** — v0.1.0 → v0.2.0 (judul E2E) → rollback → v0.1.0; list paket 0.1.0 active / 0.2.0 disabled |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
@@ -133,7 +135,7 @@
 ### Next Session Handoff
 
 1. **Jaga CI hijau**: `main` dilindungi — alur sekarang branch → PR → 2 checks hijau → merge; push langsung diblokir (termasuk admin).
-2. **Perluas E2E**: smoke, profil, alur belajar, dan a11y sudah ada; tambahkan rollback konten dan alur lisensi.
+2. **Perluas E2E**: smoke, profil, alur belajar, rollback, dan a11y sudah ada; tambahkan alur lisensi (impor file/aktivasi).
 3. **A11y manual**: NVDA/TalkBack, zoom 200%/reflow, state dinamis (hasil kuis, konfirmasi hapus), target sentuh.
 4. **Gate rilis**: OD-1 sign-off konten, OD-4 retensi/privasi, OD-5 kebijakan lisensi, OD-6 signing/identifier, OD-7 backend+CSP produksi, key lisensi produksi, DV-01…DV-20.
 

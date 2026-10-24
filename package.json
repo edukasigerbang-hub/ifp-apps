@@ -12,6 +12,7 @@
     "e2e": "node scripts/e2e/run.mjs smoke",
     "e2e:profile": "node scripts/e2e/run.mjs profile-lifecycle",
     "e2e:journey": "node scripts/e2e/run.mjs learning-journey",
+    "e2e:rollback": "node scripts/e2e/run.mjs content-rollback",
     "a11y": "node scripts/e2e/run.mjs a11y",
     "fixtures:check": "tsx scripts/check-fixtures.ts",
     "content:validate": "tsx scripts/validate-content.ts",

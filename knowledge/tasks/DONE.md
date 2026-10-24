@@ -399,3 +399,15 @@
 **Verifikasi:** `npm run e2e:journey` PASS 11 pemeriksaan (dua kali berturut-turut).
 
 **Belum:** impor lewat dialog native, rollback konten, dan alur lisensi belum menjadi skenario.
+
+### T-026 — E2E rollback konten
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Skenario `scripts/e2e/scenarios/content-rollback.mjs` (`npm run e2e:rollback`).
+- v2 dibangun saat runtime di artefak (salin paket pilot, ubah `packageVersion`/judul lesson) — tidak menambah fixture ke repo.
+- Alur: impor v0.1.0 → Player v0.1.0 → impor v0.2.0 (`previousVersion 0.1.0`) → remount Player v0.2.0 → `content_rollback_package` → Player v0.1.0 → status paket 0.1.0 active / 0.2.0 disabled.
+
+**Verifikasi:** `npm run e2e:rollback` PASS 9 pemeriksaan (dua kali berturut-turut).
+
+**Belum:** rollback lewat tombol UI (saat ini command), impor via dialog native, alur lisensi.
