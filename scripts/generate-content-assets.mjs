@@ -678,6 +678,116 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function arc(px, cx, cy, r, startDeg, endDeg, color, thickness = 4) {
+  for (let angle = startDeg; angle <= endDeg; angle += 2) {
+    const rad = (angle * Math.PI) / 180;
+    circle(px, Math.round(cx + Math.cos(rad) * r), Math.round(cy + Math.sin(rad) * r), thickness, color);
+  }
+}
+
+function geometryScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // garis sejajar dan transversal
+  line(px, 60, 170, 360, 170, colors.navy, 6);
+  line(px, 60, 270, 360, 270, colors.navy, 6);
+  line(px, 140, 110, 260, 330, colors.red, 6);
+  // sudut lancip
+  line(px, 460, 420, 620, 420, colors.navy, 6);
+  line(px, 460, 420, 590, 300, colors.blue, 6);
+  arc(px, 460, 420, 70, -60, 0, colors.orange, 4);
+  // sudut siku-siku
+  line(px, 460, 180, 620, 180, colors.navy, 6);
+  line(px, 460, 180, 460, 340, colors.blue, 6);
+  rect(px, 460, 220, 40, 40, colors.tealLight);
+  // sudut tumpul
+  line(px, 650, 480, 760, 480, colors.navy, 6);
+  line(px, 650, 480, 570, 370, colors.blue, 6);
+  arc(px, 650, 480, 70, -115, 0, colors.red, 4);
+  return px;
+}
+
+function cultureScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 400, 60, 400, 600, colors.navy, 4);
+  line(px, 0, 330, 800, 330, colors.navy, 4);
+  // rumah gadang
+  triangle(px, 80, 300, 320, 300, 200, 180, colors.red);
+  rect(px, 110, 300, 180, 20, colors.soil);
+  // penari
+  circle(px, 550, 160, 30, colors.skin1);
+  rect(px, 520, 190, 60, 90, colors.orange);
+  line(px, 520, 220, 470, 180, colors.skin1, 8);
+  line(px, 580, 220, 630, 180, colors.skin1, 8);
+  line(px, 540, 280, 520, 320, colors.navy, 8);
+  line(px, 560, 280, 580, 320, colors.navy, 8);
+  // rendang
+  ellipse(px, 200, 470, 100, 60, colors.white);
+  for (const [x, y] of [[160, 450], [200, 440], [240, 455], [180, 480], [220, 485]]) circle(px, x, y, 22, colors.soil);
+  // ulos
+  rect(px, 480, 430, 240, 120, colors.navy);
+  for (let i = 0; i < 6; i += 1) rect(px, 490 + i * 38, 440, 18, 100, i % 2 ? colors.red : colors.white);
+  return px;
+}
+
+function narrativeScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [30, 280, 530];
+  for (const x of panels) {
+    rect(px, x, 100, 230, 420, colors.sky);
+    rect(px, x, 100, 230, 5, colors.navy);
+    rect(px, x, 515, 230, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 225, 100, 5, 420, colors.navy);
+  }
+  // panel 1: anak melihat kucing
+  circle(px, 100, 260, 28, colors.skin1);
+  rect(px, 76, 288, 48, 90, colors.teal);
+  circle(px, 210, 430, 30, colors.orange);
+  circle(px, 210, 410, 10, colors.orange);
+  circle(px, 230, 410, 10, colors.orange);
+  // panel 2: hujan, kucing di bawah pohon
+  for (let i = 0; i < 5; i += 1) line(px, 300 + i * 30, 140, 290 + i * 30, 200, colors.blue, 4);
+  rect(px, 340, 330, 18, 120, colors.soil);
+  circle(px, 350, 320, 50, colors.green);
+  circle(px, 420, 440, 24, colors.orange);
+  circle(px, 412, 428, 8, colors.orange);
+  circle(px, 428, 428, 8, colors.orange);
+  // panel 3: anak menolong dengan payung
+  circle(px, 620, 260, 28, colors.skin2);
+  rect(px, 596, 288, 48, 90, colors.blue);
+  ellipse(px, 620, 210, 90, 30, colors.red);
+  line(px, 620, 240, 620, 330, colors.navy, 4);
+  circle(px, 690, 440, 24, colors.orange);
+  return px;
+}
+
+function flagCeremonyScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 430, W, 170, colors.green);
+  rect(px, 80, 220, 260, 210, colors.sand);
+  triangle(px, 70, 220, 350, 220, 210, 150, colors.red);
+  rect(px, 120, 260, 50, 60, colors.white);
+  rect(px, 240, 260, 50, 60, colors.white);
+  rect(px, 400, 150, 8, 280, colors.navy);
+  rect(px, 408, 155, 100, 32, colors.red);
+  rect(px, 408, 187, 100, 32, colors.white);
+  const kids = [[500, colors.teal], [570, colors.orange], [640, colors.blue], [710, colors.red]];
+  for (const [x, shirt] of kids) {
+    circle(px, x, 330, 28, colors.skin1);
+    rect(px, x - 24, 360, 48, 100, shirt);
+    rect(px, x - 22, 460, 16, 60, colors.navy);
+    rect(px, x + 6, 460, 16, 60, colors.navy);
+  }
+  return px;
+}
+
 function planeShapes() {
   const px = canvas();
   fill(px, colors.white);
@@ -1159,3 +1269,7 @@ write("content/packages/kelas4-matematika-b05-bangun-datar/assets/bangun-datar.p
 write("content/packages/kelas4-ipas-b05-siklus-air/assets/siklus-air.png", waterCycle());
 write("content/packages/kelas4-bahasa-indonesia-b05-teks-prosedur/assets/menanam-biji.png", plantingSteps());
 write("content/packages/kelas4-pendidikan-pancasila-b05-bhinneka/assets/bhinneka.png", bhinnekaScene());
+write("content/packages/kelas4-matematika-b06-garis-sudut/assets/garis-sudut.png", geometryScene());
+write("content/packages/kelas4-ipas-b06-keragaman-budaya/assets/keragaman-budaya.png", cultureScene());
+write("content/packages/kelas4-bahasa-indonesia-b06-teks-narasi/assets/teks-narasi.png", narrativeScene());
+write("content/packages/kelas4-pendidikan-pancasila-b06-nkri/assets/upacara-bendera.png", flagCeremonyScene());

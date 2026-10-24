@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-garis-sudut",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Garis dan Sudut",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-siku",
+        "prompt": "Sudut yang besarnya 90° disebut sudut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-siku",
+            "text": "siku-siku"
+          },
+          {
+            "optionId": "opsi-lancip",
+            "text": "lancip"
+          },
+          {
+            "optionId": "opsi-tumpul",
+            "text": "tumpul"
+          },
+          {
+            "optionId": "opsi-lurus",
+            "text": "lurus"
+          }
+        ],
+        "correctResponse": "opsi-siku"
+      },
+      {
+        "questionId": "soal-lancip",
+        "prompt": "Sudut yang besarnya kurang dari 90° disebut sudut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lancip",
+            "text": "lancip"
+          },
+          {
+            "optionId": "opsi-siku",
+            "text": "siku-siku"
+          },
+          {
+            "optionId": "opsi-tumpul",
+            "text": "tumpul"
+          },
+          {
+            "optionId": "opsi-lurus",
+            "text": "lurus"
+          }
+        ],
+        "correctResponse": "opsi-lancip"
+      },
+      {
+        "questionId": "soal-sejajar",
+        "prompt": "Dua garis yang tidak pernah berpotongan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sejajar",
+            "text": "sejajar"
+          },
+          {
+            "optionId": "opsi-berpotongan",
+            "text": "berpotongan"
+          },
+          {
+            "optionId": "opsi-tegak-lurus",
+            "text": "tegak lurus"
+          },
+          {
+            "optionId": "opsi-melengkung",
+            "text": "melengkung"
+          }
+        ],
+        "correctResponse": "opsi-sejajar"
+      },
+      {
+        "questionId": "soal-alat",
+        "prompt": "Alat yang digunakan untuk mengukur besar sudut adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-busur",
+            "text": "busur derajat"
+          },
+          {
+            "optionId": "opsi-penggaris",
+            "text": "penggaris"
+          },
+          {
+            "optionId": "opsi-jangka",
+            "text": "jangka"
+          },
+          {
+            "optionId": "opsi-meteran",
+            "text": "meteran"
+          }
+        ],
+        "correctResponse": "opsi-busur"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b06-garis-sudut",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Garis dan Sudut — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/garis-sudut.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4841,
+      "sha256": "976b7f76cf8597b56eed23c818b71bb30a76c3865fe3db1a0cf71e74ee514229"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

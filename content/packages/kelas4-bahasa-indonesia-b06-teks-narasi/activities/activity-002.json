@@ -1,0 +1,46 @@
+{
+  "activityId": "ordering-teks-narasi",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Struktur Teks Narasi",
+  "instructions": "Susun struktur teks narasi dalam urutan yang benar.",
+  "assets": [
+    "assets/teks-narasi.png"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-orientasi",
+        "text": "Orientasi: pengenalan tokoh dan latar"
+      },
+      {
+        "itemId": "item-komplikasi",
+        "text": "Komplikasi: munculnya masalah"
+      },
+      {
+        "itemId": "item-resolusi",
+        "text": "Resolusi: penyelesaian masalah"
+      }
+    ],
+    "correctOrder": [
+      "item-orientasi",
+      "item-komplikasi",
+      "item-resolusi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "nkri",
+  "packageId": "kelas4-pendidikan-pancasila-b06-nkri",
+  "title": "Negara Kesatuan Republik Indonesia",
+  "summary": "Memahami NKRI, dasar negara, semboyan persatuan, dan cara menjaga persatuan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian NKRI.",
+    "Menyebutkan dasar negara dan semboyan bangsa.",
+    "Menunjukkan sikap menjaga persatuan."
+  ],
+  "activityIds": [
+    "eksplorasi-nkri",
+    "matching-nkri"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/upacara-bendera.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera di sekolah dengan siswa berbaris dan bendera merah putih."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

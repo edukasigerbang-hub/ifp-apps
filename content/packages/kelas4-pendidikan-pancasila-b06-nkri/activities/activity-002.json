@@ -1,0 +1,54 @@
+{
+  "activityId": "matching-nkri",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah dan Makna",
+  "instructions": "Pasangkan setiap istilah kenegaraan dengan maknanya.",
+  "assets": [
+    "assets/upacara-bendera.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-nkri",
+        "left": "NKRI",
+        "right": "Negara kesatuan"
+      },
+      {
+        "pairId": "pasangan-pancasila",
+        "left": "Pancasila",
+        "right": "Dasar negara"
+      },
+      {
+        "pairId": "pasangan-bhinneka",
+        "left": "Bhinneka Tunggal Ika",
+        "right": "Semboyan persatuan"
+      },
+      {
+        "pairId": "pasangan-uud",
+        "left": "UUD 1945",
+        "right": "Hukum dasar"
+      },
+      {
+        "pairId": "pasangan-musyawarah",
+        "left": "Musyawarah",
+        "right": "Cara mengambil keputusan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera di sekolah dengan siswa berbaris dan bendera merah putih."
+  }
+}

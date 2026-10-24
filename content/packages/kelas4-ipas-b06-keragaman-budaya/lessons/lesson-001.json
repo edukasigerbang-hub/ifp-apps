@@ -1,0 +1,25 @@
+{
+  "lessonId": "keragaman-budaya",
+  "packageId": "kelas4-ipas-b06-keragaman-budaya",
+  "title": "Keragaman Budaya Nusantara",
+  "summary": "Mengenali keragaman rumah adat, tarian, makanan, dan kain tradisional serta sikap menghargainya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh keragaman budaya Indonesia.",
+    "Menghubungkan budaya dengan daerah asalnya.",
+    "Menunjukkan sikap menghargai dan melestarikan budaya."
+  ],
+  "activityIds": [
+    "eksplorasi-keragaman",
+    "matching-keragaman"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/keragaman-budaya.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 32 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 36 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -36,6 +36,10 @@
 | `kelas4-ipas-b05-siklus-air` | 0.1.0 | 4 | ipas | Bumi, cuaca, siklus air | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b05-teks-prosedur` | 0.1.0 | 4 | bahasa-indonesia | Teks prosedur | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b05-bhinneka` | 0.1.0 | 4 | pendidikan-pancasila | Bhinneka Tunggal Ika | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b06-garis-sudut` | 0.1.0 | 4 | matematika | Garis & sudut | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b06-keragaman-budaya` | 0.1.0 | 4 | ipas | Keragaman budaya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b06-teks-narasi` | 0.1.0 | 4 | bahasa-indonesia | Teks narasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b06-nkri` | 0.1.0 | 4 | pendidikan-pancasila | NKRI | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -178,6 +182,21 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
 - Bundle utama 452 kB (<500 kB) setelah lazy load.
 - Sisa Semester 2: B06–B08 untuk 7 mapel (21 paket) + opsi Bahasa Inggris.
+
+## Batch 10 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b06-garis-sudut` | Garis dan Sudut | eksplorasi + MCQ (4 soal) | `garis-sudut.png` |
+| `kelas4-ipas-b06-keragaman-budaya` | Keragaman Budaya Nusantara | eksplorasi + matching (6 pasangan) | `keragaman-budaya.png` |
+| `kelas4-bahasa-indonesia-b06-teks-narasi` | Memahami dan Menulis Teks Narasi | eksplorasi + ordering (3 struktur) | `teks-narasi.png` |
+| `kelas4-pendidikan-pancasila-b06-nkri` | Negara Kesatuan Republik Indonesia | eksplorasi + matching (5 pasangan) | `upacara-bendera.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
+- Bundle utama 456,8 kB (<500 kB).
+- Sisa Semester 2: B07–B08 untuk 7 mapel (14 paket) + opsi Bahasa Inggris.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 
