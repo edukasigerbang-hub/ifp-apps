@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T17:51:30+07:00",
+  "last_validated_at": "2026-10-24T17:58:32+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -287,6 +287,12 @@
       "command": "tauri dev with VITE_LICENSE_SERVER_URL + IFP_LICENSE_KEYS; CDP fill serial + click Aktivasi online",
       "result": "PASS",
       "details": "license_get_status valid=true; license f497b2a0; product ifp-learning; expires 2026-11-23; UI success message"
+    },
+    {
+      "name": "release_build_embedded_license",
+      "command": "IFP_LICENSE_KEYS=... VITE_LICENSE_SERVER_URL=... npm run tauri build; run release exe WITHOUT env",
+      "result": "PASS",
+      "details": "license valid=true via embedded public key; UI Aktivasi online shown; MSI sha e4b1c892…; NSIS sha 9a0bf503…"
     }
   ],
   "environment": {

@@ -21,5 +21,6 @@ Isi payload: `schemaVersion, licenseId, productId, licenseType, machineId, devic
 - Aplikasi dapat aktivasi online dengan `VITE_LICENSE_SERVER_URL=https://gerbangedukasi-api.edukasigerbang.workers.dev` (build-time) dan `IFP_LICENSE_KEYS` (runtime) + `IFP_LICENSE_PRODUCT_ID=ifp-learning`.
 - **Kunci `prod-1` bersifat provisional** untuk OD-6; keputusan KMS/HSM dan rotasi kunci produksi masih terbuka. Private key hanya ada di secret Worker dan file lokal `%TEMP%\gerbang-license-signing-key.txt` (harus dibackup aman lalu dihapus).
 - `max_devices` belum diterapkan untuk lisensi aplikasi (binding satu machine); perlu tabel perangkat multi-seat bila dibutuhkan.
-- Distribusi aplikasi memerlukan public key yang tertanam (saat ini env runtime); perlu build-time embed sebelum rilis.
+- Public key kini ditanam saat build melalui fallback `option_env!("IFP_LICENSE_KEYS")` (env runtime tetap menang). Build rilis `0.1.0` dengan `VITE_LICENSE_SERVER_URL` + kedua env build berhasil; exe rilis diuji **tanpa env** dan lisensi tetap `valid=true` serta UI menampilkan Aktivasi online.
+- Artefak rilis: `Gerbang Edukasi_0.1.0_x64_en-US.msi` (sha256 `e4b1c892…`) dan `Gerbang Edukasi_0.1.0_x64-setup.exe` (sha256 `9a0bf503…`).
 - Verifikasi: 11/11 unit test Worker, aktivasi live 200 + signature valid, konflik 409, verify `valid:true`, aktivasi online dari aplikasi Tauri PASS.

@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "7c27cfc",
+  "commit": "d082d9b",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -42,8 +42,8 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-24T17:51:30+07:00",
-  "last_validation": "worker license endpoints live (99ee8c80): activation 200 signature valid, conflict 409, verify valid=true; app online activation PASS (license f497b2a0, machine ec2a35c3); 11/11 worker tests",
+  "last_updated": "2026-10-24T17:58:32+07:00",
+  "last_validation": "release 0.1.0 built with embedded IFP_LICENSE_KEYS + VITE_LICENSE_SERVER_URL; exe run without env -> license valid=true, UI online; MSI 4.29 MiB sha e4b1c892, NSIS 3.00 MiB sha 9a0bf503",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Tanam public key lisensi saat build (bukan env runtime), backup/rotasi kunci prod-1 (OD-6), lalu review OD-1"
+  "next_step": "Jalankan DV-01..DV-20 di Windows 11/Android 14 dan review OD-1; rotasi/backup kunci prod-1; bersihkan data uji"
 }
