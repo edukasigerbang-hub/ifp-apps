@@ -11,7 +11,9 @@ import {
 } from "../data/contentRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
 import {
+  exportReviewsCsv,
   listReviews,
+  pickReviewExportDestination,
   recordReview,
   type ContentReview,
   type ReviewDecision
@@ -45,6 +47,7 @@ export function ContentScreen() {
   const [reviewBusy, setReviewBusy] = useState(false);
   const [reviewMessage, setReviewMessage] = useState<string | null>(null);
   const [reviewError, setReviewError] = useState<string | null>(null);
+  const [reviewExportBusy, setReviewExportBusy] = useState(false);
   const desktop = canPersistLocally();
 
   async function refresh() {
@@ -144,6 +147,27 @@ export function ContentScreen() {
       setReviewError(typed?.message ?? "Review gagal dicatat.");
     } finally {
       setReviewBusy(false);
+    }
+  }
+
+  async function handleExportReviews() {
+    setReviewError(null);
+    setReviewMessage(null);
+    try {
+      const destination = await pickReviewExportDestination(
+        `ifp-review-audit-${new Date().toISOString().slice(0, 10)}.csv`
+      );
+      if (!destination) return;
+      setReviewExportBusy(true);
+      const summary = await exportReviewsCsv(destination);
+      setReviewMessage(
+        `Audit review diekspor: ${summary.rows} baris (${summary.bytes} byte) ke ${summary.path}.`
+      );
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setReviewError(typed?.message ?? "Ekspor audit review gagal.");
+    } finally {
+      setReviewExportBusy(false);
     }
   }
 
@@ -300,14 +324,24 @@ export function ContentScreen() {
                 className="mt-1 block w-full rounded-control border border-ink/15 px-3 py-2 text-sm"
               />
             </label>
-            <button
-              type="button"
-              onClick={() => void handleRecordReview()}
-              disabled={reviewBusy || packages.length === 0}
-              className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
-            >
-              {reviewBusy ? "Menyimpan…" : "Catat review"}
-            </button>
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={() => void handleRecordReview()}
+                disabled={reviewBusy || packages.length === 0}
+                className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
+              >
+                {reviewBusy ? "Menyimpan…" : "Catat review"}
+              </button>
+              <button
+                type="button"
+                onClick={() => void handleExportReviews()}
+                disabled={reviewExportBusy || reviews.length === 0}
+                className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:opacity-40"
+              >
+                {reviewExportBusy ? "Mengekspor…" : "Ekspor audit review…"}
+              </button>
+            </div>
             <p aria-live="polite" className="text-sm text-muted">
               {reviewMessage ?? ""}
             </p>

@@ -4,6 +4,7 @@ use crate::profile;
 use crate::validation::validate_token;
 use rusqlite::{params, Connection, OptionalExtension};
 use serde::{Deserialize, Serialize};
+use std::io::Write;
 use tauri::State;
 
 const MAX_NOTES: usize = 1000;
@@ -158,6 +159,68 @@ pub fn record_review(
     find_review(connection, &id)?.ok_or_else(|| AppError::read("Review tidak ditemukan."))
 }
 
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ReviewExportSummary {
+    pub path: String,
+    pub rows: usize,
+    pub bytes: u64,
+}
+
+pub fn export_reviews_csv(
+    connection: &Connection,
+    destination: &std::path::Path,
+) -> Result<ReviewExportSummary, AppError> {
+    let active = profile::get_active_profile(connection)?;
+    if active.profile_type != "teacher" {
+        return Err(AppError::review_forbidden());
+    }
+
+    let reviews = list_reviews(connection, None, None)?;
+    let mut output = String::from("\u{FEFF}");
+    output.push_str("package_id,package_version,decision,reviewer,notes,created_at\r\n");
+    for review in &reviews {
+        output.push_str(&format!(
+            "{},{},{},{},{},{}\r\n",
+            crate::results::csv_field(&review.package_id),
+            crate::results::csv_field(&review.package_version),
+            crate::results::csv_field(&review.decision),
+            crate::results::csv_field(&review.reviewer_name),
+            crate::results::csv_field(review.notes.as_deref().unwrap_or("")),
+            crate::results::csv_field(&review.created_at)
+        ));
+    }
+
+    if let Some(parent) = destination.parent() {
+        std::fs::create_dir_all(parent)
+            .map_err(|_| AppError::export_failed("Folder ekspor tidak dapat dibuat."))?;
+    }
+    let mut file = std::fs::OpenOptions::new()
+        .write(true)
+        .create_new(true)
+        .open(destination)
+        .map_err(|_| AppError::export_failed("File ekspor sudah ada atau tidak dapat dibuat."))?;
+    file.write_all(output.as_bytes())
+        .map_err(|_| AppError::export_failed("Ekspor review tidak dapat ditulis."))?;
+    file.flush()
+        .map_err(|_| AppError::export_failed("Ekspor review tidak dapat difinalisasi."))?;
+
+    Ok(ReviewExportSummary {
+        path: destination.display().to_string(),
+        rows: reviews.len(),
+        bytes: output.len() as u64,
+    })
+}
+
+#[tauri::command]
+pub fn review_export_csv(
+    db: State<'_, DbState>,
+    destination: String,
+) -> Result<ReviewExportSummary, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    export_reviews_csv(&connection, std::path::Path::new(&destination))
+}
+
 #[tauri::command]
 pub fn review_list(
     db: State<'_, DbState>,
@@ -272,5 +335,47 @@ mod tests {
         assert_eq!(all.len(), 2);
         assert_eq!(all[0].decision, "approved");
         assert_eq!(list_reviews(&connection, Some("pkg-lain"), None).expect("empty").len(), 0);
+    }
+
+    #[test]
+    fn exports_reviews_csv_with_injection_guard_and_no_overwrite() {
+        let connection = test_connection();
+        seed_package(&connection);
+        teacher(&connection);
+        let mut review = input("approved");
+        review.notes = Some("=SUM(A1)".to_string());
+        record_review(&connection, &review).expect("review");
+
+        let path = std::env::temp_dir().join(format!(
+            "ifp-review-export-{}.csv",
+            uuid::Uuid::new_v4()
+        ));
+        let summary = export_reviews_csv(&connection, &path).expect("export");
+        assert_eq!(summary.rows, 1);
+        assert!(summary.bytes > 0);
+
+        let content = std::fs::read_to_string(&path).expect("read");
+        assert!(content.starts_with('\u{FEFF}'));
+        assert!(content.contains("package_id,package_version,decision,reviewer,notes,created_at\r\n"));
+        assert!(content.contains("'=SUM(A1)"));
+        assert!(content.contains("Bu Guru"));
+
+        assert!(export_reviews_csv(&connection, &path).is_err());
+        std::fs::remove_file(&path).ok();
+    }
+
+    #[test]
+    fn student_cannot_export_reviews() {
+        let connection = test_connection();
+        seed_package(&connection);
+        profile::get_active_profile(&connection).expect("student");
+
+        let path = std::env::temp_dir().join(format!(
+            "ifp-review-export-{}.csv",
+            uuid::Uuid::new_v4()
+        ));
+        let error = export_reviews_csv(&connection, &path).expect_err("forbidden");
+        assert_eq!(error.code, "REVIEW_FORBIDDEN");
+        assert!(!path.exists());
     }
 }

@@ -542,3 +542,15 @@
 **Verifikasi:** `cargo test` 53/53; `npm test` 68/68; `npm run build` PASS; `npm run e2e:review` PASS 7 pemeriksaan (dua kali); a11y 16 pemeriksaan.
 
 **Belum:** publish/build server, RBAC multi-pengguna, persetujuan global (OD-1/OD-7).
+
+### T-037 — Fase J: ekspor audit review
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- `review_export_csv`: CSV audit dengan BOM, CRLF, escaping, anti formula-injection; menolak menimpa file.
+- Hanya profil guru (native); UI tombol “Ekspor audit review…” dengan dialog simpan.
+- Data memuat nama reviewer/catatan (PII lokal), hanya diekspor atas aksi pengguna.
+
+**Verifikasi:** `cargo test` 55/55; `npm test` 68/68; `npm run build` PASS; `npm run e2e:review` PASS 9 pemeriksaan (dua kali); a11y 16 pemeriksaan.
+
+**Belum:** kirim audit ke server/pusat (OD-7); retensi PII (OD-4).

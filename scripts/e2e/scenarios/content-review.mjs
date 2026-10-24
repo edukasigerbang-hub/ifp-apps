@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -100,6 +101,20 @@ export async function run({ page, artifactDir, log }) {
   );
   log("Audit review tersimpan dengan nama reviewer dan catatan.");
 
+  const exportPath = path.join(artifactDir, "review-audit.csv");
+  const exported = await invoke(page, "review_export_csv", { destination: exportPath });
+  assert(exported.ok, `Ekspor review gagal: ${JSON.stringify(exported.error)}`);
+  assert(exported.value.rows === 1, `Baris ekspor: ${exported.value.rows}`);
+  const csv = await readFile(exportPath, "utf8");
+  assert(csv.startsWith("\uFEFF"), "CSV tidak diawali BOM.");
+  assert(csv.includes("\r\n"), "CSV tidak memakai CRLF.");
+  assert(csv.includes("Bu Guru") && csv.includes("approved"), "Isi CSV tidak lengkap.");
+  assert(
+    csv.includes("Skema dan aset sudah diperiksa."),
+    "Catatan review tidak ada di CSV."
+  );
+  log(`Audit review diekspor: ${exported.value.rows} baris, ${exported.value.bytes} byte.`);
+
   const student = await invoke(page, "profile_create", {
     input: { displayName: "Siswa Uji", profileType: "student" }
   });
@@ -133,6 +148,17 @@ export async function run({ page, artifactDir, log }) {
     `Kode error: ${JSON.stringify(forbidden.error)}`
   );
   log("Review oleh siswa ditolak native (REVIEW_FORBIDDEN).");
+
+  const forbiddenExportPath = path.join(artifactDir, "review-audit-student.csv");
+  const forbiddenExport = await invoke(page, "review_export_csv", {
+    destination: forbiddenExportPath
+  });
+  assert(!forbiddenExport.ok, "Siswa seharusnya tidak dapat mengekspor audit review.");
+  assert(
+    forbiddenExport.error?.code === "REVIEW_FORBIDDEN",
+    `Kode error ekspor: ${JSON.stringify(forbiddenExport.error)}`
+  );
+  log("Ekspor audit oleh siswa ditolak native (REVIEW_FORBIDDEN).");
 
   const after = await invoke(page, "review_list");
   assert(after.value.length === 1, "Jumlah review berubah setelah penolakan.");

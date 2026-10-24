@@ -46,6 +46,7 @@
 | T-034 | E2E backup → restore | Export/inspect (hash), mutasi, restore (profil/sesi/attempt/skor pulih), tolak schema lebih baru; 9 pemeriksaan |
 | T-035 | A11y hasil kuis + preflight | `npm run a11y` 16 pemeriksaan: state hasil kuis diaudit; harness menolak start bila app masih berjalan |
 | T-036 | Fase J — review konten lokal | Migrasi `0005`; RBAC guru native; ledger append-only + UI; audit & guard hapus profil reviewer; E2E 7 pemeriksaan |
+| T-037 | Fase J — ekspor audit review | CSV BOM/CRLF + anti-injection; hanya guru; tolak overwrite; E2E 9 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -127,6 +128,8 @@
 | A11y hasil kuis | **PASS** — 16 pemeriksaan, 0 error/0 warning (dua kali); preflight app berjalan |
 | Review konten lokal | **PASS** — E2E 7 pemeriksaan: guru mencatat review, nama/catatan tersimpan; siswa ditolak `REVIEW_FORBIDDEN`; profil reviewer tidak dapat dihapus |
 | Migrasi 0005 | **PASS** — `cargo test` 53/53; migrasi tercatat otomatis di backup |
+| Ekspor audit review | **PASS** — CSV 1 baris/173 byte; BOM+CRLF; guru saja; siswa `REVIEW_FORBIDDEN`; `cargo test` 55/55 |
+| Checksum migrasi lintas line ending | **PASS** — checksum ternormalisasi; legacy diterima & di-upgrade; app start pada DB pengguna; 3 test baru (cargo 58/58) |
 | Pilihan ganda multi-jawaban | **PASS** — E2E 6 pemeriksaan: 3 aktivitas dinilai 100, 3 percobaan, rata-rata 100; npm 56/56 |
 | Matching & ordering | **PASS** — E2E 8 pemeriksaan: 5 aktivitas dinilai 100, 5 percobaan; validasi kontrak ditolak saat rusak (unit) |
 | Unit test interaksi | **PASS** — 12 test baru; total npm 68/68 |

@@ -80,6 +80,7 @@ pub fn run() {
       profile::profile_delete,
       review::review_list,
       review::review_record,
+      review::review_export_csv,
       preferences::preferences_get,
       preferences::preferences_set
     ])

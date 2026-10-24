@@ -71,7 +71,18 @@ pub fn open(path: &Path) -> Result<Connection, DbError> {
     Ok(connection)
 }
 
+fn normalize_line_endings(sql: &str) -> String {
+    sql.replace("\r\n", "\n")
+}
+
 fn checksum_of(sql: &str) -> String {
+    Sha256::digest(normalize_line_endings(sql).as_bytes())
+        .iter()
+        .map(|byte| format!("{byte:02x}"))
+        .collect()
+}
+
+fn raw_checksum_of(sql: &str) -> String {
     Sha256::digest(sql.as_bytes())
         .iter()
         .map(|byte| format!("{byte:02x}"))
@@ -99,7 +110,19 @@ pub(crate) fn migrate(connection: &mut Connection) -> Result<(), DbError> {
 
         match applied {
             Some(existing) if existing != checksum => {
-                return Err(DbError::ChecksumMismatch(migration.version));
+                // Checksum lama dihitung dari byte mentah; line ending dapat berubah
+                // antar-checkout (CRLF/LF). Terima kedua varian lalu simpan nilai ternormalisasi.
+                let crlf_sql = migration.sql.replace('\n', "\r\n");
+                if existing == raw_checksum_of(migration.sql)
+                    || existing == raw_checksum_of(&crlf_sql)
+                {
+                    connection.execute(
+                        "UPDATE schema_migrations SET checksum = ?2 WHERE version = ?1",
+                        params![migration.version, checksum],
+                    )?;
+                } else {
+                    return Err(DbError::ChecksumMismatch(migration.version));
+                }
             }
             Some(_) => {}
             None => {
@@ -123,4 +146,57 @@ pub(crate) fn test_connection() -> Connection {
     let mut connection = Connection::open_in_memory().expect("in-memory sqlite");
     migrate(&mut connection).expect("migrasi in-memory");
     connection
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn checksum_ignores_line_endings() {
+        assert_eq!(checksum_of("a\r\nb\r\n"), checksum_of("a\nb\n"));
+    }
+
+    #[test]
+    fn migrate_accepts_and_upgrades_legacy_checksum() {
+        let mut connection = Connection::open_in_memory().expect("open");
+        migrate(&mut connection).expect("first migrate");
+
+        let last = MIGRATIONS.last().expect("migration");
+        let crlf_sql = last.sql.replace('\n', "\r\n");
+        let legacy = raw_checksum_of(&crlf_sql);
+        connection
+            .execute(
+                "UPDATE schema_migrations SET checksum = ?2 WHERE version = ?1",
+                params![last.version, legacy],
+            )
+            .expect("simulate legacy");
+
+        migrate(&mut connection).expect("legacy accepted");
+        let stored: String = connection
+            .query_row(
+                "SELECT checksum FROM schema_migrations WHERE version = ?1",
+                params![last.version],
+                |row| row.get(0),
+            )
+            .expect("checksum");
+        assert_eq!(stored, checksum_of(last.sql));
+    }
+
+    #[test]
+    fn migrate_rejects_actual_checksum_change() {
+        let mut connection = Connection::open_in_memory().expect("open");
+        migrate(&mut connection).expect("first migrate");
+        let last = MIGRATIONS.last().expect("migration");
+        connection
+            .execute(
+                "UPDATE schema_migrations SET checksum = 'deadbeef' WHERE version = ?1",
+                params![last.version],
+            )
+            .expect("tamper");
+        assert!(matches!(
+            migrate(&mut connection),
+            Err(DbError::ChecksumMismatch(version)) if version == last.version
+        ));
+    }
 }

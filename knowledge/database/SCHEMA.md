@@ -7,7 +7,7 @@
 
 - Runner native di `src-tauri/src/db.rs`; SQL di `src-tauri/src/migrations/0001_init.sql`.
 - Tabel `schema_migrations(version INTEGER PK, applied_at TEXT, checksum TEXT)`.
-- Checksum SHA-256 diverifikasi setiap startup; jika SQL migrasi berubah setelah diterapkan → startup gagal (mencegah skema basi).
+- Checksum SHA-256 dihitung dari SQL yang **dinormalisasi line ending-nya** (CRLF→LF); checksum lama berbasis byte mentah (LF/CRLF) tetap diterima lalu dinaikkan ke bentuk ternormalisasi. Perubahan SQL yang sebenarnya tetap menggagalkan startup (mencegah skema basi).
 - Migrasi dijalankan dalam transaksi; `PRAGMA foreign_keys=ON`, `journal_mode=WAL`, `busy_timeout=5000`.
 
 ## Tabel (aktual)
@@ -46,8 +46,11 @@ Transisi: `pending → acknowledged` (ack) atau `pending → failed` (retry, `at
 ### `license_state` (migrasi 0004)
 Satu baris (`id=1`): `license_json`, `license_id`, `license_type`, `product_id`, `machine_id`, `key_id`, `expires_at`, `imported_at`, `last_verified_at`. Lisensi diverifikasi ulang saat status/refresh; data UI bukan sumber otoritatif.
 
+### `content_reviews` (migrasi 0005)
+Ledger audit review konten lokal: `id` PK, `package_id`, `package_version`, `reviewer_profile_id` (FK `profiles`), `decision` (`approved|rejected`), `notes`, `created_at`. Append-only; nama reviewer diambil lewat join `profiles`. Hanya profil bertipe `teacher` yang boleh menulis (ditegakkan native). Paket dengan review tidak mengubah `reviewStatus` manifest.
+
 ### Index
-`learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)` · `sync_outbox(state, next_attempt_at, created_at)`. Indeks terakhir ditambahkan di migrasi 0002.
+`learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)` · `sync_outbox(state, next_attempt_at, created_at)` · `content_reviews(package_id, package_version, created_at)`. Indeks `content_reviews` ditambahkan di migrasi 0005.
 
 ## Jaminan transaksi
 

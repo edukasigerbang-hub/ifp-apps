@@ -12,6 +12,12 @@
 5. **Audit**: baris review tidak dapat diubah/dihapus dari aplikasi; urutan daftar memakai `created_at` + `rowid` agar deterministik.
 6. **Build/publish server tidak diimplementasikan** pada increment ini; tetap menunggu OD-7 dan kebijakan review (OD-1).
 
+## Addendum 2026-10-24 — ekspor audit review
+
+7. `review_export_csv` menghasilkan CSV audit (UTF-8 BOM, CRLF, escaping, anti formula-injection) dan menolak menimpa file yang sudah ada.
+8. Ekspor hanya untuk profil guru (ditegakkan native, `REVIEW_FORBIDDEN`).
+9. CSV memuat nama reviewer dan catatan (PII lokal); file dibuat hanya atas aksi pengguna lewat dialog simpan dan tidak dikirim ke mana pun.
+
 ## Konsekuensi
 
 - Review tersimpan di perangkat (ikut backup database) dan tidak portabel lewat paket konten.
