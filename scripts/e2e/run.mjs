@@ -42,6 +42,10 @@ try {
   });
   page = await connect(handle.target.webSocketDebuggerUrl);
   await page.waitFor("document.readyState === 'complete'", { label: "dokumen siap" });
+  await page.waitFor(`document.body.textContent.includes("Jelajah Materi")`, {
+    label: "shell aplikasi",
+    timeoutMs: 30_000
+  });
   await scenario.run({ page, artifactDir, log, setup });
 } catch (error) {
   failed = true;

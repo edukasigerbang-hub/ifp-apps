@@ -4,8 +4,8 @@
   "index_mode": "LIGHTWEIGHT_GREP",
   "index_version": 1,
   "schema_version": 1,
-  "indexed_commit": "76b8c35",
-  "generated_at": "2026-10-24T08:33:05+07:00",
+  "indexed_commit": "dbb9157",
+  "generated_at": "2026-10-24T08:43:30+07:00",
   "files_indexed": 145,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
@@ -20,7 +20,7 @@
     "note": "scripts termasuk e2e/{app,cdp,run}.mjs + scenarios/smoke.mjs; src-tauri/gen dan target dikecualikan"
   },
   "validation": {
-    "last_validated_at": "2026-10-24T08:33:05+07:00",
+    "last_validated_at": "2026-10-24T08:43:30+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },
