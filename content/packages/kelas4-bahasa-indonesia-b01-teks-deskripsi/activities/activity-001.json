@@ -2,33 +2,47 @@
   "activityId": "eksplorasi-teks-deskripsi",
   "type": "exploration",
   "schemaVersion": "1.0.0",
-  "title": "Mengamati Halaman Sekolah",
-  "instructions": "Amati gambar halaman sekolah. Catat hal yang dapat dilihat, didengar, dan dirasakan untuk bahan teks deskripsi.",
+  "title": "Eksplorasi Terbimbing",
+  "instructions": "Amati gambar, lalu ikuti lima langkah eksplorasi.",
   "assets": [
-    "assets/halaman-sekolah.png"
+    "assets/taman-kota.png"
   ],
   "interactionConfig": {
     "steps": [
       {
-        "prompt": "Apa saja yang terlihat di halaman sekolah pada gambar?",
-        "assetPath": "assets/halaman-sekolah.png",
-        "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak.",
-        "reveal": "Ada gedung sekolah, bendera, pohon, bangku, lapangan, dan jalan setapak.",
-        "hint": "Sebutkan objek dari yang paling besar ke yang lebih kecil."
+        "prompt": "Objek apa yang digambarkan?",
+        "assetPath": "assets/taman-kota.png",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Taman kota dengan air mancur, bangku, bunga, dan burung.",
+        "hint": "Amati bagian-bagian taman."
       },
       {
-        "prompt": "Panca indra apa yang dapat digunakan saat mendeskripsikan halaman sekolah?",
-        "assetPath": "assets/halaman-sekolah.png",
-        "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak.",
-        "reveal": "Kita dapat menggunakan penglihatan, pendengaran, penciuman, dan peraba.",
-        "hint": "Bayangkan warna, suara, bau, dan tekstur di halaman sekolah."
+        "prompt": "Kata penglihatan apa yang digunakan?",
+        "assetPath": "assets/taman-kota.png",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Hijau, merah, dan biru.",
+        "hint": "Sebutkan warna yang terlihat."
       },
       {
-        "prompt": "Buat satu kalimat deskripsi tentang suasana halaman sekolah.",
-        "assetPath": "assets/halaman-sekolah.png",
-        "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak.",
-        "reveal": "Contoh: Halaman sekolah tampak hijau dan bersih, dengan angin pagi yang sejuk.",
-        "hint": "Gunakan kata sifat dan kata pengindraan."
+        "prompt": "Kata pendengaran apa yang digunakan?",
+        "assetPath": "assets/taman-kota.png",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Gemericik air dan kicau burung.",
+        "hint": "Dengarkan suara di taman."
+      },
+      {
+        "prompt": "Kata penciuman apa yang digunakan?",
+        "assetPath": "assets/taman-kota.png",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Harum bunga.",
+        "hint": "Bayangkan bau bunga."
+      },
+      {
+        "prompt": "Bagaimana menyusun teks deskripsi?",
+        "assetPath": "assets/taman-kota.png",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Sebutkan objek, ciri, lalu kesan dalam tiga sampai empat kalimat.",
+        "hint": "Mulai dari kalimat topik."
       }
     ]
   },
@@ -45,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak."
+    "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung."
   }
 }

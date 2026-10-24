@@ -1,0 +1,56 @@
+{
+  "activityId": "kuis-singkat-pancasila",
+  "type": "short-answer",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Jawaban Singkat",
+  "instructions": "Tulis jawaban singkat yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-1",
+        "prompt": "Sila pertama dilambangkan dengan ...",
+        "responseType": "text",
+        "correctResponse": "bintang"
+      },
+      {
+        "questionId": "soal-2",
+        "prompt": "Sila kedua dilambangkan dengan ...",
+        "responseType": "text",
+        "correctResponse": "rantai"
+      },
+      {
+        "questionId": "soal-3",
+        "prompt": "Musyawarah termasuk sila ke ...",
+        "responseType": "text",
+        "correctResponse": "4"
+      },
+      {
+        "questionId": "soal-4",
+        "prompt": "Padi dan kapas melambangkan sila ke ...",
+        "responseType": "text",
+        "correctResponse": "5"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kegiatan kelas yang mencerminkan sila Pancasila: berdoa, menolong, belajar bersama, mengangkat tangan, dan menyapu."
+  }
+}

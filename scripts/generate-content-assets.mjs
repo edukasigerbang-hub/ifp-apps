@@ -2432,6 +2432,141 @@ function hundredChart() {
   return px;
 }
 
+function pilotPlaceValueScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const counts = [1, 2, 3, 4, 5];
+  const palette = [colors.navy, colors.teal, colors.orange, colors.green, colors.red];
+  for (let column = 0; column < 5; column += 1) {
+    const x = 40 + column * 145;
+    rect(px, x, 100, 130, 430, colors.sky);
+    rect(px, x, 100, 130, 5, colors.navy);
+    rect(px, x, 525, 130, 5, colors.navy);
+    rect(px, x, 100, 5, 430, colors.navy);
+    rect(px, x + 125, 100, 5, 430, colors.navy);
+    for (let i = 0; i < counts[column]; i += 1) {
+      if (column === 4) {
+        circle(px, x + 40 + (i % 2) * 50, 160 + Math.floor(i / 2) * 50, 15, palette[column]);
+      } else if (column === 3) {
+        rect(px, x + 35 + i * 16, 180, 10, 320, palette[column]);
+      } else {
+        const size = column === 0 ? 100 : 70;
+        const bx = x + (130 - size) / 2;
+        const by = 500 - i * (size + 15) - size;
+        rect(px, bx, by, size, size, palette[column]);
+      }
+    }
+  }
+  return px;
+}
+
+function pilotParkScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 690, 120, 44, colors.sun);
+  rect(px, 0, 430, W, 170, colors.green);
+  rect(px, 300, 430, 200, 170, colors.sand);
+  // air mancur
+  ellipse(px, 400, 430, 120, 40, colors.blue);
+  ellipse(px, 400, 425, 95, 26, colors.sky);
+  rect(px, 390, 300, 20, 125, colors.white);
+  for (const angle of [-150, -120, -90, -60, -30]) {
+    const radians = (angle * Math.PI) / 180;
+    line(px, 400, 300, 400 + Math.cos(radians) * 80, 300 + Math.sin(radians) * 60, colors.sky, 6);
+  }
+  // bangku
+  rect(px, 80, 380, 150, 16, colors.soil);
+  rect(px, 90, 396, 12, 45, colors.navy);
+  rect(px, 210, 396, 12, 45, colors.navy);
+  // bunga
+  for (const [x, y] of [[560, 470], [610, 490], [660, 470], [710, 500]]) {
+    line(px, x, y + 20, x, y + 60, colors.greenDark, 4);
+    circle(px, x, y, 18, colors.red);
+    circle(px, x, y, 7, colors.sun);
+  }
+  // pohon
+  rect(px, 700, 300, 24, 140, colors.soil);
+  circle(px, 712, 270, 60, colors.greenDark);
+  // burung
+  line(px, 520, 170, 545, 155, colors.navy, 5);
+  line(px, 545, 155, 570, 170, colors.navy, 5);
+  return px;
+}
+
+function pilotPondScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 0, 300, W, 300, colors.green);
+  ellipse(px, 400, 450, 330, 120, colors.blue);
+  ellipse(px, 400, 440, 300, 100, colors.sky);
+  // teratai
+  for (const [x, y] of [[250, 430], [520, 470], [600, 420]]) {
+    ellipse(px, x, y, 55, 24, colors.green);
+    circle(px, x + 15, y - 10, 12, colors.sun);
+  }
+  // katak
+  ellipse(px, 300, 390, 40, 30, colors.greenDark);
+  circle(px, 285, 365, 10, colors.green);
+  circle(px, 315, 365, 10, colors.green);
+  circle(px, 285, 363, 4, colors.navy);
+  circle(px, 315, 363, 4, colors.navy);
+  // ikan
+  ellipse(px, 500, 450, 34, 18, colors.orange);
+  triangle(px, 470, 450, 445, 435, 445, 465, colors.orange);
+  // capung
+  ellipse(px, 620, 250, 22, 10, colors.blue);
+  ellipse(px, 640, 240, 26, 10, colors.sky);
+  line(px, 620, 260, 620, 295, colors.navy, 3);
+  // batu
+  ellipse(px, 160, 480, 50, 24, colors.soil);
+  ellipse(px, 720, 500, 55, 26, colors.soil);
+  return px;
+}
+
+function pilotPancasilaScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [30, 190, 350, 510, 670];
+  for (const x of panels) {
+    rect(px, x, 100, 120, 430, colors.sky);
+    rect(px, x, 100, 120, 5, colors.navy);
+    rect(px, x, 525, 120, 5, colors.navy);
+    rect(px, x, 100, 5, 430, colors.navy);
+    rect(px, x + 115, 100, 5, 430, colors.navy);
+  }
+  // 1 berdoa
+  circle(px, 90, 230, 24, colors.skin1);
+  line(px, 90, 254, 90, 360, colors.teal, 12);
+  line(px, 90, 280, 70, 320, colors.skin1, 8);
+  line(px, 90, 280, 110, 320, colors.skin1, 8);
+  star(px, 90, 170, 22, 9, colors.sun);
+  // 2 menolong
+  circle(px, 250, 230, 22, colors.skin1);
+  line(px, 250, 252, 250, 360, colors.red, 12);
+  circle(px, 285, 300, 18, colors.skin2);
+  line(px, 285, 318, 285, 390, colors.blue, 10);
+  line(px, 250, 290, 285, 310, colors.skin1, 8);
+  // 3 belajar bersama
+  for (const [x, color] of [[410, colors.teal], [445, colors.orange], [480, colors.green]]) {
+    circle(px, x, 240, 20, colors.skin1);
+    line(px, x, 260, x, 350, color, 10);
+  }
+  // 4 mengangkat tangan
+  circle(px, 570, 250, 24, colors.skin2);
+  line(px, 570, 274, 570, 380, colors.blue, 12);
+  line(px, 570, 300, 540, 230, colors.navy, 8);
+  // 5 menyapu
+  circle(px, 730, 240, 22, colors.skin3);
+  line(px, 730, 262, 730, 380, colors.green, 12);
+  line(px, 730, 300, 690, 340, colors.soil, 7);
+  line(px, 680, 340, 700, 440, colors.orange, 5);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2740,3 +2875,7 @@ write("content/packages/kelas2-pendidikan-pancasila-b08-proyek-kelas/assets/proy
 write("content/packages/kelas2-seni-rupa-b08-pameran/assets/pameran-kelas2.png", exhibitionScene());
 write("content/packages/kelas2-pjok-b08-kesehatan/assets/kesehatan-kelas2.png", hygieneScene());
 write("content/packages/kelas2-pai-b08-adab/assets/adab-kelas2.png", goodMannersScene());
+write("content/packages/kelas4-matematika-b01-bilangan-cacah/assets/pasar-nilai-tempat.png", pilotPlaceValueScene());
+write("content/packages/kelas4-bahasa-indonesia-b01-teks-deskripsi/assets/taman-kota.png", pilotParkScene());
+write("content/packages/kelas4-ipas-b01-makhluk-hidup/assets/kolam-ekosistem.png", pilotPondScene());
+write("content/packages/kelas4-pendidikan-pancasila-b01-pancasila/assets/kelas-pancasila.png", pilotPancasilaScene());

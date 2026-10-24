@@ -1,125 +1,57 @@
 {
-  "activityId": "kuis-bilangan-cacah",
-  "type": "multiple-choice",
+  "activityId": "matching-bilangan-cacah",
+  "type": "matching",
   "schemaVersion": "1.0.0",
-  "title": "Kuis Bilangan Cacah Besar",
-  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
   "assets": [],
   "interactionConfig": {
-    "layout": "single-question"
-  },
-  "assessmentConfig": {
-    "questions": [
+    "pairs": [
       {
-        "questionId": "soal-nilai-7",
-        "prompt": "Nilai angka 7 pada bilangan 7.205 adalah ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-700",
-            "text": "700"
-          },
-          {
-            "optionId": "opsi-7000",
-            "text": "7.000"
-          },
-          {
-            "optionId": "opsi-70000",
-            "text": "70.000"
-          },
-          {
-            "optionId": "opsi-7",
-            "text": "7"
-          }
-        ],
-        "correctResponse": "opsi-7000"
+        "pairId": "pasangan-1",
+        "left": "12.345",
+        "right": "Dua belas ribu tiga ratus empat puluh lima"
       },
       {
-        "questionId": "soal-nilai-3",
-        "prompt": "Nilai angka 3 pada bilangan 3.482 adalah ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-3",
-            "text": "3"
-          },
-          {
-            "optionId": "opsi-30",
-            "text": "30"
-          },
-          {
-            "optionId": "opsi-300",
-            "text": "300"
-          },
-          {
-            "optionId": "opsi-3000",
-            "text": "3.000"
-          }
-        ],
-        "correctResponse": "opsi-3000"
+        "pairId": "pasangan-2",
+        "left": "Angka 3 pada 12.345",
+        "right": "Ratusan"
       },
       {
-        "questionId": "soal-bandingkan",
-        "prompt": "Manakah bilangan yang lebih besar?",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-5607",
-            "text": "5.607"
-          },
-          {
-            "optionId": "opsi-5670",
-            "text": "5.670"
-          },
-          {
-            "optionId": "opsi-sama",
-            "text": "Sama besar"
-          },
-          {
-            "optionId": "opsi-tidak-bisa",
-            "text": "Tidak dapat dibandingkan"
-          }
-        ],
-        "correctResponse": "opsi-5670"
+        "pairId": "pasangan-3",
+        "left": "Angka 4 pada 12.345",
+        "right": "Puluhan"
       },
       {
-        "questionId": "soal-tambah",
-        "prompt": "2.345 + 1.200 = ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-3445",
-            "text": "3.445"
-          },
-          {
-            "optionId": "opsi-3545",
-            "text": "3.545"
-          },
-          {
-            "optionId": "opsi-3455",
-            "text": "3.455"
-          },
-          {
-            "optionId": "opsi-3645",
-            "text": "3.645"
-          }
-        ],
-        "correctResponse": "opsi-3545"
+        "pairId": "pasangan-4",
+        "left": "12.354",
+        "right": "Lebih besar dari 12.345"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "12.435",
+        "right": "Bilangan terbesar"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Soal cerita",
+        "right": "Cerita bilangan cacah"
       }
-    ],
-    "passingScore": 75
+    ]
   },
   "completionPolicy": {
-    "type": "score-threshold",
-    "threshold": 75
+    "type": "view"
   },
   "feedbackPolicy": {
-    "mode": "after-attempt",
+    "mode": "immediate",
     "allowRetry": true,
-    "showCorrectAnswer": false
+    "showCorrectAnswer": true
   },
   "runtimeCapabilities": [
     "touch",
     "keyboard"
-  ]
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan."
+  }
 }

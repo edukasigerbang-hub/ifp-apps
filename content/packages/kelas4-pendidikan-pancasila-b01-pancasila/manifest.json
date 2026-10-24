@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
   "packageId": "kelas4-pendidikan-pancasila-b01-pancasila",
-  "packageVersion": "0.1.0",
+  "packageVersion": "0.2.0",
   "schemaVersion": "1.0.0",
-  "title": "Nilai Pancasila dalam Kehidupan Sehari-hari — Kelas 4 (Draft)",
+  "title": "Pancasila — Pendidikan Pancasila Kelas 4 (Pilot)",
   "locale": "id-ID",
   "gradeLevels": [
     4
@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gotong-royong.png",
+      "path": "assets/kelas-pancasila.png",
       "mediaType": "image/png",
-      "sizeBytes": 6372,
-      "sha256": "5f7f7ae301edf257b6d8ba9a7bc97b4607ce3b1d3b7e5f88dd8e2839d074afd1"
+      "sizeBytes": 9956,
+      "sha256": "b1e7a9e30a25ccb3b68ee29498e275f09969bc96641007fa2b5922336f68d593"
     }
   ],
   "dependencies": [],

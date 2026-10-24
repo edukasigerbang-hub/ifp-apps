@@ -1,125 +1,57 @@
 {
-  "activityId": "kuis-teks-deskripsi",
-  "type": "multiple-choice",
+  "activityId": "matching-teks-deskripsi",
+  "type": "matching",
   "schemaVersion": "1.0.0",
-  "title": "Kuis Teks Deskripsi",
-  "instructions": "Pilih satu jawaban yang paling tepat tentang teks deskripsi.",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
   "assets": [],
   "interactionConfig": {
-    "layout": "single-question"
-  },
-  "assessmentConfig": {
-    "questions": [
+    "pairs": [
       {
-        "questionId": "soal-tujuan-deskripsi",
-        "prompt": "Tujuan teks deskripsi adalah ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-menggambarkan",
-            "text": "Menggambarkan objek secara rinci"
-          },
-          {
-            "optionId": "opsi-menceritakan",
-            "text": "Menceritakan urutan peristiwa"
-          },
-          {
-            "optionId": "opsi-meyakinkan",
-            "text": "Meyakinkan pembaca untuk membeli"
-          },
-          {
-            "optionId": "opsi-memberi-langkah",
-            "text": "Memberi langkah-langkah kegiatan"
-          }
-        ],
-        "correctResponse": "opsi-menggambarkan"
+        "pairId": "pasangan-1",
+        "left": "Teks deskripsi",
+        "right": "Menggambarkan objek"
       },
       {
-        "questionId": "soal-kalimat-topik",
-        "prompt": "Kalimat topik yang tepat untuk deskripsi halaman sekolah adalah ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-bersih-hijau",
-            "text": "Halaman sekolahku bersih dan hijau."
-          },
-          {
-            "optionId": "opsi-pertama",
-            "text": "Pertama, cucilah tanganmu."
-          },
-          {
-            "optionId": "opsi-kesimpulan",
-            "text": "Oleh karena itu, kita harus rajin belajar."
-          },
-          {
-            "optionId": "opsi-dialog",
-            "text": "\"Ayo bermain bola!\" kata Beni."
-          }
-        ],
-        "correctResponse": "opsi-bersih-hijau"
+        "pairId": "pasangan-2",
+        "left": "Kata indra",
+        "right": "Penglihatan, pendengaran, penciuman"
       },
       {
-        "questionId": "soal-kata-indra",
-        "prompt": "Kata yang menunjukkan pengindraan penciuman adalah ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-harum",
-            "text": "harum"
-          },
-          {
-            "optionId": "opsi-hijau",
-            "text": "hijau"
-          },
-          {
-            "optionId": "opsi-ramai",
-            "text": "ramai"
-          },
-          {
-            "optionId": "opsi-kasar",
-            "text": "kasar"
-          }
-        ],
-        "correctResponse": "opsi-harum"
+        "pairId": "pasangan-3",
+        "left": "Penglihatan",
+        "right": "Hijau"
       },
       {
-        "questionId": "soal-urutan",
-        "prompt": "Urutan yang tepat dalam teks deskripsi adalah ...",
-        "responseType": "single-choice",
-        "options": [
-          {
-            "optionId": "opsi-objek-ciri-kesan",
-            "text": "Identifikasi objek → ciri rinci → kesan"
-          },
-          {
-            "optionId": "opsi-kesan-objek",
-            "text": "Kesan → langkah → alat"
-          },
-          {
-            "optionId": "opsi-masalah-solusi",
-            "text": "Masalah → solusi → kesimpulan"
-          },
-          {
-            "optionId": "opsi-tanya-jawab",
-            "text": "Pertanyaan → jawaban → daftar"
-          }
-        ],
-        "correctResponse": "opsi-objek-ciri-kesan"
+        "pairId": "pasangan-4",
+        "left": "Pendengaran",
+        "right": "Gemericik air"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Penciuman",
+        "right": "Harum bunga"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Kalimat topik",
+        "right": "Ide utama"
       }
-    ],
-    "passingScore": 75
+    ]
   },
   "completionPolicy": {
-    "type": "score-threshold",
-    "threshold": 75
+    "type": "view"
   },
   "feedbackPolicy": {
-    "mode": "after-attempt",
+    "mode": "immediate",
     "allowRetry": true,
-    "showCorrectAnswer": false
+    "showCorrectAnswer": true
   },
   "runtimeCapabilities": [
     "touch",
     "keyboard"
-  ]
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung."
+  }
 }

@@ -1,27 +1,29 @@
 {
   "lessonId": "bilangan-cacah-besar",
   "packageId": "kelas4-matematika-b01-bilangan-cacah",
-  "title": "Nilai Tempat dan Operasi Bilangan Cacah Besar",
-  "summary": "Membaca, menulis, membandingkan, dan mengoperasikan bilangan cacah sampai 10.000 dengan memahami nilai tempat.",
+  "title": "Bilangan Cacah Besar",
+  "summary": "Menentukan nilai tempat, membaca, menulis, membandingkan, dan mengurutkan bilangan cacah sampai 99.999.",
   "curriculumRefs": [],
   "learningObjectives": [
-    "Menentukan nilai tempat dan nilai angka pada bilangan cacah sampai 10.000.",
-    "Membandingkan dan mengurutkan bilangan cacah besar.",
-    "Menyelesaikan penjumlahan dan pengurangan bilangan cacah besar."
+    "Menentukan nilai tempat sampai puluh ribuan.",
+    "Membaca dan menulis bilangan cacah besar.",
+    "Membandingkan dan mengurutkan bilangan.",
+    "Menyelesaikan soal cerita bilangan cacah."
   ],
   "activityIds": [
-    "eksplorasi-nilai-tempat",
-    "kuis-bilangan-cacah"
+    "eksplorasi-bilangan-cacah",
+    "matching-bilangan-cacah",
+    "kuis-singkat-bilangan-cacah"
   ],
   "assessmentRefs": [
-    "kuis-bilangan-cacah"
+    "kuis-singkat-bilangan-cacah"
   ],
   "assetRefs": [
-    "assets/nilai-tempat.png"
+    "assets/pasar-nilai-tempat.png"
   ],
   "accessibilityMetadata": {
-    "altText": "Empat panel nilai tempat: satu blok besar untuk ribuan, dua blok ratusan, tiga batang puluhan, dan empat kotak satuan."
+    "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

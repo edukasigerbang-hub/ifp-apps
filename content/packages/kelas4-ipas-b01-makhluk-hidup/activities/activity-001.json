@@ -2,33 +2,47 @@
   "activityId": "eksplorasi-makhluk-hidup",
   "type": "exploration",
   "schemaVersion": "1.0.0",
-  "title": "Mengamati Makhluk Hidup di Kebun",
-  "instructions": "Amati gambar kebun. Temukan makhluk hidup dan benda tak hidup, lalu pikirkan apa yang mereka butuhkan.",
+  "title": "Eksplorasi Terbimbing",
+  "instructions": "Amati gambar, lalu ikuti lima langkah eksplorasi.",
   "assets": [
-    "assets/habitat-makhluk-hidup.png"
+    "assets/kolam-ekosistem.png"
   ],
   "interactionConfig": {
     "steps": [
       {
-        "prompt": "Sebutkan makhluk hidup yang kamu lihat pada gambar.",
-        "assetPath": "assets/habitat-makhluk-hidup.png",
-        "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air.",
-        "reveal": "Tanaman, kupu-kupu, burung, dan siput adalah makhluk hidup.",
-        "hint": "Makhluk hidup dapat tumbuh, bernapas, dan membutuhkan makanan."
+        "prompt": "Makhluk hidup apa yang terlihat?",
+        "assetPath": "assets/kolam-ekosistem.png",
+        "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air.",
+        "reveal": "Katak, ikan, capung, dan tumbuhan air.",
+        "hint": "Amati kolam dengan teliti."
       },
       {
-        "prompt": "Apa saja yang dibutuhkan tanaman untuk tumbuh?",
-        "assetPath": "assets/habitat-makhluk-hidup.png",
-        "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air.",
-        "reveal": "Tanaman membutuhkan cahaya matahari, air, udara, dan zat hara dari tanah.",
-        "hint": "Perhatikan matahari, tetes air, dan tanah pada gambar."
+        "prompt": "Apa ciri makhluk hidup?",
+        "assetPath": "assets/kolam-ekosistem.png",
+        "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air.",
+        "reveal": "Bernapas, bergerak, tumbuh, dan berkembang biak.",
+        "hint": "Bandingkan dengan batu."
       },
       {
-        "prompt": "Mengapa hewan dan tumbuhan bergantung pada lingkungannya?",
-        "assetPath": "assets/habitat-makhluk-hidup.png",
-        "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air.",
-        "reveal": "Lingkungan menyediakan makanan, air, udara, dan tempat tinggal. Jika lingkungan rusak, makhluk hidup juga terganggu.",
-        "hint": "Hubungkan kebutuhan makhluk hidup dengan bagian lingkungan di gambar."
+        "prompt": "Apa kebutuhan ikan?",
+        "assetPath": "assets/kolam-ekosistem.png",
+        "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air.",
+        "reveal": "Air bersih, makanan, dan oksigen.",
+        "hint": "Ikan hidup di air."
+      },
+      {
+        "prompt": "Mengapa tumbuhan penting?",
+        "assetPath": "assets/kolam-ekosistem.png",
+        "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air.",
+        "reveal": "Peran tumbuhan menghasilkan oksigen dan makanan.",
+        "hint": "Tumbuhan berfotosintesis."
+      },
+      {
+        "prompt": "Bagaimana mengelompokkan makhluk hidup dan benda tak hidup?",
+        "assetPath": "assets/kolam-ekosistem.png",
+        "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air.",
+        "reveal": "Makhluk hidup bernapas; batu adalah benda tak hidup.",
+        "hint": "Lihat ciri dan kebutuhannya."
       }
     ]
   },
@@ -45,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air."
+    "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air."
   }
 }

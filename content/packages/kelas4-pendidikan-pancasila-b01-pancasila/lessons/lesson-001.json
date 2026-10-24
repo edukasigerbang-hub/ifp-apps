@@ -1,25 +1,29 @@
 {
-  "lessonId": "nilai-pancasila",
+  "lessonId": "pancasila",
   "packageId": "kelas4-pendidikan-pancasila-b01-pancasila",
-  "title": "Nilai Pancasila dalam Kehidupan Sehari-hari",
-  "summary": "Mengenali nilai setiap sila Pancasila dan menerapkannya dalam kegiatan di rumah, sekolah, dan masyarakat.",
+  "title": "Pancasila dalam Kehidupan",
+  "summary": "Mengenal lima sila, makna simbol, dan contoh penerapannya di kelas.",
   "curriculumRefs": [],
   "learningObjectives": [
-    "Menyebutkan nilai-nilai yang terkandung dalam Pancasila.",
-    "Menghubungkan perilaku sehari-hari dengan sila Pancasila yang sesuai.",
-    "Menunjukkan sikap gotong royong dan adil dalam kegiatan kelas."
+    "Menyebutkan lima sila Pancasila.",
+    "Menjelaskan makna simbol sila.",
+    "Memberi contoh penerapan sila di kelas.",
+    "Menunjukkan sikap sesuai Pancasila."
   ],
   "activityIds": [
-    "eksplorasi-nilai-pancasila",
-    "matching-nilai-pancasila"
+    "eksplorasi-pancasila",
+    "matching-pancasila",
+    "kuis-singkat-pancasila"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-singkat-pancasila"
+  ],
   "assetRefs": [
-    "assets/gotong-royong.png"
+    "assets/kelas-pancasila.png"
   ],
   "accessibilityMetadata": {
-    "altText": "Tiga siswa bekerja sama di kelas: satu menyapu lantai, satu merapikan buku, dan satu menyiram tanaman."
+    "altText": "Lima kegiatan kelas yang mencerminkan sila Pancasila: berdoa, menolong, belajar bersama, mengangkat tangan, dan menyapu."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

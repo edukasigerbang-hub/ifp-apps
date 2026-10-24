@@ -1,25 +1,29 @@
 {
-  "lessonId": "makhluk-hidup-lingkungan",
+  "lessonId": "makhluk-hidup",
   "packageId": "kelas4-ipas-b01-makhluk-hidup",
-  "title": "Ciri Makhluk Hidup dan Lingkungannya",
-  "summary": "Mengidentifikasi ciri makhluk hidup, membedakannya dari benda tak hidup, serta menjelaskan kebutuhan dan peran lingkungan.",
+  "title": "Makhluk Hidup dan Lingkungannya",
+  "summary": "Mengenali ciri makhluk hidup, mengelompokkannya, dan menjelaskan kebutuhan serta peran tumbuhan.",
   "curriculumRefs": [],
   "learningObjectives": [
-    "Menyebutkan ciri-ciri makhluk hidup.",
-    "Membedakan makhluk hidup dan benda tak hidup di lingkungan sekitar.",
-    "Menjelaskan hubungan kebutuhan makhluk hidup dengan lingkungannya."
+    "Menyebutkan ciri makhluk hidup.",
+    "Mengelompokkan makhluk hidup dan benda tak hidup.",
+    "Menjelaskan kebutuhan makhluk hidup.",
+    "Menjelaskan peran tumbuhan."
   ],
   "activityIds": [
     "eksplorasi-makhluk-hidup",
-    "matching-makhluk-hidup"
+    "matching-makhluk-hidup",
+    "kuis-singkat-makhluk-hidup"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-singkat-makhluk-hidup"
+  ],
   "assetRefs": [
-    "assets/habitat-makhluk-hidup.png"
+    "assets/kolam-ekosistem.png"
   ],
   "accessibilityMetadata": {
-    "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air."
+    "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

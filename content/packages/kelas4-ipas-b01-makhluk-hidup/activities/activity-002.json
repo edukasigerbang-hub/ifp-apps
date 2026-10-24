@@ -2,37 +2,40 @@
   "activityId": "matching-makhluk-hidup",
   "type": "matching",
   "schemaVersion": "1.0.0",
-  "title": "Memasangkan Makhluk Hidup dan Kebutuhannya",
-  "instructions": "Pasangkan setiap makhluk hidup dengan kebutuhan atau tempat hidup yang sesuai.",
-  "assets": [
-    "assets/habitat-makhluk-hidup.png"
-  ],
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
+  "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-tanaman",
-        "left": "Tanaman",
-        "right": "Air, tanah, dan cahaya matahari"
+        "pairId": "pasangan-1",
+        "left": "Katak",
+        "right": "Bernapas dengan kulit dan paru-paru"
       },
       {
-        "pairId": "pasangan-kupu-kupu",
-        "left": "Kupu-kupu",
-        "right": "Nektar bunga"
+        "pairId": "pasangan-2",
+        "left": "Ikan",
+        "right": "Bernapas dengan insang"
       },
       {
-        "pairId": "pasangan-burung",
-        "left": "Burung",
-        "right": "Pohon dan udara"
+        "pairId": "pasangan-3",
+        "left": "Capung",
+        "right": "Bernapas dengan trakea"
       },
       {
-        "pairId": "pasangan-siput",
-        "left": "Siput",
-        "right": "Daun dan tempat lembap"
+        "pairId": "pasangan-4",
+        "left": "Tumbuhan air",
+        "right": "Berfotosintesis"
       },
       {
-        "pairId": "pasangan-matahari",
-        "left": "Matahari",
-        "right": "Sumber energi dan cahaya"
+        "pairId": "pasangan-5",
+        "left": "Batu",
+        "right": "Benda tak hidup"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Air",
+        "right": "Kebutuhan makhluk hidup"
       }
     ]
   },
@@ -49,6 +52,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air."
+    "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air."
   }
 }

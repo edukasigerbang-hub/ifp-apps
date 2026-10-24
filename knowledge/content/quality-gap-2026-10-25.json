@@ -3,17 +3,17 @@
     {
       "id": "G1",
       "label": "Langkah eksplorasi ≥ 5",
-      "met": 0
+      "met": 4
     },
     {
       "id": "G2",
       "label": "Aktivitas ≥ 3",
-      "met": 0
+      "met": 4
     },
     {
       "id": "G3",
       "label": "Item asesmen ≥ 8",
-      "met": 0
+      "met": 4
     },
     {
       "id": "G4",
@@ -3874,23 +3874,23 @@
       "subject": "bahasa-indonesia",
       "subjectLabel": "Bahasa Indonesia",
       "lessonTitle": "Mengenal dan Menulis Teks Deskripsi",
-      "steps": 3,
-      "activities": 2,
-      "assessmentActivities": 1,
-      "assessmentItems": 4,
-      "objectives": 3,
-      "coveredObjectives": 3,
-      "wordsPerSentence": 9.15,
+      "steps": 5,
+      "activities": 3,
+      "assessmentActivities": 2,
+      "assessmentItems": 10,
+      "objectives": 4,
+      "coveredObjectives": 4,
+      "wordsPerSentence": 6.4,
       "languageLimit": 16,
       "curriculumRefs": 0,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
-        "802c807f9daa43712be846491baca088f981c6f7866ac2551baf44df77b9b500"
+        "9dc3c2ed2241797d6e7388561ed91e7aecd6e691b35a45bd23e7633a6dc45dbd"
       ],
       "reviewStatus": "draft",
-      "fingerprint": "336ac7f42965e6cf19ae0d928867d2588383665368c59e6f84298006fb88593f",
-      "activityFingerprint": "3b7db06ceca28eba3bf18da4806a6579dece727475239cd597ba889530edbec9",
+      "fingerprint": "73adb295bb72675d2a1828648a27a35eb6d333f12cd3a0f8d0e2346b672b9605",
+      "activityFingerprint": "1defc56a48428e9c639a9a633a9c975c88c94f2351bdbc5f58c24a6f79f8a0d7",
       "optionDuplicates": false
     },
     {
@@ -4073,24 +4073,24 @@
       "grade": 4,
       "subject": "ipas",
       "subjectLabel": "IPAS",
-      "lessonTitle": "Ciri Makhluk Hidup dan Lingkungannya",
-      "steps": 3,
-      "activities": 2,
-      "assessmentActivities": 1,
-      "assessmentItems": 5,
-      "objectives": 3,
-      "coveredObjectives": 3,
-      "wordsPerSentence": 9.916666666666666,
+      "lessonTitle": "Makhluk Hidup dan Lingkungannya",
+      "steps": 5,
+      "activities": 3,
+      "assessmentActivities": 2,
+      "assessmentItems": 10,
+      "objectives": 4,
+      "coveredObjectives": 4,
+      "wordsPerSentence": 6.25,
       "languageLimit": 16,
       "curriculumRefs": 0,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
-        "6ae0614c6e8ff145a8495cc8b2886b9e06e53e6b70c3fcd0470404371900da9e"
+        "1e37990a7dcf2566c39c13893017faa3be1565d8da635c098fbb433b8a47ee2b"
       ],
       "reviewStatus": "draft",
-      "fingerprint": "1ddf9695c3a778f7ca87a064b430a2c3cf9db664e638113c6e3748247681db37",
-      "activityFingerprint": "d0af8f458e3ed66335ae738e22a3d37ffb937470f9d28f5651c0da24dc0c0946",
+      "fingerprint": "f1a9a4a6465e7ab3b5b05be314f2a8ef6ab3e6b1a50bc0ef9cae9de88523dbf7",
+      "activityFingerprint": "0bb9151113eb66c5b63dd8d9323e8cb9eb6adb957e22c2d20595558ff7972c2c",
       "optionDuplicates": false
     },
     {
@@ -4273,24 +4273,24 @@
       "grade": 4,
       "subject": "matematika",
       "subjectLabel": "Matematika",
-      "lessonTitle": "Nilai Tempat dan Operasi Bilangan Cacah Besar",
-      "steps": 3,
-      "activities": 2,
-      "assessmentActivities": 1,
-      "assessmentItems": 4,
-      "objectives": 3,
-      "coveredObjectives": 3,
-      "wordsPerSentence": 4.257142857142857,
+      "lessonTitle": "Bilangan Cacah Besar",
+      "steps": 5,
+      "activities": 3,
+      "assessmentActivities": 2,
+      "assessmentItems": 10,
+      "objectives": 4,
+      "coveredObjectives": 4,
+      "wordsPerSentence": 3.9545454545454546,
       "languageLimit": 16,
       "curriculumRefs": 0,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
-        "9aa6b02be1dafc81b211924428190d7b63c35b66debc29fb2b21517cd826061d"
+        "f9e6da94d2ef8e07cbccb03eaf919cc4850009b6ac46f5d190498e624fea4929"
       ],
       "reviewStatus": "draft",
-      "fingerprint": "520f12415ceb56bed964462ca79e9039097b0ab30fcbf3e3c7d21650324422d9",
-      "activityFingerprint": "248bed0f7e453c868b1145e38e86fef9c662e83a985867e063cb17639efe4120",
+      "fingerprint": "2f2678b29079aea0f981cc77de6ccfc18c91888dadcc21c11f0cddd3c70b1845",
+      "activityFingerprint": "289af09a0fefe9ed017c36d6e08488723ad6c4fd08010a376320d0ec6e2b4a62",
       "optionDuplicates": false
     },
     {
@@ -4673,24 +4673,24 @@
       "grade": 4,
       "subject": "pendidikan-pancasila",
       "subjectLabel": "Pendidikan Pancasila",
-      "lessonTitle": "Nilai Pancasila dalam Kehidupan Sehari-hari",
-      "steps": 3,
-      "activities": 2,
-      "assessmentActivities": 1,
-      "assessmentItems": 5,
-      "objectives": 3,
-      "coveredObjectives": 3,
-      "wordsPerSentence": 11.272727272727273,
+      "lessonTitle": "Pancasila dalam Kehidupan",
+      "steps": 5,
+      "activities": 3,
+      "assessmentActivities": 2,
+      "assessmentItems": 10,
+      "objectives": 4,
+      "coveredObjectives": 4,
+      "wordsPerSentence": 5.45,
       "languageLimit": 16,
       "curriculumRefs": 0,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
-        "5f7f7ae301edf257b6d8ba9a7bc97b4607ce3b1d3b7e5f88dd8e2839d074afd1"
+        "b1e7a9e30a25ccb3b68ee29498e275f09969bc96641007fa2b5922336f68d593"
       ],
       "reviewStatus": "draft",
-      "fingerprint": "b5a5dc8d0443befd4ca0ae0ef0808da0d32aa45d12a26bc39ee2e8758d1b8d00",
-      "activityFingerprint": "94396547e3a406cc2fb9960dd23902ce5e959731c45c97391fb1f8cb353d684c",
+      "fingerprint": "91051c92a6e8e343e028f54d7b1175439f9506d55c8f0647e5c78160fb3ffbab",
+      "activityFingerprint": "09f4a11b8013af154dcd1c1ff8ce22d82b275722f38a49e2dc630c64b8b99de2",
       "optionDuplicates": false
     },
     {

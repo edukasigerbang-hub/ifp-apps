@@ -1,0 +1,56 @@
+{
+  "activityId": "kuis-singkat-bilangan-cacah",
+  "type": "short-answer",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Jawaban Singkat",
+  "instructions": "Tulis jawaban singkat yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-1",
+        "prompt": "Tuliskan nilai tempat angka 2 pada 12.345.",
+        "responseType": "text",
+        "correctResponse": "ribuan"
+      },
+      {
+        "questionId": "soal-2",
+        "prompt": "Berapa nilai angka 5 pada 12.345?",
+        "responseType": "text",
+        "correctResponse": "5"
+      },
+      {
+        "questionId": "soal-3",
+        "prompt": "Bilangan yang lebih besar: 12.354 atau 12.345?",
+        "responseType": "text",
+        "correctResponse": "12.354"
+      },
+      {
+        "questionId": "soal-4",
+        "prompt": "Berapa nilai angka 4 pada 12.345?",
+        "responseType": "text",
+        "correctResponse": "40"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan."
+  }
+}

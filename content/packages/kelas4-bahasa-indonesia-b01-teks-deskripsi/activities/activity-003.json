@@ -1,0 +1,56 @@
+{
+  "activityId": "kuis-singkat-teks-deskripsi",
+  "type": "short-answer",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Jawaban Singkat",
+  "instructions": "Tulis jawaban singkat yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-1",
+        "prompt": "Sebutkan satu kata penglihatan pada gambar.",
+        "responseType": "text",
+        "correctResponse": "hijau"
+      },
+      {
+        "questionId": "soal-2",
+        "prompt": "Sebutkan satu kata pendengaran pada gambar.",
+        "responseType": "text",
+        "correctResponse": "kicau burung"
+      },
+      {
+        "questionId": "soal-3",
+        "prompt": "Objek yang dideskripsikan adalah ...",
+        "responseType": "text",
+        "correctResponse": "taman kota"
+      },
+      {
+        "questionId": "soal-4",
+        "prompt": "Kalimat yang berisi ide utama disebut ...",
+        "responseType": "text",
+        "correctResponse": "kalimat topik"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung."
+  }
+}

@@ -24,9 +24,9 @@
 
 | ID | Kriteria | Lulus | Gagal | % Lulus |
 |---|---|---:|---:|---:|
-| G1 | Langkah eksplorasi ≥ 5 | 0 | 320 | 0% |
-| G2 | Aktivitas ≥ 3 | 0 | 320 | 0% |
-| G3 | Item asesmen ≥ 8 | 0 | 320 | 0% |
+| G1 | Langkah eksplorasi ≥ 5 | 4 | 316 | 1% |
+| G2 | Aktivitas ≥ 3 | 4 | 316 | 1% |
+| G3 | Item asesmen ≥ 8 | 4 | 316 | 1% |
 | G4 | Tujuan ≥ 3 dan semua tercakup aktivitas | 266 | 54 | 83% |
 | G5 | Bahasa dalam batas kata/kalimat kelas | 320 | 0 | 100% |
 | G6 | Tanpa duplikasi persis antar paket | 314 | 6 | 98% |
@@ -44,7 +44,7 @@
 | 1 | 48 | 3.0 | 2.0 | 5.1 | 4.3 |
 | 2 | 48 | 3.0 | 2.0 | 5.1 | 4.3 |
 | 3 | 56 | 3.0 | 2.0 | 5.1 | 6.0 |
-| 4 | 56 | 3.0 | 2.0 | 4.8 | 7.8 |
+| 4 | 56 | 3.1 | 2.1 | 5.2 | 7.6 |
 | 5 | 56 | 3.0 | 2.0 | 5.2 | 5.6 |
 | 6 | 56 | 3.0 | 2.0 | 5.1 | 5.1 |
 

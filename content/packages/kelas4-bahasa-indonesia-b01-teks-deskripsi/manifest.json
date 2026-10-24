@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
   "packageId": "kelas4-bahasa-indonesia-b01-teks-deskripsi",
-  "packageVersion": "0.1.0",
+  "packageVersion": "0.2.0",
   "schemaVersion": "1.0.0",
-  "title": "Teks Deskripsi — Bahasa Indonesia Kelas 4 (Draft)",
+  "title": "Teks Deskripsi — Bahasa Indonesia Kelas 4 (Pilot)",
   "locale": "id-ID",
   "gradeLevels": [
     4
@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/halaman-sekolah.png",
+      "path": "assets/taman-kota.png",
       "mediaType": "image/png",
-      "sizeBytes": 6666,
-      "sha256": "802c807f9daa43712be846491baca088f981c6f7866ac2551baf44df77b9b500"
+      "sizeBytes": 5801,
+      "sha256": "9dc3c2ed2241797d6e7388561ed91e7aecd6e691b35a45bd23e7633a6dc45dbd"
     }
   ],
   "dependencies": [],
