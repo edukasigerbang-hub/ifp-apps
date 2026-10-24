@@ -1,0 +1,25 @@
+{
+  "lessonId": "energi-perubahan",
+  "packageId": "kelas4-ipas-b04-energi",
+  "title": "Energi dan Perubahannya",
+  "summary": "Mengenali bentuk energi, perubahan energi di sekitar kita, dan cara menghemat energi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bentuk-bentuk energi.",
+    "Menjelaskan perubahan energi pada peristiwa sehari-hari.",
+    "Memberikan contoh cara menghemat energi."
+  ],
+  "activityIds": [
+    "eksplorasi-energi",
+    "matching-energi"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/energi-perubahan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

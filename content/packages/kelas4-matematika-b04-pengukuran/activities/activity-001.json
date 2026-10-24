@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pengukuran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Ukur",
+  "instructions": "Amati dua panel gambar: penggaris dengan pensil dan timbangan dengan buah.",
+  "assets": [
+    "assets/pengukuran-panjang-berat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Alat apa yang digunakan untuk mengukur panjang pensil?",
+        "assetPath": "assets/pengukuran-panjang-berat.png",
+        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
+        "reveal": "Penggaris, dengan satuan sentimeter (cm).",
+        "hint": "Perhatikan garis-garis angka pada penggaris."
+      },
+      {
+        "prompt": "Alat apa yang digunakan untuk mengukur berat buah?",
+        "assetPath": "assets/pengukuran-panjang-berat.png",
+        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
+        "reveal": "Timbangan, dengan satuan gram (g) atau kilogram (kg).",
+        "hint": "Perhatikan buah di atas timbangan."
+      },
+      {
+        "prompt": "1 meter sama dengan berapa sentimeter?",
+        "assetPath": "assets/pengukuran-panjang-berat.png",
+        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
+        "reveal": "1 meter = 100 sentimeter.",
+        "hint": "Kata 'senti' berarti seperseratus."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+  }
+}

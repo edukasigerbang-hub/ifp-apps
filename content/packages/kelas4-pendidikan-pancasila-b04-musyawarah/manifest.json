@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pendidikan-pancasila-b04-musyawarah",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Musyawarah untuk Mufakat — Pendidikan Pancasila Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/musyawarah-kelas.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5400,
+      "sha256": "ed1531741d8356cf8a57eb0a618546c36c3ac4cea8d6feac4dbd593a891a3189"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 13 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 17 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -17,6 +17,10 @@
 | `kelas4-ipas-b03-gaya-gerak` | 0.1.0 | 4 | ipas | Gaya & gerak | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b03-ide-pokok` | 0.1.0 | 4 | bahasa-indonesia | Menyimak & ide pokok | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b03-hak-kewajiban` | 0.1.0 | 4 | pendidikan-pancasila | Hak & kewajiban | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b04-pengukuran` | 0.1.0 | 4 | matematika | Pengukuran panjang & berat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b04-energi` | 0.1.0 | 4 | ipas | Energi & perubahannya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b04-menulis-deskripsi` | 0.1.0 | 4 | bahasa-indonesia | Menulis teks deskripsi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b04-musyawarah` | 0.1.0 | 4 | pendidikan-pancasila | Musyawarah | **DRAFT** | VALID (2 warning) | belum |
 
 \* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
@@ -113,6 +117,20 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Validasi: **VALID**, 0 issue, 2 warning (draft + `curriculumRefs` kosong).
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, status `active`).
 - Ilustrasi diperbaiki setelah inspeksi visual: Venn diberi area irisan oranye; panel gaya/gerak dipisah agar tidak tumpang tindih.
+
+## Batch 4 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b04-pengukuran` | Mengukur Panjang dan Berat | eksplorasi + MCQ (4 soal) | `pengukuran-panjang-berat.png` |
+| `kelas4-ipas-b04-energi` | Energi dan Perubahannya | eksplorasi + matching (5 pasangan) | `energi-perubahan.png` |
+| `kelas4-bahasa-indonesia-b04-menulis-deskripsi` | Menulis Teks Deskripsi | eksplorasi + MCQ (4 soal) | `menulis-deskripsi.png` |
+| `kelas4-pendidikan-pancasila-b04-musyawarah` | Musyawarah untuk Mufakat | eksplorasi + ordering (5 langkah) | `musyawarah-kelas.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning (draft + `curriculumRefs` kosong).
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, status `active`).
+- Dengan batch ini, **seluruh 4 bab Semester 1** untuk Matematika, IPAS, Bahasa Indonesia, dan Pendidikan Pancasila sudah tersedia sebagai draft (16 paket Kelas 4).
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

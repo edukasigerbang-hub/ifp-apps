@@ -1,0 +1,25 @@
+{
+  "lessonId": "musyawarah",
+  "packageId": "kelas4-pendidikan-pancasila-b04-musyawarah",
+  "title": "Musyawarah untuk Mufakat",
+  "summary": "Memahami langkah musyawarah, menghargai pendapat, dan melaksanakan keputusan bersama.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian dan tujuan musyawarah.",
+    "Menyebutkan langkah-langkah musyawarah.",
+    "Menunjukkan sikap menghargai pendapat dalam musyawarah."
+  ],
+  "activityIds": [
+    "eksplorasi-musyawarah",
+    "ordering-musyawarah"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/musyawarah-kelas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
