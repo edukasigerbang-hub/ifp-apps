@@ -1,0 +1,27 @@
+{
+  "lessonId": "ide-pokok",
+  "packageId": "kelas4-bahasa-indonesia-b03-ide-pokok",
+  "title": "Menyimak dan Menentukan Ide Pokok",
+  "summary": "Menyimak informasi, menemukan ide pokok, dan membedakannya dari detail pendukung.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian ide pokok.",
+    "Menemukan ide pokok dalam paragraf pendek.",
+    "Membedakan ide pokok dan detail pendukung."
+  ],
+  "activityIds": [
+    "eksplorasi-ide-pokok",
+    "kuis-ide-pokok"
+  ],
+  "assessmentRefs": [
+    "kuis-ide-pokok"
+  ],
+  "assetRefs": [
+    "assets/mendengarkan-cerita.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

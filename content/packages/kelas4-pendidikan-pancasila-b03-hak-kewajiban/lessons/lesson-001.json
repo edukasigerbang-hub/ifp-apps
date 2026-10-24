@@ -1,0 +1,25 @@
+{
+  "lessonId": "hak-kewajiban",
+  "packageId": "kelas4-pendidikan-pancasila-b03-hak-kewajiban",
+  "title": "Hak dan Kewajiban di Rumah, Sekolah, dan Masyarakat",
+  "summary": "Mengenali hak dan kewajiban, serta memahami pentingnya keseimbangan keduanya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian hak dan kewajiban.",
+    "Memberikan contoh hak dan kewajiban di rumah, sekolah, dan masyarakat.",
+    "Menunjukkan sikap seimbang dalam menjalankan hak dan kewajiban."
+  ],
+  "activityIds": [
+    "eksplorasi-hak-kewajiban",
+    "matching-hak-kewajiban"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/belajar-dan-bertugas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah)."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

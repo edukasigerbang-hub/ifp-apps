@@ -411,7 +411,130 @@ write("content/packages/kelas4-matematika-b03-pecahan/assets/pecahan-senilai.png
 write("content/packages/kelas4-ipas-b01-makhluk-hidup/assets/habitat-makhluk-hidup.png", ipasHabitat());
 write("content/packages/kelas4-bahasa-indonesia-b01-teks-deskripsi/assets/halaman-sekolah.png", schoolYard());
 write("content/packages/kelas4-pendidikan-pancasila-b01-pancasila/assets/gotong-royong.png", gotongRoyong());
+function factorVenn() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const left = { x: 300, y: 330, r: 180 };
+  const right = { x: 500, y: 330, r: 180 };
+  circle(px, left.x, left.y, left.r, colors.tealLight);
+  circle(px, right.x, right.y, right.r, colors.sand);
+  for (let y = -left.r; y <= left.r; y += 1) {
+    for (let x = -left.r; x <= left.r; x += 1) {
+      if (x * x + y * y <= left.r * left.r) {
+        const pxX = left.x + x;
+        const pxY = left.y + y;
+        if ((pxX - right.x) ** 2 + (pxY - right.y) ** 2 <= right.r * right.r) {
+          set(px, pxX, pxY, colors.orange);
+        }
+      }
+    }
+  }
+  for (let angle = 0; angle < 360; angle += 2) {
+    const rad = (angle * Math.PI) / 180;
+    circle(px, Math.round(left.x + Math.cos(rad) * 180), Math.round(left.y + Math.sin(rad) * 180), 2, colors.navy);
+    circle(px, Math.round(right.x + Math.cos(rad) * 180), Math.round(right.y + Math.sin(rad) * 180), 2, colors.navy);
+  }
+  // titik faktor: 12 (kiri) dan 18 (kanan), irisan = faktor bersama
+  const leftDots = [[230, 250], [210, 330], [240, 405], [290, 440]];
+  const commonDots = [[370, 300], [400, 350], [420, 260]];
+  const rightDots = [[560, 250], [590, 330], [560, 405], [520, 440]];
+  for (const [x, y] of [...leftDots, ...commonDots, ...rightDots]) circle(px, x, y, 12, colors.navy);
+  return px;
+}
+
+function forceMotion() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 450, W, 150, colors.green);
+  line(px, 400, 60, 400, 600, colors.navy, 4);
+  line(px, 0, 300, 800, 300, colors.navy, 4);
+  // Q1 kiri-bawah: gaya dorong
+  circle(px, 170, 345, 32, colors.skin1);
+  rect(px, 140, 379, 60, 80, colors.teal);
+  rect(px, 138, 459, 18, 50, colors.navy);
+  rect(px, 184, 459, 18, 50, colors.navy);
+  rect(px, 225, 420, 120, 70, colors.orange);
+  line(px, 200, 420, 240, 445, colors.navy, 6);
+  line(px, 345, 455, 390, 455, colors.red, 8);
+  line(px, 390, 455, 370, 440, colors.red, 8);
+  line(px, 390, 455, 370, 470, colors.red, 8);
+  // Q2 kanan-bawah: bola menggelinding
+  rect(px, 450, 550, 310, 12, colors.navy);
+  circle(px, 650, 520, 30, colors.red);
+  line(px, 560, 505, 610, 505, colors.navy, 5);
+  line(px, 540, 535, 610, 535, colors.navy, 5);
+  // Q3 kiri-atas: apel jatuh
+  circle(px, 130, 80, 55, colors.green);
+  rect(px, 118, 100, 24, 60, colors.soil);
+  circle(px, 130, 185, 16, colors.red);
+  line(px, 130, 210, 130, 270, colors.red, 7);
+  line(px, 130, 270, 116, 250, colors.red, 7);
+  line(px, 130, 270, 144, 250, colors.red, 7);
+  // Q4 kanan-atas: magnet
+  rect(px, 520, 90, 40, 100, colors.navy);
+  rect(px, 620, 90, 40, 100, colors.navy);
+  rect(px, 520, 90, 140, 40, colors.red);
+  for (const [x, y] of [[540, 210], [580, 220], [620, 210]]) circle(px, x, y, 10, colors.sand);
+  return px;
+}
+
+function storyListening() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 420, colors.sky);
+  rect(px, 0, 420, W, 180, colors.sand);
+  // guru
+  circle(px, 180, 170, 42, colors.skin2);
+  rect(px, 130, 214, 100, 150, colors.teal);
+  rect(px, 140, 270, 18, 80, colors.navy);
+  rect(px, 202, 270, 18, 80, colors.navy);
+  rect(px, 230, 240, 90, 60, colors.orange);
+  rect(px, 236, 246, 78, 48, colors.white);
+  // siswa
+  for (const [x, skin, shirt] of [[420, colors.skin1, colors.orange], [540, colors.skin3, colors.blue], [660, colors.skin2, colors.red]]) {
+    circle(px, x, 280, 34, skin);
+    rect(px, x - 34, 316, 68, 90, shirt);
+    rect(px, x - 40, 406, 80, 14, colors.orange);
+  }
+  // balon percakapan
+  for (const [x, y] of [[300, 110], [340, 80], [380, 115]]) {
+    ellipse(px, x, y, 16, 11, colors.white);
+    circle(px, x, y + 14, 4, colors.white);
+  }
+  return px;
+}
+
+function rightsDuties() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 400, 60, 400, 600, colors.navy, 5);
+  // kiri: belajar
+  rect(px, 70, 400, 260, 18, colors.orange);
+  rect(px, 90, 418, 14, 80, colors.navy);
+  rect(px, 296, 418, 14, 80, colors.navy);
+  circle(px, 160, 300, 36, colors.skin1);
+  rect(px, 124, 340, 72, 90, colors.teal);
+  rect(px, 210, 350, 90, 60, colors.white);
+  rect(px, 220, 360, 70, 8, colors.sky);
+  rect(px, 220, 380, 55, 8, colors.sky);
+  // kanan: menyapu
+  circle(px, 560, 290, 36, colors.skin3);
+  rect(px, 524, 330, 72, 100, colors.orange);
+  rect(px, 520, 430, 18, 70, colors.navy);
+  rect(px, 582, 430, 18, 70, colors.navy);
+  line(px, 590, 360, 680, 470, colors.soil, 8);
+  rect(px, 660, 460, 70, 20, colors.orange);
+  rect(px, 700, 420, 40, 45, colors.sky);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b01-bilangan-cacah/assets/nilai-tempat.png", placeValueChart());
 write("content/packages/kelas4-ipas-b02-wujud-zat/assets/wujud-zat.png", statesOfMatter());
 write("content/packages/kelas4-bahasa-indonesia-b02-kalimat-efektif/assets/sudut-baca.png", readingCorner());
 write("content/packages/kelas4-pendidikan-pancasila-b02-norma-aturan/assets/antrean-kelas.png", queueScene());
+write("content/packages/kelas4-matematika-b02-faktor-kelipatan/assets/faktor-kelipatan.png", factorVenn());
+write("content/packages/kelas4-ipas-b03-gaya-gerak/assets/gaya-gerak.png", forceMotion());
+write("content/packages/kelas4-bahasa-indonesia-b03-ide-pokok/assets/mendengarkan-cerita.png", storyListening());
+write("content/packages/kelas4-pendidikan-pancasila-b03-hak-kewajiban/assets/belajar-dan-bertugas.png", rightsDuties());

@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-hak-kewajiban",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Hak dan Kewajiban",
+  "instructions": "Pasangkan setiap hak atau kewajiban dengan contoh yang sesuai.",
+  "assets": [
+    "assets/belajar-dan-bertugas.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hak-rumah",
+        "left": "Hak di rumah",
+        "right": "Mendapat kasih sayang"
+      },
+      {
+        "pairId": "pasangan-kewajiban-rumah",
+        "left": "Kewajiban di rumah",
+        "right": "Membantu orang tua"
+      },
+      {
+        "pairId": "pasangan-hak-sekolah",
+        "left": "Hak di sekolah",
+        "right": "Mendapat pembelajaran"
+      },
+      {
+        "pairId": "pasangan-kewajiban-sekolah",
+        "left": "Kewajiban di sekolah",
+        "right": "Mengerjakan tugas"
+      },
+      {
+        "pairId": "pasangan-hak-masyarakat",
+        "left": "Hak di masyarakat",
+        "right": "Menggunakan fasilitas umum"
+      },
+      {
+        "pairId": "pasangan-kewajiban-masyarakat",
+        "left": "Kewajiban di masyarakat",
+        "right": "Menjaga kebersihan lingkungan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah)."
+  }
+}

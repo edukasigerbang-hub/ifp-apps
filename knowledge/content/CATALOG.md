@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 9 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 13 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -13,6 +13,10 @@
 | `kelas4-ipas-b02-wujud-zat` | 0.1.0 | 4 | ipas | Wujud zat & perubahan | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b02-kalimat-efektif` | 0.1.0 | 4 | bahasa-indonesia | Kalimat efektif & kosakata | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b02-norma-aturan` | 0.1.0 | 4 | pendidikan-pancasila | Norma & aturan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b02-faktor-kelipatan` | 0.1.0 | 4 | matematika | Faktor, kelipatan, KPK/FPB | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b03-gaya-gerak` | 0.1.0 | 4 | ipas | Gaya & gerak | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b03-ide-pokok` | 0.1.0 | 4 | bahasa-indonesia | Menyimak & ide pokok | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b03-hak-kewajiban` | 0.1.0 | 4 | pendidikan-pancasila | Hak & kewajiban | **DRAFT** | VALID (2 warning) | belum |
 
 \* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
@@ -95,6 +99,20 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Validasi: **VALID**, 0 issue, 2 warning (draft + `curriculumRefs` kosong).
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, status `active`).
 - Belum direview manusia; R10 tetap BLOCKING sampai D6.
+
+## Batch 3 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b02-faktor-kelipatan` | Faktor, Kelipatan, KPK, dan FPB | eksplorasi + MCQ (4 soal) | `faktor-kelipatan.png` |
+| `kelas4-ipas-b03-gaya-gerak` | Gaya dan Gerak di Sekitar Kita | eksplorasi + matching (5 pasangan) | `gaya-gerak.png` |
+| `kelas4-bahasa-indonesia-b03-ide-pokok` | Menyimak dan Menentukan Ide Pokok | eksplorasi + MCQ (4 soal) | `mendengarkan-cerita.png` |
+| `kelas4-pendidikan-pancasila-b03-hak-kewajiban` | Hak dan Kewajiban di Rumah, Sekolah, dan Masyarakat | eksplorasi + matching (6 pasangan) | `belajar-dan-bertugas.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning (draft + `curriculumRefs` kosong).
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, status `active`).
+- Ilustrasi diperbaiki setelah inspeksi visual: Venn diberi area irisan oranye; panel gaya/gerak dipisah agar tidak tumpang tindih.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 
