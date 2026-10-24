@@ -35,12 +35,13 @@
 | Beranda & katalog | `npm run e2e:home` 8 pemeriksaan: sapaan, kartu mapel, cari/filter, buka lesson, kuis, kartu lanjutkan; 6 unit test katalog |
 | Aktivitas baru | `npm run e2e:activities` 8 pemeriksaan: benar-salah, jawaban singkat, multi-jawaban, matching, ordering; 5 percobaan |
 | Kontrak interaksi | 4 test validator (matching/ordering valid & rusak) + 8 test skor interaksi |
+| Backup → restore end-to-end | `npm run e2e:backup` 9 pemeriksaan: hash, mutasi, restore, profil aktif & skor pulih, schema lebih baru ditolak |
 
 ## Terbuka
 
 | Gap | Alasan | Rencana |
 |---|---|---|
-| Restore lewat dialog UI | Dialog native tidak dapat diotomasi CDP | Uji manual; command sudah diuji Rust |
+| Restore lewat dialog UI | Dialog native tidak dapat diotomasi CDP | Uji manual; alur command sudah diuji end-to-end (`e2e:backup`) |
 | Import lisensi/konten lewat dialog | Sama seperti di atas | Uji manual; command diuji |
 | Transfer/deaktivasi lisensi UI | Belum ada UI | Tambah setelah kebijakan OD-5 |
 | DV-01…DV-20 | Tidak ada perangkat Android 14/Windows 11/4K | Device acceptance plan |
@@ -65,6 +66,7 @@ npm run e2e:license # lisensi: valid, expired, signature rusak
 npm run e2e:license-online # aktivasi via server referensi
 npm run e2e:home  # Beranda + katalog + lanjutkan belajar
 npm run e2e:activities # benar-salah + jawaban singkat + multi-jawaban + matching + ordering
+npm run e2e:backup # export → mutasi → restore → tolak schema baru
 npm run a11y      # audit aksesibilitas 8 layar + keyboard
 ```
 

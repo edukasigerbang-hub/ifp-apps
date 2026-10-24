@@ -17,6 +17,7 @@
     "e2e:license-online": "node scripts/e2e/run.mjs license-online",
     "e2e:home": "node scripts/e2e/run.mjs home-catalog",
     "e2e:activities": "node scripts/e2e/run.mjs activities",
+    "e2e:backup": "node scripts/e2e/run.mjs backup-restore",
     "a11y": "node scripts/e2e/run.mjs a11y",
     "fixtures:check": "tsx scripts/check-fixtures.ts",
     "content:validate": "tsx scripts/validate-content.ts",
