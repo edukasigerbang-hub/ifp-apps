@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T19:09:34+07:00",
+  "last_validated_at": "2026-10-24T19:17:04+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -341,6 +341,12 @@
       "command": "git mv; update E2E paths + Rust test; npm test; cargo test; E2E activities/journey/rollback/review",
       "result": "PASS",
       "details": "pilot removed from content/packages; fixture path works; 4 E2E PASS; catalog 25 Kelas 4 packages"
+    },
+    {
+      "name": "grade4_semester1_complete",
+      "command": "content:validate x3; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "seni-b04, pjok-b04, pai-b04 VALID; import 5 files each active; 28 grade-4 packages total; build PASS with chunk-size warning"
     }
   ],
   "environment": {
