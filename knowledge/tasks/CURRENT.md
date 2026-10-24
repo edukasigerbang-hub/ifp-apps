@@ -66,6 +66,7 @@
 | T-054 | Konten Kelas 1 Semester 2 lengkap | 24 paket VALID; impor 48/48 Kelas 1 PASS; audit 272/272 VALID; build 415 kB + lazy 209 kB |
 | T-055 | Konten Kelas 2 batch 1 | Outline S1/S2 + 6 paket B01 VALID; impor 6/6 PASS; audit 278/278 VALID |
 | T-056 | Konten Kelas 1–6 inti lengkap | 42 paket sisa Kelas 2 VALID; impor 48/48 PASS; **total 320 paket** (Fase A 96 + B/C 224); audit 320/320 VALID |
+| T-057 | Performa katalog 320 paket | Indeks `public/content-catalog.json` build-time (ADR-0031); Beranda 8,7 dtk (sebelumnya timeout >180 dtk); E2E home 9/9 PASS |
 
 ## Status prasyarat materi pembelajaran
 

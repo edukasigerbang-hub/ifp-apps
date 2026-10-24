@@ -745,3 +745,11 @@ Menambahkan 42 paket sisa Kelas 2 (B02–B08 untuk 6 mapel).
 - `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **246,42 kB**.
 - **Kelas 2 lengkap: 48 paket draft** (S1 24 + S2 24).
 - **Seluruh 320 paket inti Kelas 1–6 selesai sebagai draft** (Fase A 96 + Fase B/C 224).
+
+## Indeks katalog build-time (2026-10-25)
+
+- `scripts/build-content-catalog.mjs` menghasilkan `public/content-catalog.json` dari 320 paket.
+- Dijalankan otomatis oleh `predev` dan `prebuild` (`npm run content:catalog`).
+- `loadCatalog()` membaca satu JSON (di-cache); paket impor tetap divalidasi runtime.
+- Hasil: Beranda siap **8,7 detik** termasuk cold start (sebelumnya timeout >180 detik); katalog 320 materi; E2E home 9/9 PASS.
+- Detail keputusan: [ADR-0031](../decisions/ADR-0031-content-catalog-index.md).
