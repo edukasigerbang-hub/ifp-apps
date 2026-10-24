@@ -79,7 +79,7 @@ describe("cloudflare worker", () => {
     });
 
     const response = await worker.fetch(
-      post("/v1/devices/enroll", { enrollmentCode: "kelas-3a" }),
+      post("/v1/devices/enroll", { enrollmentCode: "kelas-3a", platform: "windows" }),
       env
     );
     expect(response.status).toBe(201);
@@ -98,7 +98,7 @@ describe("cloudflare worker", () => {
     );
 
     const response = await worker.fetch(
-      post("/v1/devices/enroll", { enrollmentCode: "salah" }),
+      post("/v1/devices/enroll", { enrollmentCode: "salah", platform: "windows" }),
       env
     );
     expect(response.status).toBe(401);

@@ -43,7 +43,8 @@ paths:
               properties:
                 enrollmentCode: { type: string, minLength: 1, maxLength: 256 }
                 deviceId: { type: string, format: uuid }
-              required: [enrollmentCode]
+                platform: { type: string, enum: [windows, android] }
+              required: [enrollmentCode, platform]
       responses:
         "201":
           description: Perangkat terdaftar

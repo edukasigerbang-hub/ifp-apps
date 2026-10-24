@@ -6,7 +6,7 @@
 ## Server (referensi) — auth & kontrak
 
 - Spesifikasi: [`server/openapi.v1.yaml`](../../server/openapi.v1.yaml); panduan: [`server/README.md`](../../server/README.md).
-- **Produksi (dipilih):** Supabase + Cloudflare Worker — [`workers/api`](../../workers/api), skema [`supabase/migrations/0001_backend.sql`](../../supabase/migrations/0001_backend.sql), [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md).
+- **Produksi (dipilih):** Supabase + Cloudflare Worker — [`workers/api`](../../workers/api), migrasi aditif [`supabase/migrations/0002_app_backend.sql`](../../supabase/migrations/0002_app_backend.sql) (setelah `0001_init.sql` dari repo web), [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md).
 - `POST /v1/devices/enroll`: kode enrollment → `deviceId` + token Bearer HMAC (24 jam default).
 - `/v1/sync/events`: menerima token perangkat atau `SYNC_TOKEN` (referensi); `deviceId` batch harus cocok dengan token.
 - `GET /healthz`: health check.

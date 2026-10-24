@@ -50,7 +50,7 @@
 | T-038 | OD-4 default privasi | Bagian “Privasi & data”; peringatan PII pada ekspor CSV hasil/review; ADR-0025 provisional; smoke 8 pemeriksaan |
 | T-039 | OD-5 default lisensi | Clock rollback (last-seen 5 mnt); permintaan transfer (licenseId/machineId/alasan); UI + 4 test Rust; E2E 10 pemeriksaan |
 | T-040 | OD-7 increment 1 | OpenAPI v1; enrollment perangkat + token HMAC; sync menerima token perangkat; `/healthz`; 4 test server baru |
-| T-041 | OD-7 increment 2 (Supabase + Cloudflare) | Skema Supabase + RLS; Worker enrollment/sync (WebCrypto HMAC, Supabase REST); 7 test Worker; CI typecheck |
+| T-041 | OD-7 increment 2 (Supabase + Cloudflare) | Migrasi **aditif** `0002_app_backend.sql` (setelah skema web); Worker enrollment/sync (WebCrypto HMAC, Supabase REST); 7 test Worker |
 
 ## Status prasyarat materi pembelajaran
 
@@ -137,7 +137,7 @@
 | OD-4 default privasi | **PASS** — smoke 8/8 (bagian privasi + default retensi); a11y 16 pemeriksaan; build/tests PASS |
 | OD-5 default lisensi | **PASS** — E2E lisensi 10/10 (transfer ditolak tanpa lisensi, berhasil dengan lisensi); cargo 62/62; a11y 16 pemeriksaan |
 | OD-7 auth perangkat | **PASS** — server 24/24 (enrollment, kode salah, token sync, device mismatch, healthz); typecheck PASS |
-| OD-7 Supabase + Worker | **PASS** — worker 7/7, typecheck PASS; npm total 79/79; skema SQL ditulis (belum dijalankan ke project Supabase) |
+| OD-7 Supabase + Worker | **PASS** — worker 7/7, typecheck PASS; npm total 79/79; migrasi aditif selaras skema repo web |
 | Pilihan ganda multi-jawaban | **PASS** — E2E 6 pemeriksaan: 3 aktivitas dinilai 100, 3 percobaan, rata-rata 100; npm 56/56 |
 | Matching & ordering | **PASS** — E2E 8 pemeriksaan: 5 aktivitas dinilai 100, 5 percobaan; validasi kontrak ditolak saat rusak (unit) |
 | Unit test interaksi | **PASS** — 12 test baru; total npm 68/68 |

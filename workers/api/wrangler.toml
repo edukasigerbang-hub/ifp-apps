@@ -10,3 +10,6 @@ CORS_ORIGIN = "http://localhost:1420"
 #   wrangler secret put SUPABASE_SERVICE_ROLE_KEY
 #   wrangler secret put DEVICE_TOKEN_SECRET
 #   wrangler secret put ENROLLMENT_CODE_PEPPER
+#
+# Prasyarat Supabase: jalankan migrations repo `web` (0001_init.sql) lalu
+# `supabase/migrations/0002_app_backend.sql` dari repo ini pada project yang sama.

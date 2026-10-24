@@ -600,7 +600,8 @@
 **Status:** COMPLETED (scaffold) · **Change class:** MEDIUM
 
 - Keputusan stack: Supabase + Cloudflare Workers/Pages; situs marketing dicatat di `productConfig.links.marketing`.
-- `supabase/migrations/0001_backend.sql`: devices, enrollment_codes (hash), sync_events, licenses, license_audit, admin_roles; RLS tanpa policy publik; RPC `consume_enrollment_code` atomik.
+- `supabase/migrations/0002_app_backend.sql`: **aditif** terhadap skema repo web (`0001_init.sql`): enrollment_codes, sync_events, license_audit, admin_roles, kolom lisensi tambahan, RPC `consume_enrollment_code`.
+- Repo web sudah punya `licenses`/`devices`/`activations`/`orders`; Worker memakai `devices.device_id` (text unik) + `platform` wajib.
 - `workers/api`: Worker (WebCrypto HMAC, Supabase REST service role) untuk `/healthz`, `/v1/devices/enroll`, `/v1/sync/events`; endpoint lisensi 501 sampai signing/KMS diputuskan.
 - 7 test Worker + typecheck; CI menambah langkah worker typecheck.
 

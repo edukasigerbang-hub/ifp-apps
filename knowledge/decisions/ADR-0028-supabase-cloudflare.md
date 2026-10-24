@@ -3,6 +3,19 @@
 - **Status:** Accepted (increment 2) · **Tanggal:** 2026-10-24
 - **Konteks:** Product Owner memilih **Supabase** untuk database/layanan data dan **Cloudflare Workers/Pages** untuk hosting API & situs. Situs marketing sudah ada di `https://gerbangedukasi.edukasigerbang.workers.dev/` (halaman statis, CTA Demo/Kontak).
 
+## Addendum 2026-10-24 — integrasi dengan repo `web`
+
+Repo [`edukasigerbang-hub/web`](https://github.com/edukasigerbang-hub/web) (Next.js 16 + Supabase) **sudah memiliki migrasi** `supabase/migrations/0001_init.sql` dengan tabel `profiles`, `licenses`, `devices`, `activations`, `partners`, `content`, `orders`, trigger `handle_new_user`, dan RLS. Route `src/app/api/activation` masih placeholder.
+
+Karena itu:
+
+- Migrasi di repo ini diubah menjadi **aditif** `supabase/migrations/0002_app_backend.sql`; **tidak** membuat ulang `licenses`/`devices`.
+- Kunci perangkat memakai `public.devices.device_id` (text unik) yang sudah ada; `platform` wajib (`windows|android`).
+- Kolom lisensi baru (`serial_hash`, `product_id`, `license_type`, `machine_id`, `key_id`, `activated_at`) ditambahkan via `ALTER TABLE ... ADD COLUMN IF NOT EXISTS` ke `licenses` milik web.
+- Tabel baru: `enrollment_codes`, `sync_events`, `license_audit`, `admin_roles`; RPC `consume_enrollment_code`.
+- Urutan deployment: jalankan `web/supabase/migrations/0001_init.sql` lalu `0002_app_backend.sql` pada project Supabase yang sama.
+- Aktivasi lisensi tetap di route web `/api/activation` (masih placeholder); Worker hanya enrollment + sync pada increment ini.
+
 ## Keputusan
 
 1. **Supabase (Postgres + RLS)** sebagai penyimpanan server: perangkat, kode enrollment (hash), event sync, lisensi, audit, peran admin.

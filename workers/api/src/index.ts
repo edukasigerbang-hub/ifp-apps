@@ -6,7 +6,8 @@ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-
 
 const enrollSchema = z.strictObject({
   enrollmentCode: z.string().min(1).max(256),
-  deviceId: z.string().regex(UUID).optional()
+  deviceId: z.string().regex(UUID).optional(),
+  platform: z.enum(["windows", "android"])
 });
 
 const eventSchema = z.strictObject({
@@ -81,10 +82,15 @@ async function handleEnroll(request: Request, env: Env, corsOrigin: string): Pro
   }
 
   const deviceId = parsed.data.deviceId ?? crypto.randomUUID();
-  await rest(env, "/devices?on_conflict=id", {
+  await rest(env, "/devices?on_conflict=device_id", {
     method: "POST",
     prefer: "resolution=merge-duplicates,return=minimal",
-    body: { id: deviceId, label: null, status: "active" }
+    body: {
+      device_id: deviceId,
+      platform: parsed.data.platform,
+      status: "active",
+      label: null
+    }
   });
 
   const issued = await signDeviceToken({
@@ -149,7 +155,7 @@ async function handleSync(request: Request, env: Env, corsOrigin: string): Promi
     acknowledgements.push({ eventId: event.eventId, status, errorCode: null });
   }
 
-  await rest(env, `/devices?id=eq.${payload.deviceId}`, {
+  await rest(env, `/devices?device_id=eq.${payload.deviceId}`, {
     method: "PATCH",
     prefer: "return=minimal",
     body: { last_seen_at: new Date().toISOString() }
