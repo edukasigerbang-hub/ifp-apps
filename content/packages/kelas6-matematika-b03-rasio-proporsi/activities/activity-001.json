@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-rasio",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Perbandingan",
+  "instructions": "Amati batang dan kelompok benda, lalu diskusikan rasionya.",
+  "assets": [
+    "assets/rasio.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa rasio 4 benda merah dan 3 benda biru?",
+        "assetPath": "assets/rasio.png",
+        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
+        "reveal": "4 : 3.",
+        "hint": "Tulis sesuai urutan."
+      },
+      {
+        "prompt": "Bagaimana menyederhanakan 8 : 6?",
+        "assetPath": "assets/rasio.png",
+        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
+        "reveal": "4 : 3.",
+        "hint": "Bagi dengan faktor yang sama."
+      },
+      {
+        "prompt": "Apa itu proporsi?",
+        "assetPath": "assets/rasio.png",
+        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
+        "reveal": "Dua rasio yang senilai.",
+        "hint": "3 : 4 = 9 : 12."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+  }
+}

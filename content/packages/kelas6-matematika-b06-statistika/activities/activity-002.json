@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-statistika",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Statistika",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-mean",
+        "prompt": "Mean dari 70, 80, 90 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-80",
+            "text": "80"
+          },
+          {
+            "optionId": "opsi-70",
+            "text": "70"
+          },
+          {
+            "optionId": "opsi-90",
+            "text": "90"
+          },
+          {
+            "optionId": "opsi-240",
+            "text": "240"
+          }
+        ],
+        "correctResponse": "opsi-80"
+      },
+      {
+        "questionId": "soal-median",
+        "prompt": "Median dari 60, 70, 90 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-70",
+            "text": "70"
+          },
+          {
+            "optionId": "opsi-60",
+            "text": "60"
+          },
+          {
+            "optionId": "opsi-90",
+            "text": "90"
+          },
+          {
+            "optionId": "opsi-80",
+            "text": "80"
+          }
+        ],
+        "correctResponse": "opsi-70"
+      },
+      {
+        "questionId": "soal-modus",
+        "prompt": "Modus dari 2, 3, 3, 4 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-4",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12"
+          }
+        ],
+        "correctResponse": "opsi-3"
+      },
+      {
+        "questionId": "soal-mean2",
+        "prompt": "Mean dari 5, 7, 9 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-7",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-6",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-8",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-21",
+            "text": "21"
+          }
+        ],
+        "correctResponse": "opsi-7"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  }
+}

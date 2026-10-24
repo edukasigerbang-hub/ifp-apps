@@ -1,0 +1,25 @@
+{
+  "lessonId": "demokrasi",
+  "packageId": "kelas6-pendidikan-pancasila-b03-demokrasi",
+  "title": "Demokrasi dan Pemilu",
+  "summary": "Memahami demokrasi dan tahapan pemilu.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti demokrasi.",
+    "Menyebutkan tahapan pemilu.",
+    "Menghargai hasil pemilihan."
+  ],
+  "activityIds": [
+    "eksplorasi-demokrasi",
+    "ordering-demokrasi"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/demokrasi.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

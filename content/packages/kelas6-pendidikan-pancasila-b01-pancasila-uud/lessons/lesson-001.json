@@ -1,0 +1,25 @@
+{
+  "lessonId": "pancasila-uud",
+  "packageId": "kelas6-pendidikan-pancasila-b01-pancasila-uud",
+  "title": "Pancasila dan UUD 1945",
+  "summary": "Memahami kedudukan Pancasila dan UUD 1945.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan kedudukan Pancasila.",
+    "Menjelaskan kedudukan UUD 1945.",
+    "Menerapkan nilai keduanya."
+  ],
+  "activityIds": [
+    "eksplorasi-pancasila-uud",
+    "matching-pancasila-uud"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/pancasila-uud.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Simbol Pancasila dan dokumen UUD 1945."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

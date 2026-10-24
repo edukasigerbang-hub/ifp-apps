@@ -1,0 +1,25 @@
+{
+  "lessonId": "sejarah-islam",
+  "packageId": "kelas6-pai-b07-sejarah-islam",
+  "title": "Sejarah Islam",
+  "summary": "Mengurutkan peristiwa penting awal Islam.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan peristiwa awal Islam.",
+    "Mengurutkan peristiwa.",
+    "Mengambil teladan."
+  ],
+  "activityIds": [
+    "eksplorasi-sejarah-islam",
+    "ordering-sejarah-islam"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/sejarah-islam-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "unsur-prinsip-kelas6",
+  "packageId": "kelas6-seni-rupa-b01-unsur-prinsip",
+  "title": "Unsur dan Prinsip Seni",
+  "summary": "Menerapkan unsur dan prinsip seni dalam karya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan unsur seni.",
+    "Menjelaskan prinsip seni.",
+    "Menerapkan dalam karya."
+  ],
+  "activityIds": [
+    "eksplorasi-unsur-prinsip-kelas6",
+    "matching-unsur-prinsip-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/unsur-prinsip-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

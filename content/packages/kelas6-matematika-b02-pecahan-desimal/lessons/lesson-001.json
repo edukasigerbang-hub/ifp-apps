@@ -1,0 +1,25 @@
+{
+  "lessonId": "pecahan-desimal",
+  "packageId": "kelas6-matematika-b02-pecahan-desimal",
+  "title": "Operasi Pecahan dan Desimal",
+  "summary": "Mengubah dan menghitung pecahan serta desimal.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengubah pecahan menjadi desimal.",
+    "Menjumlahkan dan mengurangkan desimal.",
+    "Menyelesaikan soal cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-pecahan-desimal",
+    "matching-pecahan-desimal"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/pecahan-desimal.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan dan nilai desimal yang setara."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

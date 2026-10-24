@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-permainan-tradisional",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Permainan Tradisional",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-contoh",
+        "prompt": "Contoh permainan tradisional adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-gobak",
+            "text": "Gobak sodor"
+          },
+          {
+            "optionId": "opsi-game",
+            "text": "Permainan ponsel"
+          },
+          {
+            "optionId": "opsi-basket",
+            "text": "Bola basket"
+          },
+          {
+            "optionId": "opsi-tenis",
+            "text": "Tenis meja"
+          }
+        ],
+        "correctResponse": "opsi-gobak"
+      },
+      {
+        "questionId": "soal-aturan",
+        "prompt": "Aturan permainan harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ditaati",
+            "text": "Ditaati semua"
+          },
+          {
+            "optionId": "opsi-dilanggar",
+            "text": "Dilanggar"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Diabaikan"
+          },
+          {
+            "optionId": "opsi-ubah",
+            "text": "Diubah sendiri"
+          }
+        ],
+        "correctResponse": "opsi-ditaati"
+      },
+      {
+        "questionId": "soal-manfaat",
+        "prompt": "Manfaat permainan tradisional adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kerjasama",
+            "text": "Melatih kerja sama"
+          },
+          {
+            "optionId": "opsi-sendiri",
+            "text": "Bermain sendiri"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Menjadi malas"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Cepat marah"
+          }
+        ],
+        "correctResponse": "opsi-kerjasama"
+      },
+      {
+        "questionId": "soal-sportif",
+        "prompt": "Sikap setelah bermain adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman dengan teman"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah bila kalah"
+          },
+          {
+            "optionId": "opsi-tinggal",
+            "text": "Pergi tanpa izin"
+          },
+          {
+            "optionId": "opsi-salah",
+            "text": "Menyalahkan teman"
+          }
+        ],
+        "correctResponse": "opsi-salaman"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan tradisional di lapangan."
+  }
+}

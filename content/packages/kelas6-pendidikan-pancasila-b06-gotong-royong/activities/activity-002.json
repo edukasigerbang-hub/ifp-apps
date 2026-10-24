@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-gotong-royong-kelas6",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Kerja Bersama",
+  "instructions": "Susun langkah kerja bersama.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-kegiatan",
+        "text": "Menentukan kegiatan"
+      },
+      {
+        "itemId": "langkah-musyawarah",
+        "text": "Bermusyawarah"
+      },
+      {
+        "itemId": "langkah-tugas",
+        "text": "Membagi tugas"
+      },
+      {
+        "itemId": "langkah-kerja",
+        "text": "Bekerja bersama"
+      },
+      {
+        "itemId": "langkah-laporan",
+        "text": "Melaporkan hasil"
+      }
+    ],
+    "correctOrder": [
+      "langkah-kegiatan",
+      "langkah-musyawarah",
+      "langkah-tugas",
+      "langkah-kerja",
+      "langkah-laporan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama dan bermusyawarah."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-bumi-tata-surya",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Peristiwa",
+  "instructions": "Susun hubungan gerak bumi dan akibatnya.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-rotasi",
+        "text": "Bumi berotasi"
+      },
+      {
+        "itemId": "langkah-siang",
+        "text": "Terjadi siang dan malam"
+      },
+      {
+        "itemId": "langkah-revolusi",
+        "text": "Bumi berevolusi"
+      },
+      {
+        "itemId": "langkah-musim",
+        "text": "Terjadi pergantian musim"
+      },
+      {
+        "itemId": "langkah-gerhana",
+        "text": "Terjadi gerhana"
+      }
+    ],
+    "correctOrder": [
+      "langkah-rotasi",
+      "langkah-siang",
+      "langkah-revolusi",
+      "langkah-musim",
+      "langkah-gerhana"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet tata surya."
+  }
+}

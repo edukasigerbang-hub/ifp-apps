@@ -6,10 +6,10 @@
 
 ## Ringkasan
 
-- Total paket: **168**
-- VALID: **168** · INVALID: **0**
-- Alt text lengkap: **168/168**
-- `curriculumRefs` kosong: **168/168** (diharapkan sampai D6 disetujui)
+- Total paket: **224**
+- VALID: **224** · INVALID: **0**
+- Alt text lengkap: **224/224**
+- `curriculumRefs` kosong: **224/224** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
@@ -19,18 +19,19 @@
 | 3 | 56 |
 | 4 | 56 |
 | 5 | 56 |
+| 6 | 56 |
 
 ### Sebaran per mapel
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 24 |
-| ipas | 24 |
-| matematika | 24 |
-| pai | 24 |
-| pendidikan-pancasila | 24 |
-| pjok | 24 |
-| seni-rupa | 24 |
+| bahasa-indonesia | 32 |
+| ipas | 32 |
+| matematika | 32 |
+| pai | 32 |
+| pendidikan-pancasila | 32 |
+| pjok | 32 |
+| seni-rupa | 32 |
 
 ## Temuan yang perlu ditindaklanjuti
 
@@ -208,6 +209,62 @@
 | `kelas5-seni-rupa-b06-kerajinan-campuran` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-seni-rupa-b07-apresiasi` | 5 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-seni-rupa-b08-pameran` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-bahasa-indonesia-b01-laporan` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-bahasa-indonesia-b02-eksposisi` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-bahasa-indonesia-b03-fabel` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-bahasa-indonesia-b04-puisi-pantun` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-bahasa-indonesia-b05-prosedur` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-bahasa-indonesia-b06-diskusi` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-bahasa-indonesia-b07-wawancara` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-bahasa-indonesia-b08-menulis-karya` | 6 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-ipas-b01-perkembangbiakan` | 6 | ipas | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-ipas-b02-pewarisan-sifat` | 6 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-ipas-b03-listrik-magnet` | 6 | ipas | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-ipas-b04-energi` | 6 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-ipas-b05-ekosistem` | 6 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-ipas-b06-bumi-tata-surya` | 6 | ipas | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-ipas-b07-teknologi-ramah-lingkungan` | 6 | ipas | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-ipas-b08-pelestarian` | 6 | ipas | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-matematika-b01-bilangan-bulat` | 6 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-matematika-b02-pecahan-desimal` | 6 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-matematika-b03-rasio-proporsi` | 6 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-matematika-b04-lingkaran` | 6 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-matematika-b05-bangun-ruang` | 6 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-matematika-b06-statistika` | 6 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-matematika-b07-peluang` | 6 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-matematika-b08-pemecahan-masalah` | 6 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pai-b01-quran-tajwid` | 6 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pai-b02-iman-hari-akhir` | 6 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pai-b03-akhlak` | 6 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pai-b04-salat` | 6 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pai-b05-puasa` | 6 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pai-b06-zakat` | 6 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pai-b07-sejarah-islam` | 6 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pai-b08-adab` | 6 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pendidikan-pancasila-b01-pancasila-uud` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pendidikan-pancasila-b02-hak-kewajiban` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pendidikan-pancasila-b03-demokrasi` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pendidikan-pancasila-b04-keberagaman` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pendidikan-pancasila-b05-nkri-globalisasi` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pendidikan-pancasila-b06-gotong-royong` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pendidikan-pancasila-b07-proyek-kewargaan` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pendidikan-pancasila-b08-kearifan-lokal` | 6 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pjok-b01-bola-besar` | 6 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-pjok-b02-bola-kecil` | 6 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pjok-b03-atletik` | 6 | pjok | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pjok-b04-kebugaran` | 6 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pjok-b05-senam` | 6 | pjok | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-pjok-b06-gerak-berirama` | 6 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pjok-b07-kesehatan` | 6 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-pjok-b08-permainan-tradisional` | 6 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-seni-rupa-b01-unsur-prinsip` | 6 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-seni-rupa-b02-ilustrasi` | 6 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-seni-rupa-b03-warna-teknik` | 6 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-seni-rupa-b04-karya-tiga-dimensi` | 6 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-seni-rupa-b05-seni-cetak` | 6 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas6-seni-rupa-b06-kerajinan-campuran` | 6 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas6-seni-rupa-b07-apresiasi` | 6 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas6-seni-rupa-b08-pameran` | 6 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 
 ## Batas laporan
 

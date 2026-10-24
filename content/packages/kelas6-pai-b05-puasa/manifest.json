@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pai-b05-puasa",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Puasa — PAI Kelas 6 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/puasa-kelas6.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4790,
+      "sha256": "c311679cf808c6bc25101b417156539a1b7b1658dda42a91e7dc0c4cfa4e4ae7"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

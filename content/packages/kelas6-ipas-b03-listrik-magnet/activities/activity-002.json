@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-listrik-magnet",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Listrik dan Magnet",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-konduktor",
+        "prompt": "Bahan yang menghantarkan listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-logam",
+            "text": "Logam"
+          },
+          {
+            "optionId": "opsi-kayu",
+            "text": "Kayu"
+          },
+          {
+            "optionId": "opsi-plastik",
+            "text": "Plastik"
+          },
+          {
+            "optionId": "opsi-karet",
+            "text": "Karet"
+          }
+        ],
+        "correctResponse": "opsi-logam"
+      },
+      {
+        "questionId": "soal-isolator",
+        "prompt": "Bahan yang tidak menghantarkan listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-plastik",
+            "text": "Plastik"
+          },
+          {
+            "optionId": "opsi-tembaga",
+            "text": "Tembaga"
+          },
+          {
+            "optionId": "opsi-besi",
+            "text": "Besi"
+          },
+          {
+            "optionId": "opsi-aluminium",
+            "text": "Aluminium"
+          }
+        ],
+        "correctResponse": "opsi-plastik"
+      },
+      {
+        "questionId": "soal-magnet",
+        "prompt": "Magnet memiliki ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua kutub"
+          },
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu kutub"
+          },
+          {
+            "optionId": "opsi-tiga",
+            "text": "Tiga kutub"
+          },
+          {
+            "optionId": "opsi-tanpa",
+            "text": "Tanpa kutub"
+          }
+        ],
+        "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-rangkaian",
+        "prompt": "Rangkaian yang tetap menyala saat satu lampu putus adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-paralel",
+            "text": "Paralel"
+          },
+          {
+            "optionId": "opsi-seri",
+            "text": "Seri"
+          },
+          {
+            "optionId": "opsi-terbuka",
+            "text": "Terbuka"
+          },
+          {
+            "optionId": "opsi-tertutup",
+            "text": "Tertutup"
+          }
+        ],
+        "correctResponse": "opsi-paralel"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rangkaian listrik dan magnet menarik benda logam."
+  }
+}

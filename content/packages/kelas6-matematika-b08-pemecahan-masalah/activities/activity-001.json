@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pemecahan-masalah-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyelesaikan Soal",
+  "instructions": "Amati gambar, lalu diskusikan langkah penyelesaian.",
+  "assets": [
+    "assets/pemecahan-masalah-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa langkah pertama?",
+        "assetPath": "assets/pemecahan-masalah-kelas6.png",
+        "altText": "Anak menyelesaikan soal cerita matematika.",
+        "reveal": "Memahami yang diketahui dan ditanya.",
+        "hint": "Tandai angka."
+      },
+      {
+        "prompt": "Bagaimana memilih strategi?",
+        "assetPath": "assets/pemecahan-masalah-kelas6.png",
+        "altText": "Anak menyelesaikan soal cerita matematika.",
+        "reveal": "Pilih operasi atau rumus.",
+        "hint": "Buat model sederhana."
+      },
+      {
+        "prompt": "Mengapa memeriksa penting?",
+        "assetPath": "assets/pemecahan-masalah-kelas6.png",
+        "altText": "Anak menyelesaikan soal cerita matematika.",
+        "reveal": "Agar jawaban benar.",
+        "hint": "Hitung ulang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  }
+}

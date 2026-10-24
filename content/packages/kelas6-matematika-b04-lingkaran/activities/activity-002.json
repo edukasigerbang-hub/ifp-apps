@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-lingkaran",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur Lingkaran",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-pusat",
+        "left": "Pusat",
+        "right": "Titik tengah"
+      },
+      {
+        "pairId": "pasangan-jari",
+        "left": "Jari-jari",
+        "right": "Setengah diameter"
+      },
+      {
+        "pairId": "pasangan-diameter",
+        "left": "Diameter",
+        "right": "Dua kali jari-jari"
+      },
+      {
+        "pairId": "pasangan-keliling",
+        "left": "Keliling",
+        "right": "2πr"
+      },
+      {
+        "pairId": "pasangan-luas",
+        "left": "Luas",
+        "right": "πr²"
+      },
+      {
+        "pairId": "pasangan-pi",
+        "left": "π",
+        "right": "3,14"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+  }
+}

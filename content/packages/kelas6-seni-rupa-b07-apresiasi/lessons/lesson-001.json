@@ -1,0 +1,27 @@
+{
+  "lessonId": "apresiasi-kelas6",
+  "packageId": "kelas6-seni-rupa-b07-apresiasi",
+  "title": "Apresiasi dan Kritik Karya",
+  "summary": "Mengapresiasi dan mengkritik karya secara santun.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengamati karya.",
+    "Menjelaskan unsur karya.",
+    "Memberi kritik yang membangun."
+  ],
+  "activityIds": [
+    "eksplorasi-apresiasi-kelas6",
+    "kuis-apresiasi-kelas6"
+  ],
+  "assessmentRefs": [
+    "kuis-apresiasi-kelas6"
+  ],
+  "assetRefs": [
+    "assets/apresiasi-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan pengunjung mengamati."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -2303,6 +2303,88 @@ function solarSystemScene() {
   return px;
 }
 
+function ratioScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // batang perbandingan 4 : 3
+  rect(px, 90, 150, 620, 90, colors.sky);
+  for (let i = 0; i < 4; i += 1) rect(px, 100 + i * 150, 160, 140, 70, colors.orange);
+  rect(px, 90, 320, 620, 90, colors.sky);
+  for (let i = 0; i < 3; i += 1) rect(px, 100 + i * 150, 330, 140, 70, colors.teal);
+  // kelompok benda 4 dan 3
+  for (let i = 0; i < 4; i += 1) circle(px, 180 + i * 60, 490, 22, colors.red);
+  for (let i = 0; i < 3; i += 1) circle(px, 180 + i * 60, 540, 22, colors.blue);
+  return px;
+}
+
+function circleScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 400, 330, 180, colors.sky);
+  arc(px, 400, 330, 180, 0, 360, colors.navy, 4);
+  circle(px, 400, 330, 8, colors.navy);
+  line(px, 400, 330, 580, 330, colors.red, 5);
+  line(px, 400, 330, 400, 150, colors.green, 5);
+  line(px, 220, 330, 580, 330, colors.navy, 3);
+  return px;
+}
+
+function probabilityScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // roda putar
+  const cx = 260;
+  const cy = 330;
+  const palette = [colors.red, colors.sun, colors.green, colors.blue];
+  for (let i = 0; i < 12; i += 1) {
+    const start = (i * Math.PI) / 6;
+    const end = ((i + 1) * Math.PI) / 6;
+    const x1 = cx + Math.cos(start) * 170;
+    const y1 = cy + Math.sin(start) * 170;
+    const x2 = cx + Math.cos(end) * 170;
+    const y2 = cy + Math.sin(end) * 170;
+    triangle(px, cx, cy, x1, y1, x2, y2, palette[Math.floor(i / 3)]);
+  }
+  circle(px, cx, cy, 18, colors.white);
+  triangle(px, cx, 140, cx - 18, 190, cx + 18, 190, colors.navy);
+  // dadu
+  rect(px, 560, 240, 160, 160, colors.white);
+  rect(px, 560, 240, 160, 8, colors.navy);
+  rect(px, 560, 392, 160, 8, colors.navy);
+  rect(px, 560, 240, 8, 160, colors.navy);
+  rect(px, 712, 240, 8, 160, colors.navy);
+  for (const [x, y] of [[600, 280], [640, 320], [680, 360], [600, 360], [680, 280]]) {
+    circle(px, x, y, 10, colors.navy);
+  }
+  return px;
+}
+
+function traditionalGameScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 0, 420, W, 180, colors.green);
+  for (const [x, y] of [[100, 300], [160, 340], [220, 300], [640, 300], [700, 340], [760, 300]]) {
+    triangle(px, x - 16, y + 40, x + 16, y + 40, x, y, colors.orange);
+  }
+  const drawKid = (cx, cy, color) => {
+    circle(px, cx, cy, 24, colors.skin1);
+    line(px, cx, cy + 24, cx, cy + 100, color, 12);
+    line(px, cx, cy + 100, cx - 26, cy + 150, colors.navy, 8);
+    line(px, cx, cy + 100, cx + 26, cy + 150, colors.navy, 8);
+    line(px, cx, cy + 50, cx - 34, cy + 80, colors.navy, 8);
+    line(px, cx, cy + 50, cx + 34, cy + 80, colors.navy, 8);
+  };
+  drawKid(320, 200, colors.red);
+  drawKid(420, 180, colors.blue);
+  drawKid(520, 210, colors.teal);
+  ellipse(px, 420, 470, 120, 24, colors.white);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2459,3 +2541,59 @@ write("content/packages/kelas5-pai-b05-puasa/assets/puasa-kelas5.png", fastingSc
 write("content/packages/kelas5-pai-b06-zakat/assets/zakat-kelas5.png", charityScene());
 write("content/packages/kelas5-pai-b07-sejarah-islam/assets/sejarah-islam-kelas5.png", islamHistoryScene());
 write("content/packages/kelas5-pai-b08-adab/assets/adab-kelas5.png", goodMannersScene());
+write("content/packages/kelas6-matematika-b01-bilangan-bulat/assets/bilangan-bulat.png", additionSubtractionScene());
+write("content/packages/kelas6-matematika-b02-pecahan-desimal/assets/pecahan-desimal.png", mathFractionBars());
+write("content/packages/kelas6-matematika-b03-rasio-proporsi/assets/rasio.png", ratioScene());
+write("content/packages/kelas6-matematika-b04-lingkaran/assets/lingkaran.png", circleScene());
+write("content/packages/kelas6-matematika-b05-bangun-ruang/assets/bangun-ruang-kelas6.png", solidShapesScene());
+write("content/packages/kelas6-matematika-b06-statistika/assets/statistika.png", timeVolumeData());
+write("content/packages/kelas6-matematika-b07-peluang/assets/peluang.png", probabilityScene());
+write("content/packages/kelas6-matematika-b08-pemecahan-masalah/assets/pemecahan-masalah-kelas6.png", problemSolvingScene());
+write("content/packages/kelas6-bahasa-indonesia-b01-laporan/assets/laporan-kelas6.png", writingScene());
+write("content/packages/kelas6-bahasa-indonesia-b02-eksposisi/assets/eksposisi-kelas6.png", readingCorner());
+write("content/packages/kelas6-bahasa-indonesia-b03-fabel/assets/fabel.png", narrativeScene());
+write("content/packages/kelas6-bahasa-indonesia-b04-puisi-pantun/assets/puisi-pantun-kelas6.png", literatureScene());
+write("content/packages/kelas6-bahasa-indonesia-b05-prosedur/assets/prosedur-kelas6.png", plantingSteps());
+write("content/packages/kelas6-bahasa-indonesia-b06-diskusi/assets/diskusi-kelas6.png", discussionScene());
+write("content/packages/kelas6-bahasa-indonesia-b07-wawancara/assets/wawancara-kelas6.png", interviewScene());
+write("content/packages/kelas6-bahasa-indonesia-b08-menulis-karya/assets/menulis-karya.png", writingScene());
+write("content/packages/kelas6-ipas-b01-perkembangbiakan/assets/perkembangbiakan.png", lifeCycleScene());
+write("content/packages/kelas6-ipas-b02-pewarisan-sifat/assets/pewarisan-sifat.png", livingThingsGarden());
+write("content/packages/kelas6-ipas-b03-listrik-magnet/assets/listrik-magnet.png", forceMotion());
+write("content/packages/kelas6-ipas-b04-energi/assets/energi-kelas6.png", energyScene());
+write("content/packages/kelas6-ipas-b05-ekosistem/assets/ekosistem-kelas6.png", ecosystemScene());
+write("content/packages/kelas6-ipas-b06-bumi-tata-surya/assets/tata-surya-kelas6.png", solarSystemScene());
+write("content/packages/kelas6-ipas-b07-teknologi-ramah-lingkungan/assets/teknologi-ramah-lingkungan.png", economyScene());
+write("content/packages/kelas6-ipas-b08-pelestarian/assets/pelestarian-kelas6.png", waterCycle());
+write("content/packages/kelas6-pendidikan-pancasila-b01-pancasila-uud/assets/pancasila-uud.png", pancasilaSymbols());
+write("content/packages/kelas6-pendidikan-pancasila-b02-hak-kewajiban/assets/hak-kewajiban-kelas6.png", rightsDuties());
+write("content/packages/kelas6-pendidikan-pancasila-b03-demokrasi/assets/demokrasi.png", discussionScene());
+write("content/packages/kelas6-pendidikan-pancasila-b04-keberagaman/assets/keberagaman-kelas6.png", bhinnekaScene());
+write("content/packages/kelas6-pendidikan-pancasila-b05-nkri-globalisasi/assets/nkri-globalisasi.png", flagCeremonyScene());
+write("content/packages/kelas6-pendidikan-pancasila-b06-gotong-royong/assets/gotong-royong-kelas6.png", communityScene());
+write("content/packages/kelas6-pendidikan-pancasila-b07-proyek-kewargaan/assets/proyek-kewargaan-kelas6.png", civicProjectScene());
+write("content/packages/kelas6-pendidikan-pancasila-b08-kearifan-lokal/assets/kearifan-lokal.png", cultureScene());
+write("content/packages/kelas6-seni-rupa-b01-unsur-prinsip/assets/unsur-prinsip-kelas6.png", artElements());
+write("content/packages/kelas6-seni-rupa-b02-ilustrasi/assets/ilustrasi.png", drawingShapes());
+write("content/packages/kelas6-seni-rupa-b03-warna-teknik/assets/warna-teknik.png", colorTexture());
+write("content/packages/kelas6-seni-rupa-b04-karya-tiga-dimensi/assets/karya-tiga-dimensi.png", solidShapesScene());
+write("content/packages/kelas6-seni-rupa-b05-seni-cetak/assets/seni-cetak-kelas6.png", printmakingScene());
+write("content/packages/kelas6-seni-rupa-b06-kerajinan-campuran/assets/kerajinan-campuran-kelas6.png", naturalCraftScene());
+write("content/packages/kelas6-seni-rupa-b07-apresiasi/assets/apresiasi-kelas6.png", artAppreciationScene());
+write("content/packages/kelas6-seni-rupa-b08-pameran/assets/pameran-kelas6.png", exhibitionScene());
+write("content/packages/kelas6-pjok-b01-bola-besar/assets/bola-besar-kelas6.png", bigBallScene());
+write("content/packages/kelas6-pjok-b02-bola-kecil/assets/bola-kecil-kelas6.png", smallBallScene());
+write("content/packages/kelas6-pjok-b03-atletik/assets/atletik-kelas6.png", athleticsScene());
+write("content/packages/kelas6-pjok-b04-kebugaran/assets/kebugaran-kelas6.png", fitnessScene());
+write("content/packages/kelas6-pjok-b05-senam/assets/senam-kelas6.png", basicGymnasticsScene());
+write("content/packages/kelas6-pjok-b06-gerak-berirama/assets/gerak-berirama.png", movementScene());
+write("content/packages/kelas6-pjok-b07-kesehatan/assets/kesehatan-kelas6.png", hygieneScene());
+write("content/packages/kelas6-pjok-b08-permainan-tradisional/assets/permainan-tradisional.png", traditionalGameScene());
+write("content/packages/kelas6-pai-b01-quran-tajwid/assets/quran-kelas6.png", quranScene());
+write("content/packages/kelas6-pai-b02-iman-hari-akhir/assets/iman-hari-akhir.png", imanScene());
+write("content/packages/kelas6-pai-b03-akhlak/assets/akhlak-kelas6.png", akhlakScene());
+write("content/packages/kelas6-pai-b04-salat/assets/salat-kelas6.png", prayerScene());
+write("content/packages/kelas6-pai-b05-puasa/assets/puasa-kelas6.png", fastingScene());
+write("content/packages/kelas6-pai-b06-zakat/assets/zakat-kelas6.png", charityScene());
+write("content/packages/kelas6-pai-b07-sejarah-islam/assets/sejarah-islam-kelas6.png", islamHistoryScene());
+write("content/packages/kelas6-pai-b08-adab/assets/adab-kelas6.png", goodMannersScene());

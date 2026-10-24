@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-warna-teknik",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Warna dan Teknik",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-primer",
+        "prompt": "Warna primer adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mkb",
+            "text": "Merah, kuning, biru"
+          },
+          {
+            "optionId": "opsi-hijau",
+            "text": "Hijau, ungu, oranye"
+          },
+          {
+            "optionId": "opsi-hitam",
+            "text": "Hitam dan putih"
+          },
+          {
+            "optionId": "opsi-coklat",
+            "text": "Coklat dan abu"
+          }
+        ],
+        "correctResponse": "opsi-mkb"
+      },
+      {
+        "questionId": "soal-sekunder",
+        "prompt": "Merah dicampur biru menghasilkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ungu",
+            "text": "Ungu"
+          },
+          {
+            "optionId": "opsi-hijau",
+            "text": "Hijau"
+          },
+          {
+            "optionId": "opsi-oranye",
+            "text": "Oranye"
+          },
+          {
+            "optionId": "opsi-coklat",
+            "text": "Coklat"
+          }
+        ],
+        "correctResponse": "opsi-ungu"
+      },
+      {
+        "questionId": "soal-gradasi",
+        "prompt": "Gradasi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bertahap",
+            "text": "Perubahan warna bertahap"
+          },
+          {
+            "optionId": "opsi-sama",
+            "text": "Warna sama"
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Warna acak"
+          },
+          {
+            "optionId": "opsi-putih",
+            "text": "Warna putih saja"
+          }
+        ],
+        "correctResponse": "opsi-bertahap"
+      },
+      {
+        "questionId": "soal-teknik",
+        "prompt": "Teknik mewarnai dengan cat air disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-basah",
+            "text": "Teknik basah"
+          },
+          {
+            "optionId": "opsi-kering",
+            "text": "Teknik kering"
+          },
+          {
+            "optionId": "opsi-cetak",
+            "text": "Teknik cetak"
+          },
+          {
+            "optionId": "opsi-lipat",
+            "text": "Teknik lipat"
+          }
+        ],
+        "correctResponse": "opsi-basah"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna dan tekstur dari berbagai teknik."
+  }
+}

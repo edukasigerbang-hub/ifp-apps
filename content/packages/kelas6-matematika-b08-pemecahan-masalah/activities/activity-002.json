@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-pemecahan-masalah-kelas6",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Pemecahan Masalah",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-bagi",
+        "prompt": "12 buku dibagi rata kepada 3 anak. Setiap anak mendapat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-4",
+            "text": "4 buku"
+          },
+          {
+            "optionId": "opsi-3",
+            "text": "3 buku"
+          },
+          {
+            "optionId": "opsi-9",
+            "text": "9 buku"
+          },
+          {
+            "optionId": "opsi-15",
+            "text": "15 buku"
+          }
+        ],
+        "correctResponse": "opsi-4"
+      },
+      {
+        "questionId": "soal-harga",
+        "prompt": "3 pensil seharga Rp2.500 per buah. Totalnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-7500",
+            "text": "Rp7.500"
+          },
+          {
+            "optionId": "opsi-2500",
+            "text": "Rp2.500"
+          },
+          {
+            "optionId": "opsi-5000",
+            "text": "Rp5.000"
+          },
+          {
+            "optionId": "opsi-10000",
+            "text": "Rp10.000"
+          }
+        ],
+        "correctResponse": "opsi-7500"
+      },
+      {
+        "questionId": "soal-sisa",
+        "prompt": "Ana memiliki 20 kelereng dan memberi 8. Sisanya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-12",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-28",
+            "text": "28"
+          },
+          {
+            "optionId": "opsi-8",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-16",
+            "text": "16"
+          }
+        ],
+        "correctResponse": "opsi-12"
+      },
+      {
+        "questionId": "soal-langkah",
+        "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-paham",
+            "text": "Memahami soal"
+          },
+          {
+            "optionId": "opsi-jawab",
+            "text": "Langsung menjawab"
+          },
+          {
+            "optionId": "opsi-tebak",
+            "text": "Menebak"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Mengabaikan angka"
+          }
+        ],
+        "correctResponse": "opsi-paham"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "akhlak-kelas6",
+  "packageId": "kelas6-pai-b03-akhlak",
+  "title": "Akhlak Terpuji",
+  "summary": "Membiasakan akhlak terpuji dalam kehidupan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan akhlak terpuji.",
+    "Memberi contoh.",
+    "Membiasakan akhlak baik."
+  ],
+  "activityIds": [
+    "eksplorasi-akhlak-kelas6",
+    "matching-akhlak-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/akhlak-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berbagi dan membantu teman."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

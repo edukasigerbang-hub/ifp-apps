@@ -1,0 +1,27 @@
+{
+  "lessonId": "iman-hari-akhir",
+  "packageId": "kelas6-pai-b02-iman-hari-akhir",
+  "title": "Iman kepada Hari Akhir",
+  "summary": "Memahami iman kepada hari akhir dan perilakunya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti hari akhir.",
+    "Menyebutkan tanda-tandanya.",
+    "Menunjukkan perilaku beriman."
+  ],
+  "activityIds": [
+    "eksplorasi-iman-hari-akhir",
+    "kuis-iman-hari-akhir"
+  ],
+  "assessmentRefs": [
+    "kuis-iman-hari-akhir"
+  ],
+  "assetRefs": [
+    "assets/iman-hari-akhir.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

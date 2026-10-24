@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pewarisan-sifat",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Pewarisan",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-sifat",
+        "left": "Pewarisan sifat",
+        "right": "Ciri induk ke anak"
+      },
+      {
+        "pairId": "pasangan-gen",
+        "left": "Gen",
+        "right": "Pembawa sifat"
+      },
+      {
+        "pairId": "pasangan-induk",
+        "left": "Induk",
+        "right": "Orang tua"
+      },
+      {
+        "pairId": "pasangan-keturunan",
+        "left": "Keturunan",
+        "right": "Anak"
+      },
+      {
+        "pairId": "pasangan-bawaan",
+        "left": "Sifat bawaan",
+        "right": "Sejak lahir"
+      },
+      {
+        "pairId": "pasangan-lingkungan",
+        "left": "Lingkungan",
+        "right": "Faktor luar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Induk dan anak dengan ciri fisik yang mirip."
+  }
+}

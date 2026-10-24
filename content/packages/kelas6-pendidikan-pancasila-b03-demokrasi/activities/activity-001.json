@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-demokrasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Demokrasi",
+  "instructions": "Amati gambar, lalu diskusikan nilai demokrasi.",
+  "assets": [
+    "assets/demokrasi.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu demokrasi?",
+        "assetPath": "assets/demokrasi.png",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
+        "reveal": "Pemerintahan dari rakyat, oleh rakyat, untuk rakyat.",
+        "hint": "Ada kebebasan berpendapat."
+      },
+      {
+        "prompt": "Apa itu pemilu?",
+        "assetPath": "assets/demokrasi.png",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
+        "reveal": "Pemilihan umum untuk memilih pemimpin.",
+        "hint": "Dilakukan secara jujur."
+      },
+      {
+        "prompt": "Bagaimana menghargai hasil?",
+        "assetPath": "assets/demokrasi.png",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
+        "reveal": "Menerima keputusan bersama.",
+        "hint": "Tidak memaksakan kehendak."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  }
+}

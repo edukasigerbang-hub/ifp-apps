@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-matematika-b04-lingkaran",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Lingkaran — Matematika Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/lingkaran.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5687,
+      "sha256": "b94a0e91aee7dd9ef075ed1eaa2a9405f12735f12259d257081e065739580f0a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

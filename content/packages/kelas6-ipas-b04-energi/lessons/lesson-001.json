@@ -1,0 +1,25 @@
+{
+  "lessonId": "energi-kelas6",
+  "packageId": "kelas6-ipas-b04-energi",
+  "title": "Energi dan Perubahannya",
+  "summary": "Mengenal bentuk energi dan perubahannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bentuk energi.",
+    "Menjelaskan perubahan energi.",
+    "Menghemat energi."
+  ],
+  "activityIds": [
+    "eksplorasi-energi-kelas6",
+    "matching-energi-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/energi-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

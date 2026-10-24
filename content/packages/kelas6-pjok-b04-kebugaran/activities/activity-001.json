@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebugaran-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Bugar",
+  "instructions": "Amati gambar, lalu diskusikan cara menjaga kebugaran.",
+  "assets": [
+    "assets/kebugaran-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang membuat bugar?",
+        "assetPath": "assets/kebugaran-kelas6.png",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Olahraga, gizi, dan istirahat.",
+        "hint": "Lakukan rutin."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/kebugaran-kelas6.png",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Sebelum olahraga."
+      },
+      {
+        "prompt": "Berapa lama istirahat cukup?",
+        "assetPath": "assets/kebugaran-kelas6.png",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Sekitar 8 jam.",
+        "hint": "Tidur malam cukup."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  }
+}

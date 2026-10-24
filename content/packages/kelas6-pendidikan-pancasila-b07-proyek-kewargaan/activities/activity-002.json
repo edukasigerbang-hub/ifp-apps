@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-proyek-kewargaan-kelas6",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Proyek Kewargaan",
+  "instructions": "Susun langkah proyek kewargaan.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-masalah",
+        "text": "Memilih masalah"
+      },
+      {
+        "itemId": "langkah-rencana",
+        "text": "Menyusun rencana"
+      },
+      {
+        "itemId": "langkah-tugas",
+        "text": "Membagi tugas"
+      },
+      {
+        "itemId": "langkah-laksana",
+        "text": "Melaksanakan proyek"
+      },
+      {
+        "itemId": "langkah-laporan",
+        "text": "Melaporkan hasil"
+      }
+    ],
+    "correctOrder": [
+      "langkah-masalah",
+      "langkah-rencana",
+      "langkah-tugas",
+      "langkah-laksana",
+      "langkah-laporan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+  }
+}

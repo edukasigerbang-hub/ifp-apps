@@ -1,0 +1,27 @@
+{
+  "lessonId": "statistika",
+  "packageId": "kelas6-matematika-b06-statistika",
+  "title": "Statistika",
+  "summary": "Menghitung mean, median, dan modus dari data.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menghitung mean.",
+    "Menentukan median.",
+    "Menentukan modus."
+  ],
+  "activityIds": [
+    "eksplorasi-statistika",
+    "kuis-statistika"
+  ],
+  "assessmentRefs": [
+    "kuis-statistika"
+  ],
+  "assetRefs": [
+    "assets/statistika.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-permainan-tradisional",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Permainan Tradisional",
+  "instructions": "Amati gambar, lalu diskusikan aturan dan kerja samanya.",
+  "assets": [
+    "assets/permainan-tradisional.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Permainan tradisional apa yang kamu tahu?",
+        "assetPath": "assets/permainan-tradisional.png",
+        "altText": "Anak bermain permainan tradisional di lapangan.",
+        "reveal": "Gobak sodor, engklek, dan kasti.",
+        "hint": "Dimainkan bersama."
+      },
+      {
+        "prompt": "Mengapa aturan penting?",
+        "assetPath": "assets/permainan-tradisional.png",
+        "altText": "Anak bermain permainan tradisional di lapangan.",
+        "reveal": "Agar permainan adil.",
+        "hint": "Semua menaati."
+      },
+      {
+        "prompt": "Apa manfaatnya?",
+        "assetPath": "assets/permainan-tradisional.png",
+        "altText": "Anak bermain permainan tradisional di lapangan.",
+        "reveal": "Melatih gerak, kerja sama, dan sportivitas.",
+        "hint": "Menyenangkan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan tradisional di lapangan."
+  }
+}

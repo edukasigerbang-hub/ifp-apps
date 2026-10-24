@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-listrik-magnet",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Listrik dan Magnet",
+  "instructions": "Amati gambar, lalu diskusikan bahan dan sifat magnet.",
+  "assets": [
+    "assets/listrik-magnet.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu konduktor?",
+        "assetPath": "assets/listrik-magnet.png",
+        "altText": "Rangkaian listrik dan magnet menarik benda logam.",
+        "reveal": "Bahan yang menghantarkan listrik.",
+        "hint": "Contohnya logam."
+      },
+      {
+        "prompt": "Apa itu isolator?",
+        "assetPath": "assets/listrik-magnet.png",
+        "altText": "Rangkaian listrik dan magnet menarik benda logam.",
+        "reveal": "Bahan yang tidak menghantarkan listrik.",
+        "hint": "Contohnya plastik."
+      },
+      {
+        "prompt": "Apa kutub magnet?",
+        "assetPath": "assets/listrik-magnet.png",
+        "altText": "Rangkaian listrik dan magnet menarik benda logam.",
+        "reveal": "Ujung magnet yang menarik atau menolak.",
+        "hint": "Kutub utara dan selatan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rangkaian listrik dan magnet menarik benda logam."
+  }
+}

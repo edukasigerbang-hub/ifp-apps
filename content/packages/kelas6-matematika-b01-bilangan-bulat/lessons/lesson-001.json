@@ -1,0 +1,27 @@
+{
+  "lessonId": "bilangan-bulat",
+  "packageId": "kelas6-matematika-b01-bilangan-bulat",
+  "title": "Bilangan Bulat",
+  "summary": "Mengenal, membandingkan, dan menghitung bilangan bulat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bilangan bulat positif, negatif, dan nol.",
+    "Membandingkan bilangan bulat.",
+    "Menjumlahkan dan mengurangkan bilangan bulat."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-bulat",
+    "kuis-bilangan-bulat"
+  ],
+  "assessmentRefs": [
+    "kuis-bilangan-bulat"
+  ],
+  "assetRefs": [
+    "assets/bilangan-bulat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kearifan-lokal",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kearifan Lokal",
+  "instructions": "Amati gambar, lalu diskusikan budaya dan nilai lokal.",
+  "assets": [
+    "assets/kearifan-lokal.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu kearifan lokal?",
+        "assetPath": "assets/kearifan-lokal.png",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "reveal": "Nilai dan kebiasaan baik masyarakat setempat.",
+        "hint": "Diwariskan turun-temurun."
+      },
+      {
+        "prompt": "Apa contohnya?",
+        "assetPath": "assets/kearifan-lokal.png",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "reveal": "Gotong royong, adat, dan budaya daerah.",
+        "hint": "Setiap daerah berbeda."
+      },
+      {
+        "prompt": "Bagaimana melestarikannya?",
+        "assetPath": "assets/kearifan-lokal.png",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "reveal": "Mengenal, menghormati, dan mempraktikkan.",
+        "hint": "Tidak mengejek budaya lain."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, dan budaya daerah."
+  }
+}

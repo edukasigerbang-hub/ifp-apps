@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-ipas-b03-listrik-magnet",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Listrik dan Magnet — IPAS Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/listrik-magnet.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6196,
+      "sha256": "be34607fdefbd7e5481afa22d41640b36addf836f4f8e0b3b8a595d5d30b1736"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

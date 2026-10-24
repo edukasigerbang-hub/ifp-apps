@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-matematika-b07-peluang",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Peluang Sederhana — Matematika Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/peluang.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5600,
+      "sha256": "4135c08893232d1dbf42c18bee24c7573595bce8d28ac652861f5e66ddc7237b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

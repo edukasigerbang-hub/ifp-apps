@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 168 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 224 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -135,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4, Kelas 3, dan **Kelas 5 lengkap** (56 paket). Gelombang berikutnya: **G3 Fase C — Kelas 6 Semester 1**.
+1. **Fase B dan Fase C lengkap** (Kelas 3, 4, 5, 6). Gelombang berikutnya: **G5 Fase A — Kelas 1 Semester 1**.
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 129,5 kB (map 168 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 172,3 kB (map 224 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -482,6 +482,62 @@ Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/
 | `kelas5-seni-rupa-b06-kerajinan-campuran` | 0.1.0 | 5 | seni-rupa | Kerajinan Bahan Campuran | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-seni-rupa-b07-apresiasi` | 0.1.0 | 5 | seni-rupa | Apresiasi Karya Seni | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-seni-rupa-b08-pameran` | 0.1.0 | 5 | seni-rupa | Pameran Kelas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b01-laporan` | 0.1.0 | 6 | bahasa-indonesia | Teks Laporan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b02-eksposisi` | 0.1.0 | 6 | bahasa-indonesia | Teks Eksposisi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b03-fabel` | 0.1.0 | 6 | bahasa-indonesia | Teks Narasi dan Fabel | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b04-puisi-pantun` | 0.1.0 | 6 | bahasa-indonesia | Puisi dan Pantun | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b05-prosedur` | 0.1.0 | 6 | bahasa-indonesia | Teks Prosedur | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b06-diskusi` | 0.1.0 | 6 | bahasa-indonesia | Teks Diskusi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b07-wawancara` | 0.1.0 | 6 | bahasa-indonesia | Wawancara dan Presentasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-bahasa-indonesia-b08-menulis-karya` | 0.1.0 | 6 | bahasa-indonesia | Menulis Karya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b01-perkembangbiakan` | 0.1.0 | 6 | ipas | Perkembangbiakan Makhluk Hidup | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b02-pewarisan-sifat` | 0.1.0 | 6 | ipas | Pewarisan Sifat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b03-listrik-magnet` | 0.1.0 | 6 | ipas | Listrik dan Magnet | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b04-energi` | 0.1.0 | 6 | ipas | Energi dan Perubahannya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b05-ekosistem` | 0.1.0 | 6 | ipas | Ekosistem dan Keseimbangan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b06-bumi-tata-surya` | 0.1.0 | 6 | ipas | Bumi dan Tata Surya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b07-teknologi-ramah-lingkungan` | 0.1.0 | 6 | ipas | Teknologi Ramah Lingkungan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-ipas-b08-pelestarian` | 0.1.0 | 6 | ipas | Pelestarian Lingkungan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b01-bilangan-bulat` | 0.1.0 | 6 | matematika | Bilangan Bulat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b02-pecahan-desimal` | 0.1.0 | 6 | matematika | Operasi Pecahan dan Desimal | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b03-rasio-proporsi` | 0.1.0 | 6 | matematika | Rasio dan Proporsi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b04-lingkaran` | 0.1.0 | 6 | matematika | Lingkaran | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b05-bangun-ruang` | 0.1.0 | 6 | matematika | Bangun Ruang | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b06-statistika` | 0.1.0 | 6 | matematika | Statistika | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b07-peluang` | 0.1.0 | 6 | matematika | Peluang Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-matematika-b08-pemecahan-masalah` | 0.1.0 | 6 | matematika | Pemecahan Masalah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b01-quran-tajwid` | 0.1.0 | 6 | pai | Al-Qur'an dan Tajwid | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b02-iman-hari-akhir` | 0.1.0 | 6 | pai | Iman kepada Hari Akhir | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b03-akhlak` | 0.1.0 | 6 | pai | Akhlak Terpuji | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b04-salat` | 0.1.0 | 6 | pai | Salat dan Ibadah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b05-puasa` | 0.1.0 | 6 | pai | Puasa | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b06-zakat` | 0.1.0 | 6 | pai | Zakat dan Infak | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b07-sejarah-islam` | 0.1.0 | 6 | pai | Sejarah Islam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pai-b08-adab` | 0.1.0 | 6 | pai | Adab dan Kisah Teladan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b01-pancasila-uud` | 0.1.0 | 6 | pendidikan-pancasila | Pancasila dan UUD 1945 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b02-hak-kewajiban` | 0.1.0 | 6 | pendidikan-pancasila | Hak dan Kewajiban Warga Negara | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b03-demokrasi` | 0.1.0 | 6 | pendidikan-pancasila | Demokrasi dan Pemilu | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b04-keberagaman` | 0.1.0 | 6 | pendidikan-pancasila | Keberagaman dan Persatuan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b05-nkri-globalisasi` | 0.1.0 | 6 | pendidikan-pancasila | NKRI dan Globalisasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b06-gotong-royong` | 0.1.0 | 6 | pendidikan-pancasila | Gotong Royong dan Musyawarah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b07-proyek-kewargaan` | 0.1.0 | 6 | pendidikan-pancasila | Proyek Kewargaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pendidikan-pancasila-b08-kearifan-lokal` | 0.1.0 | 6 | pendidikan-pancasila | Kearifan Lokal | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b01-bola-besar` | 0.1.0 | 6 | pjok | Permainan Bola Besar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b02-bola-kecil` | 0.1.0 | 6 | pjok | Permainan Bola Kecil | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b03-atletik` | 0.1.0 | 6 | pjok | Atletik | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b04-kebugaran` | 0.1.0 | 6 | pjok | Kebugaran Jasmani | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b05-senam` | 0.1.0 | 6 | pjok | Senam Lantai | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b06-gerak-berirama` | 0.1.0 | 6 | pjok | Gerak Berirama | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b07-kesehatan` | 0.1.0 | 6 | pjok | Kesehatan dan Pola Hidup | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-pjok-b08-permainan-tradisional` | 0.1.0 | 6 | pjok | Permainan Tradisional | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b01-unsur-prinsip` | 0.1.0 | 6 | seni-rupa | Unsur dan Prinsip Seni | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b02-ilustrasi` | 0.1.0 | 6 | seni-rupa | Menggambar Ilustrasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b03-warna-teknik` | 0.1.0 | 6 | seni-rupa | Warna dan Teknik | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b04-karya-tiga-dimensi` | 0.1.0 | 6 | seni-rupa | Karya Tiga Dimensi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b05-seni-cetak` | 0.1.0 | 6 | seni-rupa | Seni Cetak | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b06-kerajinan-campuran` | 0.1.0 | 6 | seni-rupa | Kerajinan Bahan Campuran | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b07-apresiasi` | 0.1.0 | 6 | seni-rupa | Apresiasi dan Kritik Karya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas6-seni-rupa-b08-pameran` | 0.1.0 | 6 | seni-rupa | Pameran | **DRAFT** | VALID (2 warning) | belum |
 
 - Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); pencarian UI terverifikasi.
 - `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **95,76 kB**.
@@ -512,3 +568,16 @@ Menambahkan 28 paket Semester 2 (B05–B08 untuk 7 mapel).
 - `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **129,51 kB**.
 - **Kelas 5 lengkap: 56 paket draft** (S1 28 + S2 28).
 - Total katalog: **168 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 56).
+
+## Batch 21 Kelas 6 — Semester 1 & 2 lengkap (2026-10-24)
+
+Menambahkan 56 paket Kelas 6 (28 S1 + 28 S2) untuk 7 mapel.
+
+- Scene baru: rasio, lingkaran, peluang, permainan tradisional.
+- Validasi: **VALID** 56/56; impor **56/56 PASS** (5 file/paket, `active`).
+- UI: pencarian “Bilangan Bulat” menemukan materi; screenshot terverifikasi.
+- Audit ulang: **224/224 VALID**, alt lengkap, packageId unik.
+- `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **172,28 kB**.
+- **Kelas 6 lengkap: 56 paket draft.**
+- **Fase B dan Fase C lengkap** (Kelas 3–6, 224 paket).
+- Total katalog: **224 paket** (Kelas 3, 4, 5, 6 masing-masing 56).

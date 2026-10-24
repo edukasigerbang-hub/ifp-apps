@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bangun-ruang-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bangun Ruang",
+  "instructions": "Amati gambar, lalu diskusikan ciri dan rumusnya.",
+  "assets": [
+    "assets/bangun-ruang-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri prisma?",
+        "assetPath": "assets/bangun-ruang-kelas6.png",
+        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "Dua sisi sejajar dan sisi tegak.",
+        "hint": "Alas dan atas sama."
+      },
+      {
+        "prompt": "Apa ciri limas?",
+        "assetPath": "assets/bangun-ruang-kelas6.png",
+        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "Satu titik puncak.",
+        "hint": "Alas berbentuk bangun datar."
+      },
+      {
+        "prompt": "Apa rumus volume tabung?",
+        "assetPath": "assets/bangun-ruang-kelas6.png",
+        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "π × r² × t.",
+        "hint": "Luas alas dikali tinggi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut."
+  }
+}

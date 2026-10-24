@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-akhlak-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Akhlak dan Makna",
+  "instructions": "Pasangkan setiap akhlak dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jujur",
+        "left": "Jujur",
+        "right": "Berkata benar"
+      },
+      {
+        "pairId": "pasangan-sabar",
+        "left": "Sabar",
+        "right": "Menahan diri"
+      },
+      {
+        "pairId": "pasangan-kasih",
+        "left": "Kasih sayang",
+        "right": "Peduli sesama"
+      },
+      {
+        "pairId": "pasangan-amanah",
+        "left": "Amanah",
+        "right": "Dapat dipercaya"
+      },
+      {
+        "pairId": "pasangan-sopan",
+        "left": "Sopan",
+        "right": "Bertutur baik"
+      },
+      {
+        "pairId": "pasangan-bantu",
+        "left": "Membantu",
+        "right": "Meringankan beban"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berbagi dan membantu teman."
+  }
+}

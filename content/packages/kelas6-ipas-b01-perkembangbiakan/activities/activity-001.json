@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-perkembangbiakan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Daur Hidup",
+  "instructions": "Amati gambar, lalu diskusikan tahapan perkembangbiakan.",
+  "assets": [
+    "assets/perkembangbiakan.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana kupu-kupu berkembang biak?",
+        "assetPath": "assets/perkembangbiakan.png",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "reveal": "Bertelur.",
+        "hint": "Telur menetas menjadi ulat."
+      },
+      {
+        "prompt": "Apa tahapan setelah ulat?",
+        "assetPath": "assets/perkembangbiakan.png",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "reveal": "Kepompong, lalu kupu-kupu.",
+        "hint": "Mengalami metamorfosis."
+      },
+      {
+        "prompt": "Bagaimana tumbuhan berkembang biak?",
+        "assetPath": "assets/perkembangbiakan.png",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "reveal": "Dengan biji, tunas, atau cangkok.",
+        "hint": "Contohnya padi dengan biji."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+  }
+}

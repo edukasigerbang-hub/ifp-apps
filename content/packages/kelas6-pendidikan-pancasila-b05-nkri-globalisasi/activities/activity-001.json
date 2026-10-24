@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-nkri-globalisasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Globalisasi",
+  "instructions": "Amati gambar, lalu diskusikan dampak globalisasi.",
+  "assets": [
+    "assets/nkri-globalisasi.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu globalisasi?",
+        "assetPath": "assets/nkri-globalisasi.png",
+        "altText": "Upacara bendera dan simbol persatuan NKRI.",
+        "reveal": "Keterhubungan antarnegara.",
+        "hint": "Informasi cepat menyebar."
+      },
+      {
+        "prompt": "Apa dampak positifnya?",
+        "assetPath": "assets/nkri-globalisasi.png",
+        "altText": "Upacara bendera dan simbol persatuan NKRI.",
+        "reveal": "Ilmu dan teknologi berkembang.",
+        "hint": "Komunikasi mudah."
+      },
+      {
+        "prompt": "Bagaimana menjaga jati diri?",
+        "assetPath": "assets/nkri-globalisasi.png",
+        "altText": "Upacara bendera dan simbol persatuan NKRI.",
+        "reveal": "Mencintai budaya dan produk dalam negeri.",
+        "hint": "Tetap selektif."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol persatuan NKRI."
+  }
+}

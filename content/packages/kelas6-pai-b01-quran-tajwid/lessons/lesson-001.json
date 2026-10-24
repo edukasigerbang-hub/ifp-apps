@@ -1,0 +1,25 @@
+{
+  "lessonId": "quran-tajwid-kelas6",
+  "packageId": "kelas6-pai-b01-quran-tajwid",
+  "title": "Al-Qur'an dan Tajwid",
+  "summary": "Membaca Al-Qur'an dengan tajwid dasar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti tajwid.",
+    "Membaca mad dengan benar.",
+    "Menerapkan adab membaca."
+  ],
+  "activityIds": [
+    "eksplorasi-quran-tajwid-kelas6",
+    "matching-quran-tajwid-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/quran-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

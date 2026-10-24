@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-diskusi-kelas6",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Teks Diskusi",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-tujuan",
+        "prompt": "Teks diskusi membahas masalah dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua sisi"
+          },
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu sisi"
+          },
+          {
+            "optionId": "opsi-gambar",
+            "text": "Gambar saja"
+          },
+          {
+            "optionId": "opsi-cerita",
+            "text": "Cerita khayalan"
+          }
+        ],
+        "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-argumen",
+        "prompt": "Argumen adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-alasan",
+            "text": "Alasan yang mendukung pendapat"
+          },
+          {
+            "optionId": "opsi-tokoh",
+            "text": "Tokoh cerita"
+          },
+          {
+            "optionId": "opsi-latar",
+            "text": "Tempat cerita"
+          },
+          {
+            "optionId": "opsi-judul",
+            "text": "Judul teks"
+          }
+        ],
+        "correctResponse": "opsi-alasan"
+      },
+      {
+        "questionId": "soal-sikap",
+        "prompt": "Saat teman berbeda pendapat, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hargai",
+            "text": "Menghargai pendapatnya"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah"
+          },
+          {
+            "optionId": "opsi-potong",
+            "text": "Memotong pembicaraan"
+          },
+          {
+            "optionId": "opsi-tinggal",
+            "text": "Pergi"
+          }
+        ],
+        "correctResponse": "opsi-hargai"
+      },
+      {
+        "questionId": "soal-simpulan",
+        "prompt": "Kesimpulan diskusi diambil setelah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-timbang",
+            "text": "Menimbang semua argumen"
+          },
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu pendapat saja"
+          },
+          {
+            "optionId": "opsi-tebak",
+            "text": "Menebak"
+          },
+          {
+            "optionId": "opsi-awal",
+            "text": "Awal diskusi"
+          }
+        ],
+        "correctResponse": "opsi-timbang"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berdiskusi dengan guru."
+  }
+}

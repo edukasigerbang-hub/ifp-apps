@@ -1,0 +1,27 @@
+{
+  "lessonId": "teknologi-ramah-lingkungan",
+  "packageId": "kelas6-ipas-b07-teknologi-ramah-lingkungan",
+  "title": "Teknologi Ramah Lingkungan",
+  "summary": "Mengenal teknologi yang tidak merusak lingkungan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh teknologi ramah lingkungan.",
+    "Menjelaskan manfaatnya.",
+    "Menerapkan hemat energi."
+  ],
+  "activityIds": [
+    "eksplorasi-teknologi-ramah-lingkungan",
+    "kuis-teknologi-ramah-lingkungan"
+  ],
+  "assessmentRefs": [
+    "kuis-teknologi-ramah-lingkungan"
+  ],
+  "assetRefs": [
+    "assets/teknologi-ramah-lingkungan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Panel surya, kincir angin, dan daur ulang."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

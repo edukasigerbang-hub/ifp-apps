@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-atletik-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Nomor Atletik",
+  "instructions": "Amati gambar, lalu diskusikan tekniknya.",
+  "assets": [
+    "assets/atletik-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana start jongkok?",
+        "assetPath": "assets/atletik-kelas6.png",
+        "altText": "Lintasan lari, bak lompat, dan pita finis.",
+        "reveal": "Kaki menolak kuat, pandangan ke depan.",
+        "hint": "Siap berlari."
+      },
+      {
+        "prompt": "Apa urutan lompat jauh?",
+        "assetPath": "assets/atletik-kelas6.png",
+        "altText": "Lintasan lari, bak lompat, dan pita finis.",
+        "reveal": "Awalan, tolakan, melayang, mendarat.",
+        "hint": "Tolak satu kaki."
+      },
+      {
+        "prompt": "Apa itu sportivitas?",
+        "assetPath": "assets/atletik-kelas6.png",
+        "altText": "Lintasan lari, bak lompat, dan pita finis.",
+        "reveal": "Menghargai lawan dan aturan.",
+        "hint": "Tidak curang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  }
+}

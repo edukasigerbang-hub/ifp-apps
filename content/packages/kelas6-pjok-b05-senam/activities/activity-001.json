@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-senam-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Senam",
+  "instructions": "Amati gambar, lalu diskusikan teknik dan keselamatan.",
+  "assets": [
+    "assets/senam-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa gerak senam lantai?",
+        "assetPath": "assets/senam-kelas6.png",
+        "altText": "Anak melakukan guling depan dan keseimbangan.",
+        "reveal": "Guling depan, belakang, keseimbangan.",
+        "hint": "Di atas matras."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/senam-kelas6.png",
+        "altText": "Anak melakukan guling depan dan keseimbangan.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Sebelum berguling."
+      },
+      {
+        "prompt": "Apa yang disiapkan?",
+        "assetPath": "assets/senam-kelas6.png",
+        "altText": "Anak melakukan guling depan dan keseimbangan.",
+        "reveal": "Matras dan pendamping.",
+        "hint": "Jangan bercanda."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan."
+  }
+}

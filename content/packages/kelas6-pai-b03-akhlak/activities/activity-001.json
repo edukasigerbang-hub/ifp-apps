@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-akhlak-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Akhlak Terpuji",
+  "instructions": "Amati gambar, lalu diskusikan perilaku terpuji.",
+  "assets": [
+    "assets/akhlak-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Akhlak terpuji apa yang terlihat?",
+        "assetPath": "assets/akhlak-kelas6.png",
+        "altText": "Anak berbagi dan membantu teman.",
+        "reveal": "Berbagi, jujur, dan membantu.",
+        "hint": "Amati tindakan."
+      },
+      {
+        "prompt": "Mengapa jujur penting?",
+        "assetPath": "assets/akhlak-kelas6.png",
+        "altText": "Anak berbagi dan membantu teman.",
+        "reveal": "Agar dipercaya.",
+        "hint": "Jujur membawa kebaikan."
+      },
+      {
+        "prompt": "Apa manfaat akhlak baik?",
+        "assetPath": "assets/akhlak-kelas6.png",
+        "altText": "Anak berbagi dan membantu teman.",
+        "reveal": "Disayangi dan hidup tenang.",
+        "hint": "Dicontoh orang lain."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berbagi dan membantu teman."
+  }
+}

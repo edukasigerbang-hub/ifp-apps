@@ -1,0 +1,25 @@
+{
+  "lessonId": "prosedur-kelas6",
+  "packageId": "kelas6-bahasa-indonesia-b05-prosedur",
+  "title": "Teks Prosedur",
+  "summary": "Menyusun teks prosedur dengan langkah berurutan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri prosedur.",
+    "Menyusun langkah berurutan.",
+    "Menulis prosedur sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-prosedur-kelas6",
+    "ordering-prosedur-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/prosedur-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji dalam pot."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

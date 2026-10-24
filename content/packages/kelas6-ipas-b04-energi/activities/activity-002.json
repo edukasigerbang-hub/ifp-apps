@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-energi-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bentuk Energi",
+  "instructions": "Pasangkan setiap bentuk energi dengan contohnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-gerak",
+        "left": "Energi gerak",
+        "right": "Bola menggelinding"
+      },
+      {
+        "pairId": "pasangan-panas",
+        "left": "Energi panas",
+        "right": "Api kompor"
+      },
+      {
+        "pairId": "pasangan-cahaya",
+        "left": "Energi cahaya",
+        "right": "Lampu"
+      },
+      {
+        "pairId": "pasangan-bunyi",
+        "left": "Energi bunyi",
+        "right": "Gitar"
+      },
+      {
+        "pairId": "pasangan-listrik",
+        "left": "Energi listrik",
+        "right": "Baterai"
+      },
+      {
+        "pairId": "pasangan-potensial",
+        "left": "Energi potensial",
+        "right": "Benda di ketinggian"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
+  }
+}

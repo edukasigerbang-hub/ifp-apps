@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-seni-rupa-b06-kerajinan-campuran",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kerajinan Bahan Campuran — Seni Rupa Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/kerajinan-campuran-kelas6.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6907,
+      "sha256": "8575605abb6914a8ba88299c59198a58d4960dbdecc668f1a8e5a9532e4ab50b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

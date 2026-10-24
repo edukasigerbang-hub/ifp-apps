@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bilangan-bulat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis Bilangan",
+  "instructions": "Amati garis bilangan, lalu diskusikan posisi bilangan.",
+  "assets": [
+    "assets/bilangan-bulat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu bilangan bulat?",
+        "assetPath": "assets/bilangan-bulat.png",
+        "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif.",
+        "reveal": "Bilangan positif, negatif, dan nol.",
+        "hint": "Tanpa pecahan."
+      },
+      {
+        "prompt": "Mana yang lebih kecil, -3 atau 2?",
+        "assetPath": "assets/bilangan-bulat.png",
+        "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif.",
+        "reveal": "-3.",
+        "hint": "Semakin ke kiri semakin kecil."
+      },
+      {
+        "prompt": "Berapa hasil -5 + 3?",
+        "assetPath": "assets/bilangan-bulat.png",
+        "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif.",
+        "reveal": "-2.",
+        "hint": "Maju 3 langkah dari -5."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+  }
+}

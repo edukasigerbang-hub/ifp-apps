@@ -1,0 +1,25 @@
+{
+  "lessonId": "karya-tiga-dimensi",
+  "packageId": "kelas6-seni-rupa-b04-karya-tiga-dimensi",
+  "title": "Karya Tiga Dimensi",
+  "summary": "Membuat karya tiga dimensi dari bahan sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal karya tiga dimensi.",
+    "Memilih bahan dan teknik.",
+    "Membuat karya tiga dimensi."
+  ],
+  "activityIds": [
+    "eksplorasi-karya-tiga-dimensi",
+    "matching-karya-tiga-dimensi"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/karya-tiga-dimensi.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,27 @@
+{
+  "lessonId": "listrik-magnet",
+  "packageId": "kelas6-ipas-b03-listrik-magnet",
+  "title": "Listrik dan Magnet",
+  "summary": "Mengenal listrik, magnet, dan penerapannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan konduktor dan isolator.",
+    "Menjelaskan sifat magnet.",
+    "Menyebutkan penerapan listrik dan magnet."
+  ],
+  "activityIds": [
+    "eksplorasi-listrik-magnet",
+    "kuis-listrik-magnet"
+  ],
+  "assessmentRefs": [
+    "kuis-listrik-magnet"
+  ],
+  "assetRefs": [
+    "assets/listrik-magnet.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rangkaian listrik dan magnet menarik benda logam."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

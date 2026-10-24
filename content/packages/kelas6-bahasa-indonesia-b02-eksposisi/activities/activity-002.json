@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-eksposisi-kelas6",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Eksposisi",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-tujuan",
+        "prompt": "Tujuan teks eksposisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-jelas",
+            "text": "Menjelaskan informasi"
+          },
+          {
+            "optionId": "opsi-cerita",
+            "text": "Menceritakan khayalan"
+          },
+          {
+            "optionId": "opsi-bujuk",
+            "text": "Membujuk membeli"
+          },
+          {
+            "optionId": "opsi-langkah",
+            "text": "Memberi langkah"
+          }
+        ],
+        "correctResponse": "opsi-jelas"
+      },
+      {
+        "questionId": "soal-struktur",
+        "prompt": "Struktur eksposisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tesis",
+            "text": "Tesis, argumen, penegasan"
+          },
+          {
+            "optionId": "opsi-awal",
+            "text": "Awal, tengah, akhir"
+          },
+          {
+            "optionId": "opsi-sampiran",
+            "text": "Sampiran dan isi"
+          },
+          {
+            "optionId": "opsi-resep",
+            "text": "Alat dan langkah"
+          }
+        ],
+        "correctResponse": "opsi-tesis"
+      },
+      {
+        "questionId": "soal-bahasa",
+        "prompt": "Bahasa eksposisi sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-baku",
+            "text": "Baku dan jelas"
+          },
+          {
+            "optionId": "opsi-gaul",
+            "text": "Gaul"
+          },
+          {
+            "optionId": "opsi-puitis",
+            "text": "Puitis"
+          },
+          {
+            "optionId": "opsi-lucu",
+            "text": "Lucu"
+          }
+        ],
+        "correctResponse": "opsi-baku"
+      },
+      {
+        "questionId": "soal-argumen",
+        "prompt": "Bagian argumen berisi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-alasan",
+            "text": "Alasan dan bukti"
+          },
+          {
+            "optionId": "opsi-tokoh",
+            "text": "Tokoh cerita"
+          },
+          {
+            "optionId": "opsi-langkah",
+            "text": "Langkah kegiatan"
+          },
+          {
+            "optionId": "opsi-sampiran",
+            "text": "Sampiran pantun"
+          }
+        ],
+        "correctResponse": "opsi-alasan"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi."
+  }
+}

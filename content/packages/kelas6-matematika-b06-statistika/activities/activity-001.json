@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-statistika",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Data",
+  "instructions": "Amati diagram, lalu diskusikan mean, median, dan modus.",
+  "assets": [
+    "assets/statistika.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu mean?",
+        "assetPath": "assets/statistika.png",
+        "altText": "Diagram batang dan tabel data.",
+        "reveal": "Jumlah data dibagi banyak data.",
+        "hint": "Rata-rata."
+      },
+      {
+        "prompt": "Apa itu median?",
+        "assetPath": "assets/statistika.png",
+        "altText": "Diagram batang dan tabel data.",
+        "reveal": "Nilai tengah setelah data diurutkan.",
+        "hint": "Bagi dua jika genap."
+      },
+      {
+        "prompt": "Apa itu modus?",
+        "assetPath": "assets/statistika.png",
+        "altText": "Diagram batang dan tabel data.",
+        "reveal": "Data yang paling sering muncul.",
+        "hint": "Bisa lebih dari satu."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  }
+}

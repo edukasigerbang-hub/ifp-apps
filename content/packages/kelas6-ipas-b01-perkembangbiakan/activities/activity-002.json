@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-perkembangbiakan",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Daur Hidup Kupu-kupu",
+  "instructions": "Susun tahapan daur hidup kupu-kupu.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "tahap-telur",
+        "text": "Telur"
+      },
+      {
+        "itemId": "tahap-ulat",
+        "text": "Ulat"
+      },
+      {
+        "itemId": "tahap-kepompong",
+        "text": "Kepompong"
+      },
+      {
+        "itemId": "tahap-kupu",
+        "text": "Kupu-kupu"
+      },
+      {
+        "itemId": "tahap-bertelur",
+        "text": "Bertelur lagi"
+      }
+    ],
+    "correctOrder": [
+      "tahap-telur",
+      "tahap-ulat",
+      "tahap-kepompong",
+      "tahap-kupu",
+      "tahap-bertelur"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+  }
+}

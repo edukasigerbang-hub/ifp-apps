@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pjok-b01-bola-besar",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Permainan Bola Besar — PJOK Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/bola-besar-kelas6.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8579,
+      "sha256": "ec070fb09198309f5716ac9226603758463e48af28eef8f238eadb97cca669e1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

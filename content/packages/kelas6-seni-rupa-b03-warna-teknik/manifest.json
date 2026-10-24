@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-seni-rupa-b03-warna-teknik",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Warna dan Teknik — Seni Rupa Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/warna-teknik.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5945,
+      "sha256": "3faf047ec3813f555e302c665b430c53314799b655e56a04da30c1241199cc66"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-unsur-prinsip-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur dan Prinsip",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-garis",
+        "left": "Garis",
+        "right": "Unsur memanjang"
+      },
+      {
+        "pairId": "pasangan-warna",
+        "left": "Warna",
+        "right": "Unsur visual"
+      },
+      {
+        "pairId": "pasangan-tekstur",
+        "left": "Tekstur",
+        "right": "Kesan permukaan"
+      },
+      {
+        "pairId": "pasangan-bentuk",
+        "left": "Bentuk",
+        "right": "Unsur dua atau tiga dimensi"
+      },
+      {
+        "pairId": "pasangan-seimbang",
+        "left": "Keseimbangan",
+        "right": "Prinsip komposisi"
+      },
+      {
+        "pairId": "pasangan-kesatuan",
+        "left": "Kesatuan",
+        "right": "Keterpaduan karya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+  }
+}

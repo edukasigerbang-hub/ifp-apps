@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pecahan-desimal",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Pecahan dan Desimal",
+  "instructions": "Pasangkan setiap pecahan dengan nilai desimalnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-setengah",
+        "left": "1/2",
+        "right": "0,5"
+      },
+      {
+        "pairId": "pasangan-seperempat",
+        "left": "1/4",
+        "right": "0,25"
+      },
+      {
+        "pairId": "pasangan-tiga-perempat",
+        "left": "3/4",
+        "right": "0,75"
+      },
+      {
+        "pairId": "pasangan-seperlima",
+        "left": "1/5",
+        "right": "0,2"
+      },
+      {
+        "pairId": "pasangan-sepersepuluh",
+        "left": "1/10",
+        "right": "0,1"
+      },
+      {
+        "pairId": "pasangan-lima-puluh",
+        "left": "0,50",
+        "right": "1/2"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan dan nilai desimal yang setara."
+  }
+}

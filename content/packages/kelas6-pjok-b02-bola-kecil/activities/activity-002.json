@@ -1,0 +1,62 @@
+{
+  "activityId": "matching-bola-kecil-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Alat dan Permainan",
+  "instructions": "Pasangkan setiap alat dengan permainannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-raket",
+        "left": "Raket",
+        "right": "Bulu tangkis"
+      },
+      {
+        "pairId": "pasangan-kok",
+        "left": "Kok",
+        "right": "Bulu tangkis"
+      },
+      {
+        "pairId": "pasangan-bet",
+        "left": "Bet",
+        "right": "Tenis meja"
+      },
+      {
+        "pairId": "pasangan-bola-pingpong",
+        "left": "Bola pingpong",
+        "right": "Tenis meja"
+      },
+      {
+        "pairId": "pasangan-bola-tenis",
+        "left": "Bola tenis",
+        "right": "Tenis"
+      },
+      {
+        "pairId": "pasangan-net",
+        "left": "Net",
+        "right": "Bulu tangkis dan tenis"
+      },
+      {
+        "pairId": "pasangan-pemanasan",
+        "left": "Pemanasan",
+        "right": "Mencegah cedera"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok, dan bet tenis meja."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "lessonId": "permainan-tradisional",
+  "packageId": "kelas6-pjok-b08-permainan-tradisional",
+  "title": "Permainan Tradisional",
+  "summary": "Mengenal dan mempraktikkan permainan tradisional.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan permainan tradisional.",
+    "Mempraktikkan permainan.",
+    "Menjaga sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-permainan-tradisional",
+    "kuis-permainan-tradisional"
+  ],
+  "assessmentRefs": [
+    "kuis-permainan-tradisional"
+  ],
+  "assetRefs": [
+    "assets/permainan-tradisional.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan tradisional di lapangan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

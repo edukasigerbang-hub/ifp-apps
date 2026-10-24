@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-peluang",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Peluang",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-ruang",
+        "left": "Ruang sampel",
+        "right": "Semua hasil"
+      },
+      {
+        "pairId": "pasangan-peluang",
+        "left": "Peluang",
+        "right": "Kemungkinan"
+      },
+      {
+        "pairId": "pasangan-dadu",
+        "left": "Dadu",
+        "right": "6 hasil"
+      },
+      {
+        "pairId": "pasangan-uang",
+        "left": "Mata uang",
+        "right": "2 hasil"
+      },
+      {
+        "pairId": "pasangan-seperenam",
+        "left": "Peluang 1/6",
+        "right": "Satu dari enam"
+      },
+      {
+        "pairId": "pasangan-nol",
+        "left": "Peluang 0",
+        "right": "Tidak mungkin"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Roda putar empat warna dan dadu."
+  }
+}

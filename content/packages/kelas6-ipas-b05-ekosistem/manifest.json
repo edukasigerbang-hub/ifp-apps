@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-ipas-b05-ekosistem",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Ekosistem dan Keseimbangan — IPAS Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/ekosistem-kelas6.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4431,
+      "sha256": "3964ab775e71d14e051c0804b35388cc1b9eedbc7742739a21159b2ad3c83ca0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

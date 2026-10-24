@@ -1,0 +1,25 @@
+{
+  "lessonId": "puisi-pantun-kelas6",
+  "packageId": "kelas6-bahasa-indonesia-b04-puisi-pantun",
+  "title": "Puisi dan Pantun",
+  "summary": "Mengenal puisi dan pantun serta menulis pantun.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri puisi.",
+    "Menyebutkan ciri pantun.",
+    "Menulis pantun sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-puisi-pantun-kelas6",
+    "matching-puisi-pantun-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/puisi-pantun-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membacakan puisi dan pantun."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

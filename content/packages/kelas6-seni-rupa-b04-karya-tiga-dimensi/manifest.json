@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-seni-rupa-b04-karya-tiga-dimensi",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Karya Tiga Dimensi — Seni Rupa Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/karya-tiga-dimensi.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7686,
+      "sha256": "b7ac8b313454164d99d659e500d285a31df5a15dc3cff222d1b775948bdfdac6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

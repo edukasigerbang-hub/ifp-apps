@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-pelestarian",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Tindakan Pelestarian",
+  "instructions": "Susun langkah menjaga lingkungan.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tanam",
+        "text": "Menanam pohon"
+      },
+      {
+        "itemId": "langkah-pilah",
+        "text": "Memilah sampah"
+      },
+      {
+        "itemId": "langkah-hemat-air",
+        "text": "Menghemat air"
+      },
+      {
+        "itemId": "langkah-hemat-listrik",
+        "text": "Menghemat listrik"
+      },
+      {
+        "itemId": "langkah-jaga",
+        "text": "Menjaga hutan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tanam",
+      "langkah-pilah",
+      "langkah-hemat-air",
+      "langkah-hemat-listrik",
+      "langkah-jaga"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menanam pohon dan menjaga sumber air."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "lessonId": "bola-besar-kelas6",
+  "packageId": "kelas6-pjok-b01-bola-besar",
+  "title": "Permainan Bola Besar",
+  "summary": "Mempraktikkan teknik dan kerja sama permainan bola besar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan teknik dasar.",
+    "Bekerja sama dalam tim.",
+    "Mematuhi aturan."
+  ],
+  "activityIds": [
+    "eksplorasi-bola-besar-kelas6",
+    "kuis-bola-besar-kelas6"
+  ],
+  "assessmentRefs": [
+    "kuis-bola-besar-kelas6"
+  ],
+  "assetRefs": [
+    "assets/bola-besar-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ekosistem-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Rantai Makanan",
+  "instructions": "Amati gambar, lalu diskusikan keseimbangan ekosistem.",
+  "assets": [
+    "assets/ekosistem-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu produsen?",
+        "assetPath": "assets/ekosistem-kelas6.png",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Tumbuhan yang membuat makanan sendiri.",
+        "hint": "Sumber energi pertama."
+      },
+      {
+        "prompt": "Apa itu konsumen?",
+        "assetPath": "assets/ekosistem-kelas6.png",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Hewan yang memakan makhluk lain.",
+        "hint": "Ada konsumen puncak."
+      },
+      {
+        "prompt": "Apa itu pengurai?",
+        "assetPath": "assets/ekosistem-kelas6.png",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Bakteri dan jamur pengurai sisa.",
+        "hint": "Mengembalikan zat ke tanah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+  }
+}

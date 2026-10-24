@@ -1,0 +1,27 @@
+{
+  "lessonId": "hak-kewajiban-kelas6",
+  "packageId": "kelas6-pendidikan-pancasila-b02-hak-kewajiban",
+  "title": "Hak dan Kewajiban Warga Negara",
+  "summary": "Melaksanakan hak dan kewajiban secara seimbang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan hak dan kewajiban.",
+    "Menyebutkan contohnya.",
+    "Melaksanakan dengan seimbang."
+  ],
+  "activityIds": [
+    "eksplorasi-hak-kewajiban-kelas6",
+    "kuis-hak-kewajiban-kelas6"
+  ],
+  "assessmentRefs": [
+    "kuis-hak-kewajiban-kelas6"
+  ],
+  "assetRefs": [
+    "assets/hak-kewajiban-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan menjaga kebersihan sekolah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

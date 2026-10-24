@@ -1,0 +1,25 @@
+{
+  "lessonId": "kearifan-lokal",
+  "packageId": "kelas6-pendidikan-pancasila-b08-kearifan-lokal",
+  "title": "Kearifan Lokal",
+  "summary": "Mengenal dan melestarikan kearifan lokal.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti kearifan lokal.",
+    "Menyebutkan contohnya.",
+    "Melestarikan kearifan lokal."
+  ],
+  "activityIds": [
+    "eksplorasi-kearifan-lokal",
+    "matching-kearifan-lokal"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kearifan-lokal.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, dan budaya daerah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

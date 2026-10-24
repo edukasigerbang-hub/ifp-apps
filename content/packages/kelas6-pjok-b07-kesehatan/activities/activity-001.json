@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kesehatan-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kesehatan-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kapan mencuci tangan?",
+        "assetPath": "assets/kesehatan-kelas6.png",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Sebelum makan dan setelah bermain.",
+        "hint": "Gunakan sabun."
+      },
+      {
+        "prompt": "Mengapa olahraga penting?",
+        "assetPath": "assets/kesehatan-kelas6.png",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Menjaga kebugaran.",
+        "hint": "Lakukan rutin."
+      },
+      {
+        "prompt": "Apa manfaat istirahat?",
+        "assetPath": "assets/kesehatan-kelas6.png",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Memulihkan tenaga.",
+        "hint": "Tidur cukup."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+  }
+}

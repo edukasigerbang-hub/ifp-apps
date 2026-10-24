@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-prosedur-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Langkah Kegiatan",
+  "instructions": "Amati gambar, lalu diskusikan urutan langkahnya.",
+  "assets": [
+    "assets/prosedur-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan prosedur?",
+        "assetPath": "assets/prosedur-kelas6.png",
+        "altText": "Langkah menanam biji dalam pot.",
+        "reveal": "Memberi petunjuk melakukan sesuatu.",
+        "hint": "Ada alat dan langkah."
+      },
+      {
+        "prompt": "Bagaimana urutan langkah?",
+        "assetPath": "assets/prosedur-kelas6.png",
+        "altText": "Langkah menanam biji dalam pot.",
+        "reveal": "Berurutan dari awal sampai akhir.",
+        "hint": "Gunakan kata urutan."
+      },
+      {
+        "prompt": "Kata apa yang dipakai?",
+        "assetPath": "assets/prosedur-kelas6.png",
+        "altText": "Langkah menanam biji dalam pot.",
+        "reveal": "Kata perintah.",
+        "hint": "Siapkan, masukkan, siram."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji dalam pot."
+  }
+}

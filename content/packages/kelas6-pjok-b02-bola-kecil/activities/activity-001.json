@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bola-kecil-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Bola Kecil",
+  "instructions": "Amati gambar, lalu diskusikan teknik dasarnya.",
+  "assets": [
+    "assets/bola-kecil-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Permainan apa yang terlihat?",
+        "assetPath": "assets/bola-kecil-kelas6.png",
+        "altText": "Bola tenis, kok, dan bet tenis meja.",
+        "reveal": "Tenis, bulu tangkis, tenis meja.",
+        "hint": "Amati alatnya."
+      },
+      {
+        "prompt": "Apa teknik dasar bulu tangkis?",
+        "assetPath": "assets/bola-kecil-kelas6.png",
+        "altText": "Bola tenis, kok, dan bet tenis meja.",
+        "reveal": "Memegang raket dan memukul kok.",
+        "hint": "Perhatikan ayunan."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/bola-kecil-kelas6.png",
+        "altText": "Bola tenis, kok, dan bet tenis meja.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Lakukan sebelum bermain."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok, dan bet tenis meja."
+  }
+}

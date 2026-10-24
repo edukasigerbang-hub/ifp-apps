@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-teknologi-ramah-lingkungan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Teknologi Ramah Lingkungan",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-surya",
+        "prompt": "Panel surya mengubah energi matahari menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-listrik",
+            "text": "Listrik"
+          },
+          {
+            "optionId": "opsi-bunyi",
+            "text": "Bunyi"
+          },
+          {
+            "optionId": "opsi-panas",
+            "text": "Panas saja"
+          },
+          {
+            "optionId": "opsi-gerak",
+            "text": "Gerak"
+          }
+        ],
+        "correctResponse": "opsi-listrik"
+      },
+      {
+        "questionId": "soal-angin",
+        "prompt": "Kincir angin menghasilkan listrik dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-angin",
+            "text": "Angin"
+          },
+          {
+            "optionId": "opsi-batu",
+            "text": "Batu bara"
+          },
+          {
+            "optionId": "opsi-bensin",
+            "text": "Bensin"
+          },
+          {
+            "optionId": "opsi-diesel",
+            "text": "Diesel"
+          }
+        ],
+        "correctResponse": "opsi-angin"
+      },
+      {
+        "questionId": "soal-daur",
+        "prompt": "Daur ulang bertujuan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sampah",
+            "text": "Mengurangi sampah"
+          },
+          {
+            "optionId": "opsi-tambah",
+            "text": "Menambah sampah"
+          },
+          {
+            "optionId": "opsi-bakar",
+            "text": "Membakar sampah"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang sampah"
+          }
+        ],
+        "correctResponse": "opsi-sampah"
+      },
+      {
+        "questionId": "soal-hemat",
+        "prompt": "Cara menghemat energi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mati",
+            "text": "Mematikan lampu saat tidak dipakai"
+          },
+          {
+            "optionId": "opsi-nyala",
+            "text": "Menyalakan semua lampu"
+          },
+          {
+            "optionId": "opsi-buka",
+            "text": "Membuka kulkas lama"
+          },
+          {
+            "optionId": "opsi-charge",
+            "text": "Mengisi daya terus"
+          }
+        ],
+        "correctResponse": "opsi-mati"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Panel surya, kincir angin, dan daur ulang."
+  }
+}

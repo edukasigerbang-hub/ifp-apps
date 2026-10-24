@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gerak-berirama",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Berirama",
+  "instructions": "Amati gambar, lalu diskusikan gerak dan iramanya.",
+  "assets": [
+    "assets/gerak-berirama.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak berirama?",
+        "assetPath": "assets/gerak-berirama.png",
+        "altText": "Anak melakukan gerak berirama mengikuti irama.",
+        "reveal": "Gerak yang mengikuti irama musik atau hitungan.",
+        "hint": "Ada keluwesan."
+      },
+      {
+        "prompt": "Apa unsur utamanya?",
+        "assetPath": "assets/gerak-berirama.png",
+        "altText": "Anak melakukan gerak berirama mengikuti irama.",
+        "reveal": "Gerak, irama, dan kekompakan.",
+        "hint": "Latihan bersama."
+      },
+      {
+        "prompt": "Mengapa kekompakan penting?",
+        "assetPath": "assets/gerak-berirama.png",
+        "altText": "Anak melakukan gerak berirama mengikuti irama.",
+        "reveal": "Agar gerakan serasi.",
+        "hint": "Dengar hitungan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan gerak berirama mengikuti irama."
+  }
+}

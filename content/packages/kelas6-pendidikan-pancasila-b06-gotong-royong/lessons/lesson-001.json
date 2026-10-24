@@ -1,0 +1,25 @@
+{
+  "lessonId": "gotong-royong-kelas6",
+  "packageId": "kelas6-pendidikan-pancasila-b06-gotong-royong",
+  "title": "Gotong Royong dan Musyawarah",
+  "summary": "Menerapkan gotong royong dan musyawarah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti gotong royong.",
+    "Menyebutkan manfaat musyawarah.",
+    "Menerapkan keduanya."
+  ],
+  "activityIds": [
+    "eksplorasi-gotong-royong-kelas6",
+    "ordering-gotong-royong-kelas6"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/gotong-royong-kelas6.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama dan bermusyawarah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

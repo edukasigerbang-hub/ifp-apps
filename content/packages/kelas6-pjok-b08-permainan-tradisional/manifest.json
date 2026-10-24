@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pjok-b08-permainan-tradisional",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Permainan Tradisional — PJOK Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/permainan-tradisional.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5655,
+      "sha256": "b4918b240660e6713984909948f7d8ce5169a57534c85d53904058ba0b1abae1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

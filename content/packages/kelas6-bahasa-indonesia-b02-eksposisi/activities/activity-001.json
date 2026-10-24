@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-eksposisi-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Eksposisi",
+  "instructions": "Amati gambar, lalu diskusikan ciri dan struktur.",
+  "assets": [
+    "assets/eksposisi-kelas6.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan eksposisi?",
+        "assetPath": "assets/eksposisi-kelas6.png",
+        "altText": "Anak membaca teks eksposisi.",
+        "reveal": "Menjelaskan informasi secara objektif.",
+        "hint": "Memberi pengetahuan."
+      },
+      {
+        "prompt": "Apa strukturnya?",
+        "assetPath": "assets/eksposisi-kelas6.png",
+        "altText": "Anak membaca teks eksposisi.",
+        "reveal": "Tesis, argumen, penegasan.",
+        "hint": "Diawali pernyataan."
+      },
+      {
+        "prompt": "Bahasa apa yang dipakai?",
+        "assetPath": "assets/eksposisi-kelas6.png",
+        "altText": "Anak membaca teks eksposisi.",
+        "reveal": "Baku dan jelas.",
+        "hint": "Hindari bahasa gaul."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi."
+  }
+}

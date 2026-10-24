@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ilustrasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Ilustrasi",
+  "instructions": "Amati gambar, lalu diskusikan langkah membuat ilustrasi.",
+  "assets": [
+    "assets/ilustrasi.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu ilustrasi?",
+        "assetPath": "assets/ilustrasi.png",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
+        "reveal": "Gambar yang menjelaskan cerita atau teks.",
+        "hint": "Membantu memahami isi."
+      },
+      {
+        "prompt": "Apa langkah pertama?",
+        "assetPath": "assets/ilustrasi.png",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
+        "reveal": "Menentukan tema dan adegan.",
+        "hint": "Buat sketsa tipis."
+      },
+      {
+        "prompt": "Apa yang ditambahkan terakhir?",
+        "assetPath": "assets/ilustrasi.png",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
+        "reveal": "Warna dan detail.",
+        "hint": "Rapikan garis."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+  }
+}

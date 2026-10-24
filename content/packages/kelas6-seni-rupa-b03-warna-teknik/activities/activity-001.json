@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-warna-teknik",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Warna dan Teknik",
+  "instructions": "Amati gambar, lalu diskusikan campuran warna.",
+  "assets": [
+    "assets/warna-teknik.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa warna primer?",
+        "assetPath": "assets/warna-teknik.png",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik.",
+        "reveal": "Merah, kuning, dan biru.",
+        "hint": "Tidak dapat dicampur."
+      },
+      {
+        "prompt": "Apa hasil merah + biru?",
+        "assetPath": "assets/warna-teknik.png",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik.",
+        "reveal": "Ungu.",
+        "hint": "Warna sekunder."
+      },
+      {
+        "prompt": "Apa itu gradasi?",
+        "assetPath": "assets/warna-teknik.png",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik.",
+        "reveal": "Perubahan warna bertahap.",
+        "hint": "Dari gelap ke terang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna dan tekstur dari berbagai teknik."
+  }
+}
