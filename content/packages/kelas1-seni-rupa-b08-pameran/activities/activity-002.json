@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-pameran-kelas1",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Pameran Kelas",
+  "instructions": "Susun langkah pameran kelas.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pilih",
+        "text": "Memilih karya"
+      },
+      {
+        "itemId": "langkah-tata",
+        "text": "Menata karya"
+      },
+      {
+        "itemId": "langkah-label",
+        "text": "Memberi nama"
+      },
+      {
+        "itemId": "langkah-jaga",
+        "text": "Menjaga pameran"
+      },
+      {
+        "itemId": "langkah-rapi",
+        "text": "Merapikan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pilih",
+      "langkah-tata",
+      "langkah-label",
+      "langkah-jaga",
+      "langkah-rapi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran karya siswa di kelas."
+  }
+}

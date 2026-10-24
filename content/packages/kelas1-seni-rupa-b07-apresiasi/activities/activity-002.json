@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-apresiasi-kelas1",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Apresiasi Karya",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-amati",
+        "prompt": "Langkah pertama mengapresiasi karya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-amati",
+            "text": "Mengamati"
+          },
+          {
+            "optionId": "opsi-ejek",
+            "text": "Mengejek"
+          },
+          {
+            "optionId": "opsi-rusak",
+            "text": "Merusak"
+          },
+          {
+            "optionId": "opsi-jual",
+            "text": "Menjual"
+          }
+        ],
+        "correctResponse": "opsi-amati"
+      },
+      {
+        "questionId": "soal-warna",
+        "prompt": "Unsur yang terlihat pada karya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-warna",
+            "text": "Warna"
+          },
+          {
+            "optionId": "opsi-harga",
+            "text": "Harga"
+          },
+          {
+            "optionId": "opsi-berat",
+            "text": "Berat"
+          },
+          {
+            "optionId": "opsi-nama",
+            "text": "Nama saja"
+          }
+        ],
+        "correctResponse": "opsi-warna"
+      },
+      {
+        "questionId": "soal-sikap",
+        "prompt": "Saat melihat karya teman, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sopan",
+            "text": "Bersikap sopan"
+          },
+          {
+            "optionId": "opsi-tawa",
+            "text": "Menertawakan"
+          },
+          {
+            "optionId": "opsi-rusak",
+            "text": "Merusak"
+          },
+          {
+            "optionId": "opsi-ambil",
+            "text": "Mengambil"
+          }
+        ],
+        "correctResponse": "opsi-sopan"
+      },
+      {
+        "questionId": "soal-manfaat",
+        "prompt": "Manfaat apresiasi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hargai",
+            "text": "Menghargai karya"
+          },
+          {
+            "optionId": "opsi-rusak",
+            "text": "Merusak karya"
+          },
+          {
+            "optionId": "opsi-takut",
+            "text": "Menjadi takut"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Menjadi malas"
+          }
+        ],
+        "correctResponse": "opsi-hargai"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan anak mengamati."
+  }
+}

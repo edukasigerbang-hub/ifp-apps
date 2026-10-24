@@ -1,0 +1,25 @@
+{
+  "lessonId": "tolong-menolong",
+  "packageId": "kelas1-pendidikan-pancasila-b07-tolong-menolong",
+  "title": "Kebersamaan dan Tolong-Menolong",
+  "summary": "Membiasakan tolong-menolong dalam kebersamaan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti tolong-menolong.",
+    "Memberi contoh.",
+    "Membiasakan menolong."
+  ],
+  "activityIds": [
+    "eksplorasi-tolong-menolong",
+    "ordering-tolong-menolong"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/tolong-menolong.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak saling menolong di sekolah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

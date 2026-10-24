@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pameran-kelas1",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pameran",
+  "instructions": "Amati gambar, lalu diskusikan penataan karya.",
+  "assets": [
+    "assets/pameran-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dipamerkan?",
+        "assetPath": "assets/pameran-kelas1.png",
+        "altText": "Pameran karya siswa di kelas.",
+        "reveal": "Karya siswa.",
+        "hint": "Pilih karya terbaik."
+      },
+      {
+        "prompt": "Bagaimana menata karya?",
+        "assetPath": "assets/pameran-kelas1.png",
+        "altText": "Pameran karya siswa di kelas.",
+        "reveal": "Rapi dan mudah dilihat.",
+        "hint": "Beri nama."
+      },
+      {
+        "prompt": "Apa yang dilakukan penjaga?",
+        "assetPath": "assets/pameran-kelas1.png",
+        "altText": "Pameran karya siswa di kelas.",
+        "reveal": "Menjelaskan karya.",
+        "hint": "Menyambut pengunjung."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran karya siswa di kelas."
+  }
+}

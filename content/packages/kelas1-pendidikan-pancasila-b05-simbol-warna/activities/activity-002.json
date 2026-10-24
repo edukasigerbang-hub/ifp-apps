@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-simbol-warna",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Simbol dan Warna",
+  "instructions": "Pasangkan setiap simbol dengan warnanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-bintang",
+        "left": "Bintang",
+        "right": "Kuning emas"
+      },
+      {
+        "pairId": "pasangan-rantai",
+        "left": "Rantai",
+        "right": "Kuning emas"
+      },
+      {
+        "pairId": "pasangan-beringin",
+        "left": "Pohon beringin",
+        "right": "Hijau"
+      },
+      {
+        "pairId": "pasangan-banteng",
+        "left": "Kepala banteng",
+        "right": "Hitam"
+      },
+      {
+        "pairId": "pasangan-padi",
+        "left": "Padi dan kapas",
+        "right": "Kuning dan putih"
+      },
+      {
+        "pairId": "pasangan-musyawarah",
+        "left": "Musyawarah",
+        "right": "Sila keempat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila dengan warna khasnya."
+  }
+}

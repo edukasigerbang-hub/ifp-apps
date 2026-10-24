@@ -6,17 +6,17 @@
 
 ## Ringkasan
 
-- Total paket: **248**
-- VALID: **248** · INVALID: **0**
-- Alt text lengkap: **248/248**
-- `curriculumRefs` kosong: **248/248** (diharapkan sampai D6 disetujui)
+- Total paket: **272**
+- VALID: **272** · INVALID: **0**
+- Alt text lengkap: **272/272**
+- `curriculumRefs` kosong: **272/272** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
 
 | Kelas | Paket |
 |---|---:|
-| 1 | 24 |
+| 1 | 48 |
 | 3 | 56 |
 | 4 | 56 |
 | 5 | 56 |
@@ -26,13 +26,13 @@
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 36 |
+| bahasa-indonesia | 40 |
 | ipas | 32 |
-| matematika | 36 |
-| pai | 36 |
-| pendidikan-pancasila | 36 |
-| pjok | 36 |
-| seni-rupa | 36 |
+| matematika | 40 |
+| pai | 40 |
+| pendidikan-pancasila | 40 |
+| pjok | 40 |
+| seni-rupa | 40 |
 
 ## Temuan yang perlu ditindaklanjuti
 
@@ -46,26 +46,50 @@
 | `kelas1-bahasa-indonesia-b02-membaca-kata` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-bahasa-indonesia-b03-menyimak-cerita` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-bahasa-indonesia-b04-menulis-kata` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-bahasa-indonesia-b05-membaca-kalimat` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-bahasa-indonesia-b06-menulis-kalimat` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-bahasa-indonesia-b07-bercerita` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-bahasa-indonesia-b08-kosakata-baru` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-matematika-b01-bilangan-1-10` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-matematika-b02-penjumlahan-10` | 1 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-matematika-b03-bentuk-pola` | 1 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-matematika-b04-pengukuran` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-matematika-b05-bilangan-11-20` | 1 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-matematika-b06-penjumlahan-20` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-matematika-b07-bangun-datar` | 1 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-matematika-b08-pola-bilangan` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-pai-b01-huruf-hijaiyah` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-pai-b02-iman-allah` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-pai-b03-akhlak` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-pai-b04-belajar-salat` | 1 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-pai-b05-huruf-harakat` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pai-b06-mengenal-malaikat` | 1 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-pai-b07-kisah-nabi` | 1 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-pai-b08-adab` | 1 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-pendidikan-pancasila-b01-simbol-pancasila` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-pendidikan-pancasila-b02-aturan-rumah` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-pendidikan-pancasila-b03-hak-kewajiban-rumah` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-pendidikan-pancasila-b04-kebersamaan` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-pendidikan-pancasila-b05-simbol-warna` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pendidikan-pancasila-b06-aturan-sekolah` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-pendidikan-pancasila-b07-tolong-menolong` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-pendidikan-pancasila-b08-proyek-kelas` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-pjok-b01-jalan-lari` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-pjok-b02-melompat` | 1 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-pjok-b03-keseimbangan` | 1 | pjok | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-pjok-b04-kebersihan` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pjok-b05-permainan-sederhana` | 1 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-pjok-b06-senam-ringan` | 1 | pjok | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-pjok-b07-kebugaran` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pjok-b08-kesehatan-kebersihan` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-seni-rupa-b01-garis-warna` | 1 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-seni-rupa-b02-menggambar-bebas` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas1-seni-rupa-b03-tekstur` | 1 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-seni-rupa-b04-kolase` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-seni-rupa-b05-mewarnai-bentuk` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas1-seni-rupa-b06-kerajinan-bahan-alam` | 1 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-seni-rupa-b07-apresiasi` | 1 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-seni-rupa-b08-pameran` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas3-bahasa-indonesia-b01-teks-deskripsi` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas3-bahasa-indonesia-b02-kalimat-efektif` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas3-bahasa-indonesia-b03-ide-pokok` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |

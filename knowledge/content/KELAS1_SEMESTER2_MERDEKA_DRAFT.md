@@ -2,6 +2,7 @@
 
 **Status:** `DRAFT-UNVERIFIED` · **Fase:** A · **Tanggal:** 2026-10-24
 **Induk:** [OUTLINE_KELAS1_MERDEKA_DRAFT.md](OUTLINE_KELAS1_MERDEKA_DRAFT.md)
+**Status paket:** 24 paket draft selesai (2026-10-24).
 
 ## Matematika
 | Bab | Topik inti | Aktivitas |

@@ -1,0 +1,25 @@
+{
+  "lessonId": "menulis-kalimat",
+  "packageId": "kelas1-bahasa-indonesia-b06-menulis-kalimat",
+  "title": "Menulis Kalimat Sederhana",
+  "summary": "Menulis kalimat sederhana dengan huruf kapital dan tanda baca.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menulis kata dengan rapi.",
+    "Menyusun kalimat sederhana.",
+    "Menggunakan tanda baca."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-kalimat",
+    "ordering-menulis-kalimat"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/menulis-kalimat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis kalimat sederhana di buku."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

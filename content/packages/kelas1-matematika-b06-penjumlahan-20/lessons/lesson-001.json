@@ -1,0 +1,27 @@
+{
+  "lessonId": "penjumlahan-20",
+  "packageId": "kelas1-matematika-b06-penjumlahan-20",
+  "title": "Penjumlahan dan Pengurangan sampai 20",
+  "summary": "Menjumlahkan dan mengurangkan bilangan sampai 20.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjumlahkan sampai 20.",
+    "Mengurangkan sampai 20.",
+    "Menyelesaikan soal cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-penjumlahan-20",
+    "kuis-penjumlahan-20"
+  ],
+  "assessmentRefs": [
+    "kuis-penjumlahan-20"
+  ],
+  "assetRefs": [
+    "assets/penjumlahan-20.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

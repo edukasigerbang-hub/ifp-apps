@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pai-b06-mengenal-malaikat",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Mengenal Malaikat — PAI Kelas 1 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/mengenal-malaikat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5292,
+      "sha256": "7f269925c376edfea92bb28102222ddac334c23325c7b89504636597215014fb"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

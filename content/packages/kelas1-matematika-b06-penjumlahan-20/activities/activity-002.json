@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-penjumlahan-20",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Hitungan sampai 20",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-tambah",
+        "prompt": "12 + 5 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-17",
+            "text": "17"
+          },
+          {
+            "optionId": "opsi-16",
+            "text": "16"
+          },
+          {
+            "optionId": "opsi-18",
+            "text": "18"
+          },
+          {
+            "optionId": "opsi-7",
+            "text": "7"
+          }
+        ],
+        "correctResponse": "opsi-17"
+      },
+      {
+        "questionId": "soal-kurang",
+        "prompt": "18 − 4 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-14",
+            "text": "14"
+          },
+          {
+            "optionId": "opsi-22",
+            "text": "22"
+          },
+          {
+            "optionId": "opsi-15",
+            "text": "15"
+          },
+          {
+            "optionId": "opsi-13",
+            "text": "13"
+          }
+        ],
+        "correctResponse": "opsi-14"
+      },
+      {
+        "questionId": "soal-puluh",
+        "prompt": "10 + 10 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-20",
+            "text": "20"
+          },
+          {
+            "optionId": "opsi-10",
+            "text": "10"
+          },
+          {
+            "optionId": "opsi-11",
+            "text": "11"
+          },
+          {
+            "optionId": "opsi-21",
+            "text": "21"
+          }
+        ],
+        "correctResponse": "opsi-20"
+      },
+      {
+        "questionId": "soal-cerita",
+        "prompt": "Ana punya 15 kelereng, diberi 3 lagi. Sekarang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-18",
+            "text": "18"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-15",
+            "text": "15"
+          },
+          {
+            "optionId": "opsi-19",
+            "text": "19"
+          }
+        ],
+        "correctResponse": "opsi-18"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+  }
+}

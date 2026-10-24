@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-pola-bilangan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Pola Bilangan",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-satu",
+        "prompt": "Lanjutan 1, 2, 3, ... adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-4",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-5",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-6",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-4"
+      },
+      {
+        "questionId": "soal-dua",
+        "prompt": "Lanjutan 2, 4, 6, ... adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-8",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-7",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-9",
+            "text": "9"
+          },
+          {
+            "optionId": "opsi-10",
+            "text": "10"
+          }
+        ],
+        "correctResponse": "opsi-8"
+      },
+      {
+        "questionId": "soal-lima",
+        "prompt": "Lanjutan 5, 10, 15, ... adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-20",
+            "text": "20"
+          },
+          {
+            "optionId": "opsi-16",
+            "text": "16"
+          },
+          {
+            "optionId": "opsi-25",
+            "text": "25"
+          },
+          {
+            "optionId": "opsi-18",
+            "text": "18"
+          }
+        ],
+        "correctResponse": "opsi-20"
+      },
+      {
+        "questionId": "soal-pola",
+        "prompt": "Pola bilangan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-berulang",
+            "text": "Susunan berulang"
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Susunan acak"
+          },
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu bilangan"
+          },
+          {
+            "optionId": "opsi-gambar",
+            "text": "Gambar saja"
+          }
+        ],
+        "correctResponse": "opsi-berulang"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pola warna dan bilangan yang berulang."
+  }
+}

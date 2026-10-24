@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-membaca-kalimat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Bersama",
+  "instructions": "Amati gambar, lalu baca kalimat bersama-sama.",
+  "assets": [
+    "assets/membaca-kalimat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Baca kalimat Siti membaca buku.",
+        "assetPath": "assets/membaca-kalimat.png",
+        "altText": "Anak membaca kalimat sederhana di sudut baca.",
+        "reveal": "Siti membaca buku.",
+        "hint": "Lafalkan dengan jelas."
+      },
+      {
+        "prompt": "Kalimat berita diakhiri ...",
+        "assetPath": "assets/membaca-kalimat.png",
+        "altText": "Anak membaca kalimat sederhana di sudut baca.",
+        "reveal": "Titik.",
+        "hint": "Tanda titik (.)."
+      },
+      {
+        "prompt": "Kalimat tanya diakhiri ...",
+        "assetPath": "assets/membaca-kalimat.png",
+        "altText": "Anak membaca kalimat sederhana di sudut baca.",
+        "reveal": "Tanda tanya.",
+        "hint": "Tanda tanya (?)."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kalimat sederhana di sudut baca."
+  }
+}

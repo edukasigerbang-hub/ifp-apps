@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kerajinan-bahan-alam",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bahan dan Karya",
+  "instructions": "Pasangkan setiap bahan dengan karyanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-daun",
+        "left": "Daun kering",
+        "right": "Kolase"
+      },
+      {
+        "pairId": "pasangan-ranting",
+        "left": "Ranting",
+        "right": "Bingkai"
+      },
+      {
+        "pairId": "pasangan-biji",
+        "left": "Biji",
+        "right": "Mozaik"
+      },
+      {
+        "pairId": "pasangan-bambu",
+        "left": "Bambu",
+        "right": "Anyaman"
+      },
+      {
+        "pairId": "pasangan-lem",
+        "left": "Lem",
+        "right": "Perekat"
+      },
+      {
+        "pairId": "pasangan-gunting",
+        "left": "Gunting",
+        "right": "Memotong"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daun, ranting, dan biji untuk kerajinan."
+  }
+}

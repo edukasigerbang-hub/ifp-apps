@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-penjumlahan-20",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menghitung Sampai 20",
+  "instructions": "Amati gambar, lalu hitung bersama-sama.",
+  "assets": [
+    "assets/penjumlahan-20.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 12 + 5?",
+        "assetPath": "assets/penjumlahan-20.png",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "reveal": "17.",
+        "hint": "Hitung dari 12, maju 5."
+      },
+      {
+        "prompt": "Berapa 18 − 4?",
+        "assetPath": "assets/penjumlahan-20.png",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "reveal": "14.",
+        "hint": "Hitung mundur 4."
+      },
+      {
+        "prompt": "Berapa 10 + 10?",
+        "assetPath": "assets/penjumlahan-20.png",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "reveal": "20.",
+        "hint": "Dua kelompok sepuluh."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+  }
+}

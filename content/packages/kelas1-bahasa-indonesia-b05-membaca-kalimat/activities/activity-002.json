@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-membaca-kalimat",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Membaca Kalimat",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-titik",
+        "prompt": "Kalimat berita diakhiri dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-titik",
+            "text": "Titik"
+          },
+          {
+            "optionId": "opsi-tanya",
+            "text": "Tanda tanya"
+          },
+          {
+            "optionId": "opsi-seru",
+            "text": "Tanda seru"
+          },
+          {
+            "optionId": "opsi-koma",
+            "text": "Koma"
+          }
+        ],
+        "correctResponse": "opsi-titik"
+      },
+      {
+        "questionId": "soal-tanya",
+        "prompt": "Siapa namamu? diakhiri dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tanya",
+            "text": "Tanda tanya"
+          },
+          {
+            "optionId": "opsi-titik",
+            "text": "Titik"
+          },
+          {
+            "optionId": "opsi-koma",
+            "text": "Koma"
+          },
+          {
+            "optionId": "opsi-seru",
+            "text": "Tanda seru"
+          }
+        ],
+        "correctResponse": "opsi-tanya"
+      },
+      {
+        "questionId": "soal-kalimat",
+        "prompt": "Kalimat yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-benar",
+            "text": "Budi bermain bola."
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "budi bermain bola"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Budi bermain bola?"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "BUDI bermain bola"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-arah",
+        "prompt": "Membaca dilakukan dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kiri",
+            "text": "Kiri ke kanan"
+          },
+          {
+            "optionId": "opsi-kanan",
+            "text": "Kanan ke kiri"
+          },
+          {
+            "optionId": "opsi-atas",
+            "text": "Atas ke bawah"
+          },
+          {
+            "optionId": "opsi-bawah",
+            "text": "Bawah ke atas"
+          }
+        ],
+        "correctResponse": "opsi-kiri"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kalimat sederhana di sudut baca."
+  }
+}

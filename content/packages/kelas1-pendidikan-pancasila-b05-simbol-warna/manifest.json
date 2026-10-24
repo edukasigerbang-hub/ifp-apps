@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pendidikan-pancasila-b05-simbol-warna",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Simbol dan Warna Pancasila — Pendidikan Pancasila Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/simbol-warna-pancasila.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10802,
+      "sha256": "9543d996bc285a00f4d3389c43b0f5c2a140591bf95494db6c198aae7c06d653"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "kerajinan-bahan-alam",
+  "packageId": "kelas1-seni-rupa-b06-kerajinan-bahan-alam",
+  "title": "Kerajinan Bahan Alam",
+  "summary": "Membuat kerajinan sederhana dari bahan alam.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bahan alam.",
+    "Memilih bahan yang aman.",
+    "Membuat kerajinan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-kerajinan-bahan-alam",
+    "matching-kerajinan-bahan-alam"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kerajinan-bahan-alam-kelas1.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daun, ranting, dan biji untuk kerajinan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

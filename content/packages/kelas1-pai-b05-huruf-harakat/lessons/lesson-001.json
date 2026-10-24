@@ -1,0 +1,25 @@
+{
+  "lessonId": "huruf-harakat",
+  "packageId": "kelas1-pai-b05-huruf-harakat",
+  "title": "Huruf Hijaiyah dan Harakat",
+  "summary": "Mengenal huruf hijaiyah dengan harakat sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal harakat.",
+    "Membaca huruf berharakat.",
+    "Menerapkan adab membaca."
+  ],
+  "activityIds": [
+    "eksplorasi-huruf-harakat",
+    "matching-huruf-harakat"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/huruf-harakat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar huruf hijaiyah dan harakat."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

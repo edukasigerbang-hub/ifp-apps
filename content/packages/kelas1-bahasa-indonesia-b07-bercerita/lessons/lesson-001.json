@@ -1,0 +1,25 @@
+{
+  "lessonId": "bercerita",
+  "packageId": "kelas1-bahasa-indonesia-b07-bercerita",
+  "title": "Bercerita",
+  "summary": "Bercerita dengan suara jelas dan urut.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menceritakan pengalaman.",
+    "Bercerita dengan urut.",
+    "Bercerita dengan percaya diri."
+  ],
+  "activityIds": [
+    "eksplorasi-bercerita",
+    "ordering-bercerita"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/bercerita.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bercerita di depan kelas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

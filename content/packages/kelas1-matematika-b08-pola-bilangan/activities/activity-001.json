@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pola-bilangan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pola",
+  "instructions": "Amati gambar, lalu lanjutkan polanya.",
+  "assets": [
+    "assets/pola-bilangan.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Pola 1, 2, 3, ... berlanjut dengan ...",
+        "assetPath": "assets/pola-bilangan.png",
+        "altText": "Pola warna dan bilangan yang berulang.",
+        "reveal": "4.",
+        "hint": "Tambahkan satu."
+      },
+      {
+        "prompt": "Pola 2, 4, 6, ... berlanjut dengan ...",
+        "assetPath": "assets/pola-bilangan.png",
+        "altText": "Pola warna dan bilangan yang berulang.",
+        "reveal": "8.",
+        "hint": "Tambahkan dua."
+      },
+      {
+        "prompt": "Pola 5, 10, 15, ... berlanjut dengan ...",
+        "assetPath": "assets/pola-bilangan.png",
+        "altText": "Pola warna dan bilangan yang berulang.",
+        "reveal": "20.",
+        "hint": "Tambahkan lima."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pola warna dan bilangan yang berulang."
+  }
+}

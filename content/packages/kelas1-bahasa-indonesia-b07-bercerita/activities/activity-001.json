@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bercerita",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kegiatan Bercerita",
+  "instructions": "Amati gambar, lalu diskusikan cara bercerita.",
+  "assets": [
+    "assets/bercerita.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana suara saat bercerita?",
+        "assetPath": "assets/bercerita.png",
+        "altText": "Anak bercerita di depan kelas.",
+        "reveal": "Jelas dan cukup keras.",
+        "hint": "Agar didengar."
+      },
+      {
+        "prompt": "Bagaimana urutan cerita?",
+        "assetPath": "assets/bercerita.png",
+        "altText": "Anak bercerita di depan kelas.",
+        "reveal": "Awal, tengah, akhir.",
+        "hint": "Ceritakan berurutan."
+      },
+      {
+        "prompt": "Bagaimana sikap bercerita?",
+        "assetPath": "assets/bercerita.png",
+        "altText": "Anak bercerita di depan kelas.",
+        "reveal": "Percaya diri.",
+        "hint": "Melihat teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bercerita di depan kelas."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "lessonId": "aturan-sekolah",
+  "packageId": "kelas1-pendidikan-pancasila-b06-aturan-sekolah",
+  "title": "Aturan di Sekolah",
+  "summary": "Mengenal dan melaksanakan aturan di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan aturan di sekolah.",
+    "Menjelaskan manfaat aturan.",
+    "Melaksanakan aturan."
+  ],
+  "activityIds": [
+    "eksplorasi-aturan-sekolah",
+    "kuis-aturan-sekolah"
+  ],
+  "assessmentRefs": [
+    "kuis-aturan-sekolah"
+  ],
+  "assetRefs": [
+    "assets/aturan-sekolah.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di sekolah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebugaran-kelas1",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Bugar",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kebugaran-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang membuat tubuh bugar?",
+        "assetPath": "assets/kebugaran-kelas1.png",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Olahraga.",
+        "hint": "Bergerak setiap hari."
+      },
+      {
+        "prompt": "Mengapa perlu istirahat?",
+        "assetPath": "assets/kebugaran-kelas1.png",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Agar tenaga pulih.",
+        "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa makanan bergizi?",
+        "assetPath": "assets/kebugaran-kelas1.png",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Sayur, buah, dan lauk.",
+        "hint": "Makan teratur."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  }
+}

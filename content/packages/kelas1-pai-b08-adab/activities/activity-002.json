@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-adab",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Adab Sehari-hari",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-orang-tua",
+        "prompt": "Sikap kepada orang tua adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hormat",
+            "text": "Menghormati"
+          },
+          {
+            "optionId": "opsi-bantah",
+            "text": "Membantah"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Mengabaikan"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah"
+          }
+        ],
+        "correctResponse": "opsi-hormat"
+      },
+      {
+        "questionId": "soal-guru",
+        "prompt": "Saat bertanya kepada guru, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-angkat",
+            "text": "Mengangkat tangan"
+          },
+          {
+            "optionId": "opsi-teriak",
+            "text": "Berteriak"
+          },
+          {
+            "optionId": "opsi-potong",
+            "text": "Memotong"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari"
+          }
+        ],
+        "correctResponse": "opsi-angkat"
+      },
+      {
+        "questionId": "soal-teman",
+        "prompt": "Sikap kepada teman adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-baik",
+            "text": "Baik dan membantu"
+          },
+          {
+            "optionId": "opsi-bertengkar",
+            "text": "Bertengkar"
+          },
+          {
+            "optionId": "opsi-ejek",
+            "text": "Mengejek"
+          },
+          {
+            "optionId": "opsi-dorong",
+            "text": "Mendorong"
+          }
+        ],
+        "correctResponse": "opsi-baik"
+      },
+      {
+        "questionId": "soal-salam",
+        "prompt": "Saat bertemu orang, kita mengucapkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-salam",
+            "text": "Salam"
+          },
+          {
+            "optionId": "opsi-teriak",
+            "text": "Terlakan"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam saja"
+          },
+          {
+            "optionId": "opsi-pergi",
+            "text": "Pergi"
+          }
+        ],
+        "correctResponse": "opsi-salam"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  }
+}

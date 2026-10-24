@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-tolong-menolong",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tolong-Menolong",
+  "instructions": "Amati gambar, lalu diskusikan sikap menolong.",
+  "assets": [
+    "assets/tolong-menolong.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu tolong-menolong?",
+        "assetPath": "assets/tolong-menolong.png",
+        "altText": "Anak saling menolong di sekolah.",
+        "reveal": "Saling membantu.",
+        "hint": "Tanpa diminta."
+      },
+      {
+        "prompt": "Contoh menolong di sekolah?",
+        "assetPath": "assets/tolong-menolong.png",
+        "altText": "Anak saling menolong di sekolah.",
+        "reveal": "Membantu teman jatuh.",
+        "hint": "Meminjamkan alat tulis."
+      },
+      {
+        "prompt": "Apa manfaatnya?",
+        "assetPath": "assets/tolong-menolong.png",
+        "altText": "Anak saling menolong di sekolah.",
+        "reveal": "Teman senang.",
+        "hint": "Persahabatan erat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak saling menolong di sekolah."
+  }
+}

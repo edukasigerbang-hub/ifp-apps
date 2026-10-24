@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 248 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 272 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -135,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. **Fase B dan Fase C lengkap** (Kelas 3–6). **Kelas 1 Semester 1 lengkap** (24 paket). Lanjutkan **Kelas 1 Semester 2**.
+1. **Fase B, Fase C, dan Kelas 1 lengkap** (Kelas 1, 3, 4, 5, 6). Lanjutkan **Kelas 2 Semester 1**.
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 190,7 kB (map 248 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 209,4 kB (map 272 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -616,6 +616,30 @@ Menambahkan 56 paket Kelas 6 (28 S1 + 28 S2) untuk 7 mapel.
 | `kelas1-seni-rupa-b02-menggambar-bebas` | 0.1.0 | 1 | seni-rupa | Menggambar Bebas | **DRAFT** | VALID (2 warning) | belum |
 | `kelas1-seni-rupa-b03-tekstur` | 0.1.0 | 1 | seni-rupa | Tekstur Sederhana | **DRAFT** | VALID (2 warning) | belum |
 | `kelas1-seni-rupa-b04-kolase` | 0.1.0 | 1 | seni-rupa | Kolase Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-bahasa-indonesia-b05-membaca-kalimat` | 0.1.0 | 1 | bahasa-indonesia | Membaca Kalimat Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-bahasa-indonesia-b06-menulis-kalimat` | 0.1.0 | 1 | bahasa-indonesia | Menulis Kalimat Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-bahasa-indonesia-b07-bercerita` | 0.1.0 | 1 | bahasa-indonesia | Bercerita | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-bahasa-indonesia-b08-kosakata-baru` | 0.1.0 | 1 | bahasa-indonesia | Kosakata Baru | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b05-bilangan-11-20` | 0.1.0 | 1 | matematika | Bilangan 11–20 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b06-penjumlahan-20` | 0.1.0 | 1 | matematika | Penjumlahan dan Pengurangan sampai 20 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b07-bangun-datar` | 0.1.0 | 1 | matematika | Bangun Datar Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-matematika-b08-pola-bilangan` | 0.1.0 | 1 | matematika | Pola Bilangan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b05-huruf-harakat` | 0.1.0 | 1 | pai | Huruf Hijaiyah dan Harakat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b06-mengenal-malaikat` | 0.1.0 | 1 | pai | Mengenal Malaikat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b07-kisah-nabi` | 0.1.0 | 1 | pai | Kisah Nabi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pai-b08-adab` | 0.1.0 | 1 | pai | Adab Sehari-hari | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b05-simbol-warna` | 0.1.0 | 1 | pendidikan-pancasila | Simbol dan Warna Pancasila | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b06-aturan-sekolah` | 0.1.0 | 1 | pendidikan-pancasila | Aturan di Sekolah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b07-tolong-menolong` | 0.1.0 | 1 | pendidikan-pancasila | Kebersamaan dan Tolong-Menolong | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pendidikan-pancasila-b08-proyek-kelas` | 0.1.0 | 1 | pendidikan-pancasila | Proyek Kelas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b05-permainan-sederhana` | 0.1.0 | 1 | pjok | Permainan Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b06-senam-ringan` | 0.1.0 | 1 | pjok | Senam Ringan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b07-kebugaran` | 0.1.0 | 1 | pjok | Kebugaran | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-pjok-b08-kesehatan-kebersihan` | 0.1.0 | 1 | pjok | Kesehatan dan Kebersihan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b05-mewarnai-bentuk` | 0.1.0 | 1 | seni-rupa | Mewarnai Bentuk | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b06-kerajinan-bahan-alam` | 0.1.0 | 1 | seni-rupa | Kerajinan Bahan Alam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b07-apresiasi` | 0.1.0 | 1 | seni-rupa | Apresiasi Karya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas1-seni-rupa-b08-pameran` | 0.1.0 | 1 | seni-rupa | Pameran Kelas | **DRAFT** | VALID (2 warning) | belum |
 
 - Outline baru: [OUTLINE_KELAS1_MERDEKA_DRAFT.md](OUTLINE_KELAS1_MERDEKA_DRAFT.md), [S1](KELAS1_SEMESTER1_MERDEKA_DRAFT.md), [S2](KELAS1_SEMESTER2_MERDEKA_DRAFT.md).
 - Fase A memakai 6 mapel inti (tanpa IPAS).
@@ -634,3 +658,14 @@ Menambahkan 18 paket sisa Semester 1 (B02–B04 untuk 6 mapel).
 - `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **190,74 kB**.
 - **Kelas 1 Semester 1 lengkap: 24 paket draft.**
 - Total katalog: **248 paket**.
+
+## Batch 24 Kelas 1 — Semester 2 lengkap (2026-10-24)
+
+Menambahkan 24 paket Semester 2 (B05–B08 untuk 6 mapel).
+
+- Validasi: **VALID** 24/24; impor seluruh Kelas 1 **48/48 PASS** (5 file/paket, `active`).
+- Verifikasi UI: pencarian katalog di dev timeout karena cold-load 272 paket; data impor terverifikasi lewat `content_list_active` (48/48).
+- Audit ulang: **272/272 VALID**, alt lengkap, packageId unik.
+- `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **209,41 kB**.
+- **Kelas 1 lengkap: 48 paket draft** (S1 24 + S2 24).
+- Total katalog: **272 paket**.

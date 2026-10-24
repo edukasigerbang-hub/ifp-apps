@@ -1,0 +1,25 @@
+{
+  "lessonId": "proyek-kelas",
+  "packageId": "kelas1-pendidikan-pancasila-b08-proyek-kelas",
+  "title": "Proyek Kelas",
+  "summary": "Bekerja sama dalam proyek kelas sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Merencanakan proyek kelas.",
+    "Bekerja sama.",
+    "Melaporkan hasil."
+  ],
+  "activityIds": [
+    "eksplorasi-proyek-kelas",
+    "ordering-proyek-kelas"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/proyek-kelas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

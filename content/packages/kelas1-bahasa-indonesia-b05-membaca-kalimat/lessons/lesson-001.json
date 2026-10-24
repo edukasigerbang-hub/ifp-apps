@@ -1,0 +1,27 @@
+{
+  "lessonId": "membaca-kalimat",
+  "packageId": "kelas1-bahasa-indonesia-b05-membaca-kalimat",
+  "title": "Membaca Kalimat Sederhana",
+  "summary": "Membaca kalimat sederhana dengan lafal dan intonasi yang tepat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca kalimat sederhana.",
+    "Mengenal tanda titik dan tanda tanya.",
+    "Memahami isi kalimat."
+  ],
+  "activityIds": [
+    "eksplorasi-membaca-kalimat",
+    "kuis-membaca-kalimat"
+  ],
+  "assessmentRefs": [
+    "kuis-membaca-kalimat"
+  ],
+  "assetRefs": [
+    "assets/membaca-kalimat.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kalimat sederhana di sudut baca."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

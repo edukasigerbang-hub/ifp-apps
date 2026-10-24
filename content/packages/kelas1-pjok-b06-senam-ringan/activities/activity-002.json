@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-senam-ringan",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Senam Ringan",
+  "instructions": "Susun langkah senam ringan.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pemanasan",
+        "text": "Pemanasan"
+      },
+      {
+        "itemId": "langkah-kepala",
+        "text": "Gerak kepala"
+      },
+      {
+        "itemId": "langkah-tangan",
+        "text": "Gerak tangan"
+      },
+      {
+        "itemId": "langkah-kaki",
+        "text": "Gerak kaki"
+      },
+      {
+        "itemId": "langkah-pendinginan",
+        "text": "Pendinginan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pemanasan",
+      "langkah-kepala",
+      "langkah-tangan",
+      "langkah-kaki",
+      "langkah-pendinginan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan senam ringan dan peregangan."
+  }
+}
