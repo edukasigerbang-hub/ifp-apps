@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T17:30:44+07:00",
+  "last_validated_at": "2026-10-24T17:51:30+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -275,6 +275,18 @@
       "command": "temp E2E: tauri dev (2 phases, temp data dir) + Worker enroll + quiz + auto-sync; Supabase REST verify",
       "result": "PASS",
       "details": "installation f6f4a87e…; acknowledged 1; sync_events assessment.completed; ifp_devices last_seen_at updated; cleanup OK"
+    },
+    {
+      "name": "worker_license_endpoints",
+      "command": "vitest workers/api; curl /v1/activations x2 + conflict + /v1/licenses/verify",
+      "result": "PASS",
+      "details": "11/11 tests; live activation 200 signed (signature verified), idempotent 200, conflict 409, verify valid=true; worker 99ee8c80"
+    },
+    {
+      "name": "e2e_online_activation_app",
+      "command": "tauri dev with VITE_LICENSE_SERVER_URL + IFP_LICENSE_KEYS; CDP fill serial + click Aktivasi online",
+      "result": "PASS",
+      "details": "license_get_status valid=true; license f497b2a0; product ifp-learning; expires 2026-11-23; UI success message"
     }
   ],
   "environment": {

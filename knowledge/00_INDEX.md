@@ -90,6 +90,7 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0027](decisions/ADR-0027-device-auth-openapi.md) | OD-7 increment 1: auth perangkat & OpenAPI | Accepted (reference) |
 | [ADR-0028](decisions/ADR-0028-supabase-cloudflare.md) | Stack backend: Supabase + Cloudflare | Accepted (increment 2) |
 | [ADR-0029](decisions/ADR-0029-ifp-devices-isolation.md) | Isolasi perangkat IFP dengan `ifp_devices` (project dipakai bersama Fanakon) | Accepted |
+| [ADR-0030](decisions/ADR-0030-worker-license-signing.md) | Penerbitan lisensi Ed25519 di Worker (kunci provisional `prod-1`) | Accepted (provisional) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
 
