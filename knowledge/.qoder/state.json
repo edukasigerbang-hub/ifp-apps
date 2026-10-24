@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "6ff5e6b",
+  "commit": "54bf6b1",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -42,8 +42,8 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-24T15:12:22+07:00",
-  "last_validation": "worker gerbangedukasi-api deployed; /healthz 200; enroll invalid 401; sync invalid token 401; CORS *; typecheck PASS; 7/7 worker tests",
+  "last_updated": "2026-10-24T15:20:26+07:00",
+  "last_validation": "web prod env aktif: /api/activation 400, /api/admin/enrollment-codes 401; site 200; manual wrangler deploy gagal (ChunkLoadError) lalu rollback ke d111f184; worker-api 200/401/401",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Set env/secret produksi Cloudflare untuk web (Supabase + peppers) lalu retry deploy; isi admin_roles; uji enrollment + aktivasi live"
+  "next_step": "Isi admin_roles (admin) + uji enrollment/aktivasi live dengan kode nyata; build app dengan VITE_SYNC_BASE_URL worker API"
 }

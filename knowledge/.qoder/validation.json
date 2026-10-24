@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T15:12:22+07:00",
+  "last_validated_at": "2026-10-24T15:20:26+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -245,6 +245,12 @@
       "command": "npx wrangler secret put (3 secrets); npx wrangler deploy; curl /healthz;/v1/devices/enroll;/v1/sync/events",
       "result": "PASS",
       "details": "https://gerbangedukasi-api.edukasigerbang.workers.dev — /healthz 200 {ok:true}; invalid enrollment 401 DEVICE_ENROLLMENT_INVALID; invalid token 401 SYNC_UNAUTHORIZED; CORS * (sementara); version 94c81a2b"
+    },
+    {
+      "name": "web_production_env_verified",
+      "command": "wrangler secret put; curl https://gerbangedukasi.edukasigerbang.workers.dev/{/,/support,/api/activation,/api/admin/enrollment-codes}",
+      "result": "PASS",
+      "details": "dashboard vars + 3 worker secrets; / 200; /support 200 with edukasigerbang@gmail.com; /api/activation 400 ACTIVATION_INVALID_REQUEST (env configured); /api/admin/enrollment-codes 401 UNAUTHORIZED. Manual deploy produced ChunkLoadError; rolled back to d111f184."
     }
   ],
   "environment": {
