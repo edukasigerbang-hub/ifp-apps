@@ -30,7 +30,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | OD-4 | Kebijakan retensi, backup, ekspor, penghapusan data siswa | Privacy, DB, UI | OPEN |
 | OD-5 | Grace period subscription offline, transfer perangkat, clock rollback policy | License semantics | OPEN |
 | OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | OPEN |
-| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | OPEN |
+| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | **PROPOSED** — [proposal backend/API produksi](../api/PRODUCTION_BACKEND_PROPOSAL.md); keputusan hosting/auth/kunci diminta |
 | OD-8 | Standar "konten lengkap" per mapel/unit | Gerbang rilis konten | OPEN |
 
 ## Gap terverifikasi

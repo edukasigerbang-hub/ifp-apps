@@ -28,6 +28,7 @@
 | Skema database lokal | [`database/SCHEMA.md`](database/SCHEMA.md) |
 | Kontrak API & native commands | [`api/API.md`](api/API.md) |
 | Kontrak sinkronisasi | [`api/SYNC_CONTRACT.md`](api/SYNC_CONTRACT.md) |
+| Proposal OD-7 (backend/API produksi) | [`api/PRODUCTION_BACKEND_PROPOSAL.md`](api/PRODUCTION_BACKEND_PROPOSAL.md) |
 | Keamanan & privasi | [`security/SECURITY.md`](security/SECURITY.md) |
 | Kontrak konten v1 | [`content/SCHEMA.md`](content/SCHEMA.md) |
 | Katalog konten | [`content/CATALOG.md`](content/CATALOG.md) |
