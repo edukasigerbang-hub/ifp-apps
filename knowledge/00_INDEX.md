@@ -28,7 +28,6 @@
 | Skema database lokal | [`database/SCHEMA.md`](database/SCHEMA.md) |
 | Kontrak API & native commands | [`api/API.md`](api/API.md) |
 | Kontrak sinkronisasi | [`api/SYNC_CONTRACT.md`](api/SYNC_CONTRACT.md) |
-| Proposal OD-7 (backend/API produksi) | [`api/PRODUCTION_BACKEND_PROPOSAL.md`](api/PRODUCTION_BACKEND_PROPOSAL.md) |
 | Keamanan & privasi | [`security/SECURITY.md`](security/SECURITY.md) |
 | Kontrak konten v1 | [`content/SCHEMA.md`](content/SCHEMA.md) |
 | Katalog konten | [`content/CATALOG.md`](content/CATALOG.md) |
@@ -88,3 +87,13 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0024](decisions/ADR-0024-local-content-review.md) | Review konten lokal (Fase J increment 1) | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
+
+### Proposal keputusan terbuka
+
+| ID | Proposal |
+|---|---|
+| OD-1 | [Matriks kurikulum & opsi](content/CURRICULUM_PROPOSAL.md) |
+| OD-4 | [Privasi, retensi, penghapusan](decisions/PROPOSAL-OD-4-privacy-retention.md) |
+| OD-5 | [Kebijakan lisensi](decisions/PROPOSAL-OD-5-license-policy.md) |
+| OD-6 | [Identitas rilis & signing](decisions/PROPOSAL-OD-6-release-identity.md) |
+| OD-7 | [Backend/API produksi](api/PRODUCTION_BACKEND_PROPOSAL.md) |

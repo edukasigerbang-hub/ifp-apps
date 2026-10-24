@@ -5,7 +5,7 @@
   "index_version": 1,
   "schema_version": 1,
   "indexed_commit": "4eb3459",
-  "generated_at": "2026-10-24T10:46:18+07:00",
+  "generated_at": "2026-10-24T10:57:17+07:00",
   "files_indexed": 155,
   "symbols_indexed": 0,
   "dependencies_indexed": 0,
@@ -20,7 +20,7 @@
     "note": "scripts termasuk e2e/{app,cdp,run}.mjs + scenarios/smoke.mjs; src-tauri/gen dan target dikecualikan"
   },
   "validation": {
-    "last_validated_at": "2026-10-24T10:46:18+07:00",
+    "last_validated_at": "2026-10-24T10:57:17+07:00",
     "result": "PASS",
     "details": "Enumerasi file konsisten; bukan index simbol"
   },
