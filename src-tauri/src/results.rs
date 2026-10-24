@@ -15,7 +15,7 @@ pub struct ResultsExportSummary {
     pub bytes: u64,
 }
 
-fn csv_field(value: &str) -> String {
+pub(crate) fn csv_field(value: &str) -> String {
     let mut text = value.replace('"', "\"\"");
     if matches!(
         value.chars().next(),
