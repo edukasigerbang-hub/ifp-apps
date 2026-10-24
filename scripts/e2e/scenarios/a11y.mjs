@@ -1,3 +1,5 @@
+import path from "node:path";
+
 function auditInPage() {
   const issues = [];
   const add = (rule, severity, message, element) => {
@@ -298,6 +300,85 @@ async function pressTab(page) {
   });
 }
 
+function touchTargetsInPage() {
+  const issues = [];
+  const add = (rule, severity, message, element) => {
+    issues.push({
+      rule,
+      severity,
+      message,
+      selector: element?.tagName?.toLowerCase() ?? "document"
+    });
+  };
+  const isVisible = (element) => {
+    const rect = element.getBoundingClientRect();
+    const style = getComputedStyle(element);
+    return rect.width > 1 && rect.height > 1 && style.visibility !== "hidden" && style.display !== "none";
+  };
+  const selector =
+    "button, a[href], input:not([type='hidden']), select, textarea";
+  for (const element of document.querySelectorAll(selector)) {
+    if (!isVisible(element) || element.disabled) continue;
+    const isChoice =
+      element.tagName === "INPUT" &&
+      (element.type === "radio" || element.type === "checkbox");
+    const box = (isChoice ? element.closest("label") : element)?.getBoundingClientRect();
+    if (!box) continue;
+    const label =
+      (element.innerText || element.getAttribute("aria-label") || element.getAttribute("placeholder") || element.tagName)
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, 40);
+    if (box.height < 24) {
+      add("touch-target", "error", `Target sentuh ${Math.round(box.height)}px: "${label}".`, element);
+    } else if (box.height < 44) {
+      add("touch-target", "warning", `Target sentuh ${Math.round(box.height)}px (<44): "${label}".`, element);
+    }
+  }
+  return issues;
+}
+
+async function clickLabel(page, label) {
+  const result = await page.evaluate(`
+    (() => {
+      const buttons = [...document.querySelectorAll("button")]
+        .filter((button) => button.textContent.trim() === ${JSON.stringify(label)});
+      const target = buttons.find((button) => button.offsetParent !== null) ?? buttons[0];
+      if (!target) return "missing";
+      if (target.disabled) return "disabled";
+      target.click();
+      return "clicked";
+    })()
+  `);
+  if (result !== "clicked") {
+    throw new Error(`Tombol "${label}" tidak dapat diklik (${result}).`);
+  }
+}
+
+async function setViewport(page, width, height = 900) {
+  await page.send("Emulation.setDeviceMetricsOverride", {
+    width,
+    height,
+    deviceScaleFactor: 1,
+    mobile: false
+  });
+  await new Promise((resolve) => setTimeout(resolve, 250));
+}
+
+async function clearViewport(page) {
+  await page.send("Emulation.clearDeviceMetricsOverride");
+  await new Promise((resolve) => setTimeout(resolve, 250));
+}
+
+async function horizontalOverflow(page) {
+  return page.evaluate(`
+    ({
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: document.documentElement.clientWidth
+    })
+  `);
+}
+
 export async function run({ page, artifactDir, log }) {
   await page.waitFor(
     `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
@@ -386,6 +467,130 @@ export async function run({ page, artifactDir, log }) {
     `Traversal Tab: ${trail.filter((step) => step.text).length}/10 elemen bernama; ` +
       `${missingOutline.length} tanpa outline.`
   );
+
+  const responsiveIssues = [];
+  for (const screen of SCREENS) {
+    await clickNav(page, screen.label);
+    await page.waitFor(screen.wait, { label: `layar ${screen.label}` });
+    for (const width of [640, 320]) {
+      await setViewport(page, width);
+      const overflow = await horizontalOverflow(page);
+      if (overflow.scrollWidth > overflow.clientWidth + 1) {
+        responsiveIssues.push({
+          screen: screen.label,
+          rule: "reflow",
+          severity: "error",
+          message: `Overflow horizontal pada ${width}px: ${overflow.scrollWidth} > ${overflow.clientWidth}.`,
+          selector: "html"
+        });
+      }
+    }
+    await setViewport(page, 1600, 900);
+    const targets = await page.evaluate(`(${touchTargetsInPage.toString()})()`);
+    for (const issue of targets) {
+      responsiveIssues.push({ screen: screen.label, ...issue });
+    }
+  }
+  const responsiveErrors = responsiveIssues.filter((issue) => issue.severity === "error").length;
+  const responsiveWarnings = responsiveIssues.filter(
+    (issue) => issue.severity === "warning"
+  ).length;
+  errorCount += responsiveErrors;
+  warningCount += responsiveWarnings;
+  report.screens.push({
+    screen: "Reflow 640/320 + target sentuh",
+    stats: { widths: [640, 320] },
+    issues: responsiveIssues
+  });
+  log(
+    `Reflow 640/320 & target sentuh: ${responsiveErrors} error, ${responsiveWarnings} warning.`
+  );
+
+  await clickNav(page, "Pengaturan");
+  await page.waitFor(`document.body.textContent.includes("Profil")`, { label: "Pengaturan" });
+  await page.evaluate(`document.documentElement.style.fontSize = "200%"`);
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  const scaledOverflow = await horizontalOverflow(page);
+  await page.evaluate(`document.documentElement.style.fontSize = ""`);
+  const scaleIssues = [];
+  if (scaledOverflow.scrollWidth > scaledOverflow.clientWidth + 1) {
+    scaleIssues.push({
+      rule: "text-scale",
+      severity: "error",
+      message: `Overflow horizontal pada teks 200%: ${scaledOverflow.scrollWidth} > ${scaledOverflow.clientWidth}.`,
+      selector: "html"
+    });
+    errorCount += 1;
+  }
+  report.screens.push({ screen: "Teks 200%", stats: { width: 1600 }, issues: scaleIssues });
+  log(`Teks 200%: ${scaleIssues.length === 0 ? "tanpa overflow" : "overflow terdeteksi"}.`);
+  await clearViewport(page);
+
+  const filled = await page.evaluate(`
+    (() => {
+      const input = document.querySelector('input[placeholder="Nama siswa atau guru"]');
+      if (!input) return false;
+      const setter = Object.getOwnPropertyDescriptor(
+        window.HTMLInputElement.prototype,
+        "value"
+      ).set;
+      setter.call(input, "A11y Uji");
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      return true;
+    })()
+  `);
+  if (!filled) {
+    throw new Error("Input nama profil untuk audit state dinamis tidak ditemukan.");
+  }
+  await clickLabel(page, "Tambah profil");
+  await page.waitFor(`document.body.textContent.includes('Profil "A11y Uji" dibuat')`, {
+    label: "profil uji dibuat"
+  });
+  const opened = await page.evaluate(`
+    (() => {
+      const row = [...document.querySelectorAll("li")]
+        .find((item) => item.textContent.includes("A11y Uji"));
+      if (!row) return "row-missing";
+      const button = [...row.querySelectorAll("button")]
+        .find((item) => item.textContent.trim() === "Hapus");
+      if (!button) return "button-missing";
+      if (button.disabled) return "disabled";
+      button.click();
+      return "clicked";
+    })()
+  `);
+  if (opened !== "clicked") {
+    throw new Error(`Panel konfirmasi hapus tidak dapat dibuka (${opened}).`);
+  }
+  await page.waitFor(
+    `document.body.textContent.includes('Hapus profil "A11y Uji"?')`,
+    { label: "panel konfirmasi" }
+  );
+  const dynamicAudit = await page.evaluate(`(${auditInPage.toString()})()`);
+  const dynamicErrors = dynamicAudit.issues.filter((issue) => issue.severity === "error");
+  const dynamicWarnings = dynamicAudit.issues.filter(
+    (issue) => issue.severity === "warning"
+  );
+  errorCount += dynamicErrors.length;
+  warningCount += dynamicWarnings.length;
+  report.screens.push({
+    screen: "Pengaturan (konfirmasi hapus)",
+    stats: dynamicAudit.stats,
+    issues: dynamicAudit.issues
+  });
+  log(
+    `State dinamis konfirmasi hapus: ${dynamicErrors.length} error, ${dynamicWarnings.length} warning.`
+  );
+  await page.screenshot(path.join(artifactDir, "a11y-dynamic.png"));
+  await page.evaluate(`
+    (() => {
+      const row = [...document.querySelectorAll("li")]
+        .find((item) => item.textContent.includes("A11y Uji"));
+      const button = [...row.querySelectorAll("button")]
+        .find((item) => item.textContent.trim() === "Batal");
+      button?.click();
+    })()
+  `);
 
   const { writeFile } = await import("node:fs/promises");
   const reportPath = `${artifactDir}/a11y-report.json`;

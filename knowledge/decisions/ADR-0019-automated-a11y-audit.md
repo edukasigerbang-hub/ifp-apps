@@ -19,12 +19,21 @@
    - Player memakai `<h1>` untuk judul lesson (sebelumnya `<h2>`);
    - tab aktivitas memiliki `aria-controls`/`role="tabpanel"`/`aria-labelledby` + navigasi panah/Home/End.
 
+## Addendum 2026-10-24 — reflow, teks 200%, target sentuh, state dinamis
+
+Cakupan audit diperluas (masih skenario `npm run a11y`):
+
+5. **Reflow**: setiap layar diuji pada lebar 640 px dan 320 px; gagal bila `scrollWidth > clientWidth`.
+6. **Teks 200%**: root font-size dinaikkan 200% pada Pengaturan; gagal bila muncul overflow horizontal.
+7. **Target sentuh**: elemen interaktif terlihat harus ≥ 44 px tinggi (warning) dan ≥ 24 px (error); radio/checkbox diukur lewat `<label>` pembungkusnya. Ditemukan select preferensi 36 px → diperbaiki ke `min-h-11`.
+8. **State dinamis**: panel konfirmasi hapus profil diaudit dengan aturan yang sama (nama, heading, kontras).
+
 ## Batas yang diakui
 
-- Ini audit heuristik, bukan pengganti audit manusia/screen reader (NVDA/TalkBack) atau uji zoom 200%/reflow.
+- Ini audit heuristik, bukan pengganti audit manusia/screen reader (NVDA/TalkBack).
 - Kontras dihitung dari warna computed; teks di atas gambar/gradien dilewati.
-- Keadaan dinamis (hasil kuis, dialog konfirmasi, pesan error) belum diaudit per state.
-- Target sentuh minimum dan preferensi gerak belum diukur otomatis.
+- State dinamis yang diaudit baru panel konfirmasi hapus; hasil kuis, dialog native, dan pesan error lain belum.
+- Target sentuh diukur dari `getBoundingClientRect`, bukan pengujian jari nyata.
 - DV-01…DV-20 tetap wajib pada perangkat fisik.
 
 ## Konsekuensi
