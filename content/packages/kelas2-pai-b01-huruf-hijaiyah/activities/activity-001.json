@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-huruf-hijaiyah-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Huruf dan Harakat",
+  "instructions": "Amati gambar, lalu tirukan bacaannya.",
+  "assets": [
+    "assets/huruf-hijaiyah-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Huruf hijaiyah pertama adalah ...",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.png",
+        "altText": "Anak membaca huruf hijaiyah dan harakat.",
+        "reveal": "Alif.",
+        "hint": "Huruf Arab."
+      },
+      {
+        "prompt": "Harakat fathah dibaca ...",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.png",
+        "altText": "Anak membaca huruf hijaiyah dan harakat.",
+        "reveal": "a.",
+        "hint": "Di atas huruf."
+      },
+      {
+        "prompt": "Arah membaca huruf Arab ...",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.png",
+        "altText": "Anak membaca huruf hijaiyah dan harakat.",
+        "reveal": "Kanan ke kiri.",
+        "hint": "Berbeda dengan Latin."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah dan harakat."
+  }
+}

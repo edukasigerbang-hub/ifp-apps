@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-seni-rupa-b01-garis-bentuk-warna",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Garis, Bentuk, dan Warna — Seni Rupa Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/garis-bentuk-warna.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5520,
+      "sha256": "7a269f7e15bf260566de418ce44b533f5f65efda4a0baee468c490fa231adab5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

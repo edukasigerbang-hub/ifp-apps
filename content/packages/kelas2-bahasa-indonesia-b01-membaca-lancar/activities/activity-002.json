@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-membaca-lancar",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Membaca Lancar",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-lancar",
+        "prompt": "Membaca lancar artinya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lancar",
+            "text": "Tidak terbata-bata"
+          },
+          {
+            "optionId": "opsi-lambat",
+            "text": "Sangat lambat"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam saja"
+          },
+          {
+            "optionId": "opsi-teriak",
+            "text": "Berteriak"
+          }
+        ],
+        "correctResponse": "opsi-lancar"
+      },
+      {
+        "questionId": "soal-titik",
+        "prompt": "Saat menemukan titik, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-berhenti",
+            "text": "Berhenti sejenak"
+          },
+          {
+            "optionId": "opsi-lanjut",
+            "text": "Terus tanpa jeda"
+          },
+          {
+            "optionId": "opsi-naik",
+            "text": "Menaikkan intonasi"
+          },
+          {
+            "optionId": "opsi-cepat",
+            "text": "Membaca cepat"
+          }
+        ],
+        "correctResponse": "opsi-berhenti"
+      },
+      {
+        "questionId": "soal-tanya",
+        "prompt": "Kalimat tanya dibaca dengan intonasi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-naik",
+            "text": "Naik"
+          },
+          {
+            "optionId": "opsi-turun",
+            "text": "Turun"
+          },
+          {
+            "optionId": "opsi-datar",
+            "text": "Datar"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam"
+          }
+        ],
+        "correctResponse": "opsi-naik"
+      },
+      {
+        "questionId": "soal-latihan",
+        "prompt": "Agar lancar, kita harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-latih",
+            "text": "Berlatih setiap hari"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam"
+          },
+          {
+            "optionId": "opsi-lupa",
+            "text": "Melupakan bacaan"
+          }
+        ],
+        "correctResponse": "opsi-latih"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dengan lancar di sudut baca."
+  }
+}

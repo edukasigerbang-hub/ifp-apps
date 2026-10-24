@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gerak-lokomotor-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Berpindah",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/gerak-lokomotor-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak lokomotor?",
+        "assetPath": "assets/gerak-lokomotor-kelas2.png",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Gerak berpindah tempat.",
+        "hint": "Jalan, lari, lompat."
+      },
+      {
+        "prompt": "Bagaimana mendarat saat lompat?",
+        "assetPath": "assets/gerak-lokomotor-kelas2.png",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Lutut ditekuk.",
+        "hint": "Mendarat pelan."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum bergerak?",
+        "assetPath": "assets/gerak-lokomotor-kelas2.png",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Pemanasan.",
+        "hint": "Agar tidak cedera."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  }
+}

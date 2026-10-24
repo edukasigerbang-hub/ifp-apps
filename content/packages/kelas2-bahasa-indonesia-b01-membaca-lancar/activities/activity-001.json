@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-membaca-lancar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Bersama",
+  "instructions": "Amati gambar, lalu baca kalimat bersama-sama.",
+  "assets": [
+    "assets/membaca-lancar.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana membaca lancar?",
+        "assetPath": "assets/membaca-lancar.png",
+        "altText": "Anak membaca dengan lancar di sudut baca.",
+        "reveal": "Tidak terbata-bata.",
+        "hint": "Latih setiap hari."
+      },
+      {
+        "prompt": "Apa tanda berhenti?",
+        "assetPath": "assets/membaca-lancar.png",
+        "altText": "Anak membaca dengan lancar di sudut baca.",
+        "reveal": "Titik.",
+        "hint": "Berhenti sejenak."
+      },
+      {
+        "prompt": "Apa tanda bertanya?",
+        "assetPath": "assets/membaca-lancar.png",
+        "altText": "Anak membaca dengan lancar di sudut baca.",
+        "reveal": "Tanda tanya.",
+        "hint": "Intonasi naik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dengan lancar di sudut baca."
+  }
+}

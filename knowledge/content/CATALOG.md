@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 272 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 278 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -135,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. **Fase B, Fase C, dan Kelas 1 lengkap** (Kelas 1, 3, 4, 5, 6). Lanjutkan **Kelas 2 Semester 1**.
+1. **Fase B, Fase C, dan Kelas 1 lengkap** (Kelas 1, 3, 4, 5, 6). Kelas 2 batch 1 sudah dibuat (6 paket). Lanjutkan **Kelas 2 S1 batch 2**.
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 209,4 kB (map 272 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 214,2 kB (map 278 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -640,6 +640,12 @@ Menambahkan 56 paket Kelas 6 (28 S1 + 28 S2) untuk 7 mapel.
 | `kelas1-seni-rupa-b06-kerajinan-bahan-alam` | 0.1.0 | 1 | seni-rupa | Kerajinan Bahan Alam | **DRAFT** | VALID (2 warning) | belum |
 | `kelas1-seni-rupa-b07-apresiasi` | 0.1.0 | 1 | seni-rupa | Apresiasi Karya | **DRAFT** | VALID (2 warning) | belum |
 | `kelas1-seni-rupa-b08-pameran` | 0.1.0 | 1 | seni-rupa | Pameran Kelas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas2-bahasa-indonesia-b01-membaca-lancar` | 0.1.0 | 2 | bahasa-indonesia | Membaca Lancar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas2-matematika-b01-bilangan-1-100` | 0.1.0 | 2 | matematika | Bilangan 1–100 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas2-pai-b01-huruf-hijaiyah` | 0.1.0 | 2 | pai | Huruf Hijaiyah dan Harakat | **DRAFT** | VALID (2 warning) | belum |
+| `kelas2-pendidikan-pancasila-b01-simbol-pancasila` | 0.1.0 | 2 | pendidikan-pancasila | Simbol dan Makna Pancasila | **DRAFT** | VALID (2 warning) | belum |
+| `kelas2-pjok-b01-gerak-lokomotor` | 0.1.0 | 2 | pjok | Gerak Lokomotor | **DRAFT** | VALID (2 warning) | belum |
+| `kelas2-seni-rupa-b01-garis-bentuk-warna` | 0.1.0 | 2 | seni-rupa | Garis, Bentuk, dan Warna | **DRAFT** | VALID (2 warning) | belum |
 
 - Outline baru: [OUTLINE_KELAS1_MERDEKA_DRAFT.md](OUTLINE_KELAS1_MERDEKA_DRAFT.md), [S1](KELAS1_SEMESTER1_MERDEKA_DRAFT.md), [S2](KELAS1_SEMESTER2_MERDEKA_DRAFT.md).
 - Fase A memakai 6 mapel inti (tanpa IPAS).
@@ -669,3 +675,21 @@ Menambahkan 24 paket Semester 2 (B05–B08 untuk 6 mapel).
 - `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **209,41 kB**.
 - **Kelas 1 lengkap: 48 paket draft** (S1 24 + S2 24).
 - Total katalog: **272 paket**.
+
+## Batch 25 Kelas 2 — starter Semester 1 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas2-matematika-b01-bilangan-1-100` | Bilangan 1–100 | eksplorasi + MCQ (4 soal) | `bilangan-1-100.png` |
+| `kelas2-bahasa-indonesia-b01-membaca-lancar` | Membaca Lancar | eksplorasi + MCQ (4 soal) | `membaca-lancar.png` |
+| `kelas2-pendidikan-pancasila-b01-simbol-pancasila` | Simbol dan Makna Pancasila | eksplorasi + matching (6 pasangan) | `simbol-pancasila-kelas2.png` |
+| `kelas2-seni-rupa-b01-garis-bentuk-warna` | Garis, Bentuk, dan Warna | eksplorasi + matching (6 pasangan) | `garis-bentuk-warna.png` |
+| `kelas2-pjok-b01-gerak-lokomotor` | Gerak Lokomotor | eksplorasi + matching (6 pasangan) | `gerak-lokomotor-kelas2.png` |
+| `kelas2-pai-b01-huruf-hijaiyah` | Huruf Hijaiyah dan Harakat | eksplorasi + matching (6 pasangan) | `huruf-hijaiyah-kelas2.png` |
+
+- Outline baru: [OUTLINE_KELAS2_MERDEKA_DRAFT.md](OUTLINE_KELAS2_MERDEKA_DRAFT.md), [S1](KELAS2_SEMESTER1_MERDEKA_DRAFT.md), [S2](KELAS2_SEMESTER2_MERDEKA_DRAFT.md).
+- Scene baru: bagan seratus (10×10).
+- Validasi: **VALID** 6/6; impor **PASS** 6/6 (5 file/paket, `active`).
+- `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **214,18 kB**.
+- Audit ulang: **278/278 VALID**, alt lengkap, packageId unik.
+- Total katalog: **278 paket**.

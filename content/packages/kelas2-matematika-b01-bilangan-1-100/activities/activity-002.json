@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-bilangan-1-100",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bilangan 1–100",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-sesudah",
+        "prompt": "Bilangan setelah 39 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-40",
+            "text": "40"
+          },
+          {
+            "optionId": "opsi-38",
+            "text": "38"
+          },
+          {
+            "optionId": "opsi-41",
+            "text": "41"
+          },
+          {
+            "optionId": "opsi-30",
+            "text": "30"
+          }
+        ],
+        "correctResponse": "opsi-40"
+      },
+      {
+        "questionId": "soal-nilai",
+        "prompt": "Angka 47 terdiri dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-4-7",
+            "text": "4 puluhan dan 7 satuan"
+          },
+          {
+            "optionId": "opsi-7-4",
+            "text": "7 puluhan dan 4 satuan"
+          },
+          {
+            "optionId": "opsi-47",
+            "text": "47 puluhan"
+          },
+          {
+            "optionId": "opsi-4",
+            "text": "4 satuan"
+          }
+        ],
+        "correctResponse": "opsi-4-7"
+      },
+      {
+        "questionId": "soal-banding",
+        "prompt": "Bilangan yang lebih besar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-85",
+            "text": "85"
+          },
+          {
+            "optionId": "opsi-58",
+            "text": "58"
+          },
+          {
+            "optionId": "opsi-55",
+            "text": "55"
+          },
+          {
+            "optionId": "opsi-50",
+            "text": "50"
+          }
+        ],
+        "correctResponse": "opsi-85"
+      },
+      {
+        "questionId": "soal-seratus",
+        "prompt": "Bilangan 100 dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-seratus",
+            "text": "Seratus"
+          },
+          {
+            "optionId": "opsi-sepuluh",
+            "text": "Sepuluh"
+          },
+          {
+            "optionId": "opsi-seribu",
+            "text": "Seribu"
+          },
+          {
+            "optionId": "opsi-nol",
+            "text": "Nol"
+          }
+        ],
+        "correctResponse": "opsi-seratus"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+  }
+}

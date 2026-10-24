@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-simbol-pancasila-kelas2",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Simbol dan Makna",
+  "instructions": "Pasangkan setiap simbol dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-bintang",
+        "left": "Bintang",
+        "right": "Ketuhanan"
+      },
+      {
+        "pairId": "pasangan-rantai",
+        "left": "Rantai",
+        "right": "Kemanusiaan"
+      },
+      {
+        "pairId": "pasangan-beringin",
+        "left": "Pohon beringin",
+        "right": "Persatuan"
+      },
+      {
+        "pairId": "pasangan-banteng",
+        "left": "Kepala banteng",
+        "right": "Musyawarah"
+      },
+      {
+        "pairId": "pasangan-padi",
+        "left": "Padi dan kapas",
+        "right": "Keadilan sosial"
+      },
+      {
+        "pairId": "pasangan-sikap",
+        "left": "Beribadah",
+        "right": "Sila pertama"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+  }
+}

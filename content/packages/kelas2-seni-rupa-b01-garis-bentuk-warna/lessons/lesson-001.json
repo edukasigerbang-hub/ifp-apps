@@ -1,0 +1,25 @@
+{
+  "lessonId": "garis-bentuk-warna",
+  "packageId": "kelas2-seni-rupa-b01-garis-bentuk-warna",
+  "title": "Garis, Bentuk, dan Warna",
+  "summary": "Mengenal garis, bentuk, dan warna untuk berkarya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal jenis garis.",
+    "Mengenal bentuk dasar.",
+    "Mengenal warna."
+  ],
+  "activityIds": [
+    "eksplorasi-garis-bentuk-warna",
+    "matching-garis-bentuk-warna"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/garis-bentuk-warna.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis, bentuk, dan warna dalam karya seni."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

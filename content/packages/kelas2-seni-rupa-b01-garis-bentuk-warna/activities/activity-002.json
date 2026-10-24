@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-garis-bentuk-warna",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur Seni",
+  "instructions": "Pasangkan setiap unsur dengan contohnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lurus",
+        "left": "Garis lurus",
+        "right": "Datar"
+      },
+      {
+        "pairId": "pasangan-lengkung",
+        "left": "Garis lengkung",
+        "right": "Melengkung"
+      },
+      {
+        "pairId": "pasangan-lingkaran",
+        "left": "Lingkaran",
+        "right": "Bulat"
+      },
+      {
+        "pairId": "pasangan-persegi",
+        "left": "Persegi",
+        "right": "4 sisi"
+      },
+      {
+        "pairId": "pasangan-merah",
+        "left": "Merah",
+        "right": "Warna primer"
+      },
+      {
+        "pairId": "pasangan-hijau",
+        "left": "Hijau",
+        "right": "Warna sekunder"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis, bentuk, dan warna dalam karya seni."
+  }
+}

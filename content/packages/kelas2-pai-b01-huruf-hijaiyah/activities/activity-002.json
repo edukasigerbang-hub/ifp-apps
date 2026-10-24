@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-huruf-hijaiyah-kelas2",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Huruf dan Harakat",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-alif",
+        "left": "Alif",
+        "right": "Huruf pertama"
+      },
+      {
+        "pairId": "pasangan-fathah",
+        "left": "Fathah",
+        "right": "a"
+      },
+      {
+        "pairId": "pasangan-kasrah",
+        "left": "Kasrah",
+        "right": "i"
+      },
+      {
+        "pairId": "pasangan-dammah",
+        "left": "Dammah",
+        "right": "u"
+      },
+      {
+        "pairId": "pasangan-tartil",
+        "left": "Tartil",
+        "right": "Pelan dan jelas"
+      },
+      {
+        "pairId": "pasangan-adab",
+        "left": "Adab",
+        "right": "Sopan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah dan harakat."
+  }
+}

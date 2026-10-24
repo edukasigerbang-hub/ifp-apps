@@ -6,10 +6,10 @@
 
 ## Ringkasan
 
-- Total paket: **272**
-- VALID: **272** · INVALID: **0**
-- Alt text lengkap: **272/272**
-- `curriculumRefs` kosong: **272/272** (diharapkan sampai D6 disetujui)
+- Total paket: **278**
+- VALID: **278** · INVALID: **0**
+- Alt text lengkap: **278/278**
+- `curriculumRefs` kosong: **278/278** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
@@ -17,6 +17,7 @@
 | Kelas | Paket |
 |---|---:|
 | 1 | 48 |
+| 2 | 6 |
 | 3 | 56 |
 | 4 | 56 |
 | 5 | 56 |
@@ -26,13 +27,13 @@
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 40 |
+| bahasa-indonesia | 41 |
 | ipas | 32 |
-| matematika | 40 |
-| pai | 40 |
-| pendidikan-pancasila | 40 |
-| pjok | 40 |
-| seni-rupa | 40 |
+| matematika | 41 |
+| pai | 41 |
+| pendidikan-pancasila | 41 |
+| pjok | 41 |
+| seni-rupa | 41 |
 
 ## Temuan yang perlu ditindaklanjuti
 
@@ -90,6 +91,12 @@
 | `kelas1-seni-rupa-b06-kerajinan-bahan-alam` | 1 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas1-seni-rupa-b07-apresiasi` | 1 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas1-seni-rupa-b08-pameran` | 1 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas2-bahasa-indonesia-b01-membaca-lancar` | 2 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas2-matematika-b01-bilangan-1-100` | 2 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas2-pai-b01-huruf-hijaiyah` | 2 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas2-pendidikan-pancasila-b01-simbol-pancasila` | 2 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas2-pjok-b01-gerak-lokomotor` | 2 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas2-seni-rupa-b01-garis-bentuk-warna` | 2 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas3-bahasa-indonesia-b01-teks-deskripsi` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas3-bahasa-indonesia-b02-kalimat-efektif` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas3-bahasa-indonesia-b03-ide-pokok` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |

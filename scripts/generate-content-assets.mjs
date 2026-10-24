@@ -2412,6 +2412,26 @@ function countingScene() {
   return px;
 }
 
+function hundredChart() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const size = 46;
+  for (let row = 0; row < 10; row += 1) {
+    for (let col = 0; col < 10; col += 1) {
+      const x = 170 + col * (size + 4);
+      const y = 90 + row * (size + 4);
+      rect(px, x, y, size, size, row % 2 === 0 ? colors.sky : colors.sand);
+      rect(px, x, y, size, 2, colors.navy);
+      rect(px, x, y + size - 2, size, 2, colors.navy);
+      rect(px, x, y, 2, size, colors.navy);
+      rect(px, x + size - 2, y, 2, size, colors.navy);
+      if ((row * 10 + col + 1) % 10 === 0) circle(px, x + size / 2, y + size / 2, 8, colors.orange);
+    }
+  }
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2672,3 +2692,9 @@ write("content/packages/kelas1-pai-b05-huruf-harakat/assets/huruf-harakat.png", 
 write("content/packages/kelas1-pai-b06-mengenal-malaikat/assets/mengenal-malaikat.png", imanScene());
 write("content/packages/kelas1-pai-b07-kisah-nabi/assets/kisah-nabi.png", islamHistoryScene());
 write("content/packages/kelas1-pai-b08-adab/assets/adab-kelas1.png", goodMannersScene());
+write("content/packages/kelas2-matematika-b01-bilangan-1-100/assets/bilangan-1-100.png", hundredChart());
+write("content/packages/kelas2-bahasa-indonesia-b01-membaca-lancar/assets/membaca-lancar.png", readingCorner());
+write("content/packages/kelas2-pendidikan-pancasila-b01-simbol-pancasila/assets/simbol-pancasila-kelas2.png", pancasilaSymbols());
+write("content/packages/kelas2-seni-rupa-b01-garis-bentuk-warna/assets/garis-bentuk-warna.png", artElements());
+write("content/packages/kelas2-pjok-b01-gerak-lokomotor/assets/gerak-lokomotor-kelas2.png", movementScene());
+write("content/packages/kelas2-pai-b01-huruf-hijaiyah/assets/huruf-hijaiyah-kelas2.png", quranScene());
