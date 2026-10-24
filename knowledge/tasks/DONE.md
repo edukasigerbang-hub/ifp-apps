@@ -516,3 +516,15 @@
 **Verifikasi:** PASS 9 pemeriksaan (dua kali).
 
 **Belum:** dialog native simpan/pilih backup tetap manual; kebijakan retensi OD-4.
+
+### T-035 — A11y hasil kuis + preflight harness
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Skenario `npm run a11y` menyelesaikan kuis pilot hingga skor 100 dan penyimpanan lokal, lalu mengaudit state hasil dengan seluruh aturan (nama, heading, kontras, target sentuh).
+- Harness menolak start bila `ifp-apps.exe` masih berjalan (pesan jelas, tidak mematikan app otomatis) untuk mencegah panic WebView2.
+- ADR-0019 addendum.
+
+**Verifikasi:** `npm run a11y` PASS 16 pemeriksaan, 0 error/0 warning (dua kali).
+
+**Belum:** NVDA/TalkBack, dialog native, pesan error lain.
