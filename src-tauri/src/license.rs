@@ -108,8 +108,11 @@ struct KeyEntry {
 
 impl LicenseState {
     pub fn from_env() -> Self {
+        // Runtime env menang; jika tidak ada, pakai nilai yang ditanam saat build
+        // agar installer dapat memverifikasi lisensi tanpa variabel lingkungan.
         let keys = std::env::var("IFP_LICENSE_KEYS")
             .ok()
+            .or_else(|| option_env!("IFP_LICENSE_KEYS").map(str::to_string))
             .and_then(|raw| serde_json::from_str::<Vec<KeyEntry>>(&raw).ok())
             .map(|entries| {
                 entries
@@ -128,7 +131,9 @@ impl LicenseState {
             .unwrap_or_default();
 
         let product_id = std::env::var("IFP_LICENSE_PRODUCT_ID")
-            .unwrap_or_else(|_| "ifp-learning".to_string());
+            .ok()
+            .or_else(|| option_env!("IFP_LICENSE_PRODUCT_ID").map(str::to_string))
+            .unwrap_or_else(|| "ifp-learning".to_string());
 
         Self { keys, product_id }
     }
