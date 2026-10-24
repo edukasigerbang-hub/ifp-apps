@@ -38,6 +38,7 @@
 | T-026 | E2E rollback konten | `npm run e2e:rollback`: impor v0.1.0 → v0.2.0 → rollback → v0.1.0; badge/judul/status paket; 9 pemeriksaan |
 | T-027 | E2E lisensi | `npm run e2e:license`: key Ed25519 per run via `IFP_LICENSE_KEYS`; impor valid, expired ditolak, signature rusak ditolak, lisensi lama tetap aktif; 8 pemeriksaan |
 | T-028 | E2E aktivasi online | `npm run e2e:license-online`: server referensi + key sementara; aktivasi serial → native verify → server audit; serial tak dikenal ditolak; 7 pemeriksaan |
+| T-029 | A11y reflow & state dinamis | `npm run a11y`: 8 layar + reflow 320/640 + teks 200% + target sentuh + konfirmasi hapus; 15 pemeriksaan, 0 warning |
 
 ## Status prasyarat materi pembelajaran
 
@@ -110,6 +111,9 @@
 | E2E rollback konten | **PASS** — v0.1.0 → v0.2.0 (judul E2E) → rollback → v0.1.0; list paket 0.1.0 active / 0.2.0 disabled |
 | E2E lisensi | **PASS** — key e2e termuat; impor valid → UI “Berlaku”; expired → `LICENSE_EXPIRED`; signature rusak → `LICENSE_SIGNATURE_INVALID`; lisensi lama tetap aktif |
 | E2E aktivasi online | **PASS** — server referensi seed serial; aktivasi → UI “Berlaku”; binding machine & audit `activated` di DB server; serial tak dikenal → `LICENSE_SERIAL_INVALID` |
+| Reflow & teks 200% | **PASS** — 8 layar pada 640/320 px tanpa overflow; teks 200% tanpa overflow |
+| Target sentuh | **PASS** — semua target ≥44 px setelah select preferensi diperbaiki dari 36 px |
+| State dinamis konfirmasi hapus | **PASS** — 0 error/0 warning |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |

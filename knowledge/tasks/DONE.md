@@ -435,3 +435,15 @@
 **Verifikasi:** `npm run e2e:license-online` PASS 7 pemeriksaan (dua kali berturut-turut); port 8788/1420 bersih setelah run.
 
 **Belum:** impor lewat dialog native; TLS/produksi (OD-7); key produksi.
+
+### T-029 — A11y reflow, teks 200%, target sentuh, state dinamis
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Skenario `npm run a11y` diperluas: reflow 640/320 px per layar, teks 200%, target sentuh (44/24 px), dan audit panel konfirmasi hapus.
+- Temuan & perbaikan: select preferensi 36 px → `min-h-11` (44 px).
+- ADR-0019 addendum.
+
+**Verifikasi:** `npm run a11y` PASS 15 pemeriksaan, 0 error/0 warning (dua kali berturut-turut); `npm run build` PASS.
+
+**Belum:** NVDA/TalkBack, hasil kuis sebagai state dinamis, dialog native, perangkat fisik.

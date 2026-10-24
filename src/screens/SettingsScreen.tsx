@@ -658,7 +658,7 @@ export function SettingsScreen() {
                     fontScale: event.target.value as "normal" | "large"
                   })
                 }
-                className="min-h-9 rounded-control border border-ink/15 px-3 text-sm"
+                className="min-h-11 rounded-control border border-ink/15 px-3 text-sm"
               >
                 <option value="normal">Normal</option>
                 <option value="large">Besar</option>

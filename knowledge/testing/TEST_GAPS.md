@@ -24,6 +24,9 @@
 | Rename & hapus profil | 6 test Rust (unik, trim, profil terakhir, konfirmasi data, hapus transaksional) + E2E `npm run e2e:profile` |
 | Hapus profil berdata (UI) | Rust PASS; cabang `PROFILE_HAS_DATA` → panel kedua belum diotomasi (butuh sesi belajar nyata) |
 | Audit aksesibilitas otomatis | `npm run a11y` 8 layar: 0 error/0 warning; kontras muted 4.47→4.76, heading Player, tab semantics |
+| Reflow & teks 200% | 8 layar pada 640/320 px tanpa overflow; root font-size 200% tanpa overflow |
+| Target sentuh | Semua target ≥44 px; select preferensi diperbaiki dari 36 px |
+| State dinamis konfirmasi hapus | Panel konfirmasi diaudit: 0 error/0 warning |
 | Navigasi keyboard dasar | Tab pertama = tautan lewati; 10 langkah Tab bernama, semua punya indikator fokus |
 | Alur belajar end-to-end | `npm run e2e:journey` 11 pemeriksaan: impor paket → Player managed-first → eksplorasi 4 langkah → kuis 100 → 1 sesi/1 percobaan → outbox 1 event → Hasil Belajar |
 | Rollback konten | `npm run e2e:rollback` 9 pemeriksaan: v0.1.0 → v0.2.0 → rollback → v0.1.0; status paket active/disabled |
@@ -38,7 +41,7 @@
 | Import lisensi/konten lewat dialog | Sama seperti di atas | Uji manual; command diuji |
 | Transfer/deaktivasi lisensi UI | Belum ada UI | Tambah setelah kebijakan OD-5 |
 | DV-01…DV-20 | Tidak ada perangkat Android 14/Windows 11/4K | Device acceptance plan |
-| Screen reader & keyboard penuh | Audit otomatis PASS; NVDA/TalkBack, zoom 200%/reflow, focus trap dialog, target sentuh belum | Audit manual + device |
+| Screen reader & keyboard penuh | Audit otomatis PASS (termasuk reflow, teks 200%, target sentuh); NVDA/TalkBack, hasil kuis, dialog native belum | Audit manual + device |
 | Updater & update preservation | Belum dikonfigurasi | Fase L |
 | Cakupan skenario E2E | Smoke, profil, alur belajar, rollback, lisensi offline/online, a11y; impor via dialog native belum | Uji manual dialog |
 | Review konten manusia | Butuh guru/Curriculum Lead | OD-1/review |
