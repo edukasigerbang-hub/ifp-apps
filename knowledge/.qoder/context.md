@@ -9,7 +9,8 @@
 - Konten: **320 paket draft — seluruh inti Kelas 1–6 selesai** (Fase A 96 + Fase B/C 224); outline semua kelas tersedia. Pilot kelas 3 dipindahkan ke `scripts/e2e/fixtures/pilot-pecahan-kelas3` (fixture E2E, tidak dibundel).
 - Review teknis: 320/320 VALID, alt text lengkap, packageId unik; `curriculumRefs` kosong menunggu D6.
 - Katalog: indeks build-time `public/content-catalog.json` (ADR-0031); Beranda siap 8,7 dtk termasuk cold start; E2E home 9/9 PASS.
-- Blocker rilis: B-03 diperbaiki di kode (transfer/deactivate Worker, `ADMIN_API_TOKEN` provisial, 13/13 test); checklist B-01/B-04 dan B-02/05/06/07/08 tersedia; lembar kerja review R1–R12 (CSV 320 paket) siap diisi reviewer. Blocker rilis: 8 item terdaftar (OD-6/OD-7, SMTP, DV, review manusia).
+- Blocker rilis: B-03 diperbaiki di kode (transfer/deactivate Worker, `ADMIN_API_TOKEN` provisial, 13/13 test); checklist B-01/B-04 dan B-02/05/06/07/08 tersedia; lembar kerja review R1–R12 (CSV 320 paket) siap diisi reviewer.
+- Kualitas konten: 0/320 memenuhi G1–G12; kedalaman seragam 3 langkah/2 aktivitas/4–6 item; 16 aktivitas identik; 61 aset dipakai ulang. Fokus berikutnya: pilot gold 4 paket Kelas 4. Blocker rilis: 8 item terdaftar (OD-6/OD-7, SMTP, DV, review manusia).
 - Player: eksplorasi + kuis; nilai disimpan ke SQLite native.
 - DB pengguna bersih (0 baris); backup uji di `.tmp-data/backups/db-20261023-225208/`.
 - Sinkronisasi client: outbox native + engine TS + mock server; E2E 1 event acknowledged.
