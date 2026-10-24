@@ -69,3 +69,8 @@
 | B-08 | Butuh keputusan apakah paket konten ditandatangani + tata kelola kunci |
 
 B-07 adalah tindakan user (file sementara sudah teridentifikasi).
+
+### Checklist operasional
+
+- **B-01 (identitas & signing):** [CHECKLIST_B01_B04_2026-10-25.md](../release/CHECKLIST_B01_B04_2026-10-25.md#b-01--identitas-rilis--code-signing)
+- **B-04 (SMTP):** [CHECKLIST_B01_B04_2026-10-25.md](../release/CHECKLIST_B01_B04_2026-10-25.md#b-04--smtp-kustom-untuk-reset-password)
