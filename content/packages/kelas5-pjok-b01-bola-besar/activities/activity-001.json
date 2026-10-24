@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bola-besar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bola Besar",
+  "instructions": "Amati gambar, lalu diskusikan permainan dan teknik dasarnya.",
+  "assets": [
+    "assets/bola-besar-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Permainan bola besar apa yang terlihat?",
+        "assetPath": "assets/bola-besar-kelas5.png",
+        "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli.",
+        "reveal": "Sepak bola, bola basket, dan bola voli.",
+        "hint": "Amati bentuk bola."
+      },
+      {
+        "prompt": "Apa teknik dasar sepak bola?",
+        "assetPath": "assets/bola-besar-kelas5.png",
+        "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli.",
+        "reveal": "Menendang, mengoper, dan menggiring bola.",
+        "hint": "Gunakan kaki bagian dalam."
+      },
+      {
+        "prompt": "Mengapa kerja sama penting?",
+        "assetPath": "assets/bola-besar-kelas5.png",
+        "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli.",
+        "reveal": "Agar tim dapat mencetak skor dan bermain adil.",
+        "hint": "Beri umpan kepada teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli."
+  }
+}

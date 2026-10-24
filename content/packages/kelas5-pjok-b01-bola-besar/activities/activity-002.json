@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-bola-besar",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bola Besar",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-sepak",
+        "prompt": "Sepak bola dimainkan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kaki",
+            "text": "Kaki"
+          },
+          {
+            "optionId": "opsi-tangan",
+            "text": "Tangan"
+          },
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket"
+          },
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet"
+          }
+        ],
+        "correctResponse": "opsi-kaki"
+      },
+      {
+        "questionId": "soal-basket",
+        "prompt": "Bola basket dimasukkan ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ring",
+            "text": "Ring"
+          },
+          {
+            "optionId": "opsi-gawang",
+            "text": "Gawang"
+          },
+          {
+            "optionId": "opsi-net",
+            "text": "Net"
+          },
+          {
+            "optionId": "opsi-bak",
+            "text": "Bak pasir"
+          }
+        ],
+        "correctResponse": "opsi-ring"
+      },
+      {
+        "questionId": "soal-voli",
+        "prompt": "Bola voli dipukul melewati ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-net",
+            "text": "Net"
+          },
+          {
+            "optionId": "opsi-ring",
+            "text": "Ring"
+          },
+          {
+            "optionId": "opsi-gawang",
+            "text": "Gawang"
+          },
+          {
+            "optionId": "opsi-garis",
+            "text": "Garis finis"
+          }
+        ],
+        "correctResponse": "opsi-net"
+      },
+      {
+        "questionId": "soal-pemanasan",
+        "prompt": "Sebelum bermain, sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan besar"
+          },
+          {
+            "optionId": "opsi-duduk",
+            "text": "Duduk diam"
+          }
+        ],
+        "correctResponse": "opsi-pemanasan"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli."
+  }
+}

@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 116 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 120 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -104,6 +104,10 @@
 | `kelas5-ipas-b01-sistem-pencernaan` | 0.1.0 | 5 | ipas | Sistem Pencernaan Manusia | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-matematika-b01-bilangan-1000000` | 0.1.0 | 5 | matematika | Bilangan sampai 1.000.000 | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-pendidikan-pancasila-b01-sejarah-pancasila` | 0.1.0 | 5 | pendidikan-pancasila | Sejarah Perumusan Pancasila | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b01-unsur-prinsip` | 0.1.0 | 5 | seni-rupa | Unsur dan Prinsip Seni Rupa | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b01-bola-besar` | 0.1.0 | 5 | pjok | Permainan Bola Besar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b01-quran-tajwid` | 0.1.0 | 5 | pai | Al-Qur'an dan Tajwid Dasar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b02-operasi-pecahan` | 0.1.0 | 5 | matematika | Operasi Hitung Pecahan | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b01-gerak-lokomotor` | 0.1.0 | 3 | pjok | Gerak Lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b02-gerak-non-lokomotor` | 0.1.0 | 3 | pjok | Gerak Non-Lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b03-gerak-manipulatif` | 0.1.0 | 3 | pjok | Gerak Manipulatif | **DRAFT** | VALID (2 warning) | belum |
@@ -127,10 +131,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4 dan Kelas 3 lengkap; Kelas 5 batch 1 sudah dibuat (4 paket). Lanjutkan **Kelas 5 S1 batch 2**.
+1. Kelas 4 dan Kelas 3 lengkap; Kelas 5 batch 1–2 sudah dibuat (8 paket). Lanjutkan **Kelas 5 S1 batch 3** (sisa B02–B04).
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 89,5 kB (map 116 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 92,6 kB (map 120 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -407,3 +411,17 @@ Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/
 - Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); filter **Kelas 5** terverifikasi.
 - `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **89,52 kB**.
 - **Total katalog: 116 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 4).
+
+## Batch 17 Kelas 5 — Semester 1 batch 2 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas5-seni-rupa-b01-unsur-prinsip` | Unsur dan Prinsip Seni Rupa | eksplorasi + matching (6 pasangan) | `unsur-prinsip-kelas5.png` |
+| `kelas5-pjok-b01-bola-besar` | Permainan Bola Besar | eksplorasi + MCQ (4 soal) | `bola-besar-kelas5.png` |
+| `kelas5-pai-b01-quran-tajwid` | Al-Qur'an dan Tajwid Dasar | eksplorasi + matching (6 pasangan) | `quran-kelas5.png` |
+| `kelas5-matematika-b02-operasi-pecahan` | Operasi Hitung Pecahan | eksplorasi + matching (6 pasangan) | `operasi-pecahan.png` |
+
+- Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); pencarian UI terverifikasi.
+- `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **92,55 kB**.
+- Review teknis ulang: **120/120 VALID**, alt lengkap, packageId unik.
+- Total katalog: **120 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 8).

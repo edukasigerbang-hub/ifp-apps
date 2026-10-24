@@ -2222,3 +2222,7 @@ write("content/packages/kelas5-matematika-b01-bilangan-1000000/assets/nilai-temp
 write("content/packages/kelas5-bahasa-indonesia-b01-teks-deskripsi/assets/teks-deskripsi-kelas5.png", beachScene());
 write("content/packages/kelas5-ipas-b01-sistem-pencernaan/assets/sistem-pencernaan.png", digestiveScene());
 write("content/packages/kelas5-pendidikan-pancasila-b01-sejarah-pancasila/assets/sejarah-pancasila.png", pancasilaHistoryScene());
+write("content/packages/kelas5-seni-rupa-b01-unsur-prinsip/assets/unsur-prinsip-kelas5.png", artElements());
+write("content/packages/kelas5-pjok-b01-bola-besar/assets/bola-besar-kelas5.png", bigBallScene());
+write("content/packages/kelas5-pai-b01-quran-tajwid/assets/quran-kelas5.png", quranScene());
+write("content/packages/kelas5-matematika-b02-operasi-pecahan/assets/operasi-pecahan.png", mathFractionBars());

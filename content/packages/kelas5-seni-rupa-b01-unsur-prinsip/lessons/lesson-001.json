@@ -1,0 +1,25 @@
+{
+  "lessonId": "unsur-prinsip-seni",
+  "packageId": "kelas5-seni-rupa-b01-unsur-prinsip",
+  "title": "Unsur dan Prinsip Seni Rupa",
+  "summary": "Mengenal unsur dan prinsip seni rupa serta menerapkannya dalam karya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan unsur seni rupa.",
+    "Menjelaskan prinsip seni rupa.",
+    "Menerapkan unsur dan prinsip dalam karya."
+  ],
+  "activityIds": [
+    "eksplorasi-unsur-prinsip",
+    "matching-unsur-prinsip"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/unsur-prinsip-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

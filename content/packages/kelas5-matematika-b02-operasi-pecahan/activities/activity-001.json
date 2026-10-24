@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-operasi-pecahan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bagian Pecahan",
+  "instructions": "Amati batang pecahan, lalu diskusikan penjumlahan dan pengurangannya.",
+  "assets": [
+    "assets/operasi-pecahan.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa hasil 1/4 + 2/4?",
+        "assetPath": "assets/operasi-pecahan.png",
+        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "reveal": "3/4.",
+        "hint": "Penyebut sama, jumlahkan pembilang."
+      },
+      {
+        "prompt": "Berapa hasil 3/4 − 1/4?",
+        "assetPath": "assets/operasi-pecahan.png",
+        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "reveal": "2/4 atau 1/2.",
+        "hint": "Kurangi pembilang."
+      },
+      {
+        "prompt": "Apakah penyebut ikut dijumlahkan?",
+        "assetPath": "assets/operasi-pecahan.png",
+        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "reveal": "Tidak, penyebut tetap.",
+        "hint": "Hanya pembilang yang dihitung."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+  }
+}

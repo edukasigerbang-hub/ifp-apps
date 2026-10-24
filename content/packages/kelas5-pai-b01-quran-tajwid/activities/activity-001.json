@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-quran-tajwid",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bacaan Tartil",
+  "instructions": "Amati gambar, lalu diskusikan tajwid dan adab membaca.",
+  "assets": [
+    "assets/quran-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu tajwid?",
+        "assetPath": "assets/quran-kelas5.png",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "reveal": "Ilmu tentang cara membaca Al-Qur'an dengan benar.",
+        "hint": "Mengatur panjang pendek bacaan."
+      },
+      {
+        "prompt": "Berapa harakat panjang mad thabi'i?",
+        "assetPath": "assets/quran-kelas5.png",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "reveal": "Dua harakat.",
+        "hint": "Satu alif."
+      },
+      {
+        "prompt": "Apa adab membaca Al-Qur'an?",
+        "assetPath": "assets/quran-kelas5.png",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "reveal": "Bersih, sopan, dan tenang.",
+        "hint": "Mulai dengan ta'awuz."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
+  }
+}

@@ -64,6 +64,6 @@
 
 | Batch | Isi | Status |
 |---|---|---|
-| 1 | B01 Matematika, Bahasa Indonesia, IPAS, Pendidikan Pancasila | **draft dibuat** (2026-10-24) |
-| 2 | B01 Seni Rupa, PJOK, PAI + B02 Matematika | belum |
+| 1 | B01 Matematika, Bahasa Indonesia, IPAS, Pendidikan Pancasila | **draft selesai** (2026-10-24) |
+| 2 | B01 Seni Rupa, PJOK, PAI + B02 Matematika | **draft selesai** (2026-10-24) |
 | 3–7 | Sisa B02–B04 (20 paket) | belum |

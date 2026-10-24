@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-seni-rupa-b01-unsur-prinsip",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Unsur dan Prinsip Seni Rupa — Seni Rupa Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/unsur-prinsip-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5520,
+      "sha256": "7a269f7e15bf260566de418ce44b533f5f65efda4a0baee468c490fa231adab5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "operasi-pecahan",
+  "packageId": "kelas5-matematika-b02-operasi-pecahan",
+  "title": "Operasi Hitung Pecahan",
+  "summary": "Menjumlahkan dan mengurangkan pecahan berpenyebut sama.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjumlahkan pecahan berpenyebut sama.",
+    "Mengurangkan pecahan berpenyebut sama.",
+    "Menyelesaikan soal cerita pecahan."
+  ],
+  "activityIds": [
+    "eksplorasi-operasi-pecahan",
+    "matching-operasi-pecahan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/operasi-pecahan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
