@@ -9,6 +9,13 @@ import {
   rollbackPackage,
   type PackageRecord
 } from "../data/contentRepository";
+import { getActiveProfile, type Profile } from "../data/profileRepository";
+import {
+  listReviews,
+  recordReview,
+  type ContentReview,
+  type ReviewDecision
+} from "../data/reviewRepository";
 
 function formatDate(value: string): string {
   const date = new Date(value);
@@ -30,6 +37,14 @@ export function ContentScreen() {
   const [busy, setBusy] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [reviews, setReviews] = useState<ContentReview[]>([]);
+  const [activeProfile, setActiveProfile] = useState<Profile | null>(null);
+  const [reviewPackageIndex, setReviewPackageIndex] = useState("0");
+  const [reviewDecision, setReviewDecision] = useState<ReviewDecision>("approved");
+  const [reviewNotes, setReviewNotes] = useState("");
+  const [reviewBusy, setReviewBusy] = useState(false);
+  const [reviewMessage, setReviewMessage] = useState<string | null>(null);
+  const [reviewError, setReviewError] = useState<string | null>(null);
   const desktop = canPersistLocally();
 
   async function refresh() {
@@ -45,8 +60,16 @@ export function ContentScreen() {
     let cancelled = false;
     (async () => {
       try {
-        const records = await listPackages();
-        if (!cancelled) setPackages(records);
+        const [records, reviewRecords, profile] = await Promise.all([
+          listPackages(),
+          listReviews(),
+          getActiveProfile()
+        ]);
+        if (!cancelled) {
+          setPackages(records);
+          setReviews(reviewRecords);
+          setActiveProfile(profile);
+        }
       } catch (caught) {
         if (!cancelled) setError(caught instanceof Error ? caught.message : "Daftar paket tidak dapat dibaca.");
       } finally {
@@ -93,6 +116,38 @@ export function ContentScreen() {
       setBusy(null);
     }
   }
+
+  async function handleRecordReview() {
+    setReviewError(null);
+    setReviewMessage(null);
+    const selected = packages[Number(reviewPackageIndex)];
+    if (!selected) {
+      setReviewError("Tidak ada paket untuk direview.");
+      return;
+    }
+    setReviewBusy(true);
+    try {
+      const review = await recordReview({
+        packageId: selected.packageId,
+        packageVersion: selected.version,
+        decision: reviewDecision,
+        notes: reviewNotes.trim() ? reviewNotes.trim() : null
+      });
+      setReviews(await listReviews());
+      setReviewNotes("");
+      setReviewMessage(
+        `Review ${review.decision === "approved" ? "setuju" : "tolak"} tercatat untuk ` +
+          `${review.packageId} v${review.packageVersion}.`
+      );
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setReviewError(typed?.message ?? "Review gagal dicatat.");
+    } finally {
+      setReviewBusy(false);
+    }
+  }
+
+  const canReview = activeProfile?.profileType === "teacher";
 
   const hasPrevious = (record: PackageRecord) =>
     record.activatedAt !== null &&
@@ -170,7 +225,7 @@ export function ContentScreen() {
                       type="button"
                       onClick={() => void handleRollback(record.packageId)}
                       disabled={busy !== null}
-                      className="min-h-9 rounded-control border border-ink/15 px-3 text-xs font-medium hover:bg-paper disabled:opacity-40"
+                      className="min-h-11 rounded-control border border-ink/15 px-3 text-xs font-medium hover:bg-paper disabled:opacity-40"
                     >
                       Rollback
                     </button>
@@ -182,9 +237,111 @@ export function ContentScreen() {
         )}
 
         <p className="mt-4 text-xs text-muted">
-          Validasi native mencakup manifest, path, batas ukuran, dan SHA-256 aset. Player masih memuat paket bawaan
-          build; paket impor belum otomatis dirender sampai Content Runtime terhubung.
+          Validasi native mencakup manifest, path, batas ukuran, dan SHA-256 aset. Player memakai paket impor aktif
+          (managed-first); rollback mengembalikan versi sebelumnya.
         </p>
+      </section>
+
+      <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+          Review konten (lokal)
+        </h2>
+        <p className="mt-3 text-sm text-muted">
+          Review dicatat di perangkat ini sebagai audit lokal. Ini tidak mengubah berkas paket, tidak menandai
+          publikasi, dan tidak menggantikan review manusia sesuai rubrik. Publikasi server tetap memerlukan OD-7.
+        </p>
+
+        {!desktop ? (
+          <p className="mt-3 text-sm text-muted">Review hanya tersedia di aplikasi desktop.</p>
+        ) : !canReview ? (
+          <p className="mt-3 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm">
+            Hanya profil guru yang dapat mencatat review. Profil aktif:{" "}
+            {activeProfile?.displayName ?? "—"} (siswa).
+          </p>
+        ) : (
+          <div className="mt-4 space-y-3">
+            <div className="flex flex-wrap items-end gap-3">
+              <label className="text-sm">
+                Paket
+                <select
+                  value={reviewPackageIndex}
+                  onChange={(event) => setReviewPackageIndex(event.target.value)}
+                  disabled={packages.length === 0 || reviewBusy}
+                  className="mt-1 block min-h-11 min-w-56 rounded-control border border-ink/15 px-3 text-sm"
+                >
+                  {packages.map((record, index) => (
+                    <option key={`${record.packageId}@${record.version}`} value={index}>
+                      {record.packageId} v{record.version}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="text-sm">
+                Keputusan
+                <select
+                  value={reviewDecision}
+                  onChange={(event) => setReviewDecision(event.target.value as ReviewDecision)}
+                  disabled={reviewBusy}
+                  className="mt-1 block min-h-11 rounded-control border border-ink/15 px-3 text-sm"
+                >
+                  <option value="approved">Setujui (lokal)</option>
+                  <option value="rejected">Tolak (lokal)</option>
+                </select>
+              </label>
+            </div>
+            <label className="block text-sm">
+              Catatan
+              <textarea
+                value={reviewNotes}
+                onChange={(event) => setReviewNotes(event.target.value)}
+                disabled={reviewBusy}
+                maxLength={1000}
+                rows={3}
+                className="mt-1 block w-full rounded-control border border-ink/15 px-3 py-2 text-sm"
+              />
+            </label>
+            <button
+              type="button"
+              onClick={() => void handleRecordReview()}
+              disabled={reviewBusy || packages.length === 0}
+              className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:opacity-40"
+            >
+              {reviewBusy ? "Menyimpan…" : "Catat review"}
+            </button>
+            <p aria-live="polite" className="text-sm text-muted">
+              {reviewMessage ?? ""}
+            </p>
+            {reviewError && (
+              <p className="rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+                {reviewError}
+              </p>
+            )}
+          </div>
+        )}
+
+        {reviews.length > 0 && (
+          <ul className="mt-4 divide-y divide-ink/10">
+            {reviews.slice(0, 10).map((review) => (
+              <li key={review.id} className="py-3">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-sm font-medium">
+                    {review.packageId} v{review.packageVersion}
+                  </span>
+                  <StatusBadge
+                    tone={review.decision === "approved" ? "positive" : "warning"}
+                    label={review.decision === "approved" ? "Disetujui (lokal)" : "Ditolak (lokal)"}
+                  />
+                  <span className="text-xs text-muted">
+                    {review.reviewerName} · {formatDate(review.createdAt)}
+                  </span>
+                </div>
+                {review.notes && (
+                  <p className="mt-1 text-sm text-muted">{review.notes}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     </div>
   );

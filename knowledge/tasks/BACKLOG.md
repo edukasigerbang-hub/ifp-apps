@@ -16,7 +16,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | G | Learning runtime + basic activities | Registry tipe aktivitas, lifecycle sesi, skor, feedback aksesibel | PARTIAL — Beranda, katalog, eksplorasi, pilihan ganda (tunggal & multi), benar-salah, jawaban singkat, matching, ordering selesai; gaya guru & aktivitas lanjutan belum |
 | H | License core + test vectors | Installation ID, signed payload canonical, verifikasi Ed25519, online+offline activation, transfer | PARTIAL — core + server referensi PASS; produksi/TLS/rotasi key/transfer UI pending |
 | I | Sync outbox + API contract | Batch, retry/backoff, dedup, ack, conflict rules | PARTIAL — client + auto-schedule + server referensi PASS; stack produksi pending OD-7 |
-| J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | TODO |
+| J | Studio/admin workflows | Draft→review→approved→build→publish; RBAC; audit | PARTIAL — review lokal append-only + RBAC guru native + UI audit selesai; build/publish server, RBAC multi-pengguna, dan alur persetujuan global belum (OD-7) |
 | K | Content production/QA pipeline | Matriks kelengkapan kelas 1–6, review pedagogis, gerbang rilis | PARTIAL — 1 pilot draft; review teknis PASS, review manusia & OD-1 pending |
 | L | Device hardening & release | DV-01…DV-20 PASS, installer/updater, backup/restore teruji | PARTIAL — backup & Windows RC build PASS; install/DV/signing/updater pending |
 

@@ -104,6 +104,20 @@ impl AppError {
         Self::new("PROFILE_HAS_DATA", message)
     }
 
+    pub fn review_forbidden() -> Self {
+        Self::new(
+            "REVIEW_FORBIDDEN",
+            "Hanya profil guru yang dapat mencatat review konten.",
+        )
+    }
+
+    pub fn profile_has_reviews() -> Self {
+        Self::new(
+            "PROFILE_HAS_REVIEWS",
+            "Profil ini memiliki riwayat review konten dan tidak dapat dihapus.",
+        )
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")
