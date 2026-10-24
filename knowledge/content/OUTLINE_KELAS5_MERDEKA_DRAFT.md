@@ -34,6 +34,7 @@
 
 - **Tidak ada paket produksi Kelas 5.**
 - Pola paket Fase B dipakai ulang; kedalaman materi dinaikkan (teks lebih panjang, konsep abstrak, data).
+- **Produksi selesai (2026-10-24):** 56 paket draft (S1 28 + S2 28), semua VALID dan terimpor. Status tetap `draft` sampai review R1–R12 dan OD-1.
 
 ## Prioritas paket starter (batch 1)
 

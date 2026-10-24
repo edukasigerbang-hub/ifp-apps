@@ -1,0 +1,25 @@
+{
+  "lessonId": "wawancara-presentasi",
+  "packageId": "kelas5-bahasa-indonesia-b07-wawancara-presentasi",
+  "title": "Wawancara dan Presentasi",
+  "summary": "Melakukan wawancara dan menyajikan hasilnya dalam presentasi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyusun pertanyaan wawancara.",
+    "Melakukan wawancara dengan sopan.",
+    "Mempresentasikan hasil."
+  ],
+  "activityIds": [
+    "eksplorasi-wawancara-presentasi",
+    "ordering-wawancara-presentasi"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/wawancara-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

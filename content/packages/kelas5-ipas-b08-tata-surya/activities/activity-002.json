@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-tata-surya",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Anggota Tata Surya",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-matahari",
+        "left": "Matahari",
+        "right": "Pusat tata surya"
+      },
+      {
+        "pairId": "pasangan-planet",
+        "left": "Planet",
+        "right": "Mengelilingi matahari"
+      },
+      {
+        "pairId": "pasangan-bumi",
+        "left": "Bumi",
+        "right": "Planet tempat hidup"
+      },
+      {
+        "pairId": "pasangan-bulan",
+        "left": "Bulan",
+        "right": "Satelit bumi"
+      },
+      {
+        "pairId": "pasangan-rotasi",
+        "left": "Rotasi",
+        "right": "Perputaran pada poros"
+      },
+      {
+        "pairId": "pasangan-revolusi",
+        "left": "Revolusi",
+        "right": "Mengelilingi matahari"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet dalam tata surya."
+  }
+}

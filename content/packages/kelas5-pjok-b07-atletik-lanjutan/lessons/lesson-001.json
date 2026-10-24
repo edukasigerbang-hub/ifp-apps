@@ -1,0 +1,25 @@
+{
+  "lessonId": "atletik-lanjutan",
+  "packageId": "kelas5-pjok-b07-atletik-lanjutan",
+  "title": "Atletik Lanjutan",
+  "summary": "Mempraktikkan lari, lompat, dan lempar dengan teknik yang benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan teknik start.",
+    "Mempraktikkan lompat jauh.",
+    "Menunjukkan sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-atletik-lanjutan",
+    "matching-atletik-lanjutan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/atletik-lanjutan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-data-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Data",
+  "instructions": "Amati diagram, lalu diskusikan cara membaca dan menyimpulkan data.",
+  "assets": [
+    "assets/data-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang ditunjukkan diagram batang?",
+        "assetPath": "assets/data-kelas5.png",
+        "altText": "Diagram batang dan tabel data.",
+        "reveal": "Banyak data setiap kelompok.",
+        "hint": "Bandingkan tinggi batang."
+      },
+      {
+        "prompt": "Bagaimana menghitung rata-rata?",
+        "assetPath": "assets/data-kelas5.png",
+        "altText": "Diagram batang dan tabel data.",
+        "reveal": "Jumlah data dibagi banyak data.",
+        "hint": "Hitung total dahulu."
+      },
+      {
+        "prompt": "Apa kesimpulan dari data?",
+        "assetPath": "assets/data-kelas5.png",
+        "altText": "Diagram batang dan tabel data.",
+        "reveal": "Informasi yang dapat diambil.",
+        "hint": "Lihat nilai tertinggi dan terendah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  }
+}

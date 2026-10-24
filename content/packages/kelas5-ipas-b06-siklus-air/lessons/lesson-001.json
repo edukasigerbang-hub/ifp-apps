@@ -1,0 +1,25 @@
+{
+  "lessonId": "siklus-air",
+  "packageId": "kelas5-ipas-b06-siklus-air",
+  "title": "Siklus Air dan Cuaca",
+  "summary": "Memahami tahapan siklus air dan pengaruhnya terhadap cuaca.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan tahapan siklus air.",
+    "Menjelaskan pengaruh cuaca.",
+    "Menjaga kelestarian air."
+  ],
+  "activityIds": [
+    "eksplorasi-siklus-air",
+    "ordering-siklus-air"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/siklus-air-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

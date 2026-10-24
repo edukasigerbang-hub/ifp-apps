@@ -1,0 +1,25 @@
+{
+  "lessonId": "menulis-cerita-kelas5",
+  "packageId": "kelas5-bahasa-indonesia-b08-menulis-cerita",
+  "title": "Menulis Cerita",
+  "summary": "Menulis cerita dengan tokoh, latar, dan alur yang runtut.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan tema dan tokoh.",
+    "Menyusun alur cerita.",
+    "Menulis cerita yang runtut."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-cerita-kelas5",
+    "ordering-menulis-cerita-kelas5"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/menulis-cerita-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita di buku."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

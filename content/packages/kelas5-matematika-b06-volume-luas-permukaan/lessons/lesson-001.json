@@ -1,0 +1,27 @@
+{
+  "lessonId": "volume-luas-permukaan",
+  "packageId": "kelas5-matematika-b06-volume-luas-permukaan",
+  "title": "Volume dan Luas Permukaan",
+  "summary": "Menghitung volume dan luas permukaan bangun ruang sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menghitung volume balok.",
+    "Menghitung luas permukaan.",
+    "Menggunakan satuan volume dan luas."
+  ],
+  "activityIds": [
+    "eksplorasi-volume",
+    "kuis-volume"
+  ],
+  "assessmentRefs": [
+    "kuis-volume"
+  ],
+  "assetRefs": [
+    "assets/volume-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Balok yang tersusun dari kubus satuan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

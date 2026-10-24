@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-sejarah-islam",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Peristiwa Awal Islam",
+  "instructions": "Amati gambar, lalu diskusikan urutan peristiwa.",
+  "assets": [
+    "assets/sejarah-islam-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Di mana Nabi Muhammad lahir?",
+        "assetPath": "assets/sejarah-islam-kelas5.png",
+        "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid.",
+        "reveal": "Makkah.",
+        "hint": "Kota dengan Ka'bah."
+      },
+      {
+        "prompt": "Di mana wahyu pertama diterima?",
+        "assetPath": "assets/sejarah-islam-kelas5.png",
+        "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid.",
+        "reveal": "Gua Hira.",
+        "hint": "Di Jabal Nur."
+      },
+      {
+        "prompt": "Mengapa Nabi hijrah?",
+        "assetPath": "assets/sejarah-islam-kelas5.png",
+        "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid.",
+        "reveal": "Melindungi umat dan menyebarkan Islam.",
+        "hint": "Hijrah ke Madinah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid."
+  }
+}

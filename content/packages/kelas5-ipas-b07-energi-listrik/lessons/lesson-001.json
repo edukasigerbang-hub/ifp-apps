@@ -1,0 +1,27 @@
+{
+  "lessonId": "energi-listrik",
+  "packageId": "kelas5-ipas-b07-energi-listrik",
+  "title": "Energi dan Listrik",
+  "summary": "Mengenal sumber energi listrik dan cara menghematnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan sumber energi listrik.",
+    "Menjelaskan perubahan energi.",
+    "Menghemat penggunaan listrik."
+  ],
+  "activityIds": [
+    "eksplorasi-energi-listrik",
+    "kuis-energi-listrik"
+  ],
+  "assessmentRefs": [
+    "kuis-energi-listrik"
+  ],
+  "assetRefs": [
+    "assets/energi-listrik.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sumber energi listrik, lampu, dan alat elektronik."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

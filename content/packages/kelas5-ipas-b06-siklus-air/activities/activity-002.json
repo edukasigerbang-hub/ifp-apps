@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-siklus-air",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Siklus Air",
+  "instructions": "Susun tahapan siklus air.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-uap",
+        "text": "Penguapan"
+      },
+      {
+        "itemId": "langkah-embun",
+        "text": "Pengembunan"
+      },
+      {
+        "itemId": "langkah-hujan",
+        "text": "Hujan"
+      },
+      {
+        "itemId": "langkah-serap",
+        "text": "Penyerapan air"
+      },
+      {
+        "itemId": "langkah-alir",
+        "text": "Aliran kembali ke laut"
+      }
+    ],
+    "correctOrder": [
+      "langkah-uap",
+      "langkah-embun",
+      "langkah-hujan",
+      "langkah-serap",
+      "langkah-alir"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+  }
+}

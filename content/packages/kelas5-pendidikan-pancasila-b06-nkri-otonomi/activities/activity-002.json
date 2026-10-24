@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-nkri-otonomi",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis NKRI dan Otonomi Daerah",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-nkri",
+        "prompt": "NKRI adalah singkatan dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-benar",
+            "text": "Negara Kesatuan Republik Indonesia"
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "Negara Kuat Republik Indonesia"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Negara Kesatuan Rakyat Indonesia"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Negara Kepulauan Republik Indonesia"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-semboyan",
+        "prompt": "Semboyan bangsa Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bhinneka",
+            "text": "Bhinneka Tunggal Ika"
+          },
+          {
+            "optionId": "opsi-merdeka",
+            "text": "Merdeka"
+          },
+          {
+            "optionId": "opsi-pancasila",
+            "text": "Pancasila"
+          },
+          {
+            "optionId": "opsi-garuda",
+            "text": "Garuda"
+          }
+        ],
+        "correctResponse": "opsi-bhinneka"
+      },
+      {
+        "questionId": "soal-otonomi",
+        "prompt": "Otonomi daerah berarti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-daerah",
+            "text": "Daerah mengatur urusannya sendiri"
+          },
+          {
+            "optionId": "opsi-pusat",
+            "text": "Pusat mengatur semua"
+          },
+          {
+            "optionId": "opsi-asing",
+            "text": "Daerah lepas dari NKRI"
+          },
+          {
+            "optionId": "opsi-perang",
+            "text": "Daerah berperang"
+          }
+        ],
+        "correctResponse": "opsi-daerah"
+      },
+      {
+        "questionId": "soal-bahasa",
+        "prompt": "Bahasa persatuan Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-indonesia",
+            "text": "Bahasa Indonesia"
+          },
+          {
+            "optionId": "opsi-daerah",
+            "text": "Bahasa daerah"
+          },
+          {
+            "optionId": "opsi-inggris",
+            "text": "Bahasa Inggris"
+          },
+          {
+            "optionId": "opsi-asing",
+            "text": "Bahasa asing"
+          }
+        ],
+        "correctResponse": "opsi-indonesia"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan peta daerah dalam NKRI."
+  }
+}

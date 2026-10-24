@@ -1,0 +1,25 @@
+{
+  "lessonId": "ekosistem",
+  "packageId": "kelas5-ipas-b05-ekosistem",
+  "title": "Ekosistem dan Rantai Makanan",
+  "summary": "Mengenal komponen ekosistem dan rantai makanan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan komponen ekosistem.",
+    "Menjelaskan rantai makanan.",
+    "Menjaga keseimbangan ekosistem."
+  ],
+  "activityIds": [
+    "eksplorasi-ekosistem",
+    "matching-ekosistem"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/ekosistem-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

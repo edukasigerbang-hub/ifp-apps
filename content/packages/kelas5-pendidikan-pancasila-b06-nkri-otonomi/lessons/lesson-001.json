@@ -1,0 +1,27 @@
+{
+  "lessonId": "nkri-otonomi",
+  "packageId": "kelas5-pendidikan-pancasila-b06-nkri-otonomi",
+  "title": "NKRI dan Otonomi Daerah",
+  "summary": "Mengenal NKRI, semboyan bangsa, dan otonomi daerah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti NKRI.",
+    "Menyebutkan semboyan bangsa.",
+    "Menjelaskan otonomi daerah."
+  ],
+  "activityIds": [
+    "eksplorasi-nkri-otonomi",
+    "kuis-nkri-otonomi"
+  ],
+  "assessmentRefs": [
+    "kuis-nkri-otonomi"
+  ],
+  "assetRefs": [
+    "assets/nkri-otonomi.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan peta daerah dalam NKRI."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

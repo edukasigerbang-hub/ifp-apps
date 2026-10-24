@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-energi-listrik",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Energi dan Listrik",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-sumber",
+        "prompt": "Sumber energi listrik dari air disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-plta",
+            "text": "PLTA"
+          },
+          {
+            "optionId": "opsi-pln",
+            "text": "PLN"
+          },
+          {
+            "optionId": "opsi-baterai",
+            "text": "Baterai"
+          },
+          {
+            "optionId": "opsi-solar",
+            "text": "Panel surya"
+          }
+        ],
+        "correctResponse": "opsi-plta"
+      },
+      {
+        "questionId": "soal-alternatif",
+        "prompt": "Energi alternatif yang berasal dari matahari adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-surya",
+            "text": "Panel surya"
+          },
+          {
+            "optionId": "opsi-bensin",
+            "text": "Bensin"
+          },
+          {
+            "optionId": "opsi-batu",
+            "text": "Batu bara"
+          },
+          {
+            "optionId": "opsi-diesel",
+            "text": "Diesel"
+          }
+        ],
+        "correctResponse": "opsi-surya"
+      },
+      {
+        "questionId": "soal-hemat",
+        "prompt": "Cara menghemat listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mati",
+            "text": "Mematikan lampu saat tidak dipakai"
+          },
+          {
+            "optionId": "opsi-nyala",
+            "text": "Menyalakan semua lampu"
+          },
+          {
+            "optionId": "opsi-buka",
+            "text": "Membuka kulkas lama"
+          },
+          {
+            "optionId": "opsi-charge",
+            "text": "Mengisi daya terus-menerus"
+          }
+        ],
+        "correctResponse": "opsi-mati"
+      },
+      {
+        "questionId": "soal-konduktor",
+        "prompt": "Bahan yang dapat menghantarkan listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-logam",
+            "text": "Logam"
+          },
+          {
+            "optionId": "opsi-kayu",
+            "text": "Kayu"
+          },
+          {
+            "optionId": "opsi-plastik",
+            "text": "Plastik"
+          },
+          {
+            "optionId": "opsi-karet",
+            "text": "Karet"
+          }
+        ],
+        "correctResponse": "opsi-logam"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sumber energi listrik, lampu, dan alat elektronik."
+  }
+}

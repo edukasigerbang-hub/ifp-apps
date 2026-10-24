@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-puisi-pantun",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Puisi dan Pantun",
+  "instructions": "Amati gambar, lalu diskusikan ciri puisi dan pantun.",
+  "assets": [
+    "assets/puisi-pantun.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri puisi?",
+        "assetPath": "assets/puisi-pantun.png",
+        "altText": "Anak membaca puisi dan pantun di kelas.",
+        "reveal": "Bahasa indah dan padat.",
+        "hint": "Ada bait dan rima."
+      },
+      {
+        "prompt": "Apa ciri pantun?",
+        "assetPath": "assets/puisi-pantun.png",
+        "altText": "Anak membaca puisi dan pantun di kelas.",
+        "reveal": "Empat baris, sampiran dan isi.",
+        "hint": "Rima a-b-a-b."
+      },
+      {
+        "prompt": "Apa itu sampiran?",
+        "assetPath": "assets/puisi-pantun.png",
+        "altText": "Anak membaca puisi dan pantun di kelas.",
+        "reveal": "Dua baris awal pantun.",
+        "hint": "Bagian isi ada di akhir."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca puisi dan pantun di kelas."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-seni-rupa-b07-apresiasi",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Apresiasi Karya Seni — Seni Rupa Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/apresiasi-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6661,
+      "sha256": "11562ca14172bc9bb10a28e8f6fc694523118e09d468b409c581d7d5bac9a6d8"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

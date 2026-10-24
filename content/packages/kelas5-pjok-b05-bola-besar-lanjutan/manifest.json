@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pjok-b05-bola-besar-lanjutan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Permainan Bola Besar Lanjutan — PJOK Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/bola-besar-lanjutan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8579,
+      "sha256": "ec070fb09198309f5716ac9226603758463e48af28eef8f238eadb97cca669e1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

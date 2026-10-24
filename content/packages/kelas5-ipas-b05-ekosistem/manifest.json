@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b05-ekosistem",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Ekosistem dan Rantai Makanan — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/ekosistem-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4431,
+      "sha256": "3964ab775e71d14e051c0804b35388cc1b9eedbc7742739a21159b2ad3c83ca0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

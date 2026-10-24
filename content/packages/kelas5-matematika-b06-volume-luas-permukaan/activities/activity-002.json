@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-volume",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Volume dan Luas Permukaan",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-volume-balok",
+        "prompt": "Volume balok 4 cm × 3 cm × 2 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-24",
+            "text": "24 cm³"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12 cm³"
+          },
+          {
+            "optionId": "opsi-9",
+            "text": "9 cm³"
+          },
+          {
+            "optionId": "opsi-18",
+            "text": "18 cm³"
+          }
+        ],
+        "correctResponse": "opsi-24"
+      },
+      {
+        "questionId": "soal-satuan",
+        "prompt": "Satuan volume yang tepat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cm3",
+            "text": "cm³"
+          },
+          {
+            "optionId": "opsi-cm2",
+            "text": "cm²"
+          },
+          {
+            "optionId": "opsi-cm",
+            "text": "cm"
+          },
+          {
+            "optionId": "opsi-kg",
+            "text": "kg"
+          }
+        ],
+        "correctResponse": "opsi-cm3"
+      },
+      {
+        "questionId": "soal-kubus-volume",
+        "prompt": "Volume kubus dengan sisi 3 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-27",
+            "text": "27 cm³"
+          },
+          {
+            "optionId": "opsi-9",
+            "text": "9 cm³"
+          },
+          {
+            "optionId": "opsi-18",
+            "text": "18 cm³"
+          },
+          {
+            "optionId": "opsi-54",
+            "text": "54 cm³"
+          }
+        ],
+        "correctResponse": "opsi-27"
+      },
+      {
+        "questionId": "soal-luas-kubus",
+        "prompt": "Luas permukaan kubus dengan sisi 3 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-54",
+            "text": "54 cm²"
+          },
+          {
+            "optionId": "opsi-27",
+            "text": "27 cm²"
+          },
+          {
+            "optionId": "opsi-36",
+            "text": "36 cm²"
+          },
+          {
+            "optionId": "opsi-9",
+            "text": "9 cm²"
+          }
+        ],
+        "correctResponse": "opsi-54"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Balok yang tersusun dari kubus satuan."
+  }
+}

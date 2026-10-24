@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-apresiasi-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Karya",
+  "instructions": "Amati gambar, lalu diskusikan unsur dan tanggapan karya.",
+  "assets": [
+    "assets/apresiasi-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan apresiasi?",
+        "assetPath": "assets/apresiasi-kelas5.png",
+        "altText": "Karya seni dipajang dan pengunjung mengamati.",
+        "reveal": "Mengamati dan menghargai karya.",
+        "hint": "Bukan hanya menilai."
+      },
+      {
+        "prompt": "Unsur apa yang diamati?",
+        "assetPath": "assets/apresiasi-kelas5.png",
+        "altText": "Karya seni dipajang dan pengunjung mengamati.",
+        "reveal": "Garis, warna, bentuk, dan tekstur.",
+        "hint": "Lihat detail."
+      },
+      {
+        "prompt": "Bagaimana tanggapan yang baik?",
+        "assetPath": "assets/apresiasi-kelas5.png",
+        "altText": "Karya seni dipajang dan pengunjung mengamati.",
+        "reveal": "Sopan, beralasan, dan membangun.",
+        "hint": "Hindari mengejek."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan pengunjung mengamati."
+  }
+}

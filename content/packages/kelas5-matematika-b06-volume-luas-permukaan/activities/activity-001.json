@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-volume",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kubus Satuan",
+  "instructions": "Amati susunan kubus, lalu diskusikan cara menghitung volume.",
+  "assets": [
+    "assets/volume-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana menghitung volume balok?",
+        "assetPath": "assets/volume-kelas5.png",
+        "altText": "Balok yang tersusun dari kubus satuan.",
+        "reveal": "Panjang × lebar × tinggi.",
+        "hint": "Hitung kubus satuan."
+      },
+      {
+        "prompt": "Apa satuan volume?",
+        "assetPath": "assets/volume-kelas5.png",
+        "altText": "Balok yang tersusun dari kubus satuan.",
+        "reveal": "Sentimeter kubik (cm³).",
+        "hint": "Karena mengalikan tiga panjang."
+      },
+      {
+        "prompt": "Apa itu luas permukaan?",
+        "assetPath": "assets/volume-kelas5.png",
+        "altText": "Balok yang tersusun dari kubus satuan.",
+        "reveal": "Jumlah luas semua sisi bangun.",
+        "hint": "Bayangkan membuka kotak."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Balok yang tersusun dari kubus satuan."
+  }
+}

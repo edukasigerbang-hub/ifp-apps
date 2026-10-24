@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-senam-lantai",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Senam Lantai",
+  "instructions": "Amati gambar, lalu diskusikan teknik dan keselamatan.",
+  "assets": [
+    "assets/senam-lantai.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa gerak senam lantai?",
+        "assetPath": "assets/senam-lantai.png",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
+        "reveal": "Guling depan, guling belakang, dan keseimbangan.",
+        "hint": "Di atas matras."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/senam-lantai.png",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Lakukan sebelum berguling."
+      },
+      {
+        "prompt": "Apa yang harus disiapkan?",
+        "assetPath": "assets/senam-lantai.png",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
+        "reveal": "Matras dan pendamping.",
+        "hint": "Jangan bercanda."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+  }
+}

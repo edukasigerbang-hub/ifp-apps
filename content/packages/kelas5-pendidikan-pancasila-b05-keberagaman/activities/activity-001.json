@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-keberagaman-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Keberagaman",
+  "instructions": "Amati gambar, lalu diskusikan sikap toleransi.",
+  "assets": [
+    "assets/keberagaman-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Keberagaman apa yang terlihat?",
+        "assetPath": "assets/keberagaman-kelas5.png",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "reveal": "Suku, agama, dan budaya.",
+        "hint": "Setiap siswa berbeda."
+      },
+      {
+        "prompt": "Apa arti toleransi?",
+        "assetPath": "assets/keberagaman-kelas5.png",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "reveal": "Menerima dan menghargai perbedaan.",
+        "hint": "Tidak memaksakan kehendak."
+      },
+      {
+        "prompt": "Apa manfaat toleransi?",
+        "assetPath": "assets/keberagaman-kelas5.png",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "reveal": "Hidup rukun dan damai.",
+        "hint": "Kerja sama lancar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  }
+}

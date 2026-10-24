@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-wawancara-presentasi",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Wawancara dan Presentasi",
+  "instructions": "Susun langkah wawancara hingga presentasi.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-narasumber",
+        "text": "Menentukan narasumber"
+      },
+      {
+        "itemId": "langkah-pertanyaan",
+        "text": "Menyusun pertanyaan"
+      },
+      {
+        "itemId": "langkah-wawancara",
+        "text": "Melakukan wawancara"
+      },
+      {
+        "itemId": "langkah-catat",
+        "text": "Mencatat jawaban"
+      },
+      {
+        "itemId": "langkah-presentasi",
+        "text": "Mempresentasikan hasil"
+      }
+    ],
+    "correctOrder": [
+      "langkah-narasumber",
+      "langkah-pertanyaan",
+      "langkah-wawancara",
+      "langkah-catat",
+      "langkah-presentasi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil."
+  }
+}

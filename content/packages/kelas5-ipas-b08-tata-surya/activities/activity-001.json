@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-tata-surya",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tata Surya",
+  "instructions": "Amati gambar, lalu diskusikan anggota dan gerak bumi.",
+  "assets": [
+    "assets/tata-surya.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa pusat tata surya?",
+        "assetPath": "assets/tata-surya.png",
+        "altText": "Matahari dan planet-planet dalam tata surya.",
+        "reveal": "Matahari.",
+        "hint": "Planet mengelilinginya."
+      },
+      {
+        "prompt": "Apa itu rotasi bumi?",
+        "assetPath": "assets/tata-surya.png",
+        "altText": "Matahari dan planet-planet dalam tata surya.",
+        "reveal": "Perputaran bumi pada porosnya.",
+        "hint": "Menimbulkan siang dan malam."
+      },
+      {
+        "prompt": "Apa itu revolusi bumi?",
+        "assetPath": "assets/tata-surya.png",
+        "altText": "Matahari dan planet-planet dalam tata surya.",
+        "reveal": "Bumi mengelilingi matahari.",
+        "hint": "Memerlukan waktu satu tahun."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet dalam tata surya."
+  }
+}

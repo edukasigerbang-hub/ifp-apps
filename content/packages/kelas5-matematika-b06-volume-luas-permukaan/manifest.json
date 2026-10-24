@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b06-volume-luas-permukaan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Volume dan Luas Permukaan — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/volume-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4622,
+      "sha256": "a4d33456eacb88299b80b1df36c84e9bbbf4914a8936fadf93a796e332a5d1ef"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

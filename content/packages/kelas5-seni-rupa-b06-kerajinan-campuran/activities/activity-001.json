@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kerajinan-campuran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bahan Campuran",
+  "instructions": "Amati gambar, lalu diskusikan bahan dan hasil kerajinannya.",
+  "assets": [
+    "assets/kerajinan-campuran.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan apa yang terlihat?",
+        "assetPath": "assets/kerajinan-campuran.png",
+        "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
+        "reveal": "Daun, ranting, kain, dan biji.",
+        "hint": "Alam dan buatan."
+      },
+      {
+        "prompt": "Bagaimana memilih bahan?",
+        "assetPath": "assets/kerajinan-campuran.png",
+        "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
+        "reveal": "Bersih, aman, dan mudah dibentuk.",
+        "hint": "Sesuaikan dengan karya."
+      },
+      {
+        "prompt": "Apa perekat yang aman?",
+        "assetPath": "assets/kerajinan-campuran.png",
+        "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
+        "reveal": "Lem serbaguna.",
+        "hint": "Gunakan sedikit."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerajinan dari daun, ranting, kain, dan biji."
+  }
+}

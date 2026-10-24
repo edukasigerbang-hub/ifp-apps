@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ekosistem",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Rantai Makanan",
+  "instructions": "Amati gambar, lalu diskusikan urutan rantai makanan.",
+  "assets": [
+    "assets/ekosistem-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu produsen?",
+        "assetPath": "assets/ekosistem-kelas5.png",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Makhluk yang membuat makanan sendiri, seperti tumbuhan.",
+        "hint": "Menggunakan energi matahari."
+      },
+      {
+        "prompt": "Apa itu konsumen?",
+        "assetPath": "assets/ekosistem-kelas5.png",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Makhluk yang memakan makhluk lain.",
+        "hint": "Belalang, burung, dan ular."
+      },
+      {
+        "prompt": "Apa itu pengurai?",
+        "assetPath": "assets/ekosistem-kelas5.png",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Makhluk yang menguraikan sisa makhluk hidup.",
+        "hint": "Bakteri dan jamur."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+  }
+}

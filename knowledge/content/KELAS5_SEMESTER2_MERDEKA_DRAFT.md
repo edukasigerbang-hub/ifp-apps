@@ -2,7 +2,7 @@
 
 **Status:** `DRAFT-UNVERIFIED` · **Fase:** C · **Tanggal:** 2026-10-24
 **Induk:** [OUTLINE_KELAS5_MERDEKA_DRAFT.md](OUTLINE_KELAS5_MERDEKA_DRAFT.md)
-**Catatan:** Usulan produksi; belum ada paket yang dibuat.
+**Catatan:** Usulan produksi. **28 paket draft selesai** (2026-10-24).
 
 ## Matematika
 | Bab | Topik inti | Aktivitas |

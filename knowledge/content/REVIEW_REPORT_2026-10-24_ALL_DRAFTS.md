@@ -6,10 +6,10 @@
 
 ## Ringkasan
 
-- Total paket: **140**
-- VALID: **140** · INVALID: **0**
-- Alt text lengkap: **140/140**
-- `curriculumRefs` kosong: **140/140** (diharapkan sampai D6 disetujui)
+- Total paket: **168**
+- VALID: **168** · INVALID: **0**
+- Alt text lengkap: **168/168**
+- `curriculumRefs` kosong: **168/168** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
@@ -18,19 +18,19 @@
 |---|---:|
 | 3 | 56 |
 | 4 | 56 |
-| 5 | 28 |
+| 5 | 56 |
 
 ### Sebaran per mapel
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 20 |
-| ipas | 20 |
-| matematika | 20 |
-| pai | 20 |
-| pendidikan-pancasila | 20 |
-| pjok | 20 |
-| seni-rupa | 20 |
+| bahasa-indonesia | 24 |
+| ipas | 24 |
+| matematika | 24 |
+| pai | 24 |
+| pendidikan-pancasila | 24 |
+| pjok | 24 |
+| seni-rupa | 24 |
 
 ## Temuan yang perlu ditindaklanjuti
 
@@ -156,30 +156,58 @@
 | `kelas5-bahasa-indonesia-b02-teks-narasi` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-bahasa-indonesia-b03-ide-pokok` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-bahasa-indonesia-b04-laporan` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-bahasa-indonesia-b05-eksposisi` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-bahasa-indonesia-b06-puisi-pantun` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-bahasa-indonesia-b07-wawancara-presentasi` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-bahasa-indonesia-b08-menulis-cerita` | 5 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-ipas-b01-sistem-pencernaan` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-ipas-b02-sistem-pernapasan` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-ipas-b03-peredaran-darah` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-ipas-b04-kesehatan-tubuh` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-ipas-b05-ekosistem` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-ipas-b06-siklus-air` | 5 | ipas | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-ipas-b07-energi-listrik` | 5 | ipas | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-ipas-b08-tata-surya` | 5 | ipas | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-matematika-b01-bilangan-1000000` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-matematika-b02-operasi-pecahan` | 5 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-matematika-b03-faktor-kelipatan` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-matematika-b04-pengukuran-sudut` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-matematika-b05-bangun-ruang` | 5 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-matematika-b06-volume-luas-permukaan` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-matematika-b07-data` | 5 | matematika | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-matematika-b08-pemecahan-masalah` | 5 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-pai-b01-quran-tajwid` | 5 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pai-b02-iman-rasul` | 5 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pai-b03-akhlak` | 5 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pai-b04-salat-ibadah` | 5 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-pai-b05-puasa` | 5 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-pai-b06-zakat` | 5 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-pai-b07-sejarah-islam` | 5 | pai | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-pai-b08-adab` | 5 | pai | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-pendidikan-pancasila-b01-sejarah-pancasila` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-pendidikan-pancasila-b02-nilai-pancasila` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pendidikan-pancasila-b03-hak-kewajiban` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-pendidikan-pancasila-b05-keberagaman` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-pendidikan-pancasila-b06-nkri-otonomi` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-pendidikan-pancasila-b07-gotong-royong` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-pendidikan-pancasila-b08-proyek-kewargaan` | 5 | pendidikan-pancasila | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-pjok-b01-bola-besar` | 5 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-pjok-b02-bola-kecil` | 5 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas5-pjok-b03-atletik` | 5 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-pjok-b04-kebugaran` | 5 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-pjok-b05-bola-besar-lanjutan` | 5 | pjok | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-pjok-b06-senam-lantai` | 5 | pjok | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-pjok-b07-atletik-lanjutan` | 5 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-pjok-b08-kesehatan-kebugaran` | 5 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-seni-rupa-b01-unsur-prinsip` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-seni-rupa-b02-perspektif` | 5 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
 | `kelas5-seni-rupa-b03-warna-komposisi` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas5-seni-rupa-b04-karya-campuran` | 5 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-seni-rupa-b05-seni-cetak` | 5 | seni-rupa | VALID | 0 | 2 | exploration + ordering | OK | ya |
+| `kelas5-seni-rupa-b06-kerajinan-campuran` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas5-seni-rupa-b07-apresiasi` | 5 | seni-rupa | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas5-seni-rupa-b08-pameran` | 5 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 
 ## Batas laporan
 

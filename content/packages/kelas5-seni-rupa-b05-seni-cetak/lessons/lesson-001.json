@@ -1,0 +1,25 @@
+{
+  "lessonId": "seni-cetak-kelas5",
+  "packageId": "kelas5-seni-rupa-b05-seni-cetak",
+  "title": "Seni Cetak",
+  "summary": "Membuat karya seni cetak dengan pola berulang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan prinsip seni cetak.",
+    "Membuat alat cetak.",
+    "Mencetak pola berulang."
+  ],
+  "activityIds": [
+    "eksplorasi-seni-cetak-kelas5",
+    "ordering-seni-cetak-kelas5"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/seni-cetak-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Alat cetak, cat, dan kertas berisi cetakan pola."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

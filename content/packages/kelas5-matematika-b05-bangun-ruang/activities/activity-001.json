@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bangun-ruang",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bangun Ruang",
+  "instructions": "Amati gambar, lalu diskusikan ciri setiap bangun ruang.",
+  "assets": [
+    "assets/bangun-ruang-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bangun ruang apa yang terlihat?",
+        "assetPath": "assets/bangun-ruang-kelas5.png",
+        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "Kubus, balok, tabung, dan kerucut.",
+        "hint": "Amati bentuknya."
+      },
+      {
+        "prompt": "Apa ciri kubus?",
+        "assetPath": "assets/bangun-ruang-kelas5.png",
+        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "Enam sisi sama besar dan dua belas rusuk.",
+        "hint": "Semua sisi persegi."
+      },
+      {
+        "prompt": "Apa contoh benda berbentuk tabung?",
+        "assetPath": "assets/bangun-ruang-kelas5.png",
+        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "Kaleng dan gelas.",
+        "hint": "Memiliki sisi lingkaran."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut."
+  }
+}

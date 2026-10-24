@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pameran-kelas5",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Persiapan Pameran",
+  "instructions": "Pasangkan setiap kegiatan dengan tujuannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-karya",
+        "left": "Memilih karya",
+        "right": "Menentukan yang dipamerkan"
+      },
+      {
+        "pairId": "pasangan-tata",
+        "left": "Menata karya",
+        "right": "Membuat rapi"
+      },
+      {
+        "pairId": "pasangan-label",
+        "left": "Memberi label",
+        "right": "Menulis nama dan judul"
+      },
+      {
+        "pairId": "pasangan-jaga",
+        "left": "Menjaga pameran",
+        "right": "Menyambut pengunjung"
+      },
+      {
+        "pairId": "pasangan-jelas",
+        "left": "Menjelaskan karya",
+        "right": "Memberi informasi"
+      },
+      {
+        "pairId": "pasangan-rapi",
+        "left": "Merapikan",
+        "right": "Mengembalikan tempat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya siswa dipajang."
+  }
+}

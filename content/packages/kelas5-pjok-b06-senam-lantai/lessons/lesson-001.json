@@ -1,0 +1,25 @@
+{
+  "lessonId": "senam-lantai",
+  "packageId": "kelas5-pjok-b06-senam-lantai",
+  "title": "Senam Lantai",
+  "summary": "Mempraktikkan gerak senam lantai dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak senam lantai.",
+    "Mempraktikkan guling depan dan belakang.",
+    "Menjaga keselamatan saat berlatih."
+  ],
+  "activityIds": [
+    "eksplorasi-senam-lantai",
+    "ordering-senam-lantai"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/senam-lantai.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

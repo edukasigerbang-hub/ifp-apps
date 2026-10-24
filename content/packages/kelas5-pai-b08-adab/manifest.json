@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b08-adab",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Adab dan Kisah Teladan — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/adab-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5684,
+      "sha256": "214bc9499ec734820e7d8b0333a7eb0583b746f27905f87651f0947530d72603"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

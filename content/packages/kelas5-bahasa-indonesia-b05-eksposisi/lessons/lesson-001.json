@@ -1,0 +1,27 @@
+{
+  "lessonId": "eksposisi",
+  "packageId": "kelas5-bahasa-indonesia-b05-eksposisi",
+  "title": "Teks Eksposisi",
+  "summary": "Mengenal teks eksposisi dan strukturnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri teks eksposisi.",
+    "Menyebutkan struktur teks.",
+    "Menulis teks eksposisi sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-eksposisi",
+    "kuis-eksposisi"
+  ],
+  "assessmentRefs": [
+    "kuis-eksposisi"
+  ],
+  "assetRefs": [
+    "assets/eksposisi-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi di sudut baca."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 140 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 168 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -135,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4, Kelas 3, dan **Kelas 5 Semester 1 lengkap** (28 paket). Lanjutkan **Kelas 5 Semester 2** (28 paket).
+1. Kelas 4, Kelas 3, dan **Kelas 5 lengkap** (56 paket). Gelombang berikutnya: **G3 Fase C — Kelas 6 Semester 1**.
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 107,9 kB (map 140 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 129,5 kB (map 168 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -454,6 +454,34 @@ Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/
 | `kelas5-seni-rupa-b02-perspektif` | 0.1.0 | 5 | seni-rupa | Menggambar Perspektif Sederhana | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-seni-rupa-b03-warna-komposisi` | 0.1.0 | 5 | seni-rupa | Warna dan Komposisi | **DRAFT** | VALID (2 warning) | belum |
 | `kelas5-seni-rupa-b04-karya-campuran` | 0.1.0 | 5 | seni-rupa | Karya Campuran (Mixed Media) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b05-eksposisi` | 0.1.0 | 5 | bahasa-indonesia | Teks Eksposisi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b06-puisi-pantun` | 0.1.0 | 5 | bahasa-indonesia | Puisi dan Pantun | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b07-wawancara-presentasi` | 0.1.0 | 5 | bahasa-indonesia | Wawancara dan Presentasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b08-menulis-cerita` | 0.1.0 | 5 | bahasa-indonesia | Menulis Cerita | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b05-ekosistem` | 0.1.0 | 5 | ipas | Ekosistem dan Rantai Makanan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b06-siklus-air` | 0.1.0 | 5 | ipas | Siklus Air dan Cuaca | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b07-energi-listrik` | 0.1.0 | 5 | ipas | Energi dan Listrik | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b08-tata-surya` | 0.1.0 | 5 | ipas | Bumi dan Tata Surya | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b05-bangun-ruang` | 0.1.0 | 5 | matematika | Bangun Ruang | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b06-volume-luas-permukaan` | 0.1.0 | 5 | matematika | Volume dan Luas Permukaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b07-data` | 0.1.0 | 5 | matematika | Penyajian dan Interpretasi Data | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b08-pemecahan-masalah` | 0.1.0 | 5 | matematika | Pemecahan Masalah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b05-puasa` | 0.1.0 | 5 | pai | Puasa | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b06-zakat` | 0.1.0 | 5 | pai | Zakat dan Infak | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b07-sejarah-islam` | 0.1.0 | 5 | pai | Sejarah Islam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b08-adab` | 0.1.0 | 5 | pai | Adab dan Kisah Teladan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b05-keberagaman` | 0.1.0 | 5 | pendidikan-pancasila | Keberagaman dan Toleransi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b06-nkri-otonomi` | 0.1.0 | 5 | pendidikan-pancasila | NKRI dan Otonomi Daerah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b07-gotong-royong` | 0.1.0 | 5 | pendidikan-pancasila | Gotong Royong | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b08-proyek-kewargaan` | 0.1.0 | 5 | pendidikan-pancasila | Proyek Kewargaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b05-bola-besar-lanjutan` | 0.1.0 | 5 | pjok | Permainan Bola Besar Lanjutan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b06-senam-lantai` | 0.1.0 | 5 | pjok | Senam Lantai | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b07-atletik-lanjutan` | 0.1.0 | 5 | pjok | Atletik Lanjutan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b08-kesehatan-kebugaran` | 0.1.0 | 5 | pjok | Kesehatan dan Kebugaran | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b05-seni-cetak` | 0.1.0 | 5 | seni-rupa | Seni Cetak | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b06-kerajinan-campuran` | 0.1.0 | 5 | seni-rupa | Kerajinan Bahan Campuran | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b07-apresiasi` | 0.1.0 | 5 | seni-rupa | Apresiasi Karya Seni | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b08-pameran` | 0.1.0 | 5 | seni-rupa | Pameran Kelas | **DRAFT** | VALID (2 warning) | belum |
 
 - Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); pencarian UI terverifikasi.
 - `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **95,76 kB**.
@@ -472,3 +500,15 @@ Menambahkan 16 paket sisa Semester 1.
 - `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **107,94 kB**.
 - **Kelas 5 Semester 1 lengkap: 28 paket draft.**
 - Total katalog: **140 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 28).
+
+## Batch 20 Kelas 5 — Semester 2 lengkap (2026-10-24)
+
+Menambahkan 28 paket Semester 2 (B05–B08 untuk 7 mapel).
+
+- Scene baru: bangun ruang, volume kubus satuan, ekosistem/rantai makanan, tata surya.
+- Validasi: **VALID** 28/28; impor seluruh Kelas 5 **56/56 PASS** (5 file/paket, `active`).
+- UI: pencarian “Tata Surya” menemukan materi; screenshot terverifikasi.
+- Audit ulang: **168/168 VALID**, alt lengkap, packageId unik.
+- `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **129,51 kB**.
+- **Kelas 5 lengkap: 56 paket draft** (S1 28 + S2 28).
+- Total katalog: **168 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 56).

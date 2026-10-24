@@ -1,0 +1,27 @@
+{
+  "lessonId": "pemecahan-masalah-kelas5",
+  "packageId": "kelas5-matematika-b08-pemecahan-masalah",
+  "title": "Pemecahan Masalah",
+  "summary": "Menyelesaikan soal cerita dengan langkah yang teratur.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memahami soal cerita.",
+    "Memilih operasi hitung yang tepat.",
+    "Memeriksa jawaban."
+  ],
+  "activityIds": [
+    "eksplorasi-pemecahan-masalah",
+    "kuis-pemecahan-masalah"
+  ],
+  "assessmentRefs": [
+    "kuis-pemecahan-masalah"
+  ],
+  "assetRefs": [
+    "assets/pemecahan-masalah-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

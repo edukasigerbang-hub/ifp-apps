@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pjok-b07-atletik-lanjutan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Atletik Lanjutan — PJOK Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/atletik-lanjutan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4508,
+      "sha256": "38b3f770e0f4495070cb5dc840607176d064d9d29726d9686c7ea52b980fb624"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

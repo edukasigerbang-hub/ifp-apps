@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pendidikan-pancasila-b08-proyek-kewargaan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Proyek Kewargaan — Pendidikan Pancasila Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/proyek-kewargaan-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5289,
+      "sha256": "4220db918e8938546a6713ba9f91d6a917c09b082b8f89f8b127fbb078c8743a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

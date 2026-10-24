@@ -1,0 +1,25 @@
+{
+  "lessonId": "bangun-ruang",
+  "packageId": "kelas5-matematika-b05-bangun-ruang",
+  "title": "Bangun Ruang",
+  "summary": "Mengenal bangun ruang dan ciri sisi, rusuk, serta titik sudutnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bangun ruang.",
+    "Menjelaskan ciri sisi, rusuk, dan titik sudut.",
+    "Memberi contoh benda berbentuk bangun ruang."
+  ],
+  "activityIds": [
+    "eksplorasi-bangun-ruang",
+    "matching-bangun-ruang"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/bangun-ruang-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

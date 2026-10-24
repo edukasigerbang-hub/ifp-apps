@@ -1,0 +1,25 @@
+{
+  "lessonId": "tata-surya",
+  "packageId": "kelas5-ipas-b08-tata-surya",
+  "title": "Bumi dan Tata Surya",
+  "summary": "Mengenal tata surya, rotasi, dan revolusi bumi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan anggota tata surya.",
+    "Menjelaskan rotasi dan revolusi.",
+    "Menjelaskan akibat rotasi dan revolusi."
+  ],
+  "activityIds": [
+    "eksplorasi-tata-surya",
+    "matching-tata-surya"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/tata-surya.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet dalam tata surya."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

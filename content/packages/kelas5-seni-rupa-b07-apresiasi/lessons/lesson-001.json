@@ -1,0 +1,27 @@
+{
+  "lessonId": "apresiasi-kelas5",
+  "packageId": "kelas5-seni-rupa-b07-apresiasi",
+  "title": "Apresiasi Karya Seni",
+  "summary": "Mengapresiasi karya seni dengan tanggapan yang sopan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengamati karya dengan teliti.",
+    "Menjelaskan unsur dan prinsip karya.",
+    "Memberi tanggapan yang membangun."
+  ],
+  "activityIds": [
+    "eksplorasi-apresiasi-kelas5",
+    "kuis-apresiasi-kelas5"
+  ],
+  "assessmentRefs": [
+    "kuis-apresiasi-kelas5"
+  ],
+  "assetRefs": [
+    "assets/apresiasi-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan pengunjung mengamati."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
