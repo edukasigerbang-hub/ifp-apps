@@ -129,6 +129,7 @@
 | Review konten lokal | **PASS** — E2E 7 pemeriksaan: guru mencatat review, nama/catatan tersimpan; siswa ditolak `REVIEW_FORBIDDEN`; profil reviewer tidak dapat dihapus |
 | Migrasi 0005 | **PASS** — `cargo test` 53/53; migrasi tercatat otomatis di backup |
 | Ekspor audit review | **PASS** — CSV 1 baris/173 byte; BOM+CRLF; guru saja; siswa `REVIEW_FORBIDDEN`; `cargo test` 55/55 |
+| Checksum migrasi lintas line ending | **PASS** — checksum ternormalisasi; legacy diterima & di-upgrade; app start pada DB pengguna; 3 test baru (cargo 58/58) |
 | Pilihan ganda multi-jawaban | **PASS** — E2E 6 pemeriksaan: 3 aktivitas dinilai 100, 3 percobaan, rata-rata 100; npm 56/56 |
 | Matching & ordering | **PASS** — E2E 8 pemeriksaan: 5 aktivitas dinilai 100, 5 percobaan; validasi kontrak ditolak saat rusak (unit) |
 | Unit test interaksi | **PASS** — 12 test baru; total npm 68/68 |

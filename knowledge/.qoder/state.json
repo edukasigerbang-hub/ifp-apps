@@ -38,7 +38,7 @@
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
   "last_updated": "2026-10-24T10:35:40+07:00",
-  "last_validation": "cargo 55/55; npm 68/68 + golden; E2E review 9/9, backup 9/9, activities 8/8, journey 11/11; a11y 16 checks 0 warning; CI remote PASS",
+  "last_validation": "cargo 58/58; npm 68/68 + golden; E2E review 9/9, backup 9/9, activities 8/8, journey 11/11; a11y 16 checks 0 warning; checksum migrasi lintas line ending PASS; CI remote PASS",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",

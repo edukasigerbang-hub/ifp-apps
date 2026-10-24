@@ -59,7 +59,7 @@
 
 ```bash
 npm test          # 68 test frontend/server + golden 4/4
-cargo test        # 55 test (learning/sync/content/license/backup/diagnostics/results/profile/preferences/review)
+cargo test        # 58 test (learning/sync/content/license/backup/diagnostics/results/profile/preferences/review/db)
 npm run build     # typecheck + build
 npm run server:typecheck
 npm run ci        # rangkaian web + server
