@@ -27,6 +27,7 @@
 | Navigasi keyboard dasar | Tab pertama = tautan lewati; 10 langkah Tab bernama, semua punya indikator fokus |
 | Alur belajar end-to-end | `npm run e2e:journey` 11 pemeriksaan: impor paket → Player managed-first → eksplorasi 4 langkah → kuis 100 → 1 sesi/1 percobaan → outbox 1 event → Hasil Belajar |
 | Rollback konten | `npm run e2e:rollback` 9 pemeriksaan: v0.1.0 → v0.2.0 → rollback → v0.1.0; status paket active/disabled |
+| Lisensi end-to-end | `npm run e2e:license` 8 pemeriksaan: key per run, impor valid, expired & signature rusak ditolak, lisensi lama tetap aktif |
 
 ## Terbuka
 
@@ -38,7 +39,7 @@
 | DV-01…DV-20 | Tidak ada perangkat Android 14/Windows 11/4K | Device acceptance plan |
 | Screen reader & keyboard penuh | Audit otomatis PASS; NVDA/TalkBack, zoom 200%/reflow, focus trap dialog, target sentuh belum | Audit manual + device |
 | Updater & update preservation | Belum dikonfigurasi | Fase L |
-| Cakupan skenario E2E | Smoke, profil, alur belajar, rollback, dan a11y; impor via dialog native & lisensi belum | Tambah skenario lisensi |
+| Cakupan skenario E2E | Smoke, profil, alur belajar, rollback, lisensi, a11y; impor via dialog native & aktivasi online belum | Tambah skenario aktivasi online |
 | Review konten manusia | Butuh guru/Curriculum Lead | OD-1/review |
 
 ## Perintah uji
@@ -53,6 +54,7 @@ npm run e2e       # harness CDP (Windows desktop, aplikasi dev harus berhenti)
 npm run e2e:profile  # siklus hidup profil
 npm run e2e:journey  # impor paket → eksplorasi → kuis → hasil → outbox
 npm run e2e:rollback # impor v1 → v2 → rollback
+npm run e2e:license # lisensi: valid, expired, signature rusak
 npm run a11y      # audit aksesibilitas 8 layar + keyboard
 ```
 

@@ -60,7 +60,7 @@ async function waitForTarget(timeoutMs) {
   );
 }
 
-export async function launchApp({ artifactDir } = {}) {
+export async function launchApp({ artifactDir, extraEnv } = {}) {
   if (process.platform !== "win32") {
     throw new Error("Harness E2E saat ini hanya mendukung Windows (WebView2 + Tauri).");
   }
@@ -76,6 +76,7 @@ export async function launchApp({ artifactDir } = {}) {
   delete env.VITE_SYNC_TOKEN;
   delete env.VITE_LICENSE_SERVER_URL;
   env.IFP_DATA_DIR = dataDir;
+  Object.assign(env, extraEnv ?? {});
   env.WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS = [
     env.WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS,
     `--remote-debugging-port=${CDP_PORT}`

@@ -33,7 +33,7 @@ let handle;
 let page;
 let failed = false;
 try {
-  handle = await launchApp({ artifactDir });
+  handle = await launchApp({ artifactDir, extraEnv: scenario.env });
   page = await connect(handle.target.webSocketDebuggerUrl);
   await page.waitFor("document.readyState === 'complete'", { label: "dokumen siap" });
   await scenario.run({ page, artifactDir, log });
