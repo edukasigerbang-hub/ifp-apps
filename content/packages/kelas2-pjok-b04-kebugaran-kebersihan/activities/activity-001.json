@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kebugaran-kebersihan-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kebugaran-kebersihan-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang membuat bugar?",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.png",
+        "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
+        "reveal": "Olahraga teratur.",
+        "hint": "Bergerak setiap hari."
+      },
+      {
+        "prompt": "Kapan mencuci tangan?",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.png",
+        "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
+        "reveal": "Sebelum makan.",
+        "hint": "Setelah bermain."
+      },
+      {
+        "prompt": "Mengapa perlu istirahat?",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.png",
+        "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
+        "reveal": "Agar tenaga pulih.",
+        "hint": "Tidur cukup."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, mencuci tangan, dan beristirahat."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-perkalian-pembagian-kelas2",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Perkalian dan Pembagian",
+  "instructions": "Pasangkan setiap operasi dengan hasilnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-2x3",
+        "left": "2 × 3",
+        "right": "6"
+      },
+      {
+        "pairId": "pasangan-6bagi2",
+        "left": "6 : 2",
+        "right": "3"
+      },
+      {
+        "pairId": "pasangan-3x4",
+        "left": "3 × 4",
+        "right": "12"
+      },
+      {
+        "pairId": "pasangan-12bagi4",
+        "left": "12 : 4",
+        "right": "3"
+      },
+      {
+        "pairId": "pasangan-5x2",
+        "left": "5 × 2",
+        "right": "10"
+      },
+      {
+        "pairId": "pasangan-10bagi5",
+        "left": "10 : 5",
+        "right": "2"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kelompok benda untuk perkalian dan pembagian."
+  }
+}

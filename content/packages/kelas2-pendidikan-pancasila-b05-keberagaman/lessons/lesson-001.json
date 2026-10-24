@@ -1,0 +1,25 @@
+{
+  "lessonId": "keberagaman-kelas2",
+  "packageId": "kelas2-pendidikan-pancasila-b05-keberagaman",
+  "title": "Keberagaman di Sekolah",
+  "summary": "Menghargai keberagaman di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bentuk keberagaman.",
+    "Menghargai perbedaan.",
+    "Bekerja sama."
+  ],
+  "activityIds": [
+    "eksplorasi-keberagaman-kelas2",
+    "matching-keberagaman-kelas2"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/keberagaman-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku dan budaya belajar bersama."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

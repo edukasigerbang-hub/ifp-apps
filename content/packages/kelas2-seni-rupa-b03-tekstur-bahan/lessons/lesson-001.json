@@ -1,0 +1,27 @@
+{
+  "lessonId": "tekstur-bahan-kelas2",
+  "packageId": "kelas2-seni-rupa-b03-tekstur-bahan",
+  "title": "Tekstur dan Bahan",
+  "summary": "Mengenal tekstur bahan untuk berkarya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal tekstur kasar.",
+    "Mengenal tekstur halus.",
+    "Menempel bahan."
+  ],
+  "activityIds": [
+    "eksplorasi-tekstur-bahan-kelas2",
+    "kuis-tekstur-bahan-kelas2"
+  ],
+  "assessmentRefs": [
+    "kuis-tekstur-bahan-kelas2"
+  ],
+  "assetRefs": [
+    "assets/tekstur-bahan-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

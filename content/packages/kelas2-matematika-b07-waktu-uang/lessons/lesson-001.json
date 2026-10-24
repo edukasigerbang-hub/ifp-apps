@@ -1,0 +1,25 @@
+{
+  "lessonId": "waktu-uang",
+  "packageId": "kelas2-matematika-b07-waktu-uang",
+  "title": "Waktu dan Uang",
+  "summary": "Membaca waktu dan mengenal nilai uang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca jam.",
+    "Mengenal satuan waktu.",
+    "Mengenal nilai uang."
+  ],
+  "activityIds": [
+    "eksplorasi-waktu-uang",
+    "matching-waktu-uang"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/waktu-uang.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam dan uang untuk belajar waktu serta nilai uang."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

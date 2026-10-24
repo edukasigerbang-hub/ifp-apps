@@ -1,0 +1,27 @@
+{
+  "lessonId": "nkri-kelas2",
+  "packageId": "kelas2-pendidikan-pancasila-b06-nkri",
+  "title": "NKRI dan Simbol Negara",
+  "summary": "Mengenal NKRI dan simbol negara.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti NKRI.",
+    "Menyebutkan simbol negara.",
+    "Menunjukkan cinta tanah air."
+  ],
+  "activityIds": [
+    "eksplorasi-nkri-kelas2",
+    "kuis-nkri-kelas2"
+  ],
+  "assessmentRefs": [
+    "kuis-nkri-kelas2"
+  ],
+  "assetRefs": [
+    "assets/nkri-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol negara."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

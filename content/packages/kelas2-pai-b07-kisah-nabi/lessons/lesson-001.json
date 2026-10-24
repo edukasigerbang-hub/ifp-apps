@@ -1,0 +1,25 @@
+{
+  "lessonId": "kisah-nabi",
+  "packageId": "kelas2-pai-b07-kisah-nabi",
+  "title": "Kisah Nabi",
+  "summary": "Mengenal kisah Nabi Muhammad sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal Nabi Muhammad.",
+    "Menyebutkan peristiwa.",
+    "Meneladani sifat Nabi."
+  ],
+  "activityIds": [
+    "eksplorasi-kisah-nabi",
+    "ordering-kisah-nabi"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kisah-nabi-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

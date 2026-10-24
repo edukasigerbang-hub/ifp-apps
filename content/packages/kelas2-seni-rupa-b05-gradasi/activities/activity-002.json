@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-gradasi-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Gradasi",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-gradasi",
+        "prompt": "Gradasi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bertahap",
+            "text": "Perubahan warna bertahap"
+          },
+          {
+            "optionId": "opsi-sama",
+            "text": "Warna sama"
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Warna acak"
+          },
+          {
+            "optionId": "opsi-putih",
+            "text": "Warna putih saja"
+          }
+        ],
+        "correctResponse": "opsi-bertahap"
+      },
+      {
+        "questionId": "soal-arah",
+        "prompt": "Gradasi biasanya dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-gelap",
+            "text": "Gelap ke terang"
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Acak"
+          },
+          {
+            "optionId": "opsi-putih",
+            "text": "Putih ke putih"
+          },
+          {
+            "optionId": "opsi-hitam",
+            "text": "Hitam saja"
+          }
+        ],
+        "correctResponse": "opsi-gelap"
+      },
+      {
+        "questionId": "soal-rapi",
+        "prompt": "Saat mewarnai, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-garis",
+            "text": "Tidak keluar garis"
+          },
+          {
+            "optionId": "opsi-keluar",
+            "text": "Keluar garis"
+          },
+          {
+            "optionId": "opsi-cepat",
+            "text": "Sangat cepat"
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Acak"
+          }
+        ],
+        "correctResponse": "opsi-garis"
+      },
+      {
+        "questionId": "soal-alat",
+        "prompt": "Alat mewarnai adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-krayon",
+            "text": "Krayon"
+          },
+          {
+            "optionId": "opsi-gunting",
+            "text": "Gunting"
+          },
+          {
+            "optionId": "opsi-lem",
+            "text": "Lem"
+          },
+          {
+            "optionId": "opsi-penggaris",
+            "text": "Penggaris"
+          }
+        ],
+        "correctResponse": "opsi-krayon"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh gradasi warna dari gelap ke terang."
+  }
+}

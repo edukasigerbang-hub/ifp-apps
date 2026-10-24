@@ -1,0 +1,25 @@
+{
+  "lessonId": "kebugaran-kebersihan-kelas2",
+  "packageId": "kelas2-pjok-b04-kebugaran-kebersihan",
+  "title": "Kebugaran dan Kebersihan",
+  "summary": "Menjaga kebugaran dan kebersihan diri.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara menjaga kebugaran.",
+    "Mempraktikkan kebersihan diri.",
+    "Menjelaskan manfaatnya."
+  ],
+  "activityIds": [
+    "eksplorasi-kebugaran-kebersihan-kelas2",
+    "matching-kebugaran-kebersihan-kelas2"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kebugaran-kebersihan-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, mencuci tangan, dan beristirahat."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

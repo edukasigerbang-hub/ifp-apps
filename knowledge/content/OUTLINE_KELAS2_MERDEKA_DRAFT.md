@@ -34,6 +34,7 @@
 
 - **Tidak ada paket produksi Kelas 2.**
 - Pola Kelas 1 dipakai ulang dengan peningkatan bertahap (bilangan 100, kalimat lebih panjang).
+- **Produksi selesai (2026-10-25):** 48 paket draft (S1 24 + S2 24), semua VALID dan terimpor. Status tetap `draft` sampai review R1–R12 dan OD-1.
 
 ## Prioritas paket starter (batch 1)
 

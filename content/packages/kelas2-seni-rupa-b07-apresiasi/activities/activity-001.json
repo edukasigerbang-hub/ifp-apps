@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-apresiasi-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Karya",
+  "instructions": "Amati gambar, lalu diskusikan karya yang terlihat.",
+  "assets": [
+    "assets/apresiasi-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang terlihat pada karya?",
+        "assetPath": "assets/apresiasi-kelas2.png",
+        "altText": "Karya seni dipajang dan anak mengamati.",
+        "reveal": "Warna dan bentuk.",
+        "hint": "Amati dengan teliti."
+      },
+      {
+        "prompt": "Bagaimana menanggapi karya teman?",
+        "assetPath": "assets/apresiasi-kelas2.png",
+        "altText": "Karya seni dipajang dan anak mengamati.",
+        "reveal": "Sopan.",
+        "hint": "Tidak mengejek."
+      },
+      {
+        "prompt": "Apa manfaat apresiasi?",
+        "assetPath": "assets/apresiasi-kelas2.png",
+        "altText": "Karya seni dipajang dan anak mengamati.",
+        "reveal": "Belajar menghargai.",
+        "hint": "Menemukan ide."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan anak mengamati."
+  }
+}

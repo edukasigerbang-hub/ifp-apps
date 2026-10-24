@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pjok-b03-manipulatif",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gerak Manipulatif — PJOK Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/manipulatif-kelas2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9256,
+      "sha256": "1d696e9101ebc9eb2f2b4e07369a757e185610aed44907c435c37d7e911100bc"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

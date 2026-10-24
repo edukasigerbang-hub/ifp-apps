@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-matematika-b03-perkalian-dasar",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Perkalian Dasar (2–5) — Matematika Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/perkalian-dasar.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7319,
+      "sha256": "0744b0d9141d28e6bc9d6589bb5616f6635b6bcfd8f6a1e18d7ef91d3a683957"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

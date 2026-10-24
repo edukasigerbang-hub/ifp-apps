@@ -1,0 +1,25 @@
+{
+  "lessonId": "kolase",
+  "packageId": "kelas2-seni-rupa-b04-kolase",
+  "title": "Kolase",
+  "summary": "Membuat kolase dari bahan di sekitar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal kolase.",
+    "Memilih bahan.",
+    "Membuat kolase."
+  ],
+  "activityIds": [
+    "eksplorasi-kolase",
+    "ordering-kolase"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kolase-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun dan kertas yang ditempel."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

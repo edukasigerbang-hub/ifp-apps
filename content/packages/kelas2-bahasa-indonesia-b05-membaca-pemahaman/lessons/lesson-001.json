@@ -1,0 +1,27 @@
+{
+  "lessonId": "membaca-pemahaman-kelas2",
+  "packageId": "kelas2-bahasa-indonesia-b05-membaca-pemahaman",
+  "title": "Membaca Pemahaman",
+  "summary": "Memahami isi bacaan sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca dengan lancar.",
+    "Menjawab pertanyaan bacaan.",
+    "Menyimpulkan isi."
+  ],
+  "activityIds": [
+    "eksplorasi-membaca-pemahaman-kelas2",
+    "kuis-membaca-pemahaman-kelas2"
+  ],
+  "assessmentRefs": [
+    "kuis-membaca-pemahaman-kelas2"
+  ],
+  "assetRefs": [
+    "assets/membaca-pemahaman-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dan memahami isi bacaan."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

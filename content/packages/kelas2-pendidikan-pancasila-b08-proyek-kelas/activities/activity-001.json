@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-proyek-kelas-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Proyek Kelas",
+  "instructions": "Amati gambar, lalu diskusikan kegiatan proyek.",
+  "assets": [
+    "assets/proyek-kelas-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa proyek kelas?",
+        "assetPath": "assets/proyek-kelas-kelas2.png",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "reveal": "Kegiatan bersama.",
+        "hint": "Contoh: membersihkan kelas."
+      },
+      {
+        "prompt": "Bagaimana membagi tugas?",
+        "assetPath": "assets/proyek-kelas-kelas2.png",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "reveal": "Adil untuk semua.",
+        "hint": "Sesuai kemampuan."
+      },
+      {
+        "prompt": "Apa setelah selesai?",
+        "assetPath": "assets/proyek-kelas-kelas2.png",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "reveal": "Melaporkan hasil.",
+        "hint": "Merapikan alat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+  }
+}

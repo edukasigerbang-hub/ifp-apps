@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-salat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerakan Salat",
+  "instructions": "Amati gambar, lalu diskusikan gerakan salat.",
+  "assets": [
+    "assets/salat-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa salat wajib sehari?",
+        "assetPath": "assets/salat-kelas2.png",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Lima waktu.",
+        "hint": "Subuh sampai isya."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum salat?",
+        "assetPath": "assets/salat-kelas2.png",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Berwudu.",
+        "hint": "Membersihkan diri."
+      },
+      {
+        "prompt": "Apa gerakan terakhir?",
+        "assetPath": "assets/salat-kelas2.png",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Salam.",
+        "hint": "Menoleh kanan dan kiri."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  }
+}

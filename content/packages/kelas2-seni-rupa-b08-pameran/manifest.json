@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-seni-rupa-b08-pameran",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pameran Kelas — Seni Rupa Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/pameran-kelas2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6763,
+      "sha256": "113db76083609268be0214ac037033954369ce1f51bbb5f66aa4d3260b454476"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-matematika-b04-pengukuran",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pengukuran Panjang dan Berat — Matematika Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/pengukuran-kelas2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5229,
+      "sha256": "e21de68d447ddec784ff718c27fbbb542859a7dfbd7cc1afc95889e32ffcd3de"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

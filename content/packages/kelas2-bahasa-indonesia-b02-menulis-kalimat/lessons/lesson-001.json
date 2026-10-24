@@ -1,0 +1,25 @@
+{
+  "lessonId": "menulis-kalimat-kelas2",
+  "packageId": "kelas2-bahasa-indonesia-b02-menulis-kalimat",
+  "title": "Menulis Kalimat",
+  "summary": "Menulis kalimat dengan huruf kapital dan tanda baca.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menulis kalimat dengan rapi.",
+    "Menggunakan huruf kapital.",
+    "Menggunakan tanda baca."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-kalimat-kelas2",
+    "ordering-menulis-kalimat-kelas2"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/menulis-kalimat-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis kalimat di buku."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

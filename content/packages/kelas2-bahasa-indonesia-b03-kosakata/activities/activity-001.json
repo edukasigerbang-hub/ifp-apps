@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kosakata-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Kata",
+  "instructions": "Amati gambar, lalu diskusikan kata yang mirip dan berlawanan.",
+  "assets": [
+    "assets/kosakata-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa sinonim kata senang?",
+        "assetPath": "assets/kosakata-kelas2.png",
+        "altText": "Anak membaca buku untuk menambah kosakata.",
+        "reveal": "Gembira.",
+        "hint": "Artinya mirip."
+      },
+      {
+        "prompt": "Apa antonim kata besar?",
+        "assetPath": "assets/kosakata-kelas2.png",
+        "altText": "Anak membaca buku untuk menambah kosakata.",
+        "reveal": "Kecil.",
+        "hint": "Artinya berlawanan."
+      },
+      {
+        "prompt": "Apa antonim kata cepat?",
+        "assetPath": "assets/kosakata-kelas2.png",
+        "altText": "Anak membaca buku untuk menambah kosakata.",
+        "reveal": "Lambat.",
+        "hint": "Berlawanan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku untuk menambah kosakata."
+  }
+}

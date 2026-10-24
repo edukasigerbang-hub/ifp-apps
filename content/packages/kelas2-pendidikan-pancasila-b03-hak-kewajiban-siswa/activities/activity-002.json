@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-hak-kewajiban-siswa",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Hak dan Kewajiban",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hak",
+        "left": "Hak",
+        "right": "Yang diterima"
+      },
+      {
+        "pairId": "pasangan-kewajiban",
+        "left": "Kewajiban",
+        "right": "Yang dilakukan"
+      },
+      {
+        "pairId": "pasangan-belajar",
+        "left": "Mendapat pelajaran",
+        "right": "Hak siswa"
+      },
+      {
+        "pairId": "pasangan-bersih",
+        "left": "Menjaga kebersihan",
+        "right": "Kewajiban siswa"
+      },
+      {
+        "pairId": "pasangan-aturan",
+        "left": "Mematuhi aturan",
+        "right": "Kewajiban"
+      },
+      {
+        "pairId": "pasangan-bertanya",
+        "left": "Bertanya",
+        "right": "Hak siswa"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa belajar dan menjaga kebersihan kelas."
+  }
+}

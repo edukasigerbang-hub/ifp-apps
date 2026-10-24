@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-perkalian-dasar",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Perkalian",
+  "instructions": "Pasangkan setiap perkalian dengan hasilnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-2x3",
+        "left": "2 × 3",
+        "right": "6"
+      },
+      {
+        "pairId": "pasangan-4x2",
+        "left": "4 × 2",
+        "right": "8"
+      },
+      {
+        "pairId": "pasangan-3x5",
+        "left": "3 × 5",
+        "right": "15"
+      },
+      {
+        "pairId": "pasangan-5x2",
+        "left": "5 × 2",
+        "right": "10"
+      },
+      {
+        "pairId": "pasangan-kali",
+        "left": "Perkalian",
+        "right": "Penjumlahan berulang"
+      },
+      {
+        "pairId": "pasangan-kelompok",
+        "left": "3 × 4",
+        "right": "12"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kelompok benda untuk memahami perkalian."
+  }
+}

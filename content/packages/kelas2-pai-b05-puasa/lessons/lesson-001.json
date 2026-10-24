@@ -1,0 +1,27 @@
+{
+  "lessonId": "puasa",
+  "packageId": "kelas2-pai-b05-puasa",
+  "title": "Puasa",
+  "summary": "Mengenal puasa dan hikmahnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian puasa.",
+    "Menyebutkan waktu puasa.",
+    "Menunjukkan sikap sabar."
+  ],
+  "activityIds": [
+    "eksplorasi-puasa",
+    "kuis-puasa"
+  ],
+  "assessmentRefs": [
+    "kuis-puasa"
+  ],
+  "assetRefs": [
+    "assets/puasa-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa dengan kurma dan air."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

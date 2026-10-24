@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kisah-nabi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mendengar Kisah Nabi",
+  "instructions": "Amati gambar, lalu diskusikan kisah Nabi.",
+  "assets": [
+    "assets/kisah-nabi-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Di mana Nabi lahir?",
+        "assetPath": "assets/kisah-nabi-kelas2.png",
+        "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
+        "reveal": "Makkah.",
+        "hint": "Kota dengan Ka'bah."
+      },
+      {
+        "prompt": "Siapa Nabi terakhir?",
+        "assetPath": "assets/kisah-nabi-kelas2.png",
+        "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
+        "reveal": "Muhammad.",
+        "hint": "Utusan Allah."
+      },
+      {
+        "prompt": "Apa sifat Nabi?",
+        "assetPath": "assets/kisah-nabi-kelas2.png",
+        "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
+        "reveal": "Jujur.",
+        "hint": "Dapat dipercaya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
+  }
+}

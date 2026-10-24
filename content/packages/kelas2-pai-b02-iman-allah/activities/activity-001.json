@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-iman-allah",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Iman",
+  "instructions": "Amati gambar, lalu diskusikan arti iman.",
+  "assets": [
+    "assets/iman-allah-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti iman?",
+        "assetPath": "assets/iman-allah-kelas2.png",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
+        "reveal": "Percaya.",
+        "hint": "Yakin kepada Allah."
+      },
+      {
+        "prompt": "Allah Maha Pengasih disebut ...",
+        "assetPath": "assets/iman-allah-kelas2.png",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
+        "reveal": "Ar-Rahman.",
+        "hint": "Mengasihi makhluk."
+      },
+      {
+        "prompt": "Bagaimana wujud iman?",
+        "assetPath": "assets/iman-allah-kelas2.png",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
+        "reveal": "Berdoa dan berbuat baik.",
+        "hint": "Rajin belajar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada Allah."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "lessonId": "non-lokomotor-kelas2",
+  "packageId": "kelas2-pjok-b02-non-lokomotor",
+  "title": "Gerak Non-Lokomotor",
+  "summary": "Mempraktikkan gerak di tempat dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak non-lokomotor.",
+    "Mempraktikkan gerak di tempat.",
+    "Menjaga keseimbangan."
+  ],
+  "activityIds": [
+    "eksplorasi-non-lokomotor-kelas2",
+    "kuis-non-lokomotor-kelas2"
+  ],
+  "assessmentRefs": [
+    "kuis-non-lokomotor-kelas2"
+  ],
+  "assetRefs": [
+    "assets/non-lokomotor-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

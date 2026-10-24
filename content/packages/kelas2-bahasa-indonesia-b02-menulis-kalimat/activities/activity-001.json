@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menulis-kalimat-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Kalimat",
+  "instructions": "Amati gambar, lalu susun kalimat bersama.",
+  "assets": [
+    "assets/menulis-kalimat-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kalimat dimulai dengan huruf ...",
+        "assetPath": "assets/menulis-kalimat-kelas2.png",
+        "altText": "Anak menulis kalimat di buku.",
+        "reveal": "Kapital.",
+        "hint": "Contoh: Ayah."
+      },
+      {
+        "prompt": "Akhir kalimat berita ...",
+        "assetPath": "assets/menulis-kalimat-kelas2.png",
+        "altText": "Anak menulis kalimat di buku.",
+        "reveal": "Titik.",
+        "hint": "Tanda titik."
+      },
+      {
+        "prompt": "Antar kata diberi ...",
+        "assetPath": "assets/menulis-kalimat-kelas2.png",
+        "altText": "Anak menulis kalimat di buku.",
+        "reveal": "Jarak.",
+        "hint": "Agar mudah dibaca."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis kalimat di buku."
+  }
+}

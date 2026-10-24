@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gradasi-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gradasi",
+  "instructions": "Amati gambar, lalu diskusikan perubahan warnanya.",
+  "assets": [
+    "assets/gradasi-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gradasi?",
+        "assetPath": "assets/gradasi-kelas2.png",
+        "altText": "Contoh gradasi warna dari gelap ke terang.",
+        "reveal": "Perubahan warna bertahap.",
+        "hint": "Dari gelap ke terang."
+      },
+      {
+        "prompt": "Bagaimana mewarnai rapi?",
+        "assetPath": "assets/gradasi-kelas2.png",
+        "altText": "Contoh gradasi warna dari gelap ke terang.",
+        "reveal": "Jangan keluar garis.",
+        "hint": "Warnai pelan."
+      },
+      {
+        "prompt": "Apa yang diperiksa?",
+        "assetPath": "assets/gradasi-kelas2.png",
+        "altText": "Contoh gradasi warna dari gelap ke terang.",
+        "reveal": "Kerapian warna.",
+        "hint": "Kebersihan karya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh gradasi warna dari gelap ke terang."
+  }
+}

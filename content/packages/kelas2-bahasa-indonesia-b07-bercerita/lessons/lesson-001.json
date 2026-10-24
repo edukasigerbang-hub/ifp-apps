@@ -1,0 +1,25 @@
+{
+  "lessonId": "bercerita-kelas2",
+  "packageId": "kelas2-bahasa-indonesia-b07-bercerita",
+  "title": "Bercerita",
+  "summary": "Bercerita dengan urut dan percaya diri.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menceritakan pengalaman.",
+    "Bercerita berurutan.",
+    "Bercerita percaya diri."
+  ],
+  "activityIds": [
+    "eksplorasi-bercerita-kelas2",
+    "ordering-bercerita-kelas2"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/bercerita-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bercerita di depan kelas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

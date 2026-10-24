@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-perkalian-pembagian-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kelompok Benda",
+  "instructions": "Amati gambar, lalu diskusikan perkalian dan pembagian.",
+  "assets": [
+    "assets/perkalian-pembagian-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 2 × 3?",
+        "assetPath": "assets/perkalian-pembagian-kelas2.png",
+        "altText": "Kelompok benda untuk perkalian dan pembagian.",
+        "reveal": "6.",
+        "hint": "Dua kelompok berisi tiga."
+      },
+      {
+        "prompt": "Berapa 6 : 2?",
+        "assetPath": "assets/perkalian-pembagian-kelas2.png",
+        "altText": "Kelompok benda untuk perkalian dan pembagian.",
+        "reveal": "3.",
+        "hint": "Bagi menjadi dua kelompok."
+      },
+      {
+        "prompt": "Bagaimana hubungannya?",
+        "assetPath": "assets/perkalian-pembagian-kelas2.png",
+        "altText": "Kelompok benda untuk perkalian dan pembagian.",
+        "reveal": "Pembagian kebalikan perkalian.",
+        "hint": "2 × 3 = 6, 6 : 2 = 3."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kelompok benda untuk perkalian dan pembagian."
+  }
+}

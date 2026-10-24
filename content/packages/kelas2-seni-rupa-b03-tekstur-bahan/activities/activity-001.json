@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-tekstur-bahan-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tekstur",
+  "instructions": "Amati gambar, lalu bandingkan teksturnya.",
+  "assets": [
+    "assets/tekstur-bahan-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan kasar adalah ...",
+        "assetPath": "assets/tekstur-bahan-kelas2.png",
+        "altText": "Bahan bertekstur kasar dan halus.",
+        "reveal": "Batu.",
+        "hint": "Terasa bergerigi."
+      },
+      {
+        "prompt": "Bahan halus adalah ...",
+        "assetPath": "assets/tekstur-bahan-kelas2.png",
+        "altText": "Bahan bertekstur kasar dan halus.",
+        "reveal": "Kapas.",
+        "hint": "Terasa lembut."
+      },
+      {
+        "prompt": "Apa perekat yang aman?",
+        "assetPath": "assets/tekstur-bahan-kelas2.png",
+        "altText": "Bahan bertekstur kasar dan halus.",
+        "reveal": "Lem.",
+        "hint": "Gunakan sedikit."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus."
+  }
+}

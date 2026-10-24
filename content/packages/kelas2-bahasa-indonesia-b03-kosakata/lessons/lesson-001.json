@@ -1,0 +1,25 @@
+{
+  "lessonId": "kosakata-kelas2",
+  "packageId": "kelas2-bahasa-indonesia-b03-kosakata",
+  "title": "Kosakata, Sinonim, dan Antonim",
+  "summary": "Mengenal sinonim dan antonim kata.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal sinonim.",
+    "Mengenal antonim.",
+    "Menggunakan kata dengan tepat."
+  ],
+  "activityIds": [
+    "eksplorasi-kosakata-kelas2",
+    "matching-kosakata-kelas2"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kosakata-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku untuk menambah kosakata."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

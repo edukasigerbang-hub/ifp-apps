@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-data-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Data",
+  "instructions": "Amati diagram, lalu diskusikan datanya.",
+  "assets": [
+    "assets/data-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa isi tabel data?",
+        "assetPath": "assets/data-kelas2.png",
+        "altText": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Keterangan dan jumlah.",
+        "hint": "Baca angkanya."
+      },
+      {
+        "prompt": "Apa yang ditunjukkan diagram batang?",
+        "assetPath": "assets/data-kelas2.png",
+        "altText": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Banyak data.",
+        "hint": "Bandingkan tinggi batang."
+      },
+      {
+        "prompt": "Bagaimana mencari data terbanyak?",
+        "assetPath": "assets/data-kelas2.png",
+        "altText": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Lihat batang tertinggi.",
+        "hint": "Baca angkanya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  }
+}

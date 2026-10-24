@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-bahasa-indonesia-b07-bercerita",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bercerita — Bahasa Indonesia Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/bercerita-kelas2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7908,
+      "sha256": "a7bea868c4e223e23ede989ccaaae987cb0d0cbcb3044d699923b466cd91225e"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,27 @@
+{
+  "lessonId": "apresiasi-kelas2",
+  "packageId": "kelas2-seni-rupa-b07-apresiasi",
+  "title": "Apresiasi Karya",
+  "summary": "Mengamati dan menghargai karya seni.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengamati karya.",
+    "Menyebutkan warna dan bentuk.",
+    "Menghargai karya teman."
+  ],
+  "activityIds": [
+    "eksplorasi-apresiasi-kelas2",
+    "kuis-apresiasi-kelas2"
+  ],
+  "assessmentRefs": [
+    "kuis-apresiasi-kelas2"
+  ],
+  "assetRefs": [
+    "assets/apresiasi-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan anak mengamati."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ilustrasi-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Ilustrasi",
+  "instructions": "Amati gambar, lalu diskusikan langkahnya.",
+  "assets": [
+    "assets/ilustrasi-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu ilustrasi?",
+        "assetPath": "assets/ilustrasi-kelas2.png",
+        "altText": "Ilustrasi sederhana dari bentuk dasar.",
+        "reveal": "Gambar untuk menjelaskan cerita.",
+        "hint": "Membantu memahami."
+      },
+      {
+        "prompt": "Apa langkah pertama?",
+        "assetPath": "assets/ilustrasi-kelas2.png",
+        "altText": "Ilustrasi sederhana dari bentuk dasar.",
+        "reveal": "Menentukan tema.",
+        "hint": "Buat sketsa tipis."
+      },
+      {
+        "prompt": "Apa langkah terakhir?",
+        "assetPath": "assets/ilustrasi-kelas2.png",
+        "altText": "Ilustrasi sederhana dari bentuk dasar.",
+        "reveal": "Mewarnai.",
+        "hint": "Rapikan hasil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi sederhana dari bentuk dasar."
+  }
+}

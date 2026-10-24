@@ -1,0 +1,27 @@
+{
+  "lessonId": "pengukuran-kelas2",
+  "packageId": "kelas2-matematika-b04-pengukuran",
+  "title": "Pengukuran Panjang dan Berat",
+  "summary": "Mengukur panjang dan berat dengan alat sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengukur panjang.",
+    "Mengukur berat.",
+    "Menggunakan satuan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-pengukuran-kelas2",
+    "kuis-pengukuran-kelas2"
+  ],
+  "assessmentRefs": [
+    "kuis-pengukuran-kelas2"
+  ],
+  "assetRefs": [
+    "assets/pengukuran-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Penggaris, meteran, dan timbangan sederhana."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

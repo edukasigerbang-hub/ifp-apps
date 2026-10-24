@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pendidikan-pancasila-b02-aturan-sekolah",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Aturan di Sekolah — Pendidikan Pancasila Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/aturan-sekolah-kelas2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6590,
+      "sha256": "ee6e2288e6ad18c9e233f9832cbaffde75471a5f5e184cc0e642417b4cdfdbbb"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-menulis-paragraf-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Paragraf",
+  "instructions": "Amati gambar, lalu diskusikan langkah menulis paragraf.",
+  "assets": [
+    "assets/menulis-paragraf-kelas2.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ide pokok?",
+        "assetPath": "assets/menulis-paragraf-kelas2.png",
+        "altText": "Anak menulis paragraf sederhana di buku.",
+        "reveal": "Gagasan utama.",
+        "hint": "Menjadi inti paragraf."
+      },
+      {
+        "prompt": "Berapa kalimat dalam paragraf?",
+        "assetPath": "assets/menulis-paragraf-kelas2.png",
+        "altText": "Anak menulis paragraf sederhana di buku.",
+        "reveal": "Dua sampai tiga.",
+        "hint": "Saling berhubungan."
+      },
+      {
+        "prompt": "Apa yang diperiksa?",
+        "assetPath": "assets/menulis-paragraf-kelas2.png",
+        "altText": "Anak menulis paragraf sederhana di buku.",
+        "reveal": "Ejaan dan tanda baca.",
+        "hint": "Baca ulang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf sederhana di buku."
+  }
+}

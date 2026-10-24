@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-bola-kecil-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bola Kecil",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-raket",
+        "prompt": "Alat untuk memukul kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket"
+          },
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet"
+          },
+          {
+            "optionId": "opsi-tongkat",
+            "text": "Tongkat"
+          },
+          {
+            "optionId": "opsi-pemukul",
+            "text": "Pemukul kasti"
+          }
+        ],
+        "correctResponse": "opsi-raket"
+      },
+      {
+        "questionId": "soal-bet",
+        "prompt": "Tenis meja menggunakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet dan bola pingpong"
+          },
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket dan kok"
+          },
+          {
+            "optionId": "opsi-bola",
+            "text": "Bola sepak"
+          },
+          {
+            "optionId": "opsi-pemukul",
+            "text": "Pemukul dan bola kasti"
+          }
+        ],
+        "correctResponse": "opsi-bet"
+      },
+      {
+        "questionId": "soal-pemanasan",
+        "prompt": "Sebelum bermain kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan besar"
+          },
+          {
+            "optionId": "opsi-duduk",
+            "text": "Duduk diam"
+          }
+        ],
+        "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-sportif",
+        "prompt": "Sikap setelah bermain adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah"
+          },
+          {
+            "optionId": "opsi-tinggal",
+            "text": "Pergi"
+          },
+          {
+            "optionId": "opsi-salah",
+            "text": "Menyalahkan teman"
+          }
+        ],
+        "correctResponse": "opsi-salaman"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok, dan bet tenis meja."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-perkalian-dasar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kelompok Benda",
+  "instructions": "Amati gambar, lalu hitung bersama-sama.",
+  "assets": [
+    "assets/perkalian-dasar.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 2 × 3?",
+        "assetPath": "assets/perkalian-dasar.png",
+        "altText": "Kelompok benda untuk memahami perkalian.",
+        "reveal": "6.",
+        "hint": "2 kelompok berisi 3."
+      },
+      {
+        "prompt": "Berapa 4 × 2?",
+        "assetPath": "assets/perkalian-dasar.png",
+        "altText": "Kelompok benda untuk memahami perkalian.",
+        "reveal": "8.",
+        "hint": "4 kelompok berisi 2."
+      },
+      {
+        "prompt": "Apa arti 3 × 5?",
+        "assetPath": "assets/perkalian-dasar.png",
+        "altText": "Kelompok benda untuk memahami perkalian.",
+        "reveal": "3 kelompok berisi 5.",
+        "hint": "Jumlahnya 15."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kelompok benda untuk memahami perkalian."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "ilustrasi-kelas2",
+  "packageId": "kelas2-seni-rupa-b02-ilustrasi",
+  "title": "Menggambar Ilustrasi Sederhana",
+  "summary": "Membuat ilustrasi sederhana dari bentuk dasar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan tema.",
+    "Membuat sketsa.",
+    "Mewarnai ilustrasi."
+  ],
+  "activityIds": [
+    "eksplorasi-ilustrasi-kelas2",
+    "ordering-ilustrasi-kelas2"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/ilustrasi-kelas2.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi sederhana dari bentuk dasar."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
