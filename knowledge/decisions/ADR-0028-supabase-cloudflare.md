@@ -10,7 +10,7 @@ Repo [`edukasigerbang-hub/web`](https://github.com/edukasigerbang-hub/web) (Next
 Karena itu:
 
 - Migrasi di repo ini diubah menjadi **aditif** `supabase/migrations/0002_app_backend.sql`; **tidak** membuat ulang `licenses`/`devices`.
-- Kunci perangkat memakai `public.devices.device_id` (text unik) yang sudah ada; `platform` wajib (`windows|android`).
+- Kunci perangkat memakai `public.devices.device_id` (text unik) yang sudah ada; `platform` wajib (`windows|android`). **Dikoreksi oleh [ADR-0029](ADR-0029-ifp-devices-isolation.md):** `devices` ternyata milik Fanakon; Gerbang memakai `ifp_devices`.
 - Kolom lisensi baru (`serial_hash`, `product_id`, `license_type`, `machine_id`, `key_id`, `activated_at`) ditambahkan via `ALTER TABLE ... ADD COLUMN IF NOT EXISTS` ke `licenses` milik web.
 - Tabel baru: `enrollment_codes`, `sync_events`, `license_audit`, `admin_roles`; RPC `consume_enrollment_code`.
 - Urutan deployment: jalankan `web/supabase/migrations/0001_init.sql` lalu `0002_app_backend.sql` pada project Supabase yang sama.

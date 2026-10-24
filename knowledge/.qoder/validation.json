@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T15:20:26+07:00",
+  "last_validated_at": "2026-10-24T16:31:12+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -251,6 +251,12 @@
       "command": "wrangler secret put; curl https://gerbangedukasi.edukasigerbang.workers.dev/{/,/support,/api/activation,/api/admin/enrollment-codes}",
       "result": "PASS",
       "details": "dashboard vars + 3 worker secrets; / 200; /support 200 with edukasigerbang@gmail.com; /api/activation 400 ACTIVATION_INVALID_REQUEST (env configured); /api/admin/enrollment-codes 401 UNAUTHORIZED. Manual deploy produced ChunkLoadError; rolled back to d111f184."
+    },
+    {
+      "name": "ifp_devices_isolation",
+      "command": "Supabase SQL 0003; curl ifp_devices REST; wrangler deploy; curl worker; bundle check",
+      "result": "PASS",
+      "details": "ifp_devices created + sync_events FK rewired; REST 200; Worker 872ec15d /healthz 200, invalid enrollment 401; web bundle contains ifp_devices; Fanakon devices/commands/events/telemetry untouched"
     }
   ],
   "environment": {
