@@ -28,7 +28,7 @@ Schema konten sengaja **tidak** mengunci daftar mapel. Yang belum ada adalah oto
 
 ## Draf kerja
 
-Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belum terverifikasi**: [`OUTLINE_KELAS4_MERDEKA_DRAFT.md`](OUTLINE_KELAS4_MERDEKA_DRAFT.md). Dokumen itu hanya usulan urutan bab dan aktivitas untuk memulai produksi; D3–D7 masih harus diputuskan sebelum dianggap resmi.
+Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belum terverifikasi**: [induk](OUTLINE_KELAS4_MERDEKA_DRAFT.md), [Semester 1](KELAS4_SEMESTER1_MERDEKA_DRAFT.md), [Semester 2](KELAS4_SEMESTER2_MERDEKA_DRAFT.md). Dokumen-dokumen itu hanya usulan urutan bab dan aktivitas untuk memulai produksi; D3–D7 masih harus diputuskan sebelum dianggap resmi.
 
 ## Template matriks (ISI SETELAH D1–D7 disetujui)
 
