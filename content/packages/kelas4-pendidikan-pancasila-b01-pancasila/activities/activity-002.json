@@ -1,0 +1,54 @@
+{
+  "activityId": "matching-nilai-pancasila",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Sila dan Perilaku",
+  "instructions": "Pasangkan setiap sila Pancasila dengan contoh perilaku yang sesuai.",
+  "assets": [
+    "assets/gotong-royong.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-sila-1",
+        "left": "Sila ke-1",
+        "right": "Beribadah sesuai agama"
+      },
+      {
+        "pairId": "pasangan-sila-2",
+        "left": "Sila ke-2",
+        "right": "Menolong teman tanpa membeda-bedakan"
+      },
+      {
+        "pairId": "pasangan-sila-3",
+        "left": "Sila ke-3",
+        "right": "Bergotong royong membersihkan kelas"
+      },
+      {
+        "pairId": "pasangan-sila-4",
+        "left": "Sila ke-4",
+        "right": "Bermusyawarah memilih ketua kelas"
+      },
+      {
+        "pairId": "pasangan-sila-5",
+        "left": "Sila ke-5",
+        "right": "Berbagi tugas secara adil"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga siswa bekerja sama di kelas: satu menyapu lantai, satu merapikan buku, dan satu menyiram tanaman."
+  }
+}

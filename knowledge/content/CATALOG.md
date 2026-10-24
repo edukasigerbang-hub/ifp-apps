@@ -1,10 +1,14 @@
 # Katalog Konten
 
-**Status:** 1 paket draft · 0 paket disetujui · review teknis selesai (review manusia belum)
+**Status:** 5 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
 | `matematika-kelas3-pecahan` | 0.1.0 | 3 | matematika | Pecahan 1/2, 1/3, 1/4 | **DRAFT** | VALID (2 warning) | Teknis PASS* / manusia belum |
+| `kelas4-matematika-b03-pecahan` | 0.1.0 | 4 | matematika | Pecahan senilai | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b01-makhluk-hidup` | 0.1.0 | 4 | ipas | Makhluk hidup & lingkungan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | 0.1.0 | 4 | bahasa-indonesia | Teks deskripsi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b01-pancasila` | 0.1.0 | 4 | pendidikan-pancasila | Nilai Pancasila | **DRAFT** | VALID (2 warning) | belum |
 
 \* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
@@ -55,6 +59,23 @@ warnings:
 1. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 2. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
 3. Setelah Fase E/G (repository + learning runtime), simpan hasil belajar dan hubungkan paket lain ke Content Runtime.
+
+## Paket starter Kelas 4 (2026-10-24)
+
+Empat paket draft untuk G1 (Fase B Semester 1):
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b03-pecahan` | Pecahan Senilai dan Membandingkan Pecahan | eksplorasi + MCQ (4 soal) | `pecahan-senilai.png` |
+| `kelas4-ipas-b01-makhluk-hidup` | Ciri Makhluk Hidup dan Lingkungannya | eksplorasi + matching (5 pasangan) | `habitat-makhluk-hidup.png` |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Mengenal dan Menulis Teks Deskripsi | eksplorasi + MCQ (4 soal) | `halaman-sekolah.png` |
+| `kelas4-pendidikan-pancasila-b01-pancasila` | Nilai Pancasila dalam Kehidupan Sehari-hari | eksplorasi + matching (5 pasangan) | `gotong-royong.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik (dibuat oleh `scripts/generate-content-assets.mjs`), `curriculumRefs: []`, `reviewStatus: draft`.
+- Validasi: **VALID**, 0 issue, 2 warning (status draft + `curriculumRefs` kosong).
+- Impor: `content_import_package` untuk keempat paket **PASS** di data dir bersih; masing-masing 5 file, status `active`.
+- Belum: review pedagogis R1–R12; R10 tetap BLOCKING sampai D6 disetujui.
+- Matching tidak dipakai sebagai `assessmentRef` karena tidak memiliki `assessmentConfig`; kedua lesson matching memakai `assessmentRefs: []`.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

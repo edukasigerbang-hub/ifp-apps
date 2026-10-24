@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-makhluk-hidup",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Makhluk Hidup di Kebun",
+  "instructions": "Amati gambar kebun. Temukan makhluk hidup dan benda tak hidup, lalu pikirkan apa yang mereka butuhkan.",
+  "assets": [
+    "assets/habitat-makhluk-hidup.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Sebutkan makhluk hidup yang kamu lihat pada gambar.",
+        "assetPath": "assets/habitat-makhluk-hidup.png",
+        "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air.",
+        "reveal": "Tanaman, kupu-kupu, burung, dan siput adalah makhluk hidup.",
+        "hint": "Makhluk hidup dapat tumbuh, bernapas, dan membutuhkan makanan."
+      },
+      {
+        "prompt": "Apa saja yang dibutuhkan tanaman untuk tumbuh?",
+        "assetPath": "assets/habitat-makhluk-hidup.png",
+        "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air.",
+        "reveal": "Tanaman membutuhkan cahaya matahari, air, udara, dan zat hara dari tanah.",
+        "hint": "Perhatikan matahari, tetes air, dan tanah pada gambar."
+      },
+      {
+        "prompt": "Mengapa hewan dan tumbuhan bergantung pada lingkungannya?",
+        "assetPath": "assets/habitat-makhluk-hidup.png",
+        "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air.",
+        "reveal": "Lingkungan menyediakan makanan, air, udara, dan tempat tinggal. Jika lingkungan rusak, makhluk hidup juga terganggu.",
+        "hint": "Hubungkan kebutuhan makhluk hidup dengan bagian lingkungan di gambar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air."
+  }
+}

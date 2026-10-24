@@ -1,0 +1,54 @@
+{
+  "activityId": "matching-makhluk-hidup",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Makhluk Hidup dan Kebutuhannya",
+  "instructions": "Pasangkan setiap makhluk hidup dengan kebutuhan atau tempat hidup yang sesuai.",
+  "assets": [
+    "assets/habitat-makhluk-hidup.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-tanaman",
+        "left": "Tanaman",
+        "right": "Air, tanah, dan cahaya matahari"
+      },
+      {
+        "pairId": "pasangan-kupu-kupu",
+        "left": "Kupu-kupu",
+        "right": "Nektar bunga"
+      },
+      {
+        "pairId": "pasangan-burung",
+        "left": "Burung",
+        "right": "Pohon dan udara"
+      },
+      {
+        "pairId": "pasangan-siput",
+        "left": "Siput",
+        "right": "Daun dan tempat lembap"
+      },
+      {
+        "pairId": "pasangan-matahari",
+        "left": "Matahari",
+        "right": "Sumber energi dan cahaya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kebun cerah dengan matahari, pohon besar, tanaman muda berakar, kupu-kupu, burung, siput di tanah, dan tetes air."
+  }
+}

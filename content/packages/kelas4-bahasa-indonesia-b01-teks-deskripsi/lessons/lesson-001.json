@@ -1,0 +1,27 @@
+{
+  "lessonId": "teks-deskripsi",
+  "packageId": "kelas4-bahasa-indonesia-b01-teks-deskripsi",
+  "title": "Mengenal dan Menulis Teks Deskripsi",
+  "summary": "Mengenali ciri teks deskripsi, menggunakan kata pengindraan, dan menyusun deskripsi sederhana tentang lingkungan sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan tujuan dan ciri teks deskripsi.",
+    "Menggunakan kata pengindraan dalam kalimat deskripsi.",
+    "Menyusun teks deskripsi sederhana tentang objek di sekitar."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-deskripsi",
+    "kuis-teks-deskripsi"
+  ],
+  "assessmentRefs": [
+    "kuis-teks-deskripsi"
+  ],
+  "assetRefs": [
+    "assets/halaman-sekolah.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

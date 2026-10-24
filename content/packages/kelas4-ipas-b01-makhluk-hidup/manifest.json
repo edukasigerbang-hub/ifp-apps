@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-ipas-b01-makhluk-hidup",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Makhluk Hidup dan Lingkungannya — IPAS Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/habitat-makhluk-hidup.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6803,
+      "sha256": "6ae0614c6e8ff145a8495cc8b2886b9e06e53e6b70c3fcd0470404371900da9e"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

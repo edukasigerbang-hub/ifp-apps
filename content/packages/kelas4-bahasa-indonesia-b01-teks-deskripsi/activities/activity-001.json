@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-teks-deskripsi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Halaman Sekolah",
+  "instructions": "Amati gambar halaman sekolah. Catat hal yang dapat dilihat, didengar, dan dirasakan untuk bahan teks deskripsi.",
+  "assets": [
+    "assets/halaman-sekolah.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa saja yang terlihat di halaman sekolah pada gambar?",
+        "assetPath": "assets/halaman-sekolah.png",
+        "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak.",
+        "reveal": "Ada gedung sekolah, bendera, pohon, bangku, lapangan, dan jalan setapak.",
+        "hint": "Sebutkan objek dari yang paling besar ke yang lebih kecil."
+      },
+      {
+        "prompt": "Panca indra apa yang dapat digunakan saat mendeskripsikan halaman sekolah?",
+        "assetPath": "assets/halaman-sekolah.png",
+        "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak.",
+        "reveal": "Kita dapat menggunakan penglihatan, pendengaran, penciuman, dan peraba.",
+        "hint": "Bayangkan warna, suara, bau, dan tekstur di halaman sekolah."
+      },
+      {
+        "prompt": "Buat satu kalimat deskripsi tentang suasana halaman sekolah.",
+        "assetPath": "assets/halaman-sekolah.png",
+        "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak.",
+        "reveal": "Contoh: Halaman sekolah tampak hijau dan bersih, dengan angin pagi yang sejuk.",
+        "hint": "Gunakan kata sifat dan kata pengindraan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Halaman sekolah yang cerah: gedung beratap merah, bendera merah putih, dua pohon rindang, bangku, lapangan hijau, dan jalan setapak."
+  }
+}

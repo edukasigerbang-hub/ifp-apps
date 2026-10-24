@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-nilai-pancasila",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gotong Royong di Kelas",
+  "instructions": "Amati gambar siswa yang bekerja sama. Temukan nilai Pancasila yang tampak dalam kegiatan mereka.",
+  "assets": [
+    "assets/gotong-royong.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kegiatan apa yang dilakukan siswa pada gambar?",
+        "assetPath": "assets/gotong-royong.png",
+        "altText": "Tiga siswa bekerja sama di kelas: satu menyapu lantai, satu merapikan buku, dan satu menyiram tanaman.",
+        "reveal": "Mereka bergotong royong membersihkan dan merapikan kelas.",
+        "hint": "Perhatikan alat dan tugas masing-masing anak."
+      },
+      {
+        "prompt": "Nilai sila ke berapa yang tampak saat mereka bekerja sama?",
+        "assetPath": "assets/gotong-royong.png",
+        "altText": "Tiga siswa bekerja sama di kelas: satu menyapu lantai, satu merapikan buku, dan satu menyiram tanaman.",
+        "reveal": "Persatuan Indonesia (sila ke-3) tampak dari kerja sama; musyawarah (sila ke-4) tampak saat membagi tugas.",
+        "hint": "Hubungkan kerja sama dengan sila tentang persatuan."
+      },
+      {
+        "prompt": "Bagaimana sikap adil ditunjukkan dalam kegiatan itu?",
+        "assetPath": "assets/gotong-royong.png",
+        "altText": "Tiga siswa bekerja sama di kelas: satu menyapu lantai, satu merapikan buku, dan satu menyiram tanaman.",
+        "reveal": "Semua siswa mendapat tugas dan diperlakukan sama, sesuai sila ke-5 Keadilan Sosial.",
+        "hint": "Perhatikan apakah ada yang bekerja sendirian atau semua ikut serta."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga siswa bekerja sama di kelas: satu menyapu lantai, satu merapikan buku, dan satu menyiram tanaman."
+  }
+}
