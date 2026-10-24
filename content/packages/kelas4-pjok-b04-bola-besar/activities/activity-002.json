@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-bola-besar",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Permainan dan Teknik",
+  "instructions": "Pasangkan setiap permainan atau istilah dengan tekniknya.",
+  "assets": [
+    "assets/bola-besar.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-sepak",
+        "left": "Sepak bola",
+        "right": "Menendang bola"
+      },
+      {
+        "pairId": "pasangan-basket",
+        "left": "Bola basket",
+        "right": "Melempar bola ke ring"
+      },
+      {
+        "pairId": "pasangan-voli",
+        "left": "Bola voli",
+        "right": "Memukul bola melewati net"
+      },
+      {
+        "pairId": "pasangan-passing",
+        "left": "Passing",
+        "right": "Mengoper bola ke teman"
+      },
+      {
+        "pairId": "pasangan-dribble",
+        "left": "Dribbling",
+        "right": "Menggiring bola"
+      },
+      {
+        "pairId": "pasangan-tim",
+        "left": "Kerja sama",
+        "right": "Bermain sebagai tim"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga bola besar: bola sepak, bola basket, dan bola voli."
+  }
+}

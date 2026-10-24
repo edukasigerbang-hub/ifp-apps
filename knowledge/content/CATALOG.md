@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 44 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 46 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -29,8 +29,10 @@
 | `kelas4-seni-rupa-b03-warna-tekstur` | 0.1.0 | 4 | seni-rupa | Warna & tekstur | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pjok-b03-kebugaran` | 0.1.0 | 4 | pjok | Kebugaran jasmani | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b03-akhlak` | 0.1.0 | 4 | pai | Akhlak terpuji (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
-| `kelas4-seni-rupa-b04-pameran-kelas` | 0.1.0 | 4 | seni-rupa | Pameran kelas | **DRAFT** | VALID (2 warning) | belum |
-| `kelas4-pjok-b04-kesehatan` | 0.1.0 | 4 | pjok | Kesehatan & kebersihan diri | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b04-kolase` | 0.1.0 | 4 | seni-rupa | Kolase | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b04-bola-besar` | 0.1.0 | 4 | pjok | Permainan bola besar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b08-pameran-kelas` | 0.1.0 | 4 | seni-rupa | Pameran kelas | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b08-kesehatan` | 0.1.0 | 4 | pjok | Kesehatan & kebersihan diri | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b04-shalat` | 0.1.0 | 4 | pai | Shalat (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-matematika-b05-bangun-datar` | 0.1.0 | 4 | matematika | Bangun datar | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-ipas-b05-siklus-air` | 0.1.0 | 4 | ipas | Bumi, cuaca, siklus air | **DRAFT** | VALID (2 warning) | belum |
@@ -166,14 +168,15 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 
 | packageId | Lesson | Aktivitas | Aset |
 |---|---|---|---|
-| `kelas4-seni-rupa-b04-pameran-kelas` | Pameran Kelas | eksplorasi + ordering (5 langkah) | `pameran-kelas.png` |
-| `kelas4-pjok-b04-kesehatan` | Kesehatan dan Kebersihan Diri | eksplorasi + matching (6 pasangan) | `kebersihan-diri.png` |
+| `kelas4-seni-rupa-b08-pameran-kelas` | Pameran Kelas | eksplorasi + ordering (5 langkah) | `pameran-kelas.png` |
+| `kelas4-pjok-b08-kesehatan` | Kesehatan dan Kebersihan Diri | eksplorasi + matching (6 pasangan) | `kebersihan-diri.png` |
 | `kelas4-pai-b04-shalat` | Shalat | eksplorasi + ordering (5 shalat) | `shalat-ilustrasi.png` |
 
 - Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
 - Validasi: **VALID**, 0 issue, 2 warning per paket.
 - Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
 - **Semester 1 Kelas 4 lengkap: 28 paket draft** (7 mapel inti × 4 bab; PAI varian Islam).
+- Koreksi 2026-10-24: dua paket di atas adalah bab **Semester 2 (B08)**, bukan S1 B04; ID-nya sudah dipindahkan ke `-b08-`. B04 S1 yang benar adalah `kolase` dan `bola-besar`.
 - Bundle: konten diubah menjadi lazy chunk (`loadPackages` async); chunk utama turun ke **447 kB** (<500 kB). E2E home-catalog + learning-journey PASS.
 
 ## Batch 9 Kelas 4 (2026-10-24) — Semester 2 dimulai
@@ -235,6 +238,13 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
 - Bundle utama 466,5 kB (<500 kB); pantau saat 6 paket terakhir ditambahkan.
 - Sisa Semester 2: B07 & B08 untuk Seni Rupa/PJOK/PAI (6 paket) + opsi Bahasa Inggris.
+
+## Koreksi B04 Semester 1 (2026-10-24)
+
+- **Dipindahkan ke S2 B08:** `kelas4-seni-rupa-b04-pameran-kelas` → `kelas4-seni-rupa-b08-pameran-kelas`; `kelas4-pjok-b04-kesehatan` → `kelas4-pjok-b08-kesehatan`.
+- **Dibuat untuk S1 B04:** `kelas4-seni-rupa-b04-kolase` (Kolase) dan `kelas4-pjok-b04-bola-besar` (Permainan Bola Besar).
+- Validasi keempat paket: **VALID**; impor `content_import_package` **PASS** (5 file/paket, `active`).
+- Katalog sekarang 46 paket; S1 tetap 28 paket, S2 menjadi 18 paket.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

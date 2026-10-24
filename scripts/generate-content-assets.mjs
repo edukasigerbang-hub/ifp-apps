@@ -678,6 +678,54 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function collageScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // kertas kolase
+  rect(px, 70, 110, 520, 380, colors.white);
+  triangle(px, 110, 200, 260, 180, 180, 330, colors.teal);
+  circle(px, 370, 250, 80, colors.orange);
+  rect(px, 430, 330, 120, 100, colors.sun);
+  for (let i = 0; i < 4; i += 1) rect(px, 120 + i * 30, 360, 18, 90, colors.red);
+  // lem dan gunting
+  rect(px, 620, 240, 60, 160, colors.white);
+  rect(px, 630, 220, 40, 30, colors.blue);
+  line(px, 620, 470, 680, 410, colors.navy, 6);
+  circle(px, 610, 480, 12, colors.navy);
+  circle(px, 690, 400, 12, colors.navy);
+  return px;
+}
+
+function bigBallScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 290, 540];
+  for (const x of panels) {
+    rect(px, x, 100, 220, 420, colors.sky);
+    rect(px, x, 100, 220, 5, colors.navy);
+    rect(px, x, 515, 220, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 215, 100, 5, 420, colors.navy);
+  }
+  // sepak bola
+  circle(px, 150, 300, 80, colors.white);
+  for (const [x, y] of [[120, 260], [180, 260], [150, 315], [110, 330], [190, 330]]) {
+    circle(px, x, y, 16, colors.navy);
+  }
+  // basket
+  circle(px, 400, 300, 80, colors.orange);
+  line(px, 320, 300, 480, 300, colors.navy, 5);
+  line(px, 400, 220, 400, 380, colors.navy, 5);
+  arc(px, 400, 300, 55, 30, 150, colors.navy, 4);
+  // voli
+  circle(px, 650, 300, 80, colors.white);
+  arc(px, 650, 300, 55, -60, 60, colors.blue, 4);
+  arc(px, 650, 300, 55, 120, 240, colors.blue, 4);
+  return px;
+}
+
 function problemSolvingScene() {
   const px = canvas();
   fill(px, colors.sand);
@@ -1489,3 +1537,5 @@ write("content/packages/kelas4-matematika-b08-pemecahan-masalah/assets/pemecahan
 write("content/packages/kelas4-ipas-b08-ekonomi-pelestarian/assets/ekonomi-pelestarian.png", economyScene());
 write("content/packages/kelas4-bahasa-indonesia-b08-apresiasi-sastra/assets/apresiasi-sastra.png", literatureScene());
 write("content/packages/kelas4-pendidikan-pancasila-b08-proyek-kewargaan/assets/proyek-kewargaan.png", civicProjectScene());
+write("content/packages/kelas4-seni-rupa-b04-kolase/assets/kolase.png", collageScene());
+write("content/packages/kelas4-pjok-b04-bola-besar/assets/bola-besar.png", bigBallScene());

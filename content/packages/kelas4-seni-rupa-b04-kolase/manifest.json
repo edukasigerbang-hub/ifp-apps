@@ -1,23 +1,23 @@
 {
   "manifestVersion": 1,
-  "packageId": "kelas4-pjok-b04-kesehatan",
+  "packageId": "kelas4-seni-rupa-b04-kolase",
   "packageVersion": "0.1.0",
   "schemaVersion": "1.0.0",
-  "title": "Kesehatan dan Kebersihan Diri — PJOK Kelas 4 (Draft)",
+  "title": "Membuat Kolase — Seni Rupa Kelas 4 (Draft)",
   "locale": "id-ID",
   "gradeLevels": [
     4
   ],
   "subjects": [
-    "pjok"
+    "seni-rupa"
   ],
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kebersihan-diri.png",
+      "path": "assets/kolase.png",
       "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "sizeBytes": 6253,
+      "sha256": "28993a4c5cd827b23b5ac06c7f8814e454966d8f64cfacc008614bd72a6d249b"
     }
   ],
   "dependencies": [],

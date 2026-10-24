@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-kolase",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Kolase",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kolase",
+        "prompt": "Kolase dibuat dengan cara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tempel",
+            "text": "menempel bahan pada bidang"
+          },
+          {
+            "optionId": "opsi-ukir",
+            "text": "mengukir kayu"
+          },
+          {
+            "optionId": "opsi-tenun",
+            "text": "menenun benang"
+          },
+          {
+            "optionId": "opsi-cetak",
+            "text": "mencetak dengan tinta"
+          }
+        ],
+        "correctResponse": "opsi-tempel"
+      },
+      {
+        "questionId": "soal-lem",
+        "prompt": "Bahan yang digunakan untuk menempel potongan kertas adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lem",
+            "text": "lem"
+          },
+          {
+            "optionId": "opsi-air",
+            "text": "air"
+          },
+          {
+            "optionId": "opsi-pasir",
+            "text": "pasir"
+          },
+          {
+            "optionId": "opsi-cat",
+            "text": "cat"
+          }
+        ],
+        "correctResponse": "opsi-lem"
+      },
+      {
+        "questionId": "soal-gunting",
+        "prompt": "Alat untuk memotong kertas adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-gunting",
+            "text": "gunting"
+          },
+          {
+            "optionId": "opsi-penggaris",
+            "text": "penggaris"
+          },
+          {
+            "optionId": "opsi-lem",
+            "text": "lem"
+          },
+          {
+            "optionId": "opsi-kuas",
+            "text": "kuas"
+          }
+        ],
+        "correctResponse": "opsi-gunting"
+      },
+      {
+        "questionId": "soal-langkah",
+        "prompt": "Langkah pertama membuat kolase adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-siapkan",
+            "text": "menyiapkan bahan dan merancang"
+          },
+          {
+            "optionId": "opsi-bersihkan",
+            "text": "membersihkan kelas"
+          },
+          {
+            "optionId": "opsi-jemur",
+            "text": "menjemur kertas"
+          },
+          {
+            "optionId": "opsi-lipat",
+            "text": "melipat gunting"
+          }
+        ],
+        "correctResponse": "opsi-siapkan"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}
