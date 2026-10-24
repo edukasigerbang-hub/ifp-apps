@@ -58,6 +58,14 @@ export async function run({ page, artifactDir, log }) {
   );
   log(`Profil aktif: ${active}.`);
 
+  await page.waitFor(`document.body.textContent.includes("Privasi & data")`, {
+    label: "bagian privasi"
+  });
+  await page.waitFor(`document.body.textContent.includes("disimpan sampai dihapus eksplisit")`, {
+    label: "default retensi"
+  });
+  log("Bagian privasi & data menampilkan default retensi.");
+
   const mainLandmarks = await page.evaluate(`document.querySelectorAll("main").length`);
   assert(mainLandmarks === 1, `Landmark <main> harus tepat 1, ditemukan ${mainLandmarks}.`);
 

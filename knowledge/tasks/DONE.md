@@ -554,3 +554,16 @@
 **Verifikasi:** `cargo test` 55/55; `npm test` 68/68; `npm run build` PASS; `npm run e2e:review` PASS 9 pemeriksaan (dua kali); a11y 16 pemeriksaan.
 
 **Belum:** kirim audit ke server/pusat (OD-7); retensi PII (OD-4).
+
+### T-038 — OD-4: default privasi & retensi
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Default sementara: retensi lokal sampai dihapus eksplisit, tanpa pemangkasan otomatis; nama tidak disinkronkan; backup/CSV tetap memuat PII.
+- UI Pengaturan: bagian “Privasi & data” (lokal, ekspor, hapus, diagnostik, retensi).
+- Peringatan PII ditambahkan pada ekspor CSV hasil dan audit review.
+- ADR-0025 (provisional); release checklist OD-4 diperbarui; E2E smoke memeriksa bagian privasi.
+
+**Verifikasi:** `npm run build` PASS; `npm test` 68/68; `npm run e2e` PASS 8 pemeriksaan; `npm run a11y` 16 pemeriksaan.
+
+**Belum:** persetujuan legal/DPO, retensi server, consent formal.

@@ -32,6 +32,7 @@
 | Review konten lokal | `npm run e2e:review` 7 pemeriksaan: guru mencatat, siswa ditolak native, audit tersimpan |
 | Guard profil reviewer | Test Rust: profil dengan riwayat review tidak dapat dihapus (`PROFILE_HAS_REVIEWS`) |
 | Ekspor audit review | `e2e:review` memeriksa CSV (BOM/CRLF/isi), guru-only, tolak overwrite via test Rust |
+| Default privasi (OD-4) | `e2e` smoke 8 pemeriksaan: bagian “Privasi & data” + default retensi tampil; peringatan PII di ekspor |
 | Navigasi keyboard dasar | Tab pertama = tautan lewati; 10 langkah Tab bernama, semua punya indikator fokus |
 | Alur belajar end-to-end | `npm run e2e:journey` 11 pemeriksaan: impor paket → Player managed-first → eksplorasi 4 langkah → kuis 100 → 1 sesi/1 percobaan → outbox 1 event → Hasil Belajar |
 | Rollback konten | `npm run e2e:rollback` 9 pemeriksaan: v0.1.0 → v0.2.0 → rollback → v0.1.0; status paket active/disabled |

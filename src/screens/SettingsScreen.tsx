@@ -702,6 +702,31 @@ export function SettingsScreen() {
           </>
         )}
       </section>
+
+      <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+          Privasi &amp; data
+        </h2>
+        <ul className="mt-3 space-y-2 text-sm text-muted">
+          <li>
+            Nama profil, hasil belajar, dan review disimpan hanya di perangkat ini (tanpa akun
+            terpusat).
+          </li>
+          <li>
+            Backup dan ekspor CSV berisi nama profil/reviewer. File yang sudah diekspor tidak ikut
+            terhapus saat profil dihapus.
+          </li>
+          <li>
+            Hapus profil di bagian Profil untuk menghapus sesi dan hasil terkait; profil yang
+            memiliki riwayat review tidak dapat dihapus.
+          </li>
+          <li>Diagnostik diredaksi: tanpa nama profil, payload lisensi, atau secret.</li>
+          <li>
+            Default retensi: data disimpan sampai dihapus eksplisit; belum ada pemangkasan otomatis.
+            Kebijakan resmi masih menunggu persetujuan OD-4 (legal/privasi).
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

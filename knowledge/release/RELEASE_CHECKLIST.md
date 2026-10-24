@@ -46,7 +46,7 @@
 - [ ] Konten lengkap kelas 1–6 lulus review pedagogis (OD-1/OD-8)
 - [ ] Installer diuji: install, launch, upgrade, uninstall, preserve data/lisensi
 - [ ] Auto-updater + rollback diuji
-- [ ] Kebijakan privasi/retensi/backup (OD-4) disetujui
+- [ ] Kebijakan privasi/retensi/backup (OD-4) disetujui (default perilaku: retensi sampai dihapus, tanpa sinkron nama, peringatan PII — ADR-0025)
 
 ## Catatan
 
