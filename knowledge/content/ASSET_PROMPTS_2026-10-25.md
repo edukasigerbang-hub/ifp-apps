@@ -12,10 +12,10 @@
 
 ## Gaya global
 
-- **Kelas 1–3:** stylized 3D ala film animasi — kepala besar, mata ekspresif, material matte lembut, cahaya studio.
-- **Kelas 4–6:** gaya 3D yang sama dengan proporsi anak yang lebih matang (sekitar 10–12 tahun), bukan chibi.
+- **Kelas 1–3:** stylized 3D ala film animasi — kepala besar, mata ekspresif, material matte lembut, cahaya studio, latar krem.
+- **Kelas 4–6:** 3D semi-realistis — proporsi anak 10–12 tahun, tekstur kain, warna cerah, cahaya sinematik, latar alam Indonesia yang detail.
 - Karakter anak Indonesia konsisten: seragam putih dengan aksen merah, ramah dan sopan.
-- Cover menampilkan adegan kelas/sekolah; materi menampilkan objek 3D sederhana di latar krem.
+- Cover menampilkan adegan belajar; materi menampilkan objek/topik dengan latar sesuai jenjang.
 - Latar sederhana, ruang kosong untuk overlay judul (cover).
 - Konteks Indonesia, anak beragam, sopan, aman untuk anak SD.
 - **Tanpa teks/angka/logo/watermark**; angka divisualkan sebagai objek atau blok.
@@ -36,7 +36,7 @@
 ```text
 Wide 16:9 cover illustration for grade 1 of an Indonesian elementary school learning app. Cheerful classroom corner with very young children exploring picture books, colorful counting blocks, crayons, and simple shapes. High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop, warm teal, orange, navy and cream palette, uncluttered composition with clean cream space at the top for a title overlay, diverse Indonesian children, respectful and friendly, Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.
 
-Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
+Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
 ```
 
 ### Kelas 2 — Membaca dan Berhitung
@@ -44,7 +44,7 @@ Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2
 ```text
 Wide 16:9 cover illustration for grade 2 of an Indonesian elementary school learning app. Children reading a big picture book, counting objects in small baskets, and playing with geometric shapes in a bright classroom with a plant by the window. High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop, warm teal, orange, navy and cream palette, clean cream space at the top for a title overlay, Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.
 
-Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
+Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
 ```
 
 ## Contoh prompt materi
@@ -54,7 +54,7 @@ Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2
 ```text
 Educational illustration for grade 1 PAI in an Indonesian elementary school app, topic "Adab Sehari-hari". Membiasakan adab baik setiap hari. Show mosque silhouette, closed Quran on a rehal, prayer mat, dates and water, lantern; respectful, no depiction of prophets or God. High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.
 
-Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
+Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
 ```
 
 ### materi-kelas1-pai-b03-akhlak
@@ -62,7 +62,7 @@ Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2
 ```text
 Educational illustration for grade 1 PAI in an Indonesian elementary school app, topic "Akhlak Terpuji". Membiasakan akhlak terpuji sehari-hari. Show mosque silhouette, closed Quran on a rehal, prayer mat, dates and water, lantern; respectful, no depiction of prophets or God. High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.
 
-Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
+Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
 ```
 
 ### materi-kelas1-seni-rupa-b07-apresiasi
@@ -70,7 +70,7 @@ Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2
 ```text
 Educational illustration for grade 1 Seni Rupa in an Indonesian elementary school app, topic "Apresiasi Karya". Mengamati dan menghargai karya seni. Show art supplies, paint palette, brushes, colored paper collage, clay, simple gallery wall. High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.
 
-Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
+Avoid: text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs
 ```
 
 ## Catatan kualitas

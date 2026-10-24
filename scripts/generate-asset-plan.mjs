@@ -34,18 +34,18 @@ const subjectSceneHints = {
 };
 
 const negativePrompt =
-  "text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs";
+  "text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs";
 
 const lowerGradeCoverStyle =
   "High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
 const upperGradeCoverStyle =
-  "High-quality stylized 3D animated render, character design with age-appropriate proportions for older elementary children around 10 to 12 years old, expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
+  "High-quality semi-realistic 3D animated illustration, Pixar-style character design for older elementary children around 10 to 12 years old with natural head-to-body proportions, large expressive eyes, soft skin, detailed hair, realistic fabric textures, vibrant saturated colors, cinematic sunlight, lush detailed Indonesian environment background, shallow depth of field";
 const subjectCoverStyle =
   "High-quality stylized 3D animated still-life render, soft rounded shapes, smooth matte clay-like materials, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
 const lowerGradeMateriStyle =
   "High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background";
 const upperGradeMateriStyle =
-  "High-quality stylized 3D animated render, character design with age-appropriate proportions for older elementary children around 10 to 12 years old, expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background";
+  "High-quality semi-realistic 3D animated illustration, Pixar-style character design for older elementary children around 10 to 12 years old with natural head-to-body proportions, large expressive eyes, soft skin, detailed hair, realistic fabric textures, vibrant saturated colors, cinematic sunlight, lush softly blurred Indonesian environment background, shallow depth of field";
 
 function isLowerGrade(grade) {
   const value = Number(grade);
@@ -58,11 +58,16 @@ function materiStyleForGrade(grade) {
 
 function to3dCoverPrompt(prompt, grade) {
   const style = grade == null ? subjectCoverStyle : isLowerGrade(grade) ? lowerGradeCoverStyle : upperGradeCoverStyle;
-  return prompt
+  let out = prompt
     .replace(/ (?:Soft )?flat vector style, rounded shapes,/i, ` ${style},`)
     .replace(/ space at the top for a title overlay/i, " clean cream space at the top for a title overlay")
-    .replace(/ negative space for a title overlay/i, " clean cream negative space for a title overlay")
-    .replace(/ no text\.?$/i, " Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.");
+    .replace(/ negative space for a title overlay/i, " clean cream negative space for a title overlay");
+  if (grade != null && !isLowerGrade(grade)) {
+    out = out
+      .replace(/clean cream space at the top/i, "uncluttered sky space at the top")
+      .replace(/clean cream negative space at the top/i, "uncluttered sky negative space at the top");
+  }
+  return out.replace(/ no text\.?$/i, " Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.");
 }
 
 const gradeCovers = [
@@ -88,19 +93,19 @@ const gradeCovers = [
     grade: 4,
     title: "Kelas 4 — Berpikir dan Berkarya",
     prompt:
-      "Wide 16:9 cover illustration for grade 4 of an Indonesian elementary school learning app. Children measuring a plant, reading a large book, arranging place-value blocks, and presenting a group project on a small stage. Soft flat vector style, rounded shapes, teal, orange, navy and cream palette, space at the top for a title overlay, no text."
+      "Wide 16:9 cover illustration for grade 4 of an Indonesian elementary school learning app. Three older Indonesian children around 10 to 12 years old in white and red school uniforms in a lush school garden: one measures a potted plant with a wooden ruler, one reads a large picture book on a wooden bench, one arranges colorful place-value blocks on a low table, with a small presentation stage and a teacher in the background. Soft flat vector style, rounded shapes, teal, orange, navy and cream palette, space at the top for a title overlay, no text."
   },
   {
     grade: 5,
     title: "Kelas 5 — Tubuh, Bumi, dan Angkasa",
     prompt:
-      "Wide 16:9 cover illustration for grade 5 of an Indonesian elementary school learning app. Children exploring a simple human body model, a solar system mobile, a water cycle display, and a sports ball. Soft flat vector style, rounded shapes, teal, navy, orange and sky-blue palette, space at the top for a title overlay, no text."
+      "Wide 16:9 cover illustration for grade 5 of an Indonesian elementary school learning app. Three older Indonesian children around 10 to 12 years old in a bright science pavilion opening onto a lush school garden: one examines a simple human body model, one adjusts a solar system mobile, one points at a water cycle display with a sports ball nearby. Soft flat vector style, rounded shapes, teal, navy, orange and sky-blue palette, space at the top for a title overlay, no text."
   },
   {
     grade: 6,
     title: "Kelas 6 — Siap Melangkah",
     prompt:
-      "Wide 16:9 cover illustration for grade 6 of an Indonesian elementary school learning app. Confident older children with books, a globe, a science project, a small flag, and a path leading forward. Soft flat vector style, rounded shapes, teal, navy, orange and cream palette, hopeful and calm mood, space at the top for a title overlay, no text."
+      "Wide 16:9 cover illustration for grade 6 of an Indonesian elementary school learning app. Three confident older Indonesian children around 11 to 12 years old in white and red school uniforms standing on a path leading forward through a lush school garden, holding books, a globe, a science project, and a small red-and-white flag, hopeful and calm golden-hour mood. Soft flat vector style, rounded shapes, teal, navy, orange and cream palette, space at the top for a title overlay, no text."
   }
 ];
 
@@ -326,10 +331,10 @@ promptLines.push(`- **Total:** ${promptRows.length} prompt`);
 promptLines.push("");
 promptLines.push("## Gaya global");
 promptLines.push("");
-promptLines.push("- **Kelas 1–3:** stylized 3D ala film animasi — kepala besar, mata ekspresif, material matte lembut, cahaya studio.");
-promptLines.push("- **Kelas 4–6:** gaya 3D yang sama dengan proporsi anak yang lebih matang (sekitar 10–12 tahun), bukan chibi.");
+promptLines.push("- **Kelas 1–3:** stylized 3D ala film animasi — kepala besar, mata ekspresif, material matte lembut, cahaya studio, latar krem.");
+promptLines.push("- **Kelas 4–6:** 3D semi-realistis — proporsi anak 10–12 tahun, tekstur kain, warna cerah, cahaya sinematik, latar alam Indonesia yang detail.");
 promptLines.push("- Karakter anak Indonesia konsisten: seragam putih dengan aksen merah, ramah dan sopan.");
-promptLines.push("- Cover menampilkan adegan kelas/sekolah; materi menampilkan objek 3D sederhana di latar krem.");
+promptLines.push("- Cover menampilkan adegan belajar; materi menampilkan objek/topik dengan latar sesuai jenjang.");
 promptLines.push("- Latar sederhana, ruang kosong untuk overlay judul (cover).");
 promptLines.push("- Konteks Indonesia, anak beragam, sopan, aman untuk anak SD.");
 promptLines.push("- **Tanpa teks/angka/logo/watermark**; angka divisualkan sebagai objek atau blok.");
