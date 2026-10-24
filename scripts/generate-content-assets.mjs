@@ -663,10 +663,10 @@ write("content/packages/kelas4-ipas-b03-gaya-gerak/assets/gaya-gerak.png", force
 write("content/packages/kelas4-bahasa-indonesia-b03-ide-pokok/assets/mendengarkan-cerita.png", storyListening());
 write("content/packages/kelas4-pendidikan-pancasila-b03-hak-kewajiban/assets/belajar-dan-bertugas.png", rightsDuties());
 function triangle(px, x1, y1, x2, y2, x3, y3, color) {
-  const minX = Math.min(x1, x2, x3);
-  const maxX = Math.max(x1, x2, x3);
-  const minY = Math.min(y1, y2, y3);
-  const maxY = Math.max(y1, y2, y3);
+  const minX = Math.floor(Math.min(x1, x2, x3));
+  const maxX = Math.ceil(Math.max(x1, x2, x3));
+  const minY = Math.floor(Math.min(y1, y2, y3));
+  const maxY = Math.ceil(Math.max(y1, y2, y3));
   const area = (x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1);
   for (let y = minY; y <= maxY; y += 1) {
     for (let x = minX; x <= maxX; x += 1) {
@@ -675,6 +675,19 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
       const w3 = 1 - w1 - w2;
       if (w1 >= 0 && w2 >= 0 && w3 >= 0) set(px, x, y, color);
     }
+  }
+}
+
+function star(px, cx, cy, outer, inner, color) {
+  const points = [];
+  for (let i = 0; i < 10; i += 1) {
+    const radius = i % 2 === 0 ? outer : inner;
+    const angle = -Math.PI / 2 + (i * Math.PI) / 5;
+    points.push([cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius]);
+  }
+  for (let i = 0; i < 10; i += 1) {
+    const next = (i + 1) % 10;
+    triangle(px, cx, cy, points[i][0], points[i][1], points[next][0], points[next][1], color);
   }
 }
 
@@ -1721,6 +1734,149 @@ function goodMannersScene() {
   return px;
 }
 
+function placeValueBlocks() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const columns = [
+    { x: 30, color: colors.teal, size: 96, count: 3, gap: 12 },
+    { x: 210, color: colors.orange, size: 62, count: 4, gap: 12 },
+    { x: 390, color: colors.green, size: 16, count: 5, gap: 18, rod: true },
+    { x: 570, color: colors.red, size: 28, count: 2, gap: 12 }
+  ];
+  for (const column of columns) {
+    rect(px, column.x, 110, 200, 430, colors.sky);
+    rect(px, column.x, 110, 200, 5, colors.navy);
+    rect(px, column.x, 535, 200, 5, colors.navy);
+    rect(px, column.x, 110, 5, 430, colors.navy);
+    rect(px, column.x + 195, 110, 5, 430, colors.navy);
+    for (let i = 0; i < column.count; i += 1) {
+      if (column.rod) {
+        const bx = column.x + 40 + i * (column.size + column.gap);
+        rect(px, bx, 180, column.size, 330, column.color);
+      } else {
+        const bx = column.x + (200 - column.size) / 2;
+        const by = 500 - i * (column.size + column.gap) - column.size;
+        rect(px, bx, by, column.size, column.size, column.color);
+      }
+    }
+  }
+  return px;
+}
+
+function descriptionGarden() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 690, 120, 46, colors.sun);
+  rect(px, 0, 480, W, 120, colors.green);
+  rect(px, 0, 480, W, 12, colors.greenDark);
+  // pohon
+  rect(px, 150, 300, 34, 190, colors.soil);
+  circle(px, 167, 270, 90, colors.green);
+  circle(px, 120, 320, 55, colors.greenDark);
+  circle(px, 215, 320, 55, colors.green);
+  // bunga
+  for (const [x, y] of [[260, 440], [300, 470], [340, 440], [600, 440], [640, 470]]) {
+    line(px, x, y + 40, x, y + 90, colors.greenDark, 5);
+    circle(px, x, y, 22, colors.red);
+    circle(px, x, y, 9, colors.sun);
+  }
+  // bangku
+  rect(px, 330, 380, 170, 16, colors.soil);
+  rect(px, 340, 396, 14, 60, colors.navy);
+  rect(px, 470, 396, 14, 60, colors.navy);
+  // bendera
+  rect(px, 700, 300, 8, 190, colors.navy);
+  rect(px, 708, 300, 60, 20, colors.red);
+  rect(px, 708, 320, 60, 20, colors.white);
+  return px;
+}
+
+function livingThingsGarden() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 90, 110, 40, colors.sun);
+  rect(px, 0, 450, W, 150, colors.green);
+  // kolam
+  ellipse(px, 240, 500, 150, 55, colors.blue);
+  ellipse(px, 240, 495, 130, 42, colors.sky);
+  ellipse(px, 210, 495, 28, 14, colors.orange);
+  triangle(px, 185, 495, 160, 480, 160, 510, colors.orange);
+  // tumbuhan
+  line(px, 420, 470, 420, 360, colors.greenDark, 8);
+  ellipse(px, 400, 380, 26, 16, colors.green);
+  ellipse(px, 445, 400, 26, 16, colors.green);
+  ellipse(px, 420, 340, 22, 14, colors.green);
+  // kupu-kupu
+  ellipse(px, 560, 250, 26, 18, colors.orange);
+  ellipse(px, 600, 250, 26, 18, colors.orange);
+  line(px, 580, 230, 580, 280, colors.navy, 4);
+  // burung
+  ellipse(px, 690, 220, 28, 20, colors.blue);
+  circle(px, 710, 205, 12, colors.blue);
+  triangle(px, 720, 205, 740, 200, 720, 212, colors.orange);
+  // kucing
+  ellipse(px, 150, 430, 42, 30, colors.orange);
+  circle(px, 120, 405, 25, colors.orange);
+  triangle(px, 104, 390, 110, 360, 124, 386, colors.orange);
+  triangle(px, 136, 386, 146, 360, 150, 390, colors.orange);
+  line(px, 100, 400, 76, 394, colors.navy, 3);
+  line(px, 100, 406, 76, 406, colors.navy, 3);
+  line(px, 100, 412, 76, 418, colors.navy, 3);
+  return px;
+}
+
+function pancasilaSymbols() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const xs = [30, 190, 350, 510, 670];
+  for (const x of xs) {
+    rect(px, x, 100, 120, 430, colors.sky);
+    rect(px, x, 100, 120, 5, colors.navy);
+    rect(px, x, 525, 120, 5, colors.navy);
+    rect(px, x, 100, 5, 430, colors.navy);
+    rect(px, x + 115, 100, 5, 430, colors.navy);
+  }
+  // bintang
+  star(px, 90, 250, 46, 19, colors.sun);
+  // rantai
+  for (let row = 0; row < 3; row += 1) {
+    for (let i = 0; i < 3; i += 1) {
+      ellipse(px, 220 + i * 30, 210 + row * 52, 17, 25, colors.orange);
+    }
+  }
+  // pohon beringin
+  rect(px, 400, 300, 18, 190, colors.soil);
+  ellipse(px, 409, 250, 54, 44, colors.green);
+  ellipse(px, 380, 290, 34, 28, colors.greenDark);
+  ellipse(px, 438, 290, 34, 28, colors.greenDark);
+  for (const x of [370, 400, 430, 448]) line(px, 409, 330, x, 490, colors.soil, 4);
+  // kepala banteng
+  ellipse(px, 570, 300, 42, 52, colors.navy);
+  ellipse(px, 540, 246, 30, 12, colors.orange);
+  ellipse(px, 600, 246, 30, 12, colors.orange);
+  rect(px, 542, 280, 12, 12, colors.white);
+  rect(px, 586, 280, 12, 12, colors.white);
+  ellipse(px, 570, 340, 22, 12, colors.navy);
+  // padi dan kapas
+  line(px, 690, 480, 770, 480, colors.greenDark, 6);
+  line(px, 710, 480, 710, 200, colors.greenDark, 5);
+  for (let i = 0; i < 5; i += 1) {
+    ellipse(px, 696, 220 + i * 36, 10, 14, colors.sun);
+    ellipse(px, 724, 238 + i * 36, 10, 14, colors.sun);
+  }
+  line(px, 755, 480, 755, 230, colors.greenDark, 5);
+  line(px, 755, 262, 742, 262, colors.greenDark, 4);
+  line(px, 755, 250, 768, 250, colors.greenDark, 4);
+  circle(px, 742, 262, 14, colors.white);
+  circle(px, 768, 250, 14, colors.white);
+  circle(px, 755, 226, 15, colors.white);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -1765,3 +1921,7 @@ write("content/packages/kelas4-pai-b05-puasa/assets/puasa.png", fastingScene());
 write("content/packages/kelas4-pai-b06-zakat-infak/assets/zakat-infak.png", charityScene());
 write("content/packages/kelas4-pai-b07-sejarah-islam/assets/sejarah-islam.png", islamHistoryScene());
 write("content/packages/kelas4-pai-b08-adab-kisah-teladan/assets/adab-kisah-teladan.png", goodMannersScene());
+write("content/packages/kelas3-matematika-b01-bilangan-10000/assets/nilai-tempat-10000.png", placeValueBlocks());
+write("content/packages/kelas3-bahasa-indonesia-b01-teks-deskripsi/assets/taman-sekolah.png", descriptionGarden());
+write("content/packages/kelas3-ipas-b01-makhluk-hidup/assets/makhluk-hidup-sekitar.png", livingThingsGarden());
+write("content/packages/kelas3-pendidikan-pancasila-b01-pancasila/assets/simbol-pancasila.png", pancasilaSymbols());

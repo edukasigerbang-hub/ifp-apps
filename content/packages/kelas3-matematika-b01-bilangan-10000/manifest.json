@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b01-bilangan-10000",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bilangan sampai 10.000 — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/nilai-tempat-10000.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7736,
+      "sha256": "446b80c2f4e103d55481a2a0fc257ff1795c47e13664547b1fcb654cf53462f6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

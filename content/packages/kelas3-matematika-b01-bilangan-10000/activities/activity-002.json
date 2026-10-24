@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-bilangan-10000",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bilangan sampai 10.000",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-nilai-tempat",
+        "prompt": "Nilai tempat angka 7 pada bilangan 4.705 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ratusan",
+            "text": "Ratusan"
+          },
+          {
+            "optionId": "opsi-ribuan",
+            "text": "Ribuan"
+          },
+          {
+            "optionId": "opsi-puluhan",
+            "text": "Puluhan"
+          },
+          {
+            "optionId": "opsi-satuan",
+            "text": "Satuan"
+          }
+        ],
+        "correctResponse": "opsi-ratusan"
+      },
+      {
+        "questionId": "soal-membaca",
+        "prompt": "Bilangan 2.530 dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-benar",
+            "text": "Dua ribu lima ratus tiga puluh"
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "Dua ribu lima ratus tiga"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Dua ribu lima ratus tiga belas"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Dua ribu lima ratus"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-terbesar",
+        "prompt": "Bilangan terbesar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3990",
+            "text": "3.990"
+          },
+          {
+            "optionId": "opsi-3909",
+            "text": "3.909"
+          },
+          {
+            "optionId": "opsi-3900",
+            "text": "3.900"
+          },
+          {
+            "optionId": "opsi-3099",
+            "text": "3.099"
+          }
+        ],
+        "correctResponse": "opsi-3990"
+      },
+      {
+        "questionId": "soal-banding",
+        "prompt": "Tanda yang tepat untuk 4.250 ... 4.205 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lebih",
+            "text": ">"
+          },
+          {
+            "optionId": "opsi-kurang",
+            "text": "<"
+          },
+          {
+            "optionId": "opsi-sama",
+            "text": "="
+          },
+          {
+            "optionId": "opsi-tidak",
+            "text": "Tidak dapat dibandingkan"
+          }
+        ],
+        "correctResponse": "opsi-lebih"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+  }
+}

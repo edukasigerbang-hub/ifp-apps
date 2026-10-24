@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 56 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 60 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -60,6 +60,10 @@
 | `kelas4-pai-b06-zakat-infak` | 0.1.0 | 4 | pai | Zakat & infak (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b07-sejarah-islam` | 0.1.0 | 4 | pai | Sejarah Islam (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pai-b08-adab-kisah-teladan` | 0.1.0 | 4 | pai | Adab & kisah teladan (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-matematika-b01-bilangan-10000` | 0.1.0 | 3 | matematika | Bilangan sampai 10.000 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-bahasa-indonesia-b01-teks-deskripsi` | 0.1.0 | 3 | bahasa-indonesia | Teks deskripsi sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-ipas-b01-makhluk-hidup` | 0.1.0 | 3 | ipas | Makhluk hidup di sekitar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas3-pendidikan-pancasila-b01-pancasila` | 0.1.0 | 3 | pendidikan-pancasila | Simbol & makna Pancasila | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -67,10 +71,11 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Semester 1 (28 paket) dan Semester 2 (28 paket) lengkap sebagai draft. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
-2. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-3. Pantau ukuran bundle saat paket bertambah; lazy load konten sudah aktif (chunk utama 480,2 kB).
-4. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
+1. Kelas 4 lengkap (56 paket draft); Kelas 3 batch 1 sudah dibuat (4 paket). Lanjutkan Kelas 3 S1 batch 2 (Seni Rupa, PJOK, PAI B01 + Matematika B02).
+2. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
+3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
+4. Pantau ukuran bundle saat paket bertambah; lazy load konten sudah aktif (chunk utama 484,7 kB).
+5. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
 ## Paket starter Kelas 4 (2026-10-24)
 
@@ -297,3 +302,22 @@ Rencana urutan produksi seluruh kelas: [PRODUCTION_SCHEDULE.md](PRODUCTION_SCHED
 - `npm test`: 83/83 PASS + 4/4 golden fixture PASS.
 - `npm run build`: PASS; chunk utama 480,21 kB.
 - **Semester 2 lengkap: 28 paket draft.** Total katalog 56 paket (S1 28 + S2 28).
+
+## Batch 14 Kelas 3 — starter Semester 1 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas3-matematika-b01-bilangan-10000` | Bilangan sampai 10.000 | eksplorasi + MCQ (4 soal) | `nilai-tempat-10000.png` |
+| `kelas3-bahasa-indonesia-b01-teks-deskripsi` | Mengenal Teks Deskripsi | eksplorasi + matching (6 pasangan) | `taman-sekolah.png` |
+| `kelas3-ipas-b01-makhluk-hidup` | Makhluk Hidup di Sekitar | eksplorasi + matching (6 pasangan) | `makhluk-hidup-sekitar.png` |
+| `kelas3-pendidikan-pancasila-b01-pancasila` | Simbol dan Makna Pancasila | eksplorasi + matching (6 pasangan) | `simbol-pancasila.png` |
+
+- Outline baru: [OUTLINE_KELAS3_MERDEKA_DRAFT.md](OUTLINE_KELAS3_MERDEKA_DRAFT.md), [S1](KELAS3_SEMESTER1_MERDEKA_DRAFT.md), [S2](KELAS3_SEMESTER2_MERDEKA_DRAFT.md).
+- Audit konten: belum ada paket produksi Kelas 3; pilot pecahan hanya fixture E2E.
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
+- UI: filter kelas menampilkan **Kelas 3**; pencarian menemukan lesson; screenshot terverifikasi.
+- `npm test`: 83/83 PASS + 4/4 golden fixture PASS.
+- `npm run build`: PASS; chunk utama 484,65 kB.
+- Total katalog: **60 paket** (Kelas 4 56 + Kelas 3 4).

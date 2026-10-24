@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-makhluk-hidup",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Makhluk dan Ciri",
+  "instructions": "Pasangkan setiap makhluk atau benda dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-kupu",
+        "left": "Kupu-kupu",
+        "right": "Bernapas dengan trakea"
+      },
+      {
+        "pairId": "pasangan-ikan",
+        "left": "Ikan",
+        "right": "Bernapas dengan insang"
+      },
+      {
+        "pairId": "pasangan-burung",
+        "left": "Burung",
+        "right": "Bernapas dengan paru-paru"
+      },
+      {
+        "pairId": "pasangan-tumbuhan",
+        "left": "Tumbuhan",
+        "right": "Membuat makanan sendiri"
+      },
+      {
+        "pairId": "pasangan-kucing",
+        "left": "Kucing",
+        "right": "Memakan makanan lain"
+      },
+      {
+        "pairId": "pasangan-batu",
+        "left": "Batu",
+        "right": "Benda tak hidup"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing."
+  }
+}

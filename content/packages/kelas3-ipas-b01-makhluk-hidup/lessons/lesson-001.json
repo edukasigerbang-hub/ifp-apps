@@ -1,0 +1,25 @@
+{
+  "lessonId": "makhluk-hidup-sekitar",
+  "packageId": "kelas3-ipas-b01-makhluk-hidup",
+  "title": "Makhluk Hidup di Sekitar",
+  "summary": "Mengenali ciri makhluk hidup dan kebutuhannya melalui pengamatan lingkungan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan ciri-ciri makhluk hidup.",
+    "Mengelompokkan hewan dan tumbuhan di sekitar.",
+    "Menjelaskan kebutuhan makhluk hidup."
+  ],
+  "activityIds": [
+    "eksplorasi-makhluk-hidup",
+    "matching-makhluk-hidup"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/makhluk-hidup-sekitar.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

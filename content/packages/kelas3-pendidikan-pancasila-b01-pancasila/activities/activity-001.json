@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-simbol-pancasila",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Simbol Pancasila",
+  "instructions": "Amati lima simbol pada gambar, lalu diskusikan sila dan maknanya.",
+  "assets": [
+    "assets/simbol-pancasila.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Simbol apa yang melambangkan sila pertama?",
+        "assetPath": "assets/simbol-pancasila.png",
+        "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
+        "reveal": "Bintang emas.",
+        "hint": "Melambangkan ketuhanan."
+      },
+      {
+        "prompt": "Simbol sila ketiga?",
+        "assetPath": "assets/simbol-pancasila.png",
+        "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
+        "reveal": "Pohon beringin.",
+        "hint": "Tempat berlindung bersama."
+      },
+      {
+        "prompt": "Apa makna rantai pada sila kedua?",
+        "assetPath": "assets/simbol-pancasila.png",
+        "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
+        "reveal": "Kemanusiaan yang adil dan beradab; mata rantai saling terhubung.",
+        "hint": "Perhatikan bentuk rantai."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+  }
+}
