@@ -92,7 +92,7 @@ export function LessonPlayer() {
           }
         }
 
-        const { packages, errors } = loadContentPackages();
+        const { packages, errors } = await loadContentPackages();
         if (errors.length > 0) {
           const detail = errors
             .flatMap((error) => error.issues.map((issue) => `${issue.code}: ${issue.message}`))

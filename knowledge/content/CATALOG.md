@@ -158,7 +158,7 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Validasi: **VALID**, 0 issue, 2 warning per paket.
 - Impor: `content_import_package` ketiga paket **PASS** (5 file/paket, `active`).
 - **Semester 1 Kelas 4 lengkap: 28 paket draft** (7 mapel inti × 4 bab; PAI varian Islam).
-- Build masih memberi warning chunk JS >500 kB; perlu lazy load/code splitting.
+- Bundle: konten diubah menjadi lazy chunk (`loadPackages` async); chunk utama turun ke **447 kB** (<500 kB). E2E home-catalog + learning-journey PASS.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

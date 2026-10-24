@@ -1,4 +1,5 @@
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 function assert(condition, message) {
   if (!condition) {
@@ -62,9 +63,22 @@ export async function run({ page, artifactDir, log }) {
     label: "sapaan Beranda"
   });
   await page.waitFor(
-    `document.body.textContent.includes("Matematika") && document.body.textContent.includes("1 materi")`,
+    `document.body.textContent.includes("Matematika") && document.body.textContent.includes("4 materi")`,
     { label: "kartu mata pelajaran di Beranda" }
   );
+
+  const pilotPath = path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    "../fixtures/pilot-pecahan-kelas3"
+  );
+  const imported = await page.evaluate(`
+    window.__TAURI_INTERNALS__
+      .invoke("content_import_package", { input: { sourcePath: ${JSON.stringify(pilotPath)} } })
+      .then((result) => ({ ok: true, result }))
+      .catch((error) => ({ ok: false, error: String(error) }))
+  `);
+  assert(imported.ok, `Impor pilot fixture gagal: ${JSON.stringify(imported.error)}`);
+  log("Pilot fixture diimpor untuk menguji katalog bawaan + impor.");
   const resumeVisible = await page.evaluate(`
     [...document.querySelectorAll("h2")]
       .some((heading) => heading.textContent.trim() === "Lanjutkan belajar")
@@ -77,19 +91,19 @@ export async function run({ page, artifactDir, log }) {
     `document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`,
     { label: "halaman katalog" }
   );
-  await page.waitFor(`document.body.textContent.includes("1 materi ditemukan")`, {
+  await page.waitFor(`document.body.textContent.includes("materi ditemukan.")`, {
     label: "jumlah materi"
   });
-  log("Katalog memuat 1 materi bawaan.");
+  log("Katalog memuat materi bawaan + impor.");
 
-  assert(await page.evaluate(fillSearch("wujud")), "Input pencarian tidak ditemukan.");
+  assert(await page.evaluate(fillSearch("fotosintesis")), "Input pencarian tidak ditemukan.");
   await page.waitFor(`document.body.textContent.includes("Tidak ada materi yang cocok")`, {
     label: "hasil pencarian kosong"
   });
   log("Pencarian tanpa hasil menampilkan empty state.");
 
   assert(await page.evaluate(fillSearch("pecahan")), "Input pencarian tidak ditemukan.");
-  await page.waitFor(`document.body.textContent.includes("1 materi ditemukan")`, {
+  await page.waitFor(`document.body.textContent.includes("2 materi ditemukan")`, {
     label: "hasil pencarian pecahan"
   });
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
@@ -112,8 +126,8 @@ export async function run({ page, artifactDir, log }) {
     `document.querySelector("main h1")?.textContent.includes("Mengenal Pecahan")`,
     { label: "judul lesson di Player" }
   );
-  await page.waitFor(`document.body.textContent.includes("Paket bawaan build")`, {
-    label: "sumber paket bawaan"
+  await page.waitFor(`document.body.textContent.includes("Paket impor v0.1.0")`, {
+    label: "sumber paket impor"
   });
   log("Buka materi membuka lesson yang dipilih di Player.");
 

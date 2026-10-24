@@ -13,7 +13,7 @@ export async function loadCatalog(): Promise<CatalogLoadResult> {
   const errors: string[] = [];
   const collected: CatalogPackageInput[] = [];
 
-  const bundled = loadContentPackages();
+  const bundled = await loadContentPackages();
   for (const pkg of bundled.packages) {
     collected.push({ data: pkg.data, source: "bundled" });
   }
