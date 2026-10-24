@@ -44,6 +44,8 @@ pub struct AnswerInput {
     pub response_id: String,
     pub question_id: String,
     pub option_id: Option<String>,
+    #[serde(default)]
+    pub response_text: Option<String>,
     pub is_correct: bool,
 }
 
@@ -187,8 +189,24 @@ pub fn save_attempt(connection: &mut Connection, input: &SaveAttemptInput) -> Re
     for answer in &input.answers {
         validate_token(&answer.response_id, "ID respons")?;
         validate_token(&answer.question_id, "ID soal")?;
+        if answer.option_id.is_some() && answer.response_text.is_some() {
+            return Err(AppError::validation(
+                "Jawaban tidak boleh memiliki opsi dan teks sekaligus.",
+            ));
+        }
         if let Some(option_id) = &answer.option_id {
             validate_token(option_id, "ID opsi")?;
+        }
+        if let Some(text) = &answer.response_text {
+            let trimmed = text.trim();
+            if trimmed.is_empty() || trimmed.chars().count() > 500 {
+                return Err(AppError::validation("Teks jawaban harus 1–500 karakter."));
+            }
+        }
+        if answer.option_id.is_none() && answer.response_text.is_none() {
+            return Err(AppError::validation(
+                "Jawaban harus memiliki ID opsi atau teks.",
+            ));
         }
     }
 
@@ -241,7 +259,11 @@ pub fn save_attempt(connection: &mut Connection, input: &SaveAttemptInput) -> Re
                     answer.response_id,
                     input.attempt_id,
                     answer.question_id,
-                    serde_json::json!({ "optionId": answer.option_id }).to_string(),
+                    serde_json::json!({
+                        "optionId": answer.option_id,
+                        "responseText": answer.response_text
+                    })
+                    .to_string(),
                     if answer.is_correct { 1 } else { 0 },
                     input.occurred_at
                 ],
@@ -298,6 +320,7 @@ pub fn save_attempt(connection: &mut Connection, input: &SaveAttemptInput) -> Re
         "answers": input.answers.iter().map(|answer| serde_json::json!({
             "questionId": &answer.question_id,
             "optionId": &answer.option_id,
+            "responseText": &answer.response_text,
             "isCorrect": answer.is_correct,
         })).collect::<Vec<_>>(),
     })
@@ -459,12 +482,14 @@ mod tests {
                     response_id: format!("response-{unique}-1"),
                     question_id: "soal-1".to_string(),
                     option_id: Some("opsi-a".to_string()),
+                    response_text: None,
                     is_correct: true,
                 },
                 AnswerInput {
                     response_id: format!("response-{unique}-2"),
                     question_id: "soal-2".to_string(),
                     option_id: Some("opsi-b".to_string()),
+                    response_text: None,
                     is_correct: false,
                 },
             ],
@@ -482,6 +507,52 @@ mod tests {
         ensure_profile(&connection, &ensure_input()).expect("profile");
         start_session(&connection, &start_input()).expect("session");
         connection
+    }
+
+    #[test]
+    fn saves_text_answers_and_rejects_invalid_combinations() {
+        let mut connection = prepare();
+        let mut input = save_input("text", "event-text");
+        input.answers = vec![AnswerInput {
+            response_id: "response-text-1".to_string(),
+            question_id: "soal-teks".to_string(),
+            option_id: None,
+            response_text: Some("Setengah".to_string()),
+            is_correct: true,
+        }];
+        save_attempt(&mut connection, &input).expect("save text");
+
+        let stored: String = connection
+            .query_row(
+                "SELECT response_json FROM assessment_responses WHERE id = 'response-text-1'",
+                [],
+                |row| row.get(0),
+            )
+            .expect("response json");
+        assert!(stored.contains("\"responseText\":\"Setengah\""));
+        assert!(stored.contains("\"optionId\":null"));
+
+        let payload: String = connection
+            .query_row(
+                "SELECT payload_json FROM sync_outbox WHERE event_id = 'event-text'",
+                [],
+                |row| row.get(0),
+            )
+            .expect("payload");
+        assert!(payload.contains("\"responseText\":\"Setengah\""));
+
+        let mut both = save_input("both", "event-both");
+        both.answers[0].response_text = Some("teks".to_string());
+        assert!(save_attempt(&mut connection, &both).is_err());
+
+        let mut neither = save_input("neither", "event-neither");
+        neither.answers[0].option_id = None;
+        assert!(save_attempt(&mut connection, &neither).is_err());
+
+        let mut blank = save_input("blank", "event-blank");
+        blank.answers[0].option_id = None;
+        blank.answers[0].response_text = Some("   ".to_string());
+        assert!(save_attempt(&mut connection, &blank).is_err());
     }
 
     #[test]

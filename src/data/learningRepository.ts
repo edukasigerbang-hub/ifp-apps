@@ -19,6 +19,7 @@ export interface AnswerRecord {
   responseId: string;
   questionId: string;
   optionId: string | null;
+  responseText?: string | null;
   isCorrect: boolean;
 }
 

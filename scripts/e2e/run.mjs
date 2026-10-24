@@ -33,6 +33,7 @@ let handle;
 let page;
 let setup;
 let failed = false;
+let failureMessage = null;
 try {
   setup = await scenario.setup?.({ artifactDir });
   handle = await launchApp({
@@ -44,6 +45,7 @@ try {
   await scenario.run({ page, artifactDir, log, setup });
 } catch (error) {
   failed = true;
+  failureMessage = error.message;
   console.error(`\nE2E GAGAL: ${error.message}`);
   if (page) {
     try {
@@ -77,6 +79,7 @@ try {
         scenario: scenarioName,
         passed,
         failed,
+        error: failureMessage,
         finishedAt: new Date().toISOString()
       },
       null,

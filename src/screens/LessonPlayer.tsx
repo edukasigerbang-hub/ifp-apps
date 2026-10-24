@@ -358,6 +358,7 @@ function LessonView({
           responseId: crypto.randomUUID(),
           questionId: answer.questionId,
           optionId: answer.optionId,
+          responseText: answer.responseText,
           isCorrect: answer.isCorrect
         }))
       });
@@ -472,12 +473,16 @@ function LessonView({
       >
         {activeActivity.type === "exploration" ? (
           <ExplorationActivity
+            key={activeActivity.activityId}
             activity={activeActivity}
             assets={contentPackage.assets}
             onFinish={assessmentActivityId ? () => setActiveActivityId(assessmentActivityId) : undefined}
           />
-        ) : activeActivity.type === "multiple-choice" ? (
+        ) : activeActivity.type === "multiple-choice" ||
+          activeActivity.type === "true-false" ||
+          activeActivity.type === "short-answer" ? (
           <QuizActivity
+            key={activeActivity.activityId}
             activity={activeActivity}
             onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
           />

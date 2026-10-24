@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { scoreQuiz } from "../../content/quiz";
+import { isAnswerCorrect, scoreQuiz } from "../../content/quiz";
 import type { Activity } from "../../content/schema/activity";
 
 interface QuizActivityProps {
@@ -10,6 +10,7 @@ interface QuizActivityProps {
 export interface QuizGradedAnswer {
   questionId: string;
   optionId: string | null;
+  responseText: string | null;
   isCorrect: boolean;
 }
 
@@ -33,7 +34,10 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
     return <p className="text-sm text-muted">Kuis ini belum memiliki soal.</p>;
   }
 
-  const answeredCount = questions.filter((question) => answers[question.questionId] !== undefined).length;
+  const answeredCount = questions.filter((question) => {
+    const answer = answers[question.questionId];
+    return question.responseType === "text" ? Boolean(answer?.trim()) : answer !== undefined;
+  }).length;
   const allAnswered = answeredCount === questions.length;
 
   function choose(questionId: string, optionId: string) {
@@ -48,14 +52,13 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
       onGraded({
         score: outcome.score,
         answers: questions.map((question) => {
-          const optionId = answers[question.questionId] ?? null;
+          const answer = answers[question.questionId];
+          const isText = question.responseType === "text";
           return {
             questionId: question.questionId,
-            optionId,
-            isCorrect:
-              typeof question.correctResponse === "string" &&
-              optionId !== null &&
-              answers[question.questionId] === question.correctResponse
+            optionId: isText ? null : answer ?? null,
+            responseText: isText ? answer?.trim() ?? null : null,
+            isCorrect: isAnswerCorrect(question, answer)
           };
         })
       });
@@ -79,28 +82,50 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
             <legend className="px-1 text-sm font-semibold text-muted">Soal {index + 1}</legend>
             <p className="mt-1 text-base font-medium leading-relaxed">{question.prompt}</p>
             <div className="mt-4 space-y-2">
-              {(question.options ?? []).map((option) => {
-                const checked = answers[question.questionId] === option.optionId;
-                return (
-                  <label
-                    key={option.optionId}
-                    className={`flex min-h-11 cursor-pointer items-center gap-3 rounded-control border px-4 py-2 text-sm ${
-                      checked ? "border-primary bg-primary/5 font-medium" : "border-ink/10 hover:bg-paper"
-                    } ${result ? "cursor-default opacity-80" : ""}`}
-                  >
-                    <input
-                      type="radio"
-                      name={question.questionId}
-                      value={option.optionId}
-                      checked={checked}
-                      disabled={result !== null}
-                      onChange={() => choose(question.questionId, option.optionId)}
-                      className="h-4 w-4 accent-[var(--color-primary)]"
-                    />
-                    {option.text}
-                  </label>
-                );
-              })}
+              {question.responseType === "text" ? (
+                <label className="block text-sm">
+                  Jawaban
+                  <input
+                    type="text"
+                    value={answers[question.questionId] ?? ""}
+                    aria-label={question.prompt}
+                    disabled={result !== null}
+                    onChange={(event) => choose(question.questionId, event.target.value)}
+                    className="mt-1 block min-h-11 w-full max-w-md rounded-control border border-ink/15 px-3 text-sm disabled:opacity-80"
+                  />
+                </label>
+              ) : (
+                (question.responseType === "boolean"
+                  ? [
+                      { optionId: "true", text: "Benar" },
+                      { optionId: "false", text: "Salah" }
+                    ]
+                  : (question.options ?? [])
+                ).map((option) => {
+                  const checked = answers[question.questionId] === option.optionId;
+                  return (
+                    <label
+                      key={option.optionId}
+                      className={`flex min-h-11 cursor-pointer items-center gap-3 rounded-control border px-4 py-2 text-sm ${
+                        checked
+                          ? "border-primary bg-primary/5 font-medium"
+                          : "border-ink/10 hover:bg-paper"
+                      } ${result ? "cursor-default opacity-80" : ""}`}
+                    >
+                      <input
+                        type="radio"
+                        name={question.questionId}
+                        value={option.optionId}
+                        checked={checked}
+                        disabled={result !== null}
+                        onChange={() => choose(question.questionId, option.optionId)}
+                        className="h-4 w-4 accent-[var(--color-primary)]"
+                      />
+                      {option.text}
+                    </label>
+                  );
+                })
+              )}
             </div>
           </fieldset>
         ))}

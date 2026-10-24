@@ -40,6 +40,7 @@
 | T-028 | E2E aktivasi online | `npm run e2e:license-online`: server referensi + key sementara; aktivasi serial → native verify → server audit; serial tak dikenal ditolak; 7 pemeriksaan |
 | T-029 | A11y reflow & state dinamis | `npm run a11y`: 8 layar + reflow 320/640 + teks 200% + target sentuh + konfirmasi hapus; 15 pemeriksaan, 0 warning |
 | T-030 | Beranda & Jelajah Materi | Katalog per lesson (bundled + impor, managed menang), filter kelas/mapel/cari, pilih lesson → Player, kartu “Lanjutkan belajar”; 6 unit test + E2E 8 pemeriksaan |
+| T-031 | Aktivitas benar-salah & jawaban singkat | `responseText` di kontrak lokal/sync; UI radio Benar/Salah + input teks; normalisasi jawaban; remount per aktivitas; E2E 5 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -116,6 +117,8 @@
 | State dinamis konfirmasi hapus | **PASS** — 0 error/0 warning |
 | Beranda & katalog | **PASS** — katalog 1 materi bawaan; cari/filter; buka lesson; kuis 100; kartu “Lanjutkan belajar” membuka lesson terakhir |
 | Unit test katalog | **PASS** — 6 test baru; total 49/49 |
+| Aktivitas benar-salah & jawaban singkat | **PASS** — E2E 5 pemeriksaan: dua aktivitas dinilai 100, 2 percobaan tersimpan, respons teks `responseText` |
+| Regresi aktivitas | **PASS** — journey 11/11, a11y 15 pemeriksaan, cargo 48/48, npm 53/53 |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |

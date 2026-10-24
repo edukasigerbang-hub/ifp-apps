@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { scoreQuiz } from "../quiz";
+import { isAnswerCorrect, scoreQuiz } from "../quiz";
 import type { Activity } from "../schema/activity";
 
 type QuizQuestion = NonNullable<Activity["assessmentConfig"]>["questions"][number];
@@ -47,5 +47,47 @@ describe("scoreQuiz", () => {
     const outcome = scoreQuiz([], {}, 75);
 
     expect(outcome).toEqual({ correct: 0, total: 0, score: 0, passed: false });
+  });
+});
+
+describe("jawaban singkat", () => {
+  const textQuestions: QuizQuestion[] = [
+    {
+      questionId: "soal-teks",
+      prompt: "Tuliskan setengah",
+      responseType: "text",
+      correctResponse: "setengah"
+    }
+  ];
+
+  it("mengabaikan spasi dan huruf besar", () => {
+    expect(
+      scoreQuiz(textQuestions, { "soal-teks": "  SETENGAH  " }, 75).score
+    ).toBe(100);
+  });
+
+  it("menolak jawaban kosong atau salah", () => {
+    expect(scoreQuiz(textQuestions, { "soal-teks": "   " }, 75).score).toBe(0);
+    expect(scoreQuiz(textQuestions, { "soal-teks": "sepertiga" }, 75).score).toBe(0);
+  });
+
+  it("isAnswerCorrect menangani jawaban kosong", () => {
+    const question = textQuestions[0];
+    expect(isAnswerCorrect(question, undefined)).toBe(false);
+    expect(isAnswerCorrect(question, "")).toBe(false);
+    expect(isAnswerCorrect(question, "Setengah")).toBe(true);
+  });
+});
+
+describe("benar-salah", () => {
+  it("menerima 'false' sebagai jawaban benar untuk pernyataan salah", () => {
+    const question: QuizQuestion = {
+      questionId: "soal-bs",
+      prompt: "1/2 lebih kecil dari 1/4",
+      responseType: "boolean",
+      correctResponse: "false"
+    };
+    expect(scoreQuiz([question], { "soal-bs": "false" }, 75).passed).toBe(true);
+    expect(scoreQuiz([question], { "soal-bs": "true" }, 75).passed).toBe(false);
   });
 });

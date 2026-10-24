@@ -461,3 +461,17 @@
 **Verifikasi:** `npm test` 49/49 + golden 4/4; `npm run build` PASS; `npm run e2e:home` PASS 8 pemeriksaan (dua kali); regression smoke & journey PASS; `npm run a11y` 15 pemeriksaan PASS.
 
 **Belum:** “Lanjutkan” membuka sesi baru (bukan posisi tengah aktivitas); katalog memuat metadata semua paket saat layar dibuka.
+
+### T-031 — Aktivitas benar-salah & jawaban singkat
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- `isAnswerCorrect` + normalisasi teks (trim/lowercase); `scoreQuiz` memakainya.
+- `QuizActivity`: radio Benar/Salah untuk `boolean`, input teks untuk `responseText`; tombol periksa aktif hanya bila semua terjawab.
+- Kontrak jawaban: `AnswerInput.response_text`, aturan tepat satu `optionId`/`responseText`, `response_json` dan payload sync memuat `responseText`.
+- `LessonPlayer`: tiga tipe kuis memakai `QuizActivity` dengan `key` per aktivitas (memperbaiki state bocor antar-tab).
+- ADR-0021; SYNC_CONTRACT diperbarui.
+
+**Verifikasi:** `cargo test` 48/48; `npm test` 53/53 + golden; `npm run e2e:activities` PASS 5 pemeriksaan; regression journey/a11y PASS.
+
+**Belum:** matching, ordering, multiple-choice multi-jawaban; penilaian teks hanya kecocokan persis setelah normalisasi.
