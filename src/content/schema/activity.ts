@@ -123,6 +123,130 @@ export const activitySchema = z
         input: activity.completionPolicy.threshold
       });
     }
+
+    if (activity.type === "matching") {
+      const pairs = activity.interactionConfig.pairs;
+      if (!Array.isArray(pairs) || pairs.length < 2 || pairs.length > 12) {
+        ctx.addIssue({
+          code: "custom",
+          message: "matching memerlukan interactionConfig.pairs (2–12 pasangan)",
+          path: ["interactionConfig", "pairs"],
+          input: pairs
+        });
+        return;
+      }
+      const seen = new Set<string>();
+      pairs.forEach((raw, index) => {
+        if (typeof raw !== "object" || raw === null || Array.isArray(raw)) {
+          ctx.addIssue({
+            code: "custom",
+            message: "pasangan harus berupa objek",
+            path: ["interactionConfig", "pairs", index],
+            input: raw
+          });
+          return;
+        }
+        const pair = raw as Record<string, unknown>;
+        const idResult = idSchema.safeParse(pair.pairId);
+        if (!idResult.success) {
+          ctx.addIssue({
+            code: "custom",
+            message: "pairId tidak valid",
+            path: ["interactionConfig", "pairs", index, "pairId"],
+            input: pair.pairId
+          });
+        } else if (seen.has(idResult.data)) {
+          ctx.addIssue({
+            code: "custom",
+            message: "pairId duplikat",
+            path: ["interactionConfig", "pairs", index, "pairId"],
+            input: pair.pairId
+          });
+        } else {
+          seen.add(idResult.data);
+        }
+        for (const side of ["left", "right"] as const) {
+          const value = pair[side];
+          if (typeof value !== "string" || value.trim().length === 0 || value.length > 200) {
+            ctx.addIssue({
+              code: "custom",
+              message: `${side} harus 1–200 karakter`,
+              path: ["interactionConfig", "pairs", index, side],
+              input: value
+            });
+          }
+        }
+      });
+    }
+
+    if (activity.type === "ordering") {
+      const items = activity.interactionConfig.items;
+      const correctOrder = activity.interactionConfig.correctOrder;
+      if (!Array.isArray(items) || items.length < 2 || items.length > 12) {
+        ctx.addIssue({
+          code: "custom",
+          message: "ordering memerlukan interactionConfig.items (2–12 item)",
+          path: ["interactionConfig", "items"],
+          input: items
+        });
+        return;
+      }
+      const itemIds = new Set<string>();
+      items.forEach((raw, index) => {
+        if (typeof raw !== "object" || raw === null || Array.isArray(raw)) {
+          ctx.addIssue({
+            code: "custom",
+            message: "item harus berupa objek",
+            path: ["interactionConfig", "items", index],
+            input: raw
+          });
+          return;
+        }
+        const item = raw as Record<string, unknown>;
+        const idResult = idSchema.safeParse(item.itemId);
+        if (!idResult.success) {
+          ctx.addIssue({
+            code: "custom",
+            message: "itemId tidak valid",
+            path: ["interactionConfig", "items", index, "itemId"],
+            input: item.itemId
+          });
+        } else if (itemIds.has(idResult.data)) {
+          ctx.addIssue({
+            code: "custom",
+            message: "itemId duplikat",
+            path: ["interactionConfig", "items", index, "itemId"],
+            input: item.itemId
+          });
+        } else {
+          itemIds.add(idResult.data);
+        }
+        const text = item.text;
+        if (typeof text !== "string" || text.trim().length === 0 || text.length > 200) {
+          ctx.addIssue({
+            code: "custom",
+            message: "text harus 1–200 karakter",
+            path: ["interactionConfig", "items", index, "text"],
+            input: text
+          });
+        }
+      });
+      if (
+        !Array.isArray(correctOrder) ||
+        correctOrder.length !== items.length ||
+        !correctOrder.every(
+          (value): value is string => typeof value === "string" && itemIds.has(value)
+        ) ||
+        new Set(correctOrder).size !== correctOrder.length
+      ) {
+        ctx.addIssue({
+          code: "custom",
+          message: "correctOrder harus memuat setiap itemId tepat sekali",
+          path: ["interactionConfig", "correctOrder"],
+          input: correctOrder
+        });
+      }
+    }
   });
 
 export type Activity = z.infer<typeof activitySchema>;

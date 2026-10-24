@@ -490,3 +490,17 @@
 **Verifikasi:** `npm test` 56/56; `npm run e2e:activities` PASS 6 pemeriksaan (dua kali); journey 11/11; `cargo test` 48/48.
 
 **Belum:** matching dan ordering.
+
+### T-033 — Aktivitas matching & ordering
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Kontrak baru di `activitySchema`: matching `pairs` (2–12, `pairId` unik) dan ordering `items` + `correctOrder` (permutasi lengkap); konfigurasi rusak ditolak sebelum aktivasi.
+- `MatchingActivity`: select per baris, status Benar/Salah setelah diperiksa, skor per pasangan.
+- `OrderingActivity`: tombol naik/turun 44 px berlabel, skor per posisi; urutan awal mengikuti `items`.
+- `interactions.ts` (baca + skor) dan `graded.ts` (tipe hasil bersama); registry `matching.requiresAssessment = false`.
+- E2E memperluas paket runtime menjadi lima aktivitas; ADR-0023.
+
+**Verifikasi:** `npm test` 68/68; `npm run build` PASS; `npm run e2e:activities` PASS 8 pemeriksaan (dua kali); journey 11/11; a11y 15 pemeriksaan; `npm run content:validate` pilot tetap valid.
+
+**Belum:** tidak ada nilai parsial; drag-and-drop tidak dipakai (aksesibilitas); gaya guru.

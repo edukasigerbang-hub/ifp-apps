@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ExplorationActivity } from "../components/content/ExplorationActivity";
+import { MatchingActivity } from "../components/content/MatchingActivity";
+import { OrderingActivity } from "../components/content/OrderingActivity";
 import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
@@ -482,6 +484,18 @@ function LessonView({
           activeActivity.type === "true-false" ||
           activeActivity.type === "short-answer" ? (
           <QuizActivity
+            key={activeActivity.activityId}
+            activity={activeActivity}
+            onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
+          />
+        ) : activeActivity.type === "matching" ? (
+          <MatchingActivity
+            key={activeActivity.activityId}
+            activity={activeActivity}
+            onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
+          />
+        ) : activeActivity.type === "ordering" ? (
+          <OrderingActivity
             key={activeActivity.activityId}
             activity={activeActivity}
             onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}

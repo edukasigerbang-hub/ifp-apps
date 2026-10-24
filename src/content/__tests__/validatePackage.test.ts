@@ -62,6 +62,79 @@ describe("validateContentPackage", () => {
     expect(result.issues.some((issue) => issue.message.includes("field terlarang 'script'"))).toBe(true);
   });
 
+  it("menerima konfigurasi matching yang valid", () => {
+    const packageInput = basePackage();
+    const activity = packageInput.activities[0] as Record<string, unknown>;
+    activity.type = "matching";
+    activity.interactionConfig = {
+      pairs: [
+        { pairId: "pasangan-1", left: "1/2", right: "Setengah" },
+        { pairId: "pasangan-2", left: "1/4", right: "Seperempat" }
+      ]
+    };
+
+    const result = validateContentPackage(packageInput);
+
+    expect(result.issues).toEqual([]);
+    expect(result.ok).toBe(true);
+  });
+
+  it("menolak matching dengan pairId duplikat", () => {
+    const packageInput = basePackage();
+    const activity = packageInput.activities[0] as Record<string, unknown>;
+    activity.type = "matching";
+    activity.interactionConfig = {
+      pairs: [
+        { pairId: "pasangan-1", left: "1/2", right: "Setengah" },
+        { pairId: "pasangan-1", left: "1/4", right: "Seperempat" }
+      ]
+    };
+
+    const result = validateContentPackage(packageInput);
+
+    expect(result.ok).toBe(false);
+    expect(result.issues.some((issue) => issue.message.includes("pairId duplikat"))).toBe(true);
+  });
+
+  it("menerima konfigurasi ordering yang valid", () => {
+    const packageInput = basePackage();
+    const activity = packageInput.activities[0] as Record<string, unknown>;
+    activity.type = "ordering";
+    activity.interactionConfig = {
+      items: [
+        { itemId: "angka-1", text: "Angka 1" },
+        { itemId: "angka-2", text: "Angka 2" },
+        { itemId: "angka-3", text: "Angka 3" }
+      ],
+      correctOrder: ["angka-1", "angka-2", "angka-3"]
+    };
+
+    const result = validateContentPackage(packageInput);
+
+    expect(result.issues).toEqual([]);
+    expect(result.ok).toBe(true);
+  });
+
+  it("menolak ordering yang correctOrder-nya tidak lengkap", () => {
+    const packageInput = basePackage();
+    const activity = packageInput.activities[0] as Record<string, unknown>;
+    activity.type = "ordering";
+    activity.interactionConfig = {
+      items: [
+        { itemId: "angka-1", text: "Angka 1" },
+        { itemId: "angka-2", text: "Angka 2" }
+      ],
+      correctOrder: ["angka-1"]
+    };
+
+    const result = validateContentPackage(packageInput);
+
+    expect(result.ok).toBe(false);
+    expect(
+      result.issues.some((issue) => issue.message.includes("correctOrder harus memuat"))
+    ).toBe(true);
+  });
+
   it("menolak activityId duplikat", () => {
     const packageInput = basePackage();
     packageInput.activities.push(structuredClone(activityExploration));

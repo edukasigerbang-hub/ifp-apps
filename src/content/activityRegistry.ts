@@ -24,7 +24,7 @@ export const activityTypeRegistry: Record<ActivityType, ActivityTypeDefinition> 
     description: "Pernyataan benar atau salah"
   },
   matching: {
-    requiresAssessment: true,
+    requiresAssessment: false,
     description: "Memasangkan pasangan yang sesuai"
   },
   ordering: {
