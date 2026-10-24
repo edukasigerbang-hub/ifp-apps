@@ -504,3 +504,15 @@
 **Verifikasi:** `npm test` 68/68; `npm run build` PASS; `npm run e2e:activities` PASS 8 pemeriksaan (dua kali); journey 11/11; a11y 15 pemeriksaan; `npm run content:validate` pilot tetap valid.
 
 **Belum:** tidak ada nilai parsial; drag-and-drop tidak dipakai (aksesibilitas); gaya guru.
+
+### T-034 — E2E backup → restore
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Skenario `npm run e2e:backup`: menyiapkan 1 sesi/percobaan/respons/outbox via command, export backup, inspect (hash & counts), mutasi (profil kedua), restore, verifikasi data dan profil aktif pulih.
+- Negatif: backup dengan `schema_migrations` lebih baru ditolak `BACKUP_SCHEMA_TOO_NEW`; data tidak berubah.
+- Verifikasi UI: Hasil Belajar menampilkan skor setelah restore.
+
+**Verifikasi:** PASS 9 pemeriksaan (dua kali).
+
+**Belum:** dialog native simpan/pilih backup tetap manual; kebijakan retensi OD-4.

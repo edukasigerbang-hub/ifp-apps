@@ -43,6 +43,7 @@
 | T-031 | Aktivitas benar-salah & jawaban singkat | `responseText` di kontrak lokal/sync; UI radio Benar/Salah + input teks; normalisasi jawaban; remount per aktivitas; E2E 5 pemeriksaan |
 | T-032 | Pilihan ganda multi-jawaban | Checkbox, penilaian himpunan (tanpa nilai parsial), satu baris respons per opsi; E2E 6 pemeriksaan; harness menunggu shell |
 | T-033 | Aktivitas matching & ordering | Kontrak `pairs`/`items+correctOrder` divalidasi Zod; UI select & naik/turun; skor per pasangan/posisi; E2E 5 aktivitas |
+| T-034 | E2E backup → restore | Export/inspect (hash), mutasi, restore (profil/sesi/attempt/skor pulih), tolak schema lebih baru; 9 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -124,6 +125,7 @@
 | Pilihan ganda multi-jawaban | **PASS** — E2E 6 pemeriksaan: 3 aktivitas dinilai 100, 3 percobaan, rata-rata 100; npm 56/56 |
 | Matching & ordering | **PASS** — E2E 8 pemeriksaan: 5 aktivitas dinilai 100, 5 percobaan; validasi kontrak ditolak saat rusak (unit) |
 | Unit test interaksi | **PASS** — 12 test baru; total npm 68/68 |
+| E2E backup → restore | **PASS** — 9 pemeriksaan (dua kali): hash cocok, data pulih, schema lebih baru ditolak |
 | Player memuat paket impor | **ADA** — semua paket aktif dapat dipilih (ADR-0009) |
 | Player: eksplorasi → kuis | **PASS** — 4 langkah, skor 100/Lulus; logika gagal/ambang diuji unit |
 | Player: desktop 1600×900 & mobile 640×900 | **PASS** — screenshot diperiksa |
