@@ -567,3 +567,16 @@
 **Verifikasi:** `npm run build` PASS; `npm test` 68/68; `npm run e2e` PASS 8 pemeriksaan; `npm run a11y` 16 pemeriksaan.
 
 **Belum:** persetujuan legal/DPO, retensi server, consent formal.
+
+### T-039 — OD-5: default kebijakan lisensi
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Deteksi clock rollback: `app_meta.license_last_seen_at`, toleransi 5 menit; validitas dievaluasi pada waktu terakhir terverifikasi, kode `LICENSE_CLOCK_ROLLBACK`, `last_seen` tidak dimundurkan.
+- `license_export_transfer_request`: JSON permintaan transfer (licenseId, machineId, requestId, alasan ≤500); hanya untuk lisensi valid.
+- UI Lisensi: input alasan + tombol “Ekspor permintaan transfer…”; tampilan JSON dibedakan dari permintaan aktivasi; badge warning saat rollback.
+- ADR-0026 (provisional); API.md diperbarui; 4 test Rust baru.
+
+**Verifikasi:** `cargo test` 62/62; `npm run build` PASS; `npm run e2e:license` PASS 10 pemeriksaan (dua kali); a11y 16 pemeriksaan.
+
+**Belum:** auto-refresh terjadwal, antrean transfer di server, kebijakan final (grace/limit/refund) menunggu OD-5.

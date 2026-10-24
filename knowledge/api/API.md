@@ -11,6 +11,7 @@
 | `license_get_machine_id` | read | Installation ID acak, persisten |
 | `license_activate_online` | write | Idempotent / ber-request ID |
 | `license_export_request` | write | Offline activation request |
+| `license_export_transfer_request` | write | Permintaan transfer perangkat (diproses admin) |
 | `license_import_file` | write | Verifikasi signature native |
 | `license_refresh` | write | Subscription grace |
 | `license_get_entitlements` | read | Fitur yang diizinkan |
@@ -72,6 +73,7 @@ Kontrak jaringan lengkap: [SYNC_CONTRACT.md](SYNC_CONTRACT.md). Engine: `src/dat
 | `license_import_file` | `path` | status setelah verifikasi + simpan |
 | `license_get_entitlements` | — | daftar entitlement bila valid |
 | `license_export_request` | — | productId, machineId, requestId, nonce, createdAt |
+| `license_export_transfer_request` | reason (≤500) | productId, machineId, licenseId, requestId, reason, createdAt |
 | `license_refresh` | — | verifikasi ulang status |
 | `license_activate_online` | — | `LICENSE_SERVER_UNAVAILABLE` (belum ada server) |
 
