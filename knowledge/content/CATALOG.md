@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 5 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 9 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -9,6 +9,10 @@
 | `kelas4-ipas-b01-makhluk-hidup` | 0.1.0 | 4 | ipas | Makhluk hidup & lingkungan | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b01-teks-deskripsi` | 0.1.0 | 4 | bahasa-indonesia | Teks deskripsi | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b01-pancasila` | 0.1.0 | 4 | pendidikan-pancasila | Nilai Pancasila | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b01-bilangan-cacah` | 0.1.0 | 4 | matematika | Bilangan cacah besar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b02-wujud-zat` | 0.1.0 | 4 | ipas | Wujud zat & perubahan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b02-kalimat-efektif` | 0.1.0 | 4 | bahasa-indonesia | Kalimat efektif & kosakata | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b02-norma-aturan` | 0.1.0 | 4 | pendidikan-pancasila | Norma & aturan | **DRAFT** | VALID (2 warning) | belum |
 
 \* Review teknis 2026-10-23: 1 temuan kontras diperbaiki (4.36 → 5.40). R10 `curriculumRefs` **BLOCKING**; R1–R5/R8–R9 belum direview manusia. Laporan: [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
 
@@ -77,6 +81,20 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Review teknis: R7/R8/R9/R11/R12 PASS (teknis); **R10 BLOCKING**; R1–R6/R8–R9/R12 menunggu reviewer manusia. Laporan: [REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md](REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md).
 - Keputusan: **belum approved**; `reviewStatus` tetap `draft`.
 - Matching tidak dipakai sebagai `assessmentRef` karena tidak memiliki `assessmentConfig`; kedua lesson matching memakai `assessmentRefs: []`.
+
+## Batch 2 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b01-bilangan-cacah` | Nilai Tempat dan Operasi Bilangan Cacah Besar | eksplorasi + MCQ (4 soal) | `nilai-tempat.png` |
+| `kelas4-ipas-b02-wujud-zat` | Wujud Zat dan Perubahannya | eksplorasi + ordering (4 item) | `wujud-zat.png` |
+| `kelas4-bahasa-indonesia-b02-kalimat-efektif` | Kalimat Efektif dan Kosakata Baru | eksplorasi + MCQ (4 soal) | `sudut-baca.png` |
+| `kelas4-pendidikan-pancasila-b02-norma-aturan` | Norma dan Aturan di Rumah, Sekolah, dan Masyarakat | eksplorasi + matching (5 pasangan) | `antrean-kelas.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning (draft + `curriculumRefs` kosong).
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, status `active`).
+- Belum direview manusia; R10 tetap BLOCKING sampai D6.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

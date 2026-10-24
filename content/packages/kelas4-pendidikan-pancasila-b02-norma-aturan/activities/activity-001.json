@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-norma-aturan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Antrean di Kelas",
+  "instructions": "Amati gambar siswa yang mengantre, lalu jawab pertanyaan tentang aturan dan manfaatnya.",
+  "assets": [
+    "assets/antrean-kelas.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan siswa di depan kelas?",
+        "assetPath": "assets/antrean-kelas.png",
+        "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding.",
+        "reveal": "Mereka mengantre dengan tertib.",
+        "hint": "Perhatikan posisi dan jarak antrean."
+      },
+      {
+        "prompt": "Aturan apa yang mereka taati?",
+        "assetPath": "assets/antrean-kelas.png",
+        "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding.",
+        "reveal": "Menunggu giliran, tidak menyerobot, dan menjaga ketertiban.",
+        "hint": "Apa yang terjadi jika ada yang menyerobot?"
+      },
+      {
+        "prompt": "Mengapa aturan itu penting?",
+        "assetPath": "assets/antrean-kelas.png",
+        "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding.",
+        "reveal": "Agar kegiatan berjalan tertib, adil, dan aman bagi semua.",
+        "hint": "Hubungkan aturan dengan rasa adil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding."
+  }
+}

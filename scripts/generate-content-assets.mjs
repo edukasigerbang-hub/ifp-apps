@@ -272,7 +272,146 @@ function gotongRoyong() {
   return px;
 }
 
+function placeValueChart() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.navy);
+  const panels = [60, 245, 430, 615];
+  for (const x of panels) {
+    rect(px, x, 100, 130, 400, colors.sky);
+    rect(px, x, 100, 130, 8, colors.navy);
+    rect(px, x, 492, 130, 8, colors.navy);
+    rect(px, x, 100, 8, 400, colors.navy);
+    rect(px, x + 122, 100, 8, 400, colors.navy);
+  }
+  // ribuan: 1 blok besar
+  rect(px, 75, 240, 100, 120, colors.teal);
+  circle(px, 125, 230, 22, colors.tealLight);
+  // ratusan: 2 blok
+  rect(px, 265, 200, 90, 80, colors.tealLight);
+  rect(px, 265, 300, 90, 80, colors.tealLight);
+  // puluhan: 3 batang
+  for (let i = 0; i < 3; i += 1) rect(px, 450 + i * 35, 200, 24, 180, colors.orange);
+  // satuan: 4 kotak
+  for (let i = 0; i < 4; i += 1) {
+    const cx = 635 + (i % 2) * 50;
+    const cy = 220 + Math.floor(i / 2) * 60;
+    rect(px, cx, cy, 40, 40, colors.blue);
+  }
+  return px;
+}
+
+function statesOfMatter() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 290, 540];
+  for (const x of panels) {
+    rect(px, x, 100, 220, 400, colors.sky);
+    rect(px, x, 100, 220, 6, colors.navy);
+    rect(px, x, 494, 220, 6, colors.navy);
+    rect(px, x, 100, 6, 400, colors.navy);
+    rect(px, x + 214, 100, 6, 400, colors.navy);
+  }
+  // padat: gelas + es
+  rect(px, 95, 330, 110, 140, colors.white);
+  rect(px, 95, 330, 8, 140, colors.navy);
+  rect(px, 197, 330, 8, 140, colors.navy);
+  rect(px, 95, 462, 110, 8, colors.navy);
+  rect(px, 120, 360, 55, 55, colors.tealLight);
+  rect(px, 140, 390, 55, 55, colors.tealLight);
+  rect(px, 110, 405, 45, 45, colors.tealLight);
+  // cair: gelas + air
+  rect(px, 345, 330, 110, 140, colors.white);
+  rect(px, 345, 330, 8, 140, colors.navy);
+  rect(px, 447, 330, 8, 140, colors.navy);
+  rect(px, 345, 462, 110, 8, colors.navy);
+  rect(px, 353, 380, 94, 82, colors.blue);
+  line(px, 353, 380, 447, 380, colors.blue, 6);
+  // gas: panci + uap
+  rect(px, 590, 380, 120, 70, colors.navy);
+  rect(px, 580, 375, 140, 12, colors.navy);
+  rect(px, 600, 450, 100, 18, colors.orange);
+  circle(px, 620, 330, 18, colors.white);
+  circle(px, 660, 300, 22, colors.white);
+  circle(px, 700, 260, 26, colors.white);
+  circle(px, 650, 250, 16, colors.white);
+  circle(px, 690, 210, 18, colors.white);
+  return px;
+}
+
+function readingCorner() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 70, colors.teal);
+  // jendela
+  rect(px, 560, 120, 170, 150, colors.sky);
+  rect(px, 560, 120, 170, 10, colors.white);
+  rect(px, 560, 260, 170, 10, colors.white);
+  rect(px, 560, 120, 10, 150, colors.white);
+  rect(px, 635, 120, 10, 150, colors.white);
+  // rak buku
+  rect(px, 80, 150, 300, 320, colors.soil);
+  for (let shelf = 0; shelf < 3; shelf += 1) {
+    rect(px, 95, 210 + shelf * 85, 270, 12, colors.sand);
+    for (let i = 0; i < 7; i += 1) {
+      const palette = [colors.teal, colors.orange, colors.red, colors.blue, colors.green];
+      rect(px, 105 + i * 37, 165 + shelf * 85, 26, 45, palette[(i + shelf) % palette.length]);
+    }
+  }
+  // meja + kursi
+  rect(px, 430, 390, 150, 16, colors.orange);
+  rect(px, 445, 406, 12, 70, colors.navy);
+  rect(px, 553, 406, 12, 70, colors.navy);
+  rect(px, 610, 410, 60, 12, colors.teal);
+  rect(px, 620, 422, 10, 55, colors.navy);
+  rect(px, 650, 422, 10, 55, colors.navy);
+  // tanaman
+  rect(px, 720, 440, 36, 45, colors.orange);
+  rect(px, 732, 380, 12, 70, colors.greenDark);
+  ellipse(px, 720, 395, 22, 12, colors.green);
+  ellipse(px, 756, 405, 22, 12, colors.green);
+  return px;
+}
+
+function queueScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.sky);
+  rect(px, 0, 460, W, 140, colors.sand);
+  // pintu
+  rect(px, 620, 130, 120, 340, colors.teal);
+  rect(px, 610, 120, 140, 14, colors.navy);
+  circle(px, 720, 320, 7, colors.sun);
+  // papan aturan
+  rect(px, 80, 140, 230, 150, colors.white);
+  rect(px, 80, 140, 230, 12, colors.navy);
+  rect(px, 80, 278, 230, 12, colors.navy);
+  rect(px, 80, 140, 12, 150, colors.navy);
+  rect(px, 298, 140, 12, 150, colors.navy);
+  for (let i = 0; i < 3; i += 1) rect(px, 110, 175 + i * 30, 170, 8, colors.sky);
+  // anak mengantre
+  const kids = [
+    { x: 380, shirt: colors.teal, skin: colors.skin1 },
+    { x: 460, shirt: colors.orange, skin: colors.skin2 },
+    { x: 540, shirt: colors.blue, skin: colors.skin3 },
+    { x: 600, shirt: colors.red, skin: colors.skin1 }
+  ];
+  for (const kid of kids) {
+    circle(px, kid.x, 280, 32, kid.skin);
+    rect(px, kid.x - 28, 314, 56, 100, kid.shirt);
+    rect(px, kid.x - 26, 414, 18, 50, colors.navy);
+    rect(px, kid.x + 8, 414, 18, 50, colors.navy);
+  }
+  line(px, 340, 490, 620, 490, colors.navy, 6);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b03-pecahan/assets/pecahan-senilai.png", mathFractionBars());
 write("content/packages/kelas4-ipas-b01-makhluk-hidup/assets/habitat-makhluk-hidup.png", ipasHabitat());
 write("content/packages/kelas4-bahasa-indonesia-b01-teks-deskripsi/assets/halaman-sekolah.png", schoolYard());
 write("content/packages/kelas4-pendidikan-pancasila-b01-pancasila/assets/gotong-royong.png", gotongRoyong());
+write("content/packages/kelas4-matematika-b01-bilangan-cacah/assets/nilai-tempat.png", placeValueChart());
+write("content/packages/kelas4-ipas-b02-wujud-zat/assets/wujud-zat.png", statesOfMatter());
+write("content/packages/kelas4-bahasa-indonesia-b02-kalimat-efektif/assets/sudut-baca.png", readingCorner());
+write("content/packages/kelas4-pendidikan-pancasila-b02-norma-aturan/assets/antrean-kelas.png", queueScene());

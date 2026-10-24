@@ -1,0 +1,51 @@
+{
+  "activityId": "ordering-wujud-zat",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Perubahan Wujud",
+  "instructions": "Susun urutan perubahan wujud dari es batu hingga menjadi uap air.",
+  "assets": [
+    "assets/wujud-zat.png"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-es-batu",
+        "text": "Es batu (padat)"
+      },
+      {
+        "itemId": "item-mencair",
+        "text": "Mencair menjadi air"
+      },
+      {
+        "itemId": "item-air",
+        "text": "Air (cair)"
+      },
+      {
+        "itemId": "item-menguap",
+        "text": "Menguap menjadi uap air (gas)"
+      }
+    ],
+    "correctOrder": [
+      "item-es-batu",
+      "item-mencair",
+      "item-air",
+      "item-menguap"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
+  }
+}

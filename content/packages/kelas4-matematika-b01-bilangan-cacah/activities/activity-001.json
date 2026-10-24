@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-nilai-tempat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Nilai Tempat",
+  "instructions": "Amati empat panel pada gambar. Setiap panel mewakili nilai tempat yang berbeda.",
+  "assets": [
+    "assets/nilai-tempat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Panel pertama menunjukkan 1 kelompok ribuan. Berapa nilainya?",
+        "assetPath": "assets/nilai-tempat.png",
+        "altText": "Empat panel nilai tempat: satu blok besar untuk ribuan, dua blok ratusan, tiga batang puluhan, dan empat kotak satuan.",
+        "reveal": "1 ribuan = 1.000.",
+        "hint": "Ribuan adalah nilai tempat paling besar pada gambar."
+      },
+      {
+        "prompt": "Panel kedua berisi 2 ratusan, panel ketiga 3 puluhan, dan panel keempat 4 satuan. Bilangan berapa yang ditunjukkan?",
+        "assetPath": "assets/nilai-tempat.png",
+        "altText": "Empat panel nilai tempat: satu blok besar untuk ribuan, dua blok ratusan, tiga batang puluhan, dan empat kotak satuan.",
+        "reveal": "1.000 + 200 + 30 + 4 = 1.234.",
+        "hint": "Jumlahkan nilai setiap panel."
+      },
+      {
+        "prompt": "Pada bilangan 1.234, angka 3 menempati nilai tempat apa dan berapa nilainya?",
+        "assetPath": "assets/nilai-tempat.png",
+        "altText": "Empat panel nilai tempat: satu blok besar untuk ribuan, dua blok ratusan, tiga batang puluhan, dan empat kotak satuan.",
+        "reveal": "Angka 3 menempati puluhan, nilainya 30.",
+        "hint": "Urutan dari kiri: ribuan, ratusan, puluhan, satuan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel nilai tempat: satu blok besar untuk ribuan, dua blok ratusan, tiga batang puluhan, dan empat kotak satuan."
+  }
+}

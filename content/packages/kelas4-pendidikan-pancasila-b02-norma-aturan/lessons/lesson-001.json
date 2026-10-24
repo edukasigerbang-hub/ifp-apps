@@ -1,0 +1,25 @@
+{
+  "lessonId": "norma-aturan",
+  "packageId": "kelas4-pendidikan-pancasila-b02-norma-aturan",
+  "title": "Norma dan Aturan di Rumah, Sekolah, dan Masyarakat",
+  "summary": "Mengenali jenis norma dan aturan, serta menerapkannya untuk hidup tertib dan adil.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian norma dan aturan.",
+    "Membedakan norma agama, kesusilaan, kesopanan, dan hukum.",
+    "Menerapkan aturan di rumah, sekolah, dan masyarakat."
+  ],
+  "activityIds": [
+    "eksplorasi-norma-aturan",
+    "matching-norma-aturan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/antrean-kelas.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

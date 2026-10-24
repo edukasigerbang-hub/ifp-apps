@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b01-bilangan-cacah",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bilangan Cacah Besar — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/nilai-tempat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8228,
+      "sha256": "9aa6b02be1dafc81b211924428190d7b63c35b66debc29fb2b21517cd826061d"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-wujud-zat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Zat",
+  "instructions": "Amati tiga panel pada gambar, lalu jawab pertanyaan tentang wujud dan perubahannya.",
+  "assets": [
+    "assets/wujud-zat.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Panel pertama menunjukkan es batu. Apa wujud zatnya?",
+        "assetPath": "assets/wujud-zat.png",
+        "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
+        "reveal": "Es batu berwujud padat.",
+        "hint": "Bentuk dan volumenya tetap."
+      },
+      {
+        "prompt": "Apa yang terjadi pada es batu jika dibiarkan di ruangan hangat?",
+        "assetPath": "assets/wujud-zat.png",
+        "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
+        "reveal": "Es batu mencair menjadi air yang berwujud cair.",
+        "hint": "Perhatikan perubahan dari panel pertama ke panel kedua."
+      },
+      {
+        "prompt": "Apa yang terjadi pada air jika dipanaskan terus-menerus?",
+        "assetPath": "assets/wujud-zat.png",
+        "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
+        "reveal": "Air menguap menjadi uap air yang berwujud gas.",
+        "hint": "Perhatikan gelembung uap pada panel ketiga."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-bilangan-cacah",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bilangan Cacah Besar",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-nilai-7",
+        "prompt": "Nilai angka 7 pada bilangan 7.205 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-700",
+            "text": "700"
+          },
+          {
+            "optionId": "opsi-7000",
+            "text": "7.000"
+          },
+          {
+            "optionId": "opsi-70000",
+            "text": "70.000"
+          },
+          {
+            "optionId": "opsi-7",
+            "text": "7"
+          }
+        ],
+        "correctResponse": "opsi-7000"
+      },
+      {
+        "questionId": "soal-nilai-3",
+        "prompt": "Nilai angka 3 pada bilangan 3.482 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-30",
+            "text": "30"
+          },
+          {
+            "optionId": "opsi-300",
+            "text": "300"
+          },
+          {
+            "optionId": "opsi-3000",
+            "text": "3.000"
+          }
+        ],
+        "correctResponse": "opsi-3000"
+      },
+      {
+        "questionId": "soal-bandingkan",
+        "prompt": "Manakah bilangan yang lebih besar?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-5607",
+            "text": "5.607"
+          },
+          {
+            "optionId": "opsi-5670",
+            "text": "5.670"
+          },
+          {
+            "optionId": "opsi-sama",
+            "text": "Sama besar"
+          },
+          {
+            "optionId": "opsi-tidak-bisa",
+            "text": "Tidak dapat dibandingkan"
+          }
+        ],
+        "correctResponse": "opsi-5670"
+      },
+      {
+        "questionId": "soal-tambah",
+        "prompt": "2.345 + 1.200 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3445",
+            "text": "3.445"
+          },
+          {
+            "optionId": "opsi-3545",
+            "text": "3.545"
+          },
+          {
+            "optionId": "opsi-3455",
+            "text": "3.455"
+          },
+          {
+            "optionId": "opsi-3645",
+            "text": "3.645"
+          }
+        ],
+        "correctResponse": "opsi-3545"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}
