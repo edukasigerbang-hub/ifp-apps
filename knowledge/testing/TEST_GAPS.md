@@ -27,6 +27,8 @@
 | Reflow & teks 200% | 8 layar pada 640/320 px tanpa overflow; root font-size 200% tanpa overflow |
 | Target sentuh | Semua target ≥44 px; select preferensi diperbaiki dari 36 px |
 | State dinamis konfirmasi hapus | Panel konfirmasi diaudit: 0 error/0 warning |
+| State dinamis hasil kuis | Kuis pilot diselesaikan hingga skor 100; state hasil 0 error/0 warning |
+| Preflight harness | E2E menolak berjalan bila `ifp-apps.exe` masih hidup (mencegah panic WebView2) |
 | Navigasi keyboard dasar | Tab pertama = tautan lewati; 10 langkah Tab bernama, semua punya indikator fokus |
 | Alur belajar end-to-end | `npm run e2e:journey` 11 pemeriksaan: impor paket → Player managed-first → eksplorasi 4 langkah → kuis 100 → 1 sesi/1 percobaan → outbox 1 event → Hasil Belajar |
 | Rollback konten | `npm run e2e:rollback` 9 pemeriksaan: v0.1.0 → v0.2.0 → rollback → v0.1.0; status paket active/disabled |
@@ -45,7 +47,7 @@
 | Import lisensi/konten lewat dialog | Sama seperti di atas | Uji manual; command diuji |
 | Transfer/deaktivasi lisensi UI | Belum ada UI | Tambah setelah kebijakan OD-5 |
 | DV-01…DV-20 | Tidak ada perangkat Android 14/Windows 11/4K | Device acceptance plan |
-| Screen reader & keyboard penuh | Audit otomatis PASS (termasuk reflow, teks 200%, target sentuh); NVDA/TalkBack, hasil kuis, dialog native belum | Audit manual + device |
+| Screen reader & keyboard penuh | Audit otomatis PASS (termasuk reflow, teks 200%, target sentuh, hasil kuis); NVDA/TalkBack, dialog native belum | Audit manual + device |
 | Updater & update preservation | Belum dikonfigurasi | Fase L |
 | Cakupan skenario E2E | Smoke, profil, alur belajar, rollback, lisensi offline/online, a11y; impor via dialog native belum | Uji manual dialog |
 | Review konten manusia | Butuh guru/Curriculum Lead | OD-1/review |

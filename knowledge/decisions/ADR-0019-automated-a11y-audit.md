@@ -27,13 +27,15 @@ Cakupan audit diperluas (masih skenario `npm run a11y`):
 6. **Teks 200%**: root font-size dinaikkan 200% pada Pengaturan; gagal bila muncul overflow horizontal.
 7. **Target sentuh**: elemen interaktif terlihat harus ≥ 44 px tinggi (warning) dan ≥ 24 px (error); radio/checkbox diukur lewat `<label>` pembungkusnya. Ditemukan select preferensi 36 px → diperbaiki ke `min-h-11`.
 8. **State dinamis**: panel konfirmasi hapus profil diaudit dengan aturan yang sama (nama, heading, kontras).
+9. **Hasil kuis** (addendum 2026-10-24): skenario menyelesaikan kuis pilot hingga “Skor 100” dan penyimpanan lokal, lalu menjalankan seluruh aturan audit pada state hasil (banner feedback, tombol ulangi).
 
 ## Batas yang diakui
 
 - Ini audit heuristik, bukan pengganti audit manusia/screen reader (NVDA/TalkBack).
 - Kontras dihitung dari warna computed; teks di atas gambar/gradien dilewati.
-- State dinamis yang diaudit baru panel konfirmasi hapus; hasil kuis, dialog native, dan pesan error lain belum.
+- State dinamis yang diaudit: panel konfirmasi hapus dan hasil kuis; dialog native dan pesan error lain belum.
 - Target sentuh diukur dari `getBoundingClientRect`, bukan pengujian jari nyata.
+- Harness menolak berjalan bila masih ada `ifp-apps.exe` (mencegah bentrok WebView2), bukan mematikannya otomatis.
 - DV-01…DV-20 tetap wajib pada perangkat fisik.
 
 ## Konsekuensi

@@ -598,6 +598,50 @@ export async function run({ page, artifactDir, log }) {
     })()
   `);
 
+  await clickNav(page, "Player Pembelajaran");
+  await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
+    label: "Player untuk audit hasil kuis"
+  });
+  await clickLabel(page, "Kuis Pecahan Sederhana");
+  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+    label: "kuis tampil"
+  });
+  for (const optionId of ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"]) {
+    const chosen = await page.evaluate(`
+      (() => {
+        const input = document.querySelector('input[value="${optionId}"]');
+        if (!input) return false;
+        input.click();
+        return input.checked;
+      })()
+    `);
+    if (!chosen) {
+      throw new Error(`Opsi ${optionId} tidak dapat dipilih saat audit.`);
+    }
+  }
+  await clickLabel(page, "Periksa jawaban");
+  await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
+    label: "skor hasil kuis"
+  });
+  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
+    label: "penyimpanan hasil kuis",
+    timeoutMs: 30_000
+  });
+  const quizAudit = await page.evaluate(`(${auditInPage.toString()})()`);
+  const quizErrors = quizAudit.issues.filter((issue) => issue.severity === "error");
+  const quizWarnings = quizAudit.issues.filter((issue) => issue.severity === "warning");
+  errorCount += quizErrors.length;
+  warningCount += quizWarnings.length;
+  report.screens.push({
+    screen: "Player (hasil kuis)",
+    stats: quizAudit.stats,
+    issues: quizAudit.issues
+  });
+  log(
+    `State dinamis hasil kuis: ${quizErrors.length} error, ${quizWarnings.length} warning.`
+  );
+  await page.screenshot(path.join(artifactDir, "a11y-quiz-result.png"));
+
   const { writeFile } = await import("node:fs/promises");
   const reportPath = `${artifactDir}/a11y-report.json`;
   await writeFile(reportPath, JSON.stringify(report, null, 2));

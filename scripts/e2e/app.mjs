@@ -60,9 +60,33 @@ async function waitForTarget(timeoutMs) {
   );
 }
 
+function runningAppPids() {
+  try {
+    const output = execFileSync(
+      "tasklist",
+      ["/FI", "IMAGENAME eq ifp-apps.exe", "/FO", "CSV", "/NH"],
+      { encoding: "utf8", windowsHide: true }
+    );
+    return output
+      .split(/\r?\n/)
+      .map((line) => line.match(/^"ifp-apps\.exe","(\d+)"/))
+      .filter((match) => match !== null)
+      .map((match) => Number(match[1]));
+  } catch {
+    return [];
+  }
+}
+
 export async function launchApp({ artifactDir, extraEnv } = {}) {
   if (process.platform !== "win32") {
     throw new Error("Harness E2E saat ini hanya mendukung Windows (WebView2 + Tauri).");
+  }
+  const running = runningAppPids();
+  if (running.length > 0) {
+    throw new Error(
+      `Aplikasi ifp-apps masih berjalan (PID ${running.join(", ")}). ` +
+        "Tutup aplikasi dev terlebih dahulu agar WebView2 tidak bentrok."
+    );
   }
   if (await isPortBusy(DEV_PORT)) {
     throw new Error(
