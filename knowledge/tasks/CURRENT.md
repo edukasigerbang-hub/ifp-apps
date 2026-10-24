@@ -72,6 +72,7 @@
 | T-060 | Checklist B-02/05/06/07/08 | Runbook backup/rotasi kunci, DV perangkat, review R1–R12, pembersihan secret, keputusan signature konten |
 | T-061 | Cek konsistensi indeks katalog | Checker membandingkan 320 entri vs paket; masuk `npm test`; negative test exit 1; status OK 320/320 |
 | T-062 | Lembar kerja review R1–R12 | CSV 320 baris + panduan Markdown per kelas/mapel; R10 BLOCKED-D6, R11 pre-verified |
+| T-063 | Verifikasi P0 | Worker live masih 501; 3 file secret `%TEMP%` masih ada; backup kunci belum ditemukan; urutan B-02→B-07→B-03 |
 
 ## Status prasyarat materi pembelajaran
 
