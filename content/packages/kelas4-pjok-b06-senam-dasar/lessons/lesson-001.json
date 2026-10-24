@@ -1,0 +1,25 @@
+{
+  "lessonId": "senam-dasar",
+  "packageId": "kelas4-pjok-b06-senam-dasar",
+  "title": "Senam Dasar",
+  "summary": "Mempraktikkan gerak senam dasar dengan teknik dan keselamatan yang benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak dasar senam.",
+    "Mempraktikkan guling depan dengan bantuan.",
+    "Menjaga keselamatan dan disiplin saat berlatih."
+  ],
+  "activityIds": [
+    "eksplorasi-senam-dasar",
+    "ordering-senam-dasar"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/senam-dasar.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

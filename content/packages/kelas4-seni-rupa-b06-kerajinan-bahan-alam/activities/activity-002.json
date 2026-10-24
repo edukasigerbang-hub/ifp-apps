@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kerajinan-alam",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bahan dan Karya",
+  "instructions": "Pasangkan setiap bahan alam dengan karya yang sesuai.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-daun",
+        "left": "Daun kering",
+        "right": "Bahan kolase"
+      },
+      {
+        "pairId": "pasangan-ranting",
+        "left": "Ranting",
+        "right": "Bingkai hiasan"
+      },
+      {
+        "pairId": "pasangan-biji",
+        "left": "Biji jagung",
+        "right": "Mozaik"
+      },
+      {
+        "pairId": "pasangan-pelepah",
+        "left": "Pelepah pisang",
+        "right": "Alat cetak"
+      },
+      {
+        "pairId": "pasangan-tanah",
+        "left": "Tanah liat",
+        "right": "Patung sederhana"
+      },
+      {
+        "pairId": "pasangan-bambu",
+        "left": "Bambu",
+        "right": "Anyaman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu."
+  }
+}

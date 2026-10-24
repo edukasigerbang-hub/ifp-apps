@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-atletik-dasar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Nomor Atletik",
+  "instructions": "Amati gambar, lalu diskusikan nomor atletik dan teknik dasarnya.",
+  "assets": [
+    "assets/atletik-dasar.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Nomor atletik apa saja yang terlihat?",
+        "assetPath": "assets/atletik-dasar.png",
+        "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis.",
+        "reveal": "Lari, lompat jauh, dan lempar.",
+        "hint": "Amati lintasan dan bak pasir."
+      },
+      {
+        "prompt": "Bagaimana sikap start jongkok?",
+        "assetPath": "assets/atletik-dasar.png",
+        "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis.",
+        "reveal": "Kaki menolak kuat, pandangan ke depan, dan siap berlari.",
+        "hint": "Perhatikan posisi tangan dan kaki."
+      },
+      {
+        "prompt": "Apa urutan lompat jauh?",
+        "assetPath": "assets/atletik-dasar.png",
+        "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis.",
+        "reveal": "Awalan, tolakan, melayang, lalu mendarat.",
+        "hint": "Tolakan dengan satu kaki."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis."
+  }
+}

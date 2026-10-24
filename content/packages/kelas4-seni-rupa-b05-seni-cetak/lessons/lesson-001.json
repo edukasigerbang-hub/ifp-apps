@@ -1,0 +1,25 @@
+{
+  "lessonId": "seni-cetak",
+  "packageId": "kelas4-seni-rupa-b05-seni-cetak",
+  "title": "Mengenal Seni Cetak Sederhana",
+  "summary": "Membuat alat cetak dari bahan sederhana dan mencetak pola berulang dengan rapi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan prinsip seni cetak sederhana.",
+    "Membuat alat cetak dari bahan di sekitar.",
+    "Mencetak pola berulang dengan rapi dan bersih."
+  ],
+  "activityIds": [
+    "eksplorasi-seni-cetak",
+    "ordering-seni-cetak"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/seni-cetak.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

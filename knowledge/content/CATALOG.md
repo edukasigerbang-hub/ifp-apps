@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 46 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 56 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -50,6 +50,16 @@
 | `kelas4-ipas-b08-ekonomi-pelestarian` | 0.1.0 | 4 | ipas | Ekonomi & pelestarian | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b08-apresiasi-sastra` | 0.1.0 | 4 | bahasa-indonesia | Apresiasi sastra | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b08-proyek-kewargaan` | 0.1.0 | 4 | pendidikan-pancasila | Proyek kewargaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b05-seni-cetak` | 0.1.0 | 4 | seni-rupa | Seni cetak sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b06-kerajinan-bahan-alam` | 0.1.0 | 4 | seni-rupa | Kerajinan bahan alam | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-seni-rupa-b07-apresiasi-karya` | 0.1.0 | 4 | seni-rupa | Apresiasi karya seni | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b05-bola-kecil` | 0.1.0 | 4 | pjok | Permainan bola kecil | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b06-senam-dasar` | 0.1.0 | 4 | pjok | Senam dasar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pjok-b07-atletik-dasar` | 0.1.0 | 4 | pjok | Atletik dasar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b05-puasa` | 0.1.0 | 4 | pai | Puasa (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b06-zakat-infak` | 0.1.0 | 4 | pai | Zakat & infak (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b07-sejarah-islam` | 0.1.0 | 4 | pai | Sejarah Islam (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pai-b08-adab-kisah-teladan` | 0.1.0 | 4 | pai | Adab & kisah teladan (varian Islam) | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -57,10 +67,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Semester 1 lengkap (28 paket draft). Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
+1. Semester 1 (28 paket) dan Semester 2 (28 paket) lengkap sebagai draft. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 2. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-3. Pantau ukuran bundle saat paket bertambah; lazy load konten sudah aktif (chunk utama 447 kB).
-4. Setelah review, lanjut Semester 2 (B05–B08).
+3. Pantau ukuran bundle saat paket bertambah; lazy load konten sudah aktif (chunk utama 480,2 kB).
+4. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
 ## Paket starter Kelas 4 (2026-10-24)
 
@@ -244,7 +254,7 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - **Dipindahkan ke S2 B08:** `kelas4-seni-rupa-b04-pameran-kelas` → `kelas4-seni-rupa-b08-pameran-kelas`; `kelas4-pjok-b04-kesehatan` → `kelas4-pjok-b08-kesehatan`.
 - **Dibuat untuk S1 B04:** `kelas4-seni-rupa-b04-kolase` (Kolase) dan `kelas4-pjok-b04-bola-besar` (Permainan Bola Besar).
 - Validasi keempat paket: **VALID**; impor `content_import_package` **PASS** (5 file/paket, `active`).
-- Katalog sekarang 46 paket; S1 tetap 28 paket, S2 menjadi 18 paket.
+- Katalog sekarang 56 paket; S1 tetap 28 paket, S2 menjadi 28 paket.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 
@@ -265,3 +275,25 @@ Penyesuaian sebelum membuat paket baru:
 
 Rencana urutan produksi seluruh kelas: [PRODUCTION_SCHEDULE.md](PRODUCTION_SCHEDULE.md).
 
+
+## Batch 13 Kelas 4 — penutup Semester 2 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-seni-rupa-b05-seni-cetak` | Mengenal Seni Cetak Sederhana | eksplorasi + ordering (6 langkah) | `seni-cetak.png` |
+| `kelas4-seni-rupa-b06-kerajinan-bahan-alam` | Membuat Kerajinan dari Bahan Alam | eksplorasi + matching (6 pasangan) | `kerajinan-bahan-alam.png` |
+| `kelas4-seni-rupa-b07-apresiasi-karya` | Mengapresiasi Karya Seni | eksplorasi + MCQ (4 soal) | `apresiasi-karya.png` |
+| `kelas4-pjok-b05-bola-kecil` | Permainan Bola Kecil | eksplorasi + MCQ (4 soal) | `bola-kecil.png` |
+| `kelas4-pjok-b06-senam-dasar` | Senam Dasar | eksplorasi + ordering (5 langkah) | `senam-dasar.png` |
+| `kelas4-pjok-b07-atletik-dasar` | Atletik Dasar | eksplorasi + matching (6 pasangan) | `atletik-dasar.png` |
+| `kelas4-pai-b05-puasa` | Puasa | eksplorasi + MCQ (4 soal) | `puasa.png` |
+| `kelas4-pai-b06-zakat-infak` | Zakat dan Infak | eksplorasi + matching (6 pasangan) | `zakat-infak.png` |
+| `kelas4-pai-b07-sejarah-islam` | Sejarah Islam | eksplorasi + ordering (5 peristiwa) | `sejarah-islam.png` |
+| `kelas4-pai-b08-adab-kisah-teladan` | Adab dan Kisah Teladan | eksplorasi + MCQ (4 soal) | `adab-kisah-teladan.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` kesepuluh paket **PASS** (5 file/paket, `active`) di data E2E terisolasi.
+- `npm test`: 83/83 PASS + 4/4 golden fixture PASS.
+- `npm run build`: PASS; chunk utama 480,21 kB.
+- **Semester 2 lengkap: 28 paket draft.** Total katalog 56 paket (S1 28 + S2 28).

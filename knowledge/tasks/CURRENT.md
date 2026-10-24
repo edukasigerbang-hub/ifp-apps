@@ -51,6 +51,7 @@
 | T-039 | OD-5 default lisensi | Clock rollback (last-seen 5 mnt); permintaan transfer (licenseId/machineId/alasan); UI + 4 test Rust; E2E 10 pemeriksaan |
 | T-040 | OD-7 increment 1 | OpenAPI v1; enrollment perangkat + token HMAC; sync menerima token perangkat; `/healthz`; 4 test server baru |
 | T-041 | OD-7 increment 2 (Supabase + Cloudflare) | Migrasi **aditif** `0002_app_backend.sql` (setelah skema web); Worker enrollment/sync (WebCrypto HMAC, Supabase REST); 7 test Worker |
+| T-042 | Konten Kelas 4 Semester 2 lengkap | 28 paket draft (7 mapel × 4 bab); batch 13 menutup Seni B05–B07, PJOK B05–B07, PAI B05–B08; VALID + impor PASS; total 56 paket |
 
 ## Status prasyarat materi pembelajaran
 
@@ -58,7 +59,7 @@
 |---|---|---|
 | Kontrak/schema paket konten | **DONE** | [SCHEMA.md](../content/SCHEMA.md), `schemaVersion 1.0.0` |
 | Validator + test | **DONE** | `npm test` → 11/11 PASS; fixture VALID |
-| Konten Kelas 4 draft | **DONE (draft)** | [Katalog](../content/CATALOG.md): 25 paket Kelas 4, VALID + 2 warning per paket; pilot kelas 3 dipindah ke fixture E2E |
+| Konten Kelas 4 draft | **DONE (draft)** | [Katalog](../content/CATALOG.md): 56 paket Kelas 4 (S1 28 + S2 28), VALID + 2 warning per paket; pilot kelas 3 dipindah ke fixture E2E |
 | Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
 | Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Laporan review](../content/REVIEW_REPORT_2026-10-23.md) — R10 curriculumRefs masih BLOCKING |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
@@ -69,7 +70,7 @@
 
 **T-005b — Review Kelas 4 + sign-off OD-1** (butuh keputusan/reviewer manusia)
 1. Tunjuk reviewer (curriculum + bahasa + aksesibilitas).
-2. Review 25 paket Kelas 4 dengan [rubrik R1–R12](../content/REVIEW_RUBRIC.md); isi temuan.
+2. Review 56 paket Kelas 4 (S1 + S2) dengan [rubrik R1–R12](../content/REVIEW_RUBRIC.md); isi temuan.
 3. Product Owner + Curriculum Lead memutuskan D3–D7 → isi `curriculumRefs`.
 4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
 

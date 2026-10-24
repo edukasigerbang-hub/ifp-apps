@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pai-b07-sejarah-islam",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Sejarah Islam — PAI Kelas 4 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/sejarah-islam.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4706,
+      "sha256": "f49cb5e370c9b19c7e612746f61d811a1d8234dcee891bed134c1291bdc536ad"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

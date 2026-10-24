@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pjok-b06-senam-dasar",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Senam Dasar — PJOK Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/senam-dasar.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5678,
+      "sha256": "8754a62badbab5e2d499e0ac0ea7480cda6839254b58e6577d91c2ab9e62e0d9"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

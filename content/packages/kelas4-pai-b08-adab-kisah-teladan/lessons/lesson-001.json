@@ -1,0 +1,27 @@
+{
+  "lessonId": "adab-kisah-teladan",
+  "packageId": "kelas4-pai-b08-adab-kisah-teladan",
+  "title": "Adab dan Kisah Teladan",
+  "summary": "Menerapkan adab kepada orang tua, guru, dan teman serta meneladani kisah Nabi dan sahabat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan adab kepada orang tua, guru, dan teman.",
+    "Menjelaskan manfaat beradab baik.",
+    "Meneladani sifat jujur dan peduli dari kisah teladan."
+  ],
+  "activityIds": [
+    "eksplorasi-adab-teladan",
+    "kuis-adab-teladan"
+  ],
+  "assessmentRefs": [
+    "kuis-adab-teladan"
+  ],
+  "assetRefs": [
+    "assets/adab-kisah-teladan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

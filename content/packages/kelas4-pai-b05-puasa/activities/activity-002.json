@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-puasa",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Puasa",
+  "instructions": "Pilih satu jawaban yang paling tepat tentang puasa.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-waktu-puasa",
+        "prompt": "Puasa dimulai pada waktu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-fajar",
+            "text": "Terbit fajar"
+          },
+          {
+            "optionId": "opsi-tengah-malam",
+            "text": "Tengah malam"
+          },
+          {
+            "optionId": "opsi-magrib",
+            "text": "Matahari terbenam"
+          },
+          {
+            "optionId": "opsi-setelah-magrib",
+            "text": "Setelah salat magrib"
+          }
+        ],
+        "correctResponse": "opsi-fajar"
+      },
+      {
+        "questionId": "soal-sahur",
+        "prompt": "Makan sebelum terbit fajar disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sahur",
+            "text": "Sahur"
+          },
+          {
+            "optionId": "opsi-berbuka",
+            "text": "Berbuka"
+          },
+          {
+            "optionId": "opsi-iftar",
+            "text": "Iftar"
+          },
+          {
+            "optionId": "opsi-tarawih",
+            "text": "Tarawih"
+          }
+        ],
+        "correctResponse": "opsi-sahur"
+      },
+      {
+        "questionId": "soal-membatalkan",
+        "prompt": "Hal yang membatalkan puasa adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan dan minum dengan sengaja"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur siang"
+          },
+          {
+            "optionId": "opsi-membaca",
+            "text": "Membaca Al-Qur'an"
+          },
+          {
+            "optionId": "opsi-membantu",
+            "text": "Membantu orang tua"
+          }
+        ],
+        "correctResponse": "opsi-makan"
+      },
+      {
+        "questionId": "soal-hikmah",
+        "prompt": "Hikmah puasa yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sabar",
+            "text": "Melatih sabar dan disiplin"
+          },
+          {
+            "optionId": "opsi-lemah",
+            "text": "Membuat tubuh lemah sepanjang hari"
+          },
+          {
+            "optionId": "opsi-ibadah",
+            "text": "Meninggalkan ibadah"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Menambah rasa marah"
+          }
+        ],
+        "correctResponse": "opsi-sabar"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+  }
+}

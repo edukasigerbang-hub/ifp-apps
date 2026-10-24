@@ -1,0 +1,25 @@
+{
+  "lessonId": "sejarah-islam",
+  "packageId": "kelas4-pai-b07-sejarah-islam",
+  "title": "Sejarah Islam",
+  "summary": "Mengenal peristiwa penting awal Islam dan mengambil teladan dari perjuangan Nabi Muhammad.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan peristiwa penting awal Islam.",
+    "Mengurutkan peristiwa sejarah Islam.",
+    "Mengambil teladan dari perjuangan Nabi Muhammad."
+  ],
+  "activityIds": [
+    "eksplorasi-sejarah-islam",
+    "ordering-sejarah-islam"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/sejarah-islam.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sejarah Islam dengan Ka'bah, Gua Hira, dan masjid berkubah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-kerajinan-alam",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bahan Alam",
+  "instructions": "Amati bahan alam pada gambar, lalu diskusikan cara memanfaatkannya.",
+  "assets": [
+    "assets/kerajinan-bahan-alam.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan alam apa yang terlihat pada gambar?",
+        "assetPath": "assets/kerajinan-bahan-alam.png",
+        "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu.",
+        "reveal": "Daun kering, ranting, biji, pelepah pisang, dan bambu.",
+        "hint": "Amati bentuk dan warnanya."
+      },
+      {
+        "prompt": "Bagaimana memilih bahan yang baik?",
+        "assetPath": "assets/kerajinan-bahan-alam.png",
+        "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu.",
+        "reveal": "Bersih, kering, tidak tajam, dan mudah dibentuk.",
+        "hint": "Utamakan keamanan tangan saat berkarya."
+      },
+      {
+        "prompt": "Apa yang dibutuhkan untuk merekatkan bahan?",
+        "assetPath": "assets/kerajinan-bahan-alam.png",
+        "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu.",
+        "reveal": "Lem kayu atau lem serbaguna yang aman.",
+        "hint": "Gunakan sedikit lem agar rapi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu."
+  }
+}

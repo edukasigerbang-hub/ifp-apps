@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-sejarah-islam",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Peristiwa Sejarah Islam",
+  "instructions": "Susun peristiwa awal Islam dalam urutan yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "peristiwa-lahir",
+        "text": "Nabi Muhammad lahir di Makkah"
+      },
+      {
+        "itemId": "peristiwa-wahyu",
+        "text": "Menerima wahyu pertama di Gua Hira"
+      },
+      {
+        "itemId": "peristiwa-dakwah",
+        "text": "Berdakwah di Makkah"
+      },
+      {
+        "itemId": "peristiwa-hijrah",
+        "text": "Hijrah ke Madinah"
+      },
+      {
+        "itemId": "peristiwa-masjid",
+        "text": "Membangun Masjid Nabawi"
+      }
+    ],
+    "correctOrder": [
+      "peristiwa-lahir",
+      "peristiwa-wahyu",
+      "peristiwa-dakwah",
+      "peristiwa-hijrah",
+      "peristiwa-masjid"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sejarah Islam dengan Ka'bah, Gua Hira, dan masjid berkubah."
+  }
+}

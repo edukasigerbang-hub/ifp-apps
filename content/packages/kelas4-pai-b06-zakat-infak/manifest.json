@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pai-b06-zakat-infak",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Zakat dan Infak — PAI Kelas 4 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/zakat-infak.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5521,
+      "sha256": "d6ae153467e4c575e55978de59f303a1d4e19fc501538fc627b2ecc6754b4ea9"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

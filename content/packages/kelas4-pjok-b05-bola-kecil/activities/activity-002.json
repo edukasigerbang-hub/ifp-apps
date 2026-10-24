@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-bola-kecil",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Permainan Bola Kecil",
+  "instructions": "Pilih satu jawaban yang paling tepat tentang permainan bola kecil.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-raket",
+        "prompt": "Alat yang dipakai untuk memukul kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket"
+          },
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet"
+          },
+          {
+            "optionId": "opsi-pemukul",
+            "text": "Pemukul kasti"
+          },
+          {
+            "optionId": "opsi-tongkat",
+            "text": "Tongkat"
+          }
+        ],
+        "correctResponse": "opsi-raket"
+      },
+      {
+        "questionId": "soal-tenis-meja",
+        "prompt": "Permainan yang menggunakan bet dan bola pingpong adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tenis-meja",
+            "text": "Tenis meja"
+          },
+          {
+            "optionId": "opsi-bulu-tangkis",
+            "text": "Bulu tangkis"
+          },
+          {
+            "optionId": "opsi-sepak-bola",
+            "text": "Sepak bola"
+          },
+          {
+            "optionId": "opsi-bola-voli",
+            "text": "Bola voli"
+          }
+        ],
+        "correctResponse": "opsi-tenis-meja"
+      },
+      {
+        "questionId": "soal-pemanasan",
+        "prompt": "Sebelum bermain, kita sebaiknya melakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan besar"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari tanpa henti"
+          }
+        ],
+        "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-sportivitas",
+        "prompt": "Sikap yang tepat setelah pertandingan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman dengan lawan"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah bila kalah"
+          },
+          {
+            "optionId": "opsi-menyalahkan",
+            "text": "Menyalahkan teman"
+          },
+          {
+            "optionId": "opsi-pergi",
+            "text": "Meninggalkan lapangan tanpa izin"
+          }
+        ],
+        "correctResponse": "opsi-salaman"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
+  }
+}

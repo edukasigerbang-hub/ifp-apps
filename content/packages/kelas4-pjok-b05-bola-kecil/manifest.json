@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pjok-b05-bola-kecil",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Permainan Bola Kecil — PJOK Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/bola-kecil.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8718,
+      "sha256": "bba413ded67fdd7c0e1d65586bfda284645cc7a00f1d8e8950742a2930492c7b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

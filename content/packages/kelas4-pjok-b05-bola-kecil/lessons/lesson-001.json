@@ -1,0 +1,27 @@
+{
+  "lessonId": "bola-kecil",
+  "packageId": "kelas4-pjok-b05-bola-kecil",
+  "title": "Permainan Bola Kecil",
+  "summary": "Mengenal permainan bola kecil serta teknik dasar dan aturannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis permainan bola kecil.",
+    "Mempraktikkan gerak dasar salah satu permainan bola kecil.",
+    "Mematuhi aturan dan bekerja sama saat bermain."
+  ],
+  "activityIds": [
+    "eksplorasi-bola-kecil",
+    "kuis-bola-kecil"
+  ],
+  "assessmentRefs": [
+    "kuis-bola-kecil"
+  ],
+  "assetRefs": [
+    "assets/bola-kecil.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

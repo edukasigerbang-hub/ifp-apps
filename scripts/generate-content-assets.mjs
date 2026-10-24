@@ -1505,6 +1505,222 @@ function quranScene() {
   return px;
 }
 
+function printmakingScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 50, 110, 380, 420, colors.sand);
+  for (let row = 0; row < 3; row += 1) {
+    for (let col = 0; col < 3; col += 1) {
+      const x = 115 + col * 110;
+      const y = 180 + row * 115;
+      circle(px, x, y, 32, colors.green);
+      rect(px, x - 42, y + 28, 84, 10, colors.greenDark);
+    }
+  }
+  rect(px, 500, 150, 70, 260, colors.green);
+  for (let i = 0; i < 6; i += 1) line(px, 505, 165 + i * 40, 565, 165 + i * 40, colors.greenDark, 4);
+  circle(px, 650, 260, 55, colors.orange);
+  rect(px, 600, 350, 120, 40, colors.navy);
+  rect(px, 620, 390, 20, 80, colors.navy);
+  rect(px, 680, 390, 20, 80, colors.navy);
+  return px;
+}
+
+function naturalCraftScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 60, 120, 260, 380, colors.white);
+  for (let i = 0; i < 8; i += 1) rect(px, 80 + i * 28, 140, 14, 340, colors.orange);
+  for (let i = 0; i < 10; i += 1) rect(px, 80, 150 + i * 32, 220, 12, colors.soil);
+  ellipse(px, 420, 200, 40, 70, colors.green);
+  ellipse(px, 490, 240, 34, 60, colors.greenDark);
+  line(px, 420, 200, 420, 320, colors.soil, 5);
+  line(px, 490, 240, 490, 340, colors.soil, 5);
+  for (const [x, y] of [[400, 420], [450, 450], [500, 410], [550, 455], [430, 500], [520, 500]]) {
+    ellipse(px, x, y, 16, 12, colors.sun);
+  }
+  rect(px, 610, 180, 70, 120, colors.white);
+  rect(px, 625, 150, 40, 35, colors.blue);
+  return px;
+}
+
+function artAppreciationScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const frames = [60, 310, 560];
+  const frameColors = [colors.red, colors.orange, colors.green];
+  frames.forEach((x, i) => {
+    rect(px, x, 120, 180, 240, colors.white);
+    rect(px, x + 10, 130, 160, 220, frameColors[i]);
+    if (i === 0) circle(px, x + 90, 240, 55, colors.sun);
+    if (i === 1) triangle(px, x + 20, 340, x + 90, 170, x + 160, 340, colors.teal);
+    if (i === 2) {
+      for (let k = 0; k < 4; k += 1) circle(px, x + 50 + k * 30, 220, 18, colors.blue);
+    }
+    rect(px, x + 40, 390, 100, 36, colors.white);
+    rect(px, x + 55, 400, 70, 6, colors.navy);
+  });
+  circle(px, 400, 480, 26, colors.skin1);
+  line(px, 400, 506, 400, 560, colors.navy, 14);
+  return px;
+}
+
+function smallBallScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 290, 540];
+  for (const x of panels) {
+    rect(px, x, 100, 220, 420, colors.sky);
+    rect(px, x, 100, 220, 5, colors.navy);
+    rect(px, x, 515, 220, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 215, 100, 5, 420, colors.navy);
+  }
+  circle(px, 150, 300, 52, colors.sun);
+  arc(px, 150, 300, 52, 20, 120, colors.white, 4);
+  ellipse(px, 150, 400, 34, 50, colors.orange);
+  line(px, 150, 440, 150, 500, colors.soil, 10);
+  ellipse(px, 400, 260, 34, 40, colors.white);
+  for (let i = -2; i <= 2; i += 1) line(px, 400, 300, 400 + i * 18, 400, colors.navy, 3);
+  ellipse(px, 400, 410, 26, 26, colors.green);
+  line(px, 400, 436, 400, 500, colors.soil, 10);
+  ellipse(px, 650, 320, 70, 90, colors.red);
+  line(px, 650, 230, 650, 410, colors.soil, 10);
+  circle(px, 720, 400, 18, colors.white);
+  return px;
+}
+
+function basicGymnasticsScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 50, 420, 700, 120, colors.blue);
+  rect(px, 50, 420, 700, 10, colors.navy);
+  circle(px, 150, 380, 40, colors.skin1);
+  arc(px, 150, 390, 60, 200, 340, colors.navy, 10);
+  circle(px, 380, 220, 34, colors.skin2);
+  line(px, 380, 254, 380, 360, colors.teal, 14);
+  line(px, 380, 280, 320, 220, colors.navy, 8);
+  line(px, 380, 280, 440, 220, colors.navy, 8);
+  line(px, 380, 360, 350, 430, colors.navy, 8);
+  line(px, 380, 360, 410, 430, colors.navy, 8);
+  circle(px, 620, 240, 34, colors.skin3);
+  line(px, 620, 274, 620, 380, colors.teal, 14);
+  line(px, 620, 300, 550, 280, colors.navy, 8);
+  line(px, 620, 300, 690, 280, colors.navy, 8);
+  line(px, 620, 380, 620, 450, colors.navy, 8);
+  line(px, 620, 380, 580, 340, colors.navy, 8);
+  return px;
+}
+
+function athleticsScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 0, 330, W, 270, colors.red);
+  for (let i = 0; i < 5; i += 1) rect(px, 0, 360 + i * 48, W, 4, colors.white);
+  rect(px, 80, 380, 30, 60, colors.navy);
+  rect(px, 110, 420, 80, 20, colors.navy);
+  circle(px, 260, 280, 26, colors.skin1);
+  line(px, 260, 306, 260, 360, colors.teal, 12);
+  line(px, 260, 320, 220, 350, colors.navy, 8);
+  line(px, 260, 320, 300, 350, colors.navy, 8);
+  line(px, 260, 360, 230, 410, colors.navy, 8);
+  line(px, 260, 360, 300, 420, colors.navy, 8);
+  rect(px, 470, 360, 260, 130, colors.sand);
+  rect(px, 470, 360, 260, 8, colors.soil);
+  line(px, 740, 220, 740, 400, colors.navy, 6);
+  rect(px, 690, 300, 50, 14, colors.white);
+  return px;
+}
+
+function fastingScene() {
+  const px = canvas();
+  fill(px, colors.navy);
+  circle(px, 650, 110, 46, colors.sun);
+  circle(px, 670, 96, 42, colors.navy);
+  for (const [x, y] of [[540, 60], [720, 170], [470, 150]]) circle(px, x, y, 5, colors.white);
+  rect(px, 80, 220, 260, 180, colors.teal);
+  ellipse(px, 210, 220, 130, 60, colors.teal);
+  rect(px, 190, 150, 40, 80, colors.tealLight);
+  circle(px, 210, 145, 14, colors.sun);
+  rect(px, 0, 480, W, 120, colors.soil);
+  rect(px, 420, 420, 300, 60, colors.white);
+  for (const x of [450, 510, 570]) ellipse(px, x, 410, 20, 14, colors.orange);
+  rect(px, 620, 380, 40, 80, colors.sky);
+  rect(px, 630, 390, 20, 40, colors.blue);
+  return px;
+}
+
+function charityScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 90, 200, 230, 240, colors.green);
+  rect(px, 90, 200, 230, 30, colors.greenDark);
+  rect(px, 170, 180, 70, 20, colors.navy);
+  rect(px, 130, 280, 150, 60, colors.white);
+  for (const [x, y] of [[180, 400], [220, 380], [260, 410]]) circle(px, x, y, 18, colors.sun);
+  rect(px, 390, 260, 150, 180, colors.sand);
+  ellipse(px, 465, 260, 75, 30, colors.sand);
+  rect(px, 420, 320, 90, 50, colors.white);
+  circle(px, 620, 300, 30, colors.skin1);
+  line(px, 620, 330, 580, 380, colors.teal, 12);
+  circle(px, 700, 380, 30, colors.skin2);
+  line(px, 700, 380, 650, 380, colors.teal, 12);
+  circle(px, 640, 355, 14, colors.sun);
+  return px;
+}
+
+function islamHistoryScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 70, 320, 730, 320, colors.navy, 6);
+  rect(px, 80, 200, 110, 120, colors.navy);
+  rect(px, 80, 230, 110, 18, colors.sun);
+  triangle(px, 250, 320, 320, 200, 390, 320, colors.soil);
+  rect(px, 300, 270, 40, 50, colors.navy);
+  rect(px, 450, 230, 180, 90, colors.teal);
+  ellipse(px, 540, 230, 90, 46, colors.teal);
+  rect(px, 520, 160, 40, 70, colors.tealLight);
+  circle(px, 540, 155, 12, colors.sun);
+  rect(px, 680, 260, 70, 60, colors.greenDark);
+  rect(px, 680, 260, 70, 10, colors.sun);
+  for (const x of [135, 320, 540, 715]) circle(px, x, 320, 12, colors.orange);
+  return px;
+}
+
+function goodMannersScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 140, 230, 34, colors.skin3);
+  line(px, 140, 264, 140, 380, colors.teal, 14);
+  line(px, 140, 300, 190, 260, colors.navy, 8);
+  line(px, 140, 380, 115, 460, colors.navy, 8);
+  line(px, 140, 380, 165, 460, colors.navy, 8);
+  circle(px, 240, 260, 28, colors.skin1);
+  line(px, 240, 288, 240, 390, colors.orange, 12);
+  line(px, 240, 390, 220, 450, colors.navy, 8);
+  line(px, 240, 390, 260, 450, colors.navy, 8);
+  rect(px, 400, 420, 300, 60, colors.white);
+  circle(px, 430, 240, 30, colors.skin2);
+  line(px, 430, 270, 430, 380, colors.teal, 12);
+  circle(px, 520, 240, 30, colors.skin1);
+  line(px, 520, 270, 520, 380, colors.green, 12);
+  rect(px, 450, 400, 80, 20, colors.orange);
+  rect(px, 545, 400, 80, 20, colors.sun);
+  circle(px, 650, 300, 26, colors.skin3);
+  line(px, 650, 326, 650, 400, colors.blue, 12);
+  circle(px, 620, 360, 12, colors.red);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -1518,8 +1734,8 @@ write("content/packages/kelas4-pai-b02-iman/assets/iman-ilustrasi.png", imanScen
 write("content/packages/kelas4-seni-rupa-b03-warna-tekstur/assets/warna-tekstur.png", colorTexture());
 write("content/packages/kelas4-pjok-b03-kebugaran/assets/kebugaran.png", fitnessScene());
 write("content/packages/kelas4-pai-b03-akhlak/assets/akhlak-terpuji.png", akhlakScene());
-write("content/packages/kelas4-seni-rupa-b04-pameran-kelas/assets/pameran-kelas.png", exhibitionScene());
-write("content/packages/kelas4-pjok-b04-kesehatan/assets/kebersihan-diri.png", hygieneScene());
+write("content/packages/kelas4-seni-rupa-b08-pameran-kelas/assets/pameran-kelas.png", exhibitionScene());
+write("content/packages/kelas4-pjok-b08-kesehatan/assets/kebersihan-diri.png", hygieneScene());
 write("content/packages/kelas4-pai-b04-shalat/assets/shalat-ilustrasi.png", prayerScene());
 write("content/packages/kelas4-matematika-b05-bangun-datar/assets/bangun-datar.png", planeShapes());
 write("content/packages/kelas4-ipas-b05-siklus-air/assets/siklus-air.png", waterCycle());
@@ -1539,3 +1755,13 @@ write("content/packages/kelas4-bahasa-indonesia-b08-apresiasi-sastra/assets/apre
 write("content/packages/kelas4-pendidikan-pancasila-b08-proyek-kewargaan/assets/proyek-kewargaan.png", civicProjectScene());
 write("content/packages/kelas4-seni-rupa-b04-kolase/assets/kolase.png", collageScene());
 write("content/packages/kelas4-pjok-b04-bola-besar/assets/bola-besar.png", bigBallScene());
+write("content/packages/kelas4-seni-rupa-b05-seni-cetak/assets/seni-cetak.png", printmakingScene());
+write("content/packages/kelas4-seni-rupa-b06-kerajinan-bahan-alam/assets/kerajinan-bahan-alam.png", naturalCraftScene());
+write("content/packages/kelas4-seni-rupa-b07-apresiasi-karya/assets/apresiasi-karya.png", artAppreciationScene());
+write("content/packages/kelas4-pjok-b05-bola-kecil/assets/bola-kecil.png", smallBallScene());
+write("content/packages/kelas4-pjok-b06-senam-dasar/assets/senam-dasar.png", basicGymnasticsScene());
+write("content/packages/kelas4-pjok-b07-atletik-dasar/assets/atletik-dasar.png", athleticsScene());
+write("content/packages/kelas4-pai-b05-puasa/assets/puasa.png", fastingScene());
+write("content/packages/kelas4-pai-b06-zakat-infak/assets/zakat-infak.png", charityScene());
+write("content/packages/kelas4-pai-b07-sejarah-islam/assets/sejarah-islam.png", islamHistoryScene());
+write("content/packages/kelas4-pai-b08-adab-kisah-teladan/assets/adab-kisah-teladan.png", goodMannersScene());

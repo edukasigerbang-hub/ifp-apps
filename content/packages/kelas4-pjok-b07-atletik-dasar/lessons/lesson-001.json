@@ -1,0 +1,25 @@
+{
+  "lessonId": "atletik-dasar",
+  "packageId": "kelas4-pjok-b07-atletik-dasar",
+  "title": "Atletik Dasar",
+  "summary": "Mengenal nomor atletik dasar dan mempraktikkan lari serta lompat dengan benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan nomor atletik dasar.",
+    "Mempraktikkan teknik start dan lompat jauh sederhana.",
+    "Menunjukkan sportivitas saat berlatih."
+  ],
+  "activityIds": [
+    "eksplorasi-atletik-dasar",
+    "matching-atletik-dasar"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/atletik-dasar.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
