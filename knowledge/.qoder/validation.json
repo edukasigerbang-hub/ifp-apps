@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T19:24:42+07:00",
+  "last_validated_at": "2026-10-24T20:36:35+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -353,6 +353,12 @@
       "command": "async import.meta.glob; npm test; npm run build; E2E home-catalog/learning-journey",
       "result": "PASS",
       "details": "main chunk 447 kB; no >500 kB warning; home-catalog 9 checks + journey 11 checks PASS"
+    },
+    {
+      "name": "grade4_batch9_packages",
+      "command": "content:validate x4; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b05, ipas-b05, bindo-b05, pancasila-b05 VALID; import 5 files each active; main chunk 452 kB"
     }
   ],
   "environment": {
