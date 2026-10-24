@@ -34,7 +34,36 @@ const subjectSceneHints = {
 };
 
 const negativePrompt =
-  "text, letters, numbers, words, watermark, logo, signature, photorealistic faces of real people, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs";
+  "text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic, hyperrealistic, realistic human proportions, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs";
+
+const lowerGradeCoverStyle =
+  "High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
+const upperGradeCoverStyle =
+  "High-quality stylized 3D animated render, character design with age-appropriate proportions for older elementary children around 10 to 12 years old, expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
+const subjectCoverStyle =
+  "High-quality stylized 3D animated still-life render, soft rounded shapes, smooth matte clay-like materials, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
+const lowerGradeMateriStyle =
+  "High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background";
+const upperGradeMateriStyle =
+  "High-quality stylized 3D animated render, character design with age-appropriate proportions for older elementary children around 10 to 12 years old, expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic soft studio lighting, soft shadows, clean cream background";
+
+function isLowerGrade(grade) {
+  const value = Number(grade);
+  return Number.isFinite(value) && value >= 1 && value <= 3;
+}
+
+function materiStyleForGrade(grade) {
+  return isLowerGrade(grade) ? lowerGradeMateriStyle : upperGradeMateriStyle;
+}
+
+function to3dCoverPrompt(prompt, grade) {
+  const style = grade == null ? subjectCoverStyle : isLowerGrade(grade) ? lowerGradeCoverStyle : upperGradeCoverStyle;
+  return prompt
+    .replace(/ (?:Soft )?flat vector style, rounded shapes,/i, ` ${style},`)
+    .replace(/ space at the top for a title overlay/i, " clean cream space at the top for a title overlay")
+    .replace(/ negative space for a title overlay/i, " clean cream negative space for a title overlay")
+    .replace(/ no text\.?$/i, " Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.");
+}
 
 const gradeCovers = [
   {
@@ -228,10 +257,10 @@ for (const cover of gradeCovers) {
     grade: cover.grade,
     subject: "",
     title: cover.title,
-    prompt: cover.prompt,
+    prompt: to3dCoverPrompt(cover.prompt, cover.grade),
     negativePrompt,
     aspectRatio: "16:9",
-    suggestedFilename: `cover-kelas-${cover.grade}.png`
+    suggestedFilename: `cover-kelas-${cover.grade}.webp`
   });
 }
 for (const cover of subjectCovers) {
@@ -241,10 +270,10 @@ for (const cover of subjectCovers) {
     grade: "",
     subject: subjectLabels[cover.subject] ?? cover.subject,
     title: cover.title,
-    prompt: cover.prompt,
+    prompt: to3dCoverPrompt(cover.prompt),
     negativePrompt,
     aspectRatio: "16:9",
-    suggestedFilename: `cover-mapel-${cover.subject}.png`
+    suggestedFilename: `cover-mapel-${cover.subject}.webp`
   });
 }
 for (const record of inventory) {
@@ -256,10 +285,10 @@ for (const record of inventory) {
     subject: record.subject,
     title: record.lessonTitle,
     prompt:
-      `Educational illustration for grade ${record.grade} ${record.subject} in an Indonesian elementary school app, topic "${record.lessonTitle}". ${record.summary} Show ${sceneHint}. Flat vector style, soft rounded shapes, warm teal, orange, navy and cream palette, simple uncluttered background, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful, no text.`,
+      `Educational illustration for grade ${record.grade} ${record.subject} in an Indonesian elementary school app, topic "${record.lessonTitle}". ${record.summary} Show ${sceneHint}. ${materiStyleForGrade(record.grade)}, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.`,
     negativePrompt,
     aspectRatio: "4:3",
-    suggestedFilename: `materi-${record.packageId}.png`
+    suggestedFilename: `materi-${record.packageId}.webp`
   });
 }
 
@@ -297,7 +326,10 @@ promptLines.push(`- **Total:** ${promptRows.length} prompt`);
 promptLines.push("");
 promptLines.push("## Gaya global");
 promptLines.push("");
-promptLines.push("- Flat vector, bentuk membulat, warna teal/oranye/navy/krem agar selaras dengan aplikasi.");
+promptLines.push("- **Kelas 1–3:** stylized 3D ala film animasi — kepala besar, mata ekspresif, material matte lembut, cahaya studio.");
+promptLines.push("- **Kelas 4–6:** gaya 3D yang sama dengan proporsi anak yang lebih matang (sekitar 10–12 tahun), bukan chibi.");
+promptLines.push("- Karakter anak Indonesia konsisten: seragam putih dengan aksen merah, ramah dan sopan.");
+promptLines.push("- Cover menampilkan adegan kelas/sekolah; materi menampilkan objek 3D sederhana di latar krem.");
 promptLines.push("- Latar sederhana, ruang kosong untuk overlay judul (cover).");
 promptLines.push("- Konteks Indonesia, anak beragam, sopan, aman untuk anak SD.");
 promptLines.push("- **Tanpa teks/angka/logo/watermark**; angka divisualkan sebagai objek atau blok.");
@@ -308,7 +340,7 @@ promptLines.push("");
 promptLines.push("1. Impor CSV ke spreadsheet; buat kolom bantu `finalPrompt = prompt + \"\\nAvoid: \" + negativePrompt`.");
 promptLines.push("2. Generate cover lebih dulu (13 gambar), pilih yang konsisten, lalu jadikan referensi gaya.");
 promptLines.push("3. Generate materi per batch 10–20, simpan dengan `suggestedFilename`.");
-promptLines.push("4. Untuk cover: 1792×1024 atau 16:9; untuk materi: 1024×768 lalu turunkan ke 800×600.");
+promptLines.push("4. Untuk cover: 16:9; untuk materi: 4:3. Flow mengembalikan WebP — simpan apa adanya.");
 promptLines.push("5. Periksa tidak ada teks/logo yang tidak diinginkan sebelum dipakai.");
 promptLines.push("");
 promptLines.push("## Contoh prompt cover");
@@ -317,7 +349,7 @@ for (const cover of gradeCovers.slice(0, 2)) {
   promptLines.push(`### ${cover.title}`);
   promptLines.push("");
   promptLines.push("```text");
-  promptLines.push(cover.prompt);
+  promptLines.push(to3dCoverPrompt(cover.prompt, cover.grade));
   promptLines.push("");
   promptLines.push(`Avoid: ${negativePrompt}`);
   promptLines.push("```");
