@@ -17,6 +17,15 @@ cp .dev.vars.example .dev.vars   # isi nilai, jangan commit
 npx wrangler dev
 ```
 
+## Deploy
+
+```bash
+npx wrangler deploy
+```
+
+Produksi: `https://gerbangedukasi-api.edukasigerbang.workers.dev` (terverifikasi 2026-10-24).
+`CORS_ORIGIN="*"` untuk sementara karena origin WebView2 berbeda per platform (Windows `https://tauri.localhost`, Android `http://tauri.localhost`); persempit setelah origin final ditetapkan.
+
 ## Endpoint
 
 | Method | Path | Auth | Catatan |
