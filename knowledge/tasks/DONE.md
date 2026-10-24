@@ -411,3 +411,14 @@
 **Verifikasi:** `npm run e2e:rollback` PASS 9 pemeriksaan (dua kali berturut-turut).
 
 **Belum:** rollback lewat tombol UI (saat ini command), impor via dialog native, alur lisensi.
+
+### T-027 — E2E lisensi
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Harness `launchApp` menerima `extraEnv`; skenario menyuntikkan `IFP_LICENSE_KEYS` dengan keypair Ed25519 yang dibuat per run.
+- Skenario: status awal configured + tidak valid → impor lisensi valid (machine-bound, entitlements `core`) → UI “Berlaku” + licenseId → lisensi kedaluwarsa ditolak `LICENSE_EXPIRED` → signature diubah ditolak `LICENSE_SIGNATURE_INVALID` → lisensi valid lama tetap aktif.
+
+**Verifikasi:** `npm run e2e:license` PASS 8 pemeriksaan (dua kali berturut-turut, machine ID berbeda per run).
+
+**Belum:** impor lewat dialog native; aktivasi online dengan server referensi belum masuk harness; key produksi belum di-embed.
