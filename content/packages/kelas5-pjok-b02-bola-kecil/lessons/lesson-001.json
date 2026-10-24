@@ -1,0 +1,27 @@
+{
+  "lessonId": "bola-kecil",
+  "packageId": "kelas5-pjok-b02-bola-kecil",
+  "title": "Permainan Bola Kecil",
+  "summary": "Mempraktikkan permainan bola kecil dengan teknik dan aturan yang benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis permainan bola kecil.",
+    "Mempraktikkan gerak dasar.",
+    "Mematuhi aturan dan bekerja sama."
+  ],
+  "activityIds": [
+    "eksplorasi-bola-kecil",
+    "kuis-bola-kecil-kelas5"
+  ],
+  "assessmentRefs": [
+    "kuis-bola-kecil-kelas5"
+  ],
+  "assetRefs": [
+    "assets/bola-kecil-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

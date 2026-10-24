@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-musyawarah-demokrasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Musyawarah",
+  "instructions": "Amati gambar, lalu diskusikan nilai demokrasi dalam musyawarah.",
+  "assets": [
+    "assets/musyawarah-demokrasi.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu musyawarah?",
+        "assetPath": "assets/musyawarah-demokrasi.png",
+        "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
+        "reveal": "Membicarakan masalah bersama untuk kesepakatan.",
+        "hint": "Semua diberi kesempatan."
+      },
+      {
+        "prompt": "Apa nilai demokrasi?",
+        "assetPath": "assets/musyawarah-demokrasi.png",
+        "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
+        "reveal": "Kebebasan berpendapat dan menghargai perbedaan.",
+        "hint": "Keputusan bersama dihormati."
+      },
+      {
+        "prompt": "Bagaimana menyampaikan pendapat?",
+        "assetPath": "assets/musyawarah-demokrasi.png",
+        "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
+        "reveal": "Sopan dan tidak memotong.",
+        "hint": "Angkat tangan dahulu."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama."
+  }
+}

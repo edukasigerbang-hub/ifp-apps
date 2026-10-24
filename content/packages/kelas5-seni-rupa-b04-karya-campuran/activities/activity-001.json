@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-karya-campuran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Karya Campuran",
+  "instructions": "Amati gambar, lalu diskusikan bahan dan teknik yang dipakai.",
+  "assets": [
+    "assets/karya-campuran.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu karya campuran?",
+        "assetPath": "assets/karya-campuran.png",
+        "altText": "Karya campuran dari kertas, kain, daun, dan cat.",
+        "reveal": "Karya yang memakai beberapa bahan dan teknik.",
+        "hint": "Bisa menggambar dan menempel."
+      },
+      {
+        "prompt": "Bahan apa yang dapat dipakai?",
+        "assetPath": "assets/karya-campuran.png",
+        "altText": "Karya campuran dari kertas, kain, daun, dan cat.",
+        "reveal": "Kertas, kain, daun, dan cat.",
+        "hint": "Pilih bahan yang aman."
+      },
+      {
+        "prompt": "Bagaimana menyusun karya?",
+        "assetPath": "assets/karya-campuran.png",
+        "altText": "Karya campuran dari kertas, kain, daun, dan cat.",
+        "reveal": "Tentukan tema, susun bahan, lalu tempel atau gambar.",
+        "hint": "Rapikan hasilnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya campuran dari kertas, kain, daun, dan cat."
+  }
+}

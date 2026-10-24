@@ -1,0 +1,25 @@
+{
+  "lessonId": "laporan-kelas5",
+  "packageId": "kelas5-bahasa-indonesia-b04-laporan",
+  "title": "Menulis Laporan Sederhana",
+  "summary": "Menulis laporan hasil pengamatan dengan struktur yang benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan struktur laporan.",
+    "Menggunakan bahasa baku.",
+    "Menulis laporan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-laporan",
+    "ordering-laporan"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/laporan-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan di buku."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

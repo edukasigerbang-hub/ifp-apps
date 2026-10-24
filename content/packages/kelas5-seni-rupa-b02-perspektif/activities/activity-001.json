@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-perspektif",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis Perspektif",
+  "instructions": "Amati gambar, lalu diskusikan garis menuju titik hilang.",
+  "assets": [
+    "assets/perspektif.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu perspektif?",
+        "assetPath": "assets/perspektif.png",
+        "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang.",
+        "reveal": "Cara menggambar agar objek terlihat memiliki jarak.",
+        "hint": "Benda jauh tampak lebih kecil."
+      },
+      {
+        "prompt": "Apa itu titik hilang?",
+        "assetPath": "assets/perspektif.png",
+        "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang.",
+        "reveal": "Titik tempat garis-garis bertemu di horizon.",
+        "hint": "Letaknya di garis horizon."
+      },
+      {
+        "prompt": "Mengapa benda dekat tampak besar?",
+        "assetPath": "assets/perspektif.png",
+        "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang.",
+        "reveal": "Karena jaraknya dekat dengan pengamat.",
+        "hint": "Bandingkan pohon besar dan kecil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-seni-rupa-b02-perspektif",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menggambar Perspektif Sederhana — Seni Rupa Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/perspektif.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6597,
+      "sha256": "8cf476e473d2d2ba1ac44a8a4fe0be659cb861e29658c0d5cbae56a884ee9acd"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

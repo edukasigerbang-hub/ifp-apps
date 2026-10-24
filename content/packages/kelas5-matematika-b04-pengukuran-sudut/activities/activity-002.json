@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-pengukuran-sudut",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Sudut",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-siku",
+        "prompt": "Sudut yang besarnya 90 derajat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-siku",
+            "text": "Sudut siku-siku"
+          },
+          {
+            "optionId": "opsi-lancip",
+            "text": "Sudut lancip"
+          },
+          {
+            "optionId": "opsi-tumpul",
+            "text": "Sudut tumpul"
+          },
+          {
+            "optionId": "opsi-lurus",
+            "text": "Sudut lurus"
+          }
+        ],
+        "correctResponse": "opsi-siku"
+      },
+      {
+        "questionId": "soal-lancip",
+        "prompt": "Sudut yang kurang dari 90 derajat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lancip",
+            "text": "Sudut lancip"
+          },
+          {
+            "optionId": "opsi-siku",
+            "text": "Sudut siku-siku"
+          },
+          {
+            "optionId": "opsi-tumpul",
+            "text": "Sudut tumpul"
+          },
+          {
+            "optionId": "opsi-lurus",
+            "text": "Sudut lurus"
+          }
+        ],
+        "correctResponse": "opsi-lancip"
+      },
+      {
+        "questionId": "soal-tumpul",
+        "prompt": "Sudut yang lebih dari 90 derajat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tumpul",
+            "text": "Sudut tumpul"
+          },
+          {
+            "optionId": "opsi-lancip",
+            "text": "Sudut lancip"
+          },
+          {
+            "optionId": "opsi-siku",
+            "text": "Sudut siku-siku"
+          },
+          {
+            "optionId": "opsi-nol",
+            "text": "Sudut nol"
+          }
+        ],
+        "correctResponse": "opsi-tumpul"
+      },
+      {
+        "questionId": "soal-segitiga",
+        "prompt": "Jumlah sudut dalam segitiga adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-180",
+            "text": "180 derajat"
+          },
+          {
+            "optionId": "opsi-90",
+            "text": "90 derajat"
+          },
+          {
+            "optionId": "opsi-360",
+            "text": "360 derajat"
+          },
+          {
+            "optionId": "opsi-270",
+            "text": "270 derajat"
+          }
+        ],
+        "correctResponse": "opsi-180"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut lancip, siku, dan tumpul pada bangun datar."
+  }
+}

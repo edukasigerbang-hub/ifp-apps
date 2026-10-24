@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 124 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 140 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -135,10 +135,10 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4 dan Kelas 3 lengkap; Kelas 5 batch 1–3 sudah dibuat (12 paket). Lanjutkan **Kelas 5 S1 batch 4** (sisa B02–B04: 16 paket).
+1. Kelas 4, Kelas 3, dan **Kelas 5 Semester 1 lengkap** (28 paket). Lanjutkan **Kelas 5 Semester 2** (28 paket).
 2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 95,8 kB (map 124 paket).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 107,9 kB (map 140 paket).
 5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
 6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
@@ -438,8 +438,37 @@ Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/
 | `kelas5-ipas-b02-sistem-pernapasan` | Sistem Pernapasan Manusia | eksplorasi + matching (6 pasangan) | `sistem-pernapasan.png` |
 | `kelas5-pendidikan-pancasila-b02-nilai-pancasila` | Nilai Pancasila dalam Kehidupan | eksplorasi + matching (6 pasangan) | `nilai-pancasila.png` |
 | `kelas5-matematika-b03-faktor-kelipatan` | Faktor, Kelipatan, KPK, dan FPB | eksplorasi + MCQ (4 soal) | `faktor-kelipatan-kelas5.png` |
+| `kelas5-bahasa-indonesia-b03-ide-pokok` | 0.1.0 | 5 | bahasa-indonesia | Ide Pokok dan Kalimat Utama | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b04-laporan` | 0.1.0 | 5 | bahasa-indonesia | Menulis Laporan Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b03-peredaran-darah` | 0.1.0 | 5 | ipas | Sistem Peredaran Darah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b04-kesehatan-tubuh` | 0.1.0 | 5 | ipas | Kesehatan Tubuh dan Pencegahan Penyakit | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b04-pengukuran-sudut` | 0.1.0 | 5 | matematika | Pengukuran Sudut dan Bangun Datar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b02-iman-rasul` | 0.1.0 | 5 | pai | Iman kepada Rasul | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b03-akhlak` | 0.1.0 | 5 | pai | Akhlak Terpuji | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pai-b04-salat-ibadah` | 0.1.0 | 5 | pai | Salat dan Ibadah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b03-hak-kewajiban` | 0.1.0 | 5 | pendidikan-pancasila | Hak dan Kewajiban Warga Negara | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi` | 0.1.0 | 5 | pendidikan-pancasila | Musyawarah dan Demokrasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b02-bola-kecil` | 0.1.0 | 5 | pjok | Permainan Bola Kecil | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b03-atletik` | 0.1.0 | 5 | pjok | Atletik Dasar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pjok-b04-kebugaran` | 0.1.0 | 5 | pjok | Kebugaran Jasmani | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b02-perspektif` | 0.1.0 | 5 | seni-rupa | Menggambar Perspektif Sederhana | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b03-warna-komposisi` | 0.1.0 | 5 | seni-rupa | Warna dan Komposisi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-seni-rupa-b04-karya-campuran` | 0.1.0 | 5 | seni-rupa | Karya Campuran (Mixed Media) | **DRAFT** | VALID (2 warning) | belum |
 
 - Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); pencarian UI terverifikasi.
 - `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **95,76 kB**.
 - Review teknis ulang: **124/124 VALID**, alt lengkap, packageId unik.
 - Total katalog: **124 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 12).
+
+## Batch 19 Kelas 5 — Semester 1 lengkap (2026-10-24)
+
+Menambahkan 16 paket sisa Semester 1.
+
+- Cakupan: Seni B02–B04, PJOK B02–B04, PAI B02–B04, Bahasa B03–B04, IPAS B03–B04, Matematika B04, Pancasila B03–B04.
+- Scene baru: perspektif dan sistem peredaran darah.
+- Validasi: **VALID** 16/16; impor **28/28 paket Kelas 5 PASS** (5 file/paket, `active`).
+- UI: pencarian “Peredaran Darah” menemukan materi; screenshot terverifikasi.
+- Audit ulang: **140/140 VALID**, alt lengkap, packageId unik.
+- `npm test`: 83/83 + golden 4/4; build utama **415,32 kB**, lazy map **107,94 kB**.
+- **Kelas 5 Semester 1 lengkap: 28 paket draft.**
+- Total katalog: **140 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 28).

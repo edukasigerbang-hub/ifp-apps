@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-hak-kewajiban-warga",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Hak dan Kewajiban",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-hak",
+        "prompt": "Contoh hak warga negara adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pendidikan",
+            "text": "Mendapat pendidikan"
+          },
+          {
+            "optionId": "opsi-kebersihan",
+            "text": "Menjaga kebersihan"
+          },
+          {
+            "optionId": "opsi-aturan",
+            "text": "Mematuhi aturan"
+          },
+          {
+            "optionId": "opsi-pajak",
+            "text": "Membayar pajak"
+          }
+        ],
+        "correctResponse": "opsi-pendidikan"
+      },
+      {
+        "questionId": "soal-kewajiban",
+        "prompt": "Contoh kewajiban di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-aturan",
+            "text": "Mematuhi aturan"
+          },
+          {
+            "optionId": "opsi-bermain",
+            "text": "Bermain terus"
+          },
+          {
+            "optionId": "opsi-jajan",
+            "text": "Membeli jajan"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur di kelas"
+          }
+        ],
+        "correctResponse": "opsi-aturan"
+      },
+      {
+        "questionId": "soal-seimbang",
+        "prompt": "Hak dan kewajiban harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-seimbang",
+            "text": "Dilaksanakan seimbang"
+          },
+          {
+            "optionId": "opsi-hak",
+            "text": "Hak saja"
+          },
+          {
+            "optionId": "opsi-kewajiban",
+            "text": "Kewajiban saja"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Diabaikan"
+          }
+        ],
+        "correctResponse": "opsi-seimbang"
+      },
+      {
+        "questionId": "soal-contoh",
+        "prompt": "Contoh kewajiban menjaga lingkungan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sampah",
+            "text": "Membuang sampah pada tempatnya"
+          },
+          {
+            "optionId": "opsi-coret",
+            "text": "Mencoret dinding"
+          },
+          {
+            "optionId": "opsi-tebang",
+            "text": "Menebang pohon sembarangan"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang sampah ke sungai"
+          }
+        ],
+        "correctResponse": "opsi-sampah"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+  }
+}

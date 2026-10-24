@@ -1,0 +1,27 @@
+{
+  "lessonId": "ide-pokok-kelas5",
+  "packageId": "kelas5-bahasa-indonesia-b03-ide-pokok",
+  "title": "Ide Pokok dan Kalimat Utama",
+  "summary": "Menemukan ide pokok dan kalimat utama dalam paragraf.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti ide pokok.",
+    "Menemukan kalimat utama.",
+    "Menyimpulkan isi paragraf."
+  ],
+  "activityIds": [
+    "eksplorasi-ide-pokok-kelas5",
+    "kuis-ide-pokok-kelas5"
+  ],
+  "assessmentRefs": [
+    "kuis-ide-pokok-kelas5"
+  ],
+  "assetRefs": [
+    "assets/ide-pokok-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita dan mencatat ide pokok."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

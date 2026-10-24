@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-pengukuran-sudut",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Sudut",
+  "instructions": "Amati gambar, lalu diskusikan jenis dan besar sudut.",
+  "assets": [
+    "assets/pengukuran-sudut.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa sudut siku-siku?",
+        "assetPath": "assets/pengukuran-sudut.png",
+        "altText": "Sudut lancip, siku, dan tumpul pada bangun datar.",
+        "reveal": "Sudut yang besarnya 90 derajat.",
+        "hint": "Bentuk huruf L."
+      },
+      {
+        "prompt": "Apa sudut lancip?",
+        "assetPath": "assets/pengukuran-sudut.png",
+        "altText": "Sudut lancip, siku, dan tumpul pada bangun datar.",
+        "reveal": "Sudut kurang dari 90 derajat.",
+        "hint": "Lebih sempit dari siku."
+      },
+      {
+        "prompt": "Apa sudut tumpul?",
+        "assetPath": "assets/pengukuran-sudut.png",
+        "altText": "Sudut lancip, siku, dan tumpul pada bangun datar.",
+        "reveal": "Sudut lebih dari 90 derajat.",
+        "hint": "Lebih lebar dari siku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut lancip, siku, dan tumpul pada bangun datar."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "atletik-dasar",
+  "packageId": "kelas5-pjok-b03-atletik",
+  "title": "Atletik Dasar",
+  "summary": "Mempraktikkan nomor atletik dasar dengan teknik dan sportivitas.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan nomor atletik.",
+    "Mempraktikkan lari dan lompat.",
+    "Menunjukkan sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-atletik-kelas5",
+    "matching-atletik-kelas5"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/atletik-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat pasir, dan pita finis."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

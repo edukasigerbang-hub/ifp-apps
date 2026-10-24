@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-peredaran-darah",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Organ dan Fungsi",
+  "instructions": "Pasangkan setiap organ dengan fungsinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jantung",
+        "left": "Jantung",
+        "right": "Memompa darah"
+      },
+      {
+        "pairId": "pasangan-arteri",
+        "left": "Arteri",
+        "right": "Membawa darah dari jantung"
+      },
+      {
+        "pairId": "pasangan-vena",
+        "left": "Vena",
+        "right": "Membawa darah ke jantung"
+      },
+      {
+        "pairId": "pasangan-darah",
+        "left": "Darah",
+        "right": "Mengangkut oksigen"
+      },
+      {
+        "pairId": "pasangan-paru",
+        "left": "Paru-paru",
+        "right": "Menukar oksigen"
+      },
+      {
+        "pairId": "pasangan-kapiler",
+        "left": "Kapiler",
+        "right": "Pertukaran zat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram jantung, paru-paru, dan pembuluh darah."
+  }
+}

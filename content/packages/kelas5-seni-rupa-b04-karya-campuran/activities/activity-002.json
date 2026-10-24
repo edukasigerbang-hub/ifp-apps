@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-karya-campuran",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Membuat Karya Campuran",
+  "instructions": "Susun langkah membuat karya campuran.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tema",
+        "text": "Menentukan tema"
+      },
+      {
+        "itemId": "langkah-bahan",
+        "text": "Menyiapkan bahan"
+      },
+      {
+        "itemId": "langkah-rancangan",
+        "text": "Membuat rancangan"
+      },
+      {
+        "itemId": "langkah-buat",
+        "text": "Menempel dan menggambar"
+      },
+      {
+        "itemId": "langkah-rapi",
+        "text": "Merapikan karya"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tema",
+      "langkah-bahan",
+      "langkah-rancangan",
+      "langkah-buat",
+      "langkah-rapi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya campuran dari kertas, kain, daun, dan cat."
+  }
+}

@@ -67,4 +67,6 @@
 | 1 | B01 Matematika, Bahasa Indonesia, IPAS, Pendidikan Pancasila | **draft selesai** (2026-10-24) |
 | 2 | B01 Seni Rupa, PJOK, PAI + B02 Matematika | **draft selesai** (2026-10-24) |
 | 3 | B02 Bahasa Indonesia, IPAS, Pancasila + B03 Matematika | **draft selesai** (2026-10-24) |
-| 4–7 | Sisa B02–B04 (16 paket) | belum |
+| 4–7 | Sisa B02–B04 (16 paket) | **draft selesai** (2026-10-24) |
+
+**Semester 1 lengkap: 28 paket draft** (7 mapel × 4 bab).

@@ -2140,6 +2140,56 @@ function respiratoryScene() {
   return px;
 }
 
+function perspectiveScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 680, 120, 40, colors.sun);
+  rect(px, 0, 300, W, 300, colors.green);
+  line(px, 0, 300, W, 300, colors.navy, 4);
+  circle(px, 400, 300, 7, colors.red);
+  line(px, 0, 600, 400, 300, colors.sand, 6);
+  line(px, W, 600, 400, 300, colors.sand, 6);
+  line(px, 200, 600, 400, 300, colors.sand, 4);
+  line(px, 600, 600, 400, 300, colors.sand, 4);
+  // pohon dekat dan jauh
+  rect(px, 120, 400, 18, 120, colors.soil);
+  circle(px, 129, 380, 58, colors.greenDark);
+  rect(px, 470, 330, 10, 50, colors.soil);
+  circle(px, 475, 320, 28, colors.greenDark);
+  rect(px, 650, 310, 6, 24, colors.soil);
+  circle(px, 653, 305, 14, colors.greenDark);
+  // rumah
+  rect(px, 540, 420, 110, 80, colors.white);
+  triangle(px, 530, 420, 595, 360, 660, 420, colors.red);
+  return px;
+}
+
+function circulationScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 400, 115, 44, colors.skin1);
+  rect(px, 300, 170, 200, 350, colors.sand);
+  // paru-paru
+  ellipse(px, 350, 260, 45, 60, colors.sky);
+  ellipse(px, 450, 260, 45, 60, colors.sky);
+  // jantung
+  circle(px, 380, 350, 38, colors.red);
+  circle(px, 420, 350, 38, colors.red);
+  triangle(px, 345, 365, 455, 365, 400, 440, colors.red);
+  // pembuluh
+  line(px, 380, 312, 350, 220, colors.blue, 7);
+  line(px, 420, 312, 450, 220, colors.blue, 7);
+  line(px, 400, 440, 400, 500, colors.blue, 7);
+  line(px, 345, 370, 310, 420, colors.red, 6);
+  line(px, 455, 370, 490, 420, colors.red, 6);
+  for (const [x, y] of [[340, 480], [360, 480], [440, 480], [460, 480]]) {
+    circle(px, x, y, 8, colors.red);
+  }
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2252,3 +2302,19 @@ write("content/packages/kelas5-bahasa-indonesia-b02-teks-narasi/assets/teks-nara
 write("content/packages/kelas5-ipas-b02-sistem-pernapasan/assets/sistem-pernapasan.png", respiratoryScene());
 write("content/packages/kelas5-pendidikan-pancasila-b02-nilai-pancasila/assets/nilai-pancasila.png", bhinnekaScene());
 write("content/packages/kelas5-matematika-b03-faktor-kelipatan/assets/faktor-kelipatan-kelas5.png", factorVenn());
+write("content/packages/kelas5-seni-rupa-b02-perspektif/assets/perspektif.png", perspectiveScene());
+write("content/packages/kelas5-pjok-b02-bola-kecil/assets/bola-kecil-kelas5.png", smallBallScene());
+write("content/packages/kelas5-pai-b02-iman-rasul/assets/iman-rasul.png", imanScene());
+write("content/packages/kelas5-bahasa-indonesia-b03-ide-pokok/assets/ide-pokok-kelas5.png", storyListening());
+write("content/packages/kelas5-seni-rupa-b03-warna-komposisi/assets/warna-komposisi.png", colorTexture());
+write("content/packages/kelas5-pjok-b03-atletik/assets/atletik-kelas5.png", athleticsScene());
+write("content/packages/kelas5-pai-b03-akhlak/assets/akhlak-kelas5.png", akhlakScene());
+write("content/packages/kelas5-pendidikan-pancasila-b03-hak-kewajiban/assets/hak-kewajiban-kelas5.png", rightsDuties());
+write("content/packages/kelas5-seni-rupa-b04-karya-campuran/assets/karya-campuran.png", collageScene());
+write("content/packages/kelas5-pjok-b04-kebugaran/assets/kebugaran-kelas5.png", fitnessScene());
+write("content/packages/kelas5-pai-b04-salat-ibadah/assets/salat-ibadah.png", prayerScene());
+write("content/packages/kelas5-ipas-b03-peredaran-darah/assets/peredaran-darah.png", circulationScene());
+write("content/packages/kelas5-matematika-b04-pengukuran-sudut/assets/pengukuran-sudut.png", geometryScene());
+write("content/packages/kelas5-bahasa-indonesia-b04-laporan/assets/laporan-kelas5.png", writingScene());
+write("content/packages/kelas5-ipas-b04-kesehatan-tubuh/assets/kesehatan-tubuh.png", hygieneScene());
+write("content/packages/kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi/assets/musyawarah-demokrasi.png", discussionScene());

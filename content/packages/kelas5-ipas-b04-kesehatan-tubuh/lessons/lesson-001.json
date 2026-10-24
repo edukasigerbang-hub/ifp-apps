@@ -1,0 +1,25 @@
+{
+  "lessonId": "kesehatan-tubuh",
+  "packageId": "kelas5-ipas-b04-kesehatan-tubuh",
+  "title": "Kesehatan Tubuh dan Pencegahan Penyakit",
+  "summary": "Menjaga kesehatan tubuh dan mencegah penyakit menular.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara menjaga kesehatan.",
+    "Menjelaskan pencegahan penyakit.",
+    "Membiasakan hidup bersih."
+  ],
+  "activityIds": [
+    "eksplorasi-kesehatan-tubuh",
+    "matching-kesehatan-tubuh"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/kesehatan-tubuh.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

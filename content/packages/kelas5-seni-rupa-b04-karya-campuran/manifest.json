@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-seni-rupa-b04-karya-campuran",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Karya Campuran (Mixed Media) — Seni Rupa Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/karya-campuran.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6253,
+      "sha256": "28993a4c5cd827b23b5ac06c7f8814e454966d8f64cfacc008614bd72a6d249b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

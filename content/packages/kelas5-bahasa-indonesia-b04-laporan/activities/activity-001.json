@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-laporan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Laporan",
+  "instructions": "Amati gambar, lalu diskusikan bagian-bagian laporan.",
+  "assets": [
+    "assets/laporan-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa bagian laporan?",
+        "assetPath": "assets/laporan-kelas5.png",
+        "altText": "Anak menulis laporan hasil pengamatan di buku.",
+        "reveal": "Tujuan, kegiatan, hasil, dan kesimpulan.",
+        "hint": "Urut dan jelas."
+      },
+      {
+        "prompt": "Apa ciri bahasa laporan?",
+        "assetPath": "assets/laporan-kelas5.png",
+        "altText": "Anak menulis laporan hasil pengamatan di buku.",
+        "reveal": "Baku, jelas, dan tidak berlebihan.",
+        "hint": "Gunakan kalimat efektif."
+      },
+      {
+        "prompt": "Apa yang perlu diperiksa?",
+        "assetPath": "assets/laporan-kelas5.png",
+        "altText": "Anak menulis laporan hasil pengamatan di buku.",
+        "reveal": "Ejaan, tanda baca, dan kelengkapan isi.",
+        "hint": "Baca ulang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan di buku."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lessonId": "peredaran-darah",
+  "packageId": "kelas5-ipas-b03-peredaran-darah",
+  "title": "Sistem Peredaran Darah",
+  "summary": "Mengenal organ peredaran darah dan fungsinya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan organ peredaran darah.",
+    "Menjelaskan fungsi jantung.",
+    "Menjaga kesehatan peredaran darah."
+  ],
+  "activityIds": [
+    "eksplorasi-peredaran-darah",
+    "matching-peredaran-darah"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/peredaran-darah.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram jantung, paru-paru, dan pembuluh darah."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
