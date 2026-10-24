@@ -37,6 +37,7 @@
 | Jadwal produksi konten Kelas 1–6 | [`content/PRODUCTION_SCHEDULE.md`](content/PRODUCTION_SCHEDULE.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |
+| Review teknis starter Kelas 4 (2026-10-24) | [`content/REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md`](content/REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md) |
 | Device spike readiness | [`device/DEVICE_SPIKE_READINESS.md`](device/DEVICE_SPIKE_READINESS.md) |
 | Release checklist (Windows RC) | [`release/RELEASE_CHECKLIST.md`](release/RELEASE_CHECKLIST.md) |
 | Register test gap | [`testing/TEST_GAPS.md`](testing/TEST_GAPS.md) |

@@ -74,7 +74,8 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik (dibuat oleh `scripts/generate-content-assets.mjs`), `curriculumRefs: []`, `reviewStatus: draft`.
 - Validasi: **VALID**, 0 issue, 2 warning (status draft + `curriculumRefs` kosong).
 - Impor: `content_import_package` untuk keempat paket **PASS** di data dir bersih; masing-masing 5 file, status `active`.
-- Belum: review pedagogis R1–R12; R10 tetap BLOCKING sampai D6 disetujui.
+- Review teknis: R7/R8/R9/R11/R12 PASS (teknis); **R10 BLOCKING**; R1–R6/R8–R9/R12 menunggu reviewer manusia. Laporan: [REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md](REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md).
+- Keputusan: **belum approved**; `reviewStatus` tetap `draft`.
 - Matching tidak dipakai sebagai `assessmentRef` karena tidak memiliki `assessmentConfig`; kedua lesson matching memakai `assessmentRefs: []`.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
