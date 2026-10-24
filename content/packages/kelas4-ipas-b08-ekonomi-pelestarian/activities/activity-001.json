@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-ekonomi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kegiatan Ekonomi",
+  "instructions": "Amati gambar, lalu hubungkan pekerjaan dengan jenis kegiatan ekonomi.",
+  "assets": [
+    "assets/ekonomi-pelestarian.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan petani pada gambar?",
+        "assetPath": "assets/ekonomi-pelestarian.png",
+        "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon.",
+        "reveal": "Petani menanam padi; ini kegiatan produksi.",
+        "hint": "Perhatikan sawah dan alat pertanian."
+      },
+      {
+        "prompt": "Apa yang dilakukan nelayan?",
+        "assetPath": "assets/ekonomi-pelestarian.png",
+        "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon.",
+        "reveal": "Nelayan menangkap ikan; ini juga produksi dari sumber daya laut.",
+        "hint": "Perhatikan perahu dan laut."
+      },
+      {
+        "prompt": "Mengapa menanam pohon penting bagi lingkungan?",
+        "assetPath": "assets/ekonomi-pelestarian.png",
+        "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon.",
+        "reveal": "Pohon menjaga udara, tanah, dan air serta mencegah erosi.",
+        "hint": "Hubungkan dengan sumber daya alam."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon."
+  }
+}

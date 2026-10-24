@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-apresiasi",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Apresiasi Sastra",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-bait",
+        "prompt": "Kumpulan baris dalam puisi disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bait",
+            "text": "bait"
+          },
+          {
+            "optionId": "opsi-rima",
+            "text": "rima"
+          },
+          {
+            "optionId": "opsi-amanat",
+            "text": "amanat"
+          },
+          {
+            "optionId": "opsi-latar",
+            "text": "latar"
+          }
+        ],
+        "correctResponse": "opsi-bait"
+      },
+      {
+        "questionId": "soal-rima",
+        "prompt": "Persamaan bunyi pada akhir baris puisi disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-rima",
+            "text": "rima"
+          },
+          {
+            "optionId": "opsi-bait",
+            "text": "bait"
+          },
+          {
+            "optionId": "opsi-tokoh",
+            "text": "tokoh"
+          },
+          {
+            "optionId": "opsi-alur",
+            "text": "alur"
+          }
+        ],
+        "correctResponse": "opsi-rima"
+      },
+      {
+        "questionId": "soal-amanat",
+        "prompt": "Pesan yang ingin disampaikan penulis dalam cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-amanat",
+            "text": "amanat"
+          },
+          {
+            "optionId": "opsi-latar",
+            "text": "latar"
+          },
+          {
+            "optionId": "opsi-rima",
+            "text": "rima"
+          },
+          {
+            "optionId": "opsi-bait",
+            "text": "bait"
+          }
+        ],
+        "correctResponse": "opsi-amanat"
+      },
+      {
+        "questionId": "soal-apresiasi",
+        "prompt": "Apresiasi yang baik terhadap karya teman adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-alasan",
+            "text": "menyebutkan hal menarik beserta alasannya"
+          },
+          {
+            "optionId": "opsi-ejek",
+            "text": "mengejek kekurangan karya"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "diam saja tanpa tanggapan"
+          },
+          {
+            "optionId": "opsi-klaim",
+            "text": "mengklaim karya itu milik sendiri"
+          }
+        ],
+        "correctResponse": "opsi-alasan"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

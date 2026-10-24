@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-apresiasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menikmati Karya Sastra",
+  "instructions": "Amati gambar, lalu diskusikan cara menikmati dan menghargai karya sastra.",
+  "assets": [
+    "assets/apresiasi-sastra.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan anak pada gambar?",
+        "assetPath": "assets/apresiasi-sastra.png",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
+        "reveal": "Anak membaca buku sastra dengan tenang.",
+        "hint": "Perhatikan buku dan suasana."
+      },
+      {
+        "prompt": "Apa yang bisa dinikmati dari sebuah puisi?",
+        "assetPath": "assets/apresiasi-sastra.png",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
+        "reveal": "Rima, pilihan kata, irama, dan amanat.",
+        "hint": "Dengarkan bunyi dan maknanya."
+      },
+      {
+        "prompt": "Bagaimana cara memberi apresiasi yang baik?",
+        "assetPath": "assets/apresiasi-sastra.png",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
+        "reveal": "Menyebutkan hal menarik dan alasannya dengan sopan.",
+        "hint": "Hindari mengejek karya teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+  }
+}

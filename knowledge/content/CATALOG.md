@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 40 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 44 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -44,6 +44,10 @@
 | `kelas4-ipas-b07-sejarah-kerajaan` | 0.1.0 | 4 | ipas | Sejarah kerajaan | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b07-wawancara-presentasi` | 0.1.0 | 4 | bahasa-indonesia | Wawancara & presentasi | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b07-gotong-royong` | 0.1.0 | 4 | pendidikan-pancasila | Gotong royong | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b08-pemecahan-masalah` | 0.1.0 | 4 | matematika | Pemecahan masalah | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b08-ekonomi-pelestarian` | 0.1.0 | 4 | ipas | Ekonomi & pelestarian | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b08-apresiasi-sastra` | 0.1.0 | 4 | bahasa-indonesia | Apresiasi sastra | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b08-proyek-kewargaan` | 0.1.0 | 4 | pendidikan-pancasila | Proyek kewargaan | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -216,6 +220,21 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
 - Bundle utama 461,6 kB (<500 kB).
 - Sisa Semester 2: B07 untuk Seni Rupa/PJOK/PAI (3 paket) + B08 untuk 7 mapel (7 paket) + opsi Bahasa Inggris (10 paket).
+
+## Batch 12 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b08-pemecahan-masalah` | Pemecahan Masalah Matematika | eksplorasi + MCQ (4 soal) | `pemecahan-masalah.png` |
+| `kelas4-ipas-b08-ekonomi-pelestarian` | Kegiatan Ekonomi dan Pelestarian Lingkungan | eksplorasi + matching (5 pasangan) | `ekonomi-pelestarian.png` |
+| `kelas4-bahasa-indonesia-b08-apresiasi-sastra` | Apresiasi Sastra | eksplorasi + MCQ (4 soal) | `apresiasi-sastra.png` |
+| `kelas4-pendidikan-pancasila-b08-proyek-kewargaan` | Proyek Kewargaan | eksplorasi + ordering (5 langkah) | `proyek-kewargaan.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
+- Bundle utama 466,5 kB (<500 kB); pantau saat 6 paket terakhir ditambahkan.
+- Sisa Semester 2: B07 & B08 untuk Seni Rupa/PJOK/PAI (6 paket) + opsi Bahasa Inggris.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

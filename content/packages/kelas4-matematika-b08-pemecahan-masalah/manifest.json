@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b08-pemecahan-masalah",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pemecahan Masalah Matematika — Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/pemecahan-masalah.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4759,
+      "sha256": "af9dfa4dca238a72fc2550a71f3d00f0e852d7cbe7b5c0a164d4cbcd94a89a22"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

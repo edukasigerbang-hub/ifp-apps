@@ -1,0 +1,25 @@
+{
+  "lessonId": "ekonomi-pelestarian",
+  "packageId": "kelas4-ipas-b08-ekonomi-pelestarian",
+  "title": "Kegiatan Ekonomi dan Pelestarian Lingkungan",
+  "summary": "Mengenali kegiatan produksi, distribusi, dan konsumsi serta cara memanfaatkan sumber daya secara lestari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis kegiatan ekonomi.",
+    "Menghubungkan pekerjaan dengan kegiatan ekonomi.",
+    "Menjelaskan cara menjaga lingkungan dalam kegiatan ekonomi."
+  ],
+  "activityIds": [
+    "eksplorasi-ekonomi",
+    "matching-ekonomi"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/ekonomi-pelestarian.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

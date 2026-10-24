@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-pemecahan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Pemecahan Masalah",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-total-buku",
+        "prompt": "3 buku masing-masing Rp5.000. Total harganya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-10000",
+            "text": "Rp10.000"
+          },
+          {
+            "optionId": "opsi-15000",
+            "text": "Rp15.000"
+          },
+          {
+            "optionId": "opsi-20000",
+            "text": "Rp20.000"
+          },
+          {
+            "optionId": "opsi-25000",
+            "text": "Rp25.000"
+          }
+        ],
+        "correctResponse": "opsi-15000"
+      },
+      {
+        "questionId": "soal-kembalian",
+        "prompt": "Membayar Rp20.000 untuk belanja Rp15.000. Kembaliannya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3000",
+            "text": "Rp3.000"
+          },
+          {
+            "optionId": "opsi-5000",
+            "text": "Rp5.000"
+          },
+          {
+            "optionId": "opsi-7000",
+            "text": "Rp7.000"
+          },
+          {
+            "optionId": "opsi-10000",
+            "text": "Rp10.000"
+          }
+        ],
+        "correctResponse": "opsi-5000"
+      },
+      {
+        "questionId": "soal-pensil",
+        "prompt": "4 pensil Rp2.000 dan 1 buku Rp10.000. Totalnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-14000",
+            "text": "Rp14.000"
+          },
+          {
+            "optionId": "opsi-16000",
+            "text": "Rp16.000"
+          },
+          {
+            "optionId": "opsi-18000",
+            "text": "Rp18.000"
+          },
+          {
+            "optionId": "opsi-20000",
+            "text": "Rp20.000"
+          }
+        ],
+        "correctResponse": "opsi-18000"
+      },
+      {
+        "questionId": "soal-langkah",
+        "prompt": "Langkah pertama memecahkan soal cerita adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-memahami",
+            "text": "memahami masalah"
+          },
+          {
+            "optionId": "opsi-menebak",
+            "text": "menebak jawaban"
+          },
+          {
+            "optionId": "opsi-menghapus",
+            "text": "menghapus soal"
+          },
+          {
+            "optionId": "opsi-berhenti",
+            "text": "berhenti mengerjakan"
+          }
+        ],
+        "correctResponse": "opsi-memahami"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

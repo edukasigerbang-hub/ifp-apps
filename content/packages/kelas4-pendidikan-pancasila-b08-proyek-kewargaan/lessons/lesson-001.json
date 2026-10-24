@@ -1,0 +1,25 @@
+{
+  "lessonId": "proyek-kewargaan",
+  "packageId": "kelas4-pendidikan-pancasila-b08-proyek-kewargaan",
+  "title": "Proyek Kewargaan",
+  "summary": "Merencanakan dan melaksanakan proyek kewargaan sederhana secara bersama-sama.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan tujuan proyek kewargaan.",
+    "Menyusun langkah proyek kewargaan.",
+    "Bekerja sama dan melaporkan hasil proyek."
+  ],
+  "activityIds": [
+    "eksplorasi-proyek",
+    "ordering-proyek"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/proyek-kewargaan.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

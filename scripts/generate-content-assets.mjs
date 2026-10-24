@@ -678,6 +678,106 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function problemSolvingScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  // lapak
+  rect(px, 80, 160, 260, 20, colors.red);
+  rect(px, 90, 180, 240, 140, colors.white);
+  for (let i = 0; i < 3; i += 1) rect(px, 110 + i * 70, 220, 50, 70, [colors.teal, colors.orange, colors.blue][i]);
+  // keranjang dan uang
+  ellipse(px, 480, 420, 100, 40, colors.soil);
+  rect(px, 440, 400, 80, 20, colors.soil);
+  for (const [x, y, c] of [[600, 380, colors.sun], [650, 400, colors.sun], [700, 370, colors.sun]]) circle(px, x, y, 26, c);
+  rect(px, 590, 440, 120, 50, colors.teal);
+  rect(px, 590, 440, 120, 50, colors.tealLight);
+  // gelembung berpikir
+  ellipse(px, 200, 360, 70, 40, colors.white);
+  for (let i = 0; i < 3; i += 1) circle(px, 190 + i * 18, 350, 5, colors.navy);
+  return px;
+}
+
+function economyScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 400, 60, 400, 600, colors.navy, 4);
+  line(px, 0, 330, 800, 330, colors.navy, 4);
+  // petani
+  rect(px, 0, 400, 400, 200, colors.green);
+  circle(px, 120, 250, 28, colors.skin1);
+  rect(px, 96, 278, 48, 90, colors.orange);
+  line(px, 144, 300, 190, 340, colors.navy, 6);
+  rect(px, 80, 360, 80, 40, colors.sun);
+  // nelayan
+  rect(px, 400, 420, 400, 180, colors.blue);
+  ellipse(px, 580, 440, 100, 24, colors.soil);
+  line(px, 580, 430, 580, 330, colors.navy, 4);
+  triangle(px, 580, 340, 580, 420, 660, 400, colors.white);
+  circle(px, 500, 360, 26, colors.skin3);
+  rect(px, 476, 386, 48, 70, colors.teal);
+  // pasar + tanam pohon
+  rect(px, 430, 80, 340, 220, colors.sand);
+  rect(px, 450, 120, 300, 20, colors.red);
+  rect(px, 470, 140, 100, 100, colors.white);
+  rect(px, 590, 140, 100, 100, colors.white);
+  circle(px, 660, 280, 26, colors.skin2);
+  rect(px, 636, 306, 48, 70, colors.green);
+  rect(px, 690, 330, 10, 40, colors.greenDark);
+  ellipse(px, 680, 320, 22, 12, colors.green);
+  return px;
+}
+
+function literatureScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 430, W, 170, colors.green);
+  circle(px, 680, 90, 45, colors.sun);
+  rect(px, 120, 250, 30, 190, colors.soil);
+  circle(px, 135, 220, 90, colors.greenDark);
+  circle(px, 90, 260, 60, colors.green);
+  circle(px, 180, 260, 60, colors.green);
+  // anak membaca
+  circle(px, 420, 330, 34, colors.skin1);
+  rect(px, 386, 364, 68, 100, colors.teal);
+  rect(px, 370, 400, 100, 60, colors.white);
+  line(px, 380, 420, 460, 420, colors.sky, 3);
+  line(px, 380, 438, 450, 438, colors.sky, 3);
+  line(px, 386, 400, 370, 380, colors.skin1, 7);
+  line(px, 454, 400, 470, 380, colors.skin1, 7);
+  // burung
+  line(px, 560, 160, 580, 145, colors.navy, 4);
+  line(px, 580, 145, 600, 160, colors.navy, 4);
+  return px;
+}
+
+function civicProjectScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 0, 430, W, 170, colors.sand);
+  // papan proyek
+  rect(px, 120, 150, 260, 180, colors.white);
+  rect(px, 120, 150, 260, 12, colors.navy);
+  for (let i = 0; i < 3; i += 1) rect(px, 145, 185 + i * 35, 200, 10, colors.sky);
+  circle(px, 160, 320, 8, colors.red);
+  // anak-anak
+  const kids = [[460, colors.teal], [540, colors.orange], [620, colors.blue]];
+  for (const [x, shirt] of kids) {
+    circle(px, x, 270, 30, colors.skin1);
+    rect(px, x - 26, 302, 52, 90, shirt);
+    rect(px, x - 24, 392, 18, 60, colors.navy);
+    rect(px, x + 6, 392, 18, 60, colors.navy);
+  }
+  line(px, 490, 310, 560, 260, colors.navy, 4);
+  rect(px, 680, 360, 50, 70, colors.green);
+  line(px, 700, 330, 700, 370, colors.greenDark, 6);
+  ellipse(px, 690, 340, 18, 10, colors.green);
+  ellipse(px, 712, 350, 18, 10, colors.green);
+  return px;
+}
+
 function timeVolumeData() {
   const px = canvas();
   fill(px, colors.white);
@@ -1385,3 +1485,7 @@ write("content/packages/kelas4-matematika-b07-waktu-volume-data/assets/waktu-vol
 write("content/packages/kelas4-ipas-b07-sejarah-kerajaan/assets/kerajaan-nusantara.png", kingdomScene());
 write("content/packages/kelas4-bahasa-indonesia-b07-wawancara-presentasi/assets/wawancara-presentasi.png", interviewScene());
 write("content/packages/kelas4-pendidikan-pancasila-b07-gotong-royong/assets/gotong-royong.png", communityScene());
+write("content/packages/kelas4-matematika-b08-pemecahan-masalah/assets/pemecahan-masalah.png", problemSolvingScene());
+write("content/packages/kelas4-ipas-b08-ekonomi-pelestarian/assets/ekonomi-pelestarian.png", economyScene());
+write("content/packages/kelas4-bahasa-indonesia-b08-apresiasi-sastra/assets/apresiasi-sastra.png", literatureScene());
+write("content/packages/kelas4-pendidikan-pancasila-b08-proyek-kewargaan/assets/proyek-kewargaan.png", civicProjectScene());
