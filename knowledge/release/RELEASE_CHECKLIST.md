@@ -47,6 +47,7 @@
 - [ ] Installer diuji: install, launch, upgrade, uninstall, preserve data/lisensi
 - [ ] Auto-updater + rollback diuji
 - [ ] Kebijakan privasi/retensi/backup (OD-4) disetujui (default perilaku: retensi sampai dihapus, tanpa sinkron nama, peringatan PII — ADR-0025)
+- [ ] Kebijakan lisensi final (OD-5): grace, transfer, revocation (default provisional ADR-0026)
 
 ## Catatan
 

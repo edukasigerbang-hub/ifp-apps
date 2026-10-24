@@ -123,6 +123,16 @@ export async function run({ page, artifactDir, log }) {
   );
   log("Status awal: public key termuat, lisensi tidak valid.");
 
+  const noLicenseTransfer = await invoke(page, "license_export_transfer_request", {
+    input: { reason: null }
+  });
+  assert(!noLicenseTransfer.ok, "Transfer tanpa lisensi seharusnya ditolak.");
+  assert(
+    noLicenseTransfer.error?.code === "LICENSE_INVALID",
+    `Kode error transfer tanpa lisensi: ${JSON.stringify(noLicenseTransfer.error)}`
+  );
+  log("Permintaan transfer tanpa lisensi ditolak (LICENSE_INVALID).");
+
   const good = issueLicense(machineId);
   const imported = await importLicense(page, good);
   assert(imported.ok, `Impor lisensi gagal: ${JSON.stringify(imported.error)}`);
@@ -147,6 +157,16 @@ export async function run({ page, artifactDir, log }) {
     label: "licenseId di UI"
   });
   log("UI Lisensi menampilkan “Berlaku” dan licenseId.");
+
+  const transfer = await invoke(page, "license_export_transfer_request", {
+    input: { reason: "  Ganti perangkat kelas  " }
+  });
+  assert(transfer.ok, `Permintaan transfer gagal: ${JSON.stringify(transfer.error)}`);
+  assert(transfer.value.licenseId === good.payload.licenseId, "licenseId transfer tidak cocok.");
+  assert(transfer.value.machineId === machineId, "machineId transfer tidak cocok.");
+  assert(transfer.value.reason === "Ganti perangkat kelas", "Alasan transfer tidak dinormalisasi.");
+  assert(typeof transfer.value.requestId === "string", "requestId transfer kosong.");
+  log("Permintaan transfer dibuat dengan licenseId, machineId, dan alasan.");
 
   const expired = issueLicense(machineId, { expiresInDays: -10, notBeforeDays: 20 });
   const expiredResult = await importLicense(page, expired);

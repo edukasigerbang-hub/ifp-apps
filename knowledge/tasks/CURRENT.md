@@ -48,6 +48,7 @@
 | T-036 | Fase J — review konten lokal | Migrasi `0005`; RBAC guru native; ledger append-only + UI; audit & guard hapus profil reviewer; E2E 7 pemeriksaan |
 | T-037 | Fase J — ekspor audit review | CSV BOM/CRLF + anti-injection; hanya guru; tolak overwrite; E2E 9 pemeriksaan |
 | T-038 | OD-4 default privasi | Bagian “Privasi & data”; peringatan PII pada ekspor CSV hasil/review; ADR-0025 provisional; smoke 8 pemeriksaan |
+| T-039 | OD-5 default lisensi | Clock rollback (last-seen 5 mnt); permintaan transfer (licenseId/machineId/alasan); UI + 4 test Rust; E2E 10 pemeriksaan |
 
 ## Status prasyarat materi pembelajaran
 
@@ -132,6 +133,7 @@
 | Ekspor audit review | **PASS** — CSV 1 baris/173 byte; BOM+CRLF; guru saja; siswa `REVIEW_FORBIDDEN`; `cargo test` 55/55 |
 | Checksum migrasi lintas line ending | **PASS** — checksum ternormalisasi; legacy diterima & di-upgrade; app start pada DB pengguna; 3 test baru (cargo 58/58) |
 | OD-4 default privasi | **PASS** — smoke 8/8 (bagian privasi + default retensi); a11y 16 pemeriksaan; build/tests PASS |
+| OD-5 default lisensi | **PASS** — E2E lisensi 10/10 (transfer ditolak tanpa lisensi, berhasil dengan lisensi); cargo 62/62; a11y 16 pemeriksaan |
 | Pilihan ganda multi-jawaban | **PASS** — E2E 6 pemeriksaan: 3 aktivitas dinilai 100, 3 percobaan, rata-rata 100; npm 56/56 |
 | Matching & ordering | **PASS** — E2E 8 pemeriksaan: 5 aktivitas dinilai 100, 5 percobaan; validasi kontrak ditolak saat rusak (unit) |
 | Unit test interaksi | **PASS** — 12 test baru; total npm 68/68 |

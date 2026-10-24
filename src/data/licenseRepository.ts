@@ -40,6 +40,22 @@ export async function exportActivationRequest(): Promise<ActivationRequest> {
   return invoke<ActivationRequest>("license_export_request");
 }
 
+export interface TransferRequest {
+  schemaVersion: string;
+  productId: string;
+  machineId: string;
+  licenseId: string;
+  requestId: string;
+  reason: string | null;
+  createdAt: string;
+}
+
+export async function exportTransferRequest(reason: string | null): Promise<TransferRequest> {
+  return invoke<TransferRequest>("license_export_transfer_request", {
+    input: { reason }
+  });
+}
+
 export async function getMachineId(): Promise<string> {
   return invoke<string>("license_get_machine_id");
 }

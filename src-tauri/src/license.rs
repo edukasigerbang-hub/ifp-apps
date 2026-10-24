@@ -1,3 +1,4 @@
+use crate::app_meta;
 use crate::db::DbState;
 use crate::error::AppError;
 use base64::{engine::general_purpose::STANDARD, Engine as _};
@@ -12,6 +13,9 @@ use tauri::State;
 
 const SUPPORTED_SCHEMA_VERSION: &str = "1.0.0";
 const MAX_LICENSE_BYTES: u64 = 524_288;
+const MAX_TRANSFER_REASON: usize = 500;
+const CLOCK_ROLLBACK_TOLERANCE_SECS: i64 = 300;
+const LAST_SEEN_KEY: &str = "license_last_seen_at";
 
 #[derive(Clone)]
 pub struct LicenseKey {
@@ -270,6 +274,30 @@ fn store_license(
     Ok(())
 }
 
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct TransferRequestView {
+    pub schema_version: String,
+    pub product_id: String,
+    pub machine_id: String,
+    pub license_id: String,
+    pub request_id: String,
+    pub reason: Option<String>,
+    pub created_at: String,
+}
+
+fn read_last_seen(connection: &Connection) -> Result<Option<DateTime<Utc>>, AppError> {
+    Ok(app_meta::get(connection, LAST_SEEN_KEY)?.and_then(|value| {
+        DateTime::parse_from_rfc3339(&value)
+            .ok()
+            .map(|parsed| parsed.with_timezone(&Utc))
+    }))
+}
+
+fn write_last_seen(connection: &Connection, now: DateTime<Utc>) -> Result<(), AppError> {
+    app_meta::set(connection, LAST_SEEN_KEY, &now.to_rfc3339())
+}
+
 fn load_stored_license(connection: &Connection) -> Result<Option<(String, LicenseFile)>, AppError> {
     let raw: Option<String> = connection
         .query_row("SELECT license_json FROM license_state WHERE id = 1", [], |row| {
@@ -316,6 +344,12 @@ pub fn get_status(
         return Ok(view);
     }
 
+    let last_seen = read_last_seen(connection)?;
+    let rollback = last_seen
+        .map(|seen| now + Duration::seconds(CLOCK_ROLLBACK_TOLERANCE_SECS) < seen)
+        .unwrap_or(false);
+    let evaluate_at = if rollback { last_seen.unwrap_or(now) } else { now };
+
     let stored = load_stored_license(connection)?;
     let Some((_raw, file)) = stored else {
         view.code = Some("LICENSE_MISSING".to_string());
@@ -329,20 +363,44 @@ pub fn get_status(
     view.expires_at = file.payload.expires_at.clone();
     view.entitlements = file.payload.entitlements.clone();
 
-    match verify_license(&file, &state.keys, &state.product_id, &view.machine_id, now) {
+    match verify_license(
+        &file,
+        &state.keys,
+        &state.product_id,
+        &view.machine_id,
+        evaluate_at,
+    ) {
         Ok(verified) => {
             view.valid = true;
             view.in_grace = verified.in_grace;
             connection
                 .execute(
                     "UPDATE license_state SET last_verified_at = ?1 WHERE id = 1",
-                    [now.to_rfc3339()],
+                    [evaluate_at.to_rfc3339()],
                 )
                 .map_err(AppError::write)?;
+            if !rollback {
+                write_last_seen(connection, now)?;
+            }
         }
         Err(error) => {
             view.code = Some(error.code.clone());
             view.message = Some(error.message.clone());
+        }
+    }
+
+    if rollback {
+        let warning =
+            "Jam perangkat mundur; validitas dihitung dari waktu terakhir terverifikasi.";
+        if view.valid {
+            view.code = Some("LICENSE_CLOCK_ROLLBACK".to_string());
+            view.message = Some(warning.to_string());
+        } else {
+            view.message = Some(
+                format!("{} {}", view.message.unwrap_or_default(), warning)
+                    .trim()
+                    .to_string(),
+            );
         }
     }
 
@@ -414,6 +472,57 @@ pub fn export_request(
         nonce: uuid::Uuid::new_v4().to_string(),
         created_at: now.to_rfc3339(),
     })
+}
+
+pub fn export_transfer_request(
+    connection: &Connection,
+    state: &LicenseState,
+    reason: Option<&str>,
+    now: DateTime<Utc>,
+) -> Result<TransferRequestView, AppError> {
+    let reason = match reason.map(str::trim) {
+        Some(value) if value.chars().count() > MAX_TRANSFER_REASON => {
+            return Err(AppError::validation("Alasan transfer maksimal 500 karakter."));
+        }
+        Some(value) if !value.is_empty() => Some(value.to_string()),
+        _ => None,
+    };
+
+    let status = get_status(connection, state, now)?;
+    if !status.valid {
+        return Err(AppError::license_invalid(
+            "Lisensi aktif diperlukan untuk permintaan transfer.",
+        ));
+    }
+    let license_id = status
+        .license_id
+        .ok_or_else(|| AppError::license_invalid("Lisensi tidak memiliki ID."))?;
+
+    Ok(TransferRequestView {
+        schema_version: SUPPORTED_SCHEMA_VERSION.to_string(),
+        product_id: state.product_id.clone(),
+        machine_id: status.machine_id,
+        license_id,
+        request_id: uuid::Uuid::new_v4().to_string(),
+        reason,
+        created_at: now.to_rfc3339(),
+    })
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct TransferRequestInput {
+    pub reason: Option<String>,
+}
+
+#[tauri::command]
+pub fn license_export_transfer_request(
+    db: State<'_, DbState>,
+    license: State<'_, LicenseState>,
+    input: TransferRequestInput,
+) -> Result<TransferRequestView, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    export_transfer_request(&connection, &license, input.reason.as_deref(), Utc::now())
 }
 
 #[tauri::command]
@@ -661,5 +770,63 @@ mod tests {
         assert!(!status.valid);
         assert_eq!(status.code.as_deref(), Some("LICENSE_NOT_CONFIGURED"));
         assert_eq!(status.machine_id, machine_id);
+    }
+
+    fn import_valid(connection: &Connection) {
+        let machine_id = crate::sync::get_device_id(connection).expect("machine id");
+        let raw = serde_json::to_string(&sign(&payload(&machine_id))).expect("serialize");
+        import_license_json(connection, &state(), &raw, now()).expect("import");
+    }
+
+    #[test]
+    fn detects_clock_rollback_without_extending_validity() {
+        let connection = test_connection();
+        import_valid(&connection);
+        crate::app_meta::set(&connection, LAST_SEEN_KEY, "2027-01-03T00:00:00Z").expect("last seen");
+
+        let status = get_status(&connection, &state(), now()).expect("status");
+        assert!(status.valid);
+        assert!(status.in_grace);
+        assert_eq!(status.code.as_deref(), Some("LICENSE_CLOCK_ROLLBACK"));
+        assert_eq!(
+            crate::app_meta::get(&connection, LAST_SEEN_KEY).expect("stored"),
+            Some("2027-01-03T00:00:00Z".to_string())
+        );
+    }
+
+    #[test]
+    fn updates_last_seen_on_normal_status() {
+        let connection = test_connection();
+        import_valid(&connection);
+        get_status(&connection, &state(), now()).expect("status");
+        let stored = crate::app_meta::get(&connection, LAST_SEEN_KEY).expect("stored");
+        assert!(stored.is_some());
+    }
+
+    #[test]
+    fn exports_transfer_request_for_active_license() {
+        let connection = test_connection();
+        import_valid(&connection);
+
+        let request = export_transfer_request(
+            &connection,
+            &state(),
+            Some("  ganti perangkat  "),
+            now(),
+        )
+        .expect("transfer request");
+        assert_eq!(request.license_id, "lic-1");
+        assert_eq!(request.reason.as_deref(), Some("ganti perangkat"));
+        assert!(!request.request_id.is_empty());
+
+        assert!(export_transfer_request(&connection, &state(), Some(&"x".repeat(501)), now()).is_err());
+        assert!(export_transfer_request(&connection, &state(), None, now()).is_ok());
+    }
+
+    #[test]
+    fn rejects_transfer_request_without_active_license() {
+        let connection = test_connection();
+        let error = export_transfer_request(&connection, &state(), None, now()).expect_err("missing");
+        assert_eq!(error.code, "LICENSE_INVALID");
     }
 }

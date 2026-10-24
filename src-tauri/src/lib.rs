@@ -65,6 +65,7 @@ pub fn run() {
       license::license_import_json,
       license::license_get_entitlements,
       license::license_export_request,
+      license::license_export_transfer_request,
       license::license_refresh,
       license::license_activate_online,
       backup::backup_export,

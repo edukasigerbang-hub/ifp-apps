@@ -5,6 +5,7 @@ import { canPersistLocally } from "../data/learningRepository";
 import {
   activateOnline,
   exportActivationRequest,
+  exportTransferRequest,
   getLicenseStatus,
   importLicenseFile,
   isLicenseServerConfigured,
@@ -25,7 +26,9 @@ function formatDate(value: string | null): string {
 }
 
 function statusTone(status: LicenseStatus): StatusTone {
-  if (status.valid) return status.inGrace ? "warning" : "positive";
+  if (status.valid) {
+    return status.inGrace || status.code === "LICENSE_CLOCK_ROLLBACK" ? "warning" : "positive";
+  }
   return status.configured ? "warning" : "neutral";
 }
 
@@ -36,7 +39,9 @@ export function LicenseScreen() {
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [request, setRequest] = useState<string | null>(null);
+  const [requestKind, setRequestKind] = useState<"activation" | "transfer">("activation");
   const [serial, setSerial] = useState("");
+  const [transferReason, setTransferReason] = useState("");
   const desktop = canPersistLocally();
 
   useEffect(() => {
@@ -96,10 +101,24 @@ export function LicenseScreen() {
     setMessage(null);
     try {
       const data = await exportActivationRequest();
+      setRequestKind("activation");
       setRequest(JSON.stringify(data, null, 2));
       setMessage("Permintaan aktivasi dibuat. Kirim JSON ini ke issuer lisensi.");
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : "Permintaan aktivasi gagal dibuat.");
+    }
+  }
+
+  async function handleTransferRequest() {
+    setError(null);
+    setMessage(null);
+    try {
+      const data = await exportTransferRequest(transferReason.trim() || null);
+      setRequestKind("transfer");
+      setRequest(JSON.stringify(data, null, 2));
+      setMessage("Permintaan transfer dibuat. Kirim JSON ini ke admin lisensi.");
+    } catch (caught) {
+      setError(caught instanceof Error ? caught.message : "Permintaan transfer gagal dibuat.");
     }
   }
 
@@ -232,13 +251,50 @@ export function LicenseScreen() {
 
           {request && (
             <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Permintaan aktivasi offline</h2>
+              <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+                {requestKind === "transfer" ? "Permintaan transfer perangkat" : "Permintaan aktivasi offline"}
+              </h2>
               <pre className="mt-3 overflow-x-auto rounded-control bg-paper p-4 text-xs">{request}</pre>
               <p className="mt-3 text-xs text-muted">
-                Kirim JSON ini ke issuer lisensi. File lisensi bertanda tangan diimpor kembali lewat tombol di atas.
+                {requestKind === "transfer"
+                  ? "Kirim JSON ini ke admin lisensi. Perangkat lama akan dinonaktifkan saat transfer diproses."
+                  : "Kirim JSON ini ke issuer lisensi. File lisensi bertanda tangan diimpor kembali lewat tombol di atas."}
               </p>
             </section>
           )}
+
+          <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Transfer perangkat</h2>
+            <p className="mt-3 text-sm text-muted">
+              Minta admin memindahkan lisensi ke perangkat pengganti. Permintaan ini tidak mengubah
+              lisensi sampai diproses server.
+            </p>
+            <div className="mt-3 flex flex-wrap items-end gap-3">
+              <label className="text-sm">
+                Alasan (opsional)
+                <input
+                  type="text"
+                  value={transferReason}
+                  onChange={(event) => setTransferReason(event.target.value)}
+                  maxLength={500}
+                  className="mt-1 block min-h-11 w-64 rounded-control border border-ink/15 px-3 text-sm"
+                />
+              </label>
+              <button
+                type="button"
+                onClick={() => void handleTransferRequest()}
+                disabled={busy !== null || !status?.valid}
+                className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:opacity-40"
+              >
+                Ekspor permintaan transfer…
+              </button>
+            </div>
+            {!status?.valid && (
+              <p className="mt-2 text-xs text-muted">
+                Permintaan transfer memerlukan lisensi yang valid.
+              </p>
+            )}
+          </section>
 
           <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
             <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Aktivasi online</h2>
