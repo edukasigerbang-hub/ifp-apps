@@ -422,3 +422,16 @@
 **Verifikasi:** `npm run e2e:license` PASS 8 pemeriksaan (dua kali berturut-turut, machine ID berbeda per run).
 
 **Belum:** impor lewat dialog native; aktivasi online dengan server referensi belum masuk harness; key produksi belum di-embed.
+
+### T-028 — E2E aktivasi online
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Harness `run.mjs` mendapat hook `setup`/`teardown`; skenario menyalakan server referensi di port 8788 dengan DB & key sementara.
+- Skenario `npm run e2e:license-online`: UI form serial → aktivasi → lisensi ditandatangani server → verifikasi native → UI “Berlaku”; machine binding & audit `activated` diverifikasi langsung di SQLite server.
+- Negatif: serial tidak dikenal → `LICENSE_SERIAL_INVALID`; lisensi valid lama tetap aktif.
+- Private key dihapus saat teardown; artefak DB tetap di `.tmp-e2e/`.
+
+**Verifikasi:** `npm run e2e:license-online` PASS 7 pemeriksaan (dua kali berturut-turut); port 8788/1420 bersih setelah run.
+
+**Belum:** impor lewat dialog native; TLS/produksi (OD-7); key produksi.
