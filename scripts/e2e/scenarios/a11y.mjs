@@ -254,8 +254,14 @@ function focusTrailInPage() {
 }
 
 const SCREENS = [
-  { label: "Beranda", wait: `document.querySelector('main h1') !== null` },
-  { label: "Jelajah Materi", wait: `document.body.textContent.includes("Jelajah Materi")` },
+  {
+    label: "Beranda",
+    wait: `document.querySelector("main h1")?.textContent.includes("Halo")`
+  },
+  {
+    label: "Jelajah Materi",
+    wait: `document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`
+  },
   { label: "Aktivitas Interaktif", wait: `document.body.textContent.includes("Aktivitas Interaktif")` },
   {
     label: "Player Pembelajaran",

@@ -447,3 +447,17 @@
 **Verifikasi:** `npm run a11y` PASS 15 pemeriksaan, 0 error/0 warning (dua kali berturut-turut); `npm run build` PASS.
 
 **Belum:** NVDA/TalkBack, hasil kuis sebagai state dinamis, dialog native, perangkat fisik.
+
+### T-030 — Beranda & Jelajah Materi
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Katalog per lesson dari paket bawaan + impor aktif (validasi Zod, managed menang atas bundled): `src/content/catalog.ts`, `loadCatalog.ts`.
+- Beranda: sapaan profil, ringkasan sesi/percobaan/rata-rata, kartu “Lanjutkan belajar”, kartu mapel, 3 aktivitas terbaru.
+- Jelajah Materi: pencarian, filter kelas & mapel, kartu lesson, tombol “Buka materi”.
+- Pemilihan lesson diteruskan ke Player via `playbackSelection`; Player memilih paket/lesson yang diminta, fallback ke default.
+- ADR-0020; 6 unit test katalog.
+
+**Verifikasi:** `npm test` 49/49 + golden 4/4; `npm run build` PASS; `npm run e2e:home` PASS 8 pemeriksaan (dua kali); regression smoke & journey PASS; `npm run a11y` 15 pemeriksaan PASS.
+
+**Belum:** “Lanjutkan” membuka sesi baru (bukan posisi tengah aktivitas); katalog memuat metadata semua paket saat layar dibuka.

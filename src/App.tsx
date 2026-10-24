@@ -5,6 +5,8 @@ import { applyPreferences, getPreferences } from "./data/preferencesRepository";
 import { useSyncScheduler } from "./hooks/useSyncScheduler";
 import { findNavItem, isScreenId, type ScreenId } from "./navigation";
 import { ContentScreen } from "./screens/ContentScreen";
+import { CurriculumScreen } from "./screens/CurriculumScreen";
+import { HomeScreen } from "./screens/HomeScreen";
 import { LessonPlayer } from "./screens/LessonPlayer";
 import { LicenseScreen } from "./screens/LicenseScreen";
 import { ResultsScreen } from "./screens/ResultsScreen";
@@ -45,7 +47,11 @@ export default function App() {
 
   return (
     <AppShell activeScreen={activeScreen} onNavigate={navigate}>
-      {activeScreen === "player" ? (
+      {activeScreen === "home" ? (
+        <HomeScreen onNavigate={navigate} />
+      ) : activeScreen === "curriculum" ? (
+        <CurriculumScreen onNavigate={navigate} />
+      ) : activeScreen === "player" ? (
         <LessonPlayer />
       ) : activeScreen === "results" ? (
         <ResultsScreen />
