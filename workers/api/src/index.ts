@@ -1,6 +1,8 @@
 import { z } from "zod";
 import { hashEnrollmentCode, signDeviceToken, verifyDeviceToken } from "./auth";
-import { rest, rpc, SupabaseError, type SupabaseEnv } from "./supabase";
+import { failure, json, readJson } from "./http";
+import { handleActivation, handleRefresh, handleVerify, type LicenseEnv } from "./license";
+import { rest, rpc, SupabaseError } from "./supabase";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
@@ -23,40 +25,13 @@ const batchSchema = z.strictObject({
   events: z.array(eventSchema).min(1).max(100)
 });
 
-export interface Env extends SupabaseEnv {
+export interface Env extends LicenseEnv {
   DEVICE_TOKEN_SECRET: string;
   ENROLLMENT_CODE_PEPPER: string;
   CORS_ORIGIN?: string;
 }
 
-const MAX_BODY_BYTES = 1_048_576;
 const MAX_EVENT_BYTES = 262_144;
-
-function json(status: number, body: unknown, corsOrigin: string): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      "content-type": "application/json",
-      "access-control-allow-origin": corsOrigin
-    }
-  });
-}
-
-function failure(status: number, code: string, message: string, corsOrigin: string): Response {
-  return json(status, { error: { code, message } }, corsOrigin);
-}
-
-async function readJson(request: Request): Promise<{ ok: true; value: unknown } | { ok: false }> {
-  const text = await request.text();
-  if (new TextEncoder().encode(text).length > MAX_BODY_BYTES) {
-    return { ok: false };
-  }
-  try {
-    return { ok: true, value: JSON.parse(text) };
-  } catch {
-    return { ok: false };
-  }
-}
 
 function bearerToken(request: Request): string {
   const authorization = request.headers.get("authorization") ?? "";
@@ -194,13 +169,32 @@ export default {
         return await handleSync(request, env, corsOrigin);
       }
 
-      if (url.pathname.startsWith("/v1/activations") || url.pathname.startsWith("/v1/licenses")) {
+      if (request.method === "POST" && url.pathname === "/v1/activations") {
+        return await handleActivation(request, env, corsOrigin);
+      }
+
+      if (request.method === "POST" && url.pathname === "/v1/licenses/refresh") {
+        return await handleRefresh(request, env, corsOrigin);
+      }
+
+      if (request.method === "POST" && url.pathname === "/v1/licenses/verify") {
+        return await handleVerify(request, env, corsOrigin);
+      }
+
+      if (
+        url.pathname === "/v1/licenses/transfer" ||
+        url.pathname === "/v1/activations/deactivate"
+      ) {
         return failure(
           501,
-          "LICENSE_ENDPOINT_NOT_IMPLEMENTED",
-          "Endpoint lisensi di Worker belum diaktifkan; gunakan server referensi sampai increment berikutnya.",
+          "LICENSE_ADMIN_NOT_IMPLEMENTED",
+          "Transfer/deaktivasi lisensi di Worker belum diaktifkan.",
           corsOrigin
         );
+      }
+
+      if (url.pathname.startsWith("/v1/activations") || url.pathname.startsWith("/v1/licenses")) {
+        return failure(404, "NOT_FOUND", "Endpoint tidak ditemukan.", corsOrigin);
       }
 
       return failure(404, "NOT_FOUND", "Endpoint tidak ditemukan.", corsOrigin);

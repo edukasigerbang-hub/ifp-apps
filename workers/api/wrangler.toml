@@ -5,6 +5,11 @@ compatibility_date = "2026-10-24"
 [vars]
 SUPABASE_URL = "https://qbccunwxfrwauuepxcbo.supabase.co"
 CORS_ORIGIN = "*" # sementara: WebView2 Windows (https://tauri.localhost) & Android (http://tauri.localhost)
+LICENSE_KEY_ID = "prod-1"
+LICENSE_PRODUCT_ID = "ifp-learning"
+LICENSE_SUBSCRIPTION_DAYS = "30"
+LICENSE_GRACE_DAYS = "7"
+LICENSE_PUBLIC_KEY = "nb3tb7vCi+CY20D9xJe5B6LS7qmMpRK7+S5XXAG2gnU="
 
 # Secrets (jangan commit):
 #   wrangler secret put SUPABASE_SERVICE_ROLE_KEY

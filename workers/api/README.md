@@ -33,9 +33,23 @@ Produksi: `https://gerbangedukasi-api.edukasigerbang.workers.dev` (terverifikasi
 | GET | `/healthz` | — | Health check |
 | POST | `/v1/devices/enroll` | kode enrollment | Body: `enrollmentCode`, `platform`, `deviceId?` → token Bearer HMAC |
 | POST | `/v1/sync/events` | token perangkat | `deviceId` batch harus sama dengan token |
-| POST | `/v1/activations`, `/v1/licenses/*` | — | 501 sampai signing/KMS diputuskan |
+| POST | `/v1/activations` | — | Serial → lisensi bertanda tangan Ed25519 (machine binding) |
+| POST | `/v1/licenses/refresh` | — | Perbarui masa berlaku lisensi subscription |
+| POST | `/v1/licenses/verify` | — | Verifikasi tanda tangan + status lisensi |
+| POST | `/v1/licenses/transfer`, `/v1/activations/deactivate` | admin | 501 sampai RBAC/admin token diputuskan |
 
 ## Secret
 
-`wrangler secret put SUPABASE_SERVICE_ROLE_KEY` · `DEVICE_TOKEN_SECRET` · `ENROLLMENT_CODE_PEPPER`.
-`SUPABASE_URL` dan `CORS_ORIGIN` via `[vars]` di `wrangler.toml`.
+`wrangler secret put SUPABASE_SERVICE_ROLE_KEY` · `DEVICE_TOKEN_SECRET` · `ENROLLMENT_CODE_PEPPER` · `ACTIVATION_CODE_PEPPER` · `LICENSE_SIGNING_PRIVATE_KEY` (PKCS8 base64).
+`SUPABASE_URL`, `CORS_ORIGIN`, `LICENSE_KEY_ID`, `LICENSE_PRODUCT_ID`, `LICENSE_PUBLIC_KEY`, `LICENSE_SUBSCRIPTION_DAYS`, `LICENSE_GRACE_DAYS` via `[vars]`.
+
+## Lisensi di aplikasi
+
+```bash
+VITE_LICENSE_SERVER_URL=https://gerbangedukasi-api.edukasigerbang.workers.dev \
+IFP_LICENSE_KEYS='[{"keyId":"prod-1","publicKey":"<LICENSE_PUBLIC_KEY>"}]' \
+IFP_LICENSE_PRODUCT_ID=ifp-learning \
+npm run tauri build
+```
+
+Lisensi offline memakai pasangan kunci yang sama (`scripts/license-issuer.mjs`) dan `IFP_LICENSE_KEYS`.

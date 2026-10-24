@@ -1,14 +1,70 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { signDeviceToken, verifyDeviceToken } from "./auth";
 import worker, { type Env } from "./index";
+import { canonicalJson } from "./license";
+
+const TEST_PRIVATE_KEY =
+  "MC4CAQAwBQYDK2VwBCIEIFcCWpPVtIyUjgFFlqeXoOZeWiNU1S7iqq43GSIZAdIk";
+const TEST_PUBLIC_KEY = "HxYJgNrK0CMB6EnzmL1pBMPjWIcPwze12ecr/xBAoYo=";
 
 const env: Env = {
   SUPABASE_URL: "https://supabase.test",
   SUPABASE_SERVICE_ROLE_KEY: "service-role-test",
   DEVICE_TOKEN_SECRET: "device-secret-test",
   ENROLLMENT_CODE_PEPPER: "pepper-test",
+  ACTIVATION_CODE_PEPPER: "activation-pepper-test",
+  LICENSE_SIGNING_PRIVATE_KEY: TEST_PRIVATE_KEY,
+  LICENSE_PUBLIC_KEY: TEST_PUBLIC_KEY,
+  LICENSE_KEY_ID: "test-1",
+  LICENSE_PRODUCT_ID: "ifp-learning",
   CORS_ORIGIN: "http://localhost:1420"
 };
+
+function arrayBuffer(bytes: Uint8Array): ArrayBuffer {
+  const copy = new Uint8Array(bytes.length);
+  copy.set(bytes);
+  return copy.buffer;
+}
+
+function base64Bytes(value: string): Uint8Array {
+  const binary = atob(value);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return bytes;
+}
+
+function licenseRow(overrides: Record<string, unknown> = {}) {
+  return {
+    id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    owner_id: null,
+    plan: "personal",
+    status: "trial",
+    max_devices: 1,
+    starts_at: "2026-01-01T00:00:00.000Z",
+    expires_at: null,
+    serial_hash: "hash",
+    product_id: "ifp-learning",
+    license_type: "subscription",
+    machine_id: null,
+    key_id: null,
+    activated_at: null,
+    ...overrides
+  };
+}
+
+function activation(machineId: string, serial: string) {
+  return {
+    schemaVersion: "1.0.0",
+    productId: "ifp-learning",
+    machineId,
+    requestId: crypto.randomUUID(),
+    nonce: "nonce-test",
+    createdAt: new Date().toISOString(),
+    serial
+  };
+}
 
 let calls: Array<{ url: string; init: RequestInit }> = [];
 
@@ -160,14 +216,92 @@ describe("cloudflare worker", () => {
     expect(response.status).toBe(401);
   });
 
-  it("menandai endpoint lisensi belum diimplementasikan", async () => {
+  it("menolak permintaan aktivasi yang tidak valid", async () => {
     mockSupabase(() => new Response("unexpected", { status: 500 }));
     const response = await worker.fetch(
       post("/v1/activations", { schemaVersion: "1.0.0" }),
       env
     );
+    expect(response.status).toBe(400);
+    const body = (await response.json()) as { error?: { code?: string } };
+    expect(body.error?.code).toBe("LICENSE_INVALID_REQUEST");
+  });
+
+  it("menolak serial yang tidak dikenal", async () => {
+    mockSupabase(() => Response.json([]));
+    const response = await worker.fetch(
+      post("/v1/activations", activation(crypto.randomUUID(), "SERIAL-PALSU")),
+      env
+    );
+    expect(response.status).toBe(404);
+    const body = (await response.json()) as { error?: { code?: string } };
+    expect(body.error?.code).toBe("LICENSE_SERIAL_INVALID");
+  });
+
+  it("menolak serial yang terikat ke perangkat lain", async () => {
+    mockSupabase(() => Response.json([licenseRow({ machine_id: crypto.randomUUID() })]));
+    const response = await worker.fetch(
+      post("/v1/activations", activation(crypto.randomUUID(), "SERIAL-TERIKAT")),
+      env
+    );
+    expect(response.status).toBe(409);
+    const body = (await response.json()) as { error?: { code?: string } };
+    expect(body.error?.code).toBe("LICENSE_ACTIVATION_CONFLICT");
+  });
+
+  it("menerbitkan lisensi bertanda tangan Ed25519", async () => {
+    const row = licenseRow();
+    mockSupabase((url, init) => {
+      if (init.method === "PATCH" && url.includes("/rest/v1/licenses?")) {
+        return new Response(null, { status: 204 });
+      }
+      if (init.method === "POST" && url.includes("/rest/v1/license_audit")) {
+        return new Response(null, { status: 201 });
+      }
+      if (url.includes("/rest/v1/licenses?")) {
+        return Response.json([row]);
+      }
+      return new Response("unexpected", { status: 500 });
+    });
+
+    const machineId = crypto.randomUUID();
+    const response = await worker.fetch(
+      post("/v1/activations", activation(machineId, "SERIAL-VALID")),
+      env
+    );
+    expect(response.status).toBe(200);
+    const body = (await response.json()) as {
+      payload: Record<string, unknown>;
+      signature: string;
+    };
+    expect(body.payload.machineId).toBe(machineId);
+    expect(body.payload.licenseId).toBe(row.id);
+    expect(body.payload.keyId).toBe("test-1");
+
+    const key = await crypto.subtle.importKey(
+      "raw",
+      arrayBuffer(base64Bytes(TEST_PUBLIC_KEY)),
+      { name: "Ed25519" } as AlgorithmIdentifier,
+      false,
+      ["verify"]
+    );
+    const valid = await crypto.subtle.verify(
+      { name: "Ed25519" } as AlgorithmIdentifier,
+      key,
+      arrayBuffer(base64Bytes(body.signature)),
+      arrayBuffer(new TextEncoder().encode(canonicalJson(body.payload)))
+    );
+    expect(valid).toBe(true);
+  });
+
+  it("menolak transfer lisensi yang belum diimplementasikan", async () => {
+    mockSupabase(() => new Response("unexpected", { status: 500 }));
+    const response = await worker.fetch(
+      post("/v1/licenses/transfer", { licenseId: crypto.randomUUID(), machineId: crypto.randomUUID() }),
+      env
+    );
     expect(response.status).toBe(501);
     const body = (await response.json()) as { error?: { code?: string } };
-    expect(body.error?.code).toBe("LICENSE_ENDPOINT_NOT_IMPLEMENTED");
+    expect(body.error?.code).toBe("LICENSE_ADMIN_NOT_IMPLEMENTED");
   });
 });
