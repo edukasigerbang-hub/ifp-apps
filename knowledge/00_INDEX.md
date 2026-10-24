@@ -46,6 +46,8 @@
 | Lembar kerja review R1–R12 (2026-10-25) | [panduan](release/REVIEW_WORKSHEET_2026-10-25.md) · [CSV](release/review-worksheet-2026-10-25.csv) |
 | Analisis gap kualitas 320 paket (2026-10-25) | [`content/QUALITY_GAP_2026-10-25.md`](content/QUALITY_GAP_2026-10-25.md) · [JSON](content/quality-gap-2026-10-25.json) |
 | Pilot gold Kelas 4 B01 (2026-10-25) | [`content/PILOT_GOLD_KELAS4_B01_2026-10-25.md`](content/PILOT_GOLD_KELAS4_B01_2026-10-25.md) |
+| Inventaris aset konten (2026-10-25) | [`content/ASSET_INVENTORY_2026-10-25.md`](content/ASSET_INVENTORY_2026-10-25.md) · [CSV](content/asset-inventory-2026-10-25.csv) |
+| Prompt pack aset — cover & materi (2026-10-25) | [`content/ASSET_PROMPTS_2026-10-25.md`](content/ASSET_PROMPTS_2026-10-25.md) · [CSV](content/asset-prompts-2026-10-25.csv) |
 | Jadwal produksi konten Kelas 1–6 | [`content/PRODUCTION_SCHEDULE.md`](content/PRODUCTION_SCHEDULE.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |

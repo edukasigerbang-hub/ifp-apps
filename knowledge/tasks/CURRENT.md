@@ -76,6 +76,7 @@
 | T-064 | Analisis gap kualitas 320 paket | 0/320 memenuhi G1–G12; semua 3 langkah/2 aktivitas/4–6 item; 16 paket aktivitas identik; 61 aset dipakai ulang; 54 tujuan belum tercakup penuh |
 | T-065 | Pilot gold Kelas 4 B01 | 4 paket v0.2.0: 5 langkah, 3 aktivitas, 10 item, 4 tujuan; aset unik; 11/12 G PASS; G10 review manusia |
 | T-066 | G8 pilot selesai | `curriculumRefs` fase-b/2024 diisi provisional (ADR-0033); validator 4/4 VALID 0 warning; G8 4/320 |
+| T-067 | Inventaris aset + prompt pack | CSV 320 aset (82 hash, 61 reuse) + 333 prompt (6 cover kelas, 7 cover mapel, 320 materi) untuk Google Flow |
 
 ## Status prasyarat materi pembelajaran
 
