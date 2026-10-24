@@ -23,7 +23,7 @@ Schema konten sengaja **tidak** mengunci daftar mapel. Yang belum ada adalah oto
 | D3 | Bahasa Inggris | Wajib / pilihan / tidak ada | Cakupan konten |
 | D4 | Seni | Satu strand / pilihan (Rupa, Musik, Tari, Teater) | Struktur paket seni |
 | D5 | Muatan lokal | Ada / tidak; siapa penyedia | Katalog & hak konten |
-| D6 | Format `curriculumRefs` | ID resmi + versi (contoh `kurikulum-merdeka:2024`) | Keterlacakan & audit |
+| D6 | Format `curriculumRefs` | Objek `{framework, id, version}` (contoh `{ "framework": "kurikulum-merdeka", "id": "fase-b", "version": "2024" }`); skema menolak string | Keterlacakan & audit |
 | D7 | Standar "konten lengkap" (OD-8) | Jumlah unit per mapel/kelas/semester | Gerbang rilis |
 
 ## Draf kerja

@@ -21,14 +21,14 @@
 | D3 | Bahasa Inggris disertakan | **belum diputuskan** (pilihan sekolah) |
 | D4 | Seni memakai strand **Seni Rupa** | **belum diputuskan** (Rupa/Musik/Tari/Teater) |
 | D5 | Muatan lokal | **belum diputuskan** (di luar outline ini) |
-| D6 | Format `curriculumRefs` | usulan: `kurikulum-merdeka:2024` |
+| D6 | Format `curriculumRefs` | usulan objek `{framework, id, version}`, mis. `{ "framework": "kurikulum-merdeka", "id": "fase-b", "version": "2024" }` (skema **menolak string**) |
 | D7 | Standar kelengkapan (OD-8) | belum diputuskan |
 
 ## Konvensi paket
 
 - Satu paket = satu bab: `kelas4-<subject>-b<nn>-<slug>` (contoh `kelas4-matematika-b03-pecahan`).
 - Tipe aktivitas yang didukung: `exploration`, kuis MCQ (tunggal/multi), `true-false`, `short-answer`, `matching`, `ordering`.
-- `curriculumRefs` diisi setelah D6 disetujui; sebelum itu kosong dan validator memberi warning.
+- `curriculumRefs` diisi setelah D6 disetujui; sebelum itu kosong dan validator memberi warning. Formatnya objek `{framework, id, version}` (bukan string).
 - Rincian bab dan aktivitas ada di dokumen semester; dokumen ini tidak menduplikasi tabel.
 
 ## Prioritas paket starter (gabungan)

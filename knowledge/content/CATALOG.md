@@ -55,3 +55,21 @@ warnings:
 1. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 2. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
 3. Setelah Fase E/G (repository + learning runtime), simpan hasil belajar dan hubungkan paket lain ke Content Runtime.
+
+## Inventaris sebelum produksi Kelas 4 (2026-10-24)
+
+Hasil audit materi yang ada:
+
+- Satu-satunya paket produksi: `matematika-kelas3-pecahan` v0.1.0 (kelas 3, draft, 1 lesson, 2 aktivitas: eksplorasi + MCQ, 4 aset PNG, `curriculumRefs: []`). Review teknis PASS; R10 `curriculumRefs` masih BLOCKING dan review manusia belum.
+- `content/fixtures/*` hanya untuk pengujian validator, **tidak** dibundel (`loadPackages` hanya membaca `content/packages/*`).
+- **Tidak ada paket Kelas 4** dan tidak ada materi lain yang perlu diubah isinya.
+
+Penyesuaian sebelum membuat paket baru:
+
+1. `curriculumRefs` wajib berupa **objek** `{framework, id, version}`; string seperti `kurikulum-merdeka:2024` ditolak skema. Isi setelah D6 disetujui.
+2. Skema aktivitas sudah mendukung `exploration`, MCQ (`single-choice`/`multiple-choice`), `true-false` (`boolean`), `short-answer` (`text`), `matching`, dan `ordering` — **tidak perlu ubah kode**.
+3. Aset hanya boleh PNG/JPEG/WebP/AVIF (SVG tidak didukung), harus dicantumkan `sizeBytes` + `sha256`, dan sebaiknya mengikuti konvensi pilot: 800×600, tanpa teks di gambar, alt text di metadata.
+4. Paket pecahan Kelas 4 B03 dibuat **baru** (`kelas4-matematika-b03-pecahan`); jangan mengubah pilot kelas 3.
+5. Setelah D6, isi juga `curriculumRefs` pilot kelas 3 agar R10 bisa ditutup.
+6. Setiap paket baru harus ditambahkan ke tabel katalog dan `00_INDEX`.
+
