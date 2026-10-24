@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b01-bilangan-1-10",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bilangan 1–10 — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/bilangan-1-10.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5539,
+      "sha256": "0ccdb9efa2a86d948b0473e86f3d5f9b6f2eabb121ea3b86d2107a34de2e6e07"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

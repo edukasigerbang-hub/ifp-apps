@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-huruf-suku-kata",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Membaca",
+  "instructions": "Amati gambar, lalu tirukan bunyi huruf dan suku kata.",
+  "assets": [
+    "assets/huruf-suku-kata.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa saja huruf vokal?",
+        "assetPath": "assets/huruf-suku-kata.png",
+        "altText": "Anak-anak belajar membaca huruf dan suku kata.",
+        "reveal": "a, i, u, e, o.",
+        "hint": "Huruf hidup."
+      },
+      {
+        "prompt": "Baca suku kata ba-bi-bu.",
+        "assetPath": "assets/huruf-suku-kata.png",
+        "altText": "Anak-anak belajar membaca huruf dan suku kata.",
+        "reveal": "ba, bi, bu.",
+        "hint": "Ulangi pelan-pelan."
+      },
+      {
+        "prompt": "Gabungkan bu dan ku menjadi ...",
+        "assetPath": "assets/huruf-suku-kata.png",
+        "altText": "Anak-anak belajar membaca huruf dan suku kata.",
+        "reveal": "buku.",
+        "hint": "Baca utuh."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak belajar membaca huruf dan suku kata."
+  }
+}

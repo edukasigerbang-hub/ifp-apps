@@ -1,0 +1,25 @@
+{
+  "lessonId": "huruf-suku-kata",
+  "packageId": "kelas1-bahasa-indonesia-b01-huruf-suku-kata",
+  "title": "Mengenal Huruf dan Suku Kata",
+  "summary": "Mengenal huruf, membaca suku kata, dan menyusun kata.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal huruf vokal dan konsonan.",
+    "Membaca suku kata.",
+    "Menyusun suku kata menjadi kata."
+  ],
+  "activityIds": [
+    "eksplorasi-huruf-suku-kata",
+    "matching-huruf-suku-kata"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/huruf-suku-kata.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak belajar membaca huruf dan suku kata."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

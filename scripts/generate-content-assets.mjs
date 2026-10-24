@@ -2385,6 +2385,33 @@ function traditionalGameScene() {
   return px;
 }
 
+function countingScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const cell = 100;
+  for (let row = 0; row < 2; row += 1) {
+    for (let col = 0; col < 5; col += 1) {
+      const x = 150 + col * cell;
+      const y = 170 + row * cell;
+      rect(px, x, y, cell - 4, cell - 4, colors.sky);
+      rect(px, x, y, cell - 4, 4, colors.navy);
+      rect(px, x, y + cell - 8, cell - 4, 4, colors.navy);
+      rect(px, x, y, 4, cell - 4, colors.navy);
+      rect(px, x + cell - 8, y, 4, cell - 4, colors.navy);
+    }
+  }
+  for (let i = 0; i < 7; i += 1) {
+    const col = i % 5;
+    const row = Math.floor(i / 5);
+    const cx = 200 + col * cell;
+    const cy = 220 + row * cell;
+    circle(px, cx, cy, 26, colors.red);
+    ellipse(px, cx + 8, cy - 26, 14, 7, colors.green);
+  }
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2597,3 +2624,9 @@ write("content/packages/kelas6-pai-b05-puasa/assets/puasa-kelas6.png", fastingSc
 write("content/packages/kelas6-pai-b06-zakat/assets/zakat-kelas6.png", charityScene());
 write("content/packages/kelas6-pai-b07-sejarah-islam/assets/sejarah-islam-kelas6.png", islamHistoryScene());
 write("content/packages/kelas6-pai-b08-adab/assets/adab-kelas6.png", goodMannersScene());
+write("content/packages/kelas1-matematika-b01-bilangan-1-10/assets/bilangan-1-10.png", countingScene());
+write("content/packages/kelas1-bahasa-indonesia-b01-huruf-suku-kata/assets/huruf-suku-kata.png", readingCorner());
+write("content/packages/kelas1-pendidikan-pancasila-b01-simbol-pancasila/assets/simbol-pancasila-kelas1.png", pancasilaSymbols());
+write("content/packages/kelas1-seni-rupa-b01-garis-warna/assets/garis-warna-kelas1.png", artElements());
+write("content/packages/kelas1-pjok-b01-jalan-lari/assets/jalan-lari.png", movementScene());
+write("content/packages/kelas1-pai-b01-huruf-hijaiyah/assets/huruf-hijaiyah.png", quranScene());

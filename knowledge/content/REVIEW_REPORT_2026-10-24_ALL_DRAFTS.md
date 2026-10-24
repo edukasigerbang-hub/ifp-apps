@@ -6,16 +6,17 @@
 
 ## Ringkasan
 
-- Total paket: **224**
-- VALID: **224** · INVALID: **0**
-- Alt text lengkap: **224/224**
-- `curriculumRefs` kosong: **224/224** (diharapkan sampai D6 disetujui)
+- Total paket: **230**
+- VALID: **230** · INVALID: **0**
+- Alt text lengkap: **230/230**
+- `curriculumRefs` kosong: **230/230** (diharapkan sampai D6 disetujui)
 - packageId duplikat: **0**
 
 ### Sebaran per kelas
 
 | Kelas | Paket |
 |---|---:|
+| 1 | 6 |
 | 3 | 56 |
 | 4 | 56 |
 | 5 | 56 |
@@ -25,13 +26,13 @@
 
 | Mapel | Paket |
 |---|---:|
-| bahasa-indonesia | 32 |
+| bahasa-indonesia | 33 |
 | ipas | 32 |
-| matematika | 32 |
-| pai | 32 |
-| pendidikan-pancasila | 32 |
-| pjok | 32 |
-| seni-rupa | 32 |
+| matematika | 33 |
+| pai | 33 |
+| pendidikan-pancasila | 33 |
+| pjok | 33 |
+| seni-rupa | 33 |
 
 ## Temuan yang perlu ditindaklanjuti
 
@@ -41,6 +42,12 @@
 
 | packageId | Kelas | Mapel | Status | Issue | Warning | Aktivitas | Alt | refs kosong |
 |---|---:|---|---|---:|---:|---|---|---|
+| `kelas1-bahasa-indonesia-b01-huruf-suku-kata` | 1 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-matematika-b01-bilangan-1-10` | 1 | matematika | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
+| `kelas1-pai-b01-huruf-hijaiyah` | 1 | pai | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pendidikan-pancasila-b01-simbol-pancasila` | 1 | pendidikan-pancasila | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-pjok-b01-jalan-lari` | 1 | pjok | VALID | 0 | 2 | exploration + matching | OK | ya |
+| `kelas1-seni-rupa-b01-garis-warna` | 1 | seni-rupa | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas3-bahasa-indonesia-b01-teks-deskripsi` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + matching | OK | ya |
 | `kelas3-bahasa-indonesia-b02-kalimat-efektif` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + multiple-choice | OK | ya |
 | `kelas3-bahasa-indonesia-b03-ide-pokok` | 3 | bahasa-indonesia | VALID | 0 | 2 | exploration + ordering | OK | ya |

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-jalan-lari",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Jalan dan Lari",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/jalan-lari.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Jalan dilakukan dengan ...",
+        "assetPath": "assets/jalan-lari.png",
+        "altText": "Anak berjalan dan berlari di lapangan.",
+        "reveal": "Pelan.",
+        "hint": "Kaki melangkah."
+      },
+      {
+        "prompt": "Lari dilakukan dengan ...",
+        "assetPath": "assets/jalan-lari.png",
+        "altText": "Anak berjalan dan berlari di lapangan.",
+        "reveal": "Cepat.",
+        "hint": "Kaki lebih cepat."
+      },
+      {
+        "prompt": "Sebelum bergerak kita ...",
+        "assetPath": "assets/jalan-lari.png",
+        "altText": "Anak berjalan dan berlari di lapangan.",
+        "reveal": "Pemanasan.",
+        "hint": "Agar tidak cedera."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan dan berlari di lapangan."
+  }
+}

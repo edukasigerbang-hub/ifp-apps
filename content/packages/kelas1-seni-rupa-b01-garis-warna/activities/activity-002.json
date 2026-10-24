@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-garis-warna",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Garis dan Warna",
+  "instructions": "Pasangkan setiap istilah dengan contohnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lurus",
+        "left": "Garis lurus",
+        "right": "Datar"
+      },
+      {
+        "pairId": "pasangan-lengkung",
+        "left": "Garis lengkung",
+        "right": "Melengkung"
+      },
+      {
+        "pairId": "pasangan-zigzag",
+        "left": "Garis zigzag",
+        "right": "Berkelok"
+      },
+      {
+        "pairId": "pasangan-merah",
+        "left": "Merah",
+        "right": "Warna primer"
+      },
+      {
+        "pairId": "pasangan-kuning",
+        "left": "Kuning",
+        "right": "Warna primer"
+      },
+      {
+        "pairId": "pasangan-biru",
+        "left": "Biru",
+        "right": "Warna primer"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-bilangan-1-10",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menghitung Apel",
+  "instructions": "Amati gambar, lalu hitung apel bersama-sama.",
+  "assets": [
+    "assets/bilangan-1-10.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Ada berapa apel?",
+        "assetPath": "assets/bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh buah apel.",
+        "reveal": "Tujuh.",
+        "hint": "Hitung satu per satu."
+      },
+      {
+        "prompt": "Angka untuk tujuh adalah ...",
+        "assetPath": "assets/bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh buah apel.",
+        "reveal": "7.",
+        "hint": "Tujuh ditulis 7."
+      },
+      {
+        "prompt": "Mana yang lebih banyak, 5 atau 3?",
+        "assetPath": "assets/bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh buah apel.",
+        "reveal": "5.",
+        "hint": "Bandingkan jumlahnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerangka sepuluh berisi tujuh buah apel."
+  }
+}

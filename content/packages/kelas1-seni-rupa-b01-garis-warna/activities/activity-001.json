@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-garis-warna",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis dan Warna",
+  "instructions": "Amati gambar, lalu tunjuk garis dan warnanya.",
+  "assets": [
+    "assets/garis-warna-kelas1.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Garis yang lurus disebut ...",
+        "assetPath": "assets/garis-warna-kelas1.png",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "reveal": "Garis lurus.",
+        "hint": "Seperti penggaris."
+      },
+      {
+        "prompt": "Garis yang melengkung disebut ...",
+        "assetPath": "assets/garis-warna-kelas1.png",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "reveal": "Garis lengkung.",
+        "hint": "Seperti pelangi."
+      },
+      {
+        "prompt": "Sebutkan warna primer.",
+        "assetPath": "assets/garis-warna-kelas1.png",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "reveal": "Merah, kuning, biru.",
+        "hint": "Warna dasar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+  }
+}
