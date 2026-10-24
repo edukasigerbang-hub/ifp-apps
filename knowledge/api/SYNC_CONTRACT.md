@@ -38,7 +38,8 @@ Content-Type: application/json
         "score": 100,
         "occurredAt": "2026-10-23T15:00:00.000Z",
         "answers": [
-          { "questionId": "soal-setengah", "optionId": "opsi-setengah", "isCorrect": true }
+          { "questionId": "soal-setengah", "optionId": "opsi-setengah", "responseText": null, "isCorrect": true },
+          { "questionId": "soal-teks", "optionId": null, "responseText": "Setengah", "isCorrect": true }
         ]
       }
     }
@@ -47,6 +48,8 @@ Content-Type: application/json
 ```
 
 Batas (usulan, wajib dikonfirmasi backend): maksimal **100 event** per batch, **256 KB** per event, **1 MB** per batch. Pelanggaran → `413`.
+
+Jawaban: tepat satu dari `optionId` (pilihan/benar-salah) atau `responseText` (jawaban singkat, 1–500 karakter) wajib terisi; backend harus menyimpan keduanya apa adanya dan tidak menilai ulang.
 
 ## Response
 

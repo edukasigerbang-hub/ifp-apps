@@ -149,6 +149,7 @@ mod tests {
                     response_id: "response-export".to_string(),
                     question_id: "soal-1".to_string(),
                     option_id: Some("opsi-a".to_string()),
+                    response_text: None,
                     is_correct: true,
                 }],
             },
