@@ -26,7 +26,7 @@ async function clickButton(page, label) {
 async function buildVersionTwo(artifactDir) {
   const source = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   const target = path.join(artifactDir, "content-v2");
   await mkdir(target, { recursive: true });
@@ -73,7 +73,7 @@ export async function run({ page, artifactDir, log }) {
 
   const v1Path = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   const v2Path = await buildVersionTwo(artifactDir);
   log(`Paket v2 disiapkan di ${v2Path}`);

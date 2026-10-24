@@ -31,7 +31,7 @@ export async function run({ page, artifactDir, log }) {
 
   const packagePath = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   assert(existsSync(path.join(packagePath, "manifest.json")), `Paket tidak ditemukan: ${packagePath}`);
   log(`Paket sumber: ${packagePath}`);

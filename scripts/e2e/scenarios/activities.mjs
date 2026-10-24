@@ -26,7 +26,7 @@ async function clickButton(page, label) {
 async function buildPackage(artifactDir) {
   const source = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   const target = path.join(artifactDir, "activities-package");
   await mkdir(target, { recursive: true });

@@ -784,7 +784,7 @@ mod tests {
     use crate::db::test_connection;
 
     fn fixture() -> PathBuf {
-        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../content/packages/matematika-kelas3-pecahan")
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../scripts/e2e/fixtures/pilot-pecahan-kelas3")
     }
 
     fn temp_root(name: &str) -> PathBuf {

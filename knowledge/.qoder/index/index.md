@@ -43,7 +43,8 @@ src-tauri/   Cargo.toml, build.rs, tauri.conf.json, capabilities/
 scripts/     validate-content.ts, export-content-schema.ts, check-fixtures.ts,
              mock-sync-server.mjs, license-issuer.mjs
 server/      src/{app,index,store,license}.ts + src/{app,license}.test.ts  (backend referensi)
-content/     schema/*.json (generated), fixtures/*, packages/matematika-kelas3-pecahan/ (draft)
+content/     schema/*.json (generated), fixtures/*, packages/kelas4-* (25 draft)
+scripts/     e2e/fixtures/pilot-pecahan-kelas3 (fixture E2E, tidak dibundel)
 ```
 
 ## Keterbatasan

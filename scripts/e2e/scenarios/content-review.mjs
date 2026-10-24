@@ -50,7 +50,7 @@ export async function run({ page, artifactDir, log }) {
 
   const packagePath = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   const imported = await invoke(page, "content_import_package", {
     input: { sourcePath: packagePath }
