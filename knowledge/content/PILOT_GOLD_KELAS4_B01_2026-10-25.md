@@ -1,6 +1,6 @@
 # Pilot Gold Standard — Kelas 4 B01 (2026-10-25)
 
-**Status:** `PILOT-UPGRADED` — 10/12 kriteria terpenuhi; G8 dan G10 tetap eksternal.
+**Status:** `PILOT-UPGRADED` — **11/12** kriteria terpenuhi; G10 menunggu review manusia.
 
 ## Paket
 
@@ -33,7 +33,7 @@
 | G5 | Bahasa sesuai kelas | **PASS** |
 | G6 | Tanpa duplikasi penuh | **PASS** |
 | G7 | Aset unik lintas kelas | **PASS (0 berbagi)** |
-| G8 | `curriculumRefs` terisi | **BLOCKED — D6 belum diputuskan** |
+| G8 | `curriculumRefs` terisi | **PASS (provisional)** — `fase-b`/2024, ADR-0033 |
 | G9 | Alt text lengkap | **PASS** |
 | G10 | Review manusia | **BELUM — R1–R12** |
 | G11 | Opsi jawaban unik | **PASS** |
@@ -59,6 +59,6 @@
 
 ## Batas
 
-- **G8** tidak diisi dengan referensi sementara karena D6 belum disetujui; mengisi sekarang akan menciptakan klaim kurikulum palsu.
+- **G8** memakai referensi phase-level `{framework: kurikulum-merdeka, id: fase-b, version: 2024}` sesuai ADR-0033. Ini bukan pemetaan CP/ATP per bab; R10 tetap perlu verifikasi Curriculum Lead.
 - **G10** hanya dapat dipenuhi reviewer manusia dengan formulir R1–R12.
 - Empat paket ini menjadi template untuk 316 paket lain; replikasi tetap per batch dan harus direview manusia.

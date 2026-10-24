@@ -3,7 +3,13 @@
   "packageId": "kelas4-bahasa-indonesia-b01-teks-deskripsi",
   "title": "Mengenal dan Menulis Teks Deskripsi",
   "summary": "Mengenali ciri objek, menggunakan kata indra, dan menyusun teks deskripsi tiga sampai empat kalimat.",
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
   "learningObjectives": [
     "Menyebutkan ciri objek pada teks deskripsi.",
     "Menggunakan kata indra dalam deskripsi.",

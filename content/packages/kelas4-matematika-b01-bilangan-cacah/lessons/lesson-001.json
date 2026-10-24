@@ -3,7 +3,13 @@
   "packageId": "kelas4-matematika-b01-bilangan-cacah",
   "title": "Bilangan Cacah Besar",
   "summary": "Menentukan nilai tempat, membaca, menulis, membandingkan, dan mengurutkan bilangan cacah sampai 99.999.",
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
   "learningObjectives": [
     "Menentukan nilai tempat sampai puluh ribuan.",
     "Membaca dan menulis bilangan cacah besar.",

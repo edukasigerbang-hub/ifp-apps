@@ -21,7 +21,7 @@
 | D3 | Bahasa Inggris disertakan | **belum diputuskan** (pilihan sekolah) |
 | D4 | Seni memakai strand **Seni Rupa** | **belum diputuskan** (Rupa/Musik/Tari/Teater) |
 | D5 | Muatan lokal | **belum diputuskan** (di luar outline ini) |
-| D6 | Format `curriculumRefs` | usulan objek `{framework, id, version}`, mis. `{ "framework": "kurikulum-merdeka", "id": "fase-b", "version": "2024" }` (skema **menolak string**) |
+| D6 | Format `curriculumRefs` | **provisional (ADR-0033):** objek `{framework, id, version}`, mis. `{ "framework": "kurikulum-merdeka", "id": "fase-b", "version": "2024" }` (skema **menolak string**); pemetaan CP/ATP per bab masih menunggu Curriculum Lead |
 | D7 | Standar kelengkapan (OD-8) | belum diputuskan |
 
 ## Konvensi paket

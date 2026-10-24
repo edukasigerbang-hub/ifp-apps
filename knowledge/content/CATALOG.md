@@ -5,10 +5,10 @@
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
 | `kelas4-matematika-b03-pecahan` | 0.2.0 | 4 | matematika | Pecahan senilai | **DRAFT** | VALID (2 warning) | belum |
-| `kelas4-ipas-b01-makhluk-hidup` | 0.2.0 | 4 | ipas | Makhluk hidup & lingkungan | **DRAFT** | VALID (2 warning) | belum |
-| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | 0.2.0 | 4 | bahasa-indonesia | Teks deskripsi | **DRAFT** | VALID (2 warning) | belum |
-| `kelas4-pendidikan-pancasila-b01-pancasila` | 0.2.0 | 4 | pendidikan-pancasila | Nilai Pancasila | **DRAFT** | VALID (2 warning) | belum |
-| `kelas4-matematika-b01-bilangan-cacah` | 0.2.0 | 4 | matematika | Bilangan cacah besar | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b01-makhluk-hidup` | 0.2.0 | 4 | ipas | Makhluk hidup & lingkungan | **DRAFT** | VALID (0 warning) | belum |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | 0.2.0 | 4 | bahasa-indonesia | Teks deskripsi | **DRAFT** | VALID (0 warning) | belum |
+| `kelas4-pendidikan-pancasila-b01-pancasila` | 0.2.0 | 4 | pendidikan-pancasila | Nilai Pancasila | **DRAFT** | VALID (0 warning) | belum |
+| `kelas4-matematika-b01-bilangan-cacah` | 0.2.0 | 4 | matematika | Bilangan cacah besar | **DRAFT** | VALID (0 warning) | belum |
 | `kelas4-ipas-b02-wujud-zat` | 0.1.0 | 4 | ipas | Wujud zat & perubahan | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b02-kalimat-efektif` | 0.1.0 | 4 | bahasa-indonesia | Kalimat efektif & kosakata | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b02-norma-aturan` | 0.1.0 | 4 | pendidikan-pancasila | Norma & aturan | **DRAFT** | VALID (2 warning) | belum |
@@ -771,5 +771,5 @@ Empat paket dinaikkan ke versi **0.2.0**:
 - `kelas4-pendidikan-pancasila-b01-pancasila`
 
 Perubahan: 5 langkah eksplorasi, 3 aktivitas, 10 item asesmen, 4 tujuan tercakup, aset baru unik.
-Status G1–G12: **10/12 PASS**; G8 (`curriculumRefs`) menunggu D6, G10 menunggu review manusia.
+Status G1–G12: **11/12 PASS**; G8 terisi provisional (ADR-0033), G10 menunggu review manusia.
 Detail: [PILOT_GOLD_KELAS4_B01_2026-10-25.md](PILOT_GOLD_KELAS4_B01_2026-10-25.md).

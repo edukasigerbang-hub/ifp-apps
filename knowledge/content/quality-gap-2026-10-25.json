@@ -38,7 +38,7 @@
     {
       "id": "G8",
       "label": "`curriculumRefs` terisi",
-      "met": 0
+      "met": 4
     },
     {
       "id": "G9",
@@ -3882,7 +3882,7 @@
       "coveredObjectives": 4,
       "wordsPerSentence": 6.4,
       "languageLimit": 16,
-      "curriculumRefs": 0,
+      "curriculumRefs": 1,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
@@ -4082,7 +4082,7 @@
       "coveredObjectives": 4,
       "wordsPerSentence": 6.25,
       "languageLimit": 16,
-      "curriculumRefs": 0,
+      "curriculumRefs": 1,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
@@ -4282,7 +4282,7 @@
       "coveredObjectives": 4,
       "wordsPerSentence": 3.9545454545454546,
       "languageLimit": 16,
-      "curriculumRefs": 0,
+      "curriculumRefs": 1,
       "altOk": true,
       "assets": 1,
       "assetHashes": [
@@ -4682,7 +4682,7 @@
       "coveredObjectives": 4,
       "wordsPerSentence": 5.45,
       "languageLimit": 16,
-      "curriculumRefs": 0,
+      "curriculumRefs": 1,
       "altOk": true,
       "assets": 1,
       "assetHashes": [

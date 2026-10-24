@@ -3,7 +3,13 @@
   "packageId": "kelas4-ipas-b01-makhluk-hidup",
   "title": "Makhluk Hidup dan Lingkungannya",
   "summary": "Mengenali ciri makhluk hidup, mengelompokkannya, dan menjelaskan kebutuhan serta peran tumbuhan.",
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
   "learningObjectives": [
     "Menyebutkan ciri makhluk hidup.",
     "Mengelompokkan makhluk hidup dan benda tak hidup.",

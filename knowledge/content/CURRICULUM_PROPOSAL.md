@@ -58,3 +58,9 @@ Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belu
 - Schema konten v1 menerima `subjects` sebagai slug bebas → **tidak perlu ubah kode**.
 - `curriculumRefs` sudah tersedia di manifest dan lesson.
 - Validator memberi peringatan bila `curriculumRefs` kosong.
+
+## Status D6 (2026-10-25)
+
+- D6 diadopsi **provisional** sesuai ADR-0033: `{framework, id, version}` dengan referensi phase-level `kurikulum-merdeka` / `fase-b` / `2024`.
+- Pilot Kelas 4 B01 sudah memakai referensi ini.
+- Pemetaan per mata pelajaran/bab ke CP/ATP resmi **belum** diverifikasi; R10 tetap memerlukan Curriculum Lead.

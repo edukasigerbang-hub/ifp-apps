@@ -31,7 +31,7 @@
 | G5 | Bahasa dalam batas kata/kalimat kelas | 320 | 0 | 100% |
 | G6 | Tanpa duplikasi persis antar paket | 314 | 6 | 98% |
 | G7 | Aset tidak dipakai ulang lintas kelas | 21 | 299 | 7% |
-| G8 | `curriculumRefs` terisi | 0 | 320 | 0% |
+| G8 | `curriculumRefs` terisi | 4 | 316 | 1% |
 | G9 | Alt text lengkap | 320 | 0 | 100% |
 | G10 | Sudah direview manusia | 0 | 320 | 0% |
 | G11 | Tidak ada opsi jawaban duplikat | 319 | 1 | 100% |
