@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T18:42:11+07:00",
+  "last_validated_at": "2026-10-24T18:51:01+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -311,6 +311,12 @@
       "command": "content:validate x4; content_import_package via CDP; npm run build; npm test",
       "result": "PASS",
       "details": "matematika-b02, ipas-b03, bindo-b03, pancasila-b03 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch4_packages",
+      "command": "content:validate x4; content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b04, ipas-b04, bindo-b04, pancasila-b04 VALID; import 5 files each active; build/fixtures PASS"
     }
   ],
   "environment": {
