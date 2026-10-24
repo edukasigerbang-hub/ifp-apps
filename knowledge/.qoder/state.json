@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "0d8e49a",
+  "commit": "e00a913",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -43,7 +43,7 @@
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
   "last_updated": "2026-10-25T00:39:00+07:00",
-  "last_validation": "B-03 kode selesai: transfer/deactivate Worker + ADMIN_API_TOKEN; 13/13 worker test; npm test 85/85; build PASS; deploy menunggu secret",
+  "last_validation": "Cek indeks katalog: 320/320 entri sinkron; negative test exit 1; npm test 85/85; build 416,03 kB",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Jalankan checklist B-02/B-07 (user), B-01/B-04 (kredensial), B-05 (perangkat), B-06 (reviewer), B-08 (keputusan)"
+  "next_step": "Buat lembar kerja review R1–R12 per paket; jalankan checklist B-02/B-07 (user), B-01/B-04 (kredensial), B-05 (perangkat), B-06 (reviewer), B-08 (keputusan)"
 }
