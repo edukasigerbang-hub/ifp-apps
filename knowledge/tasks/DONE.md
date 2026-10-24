@@ -528,3 +528,17 @@
 **Verifikasi:** `npm run a11y` PASS 16 pemeriksaan, 0 error/0 warning (dua kali).
 
 **Belum:** NVDA/TalkBack, dialog native, pesan error lain.
+
+### T-036 — Fase J: review konten lokal
+
+**Status:** COMPLETED · **Change class:** MEDIUM
+
+- Migrasi `0005_content_reviews` (append-only) + modul `review.rs`: list/record dengan validasi paket, keputusan, catatan ≤1000.
+- RBAC native: hanya profil aktif `teacher`; selain itu `REVIEW_FORBIDDEN`.
+- UI Konten & Pembaruan: form review untuk guru, daftar audit terbaru; label jelas “lokal”, tanpa mengubah paket/katalog.
+- Guard: profil yang pernah mereview tidak dapat dihapus (`PROFILE_HAS_REVIEWS`).
+- ADR-0024; teks UI lama yang menyatakan paket impor belum dirender diperbaiki (managed-first sudah aktif).
+
+**Verifikasi:** `cargo test` 53/53; `npm test` 68/68; `npm run build` PASS; `npm run e2e:review` PASS 7 pemeriksaan (dua kali); a11y 16 pemeriksaan.
+
+**Belum:** publish/build server, RBAC multi-pengguna, persetujuan global (OD-1/OD-7).

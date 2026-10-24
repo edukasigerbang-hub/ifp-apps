@@ -9,6 +9,7 @@ mod license;
 mod preferences;
 mod profile;
 mod results;
+mod review;
 mod sync;
 mod validation;
 
@@ -77,6 +78,8 @@ pub fn run() {
       profile::profile_set_active,
       profile::profile_rename,
       profile::profile_delete,
+      review::review_list,
+      review::review_record,
       preferences::preferences_get,
       preferences::preferences_set
     ])

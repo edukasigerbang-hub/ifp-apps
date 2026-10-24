@@ -259,6 +259,17 @@ pub fn delete_profile(
         return Err(AppError::profile_last_remaining());
     }
 
+    let reviews: i64 = connection
+        .query_row(
+            "SELECT COUNT(*) FROM content_reviews WHERE reviewer_profile_id = ?1",
+            [id],
+            |row| row.get(0),
+        )
+        .map_err(AppError::read)?;
+    if reviews > 0 {
+        return Err(AppError::profile_has_reviews());
+    }
+
     let counts = profile_data_counts(connection, id)?;
     if counts.total() > 0 && !delete_data {
         return Err(AppError::profile_has_data(&format!(
@@ -518,6 +529,33 @@ mod tests {
 
         let last = delete_profile(&mut connection, &second.id, false).expect_err("last");
         assert_eq!(last.code, "PROFILE_LAST_REMAINING");
+    }
+
+    #[test]
+    fn blocks_deleting_reviewer_profile() {
+        let mut connection = test_connection();
+        let teacher = create_profile(&connection, "Bu Guru", "teacher").expect("teacher");
+        create_profile(&connection, "Siswa Lain", "student").expect("student");
+        connection
+            .execute(
+                "INSERT INTO content_packages
+                   (package_id, version, source, status, installed_at)
+                 VALUES ('pkg-review', '1.0.0', 'imported', 'active', '2026-10-24T00:00:00Z')",
+                [],
+            )
+            .expect("package");
+        connection
+            .execute(
+                "INSERT INTO content_reviews
+                   (id, package_id, package_version, reviewer_profile_id, decision, notes, created_at)
+                 VALUES ('rev-1', 'pkg-review', '1.0.0', ?1, 'approved', NULL, '2026-10-24T00:00:00Z')",
+                [&teacher.id],
+            )
+            .expect("review");
+
+        let blocked = delete_profile(&mut connection, &teacher.id, true).expect_err("blocked");
+        assert_eq!(blocked.code, "PROFILE_HAS_REVIEWS");
+        assert_eq!(list_profiles(&connection).expect("list").len(), 2);
     }
 
     #[test]
