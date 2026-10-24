@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T21:15:26+07:00",
+  "last_validated_at": "2026-10-24T21:20:16+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -377,6 +377,12 @@
       "command": "content:validate x4; content_import_package; npm run build; npm test",
       "result": "PASS",
       "details": "matematika-b08, ipas-b08, bindo-b08, pancasila-b08 VALID; import 5 files each active; main chunk 466.5 kB"
+    },
+    {
+      "name": "seni_pjok_b04_alignment",
+      "command": "git mv; packageId update; content:validate x4; content_import_package x4; npm run build; npm test",
+      "result": "PASS",
+      "details": "pameran→seni-b08, kesehatan→pjok-b08; new kolase + bola-besar; all VALID/imported; 46 packages"
     }
   ],
   "environment": {
