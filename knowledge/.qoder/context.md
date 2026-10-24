@@ -10,7 +10,8 @@
 - Review teknis: 320/320 VALID, alt text lengkap, packageId unik; `curriculumRefs` kosong menunggu D6.
 - Katalog: indeks build-time `public/content-catalog.json` (ADR-0031); Beranda siap 8,7 dtk termasuk cold start; E2E home 9/9 PASS.
 - Blocker rilis: B-03 diperbaiki di kode (transfer/deactivate Worker, `ADMIN_API_TOKEN` provisial, 13/13 test); checklist B-01/B-04 dan B-02/05/06/07/08 tersedia; lembar kerja review R1–R12 (CSV 320 paket) siap diisi reviewer.
-- Kualitas konten: pilot gold Kelas 4 B01 (4 paket v0.2.0) lulus **11/12 G**; G8 diisi provisional fase-b/2024 (ADR-0033); G10 menunggu review manusia. 316 paket lain masih standar lama. Blocker rilis: 8 item terdaftar (OD-6/OD-7, SMTP, DV, review manusia).
+- Kualitas konten: pilot gold Kelas 4 B01 (4 paket v0.2.0) lulus **11/12 G**; G8 diisi provisional fase-b/2024 (ADR-0033); G10 menunggu review manusia. 316 paket lain masih standar lama.
+- Aset: inventaris 320 paket (82 hash unik, 61 reuse) + prompt pack 333 gambar (6 cover kelas, 7 cover mapel, 320 materi) siap untuk Google Flow. Blocker rilis: 8 item terdaftar (OD-6/OD-7, SMTP, DV, review manusia).
 - Player: eksplorasi + kuis; nilai disimpan ke SQLite native.
 - DB pengguna bersih (0 baris); backup uji di `.tmp-data/backups/db-20261023-225208/`.
 - Sinkronisasi client: outbox native + engine TS + mock server; E2E 1 event acknowledged.
