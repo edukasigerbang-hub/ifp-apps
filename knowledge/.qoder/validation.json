@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T16:31:12+07:00",
+  "last_validated_at": "2026-10-24T17:19:25+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -257,6 +257,12 @@
       "command": "Supabase SQL 0003; curl ifp_devices REST; wrangler deploy; curl worker; bundle check",
       "result": "PASS",
       "details": "ifp_devices created + sync_events FK rewired; REST 200; Worker 872ec15d /healthz 200, invalid enrollment 401; web bundle contains ifp_devices; Fanakon devices/commands/events/telemetry untouched"
+    },
+    {
+      "name": "e2e_enrollment_live",
+      "command": "POST enrollment_codes (service role); curl POST /v1/devices/enroll; GET ifp_devices; DELETE test rows",
+      "result": "PASS",
+      "details": "code 201; enroll 201; response deviceId/token/tokenType/expiresAt; ifp_devices row status=active platform=windows owner_id=null; cleanup OK"
     }
   ],
   "environment": {

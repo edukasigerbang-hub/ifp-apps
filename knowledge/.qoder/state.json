@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "cd751f8",
+  "commit": "19ee448",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -42,8 +42,8 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-24T16:31:12+07:00",
-  "last_validation": "ifp_devices migration applied (REST 200); web PR #5 a4186e2 bundle memuat ifp_devices; worker 872ec15d deployed, /healthz 200, invalid enroll 401; Fanakon tables untouched",
+  "last_updated": "2026-10-24T17:19:25+07:00",
+  "last_validation": "enrollment E2E via Worker: insert code 201, POST enroll 201, token 2-part, ifp_devices row active/windows; test rows cleaned up",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Buat enrollment code di dashboard lalu uji enroll nyata; siapkan lisensi uji untuk aktivasi end-to-end"
+  "next_step": "Siapkan lisensi uji + kode aktivasi untuk uji aktivasi end-to-end; ganti password sementara admin"
 }
