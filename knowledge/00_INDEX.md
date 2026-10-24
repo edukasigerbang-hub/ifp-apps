@@ -87,3 +87,13 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0024](decisions/ADR-0024-local-content-review.md) | Review konten lokal (Fase J increment 1) | Accepted (implemented) |
 
 Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
+
+### Proposal keputusan terbuka
+
+| ID | Proposal |
+|---|---|
+| OD-1 | [Matriks kurikulum & opsi](content/CURRICULUM_PROPOSAL.md) |
+| OD-4 | [Privasi, retensi, penghapusan](decisions/PROPOSAL-OD-4-privacy-retention.md) |
+| OD-5 | [Kebijakan lisensi](decisions/PROPOSAL-OD-5-license-policy.md) |
+| OD-6 | [Identitas rilis & signing](decisions/PROPOSAL-OD-6-release-identity.md) |
+| OD-7 | [Backend/API produksi](api/PRODUCTION_BACKEND_PROPOSAL.md) |

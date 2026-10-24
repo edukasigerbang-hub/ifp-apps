@@ -27,10 +27,10 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | OD-1 | Daftar resmi mata pelajaran + referensi kurikulum | Schema kurikulum, konten, validasi pedagogis | **PROPOSED** — [matriks & opsi](../content/CURRICULUM_PROPOSAL.md), menunggu Product Owner + Curriculum Lead |
 | OD-2 | Model perangkat IFP nyata + arsitektur CPU | Build matrix, spike, DV | OPEN |
 | OD-3 | Batas ukuran paket, codec media, target performa numerik | Import limits, DV-11/12/20 | OPEN |
-| OD-4 | Kebijakan retensi, backup, ekspor, penghapusan data siswa | Privacy, DB, UI | OPEN |
-| OD-5 | Grace period subscription offline, transfer perangkat, clock rollback policy | License semantics | OPEN |
-| OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | OPEN |
-| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | OPEN |
+| OD-4 | Kebijakan retensi, backup, ekspor, penghapusan data siswa | Privacy, DB, UI | **PROPOSED** — [brief privasi/retensi](../decisions/PROPOSAL-OD-4-privacy-retention.md) |
+| OD-5 | Grace period subscription offline, transfer perangkat, clock rollback policy | License semantics | **PROPOSED** — [brief kebijakan lisensi](../decisions/PROPOSAL-OD-5-license-policy.md) |
+| OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | **PROPOSED** — [brief identitas rilis & signing](../decisions/PROPOSAL-OD-6-release-identity.md) |
+| OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | **PROPOSED** — [proposal backend/API produksi](../api/PRODUCTION_BACKEND_PROPOSAL.md); keputusan hosting/auth/kunci diminta |
 | OD-8 | Standar "konten lengkap" per mapel/unit | Gerbang rilis konten | OPEN |
 
 ## Gap terverifikasi
