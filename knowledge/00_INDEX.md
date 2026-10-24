@@ -33,6 +33,7 @@
 | Katalog konten | [`content/CATALOG.md`](content/CATALOG.md) |
 | Fixture input/output validator | [`content/FIXTURES.md`](content/FIXTURES.md) |
 | Proposal kurikulum (OD-1) | [`content/CURRICULUM_PROPOSAL.md`](content/CURRICULUM_PROPOSAL.md) |
+| Outline Kelas 4 Kurikulum Merdeka (DRAF) | [`content/OUTLINE_KELAS4_MERDEKA_DRAFT.md`](content/OUTLINE_KELAS4_MERDEKA_DRAFT.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |
 | Device spike readiness | [`device/DEVICE_SPIKE_READINESS.md`](device/DEVICE_SPIKE_READINESS.md) |

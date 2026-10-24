@@ -26,6 +26,10 @@ Schema konten sengaja **tidak** mengunci daftar mapel. Yang belum ada adalah oto
 | D6 | Format `curriculumRefs` | ID resmi + versi (contoh `kurikulum-merdeka:2024`) | Keterlacakan & audit |
 | D7 | Standar "konten lengkap" (OD-8) | Jumlah unit per mapel/kelas/semester | Gerbang rilis |
 
+## Draf kerja
+
+Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belum terverifikasi**: [`OUTLINE_KELAS4_MERDEKA_DRAFT.md`](OUTLINE_KELAS4_MERDEKA_DRAFT.md). Dokumen itu hanya usulan urutan bab dan aktivitas untuk memulai produksi; D3–D7 masih harus diputuskan sebelum dianggap resmi.
+
 ## Template matriks (ISI SETELAH D1–D7 disetujui)
 
 | subjectId (slug) | Label tampilan | Kelas 1–3 | Kelas 4–6 | Wajib? | Catatan |
