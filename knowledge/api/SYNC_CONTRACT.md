@@ -49,7 +49,7 @@ Content-Type: application/json
 
 Batas (usulan, wajib dikonfirmasi backend): maksimal **100 event** per batch, **256 KB** per event, **1 MB** per batch. Pelanggaran → `413`.
 
-Jawaban: tepat satu dari `optionId` (pilihan/benar-salah) atau `responseText` (jawaban singkat, 1–500 karakter) wajib terisi; backend harus menyimpan keduanya apa adanya dan tidak menilai ulang.
+Jawaban: tepat satu dari `optionId` (pilihan/benar-salah) atau `responseText` (jawaban singkat, 1–500 karakter) wajib terisi; backend harus menyimpan keduanya apa adanya dan tidak menilai ulang. Untuk soal pilihan ganda multi-jawaban, satu event dapat memuat **beberapa entri dengan `questionId` sama** (satu per opsi terpilih); `isCorrect` per entri berarti opsi tersebut termasuk jawaban benar.
 
 ## Response
 

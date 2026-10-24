@@ -475,3 +475,18 @@
 **Verifikasi:** `cargo test` 48/48; `npm test` 53/53 + golden; `npm run e2e:activities` PASS 5 pemeriksaan; regression journey/a11y PASS.
 
 **Belum:** matching, ordering, multiple-choice multi-jawaban; penilaian teks hanya kecocokan persis setelah normalisasi.
+
+### T-032 — Pilihan ganda multi-jawaban
+
+**Status:** COMPLETED · **Change class:** SMALL
+
+- Checkbox untuk `responseType: "multiple-choice"`; state jawaban berupa array.
+- Penilaian himpunan sama persis (urutan/duplikat diabaikan, tanpa nilai parsial); `isAnswerCorrect` mendukung array.
+- Setiap opsi terpilih disimpan sebagai satu baris respons dengan `questionId` sama; `isCorrect` per opsi.
+- SYNC_CONTRACT mencatat beberapa entri `answers` per soal.
+- Harness E2E menunggu shell aplikasi sebelum skenario (memperbaiki blank-page transien WebView2).
+- ADR-0022.
+
+**Verifikasi:** `npm test` 56/56; `npm run e2e:activities` PASS 6 pemeriksaan (dua kali); journey 11/11; `cargo test` 48/48.
+
+**Belum:** matching dan ordering.

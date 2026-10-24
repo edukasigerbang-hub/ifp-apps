@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { isAnswerCorrect, scoreQuiz } from "../../content/quiz";
+import { isAnswerCorrect, scoreQuiz, type QuizAnswerValue } from "../../content/quiz";
 import type { Activity } from "../../content/schema/activity";
 
 interface QuizActivityProps {
@@ -27,21 +27,41 @@ interface QuizResult {
 export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
   const questions = activity.assessmentConfig?.questions ?? [];
   const passingScore = activity.assessmentConfig?.passingScore ?? 70;
-  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [answers, setAnswers] = useState<Record<string, QuizAnswerValue>>({});
   const [result, setResult] = useState<QuizResult | null>(null);
 
   if (questions.length === 0) {
     return <p className="text-sm text-muted">Kuis ini belum memiliki soal.</p>;
   }
 
-  const answeredCount = questions.filter((question) => {
+  const isAnswered = (question: (typeof questions)[number]): boolean => {
     const answer = answers[question.questionId];
-    return question.responseType === "text" ? Boolean(answer?.trim()) : answer !== undefined;
-  }).length;
+    if (question.responseType === "multiple-choice") {
+      return Array.isArray(answer) && answer.length > 0;
+    }
+    if (question.responseType === "text") {
+      return typeof answer === "string" && answer.trim().length > 0;
+    }
+    return answer !== undefined;
+  };
+  const answeredCount = questions.filter(isAnswered).length;
   const allAnswered = answeredCount === questions.length;
 
-  function choose(questionId: string, optionId: string) {
-    setAnswers((current) => ({ ...current, [questionId]: optionId }));
+  function choose(questionId: string, value: string) {
+    setAnswers((current) => ({ ...current, [questionId]: value }));
+  }
+
+  function toggle(questionId: string, optionId: string) {
+    setAnswers((current) => {
+      const existing = current[questionId];
+      const list = Array.isArray(existing) ? existing : [];
+      return {
+        ...current,
+        [questionId]: list.includes(optionId)
+          ? list.filter((value) => value !== optionId)
+          : [...list, optionId]
+      };
+    });
   }
 
   function submit() {
@@ -49,19 +69,39 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
     setResult({ score: outcome.score, passed: outcome.passed });
 
     if (onGraded) {
-      onGraded({
-        score: outcome.score,
-        answers: questions.map((question) => {
-          const answer = answers[question.questionId];
-          const isText = question.responseType === "text";
-          return {
+      const graded: QuizGradedAnswer[] = [];
+      for (const question of questions) {
+        const answer = answers[question.questionId];
+        if (question.responseType === "multiple-choice") {
+          const selected = Array.isArray(answer) ? answer : [];
+          const correctSet = Array.isArray(question.correctResponse)
+            ? question.correctResponse
+            : [];
+          for (const optionId of selected) {
+            graded.push({
+              questionId: question.questionId,
+              optionId,
+              responseText: null,
+              isCorrect: correctSet.includes(optionId)
+            });
+          }
+        } else if (question.responseType === "text") {
+          graded.push({
             questionId: question.questionId,
-            optionId: isText ? null : answer ?? null,
-            responseText: isText ? answer?.trim() ?? null : null,
+            optionId: null,
+            responseText: typeof answer === "string" ? answer.trim() : null,
             isCorrect: isAnswerCorrect(question, answer)
-          };
-        })
-      });
+          });
+        } else {
+          graded.push({
+            questionId: question.questionId,
+            optionId: typeof answer === "string" ? answer : null,
+            responseText: null,
+            isCorrect: isAnswerCorrect(question, answer)
+          });
+        }
+      }
+      onGraded({ score: outcome.score, answers: graded });
     }
   }
 
@@ -87,13 +127,43 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
                   Jawaban
                   <input
                     type="text"
-                    value={answers[question.questionId] ?? ""}
+                    value={
+                      typeof answers[question.questionId] === "string"
+                        ? (answers[question.questionId] as string)
+                        : ""
+                    }
                     aria-label={question.prompt}
                     disabled={result !== null}
                     onChange={(event) => choose(question.questionId, event.target.value)}
                     className="mt-1 block min-h-11 w-full max-w-md rounded-control border border-ink/15 px-3 text-sm disabled:opacity-80"
                   />
                 </label>
+              ) : question.responseType === "multiple-choice" ? (
+                (question.options ?? []).map((option) => {
+                  const answer = answers[question.questionId];
+                  const checked = Array.isArray(answer) && answer.includes(option.optionId);
+                  return (
+                    <label
+                      key={option.optionId}
+                      className={`flex min-h-11 cursor-pointer items-center gap-3 rounded-control border px-4 py-2 text-sm ${
+                        checked
+                          ? "border-primary bg-primary/5 font-medium"
+                          : "border-ink/10 hover:bg-paper"
+                      } ${result ? "cursor-default opacity-80" : ""}`}
+                    >
+                      <input
+                        type="checkbox"
+                        name={question.questionId}
+                        value={option.optionId}
+                        checked={checked}
+                        disabled={result !== null}
+                        onChange={() => toggle(question.questionId, option.optionId)}
+                        className="h-4 w-4 accent-[var(--color-primary)]"
+                      />
+                      {option.text}
+                    </label>
+                  );
+                })
               ) : (
                 (question.responseType === "boolean"
                   ? [

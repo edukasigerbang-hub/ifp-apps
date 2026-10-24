@@ -91,3 +91,33 @@ describe("benar-salah", () => {
     expect(scoreQuiz([question], { "soal-bs": "true" }, 75).passed).toBe(false);
   });
 });
+
+describe("pilihan ganda multi-jawaban", () => {
+  const question: QuizQuestion = {
+    questionId: "soal-multi",
+    prompt: "Pilih pecahan yang senilai",
+    responseType: "multiple-choice",
+    options: [
+      { optionId: "opsi-a", text: "2/4" },
+      { optionId: "opsi-b", text: "1/3" },
+      { optionId: "opsi-c", text: "4/8" }
+    ],
+    correctResponse: ["opsi-a", "opsi-c"]
+  };
+
+  it("menerima semua jawaban benar tanpa memedulikan urutan", () => {
+    expect(scoreQuiz([question], { "soal-multi": ["opsi-c", "opsi-a"] }, 75).score).toBe(100);
+  });
+
+  it("menolak jawaban kurang atau berlebih", () => {
+    expect(scoreQuiz([question], { "soal-multi": ["opsi-a"] }, 75).score).toBe(0);
+    expect(
+      scoreQuiz([question], { "soal-multi": ["opsi-a", "opsi-b", "opsi-c"] }, 75).score
+    ).toBe(0);
+  });
+
+  it("isAnswerCorrect menolak jawaban tunggal untuk soal multi", () => {
+    expect(isAnswerCorrect(question, "opsi-a")).toBe(false);
+    expect(isAnswerCorrect(question, ["opsi-a", "opsi-c"])).toBe(true);
+  });
+});

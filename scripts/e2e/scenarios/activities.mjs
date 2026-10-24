@@ -97,6 +97,46 @@ async function buildPackage(artifactDir) {
     runtimeCapabilities: ["touch", "keyboard"]
   };
 
+  const multiAnswer = {
+    activityId: "aktivitas-pilihan-ganda-multi",
+    type: "multiple-choice",
+    schemaVersion: "1.0.0",
+    title: "Pilihan Ganda (Pilih Semua)",
+    instructions: "Pilih semua jawaban yang benar.",
+    assets: [],
+    interactionConfig: {},
+    assessmentConfig: {
+      questions: [
+        {
+          questionId: "mg-setengah",
+          prompt: "Pilih semua pecahan yang senilai dengan 1/2.",
+          responseType: "multiple-choice",
+          options: [
+            { optionId: "opsi-2-4", text: "2/4" },
+            { optionId: "opsi-1-3", text: "1/3" },
+            { optionId: "opsi-3-6", text: "3/6" }
+          ],
+          correctResponse: ["opsi-2-4", "opsi-3-6"]
+        },
+        {
+          questionId: "mg-seperempat",
+          prompt: "Pilih semua pecahan yang senilai dengan 1/4.",
+          responseType: "multiple-choice",
+          options: [
+            { optionId: "opsi-1-4", text: "1/4" },
+            { optionId: "opsi-2-8", text: "2/8" },
+            { optionId: "opsi-2-4b", text: "2/4" }
+          ],
+          correctResponse: ["opsi-1-4", "opsi-2-8"]
+        }
+      ],
+      passingScore: 100
+    },
+    completionPolicy: { type: "score-threshold", threshold: 100 },
+    feedbackPolicy: { mode: "after-attempt", allowRetry: true, showCorrectAnswer: false },
+    runtimeCapabilities: ["touch", "keyboard"]
+  };
+
   await writeFile(
     path.join(activitiesDir, "activity-tf.json"),
     `${JSON.stringify(trueFalse, null, 2)}\n`,
@@ -105,6 +145,11 @@ async function buildPackage(artifactDir) {
   await writeFile(
     path.join(activitiesDir, "activity-sa.json"),
     `${JSON.stringify(shortAnswer, null, 2)}\n`,
+    "utf8"
+  );
+  await writeFile(
+    path.join(activitiesDir, "activity-mg.json"),
+    `${JSON.stringify(multiAnswer, null, 2)}\n`,
     "utf8"
   );
 
@@ -118,8 +163,16 @@ async function buildPackage(artifactDir) {
   const lesson = JSON.parse(await readFile(lessonPath, "utf8"));
   lesson.title = "Aktivitas Baru (E2E)";
   lesson.contentVersion = "0.3.0";
-  lesson.activityIds = [trueFalse.activityId, shortAnswer.activityId];
-  lesson.assessmentRefs = [trueFalse.activityId, shortAnswer.activityId];
+  lesson.activityIds = [
+    trueFalse.activityId,
+    shortAnswer.activityId,
+    multiAnswer.activityId
+  ];
+  lesson.assessmentRefs = [
+    trueFalse.activityId,
+    shortAnswer.activityId,
+    multiAnswer.activityId
+  ];
   await writeFile(lessonPath, `${JSON.stringify(lesson, null, 2)}\n`, "utf8");
 
   return target;
@@ -146,6 +199,17 @@ async function fillByLabel(page, ariaLabel, value) {
 }
 
 async function chooseRadio(page, name, value) {
+  return page.evaluate(`
+    (() => {
+      const input = document.querySelector('input[name=${JSON.stringify(name)}][value=${JSON.stringify(value)}]');
+      if (!input) return false;
+      input.click();
+      return input.checked;
+    })()
+  `);
+}
+
+async function chooseCheckbox(page, name, value) {
   return page.evaluate(`
     (() => {
       const input = document.querySelector('input[name=${JSON.stringify(name)}][value=${JSON.stringify(value)}]');
@@ -223,6 +287,28 @@ export async function run({ page, artifactDir, log }) {
   });
   log("Aktivitas jawaban singkat dinilai 100 (normalisasi huruf) dan tersimpan.");
 
+  await clickButton(page, "Pilihan Ganda (Pilih Semua)");
+  await page.waitFor(`document.body.textContent.includes("Pilih semua pecahan yang senilai dengan 1/2")`, {
+    label: "kuis multi-jawaban"
+  });
+  for (const [name, value] of [
+    ["mg-setengah", "opsi-2-4"],
+    ["mg-setengah", "opsi-3-6"],
+    ["mg-seperempat", "opsi-1-4"],
+    ["mg-seperempat", "opsi-2-8"]
+  ]) {
+    assert(await chooseCheckbox(page, name, value), `Checkbox ${name}/${value} gagal.`);
+  }
+  await clickButton(page, "Periksa jawaban");
+  await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
+    label: "skor multi-jawaban"
+  });
+  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
+    label: "simpan multi-jawaban",
+    timeoutMs: 30_000
+  });
+  log("Aktivitas pilihan ganda multi-jawaban dinilai 100 dan tersimpan.");
+
   const profileId = await page.evaluate(
     `window.__TAURI_INTERNALS__.invoke("profile_get_active").then((profile) => profile.id)`
   );
@@ -231,7 +317,7 @@ export async function run({ page, artifactDir, log }) {
       profileId: ${JSON.stringify(profileId)}
     })
   `);
-  assert(summary.attempts === 2, `Percobaan tersimpan ${summary.attempts}, harus 2.`);
+  assert(summary.attempts === 3, `Percobaan tersimpan ${summary.attempts}, harus 3.`);
   assert(summary.averageScore === 100, `Rata-rata ${summary.averageScore}, harus 100.`);
   log(`Ringkasan: ${summary.sessions} sesi, ${summary.attempts} percobaan, rata-rata ${summary.averageScore}.`);
 
