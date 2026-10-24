@@ -1,0 +1,25 @@
+{
+  "lessonId": "wawancara-presentasi",
+  "packageId": "kelas4-bahasa-indonesia-b07-wawancara-presentasi",
+  "title": "Wawancara dan Presentasi",
+  "summary": "Menyusun pertanyaan wawancara, mencatat jawaban, dan menyajikan hasil dengan percaya diri.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyusun pertanyaan wawancara yang tepat.",
+    "Melakukan wawancara dan mencatat jawaban.",
+    "Menyajikan hasil wawancara secara runtut."
+  ],
+  "activityIds": [
+    "eksplorasi-wawancara",
+    "ordering-wawancara"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/wawancara-presentasi.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

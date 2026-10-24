@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b07-waktu-volume-data",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Waktu, Volume, dan Penyajian Data — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/waktu-volume-data.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8282,
+      "sha256": "6db308aa066de728efc3501cefe5e005e5fff890aeb94ce1937950192edf854c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

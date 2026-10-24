@@ -678,6 +678,114 @@ function triangle(px, x1, y1, x2, y2, x3, y3, color) {
   }
 }
 
+function timeVolumeData() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const panels = [40, 290, 540];
+  for (const x of panels) {
+    rect(px, x, 100, 220, 420, colors.sky);
+    rect(px, x, 100, 220, 5, colors.navy);
+    rect(px, x, 515, 220, 5, colors.navy);
+    rect(px, x, 100, 5, 420, colors.navy);
+    rect(px, x + 215, 100, 5, 420, colors.navy);
+  }
+  // jam
+  circle(px, 150, 300, 80, colors.white);
+  circle(px, 150, 300, 72, colors.sand);
+  line(px, 150, 300, 150, 245, colors.navy, 5);
+  line(px, 150, 300, 190, 325, colors.navy, 5);
+  circle(px, 150, 300, 6, colors.navy);
+  for (let a = 0; a < 360; a += 30) {
+    const r = (a * Math.PI) / 180;
+    circle(px, Math.round(150 + Math.cos(r) * 64), Math.round(300 + Math.sin(r) * 64), 3, colors.navy);
+  }
+  // gelas ukur
+  rect(px, 340, 220, 120, 240, colors.white);
+  rect(px, 340, 220, 8, 240, colors.navy);
+  rect(px, 452, 220, 8, 240, colors.navy);
+  rect(px, 340, 452, 120, 8, colors.navy);
+  rect(px, 348, 340, 104, 112, colors.blue);
+  for (let i = 0; i < 5; i += 1) line(px, 348, 250 + i * 40, 380, 250 + i * 40, colors.navy, 3);
+  // diagram batang
+  line(px, 580, 460, 740, 460, colors.navy, 5);
+  line(px, 580, 460, 580, 240, colors.navy, 5);
+  rect(px, 600, 400, 30, 60, colors.teal);
+  rect(px, 640, 340, 30, 120, colors.orange);
+  rect(px, 680, 280, 30, 180, colors.red);
+  return px;
+}
+
+function kingdomScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 440, W, 160, colors.green);
+  // candi bertingkat
+  rect(px, 260, 360, 220, 80, colors.soil);
+  rect(px, 290, 300, 160, 60, colors.soil);
+  rect(px, 320, 250, 100, 50, colors.soil);
+  triangle(px, 300, 250, 440, 250, 370, 190, colors.navy);
+  rect(px, 350, 400, 40, 40, colors.navy);
+  // kapal
+  ellipse(px, 120, 450, 90, 22, colors.soil);
+  line(px, 120, 430, 120, 300, colors.navy, 5);
+  triangle(px, 120, 310, 120, 420, 200, 400, colors.white);
+  // prasasti
+  rect(px, 610, 350, 100, 120, colors.sand);
+  for (let i = 0; i < 5; i += 1) line(px, 625, 370 + i * 20, 695, 370 + i * 20, colors.soil, 3);
+  return px;
+}
+
+function interviewScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  line(px, 400, 60, 400, 600, colors.navy, 4);
+  rect(px, 0, 450, 400, 150, colors.sand);
+  rect(px, 400, 450, 400, 150, colors.sand);
+  // wawancara
+  circle(px, 130, 260, 34, colors.skin1);
+  rect(px, 96, 294, 68, 110, colors.teal);
+  circle(px, 290, 260, 34, colors.skin3);
+  rect(px, 256, 294, 68, 110, colors.orange);
+  line(px, 175, 320, 230, 300, colors.navy, 4);
+  circle(px, 235, 298, 10, colors.navy);
+  rect(px, 170, 350, 60, 45, colors.white);
+  line(px, 180, 365, 220, 365, colors.sky, 3);
+  // presentasi
+  rect(px, 460, 160, 280, 160, colors.white);
+  rect(px, 460, 160, 280, 12, colors.navy);
+  line(px, 500, 300, 720, 300, colors.navy, 5);
+  rect(px, 530, 260, 30, 40, colors.teal);
+  rect(px, 580, 230, 30, 70, colors.orange);
+  rect(px, 630, 200, 30, 100, colors.red);
+  circle(px, 510, 420, 32, colors.skin2);
+  rect(px, 478, 452, 64, 100, colors.blue);
+  line(px, 542, 460, 600, 380, colors.navy, 5);
+  return px;
+}
+
+function communityScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 430, W, 170, colors.green);
+  rect(px, 60, 220, 180, 210, colors.sand);
+  triangle(px, 50, 220, 250, 220, 150, 150, colors.red);
+  rect(px, 300, 240, 160, 190, colors.sand);
+  triangle(px, 290, 240, 470, 240, 380, 175, colors.teal);
+  // warga kerja bakti
+  const people = [[520, colors.teal], [580, colors.orange], [640, colors.blue], [700, colors.red]];
+  for (const [x, shirt] of people) {
+    circle(px, x, 330, 28, colors.skin1);
+    rect(px, x - 24, 360, 48, 90, shirt);
+    rect(px, x - 22, 450, 16, 60, colors.navy);
+    rect(px, x + 6, 450, 16, 60, colors.navy);
+  }
+  line(px, 500, 400, 740, 400, colors.soil, 8);
+  rect(px, 560, 420, 40, 20, colors.orange);
+  return px;
+}
+
 function arc(px, cx, cy, r, startDeg, endDeg, color, thickness = 4) {
   for (let angle = startDeg; angle <= endDeg; angle += 2) {
     const rad = (angle * Math.PI) / 180;
@@ -1273,3 +1381,7 @@ write("content/packages/kelas4-matematika-b06-garis-sudut/assets/garis-sudut.png
 write("content/packages/kelas4-ipas-b06-keragaman-budaya/assets/keragaman-budaya.png", cultureScene());
 write("content/packages/kelas4-bahasa-indonesia-b06-teks-narasi/assets/teks-narasi.png", narrativeScene());
 write("content/packages/kelas4-pendidikan-pancasila-b06-nkri/assets/upacara-bendera.png", flagCeremonyScene());
+write("content/packages/kelas4-matematika-b07-waktu-volume-data/assets/waktu-volume-data.png", timeVolumeData());
+write("content/packages/kelas4-ipas-b07-sejarah-kerajaan/assets/kerajaan-nusantara.png", kingdomScene());
+write("content/packages/kelas4-bahasa-indonesia-b07-wawancara-presentasi/assets/wawancara-presentasi.png", interviewScene());
+write("content/packages/kelas4-pendidikan-pancasila-b07-gotong-royong/assets/gotong-royong.png", communityScene());

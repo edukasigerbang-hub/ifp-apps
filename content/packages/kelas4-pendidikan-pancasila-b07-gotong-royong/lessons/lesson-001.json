@@ -1,0 +1,25 @@
+{
+  "lessonId": "gotong-royong",
+  "packageId": "kelas4-pendidikan-pancasila-b07-gotong-royong",
+  "title": "Gotong Royong",
+  "summary": "Memahami makna gotong royong, contohnya di rumah/sekolah/masyarakat, dan manfaatnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan makna gotong royong.",
+    "Menyebutkan contoh gotong royong.",
+    "Menunjukkan sikap gotong royong dalam kehidupan sehari-hari."
+  ],
+  "activityIds": [
+    "eksplorasi-gotong-royong",
+    "matching-gotong-royong"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/gotong-royong.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

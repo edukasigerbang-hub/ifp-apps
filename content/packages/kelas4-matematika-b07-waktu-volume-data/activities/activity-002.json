@@ -1,0 +1,125 @@
+{
+  "activityId": "kuis-waktu-volume",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Waktu, Volume, dan Data",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-jam-menit",
+        "prompt": "1 jam = ... menit",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-30",
+            "text": "30"
+          },
+          {
+            "optionId": "opsi-60",
+            "text": "60"
+          },
+          {
+            "optionId": "opsi-90",
+            "text": "90"
+          },
+          {
+            "optionId": "opsi-100",
+            "text": "100"
+          }
+        ],
+        "correctResponse": "opsi-60"
+      },
+      {
+        "questionId": "soal-liter",
+        "prompt": "1 liter = ... mL",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-100",
+            "text": "100"
+          },
+          {
+            "optionId": "opsi-500",
+            "text": "500"
+          },
+          {
+            "optionId": "opsi-1000",
+            "text": "1.000"
+          },
+          {
+            "optionId": "opsi-10000",
+            "text": "10.000"
+          }
+        ],
+        "correctResponse": "opsi-1000"
+      },
+      {
+        "questionId": "soal-selang",
+        "prompt": "Pukul 07.30 ditambah 45 menit menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-0800",
+            "text": "08.00"
+          },
+          {
+            "optionId": "opsi-0815",
+            "text": "08.15"
+          },
+          {
+            "optionId": "opsi-0830",
+            "text": "08.30"
+          },
+          {
+            "optionId": "opsi-0745",
+            "text": "07.45"
+          }
+        ],
+        "correctResponse": "opsi-0815"
+      },
+      {
+        "questionId": "soal-diagram",
+        "prompt": "Pada diagram batang, data terbanyak ditunjukkan oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tertinggi",
+            "text": "batang paling tinggi"
+          },
+          {
+            "optionId": "opsi-terendah",
+            "text": "batang paling rendah"
+          },
+          {
+            "optionId": "opsi-warna",
+            "text": "warna paling gelap"
+          },
+          {
+            "optionId": "opsi-lebar",
+            "text": "batang paling lebar"
+          }
+        ],
+        "correctResponse": "opsi-tertinggi"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 36 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 40 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -40,6 +40,10 @@
 | `kelas4-ipas-b06-keragaman-budaya` | 0.1.0 | 4 | ipas | Keragaman budaya | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-bahasa-indonesia-b06-teks-narasi` | 0.1.0 | 4 | bahasa-indonesia | Teks narasi | **DRAFT** | VALID (2 warning) | belum |
 | `kelas4-pendidikan-pancasila-b06-nkri` | 0.1.0 | 4 | pendidikan-pancasila | NKRI | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-matematika-b07-waktu-volume-data` | 0.1.0 | 4 | matematika | Waktu, volume, data | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-ipas-b07-sejarah-kerajaan` | 0.1.0 | 4 | ipas | Sejarah kerajaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-bahasa-indonesia-b07-wawancara-presentasi` | 0.1.0 | 4 | bahasa-indonesia | Wawancara & presentasi | **DRAFT** | VALID (2 warning) | belum |
+| `kelas4-pendidikan-pancasila-b07-gotong-royong` | 0.1.0 | 4 | pendidikan-pancasila | Gotong royong | **DRAFT** | VALID (2 warning) | belum |
 
 ## Pilot Kelas 3 — dipindahkan ke fixture
 
@@ -197,6 +201,21 @@ Empat paket draft untuk G1 (Fase B Semester 1):
 - Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
 - Bundle utama 456,8 kB (<500 kB).
 - Sisa Semester 2: B07–B08 untuk 7 mapel (14 paket) + opsi Bahasa Inggris.
+
+## Batch 11 Kelas 4 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas4-matematika-b07-waktu-volume-data` | Waktu, Volume, dan Penyajian Data | eksplorasi + MCQ (4 soal) | `waktu-volume-data.png` |
+| `kelas4-ipas-b07-sejarah-kerajaan` | Sejarah Nusantara: Kerajaan | eksplorasi + matching (5 pasangan) | `kerajaan-nusantara.png` |
+| `kelas4-bahasa-indonesia-b07-wawancara-presentasi` | Wawancara dan Presentasi | eksplorasi + ordering (5 langkah) | `wawancara-presentasi.png` |
+| `kelas4-pendidikan-pancasila-b07-gotong-royong` | Gotong Royong | eksplorasi + matching (5 pasangan) | `gotong-royong.png` |
+
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600 deterministik, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID**, 0 issue, 2 warning per paket.
+- Impor: `content_import_package` keempat paket **PASS** (5 file/paket, `active`).
+- Bundle utama 461,6 kB (<500 kB).
+- Sisa Semester 2: B08 untuk 7 mapel (7 paket) + opsi Bahasa Inggris.
 
 ## Inventaris sebelum produksi Kelas 4 (2026-10-24)
 

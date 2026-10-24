@@ -1,0 +1,27 @@
+{
+  "lessonId": "waktu-volume-data",
+  "packageId": "kelas4-matematika-b07-waktu-volume-data",
+  "title": "Waktu, Volume, dan Penyajian Data",
+  "summary": "Membaca waktu dan volume, mengonversi satuan, serta membaca diagram batang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca waktu dan menghitung selang waktu.",
+    "Mengonversi satuan waktu dan volume.",
+    "Membaca dan menafsirkan diagram batang."
+  ],
+  "activityIds": [
+    "eksplorasi-waktu-volume",
+    "kuis-waktu-volume"
+  ],
+  "assessmentRefs": [
+    "kuis-waktu-volume"
+  ],
+  "assetRefs": [
+    "assets/waktu-volume-data.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}
