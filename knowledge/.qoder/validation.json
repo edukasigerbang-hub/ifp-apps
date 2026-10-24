@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T17:58:32+07:00",
+  "last_validated_at": "2026-10-24T18:19:43+07:00",
   "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
@@ -293,6 +293,12 @@
       "command": "IFP_LICENSE_KEYS=... VITE_LICENSE_SERVER_URL=... npm run tauri build; run release exe WITHOUT env",
       "result": "PASS",
       "details": "license valid=true via embedded public key; UI Aktivasi online shown; MSI sha e4b1c892…; NSIS sha 9a0bf503…"
+    },
+    {
+      "name": "grade4_starter_packages",
+      "command": "npm run content:validate (x4); content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "4 packages VALID; import 5 files each status active; build PASS; fixtures 4/4; warnings: draft + empty curriculumRefs"
     }
   ],
   "environment": {
