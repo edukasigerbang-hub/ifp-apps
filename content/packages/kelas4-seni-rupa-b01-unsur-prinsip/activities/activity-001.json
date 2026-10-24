@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-unsur-seni",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Unsur Seni Rupa",
+  "instructions": "Amati komposisi pada gambar, lalu temukan unsur seni rupa yang menyusunnya.",
+  "assets": [
+    "assets/unsur-seni.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Unsur seni rupa apa saja yang terlihat pada gambar?",
+        "assetPath": "assets/unsur-seni.png",
+        "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong.",
+        "reveal": "Garis, bentuk, warna, tekstur, dan ruang.",
+        "hint": "Perhatikan garis, bidang, warna, dan titik-titik."
+      },
+      {
+        "prompt": "Sebutkan bentuk-bentuk yang kamu lihat.",
+        "assetPath": "assets/unsur-seni.png",
+        "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong.",
+        "reveal": "Ada persegi, lingkaran, dan elips.",
+        "hint": "Bentuk dapat berupa bangun datar."
+      },
+      {
+        "prompt": "Bagaimana keseimbangan komposisi pada gambar?",
+        "assetPath": "assets/unsur-seni.png",
+        "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong.",
+        "reveal": "Bentuk tersebar di beberapa bagian sehingga terasa seimbang, tidak menumpuk di satu sisi.",
+        "hint": "Bandingkan kiri, kanan, atas, dan bawah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "activityId": "matching-surah-pendek",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Surah dan Tema",
+  "instructions": "Pasangkan setiap surah pendek dengan tema utamanya.",
+  "assets": [
+    "assets/membaca-quran.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-fatihah",
+        "left": "Al-Fatihah",
+        "right": "Surah pembuka"
+      },
+      {
+        "pairId": "pasangan-ikhlas",
+        "left": "Al-Ikhlas",
+        "right": "Keesaan Allah"
+      },
+      {
+        "pairId": "pasangan-falaq",
+        "left": "Al-Falaq",
+        "right": "Perlindungan dari kejahatan"
+      },
+      {
+        "pairId": "pasangan-nas",
+        "left": "An-Nas",
+        "right": "Perlindungan dari bisikan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu."
+  }
+}

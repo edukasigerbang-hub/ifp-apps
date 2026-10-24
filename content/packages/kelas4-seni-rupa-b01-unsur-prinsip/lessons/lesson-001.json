@@ -1,0 +1,25 @@
+{
+  "lessonId": "unsur-prinsip-seni",
+  "packageId": "kelas4-seni-rupa-b01-unsur-prinsip",
+  "title": "Unsur dan Prinsip Seni Rupa",
+  "summary": "Mengenali unsur garis, bentuk, warna, tekstur, dan ruang, lalu menyusun komposisi sederhana yang seimbang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan unsur-unsur seni rupa.",
+    "Menjelaskan prinsip keseimbangan dan kesatuan.",
+    "Menyusun komposisi sederhana dari unsur seni rupa."
+  ],
+  "activityIds": [
+    "eksplorasi-unsur-seni",
+    "matching-unsur-seni"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/unsur-seni.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

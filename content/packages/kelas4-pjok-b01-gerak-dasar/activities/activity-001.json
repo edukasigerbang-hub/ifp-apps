@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-gerak-dasar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Dasar",
+  "instructions": "Amati empat panel gerak, lalu tentukan jenis geraknya.",
+  "assets": [
+    "assets/gerak-dasar.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Gerakan apa yang dilakukan anak pada panel pertama dan kedua?",
+        "assetPath": "assets/gerak-dasar.png",
+        "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk.",
+        "reveal": "Berjalan dan berlari; keduanya membuat tubuh berpindah tempat (lokomotor).",
+        "hint": "Perhatikan posisi kaki dan arah gerak."
+      },
+      {
+        "prompt": "Gerakan apa pada panel ketiga?",
+        "assetPath": "assets/gerak-dasar.png",
+        "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk.",
+        "reveal": "Melompat; tubuh berpindah tempat, jadi termasuk gerak lokomotor.",
+        "hint": "Kedua kaki meninggalkan tanah."
+      },
+      {
+        "prompt": "Apa perbedaan gerak lokomotor dan non-lokomotor?",
+        "assetPath": "assets/gerak-dasar.png",
+        "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk.",
+        "reveal": "Lokomotor berpindah tempat (jalan, lari, lompat); non-lokomotor dilakukan di tempat (menekuk, memutar, mengayun).",
+        "hint": "Bandingkan panel keempat dengan panel lainnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk."
+  }
+}

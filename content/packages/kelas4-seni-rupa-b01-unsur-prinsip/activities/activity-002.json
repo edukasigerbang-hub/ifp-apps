@@ -1,0 +1,54 @@
+{
+  "activityId": "matching-unsur-seni",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur dan Contoh",
+  "instructions": "Pasangkan setiap unsur seni rupa dengan contoh yang sesuai.",
+  "assets": [
+    "assets/unsur-seni.png"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-garis",
+        "left": "Garis",
+        "right": "Goresan panjang dan tipis"
+      },
+      {
+        "pairId": "pasangan-bentuk",
+        "left": "Bentuk",
+        "right": "Lingkaran dan persegi"
+      },
+      {
+        "pairId": "pasangan-warna",
+        "left": "Warna",
+        "right": "Merah, biru, dan kuning"
+      },
+      {
+        "pairId": "pasangan-tekstur",
+        "left": "Tekstur",
+        "right": "Kasar atau halus"
+      },
+      {
+        "pairId": "pasangan-ruang",
+        "left": "Ruang",
+        "right": "Area kosong di sekitar objek"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong."
+  }
+}

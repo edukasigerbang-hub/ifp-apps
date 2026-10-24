@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pai-b01-surah-pendek",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Mengenal Surah Pendek dan Adab Membaca — PAI Kelas 4 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/membaca-quran.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5306,
+      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}
