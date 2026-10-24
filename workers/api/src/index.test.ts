@@ -17,6 +17,7 @@ const env: Env = {
   LICENSE_PUBLIC_KEY: TEST_PUBLIC_KEY,
   LICENSE_KEY_ID: "test-1",
   LICENSE_PRODUCT_ID: "ifp-learning",
+  ADMIN_API_TOKEN: "admin-token-test",
   CORS_ORIGIN: "http://localhost:1420"
 };
 
@@ -294,14 +295,78 @@ describe("cloudflare worker", () => {
     expect(valid).toBe(true);
   });
 
-  it("menolak transfer lisensi yang belum diimplementasikan", async () => {
+  it("menolak transfer tanpa token admin", async () => {
     mockSupabase(() => new Response("unexpected", { status: 500 }));
     const response = await worker.fetch(
-      post("/v1/licenses/transfer", { licenseId: crypto.randomUUID(), machineId: crypto.randomUUID() }),
+      post("/v1/licenses/transfer", {
+        licenseId: crypto.randomUUID(),
+        machineId: crypto.randomUUID()
+      }),
       env
     );
-    expect(response.status).toBe(501);
+    expect(response.status).toBe(401);
     const body = (await response.json()) as { error?: { code?: string } };
-    expect(body.error?.code).toBe("LICENSE_ADMIN_NOT_IMPLEMENTED");
+    expect(body.error?.code).toBe("LICENSE_UNAUTHORIZED_ADMIN");
+  });
+
+  it("memindahkan lisensi ke perangkat baru", async () => {
+    const row = licenseRow({ machine_id: crypto.randomUUID(), status: "active" });
+    const nextMachine = crypto.randomUUID();
+    const patches: Array<Record<string, unknown>> = [];
+    let audited = false;
+    mockSupabase((url, init) => {
+      if (url.includes("/rest/v1/licenses?select=")) {
+        return Response.json([row]);
+      }
+      if (url.includes("/rest/v1/licenses?id=eq.")) {
+        patches.push(JSON.parse(String(init.body)) as Record<string, unknown>);
+        return new Response(null, { status: 204 });
+      }
+      if (url.includes("/rest/v1/license_audit")) {
+        audited = true;
+        return new Response(null, { status: 201 });
+      }
+      return new Response("unexpected", { status: 500 });
+    });
+
+    const response = await worker.fetch(
+      post("/v1/licenses/transfer", { licenseId: row.id, machineId: nextMachine }, "admin-token-test"),
+      env
+    );
+    expect(response.status).toBe(200);
+    const body = (await response.json()) as { machineId: string; changed: boolean };
+    expect(body.machineId).toBe(nextMachine);
+    expect(body.changed).toBe(true);
+    expect(patches[0]?.machine_id).toBe(nextMachine);
+    expect(patches[0]?.status).toBe("active");
+    expect(audited).toBe(true);
+  });
+
+  it("melepas lisensi dari perangkat", async () => {
+    const row = licenseRow({ machine_id: crypto.randomUUID(), status: "active" });
+    const patches: Array<Record<string, unknown>> = [];
+    mockSupabase((url, init) => {
+      if (url.includes("/rest/v1/licenses?select=")) {
+        return Response.json([row]);
+      }
+      if (url.includes("/rest/v1/licenses?id=eq.")) {
+        patches.push(JSON.parse(String(init.body)) as Record<string, unknown>);
+        return new Response(null, { status: 204 });
+      }
+      if (url.includes("/rest/v1/license_audit")) {
+        return new Response(null, { status: 201 });
+      }
+      return new Response("unexpected", { status: 500 });
+    });
+
+    const response = await worker.fetch(
+      post("/v1/activations/deactivate", { licenseId: row.id }, "admin-token-test"),
+      env
+    );
+    expect(response.status).toBe(200);
+    const body = (await response.json()) as { machineId: null; changed: boolean };
+    expect(body.machineId).toBeNull();
+    expect(body.changed).toBe(true);
+    expect(patches[0]?.machine_id).toBeNull();
   });
 });

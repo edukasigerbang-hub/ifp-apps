@@ -99,6 +99,7 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0026](decisions/ADR-0026-license-policy-defaults.md) | Default kebijakan lisensi (provisional, OD-5) | Accepted (provisional) |
 | [ADR-0027](decisions/ADR-0027-device-auth-openapi.md) | OD-7 increment 1: auth perangkat & OpenAPI | Accepted (reference) |
 | [ADR-0031](decisions/ADR-0031-content-catalog-index.md) | Indeks katalog konten build-time untuk 320 paket | Accepted (implemented) |
+| [ADR-0032](decisions/ADR-0032-admin-api-token-provisional.md) | Token admin provisial untuk transfer/deaktivasi lisensi | Accepted (provisional) |
 | [ADR-0028](decisions/ADR-0028-supabase-cloudflare.md) | Stack backend: Supabase + Cloudflare | Accepted (increment 2) |
 | [ADR-0029](decisions/ADR-0029-ifp-devices-isolation.md) | Isolasi perangkat IFP dengan `ifp_devices` (project dipakai bersama Fanakon) | Accepted |
 | [ADR-0030](decisions/ADR-0030-worker-license-signing.md) | Penerbitan lisensi Ed25519 di Worker (kunci provisional `prod-1`) | Accepted (provisional) |

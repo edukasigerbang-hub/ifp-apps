@@ -2,6 +2,7 @@ import { z } from "zod";
 import { hashEnrollmentCode, signDeviceToken, verifyDeviceToken } from "./auth";
 import { failure, json, readJson } from "./http";
 import { handleActivation, handleRefresh, handleVerify, type LicenseEnv } from "./license";
+import { handleDeactivate, handleTransfer } from "./licenseAdmin";
 import { rest, rpc, SupabaseError } from "./supabase";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -28,6 +29,7 @@ const batchSchema = z.strictObject({
 export interface Env extends LicenseEnv {
   DEVICE_TOKEN_SECRET: string;
   ENROLLMENT_CODE_PEPPER: string;
+  ADMIN_API_TOKEN?: string;
   CORS_ORIGIN?: string;
 }
 
@@ -181,16 +183,12 @@ export default {
         return await handleVerify(request, env, corsOrigin);
       }
 
-      if (
-        url.pathname === "/v1/licenses/transfer" ||
-        url.pathname === "/v1/activations/deactivate"
-      ) {
-        return failure(
-          501,
-          "LICENSE_ADMIN_NOT_IMPLEMENTED",
-          "Transfer/deaktivasi lisensi di Worker belum diaktifkan.",
-          corsOrigin
-        );
+      if (request.method === "POST" && url.pathname === "/v1/licenses/transfer") {
+        return await handleTransfer(request, env, corsOrigin);
+      }
+
+      if (request.method === "POST" && url.pathname === "/v1/activations/deactivate") {
+        return await handleDeactivate(request, env, corsOrigin);
       }
 
       if (url.pathname.startsWith("/v1/activations") || url.pathname.startsWith("/v1/licenses")) {

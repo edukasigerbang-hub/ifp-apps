@@ -15,6 +15,7 @@ LICENSE_PUBLIC_KEY = "nb3tb7vCi+CY20D9xJe5B6LS7qmMpRK7+S5XXAG2gnU="
 #   wrangler secret put SUPABASE_SERVICE_ROLE_KEY
 #   wrangler secret put DEVICE_TOKEN_SECRET
 #   wrangler secret put ENROLLMENT_CODE_PEPPER
+#   wrangler secret put ADMIN_API_TOKEN   # transfer/deactivate lisensi (provisional)
 #
 # Prasyarat Supabase: jalankan migrations repo `web` (0001_init.sql) lalu
 # `supabase/migrations/0002_app_backend.sql` dari repo ini pada project yang sama.

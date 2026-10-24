@@ -97,6 +97,7 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 | POST | `/v1/licenses/transfer` | admin bearer | licenseId, machineId → binding baru |
 | POST | `/v1/activations/deactivate` | admin bearer | licenseId → machine dilepas |
 
+- Worker produksi: otorisasi memakai secret `ADMIN_API_TOKEN` (provisional, ADR-0032); endpoint aktif setelah secret diset dan Worker dideploy.
 - Serial disimpan sebagai SHA-256; aktivasi mengikat machine secara atomik; audit di `license_audit`.
 - Env: `LICENSE_SIGNING_KEY_PATH`, `LICENSE_KEY_ID`, `LICENSE_SEED_SERIALS`, `LICENSE_ADMIN_TOKEN`, `LICENSE_SUBSCRIPTION_DAYS`, `LICENSE_GRACE_DAYS`.
 - Bukan produksi (tanpa TLS, token admin statis, seed via env). Client: `VITE_LICENSE_SERVER_URL` + tombol Aktivasi online.
