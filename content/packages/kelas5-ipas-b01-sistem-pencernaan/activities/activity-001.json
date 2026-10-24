@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-sistem-pencernaan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Organ Pencernaan",
+  "instructions": "Amati diagram, lalu diskusikan urutan dan fungsi organ pencernaan.",
+  "assets": [
+    "assets/sistem-pencernaan.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Organ apa yang pertama mencerna makanan?",
+        "assetPath": "assets/sistem-pencernaan.png",
+        "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar.",
+        "reveal": "Mulut.",
+        "hint": "Makanan dikunyah dan dicampur air liur."
+      },
+      {
+        "prompt": "Apa fungsi lambung?",
+        "assetPath": "assets/sistem-pencernaan.png",
+        "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar.",
+        "reveal": "Mencerna makanan dengan asam dan gerakan.",
+        "hint": "Makanan menjadi lebih halus."
+      },
+      {
+        "prompt": "Di mana sari makanan diserap?",
+        "assetPath": "assets/sistem-pencernaan.png",
+        "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar.",
+        "reveal": "Usus halus.",
+        "hint": "Permukaannya penuh jonjot."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar."
+  }
+}

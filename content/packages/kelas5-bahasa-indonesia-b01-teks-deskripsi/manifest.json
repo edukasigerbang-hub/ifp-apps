@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-bahasa-indonesia-b01-teks-deskripsi",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Deskripsi dan Pengindraan — Bahasa Indonesia Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/teks-deskripsi-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5585,
+      "sha256": "30654b2f4dc837176b0279ce85a9387ec70271ff4c7b1008e76201cf30ff4f49"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

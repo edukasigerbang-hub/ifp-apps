@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-sejarah-pancasila",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Sidang Perumusan",
+  "instructions": "Amati gambar, lalu diskusikan proses perumusan Pancasila.",
+  "assets": [
+    "assets/sejarah-pancasila.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Badan apa yang dibentuk untuk menyiapkan kemerdekaan?",
+        "assetPath": "assets/sejarah-pancasila.png",
+        "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih.",
+        "reveal": "BPUPKI.",
+        "hint": "Dibentuk tahun 1945."
+      },
+      {
+        "prompt": "Siapa yang mengusulkan dasar negara?",
+        "assetPath": "assets/sejarah-pancasila.png",
+        "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih.",
+        "reveal": "Para tokoh, antara lain Mr. Mohammad Yamin, Mr. Soepomo, dan Ir. Soekarno.",
+        "hint": "Usulan dibahas bersama."
+      },
+      {
+        "prompt": "Kapan Pancasila disahkan?",
+        "assetPath": "assets/sejarah-pancasila.png",
+        "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih.",
+        "reveal": "18 Agustus 1945 oleh PPKI.",
+        "hint": "Sehari setelah proklamasi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
+  }
+}

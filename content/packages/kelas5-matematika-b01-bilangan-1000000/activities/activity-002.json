@@ -1,0 +1,128 @@
+{
+  "activityId": "kuis-bilangan-1000000",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bilangan sampai 1.000.000",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-nilai-tempat",
+        "prompt": "Nilai tempat angka 7 pada bilangan 275.430 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-puluh-ribu",
+            "text": "Puluh ribuan"
+          },
+          {
+            "optionId": "opsi-ratus-ribu",
+            "text": "Ratus ribuan"
+          },
+          {
+            "optionId": "opsi-ribu",
+            "text": "Ribuan"
+          },
+          {
+            "optionId": "opsi-ratus",
+            "text": "Ratusan"
+          }
+        ],
+        "correctResponse": "opsi-puluh-ribu"
+      },
+      {
+        "questionId": "soal-membaca",
+        "prompt": "Bilangan 452.316 dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-benar",
+            "text": "Empat ratus lima puluh dua ribu tiga ratus enam belas"
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "Empat ratus lima puluh dua ribu tiga ratus enam puluh"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Empat ratus lima ribu tiga ratus enam belas"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Empat ratus lima puluh dua ribu tiga ratus"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-terbesar",
+        "prompt": "Bilangan terbesar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-599909",
+            "text": "599.909"
+          },
+          {
+            "optionId": "opsi-599099",
+            "text": "599.099"
+          },
+          {
+            "optionId": "opsi-590999",
+            "text": "590.999"
+          },
+          {
+            "optionId": "opsi-509999",
+            "text": "509.999"
+          }
+        ],
+        "correctResponse": "opsi-599909"
+      },
+      {
+        "questionId": "soal-banding",
+        "prompt": "Tanda yang tepat untuk 350.000 ... 305.000 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lebih",
+            "text": ">"
+          },
+          {
+            "optionId": "opsi-kurang",
+            "text": "<"
+          },
+          {
+            "optionId": "opsi-sama",
+            "text": "="
+          },
+          {
+            "optionId": "opsi-tidak",
+            "text": "Tidak dapat dibandingkan"
+          }
+        ],
+        "correctResponse": "opsi-lebih"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
+  }
+}

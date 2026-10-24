@@ -35,6 +35,9 @@
 | Proposal kurikulum (OD-1) | [`content/CURRICULUM_PROPOSAL.md`](content/CURRICULUM_PROPOSAL.md) |
 | Outline Kelas 4 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS4_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS4_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS4_SEMESTER2_MERDEKA_DRAFT.md) |
 | Outline Kelas 3 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS3_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS3_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS3_SEMESTER2_MERDEKA_DRAFT.md) |
+| Outline Kelas 5 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS5_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS5_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS5_SEMESTER2_MERDEKA_DRAFT.md) |
+| Review teknis seluruh paket draft (2026-10-24) | [`content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md`](content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md) |
+| Register blocker rilis (2026-10-24) | [`api/RELEASE_BLOCKERS_2026-10-24.md`](api/RELEASE_BLOCKERS_2026-10-24.md) |
 | Jadwal produksi konten Kelas 1–6 | [`content/PRODUCTION_SCHEDULE.md`](content/PRODUCTION_SCHEDULE.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |

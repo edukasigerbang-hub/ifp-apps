@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pendidikan-pancasila-b01-sejarah-pancasila",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Sejarah Perumusan Pancasila — Pendidikan Pancasila Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/sejarah-pancasila.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5276,
+      "sha256": "43e2958b9e310bca12a07431293f73e305c6d893d6b2e86704d1b5938c93d988"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

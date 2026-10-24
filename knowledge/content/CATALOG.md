@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 112 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 116 paket draft · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -100,6 +100,10 @@
 | `kelas3-pendidikan-pancasila-b06-nkri` | 0.1.0 | 3 | pendidikan-pancasila | NKRI dan Simbol Negara | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pendidikan-pancasila-b07-gotong-royong` | 0.1.0 | 3 | pendidikan-pancasila | Gotong Royong | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pendidikan-pancasila-b08-proyek-kewargaan` | 0.1.0 | 3 | pendidikan-pancasila | Proyek Kewargaan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-bahasa-indonesia-b01-teks-deskripsi` | 0.1.0 | 5 | bahasa-indonesia | Teks Deskripsi dan Pengindraan | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-ipas-b01-sistem-pencernaan` | 0.1.0 | 5 | ipas | Sistem Pencernaan Manusia | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-matematika-b01-bilangan-1000000` | 0.1.0 | 5 | matematika | Bilangan sampai 1.000.000 | **DRAFT** | VALID (2 warning) | belum |
+| `kelas5-pendidikan-pancasila-b01-sejarah-pancasila` | 0.1.0 | 5 | pendidikan-pancasila | Sejarah Perumusan Pancasila | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b01-gerak-lokomotor` | 0.1.0 | 3 | pjok | Gerak Lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b02-gerak-non-lokomotor` | 0.1.0 | 3 | pjok | Gerak Non-Lokomotor | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-pjok-b03-gerak-manipulatif` | 0.1.0 | 3 | pjok | Gerak Manipulatif | **DRAFT** | VALID (2 warning) | belum |
@@ -123,11 +127,12 @@ Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. 
 
 ## Next
 
-1. Kelas 4 dan Kelas 3 lengkap (112 paket draft). Gelombang berikutnya sesuai jadwal: **G3 Fase C — Kelas 5 S1**.
-2. Tunjuk reviewer (curriculum + bahasa + aksesibilitas) → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
+1. Kelas 4 dan Kelas 3 lengkap; Kelas 5 batch 1 sudah dibuat (4 paket). Lanjutkan **Kelas 5 S1 batch 2**.
+2. Lembar kerja review teknis tersedia: [REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md). Tunjuk reviewer manusia → isi [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md).
 3. Setujui OD-1 → isi `curriculumRefs` dan naikkan `reviewStatus`.
-4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 86,3 kB (map 112 paket).
-5. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
+4. Bundle tetap terkendali: chunk utama 415,3 kB + chunk lazy `packageModules` 89,5 kB (map 116 paket).
+5. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md).
+6. Setelah review, putuskan paket opsional Bahasa Inggris/mulok/coding-AI (D3–D7).
 
 ## Paket starter Kelas 4 (2026-10-24)
 
@@ -387,3 +392,18 @@ Menambahkan 52 paket sisa Kelas 3 (12 paket S1 B02–B04 inti, 12 paket S1 Seni/
 - Build: chunk utama **415,32 kB**; `packageModules` lazy **86,28 kB**. Manifest konten dipindah ke chunk lazy agar 112 manifest tidak membebani chunk utama.
 - **Kelas 3 lengkap: 56 paket draft** (S1 28 + S2 28).
 - **Total katalog: 112 paket draft** (Kelas 4 56 + Kelas 3 56).
+
+## Batch 16 Kelas 5 — starter Semester 1 (2026-10-24)
+
+| packageId | Lesson | Aktivitas | Aset |
+|---|---|---|---|
+| `kelas5-matematika-b01-bilangan-1000000` | Bilangan sampai 1.000.000 | eksplorasi + MCQ (4 soal) | `nilai-tempat-1000000.png` |
+| `kelas5-bahasa-indonesia-b01-teks-deskripsi` | Teks Deskripsi dan Pengindraan | eksplorasi + matching (6 pasangan) | `teks-deskripsi-kelas5.png` |
+| `kelas5-ipas-b01-sistem-pencernaan` | Sistem Pencernaan Manusia | eksplorasi + matching (6 pasangan) | `sistem-pencernaan.png` |
+| `kelas5-pendidikan-pancasila-b01-sejarah-pancasila` | Sejarah Perumusan Pancasila | eksplorasi + ordering (5 peristiwa) | `sejarah-pancasila.png` |
+
+- Outline baru: [OUTLINE_KELAS5_MERDEKA_DRAFT.md](OUTLINE_KELAS5_MERDEKA_DRAFT.md), [S1](KELAS5_SEMESTER1_MERDEKA_DRAFT.md), [S2](KELAS5_SEMESTER2_MERDEKA_DRAFT.md).
+- Semua: 1 lesson + 2 aktivitas + 1 PNG 800×600, `reviewStatus: draft`, `curriculumRefs: []`.
+- Validasi: **VALID** 4/4; impor **PASS** 4/4 (5 file/paket, `active`); filter **Kelas 5** terverifikasi.
+- `npm test`: 83/83 PASS + 4/4 golden fixture; build utama **415,32 kB**, lazy map **89,52 kB**.
+- **Total katalog: 116 paket** (Kelas 4 56 + Kelas 3 56 + Kelas 5 4).

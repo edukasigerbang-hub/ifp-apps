@@ -1,0 +1,50 @@
+{
+  "activityId": "eksplorasi-teks-deskripsi-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pantai",
+  "instructions": "Amati gambar pantai, lalu diskusikan kata pengindraan yang sesuai.",
+  "assets": [
+    "assets/teks-deskripsi-kelas5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa objek yang dideskripsikan?",
+        "assetPath": "assets/teks-deskripsi-kelas5.png",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "reveal": "Pantai dengan laut, ombak, perahu, dan pohon kelapa.",
+        "hint": "Amati bagian-bagiannya."
+      },
+      {
+        "prompt": "Kata penglihatan apa yang digunakan?",
+        "assetPath": "assets/teks-deskripsi-kelas5.png",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "reveal": "Biru, putih, dan hijau.",
+        "hint": "Sebutkan warna dan bentuk."
+      },
+      {
+        "prompt": "Kata pendengaran apa yang digunakan?",
+        "assetPath": "assets/teks-deskripsi-kelas5.png",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "reveal": "Debur ombak dan angin.",
+        "hint": "Bayangkan suaranya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+  }
+}

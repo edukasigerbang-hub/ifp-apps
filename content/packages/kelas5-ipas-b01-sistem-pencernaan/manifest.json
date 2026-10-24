@@ -1,0 +1,26 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b01-sistem-pencernaan",
+  "packageVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
+  "title": "Sistem Pencernaan Manusia — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [],
+  "assets": [
+    {
+      "path": "assets/sistem-pencernaan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5781,
+      "sha256": "5a01cd85f316f83574c1359cd6582ac27b58ec7ddf7f8b9b2a76e6996237ea35"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

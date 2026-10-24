@@ -2023,6 +2023,101 @@ function weatherScene() {
   return px;
 }
 
+function millionPlaceValue() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  const counts = [4, 5, 2, 3, 1, 6];
+  const palette = [colors.teal, colors.orange, colors.green, colors.red, colors.blue, colors.soil];
+  for (let column = 0; column < 6; column += 1) {
+    const x = 20 + column * 130;
+    rect(px, x, 100, 120, 440, colors.sky);
+    rect(px, x, 100, 120, 5, colors.navy);
+    rect(px, x, 535, 120, 5, colors.navy);
+    rect(px, x, 100, 5, 440, colors.navy);
+    rect(px, x + 115, 100, 5, 440, colors.navy);
+    for (let i = 0; i < counts[column]; i += 1) {
+      circle(px, x + 38 + (i % 2) * 44, 160 + Math.floor(i / 2) * 60, 16, palette[column]);
+    }
+  }
+  return px;
+}
+
+function beachScene() {
+  const px = canvas();
+  fill(px, colors.sky);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 680, 120, 46, colors.sun);
+  rect(px, 0, 250, W, 180, colors.blue);
+  rect(px, 0, 420, W, 180, colors.sand);
+  for (let i = 0; i < 4; i += 1) arc(px, 120 + i * 190, 300, 55, 200, 340, colors.white, 4);
+  // perahu
+  triangle(px, 520, 300, 620, 300, 570, 340, colors.white);
+  line(px, 570, 250, 570, 300, colors.navy, 5);
+  triangle(px, 570, 250, 570, 295, 620, 295, colors.red);
+  // pohon kelapa
+  line(px, 150, 470, 170, 250, colors.soil, 16);
+  for (const angle of [-150, -110, -70, -30]) {
+    const radians = (angle * Math.PI) / 180;
+    line(px, 170, 250, 170 + Math.cos(radians) * 90, 250 + Math.sin(radians) * 55, colors.green, 10);
+  }
+  circle(px, 135, 250, 16, colors.soil);
+  circle(px, 205, 250, 16, colors.soil);
+  // kerang
+  for (const [x, y] of [[340, 500], [400, 520], [680, 480], [720, 520]]) {
+    arc(px, x, y, 16, 180, 360, colors.orange, 5);
+  }
+  return px;
+}
+
+function digestiveScene() {
+  const px = canvas();
+  fill(px, colors.white);
+  rect(px, 0, 0, W, 60, colors.teal);
+  circle(px, 400, 120, 46, colors.skin1);
+  rect(px, 375, 160, 50, 40, colors.skin1);
+  rect(px, 300, 190, 200, 330, colors.sand);
+  // mulut dan kerongkongan
+  rect(px, 388, 130, 24, 70, colors.red);
+  rect(px, 394, 200, 14, 110, colors.red);
+  // lambung
+  ellipse(px, 370, 320, 55, 42, colors.orange);
+  arc(px, 425, 320, 30, 270, 90, colors.orange, 10);
+  // usus halus
+  for (let i = 0; i < 4; i += 1) {
+    arc(px, 400, 390 + i * 22, 55 - i * 6, 0, 180, colors.red, 6);
+    arc(px, 400, 400 + i * 22, 55 - i * 6, 180, 360, colors.red, 6);
+  }
+  // usus besar
+  rect(px, 320, 380, 20, 110, colors.greenDark);
+  rect(px, 460, 380, 20, 110, colors.greenDark);
+  rect(px, 320, 470, 160, 20, colors.greenDark);
+  return px;
+}
+
+function pancasilaHistoryScene() {
+  const px = canvas();
+  fill(px, colors.sand);
+  rect(px, 0, 0, W, 60, colors.teal);
+  rect(px, 0, 470, W, 130, colors.soil);
+  rect(px, 120, 320, 560, 120, colors.white);
+  rect(px, 120, 320, 560, 12, colors.navy);
+  // peserta
+  const seats = [180, 330, 480, 630];
+  for (const x of seats) {
+    ellipse(px, x, 290, 34, 46, colors.teal);
+    circle(px, x, 240, 28, colors.skin1);
+  }
+  // dokumen
+  rect(px, 320, 350, 170, 60, colors.white);
+  star(px, 405, 380, 20, 8, colors.sun);
+  // bendera
+  rect(px, 720, 120, 8, 220, colors.navy);
+  rect(px, 728, 120, 55, 18, colors.red);
+  rect(px, 728, 138, 55, 18, colors.white);
+  return px;
+}
+
 write("content/packages/kelas4-matematika-b04-pengukuran/assets/pengukuran-panjang-berat.png", measurementScene());
 write("content/packages/kelas4-ipas-b04-energi/assets/energi-perubahan.png", energyScene());
 write("content/packages/kelas4-bahasa-indonesia-b04-menulis-deskripsi/assets/menulis-deskripsi.png", writingScene());
@@ -2123,3 +2218,7 @@ write("content/packages/kelas3-pai-b05-puasa/assets/puasa-kelas3.png", fastingSc
 write("content/packages/kelas3-pai-b06-zakat-infak/assets/zakat-infak-kelas3.png", charityScene());
 write("content/packages/kelas3-pai-b07-sejarah-islam/assets/sejarah-islam-kelas3.png", islamHistoryScene());
 write("content/packages/kelas3-pai-b08-adab-kisah-teladan/assets/adab-kelas3.png", goodMannersScene());
+write("content/packages/kelas5-matematika-b01-bilangan-1000000/assets/nilai-tempat-1000000.png", millionPlaceValue());
+write("content/packages/kelas5-bahasa-indonesia-b01-teks-deskripsi/assets/teks-deskripsi-kelas5.png", beachScene());
+write("content/packages/kelas5-ipas-b01-sistem-pencernaan/assets/sistem-pencernaan.png", digestiveScene());
+write("content/packages/kelas5-pendidikan-pancasila-b01-sejarah-pancasila/assets/sejarah-pancasila.png", pancasilaHistoryScene());

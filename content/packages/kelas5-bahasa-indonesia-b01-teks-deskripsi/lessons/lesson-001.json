@@ -1,0 +1,25 @@
+{
+  "lessonId": "teks-deskripsi-kelas5",
+  "packageId": "kelas5-bahasa-indonesia-b01-teks-deskripsi",
+  "title": "Teks Deskripsi dan Pengindraan",
+  "summary": "Menulis teks deskripsi dengan kata pengindraan yang tepat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri teks deskripsi.",
+    "Menggunakan kata pengindraan.",
+    "Menulis deskripsi objek secara rinci."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-deskripsi-kelas5",
+    "matching-teks-deskripsi-kelas5"
+  ],
+  "assessmentRefs": [],
+  "assetRefs": [
+    "assets/teks-deskripsi-kelas5.png"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+  },
+  "contentVersion": "0.1.0",
+  "reviewStatus": "draft"
+}

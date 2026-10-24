@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-teks-deskripsi-kelas5",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kata Indra",
+  "instructions": "Pasangkan setiap indra dengan contoh katanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lihat",
+        "left": "Penglihatan",
+        "right": "Biru laut"
+      },
+      {
+        "pairId": "pasangan-dengar",
+        "left": "Pendengaran",
+        "right": "Debur ombak"
+      },
+      {
+        "pairId": "pasangan-cium",
+        "left": "Penciuman",
+        "right": "Bau asin"
+      },
+      {
+        "pairId": "pasangan-raba",
+        "left": "Peraba",
+        "right": "Pasir hangat"
+      },
+      {
+        "pairId": "pasangan-topik",
+        "left": "Kalimat topik",
+        "right": "Ide utama"
+      },
+      {
+        "pairId": "pasangan-kesan",
+        "left": "Kesan",
+        "right": "Perasaan setelah membaca"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+  }
+}
