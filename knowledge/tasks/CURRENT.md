@@ -214,7 +214,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-26, lanjutan)
 
-**Status:** 88/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 40/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 89 (BLOCKED kuota Agen Flow)**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH24_2026-10-26.md`.
+**Status:** 89/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 41/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 89 (BLOCKED kuota Agen Flow)**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH24_2026-10-26.md`.
 
 **Blocker lama selesai (2026-10-26 05:55 +07:00):** tab Flow di-refresh sesuai instruksi user; banner “aktivitas yang tidak biasa” hilang, indeks 76 ternyata selesai dan tersimpan. Indeks 76–82 tuntas tanpa bypass dan tanpa ganti akun.
 
