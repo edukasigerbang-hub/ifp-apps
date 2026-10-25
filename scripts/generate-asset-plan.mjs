@@ -34,7 +34,10 @@ const subjectSceneHints = {
 };
 
 const negativePrompt =
-  "text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs";
+  "text, letters, numbers, words, watermark, logo, signature, flat vector, 2D illustration, line art, cartoon drawing, photorealistic human faces, uncanny, eating with left hand, drinking with left hand, scary imagery, violence, religious disrespect, stereotypes, clutter, distorted hands, extra limbs";
+
+const eatingRule =
+  "When food or drink is shown, characters always eat and drink with the right hand only, never the left hand.";
 
 const lowerGradeCoverStyle =
   "High-quality stylized 3D cartoon render, animated-film character design with oversized heads, large expressive eyes, soft rounded features, smooth matte clay-like materials, warm skin tones, cinematic studio lighting, soft shadows, subtle ambient occlusion, clean warm cream backdrop";
@@ -67,7 +70,7 @@ function to3dCoverPrompt(prompt, grade) {
       .replace(/clean cream space at the top/i, "uncluttered sky space at the top")
       .replace(/clean cream negative space at the top/i, "uncluttered sky negative space at the top");
   }
-  return out.replace(/ no text\.?$/i, " Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.");
+  return out.replace(/ no text\.?$/i, ` Consistent Indonesian school characters across images: white school uniform with red accents, friendly and respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo. ${eatingRule}`);
 }
 
 const gradeCovers = [
@@ -290,7 +293,7 @@ for (const record of inventory) {
     subject: record.subject,
     title: record.lessonTitle,
     prompt:
-      `Educational illustration for grade ${record.grade} ${record.subject} in an Indonesian elementary school app, topic "${record.lessonTitle}". ${record.summary} Show ${sceneHint}. ${materiStyleForGrade(record.grade)}, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo.`,
+      `Educational illustration for grade ${record.grade} ${record.subject} in an Indonesian elementary school app, topic "${record.lessonTitle}". ${record.summary} Show ${sceneHint}. ${materiStyleForGrade(record.grade)}, child-friendly, culturally appropriate Indonesian context, diverse children when people are shown, respectful. Not flat, not vector, not 2D drawing. No text, no letters, no numbers, no watermark, no logo. ${eatingRule}`,
     negativePrompt,
     aspectRatio: "4:3",
     suggestedFilename: `materi-${record.packageId}.webp`
