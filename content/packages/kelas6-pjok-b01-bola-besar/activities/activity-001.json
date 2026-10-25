@@ -5,27 +5,27 @@
   "title": "Mengamati Permainan",
   "instructions": "Amati gambar, lalu diskusikan teknik dan aturan.",
   "assets": [
-    "assets/bola-besar-kelas6.png"
+    "assets/bola-besar-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa teknik dasar sepak bola?",
-        "assetPath": "assets/bola-besar-kelas6.png",
+        "assetPath": "assets/bola-besar-kelas6.webp",
         "altText": "Bola sepak, bola basket, dan bola voli.",
         "reveal": "Menendang, mengoper, menggiring.",
         "hint": "Latih berpasangan."
       },
       {
         "prompt": "Apa teknik dasar bola basket?",
-        "assetPath": "assets/bola-besar-kelas6.png",
+        "assetPath": "assets/bola-besar-kelas6.webp",
         "altText": "Bola sepak, bola basket, dan bola voli.",
         "reveal": "Dribble, passing, shooting.",
         "hint": "Gunakan kedua tangan."
       },
       {
         "prompt": "Mengapa kerja sama penting?",
-        "assetPath": "assets/bola-besar-kelas6.png",
+        "assetPath": "assets/bola-besar-kelas6.webp",
         "altText": "Bola sepak, bola basket, dan bola voli.",
         "reveal": "Agar tim mencetak skor.",
         "hint": "Beri umpan tepat."

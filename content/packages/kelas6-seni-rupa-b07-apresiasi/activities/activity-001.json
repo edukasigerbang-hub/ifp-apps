@@ -5,27 +5,27 @@
   "title": "Mengamati Karya",
   "instructions": "Amati gambar, lalu diskusikan apresiasi dan kritik.",
   "assets": [
-    "assets/apresiasi-kelas6.png"
+    "assets/apresiasi-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu apresiasi?",
-        "assetPath": "assets/apresiasi-kelas6.png",
+        "assetPath": "assets/apresiasi-kelas6.webp",
         "altText": "Karya seni dipajang dan pengunjung mengamati.",
         "reveal": "Menghargai karya.",
         "hint": "Bukan hanya menilai."
       },
       {
         "prompt": "Apa itu kritik?",
-        "assetPath": "assets/apresiasi-kelas6.png",
+        "assetPath": "assets/apresiasi-kelas6.webp",
         "altText": "Karya seni dipajang dan pengunjung mengamati.",
         "reveal": "Tanggapan beralasan.",
         "hint": "Bertujuan membangun."
       },
       {
         "prompt": "Bagaimana menyampaikannya?",
-        "assetPath": "assets/apresiasi-kelas6.png",
+        "assetPath": "assets/apresiasi-kelas6.webp",
         "altText": "Karya seni dipajang dan pengunjung mengamati.",
         "reveal": "Sopan dan jelas.",
         "hint": "Hindari mengejek."

@@ -5,27 +5,27 @@
   "title": "Mengamati Dasar Negara",
   "instructions": "Amati gambar, lalu diskusikan Pancasila dan UUD 1945.",
   "assets": [
-    "assets/pancasila-uud.png"
+    "assets/pancasila-uud.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa kedudukan Pancasila?",
-        "assetPath": "assets/pancasila-uud.png",
+        "assetPath": "assets/pancasila-uud.webp",
         "altText": "Simbol Pancasila dan dokumen UUD 1945.",
         "reveal": "Dasar negara Indonesia.",
         "hint": "Sumber segala hukum."
       },
       {
         "prompt": "Apa itu UUD 1945?",
-        "assetPath": "assets/pancasila-uud.png",
+        "assetPath": "assets/pancasila-uud.webp",
         "altText": "Simbol Pancasila dan dokumen UUD 1945.",
         "reveal": "Hukum dasar negara.",
         "hint": "Mengatur penyelenggaraan negara."
       },
       {
         "prompt": "Apa hubungan keduanya?",
-        "assetPath": "assets/pancasila-uud.png",
+        "assetPath": "assets/pancasila-uud.webp",
         "altText": "Simbol Pancasila dan dokumen UUD 1945.",
         "reveal": "UUD menjabarkan nilai Pancasila.",
         "hint": "Saling melengkapi."

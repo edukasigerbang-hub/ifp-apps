@@ -5,27 +5,27 @@
   "title": "Mengamati Globalisasi",
   "instructions": "Amati gambar, lalu diskusikan dampak globalisasi.",
   "assets": [
-    "assets/nkri-globalisasi.png"
+    "assets/nkri-globalisasi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu globalisasi?",
-        "assetPath": "assets/nkri-globalisasi.png",
+        "assetPath": "assets/nkri-globalisasi.webp",
         "altText": "Upacara bendera dan simbol persatuan NKRI.",
         "reveal": "Keterhubungan antarnegara.",
         "hint": "Informasi cepat menyebar."
       },
       {
         "prompt": "Apa dampak positifnya?",
-        "assetPath": "assets/nkri-globalisasi.png",
+        "assetPath": "assets/nkri-globalisasi.webp",
         "altText": "Upacara bendera dan simbol persatuan NKRI.",
         "reveal": "Ilmu dan teknologi berkembang.",
         "hint": "Komunikasi mudah."
       },
       {
         "prompt": "Bagaimana menjaga jati diri?",
-        "assetPath": "assets/nkri-globalisasi.png",
+        "assetPath": "assets/nkri-globalisasi.webp",
         "altText": "Upacara bendera dan simbol persatuan NKRI.",
         "reveal": "Mencintai budaya dan produk dalam negeri.",
         "hint": "Tetap selektif."

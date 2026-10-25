@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/proyek-kewargaan-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5289,
-      "sha256": "4220db918e8938546a6713ba9f91d6a917c09b082b8f89f8b127fbb078c8743a"
+      "path": "assets/proyek-kewargaan-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 234816,
+      "sha256": "a83de64d70cb71e7616f98fba6fb938b88ee858edf63255b03b0cd8ad409e894"
     }
   ],
   "dependencies": [],

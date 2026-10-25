@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/perkembangbiakan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6273,
-      "sha256": "1162f22f629514cd8f8ce40df1a79d2449156b93c107c9efc8fdc9d95786682d"
+      "path": "assets/perkembangbiakan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 228834,
+      "sha256": "123eeadf9bc70441c5f4f8932e588367991639081e3c472ede60f65368803674"
     }
   ],
   "dependencies": [],

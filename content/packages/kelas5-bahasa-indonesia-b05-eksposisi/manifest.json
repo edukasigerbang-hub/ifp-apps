@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/eksposisi-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/eksposisi-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 211758,
+      "sha256": "089be21dd5797350bcbe5a030cdd8d1cfa515aeba633e3f632c61310cab3e0e5"
     }
   ],
   "dependencies": [],

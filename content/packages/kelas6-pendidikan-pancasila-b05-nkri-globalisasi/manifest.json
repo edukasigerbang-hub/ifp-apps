@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/nkri-globalisasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6032,
-      "sha256": "ad6fe0079c34a1cc4513b6a893f93c26aa125f411b4447f6b6e63af4df7cae94"
+      "path": "assets/nkri-globalisasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 283232,
+      "sha256": "7883f6669686ee6d71cee59468bc9c11fb3ef38a4301c8b3311883a3f2b916ba"
     }
   ],
   "dependencies": [],

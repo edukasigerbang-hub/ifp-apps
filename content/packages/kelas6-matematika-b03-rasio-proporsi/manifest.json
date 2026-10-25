@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/rasio.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5083,
-      "sha256": "71903667adc084468163c6c7bd05918944fa5ee6a9f54cf800a78fd00760c887"
+      "path": "assets/rasio.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 110572,
+      "sha256": "63da46a86cdbf9a21539e0c402c8f58205fc4fedcf50617d8dd60cea2cc28157"
     }
   ],
   "dependencies": [],

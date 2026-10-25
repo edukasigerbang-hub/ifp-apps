@@ -5,27 +5,27 @@
   "title": "Mengamati Cetakan",
   "instructions": "Amati gambar, lalu diskusikan cara mencetak pola.",
   "assets": [
-    "assets/seni-cetak-kelas5.png"
+    "assets/seni-cetak-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu seni cetak?",
-        "assetPath": "assets/seni-cetak-kelas5.png",
+        "assetPath": "assets/seni-cetak-kelas5.webp",
         "altText": "Alat cetak, cat, dan kertas berisi cetakan pola.",
         "reveal": "Membuat gambar berulang dengan alat cetak.",
         "hint": "Pola dapat disusun."
       },
       {
         "prompt": "Apa bahan alat cetak?",
-        "assetPath": "assets/seni-cetak-kelas5.png",
+        "assetPath": "assets/seni-cetak-kelas5.webp",
         "altText": "Alat cetak, cat, dan kertas berisi cetakan pola.",
         "reveal": "Kentang, pelepah pisang, atau tutup botol.",
         "hint": "Permukaan rata."
       },
       {
         "prompt": "Bagaimana mencetak?",
-        "assetPath": "assets/seni-cetak-kelas5.png",
+        "assetPath": "assets/seni-cetak-kelas5.webp",
         "altText": "Alat cetak, cat, dan kertas berisi cetakan pola.",
         "reveal": "Oles cat, tekan, lalu angkat.",
         "hint": "Jangan terlalu banyak cat."

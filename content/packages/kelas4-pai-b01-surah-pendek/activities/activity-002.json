@@ -5,7 +5,7 @@
   "title": "Memasangkan Surah dan Tema",
   "instructions": "Pasangkan setiap surah pendek dengan tema utamanya.",
   "assets": [
-    "assets/membaca-quran.png"
+    "assets/membaca-quran.webp"
   ],
   "interactionConfig": {
     "pairs": [

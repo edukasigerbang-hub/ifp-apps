@@ -5,7 +5,7 @@
   "title": "Urutan Siklus Air",
   "instructions": "Susun tahapan siklus air dalam urutan yang benar.",
   "assets": [
-    "assets/siklus-air.png"
+    "assets/siklus-air.webp"
   ],
   "interactionConfig": {
     "items": [

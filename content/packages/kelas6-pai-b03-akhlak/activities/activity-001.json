@@ -5,27 +5,27 @@
   "title": "Mengamati Akhlak Terpuji",
   "instructions": "Amati gambar, lalu diskusikan perilaku terpuji.",
   "assets": [
-    "assets/akhlak-kelas6.png"
+    "assets/akhlak-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Akhlak terpuji apa yang terlihat?",
-        "assetPath": "assets/akhlak-kelas6.png",
+        "assetPath": "assets/akhlak-kelas6.webp",
         "altText": "Anak berbagi dan membantu teman.",
         "reveal": "Berbagi, jujur, dan membantu.",
         "hint": "Amati tindakan."
       },
       {
         "prompt": "Mengapa jujur penting?",
-        "assetPath": "assets/akhlak-kelas6.png",
+        "assetPath": "assets/akhlak-kelas6.webp",
         "altText": "Anak berbagi dan membantu teman.",
         "reveal": "Agar dipercaya.",
         "hint": "Jujur membawa kebaikan."
       },
       {
         "prompt": "Apa manfaat akhlak baik?",
-        "assetPath": "assets/akhlak-kelas6.png",
+        "assetPath": "assets/akhlak-kelas6.webp",
         "altText": "Anak berbagi dan membantu teman.",
         "reveal": "Disayangi dan hidup tenang.",
         "hint": "Dicontoh orang lain."

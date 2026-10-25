@@ -5,27 +5,27 @@
   "title": "Mengamati Hak dan Kewajiban",
   "instructions": "Amati gambar, lalu diskusikan hak dan kewajiban warga.",
   "assets": [
-    "assets/hak-kewajiban-kelas5.png"
+    "assets/hak-kewajiban-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa contoh hak warga?",
-        "assetPath": "assets/hak-kewajiban-kelas5.png",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
         "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
         "reveal": "Mendapat pendidikan dan pelayanan kesehatan.",
         "hint": "Hak adalah yang diterima."
       },
       {
         "prompt": "Apa contoh kewajiban?",
-        "assetPath": "assets/hak-kewajiban-kelas5.png",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
         "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
         "reveal": "Menjaga kebersihan dan mematuhi aturan.",
         "hint": "Kewajiban adalah yang dilakukan."
       },
       {
         "prompt": "Mengapa harus seimbang?",
-        "assetPath": "assets/hak-kewajiban-kelas5.png",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
         "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
         "reveal": "Agar kehidupan tertib dan adil.",
         "hint": "Hak dan kewajiban berjalan bersama."

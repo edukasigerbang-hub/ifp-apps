@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/quran-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5306,
-      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+      "path": "assets/quran-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 181256,
+      "sha256": "780679980e506c056cb85da09c2cfffc2cf798ca256d4043035e334ca12af8ab"
     }
   ],
   "dependencies": [],

@@ -20,10 +20,10 @@
   ],
   "assets": [
     {
-      "path": "assets/kolam-ekosistem.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5580,
-      "sha256": "1e37990a7dcf2566c39c13893017faa3be1565d8da635c098fbb433b8a47ee2b"
+      "path": "assets/kolam-ekosistem.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 206894,
+      "sha256": "11b376f32107085a89e5d744d73c273fef212d9c22b3f57ee4db353bf4548d0f"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/nkri-otonomi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6032,
-      "sha256": "ad6fe0079c34a1cc4513b6a893f93c26aa125f411b4447f6b6e63af4df7cae94"
+      "path": "assets/nkri-otonomi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177438,
+      "sha256": "3cdcaec8711f24c1d72e4c6ac8e60d8b7eaab5bb4a2a7543bca04f33b552583b"
     }
   ],
   "dependencies": [],

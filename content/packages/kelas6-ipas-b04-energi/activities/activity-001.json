@@ -5,27 +5,27 @@
   "title": "Mengamati Bentuk Energi",
   "instructions": "Amati gambar, lalu diskusikan perubahan energinya.",
   "assets": [
-    "assets/energi-kelas6.png"
+    "assets/energi-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu energi?",
-        "assetPath": "assets/energi-kelas6.png",
+        "assetPath": "assets/energi-kelas6.webp",
         "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
         "reveal": "Kemampuan melakukan kerja.",
         "hint": "Tidak dapat diciptakan."
       },
       {
         "prompt": "Apa perubahan energi pada lampu?",
-        "assetPath": "assets/energi-kelas6.png",
+        "assetPath": "assets/energi-kelas6.webp",
         "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
         "reveal": "Listrik menjadi cahaya.",
         "hint": "Juga panas."
       },
       {
         "prompt": "Bagaimana menghemat energi?",
-        "assetPath": "assets/energi-kelas6.png",
+        "assetPath": "assets/energi-kelas6.webp",
         "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
         "reveal": "Matikan alat yang tidak dipakai.",
         "hint": "Gunakan energi alternatif."

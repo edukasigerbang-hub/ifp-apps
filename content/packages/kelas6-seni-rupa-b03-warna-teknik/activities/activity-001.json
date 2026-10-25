@@ -5,27 +5,27 @@
   "title": "Mengamati Warna dan Teknik",
   "instructions": "Amati gambar, lalu diskusikan campuran warna.",
   "assets": [
-    "assets/warna-teknik.png"
+    "assets/warna-teknik.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa warna primer?",
-        "assetPath": "assets/warna-teknik.png",
+        "assetPath": "assets/warna-teknik.webp",
         "altText": "Contoh warna dan tekstur dari berbagai teknik.",
         "reveal": "Merah, kuning, dan biru.",
         "hint": "Tidak dapat dicampur."
       },
       {
         "prompt": "Apa hasil merah + biru?",
-        "assetPath": "assets/warna-teknik.png",
+        "assetPath": "assets/warna-teknik.webp",
         "altText": "Contoh warna dan tekstur dari berbagai teknik.",
         "reveal": "Ungu.",
         "hint": "Warna sekunder."
       },
       {
         "prompt": "Apa itu gradasi?",
-        "assetPath": "assets/warna-teknik.png",
+        "assetPath": "assets/warna-teknik.webp",
         "altText": "Contoh warna dan tekstur dari berbagai teknik.",
         "reveal": "Perubahan warna bertahap.",
         "hint": "Dari gelap ke terang."

@@ -5,27 +5,27 @@
   "title": "Mengamati Ciri Keturunan",
   "instructions": "Amati gambar, lalu diskusikan ciri yang mirip induk.",
   "assets": [
-    "assets/pewarisan-sifat.png"
+    "assets/pewarisan-sifat.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu pewarisan sifat?",
-        "assetPath": "assets/pewarisan-sifat.png",
+        "assetPath": "assets/pewarisan-sifat.webp",
         "altText": "Induk dan anak dengan ciri fisik yang mirip.",
         "reveal": "Ciri induk menurun kepada anak.",
         "hint": "Melalui gen."
       },
       {
         "prompt": "Contoh sifat menurun?",
-        "assetPath": "assets/pewarisan-sifat.png",
+        "assetPath": "assets/pewarisan-sifat.webp",
         "altText": "Induk dan anak dengan ciri fisik yang mirip.",
         "reveal": "Warna mata, bentuk rambut, warna kulit.",
         "hint": "Bisa dari ayah atau ibu."
       },
       {
         "prompt": "Apa pengaruh lingkungan?",
-        "assetPath": "assets/pewarisan-sifat.png",
+        "assetPath": "assets/pewarisan-sifat.webp",
         "altText": "Induk dan anak dengan ciri fisik yang mirip.",
         "reveal": "Makanan dan kebiasaan juga memengaruhi.",
         "hint": "Tinggi badan dipengaruhi gizi."

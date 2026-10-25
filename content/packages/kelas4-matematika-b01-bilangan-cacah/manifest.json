@@ -20,10 +20,10 @@
   ],
   "assets": [
     {
-      "path": "assets/pasar-nilai-tempat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8692,
-      "sha256": "f9e6da94d2ef8e07cbccb03eaf919cc4850009b6ac46f5d190498e624fea4929"
+      "path": "assets/pasar-nilai-tempat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 151986,
+      "sha256": "06253c3f7ae563cd85f7c3943060e19efc1cfc7146c43663580dec6b8a68b999"
     }
   ],
   "dependencies": [],

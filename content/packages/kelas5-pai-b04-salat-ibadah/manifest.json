@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/salat-ibadah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4621,
-      "sha256": "5eed3951d0be92cf7676f2ca4d808ecb3a3b55cdde6d6a926443d36b34d370d2"
+      "path": "assets/salat-ibadah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 185206,
+      "sha256": "e15ce505089b4a7b420ff41b9db44a965ffb4a3e6085ac21dc70b548ca798913"
     }
   ],
   "dependencies": [],

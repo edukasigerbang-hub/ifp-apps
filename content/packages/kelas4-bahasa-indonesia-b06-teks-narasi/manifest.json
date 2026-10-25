@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/teks-narasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7908,
-      "sha256": "a7bea868c4e223e23ede989ccaaae987cb0d0cbcb3044d699923b466cd91225e"
+      "path": "assets/teks-narasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 153490,
+      "sha256": "ecbacc560eba8094f00adad87b077b3151ec6a74fd1e8db3665043eeb1e27c05"
     }
   ],
   "dependencies": [],

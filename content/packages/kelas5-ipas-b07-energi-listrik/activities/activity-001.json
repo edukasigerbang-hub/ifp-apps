@@ -5,27 +5,27 @@
   "title": "Mengamati Energi Listrik",
   "instructions": "Amati gambar, lalu diskusikan sumber dan penggunaan listrik.",
   "assets": [
-    "assets/energi-listrik.png"
+    "assets/energi-listrik.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa sumber energi listrik?",
-        "assetPath": "assets/energi-listrik.png",
+        "assetPath": "assets/energi-listrik.webp",
         "altText": "Sumber energi listrik, lampu, dan alat elektronik.",
         "reveal": "Air, angin, matahari, dan bahan bakar.",
         "hint": "Pembangkit listrik."
       },
       {
         "prompt": "Apa perubahan energi pada lampu?",
-        "assetPath": "assets/energi-listrik.png",
+        "assetPath": "assets/energi-listrik.webp",
         "altText": "Sumber energi listrik, lampu, dan alat elektronik.",
         "reveal": "Listrik menjadi cahaya.",
         "hint": "Juga menjadi panas."
       },
       {
         "prompt": "Bagaimana menghemat listrik?",
-        "assetPath": "assets/energi-listrik.png",
+        "assetPath": "assets/energi-listrik.webp",
         "altText": "Sumber energi listrik, lampu, dan alat elektronik.",
         "reveal": "Matikan alat yang tidak dipakai.",
         "hint": "Gunakan lampu hemat energi."

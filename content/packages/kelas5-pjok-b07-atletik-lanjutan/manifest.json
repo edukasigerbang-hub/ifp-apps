@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/atletik-lanjutan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4508,
-      "sha256": "38b3f770e0f4495070cb5dc840607176d064d9d29726d9686c7ea52b980fb624"
+      "path": "assets/atletik-lanjutan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 180356,
+      "sha256": "1532d6d3182aea20414b76ed6c3da2455f51ebecd79611c033e32e011aa357fb"
     }
   ],
   "dependencies": [],

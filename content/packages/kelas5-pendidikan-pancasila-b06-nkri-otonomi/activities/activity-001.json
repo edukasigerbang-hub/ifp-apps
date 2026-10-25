@@ -5,27 +5,27 @@
   "title": "Mengamati NKRI",
   "instructions": "Amati gambar, lalu diskusikan persatuan dan otonomi daerah.",
   "assets": [
-    "assets/nkri-otonomi.png"
+    "assets/nkri-otonomi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa arti NKRI?",
-        "assetPath": "assets/nkri-otonomi.png",
+        "assetPath": "assets/nkri-otonomi.webp",
         "altText": "Upacara bendera dan peta daerah dalam NKRI.",
         "reveal": "Negara Kesatuan Republik Indonesia.",
         "hint": "Satu negara, banyak daerah."
       },
       {
         "prompt": "Apa semboyan bangsa Indonesia?",
-        "assetPath": "assets/nkri-otonomi.png",
+        "assetPath": "assets/nkri-otonomi.webp",
         "altText": "Upacara bendera dan peta daerah dalam NKRI.",
         "reveal": "Bhinneka Tunggal Ika.",
         "hint": "Berbeda tetapi tetap satu."
       },
       {
         "prompt": "Apa itu otonomi daerah?",
-        "assetPath": "assets/nkri-otonomi.png",
+        "assetPath": "assets/nkri-otonomi.webp",
         "altText": "Upacara bendera dan peta daerah dalam NKRI.",
         "reveal": "Kewenangan daerah mengatur urusannya sendiri.",
         "hint": "Dipimpin pemerintah daerah."

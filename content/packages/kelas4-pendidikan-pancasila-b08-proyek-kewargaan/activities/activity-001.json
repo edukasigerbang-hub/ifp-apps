@@ -5,27 +5,27 @@
   "title": "Mengamati Proyek Kewargaan",
   "instructions": "Amati gambar anak-anak mengerjakan proyek, lalu diskusikan langkahnya.",
   "assets": [
-    "assets/proyek-kewargaan.png"
+    "assets/proyek-kewargaan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak-anak pada gambar?",
-        "assetPath": "assets/proyek-kewargaan.png",
+        "assetPath": "assets/proyek-kewargaan.webp",
         "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
         "reveal": "Mereka mengerjakan proyek bersama: membuat poster, papan rencana, dan menanam tanaman.",
         "hint": "Perhatikan alat dan pembagian tugas."
       },
       {
         "prompt": "Mengapa perlu pembagian tugas?",
-        "assetPath": "assets/proyek-kewargaan.png",
+        "assetPath": "assets/proyek-kewargaan.webp",
         "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
         "reveal": "Agar pekerjaan cepat selesai dan setiap orang berkontribusi.",
         "hint": "Bayangkan semua mengerjakan hal yang sama."
       },
       {
         "prompt": "Apa manfaat proyek kewargaan?",
-        "assetPath": "assets/proyek-kewargaan.png",
+        "assetPath": "assets/proyek-kewargaan.webp",
         "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
         "reveal": "Menumbuhkan kepedulian, tanggung jawab, dan kerja sama.",
         "hint": "Hubungkan dengan lingkungan sekitar."

@@ -5,27 +5,27 @@
   "title": "Mengamati Pantai",
   "instructions": "Amati gambar pantai, lalu diskusikan kata pengindraan yang sesuai.",
   "assets": [
-    "assets/teks-deskripsi-kelas5.png"
+    "assets/teks-deskripsi-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa objek yang dideskripsikan?",
-        "assetPath": "assets/teks-deskripsi-kelas5.png",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
         "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
         "reveal": "Pantai dengan laut, ombak, perahu, dan pohon kelapa.",
         "hint": "Amati bagian-bagiannya."
       },
       {
         "prompt": "Kata penglihatan apa yang digunakan?",
-        "assetPath": "assets/teks-deskripsi-kelas5.png",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
         "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
         "reveal": "Biru, putih, dan hijau.",
         "hint": "Sebutkan warna dan bentuk."
       },
       {
         "prompt": "Kata pendengaran apa yang digunakan?",
-        "assetPath": "assets/teks-deskripsi-kelas5.png",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
         "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
         "reveal": "Debur ombak dan angin.",
         "hint": "Bayangkan suaranya."

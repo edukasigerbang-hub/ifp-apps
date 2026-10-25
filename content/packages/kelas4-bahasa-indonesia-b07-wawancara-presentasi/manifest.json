@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/wawancara-presentasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6128,
-      "sha256": "14c31549f8712d3ed3b8cfc0939b9c9987f4c3c13d54d508259fbba96106afd6"
+      "path": "assets/wawancara-presentasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 151016,
+      "sha256": "5caef1d2d11e1ec42ce9fc70bcffc8a73dcdadddc64d8dc629685fb996149ec9"
     }
   ],
   "dependencies": [],

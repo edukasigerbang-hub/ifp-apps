@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pecahan-desimal.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5577,
-      "sha256": "883ae8bf75dda04715f0770ced36197724a3511e8152b02031398b1fdba91f6a"
+      "path": "assets/pecahan-desimal.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 121650,
+      "sha256": "f2302437db9c55747ea44faf24f61bf5e155678581173e07b224146ad79f20d8"
     }
   ],
   "dependencies": [],

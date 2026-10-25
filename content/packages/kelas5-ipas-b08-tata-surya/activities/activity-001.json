@@ -5,27 +5,27 @@
   "title": "Mengamati Tata Surya",
   "instructions": "Amati gambar, lalu diskusikan anggota dan gerak bumi.",
   "assets": [
-    "assets/tata-surya.png"
+    "assets/tata-surya.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa pusat tata surya?",
-        "assetPath": "assets/tata-surya.png",
+        "assetPath": "assets/tata-surya.webp",
         "altText": "Matahari dan planet-planet dalam tata surya.",
         "reveal": "Matahari.",
         "hint": "Planet mengelilinginya."
       },
       {
         "prompt": "Apa itu rotasi bumi?",
-        "assetPath": "assets/tata-surya.png",
+        "assetPath": "assets/tata-surya.webp",
         "altText": "Matahari dan planet-planet dalam tata surya.",
         "reveal": "Perputaran bumi pada porosnya.",
         "hint": "Menimbulkan siang dan malam."
       },
       {
         "prompt": "Apa itu revolusi bumi?",
-        "assetPath": "assets/tata-surya.png",
+        "assetPath": "assets/tata-surya.webp",
         "altText": "Matahari dan planet-planet dalam tata surya.",
         "reveal": "Bumi mengelilingi matahari.",
         "hint": "Memerlukan waktu satu tahun."

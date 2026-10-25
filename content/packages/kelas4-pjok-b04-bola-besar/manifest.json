@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bola-besar.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8579,
-      "sha256": "ec070fb09198309f5716ac9226603758463e48af28eef8f238eadb97cca669e1"
+      "path": "assets/bola-besar.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 192842,
+      "sha256": "963d5052e08a9f31aae5ce3fa06cd5b8adcadfe36766585a4742ff4f73fca0d8"
     }
   ],
   "dependencies": [],

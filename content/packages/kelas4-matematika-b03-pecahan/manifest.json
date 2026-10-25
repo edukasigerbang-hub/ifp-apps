@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pecahan-senilai.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5577,
-      "sha256": "883ae8bf75dda04715f0770ced36197724a3511e8152b02031398b1fdba91f6a"
+      "path": "assets/pecahan-senilai.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 149442,
+      "sha256": "bae1975467ec4c9ea41ba1025b9f7c893706d5ce52f4307255af68001fc1bee2"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Menyusun Laporan",
   "instructions": "Amati gambar, lalu diskusikan bagian laporan.",
   "assets": [
-    "assets/laporan-kelas6.png"
+    "assets/laporan-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa bagian laporan?",
-        "assetPath": "assets/laporan-kelas6.png",
+        "assetPath": "assets/laporan-kelas6.webp",
         "altText": "Anak menulis laporan hasil pengamatan.",
         "reveal": "Tujuan, kegiatan, hasil, kesimpulan.",
         "hint": "Urut dan jelas."
       },
       {
         "prompt": "Bahasa apa yang dipakai?",
-        "assetPath": "assets/laporan-kelas6.png",
+        "assetPath": "assets/laporan-kelas6.webp",
         "altText": "Anak menulis laporan hasil pengamatan.",
         "reveal": "Baku dan objektif.",
         "hint": "Tidak berlebihan."
       },
       {
         "prompt": "Apa yang diperiksa?",
-        "assetPath": "assets/laporan-kelas6.png",
+        "assetPath": "assets/laporan-kelas6.webp",
         "altText": "Anak menulis laporan hasil pengamatan.",
         "reveal": "Ejaan dan kelengkapan isi.",
         "hint": "Baca ulang."

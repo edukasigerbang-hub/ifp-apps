@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/listrik-magnet.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6196,
-      "sha256": "be34607fdefbd7e5481afa22d41640b36addf836f4f8e0b3b8a595d5d30b1736"
+      "path": "assets/listrik-magnet.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 176072,
+      "sha256": "5299705ad498aeffa27d85483fb5ec6f5bba0d6a83ac9f5aeef3f98816277bd5"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/puasa-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4790,
-      "sha256": "c311679cf808c6bc25101b417156539a1b7b1658dda42a91e7dc0c4cfa4e4ae7"
+      "path": "assets/puasa-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 182682,
+      "sha256": "daf602cb7b910c8244b2593f1fbda81182d85d7bf8cf797f25b992d36d403723"
     }
   ],
   "dependencies": [],

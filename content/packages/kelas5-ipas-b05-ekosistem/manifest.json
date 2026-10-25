@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/ekosistem-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4431,
-      "sha256": "3964ab775e71d14e051c0804b35388cc1b9eedbc7742739a21159b2ad3c83ca0"
+      "path": "assets/ekosistem-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 222212,
+      "sha256": "3f18c7831d7249f67ab4593af992ac0f3498ec9fb8ea477aa5888b7271ad99b1"
     }
   ],
   "dependencies": [],

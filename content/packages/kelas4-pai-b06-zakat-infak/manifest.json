@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/zakat-infak.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5521,
-      "sha256": "d6ae153467e4c575e55978de59f303a1d4e19fc501538fc627b2ecc6754b4ea9"
+      "path": "assets/zakat-infak.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 170870,
+      "sha256": "bbbf8cd29bc327b6c58081706e6ab399ed3550f42ec8f11f8c195c8f2a5965cb"
     }
   ],
   "dependencies": [],

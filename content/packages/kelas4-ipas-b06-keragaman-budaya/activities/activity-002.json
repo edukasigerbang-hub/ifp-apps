@@ -5,7 +5,7 @@
   "title": "Memasangkan Budaya dan Daerah",
   "instructions": "Pasangkan setiap budaya dengan daerah asalnya.",
   "assets": [
-    "assets/keragaman-budaya.png"
+    "assets/keragaman-budaya.webp"
   ],
   "interactionConfig": {
     "pairs": [

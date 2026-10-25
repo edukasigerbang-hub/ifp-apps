@@ -5,27 +5,27 @@
   "title": "Mengamati Garis dan Sudut",
   "instructions": "Amati gambar, lalu diskusikan hubungan garis dan jenis sudut.",
   "assets": [
-    "assets/garis-sudut.png"
+    "assets/garis-sudut.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Garis mana yang sejajar pada gambar?",
-        "assetPath": "assets/garis-sudut.png",
+        "assetPath": "assets/garis-sudut.webp",
         "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
         "reveal": "Dua garis mendatar yang tidak berpotongan disebut sejajar.",
         "hint": "Perhatikan dua garis yang arahnya sama."
       },
       {
         "prompt": "Sudut apa yang besarnya 90°?",
-        "assetPath": "assets/garis-sudut.png",
+        "assetPath": "assets/garis-sudut.webp",
         "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
         "reveal": "Sudut siku-siku, ditandai dengan kotak kecil.",
         "hint": "Perhatikan tanda persegi pada pertemuan garis."
       },
       {
         "prompt": "Apa perbedaan sudut lancip dan tumpul?",
-        "assetPath": "assets/garis-sudut.png",
+        "assetPath": "assets/garis-sudut.webp",
         "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
         "reveal": "Sudut lancip kurang dari 90°, sudut tumpul lebih dari 90°.",
         "hint": "Bandingkan dengan sudut siku-siku."

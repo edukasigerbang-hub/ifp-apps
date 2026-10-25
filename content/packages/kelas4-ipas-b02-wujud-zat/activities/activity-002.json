@@ -5,7 +5,7 @@
   "title": "Urutan Perubahan Wujud",
   "instructions": "Susun urutan perubahan wujud dari es batu hingga menjadi uap air.",
   "assets": [
-    "assets/wujud-zat.png"
+    "assets/wujud-zat.webp"
   ],
   "interactionConfig": {
     "items": [

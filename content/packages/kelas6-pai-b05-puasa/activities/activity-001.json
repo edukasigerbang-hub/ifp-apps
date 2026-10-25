@@ -5,27 +5,27 @@
   "title": "Mengamati Suasana Puasa",
   "instructions": "Amati gambar, lalu diskusikan waktu dan hikmah puasa.",
   "assets": [
-    "assets/puasa-kelas6.png"
+    "assets/puasa-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu puasa?",
-        "assetPath": "assets/puasa-kelas6.png",
+        "assetPath": "assets/puasa-kelas6.webp",
         "altText": "Suasana berbuka puasa dengan kurma dan air.",
         "reveal": "Menahan makan dan minum sejak fajar hingga magrib.",
         "hint": "Dengan niat."
       },
       {
         "prompt": "Apa yang membatalkan?",
-        "assetPath": "assets/puasa-kelas6.png",
+        "assetPath": "assets/puasa-kelas6.webp",
         "altText": "Suasana berbuka puasa dengan kurma dan air.",
         "reveal": "Makan dan minum dengan sengaja.",
         "hint": "Juga hal yang dilarang."
       },
       {
         "prompt": "Apa hikmahnya?",
-        "assetPath": "assets/puasa-kelas6.png",
+        "assetPath": "assets/puasa-kelas6.webp",
         "altText": "Suasana berbuka puasa dengan kurma dan air.",
         "reveal": "Melatih sabar dan disiplin.",
         "hint": "Peduli kepada kekurangan."

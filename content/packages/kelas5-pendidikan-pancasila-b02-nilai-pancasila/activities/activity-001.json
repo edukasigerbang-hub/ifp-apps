@@ -5,27 +5,27 @@
   "title": "Mengamati Penerapan Nilai",
   "instructions": "Amati gambar, lalu diskusikan nilai Pancasila yang tampak.",
   "assets": [
-    "assets/nilai-pancasila.png"
+    "assets/nilai-pancasila.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa nilai sila pertama?",
-        "assetPath": "assets/nilai-pancasila.png",
+        "assetPath": "assets/nilai-pancasila.webp",
         "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila.",
         "reveal": "Religius dan percaya kepada Tuhan.",
         "hint": "Rajin beribadah."
       },
       {
         "prompt": "Apa nilai sila kedua?",
-        "assetPath": "assets/nilai-pancasila.png",
+        "assetPath": "assets/nilai-pancasila.webp",
         "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila.",
         "reveal": "Kemanusiaan dan kasih sayang.",
         "hint": "Menolong sesama."
       },
       {
         "prompt": "Apa nilai sila kelima?",
-        "assetPath": "assets/nilai-pancasila.png",
+        "assetPath": "assets/nilai-pancasila.webp",
         "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila.",
         "reveal": "Keadilan sosial.",
         "hint": "Bersikap adil kepada semua."

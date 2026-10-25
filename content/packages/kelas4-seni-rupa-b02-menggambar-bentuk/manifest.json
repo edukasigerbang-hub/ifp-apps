@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menggambar-bentuk.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5490,
-      "sha256": "c85e2d499ba466cc1ffbbcc143dca3928ad4e1f52dc6d4af2b85268cbe5c7635"
+      "path": "assets/menggambar-bentuk.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 173584,
+      "sha256": "5e9cfb6d6051fabc5a0ef72d7d76645c5d99e3f22650e2dadb24f341881ce54e"
     }
   ],
   "dependencies": [],

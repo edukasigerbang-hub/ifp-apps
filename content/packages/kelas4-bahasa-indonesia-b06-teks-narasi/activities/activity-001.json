@@ -5,27 +5,27 @@
   "title": "Mengamati Alur Cerita",
   "instructions": "Amati tiga panel cerita, lalu tentukan bagian awal, masalah, dan penyelesaian.",
   "assets": [
-    "assets/teks-narasi.png"
+    "assets/teks-narasi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang terjadi pada panel pertama?",
-        "assetPath": "assets/teks-narasi.png",
+        "assetPath": "assets/teks-narasi.webp",
         "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung.",
         "reveal": "Seorang anak melihat kucing di dekatnya (bagian orientasi).",
         "hint": "Perhatikan tokoh dan latar."
       },
       {
         "prompt": "Masalah apa yang muncul pada panel kedua?",
-        "assetPath": "assets/teks-narasi.png",
+        "assetPath": "assets/teks-narasi.webp",
         "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung.",
         "reveal": "Hujan turun dan kucing berada di bawah pohon (komplikasi).",
         "hint": "Apa yang membuat cerita menjadi menegangkan?"
       },
       {
         "prompt": "Bagaimana masalah diselesaikan pada panel ketiga?",
-        "assetPath": "assets/teks-narasi.png",
+        "assetPath": "assets/teks-narasi.webp",
         "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung.",
         "reveal": "Anak menolong kucing dengan payung (resolusi).",
         "hint": "Perhatikan tindakan tokoh di akhir cerita."

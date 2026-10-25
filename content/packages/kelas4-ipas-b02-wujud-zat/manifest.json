@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/wujud-zat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7504,
-      "sha256": "82a12f6f313be470cd52fdb258ec58fe1cf908b71baf0624a6b9e50c5796c99a"
+      "path": "assets/wujud-zat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 144640,
+      "sha256": "cde50b39dd46aa6b694cc0660227882c134037c519d988aac441bd773e0da882"
     }
   ],
   "dependencies": [],

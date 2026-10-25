@@ -5,27 +5,27 @@
   "title": "Mengamati Warna dan Tekstur",
   "instructions": "Amati roda warna dan tiga contoh tekstur pada gambar.",
   "assets": [
-    "assets/warna-tekstur.png"
+    "assets/warna-tekstur.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Warna apa saja yang terlihat pada roda warna?",
-        "assetPath": "assets/warna-tekstur.png",
+        "assetPath": "assets/warna-tekstur.webp",
         "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus.",
         "reveal": "Merah, oranye, kuning, hijau, biru, dan ungu.",
         "hint": "Sebutkan warna dari yang paling mencolok."
       },
       {
         "prompt": "Warna apa yang dihasilkan dari merah + kuning?",
-        "assetPath": "assets/warna-tekstur.png",
+        "assetPath": "assets/warna-tekstur.webp",
         "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus.",
         "reveal": "Merah + kuning = oranye; biru + kuning = hijau; merah + biru = ungu.",
         "hint": "Campurkan dua warna primer."
       },
       {
         "prompt": "Bandingkan tekstur pada tiga kotak.",
-        "assetPath": "assets/warna-tekstur.png",
+        "assetPath": "assets/warna-tekstur.webp",
         "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus.",
         "reveal": "Kotak titik-titik terasa kasar, kotak garis bertekstur garis, dan kotak biru muda halus.",
         "hint": "Bayangkan permukaannya saat disentuh."

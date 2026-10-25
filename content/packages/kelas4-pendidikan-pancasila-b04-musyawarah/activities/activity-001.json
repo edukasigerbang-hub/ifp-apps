@@ -5,27 +5,27 @@
   "title": "Mengamati Musyawarah Kelas",
   "instructions": "Amati gambar siswa yang bermusyawarah, lalu jawab pertanyaan.",
   "assets": [
-    "assets/musyawarah-kelas.png"
+    "assets/musyawarah-kelas.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan siswa pada gambar?",
-        "assetPath": "assets/musyawarah-kelas.png",
+        "assetPath": "assets/musyawarah-kelas.webp",
         "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat.",
         "reveal": "Mereka duduk melingkar untuk bermusyawarah.",
         "hint": "Perhatikan posisi duduk dan meja."
       },
       {
         "prompt": "Siapa yang sedang menyampaikan pendapat?",
-        "assetPath": "assets/musyawarah-kelas.png",
+        "assetPath": "assets/musyawarah-kelas.webp",
         "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat.",
         "reveal": "Siswa yang memiliki balon bicara sedang menyampaikan pendapat.",
         "hint": "Perhatikan balon percakapan."
       },
       {
         "prompt": "Mengapa keputusan musyawarah harus dilaksanakan bersama?",
-        "assetPath": "assets/musyawarah-kelas.png",
+        "assetPath": "assets/musyawarah-kelas.webp",
         "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat.",
         "reveal": "Agar keputusan adil dan menjadi tanggung jawab bersama.",
         "hint": "Hubungkan dengan sikap menghargai hasil kesepakatan."

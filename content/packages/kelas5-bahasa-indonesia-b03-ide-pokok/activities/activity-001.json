@@ -5,27 +5,27 @@
   "title": "Mencari Ide Pokok",
   "instructions": "Amati gambar, lalu diskusikan cara menemukan ide pokok.",
   "assets": [
-    "assets/ide-pokok-kelas5.png"
+    "assets/ide-pokok-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu ide pokok?",
-        "assetPath": "assets/ide-pokok-kelas5.png",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
         "altText": "Anak menyimak cerita dan mencatat ide pokok.",
         "reveal": "Gagasan utama sebuah paragraf.",
         "hint": "Menjadi inti pembicaraan."
       },
       {
         "prompt": "Di mana letak kalimat utama?",
-        "assetPath": "assets/ide-pokok-kelas5.png",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
         "altText": "Anak menyimak cerita dan mencatat ide pokok.",
         "reveal": "Sering di awal paragraf, bisa juga di akhir.",
         "hint": "Perhatikan kalimat yang paling umum."
       },
       {
         "prompt": "Bagaimana menemukannya?",
-        "assetPath": "assets/ide-pokok-kelas5.png",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
         "altText": "Anak menyimak cerita dan mencatat ide pokok.",
         "reveal": "Baca seluruh paragraf lalu tentukan intinya.",
         "hint": "Abaikan kalimat contoh."

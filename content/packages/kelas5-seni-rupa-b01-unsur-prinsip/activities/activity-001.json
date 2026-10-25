@@ -5,27 +5,27 @@
   "title": "Mengamati Unsur dan Prinsip",
   "instructions": "Amati karya, lalu diskusikan unsur dan prinsip yang terlihat.",
   "assets": [
-    "assets/unsur-prinsip-kelas5.png"
+    "assets/unsur-prinsip-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Unsur apa yang terlihat pada karya?",
-        "assetPath": "assets/unsur-prinsip-kelas5.png",
+        "assetPath": "assets/unsur-prinsip-kelas5.webp",
         "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni.",
         "reveal": "Garis, bentuk, warna, tekstur, dan ruang.",
         "hint": "Amati bagian-bagian karya."
       },
       {
         "prompt": "Apa itu keseimbangan?",
-        "assetPath": "assets/unsur-prinsip-kelas5.png",
+        "assetPath": "assets/unsur-prinsip-kelas5.webp",
         "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni.",
         "reveal": "Susunan yang tidak berat sebelah.",
         "hint": "Bandingkan sisi kiri dan kanan."
       },
       {
         "prompt": "Bagaimana menciptakan kesatuan?",
-        "assetPath": "assets/unsur-prinsip-kelas5.png",
+        "assetPath": "assets/unsur-prinsip-kelas5.webp",
         "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni.",
         "reveal": "Menggunakan warna dan bentuk yang saling mendukung.",
         "hint": "Jangan terlalu banyak gaya."

@@ -5,27 +5,27 @@
   "title": "Mengamati Listrik dan Magnet",
   "instructions": "Amati gambar, lalu diskusikan bahan dan sifat magnet.",
   "assets": [
-    "assets/listrik-magnet.png"
+    "assets/listrik-magnet.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu konduktor?",
-        "assetPath": "assets/listrik-magnet.png",
+        "assetPath": "assets/listrik-magnet.webp",
         "altText": "Rangkaian listrik dan magnet menarik benda logam.",
         "reveal": "Bahan yang menghantarkan listrik.",
         "hint": "Contohnya logam."
       },
       {
         "prompt": "Apa itu isolator?",
-        "assetPath": "assets/listrik-magnet.png",
+        "assetPath": "assets/listrik-magnet.webp",
         "altText": "Rangkaian listrik dan magnet menarik benda logam.",
         "reveal": "Bahan yang tidak menghantarkan listrik.",
         "hint": "Contohnya plastik."
       },
       {
         "prompt": "Apa kutub magnet?",
-        "assetPath": "assets/listrik-magnet.png",
+        "assetPath": "assets/listrik-magnet.webp",
         "altText": "Rangkaian listrik dan magnet menarik benda logam.",
         "reveal": "Ujung magnet yang menarik atau menolak.",
         "hint": "Kutub utara dan selatan."

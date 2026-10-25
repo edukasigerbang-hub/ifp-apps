@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/seni-cetak-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7411,
-      "sha256": "9901f272e38cfc7492c8c6e5648666ab904037f2c0e3008af5db214539f5e10d"
+      "path": "assets/seni-cetak-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 178166,
+      "sha256": "bb7ed732126076a0966f54e0dd169d61708dffcdc204ac8e83c0dd22242ccdb2"
     }
   ],
   "dependencies": [],

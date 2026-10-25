@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/adab-kisah-teladan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5684,
-      "sha256": "214bc9499ec734820e7d8b0333a7eb0583b746f27905f87651f0947530d72603"
+      "path": "assets/adab-kisah-teladan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 188402,
+      "sha256": "d3b93e9e4b371dc0aa6086666f3efd296d81721ec6040144938e1381377fa822"
     }
   ],
   "dependencies": [],

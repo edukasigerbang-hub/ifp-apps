@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/diskusi-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5400,
-      "sha256": "ed1531741d8356cf8a57eb0a618546c36c3ac4cea8d6feac4dbd593a891a3189"
+      "path": "assets/diskusi-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 178452,
+      "sha256": "8df4b3d8995111d6338d0b4d45f3bcc3808148c3b9a6519e2532e59f72a27885"
     }
   ],
   "dependencies": [],

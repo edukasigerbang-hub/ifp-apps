@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sejarah-pancasila.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5276,
-      "sha256": "43e2958b9e310bca12a07431293f73e305c6d893d6b2e86704d1b5938c93d988"
+      "path": "assets/sejarah-pancasila.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 193440,
+      "sha256": "6124c75440355d43a78d747baa7eb3e961c11ac202bab11aaae9c57685cde444"
     }
   ],
   "dependencies": [],

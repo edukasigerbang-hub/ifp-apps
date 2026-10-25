@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/seni-cetak.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7411,
-      "sha256": "9901f272e38cfc7492c8c6e5648666ab904037f2c0e3008af5db214539f5e10d"
+      "path": "assets/seni-cetak.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 171216,
+      "sha256": "4f7f8f89774e5b6fbb74901064b1bd06e07052cffea1d77abc8db18c65a0c09f"
     }
   ],
   "dependencies": [],

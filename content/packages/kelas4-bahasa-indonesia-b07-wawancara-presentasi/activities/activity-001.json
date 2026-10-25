@@ -5,27 +5,27 @@
   "title": "Mengamati Wawancara dan Presentasi",
   "instructions": "Amati dua panel gambar, lalu diskusikan langkah wawancara.",
   "assets": [
-    "assets/wawancara-presentasi.png"
+    "assets/wawancara-presentasi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak pada panel kiri?",
-        "assetPath": "assets/wawancara-presentasi.png",
+        "assetPath": "assets/wawancara-presentasi.webp",
         "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas.",
         "reveal": "Mewawancarai guru dengan mikrofon dan mencatat jawaban.",
         "hint": "Perhatikan mikrofon dan buku catatan."
       },
       {
         "prompt": "Apa yang dilakukan anak pada panel kanan?",
-        "assetPath": "assets/wawancara-presentasi.png",
+        "assetPath": "assets/wawancara-presentasi.webp",
         "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas.",
         "reveal": "Mempresentasikan hasil di depan kelas dengan diagram.",
         "hint": "Perhatikan papan dan penunjuk."
       },
       {
         "prompt": "Mengapa pertanyaan perlu disiapkan sebelum wawancara?",
-        "assetPath": "assets/wawancara-presentasi.png",
+        "assetPath": "assets/wawancara-presentasi.webp",
         "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas.",
         "reveal": "Agar wawancara terarah, tidak berulang, dan informasi lengkap.",
         "hint": "Bayangkan wawancara tanpa rencana."

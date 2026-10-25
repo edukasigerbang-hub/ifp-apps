@@ -5,27 +5,27 @@
   "title": "Mengamati Rantai Makanan",
   "instructions": "Amati gambar, lalu diskusikan keseimbangan ekosistem.",
   "assets": [
-    "assets/ekosistem-kelas6.png"
+    "assets/ekosistem-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu produsen?",
-        "assetPath": "assets/ekosistem-kelas6.png",
+        "assetPath": "assets/ekosistem-kelas6.webp",
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Tumbuhan yang membuat makanan sendiri.",
         "hint": "Sumber energi pertama."
       },
       {
         "prompt": "Apa itu konsumen?",
-        "assetPath": "assets/ekosistem-kelas6.png",
+        "assetPath": "assets/ekosistem-kelas6.webp",
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Hewan yang memakan makhluk lain.",
         "hint": "Ada konsumen puncak."
       },
       {
         "prompt": "Apa itu pengurai?",
-        "assetPath": "assets/ekosistem-kelas6.png",
+        "assetPath": "assets/ekosistem-kelas6.webp",
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Bakteri dan jamur pengurai sisa.",
         "hint": "Mengembalikan zat ke tanah."

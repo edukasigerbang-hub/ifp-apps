@@ -5,27 +5,27 @@
   "title": "Mengamati Fabel",
   "instructions": "Amati gambar, lalu diskusikan tokoh dan pesan fabel.",
   "assets": [
-    "assets/fabel.png"
+    "assets/fabel.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu fabel?",
-        "assetPath": "assets/fabel.png",
+        "assetPath": "assets/fabel.webp",
         "altText": "Anak membaca fabel tentang hewan.",
         "reveal": "Cerita hewan yang berperilaku seperti manusia.",
         "hint": "Mengandung pesan."
       },
       {
         "prompt": "Siapa tokoh fabel?",
-        "assetPath": "assets/fabel.png",
+        "assetPath": "assets/fabel.webp",
         "altText": "Anak membaca fabel tentang hewan.",
         "reveal": "Hewan.",
         "hint": "Memiliki sifat seperti manusia."
       },
       {
         "prompt": "Apa pesan fabel?",
-        "assetPath": "assets/fabel.png",
+        "assetPath": "assets/fabel.webp",
         "altText": "Anak membaca fabel tentang hewan.",
         "reveal": "Nasihat dari cerita.",
         "hint": "Biasanya di akhir."

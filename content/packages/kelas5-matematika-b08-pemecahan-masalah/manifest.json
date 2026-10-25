@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pemecahan-masalah-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4759,
-      "sha256": "af9dfa4dca238a72fc2550a71f3d00f0e852d7cbe7b5c0a164d4cbcd94a89a22"
+      "path": "assets/pemecahan-masalah-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 145140,
+      "sha256": "f4b369fda65fd3ac18d0470682acd2ece0e745892c8de1d06f75067873d8e389"
     }
   ],
   "dependencies": [],

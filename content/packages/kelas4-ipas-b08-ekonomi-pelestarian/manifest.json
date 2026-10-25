@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/ekonomi-pelestarian.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6204,
-      "sha256": "fed38773c93ebea9e5443ec3644237d56e1269e17bea1a8456911a8cec0a4077"
+      "path": "assets/ekonomi-pelestarian.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 219176,
+      "sha256": "499dc9010d8dc090e02c365e5b3f1cd6864e84e9342be25c4782c90d94a73198"
     }
   ],
   "dependencies": [],

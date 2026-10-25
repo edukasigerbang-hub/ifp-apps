@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/hak-kewajiban-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5788,
-      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+      "path": "assets/hak-kewajiban-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 170330,
+      "sha256": "c49bd5c590c9fa6fd17ae467bf37b1a7b377c2aa6f0db6c82f4cd8e3e720bd10"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/tata-surya.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6101,
-      "sha256": "dd5bcdc003c69b1b6db3d50eeeb5ddb805955d2914b98b58b0bec965f3591341"
+      "path": "assets/tata-surya.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 180296,
+      "sha256": "fa182a54bc990808d47150aab932c1965ab4372581a161dc691ae045a38be18a"
     }
   ],
   "dependencies": [],

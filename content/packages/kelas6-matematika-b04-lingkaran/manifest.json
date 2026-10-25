@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/lingkaran.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5687,
-      "sha256": "b94a0e91aee7dd9ef075ed1eaa2a9405f12735f12259d257081e065739580f0a"
+      "path": "assets/lingkaran.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168192,
+      "sha256": "65010498c02609366f4bf3f8aaee5ecf1ce7f9bfb542261ff11341fdf93006f1"
     }
   ],
   "dependencies": [],

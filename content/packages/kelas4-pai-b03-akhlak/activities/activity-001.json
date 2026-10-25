@@ -5,27 +5,27 @@
   "title": "Mengamati Akhlak Terpuji",
   "instructions": "Amati dua panel gambar, lalu hubungkan perilaku dengan akhlak terpuji.",
   "assets": [
-    "assets/akhlak-terpuji.png"
+    "assets/akhlak-terpuji.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak pada panel kiri?",
-        "assetPath": "assets/akhlak-terpuji.png",
+        "assetPath": "assets/akhlak-terpuji.webp",
         "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan.",
         "reveal": "Anak mengembalikan buku kepada guru/teman. Ini menunjukkan jujur dan amanah.",
         "hint": "Perhatikan buku yang diserahkan."
       },
       {
         "prompt": "Apa yang dilakukan anak pada panel kanan?",
-        "assetPath": "assets/akhlak-terpuji.png",
+        "assetPath": "assets/akhlak-terpuji.webp",
         "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan.",
         "reveal": "Anak menolong teman yang kesulitan. Ini menunjukkan sikap tolong-menolong.",
         "hint": "Perhatikan posisi kedua anak."
       },
       {
         "prompt": "Mengapa akhlak terpuji penting?",
-        "assetPath": "assets/akhlak-terpuji.png",
+        "assetPath": "assets/akhlak-terpuji.webp",
         "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan.",
         "reveal": "Akhlak terpuji disukai Allah dan manusia, serta membuat hidup harmonis.",
         "hint": "Hubungkan dengan perasaan orang lain."

@@ -5,27 +5,27 @@
   "title": "Mengamati Keberagaman",
   "instructions": "Amati gambar, lalu diskusikan arti dan sikap terhadap keberagaman.",
   "assets": [
-    "assets/bhinneka.png"
+    "assets/bhinneka.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak-anak pada gambar?",
-        "assetPath": "assets/bhinneka.png",
+        "assetPath": "assets/bhinneka.webp",
         "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
         "reveal": "Mereka bergandengan tangan meskipun berbeda warna pakaian.",
         "hint": "Perhatikan sikap tangan mereka."
       },
       {
         "prompt": "Apa arti Bhinneka Tunggal Ika?",
-        "assetPath": "assets/bhinneka.png",
+        "assetPath": "assets/bhinneka.webp",
         "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
         "reveal": "Berbeda-beda tetapi tetap satu; keberagaman tidak memecah persatuan.",
         "hint": "Hubungkan dengan semboyan bangsa."
       },
       {
         "prompt": "Bagaimana sikap kita terhadap perbedaan?",
-        "assetPath": "assets/bhinneka.png",
+        "assetPath": "assets/bhinneka.webp",
         "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
         "reveal": "Menghormati, tidak membeda-bedakan, dan mau bekerja sama.",
         "hint": "Bayangkan jika semua orang saling menghina."

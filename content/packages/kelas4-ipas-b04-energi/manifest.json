@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/energi-perubahan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8955,
-      "sha256": "dd44299b051ee3fa62c393427bc116136d20a8a19143d8cbf649720f14c7b01c"
+      "path": "assets/energi-perubahan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177202,
+      "sha256": "bf51a7df85ed54c5136986f1ad85d97b0690938714514ee76a428127a831dfbb"
     }
   ],
   "dependencies": [],

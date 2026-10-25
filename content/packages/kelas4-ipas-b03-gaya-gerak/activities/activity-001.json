@@ -5,27 +5,27 @@
   "title": "Mengamati Gaya di Sekitar",
   "instructions": "Amati empat gambar. Pikirkan gaya apa yang bekerja pada setiap kegiatan.",
   "assets": [
-    "assets/gaya-gerak.png"
+    "assets/gaya-gerak.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak pada gambar kiri bawah?",
-        "assetPath": "assets/gaya-gerak.png",
+        "assetPath": "assets/gaya-gerak.webp",
         "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku.",
         "reveal": "Anak itu mendorong kotak, sehingga kotak bergerak. Ini gaya dorong.",
         "hint": "Perhatikan arah panah merah."
       },
       {
         "prompt": "Mengapa apel pada gambar kiri atas jatuh ke bawah?",
-        "assetPath": "assets/gaya-gerak.png",
+        "assetPath": "assets/gaya-gerak.webp",
         "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku.",
         "reveal": "Apel jatuh karena gaya gravitasi bumi menarik benda ke bawah.",
         "hint": "Arah panah menunjukkan benda jatuh ke tanah."
       },
       {
         "prompt": "Apa yang membuat paku menempel pada magnet?",
-        "assetPath": "assets/gaya-gerak.png",
+        "assetPath": "assets/gaya-gerak.webp",
         "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku.",
         "reveal": "Paku menempel karena gaya magnet menarik benda logam.",
         "hint": "Perhatikan benda kecil di bawah magnet."

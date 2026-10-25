@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kesehatan-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "path": "assets/kesehatan-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 269410,
+      "sha256": "a85edb4bf5896ad9c63f38b81fe9b95ef3e63e96e34f04d0173f425aea3a51cf"
     }
   ],
   "dependencies": [],

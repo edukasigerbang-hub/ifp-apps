@@ -5,27 +5,27 @@
   "title": "Mengamati Karya di Pameran",
   "instructions": "Amati tiga karya pada gambar, lalu diskusikan cara mengapresiasinya.",
   "assets": [
-    "assets/apresiasi-karya.png"
+    "assets/apresiasi-karya.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa tujuan apresiasi karya seni?",
-        "assetPath": "assets/apresiasi-karya.png",
+        "assetPath": "assets/apresiasi-karya.webp",
         "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati.",
         "reveal": "Mengamati, menilai, dan menghargai karya.",
         "hint": "Bukan hanya memberi nilai."
       },
       {
         "prompt": "Unsur apa yang dapat diamati?",
-        "assetPath": "assets/apresiasi-karya.png",
+        "assetPath": "assets/apresiasi-karya.webp",
         "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati.",
         "reveal": "Garis, warna, bentuk, tekstur, dan tema.",
         "hint": "Lihat detail pada karya."
       },
       {
         "prompt": "Bagaimana memberi tanggapan yang baik?",
-        "assetPath": "assets/apresiasi-karya.png",
+        "assetPath": "assets/apresiasi-karya.webp",
         "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati.",
         "reveal": "Sopan, beralasan, dan memberi saran yang membangun.",
         "hint": "Hindari mengejek karya teman."

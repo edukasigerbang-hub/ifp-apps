@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/demokrasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5400,
-      "sha256": "ed1531741d8356cf8a57eb0a618546c36c3ac4cea8d6feac4dbd593a891a3189"
+      "path": "assets/demokrasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 205696,
+      "sha256": "e6ea29be5f90f5d13a1b78927844fbcf8e3c609804a8de783cf6fab3fb736ab1"
     }
   ],
   "dependencies": [],

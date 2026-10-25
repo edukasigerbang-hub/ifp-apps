@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kebersihan-diri.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "path": "assets/kebersihan-diri.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 160280,
+      "sha256": "5ae4e8d05a4102a7acaa989c42e89d0952ebc32b5f93e8441f1d441b4bed73ac"
     }
   ],
   "dependencies": [],

@@ -5,7 +5,7 @@
   "title": "Memasangkan Permainan dan Teknik",
   "instructions": "Pasangkan setiap permainan atau istilah dengan tekniknya.",
   "assets": [
-    "assets/bola-besar.png"
+    "assets/bola-besar.webp"
   ],
   "interactionConfig": {
     "pairs": [

@@ -5,7 +5,7 @@
   "title": "Memasangkan Latihan dan Manfaat",
   "instructions": "Pasangkan setiap latihan atau kebiasaan dengan manfaatnya.",
   "assets": [
-    "assets/kebugaran.png"
+    "assets/kebugaran.webp"
   ],
   "interactionConfig": {
     "pairs": [

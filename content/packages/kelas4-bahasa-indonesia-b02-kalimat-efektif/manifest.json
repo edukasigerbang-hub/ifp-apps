@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sudut-baca.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/sudut-baca.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 166004,
+      "sha256": "73c7ed8c3e647d487602d870c4e846fcf0be96247ccb6670676ee54352540bb5"
     }
   ],
   "dependencies": [],

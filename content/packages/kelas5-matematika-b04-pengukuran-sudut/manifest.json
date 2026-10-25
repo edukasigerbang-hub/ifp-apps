@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pengukuran-sudut.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4841,
-      "sha256": "976b7f76cf8597b56eed23c818b71bb30a76c3865fe3db1a0cf71e74ee514229"
+      "path": "assets/pengukuran-sudut.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 137940,
+      "sha256": "3fc54f5b3539a1cddcf0f350d76b1d628854c80ce67ec3c7290f4463be45fe9e"
     }
   ],
   "dependencies": [],

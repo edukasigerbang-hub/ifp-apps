@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/nilai-pancasila.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6602,
-      "sha256": "ae584cb2aab112dc3b5e60008e6a705bf7b99f4b3558eea964857494765f6948"
+      "path": "assets/nilai-pancasila.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 234336,
+      "sha256": "dd53f1463a508da41388b451d1cf3c0fee3f0d361eb1dfe6051f7d4c6cb5d398"
     }
   ],
   "dependencies": [],

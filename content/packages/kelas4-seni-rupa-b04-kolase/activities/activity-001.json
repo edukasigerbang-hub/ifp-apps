@@ -5,27 +5,27 @@
   "title": "Mengamati Bahan Kolase",
   "instructions": "Amati gambar bahan dan contoh kolase, lalu diskusikan cara membuatnya.",
   "assets": [
-    "assets/kolase.png"
+    "assets/kolase.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bahan dan alat apa yang terlihat pada gambar?",
-        "assetPath": "assets/kolase.png",
+        "assetPath": "assets/kolase.webp",
         "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase.",
         "reveal": "Kertas warna, lem, dan gunting.",
         "hint": "Perhatikan benda di sekitar kertas."
       },
       {
         "prompt": "Bagaimana potongan kertas ditempel?",
-        "assetPath": "assets/kolase.png",
+        "assetPath": "assets/kolase.webp",
         "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase.",
         "reveal": "Kertas dipotong atau dirobek, lalu ditempel pada bidang dengan lem.",
         "hint": "Perhatikan bentuk-bentuk pada kertas."
       },
       {
         "prompt": "Apa yang membuat kolase terlihat menarik?",
-        "assetPath": "assets/kolase.png",
+        "assetPath": "assets/kolase.webp",
         "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase.",
         "reveal": "Susunan warna, bentuk, dan ukuran yang seimbang.",
         "hint": "Perhatikan sebaran bentuk."

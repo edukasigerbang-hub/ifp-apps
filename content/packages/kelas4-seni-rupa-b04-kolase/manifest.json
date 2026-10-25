@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kolase.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6253,
-      "sha256": "28993a4c5cd827b23b5ac06c7f8814e454966d8f64cfacc008614bd72a6d249b"
+      "path": "assets/kolase.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 173868,
+      "sha256": "3a4fcc99fc14a14d2831c9588a17ddecf0314802d554dff2536224785952ad45"
     }
   ],
   "dependencies": [],

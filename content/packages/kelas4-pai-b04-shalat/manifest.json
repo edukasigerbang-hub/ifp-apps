@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/shalat-ilustrasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4621,
-      "sha256": "5eed3951d0be92cf7676f2ca4d808ecb3a3b55cdde6d6a926443d36b34d370d2"
+      "path": "assets/shalat-ilustrasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172752,
+      "sha256": "7dadbf9f6e76d4691cc89c667f03de3db0a2c91fe7ebb4e1eb330cb0be310d3a"
     }
   ],
   "dependencies": [],

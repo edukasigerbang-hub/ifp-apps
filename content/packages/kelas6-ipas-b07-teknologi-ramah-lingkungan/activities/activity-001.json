@@ -5,27 +5,27 @@
   "title": "Mengamati Teknologi Hijau",
   "instructions": "Amati gambar, lalu diskusikan manfaat teknologinya.",
   "assets": [
-    "assets/teknologi-ramah-lingkungan.png"
+    "assets/teknologi-ramah-lingkungan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu panel surya?",
-        "assetPath": "assets/teknologi-ramah-lingkungan.png",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
         "altText": "Panel surya, kincir angin, dan daur ulang.",
         "reveal": "Alat pengubah energi matahari menjadi listrik.",
         "hint": "Energi terbarukan."
       },
       {
         "prompt": "Apa itu kincir angin?",
-        "assetPath": "assets/teknologi-ramah-lingkungan.png",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
         "altText": "Panel surya, kincir angin, dan daur ulang.",
         "reveal": "Pembangkit listrik tenaga angin.",
         "hint": "Tidak menghasilkan polusi."
       },
       {
         "prompt": "Apa itu daur ulang?",
-        "assetPath": "assets/teknologi-ramah-lingkungan.png",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
         "altText": "Panel surya, kincir angin, dan daur ulang.",
         "reveal": "Mengolah sampah menjadi barang baru.",
         "hint": "Mengurangi sampah."

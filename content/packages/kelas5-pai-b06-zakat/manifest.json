@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/zakat-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5521,
-      "sha256": "d6ae153467e4c575e55978de59f303a1d4e19fc501538fc627b2ecc6754b4ea9"
+      "path": "assets/zakat-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168352,
+      "sha256": "3c50e9fabaf6b3ff54e2baaade4f1ff019c67138d4c89e8b76af980d8b356c57"
     }
   ],
   "dependencies": [],

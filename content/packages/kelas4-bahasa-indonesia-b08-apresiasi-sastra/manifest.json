@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/apresiasi-sastra.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4941,
-      "sha256": "84a669e8419616c51ba98a7482c056673a86efd84edead5048fd53b3f5f7525d"
+      "path": "assets/apresiasi-sastra.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 188868,
+      "sha256": "aa991d56999153b422ecd3b605e9d51c059a1c0fd503ea623fc42cc7b90972bd"
     }
   ],
   "dependencies": [],

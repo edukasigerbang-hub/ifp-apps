@@ -5,27 +5,27 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan cara membaca dan menyimpulkan data.",
   "assets": [
-    "assets/data-kelas5.png"
+    "assets/data-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang ditunjukkan diagram batang?",
-        "assetPath": "assets/data-kelas5.png",
+        "assetPath": "assets/data-kelas5.webp",
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Banyak data setiap kelompok.",
         "hint": "Bandingkan tinggi batang."
       },
       {
         "prompt": "Bagaimana menghitung rata-rata?",
-        "assetPath": "assets/data-kelas5.png",
+        "assetPath": "assets/data-kelas5.webp",
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Jumlah data dibagi banyak data.",
         "hint": "Hitung total dahulu."
       },
       {
         "prompt": "Apa kesimpulan dari data?",
-        "assetPath": "assets/data-kelas5.png",
+        "assetPath": "assets/data-kelas5.webp",
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Informasi yang dapat diambil.",
         "hint": "Lihat nilai tertinggi dan terendah."

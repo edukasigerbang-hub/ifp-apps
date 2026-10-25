@@ -5,7 +5,7 @@
   "title": "Urutan Struktur Teks Narasi",
   "instructions": "Susun struktur teks narasi dalam urutan yang benar.",
   "assets": [
-    "assets/teks-narasi.png"
+    "assets/teks-narasi.webp"
   ],
   "interactionConfig": {
     "items": [

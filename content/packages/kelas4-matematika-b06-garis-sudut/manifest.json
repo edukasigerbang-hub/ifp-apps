@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/garis-sudut.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4841,
-      "sha256": "976b7f76cf8597b56eed23c818b71bb30a76c3865fe3db1a0cf71e74ee514229"
+      "path": "assets/garis-sudut.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168000,
+      "sha256": "a8efc110dcc94402a4c41c6d9a3e1616e282a3a80f77eaf5c590242abf73e6f3"
     }
   ],
   "dependencies": [],

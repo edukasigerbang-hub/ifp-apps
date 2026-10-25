@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pengukuran-panjang-berat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5229,
-      "sha256": "e21de68d447ddec784ff718c27fbbb542859a7dfbd7cc1afc95889e32ffcd3de"
+      "path": "assets/pengukuran-panjang-berat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 164610,
+      "sha256": "df35bb99415028f159cefc9908c74306df905ed1aca4c645af0f46ca5ac7fc9d"
     }
   ],
   "dependencies": [],

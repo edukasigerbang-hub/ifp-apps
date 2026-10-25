@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/atletik-dasar.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4508,
-      "sha256": "38b3f770e0f4495070cb5dc840607176d064d9d29726d9686c7ea52b980fb624"
+      "path": "assets/atletik-dasar.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172900,
+      "sha256": "fb9db5602929a9f8c087f5dd5cd78d4674ffb7d5a26619a60781df7eab6fb5eb"
     }
   ],
   "dependencies": [],

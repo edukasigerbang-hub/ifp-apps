@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/warna-komposisi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5945,
-      "sha256": "3faf047ec3813f555e302c665b430c53314799b655e56a04da30c1241199cc66"
+      "path": "assets/warna-komposisi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 160576,
+      "sha256": "efcdcdc39c7735b6d58a7348d79534afad606b6340b373073ad43565b3047688"
     }
   ],
   "dependencies": [],

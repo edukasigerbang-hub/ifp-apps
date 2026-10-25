@@ -5,27 +5,27 @@
   "title": "Menyelesaikan Soal Cerita",
   "instructions": "Amati gambar, lalu diskusikan langkah menyelesaikan soal.",
   "assets": [
-    "assets/pemecahan-masalah-kelas5.png"
+    "assets/pemecahan-masalah-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa langkah pertama?",
-        "assetPath": "assets/pemecahan-masalah-kelas5.png",
+        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
         "altText": "Anak menyelesaikan soal cerita matematika.",
         "reveal": "Memahami apa yang diketahui dan ditanya.",
         "hint": "Tandai angka penting."
       },
       {
         "prompt": "Bagaimana memilih operasi?",
-        "assetPath": "assets/pemecahan-masalah-kelas5.png",
+        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
         "altText": "Anak menyelesaikan soal cerita matematika.",
         "reveal": "Sesuaikan dengan kata kunci soal.",
         "hint": "Jumlah, selisih, atau bagi."
       },
       {
         "prompt": "Mengapa harus memeriksa?",
-        "assetPath": "assets/pemecahan-masalah-kelas5.png",
+        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
         "altText": "Anak menyelesaikan soal cerita matematika.",
         "reveal": "Agar jawaban benar.",
         "hint": "Hitung ulang dengan cara lain."

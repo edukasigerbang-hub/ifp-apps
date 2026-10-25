@@ -20,10 +20,10 @@
   ],
   "assets": [
     {
-      "path": "assets/taman-kota.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5801,
-      "sha256": "9dc3c2ed2241797d6e7388561ed91e7aecd6e691b35a45bd23e7633a6dc45dbd"
+      "path": "assets/taman-kota.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 181378,
+      "sha256": "fbad4614d2347372f66afc485f77a598685644df7e85dd6dd961fb575262f39f"
     }
   ],
   "dependencies": [],

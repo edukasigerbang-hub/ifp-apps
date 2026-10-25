@@ -5,7 +5,7 @@
   "title": "Memasangkan Pekerjaan dan Kegiatan",
   "instructions": "Pasangkan setiap pekerjaan atau tindakan dengan kegiatannya.",
   "assets": [
-    "assets/ekonomi-pelestarian.png"
+    "assets/ekonomi-pelestarian.webp"
   ],
   "interactionConfig": {
     "pairs": [

@@ -5,27 +5,27 @@
   "title": "Mengamati Keberagaman",
   "instructions": "Amati gambar, lalu diskusikan sikap toleransi.",
   "assets": [
-    "assets/keberagaman-kelas5.png"
+    "assets/keberagaman-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Keberagaman apa yang terlihat?",
-        "assetPath": "assets/keberagaman-kelas5.png",
+        "assetPath": "assets/keberagaman-kelas5.webp",
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Suku, agama, dan budaya.",
         "hint": "Setiap siswa berbeda."
       },
       {
         "prompt": "Apa arti toleransi?",
-        "assetPath": "assets/keberagaman-kelas5.png",
+        "assetPath": "assets/keberagaman-kelas5.webp",
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Menerima dan menghargai perbedaan.",
         "hint": "Tidak memaksakan kehendak."
       },
       {
         "prompt": "Apa manfaat toleransi?",
-        "assetPath": "assets/keberagaman-kelas5.png",
+        "assetPath": "assets/keberagaman-kelas5.webp",
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Hidup rukun dan damai.",
         "hint": "Kerja sama lancar."

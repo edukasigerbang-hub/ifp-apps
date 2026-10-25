@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pewarisan-sifat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5227,
-      "sha256": "f1cb1923d2faac497985c73a9e298ac04629b35f058a3cca1fba400f21423985"
+      "path": "assets/pewarisan-sifat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 178866,
+      "sha256": "b2c9feb359b7474a3c76cd0c4c957de7e05d2d8913edbde14ae7e215f3f9182c"
     }
   ],
   "dependencies": [],

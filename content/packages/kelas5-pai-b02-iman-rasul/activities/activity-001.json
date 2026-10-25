@@ -5,27 +5,27 @@
   "title": "Mengamati Sifat Rasul",
   "instructions": "Amati gambar, lalu diskusikan arti rasul dan sifatnya.",
   "assets": [
-    "assets/iman-rasul.png"
+    "assets/iman-rasul.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa arti rasul?",
-        "assetPath": "assets/iman-rasul.png",
+        "assetPath": "assets/iman-rasul.webp",
         "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
         "reveal": "Utusan Allah yang menyampaikan wahyu.",
         "hint": "Membawa petunjuk bagi manusia."
       },
       {
         "prompt": "Berapa jumlah nabi dan rasul yang wajib diketahui?",
-        "assetPath": "assets/iman-rasul.png",
+        "assetPath": "assets/iman-rasul.webp",
         "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
         "reveal": "25.",
         "hint": "Disebut dalam Al-Qur'an."
       },
       {
         "prompt": "Apa sifat wajib rasul?",
-        "assetPath": "assets/iman-rasul.png",
+        "assetPath": "assets/iman-rasul.webp",
         "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
         "reveal": "Siddiq, amanah, tabligh, dan fatanah.",
         "hint": "Jujur, dipercaya, menyampaikan, cerdas."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bola-kecil-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8718,
-      "sha256": "bba413ded67fdd7c0e1d65586bfda284645cc7a00f1d8e8950742a2930492c7b"
+      "path": "assets/bola-kecil-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 256002,
+      "sha256": "2a073365fa7736970f080213f3246099db48ecec31f65034dfba6331059433da"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Memahami Soal Cerita",
   "instructions": "Gunakan gambar untuk membantu memahami soal cerita tentang berbelanja.",
   "assets": [
-    "assets/pemecahan-masalah.png"
+    "assets/pemecahan-masalah.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Ani membeli 3 buku, masing-masing Rp5.000. Apa informasi pentingnya?",
-        "assetPath": "assets/pemecahan-masalah.png",
+        "assetPath": "assets/pemecahan-masalah.webp",
         "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja.",
         "reveal": "Jumlah buku 3 dan harga per buku Rp5.000.",
         "hint": "Catat angka dan satuannya."
       },
       {
         "prompt": "Operasi apa yang digunakan untuk menghitung total?",
-        "assetPath": "assets/pemecahan-masalah.png",
+        "assetPath": "assets/pemecahan-masalah.webp",
         "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja.",
         "reveal": "Perkalian: 3 × 5.000 = 15.000.",
         "hint": "Harga yang sama diulang."
       },
       {
         "prompt": "Jika Ani membayar Rp20.000, berapa kembaliannya?",
-        "assetPath": "assets/pemecahan-masalah.png",
+        "assetPath": "assets/pemecahan-masalah.webp",
         "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja.",
         "reveal": "20.000 − 15.000 = 5.000.",
         "hint": "Kurangi total belanja dari uang yang dibayar."

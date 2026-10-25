@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bangun-ruang-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7686,
-      "sha256": "b7ac8b313454164d99d659e500d285a31df5a15dc3cff222d1b775948bdfdac6"
+      "path": "assets/bangun-ruang-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 151492,
+      "sha256": "a880f304f0f590bbda3ad073b247c9bb3428498cea4e8945a49b5c15364b9071"
     }
   ],
   "dependencies": [],

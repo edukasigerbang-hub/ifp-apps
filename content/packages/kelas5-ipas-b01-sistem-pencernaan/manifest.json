@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sistem-pencernaan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5781,
-      "sha256": "5a01cd85f316f83574c1359cd6582ac27b58ec7ddf7f8b9b2a76e6996237ea35"
+      "path": "assets/sistem-pencernaan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 187640,
+      "sha256": "545667963a6822db608cca742ea116ed3a3db6a46526df3a79365e8d84c2db40"
     }
   ],
   "dependencies": [],

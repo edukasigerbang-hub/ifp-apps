@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/atletik-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4508,
-      "sha256": "38b3f770e0f4495070cb5dc840607176d064d9d29726d9686c7ea52b980fb624"
+      "path": "assets/atletik-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 221212,
+      "sha256": "ae5dc512b9897e228ba18a15de696620b73aebbe99a2f24d77590f286241c7e2"
     }
   ],
   "dependencies": [],

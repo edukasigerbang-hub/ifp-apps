@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/membaca-quran.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5306,
-      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+      "path": "assets/membaca-quran.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 184318,
+      "sha256": "d052feee5b54f031d8018a167398f81ab1fe0e2a813d9ab4e43516c22ab168be"
     }
   ],
   "dependencies": [],

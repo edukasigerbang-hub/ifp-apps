@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kesehatan-kebugaran.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "path": "assets/kesehatan-kebugaran.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169674,
+      "sha256": "446af25e46e2110d86b806117724eca42585a66ce30a0fa15cf9e72248e7ada2"
     }
   ],
   "dependencies": [],

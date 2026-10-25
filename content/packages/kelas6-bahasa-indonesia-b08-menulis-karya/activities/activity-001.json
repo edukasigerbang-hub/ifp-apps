@@ -5,27 +5,27 @@
   "title": "Menyusun Karya",
   "instructions": "Amati gambar, lalu diskusikan unsur karya sastra.",
   "assets": [
-    "assets/menulis-karya.png"
+    "assets/menulis-karya.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa unsur karya sastra?",
-        "assetPath": "assets/menulis-karya.png",
+        "assetPath": "assets/menulis-karya.webp",
         "altText": "Anak menulis karya sastra di buku.",
         "reveal": "Tema, tokoh, latar, alur, dan amanat.",
         "hint": "Saling melengkapi."
       },
       {
         "prompt": "Bagaimana menyusun alur?",
-        "assetPath": "assets/menulis-karya.png",
+        "assetPath": "assets/menulis-karya.webp",
         "altText": "Anak menulis karya sastra di buku.",
         "reveal": "Awal, tengah, akhir.",
         "hint": "Buat kerangka."
       },
       {
         "prompt": "Apa itu amanat?",
-        "assetPath": "assets/menulis-karya.png",
+        "assetPath": "assets/menulis-karya.webp",
         "altText": "Anak menulis karya sastra di buku.",
         "reveal": "Pesan untuk pembaca.",
         "hint": "Disampaikan halus."

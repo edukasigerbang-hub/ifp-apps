@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/karya-tiga-dimensi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7686,
-      "sha256": "b7ac8b313454164d99d659e500d285a31df5a15dc3cff222d1b775948bdfdac6"
+      "path": "assets/karya-tiga-dimensi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 176844,
+      "sha256": "3a5451fbbeef3209f2ca90dcc9c701220a8ba05adcd83b74d19c88b70e3dda71"
     }
   ],
   "dependencies": [],

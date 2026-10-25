@@ -5,27 +5,27 @@
   "title": "Mengamati Teks Eksposisi",
   "instructions": "Amati gambar, lalu diskusikan ciri dan struktur eksposisi.",
   "assets": [
-    "assets/eksposisi-kelas5.png"
+    "assets/eksposisi-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa tujuan teks eksposisi?",
-        "assetPath": "assets/eksposisi-kelas5.png",
+        "assetPath": "assets/eksposisi-kelas5.webp",
         "altText": "Anak membaca teks eksposisi di sudut baca.",
         "reveal": "Menjelaskan informasi secara objektif.",
         "hint": "Memberi pengetahuan."
       },
       {
         "prompt": "Apa strukturnya?",
-        "assetPath": "assets/eksposisi-kelas5.png",
+        "assetPath": "assets/eksposisi-kelas5.webp",
         "altText": "Anak membaca teks eksposisi di sudut baca.",
         "reveal": "Tesis, argumen, dan penegasan.",
         "hint": "Diawali pernyataan."
       },
       {
         "prompt": "Bahasa apa yang dipakai?",
-        "assetPath": "assets/eksposisi-kelas5.png",
+        "assetPath": "assets/eksposisi-kelas5.webp",
         "altText": "Anak membaca teks eksposisi di sudut baca.",
         "reveal": "Baku dan jelas.",
         "hint": "Hindari bahasa gaul."

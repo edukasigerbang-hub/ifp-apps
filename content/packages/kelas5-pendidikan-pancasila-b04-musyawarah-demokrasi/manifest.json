@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/musyawarah-demokrasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5400,
-      "sha256": "ed1531741d8356cf8a57eb0a618546c36c3ac4cea8d6feac4dbd593a891a3189"
+      "path": "assets/musyawarah-demokrasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 171618,
+      "sha256": "13322340a307a2645db372435a4236e7bf7266e1187fba16e1b7ebc55621a340"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Mengamati Organ Pernapasan",
   "instructions": "Amati diagram, lalu diskusikan alur udara dan pertukaran gas.",
   "assets": [
-    "assets/sistem-pernapasan.png"
+    "assets/sistem-pernapasan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa organ pernapasan utama?",
-        "assetPath": "assets/sistem-pernapasan.png",
+        "assetPath": "assets/sistem-pernapasan.webp",
         "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
         "reveal": "Hidung, tenggorokan, dan paru-paru.",
         "hint": "Udara masuk lewat hidung."
       },
       {
         "prompt": "Di mana pertukaran gas terjadi?",
-        "assetPath": "assets/sistem-pernapasan.png",
+        "assetPath": "assets/sistem-pernapasan.webp",
         "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
         "reveal": "Alveolus di paru-paru.",
         "hint": "Oksigen masuk, karbon dioksida keluar."
       },
       {
         "prompt": "Bagaimana menjaga kesehatan pernapasan?",
-        "assetPath": "assets/sistem-pernapasan.png",
+        "assetPath": "assets/sistem-pernapasan.webp",
         "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
         "reveal": "Hindari asap, rajin olahraga, dan pakai masker.",
         "hint": "Pilih udara bersih."

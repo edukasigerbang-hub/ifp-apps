@@ -5,27 +5,27 @@
   "title": "Mengamati Cerita Narasi",
   "instructions": "Amati gambar, lalu diskusikan tokoh dan alur cerita.",
   "assets": [
-    "assets/teks-narasi-kelas5.png"
+    "assets/teks-narasi-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa ciri teks narasi?",
-        "assetPath": "assets/teks-narasi-kelas5.png",
+        "assetPath": "assets/teks-narasi-kelas5.webp",
         "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur.",
         "reveal": "Menceritakan peristiwa dengan tokoh dan alur.",
         "hint": "Ada awal, tengah, dan akhir."
       },
       {
         "prompt": "Apa itu tokoh?",
-        "assetPath": "assets/teks-narasi-kelas5.png",
+        "assetPath": "assets/teks-narasi-kelas5.webp",
         "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur.",
         "reveal": "Pelaku dalam cerita.",
         "hint": "Perhatikan wataknya."
       },
       {
         "prompt": "Bagaimana alur cerita disusun?",
-        "assetPath": "assets/teks-narasi-kelas5.png",
+        "assetPath": "assets/teks-narasi-kelas5.webp",
         "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur.",
         "reveal": "Awal memperkenalkan, tengah berisi konflik, akhir penyelesaian.",
         "hint": "Urutkan peristiwa."

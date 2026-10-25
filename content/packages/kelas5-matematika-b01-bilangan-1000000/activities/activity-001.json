@@ -5,27 +5,27 @@
   "title": "Mengamati Nilai Tempat",
   "instructions": "Amati enam kolom nilai tempat, lalu diskusikan bilangan yang ditunjukkan.",
   "assets": [
-    "assets/nilai-tempat-1000000.png"
+    "assets/nilai-tempat-1000000.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bilangan 452.316 dibaca ...",
-        "assetPath": "assets/nilai-tempat-1000000.png",
+        "assetPath": "assets/nilai-tempat-1000000.webp",
         "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna.",
         "reveal": "Empat ratus lima puluh dua ribu tiga ratus enam belas.",
         "hint": "Baca per kelompok tiga angka."
       },
       {
         "prompt": "Apa nilai tempat angka 5 pada 452.316?",
-        "assetPath": "assets/nilai-tempat-1000000.png",
+        "assetPath": "assets/nilai-tempat-1000000.webp",
         "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna.",
         "reveal": "Puluh ribuan, nilainya 50.000.",
         "hint": "Urutan: ratus ribuan, puluh ribuan, ribuan, ratusan, puluhan, satuan."
       },
       {
         "prompt": "Bagaimana membandingkan dua bilangan?",
-        "assetPath": "assets/nilai-tempat-1000000.png",
+        "assetPath": "assets/nilai-tempat-1000000.webp",
         "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna.",
         "reveal": "Bandingkan angka paling kiri lebih dahulu.",
         "hint": "Jika sama, lanjut ke angka berikutnya."

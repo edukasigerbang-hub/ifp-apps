@@ -5,27 +5,27 @@
   "title": "Mengamati Keberagaman",
   "instructions": "Amati gambar, lalu diskusikan sikap menjaga persatuan.",
   "assets": [
-    "assets/keberagaman-kelas6.png"
+    "assets/keberagaman-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Keberagaman apa yang terlihat?",
-        "assetPath": "assets/keberagaman-kelas6.png",
+        "assetPath": "assets/keberagaman-kelas6.webp",
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Suku, agama, dan budaya.",
         "hint": "Setiap siswa berbeda."
       },
       {
         "prompt": "Mengapa persatuan penting?",
-        "assetPath": "assets/keberagaman-kelas6.png",
+        "assetPath": "assets/keberagaman-kelas6.webp",
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Agar negara tetap kuat.",
         "hint": "Perbedaan bukan alasan berpecah."
       },
       {
         "prompt": "Bagaimana menerapkan toleransi?",
-        "assetPath": "assets/keberagaman-kelas6.png",
+        "assetPath": "assets/keberagaman-kelas6.webp",
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Menghargai dan tidak mengejek.",
         "hint": "Bekerja sama."

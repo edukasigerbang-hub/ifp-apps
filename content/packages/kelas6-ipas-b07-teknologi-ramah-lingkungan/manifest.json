@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/teknologi-ramah-lingkungan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6204,
-      "sha256": "fed38773c93ebea9e5443ec3644237d56e1269e17bea1a8456911a8cec0a4077"
+      "path": "assets/teknologi-ramah-lingkungan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 182132,
+      "sha256": "7c0333b86892c099c7989f5a47726456574db95e1f83cd74bcfe065facbff63b"
     }
   ],
   "dependencies": [],

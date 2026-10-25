@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kesehatan-tubuh.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "path": "assets/kesehatan-tubuh.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 179154,
+      "sha256": "51d0ab405cd583c4f2c044d1e4d0024e2945876f058c4181e48d9f4e6a2781c6"
     }
   ],
   "dependencies": [],

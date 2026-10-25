@@ -5,27 +5,27 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan mean, median, dan modus.",
   "assets": [
-    "assets/statistika.png"
+    "assets/statistika.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu mean?",
-        "assetPath": "assets/statistika.png",
+        "assetPath": "assets/statistika.webp",
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Jumlah data dibagi banyak data.",
         "hint": "Rata-rata."
       },
       {
         "prompt": "Apa itu median?",
-        "assetPath": "assets/statistika.png",
+        "assetPath": "assets/statistika.webp",
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Nilai tengah setelah data diurutkan.",
         "hint": "Bagi dua jika genap."
       },
       {
         "prompt": "Apa itu modus?",
-        "assetPath": "assets/statistika.png",
+        "assetPath": "assets/statistika.webp",
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Data yang paling sering muncul.",
         "hint": "Bisa lebih dari satu."

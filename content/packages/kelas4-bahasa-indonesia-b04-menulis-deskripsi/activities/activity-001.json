@@ -5,27 +5,27 @@
   "title": "Menyiapkan Bahan Deskripsi",
   "instructions": "Amati gambar, lalu susun bahan untuk menulis deskripsi tentang kucing.",
   "assets": [
-    "assets/menulis-deskripsi.png"
+    "assets/menulis-deskripsi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak pada gambar?",
-        "assetPath": "assets/menulis-deskripsi.png",
+        "assetPath": "assets/menulis-deskripsi.webp",
         "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya.",
         "reveal": "Anak itu menulis di buku, ditemani kucing oranye.",
         "hint": "Perhatikan buku dan pensil."
       },
       {
         "prompt": "Sebutkan tiga ciri kucing yang bisa kamu deskripsikan.",
-        "assetPath": "assets/menulis-deskripsi.png",
+        "assetPath": "assets/menulis-deskripsi.webp",
         "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya.",
         "reveal": "Contoh: warna bulu oranye, tubuh kecil, dan mata bulat.",
         "hint": "Gunakan penglihatan dan pendengaran."
       },
       {
         "prompt": "Susun kerangka: objek, ciri-ciri, lalu kesan. Apa objekmu?",
-        "assetPath": "assets/menulis-deskripsi.png",
+        "assetPath": "assets/menulis-deskripsi.webp",
         "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya.",
         "reveal": "Objek: kucing. Ciri: bulu oranye, mata bulat, suara lembut. Kesan: lucu dan menyenangkan.",
         "hint": "Mulai dari objek, lalu ciri, lalu kesan."

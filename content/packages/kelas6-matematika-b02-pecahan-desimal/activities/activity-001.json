@@ -5,27 +5,27 @@
   "title": "Mengamati Pecahan dan Desimal",
   "instructions": "Amati batang pecahan, lalu diskusikan nilai desimalnya.",
   "assets": [
-    "assets/pecahan-desimal.png"
+    "assets/pecahan-desimal.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa nilai desimal 1/2?",
-        "assetPath": "assets/pecahan-desimal.png",
+        "assetPath": "assets/pecahan-desimal.webp",
         "altText": "Batang pecahan dan nilai desimal yang setara.",
         "reveal": "0,5.",
         "hint": "Bagi 1 dengan 2."
       },
       {
         "prompt": "Berapa nilai pecahan 0,25?",
-        "assetPath": "assets/pecahan-desimal.png",
+        "assetPath": "assets/pecahan-desimal.webp",
         "altText": "Batang pecahan dan nilai desimal yang setara.",
         "reveal": "1/4.",
         "hint": "25 per seratus disederhanakan."
       },
       {
         "prompt": "Bagaimana menjumlahkan desimal?",
-        "assetPath": "assets/pecahan-desimal.png",
+        "assetPath": "assets/pecahan-desimal.webp",
         "altText": "Batang pecahan dan nilai desimal yang setara.",
         "reveal": "Sejajarkan tanda koma.",
         "hint": "Jumlahkan per nilai tempat."

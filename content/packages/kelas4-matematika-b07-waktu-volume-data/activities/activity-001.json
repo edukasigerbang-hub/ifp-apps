@@ -5,27 +5,27 @@
   "title": "Mengamati Waktu, Volume, dan Data",
   "instructions": "Amati tiga panel gambar, lalu jawab pertanyaan.",
   "assets": [
-    "assets/waktu-volume-data.png"
+    "assets/waktu-volume-data.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Pukul berapa waktu yang ditunjukkan jam pada panel pertama?",
-        "assetPath": "assets/waktu-volume-data.png",
+        "assetPath": "assets/waktu-volume-data.webp",
         "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang.",
         "reveal": "Pukul 07.30 (tujuh lewat tiga puluh menit).",
         "hint": "Jarum pendek di antara 7 dan 8; jarum panjang di angka 6."
       },
       {
         "prompt": "Berapa volume air pada gelas ukur?",
-        "assetPath": "assets/waktu-volume-data.png",
+        "assetPath": "assets/waktu-volume-data.webp",
         "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang.",
         "reveal": "Sekitar 600 mL, terbaca dari garis skala.",
         "hint": "Baca garis skala yang sejajar permukaan air."
       },
       {
         "prompt": "Data apa yang paling banyak pada diagram batang?",
-        "assetPath": "assets/waktu-volume-data.png",
+        "assetPath": "assets/waktu-volume-data.webp",
         "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang.",
         "reveal": "Batang berwarna merah paling tinggi, berarti datanya paling banyak.",
         "hint": "Bandingkan tinggi batang."

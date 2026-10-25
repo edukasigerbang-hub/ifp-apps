@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/karya-campuran.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6253,
-      "sha256": "28993a4c5cd827b23b5ac06c7f8814e454966d8f64cfacc008614bd72a6d249b"
+      "path": "assets/karya-campuran.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 155816,
+      "sha256": "c84c8e27397e436c0fd3908593b89106abe91cce55eb9071615f2760e2b56ee8"
     }
   ],
   "dependencies": [],

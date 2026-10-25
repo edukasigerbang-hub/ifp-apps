@@ -5,27 +5,27 @@
   "title": "Mengamati Suasana Puasa",
   "instructions": "Amati gambar, lalu diskusikan pengertian, waktu, dan hikmah puasa.",
   "assets": [
-    "assets/puasa.png"
+    "assets/puasa.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu puasa?",
-        "assetPath": "assets/puasa.png",
+        "assetPath": "assets/puasa.webp",
         "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
         "reveal": "Menahan diri dari makan, minum, dan hal yang membatalkan sejak fajar hingga magrib.",
         "hint": "Dilakukan dengan niat."
       },
       {
         "prompt": "Kapan waktu berbuka puasa?",
-        "assetPath": "assets/puasa.png",
+        "assetPath": "assets/puasa.webp",
         "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
         "reveal": "Saat matahari terbenam (magrib).",
         "hint": "Ditandai azan magrib."
       },
       {
         "prompt": "Apa hikmah puasa?",
-        "assetPath": "assets/puasa.png",
+        "assetPath": "assets/puasa.webp",
         "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
         "reveal": "Melatih sabar, disiplin, dan peduli kepada yang kekurangan.",
         "hint": "Rasakan lapar agar tumbuh empati."

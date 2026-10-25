@@ -5,27 +5,27 @@
   "title": "Mengamati Wujud Zat",
   "instructions": "Amati tiga panel pada gambar, lalu jawab pertanyaan tentang wujud dan perubahannya.",
   "assets": [
-    "assets/wujud-zat.png"
+    "assets/wujud-zat.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Panel pertama menunjukkan es batu. Apa wujud zatnya?",
-        "assetPath": "assets/wujud-zat.png",
+        "assetPath": "assets/wujud-zat.webp",
         "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
         "reveal": "Es batu berwujud padat.",
         "hint": "Bentuk dan volumenya tetap."
       },
       {
         "prompt": "Apa yang terjadi pada es batu jika dibiarkan di ruangan hangat?",
-        "assetPath": "assets/wujud-zat.png",
+        "assetPath": "assets/wujud-zat.webp",
         "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
         "reveal": "Es batu mencair menjadi air yang berwujud cair.",
         "hint": "Perhatikan perubahan dari panel pertama ke panel kedua."
       },
       {
         "prompt": "Apa yang terjadi pada air jika dipanaskan terus-menerus?",
-        "assetPath": "assets/wujud-zat.png",
+        "assetPath": "assets/wujud-zat.webp",
         "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
         "reveal": "Air menguap menjadi uap air yang berwujud gas.",
         "hint": "Perhatikan gelembung uap pada panel ketiga."

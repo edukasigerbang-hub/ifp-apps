@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gerak-manipulatif.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9256,
-      "sha256": "1d696e9101ebc9eb2f2b4e07369a757e185610aed44907c435c37d7e911100bc"
+      "path": "assets/gerak-manipulatif.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 195302,
+      "sha256": "11e495d5a3f3c7764298bd69e99bfff68ff57e05044770f48e1fc931232ca1c5"
     }
   ],
   "dependencies": [],

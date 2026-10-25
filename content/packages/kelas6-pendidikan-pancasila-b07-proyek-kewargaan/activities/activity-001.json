@@ -5,27 +5,27 @@
   "title": "Mengamati Proyek",
   "instructions": "Amati gambar, lalu diskusikan langkah proyek.",
   "assets": [
-    "assets/proyek-kewargaan-kelas6.png"
+    "assets/proyek-kewargaan-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa masalah yang dipilih?",
-        "assetPath": "assets/proyek-kewargaan-kelas6.png",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
         "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
         "reveal": "Masalah di lingkungan sekitar.",
         "hint": "Pilih yang penting."
       },
       {
         "prompt": "Bagaimana merencanakan?",
-        "assetPath": "assets/proyek-kewargaan-kelas6.png",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
         "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
         "reveal": "Tentukan tujuan, tugas, dan waktu.",
         "hint": "Bagi peran."
       },
       {
         "prompt": "Apa yang dilakukan setelahnya?",
-        "assetPath": "assets/proyek-kewargaan-kelas6.png",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
         "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
         "reveal": "Melaporkan dan mengevaluasi.",
         "hint": "Ceritakan pengalaman."

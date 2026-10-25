@@ -5,27 +5,27 @@
   "title": "Mengamati Diskusi",
   "instructions": "Amati gambar, lalu diskusikan cara menyampaikan pendapat.",
   "assets": [
-    "assets/diskusi-kelas6.png"
+    "assets/diskusi-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa tujuan teks diskusi?",
-        "assetPath": "assets/diskusi-kelas6.png",
+        "assetPath": "assets/diskusi-kelas6.webp",
         "altText": "Siswa berdiskusi dengan guru.",
         "reveal": "Membahas masalah dari dua sisi.",
         "hint": "Ada pro dan kontra."
       },
       {
         "prompt": "Apa itu argumen?",
-        "assetPath": "assets/diskusi-kelas6.png",
+        "assetPath": "assets/diskusi-kelas6.webp",
         "altText": "Siswa berdiskusi dengan guru.",
         "reveal": "Alasan yang mendukung pendapat.",
         "hint": "Perlu bukti."
       },
       {
         "prompt": "Bagaimana menyimpulkan?",
-        "assetPath": "assets/diskusi-kelas6.png",
+        "assetPath": "assets/diskusi-kelas6.webp",
         "altText": "Siswa berdiskusi dengan guru.",
         "reveal": "Menimbang argumen.",
         "hint": "Ambil kesimpulan adil."

@@ -20,10 +20,10 @@
   ],
   "assets": [
     {
-      "path": "assets/kelas-pancasila.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9956,
-      "sha256": "b1e7a9e30a25ccb3b68ee29498e275f09969bc96641007fa2b5922336f68d593"
+      "path": "assets/kelas-pancasila.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 187068,
+      "sha256": "ac13ae5121fa9b8e141a20f2b109bb216be13ab4e1cdd823867ca816105a77d4"
     }
   ],
   "dependencies": [],

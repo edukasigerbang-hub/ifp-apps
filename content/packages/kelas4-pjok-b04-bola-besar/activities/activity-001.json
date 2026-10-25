@@ -5,27 +5,27 @@
   "title": "Mengamati Permainan Bola Besar",
   "instructions": "Amati tiga jenis bola pada gambar, lalu diskusikan permainannya.",
   "assets": [
-    "assets/bola-besar.png"
+    "assets/bola-besar.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Olahraga apa yang menggunakan bola pada panel pertama?",
-        "assetPath": "assets/bola-besar.png",
+        "assetPath": "assets/bola-besar.webp",
         "altText": "Tiga bola besar: bola sepak, bola basket, dan bola voli.",
         "reveal": "Sepak bola; bola ditendang ke gawang.",
         "hint": "Perhatikan pola hitam-putih pada bola."
       },
       {
         "prompt": "Apa ciri permainan bola basket?",
-        "assetPath": "assets/bola-besar.png",
+        "assetPath": "assets/bola-besar.webp",
         "altText": "Tiga bola besar: bola sepak, bola basket, dan bola voli.",
         "reveal": "Bola oranye dimasukkan ke ring dengan tangan.",
         "hint": "Perhatikan warna bola dan ring."
       },
       {
         "prompt": "Apa yang diperlukan dalam permainan bola besar?",
-        "assetPath": "assets/bola-besar.png",
+        "assetPath": "assets/bola-besar.webp",
         "altText": "Tiga bola besar: bola sepak, bola basket, dan bola voli.",
         "reveal": "Kerja sama tim, teknik dasar, dan keselamatan.",
         "hint": "Permainan dilakukan beregu."

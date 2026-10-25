@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/wawancara-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6128,
-      "sha256": "14c31549f8712d3ed3b8cfc0939b9c9987f4c3c13d54d508259fbba96106afd6"
+      "path": "assets/wawancara-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 259090,
+      "sha256": "2af8723c6ea0e778555a85eaa140dedd557c0df2fed338f077e631ac6d696706"
     }
   ],
   "dependencies": [],

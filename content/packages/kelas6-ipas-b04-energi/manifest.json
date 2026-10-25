@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/energi-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8955,
-      "sha256": "dd44299b051ee3fa62c393427bc116136d20a8a19143d8cbf649720f14c7b01c"
+      "path": "assets/energi-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169240,
+      "sha256": "2e09ded036ed8f10c7513276b1a9cd02e41828b9c0ae4689d79def1f9f0972bc"
     }
   ],
   "dependencies": [],

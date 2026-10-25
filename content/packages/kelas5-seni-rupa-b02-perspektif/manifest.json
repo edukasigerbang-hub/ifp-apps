@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/perspektif.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6597,
-      "sha256": "8cf476e473d2d2ba1ac44a8a4fe0be659cb861e29658c0d5cbae56a884ee9acd"
+      "path": "assets/perspektif.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 167870,
+      "sha256": "ce87be038e51dfb190b40da4e638cd18d7c7438f5c8b8c00f8cf202d3e6ee553"
     }
   ],
   "dependencies": [],

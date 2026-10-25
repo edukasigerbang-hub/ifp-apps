@@ -5,7 +5,7 @@
   "title": "Memasangkan Kerajaan dan Letaknya",
   "instructions": "Pasangkan setiap kerajaan dengan daerah/letaknya.",
   "assets": [
-    "assets/kerajaan-nusantara.png"
+    "assets/kerajaan-nusantara.webp"
   ],
   "interactionConfig": {
     "pairs": [

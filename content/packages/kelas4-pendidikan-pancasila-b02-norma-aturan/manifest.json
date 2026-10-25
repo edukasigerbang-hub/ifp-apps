@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/antrean-kelas.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6590,
-      "sha256": "ee6e2288e6ad18c9e233f9832cbaffde75471a5f5e184cc0e642417b4cdfdbbb"
+      "path": "assets/antrean-kelas.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 176840,
+      "sha256": "2673d9f7b56f85d7afadda9d136bf000143a365b5860d4e5ea1983cacb482587"
     }
   ],
   "dependencies": [],

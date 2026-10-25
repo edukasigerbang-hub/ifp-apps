@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/laporan-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4931,
-      "sha256": "1a58835a3ace0cdc678a39e6881f047089d6e3547d4f6dab059072ef8905ef32"
+      "path": "assets/laporan-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 185526,
+      "sha256": "93097acce3d79314c5d4356a1efcf0ca69dfabd1f059a6c0dc919df9fef59f1b"
     }
   ],
   "dependencies": [],

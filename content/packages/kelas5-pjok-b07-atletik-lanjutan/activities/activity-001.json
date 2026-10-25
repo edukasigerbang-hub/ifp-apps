@@ -5,27 +5,27 @@
   "title": "Mengamati Teknik Atletik",
   "instructions": "Amati gambar, lalu diskusikan teknik setiap nomor.",
   "assets": [
-    "assets/atletik-lanjutan.png"
+    "assets/atletik-lanjutan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana start jongkok?",
-        "assetPath": "assets/atletik-lanjutan.png",
+        "assetPath": "assets/atletik-lanjutan.webp",
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Kaki menolak kuat dan pandangan ke depan.",
         "hint": "Siap berlari."
       },
       {
         "prompt": "Apa urutan lompat jauh?",
-        "assetPath": "assets/atletik-lanjutan.png",
+        "assetPath": "assets/atletik-lanjutan.webp",
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Awalan, tolakan, melayang, mendarat.",
         "hint": "Tolak satu kaki."
       },
       {
         "prompt": "Apa itu sportivitas?",
-        "assetPath": "assets/atletik-lanjutan.png",
+        "assetPath": "assets/atletik-lanjutan.webp",
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Menghargai lawan dan aturan.",
         "hint": "Tidak curang."

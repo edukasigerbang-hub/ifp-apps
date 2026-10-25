@@ -5,7 +5,7 @@
   "title": "Urutan Menanam Biji",
   "instructions": "Susun langkah menanam biji dalam urutan yang benar.",
   "assets": [
-    "assets/menanam-biji.png"
+    "assets/menanam-biji.webp"
   ],
   "interactionConfig": {
     "items": [

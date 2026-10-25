@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pemecahan-masalah-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4759,
-      "sha256": "af9dfa4dca238a72fc2550a71f3d00f0e852d7cbe7b5c0a164d4cbcd94a89a22"
+      "path": "assets/pemecahan-masalah-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 147620,
+      "sha256": "b5394c9e10dddbc0097d1a8baa012ef1e6ee13b4913339d9834af5cf481fd2c5"
     }
   ],
   "dependencies": [],

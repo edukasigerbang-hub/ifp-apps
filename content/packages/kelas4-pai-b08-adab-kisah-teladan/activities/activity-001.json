@@ -5,27 +5,27 @@
   "title": "Mengamati Adab Sehari-hari",
   "instructions": "Amati gambar, lalu diskusikan adab dan sifat teladan yang ditunjukkan.",
   "assets": [
-    "assets/adab-kisah-teladan.png"
+    "assets/adab-kisah-teladan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana adab kepada orang tua?",
-        "assetPath": "assets/adab-kisah-teladan.png",
+        "assetPath": "assets/adab-kisah-teladan.webp",
         "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman.",
         "reveal": "Menghormati, mendengarkan, dan membantu.",
         "hint": "Gunakan bahasa yang sopan."
       },
       {
         "prompt": "Bagaimana adab kepada guru dan teman?",
-        "assetPath": "assets/adab-kisah-teladan.png",
+        "assetPath": "assets/adab-kisah-teladan.webp",
         "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman.",
         "reveal": "Sopan, jujur, sabar, dan saling membantu.",
         "hint": "Antre dan tidak memotong pembicaraan."
       },
       {
         "prompt": "Sifat apa yang diteladani dari kisah Nabi dan sahabat?",
-        "assetPath": "assets/adab-kisah-teladan.png",
+        "assetPath": "assets/adab-kisah-teladan.webp",
         "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman.",
         "reveal": "Jujur, amanah, sabar, dan dermawan.",
         "hint": "Terapkan dalam kehidupan sehari-hari."

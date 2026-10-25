@@ -5,27 +5,27 @@
   "title": "Mengamati Kerja Bersama",
   "instructions": "Amati gambar, lalu diskusikan gotong royong dan musyawarah.",
   "assets": [
-    "assets/gotong-royong-kelas6.png"
+    "assets/gotong-royong-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu gotong royong?",
-        "assetPath": "assets/gotong-royong-kelas6.png",
+        "assetPath": "assets/gotong-royong-kelas6.webp",
         "altText": "Warga bekerja bersama dan bermusyawarah.",
         "reveal": "Bekerja bersama untuk kepentingan bersama.",
         "hint": "Tanpa mengharap upah."
       },
       {
         "prompt": "Apa manfaat musyawarah?",
-        "assetPath": "assets/gotong-royong-kelas6.png",
+        "assetPath": "assets/gotong-royong-kelas6.webp",
         "altText": "Warga bekerja bersama dan bermusyawarah.",
         "reveal": "Mencapai keputusan bersama.",
         "hint": "Menghargai pendapat."
       },
       {
         "prompt": "Bagaimana menerapkannya?",
-        "assetPath": "assets/gotong-royong-kelas6.png",
+        "assetPath": "assets/gotong-royong-kelas6.webp",
         "altText": "Warga bekerja bersama dan bermusyawarah.",
         "reveal": "Berbagi tugas dan bermusyawarah.",
         "hint": "Sopan dan adil."

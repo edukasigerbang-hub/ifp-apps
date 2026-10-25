@@ -5,27 +5,27 @@
   "title": "Mengamati Tindakan Pelestarian",
   "instructions": "Amati gambar, lalu diskusikan cara melestarikan lingkungan.",
   "assets": [
-    "assets/pelestarian-kelas6.png"
+    "assets/pelestarian-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Mengapa lingkungan harus dilestarikan?",
-        "assetPath": "assets/pelestarian-kelas6.png",
+        "assetPath": "assets/pelestarian-kelas6.webp",
         "altText": "Kegiatan menanam pohon dan menjaga sumber air.",
         "reveal": "Agar tetap sehat dan tersedia.",
         "hint": "Untuk generasi berikutnya."
       },
       {
         "prompt": "Bagaimana melestarikan air?",
-        "assetPath": "assets/pelestarian-kelas6.png",
+        "assetPath": "assets/pelestarian-kelas6.webp",
         "altText": "Kegiatan menanam pohon dan menjaga sumber air.",
         "reveal": "Hemat air dan jaga sumbernya.",
         "hint": "Jangan mencemari."
       },
       {
         "prompt": "Bagaimana melestarikan hutan?",
-        "assetPath": "assets/pelestarian-kelas6.png",
+        "assetPath": "assets/pelestarian-kelas6.webp",
         "altText": "Kegiatan menanam pohon dan menjaga sumber air.",
         "reveal": "Menanam dan tidak menebang sembarangan.",
         "hint": "Mencegah banjir."

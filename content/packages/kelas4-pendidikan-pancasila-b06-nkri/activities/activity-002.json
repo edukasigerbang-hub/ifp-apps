@@ -5,7 +5,7 @@
   "title": "Memasangkan Istilah dan Makna",
   "instructions": "Pasangkan setiap istilah kenegaraan dengan maknanya.",
   "assets": [
-    "assets/upacara-bendera.png"
+    "assets/upacara-bendera.webp"
   ],
   "interactionConfig": {
     "pairs": [

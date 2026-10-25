@@ -5,27 +5,27 @@
   "title": "Mengamati Kebiasaan Sehat",
   "instructions": "Amati empat panel gambar, lalu hubungkan dengan manfaatnya.",
   "assets": [
-    "assets/kebersihan-diri.png"
+    "assets/kebersihan-diri.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak pada panel pertama?",
-        "assetPath": "assets/kebersihan-diri.png",
+        "assetPath": "assets/kebersihan-diri.webp",
         "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
         "reveal": "Mencuci tangan dengan air dan sabun.",
         "hint": "Perhatikan air dan tangan."
       },
       {
         "prompt": "Mengapa menyikat gigi penting?",
-        "assetPath": "assets/kebersihan-diri.png",
+        "assetPath": "assets/kebersihan-diri.webp",
         "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
         "reveal": "Menjaga kesehatan gigi dan mulut serta mencegah gigi berlubang.",
         "hint": "Lakukan pagi dan sebelum tidur."
       },
       {
         "prompt": "Kebiasaan sehat apa lagi yang terlihat?",
-        "assetPath": "assets/kebersihan-diri.png",
+        "assetPath": "assets/kebersihan-diri.webp",
         "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
         "reveal": "Makan buah dan tidur cukup agar tubuh tetap sehat.",
         "hint": "Perhatikan panel ketiga dan keempat."

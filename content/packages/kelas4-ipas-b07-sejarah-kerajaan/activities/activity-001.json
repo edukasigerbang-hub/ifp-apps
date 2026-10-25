@@ -5,27 +5,27 @@
   "title": "Mengamati Peninggalan Kerajaan",
   "instructions": "Amati gambar peninggalan kerajaan, lalu diskusikan maknanya.",
   "assets": [
-    "assets/kerajaan-nusantara.png"
+    "assets/kerajaan-nusantara.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bangunan apa yang terlihat pada gambar?",
-        "assetPath": "assets/kerajaan-nusantara.png",
+        "assetPath": "assets/kerajaan-nusantara.webp",
         "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara.",
         "reveal": "Candi, peninggalan kerajaan masa lalu.",
         "hint": "Perhatikan bangunan bertingkat."
       },
       {
         "prompt": "Apa bukti kejayaan maritim pada gambar?",
-        "assetPath": "assets/kerajaan-nusantara.png",
+        "assetPath": "assets/kerajaan-nusantara.webp",
         "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara.",
         "reveal": "Kapal layar menunjukkan aktivitas pelayaran dan perdagangan.",
         "hint": "Perhatikan kapal di atas air."
       },
       {
         "prompt": "Mengapa prasasti penting bagi sejarah?",
-        "assetPath": "assets/kerajaan-nusantara.png",
+        "assetPath": "assets/kerajaan-nusantara.webp",
         "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara.",
         "reveal": "Prasasti mencatat peristiwa dan menjadi sumber sejarah.",
         "hint": "Perhatikan tulisan pada batu."

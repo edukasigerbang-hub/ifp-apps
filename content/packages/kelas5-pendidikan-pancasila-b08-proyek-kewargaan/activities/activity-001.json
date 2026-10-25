@@ -5,27 +5,27 @@
   "title": "Mengamati Proyek Kelas",
   "instructions": "Amati gambar, lalu diskusikan langkah merancang proyek.",
   "assets": [
-    "assets/proyek-kewargaan-kelas5.png"
+    "assets/proyek-kewargaan-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa masalah yang dipilih?",
-        "assetPath": "assets/proyek-kewargaan-kelas5.png",
+        "assetPath": "assets/proyek-kewargaan-kelas5.webp",
         "altText": "Siswa melaksanakan proyek kebersihan sekolah.",
         "reveal": "Masalah di sekitar sekolah.",
         "hint": "Pilih yang penting dan dekat."
       },
       {
         "prompt": "Bagaimana merencanakan?",
-        "assetPath": "assets/proyek-kewargaan-kelas5.png",
+        "assetPath": "assets/proyek-kewargaan-kelas5.webp",
         "altText": "Siswa melaksanakan proyek kebersihan sekolah.",
         "reveal": "Tentukan tujuan, tugas, dan waktu.",
         "hint": "Bagi peran adil."
       },
       {
         "prompt": "Apa yang dilakukan setelah proyek?",
-        "assetPath": "assets/proyek-kewargaan-kelas5.png",
+        "assetPath": "assets/proyek-kewargaan-kelas5.webp",
         "altText": "Siswa melaksanakan proyek kebersihan sekolah.",
         "reveal": "Melaporkan hasil dan evaluasi.",
         "hint": "Ceritakan pengalaman."

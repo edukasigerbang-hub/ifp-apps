@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/unsur-seni.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5520,
-      "sha256": "7a269f7e15bf260566de418ce44b533f5f65efda4a0baee468c490fa231adab5"
+      "path": "assets/unsur-seni.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 176846,
+      "sha256": "e7ae98d1152876db66a0f3009fa9e9872a79e96eed53964d6d188f7c935f9b14"
     }
   ],
   "dependencies": [],

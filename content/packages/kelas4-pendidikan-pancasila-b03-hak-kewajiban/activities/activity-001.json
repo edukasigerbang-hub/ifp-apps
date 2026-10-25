@@ -5,27 +5,27 @@
   "title": "Mengamati Hak dan Kewajiban",
   "instructions": "Amati dua panel gambar, lalu hubungkan kegiatan dengan hak atau kewajiban.",
   "assets": [
-    "assets/belajar-dan-bertugas.png"
+    "assets/belajar-dan-bertugas.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan anak pada panel kiri?",
-        "assetPath": "assets/belajar-dan-bertugas.png",
+        "assetPath": "assets/belajar-dan-bertugas.webp",
         "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah).",
         "reveal": "Anak itu belajar. Mendapat pendidikan adalah hak di rumah dan sekolah.",
         "hint": "Perhatikan buku dan meja belajar."
       },
       {
         "prompt": "Apa yang dilakukan anak pada panel kanan?",
-        "assetPath": "assets/belajar-dan-bertugas.png",
+        "assetPath": "assets/belajar-dan-bertugas.webp",
         "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah).",
         "reveal": "Anak itu menyapu. Membantu pekerjaan rumah adalah kewajiban di rumah.",
         "hint": "Perhatikan alat kebersihan."
       },
       {
         "prompt": "Mengapa hak dan kewajiban harus seimbang?",
-        "assetPath": "assets/belajar-dan-bertugas.png",
+        "assetPath": "assets/belajar-dan-bertugas.webp",
         "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah).",
         "reveal": "Agar hidup tertib, adil, dan harmonis; hak tidak dipakai untuk merugikan orang lain.",
         "hint": "Bayangkan jika semua menuntut hak tanpa menjalankan kewajiban."

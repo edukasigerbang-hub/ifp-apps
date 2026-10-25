@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gotong-royong-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5774,
-      "sha256": "db68c4a4a7fb96ec9843728e82f0fec505178f3f7bd64381d800f67c7e911d28"
+      "path": "assets/gotong-royong-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 234596,
+      "sha256": "aef56f5a0daf8e26543f3004c08e86ffb9b6de21771e652993fd3eef67292348"
     }
   ],
   "dependencies": [],

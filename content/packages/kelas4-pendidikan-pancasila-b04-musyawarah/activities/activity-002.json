@@ -5,7 +5,7 @@
   "title": "Urutan Langkah Musyawarah",
   "instructions": "Susun langkah musyawarah dalam urutan yang benar.",
   "assets": [
-    "assets/musyawarah-kelas.png"
+    "assets/musyawarah-kelas.webp"
   ],
   "interactionConfig": {
     "items": [

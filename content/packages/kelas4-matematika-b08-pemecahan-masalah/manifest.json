@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pemecahan-masalah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4759,
-      "sha256": "af9dfa4dca238a72fc2550a71f3d00f0e852d7cbe7b5c0a164d4cbcd94a89a22"
+      "path": "assets/pemecahan-masalah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 146408,
+      "sha256": "24fd8cebb4eb4494c04fe52fda1d07f10b451469037fc3602d1abbaef7ec5911"
     }
   ],
   "dependencies": [],

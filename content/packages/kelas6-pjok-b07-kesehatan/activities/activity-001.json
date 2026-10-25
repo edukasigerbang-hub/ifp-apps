@@ -5,27 +5,27 @@
   "title": "Mengamati Kebiasaan Sehat",
   "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
   "assets": [
-    "assets/kesehatan-kelas6.png"
+    "assets/kesehatan-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Kapan mencuci tangan?",
-        "assetPath": "assets/kesehatan-kelas6.png",
+        "assetPath": "assets/kesehatan-kelas6.webp",
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Sebelum makan dan setelah bermain.",
         "hint": "Gunakan sabun."
       },
       {
         "prompt": "Mengapa olahraga penting?",
-        "assetPath": "assets/kesehatan-kelas6.png",
+        "assetPath": "assets/kesehatan-kelas6.webp",
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Menjaga kebugaran.",
         "hint": "Lakukan rutin."
       },
       {
         "prompt": "Apa manfaat istirahat?",
-        "assetPath": "assets/kesehatan-kelas6.png",
+        "assetPath": "assets/kesehatan-kelas6.webp",
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Memulihkan tenaga.",
         "hint": "Tidur cukup."

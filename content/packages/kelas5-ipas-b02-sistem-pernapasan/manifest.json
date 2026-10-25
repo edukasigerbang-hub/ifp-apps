@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sistem-pernapasan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5662,
-      "sha256": "a82c4941d8e69cf817dea524980fb24efa871573ef44503c85a4e5ac24ee17a0"
+      "path": "assets/sistem-pernapasan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177748,
+      "sha256": "4bafd69b700b3ac7c671e6d11f5d4ba241a920ca932ab3974688778edb761b1b"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sejarah-islam-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4706,
-      "sha256": "f49cb5e370c9b19c7e612746f61d811a1d8234dcee891bed134c1291bdc536ad"
+      "path": "assets/sejarah-islam-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168430,
+      "sha256": "ef1f73b0c2d99be315fd62a24233b94eaaaf12b832029503de8a7250d4de1768"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/akhlak-terpuji.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6401,
-      "sha256": "cb3323e30359b952f6aafef037a5d2bc877628a5f95e8047e9dbc3dcb85e0942"
+      "path": "assets/akhlak-terpuji.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 182634,
+      "sha256": "334dc0d2e2275ad07030be1405ade800cb5d07e9e0a000db01adf50dbe379804"
     }
   ],
   "dependencies": [],

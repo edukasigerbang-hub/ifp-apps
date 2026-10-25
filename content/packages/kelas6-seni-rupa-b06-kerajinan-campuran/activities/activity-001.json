@@ -5,27 +5,27 @@
   "title": "Mengamati Bahan Campuran",
   "instructions": "Amati gambar, lalu diskusikan bahan dan hasilnya.",
   "assets": [
-    "assets/kerajinan-campuran-kelas6.png"
+    "assets/kerajinan-campuran-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bahan apa yang terlihat?",
-        "assetPath": "assets/kerajinan-campuran-kelas6.png",
+        "assetPath": "assets/kerajinan-campuran-kelas6.webp",
         "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
         "reveal": "Daun, ranting, kain, dan biji.",
         "hint": "Alam dan buatan."
       },
       {
         "prompt": "Bagaimana memilih bahan?",
-        "assetPath": "assets/kerajinan-campuran-kelas6.png",
+        "assetPath": "assets/kerajinan-campuran-kelas6.webp",
         "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
         "reveal": "Bersih, aman, mudah dibentuk.",
         "hint": "Sesuaikan karya."
       },
       {
         "prompt": "Apa perekat yang aman?",
-        "assetPath": "assets/kerajinan-campuran-kelas6.png",
+        "assetPath": "assets/kerajinan-campuran-kelas6.webp",
         "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
         "reveal": "Lem serbaguna.",
         "hint": "Gunakan sedikit."

@@ -5,27 +5,27 @@
   "title": "Menyusun Cerita",
   "instructions": "Amati gambar, lalu diskusikan langkah menulis cerita.",
   "assets": [
-    "assets/menulis-cerita-kelas5.png"
+    "assets/menulis-cerita-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang ditentukan pertama?",
-        "assetPath": "assets/menulis-cerita-kelas5.png",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
         "altText": "Anak menulis cerita di buku.",
         "reveal": "Tema cerita.",
         "hint": "Pilih pengalaman menarik."
       },
       {
         "prompt": "Bagaimana menyusun alur?",
-        "assetPath": "assets/menulis-cerita-kelas5.png",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
         "altText": "Anak menulis cerita di buku.",
         "reveal": "Awal, tengah, dan akhir.",
         "hint": "Buat kerangka dahulu."
       },
       {
         "prompt": "Apa yang diperiksa?",
-        "assetPath": "assets/menulis-cerita-kelas5.png",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
         "altText": "Anak menulis cerita di buku.",
         "reveal": "Ejaan, tanda baca, dan keruntutan.",
         "hint": "Baca ulang."

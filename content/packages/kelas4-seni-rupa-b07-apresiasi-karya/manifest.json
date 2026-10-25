@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/apresiasi-karya.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6661,
-      "sha256": "11562ca14172bc9bb10a28e8f6fc694523118e09d468b409c581d7d5bac9a6d8"
+      "path": "assets/apresiasi-karya.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 188096,
+      "sha256": "433c578e2bb0cf761daabc0e22615f406a588e43416e47ed392e5ada5c5d66a2"
     }
   ],
   "dependencies": [],

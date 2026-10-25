@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/ide-pokok-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5394,
-      "sha256": "6e1233743d87e4cef342c4f6de4a37649d556b9e5137ceaa10a8e619be800d75"
+      "path": "assets/ide-pokok-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 154346,
+      "sha256": "16454dc1a36c4c7144b8862d358708db19d0a9686bfa1ae532be0272f8aa9820"
     }
   ],
   "dependencies": [],

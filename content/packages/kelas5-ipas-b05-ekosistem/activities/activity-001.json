@@ -5,27 +5,27 @@
   "title": "Mengamati Rantai Makanan",
   "instructions": "Amati gambar, lalu diskusikan urutan rantai makanan.",
   "assets": [
-    "assets/ekosistem-kelas5.png"
+    "assets/ekosistem-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu produsen?",
-        "assetPath": "assets/ekosistem-kelas5.png",
+        "assetPath": "assets/ekosistem-kelas5.webp",
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Makhluk yang membuat makanan sendiri, seperti tumbuhan.",
         "hint": "Menggunakan energi matahari."
       },
       {
         "prompt": "Apa itu konsumen?",
-        "assetPath": "assets/ekosistem-kelas5.png",
+        "assetPath": "assets/ekosistem-kelas5.webp",
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Makhluk yang memakan makhluk lain.",
         "hint": "Belalang, burung, dan ular."
       },
       {
         "prompt": "Apa itu pengurai?",
-        "assetPath": "assets/ekosistem-kelas5.png",
+        "assetPath": "assets/ekosistem-kelas5.webp",
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Makhluk yang menguraikan sisa makhluk hidup.",
         "hint": "Bakteri dan jamur."

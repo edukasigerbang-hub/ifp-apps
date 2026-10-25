@@ -5,27 +5,27 @@
   "title": "Mengamati Kebiasaan Bugar",
   "instructions": "Amati gambar, lalu diskusikan cara menjaga kebugaran.",
   "assets": [
-    "assets/kebugaran-kelas6.png"
+    "assets/kebugaran-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang membuat bugar?",
-        "assetPath": "assets/kebugaran-kelas6.png",
+        "assetPath": "assets/kebugaran-kelas6.webp",
         "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
         "reveal": "Olahraga, gizi, dan istirahat.",
         "hint": "Lakukan rutin."
       },
       {
         "prompt": "Mengapa pemanasan penting?",
-        "assetPath": "assets/kebugaran-kelas6.png",
+        "assetPath": "assets/kebugaran-kelas6.webp",
         "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
         "reveal": "Mencegah cedera.",
         "hint": "Sebelum olahraga."
       },
       {
         "prompt": "Berapa lama istirahat cukup?",
-        "assetPath": "assets/kebugaran-kelas6.png",
+        "assetPath": "assets/kebugaran-kelas6.webp",
         "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
         "reveal": "Sekitar 8 jam.",
         "hint": "Tidur malam cukup."

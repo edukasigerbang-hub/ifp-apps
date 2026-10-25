@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/upacara-bendera.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6032,
-      "sha256": "ad6fe0079c34a1cc4513b6a893f93c26aa125f411b4447f6b6e63af4df7cae94"
+      "path": "assets/upacara-bendera.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172316,
+      "sha256": "d65cae3136b8d76fd887de207b39cfde2c0dc1394ae22d498d8a4a7b70ed81d6"
     }
   ],
   "dependencies": [],

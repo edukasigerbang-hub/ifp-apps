@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/peluang.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5600,
-      "sha256": "4135c08893232d1dbf42c18bee24c7573595bce8d28ac652861f5e66ddc7237b"
+      "path": "assets/peluang.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 152894,
+      "sha256": "8d3dee7018dbe2706c66760c799ec3f99914cafa8ed0f4640a17d6d53772ddf2"
     }
   ],
   "dependencies": [],

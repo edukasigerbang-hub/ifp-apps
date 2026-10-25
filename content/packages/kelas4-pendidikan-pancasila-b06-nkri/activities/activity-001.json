@@ -5,27 +5,27 @@
   "title": "Mengamati Upacara Bendera",
   "instructions": "Amati gambar upacara bendera, lalu diskusikan makna persatuan.",
   "assets": [
-    "assets/upacara-bendera.png"
+    "assets/upacara-bendera.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan siswa pada gambar?",
-        "assetPath": "assets/upacara-bendera.png",
+        "assetPath": "assets/upacara-bendera.webp",
         "altText": "Upacara bendera di sekolah dengan siswa berbaris dan bendera merah putih.",
         "reveal": "Siswa mengikuti upacara bendera dengan tertib.",
         "hint": "Perhatikan barisan dan bendera."
       },
       {
         "prompt": "Mengapa upacara bendera penting?",
-        "assetPath": "assets/upacara-bendera.png",
+        "assetPath": "assets/upacara-bendera.webp",
         "altText": "Upacara bendera di sekolah dengan siswa berbaris dan bendera merah putih.",
         "reveal": "Untuk menghormati lambang negara dan memperkuat persatuan.",
         "hint": "Hubungkan dengan rasa bangga sebagai bangsa."
       },
       {
         "prompt": "Apa dasar negara dan semboyan bangsa Indonesia?",
-        "assetPath": "assets/upacara-bendera.png",
+        "assetPath": "assets/upacara-bendera.webp",
         "altText": "Upacara bendera di sekolah dengan siswa berbaris dan bendera merah putih.",
         "reveal": "Dasar negara Pancasila; semboyan Bhinneka Tunggal Ika.",
         "hint": "Ingat lambang negara dan semboyan."

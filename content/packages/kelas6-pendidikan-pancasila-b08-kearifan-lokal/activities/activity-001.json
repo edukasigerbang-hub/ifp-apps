@@ -5,27 +5,27 @@
   "title": "Mengamati Kearifan Lokal",
   "instructions": "Amati gambar, lalu diskusikan budaya dan nilai lokal.",
   "assets": [
-    "assets/kearifan-lokal.png"
+    "assets/kearifan-lokal.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu kearifan lokal?",
-        "assetPath": "assets/kearifan-lokal.png",
+        "assetPath": "assets/kearifan-lokal.webp",
         "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
         "reveal": "Nilai dan kebiasaan baik masyarakat setempat.",
         "hint": "Diwariskan turun-temurun."
       },
       {
         "prompt": "Apa contohnya?",
-        "assetPath": "assets/kearifan-lokal.png",
+        "assetPath": "assets/kearifan-lokal.webp",
         "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
         "reveal": "Gotong royong, adat, dan budaya daerah.",
         "hint": "Setiap daerah berbeda."
       },
       {
         "prompt": "Bagaimana melestarikannya?",
-        "assetPath": "assets/kearifan-lokal.png",
+        "assetPath": "assets/kearifan-lokal.webp",
         "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
         "reveal": "Mengenal, menghormati, dan mempraktikkan.",
         "hint": "Tidak mengejek budaya lain."

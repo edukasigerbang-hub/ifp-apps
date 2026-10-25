@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/prosedur-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7196,
-      "sha256": "88239c490e6b747b3d00bd1a20d0edfdc3622a015d33ddf17e9501da155ecdb3"
+      "path": "assets/prosedur-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177354,
+      "sha256": "5f64a5b1d932b81dfe7f38095e052b4c1b9a092164de1fd41fff91e52c014fac"
     }
   ],
   "dependencies": [],

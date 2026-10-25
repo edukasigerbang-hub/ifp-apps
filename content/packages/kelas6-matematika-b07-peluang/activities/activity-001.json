@@ -5,27 +5,27 @@
   "title": "Mengamati Roda dan Dadu",
   "instructions": "Amati gambar, lalu diskusikan kemungkinan hasilnya.",
   "assets": [
-    "assets/peluang.png"
+    "assets/peluang.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa hasil yang mungkin pada dadu?",
-        "assetPath": "assets/peluang.png",
+        "assetPath": "assets/peluang.webp",
         "altText": "Roda putar empat warna dan dadu.",
         "reveal": "6 hasil.",
         "hint": "Angka 1 sampai 6."
       },
       {
         "prompt": "Apa peluang muncul angka 3?",
-        "assetPath": "assets/peluang.png",
+        "assetPath": "assets/peluang.webp",
         "altText": "Roda putar empat warna dan dadu.",
         "reveal": "1/6.",
         "hint": "Satu hasil dari enam."
       },
       {
         "prompt": "Berapa hasil yang mungkin pada mata uang?",
-        "assetPath": "assets/peluang.png",
+        "assetPath": "assets/peluang.webp",
         "altText": "Roda putar empat warna dan dadu.",
         "reveal": "2 hasil.",
         "hint": "Angka dan gambar."

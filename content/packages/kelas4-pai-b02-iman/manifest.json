@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/iman-ilustrasi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5292,
-      "sha256": "7f269925c376edfea92bb28102222ddac334c23325c7b89504636597215014fb"
+      "path": "assets/iman-ilustrasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 150412,
+      "sha256": "c90e6caa4dc3f31d80d07b94f4987795f0ae6493a5802ba72f93feab7c081be8"
     }
   ],
   "dependencies": [],

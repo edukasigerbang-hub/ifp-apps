@@ -17,7 +17,7 @@
     "kuis-waktu-volume"
   ],
   "assetRefs": [
-    "assets/waktu-volume-data.png"
+    "assets/waktu-volume-data.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."

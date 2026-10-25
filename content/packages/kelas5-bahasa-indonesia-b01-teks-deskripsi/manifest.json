@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/teks-deskripsi-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5585,
-      "sha256": "30654b2f4dc837176b0279ce85a9387ec70271ff4c7b1008e76201cf30ff4f49"
+      "path": "assets/teks-deskripsi-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 214118,
+      "sha256": "f2df8ea1e688c651c564e634a192057abf151146289838e46874ebcf70c0cda6"
     }
   ],
   "dependencies": [],

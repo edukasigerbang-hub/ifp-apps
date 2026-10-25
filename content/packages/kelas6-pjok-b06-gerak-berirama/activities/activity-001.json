@@ -5,27 +5,27 @@
   "title": "Mengamati Gerak Berirama",
   "instructions": "Amati gambar, lalu diskusikan gerak dan iramanya.",
   "assets": [
-    "assets/gerak-berirama.png"
+    "assets/gerak-berirama.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu gerak berirama?",
-        "assetPath": "assets/gerak-berirama.png",
+        "assetPath": "assets/gerak-berirama.webp",
         "altText": "Anak melakukan gerak berirama mengikuti irama.",
         "reveal": "Gerak yang mengikuti irama musik atau hitungan.",
         "hint": "Ada keluwesan."
       },
       {
         "prompt": "Apa unsur utamanya?",
-        "assetPath": "assets/gerak-berirama.png",
+        "assetPath": "assets/gerak-berirama.webp",
         "altText": "Anak melakukan gerak berirama mengikuti irama.",
         "reveal": "Gerak, irama, dan kekompakan.",
         "hint": "Latihan bersama."
       },
       {
         "prompt": "Mengapa kekompakan penting?",
-        "assetPath": "assets/gerak-berirama.png",
+        "assetPath": "assets/gerak-berirama.webp",
         "altText": "Anak melakukan gerak berirama mengikuti irama.",
         "reveal": "Agar gerakan serasi.",
         "hint": "Dengar hitungan."

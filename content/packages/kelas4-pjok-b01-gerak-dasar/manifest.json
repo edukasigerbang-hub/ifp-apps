@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gerak-dasar.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9314,
-      "sha256": "378bb297592a69945aa4d07585f1af520baf28d2e102fdded37533151951180a"
+      "path": "assets/gerak-dasar.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 165444,
+      "sha256": "ad7b1064bdd0052a1889137c1115711fc540919d1482525e5d8d958e4284ae4f"
     }
   ],
   "dependencies": [],

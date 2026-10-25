@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kerajaan-nusantara.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4675,
-      "sha256": "e8d3cc018af0c2fe156a73e79997e44e8456a139fafcca1f7a826f6102798a36"
+      "path": "assets/kerajaan-nusantara.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172344,
+      "sha256": "fda0e67c0cb57e08c60f9798ad2d065d039075866d04c663a208e2c74db8e127"
     }
   ],
   "dependencies": [],

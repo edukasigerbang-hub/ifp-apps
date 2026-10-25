@@ -5,27 +5,27 @@
   "title": "Mengamati Permainan Tradisional",
   "instructions": "Amati gambar, lalu diskusikan aturan dan kerja samanya.",
   "assets": [
-    "assets/permainan-tradisional.png"
+    "assets/permainan-tradisional.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Permainan tradisional apa yang kamu tahu?",
-        "assetPath": "assets/permainan-tradisional.png",
+        "assetPath": "assets/permainan-tradisional.webp",
         "altText": "Anak bermain permainan tradisional di lapangan.",
         "reveal": "Gobak sodor, engklek, dan kasti.",
         "hint": "Dimainkan bersama."
       },
       {
         "prompt": "Mengapa aturan penting?",
-        "assetPath": "assets/permainan-tradisional.png",
+        "assetPath": "assets/permainan-tradisional.webp",
         "altText": "Anak bermain permainan tradisional di lapangan.",
         "reveal": "Agar permainan adil.",
         "hint": "Semua menaati."
       },
       {
         "prompt": "Apa manfaatnya?",
-        "assetPath": "assets/permainan-tradisional.png",
+        "assetPath": "assets/permainan-tradisional.webp",
         "altText": "Anak bermain permainan tradisional di lapangan.",
         "reveal": "Melatih gerak, kerja sama, dan sportivitas.",
         "hint": "Menyenangkan."

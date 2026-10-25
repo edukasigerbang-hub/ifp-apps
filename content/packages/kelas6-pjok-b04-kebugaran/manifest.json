@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kebugaran-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9721,
-      "sha256": "001c405ce7b10069eddc4f885cea402f96de958c020be5b27589789b14574b15"
+      "path": "assets/kebugaran-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 280086,
+      "sha256": "5661e28ca04bf9dc1ce2ada968b95f87e5d52024ae1fed8832c6fda7d33069df"
     }
   ],
   "dependencies": [],

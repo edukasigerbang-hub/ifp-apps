@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bhinneka.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6602,
-      "sha256": "ae584cb2aab112dc3b5e60008e6a705bf7b99f4b3558eea964857494765f6948"
+      "path": "assets/bhinneka.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 223456,
+      "sha256": "6db913a2f1bc10b062c81c908bbb9414b5dd89e7e2264be2054a1010a254b829"
     }
   ],
   "dependencies": [],

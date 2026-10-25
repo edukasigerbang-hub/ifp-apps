@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/belajar-dan-bertugas.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5788,
-      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+      "path": "assets/belajar-dan-bertugas.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 166936,
+      "sha256": "df40cd7b18f7568503372e2170c4c82c49001dc3aa6ced66f85d946452e65b61"
     }
   ],
   "dependencies": [],

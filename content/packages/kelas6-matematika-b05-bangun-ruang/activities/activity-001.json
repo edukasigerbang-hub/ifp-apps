@@ -5,27 +5,27 @@
   "title": "Mengamati Bangun Ruang",
   "instructions": "Amati gambar, lalu diskusikan ciri dan rumusnya.",
   "assets": [
-    "assets/bangun-ruang-kelas6.png"
+    "assets/bangun-ruang-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa ciri prisma?",
-        "assetPath": "assets/bangun-ruang-kelas6.png",
+        "assetPath": "assets/bangun-ruang-kelas6.webp",
         "altText": "Kubus, balok, tabung, dan kerucut.",
         "reveal": "Dua sisi sejajar dan sisi tegak.",
         "hint": "Alas dan atas sama."
       },
       {
         "prompt": "Apa ciri limas?",
-        "assetPath": "assets/bangun-ruang-kelas6.png",
+        "assetPath": "assets/bangun-ruang-kelas6.webp",
         "altText": "Kubus, balok, tabung, dan kerucut.",
         "reveal": "Satu titik puncak.",
         "hint": "Alas berbentuk bangun datar."
       },
       {
         "prompt": "Apa rumus volume tabung?",
-        "assetPath": "assets/bangun-ruang-kelas6.png",
+        "assetPath": "assets/bangun-ruang-kelas6.webp",
         "altText": "Kubus, balok, tabung, dan kerucut.",
         "reveal": "π × r² × t.",
         "hint": "Luas alas dikali tinggi."

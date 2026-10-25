@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/unsur-prinsip-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5520,
-      "sha256": "7a269f7e15bf260566de418ce44b533f5f65efda4a0baee468c490fa231adab5"
+      "path": "assets/unsur-prinsip-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 158668,
+      "sha256": "9210a9670b155e11daeb5c2335058ea9b7a2d8636d340d2b24c9590cd0b6b904"
     }
   ],
   "dependencies": [],

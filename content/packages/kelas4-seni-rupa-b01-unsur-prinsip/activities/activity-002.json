@@ -5,7 +5,7 @@
   "title": "Memasangkan Unsur dan Contoh",
   "instructions": "Pasangkan setiap unsur seni rupa dengan contoh yang sesuai.",
   "assets": [
-    "assets/unsur-seni.png"
+    "assets/unsur-seni.webp"
   ],
   "interactionConfig": {
     "pairs": [

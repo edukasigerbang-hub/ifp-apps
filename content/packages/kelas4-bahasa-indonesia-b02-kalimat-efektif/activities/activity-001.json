@@ -5,27 +5,27 @@
   "title": "Mengamati Sudut Baca",
   "instructions": "Amati gambar sudut baca, lalu bandingkan kalimat yang efektif dan tidak efektif.",
   "assets": [
-    "assets/sudut-baca.png"
+    "assets/sudut-baca.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa saja benda yang ada di sudut baca?",
-        "assetPath": "assets/sudut-baca.png",
+        "assetPath": "assets/sudut-baca.webp",
         "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman.",
         "reveal": "Ada rak buku, buku, meja, kursi, jendela, dan tanaman.",
         "hint": "Sebutkan benda dari yang paling besar."
       },
       {
         "prompt": "Bandingkan: 'Buku-buku itu sangat banyak sekali.' dan 'Buku-buku itu banyak.' Mana yang lebih efektif?",
-        "assetPath": "assets/sudut-baca.png",
+        "assetPath": "assets/sudut-baca.webp",
         "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman.",
         "reveal": "Kalimat kedua lebih efektif karena tidak mengulang makna 'banyak'.",
         "hint": "Hindari kata yang mubazir."
       },
       {
         "prompt": "Buat satu kalimat efektif tentang sudut baca.",
-        "assetPath": "assets/sudut-baca.png",
+        "assetPath": "assets/sudut-baca.webp",
         "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman.",
         "reveal": "Contoh: Sudut baca kelas kami rapi dan nyaman.",
         "hint": "Gunakan subjek dan predikat yang jelas."

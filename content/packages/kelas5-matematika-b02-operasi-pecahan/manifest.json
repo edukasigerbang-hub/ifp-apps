@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/operasi-pecahan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5577,
-      "sha256": "883ae8bf75dda04715f0770ced36197724a3511e8152b02031398b1fdba91f6a"
+      "path": "assets/operasi-pecahan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 140658,
+      "sha256": "76bfc30fce07b570f52a4a4e80e231958b9232a0e9ac778d9216327d38a74eaa"
     }
   ],
   "dependencies": [],

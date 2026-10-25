@@ -5,27 +5,27 @@
   "title": "Mengamati Adab Sehari-hari",
   "instructions": "Amati gambar, lalu diskusikan adab dan sifat teladan.",
   "assets": [
-    "assets/adab-kelas5.png"
+    "assets/adab-kelas5.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana adab kepada orang tua?",
-        "assetPath": "assets/adab-kelas5.png",
+        "assetPath": "assets/adab-kelas5.webp",
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Menghormati dan membantu.",
         "hint": "Bahasa sopan."
       },
       {
         "prompt": "Bagaimana adab kepada guru?",
-        "assetPath": "assets/adab-kelas5.png",
+        "assetPath": "assets/adab-kelas5.webp",
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Sopan dan mendengarkan.",
         "hint": "Angkat tangan sebelum bertanya."
       },
       {
         "prompt": "Sifat apa yang diteladani?",
-        "assetPath": "assets/adab-kelas5.png",
+        "assetPath": "assets/adab-kelas5.webp",
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Jujur, sabar, dan peduli.",
         "hint": "Terapkan setiap hari."

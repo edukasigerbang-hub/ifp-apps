@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menanam-biji.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7196,
-      "sha256": "88239c490e6b747b3d00bd1a20d0edfdc3622a015d33ddf17e9501da155ecdb3"
+      "path": "assets/menanam-biji.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 157168,
+      "sha256": "d480383ad65f116218b20697f036859b44f78dc36547c9808f6af4ff6bbd7c0a"
     }
   ],
   "dependencies": [],

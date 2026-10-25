@@ -5,27 +5,27 @@
   "title": "Mengamati Keragaman Budaya",
   "instructions": "Amati gambar, lalu diskusikan keragaman budaya Indonesia.",
   "assets": [
-    "assets/keragaman-budaya.png"
+    "assets/keragaman-budaya.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa saja yang terlihat pada gambar?",
-        "assetPath": "assets/keragaman-budaya.png",
+        "assetPath": "assets/keragaman-budaya.webp",
         "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak.",
         "reveal": "Rumah adat, penari, makanan tradisional, dan kain bercorak.",
         "hint": "Perhatikan setiap bagian gambar."
       },
       {
         "prompt": "Mengapa Indonesia memiliki beragam budaya?",
-        "assetPath": "assets/keragaman-budaya.png",
+        "assetPath": "assets/keragaman-budaya.webp",
         "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak.",
         "reveal": "Karena Indonesia terdiri atas banyak suku dan daerah dengan adat yang berbeda.",
         "hint": "Hubungkan dengan jumlah pulau dan suku."
       },
       {
         "prompt": "Bagaimana sikap kita terhadap keragaman budaya?",
-        "assetPath": "assets/keragaman-budaya.png",
+        "assetPath": "assets/keragaman-budaya.webp",
         "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak.",
         "reveal": "Menghargai, mempelajari, dan melestarikan budaya daerah.",
         "hint": "Jangan mengejek budaya lain."

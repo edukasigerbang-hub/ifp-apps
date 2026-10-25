@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/peredaran-darah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5984,
-      "sha256": "c2c3719f6e8903613c7f71cd7d884a58393211e0ac597e67b326ab6a902f45ff"
+      "path": "assets/peredaran-darah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 127238,
+      "sha256": "629397b1211b9644b5ccd8241a979c4836f6641719fe2dfdf844fcef3af41380"
     }
   ],
   "dependencies": [],

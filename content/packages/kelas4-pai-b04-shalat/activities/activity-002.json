@@ -5,7 +5,7 @@
   "title": "Urutan Shalat Wajib",
   "instructions": "Susun lima shalat wajib sesuai urutan waktunya.",
   "assets": [
-    "assets/shalat-ilustrasi.png"
+    "assets/shalat-ilustrasi.webp"
   ],
   "interactionConfig": {
     "items": [

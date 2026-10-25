@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/energi-listrik.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8955,
-      "sha256": "dd44299b051ee3fa62c393427bc116136d20a8a19143d8cbf649720f14c7b01c"
+      "path": "assets/energi-listrik.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 153698,
+      "sha256": "54216d6dd03cc12147f205da9bc4c422f0195765ae59c4205fa286f3fd3552a4"
     }
   ],
   "dependencies": [],

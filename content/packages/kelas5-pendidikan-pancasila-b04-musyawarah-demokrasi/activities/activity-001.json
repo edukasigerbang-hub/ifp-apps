@@ -5,27 +5,27 @@
   "title": "Mengamati Musyawarah",
   "instructions": "Amati gambar, lalu diskusikan nilai demokrasi dalam musyawarah.",
   "assets": [
-    "assets/musyawarah-demokrasi.png"
+    "assets/musyawarah-demokrasi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu musyawarah?",
-        "assetPath": "assets/musyawarah-demokrasi.png",
+        "assetPath": "assets/musyawarah-demokrasi.webp",
         "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
         "reveal": "Membicarakan masalah bersama untuk kesepakatan.",
         "hint": "Semua diberi kesempatan."
       },
       {
         "prompt": "Apa nilai demokrasi?",
-        "assetPath": "assets/musyawarah-demokrasi.png",
+        "assetPath": "assets/musyawarah-demokrasi.webp",
         "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
         "reveal": "Kebebasan berpendapat dan menghargai perbedaan.",
         "hint": "Keputusan bersama dihormati."
       },
       {
         "prompt": "Bagaimana menyampaikan pendapat?",
-        "assetPath": "assets/musyawarah-demokrasi.png",
+        "assetPath": "assets/musyawarah-demokrasi.webp",
         "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
         "reveal": "Sopan dan tidak memotong.",
         "hint": "Angkat tangan dahulu."

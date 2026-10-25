@@ -5,27 +5,27 @@
   "title": "Mengamati Karya Tiga Dimensi",
   "instructions": "Amati gambar, lalu diskusikan bentuk dan bahannya.",
   "assets": [
-    "assets/karya-tiga-dimensi.png"
+    "assets/karya-tiga-dimensi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa ciri karya tiga dimensi?",
-        "assetPath": "assets/karya-tiga-dimensi.png",
+        "assetPath": "assets/karya-tiga-dimensi.webp",
         "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi.",
         "reveal": "Memiliki panjang, lebar, dan tinggi.",
         "hint": "Dapat dilihat dari berbagai sisi."
       },
       {
         "prompt": "Bahan apa yang dapat dipakai?",
-        "assetPath": "assets/karya-tiga-dimensi.png",
+        "assetPath": "assets/karya-tiga-dimensi.webp",
         "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi.",
         "reveal": "Tanah liat, kardus, dan bambu.",
         "hint": "Pilih yang aman."
       },
       {
         "prompt": "Bagaimana membuatnya?",
-        "assetPath": "assets/karya-tiga-dimensi.png",
+        "assetPath": "assets/karya-tiga-dimensi.webp",
         "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi.",
         "reveal": "Rancang, bentuk, lalu rapikan.",
         "hint": "Gunakan alat sesuai."

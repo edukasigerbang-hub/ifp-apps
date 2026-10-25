@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/faktor-kelipatan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8496,
-      "sha256": "559023ded44be103bcaca145339e56cc64ae6c444d6a52de44a2f8ece4760cdd"
+      "path": "assets/faktor-kelipatan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 161078,
+      "sha256": "98a3c8c750e1591f3fe597fd165dbc29dfe218205a20a9ef63b6ea02cafb487d"
     }
   ],
   "dependencies": [],

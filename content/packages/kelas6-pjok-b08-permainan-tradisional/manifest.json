@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/permainan-tradisional.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5655,
-      "sha256": "b4918b240660e6713984909948f7d8ce5169a57534c85d53904058ba0b1abae1"
+      "path": "assets/permainan-tradisional.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 235562,
+      "sha256": "86d3b0b633a436cb7f0463b58f1c1c30b4234f7d689c6dc642d890c8e53ffdbc"
     }
   ],
   "dependencies": [],

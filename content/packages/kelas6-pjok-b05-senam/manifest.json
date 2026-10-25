@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/senam-kelas6.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5678,
-      "sha256": "8754a62badbab5e2d499e0ac0ea7480cda6839254b58e6577d91c2ab9e62e0d9"
+      "path": "assets/senam-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 255034,
+      "sha256": "7065eea3ae3ec0d0275a1743f2539e9190d5f998157c472c342a685d23b5b1f4"
     }
   ],
   "dependencies": [],

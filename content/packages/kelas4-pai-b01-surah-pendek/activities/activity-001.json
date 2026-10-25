@@ -5,27 +5,27 @@
   "title": "Adab Membaca Al-Qur'an",
   "instructions": "Amati gambar, lalu diskusikan adab dan surah pendek yang kamu kenal.",
   "assets": [
-    "assets/membaca-quran.png"
+    "assets/membaca-quran.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang kamu lihat pada gambar?",
-        "assetPath": "assets/membaca-quran.png",
+        "assetPath": "assets/membaca-quran.webp",
         "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu.",
         "reveal": "Al-Qur'an di atas rehal, sajadah, jendela, dan lampu.",
         "hint": "Perhatikan kitab dan alasnya."
       },
       {
         "prompt": "Sebutkan tiga adab sebelum membaca Al-Qur'an.",
-        "assetPath": "assets/membaca-quran.png",
+        "assetPath": "assets/membaca-quran.webp",
         "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu.",
         "reveal": "Bersuci, menghadap kiblat, dan membaca dengan tenang serta tartil.",
         "hint": "Adab berkaitan dengan kebersihan dan sikap."
       },
       {
         "prompt": "Sebutkan contoh surah pendek.",
-        "assetPath": "assets/membaca-quran.png",
+        "assetPath": "assets/membaca-quran.webp",
         "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu.",
         "reveal": "Contoh: Al-Fatihah, Al-Ikhlas, Al-Falaq, dan An-Nas.",
         "hint": "Surah-surah ini sering dibaca dalam shalat."

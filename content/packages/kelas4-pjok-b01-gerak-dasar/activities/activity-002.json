@@ -5,7 +5,7 @@
   "title": "Memasangkan Gerak dan Jenisnya",
   "instructions": "Pasangkan setiap gerakan dengan jenis geraknya.",
   "assets": [
-    "assets/gerak-dasar.png"
+    "assets/gerak-dasar.webp"
   ],
   "interactionConfig": {
     "pairs": [

@@ -5,7 +5,7 @@
   "title": "Memasangkan Gerak dan Cara Melakukan",
   "instructions": "Pasangkan setiap gerak manipulatif dengan cara melakukannya.",
   "assets": [
-    "assets/gerak-manipulatif.png"
+    "assets/gerak-manipulatif.webp"
   ],
   "interactionConfig": {
     "pairs": [

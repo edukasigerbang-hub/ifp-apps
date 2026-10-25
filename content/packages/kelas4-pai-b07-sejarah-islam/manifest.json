@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sejarah-islam.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4706,
-      "sha256": "f49cb5e370c9b19c7e612746f61d811a1d8234dcee891bed134c1291bdc536ad"
+      "path": "assets/sejarah-islam.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 188530,
+      "sha256": "c4b37100bfb0d3b2e2d9fd74d25ba0935fa736c64befd4d8493f3b961c6a8b95"
     }
   ],
   "dependencies": [],

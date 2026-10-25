@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bola-besar-kelas5.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8579,
-      "sha256": "ec070fb09198309f5716ac9226603758463e48af28eef8f238eadb97cca669e1"
+      "path": "assets/bola-besar-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 286924,
+      "sha256": "84d55ec85e66e31c02237c30d7e21da30a996093e7fff2897633f22b4876fb86"
     }
   ],
   "dependencies": [],

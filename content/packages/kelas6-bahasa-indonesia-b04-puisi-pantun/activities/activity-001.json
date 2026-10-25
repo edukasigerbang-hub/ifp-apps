@@ -5,27 +5,27 @@
   "title": "Mengamati Puisi dan Pantun",
   "instructions": "Amati gambar, lalu diskusikan ciri keduanya.",
   "assets": [
-    "assets/puisi-pantun-kelas6.png"
+    "assets/puisi-pantun-kelas6.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa ciri puisi?",
-        "assetPath": "assets/puisi-pantun-kelas6.png",
+        "assetPath": "assets/puisi-pantun-kelas6.webp",
         "altText": "Anak membacakan puisi dan pantun.",
         "reveal": "Bahasa indah dan padat.",
         "hint": "Ada bait dan rima."
       },
       {
         "prompt": "Apa ciri pantun?",
-        "assetPath": "assets/puisi-pantun-kelas6.png",
+        "assetPath": "assets/puisi-pantun-kelas6.webp",
         "altText": "Anak membacakan puisi dan pantun.",
         "reveal": "Empat baris, sampiran dan isi.",
         "hint": "Rima a-b-a-b."
       },
       {
         "prompt": "Apa itu rima?",
-        "assetPath": "assets/puisi-pantun-kelas6.png",
+        "assetPath": "assets/puisi-pantun-kelas6.webp",
         "altText": "Anak membacakan puisi dan pantun.",
         "reveal": "Bunyi akhir baris.",
         "hint": "Harus serasi."

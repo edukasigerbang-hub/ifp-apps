@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bola-besar-lanjutan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8579,
-      "sha256": "ec070fb09198309f5716ac9226603758463e48af28eef8f238eadb97cca669e1"
+      "path": "assets/bola-besar-lanjutan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 254032,
+      "sha256": "c79f41318409be0f03e65174f2748a38d29b8b444bf5e5ffe73bbd063cc2eae0"
     }
   ],
   "dependencies": [],

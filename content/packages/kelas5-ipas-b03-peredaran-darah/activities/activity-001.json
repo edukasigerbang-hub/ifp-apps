@@ -5,27 +5,27 @@
   "title": "Mengamati Organ Peredaran Darah",
   "instructions": "Amati diagram, lalu diskusikan fungsi setiap organ.",
   "assets": [
-    "assets/peredaran-darah.png"
+    "assets/peredaran-darah.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa organ utama peredaran darah?",
-        "assetPath": "assets/peredaran-darah.png",
+        "assetPath": "assets/peredaran-darah.webp",
         "altText": "Diagram jantung, paru-paru, dan pembuluh darah.",
         "reveal": "Jantung.",
         "hint": "Memompa darah ke seluruh tubuh."
       },
       {
         "prompt": "Apa fungsi arteri?",
-        "assetPath": "assets/peredaran-darah.png",
+        "assetPath": "assets/peredaran-darah.webp",
         "altText": "Diagram jantung, paru-paru, dan pembuluh darah.",
         "reveal": "Membawa darah dari jantung.",
         "hint": "Pembuluh nadi."
       },
       {
         "prompt": "Apa fungsi vena?",
-        "assetPath": "assets/peredaran-darah.png",
+        "assetPath": "assets/peredaran-darah.webp",
         "altText": "Diagram jantung, paru-paru, dan pembuluh darah.",
         "reveal": "Membawa darah kembali ke jantung.",
         "hint": "Pembuluh balik."
