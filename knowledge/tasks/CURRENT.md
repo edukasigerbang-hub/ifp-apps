@@ -214,7 +214,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-25, jeda malam)
 
-**Status:** 22/152 gambar selesai (Kelas 1: 22/48) — batch 7 menambah kebersamaan, kebersihan-diri, kebugaran (indeks 19–21). Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 22** (`kelas1-seni-rupa-b06-kerajinan-bahan-alam`). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH7_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
+**Status:** 23/152 gambar selesai (Kelas 1: 23/48) — batch 7 menambah kebersamaan, kebersihan-diri, kebugaran (indeks 19–21); indeks 22 (kerajinan bahan alam) selesai terpisah. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 23** (`kelas1-pjok-b08-kesehatan-kebersihan`). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH7_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
 
 **Saat lanjut malam:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
@@ -229,5 +229,6 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - Setelah panel terlihat, `Enter` pada composer mengirim prompt (klik tombol juga berfungsi).
 - Unduhan 1K Flow kadang selesai sebagai `<uuid>.tmp` beberapa detik sebelum rename; tunggu ukuran stabil dan verifikasi `file` (JPEG 1200×896).
 - Batch 7 keluar native 1200×896; konversi canvas 1200×896 → WebP 0.9 via queue server `127.0.0.1:4789`, simpan `&grade=1`.
+- **Jalur unduh tanpa klik (dipakai sejak indeks 22):** baca `img.currentSrc` hasil generasi dari DOM → buka URL `flow-content.google/image/...` di tab kedua (same-origin) → `fetch(location.href)` → canvas 1200×896 → `toBlob('image/webp',0.9)` → POST ke queue server. Tidak perlu membuka editor/panel; JS tetap berjalan meski surface hidden. Surface hanya dibutuhkan untuk **mengirim** prompt.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 22).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 23).
