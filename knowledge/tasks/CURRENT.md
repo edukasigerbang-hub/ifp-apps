@@ -214,16 +214,18 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-26, lanjutan)
 
-**Status:** 87/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 39/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 87**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH23_2026-10-26.md`.
+**Status:** 88/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 40/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 89 (BLOCKED kuota Agen Flow)**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH24_2026-10-26.md`.
 
 **Blocker lama selesai (2026-10-26 05:55 +07:00):** tab Flow di-refresh sesuai instruksi user; banner “aktivitas yang tidak biasa” hilang, indeks 76 ternyata selesai dan tersimpan. Indeks 76–82 tuntas tanpa bypass dan tanpa ganti akun.
 
-**Blocker surface selesai (2026-10-26):** panel in-app Browser dibuka kembali oleh user; indeks 83–86 terkirim dan tuntas. Tidak ada blocker aktif. Pola kirim yang dipakai: sembunyikan `.messages-list` → `take_snapshot` (`filePath`) → uid composer → `fill` → tampilkan pesan → `Enter`; verifikasi prompt benar-benar masuk sebelum menunggu gambar.
+**Blocker surface selesai (2026-10-26):** panel in-app Browser dibuka kembali oleh user; indeks 83–86 terkirim dan tuntas. Pola kirim yang dipakai: sembunyikan `.messages-list` → `take_snapshot` (`filePath`) → uid composer → `fill` → tampilkan pesan → `Enter`; verifikasi prompt benar-benar masuk sebelum menunggu gambar.
+
+**Blocker AKTIF (2026-10-26 06:45 +07:00):** kuota Agen Flow habis saat indeks 89 — balasan Flow: “Anda telah mencapai batas kuota Agen Flow. Beralihlah ke penulisan perintah manual atau kembali lagi besok untuk melanjutkan percakapan.” Indeks 87–88 tuntas dan disimpan; indeks 89 belum menghasilkan gambar. Tidak ada bypass/ganti akun. Pilihan: tunggu kuota pulih, atau user memutuskan pemakaian mode penulisan manual Flow.
 
 **Saat lanjut:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
 2. Server antrean lokal `http://127.0.0.1:4789/` (`/tmp/ifp-queue-server.mjs`) menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`.
-3. Mulai dari indeks 87; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh `Option 1` terbaru (=s1600-rw → WebP 1200×896), QA (tanpa teks; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
+3. Mulai dari indeks 89 setelah kuota Agen Flow pulih (atau mode penulisan manual disetujui); **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh `Option 1` terbaru (=s1600-rw → WebP 1200×896), QA (tanpa teks; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
 4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
 ### Catatan operasional Flow (2026-10-25 20:47 +07:00)
@@ -238,4 +240,4 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - **Ambil resolusi penuh dari grid agent:** thumbnail di grid adalah `flow.google.com/asb/...=s512-rw`; ganti sufiks menjadi `=s1600-rw` → respons **WebP 1200×896** (bukan JPEG). `fetch` same-origin (flow.google.com) → POST blob langsung ke queue server, tanpa canvas.
 - Surface hanya dibutuhkan untuk mengirim prompt (Enter bekerja bila tab ter-attach); unduhan tidak lagi menyentuh panel.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 87).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 89; cek kuota Agen Flow lebih dulu).

@@ -42,11 +42,11 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T07:35:00+07:00",
-  "last_validation": "Batch 23 QA PASS: data, perkalian-pembagian, perkalian-dasar, bola-kecil (4 WebP 1200x896; crop 3-7x tanpa teks/angka terbaca); total 87/152",
+  "last_updated": "2026-10-26T06:45:00+07:00",
+  "last_validation": "Batch 24 QA PASS: proyek-kelas, puasa (2 WebP 1200x896; crop 3-8x tanpa teks/angka terbaca); total 88/152; indeks 89 BLOCKED kuota Agen Flow",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
-  "last_command_status": "COMPLETED",
+  "last_command_status": "BLOCKED",
   "open_wave": null,
   "dirty": true,
   "drift_detected": true,
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Kirim indeks 87 (kelas2-pendidikan-pancasila-b08-proyek-kelas) sampai 95, lalu Kelas 3 96-151; commit tiap 4 gambar + laporan; total 87/152 selesai"
+  "next_step": "Tunggu kuota Agen Flow pulih (atau user menyetujui mode penulisan manual); lanjut indeks 89 (kelas2-bahasa-indonesia-b08-puisi-pantun) sampai 95, lalu Kelas 3 96-151; commit tiap 4 gambar + laporan; total 88/152 selesai"
 }
