@@ -214,7 +214,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-25, jeda malam)
 
-**Status:** 23/152 gambar selesai (Kelas 1: 23/48) — batch 7 menambah kebersamaan, kebersihan-diri, kebugaran (indeks 19–21); indeks 22 (kerajinan bahan alam) selesai terpisah. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 23** (`kelas1-pjok-b08-kesehatan-kebersihan`). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH7_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
+**Status:** 24/152 gambar selesai (Kelas 1: 24/48) — batch 7 (19–21), indeks 22 dan 23 selesai. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 24** (`kelas1-pai-b07-kisah-nabi`). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH7_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
 
 **Saat lanjut malam:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
