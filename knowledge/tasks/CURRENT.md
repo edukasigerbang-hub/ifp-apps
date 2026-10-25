@@ -216,6 +216,8 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 **Status:** 76/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 28/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 76**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH20_2026-10-26.md`.
 
+**Blocker sementara (2026-10-26 00:25 +07:00):** indeks 76 gagal dibuat — Flow menampilkan “Kami mendapati aktivitas yang tidak biasa…” dengan tombol “Coba lagi”; satu retry tidak berhasil. Pipeline dihentikan (tidak menembus verifikasi). Perlu user membuka tab Flow, refresh/bereskan banner, lalu konfirmasi `lanjutkan`.
+
 **Saat lanjut malam:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
 2. Nyalakan ulang server antrean lokal `/tmp/ifp-queue-server.mjs` (menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`).
