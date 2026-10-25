@@ -214,12 +214,12 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-25, jeda malam)
 
-**Status:** 10/152 gambar selesai (Kelas 1: 10/48) — batch 3 menambah bentuk-pola, bercerita, bilangan-1-10. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 10**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md`, `MATERI_KELAS1-3_BATCH2_2026-10-25.md`, `MATERI_KELAS1-3_BATCH3_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
+**Status:** 13/152 gambar selesai (Kelas 1: 13/48) — batch 4 menambah bilangan-11-20, garis-warna, jalan-lari. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 13**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md`, `MATERI_KELAS1-3_BATCH2_2026-10-25.md`, `MATERI_KELAS1-3_BATCH3_2026-10-25.md`, `MATERI_KELAS1-3_BATCH4_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
 
 **Saat lanjut malam:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
 2. Nyalakan ulang server antrean lokal `/tmp/ifp-queue-server.mjs` (menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`).
-3. Mulai dari indeks 10; 3 prompt per kirim; unduh 1K, konversi 1200×896 WebP, QA (tanpa teks; tangan kanan = sisi kiri layar; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
+3. Mulai dari indeks 13; 3 prompt per kirim; unduh 1K, konversi 1200×896 WebP, QA (tanpa teks; tangan kanan = sisi kiri layar; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
 4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 10).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 13).
