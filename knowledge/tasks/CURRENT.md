@@ -211,3 +211,15 @@
 Resume minimal: `.qoder/state.json` → `.qoder/index/index-state.json` → `.qoder/context.md` → `.qoder/memory.md` → `CURRENT.md`.
 
 Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft**. Arsitektur: [ADR-0004](../decisions/ADR-0004-local-persistence.md); profil [ADR-0015](../decisions/ADR-0015-profiles-preferences.md)/[ADR-0018](../decisions/ADR-0018-profile-lifecycle.md); testing [ADR-0017](../decisions/ADR-0017-ci-e2e-harness.md)/[ADR-0019](../decisions/ADR-0019-automated-a11y-audit.md).
+
+### Handoff Aset Materi Kelas 1–3 (2026-10-25, jeda malam)
+
+**Status:** 4/152 gambar selesai — `content/materi/kelas1/` (adab, akhlak, apresiasi, aturan-rumah), commit `a8c0e91`. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 4**. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
+
+**Saat lanjut malam:**
+1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
+2. Nyalakan ulang server antrean lokal `/tmp/ifp-queue-server.mjs` (menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`).
+3. Mulai dari indeks 4; 3 prompt per kirim; unduh 1K, konversi 1200×896 WebP, QA (tanpa teks; tangan kanan = sisi kiri layar), commit per batch + laporan.
+4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
+
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 4).
