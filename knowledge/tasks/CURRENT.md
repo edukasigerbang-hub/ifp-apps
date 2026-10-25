@@ -214,14 +214,16 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-26, lanjutan)
 
-**Status:** 80/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 32/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 80**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH21_2026-10-26.md`.
+**Status:** 83/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 35/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 83**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH22_2026-10-26.md`.
 
-**Blocker lama selesai (2026-10-26 05:55 +07:00):** tab Flow di-refresh sesuai instruksi user; banner “aktivitas yang tidak biasa” hilang, indeks 76 ternyata selesai dan tersimpan. Indeks 76–79 tuntas tanpa bypass dan tanpa ganti akun. Tidak ada blocker aktif.
+**Blocker lama selesai (2026-10-26 05:55 +07:00):** tab Flow di-refresh sesuai instruksi user; banner “aktivitas yang tidak biasa” hilang, indeks 76 ternyata selesai dan tersimpan. Indeks 76–82 tuntas tanpa bypass dan tanpa ganti akun.
+
+**Blocker aktif (2026-10-26):** indeks 83 (`kelas2-matematika-b08-data`) belum terkirim. Banner “aktivitas yang tidak biasa” sudah hilang setelah satu kali refresh, tetapi surface in-app Browser berstatus `visibilityState = hidden` (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`), sehingga `Enter`/klik tidak sampai ke Flow. Tindakan: buka panel in-app Browser hingga surface terlihat, lalu lanjutkan pengiriman indeks 83. Jangan mengulang klik otomatis dan jangan ganti akun.
 
 **Saat lanjut:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
 2. Server antrean lokal `http://127.0.0.1:4789/` (`/tmp/ifp-queue-server.mjs`) menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`.
-3. Mulai dari indeks 80; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh `Option 1` terbaru (=s1600-rw → WebP 1200×896), QA (tanpa teks; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
+3. Mulai dari indeks 83; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh `Option 1` terbaru (=s1600-rw → WebP 1200×896), QA (tanpa teks; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
 4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
 ### Catatan operasional Flow (2026-10-25 20:47 +07:00)
@@ -236,4 +238,4 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - **Ambil resolusi penuh dari grid agent:** thumbnail di grid adalah `flow.google.com/asb/...=s512-rw`; ganti sufiks menjadi `=s1600-rw` → respons **WebP 1200×896** (bukan JPEG). `fetch` same-origin (flow.google.com) → POST blob langsung ke queue server, tanpa canvas.
 - Surface hanya dibutuhkan untuk mengirim prompt (Enter bekerja bila tab ter-attach); unduhan tidak lagi menyentuh panel.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 80).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 83).
