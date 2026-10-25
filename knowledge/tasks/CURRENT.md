@@ -214,7 +214,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-25, jeda malam)
 
-**Status:** 19/152 gambar selesai (Kelas 1: 19/48) — batch 6 menambah huruf-harakat, iman-allah, tolong-menolong. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 19** (`kelas1-pendidikan-pancasila-b04-kebersamaan`). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH6_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
+**Status:** 22/152 gambar selesai (Kelas 1: 22/48) — batch 7 menambah kebersamaan, kebersihan-diri, kebugaran (indeks 19–21). Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 22** (`kelas1-seni-rupa-b06-kerajinan-bahan-alam`). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH7_2026-10-25.md`. Kelas 4–6 (168 gambar) sudah selesai dan manifesnya sudah memakai WebP (`b1360fa`).
 
 **Saat lanjut malam:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
@@ -222,11 +222,12 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 3. Mulai dari indeks 19; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh 1K, konversi 1200×896 WebP, QA (tanpa teks; tangan kanan = sisi kiri layar; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
 4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
-### Blocker surface Flow (2026-10-25 20:18 +07:00)
+### Catatan operasional Flow (2026-10-25 20:47 +07:00)
 
-- Tab Flow (`/u/1/project/5b13c73f-…`) hidup di in-app Browser Qoder tetapi `document.visibilityState = hidden`; CDP input tidak terkirim (0 trusted `pointerdown`/`mousedown`/`click` pada capture listener) dan `take_screenshot` gagal `NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`. Klik otomatis diblokir classifier sampai surface terlihat.
-- Prompt indeks 19 (1050 karakter) + 2 referensi karakter (Ayu, Bima) **sudah menempel** di composer project; tombol "Mulai pembuatan" aktif.
-- Rasio composer terdeteksi **16:9** — ubah ke **4:3** sebelum mengirim (target WebP 1200×896).
-- Tindakan manual (satu klik): buka panel in-app Browser Qoder sehingga tab "Google Flow - Okt 25 - 11:46" tampil, lalu ketik `lanjutkan`. Tidak ada gambar yang dibuat sejak batch 6; 19/152 tetap.
+- Surface in-app Browser harus terlihat (`visibilityState = visible`) sebelum klik; saat hidden, CDP input tidak terkirim dan `take_screenshot` gagal (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`). Bila terjadi: minta user membuka panel; jangan mengulang klik otomatis.
+- **Rasio composer WAJIB 4:3 (`crop_landscape`)** — pernah tersetel 16:9 dan menghasilkan 1376×768 yang tidak dipakai. Cek chip setelan sebelum setiap kirim.
+- Setelah panel terlihat, `Enter` pada composer mengirim prompt (klik tombol juga berfungsi).
+- Unduhan 1K Flow kadang selesai sebagai `<uuid>.tmp` beberapa detik sebelum rename; tunggu ukuran stabil dan verifikasi `file` (JPEG 1200×896).
+- Batch 7 keluar native 1200×896; konversi canvas 1200×896 → WebP 0.9 via queue server `127.0.0.1:4789`, simpan `&grade=1`.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 19).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 22).
