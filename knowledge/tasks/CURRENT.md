@@ -212,16 +212,16 @@ Resume minimal: `.qoder/state.json` → `.qoder/index/index-state.json` → `.qo
 
 Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md). Tanpa sign-off D1–D7 dan review manusia, paket pilot tetap **draft**. Arsitektur: [ADR-0004](../decisions/ADR-0004-local-persistence.md); profil [ADR-0015](../decisions/ADR-0015-profiles-preferences.md)/[ADR-0018](../decisions/ADR-0018-profile-lifecycle.md); testing [ADR-0017](../decisions/ADR-0017-ci-e2e-harness.md)/[ADR-0019](../decisions/ADR-0019-automated-a11y-audit.md).
 
-### Handoff Aset Materi Kelas 1–3 (2026-10-25, jeda malam)
+### Handoff Aset Materi Kelas 1–3 (2026-10-26, lanjutan)
 
-**Status:** 76/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 28/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 76**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH20_2026-10-26.md`.
+**Status:** 80/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 32/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 80**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH21_2026-10-26.md`.
 
-**Blocker sementara (2026-10-26 00:25 +07:00):** indeks 76 gagal dibuat — Flow menampilkan “Kami mendapati aktivitas yang tidak biasa…” dengan tombol “Coba lagi”; satu retry tidak berhasil. Pipeline dihentikan (tidak menembus verifikasi). Perlu user membuka tab Flow, refresh/bereskan banner, lalu konfirmasi `lanjutkan`.
+**Blocker lama selesai (2026-10-26 05:55 +07:00):** tab Flow di-refresh sesuai instruksi user; banner “aktivitas yang tidak biasa” hilang, indeks 76 ternyata selesai dan tersimpan. Indeks 76–79 tuntas tanpa bypass dan tanpa ganti akun. Tidak ada blocker aktif.
 
-**Saat lanjut malam:**
+**Saat lanjut:**
 1. Pastikan sesi Google Flow masih login (akun `risetpaugeng@gmail.com`, project `5b13c73f-…`). Karakter **Ayu** (hijab, kemeja lengan panjang) dan **Bima** sudah ada.
-2. Nyalakan ulang server antrean lokal `/tmp/ifp-queue-server.mjs` (menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`).
-3. Mulai dari indeks 19; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh 1K, konversi 1200×896 WebP, QA (tanpa teks; tangan kanan = sisi kiri layar; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
+2. Server antrean lokal `http://127.0.0.1:4789/` (`/tmp/ifp-queue-server.mjs`) menyajikan `queue-kelas1-3.json`, simpan via `&grade=1|2|3`.
+3. Mulai dari indeks 80; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh `Option 1` terbaru (=s1600-rw → WebP 1200×896), QA (tanpa teks; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
 4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
 ### Catatan operasional Flow (2026-10-25 20:47 +07:00)
@@ -236,4 +236,4 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - **Ambil resolusi penuh dari grid agent:** thumbnail di grid adalah `flow.google.com/asb/...=s512-rw`; ganti sufiks menjadi `=s1600-rw` → respons **WebP 1200×896** (bukan JPEG). `fetch` same-origin (flow.google.com) → POST blob langsung ke queue server, tanpa canvas.
 - Surface hanya dibutuhkan untuk mengirim prompt (Enter bekerja bila tab ter-attach); unduhan tidak lagi menyentuh panel.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 25).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 80).

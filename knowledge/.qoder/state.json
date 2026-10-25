@@ -42,8 +42,8 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T00:26:52+07:00",
-  "last_validation": "Batch 20 QA PASS: membaca-lancar, membaca-pemahaman, ilustrasi, menulis-kalimat (4 WebP 1200x896; crop 3x verifikasi tanpa teks terbaca); total 76/152",
+  "last_updated": "2026-10-26T06:03:00+07:00",
+  "last_validation": "Batch 21 QA PASS: menulis-paragraf, menyimak-cerita, gradasi, nkri (4 WebP 1200x896; crop 3-4x tanpa teks terbaca); total 80/152",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "COMPLETED",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "BLOCKED sementara: indeks 76 gagal karena Flow \"aktivitas tidak biasa\"; user perlu refresh/bereskan banner di tab Flow lalu ketik lanjutkan; 76/152 selesai"
+  "next_step": "Lanjut indeks 80 (kelas2-seni-rupa-b08-pameran) sampai 95, lalu Kelas 3 indeks 96-151; commit tiap 4 gambar + laporan; total 80/152 selesai"
 }
