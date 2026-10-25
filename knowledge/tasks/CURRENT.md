@@ -222,4 +222,11 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 3. Mulai dari indeks 19; **satu topik per pengiriman prompt** (menggabungkan beberapa entri diblokir classifier Auto-mode); unduh 1K, konversi 1200×896 WebP, QA (tanpa teks; tangan kanan = sisi kiri layar; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis), commit per batch + laporan.
 4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
+### Blocker surface Flow (2026-10-25 20:18 +07:00)
+
+- Tab Flow (`/u/1/project/5b13c73f-…`) hidup di in-app Browser Qoder tetapi `document.visibilityState = hidden`; CDP input tidak terkirim (0 trusted `pointerdown`/`mousedown`/`click` pada capture listener) dan `take_screenshot` gagal `NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`. Klik otomatis diblokir classifier sampai surface terlihat.
+- Prompt indeks 19 (1050 karakter) + 2 referensi karakter (Ayu, Bima) **sudah menempel** di composer project; tombol "Mulai pembuatan" aktif.
+- Rasio composer terdeteksi **16:9** — ubah ke **4:3** sebelum mengirim (target WebP 1200×896).
+- Tindakan manual (satu klik): buka panel in-app Browser Qoder sehingga tab "Google Flow - Okt 25 - 11:46" tampil, lalu ketik `lanjutkan`. Tidak ada gambar yang dibuat sejak batch 6; 19/152 tetap.
+
 **Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 19).
