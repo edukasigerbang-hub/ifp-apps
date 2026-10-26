@@ -38,22 +38,6 @@ function fillSearch(value) {
   `;
 }
 
-function selectFilter(label, value) {
-  return `
-    (() => {
-      const select = document.querySelector('select[aria-label=${JSON.stringify(label)}]');
-      if (!select) return false;
-      const setter = Object.getOwnPropertyDescriptor(
-        window.HTMLSelectElement.prototype,
-        "value"
-      ).set;
-      setter.call(select, ${JSON.stringify(value)});
-      select.dispatchEvent(new Event("change", { bubbles: true }));
-      return true;
-    })()
-  `;
-}
-
 function clickGrade(value) {
   return `
     (() => {
@@ -61,6 +45,21 @@ function clickGrade(value) {
       if (!group) return false;
       const target = [...group.querySelectorAll("button")].find(
         (button) => button.textContent.trim() === ${JSON.stringify(`Kelas ${value}`)}
+      );
+      if (!target) return false;
+      target.click();
+      return true;
+    })()
+  `;
+}
+
+function clickSubject(label) {
+  return `
+    (() => {
+      const group = document.querySelector('[role="group"][aria-labelledby="filter-mapel-label"]');
+      if (!group) return false;
+      const target = [...group.querySelectorAll("button")].find(
+        (button) => button.textContent.trim() === ${JSON.stringify(label)}
       );
       if (!target) return false;
       target.click();
@@ -221,10 +220,39 @@ export async function run({ page, artifactDir, log }) {
   `);
   assert(pickerCollapsed, "Panel pilihan kelas tidak menutup setelah kelas dipilih.");
   log("Memilih kelas menutup panel dan menampilkan “Kelas 3” pada header.");
-  assert(
-    await page.evaluate(selectFilter("Filter mata pelajaran", "matematika")),
-    "Filter mata pelajaran tidak ditemukan."
+  await page.waitFor(
+    `[...document.querySelectorAll('#filter-mapel-grid img[data-lesson-thumb]')].length >= 7 &&
+     [...document.querySelectorAll('#filter-mapel-grid img[data-lesson-thumb]')].every((img) => img.complete && img.naturalWidth > 0)`,
+    { label: "thumbnail pilihan mata pelajaran" }
   );
+  const subjectTileCount = await page.evaluate(
+    `document.querySelectorAll('#filter-mapel-grid button').length`
+  );
+  log(`Pilihan mata pelajaran berupa ${subjectTileCount} tile thumbnail dari aset paket.`);
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "filter-mapel.png"));
+  assert(
+    await page.evaluate(clickSubject("Matematika")),
+    "Tile mata pelajaran Matematika tidak ditemukan."
+  );
+  await page.waitFor(
+    `document.querySelector('button[aria-controls="filter-mapel-grid"]')?.textContent.includes("Matematika")`,
+    { label: "chip mata pelajaran terpilih" }
+  );
+  const subjectPickerCollapsed = await page.evaluate(`
+    (() => {
+      const toggle = document.querySelector('button[aria-controls="filter-mapel-grid"]');
+      return (
+        toggle?.getAttribute("aria-expanded") === "false" &&
+        document.getElementById("filter-mapel-grid") === null
+      );
+    })()
+  `);
+  assert(
+    subjectPickerCollapsed,
+    "Panel pilihan mata pelajaran tidak menutup setelah mata pelajaran dipilih."
+  );
+  log("Memilih mata pelajaran menutup panel dan menampilkan “Matematika” pada header.");
   await page.waitFor(`document.body.textContent.includes("Bilangan sampai 10.000")`, {
     label: "hasil filter"
   });

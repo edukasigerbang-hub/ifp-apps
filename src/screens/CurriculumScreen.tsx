@@ -21,6 +21,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(null);
   const [classesOpen, setClassesOpen] = useState(true);
+  const [subjectsOpen, setSubjectsOpen] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -57,6 +58,16 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
       if (!entry.coverAsset) continue;
       for (const level of entry.gradeLevels) {
         if (!covers.has(level)) covers.set(level, entry);
+      }
+    }
+    return covers;
+  }, [entries]);
+  const subjectCovers = useMemo(() => {
+    const covers = new Map<string, CatalogLessonEntry>();
+    for (const entry of entries) {
+      if (!entry.coverAsset) continue;
+      for (const value of entry.subjects) {
+        if (!covers.has(value)) covers.set(value, entry);
       }
     }
     return covers;
@@ -107,32 +118,14 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
               className="mt-1 block min-h-11 w-full rounded-control border border-ink/15 px-3 text-sm"
             />
           </label>
-          <label className="text-sm">
-            Mata pelajaran
-            <select
-              value={subject ?? ""}
-              aria-label="Filter mata pelajaran"
-              onChange={(event) =>
-                setSubject(event.target.value === "" ? null : event.target.value)
-              }
-              className="mt-1 block min-h-11 rounded-control border border-ink/15 px-3 text-sm"
-            >
-              <option value="">Semua mapel</option>
-              {facets.subjects.map((value) => (
-                <option key={value} value={value}>
-                  {subjectLabel(value)}
-                </option>
-              ))}
-            </select>
-          </label>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 flex flex-col gap-3 md:flex-row">
           <button
             type="button"
             aria-expanded={classesOpen}
             aria-controls="filter-kelas-grid"
             onClick={() => setClassesOpen((open) => !open)}
-            className="flex min-h-11 w-full items-center justify-between gap-3 rounded-control border border-ink/15 bg-surface px-3 text-left text-sm hover:border-primary/40"
+            className="flex min-h-11 w-full items-center justify-between gap-3 rounded-control border border-ink/15 bg-surface px-3 text-left text-sm hover:border-primary/40 md:flex-1"
           >
             <span className="flex flex-wrap items-center gap-2">
               <span id="filter-kelas-label" className="sr-only">
@@ -159,79 +152,181 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
               <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          {classesOpen && (
-            <div
-              id="filter-kelas-grid"
-              role="group"
-              aria-labelledby="filter-kelas-label"
-              className="mt-2 grid grid-cols-4 gap-2 md:grid-cols-7"
-            >
-              <button
-                type="button"
-                aria-pressed={grade === null}
-                onClick={() => {
-                  setGrade(null);
-                  setClassesOpen(false);
-                }}
-                className={`flex min-h-11 items-center justify-center rounded-control border px-2 text-sm font-medium transition-colors ${
-                  grade === null
-                    ? "border-primary bg-primary text-white"
-                    : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+          <button
+            type="button"
+            aria-expanded={subjectsOpen}
+            aria-controls="filter-mapel-grid"
+            onClick={() => setSubjectsOpen((open) => !open)}
+            className="flex min-h-11 w-full items-center justify-between gap-3 rounded-control border border-ink/15 bg-surface px-3 text-left text-sm hover:border-primary/40 md:flex-1"
+          >
+            <span className="flex flex-wrap items-center gap-2">
+              <span id="filter-mapel-label" className="sr-only">
+                Mata pelajaran
+              </span>
+              <span
+                className={`rounded-full px-3 py-1.5 text-sm font-semibold ${
+                  subject === null ? "bg-teal/10 text-ink" : "bg-primary text-white"
                 }`}
               >
-                <span className="flex flex-col items-center gap-1.5">
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    className="h-6 w-6"
-                  >
-                    <rect x="4" y="4" width="7" height="7" rx="1.5" />
-                    <rect x="13" y="4" width="7" height="7" rx="1.5" />
-                    <rect x="4" y="13" width="7" height="7" rx="1.5" />
-                    <rect x="13" y="13" width="7" height="7" rx="1.5" />
-                  </svg>
-                  Semua kelas
-                </span>
-              </button>
-              {facets.grades.map((value) => {
-                const isActive = grade === value;
-                const cover = gradeCovers.get(value);
-                return (
-                  <button
-                    key={value}
-                    type="button"
-                    aria-pressed={isActive}
-                    onClick={() => {
-                      setGrade(value);
-                      setClassesOpen(false);
-                    }}
-                    className={`overflow-hidden rounded-control border text-center transition-colors ${
-                      isActive
-                        ? "border-primary ring-2 ring-primary"
-                        : "border-ink/15 hover:border-primary/40"
+                {subject === null ? "Semua mapel" : subjectLabel(subject)}
+              </span>
+            </span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className={`h-4 w-4 shrink-0 text-muted transition-transform ${
+                subjectsOpen ? "rotate-180" : ""
+              }`}
+            >
+              <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+        {classesOpen && (
+          <div
+            id="filter-kelas-grid"
+            role="group"
+            aria-labelledby="filter-kelas-label"
+            className="mt-2 grid grid-cols-4 gap-2 md:grid-cols-7"
+          >
+            <button
+              type="button"
+              aria-pressed={grade === null}
+              onClick={() => {
+                setGrade(null);
+                setClassesOpen(false);
+              }}
+              className={`flex min-h-11 items-center justify-center rounded-control border px-2 text-sm font-medium transition-colors ${
+                grade === null
+                  ? "border-primary bg-primary text-white"
+                  : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+              }`}
+            >
+              <span className="flex flex-col items-center gap-1.5">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-6 w-6"
+                >
+                  <rect x="4" y="4" width="7" height="7" rx="1.5" />
+                  <rect x="13" y="4" width="7" height="7" rx="1.5" />
+                  <rect x="4" y="13" width="7" height="7" rx="1.5" />
+                  <rect x="13" y="13" width="7" height="7" rx="1.5" />
+                </svg>
+                Semua kelas
+              </span>
+            </button>
+            {facets.grades.map((value) => {
+              const isActive = grade === value;
+              const cover = gradeCovers.get(value);
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  aria-pressed={isActive}
+                  onClick={() => {
+                    setGrade(value);
+                    setClassesOpen(false);
+                  }}
+                  className={`overflow-hidden rounded-control border text-center transition-colors ${
+                    isActive
+                      ? "border-primary ring-2 ring-primary"
+                      : "border-ink/15 hover:border-primary/40"
+                  }`}
+                >
+                  {cover ? (
+                    <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
+                  ) : (
+                    <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
+                  )}
+                  <span
+                    className={`block px-2 py-1.5 text-xs font-semibold ${
+                      isActive ? "bg-primary text-white" : "bg-surface text-ink"
                     }`}
                   >
-                    {cover ? (
-                      <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
-                    ) : (
-                      <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
-                    )}
-                    <span
-                      className={`block px-2 py-1.5 text-xs font-semibold ${
-                        isActive ? "bg-primary text-white" : "bg-surface text-ink"
-                      }`}
-                    >
-                      Kelas {value}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
+                    Kelas {value}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+        {subjectsOpen && (
+          <div
+            id="filter-mapel-grid"
+            role="group"
+            aria-labelledby="filter-mapel-label"
+            className="mt-2 grid grid-cols-4 gap-2 md:grid-cols-8"
+          >
+            <button
+              type="button"
+              aria-pressed={subject === null}
+              onClick={() => {
+                setSubject(null);
+                setSubjectsOpen(false);
+              }}
+              className={`flex min-h-11 items-center justify-center rounded-control border px-2 text-sm font-medium transition-colors ${
+                subject === null
+                  ? "border-primary bg-primary text-white"
+                  : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+              }`}
+            >
+              <span className="flex flex-col items-center gap-1.5">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-6 w-6"
+                >
+                  <path d="M5 5h14v14H5z" strokeLinejoin="round" />
+                  <path d="M9 5v14M15 5v14" strokeLinejoin="round" />
+                </svg>
+                Semua mapel
+              </span>
+            </button>
+            {facets.subjects.map((value) => {
+              const isActive = subject === value;
+              const cover = subjectCovers.get(value);
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  aria-pressed={isActive}
+                  onClick={() => {
+                    setSubject(value);
+                    setSubjectsOpen(false);
+                  }}
+                  className={`overflow-hidden rounded-control border text-center transition-colors ${
+                    isActive
+                      ? "border-primary ring-2 ring-primary"
+                      : "border-ink/15 hover:border-primary/40"
+                  }`}
+                >
+                  {cover ? (
+                    <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
+                  ) : (
+                    <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
+                  )}
+                  <span
+                    className={`block px-2 py-1.5 text-xs font-semibold ${
+                      isActive ? "bg-primary text-white" : "bg-surface text-ink"
+                    }`}
+                  >
+                    {subjectLabel(value)}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        )}
         <p aria-live="polite" className="mt-3 text-sm text-muted">
           {loading ? "Memuat materi…" : `${visible.length} materi ditemukan.`}
         </p>

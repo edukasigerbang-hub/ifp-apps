@@ -464,3 +464,17 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan:** `cargo fmt` sempat mereformat 13 berkas Rust lain; churn format itu dibatalkan sebelum commit (working tree hanya berisi berkas fase ini). Editor tidak diotomasi E2E karena dialog pemilih berkas native; matematika crop diuji unit dan penyimpanan data URL diuji Rust + invoke.
 
 **Sisa:** editor belum punya kontrol rotasi/mirror; tidak ada validasi dimensi minimum sumber; kompresi berhenti di target 1 MB (bukan kualitas tetap).
+
+### Handoff Filter Mapel Bergambar (2026-10-27, T-081)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: filter mata pelajaran di Jelajah Materi memakai perilaku seperti filter kelas (bukan dropdown biasa).
+
+**Perubahan kode:**
+- `src/screens/CurriculumScreen.tsx` — dropdown `<select aria-label="Filter mata pelajaran">` diganti panel collapsible: tombol header `aria-expanded`/`aria-controls="filter-mapel-grid"` dengan chip “Semua mapel” atau label mapel terpilih (label sr-only “Mata pelajaran”); grid `role="group"` berisi 8 tile (Semua mapel + 7 mapel) dengan cover `coverAsset` per mapel (peta `subjectCovers`); memilih tile menutup panel; tombol kelas & mapel kini berdampingan (`md:flex-row`, masing-masing `md:flex-1`).
+- `scripts/e2e/scenarios/home-catalog.mjs` — helper `clickSubject()`; menunggu 7 thumbnail mapel termuat, menyimpan `filter-mapel.png`, memeriksa chip “Matematika” + panel tertutup; `selectFilter` dihapus. Skenario kini **18 pemeriksaan**.
+
+**Verifikasi aktual:** `npm test` **98/98** (12 berkas) + fixture 4/4 + catalog 320/320 · `cargo test` **69/69** (tidak ada perubahan Rust) · `npm run build` PASS · `npm run a11y` **17 pemeriksaan PASS** (0 error, 7 warning; termasuk tile mapel baru) · E2E **home-catalog 18/18** · mode-switch 6/6 · smoke 8/8. Bukti visual: `filter-mapel.png` memperlihatkan 8 tile bergambar, chip “Semua mapel”, dan panel yang menutup setelah “Matematika” dipilih (`catalog-thumbnails.png`).
+
+**Catatan:** perilaku, bukan hanya tampilan — panel default terbuka seperti panel kelas, chip di header, tutup otomatis setelah memilih, dan bisa dibuka kembali. Grid mapel memakai `md:grid-cols-8` agar 8 tile muat satu baris di desktop.
+
+**Sisa:** pilihan filter belum dipertahankan saat berpindah layar; tidak ada tombol “reset semua filter”.
