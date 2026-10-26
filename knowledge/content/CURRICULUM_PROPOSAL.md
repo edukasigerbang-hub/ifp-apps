@@ -1,9 +1,9 @@
 # Proposal OD-1 — Matriks Mata Pelajaran & Kurikulum
 
-**Status:** `PROPOSED` — **BELUM DISETUJUI**. Dokumen ini bukan keputusan resmi dan tidak boleh dipakai untuk mengklaim kesesuaian kurikulum.
+**Status:** `DISETUJUI PRODUCT OWNER — MENUNGGU CURRICULUM LEAD` (sejak 2026-10-26). Persetujuan PO tercatat di [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md); keputusan belum sah untuk produksi dan tidak boleh dipakai mengklaim kesesuaian kurikulum sampai Curriculum Lead menandatangani.
 
 **Pemilik keputusan:** Product Owner + Curriculum Lead.
-**Tanggal:** 2026-10-23 · **Menghambat:** produksi konten (Fase K), schema konten final, kurikulumRefs.
+**Tanggal:** 2026-10-23 (proposal) · 2026-10-26 (persetujuan PO) · **Menghambat:** pengisian `curriculumRefs` 316 paket, klaim kurikulum, schema konten final.
 
 ## Mengapa ini harus diputuskan manusia
 
@@ -48,10 +48,11 @@ Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belu
 
 ## Kriteria penerimaan proposal
 
-- [ ] D1–D7 diputuskan dan ditandatangani Product Owner + Curriculum Lead.
+- [x] D1–D8 disetujui Product Owner (2026-10-26, via instruksi sesi; tanpa tanda tangan tertulis).
+- [ ] D1–D8 ditandatangani Curriculum Lead pada [lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md).
 - [ ] Setiap baris matriks punya referensi resmi (dokumen + pasal/halaman) di `curriculumRefs`.
-- [ ] Daftar unit minimum per kelas/mapel disepakati (OD-8).
-- [ ] Keputusan dicatat sebagai ADR-0004 (menggantikan status proposal ini).
+- [x] Daftar unit minimum per kelas/mapel disepakati: 8 unit/tahun/mapel (D7).
+- [x] Keputusan dicatat sebagai [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) (provisional).
 
 ## Yang sudah siap menyambut keputusan ini
 
@@ -59,8 +60,9 @@ Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belu
 - `curriculumRefs` sudah tersedia di manifest dan lesson.
 - Validator memberi peringatan bila `curriculumRefs` kosong.
 
-## Status D6 (2026-10-25)
+## Status D6 (2026-10-25 → 2026-10-26)
 
 - D6 diadopsi **provisional** sesuai ADR-0033: `{framework, id, version}` dengan referensi phase-level `kurikulum-merdeka` / `fase-b` / `2024`.
 - Pilot Kelas 4 B01 sudah memakai referensi ini.
-- Pemetaan per mata pelajaran/bab ke CP/ATP resmi **belum** diverifikasi; R10 tetap memerlukan Curriculum Lead.
+- Product Owner menyetujui D6 pada 2026-10-26; keputusan tetap **provisional** sampai Curriculum Lead memverifikasi referensi resmi.
+- Pemetaan per mata pelajaran/bab ke CP/ATP resmi **belum** diverifikasi; R10 tetap memerlukan Curriculum Lead dan 316 paket belum diisi.

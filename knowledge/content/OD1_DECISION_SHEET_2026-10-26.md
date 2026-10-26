@@ -1,8 +1,10 @@
 # Lembar Keputusan OD-1 — Matriks Mapel & Kurikulum (2026-10-26)
 
-**Status:** `MENUNGGU KEPUTUSAN` — **bukan approval**. Lembar ini disiapkan agar Product Owner + Curriculum Lead dapat memutuskan D1–D7 secara terpisah dari review pedagogis.
+**Status:** `DISETUJUI PRODUCT OWNER — MENUNGGU CURRICULUM LEAD`. D1–D8 disetujui Product Owner pada 2026-10-26 melalui instruksi sesi; **belum berlaku penuh** sampai Curriculum Lead menandatangani. Lihat [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md).
 **Dasar:** [CURRICULUM_PROPOSAL.md](CURRICULUM_PROPOSAL.md) · [ADR-0033](../decisions/ADR-0033-curriculum-refs-d6-provisional.md) · [review teknis 2026-10-26](REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md) · data aktual 320 paket.
 **Yang tidak boleh dilakukan agent:** mengisi tanda tangan, menaikkan `reviewStatus`, atau mengklaim kesesuaian kurikulum tanpa referensi resmi.
+
+> **Catatan persetujuan (2026-10-26):** Product Owner menyetujui D1–D8 sesuai rekomendasi pada tabel keputusan. Persetujuan dicatat sebagai instruksi sesi, **bukan tanda tangan tertulis**; nama dan tanda tangan tidak diisi oleh agent. OD-1 tetap **BELUM SAH** untuk mengisi `curriculumRefs` sampai Curriculum Lead menandatangani.
 
 ## Fakta aktual per 2026-10-26
 
@@ -35,7 +37,7 @@
 
 ## Rekomendasi tambahan (bukan bagian D1–D7)
 
-1. **Jangan tanda tangan OD-1 sebelum kedalaman diperbaiki.** 316 paket masih 3 langkah / 2 aktivitas / 4–6 item; standar internal menuntut ≥5 / ≥3 / ≥8.
+1. **Curriculum Lead sebaiknya tidak menandatangani OD-1 sebagai “siap rilis” sebelum kedalaman diperbaiki.** 316 paket masih 3 langkah / 2 aktivitas / 4–6 item; standar internal menuntut ≥5 / ≥3 / ≥8. Persetujuan D1–D8 oleh PO hanya menetapkan matriks mapel, bukan kualitas pelajaran.
 2. **Isi `curriculumRefs` per mapel/fase hanya setelah referensi resmi diverifikasi** — bukan dari ringkasan sekunder. Format phase-level saja belum memenuhi R10 untuk audit per mapel.
 3. **Perbaiki 3 grup duplikasi persis** dan 7 grup aktivitas identik sebelum review manusia, agar reviewer tidak menghabiskan waktu pada konten kembar.
 4. **Jangan memakai klaim pemasaran “sesuai Kurikulum Merdeka”** sampai `curriculumRefs` terisi dan review manusia menandatangani R1–R12.
@@ -44,14 +46,17 @@
 
 | Peran | Nama | Keputusan D1–D8 | Tanggal | Tanda tangan |
 |---|---|---|---|---|
-| Product Owner |  |  |  |  |
+| Product Owner | _(tidak diisi agent)_ | **SETUJU** D1–D8 sesuai tabel | 2026-10-26 | Disetujui via instruksi sesi (tanpa tanda tangan tertulis) |
 | Curriculum Lead |  |  |  |  |
 
-> Tanpa kedua tanda tangan, status OD-1 tetap **BELUM DISETUJUI** dan `reviewStatus` tetap `draft`.
+> Persetujuan PO belum cukup: tanpa tanda tangan Curriculum Lead, status OD-1 tetap **BELUM SAH**, `curriculumRefs` 316 paket **tidak boleh diisi**, dan `reviewStatus` tetap `draft`.
 
 ## Setelah keputusan (urutan kerja teknis)
 
-1. Catat keputusan sebagai ADR (menggantikan status `PROPOSED` proposal).
-2. Isi `curriculumRefs` untuk 316 paket sesuai fase mapel; jalankan ulang `npx tsx scripts/review-content.ts` sampai R10 = 320/320.
-3. Perbaiki kedalaman & diferensiasi; jalankan ulang review otomatis.
-4. Serahkan ke reviewer manusia untuk R1–R6, R8–R9, R12 memakai [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md).
+1. ✅ Catat keputusan PO sebagai [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) (proposal diperbarui; ADR berstatus *provisional — menunggu Curriculum Lead*).
+2. ⏳ **Curriculum Lead menandatangani** lembar ini (dan memverifikasi referensi resmi CP/ATP per mapel/fase).
+3. ⏳ Setelah tanda tangan: isi `curriculumRefs` untuk 316 paket sesuai fase mapel; jalankan ulang `npx tsx scripts/review-content.ts` sampai R10 = 320/320.
+4. ⏳ Perbaiki kedalaman & diferensiasi; jalankan ulang review otomatis.
+5. ⏳ Serahkan ke reviewer manusia untuk R1–R6, R8–R9, R12 memakai [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md).
+
+> Persetujuan PO atas D1–D8 **bukan** persetujuan rilis konten: kedalaman 316 paket, duplikasi, dan review pedagogis manusia tetap menjadi prasyarat sebelum `reviewStatus` naik.

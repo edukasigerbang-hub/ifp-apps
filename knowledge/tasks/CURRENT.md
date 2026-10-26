@@ -77,6 +77,8 @@
 | T-065 | Pilot gold Kelas 4 B01 | 4 paket v0.2.0: 5 langkah, 3 aktivitas, 10 item, 4 tujuan; aset unik; 11/12 G PASS; G10 review manusia |
 | T-066 | G8 pilot selesai | `curriculumRefs` fase-b/2024 diisi provisional (ADR-0033); validator 4/4 VALID 0 warning; G8 4/320 |
 | T-067 | Inventaris aset + prompt pack | CSV 320 aset (82 hash, 61 reuse) + 333 prompt (6 cover kelas, 7 cover mapel, 320 materi) untuk Google Flow |
+| T-068 | Review teknis 320 paket + lembar keputusan OD-1 | [Review 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md) (320/320 valid; R10 4/320; kedalaman 316 belum) + [lembar keputusan](../content/OD1_DECISION_SHEET_2026-10-26.md) D1–D8 |
+| T-069 | Persetujuan PO OD-1 | D1–D8 disetujui Product Owner 2026-10-26 ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)); Curriculum Lead belum tanda tangan; `curriculumRefs` belum diisi |
 
 ## Status prasyarat materi pembelajaran
 
@@ -92,7 +94,7 @@
 | Konten Kelas 1 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten Kelas 2 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten inti Kelas 1–6 | **DONE (draft)** | **320 paket** (Fase A 96 + Fase B/C 224); semua VALID, `curriculumRefs` kosong |
-| Daftar mapel/kurikulum (OD-1) | **PROPOSED — lembar keputusan siap** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) · [lembar keputusan 2026-10-26](../content/OD1_DECISION_SHEET_2026-10-26.md) — belum disetujui |
+| Daftar mapel/kurikulum (OD-1) | **DISETUJUI PO — MENUNGGU CURRICULUM LEAD** | [lembar keputusan 2026-10-26](../content/OD1_DECISION_SHEET_2026-10-26.md) · [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) — D1–D8 disetujui PO; tanda tangan Curriculum Lead belum ada |
 | Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; R10 4/320 BLOCKING; kedalaman 316 belum |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
 | Penyimpanan hasil lokal | **DONE** | SQLite native, transaksi attempt+respons+progress+outbox |
@@ -102,8 +104,8 @@
 
 **T-005b — Review Kelas 4 + sign-off OD-1** (butuh keputusan/reviewer manusia)
 1. ✅ Review teknis 320 paket (2026-10-26): 320/320 valid + hash; R10 4/320; R5 struktur bersih (1 peringatan lunak); kedalaman 316 paket di bawah standar; 3 grup duplikasi persis + 7 grup aktivitas identik — [laporan review](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md).
-2. ⏳ Product Owner + Curriculum Lead memutuskan D1–D8 memakai [lembar keputusan OD-1](../content/OD1_DECISION_SHEET_2026-10-26.md).
-3. ⏳ Isi `curriculumRefs` untuk 316 paket setelah keputusan; jalankan ulang `npx tsx scripts/review-content.ts` sampai R10 320/320.
+2. ✅ Product Owner menyetujui D1–D8 (2026-10-26) — [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md); ⏳ Curriculum Lead menandatangani [lembar keputusan OD-1](../content/OD1_DECISION_SHEET_2026-10-26.md).
+3. ⏳ **Setelah tanda tangan Curriculum Lead:** isi `curriculumRefs` untuk 316 paket; jalankan ulang `npx tsx scripts/review-content.ts` sampai R10 320/320.
 4. ⏳ Perbaiki kedalaman (≥5 langkah/≥3 aktivitas/≥8 item) dan duplikasi; baru setelah itu reviewer manusia menilai R1–R6, R8–R9, R12.
 5. ⏳ Tunjuk reviewer manusia (curriculum + bahasa + aksesibilitas); `reviewStatus` tetap `draft` sampai semua R1–R12 LULUS.
 
@@ -194,7 +196,7 @@
 
 | ID | Blocker | Dampak |
 |---|---|---|
-| OD-1 | Matriks mapel/kurikulum belum disetujui | Konten pilot tidak boleh diklaim selaras kurikulum |
+| OD-1 | Matriks mapel/kurikulum: PO setuju, **Curriculum Lead belum tanda tangan** | `curriculumRefs` 316 paket belum boleh diisi; konten tidak boleh diklaim selaras kurikulum |
 | — | Reviewer manusia belum ditunjuk | `reviewStatus: approved` tidak boleh disetel |
 | GAP-1 | Prototype `index.html` tidak ada | Referensi UI visual hilang |
 
