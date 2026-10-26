@@ -208,7 +208,7 @@ export function LessonPlayer() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-4xl">
+    <div className="mx-auto w-full max-w-[1400px]">
       {state.source === "managed" && state.summaries.length > 1 && (
         <section aria-label="Pilih paket konten" className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Pilih paket</p>
@@ -383,7 +383,7 @@ function LessonView({
   }
 
   return (
-    <div className="mx-auto w-full max-w-4xl">
+    <div>
       <div className="flex flex-wrap items-center gap-3">
         <StatusBadge tone={reviewTone} label={reviewLabel} />
         <StatusBadge
@@ -401,120 +401,136 @@ function LessonView({
         </span>
       </div>
 
-      <h1 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
+      <h1 className="mt-4 max-w-4xl text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
 
-      <p
-        aria-live="polite"
-        className={`mt-4 rounded-control border px-4 py-3 text-sm ${storageClasses[storage.status]}`}
+      <div
+        data-player-layout
+        className="mt-6 grid gap-x-6 gap-y-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_22rem]"
       >
-        {storage.message}
-      </p>
-
-      <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Tujuan pembelajaran</h2>
-        <ul className="mt-3 space-y-2">
-          {lesson.learningObjectives.map((objective) => (
-            <li key={objective} className="flex items-start gap-3 text-sm">
-              <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
-              {objective}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <div role="tablist" aria-label="Aktivitas pembelajaran" className="mt-6 flex flex-wrap gap-2">
-        {activities.map((activity) => {
-          const isActive = activity.activityId === activeActivity.activityId;
-          return (
-            <button
-              key={activity.activityId}
-              id={`activity-tab-${activity.activityId}`}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              aria-controls="activity-panel"
-              tabIndex={isActive ? 0 : -1}
-              onKeyDown={(event) => {
-                if (
-                  event.key !== "ArrowRight" &&
-                  event.key !== "ArrowLeft" &&
-                  event.key !== "Home" &&
-                  event.key !== "End"
-                ) {
-                  return;
-                }
-                event.preventDefault();
-                const currentIndex = activities.findIndex(
-                  (entry) => entry.activityId === activity.activityId
-                );
-                let nextIndex = currentIndex;
-                if (event.key === "ArrowRight") {
-                  nextIndex = (currentIndex + 1) % activities.length;
-                } else if (event.key === "ArrowLeft") {
-                  nextIndex = (currentIndex - 1 + activities.length) % activities.length;
-                } else if (event.key === "Home") {
-                  nextIndex = 0;
-                } else if (event.key === "End") {
-                  nextIndex = activities.length - 1;
-                }
-                const next = activities[nextIndex];
-                setActiveActivityId(next.activityId);
-                requestAnimationFrame(() => {
-                  document.getElementById(`activity-tab-${next.activityId}`)?.focus();
-                });
-              }}
-              onClick={() => setActiveActivityId(activity.activityId)}
-              className={`min-h-11 rounded-control px-4 text-sm font-medium ${
-                isActive ? "bg-navy text-white" : "border border-ink/15 bg-surface text-ink hover:bg-paper"
-              }`}
-            >
-              {activity.title}
-            </button>
-          );
-        })}
-      </div>
-
-      <section
-        id="activity-panel"
-        role="tabpanel"
-        aria-labelledby={`activity-tab-${activeActivity.activityId}`}
-        tabIndex={0}
-        className="mt-4 rounded-card border border-ink/10 bg-surface p-5 md:p-6"
-      >
-        {activeActivity.type === "exploration" ? (
-          <ExplorationActivity
-            key={activeActivity.activityId}
-            activity={activeActivity}
-            assets={contentPackage.assets}
-            onFinish={assessmentActivityId ? () => setActiveActivityId(assessmentActivityId) : undefined}
-          />
-        ) : activeActivity.type === "multiple-choice" ||
-          activeActivity.type === "true-false" ||
-          activeActivity.type === "short-answer" ? (
-          <QuizActivity
-            key={activeActivity.activityId}
-            activity={activeActivity}
-            onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
-          />
-        ) : activeActivity.type === "matching" ? (
-          <MatchingActivity
-            key={activeActivity.activityId}
-            activity={activeActivity}
-            onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
-          />
-        ) : activeActivity.type === "ordering" ? (
-          <OrderingActivity
-            key={activeActivity.activityId}
-            activity={activeActivity}
-            onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
-          />
-        ) : (
-          <p className="text-sm text-muted">
-            Tipe aktivitas <code>{activeActivity.type}</code> belum didukung di pratinjau ini.
+        <div
+          data-player-aside
+          className="space-y-4 lg:sticky lg:top-6 lg:col-start-2 lg:row-span-2 lg:row-start-1"
+        >
+          <p
+            aria-live="polite"
+            className={`rounded-control border px-4 py-3 text-sm ${storageClasses[storage.status]}`}
+          >
+            {storage.message}
           </p>
-        )}
-      </section>
+
+          <section className="rounded-card border border-ink/10 bg-surface p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+              Tujuan pembelajaran
+            </h2>
+            <ul className="mt-3 space-y-2">
+              {lesson.learningObjectives.map((objective) => (
+                <li key={objective} className="flex items-start gap-3 text-sm">
+                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
+                  {objective}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+
+        <div
+          role="tablist"
+          aria-label="Aktivitas pembelajaran"
+          className="flex flex-wrap gap-2 lg:col-start-1 lg:row-start-1"
+        >
+          {activities.map((activity) => {
+            const isActive = activity.activityId === activeActivity.activityId;
+            return (
+              <button
+                key={activity.activityId}
+                id={`activity-tab-${activity.activityId}`}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                aria-controls="activity-panel"
+                tabIndex={isActive ? 0 : -1}
+                onKeyDown={(event) => {
+                  if (
+                    event.key !== "ArrowRight" &&
+                    event.key !== "ArrowLeft" &&
+                    event.key !== "Home" &&
+                    event.key !== "End"
+                  ) {
+                    return;
+                  }
+                  event.preventDefault();
+                  const currentIndex = activities.findIndex(
+                    (entry) => entry.activityId === activity.activityId
+                  );
+                  let nextIndex = currentIndex;
+                  if (event.key === "ArrowRight") {
+                    nextIndex = (currentIndex + 1) % activities.length;
+                  } else if (event.key === "ArrowLeft") {
+                    nextIndex = (currentIndex - 1 + activities.length) % activities.length;
+                  } else if (event.key === "Home") {
+                    nextIndex = 0;
+                  } else if (event.key === "End") {
+                    nextIndex = activities.length - 1;
+                  }
+                  const next = activities[nextIndex];
+                  setActiveActivityId(next.activityId);
+                  requestAnimationFrame(() => {
+                    document.getElementById(`activity-tab-${next.activityId}`)?.focus();
+                  });
+                }}
+                onClick={() => setActiveActivityId(activity.activityId)}
+                className={`min-h-11 rounded-control px-4 text-sm font-medium ${
+                  isActive ? "bg-navy text-white" : "border border-ink/15 bg-surface text-ink hover:bg-paper"
+                }`}
+              >
+                {activity.title}
+              </button>
+            );
+          })}
+        </div>
+
+        <section
+          id="activity-panel"
+          role="tabpanel"
+          aria-labelledby={`activity-tab-${activeActivity.activityId}`}
+          tabIndex={0}
+          className="min-w-0 rounded-card border border-ink/10 bg-surface p-5 md:p-6 lg:col-start-1 lg:row-start-2"
+        >
+          {activeActivity.type === "exploration" ? (
+            <ExplorationActivity
+              key={activeActivity.activityId}
+              activity={activeActivity}
+              assets={contentPackage.assets}
+              onFinish={assessmentActivityId ? () => setActiveActivityId(assessmentActivityId) : undefined}
+            />
+          ) : activeActivity.type === "multiple-choice" ||
+            activeActivity.type === "true-false" ||
+            activeActivity.type === "short-answer" ? (
+            <QuizActivity
+              key={activeActivity.activityId}
+              activity={activeActivity}
+              onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
+            />
+          ) : activeActivity.type === "matching" ? (
+            <MatchingActivity
+              key={activeActivity.activityId}
+              activity={activeActivity}
+              onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
+            />
+          ) : activeActivity.type === "ordering" ? (
+            <OrderingActivity
+              key={activeActivity.activityId}
+              activity={activeActivity}
+              onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
+            />
+          ) : (
+            <p className="text-sm text-muted">
+              Tipe aktivitas <code>{activeActivity.type}</code> belum didukung di pratinjau ini.
+            </p>
+          )}
+        </section>
+      </div>
     </div>
   );
 }

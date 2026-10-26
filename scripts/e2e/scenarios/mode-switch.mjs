@@ -116,6 +116,10 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Jelajah Materi")`, {
     label: "shell setelah muat ulang"
   });
+  await page.waitFor(
+    `document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`,
+    { label: "mode belajar dipulihkan di shell" }
+  );
   const restoredView = await page.evaluate(`
     ({
       sidebar: Boolean(document.querySelector("aside")),

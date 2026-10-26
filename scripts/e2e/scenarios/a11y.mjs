@@ -647,7 +647,7 @@ export async function run({ page, artifactDir, log }) {
   await page.screenshot(path.join(artifactDir, "a11y-quiz-result.png"));
 
   await clickLabel(page, "Belajar");
-  await page.waitFor(`!document.querySelector("aside")`, {
+  await page.waitFor(`document.querySelector('nav[aria-label="Navigasi utama"]') === null`, {
     label: "mode belajar tanpa sidebar admin"
   });
   await page.waitFor(`document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`, {
@@ -667,6 +667,15 @@ export async function run({ page, artifactDir, log }) {
     }
   }
   await setViewport(page, 1600, 900);
+  const wideOverflow = await horizontalOverflow(page);
+  if (wideOverflow.scrollWidth > wideOverflow.clientWidth + 1) {
+    modeReflow.push({
+      rule: "reflow",
+      severity: "error",
+      message: `Player dua kolom overflow horizontal pada 1600px: ${wideOverflow.scrollWidth} > ${wideOverflow.clientWidth}.`,
+      selector: "html"
+    });
+  }
   const modeAudit = await page.evaluate(`(${auditInPage.toString()})()`);
   const modeIssues = [...modeAudit.issues, ...modeReflow];
   const modeErrors = modeIssues.filter((issue) => issue.severity === "error");
@@ -683,7 +692,7 @@ export async function run({ page, artifactDir, log }) {
   );
   await page.screenshot(path.join(artifactDir, "a11y-mode-belajar.png"));
   await clickLabel(page, "Admin");
-  await page.waitFor(`document.querySelector("aside") !== null`, {
+  await page.waitFor(`document.querySelector('nav[aria-label="Navigasi utama"]') !== null`, {
     label: "kembali mode admin"
   });
 

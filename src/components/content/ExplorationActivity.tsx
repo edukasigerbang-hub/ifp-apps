@@ -114,7 +114,7 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
         <img
           src={assetUrl}
           alt={step.altText ?? activity.accessibilityMetadata?.altText ?? "Ilustrasi aktivitas"}
-          className="mt-5 w-full max-w-xl rounded-card border border-ink/10 bg-surface"
+          className="mx-auto mt-5 block max-h-[60vh] w-auto max-w-full rounded-card border border-ink/10 bg-surface"
         />
       )}
 

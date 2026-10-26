@@ -325,6 +325,57 @@ export async function run({ page, artifactDir, log }) {
     label: "paket impor aktif"
   });
 
+  const layout = await page.evaluate(`
+    (() => {
+      const grid = document.querySelector("[data-player-layout]");
+      const aside = document.querySelector("[data-player-aside]");
+      const panel = document.querySelector("#activity-panel");
+      if (!grid || !aside || !panel) return null;
+      const g = grid.getBoundingClientRect();
+      const a = aside.getBoundingClientRect();
+      const p = panel.getBoundingClientRect();
+      return {
+        viewport: window.innerWidth,
+        gridWidth: Math.round(g.width),
+        panelWidth: Math.round(p.width),
+        asideWidth: Math.round(a.width),
+        asideRightOfPanel: a.left >= p.right - 1,
+        asidePosition: getComputedStyle(aside).position,
+        asideHeight: Math.round(a.height),
+        gridHeight: Math.round(g.height),
+        asideHasObjectives: aside.textContent.includes("Tujuan pembelajaran"),
+        overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      };
+    })()
+  `);
+  assert(layout, "Grid dua kolom Player (kolom samping + panel aktivitas) tidak ditemukan.");
+  assert(layout.asideHasObjectives, "Kartu Tujuan pembelajaran tidak berada di kolom samping.");
+  assert(!layout.overflowX, `Layout Player menyebabkan gulir horizontal (lebar ${layout.viewport}px).`);
+  if (layout.viewport >= 1024) {
+    assert(layout.asideRightOfPanel, "Pada layar lebar, kolom samping tidak berada di kanan panel aktivitas.");
+    assert(
+      layout.asidePosition === "sticky",
+      `Kolom samping tidak menempel (position: ${layout.asidePosition}).`
+    );
+    assert(
+      layout.gridHeight > layout.asideHeight + 80,
+      `Kolom samping tidak memiliki ruang menempel (grid ${layout.gridHeight}px vs kartu ${layout.asideHeight}px).`
+    );
+    assert(
+      layout.panelWidth / layout.gridWidth > 0.55,
+      `Panel aktivitas hanya ${layout.panelWidth}px dari ${layout.gridWidth}px — kolom utama terlalu sempit.`
+    );
+    log(
+      `Layout Player dua kolom pada ${layout.viewport}px: panel ${layout.panelWidth}px, samping ${layout.asideWidth}px (tinggi ${layout.asideHeight}px dalam grid ${layout.gridHeight}px, position ${layout.asidePosition}).`
+    );
+  } else {
+    assert(
+      layout.asideWidth <= layout.gridWidth,
+      "Kolom samping melebihi lebar kontainer pada layar sempit."
+    );
+    log(`Layout Player satu kolom pada ${layout.viewport}px (di bawah breakpoint lg).`);
+  }
+
   await clickButton(page, "Benar atau Salah");
   await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
     label: "kuis benar-salah"
@@ -434,6 +485,40 @@ export async function run({ page, artifactDir, log }) {
     label: "fokus kartu hasil mengurutkan"
   });
   log("Aktivitas mengurutkan dinilai 100, tersimpan, dan kartu hasil difokuskan.");
+
+  const sticky = await page.evaluate(`
+    (async () => {
+      const main = document.querySelector("#main-content");
+      const aside = document.querySelector("[data-player-aside]");
+      if (!main || !aside) return null;
+      if (main.scrollHeight <= main.clientHeight + 120) {
+        return { exercised: false, viewport: window.innerWidth };
+      }
+      const topBefore = Math.round(aside.getBoundingClientRect().top);
+      main.scrollTop = 160;
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+      const topAfter = Math.round(aside.getBoundingClientRect().top);
+      const mainTop = Math.round(main.getBoundingClientRect().top);
+      main.scrollTop = 0;
+      return {
+        exercised: true,
+        scrollTop: main.scrollHeight - main.clientHeight,
+        topBefore,
+        topAfter,
+        mainTop,
+        stuck: topAfter >= mainTop && topAfter < topBefore
+      };
+    })()
+  `);
+  if (sticky?.exercised && layout.viewport >= 1024) {
+    assert(
+      sticky.stuck,
+      `Kolom samping tidak menempel saat menggulir (top ${sticky.topBefore} → ${sticky.topAfter}, main ${sticky.mainTop}).`
+    );
+    log(`Kolom samping menempel saat menggulir (top ${sticky.topBefore} → ${sticky.topAfter}px).`);
+  } else {
+    log("Kolom samping menempel: tidak diuji (viewport sempit atau halaman tidak dapat digulir).");
+  }
 
   const profileId = await page.evaluate(
     `window.__TAURI_INTERNALS__.invoke("profile_get_active").then((profile) => profile.id)`
