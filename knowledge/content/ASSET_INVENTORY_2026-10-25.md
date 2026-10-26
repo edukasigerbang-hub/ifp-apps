@@ -42,3 +42,17 @@
 - Aset dipakai ulang bukan otomatis salah, tetapi 61 hash lintas paket menunjukkan diferensiasi visual rendah.
 - Aset materi baru sebaiknya 4:3 (1024×768 lalu downscale 800×600) agar cocok dengan Player.
 - Cover kelas/mapel sebaiknya 16:9 (1792×1024) untuk tampilan IFP.
+
+## Addendum 2026-10-26 — pasca-migrasi WebP
+
+Ringkasan di atas menggambarkan kondisi **sebelum** migrasi. Kondisi aktual setelah commit `a0667ab`:
+
+| Metrik | Nilai aktual |
+|---|---|
+| File aset paket | **320 WebP** (`image/webp`), 0 PNG |
+| Hash unik | **320** — tidak ada aset dipakai ulang lintas paket |
+| Ukuran file | min 65.794 B · median 168.504 B · maks 291.998 B · total 51,0 MB |
+| Sumber | 152 gambar Kelas 1–3 via Google Flow (batch 1–38, 1200×896) + 168 gambar Kelas 4–6 (batch 1–12) |
+| Validasi | validator repo + hash: **320/320 VALID** |
+
+Catatan diferensiasi visual kini ditangani per paket: setiap paket punya hash aset sendiri. Rujukan bukti QA per batch ada di `MATERI_*_BATCH*.md`; review teknis konten terbaru ada di [REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md](REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md).

@@ -92,19 +92,20 @@
 | Konten Kelas 1 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten Kelas 2 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten inti Kelas 1–6 | **DONE (draft)** | **320 paket** (Fase A 96 + Fase B/C 224); semua VALID, `curriculumRefs` kosong |
-| Daftar mapel/kurikulum (OD-1) | **PROPOSED** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) — belum disetujui |
-| Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Laporan review](../content/REVIEW_REPORT_2026-10-23.md) — R10 curriculumRefs masih BLOCKING |
+| Daftar mapel/kurikulum (OD-1) | **PROPOSED — lembar keputusan siap** | [CURRICULUM_PROPOSAL.md](../content/CURRICULUM_PROPOSAL.md) · [lembar keputusan 2026-10-26](../content/OD1_DECISION_SHEET_2026-10-26.md) — belum disetujui |
+| Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; R10 4/320 BLOCKING; kedalaman 316 belum |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
 | Penyimpanan hasil lokal | **DONE** | SQLite native, transaksi attempt+respons+progress+outbox |
-| Hak/lisensi aset | **BELUM** | Belum ada aset produksi |
+| Hak/lisensi aset | **TERDOKUMENTASI** | 320 aset internal via Google Flow (inventaris + laporan batch); tanpa lisensi pihak ketiga |
 
 ## Next task
 
 **T-005b — Review Kelas 4 + sign-off OD-1** (butuh keputusan/reviewer manusia)
-1. Tunjuk reviewer (curriculum + bahasa + aksesibilitas).
-2. Review 320 paket draft dengan [rubrik R1–R12](../content/REVIEW_RUBRIC.md); lembar kerja teknis: [laporan audit](../content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md).
-3. Product Owner + Curriculum Lead memutuskan D3–D7 → isi `curriculumRefs`.
-4. Baru setelah itu `reviewStatus` boleh naik dari `draft`.
+1. ✅ Review teknis 320 paket (2026-10-26): 320/320 valid + hash; R10 4/320; R5 struktur bersih (1 peringatan lunak); kedalaman 316 paket di bawah standar; 3 grup duplikasi persis + 7 grup aktivitas identik — [laporan review](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md).
+2. ⏳ Product Owner + Curriculum Lead memutuskan D1–D8 memakai [lembar keputusan OD-1](../content/OD1_DECISION_SHEET_2026-10-26.md).
+3. ⏳ Isi `curriculumRefs` untuk 316 paket setelah keputusan; jalankan ulang `npx tsx scripts/review-content.ts` sampai R10 320/320.
+4. ⏳ Perbaiki kedalaman (≥5 langkah/≥3 aktivitas/≥8 item) dan duplikasi; baru setelah itu reviewer manusia menilai R1–R6, R8–R9, R12.
+5. ⏳ Tunjuk reviewer manusia (curriculum + bahasa + aksesibilitas); `reviewStatus` tetap `draft` sampai semua R1–R12 LULUS.
 
 **T-009 acceptance — BLOCKED** (tidak ada perangkat Android 14 fisik / Windows 11 / panel 4K; lihat [readiness](../device/DEVICE_SPIKE_READINESS.md)).
 
