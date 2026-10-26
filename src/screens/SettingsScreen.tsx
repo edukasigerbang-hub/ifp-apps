@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { open } from "@tauri-apps/plugin-dialog";
 import { PageHeader } from "../components/ui/PageHeader";
+import { ProfileAvatar } from "../components/profile/ProfileAvatar";
 import { canPersistLocally } from "../data/learningRepository";
 import {
   exportBackup,
@@ -11,12 +13,14 @@ import {
 } from "../data/backupRepository";
 import { exportDiagnostics, pickDiagnosticsDestination } from "../data/diagnosticsRepository";
 import {
+  clearProfileAvatar,
   createProfile,
   deleteProfile,
   getActiveProfile,
   listProfiles,
   renameProfile,
   setActiveProfile,
+  setProfileAvatar,
   type Profile
 } from "../data/profileRepository";
 import {
@@ -286,8 +290,46 @@ export function SettingsScreen() {
     }
   }
 
-  async function handleDeleteProfile(profile: Profile, deleteData: boolean) {
+  async function handleAvatarPick() {
+    if (!activeProfile) return;
     setProfileError(null);
+    setProfileMessage(null);
+    try {
+      const picked = await open({
+        multiple: false,
+        directory: false,
+        title: "Pilih foto profil",
+        filters: [{ name: "Gambar", extensions: ["png", "jpg", "jpeg", "webp"] }]
+      });
+      if (!picked || Array.isArray(picked)) return;
+      setProfileBusy(true);
+      const updated = await setProfileAvatar(activeProfile.id, picked);
+      await reloadProfiles();
+      setProfileMessage(`Foto profil "${updated.displayName}" diperbarui.`);
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleAvatarClear() {
+    if (!activeProfile) return;
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const updated = await clearProfileAvatar(activeProfile.id);
+      await reloadProfiles();
+      setProfileMessage(`Foto profil "${updated.displayName}" dihapus.`);
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleDeleteProfile(profile: Profile, deleteData: boolean) {    setProfileError(null);
     setProfileMessage(null);
     setProfileBusy(true);
     try {
@@ -353,6 +395,10 @@ export function SettingsScreen() {
                     className="rounded-control border border-ink/10 bg-paper/60"
                   >
                     <div className="flex flex-wrap items-center gap-2 p-2">
+                      <ProfileAvatar
+                        profile={profile}
+                        className="h-11 w-11 shrink-0 rounded-full text-sm"
+                      />
                       <button
                         type="button"
                         aria-pressed={active}
@@ -432,6 +478,30 @@ export function SettingsScreen() {
                         </div>
                       )}
                     </div>
+
+                    {active && (
+                      <div className="flex flex-wrap items-center gap-2 border-t border-ink/10 px-3 py-2">
+                        <button
+                          type="button"
+                          onClick={() => void handleAvatarPick()}
+                          disabled={profileBusy || isRenaming}
+                          className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                        >
+                          {profile.hasAvatar ? "Ganti foto…" : "Pilih foto…"}
+                        </button>
+                        {profile.hasAvatar && (
+                          <button
+                            type="button"
+                            onClick={() => void handleAvatarClear()}
+                            disabled={profileBusy}
+                            className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                          >
+                            Hapus foto
+                          </button>
+                        )}
+                        <span className="text-xs text-muted">PNG/JPEG/WebP, maks 1,5 MB</span>
+                      </div>
+                    )}
 
                     {candidate && (
                       <div className="border-t border-ink/10 p-3">
@@ -581,7 +651,7 @@ export function SettingsScreen() {
         <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
           <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Backup & Restore</h2>
           <p className="mt-3 text-sm text-muted">
-            Backup berisi database lokal: profil, sesi, hasil belajar, outbox, dan lisensi. Konten impor tidak
+            Backup berisi database lokal: profil, foto profil, sesi, hasil belajar, outbox, dan lisensi. Konten impor tidak
             disertakan karena dapat diimpor ulang.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
@@ -713,8 +783,8 @@ export function SettingsScreen() {
         </h2>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li>
-            Nama profil, hasil belajar, dan review disimpan hanya di perangkat ini (tanpa akun
-            terpusat).
+            Nama profil, foto profil, hasil belajar, dan review disimpan hanya di perangkat ini
+            (tanpa akun terpusat).
           </li>
           <li>
             Backup dan ekspor CSV berisi nama profil/reviewer. File yang sudah diekspor tidak ikut

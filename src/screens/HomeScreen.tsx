@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { LessonThumbnail } from "../components/content/LessonThumbnail";
+import { LearningIllustration } from "../components/home/LearningIllustration";
+import { ProfileAvatar } from "../components/profile/ProfileAvatar";
 import type { CatalogLessonEntry } from "../content/catalog";
 import { catalogFacets } from "../content/catalog";
 import { loadCatalog } from "../content/loadCatalog";
@@ -58,6 +60,16 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   const resumeEntry = recent
     ? entries.find((entry) => entry.lessonId === recent.lessonId)
     : undefined;
+  const heroEntry = useMemo(
+    () =>
+      entries.find(
+        (entry) =>
+          entry.coverAsset &&
+          entry.subjects.includes("matematika") &&
+          entry.gradeLevels.includes(3)
+      ) ?? entries.find((entry) => entry.coverAsset),
+    [entries]
+  );
   const facets = catalogFacets(entries);
   const subjectCounts = new Map<string, number>();
   for (const entry of entries) {
@@ -78,12 +90,30 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
 
   return (
     <div className="w-full">
-      <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
-        {profile ? `Halo, ${profile.displayName}` : "Halo"}
-      </h1>
-      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
-        Lanjutkan belajar dari perangkat ini, atau jelajahi materi yang tersedia.
-      </p>
+      <section className="overflow-hidden rounded-card border border-teal/20 bg-gradient-to-br from-teal/10 via-surface to-primary/5">
+        <div className="flex flex-col gap-6 p-5 md:flex-row md:items-center md:justify-between md:p-7">
+          <div className="flex min-w-0 items-start gap-4">
+            <ProfileAvatar
+              profile={profile}
+              className="h-16 w-16 shrink-0 rounded-full text-lg ring-2 ring-surface md:h-20 md:w-20 md:text-xl"
+            />
+            <div className="min-w-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal-strong">
+                Ruang belajar
+              </p>
+              <h1 className="mt-1 text-2xl font-semibold tracking-tight md:text-3xl">
+                {profile ? `Halo, ${profile.displayName}` : "Halo"}
+              </h1>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted md:text-base">
+                Lanjutkan belajar dari perangkat ini, atau jelajahi materi yang tersedia.
+              </p>
+            </div>
+          </div>
+          <div className="w-full max-w-sm self-center md:w-80 md:shrink-0">
+            <LearningIllustration entry={heroEntry} />
+          </div>
+        </div>
+      </section>
 
       {error && (
         <p className="mt-4 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm">

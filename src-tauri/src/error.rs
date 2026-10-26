@@ -118,6 +118,21 @@ impl AppError {
         )
     }
 
+    pub fn avatar_invalid() -> Self {
+        Self::new(
+            "PROFILE_AVATAR_INVALID",
+            "Foto profil harus berupa gambar PNG, JPEG, atau WebP.",
+        )
+    }
+
+    pub fn avatar_too_large() -> Self {
+        Self::new("PROFILE_AVATAR_TOO_LARGE", "Ukuran foto profil maksimal 1,5 MB.")
+    }
+
+    pub fn avatar_unreadable() -> Self {
+        Self::new("PROFILE_AVATAR_UNREADABLE", "File foto profil tidak dapat dibaca.")
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")

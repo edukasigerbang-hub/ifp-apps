@@ -1,12 +1,31 @@
 use crate::app_meta;
 use crate::db::DbState;
 use crate::error::AppError;
+use base64::{engine::general_purpose::STANDARD, Engine as _};
 use rusqlite::{params, Connection, OptionalExtension};
 use serde::{Deserialize, Serialize};
 use tauri::State;
 
 const ACTIVE_PROFILE_KEY: &str = "active_profile_id";
 const DEFAULT_PROFILE_NAME: &str = "Siswa Lokal";
+const MAX_AVATAR_BYTES: usize = 1_500_000;
+
+fn profile_columns() -> &'static str {
+    "id, display_name, profile_type,
+     EXISTS (SELECT 1 FROM profile_avatars va WHERE va.profile_id = profiles.id),
+     created_at, updated_at"
+}
+
+fn read_profile_row(row: &rusqlite::Row<'_>) -> rusqlite::Result<ProfileView> {
+    Ok(ProfileView {
+        id: row.get(0)?,
+        display_name: row.get(1)?,
+        profile_type: row.get(2)?,
+        has_avatar: row.get::<_, i64>(3)? != 0,
+        created_at: row.get(4)?,
+        updated_at: row.get(5)?,
+    })
+}
 
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -14,6 +33,7 @@ pub struct ProfileView {
     pub id: String,
     pub display_name: String,
     pub profile_type: String,
+    pub has_avatar: bool,
     pub created_at: String,
     pub updated_at: String,
 }
@@ -65,17 +85,9 @@ impl ProfileDataCounts {
 fn find_profile(connection: &Connection, id: &str) -> Result<Option<ProfileView>, AppError> {
     connection
         .query_row(
-            "SELECT id, display_name, profile_type, created_at, updated_at FROM profiles WHERE id = ?1",
+            &format!("SELECT {} FROM profiles WHERE id = ?1", profile_columns()),
             [id],
-            |row| {
-                Ok(ProfileView {
-                    id: row.get(0)?,
-                    display_name: row.get(1)?,
-                    profile_type: row.get(2)?,
-                    created_at: row.get(3)?,
-                    updated_at: row.get(4)?,
-                })
-            },
+            read_profile_row,
         )
         .optional()
         .map_err(AppError::read)
@@ -83,22 +95,14 @@ fn find_profile(connection: &Connection, id: &str) -> Result<Option<ProfileView>
 
 pub fn list_profiles(connection: &Connection) -> Result<Vec<ProfileView>, AppError> {
     let mut statement = connection
-        .prepare(
-            "SELECT id, display_name, profile_type, created_at, updated_at
-             FROM profiles ORDER BY created_at ASC, id ASC",
-        )
+        .prepare(&format!(
+            "SELECT {} FROM profiles ORDER BY created_at ASC, id ASC",
+            profile_columns()
+        ))
         .map_err(AppError::read)?;
 
     let profiles = statement
-        .query_map([], |row| {
-            Ok(ProfileView {
-                id: row.get(0)?,
-                display_name: row.get(1)?,
-                profile_type: row.get(2)?,
-                created_at: row.get(3)?,
-                updated_at: row.get(4)?,
-            })
-        })
+        .query_map([], read_profile_row)
         .map_err(AppError::read)?
         .collect::<Result<Vec<_>, _>>()
         .map_err(AppError::read)?;
@@ -187,6 +191,68 @@ pub fn rename_profile(
         .map_err(AppError::write)?;
 
     find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)
+}
+
+fn sniff_image_mime(bytes: &[u8]) -> Option<&'static str> {
+    if bytes.starts_with(&[0x89, b'P', b'N', b'G', 0x0D, 0x0A, 0x1A, 0x0A]) {
+        Some("image/png")
+    } else if bytes.starts_with(&[0xFF, 0xD8, 0xFF]) {
+        Some("image/jpeg")
+    } else if bytes.len() >= 12 && &bytes[0..4] == b"RIFF" && &bytes[8..12] == b"WEBP" {
+        Some("image/webp")
+    } else {
+        None
+    }
+}
+
+pub fn set_profile_avatar(
+    connection: &Connection,
+    id: &str,
+    bytes: &[u8],
+) -> Result<ProfileView, AppError> {
+    find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)?;
+    if bytes.is_empty() {
+        return Err(AppError::avatar_invalid());
+    }
+    if bytes.len() > MAX_AVATAR_BYTES {
+        return Err(AppError::avatar_too_large());
+    }
+    let mime = sniff_image_mime(bytes).ok_or_else(AppError::avatar_invalid)?;
+
+    connection
+        .execute(
+            "INSERT INTO profile_avatars (profile_id, mime_type, bytes, updated_at)
+             VALUES (?1, ?2, ?3, strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+             ON CONFLICT(profile_id) DO UPDATE SET
+               mime_type = excluded.mime_type,
+               bytes = excluded.bytes,
+               updated_at = excluded.updated_at",
+            params![id, mime, bytes],
+        )
+        .map_err(AppError::write)?;
+
+    find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)
+}
+
+pub fn clear_profile_avatar(connection: &Connection, id: &str) -> Result<ProfileView, AppError> {
+    find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)?;
+    connection
+        .execute("DELETE FROM profile_avatars WHERE profile_id = ?1", [id])
+        .map_err(AppError::write)?;
+    find_profile(connection, id)?.ok_or_else(AppError::profile_not_found)
+}
+
+pub fn get_profile_avatar(connection: &Connection, id: &str) -> Result<Option<String>, AppError> {
+    let stored: Option<(String, Vec<u8>)> = connection
+        .query_row(
+            "SELECT mime_type, bytes FROM profile_avatars WHERE profile_id = ?1",
+            [id],
+            |row| Ok((row.get(0)?, row.get(1)?)),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+
+    Ok(stored.map(|(mime, bytes)| format!("data:{mime};base64,{}", STANDARD.encode(bytes))))
 }
 
 fn profile_data_counts(
@@ -392,6 +458,40 @@ pub fn profile_delete(
     delete_profile(&mut connection, &profile_id, delete_data.unwrap_or(false))
 }
 
+#[tauri::command]
+pub fn profile_avatar_set(
+    db: State<'_, DbState>,
+    profile_id: String,
+    source_path: String,
+) -> Result<ProfileView, AppError> {
+    let metadata =
+        std::fs::metadata(&source_path).map_err(|_| AppError::avatar_unreadable())?;
+    if metadata.len() > MAX_AVATAR_BYTES as u64 {
+        return Err(AppError::avatar_too_large());
+    }
+    let bytes = std::fs::read(&source_path).map_err(|_| AppError::avatar_unreadable())?;
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    set_profile_avatar(&connection, &profile_id, &bytes)
+}
+
+#[tauri::command]
+pub fn profile_avatar_clear(
+    db: State<'_, DbState>,
+    profile_id: String,
+) -> Result<ProfileView, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    clear_profile_avatar(&connection, &profile_id)
+}
+
+#[tauri::command]
+pub fn profile_avatar_get(
+    db: State<'_, DbState>,
+    profile_id: String,
+) -> Result<Option<String>, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    get_profile_avatar(&connection, &profile_id)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -513,6 +613,54 @@ mod tests {
                 )],
             )
             .expect("outbox");
+    }
+
+    #[test]
+    fn stores_and_clears_profile_avatar() {
+        let connection = test_connection();
+        let profile = get_active_profile(&connection).expect("profile");
+        assert!(!profile.has_avatar);
+        assert!(get_profile_avatar(&connection, &profile.id)
+            .expect("read empty")
+            .is_none());
+
+        let png = [0x89, b'P', b'N', b'G', 0x0D, 0x0A, 0x1A, 0x0A, 0, 0, 0, 0];
+        let updated = set_profile_avatar(&connection, &profile.id, &png).expect("set");
+        assert!(updated.has_avatar);
+
+        let url = get_profile_avatar(&connection, &profile.id)
+            .expect("read")
+            .expect("exists");
+        assert!(url.starts_with("data:image/png;base64,"));
+
+        let listed = list_profiles(&connection).expect("list");
+        assert!(listed.iter().find(|item| item.id == profile.id).unwrap().has_avatar);
+
+        let cleared = clear_profile_avatar(&connection, &profile.id).expect("clear");
+        assert!(!cleared.has_avatar);
+        assert!(get_profile_avatar(&connection, &profile.id)
+            .expect("read cleared")
+            .is_none());
+    }
+
+    #[test]
+    fn rejects_invalid_or_oversized_avatars() {
+        let connection = test_connection();
+        let profile = get_active_profile(&connection).expect("profile");
+
+        let invalid =
+            set_profile_avatar(&connection, &profile.id, b"not an image").expect_err("invalid");
+        assert_eq!(invalid.code, "PROFILE_AVATAR_INVALID");
+
+        let oversized_bytes = vec![0u8; MAX_AVATAR_BYTES + 1];
+        let oversized =
+            set_profile_avatar(&connection, &profile.id, &oversized_bytes).expect_err("oversized");
+        assert_eq!(oversized.code, "PROFILE_AVATAR_TOO_LARGE");
+
+        assert!(get_profile_avatar(&connection, &profile.id)
+            .expect("read")
+            .is_none());
+        assert!(set_profile_avatar(&connection, "missing", b"x").is_err());
     }
 
     #[test]

@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; **mode belajar/admin selesai (T-077) + sakelar ikon & thumbnail materi (T-078)**; a11y 17/17 PASS, E2E 6 skenario PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; a11y 17/17 PASS, E2E 7 skenario PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -88,6 +88,7 @@
 | T-076 | UX-03 + a11y + E2E | Kartu hasil `tabIndex={-1}` + `scrollIntoView`/`focus()` setelah penilaian di kuis, mencocokkan, mengurutkan (3 komponen). Harness a11y & E2E diperbarui ke konten aktual (“Kuis Penguatan”, tombol “Lanjut berlatih”) dan 3 asersi fokus baru. `npm test` 89/89, build PASS, `npm run a11y` **PASS 16 pemeriksaan** (0 error, 7 warning reflow), E2E smoke 8/8 · activities 8/8 · home 9/9 · journey 11/11 · profile 7/7 |
 | T-077 | Dua mode: belajar & admin (D-UX-1) | Mode belajar = shell selebar perangkat **tanpa sidebar**, bar navigasi 4 tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar), layar Konten/Lisensi/Pengaturan disembunyikan. Mode admin = sidebar lengkap seperti sebelumnya. Sakelar “Belajar/Admin” di bilah atas (`aria-pressed`), tersimpan per perangkat (`preferences.appMode`, default `admin`; rekaman lama tetap terbaca). Layar di luar mode dialihkan ke Beranda. `npm test` 93/93, `cargo test` 64/64, build PASS, a11y **17 pemeriksaan PASS**, E2E baru `mode-switch` 5/5 + regresi 5 skenario PASS |
 | T-078 | Sakelar mode ikon + thumbnail materi + rail + tile kelas | Sakelar mode kini **dua tombol ikon** (topi wisuda/slider), `aria-label` + `title`, target 44 px; persistensi tetap di SQLite `app_meta.preferences.appMode` (test baru `app_mode_survives_database_reopen`). Mode belajar memakai **rail ikon 80 px** (4 tujuan, label lewat tooltip + teks sr-only), bukan bar atas. Katalog membawa `coverAsset`; kartu Jelajah Materi dan kartu “Lanjutkan belajar” menampilkan thumbnail dari aset paket yang sudah ada (bundled via `import.meta.glob`, impor via `content_read_asset` → blob URL), fallback inisial subjek. Filter kelas berupa **tile thumbnail cover materi tiap kelas** (bukan dropdown) di dalam panel **collapsible** — header menampilkan chip kelas terpilih (“Kelas N”), panel menutup otomatis setelah memilih dan bisa dibuka lagi; grid materi 3 kolom. `npm test` 93/93, `cargo test` 65/65, build PASS, a11y 17/17 PASS, E2E home **13/13** + mode **6/6** + regresi 4 skenario PASS |
+| T-079 | Foto profil lokal + ilustrasi Beranda | **Foto profil**: tabel `profile_avatars` (migrasi `0006`, BLOB + `mime_type` PNG/JPEG/WebP, FK cascade), perintah `profile_avatar_set/clear/get` dengan sniff magic bytes + batas 1,5 MB, `ProfileView.hasAvatar`; data URL dikembalikan ke webview; Pengaturan memakai dialog native (`@tauri-apps/plugin-dialog`) untuk memilih/menghapus foto. **Beranda**: hero bergradasi teal→surface dengan avatar bulat, eyebrow “Ruang belajar”, sapaan “Halo, {nama}”, dan **ilustrasi belajar** bingkai bergambar cover Flow yang sudah ada (pilihan: cover matematika kelas 3, fallback cover pertama) + aksen dekoratif; tanpa aset baru (aturan Flow-only). `cargo test` **67/67**, `npm test` PASS (fixture 4/4, catalog 320/320), build PASS, E2E `home-catalog` **14/14** (avatar + ilustrasi termuat, screenshot `hero-beranda.png`), a11y 17/17, mode-switch 6/6, profile-lifecycle 7/7, smoke 8/8 |
 
 ## Status prasyarat materi pembelajaran
 
@@ -170,6 +171,13 @@
 | Tile kelas thumbnail (T-078d) | **PASS** — 6 tile kelas memakai cover materi (aset paket), chip “Semua kelas”; E2E `home-catalog` 11/11 |
 | Pemilih kelas collapsible (T-078f) | **PASS** — header `aria-expanded`/`aria-controls` menampilkan chip “Semua kelas” / “Kelas N”; memilih kelas menutup panel (header tetap menampilkan “Kelas 3”), header membuka panel lagi; state tetap satu `grade` untuk filter; E2E `home-catalog` **13/13** + a11y 17/17 + build PASS |
 | Tata letak lebar penuh (T-078e) | **PASS** — Beranda/Jelajah memakai lebar penuh (grid 3 kolom, mapel 3 kolom di xl); layar baca dipusatkan `mx-auto max-w-4xl`; build PASS, E2E 11/11 + 6/6, a11y 17/17, regresi PASS |
+| `cargo test` (T-079) | **PASS** — **67/67**; 2 test avatar baru (simpan→baca data URL→hapus; tolak non-gambar/kosong/>1,5 MB dengan kode `PROFILE_AVATAR_INVALID`/`PROFILE_AVATAR_TOO_LARGE`) |
+| Migrasi `0006_profile_avatars` (T-079) | **VERIFIED** — tabel `profile_avatars` (PK `profile_id`, `mime_type` CHECK PNG/JPEG/WebP, `bytes` BLOB, FK `ON DELETE CASCADE`); checksum migrasi terdaftar di `db.rs`; DB perangkat terbuka tanpa error |
+| E2E home-catalog (T-079) | **PASS** — **14/14**; `profile_avatar_set` dengan cover Flow kelas 3 → `hasAvatar` benar → setelah `Page.reload` avatar `<img>` dan ilustrasi `[data-learning-illustration]` termuat (`naturalWidth > 0`); screenshot `hero-beranda.png` |
+| `npm test` (T-079) | **PASS** — unit + fixture 4/4 + catalog 320/320 |
+| `npm run build` (T-079) | **PASS** — `tsc --noEmit` + Vite |
+| `npm run a11y` (T-079) | **PASS** — 17 pemeriksaan; 0 error, 7 warning reflow/target sentuh; Beranda 18 interaktif / 49 kontras, Pengaturan 24 interaktif / 56 kontras |
+| E2E regresi (T-079) | **PASS** — mode-switch 6/6 (sakelar ikon + restore), profile-lifecycle 7/7, smoke 8/8 |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -414,3 +422,24 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan persistensi:** nilai tersimpan di SQLite `app_meta` (key `preferences`), bukan localStorage; dibaca `App.tsx` saat start. DB perangkat diperiksa langsung dan berisi `appMode":"belajar"` setelah sakelar dipakai.
 
 **Sisa:** thumbnail memakai aset pertama paket (bukan gambar khusus sampul); mode masih pembatas UI tanpa PIN. Pada lebar 768–1023 px grid 3 kolom terasa sempit (judul membungkus).
+
+### Handoff Foto Profil + Ilustrasi Beranda (2026-10-27, T-079)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: Beranda diberi ilustrasi yang relevan dan foto profil.
+
+**Perubahan kode:**
+- `src-tauri/src/migrations/0006_profile_avatars.sql` (baru) — tabel `profile_avatars(profile_id PK, mime_type CHECK png/jpeg/webp, bytes BLOB, updated_at, FK cascade)`; terdaftar di `db.rs` sebagai versi 6 (checksum SHA256, normalisasi CRLF).
+- `src-tauri/src/profile.rs` — `MAX_AVATAR_BYTES = 1_500_000`; `sniff_image_mime` (magic bytes); `set_profile_avatar` (validasi profil/ukuran/mime, UPSERT), `clear_profile_avatar`, `get_profile_avatar` → data URL; `ProfileView.hasAvatar` lewat `EXISTS(...)`; perintah `profile_avatar_set` (path berkas; cek ukuran metadata dulu), `profile_avatar_clear`, `profile_avatar_get`; 2 test baru.
+- `src-tauri/src/error.rs` — `PROFILE_AVATAR_INVALID`, `PROFILE_AVATAR_TOO_LARGE`, `PROFILE_AVATAR_UNREADABLE`. `src-tauri/src/lib.rs` — 3 perintah terdaftar.
+- `src/data/profileRepository.ts` — `Profile.hasAvatar`, `readProfileAvatar` (cache modul), `setProfileAvatar`, `clearProfileAvatar`, invalidasi cache saat hapus profil.
+- `src/components/profile/ProfileAvatar.tsx` (baru) — foto `object-cover` atau fallback inisial; `alt=""` dekoratif.
+- `src/components/home/LearningIllustration.tsx` (baru) — bingkai kartu berisi thumbnail cover (16:10) + aksen lingkaran/sunburst/star; `aria-hidden`.
+- `src/screens/HomeScreen.tsx` — hero `rounded-card` gradasi teal→surface: avatar 64/80 px, eyebrow “Ruang belajar”, “Halo, {nama}”, paragraf, ilustrasi di sisi kanan (max 320 px di md+). Ilustrasi memilih cover matematika kelas 3, fallback cover pertama.
+- `src/screens/SettingsScreen.tsx` — setiap baris profil memakai `ProfileAvatar`; profil aktif punya “Pilih/Ganti foto…” (dialog native `open()` filter png/jpg/jpeg/webp), “Hapus foto”, petunjuk “PNG/JPEG/WebP, maks 1,5 MB”; backup & privasi menyebut foto profil.
+- `scripts/e2e/scenarios/home-catalog.mjs` — menyetel avatar lewat `profile_avatar_set` (aset cover Flow kelas 3 yang sudah ada), memuat ulang, menunggu avatar + ilustrasi termuat, screenshot `hero-beranda.png`; skenario kini **14 pemeriksaan**.
+
+**Verifikasi aktual:** `cargo test` **67/67** · `npm test` PASS (fixture 4/4, catalog 320/320) · `npm run build` PASS · `npm run a11y` **17 PASS** (0 error, 7 warning) · E2E home-catalog **14/14** · mode-switch 6/6 · profile-lifecycle 7/7 · smoke 8/8. Screenshot `hero-beranda.png` memperlihatkan avatar bulat, eyebrow, sapaan, dan ilustrasi matematika berbingkai.
+
+**Catatan:** avatar disimpan sebagai BLOB di SQLite sehingga ikut dalam backup DB; tidak ada aset gambar baru yang dihasilkan (memakai cover Flow yang sudah ada, sesuai aturan Flow-only). Dialog pemilih berkas tidak diotomasi E2E (native); jalur set/clear diuji lewat perintah Rust + invoke.
+
+**Sisa:** foto profil belum dipotong persegi secara eksplisit (hanya `object-cover` pada lingkaran); belum ada validasi dimensi minimum; ilustrasi Beranda statis (bukan rotasi).

@@ -82,6 +82,49 @@ export async function run({ page, artifactDir, log }) {
     { label: "kartu mata pelajaran di Beranda" }
   );
 
+  const avatarSource = path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    "../../..",
+    "content/packages/kelas3-matematika-b01-bilangan-10000/assets/nilai-tempat-10000.webp"
+  );
+  const avatarSet = await page.evaluate(`
+    window.__TAURI_INTERNALS__
+      .invoke("profile_get_active")
+      .then((active) =>
+        window.__TAURI_INTERNALS__.invoke("profile_avatar_set", {
+          profileId: active.id,
+          sourcePath: ${JSON.stringify(avatarSource)}
+        })
+      )
+      .then((profile) => ({ ok: true, hasAvatar: profile.hasAvatar }))
+      .catch((error) => ({ ok: false, error: String(error) }))
+  `);
+  assert(
+    avatarSet.ok && avatarSet.hasAvatar,
+    `Foto profil demo gagal dipasang: ${JSON.stringify(avatarSet.error)}`
+  );
+  await page.send("Page.reload");
+  await page.waitFor(`typeof window.__TAURI_INTERNALS__?.invoke === "function"`, {
+    label: "bridge Tauri setelah muat ulang"
+  });
+  await page.waitFor(`document.querySelector("main h1")?.textContent.includes("Halo")`, {
+    label: "sapaan Beranda setelah muat ulang",
+    timeoutMs: 30_000
+  });
+  await page.waitFor(
+    `(() => {
+      const avatar = document.querySelector("img[data-profile-avatar]");
+      const illustration = document.querySelector("[data-learning-illustration] img");
+      return (
+        avatar && avatar.complete && avatar.naturalWidth > 0 &&
+        illustration && illustration.complete && illustration.naturalWidth > 0
+      );
+    })()`,
+    { label: "foto profil dan ilustrasi Beranda" }
+  );
+  log("Beranda menampilkan foto profil dan ilustrasi belajar.");
+  await page.screenshot(path.join(artifactDir, "hero-beranda.png"));
+
   const pilotPath = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
     "../fixtures/pilot-pecahan-kelas3"
