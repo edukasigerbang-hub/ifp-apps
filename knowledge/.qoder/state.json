@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "615f109",
+  "commit": "02dc4e4",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,17 +35,17 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 8,
+  "context_version": 9,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-074 Dokumen review UX/UI gabungan (knowledge/design/)",
+  "last_task": "T-075 Eksekusi P0 UX (5/6 butir; metadata internal tertahan keputusan)",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T17:12:00+07:00",
-  "last_validation": "T-072 pra-review agent (2026-10-26): 320 paket dipindai deterministik -> R1 66, R3 40, R4 0, R5 184, R6 0, R8 0, R9 0, R12 1 temuan. BUKAN approval. T-073: packageDirOf diperbaiki; Player membuka paket bawaan; npm test 86/86; build PASS. T-074: dokumen review UX/UI gabungan di knowledge/design/ (20 temuan: 5 P1, 10 P2, 5 P3; 6 keputusan terbuka D-UX-1..D-UX-6); berkas eksternal 337 baris/14.998 byte diunduh lalu digabung (prinsip, state interaksi, skor per area, checklist); 4 klaim eksternal dikoreksi via kode; tautan 50/50 valid; tidak ada perubahan kode; belum ada usability test.",
+  "last_updated": "2026-10-26T17:25:10+07:00",
+  "last_validation": "T-075 (2026-10-26): 5/6 butir P0 UX selesai — copy netral + istilah skor; subjectLabel bersama (7 slug + fallback, 3 unit test) dipakai Home/Curriculum/Player/Hasil Belajar; token teal-strong #0b6f69 dan danger-strong #a8323c; breadcrumb Beranda jadi tombol; hint matching; satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. npm test 89/89 + fixture 4/4 + catalog 320/320; npm run build PASS. Verifikasi DOM dev PASS (label, breadcrumb, hint, copy kuis/eksplorasi, pesan tunggal). Screenshot PARTIAL (hanya Jelajah Materi; surface browser tersembunyi untuk Player). npm run a11y dan Hasil Belajar berisi data NOT RUN. T-072: pra-review agent 320 paket (bukan approval). T-073: packageDirOf diperbaiki; npm test 86/86. T-074: dokumen review UX/UI gabungan knowledge/design/ (20 temuan, 6 keputusan D-UX-1..D-UX-6); berkas eksternal 337 baris/14.998 byte digabung; 4 klaim dikoreksi; tautan 50/50 valid.",
   "last_test_status": "pass",
-  "last_command": "DOCUMENT",
+  "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
   "open_wave": null,
   "dirty": false,
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab; lalu keputusan desain D-UX-1 (dua mode) dan D-UX-2 (baseline skala IFP) — dan D-UX-6 (prioritas matching) — sebelum eksekusi P0 knowledge/design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md; reviewStatus tetap draft"
+  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. P0 UX 5/6 selesai; butir 3 tertahan D-UX-1 (dua mode) dan D-UX-4 (metadata), P1 tertahan D-UX-2 (skala IFP) dan D-UX-6 (prioritas matching). Verifikasi Hasil Belajar dengan data nyata di desktop; jalankan npm run a11y. reviewStatus tetap draft"
 }
