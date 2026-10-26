@@ -97,6 +97,35 @@ export async function run({ page, artifactDir, log }) {
   );
   log("Mode belajar tersimpan di preferensi perangkat.");
 
+  await page.send("Page.reload");
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri setelah muat ulang", timeoutMs: 30_000 }
+  );
+  await page.waitFor(`document.body.textContent.includes("Jelajah Materi")`, {
+    label: "shell setelah muat ulang"
+  });
+  const restoredView = await page.evaluate(`
+    ({
+      sidebar: Boolean(document.querySelector("aside")),
+      navLabels: [...document.querySelectorAll('nav[aria-label="Navigasi belajar"] button')]
+        .map((button) => button.textContent.trim()),
+      pressed: [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
+        .map((button) => ({ label: button.getAttribute("aria-label"), pressed: button.getAttribute("aria-pressed") }))
+    })
+  `);
+  assert(!restoredView.sidebar, "Setelah muat ulang, mode belajar harus tetap tanpa sidebar.");
+  assert(
+    JSON.stringify(restoredView.navLabels) ===
+      JSON.stringify(["Beranda", "Jelajah Materi", "Aktivitas Interaktif", "Hasil Belajar"]),
+    `Navigasi belajar tidak dipulihkan setelah muat ulang: ${restoredView.navLabels.join(", ")}`
+  );
+  assert(
+    restoredView.pressed.find((entry) => entry.label === "Belajar")?.pressed === "true",
+    "Tombol Belajar harus aktif setelah muat ulang."
+  );
+  log("Mode belajar dipulihkan setelah muat ulang (simulasi restart).");
+
   await page.evaluate(`
     (() => {
       const target = [...document.querySelectorAll('nav[aria-label="Navigasi belajar"] button')]

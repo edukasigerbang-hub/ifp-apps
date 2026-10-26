@@ -162,7 +162,7 @@
 | `cargo test` (T-078) | **PASS** — 65/65; tambah `app_mode_survives_database_reopen` (tulis → tutup → buka ulang DB → `appMode` tetap `belajar`) |
 | Persistensi mode di SQLite (T-078) | **VERIFIED** — DB perangkat `%APPDATA%/id.gerbangedukasi.ifp/ifp.db`, `app_meta.preferences` = `{"reducedMotion":false,"fontScale":"normal","appMode":"belajar"}` setelah sakelar dipakai; `App.tsx` membaca nilai ini saat start |
 | E2E home-catalog (T-078) | **PASS** — 10 pemeriksaan; 2 asersi thumbnail (bawaan + impor) dan screenshot `catalog-thumbnails.png` |
-| E2E mode-switch (T-078) | **PASS** — 5 pemeriksaan dengan tombol ikon (`aria-label` Belajar/Admin) |
+| E2E mode-switch (T-078) | **PASS** — 6 pemeriksaan: tombol ikon (`aria-label` Belajar/Admin), mode tersimpan, dan **restore setelah `Page.reload`** (simulasi restart: tetap tanpa sidebar + 4 tujuan belajar) |
 | E2E regresi (T-078) | **PASS** — smoke 8, activities 8, learning-journey 11, profile-lifecycle 7 |
 | `npm run a11y` (T-078) | **PASS** — 17 pemeriksaan; 0 error, 7 warning reflow/target sentuh |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
@@ -402,7 +402,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - `src-tauri/src/preferences.rs` — test `app_mode_survives_database_reopen` membuktikan persistensi setelah DB ditutup dan dibuka ulang.
 - E2E: `mode-switch.mjs` mencocokkan tombol lewat `aria-label`; `a11y.mjs` `clickLabel` menerima `aria-label`; `home-catalog.mjs` menunggu dua thumbnail termuat + screenshot `catalog-thumbnails.png`.
 
-**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` 5/5 · `home-catalog` **10/10** · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-admin.png` memperlihatkan ikon topi (inaktif) + slider (aktif); `catalog-thumbnails.png` memperlihatkan thumbnail WebP pada dua kartu pertama.
+**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` **6/6** (termasuk restore setelah muat ulang) · `home-catalog` **10/10** · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-admin.png` memperlihatkan ikon topi (inaktif) + slider (aktif); `catalog-thumbnails.png` memperlihatkan thumbnail WebP pada dua kartu pertama.
 
 **Catatan persistensi:** nilai tersimpan di SQLite `app_meta` (key `preferences`), bukan localStorage; dibaca `App.tsx` saat start. DB perangkat diperiksa langsung dan berisi `appMode":"belajar"` setelah sakelar dipakai.
 

@@ -122,7 +122,7 @@ Konsekuensi: label internal (UX-04) tidak perlu dihapus dari produk — cukup di
 | Persistensi | `preferences.appMode` di `app_meta` (default `admin`; rekaman lama tanpa field tetap terbaca) |
 | Pengalihan | Layar di luar mode dipindahkan ke Beranda, hash diselaraskan ([App.tsx](../../src/App.tsx)) |
 
-Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 65/65, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 5/5 PASS, `home-catalog` 10/10 (termasuk thumbnail), serta regresi smoke 8/8, activities 8/8, journey 11/11, profile 7/7. Sakelar mode memakai ikon saja; thumbnail materi memakai aset paket yang sudah ada.
+Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 65/65, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 6/6 PASS (termasuk restore setelah muat ulang), `home-catalog` 10/10 (termasuk thumbnail), serta regresi smoke 8/8, activities 8/8, journey 11/11, profile 7/7. Sakelar mode memakai ikon saja; thumbnail materi memakai aset paket yang sudah ada.
 
 ### 5.1 Prinsip UX yang disepakati
 
