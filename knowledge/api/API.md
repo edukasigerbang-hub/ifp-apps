@@ -143,10 +143,10 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 | `profile_create` | `displayName`, `profileType` | profil baru |
 | `profile_get_active` | — | profil aktif (buat default bila kosong) |
 | `profile_set_active` | `profileId` | profil aktif |
-| `preferences_get` | — | `reducedMotion`, `fontScale` |
-| `preferences_set` | `reducedMotion`, `fontScale` | preferensi tersimpan |
+| `preferences_get` | — | `reducedMotion`, `fontScale`, `appMode` |
+| `preferences_set` | `reducedMotion`, `fontScale`, `appMode` | preferensi tersimpan |
 
-- Profil aktif mengikat sesi/hasil belajar; preferensi diterapkan ke `<html>` (`reduce-motion`, `font-large`).
+- Profil aktif mengikat sesi/hasil belajar; preferensi diterapkan ke `<html>` (`reduce-motion`, `font-large`). `appMode` (`belajar|admin`) mengatur shell: mode belajar tanpa sidebar dan tanpa layar kelola. Rekaman lama tanpa `appMode` dibaca sebagai `admin`.
 
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.

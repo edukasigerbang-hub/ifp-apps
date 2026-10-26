@@ -8,6 +8,15 @@ export type ScreenId =
   | "license"
   | "settings";
 
+export type AppMode = "belajar" | "admin";
+
+export const DEFAULT_APP_MODE: AppMode = "admin";
+
+export const appModeLabels: Record<AppMode, string> = {
+  belajar: "Belajar",
+  admin: "Admin"
+};
+
 export interface NavItem {
   id: ScreenId;
   label: string;
@@ -85,4 +94,21 @@ export function findNavItem(id: ScreenId): NavItem {
 
 export function isScreenId(value: string): value is ScreenId {
   return navigationItems.some((item) => item.id === value);
+}
+
+export function isAppMode(value: unknown): value is AppMode {
+  return value === "belajar" || value === "admin";
+}
+
+// Mode belajar hanya memuat layar grup "belajar"; Player dibuka dari materi, bukan dari navigasi.
+export const studentNavigationItems: NavItem[] = navigationItems.filter(
+  (item) => item.group === "belajar" && item.id !== "player"
+);
+
+export function navigationItemsForMode(mode: AppMode): NavItem[] {
+  return mode === "admin" ? navigationItems : studentNavigationItems;
+}
+
+export function isScreenAllowedInMode(mode: AppMode, id: ScreenId): boolean {
+  return mode === "admin" || findNavItem(id).group === "belajar";
 }

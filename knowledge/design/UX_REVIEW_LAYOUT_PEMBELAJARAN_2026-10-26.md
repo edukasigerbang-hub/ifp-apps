@@ -111,6 +111,18 @@ Direkomendasikan oleh review eksternal dan konsisten dengan kebutuhan produk (mo
 
 Konsekuensi: label internal (UX-04) tidak perlu dihapus dari produk — cukup dipindahkan ke Mode Pengelola/area debug.
 
+**Status implementasi (2026-10-26, T-077):** D-UX-1 diputuskan PO lewat instruksi sesi. Mode belajar diterapkan: shell selebar perangkat tanpa sidebar, bar navigasi empat tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar), layar Konten/Lisensi/Pengaturan disembunyikan; mode admin mempertahankan sidebar lengkap. Sakelar Belajar/Admin ada di bilah atas dan tersimpan per perangkat (`preferences.appMode`, default `admin`). Skala tipografi/target sentuh mode siswa (§6, D-UX-2) belum diterapkan, dan metadata internal (UX-04) belum dipindahkan ke area pengelola.
+
+| Aspek | Implementasi (bukti kode) |
+|---|---|
+| Model mode | `AppMode`, `navigationItemsForMode()`, `isScreenAllowedInMode()` di [navigation.ts](../../src/navigation.ts) |
+| Shell | [AppShell.tsx](../../src/components/layout/AppShell.tsx): sidebar hanya mode admin; bar belajar [StudentNavigation.tsx](../../src/components/layout/StudentNavigation.tsx) |
+| Sakelar | [TopBar.tsx](../../src/components/layout/TopBar.tsx): grup “Mode aplikasi” dengan `aria-pressed` |
+| Persistensi | `preferences.appMode` di `app_meta` (default `admin`; rekaman lama tanpa field tetap terbaca) |
+| Pengalihan | Layar di luar mode dipindahkan ke Beranda, hash diselaraskan ([App.tsx](../../src/App.tsx)) |
+
+Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 64/64, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 5/5 PASS, serta regresi smoke 8/8, home 9/9, activities 8/8, journey 11/11, profile 7/7.
+
 ### 5.1 Prinsip UX yang disepakati
 
 Delapan prinsip dari berkas review eksternal (§6 di sana) disetujui karena cocok dengan temuan kode; kolom terakhir menunjukkan di mana prinsip itu punya konsekuensi konkret, supaya tidak berhenti sebagai slogan.
@@ -219,13 +231,13 @@ Angka berikut berasal dari berkas eksternal (§3 di sana), dihitung dari screens
 
 **Kriteria penerimaan P0:** tidak ada ID mentah/jargon di layar siswa; semua teks status ≥4,5:1; tombol disabled punya alasan; screenshot ulang sebagai bukti.
 
-**Status implementasi (2026-10-26):** butir 1, 2, 4, 5, 6 **selesai** dan diverifikasi build/uji/DOM; butir 3 **tertahan keputusan** D-UX-1/D-UX-4. Setelah itu dijalankan verifikasi penuh: `npm run a11y` **PASS** 16 pemeriksaan (0 error, 7 warning reflow) dan 5 skenario E2E PASS (smoke 8, activities 8, home 9, journey 11, profile 7).
+**Status implementasi (2026-10-26):** butir 1, 2, 4, 5, 6 **selesai** dan diverifikasi build/uji/DOM; butir 3 **tertahan** D-UX-4 (D-UX-1 sudah diputuskan 2026-10-26). Setelah itu dijalankan verifikasi penuh: `npm run a11y` **PASS** 16 pemeriksaan (0 error, 7 warning reflow) dan 5 skenario E2E PASS (smoke 8, activities 8, home 9, journey 11, profile 7).
 
 | Butir | Status | Bukti |
 |---|---|---|
 | 1 Copy hardcoded & istilah | Selesai | `QuizActivity` memakai “Skor minimal lulus: N dari 100” dan copy netral; `ExplorationActivity` memakai `{steps.length} langkah`; DOM menampilkan “Kamu sudah menyelesaikan 5 langkah.” |
 | 2 Label subjek & judul | Selesai | [`subjectLabel.ts`](../../src/content/subjectLabel.ts) dipakai Home, Curriculum, Player, Results; 3 unit test; DOM menampilkan “Bahasa Indonesia”, “PAI”, “PJOK”, “Pendidikan Pancasila” |
-| 3 Sembunyikan metadata internal | **Tertahan** | Menunggu D-UX-1 (dua mode) dan D-UX-4 (perlakuan metadata DRAFT/versi) |
+| 3 Sembunyikan metadata internal | **Tertahan** | Menunggu D-UX-4 (perlakuan metadata DRAFT/versi); mode belajar sudah tersedia sebagai tempat memindahkan metadata pengelola |
 | 4 Kontras | Selesai | Token `--color-teal-strong #0b6f69` dan `--color-danger-strong #a8323c`; label sidebar `white/70`; utilitas terverifikasi di CSS hasil build |
 | 5 Breadcrumb & alasan disabled | Selesai | `TopBar` menerima `onNavigate`; klik “Beranda” terverifikasi pindah ke `#home`; matching menampilkan “Lengkapi N pasangan lagi…” |
 | 6 Satu pesan penyimpanan | Selesai | Pesan footer ganda dihapus; banner menyimpan status siap/tersimpan + “belum disinkronkan” |
@@ -299,7 +311,7 @@ Dipakai sebelum menyatakan redesign selesai — digabung dari §8 berkas ekstern
 
 | ID | Keputusan | Pemilik | Dampak bila ditunda |
 |---|---|---|---|
-| D-UX-1 | Menerapkan dua mode (Siswa/Pengelola) | PO + desain | P0/P3 tidak bisa dieksekusi konsisten |
+| D-UX-1 | Menerapkan dua mode (Siswa/Pengelola) | PO + desain | **Diputuskan 2026-10-26** (PO via instruksi sesi); implementasi awal T-077 selesai. Skala mode siswa tetap D-UX-2; PIN mode admin belum ada |
 | D-UX-2 | Baseline skala IFP (16–18 px vs 20–24 px) | Desain + QA perangkat | Risiko redesign dua kali |
 | D-UX-3 | Inter vs Segoe UI | Desain | Churn font tanpa manfaat jelas |
 | D-UX-4 | Perlakuan metadata DRAFT/versi | PO + Curriculum Lead | Guru melihat status draft secara menyesatkan |
@@ -319,7 +331,7 @@ Dipakai sebelum menyatakan redesign selesai — digabung dari §8 berkas ekstern
 
 Urutan gabungan (menggantikan urutan P0–P3 bila keduanya bertabrakan): **P0 → prototipe → uji → P1**.
 
-1. Putuskan D-UX-1 dan D-UX-2.
+1. Putuskan D-UX-2 (skala IFP) dan tindak lanjut mode siswa; D-UX-1 sudah diputuskan 2026-10-26.
 2. Eksekusi P0 (perubahan kecil, dapat diverifikasi dengan screenshot + a11y).
 3. Verifikasi Hasil Belajar **di desktop dengan data nyata** sebelum mendesain ulang layar tersebut.
 4. Susun prototipe alur kelas 1: Jelajah → Player → Aktivitas → Kuis → Hasil, memakai baseline skala IFP §6.

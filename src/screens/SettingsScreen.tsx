@@ -664,6 +664,10 @@ export function SettingsScreen() {
                 <option value="large">Besar</option>
               </select>
             </label>
+            <p className="text-xs text-muted">
+              Mode aplikasi (Belajar/Admin) diatur lewat tombol di bilah atas dan tersimpan per
+              perangkat. Mode Belajar menyembunyikan Konten, Lisensi, dan Pengaturan.
+            </p>
             <p aria-live="polite" className="text-sm text-muted">
               {preferencesMessage ?? ""}
             </p>

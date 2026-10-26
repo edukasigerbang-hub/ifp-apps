@@ -643,6 +643,47 @@ export async function run({ page, artifactDir, log }) {
   );
   await page.screenshot(path.join(artifactDir, "a11y-quiz-result.png"));
 
+  await clickLabel(page, "Belajar");
+  await page.waitFor(`!document.querySelector("aside")`, {
+    label: "mode belajar tanpa sidebar"
+  });
+  await page.waitFor(`document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`, {
+    label: "navigasi belajar"
+  });
+  const modeReflow = [];
+  for (const width of [640, 320]) {
+    await setViewport(page, width);
+    const overflow = await horizontalOverflow(page);
+    if (overflow.scrollWidth > overflow.clientWidth + 1) {
+      modeReflow.push({
+        rule: "reflow",
+        severity: "error",
+        message: `Mode belajar overflow horizontal pada ${width}px: ${overflow.scrollWidth} > ${overflow.clientWidth}.`,
+        selector: "html"
+      });
+    }
+  }
+  await setViewport(page, 1600, 900);
+  const modeAudit = await page.evaluate(`(${auditInPage.toString()})()`);
+  const modeIssues = [...modeAudit.issues, ...modeReflow];
+  const modeErrors = modeIssues.filter((issue) => issue.severity === "error");
+  const modeWarnings = modeIssues.filter((issue) => issue.severity === "warning");
+  errorCount += modeErrors.length;
+  warningCount += modeWarnings.length;
+  report.screens.push({
+    screen: "Mode belajar (Player)",
+    stats: modeAudit.stats,
+    issues: modeIssues
+  });
+  log(
+    `Mode belajar tanpa sidebar: ${modeErrors.length} error, ${modeWarnings.length} warning.`
+  );
+  await page.screenshot(path.join(artifactDir, "a11y-mode-belajar.png"));
+  await clickLabel(page, "Admin");
+  await page.waitFor(`document.querySelector("aside") !== null`, {
+    label: "kembali mode admin"
+  });
+
   const { writeFile } = await import("node:fs/promises");
   const reportPath = `${artifactDir}/a11y-report.json`;
   await writeFile(reportPath, JSON.stringify(report, null, 2));

@@ -1,9 +1,21 @@
 import { useEffect, useState } from "react";
 import { AppShell } from "./components/layout/AppShell";
 import { canPersistLocally } from "./data/learningRepository";
-import { applyPreferences, getPreferences } from "./data/preferencesRepository";
+import {
+  applyPreferences,
+  getPreferences,
+  setPreferences
+} from "./data/preferencesRepository";
 import { useSyncScheduler } from "./hooks/useSyncScheduler";
-import { findNavItem, isScreenId, type ScreenId } from "./navigation";
+import {
+  DEFAULT_APP_MODE,
+  findNavItem,
+  isAppMode,
+  isScreenAllowedInMode,
+  isScreenId,
+  type AppMode,
+  type ScreenId
+} from "./navigation";
 import { ContentScreen } from "./screens/ContentScreen";
 import { CurriculumScreen } from "./screens/CurriculumScreen";
 import { HomeScreen } from "./screens/HomeScreen";
@@ -20,6 +32,8 @@ function initialScreen(): ScreenId {
 
 export default function App() {
   const [activeScreen, setActiveScreen] = useState<ScreenId>(initialScreen);
+  const [appMode, setAppMode] = useState<AppMode>(DEFAULT_APP_MODE);
+  const [modeNotice, setModeNotice] = useState<string | null>(null);
   const activeItem = findNavItem(activeScreen);
   useSyncScheduler();
 
@@ -30,9 +44,13 @@ export default function App() {
     let cancelled = false;
     getPreferences()
       .then((preferences) => {
-        if (!cancelled) {
-          applyPreferences(preferences);
+        if (cancelled) {
+          return;
         }
+        applyPreferences(preferences);
+        const mode = isAppMode(preferences.appMode) ? preferences.appMode : DEFAULT_APP_MODE;
+        setAppMode(mode);
+        setActiveScreen((current) => (isScreenAllowedInMode(mode, current) ? current : "home"));
       })
       .catch(() => undefined);
     return () => {
@@ -41,12 +59,47 @@ export default function App() {
   }, []);
 
   function navigate(screen: ScreenId) {
-    setActiveScreen(screen);
-    window.history.replaceState(null, "", `#${screen}`);
+    const next = isScreenAllowedInMode(appMode, screen) ? screen : "home";
+    setActiveScreen(next);
+    window.history.replaceState(null, "", `#${next}`);
+  }
+
+  function applyMode(mode: AppMode) {
+    setAppMode(mode);
+    setActiveScreen((current) => {
+      if (isScreenAllowedInMode(mode, current)) {
+        return current;
+      }
+      window.history.replaceState(null, "", "#home");
+      return "home";
+    });
+  }
+
+  async function changeMode(mode: AppMode) {
+    if (mode === appMode) {
+      return;
+    }
+    setModeNotice(null);
+    applyMode(mode);
+    if (!canPersistLocally()) {
+      return;
+    }
+    try {
+      const current = await getPreferences();
+      await setPreferences({ ...current, appMode: mode });
+    } catch {
+      setModeNotice("Mode tidak dapat disimpan di perangkat ini.");
+    }
   }
 
   return (
-    <AppShell activeScreen={activeScreen} onNavigate={navigate}>
+    <AppShell
+      activeScreen={activeScreen}
+      mode={appMode}
+      modeNotice={modeNotice}
+      onNavigate={navigate}
+      onModeChange={changeMode}
+    >
       {activeScreen === "home" ? (
         <HomeScreen onNavigate={navigate} />
       ) : activeScreen === "curriculum" ? (

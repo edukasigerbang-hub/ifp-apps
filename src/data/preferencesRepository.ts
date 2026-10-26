@@ -1,8 +1,10 @@
 import { invoke } from "@tauri-apps/api/core";
+import type { AppMode } from "../navigation";
 
 export interface Preferences {
   reducedMotion: boolean;
   fontScale: "normal" | "large";
+  appMode: AppMode;
 }
 
 export async function getPreferences(): Promise<Preferences> {

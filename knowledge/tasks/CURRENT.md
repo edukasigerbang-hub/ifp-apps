@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan keputusan); UX-03 (fokus kartu hasil) selesai; a11y 16/16 PASS, E2E 5 skenario PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; **mode belajar/admin selesai (T-077)**; a11y 17/17 PASS, E2E 6 skenario PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -86,6 +86,7 @@
 | T-074 | Dokumen review UX/UI gabungan | 7 screenshot full-page + audit kode + review eksternal digabung menjadi [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](../design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md): 20 temuan (5 P1, 10 P2, 5 P3), 8 prinsip UX, matriks 10 state interaksi, checklist 13 item, rekomendasi dua mode, baseline skala IFP, roadmap P0–P3, 6 keputusan terbuka. Berkas eksternal `.md` (337 baris/14.998 byte) diunduh & isinya digabung; 4 klaimnya dikoreksi setelah cek kode. **Bukan approval**; tidak ada usability test |
 | T-075 | Eksekusi P0 UX yang tidak bergantung keputusan | 5 dari 6 butir P0 selesai: copy netral + istilah “Skor”, `subjectLabel()` bersama (Home/Curriculum/Player/Results), token kontras `teal-strong`/`danger-strong`, breadcrumb Beranda jadi tombol + alasan disabled matching, satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. `npm test` 89/89, build PASS; verifikasi DOM + 1 screenshot |
 | T-076 | UX-03 + a11y + E2E | Kartu hasil `tabIndex={-1}` + `scrollIntoView`/`focus()` setelah penilaian di kuis, mencocokkan, mengurutkan (3 komponen). Harness a11y & E2E diperbarui ke konten aktual (“Kuis Penguatan”, tombol “Lanjut berlatih”) dan 3 asersi fokus baru. `npm test` 89/89, build PASS, `npm run a11y` **PASS 16 pemeriksaan** (0 error, 7 warning reflow), E2E smoke 8/8 · activities 8/8 · home 9/9 · journey 11/11 · profile 7/7 |
+| T-077 | Dua mode: belajar & admin (D-UX-1) | Mode belajar = shell selebar perangkat **tanpa sidebar**, bar navigasi 4 tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar), layar Konten/Lisensi/Pengaturan disembunyikan. Mode admin = sidebar lengkap seperti sebelumnya. Sakelar “Belajar/Admin” di bilah atas (`aria-pressed`), tersimpan per perangkat (`preferences.appMode`, default `admin`; rekaman lama tetap terbaca). Layar di luar mode dialihkan ke Beranda. `npm test` 93/93, `cargo test` 64/64, build PASS, a11y **17 pemeriksaan PASS**, E2E baru `mode-switch` 5/5 + regresi 5 skenario PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -150,6 +151,13 @@
 | E2E home-catalog (T-076) | **PASS** — 9 pemeriksaan |
 | E2E learning-journey (T-076) | **PASS** — 11 pemeriksaan |
 | E2E profile-lifecycle (T-076) | **PASS** — 7 pemeriksaan |
+| `npm test` (T-077) | **PASS** — 93/93 unit (termasuk 4 test `navigation.test.ts`) + fixture 4/4 + catalog 320/320 |
+| `cargo test` (T-077) | **PASS** — 64/64; `preferences` 5 test termasuk rekaman lama tanpa `appMode` tetap terbaca dan `appMode` invalid ditolak |
+| `npm run build` (T-077) | **PASS** — `tsc --noEmit` + Vite |
+| `npm run a11y` (T-077) | **PASS** — **17 pemeriksaan**; 0 error, 7 warning (reflow 640/320 & target sentuh); tambah audit mode belajar (tanpa sidebar + reflow 640/320) |
+| E2E mode-switch (T-077) | **PASS** — 5 pemeriksaan: sidebar admin, konten 1600 px tanpa sidebar di mode belajar, 4 tujuan belajar, mode tersimpan (`preferences_get`), navigasi ke Hasil Belajar, kembali ke admin |
+| E2E regresi (T-077) | **PASS** — smoke 8, home-catalog 9, activities 8, learning-journey 11, profile-lifecycle 7 |
+| Screenshot dua mode (T-077) | **ADA** — `mode-admin.png` + `mode-belajar.png` di artefak `.tmp-e2e/…` (tidak di-commit); a11y `a11y-mode-belajar.png` |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -328,7 +336,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 **Verifikasi:** `npm test` **89/89** (3 test baru `subjectLabel`) + fixture 4/4 + catalog 320/320; `npm run build` **PASS**; DOM dev terverifikasi untuk label, breadcrumb, hint, copy kuis/eksplorasi, dan pesan tunggal. Screenshot: `p0-01-kurikulum-label.png` (`.tmp-screenshots/`, git-ignored); screenshot Player gagal karena surface browser tersembunyi. `npm run a11y` dan Hasil Belajar berisi data **belum** dijalankan/diverifikasi.
 
-**Sisa:** butir 3 P0 (gated), P1 (skala IFP, feedback per jawaban, hasil di viewport, progres lintas aktivitas, target sentuh), P2/P3; keputusan D-UX-1…D-UX-6.
+**Sisa:** butir 3 P0 (gated D-UX-4), P1 (skala IFP, feedback per jawaban, hasil di viewport, progres lintas aktivitas, target sentuh), P2/P3; D-UX-1 selesai di T-077, sisa keputusan D-UX-2…D-UX-6.
 
 ### Handoff UX-03 + Audit a11y + E2E (2026-10-26, T-076)
 
@@ -346,3 +354,29 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan operasional:** proses `ifp-apps.exe` (PID 94584) masih hidup meski user menyatakan app ditutup; setelah konfirmasi user, proses ditutup dengan `taskkill /PID 94584 /F` agar harness bisa berjalan.
 
 **Sisa:** Hasil Belajar berisi data (belum diverifikasi dengan data desktop), NVDA/screen reader manual, D-UX-1…D-UX-6.
+
+### Handoff Dua Mode: Belajar & Admin (2026-10-26, T-077)
+
+**Status:** D-UX-1 **diputuskan PO** lewat instruksi sesi (“mode belajar harus full device tanpa sidebar”); implementasi awal **selesai**. Mode belajar = pembatas UI, **bukan otorisasi**: belum ada PIN/kunci mode admin.
+
+**Perilaku:**
+- Mode **admin** (default): sidebar navy lengkap (Belajar + Kelola), seperti sebelum T-077.
+- Mode **belajar**: sidebar tidak dirender; konten selebar perangkat; bar navigasi horizontal 4 tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar); Player tetap dapat dibuka dari materi/Beranda tetapi tidak menjadi tujuan navigasi; Konten/Lisensi/Pengaturan tidak dapat dibuka (layar dipindahkan ke Beranda, hash diselaraskan).
+- Sakelar “Belajar/Admin” di bilah atas (grup `Mode aplikasi`, `aria-pressed`); perubahan langsung berlaku dan disimpan ke `preferences.appMode`.
+
+**Perubahan kode:**
+- `src/navigation.ts` — `AppMode`, `DEFAULT_APP_MODE` (`admin`), `studentNavigationItems`, `navigationItemsForMode()`, `isScreenAllowedInMode()`, `isAppMode()`.
+- `src/components/layout/AppShell.tsx` — sidebar hanya mode admin; `StudentNavigation` hanya mode belajar; `MobileNavigation` memakai item sesuai mode.
+- `src/components/layout/TopBar.tsx` — sakelar mode; pesan `aria-live` bila penyimpanan gagal.
+- `src/components/layout/StudentNavigation.tsx` (baru), `src/components/layout/MobileNavigation.tsx`.
+- `src/App.tsx` — memuat `appMode` saat start, pengalihan layar terlarang, simpan via `preferences_set`.
+- `src/data/preferencesRepository.ts` — `Preferences.appMode`.
+- `src-tauri/src/preferences.rs` — `app_mode` dengan serde default `admin` (rekaman lama tetap terbaca), validasi `belajar|admin`, 2 test baru.
+- `src/screens/SettingsScreen.tsx` — catatan bahwa mode diatur dari bilah atas.
+- `src/navigation.test.ts` (baru) — 4 test; `scripts/e2e/scenarios/mode-switch.mjs` (baru) + `npm run e2e:mode`; `a11y.mjs` menambah audit mode belajar.
+
+**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` 64/64 · `npm run build` PASS · `npm run a11y` **PASS 17 pemeriksaan** (0 error, 7 warning reflow) · E2E `mode-switch` 5/5 · regresi smoke 8/8 · home 9/9 · activities 8/8 · journey 11/11 · profile 7/7.
+
+**Catatan operasional:** proses dev (`npm run tauri dev`) dan `ifp-apps.exe` sisa ditutup agar harness bisa start; aplikasi dev dijalankan ulang setelah verifikasi.
+
+**Sisa:** skala tipografi/target sentuh mode siswa (D-UX-2), pemindahan metadata internal ke area pengelola (D-UX-4), keputusan PIN/kunci mode admin, verifikasi visual Hasil Belajar dengan data nyata + NVDA.
