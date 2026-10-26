@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan keputusan); sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan keputusan); UX-03 (fokus kartu hasil) selesai; a11y 16/16 PASS, E2E 5 skenario PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -85,6 +85,7 @@
 | T-073 | Perbaikan pemuatan paket bawaan | `packageDirOf` di `src/content/loadPackages.ts` salah menurunkan direktori untuk modul `lessons/`/`activities/`, sehingga Player menampilkan “Paket bawaan gagal divalidasi” dan Beranda 0 paket. Diperbaiki + unit test `loadPackages.test.ts`; paket bawaan terbuka di Player |
 | T-074 | Dokumen review UX/UI gabungan | 7 screenshot full-page + audit kode + review eksternal digabung menjadi [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](../design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md): 20 temuan (5 P1, 10 P2, 5 P3), 8 prinsip UX, matriks 10 state interaksi, checklist 13 item, rekomendasi dua mode, baseline skala IFP, roadmap P0–P3, 6 keputusan terbuka. Berkas eksternal `.md` (337 baris/14.998 byte) diunduh & isinya digabung; 4 klaimnya dikoreksi setelah cek kode. **Bukan approval**; tidak ada usability test |
 | T-075 | Eksekusi P0 UX yang tidak bergantung keputusan | 5 dari 6 butir P0 selesai: copy netral + istilah “Skor”, `subjectLabel()` bersama (Home/Curriculum/Player/Results), token kontras `teal-strong`/`danger-strong`, breadcrumb Beranda jadi tombol + alasan disabled matching, satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. `npm test` 89/89, build PASS; verifikasi DOM + 1 screenshot |
+| T-076 | UX-03 + a11y + E2E | Kartu hasil `tabIndex={-1}` + `scrollIntoView`/`focus()` setelah penilaian di kuis, mencocokkan, mengurutkan (3 komponen). Harness a11y & E2E diperbarui ke konten aktual (“Kuis Penguatan”, tombol “Lanjut berlatih”) dan 3 asersi fokus baru. `npm test` 89/89, build PASS, `npm run a11y` **PASS 16 pemeriksaan** (0 error, 7 warning reflow), E2E smoke 8/8 · activities 8/8 · home 9/9 · journey 11/11 · profile 7/7 |
 
 ## Status prasyarat materi pembelajaran
 
@@ -143,7 +144,12 @@
 | Verifikasi DOM (T-075) | **PASS** — opsi mapel “Bahasa Indonesia/PAI/PJOK/Pendidikan Pancasila”, breadcrumb pindah ke `#home`, hint “Lengkapi 6 pasangan lagi”, copy kuis “Skor minimal lulus: 75 dari 100”, eksplorasi “menyelesaikan 5 langkah”, satu pesan pratinjau |
 | Verifikasi Hasil Belajar dengan data (T-075) | **NOT RUN** — data lokal hanya ada di jendela desktop; browser pratinjau menampilkan state kosong |
 | Screenshot ulang P0 (T-075) | **PARTIAL** — `p0-01-kurikulum-label.png` tersimpan; screenshot Player gagal karena surface in-app Browser tersembunyi (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`) |
-| `npm run a11y` (T-075) | **NOT RUN** — belum dijalankan pada perubahan ini |
+| `npm run a11y` (T-076) | **PASS** — 16 pemeriksaan; 0 error, 7 warning (reflow 640/320 & target sentuh); termasuk state dinamis konfirmasi hapus & hasil kuis |
+| E2E smoke (T-076) | **PASS** — 8 pemeriksaan |
+| E2E activities (T-076) | **PASS** — 8 pemeriksaan; 3 asersi baru: fokus berpindah ke kartu hasil kuis benar-salah, mencocokkan, mengurutkan |
+| E2E home-catalog (T-076) | **PASS** — 9 pemeriksaan |
+| E2E learning-journey (T-076) | **PASS** — 11 pemeriksaan |
+| E2E profile-lifecycle (T-076) | **PASS** — 7 pemeriksaan |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -323,3 +329,20 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Verifikasi:** `npm test` **89/89** (3 test baru `subjectLabel`) + fixture 4/4 + catalog 320/320; `npm run build` **PASS**; DOM dev terverifikasi untuk label, breadcrumb, hint, copy kuis/eksplorasi, dan pesan tunggal. Screenshot: `p0-01-kurikulum-label.png` (`.tmp-screenshots/`, git-ignored); screenshot Player gagal karena surface browser tersembunyi. `npm run a11y` dan Hasil Belajar berisi data **belum** dijalankan/diverifikasi.
 
 **Sisa:** butir 3 P0 (gated), P1 (skala IFP, feedback per jawaban, hasil di viewport, progres lintas aktivitas, target sentuh), P2/P3; keputusan D-UX-1…D-UX-6.
+
+### Handoff UX-03 + Audit a11y + E2E (2026-10-26, T-076)
+
+**Status:** UX-03 (kartu hasil di luar viewport) **selesai** untuk bagian otomatis; label tiga keadaan per jawaban (UX-02) tetap tertahan D-UX-5.
+
+**Perubahan kode:** `QuizActivity`, `MatchingActivity`, `OrderingActivity` — kartu hasil memakai `ref`, `tabIndex={-1}`, `scrollIntoView({ block: "nearest" })` dan `focus()` saat hasil muncul; `aria-live="polite"` tetap. Cincin fokus `focus-visible:ring-2 ring-primary/50` untuk pengguna keyboard.
+
+**Perubahan harness:**
+- `scripts/e2e/scenarios/a11y.mjs` — audit hasil kuis memakai paket bawaan aktual: tombol “Kuis Penguatan” + opsi `opsi-penguatan-1-1`/`-2-2` (sebelumnya merujuk paket pilot “Kuis Pecahan Sederhana” yang tidak lagi menjadi lesson default).
+- `scripts/e2e/scenarios/learning-journey.mjs`, `home-catalog.mjs` — tombol “Lanjut ke kuis” → “Lanjut berlatih” (copy P0 T-075).
+- `scripts/e2e/scenarios/activities.mjs` — 3 asersi fokus kartu hasil (`document.activeElement` memuat “Skor 100 dari 100”) untuk kuis, matching, ordering.
+
+**Verifikasi aktual:** `npm test` 89/89 + fixture 4/4 + catalog 320/320 · `npm run build` PASS · `npm run a11y` **PASS 16 pemeriksaan** (0 error, 7 warning reflow) · `npm run e2e` 8/8 · `e2e:activities` 8/8 · `e2e:home` 9/9 · `e2e:journey` 11/11 · `e2e:profile` 7/7.
+
+**Catatan operasional:** proses `ifp-apps.exe` (PID 94584) masih hidup meski user menyatakan app ditutup; setelah konfirmasi user, proses ditutup dengan `taskkill /PID 94584 /F` agar harness bisa berjalan.
+
+**Sisa:** Hasil Belajar berisi data (belum diverifikasi dengan data desktop), NVDA/screen reader manual, D-UX-1…D-UX-6.

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { GradedOutcome } from "../../content/graded";
 import { readMatchingPairs, scoreMatching } from "../../content/interactions";
 import type { Activity } from "../../content/schema/activity";
@@ -16,6 +16,13 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
       : 70;
   const [selections, setSelections] = useState<Record<string, string>>({});
   const [result, setResult] = useState<{ score: number; passed: boolean } | null>(null);
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!result) return;
+    resultRef.current?.scrollIntoView({ block: "nearest" });
+    resultRef.current?.focus();
+  }, [result]);
 
   if (pairs.length === 0) {
     return <p className="text-sm text-muted">Aktivitas ini belum memiliki pasangan.</p>;
@@ -95,7 +102,9 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
       <div aria-live="polite" className="mt-6">
         {result && (
           <div
-            className={`rounded-card border p-5 ${
+            ref={resultRef}
+            tabIndex={-1}
+            className={`rounded-card border p-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
               result.passed ? "border-teal/30 bg-teal/5" : "border-warning/40 bg-warning/10"
             }`}
           >

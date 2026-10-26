@@ -34,7 +34,7 @@ Skor 6,5/10 dari review eksternal adalah **penilaian heuristik visual** (diakui 
 | Objek review eksternal | Arsip `layout-pembelajaran-2026-10-26.zip` (7 screenshot yang sama), tanpa akses kode |
 | Tidak dinilai | Beranda dan Hasil Belajar **berisi data** (butuh jendela desktop/native); perilaku sentuh nyata di panel; tablet/Android; pengujian dengan anak atau guru |
 | Tidak dinilai (review eksternal) | Performa, keamanan/privasi, kebenaran pedagogis, ketahanan penyimpanan/sinkronisasi, dan aksesibilitas menurut standar — dinyatakan sendiri oleh penulisnya |
-| Audit aksesibilitas | Dokumen ini hanya menghitung rasio kontras token; skenario `npm run a11y` (`scripts/e2e/scenarios/a11y.mjs`, audit kustom) **tidak** dijalankan ulang di sesi ini; bukan audit WCAG penuh |
+| Audit aksesibilitas | Dokumen ini hanya menghitung rasio kontras token; skenario `npm run a11y` (`scripts/e2e/scenarios/a11y.mjs`, audit kustom) **belum** dijalankan saat review disusun — baru dijalankan 2026-10-26 setelah perbaikan P0/UX-03 (PASS 16 pemeriksaan, 0 error, 7 warning); tetap bukan audit WCAG penuh |
 
 Catatan kondisi: pratinjau browser tidak memiliki database lokal, sehingga Hasil Belajar tampil kosong dan banner “hasil belajar tidak disimpan” muncul dua kali. Ini **artefak pratinjau**, bukan perilaku aplikasi desktop.
 
@@ -52,15 +52,15 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 ### P1 — sebelum pilot kelas
 
-**UX-01 · Skala IFP belum ada.** Kolom `max-w-4xl` = 896 px ([LessonPlayer.tsx:210](../../src/screens/LessonPlayer.tsx#L210)), `max-w-5xl` = 1024 px ([CurriculumScreen.tsx:76](../../src/screens/CurriculumScreen.tsx#L76)) → hanya 47%/53% lebar 1920. Body 14 px, opsi kuis 14 px dengan radio 16 px ([QuizActivity.tsx:148](../../src/components/content/QuizActivity.tsx#L148)). → Terapkan skala panel (lihat §6) sebagai mode/token, bukan zoom global.
+**UX-01 · Skala IFP belum ada.** Kolom `max-w-4xl` = 896 px ([LessonPlayer.tsx:210](../../src/screens/LessonPlayer.tsx#L210)), `max-w-5xl` = 1024 px ([CurriculumScreen.tsx:76](../../src/screens/CurriculumScreen.tsx#L76)) → hanya 47%/53% lebar 1920. Body 14 px, opsi kuis 14 px dengan radio 16 px ([QuizActivity.tsx:155](../../src/components/content/QuizActivity.tsx#L155)). → Terapkan skala panel (lihat §6) sebagai mode/token, bukan zoom global.
 
-**UX-02 · Tidak ada umpan balik benar/salah per jawaban.** Opsi kuis setelah dinilai hanya `disabled opacity-80`, tanpa penanda benar/salah maupun kunci ([QuizActivity.tsx:148-196](../../src/components/content/QuizActivity.tsx#L148)); matching menulis “Salah” tetapi tidak menunjukkan pasangan yang benar ([MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83)). → Tiga keadaan: dipilih–benar, dipilih–salah, dan kunci jawaban; tambah kalimat koreksi singkat.
+**UX-02 · Tidak ada umpan balik benar/salah per jawaban.** Opsi kuis setelah dinilai hanya `disabled opacity-80`, tanpa penanda benar/salah maupun kunci ([QuizActivity.tsx:148-196](../../src/components/content/QuizActivity.tsx#L148)); matching menulis “Salah” tetapi tidak menunjukkan pasangan yang benar ([MatchingActivity.tsx:90-96](../../src/components/content/MatchingActivity.tsx#L90)). → Tiga keadaan: dipilih–benar, dipilih–salah, dan kunci jawaban; tambah kalimat koreksi singkat.
 
-**UX-03 · Kartu hasil di luar viewport.** Kartu skor berada di atas tombol, setelah 6 baris matching / 2 fieldset ([MatchingActivity.tsx:95-107](../../src/components/content/MatchingActivity.tsx#L95), [QuizActivity.tsx:205-222](../../src/components/content/QuizActivity.tsx#L205)); siswa melihat tombol berubah “Ulangi” tanpa melihat skor. → Auto-scroll/fokus ke hasil, atau bar hasil sticky.
+**UX-03 · Kartu hasil di luar viewport.** Kartu skor berada di atas tombol, setelah 6 baris matching / 2 fieldset ([MatchingActivity.tsx:102-114](../../src/components/content/MatchingActivity.tsx#L102), [QuizActivity.tsx:212-229](../../src/components/content/QuizActivity.tsx#L212)); siswa melihat tombol berubah “Ulangi” tanpa melihat skor. → Auto-scroll/fokus ke hasil, atau bar hasil sticky. **Selesai 2026-10-26 (bagian otomatis):** kartu hasil `tabIndex={-1}` + `scrollIntoView`/`focus()` di kuis, mencocokkan, dan mengurutkan; label tiga keadaan per jawaban tetap UX-02/D-UX-5.
 
 **UX-04 · Metadata internal di layar belajar.** Badge DRAFT dan “Paket bawaan build” ([LessonPlayer.tsx:379-393](../../src/screens/LessonPlayer.tsx#L379)), “Versi 0.1.0 · scaffold” ([SidebarNavigation.tsx:59](../../src/components/layout/SidebarNavigation.tsx#L59)), “Scaffold Fase C” ([ScreenPlaceholder.tsx:15](../../src/screens/ScreenPlaceholder.tsx#L15)), slug `bahasa-indonesia` ([LessonPlayer.tsx:389-392](../../src/screens/LessonPlayer.tsx#L389)), dan ID mentah di Hasil Belajar ([ResultsScreen.tsx:166-168](../../src/screens/ResultsScreen.tsx#L166)). → Pindahkan metadata QA ke area admin/debug; pakai `subjectLabel()` untuk subjek; Hasil Belajar menampilkan judul lesson/aktivitas, bukan ID.
 
-**UX-05 · Copy hasil penilaian salah konteks & hardcoded.** Pesan lulus menyebut “pecahan sederhana” pada pelajaran huruf ([QuizActivity.tsx:216](../../src/components/content/QuizActivity.tsx#L216)); “mengamati keempat gambar” padahal langkah bisa 5 ([ExplorationActivity.tsx:67](../../src/components/content/ExplorationActivity.tsx#L67)). → Copy netral per tipe aktivitas, atau ambil dari paket konten.
+**UX-05 · Copy hasil penilaian salah konteks & hardcoded.** Pesan lulus menyebut “pecahan sederhana” pada pelajaran huruf ([QuizActivity.tsx:223](../../src/components/content/QuizActivity.tsx#L223)); “mengamati keempat gambar” padahal langkah bisa 5 ([ExplorationActivity.tsx:67](../../src/components/content/ExplorationActivity.tsx#L67)). → Copy netral per tipe aktivitas, atau ambil dari paket konten.
 
 ### P2 — kualitas pengalaman
 
@@ -70,7 +70,7 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 **UX-08 · CTA bersaing.** “Tampilkan penjelasan” biru penuh ([ExplorationActivity.tsx:137-152](../../src/components/content/ExplorationActivity.tsx#L137)) dan “Lanjut” biru penuh ([ExplorationActivity.tsx:164-170](../../src/components/content/ExplorationActivity.tsx#L164)). → Satu primary per layar; reveal jadi secondary.
 
-**UX-09 · Disabled tanpa alasan.** “Periksa pasangan” 40% opacity (kontras 1,65:1) dan masih tampak aktif ([MatchingActivity.tsx:109-118](../../src/components/content/MatchingActivity.tsx#L109)). → Sertakan hint “Lengkapi 6 pasangan dulu”, atau aktifkan tombol dan beri pesan validasi.
+**UX-09 · Disabled tanpa alasan.** “Periksa pasangan” 40% opacity (kontras 1,65:1) dan masih tampak aktif ([MatchingActivity.tsx:116-125](../../src/components/content/MatchingActivity.tsx#L116)). → Sertakan hint “Lengkapi 6 pasangan dulu”, atau aktifkan tombol dan beri pesan validasi.
 
 **UX-10 · Jelajah memindai lambat.** 48 kartu identik tanpa thumbnail (padahal aset WebP tersedia), 48 tombol biru identik, tanpa kode warna mapel, tanpa status selesai/belum ([CurriculumScreen.tsx:149-175](../../src/screens/CurriculumScreen.tsx#L149)); filter tanpa reset/chip aktif ([CurriculumScreen.tsx:88-141](../../src/screens/CurriculumScreen.tsx#L88)). → Kartu berilustrasi + warna mapel + status progres; klik seluruh kartu; chip filter + reset; kelompokkan per mapel.
 
@@ -80,7 +80,7 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 **UX-13 · Navigasi mencampur peran & tanpa ikon.** Sembilan item belajar + kelola setara ([SidebarNavigation.tsx:26-57](../../src/components/layout/SidebarNavigation.tsx#L26)); brand “GERBANG EDUKASI” diulang dua baris ([SidebarNavigation.tsx:17-24](../../src/components/layout/SidebarNavigation.tsx#L17)); navigasi seluler = 9 item scroll horizontal tanpa ikon ([MobileNavigation.tsx:14-31](../../src/components/layout/MobileNavigation.tsx#L14)). → Pemisahan mode Siswa/Guru (lihat §5); ikon + label; di seluler prioritaskan 4–5 item utama.
 
-**UX-14 · Progres tidak konsisten.** Eksplorasi punya progress bar; kuis/matching hanya teks “Terjawab 0 dari 2” ([QuizActivity.tsx:115-117](../../src/components/content/QuizActivity.tsx#L115), [MatchingActivity.tsx:45-48](../../src/components/content/MatchingActivity.tsx#L45)). → Satu komponen progres untuk semua tipe aktivitas.
+**UX-14 · Progres tidak konsisten.** Eksplorasi punya progress bar; kuis/matching hanya teks “Terjawab 0 dari 2” ([QuizActivity.tsx:122-124](../../src/components/content/QuizActivity.tsx#L122), [MatchingActivity.tsx:52-55](../../src/components/content/MatchingActivity.tsx#L52)). → Satu komponen progres untuk semua tipe aktivitas.
 
 **UX-15 · Umpan balik tekan tidak ada.** Semua CTA memakai `hover:opacity-90` tanpa `active:`/skala; di layar sentuh tidak ada respons saat disentuh (contoh [CurriculumScreen.tsx:166-172](../../src/screens/CurriculumScreen.tsx#L166)). → Tambah status `active`/pressed dan target 56–64 px.
 
@@ -88,11 +88,11 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 | ID | Temuan | Bukti | Angka |
 |---|---|---|---|
-| UX-16 | “Benar” teal 14 px gagal AA | [MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83) | **2,81–2,95:1** (butuh 4,5) |
-| UX-17 | “Salah” merah di tint gagal AA | [MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83) | **4,23:1** |
+| UX-16 | “Benar” teal 14 px gagal AA | [MatchingActivity.tsx:90-96](../../src/components/content/MatchingActivity.tsx#L90) | **2,81–2,95:1** (butuh 4,5) |
+| UX-17 | “Salah” merah di tint gagal AA | [MatchingActivity.tsx:90-96](../../src/components/content/MatchingActivity.tsx#L90) | **4,23:1** |
 | UX-18 | Label grup sidebar 11 px & footer 12 px gagal AA | [SidebarNavigation.tsx:29](../../src/components/layout/SidebarNavigation.tsx#L29), [:59](../../src/components/layout/SidebarNavigation.tsx#L59) | **4,06:1** |
-| UX-19 | Prompt kuis bukan bagian `<legend>` | [QuizActivity.tsx:121-123](../../src/components/content/QuizActivity.tsx#L121) | Pembaca layar mengumumkan grup “Soal 1”, bukan pertanyaan |
-| UX-20 | Istilah campur & tanda baca | “Nilai lulus” vs “Skor” ([QuizActivity.tsx:116](../../src/components/content/QuizActivity.tsx#L116)); “Terjawab 6 dari 6.”; “Apa pasangan dari …” | Konsistensi bahasa |
+| UX-19 | Prompt kuis bukan bagian `<legend>` | [QuizActivity.tsx:128-130](../../src/components/content/QuizActivity.tsx#L128) | Pembaca layar mengumumkan grup “Soal 1”, bukan pertanyaan |
+| UX-20 | Istilah campur & tanda baca | “Nilai lulus” vs “Skor” ([QuizActivity.tsx:123](../../src/components/content/QuizActivity.tsx#L123)); “Terjawab 6 dari 6.”; “Apa pasangan dari …” | Konsistensi bahasa |
 
 Kontras yang **lolos**: muted `#5f7085` di paper 4,76:1; putih di primary 5,38:1; putih di navy 11,25:1; ink di paper 14,29:1.
 
@@ -219,7 +219,7 @@ Angka berikut berasal dari berkas eksternal (§3 di sana), dihitung dari screens
 
 **Kriteria penerimaan P0:** tidak ada ID mentah/jargon di layar siswa; semua teks status ≥4,5:1; tombol disabled punya alasan; screenshot ulang sebagai bukti.
 
-**Status implementasi (2026-10-26):** butir 1, 2, 4, 5, 6 **selesai** dan diverifikasi build/uji/DOM; butir 3 **tertahan keputusan** D-UX-1/D-UX-4.
+**Status implementasi (2026-10-26):** butir 1, 2, 4, 5, 6 **selesai** dan diverifikasi build/uji/DOM; butir 3 **tertahan keputusan** D-UX-1/D-UX-4. Setelah itu dijalankan verifikasi penuh: `npm run a11y` **PASS** 16 pemeriksaan (0 error, 7 warning reflow) dan 5 skenario E2E PASS (smoke 8, activities 8, home 9, journey 11, profile 7).
 
 | Butir | Status | Bukti |
 |---|---|---|
@@ -230,13 +230,15 @@ Angka berikut berasal dari berkas eksternal (§3 di sana), dihitung dari screens
 | 5 Breadcrumb & alasan disabled | Selesai | `TopBar` menerima `onNavigate`; klik “Beranda” terverifikasi pindah ke `#home`; matching menampilkan “Lengkapi N pasangan lagi…” |
 | 6 Satu pesan penyimpanan | Selesai | Pesan footer ganda dihapus; banner menyimpan status siap/tersimpan + “belum disinkronkan” |
 
-**Batas bukti:** screenshot baru hanya untuk layar Jelajah Materi (`p0-01-kurikulum-label.png`); surface in-app Browser kembali tersembunyi sebelum screenshot Player (galat `NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`), sehingga butir lain diverifikasi lewat DOM + build, bukan tangkapan layar. Uji ulang a11y belum dijalankan pada perubahan ini.
+**Batas bukti:** screenshot baru hanya untuk layar Jelajah Materi (`p0-01-kurikulum-label.png`); surface in-app Browser kembali tersembunyi sebelum screenshot Player (galat `NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`), sehingga butir lain diverifikasi lewat DOM + build, bukan tangkapan layar.
+
+**Verifikasi susulan 2026-10-26 (UX-03):** `npm test` 89/89 · `npm run build` PASS · `npm run a11y` PASS 16 pemeriksaan (0 error, 7 warning reflow; termasuk state hasil kuis) · E2E smoke 8/8, activities 8/8 (3 asersi baru: fokus pindah ke kartu hasil kuis/matching/ordering), home-catalog 9/9, learning-journey 11/11, profile-lifecycle 7/7. Harness diperbarui: audit hasil kuis memakai paket bawaan (“Kuis Penguatan”), tombol eksplorasi “Lanjut berlatih”.
 
 ### P1 — Player siswa (dampak terbesar)
 
 1. Token skala IFP + kolom konten lebih lebar.
 2. Tujuan pembelajaran jadi ringkas; status penyimpanan jadi indikator header.
-3. Feedback 3 keadaan + kunci jawaban; hasil auto-scroll/fokus.
+3. Feedback 3 keadaan + kunci jawaban (UX-02, tertahan D-UX-5); **hasil auto-scroll/fokus selesai 2026-10-26** (UX-03).
 4. Satu komponen progres lintas aktivitas; tab dengan status selesai.
 5. Target sentuh 56–64 px + status pressed.
 
@@ -266,7 +268,7 @@ Daftar dari review eksternal (§5.4 di sana) dengan status aktual di kode. Kolom
 | focus | semua kontrol | Ada — `:focus-visible` 3 px ([index.css:3](../../src/index.css#L3)) |
 | selected | opsi kuis, tab, filter | Ada (`checked`, `aria-selected`, nilai select) |
 | correct | opsi/kartu setelah dinilai | **Tidak ada** (UX-02) |
-| incorrect | opsi/kartu setelah dinilai | **Tidak ada** untuk opsi kuis; matching/ordering menulis “Salah” dengan warna `danger-strong` yang lolos kontras ([MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83)) |
+| incorrect | opsi/kartu setelah dinilai | **Tidak ada** untuk opsi kuis; matching/ordering menulis “Salah” dengan warna `danger-strong` yang lolos kontras ([MatchingActivity.tsx:90-96](../../src/components/content/MatchingActivity.tsx#L90)) |
 | disabled | CTA “Periksa” | Ada dengan alasan: matching menyebut jumlah pasangan tersisa; kuis menampilkan “Terjawab X dari Y” (UX-09 sebagian selesai) |
 | loading | katalog, player, ekspor | Katalog (`Memuat materi…`) dan player (`Memuat konten…`, [LessonPlayer.tsx:179-185](../../src/screens/LessonPlayer.tsx#L179)) ada; ekspor hanya menonaktifkan tombol tanpa label proses ([ResultsScreen.tsx:138-142](../../src/screens/ResultsScreen.tsx#L138)) |
 | error | katalog, penyimpanan, ekspor | Ada di katalog, penyimpanan (`saved`/`error`), ekspor, dan Hasil Belajar |

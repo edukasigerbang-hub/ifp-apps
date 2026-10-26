@@ -77,7 +77,7 @@ export async function run({ page, artifactDir, log }) {
   });
   log("Eksplorasi 4 langkah selesai.");
 
-  await clickButton(page, "Lanjut ke kuis");
+  await clickButton(page, "Lanjut berlatih");
   await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
     label: "kuis tampil"
   });

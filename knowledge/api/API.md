@@ -183,7 +183,7 @@ Server: authorization → size/schema validation → idempotency → persist →
 { "code": "CONTENT_ASSET_HASH_MISMATCH", "message": "<aman untuk pengguna>", "retryable": false, "correlationId": "<id>" }
 ```
 
-Kode stabil: lihat [LLD ringkasan §Error codes](LLD.md#error-codes-subset-wajib).
+Kode stabil: lihat [LLD ringkasan §Error codes](../architecture/LLD.md#error-codes-subset-wajib).
 
 ## Status
 

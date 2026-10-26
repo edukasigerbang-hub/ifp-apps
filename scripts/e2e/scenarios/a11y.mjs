@@ -602,11 +602,12 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
     label: "Player untuk audit hasil kuis"
   });
-  await clickLabel(page, "Kuis Pecahan Sederhana");
+  // Player membuka paket bawaan pertama (Kelas 1 Bahasa Indonesia) — pakai kuis aktualnya.
+  await clickLabel(page, "Kuis Penguatan");
   await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
     label: "kuis tampil"
   });
-  for (const optionId of ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"]) {
+  for (const optionId of ["opsi-penguatan-1-1", "opsi-penguatan-2-2"]) {
     const chosen = await page.evaluate(`
       (() => {
         const input = document.querySelector('input[value="${optionId}"]');

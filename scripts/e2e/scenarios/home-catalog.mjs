@@ -156,7 +156,7 @@ export async function run({ page, artifactDir, log }) {
     label: "eksplorasi langkah 4"
   });
   await clickButton(page, "Selesai");
-  await clickButton(page, "Lanjut ke kuis");
+  await clickButton(page, "Lanjut berlatih");
   await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
     label: "kuis tampil"
   });

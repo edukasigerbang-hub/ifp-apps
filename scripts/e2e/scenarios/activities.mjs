@@ -339,7 +339,10 @@ export async function run({ page, artifactDir, log }) {
     label: "simpan benar-salah",
     timeoutMs: 30_000
   });
-  log("Aktivitas benar-salah dinilai 100 dan tersimpan.");
+  await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
+    label: "fokus kartu hasil benar-salah"
+  });
+  log("Aktivitas benar-salah dinilai 100, tersimpan, dan kartu hasil difokuskan.");
 
   await clickButton(page, "Jawaban Singkat");
   await page.waitFor(`document.body.textContent.includes("Tuliskan nama pecahan 1/2")`, {
@@ -408,7 +411,10 @@ export async function run({ page, artifactDir, log }) {
     label: "simpan mencocokkan",
     timeoutMs: 30_000
   });
-  log("Aktivitas mencocokkan dinilai 100 dan tersimpan.");
+  await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
+    label: "fokus kartu hasil mencocokkan"
+  });
+  log("Aktivitas mencocokkan dinilai 100, tersimpan, dan kartu hasil difokuskan.");
 
   await clickButton(page, "Mengurutkan Angka");
   await page.waitFor(`document.body.textContent.includes("Urutkan angka dari terkecil")`, {
@@ -424,7 +430,10 @@ export async function run({ page, artifactDir, log }) {
     label: "simpan mengurutkan",
     timeoutMs: 30_000
   });
-  log("Aktivitas mengurutkan dinilai 100 dan tersimpan.");
+  await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
+    label: "fokus kartu hasil mengurutkan"
+  });
+  log("Aktivitas mengurutkan dinilai 100, tersimpan, dan kartu hasil difokuskan.");
 
   const profileId = await page.evaluate(
     `window.__TAURI_INTERNALS__.invoke("profile_get_active").then((profile) => profile.id)`

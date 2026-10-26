@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { isAnswerCorrect, scoreQuiz, type QuizAnswerValue } from "../../content/quiz";
 import type { Activity } from "../../content/schema/activity";
 
@@ -29,6 +29,13 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
   const passingScore = activity.assessmentConfig?.passingScore ?? 70;
   const [answers, setAnswers] = useState<Record<string, QuizAnswerValue>>({});
   const [result, setResult] = useState<QuizResult | null>(null);
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!result) return;
+    resultRef.current?.scrollIntoView({ block: "nearest" });
+    resultRef.current?.focus();
+  }, [result]);
 
   if (questions.length === 0) {
     return <p className="text-sm text-muted">Kuis ini belum memiliki soal.</p>;
@@ -205,7 +212,9 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
       <div aria-live="polite" className="mt-6">
         {result && (
           <div
-            className={`rounded-card border p-5 ${
+            ref={resultRef}
+            tabIndex={-1}
+            className={`rounded-card border p-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
               result.passed ? "border-teal/30 bg-teal/5" : "border-warning/40 bg-warning/10"
             }`}
           >
