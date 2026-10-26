@@ -19,8 +19,12 @@ export interface ContentLoadOptions {
   includeAssets?: boolean;
 }
 
-function packageDirOf(path: string): string {
-  return path.slice(0, path.lastIndexOf("/"));
+export function packageDirOf(modulePath: string): string {
+  const dir = modulePath.slice(0, modulePath.lastIndexOf("/"));
+  if (dir.endsWith("/lessons") || dir.endsWith("/activities")) {
+    return dir.slice(0, dir.lastIndexOf("/"));
+  }
+  return dir;
 }
 
 const catalogCache = { promise: null as Promise<ContentLoadResult> | null };
