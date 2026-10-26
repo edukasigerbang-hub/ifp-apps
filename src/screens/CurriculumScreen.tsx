@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { CoverArt } from "../components/content/CoverArt";
 import { LessonThumbnail } from "../components/content/LessonThumbnail";
 import {
   catalogFacets,
@@ -6,6 +7,7 @@ import {
   filterCatalog,
   type CatalogLessonEntry
 } from "../content/catalog";
+import { gradeCoverUrl, subjectCoverUrl } from "../content/coverArt";
 import { loadCatalog } from "../content/loadCatalog";
 import { subjectLabel } from "../content/subjectLabel";
 import type { ScreenId } from "../navigation";
@@ -224,6 +226,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
             </button>
             {facets.grades.map((value) => {
               const isActive = grade === value;
+              const coverUrl = gradeCoverUrl(value);
               const cover = gradeCovers.get(value);
               return (
                 <button
@@ -240,10 +243,12 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
                       : "border-ink/15 hover:border-primary/40"
                   }`}
                 >
-                  {cover ? (
-                    <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
+                  {coverUrl ? (
+                    <CoverArt url={coverUrl} className="aspect-[16/9] w-full" />
+                  ) : cover ? (
+                    <LessonThumbnail entry={cover} className="aspect-[16/9] w-full" />
                   ) : (
-                    <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
+                    <span aria-hidden="true" className="block aspect-[16/9] w-full bg-teal/10" />
                   )}
                   <span
                     className={`block px-2 py-1.5 text-xs font-semibold ${
@@ -294,6 +299,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
             </button>
             {facets.subjects.map((value) => {
               const isActive = subject === value;
+              const coverUrl = subjectCoverUrl(value);
               const cover = subjectCovers.get(value);
               return (
                 <button
@@ -310,10 +316,12 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
                       : "border-ink/15 hover:border-primary/40"
                   }`}
                 >
-                  {cover ? (
-                    <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
+                  {coverUrl ? (
+                    <CoverArt url={coverUrl} className="aspect-[16/9] w-full" />
+                  ) : cover ? (
+                    <LessonThumbnail entry={cover} className="aspect-[16/9] w-full" />
                   ) : (
-                    <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
+                    <span aria-hidden="true" className="block aspect-[16/9] w-full bg-teal/10" />
                   )}
                   <span
                     className={`block px-2 py-1.5 text-xs font-semibold ${

@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
+import { CoverArt } from "../components/content/CoverArt";
 import { LessonThumbnail } from "../components/content/LessonThumbnail";
 import { LearningIllustration } from "../components/home/LearningIllustration";
 import { ProfileAvatar } from "../components/profile/ProfileAvatar";
 import type { CatalogLessonEntry } from "../content/catalog";
 import { catalogFacets } from "../content/catalog";
+import { subjectCoverUrl } from "../content/coverArt";
 import { loadCatalog } from "../content/loadCatalog";
 import { subjectLabel } from "../content/subjectLabel";
 import { canPersistLocally, getLearningSummary, type LearningSummary } from "../data/learningRepository";
@@ -71,6 +73,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     [entries]
   );
   const facets = catalogFacets(entries);
+  const heroCoverUrl = heroEntry ? subjectCoverUrl(heroEntry.subjects[0] ?? "") : null;
   const subjectCounts = new Map<string, number>();
   const subjectCovers = new Map<string, CatalogLessonEntry>();
   for (const entry of entries) {
@@ -119,7 +122,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             </div>
           </div>
           <div className="w-full max-w-sm self-center md:w-80 md:shrink-0">
-            <LearningIllustration entry={heroEntry} />
+            <LearningIllustration entry={heroEntry} coverUrl={heroCoverUrl} />
           </div>
         </div>
       </section>
@@ -215,31 +218,41 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           </p>
         ) : (
           <ul className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {facets.subjects.map((subject) => (
-              <li
-                key={subject}
-                data-subject-card
-                className="flex items-center gap-3 rounded-card border border-ink/10 bg-surface p-4"
-              >
-                <LessonThumbnail
-                  entry={subjectCovers.get(subject)!}
-                  className="h-16 w-24 shrink-0 rounded-control"
-                />
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-semibold">{subjectLabel(subject)}</p>
-                  <p className="text-xs text-muted">
-                    {subjectCounts.get(subject) ?? 0} materi
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => onNavigate("curriculum")}
-                  className="min-h-11 shrink-0 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+            {facets.subjects.map((subject) => {
+              const coverUrl = subjectCoverUrl(subject);
+              const cover = subjectCovers.get(subject);
+              return (
+                <li
+                  key={subject}
+                  data-subject-card
+                  className="flex items-center gap-3 rounded-card border border-ink/10 bg-surface p-4"
                 >
-                  Lihat
-                </button>
-              </li>
-            ))}
+                  {coverUrl ? (
+                    <CoverArt url={coverUrl} className="h-14 w-24 shrink-0 rounded-control" />
+                  ) : cover ? (
+                    <LessonThumbnail entry={cover} className="h-14 w-24 shrink-0 rounded-control" />
+                  ) : (
+                    <span
+                      aria-hidden="true"
+                      className="h-14 w-24 shrink-0 rounded-control bg-teal/10"
+                    />
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold">{subjectLabel(subject)}</p>
+                    <p className="text-xs text-muted">
+                      {subjectCounts.get(subject) ?? 0} materi
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => onNavigate("curriculum")}
+                    className="min-h-11 shrink-0 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+                  >
+                    Lihat
+                  </button>
+                </li>
+              );
+            })}
           </ul>
         )}
       </section>

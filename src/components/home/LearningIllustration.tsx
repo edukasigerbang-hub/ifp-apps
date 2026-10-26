@@ -1,11 +1,13 @@
 import type { CatalogLessonEntry } from "../../content/catalog";
+import { CoverArt } from "../content/CoverArt";
 import { LessonThumbnail } from "../content/LessonThumbnail";
 
 interface LearningIllustrationProps {
   entry?: CatalogLessonEntry;
+  coverUrl?: string | null;
 }
 
-export function LearningIllustration({ entry }: LearningIllustrationProps) {
+export function LearningIllustration({ entry, coverUrl = null }: LearningIllustrationProps) {
   return (
     <div
       aria-hidden="true"
@@ -17,10 +19,12 @@ export function LearningIllustration({ entry }: LearningIllustrationProps) {
       <span className="absolute -top-2 right-12 h-9 w-9 rounded-full bg-primary/10" />
 
       <div className="relative mt-2 overflow-hidden rounded-card border border-surface bg-surface shadow-[0_20px_45px_-28px_rgba(23,59,105,0.5)] ring-1 ring-ink/5">
-        {entry ? (
-          <LessonThumbnail entry={entry} className="aspect-[16/10] w-full" />
+        {coverUrl ? (
+          <CoverArt url={coverUrl} className="aspect-[16/9] w-full" />
+        ) : entry ? (
+          <LessonThumbnail entry={entry} className="aspect-[16/9] w-full" />
         ) : (
-          <span className="block aspect-[16/10] w-full bg-teal/10" />
+          <span className="block aspect-[16/9] w-full bg-teal/10" />
         )}
       </div>
 

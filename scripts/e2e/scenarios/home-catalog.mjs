@@ -124,12 +124,13 @@ export async function run({ page, artifactDir, log }) {
       const illustration = document.querySelector("[data-learning-illustration] img");
       return (
         avatar && avatar.complete && avatar.naturalWidth > 0 &&
-        illustration && illustration.complete && illustration.naturalWidth > 0
+        illustration && illustration.complete && illustration.naturalWidth > 0 &&
+        illustration.src.includes("cover-mapel-")
       );
     })()`,
     { label: "foto profil dan ilustrasi Beranda" }
   );
-  log("Beranda menampilkan foto profil dan ilustrasi belajar.");
+  log("Beranda menampilkan foto profil dan ilustrasi dari cover mapel khusus.");
 
   await page.waitFor(
     `(() => {
@@ -137,8 +138,10 @@ export async function run({ page, artifactDir, log }) {
       return (
         cards.length >= 5 &&
         cards.every((card) => {
-          const img = card.querySelector("img[data-lesson-thumb]");
-          return img && img.complete && img.naturalWidth > 0;
+          const img = card.querySelector("img[data-cover-art]");
+          return (
+            img && img.complete && img.naturalWidth > 0 && img.src.includes("cover-mapel-")
+          );
         })
       );
     })()`,
@@ -147,7 +150,7 @@ export async function run({ page, artifactDir, log }) {
   const subjectCardCount = await page.evaluate(
     `document.querySelectorAll("[data-subject-card]").length`
   );
-  log(`Kartu materi Beranda (${subjectCardCount}) menampilkan cover tiap mata pelajaran.`);
+  log(`Kartu materi Beranda (${subjectCardCount}) memakai cover mapel khusus.`);
   await new Promise((resolve) => setTimeout(resolve, 500));
   await page.screenshot(path.join(artifactDir, "hero-beranda.png"));
 
@@ -181,10 +184,12 @@ export async function run({ page, artifactDir, log }) {
   log("Katalog memuat materi bawaan + impor.");
 
   await page.waitFor(
-    `[...document.querySelectorAll('[role="group"][aria-labelledby="filter-kelas-label"] img')].filter((img) => img.complete && img.naturalWidth > 0).length >= 6`,
+    `[...document.querySelectorAll('[role="group"][aria-labelledby="filter-kelas-label"] img[data-cover-art]')].filter((img) => img.complete && img.naturalWidth > 0 && img.src.includes("cover-kelas-")).length >= 6`,
     { label: "thumbnail pilihan kelas" }
   );
-  log("Pilihan kelas berupa tile thumbnail dari aset paket.");
+  log("Pilihan kelas memakai 6 cover kelas khusus (16:9).");
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "filter-kelas.png"));
 
   assert(await page.evaluate(fillSearch("fotosintesis")), "Input pencarian tidak ditemukan.");
   await page.waitFor(`document.body.textContent.includes("Tidak ada materi yang cocok")`, {
@@ -221,14 +226,14 @@ export async function run({ page, artifactDir, log }) {
   assert(pickerCollapsed, "Panel pilihan kelas tidak menutup setelah kelas dipilih.");
   log("Memilih kelas menutup panel dan menampilkan “Kelas 3” pada header.");
   await page.waitFor(
-    `[...document.querySelectorAll('#filter-mapel-grid img[data-lesson-thumb]')].length >= 7 &&
-     [...document.querySelectorAll('#filter-mapel-grid img[data-lesson-thumb]')].every((img) => img.complete && img.naturalWidth > 0)`,
+    `[...document.querySelectorAll('#filter-mapel-grid img[data-cover-art]')].length >= 7 &&
+     [...document.querySelectorAll('#filter-mapel-grid img[data-cover-art]')].every((img) => img.complete && img.naturalWidth > 0 && img.src.includes("cover-mapel-"))`,
     { label: "thumbnail pilihan mata pelajaran" }
   );
   const subjectTileCount = await page.evaluate(
     `document.querySelectorAll('#filter-mapel-grid button').length`
   );
-  log(`Pilihan mata pelajaran berupa ${subjectTileCount} tile thumbnail dari aset paket.`);
+  log(`Pilihan mata pelajaran memakai ${subjectTileCount - 1} cover mapel khusus.`);
   await new Promise((resolve) => setTimeout(resolve, 300));
   await page.screenshot(path.join(artifactDir, "filter-mapel.png"));
   assert(
