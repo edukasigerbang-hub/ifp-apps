@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-iman",
-    "matching-iman"
+    "matching-iman",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/iman-ilustrasi.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

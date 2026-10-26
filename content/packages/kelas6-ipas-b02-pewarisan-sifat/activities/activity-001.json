@@ -29,6 +29,20 @@
         "altText": "Induk dan anak dengan ciri fisik yang mirip.",
         "reveal": "Makanan dan kebiasaan juga memengaruhi.",
         "hint": "Tinggi badan dipengaruhi gizi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pewarisan Sifat?",
+        "reveal": "Memahami pewarisan sifat dari induk kepada keturunan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Induk dan anak dengan ciri fisik yang mirip.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip."
       }
     ]
   },

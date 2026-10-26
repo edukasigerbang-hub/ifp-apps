@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bola-besar",
-    "kuis-bola-besar"
+    "kuis-bola-besar",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bola-besar"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Alat apa yang dipakai?",
+        "right": "Pensil, krayon, dan kertas."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa yang digambar?",
+        "right": "Bebas sesuai ide."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa langkah terakhir?",
+        "right": "Mewarnai."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Menggambar Bebas?",
+        "right": "Menyiapkan alat → Memilih tema → Membuat sketsa → Mewarnai → Merapikan alat"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Menggambar Bebas?",
+        "right": "Menggambar bebas dengan alat sederhana."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  }
+}

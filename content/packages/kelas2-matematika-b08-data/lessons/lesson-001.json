@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-data-kelas2",
-    "kuis-data-kelas2"
+    "kuis-data-kelas2",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-data-kelas2"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Diagram batang dan tabel data sederhana."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

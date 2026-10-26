@@ -29,6 +29,20 @@
         "altText": "Anak bermain permainan tradisional di lapangan.",
         "reveal": "Melatih gerak, kerja sama, dan sportivitas.",
         "hint": "Menyenangkan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak bermain permainan tradisional di lapangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/permainan-tradisional.webp",
+        "altText": "Anak bermain permainan tradisional di lapangan."
+      },
+      {
+        "prompt": "Contoh permainan tradisional adalah ...",
+        "reveal": "Gobak sodor",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/permainan-tradisional.webp",
+        "altText": "Anak bermain permainan tradisional di lapangan."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis.",
         "reveal": "Awalan, tolakan, melayang, lalu mendarat.",
         "hint": "Tolakan dengan satu kaki."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Atletik Dasar?",
+        "reveal": "Mengenal nomor atletik dasar dan mempraktikkan lari serta lompat dengan benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/atletik-dasar.webp",
+        "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lintasan lari, balok start, bak lompat pasir, dan pita finis.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/atletik-dasar.webp",
+        "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis."
       }
     ]
   },

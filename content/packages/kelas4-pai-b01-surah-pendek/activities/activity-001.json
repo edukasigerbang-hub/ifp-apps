@@ -29,6 +29,20 @@
         "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu.",
         "reveal": "Contoh: Al-Fatihah, Al-Ikhlas, Al-Falaq, dan An-Nas.",
         "hint": "Surah-surah ini sering dibaca dalam shalat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Surah Pendek dan Adab Membacanya?",
+        "reveal": "Mengenal beberapa surah pendek, memahami adab sebelum membaca Al-Qur'an, dan berlatih membaca dengan bimbingan guru.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/membaca-quran.webp",
+        "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/membaca-quran.webp",
+        "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu."
       }
     ]
   },

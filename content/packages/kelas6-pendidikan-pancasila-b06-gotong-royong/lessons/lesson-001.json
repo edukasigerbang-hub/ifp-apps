@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-gotong-royong-kelas6",
-    "ordering-gotong-royong-kelas6"
+    "ordering-gotong-royong-kelas6",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Warga bekerja bersama dan bermusyawarah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing.",
         "reveal": "Air, udara, makanan, dan tempat hidup.",
         "hint": "Setiap makhluk punya kebutuhan berbeda."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Makhluk Hidup di Sekitar?",
+        "reveal": "Mengenali ciri makhluk hidup dan kebutuhannya melalui pengamatan lingkungan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/makhluk-hidup-sekitar.webp",
+        "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/makhluk-hidup-sekitar.webp",
+        "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing."
       }
     ]
   },

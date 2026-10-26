@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-gerak-lokomotor",
-    "matching-gerak-lokomotor"
+    "matching-gerak-lokomotor",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/gerak-lokomotor.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak berjalan, berlari, dan melompat di lapangan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

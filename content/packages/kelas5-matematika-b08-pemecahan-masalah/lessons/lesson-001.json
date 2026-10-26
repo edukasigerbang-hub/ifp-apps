@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-pemecahan-masalah",
-    "kuis-pemecahan-masalah"
+    "kuis-pemecahan-masalah",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-pemecahan-masalah"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak menyelesaikan soal cerita matematika."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

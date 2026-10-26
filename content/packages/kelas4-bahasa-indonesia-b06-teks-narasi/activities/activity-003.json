@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa yang terjadi pada panel pertama?",
+        "right": "Seorang anak melihat kucing di dekatnya (bagian orientasi)."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Masalah apa yang muncul pada panel kedua?",
+        "right": "Hujan turun dan kucing berada di bawah pohon (komplikasi)."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana masalah diselesaikan pada panel ketiga?",
+        "right": "Anak menolong kucing dengan payung (resolusi)."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Memahami dan Menulis Teks Narasi?",
+        "right": "Mengenali struktur teks narasi, tokoh, dan latar, lalu menyusun cerita sederhana."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Memahami dan Menulis Teks Narasi?",
+        "right": "Orientasi: pengenalan tokoh dan latar → Komplikasi: munculnya masalah → Resolusi: penyelesaian masalah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
+  }
+}

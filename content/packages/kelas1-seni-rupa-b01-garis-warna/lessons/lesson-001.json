@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-garis-warna",
-    "matching-garis-warna"
+    "matching-garis-warna",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/garis-warna-kelas1.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

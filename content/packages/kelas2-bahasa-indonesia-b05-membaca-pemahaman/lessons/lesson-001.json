@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-membaca-pemahaman-kelas2",
-    "kuis-membaca-pemahaman-kelas2"
+    "kuis-membaca-pemahaman-kelas2",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-membaca-pemahaman-kelas2"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak membaca dan memahami isi bacaan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

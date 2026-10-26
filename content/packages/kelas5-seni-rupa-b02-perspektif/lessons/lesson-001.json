@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-perspektif",
-    "ordering-perspektif"
+    "ordering-perspektif",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

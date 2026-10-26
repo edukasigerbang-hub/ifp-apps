@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-faktor-kelipatan",
-    "kuis-faktor-kelipatan"
+    "kuis-faktor-kelipatan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-faktor-kelipatan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Diagram Venn dua lingkaran: faktor 12 di kiri, faktor 18 di kanan, dan faktor persekutuan di daerah oranye."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

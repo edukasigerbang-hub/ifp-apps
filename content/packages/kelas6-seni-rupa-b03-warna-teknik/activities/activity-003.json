@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa warna primer?",
+        "right": "Merah, kuning, dan biru."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa hasil merah + biru?",
+        "right": "Ungu."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa itu gradasi?",
+        "right": "Perubahan warna bertahap."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Teknik mewarnai dengan cat air disebut ...",
+        "right": "Teknik basah"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Contoh warna dan tekstur dari berbagai teknik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna dan tekstur dari berbagai teknik."
+  }
+}

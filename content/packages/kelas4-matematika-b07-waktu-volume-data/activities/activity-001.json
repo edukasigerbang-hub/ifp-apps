@@ -29,6 +29,20 @@
         "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang.",
         "reveal": "Batang berwarna merah paling tinggi, berarti datanya paling banyak.",
         "hint": "Bandingkan tinggi batang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Waktu, Volume, dan Penyajian Data?",
+        "reveal": "Membaca waktu dan volume, mengonversi satuan, serta membaca diagram batang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/waktu-volume-data.webp",
+        "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/waktu-volume-data.webp",
+        "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."
       }
     ]
   },

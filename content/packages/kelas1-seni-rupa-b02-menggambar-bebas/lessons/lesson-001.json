@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-menggambar-bebas",
-    "ordering-menggambar-bebas"
+    "ordering-menggambar-bebas",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

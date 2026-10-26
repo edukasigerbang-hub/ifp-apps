@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-teks-narasi",
-    "ordering-teks-narasi"
+    "ordering-teks-narasi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-wawancara-presentasi",
-    "ordering-wawancara-presentasi"
+    "ordering-wawancara-presentasi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

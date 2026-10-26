@@ -29,6 +29,20 @@
         "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat.",
         "reveal": "Agar keputusan adil dan menjadi tanggung jawab bersama.",
         "hint": "Hubungkan dengan sikap menghargai hasil kesepakatan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Musyawarah untuk Mufakat?",
+        "reveal": "Memahami langkah musyawarah, menghargai pendapat, dan melaksanakan keputusan bersama.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/musyawarah-kelas.webp",
+        "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Musyawarah untuk Mufakat?",
+        "reveal": "Menyampaikan pendapat → Mendengarkan pendapat orang lain → Mencatat usulan → Menyimpulkan atau memilih keputusan → Melaksanakan keputusan bersama",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/musyawarah-kelas.webp",
+        "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat."
       }
     ]
   },

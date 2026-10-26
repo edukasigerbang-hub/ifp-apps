@@ -29,6 +29,20 @@
         "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku.",
         "reveal": "Paku menempel karena gaya magnet menarik benda logam.",
         "hint": "Perhatikan benda kecil di bawah magnet."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gaya dan Gerak di Sekitar Kita?",
+        "reveal": "Mengenali jenis gaya, pengaruhnya terhadap gerak benda, dan contohnya dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gaya-gerak.webp",
+        "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gaya-gerak.webp",
+        "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku."
       }
     ]
   },

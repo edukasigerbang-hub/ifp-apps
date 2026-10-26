@@ -29,6 +29,20 @@
         "altText": "Pola warna dan bilangan yang berulang.",
         "reveal": "20.",
         "hint": "Tambahkan lima."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pola Bilangan?",
+        "reveal": "Mengenal dan melanjutkan pola bilangan sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pola-bilangan.webp",
+        "altText": "Pola warna dan bilangan yang berulang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Pola warna dan bilangan yang berulang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pola-bilangan.webp",
+        "altText": "Pola warna dan bilangan yang berulang."
       }
     ]
   },

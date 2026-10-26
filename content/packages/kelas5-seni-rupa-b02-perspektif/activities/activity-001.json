@@ -29,6 +29,20 @@
         "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang.",
         "reveal": "Karena jaraknya dekat dengan pengamat.",
         "hint": "Bandingkan pohon besar dan kecil."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menggambar Perspektif Sederhana?",
+        "reveal": "Menentukan garis horizon → Menentukan titik hilang → Menggambar garis bantu → Menggambar objek → Menambahkan detail",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/perspektif.webp",
+        "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menggambar Perspektif Sederhana?",
+        "reveal": "Menggambar objek dengan kesan jarak menggunakan garis perspektif.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/perspektif.webp",
+        "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
       }
     ]
   },

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Alat apa yang digunakan untuk mengukur panjang pensil?",
+        "right": "Penggaris, dengan satuan sentimeter (cm)."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Alat apa yang digunakan untuk mengukur berat buah?",
+        "right": "Timbangan, dengan satuan gram (g) atau kilogram (kg)."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "1 meter sama dengan berapa sentimeter?",
+        "right": "1 meter = 100 sentimeter."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Mengukur Panjang dan Berat?",
+        "right": "Menggunakan alat ukur panjang dan berat, memahami satuan cm/m dan g/kg, serta menyelesaikan masalah sederhana."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Alat yang tepat untuk mengukur berat badan adalah ...",
+        "right": "timbangan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+  }
+}

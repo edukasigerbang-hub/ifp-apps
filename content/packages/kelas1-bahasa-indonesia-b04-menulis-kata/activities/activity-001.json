@@ -29,6 +29,20 @@
         "altText": "Anak menulis huruf dan kata di buku.",
         "reveal": "Kata.",
         "hint": "Gabungkan suku kata."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Huruf dan Kata?",
+        "reveal": "Menulis huruf, suku kata, dan kata sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Huruf dan Kata?",
+        "reveal": "Memegang pensil → Menulis huruf → Menulis suku kata → Menulis kata → Memeriksa tulisan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku."
       }
     ]
   },

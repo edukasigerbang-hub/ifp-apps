@@ -29,6 +29,20 @@
         "altText": "Kubus, balok, tabung, dan kerucut.",
         "reveal": "π × r² × t.",
         "hint": "Luas alas dikali tinggi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Ruang?",
+        "reveal": "Mengenal bangun ruang dan menghitung volume serta luas permukaan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bangun-ruang-kelas6.webp",
+        "altText": "Kubus, balok, tabung, dan kerucut."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kubus, balok, tabung, dan kerucut.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bangun-ruang-kelas6.webp",
+        "altText": "Kubus, balok, tabung, dan kerucut."
       }
     ]
   },

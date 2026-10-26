@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kerajinan-alam",
-    "matching-kerajinan-alam"
+    "matching-kerajinan-alam",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kerajinan-kelas3.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

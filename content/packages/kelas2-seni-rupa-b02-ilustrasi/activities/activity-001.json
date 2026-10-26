@@ -29,6 +29,20 @@
         "altText": "Ilustrasi sederhana dari bentuk dasar.",
         "reveal": "Mewarnai.",
         "hint": "Rapikan hasil."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menggambar Ilustrasi Sederhana?",
+        "reveal": "Menentukan tema → Membuat sketsa → Menebalkan garis → Mewarnai → Merapikan karya",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/ilustrasi-kelas2.webp",
+        "altText": "Ilustrasi sederhana dari bentuk dasar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menggambar Ilustrasi Sederhana?",
+        "reveal": "Membuat ilustrasi sederhana dari bentuk dasar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ilustrasi-kelas2.webp",
+        "altText": "Ilustrasi sederhana dari bentuk dasar."
       }
     ]
   },

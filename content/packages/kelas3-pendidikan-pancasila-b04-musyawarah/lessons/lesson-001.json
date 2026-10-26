@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-musyawarah",
-    "ordering-musyawarah"
+    "ordering-musyawarah",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa duduk melingkar bermusyawarah dengan guru."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

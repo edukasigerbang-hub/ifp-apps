@@ -29,6 +29,20 @@
         "altText": "Anak berwudu dan melaksanakan gerakan salat.",
         "reveal": "Berdiri, takbir, rukuk, sujud, duduk, salam.",
         "hint": "Lakukan dengan tenang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Salat dan Ibadah?",
+        "reveal": "Berwudu → Berdiri menghadap kiblat → Takbiratul ihram → Rukuk dan sujud → Duduk tasyahud → Salam",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/salat-ibadah.webp",
+        "altText": "Anak berwudu dan melaksanakan gerakan salat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berwudu dan melaksanakan gerakan salat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/salat-ibadah.webp",
+        "altText": "Anak berwudu dan melaksanakan gerakan salat."
       }
     ]
   },

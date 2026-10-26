@@ -29,6 +29,20 @@
         "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun.",
         "reveal": "Oleskan cat pada alat cetak, tekan ke kertas, lalu angkat perlahan.",
         "hint": "Cat harus rata, jangan terlalu banyak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Seni Cetak Sederhana?",
+        "reveal": "Membuat alat cetak dari bahan sederhana dan mencetak pola berulang dengan rapi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
       }
     ]
   },

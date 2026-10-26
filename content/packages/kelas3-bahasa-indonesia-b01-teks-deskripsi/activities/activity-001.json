@@ -29,6 +29,20 @@
         "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera.",
         "reveal": "Sebutkan objek, ciri-cirinya, lalu kesan.",
         "hint": "Mulai dari yang terlihat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Teks Deskripsi?",
+        "reveal": "Mengenali teks deskripsi dan menuliskan ciri objek dengan kata indra.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/taman-sekolah.webp",
+        "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/taman-sekolah.webp",
+        "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera."
       }
     ]
   },

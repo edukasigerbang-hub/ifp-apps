@@ -29,6 +29,20 @@
         "altText": "Roda putar empat warna dan dadu.",
         "reveal": "2 hasil.",
         "hint": "Angka dan gambar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Peluang Sederhana?",
+        "reveal": "Mengenal ruang sampel dan menghitung peluang sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/peluang.webp",
+        "altText": "Roda putar empat warna dan dadu."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Roda putar empat warna dan dadu.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/peluang.webp",
+        "altText": "Roda putar empat warna dan dadu."
       }
     ]
   },

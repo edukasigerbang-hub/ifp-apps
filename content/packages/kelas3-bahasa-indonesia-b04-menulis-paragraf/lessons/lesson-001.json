@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-menulis-paragraf",
-    "ordering-menulis-paragraf"
+    "ordering-menulis-paragraf",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

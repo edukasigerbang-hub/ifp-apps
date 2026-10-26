@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-gotong-royong",
-    "ordering-gotong-royong"
+    "ordering-gotong-royong",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

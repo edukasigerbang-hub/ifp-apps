@@ -29,6 +29,20 @@
         "altText": "Diagram Venn faktor dan kelipatan dua bilangan.",
         "reveal": "12.",
         "hint": "Kelipatan persekutuan terkecil."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Faktor, Kelipatan, KPK, dan FPB?",
+        "reveal": "Menentukan faktor, kelipatan, KPK, dan FPB dua bilangan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/faktor-kelipatan-kelas5.webp",
+        "altText": "Diagram Venn faktor dan kelipatan dua bilangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram Venn faktor dan kelipatan dua bilangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/faktor-kelipatan-kelas5.webp",
+        "altText": "Diagram Venn faktor dan kelipatan dua bilangan."
       }
     ]
   },

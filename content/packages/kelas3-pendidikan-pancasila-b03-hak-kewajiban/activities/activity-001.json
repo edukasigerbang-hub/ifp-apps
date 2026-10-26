@@ -29,6 +29,20 @@
         "altText": "Anak belajar dan membantu orang tua di rumah.",
         "reveal": "Kewajiban dahulu, lalu hak.",
         "hint": "Bertanggung jawab."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban Anggota Keluarga?",
+        "reveal": "Membedakan hak dan kewajiban serta melaksanakannya di keluarga.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-kelas3.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak belajar dan membantu orang tua di rumah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/hak-kewajiban-kelas3.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah."
       }
     ]
   },

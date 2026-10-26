@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-huruf-harakat",
-    "matching-huruf-harakat"
+    "matching-huruf-harakat",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/huruf-harakat.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak belajar huruf hijaiyah dan harakat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

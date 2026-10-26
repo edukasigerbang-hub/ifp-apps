@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-unsur-prinsip-kelas6",
-    "matching-unsur-prinsip-kelas6"
+    "matching-unsur-prinsip-kelas6",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/unsur-prinsip-kelas6.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

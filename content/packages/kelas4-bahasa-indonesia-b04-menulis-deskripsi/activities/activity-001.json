@@ -29,6 +29,20 @@
         "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya.",
         "reveal": "Objek: kucing. Ciri: bulu oranye, mata bulat, suara lembut. Kesan: lucu dan menyenangkan.",
         "hint": "Mulai dari objek, lalu ciri, lalu kesan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Teks Deskripsi?",
+        "reveal": "Menyusun teks deskripsi dengan menentukan objek, mencatat ciri pengindraan, dan menutup dengan kesan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-deskripsi.webp",
+        "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya."
+      },
+      {
+        "prompt": "Langkah pertama menulis teks deskripsi adalah ...",
+        "reveal": "Menentukan objek yang dideskripsikan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/menulis-deskripsi.webp",
+        "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya."
       }
     ]
   },

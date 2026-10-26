@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-tata-surya",
-    "matching-tata-surya"
+    "matching-tata-surya",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/tata-surya.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Matahari dan planet-planet dalam tata surya."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

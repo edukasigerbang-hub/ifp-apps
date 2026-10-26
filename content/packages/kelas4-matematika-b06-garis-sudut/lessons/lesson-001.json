@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-garis-sudut",
-    "kuis-garis-sudut"
+    "kuis-garis-sudut",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-garis-sudut"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

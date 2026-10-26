@@ -29,6 +29,20 @@
         "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat.",
         "reveal": "Shalat adalah kewajiban, mendekatkan diri kepada Allah, dan melatih disiplin.",
         "hint": "Hubungkan dengan tanggung jawab dan ketenangan hati."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Shalat?",
+        "reveal": "Mengenal shalat wajib, urutan waktunya, dan pentingnya disiplin menjalankan shalat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
       }
     ]
   },

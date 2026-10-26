@@ -29,6 +29,20 @@
         "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
         "reveal": "Debur ombak dan angin.",
         "hint": "Bayangkan suaranya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Deskripsi dan Pengindraan?",
+        "reveal": "Menulis teks deskripsi dengan kata pengindraan yang tepat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
       }
     ]
   },

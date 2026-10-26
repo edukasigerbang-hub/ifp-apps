@@ -29,6 +29,20 @@
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Data yang paling sering muncul.",
         "hint": "Bisa lebih dari satu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Statistika?",
+        "reveal": "Menghitung mean, median, dan modus dari data.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/statistika.webp",
+        "altText": "Diagram batang dan tabel data."
+      },
+      {
+        "prompt": "Mean dari 70, 80, 90 adalah ...",
+        "reveal": "80",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/statistika.webp",
+        "altText": "Diagram batang dan tabel data."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah.",
         "reveal": "Keliling = 2 × (panjang + lebar).",
         "hint": "Jumlahkan semua sisi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sifat, Keliling, dan Luas Bangun Datar?",
+        "reveal": "Mengenali sifat bangun datar serta menghitung keliling dan luas persegi dan persegi panjang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bangun-datar.webp",
+        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bangun-datar.webp",
+        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Anak mewawancarai narasumber.",
         "reveal": "Urutan materi dan suara jelas.",
         "hint": "Latih sebelumnya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Wawancara dan Presentasi?",
+        "reveal": "Menentukan narasumber → Menyusun pertanyaan → Melakukan wawancara → Mencatat jawaban → Mempresentasikan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wawancara dan Presentasi?",
+        "reveal": "Melakukan wawancara dan mempresentasikan hasil.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber."
       }
     ]
   },

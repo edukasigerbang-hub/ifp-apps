@@ -29,6 +29,20 @@
         "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
         "reveal": "Nasihat atau pelajaran dari cerita.",
         "hint": "Biasanya ada di akhir cerita."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Dongeng dan Pesan Cerita?",
+        "reveal": "Mengenal dongeng, tokohnya, dan pesan yang terkandung di dalamnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+      },
+      {
+        "prompt": "Dongeng adalah cerita ...",
+        "reveal": "Khayalan turun-temurun",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan."
       }
     ]
   },

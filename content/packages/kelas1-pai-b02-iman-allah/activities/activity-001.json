@@ -29,6 +29,20 @@
         "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
         "reveal": "Berdoa dan berbuat baik.",
         "hint": "Rajin belajar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berdoa sebagai wujud iman kepada Allah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/iman-allah-kelas1.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Iman kepada Allah?",
+        "reveal": "Mengenal iman kepada Allah dan wujudnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/iman-allah-kelas1.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah."
       }
     ]
   },

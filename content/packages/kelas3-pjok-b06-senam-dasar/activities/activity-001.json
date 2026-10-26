@@ -29,6 +29,20 @@
         "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras.",
         "reveal": "Matras dan pendamping.",
         "hint": "Jangan bercanda."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Senam Dasar?",
+        "reveal": "Melakukan pemanasan → Jongkok dengan dagu menempel dada → Meletakkan tengkuk di matras → Berguling ke depan → Berdiri tegak",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/senam-dasar-kelas3.webp",
+        "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Senam Dasar?",
+        "reveal": "Mempraktikkan gerak senam dasar dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/senam-dasar-kelas3.webp",
+        "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
       }
     ]
   },

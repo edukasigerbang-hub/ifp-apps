@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-akhlak-kelas5",
-    "matching-akhlak-kelas5"
+    "matching-akhlak-kelas5",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/akhlak-kelas5.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak berbagi, berkata jujur, dan membantu teman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

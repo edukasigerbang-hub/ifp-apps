@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Mengapa pemanasan penting?",
+        "right": "Mencegah cedera."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa gerak senam pada gambar?",
+        "right": "Guling depan, peregangan, dan keseimbangan."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang disiapkan agar aman?",
+        "right": "Matras dan pendamping."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Senam Dasar?",
+        "right": "Melakukan pemanasan → Jongkok dengan dagu menempel dada → Meletakkan tengkuk di matras → Berguling ke depan → Berdiri tegak"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Senam Dasar?",
+        "right": "Mempraktikkan gerak senam dasar dengan aman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+  }
+}

@@ -29,6 +29,20 @@
         "altText": "Anak belajar dan membantu orang tua di rumah.",
         "reveal": "Kewajiban dahulu.",
         "hint": "Lalu menerima hak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban di Rumah?",
+        "reveal": "Mengenal hak dan kewajiban anak di rumah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak belajar dan membantu orang tua di rumah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah."
       }
     ]
   },

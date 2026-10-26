@@ -29,6 +29,20 @@
         "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
         "reveal": "Sekitar 8 jam.",
         "hint": "Tidur malam cukup."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran Jasmani?",
+        "reveal": "Menjaga kebugaran melalui latihan dan pola hidup sehat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran-kelas6.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran-kelas6.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
       }
     ]
   },

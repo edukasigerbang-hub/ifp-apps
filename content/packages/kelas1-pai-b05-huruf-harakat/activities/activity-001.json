@@ -29,6 +29,20 @@
         "altText": "Anak belajar huruf hijaiyah dan harakat.",
         "reveal": "u.",
         "hint": "Di atas huruf."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak belajar huruf hijaiyah dan harakat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Huruf Hijaiyah dan Harakat?",
+        "reveal": "Mengenal huruf hijaiyah dengan harakat sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat."
       }
     ]
   },

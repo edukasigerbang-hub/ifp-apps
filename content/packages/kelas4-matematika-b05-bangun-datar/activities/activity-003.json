@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Sebutkan bangun datar yang terlihat pada gambar.",
+        "right": "Persegi, persegi panjang, segitiga, dan lingkaran."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bangun mana yang memiliki empat sisi sama panjang?",
+        "right": "Persegi memiliki empat sisi sama panjang dan empat sudut siku-siku."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana cara menghitung keliling persegi panjang?",
+        "right": "Keliling = 2 × (panjang + lebar)."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Sifat, Keliling, dan Luas Bangun Datar?",
+        "right": "Mengenali sifat bangun datar serta menghitung keliling dan luas persegi dan persegi panjang."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+  }
+}

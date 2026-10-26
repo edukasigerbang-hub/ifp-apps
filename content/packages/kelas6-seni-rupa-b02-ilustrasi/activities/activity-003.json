@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu ilustrasi?",
+        "right": "Gambar yang menjelaskan cerita atau teks."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa langkah pertama?",
+        "right": "Menentukan tema dan adegan."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang ditambahkan terakhir?",
+        "right": "Warna dan detail."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Menggambar Ilustrasi?",
+        "right": "Menentukan tema → Membuat sketsa → Menebalkan garis → Mewarnai → Menambahkan detail"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Menggambar Ilustrasi?",
+        "right": "Membuat ilustrasi sederhana untuk cerita."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+  }
+}

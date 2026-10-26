@@ -29,6 +29,20 @@
         "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas.",
         "reveal": "Bayangan memberi kesan tiga dimensi dan membuat gambar lebih hidup.",
         "hint": "Bandingkan benda yang memiliki bayangan dengan yang tidak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menggambar Bentuk Sederhana?",
+        "reveal": "Mengamati bentuk dasar, menggambar dengan proporsi, dan memberi gelap-terang agar terkesan tiga dimensi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menggambar-bentuk.webp",
+        "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/menggambar-bentuk.webp",
+        "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
         "reveal": "Rajin beribadah.",
         "hint": "Berdoa sebelum belajar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/simbol-pancasila-kelas1.webp",
+        "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Simbol Pancasila?",
+        "reveal": "Mengenal lima simbol Pancasila dan silanya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/simbol-pancasila-kelas1.webp",
+        "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
       }
     ]
   },

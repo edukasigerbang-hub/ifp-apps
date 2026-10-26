@@ -29,6 +29,20 @@
         "altText": "Bahan bertekstur kasar dan halus.",
         "reveal": "Lem.",
         "hint": "Gunakan sedikit."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bahan bertekstur kasar dan halus.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/tekstur-bahan-kelas2.webp",
+        "altText": "Bahan bertekstur kasar dan halus."
+      },
+      {
+        "prompt": "Bahan yang kasar adalah ...",
+        "reveal": "Batu",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/tekstur-bahan-kelas2.webp",
+        "altText": "Bahan bertekstur kasar dan halus."
       }
     ]
   },

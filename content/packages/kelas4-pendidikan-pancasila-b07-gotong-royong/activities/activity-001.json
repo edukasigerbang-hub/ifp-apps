@@ -29,6 +29,20 @@
         "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong.",
         "reveal": "Piket kelas, kerja bakti, dan membantu teman yang kesulitan.",
         "hint": "Ingat kegiatan bersama di kelas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gotong Royong?",
+        "reveal": "Memahami makna gotong royong, contohnya di rumah/sekolah/masyarakat, dan manfaatnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
       }
     ]
   },

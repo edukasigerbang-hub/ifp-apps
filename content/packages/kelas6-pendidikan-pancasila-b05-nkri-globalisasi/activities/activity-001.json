@@ -29,6 +29,20 @@
         "altText": "Upacara bendera dan simbol persatuan NKRI.",
         "reveal": "Mencintai budaya dan produk dalam negeri.",
         "hint": "Tetap selektif."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang NKRI dan Globalisasi?",
+        "reveal": "Menghadapi globalisasi dengan tetap menjaga jati diri bangsa.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nkri-globalisasi.webp",
+        "altText": "Upacara bendera dan simbol persatuan NKRI."
+      },
+      {
+        "prompt": "Cara menjaga jati diri bangsa adalah ...",
+        "reveal": "Mencintai budaya sendiri",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/nkri-globalisasi.webp",
+        "altText": "Upacara bendera dan simbol persatuan NKRI."
       }
     ]
   },

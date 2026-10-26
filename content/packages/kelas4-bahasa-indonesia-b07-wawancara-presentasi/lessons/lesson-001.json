@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-wawancara",
-    "ordering-wawancara"
+    "ordering-wawancara",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

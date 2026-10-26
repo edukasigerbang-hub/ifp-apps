@@ -29,6 +29,20 @@
         "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
         "reveal": "Matikan alat yang tidak dipakai.",
         "hint": "Gunakan energi alternatif."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Energi dan Perubahannya?",
+        "reveal": "Mengenal bentuk energi dan perubahannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh energi gerak, panas, cahaya, dan listrik.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
       }
     ]
   },

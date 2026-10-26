@@ -29,6 +29,20 @@
         "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
         "reveal": "1.000 gram.",
         "hint": "Lihat timbangan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Waktu, Panjang, dan Berat?",
+        "reveal": "Mengenal dan mengubah satuan waktu, panjang, serta berat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/waktu-panjang-berat.webp",
+        "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/waktu-panjang-berat.webp",
+        "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat."
       }
     ]
   },

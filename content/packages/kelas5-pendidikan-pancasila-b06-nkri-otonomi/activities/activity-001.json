@@ -29,6 +29,20 @@
         "altText": "Upacara bendera dan peta daerah dalam NKRI.",
         "reveal": "Kewenangan daerah mengatur urusannya sendiri.",
         "hint": "Dipimpin pemerintah daerah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang NKRI dan Otonomi Daerah?",
+        "reveal": "Mengenal NKRI, semboyan bangsa, dan otonomi daerah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nkri-otonomi.webp",
+        "altText": "Upacara bendera dan peta daerah dalam NKRI."
+      },
+      {
+        "prompt": "Otonomi daerah berarti ...",
+        "reveal": "Daerah mengatur urusannya sendiri",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/nkri-otonomi.webp",
+        "altText": "Upacara bendera dan peta daerah dalam NKRI."
       }
     ]
   },

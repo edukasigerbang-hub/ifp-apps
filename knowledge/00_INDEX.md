@@ -40,6 +40,8 @@
 | Outline Kelas 1 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS1_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS1_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS1_SEMESTER2_MERDEKA_DRAFT.md) |
 | Outline Kelas 2 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS2_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS2_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS2_SEMESTER2_MERDEKA_DRAFT.md) |
 | Review teknis seluruh paket draft (2026-10-24) | [`content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md`](content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md) |
+| Review teknis seluruh paket draft (2026-10-26, pasca-pengayaan) | [`content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md`](content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md) · [JSON](content/review-flags-2026-10-26.json) |
+| Lembar keputusan OD-1 D1–D8 (2026-10-26) | [`content/OD1_DECISION_SHEET_2026-10-26.md`](content/OD1_DECISION_SHEET_2026-10-26.md) |
 | Register blocker rilis (2026-10-24) | [`api/RELEASE_BLOCKERS_2026-10-24.md`](api/RELEASE_BLOCKERS_2026-10-24.md) |
 | Checklist B-01 signing & B-04 SMTP (2026-10-25) | [`release/CHECKLIST_B01_B04_2026-10-25.md`](release/CHECKLIST_B01_B04_2026-10-25.md) |
 | Checklist B-02, B-05, B-06, B-07, B-08 (2026-10-25) | [`release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md`](release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md) |

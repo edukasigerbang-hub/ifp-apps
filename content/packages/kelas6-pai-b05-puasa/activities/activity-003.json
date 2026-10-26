@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu puasa?",
+        "right": "Menahan makan dan minum sejak fajar hingga magrib."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa yang membatalkan?",
+        "right": "Makan dan minum dengan sengaja."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa hikmahnya?",
+        "right": "Melatih sabar dan disiplin."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Hal yang membatalkan puasa adalah ...",
+        "right": "Makan dengan sengaja"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Hikmah puasa adalah ...",
+        "right": "Melatih sabar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa dengan kurma dan air."
+  }
+}

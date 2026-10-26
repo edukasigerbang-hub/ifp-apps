@@ -29,6 +29,20 @@
         "altText": "Upacara bendera dan simbol negara.",
         "reveal": "Garuda Pancasila.",
         "hint": "Memuat simbol Pancasila."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang NKRI dan Simbol Negara?",
+        "reveal": "Mengenal NKRI dan simbol negara.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Upacara bendera dan simbol negara.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara."
       }
     ]
   },

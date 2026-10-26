@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-nkri-globalisasi",
-    "kuis-nkri-globalisasi"
+    "kuis-nkri-globalisasi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-nkri-globalisasi"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Upacara bendera dan simbol persatuan NKRI."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

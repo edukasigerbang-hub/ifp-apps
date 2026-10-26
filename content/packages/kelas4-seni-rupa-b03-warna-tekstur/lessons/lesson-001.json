@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-warna-tekstur",
-    "matching-warna-tekstur"
+    "matching-warna-tekstur",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/warna-tekstur.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

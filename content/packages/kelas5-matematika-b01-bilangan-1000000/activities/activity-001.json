@@ -29,6 +29,20 @@
         "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna.",
         "reveal": "Bandingkan angka paling kiri lebih dahulu.",
         "hint": "Jika sama, lanjut ke angka berikutnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan sampai 1.000.000?",
+        "reveal": "Membaca, menulis, dan membandingkan bilangan cacah sampai 1.000.000.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nilai-tempat-1000000.webp",
+        "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/nilai-tempat-1000000.webp",
+        "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
       }
     ]
   },

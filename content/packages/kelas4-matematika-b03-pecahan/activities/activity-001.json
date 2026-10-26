@@ -29,6 +29,20 @@
         "altText": "Tiga batang berukuran sama: batang pertama terbagi 2 dengan 1 bagian berwarna, batang kedua terbagi 4 dengan 2 bagian berwarna, batang ketiga terbagi 8 dengan 4 bagian berwarna.",
         "reveal": "4 dari 8 bagian berwarna, jadi 4/8. Nilainya juga sama dengan 1/2. Jadi 1/2 = 2/4 = 4/8.",
         "hint": "Pecahan senilai dapat diperoleh dengan mengalikan pembilang dan penyebut dengan bilangan yang sama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pecahan Senilai dan Membandingkan Pecahan?",
+        "reveal": "Mengenal pecahan senilai melalui gambar, membandingkan pecahan sederhana, dan menentukan bentuk paling sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pecahan-senilai.webp",
+        "altText": "Tiga batang berukuran sama: batang pertama terbagi 2 dengan 1 bagian berwarna, batang kedua terbagi 4 dengan 2 bagian berwarna, batang ketiga terbagi 8 dengan 4 bagian berwarna."
+      },
+      {
+        "prompt": "Bentuk paling sederhana dari 4/8 adalah ...",
+        "reveal": "1/2",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pecahan-senilai.webp",
+        "altText": "Tiga batang berukuran sama: batang pertama terbagi 2 dengan 1 bagian berwarna, batang kedua terbagi 4 dengan 2 bagian berwarna, batang ketiga terbagi 8 dengan 4 bagian berwarna."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Rangkaian listrik dan magnet menarik benda logam.",
         "reveal": "Ujung magnet yang menarik atau menolak.",
         "hint": "Kutub utara dan selatan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Listrik dan Magnet?",
+        "reveal": "Mengenal listrik, magnet, dan penerapannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/listrik-magnet.webp",
+        "altText": "Rangkaian listrik dan magnet menarik benda logam."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Rangkaian listrik dan magnet menarik benda logam.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/listrik-magnet.webp",
+        "altText": "Rangkaian listrik dan magnet menarik benda logam."
       }
     ]
   },

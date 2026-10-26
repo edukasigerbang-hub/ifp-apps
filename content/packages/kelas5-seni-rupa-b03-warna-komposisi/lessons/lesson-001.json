@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-warna-komposisi",
-    "matching-warna-komposisi"
+    "matching-warna-komposisi",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/warna-komposisi.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Contoh warna hangat, dingin, dan susunan komposisi seimbang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-menulis-karya",
-    "matching-menulis-karya"
+    "matching-menulis-karya",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/menulis-karya.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak menulis karya sastra di buku."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

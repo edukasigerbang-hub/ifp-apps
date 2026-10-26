@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Aturan apa yang terlihat pada gambar?",
+        "right": "Antre dengan tertib."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Mengapa aturan diperlukan?",
+        "right": "Agar kegiatan berjalan aman dan teratur."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa akibat melanggar aturan?",
+        "right": "Kegiatan terganggu dan orang lain dirugikan."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Aturan di Rumah dan Sekolah?",
+        "right": "Mengenal aturan di rumah dan sekolah serta manfaat melaksanakannya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Contoh aturan di rumah adalah ...",
+        "right": "Merapikan tempat tidur"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di depan kelas."
+  }
+}

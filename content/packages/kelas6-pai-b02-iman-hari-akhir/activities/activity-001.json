@@ -29,6 +29,20 @@
         "altText": "Anak berdoa sebagai wujud iman.",
         "reveal": "Rajin beribadah dan berbuat baik.",
         "hint": "Menjauhi perbuatan buruk."
+      },
+      {
+        "prompt": "Perilaku beriman kepada hari akhir adalah ...",
+        "reveal": "Rajin berbuat baik",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman."
+      },
+      {
+        "prompt": "Tanda hari akhir adalah ...",
+        "reveal": "Terompet sangkakala ditiup",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman."
       }
     ]
   },

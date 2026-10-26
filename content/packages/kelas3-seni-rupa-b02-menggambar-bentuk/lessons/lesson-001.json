@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-menggambar-bentuk",
-    "ordering-menggambar-bentuk"
+    "ordering-menggambar-bentuk",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Bola sepak, bola basket, dan bola voli.",
         "reveal": "Agar tim mencetak skor.",
         "hint": "Beri umpan tepat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar Lanjutan?",
+        "reveal": "Mempraktikkan teknik lanjutan permainan bola besar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
+      },
+      {
+        "prompt": "Agar tim menang, pemain harus ...",
+        "reveal": "Bekerja sama",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
       }
     ]
   },

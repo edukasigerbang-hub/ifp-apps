@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu dongeng?",
+        "right": "Cerita khayalan yang diwariskan turun-temurun."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Siapa tokoh dalam dongeng?",
+        "right": "Pelaku dalam cerita."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa pesan cerita?",
+        "right": "Nasihat atau pelajaran dari cerita."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Dongeng dan Pesan Cerita?",
+        "right": "Mengenal dongeng, tokohnya, dan pesan yang terkandung di dalamnya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Dongeng adalah cerita ...",
+        "right": "Khayalan turun-temurun"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+  }
+}

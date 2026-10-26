@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-ide-pokok-kelas5",
-    "kuis-ide-pokok-kelas5"
+    "kuis-ide-pokok-kelas5",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-ide-pokok-kelas5"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak menyimak cerita dan mencatat ide pokok."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

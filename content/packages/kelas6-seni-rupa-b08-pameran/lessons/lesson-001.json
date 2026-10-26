@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-pameran-kelas6",
-    "matching-pameran-kelas6"
+    "matching-pameran-kelas6",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pameran-kelas6.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Pameran karya siswa di kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

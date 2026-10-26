@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-nkri",
-    "kuis-nkri"
+    "kuis-nkri",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-nkri"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

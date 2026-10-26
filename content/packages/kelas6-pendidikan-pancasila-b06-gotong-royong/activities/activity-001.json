@@ -29,6 +29,20 @@
         "altText": "Warga bekerja bersama dan bermusyawarah.",
         "reveal": "Berbagi tugas dan bermusyawarah.",
         "hint": "Sopan dan adil."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Gotong Royong dan Musyawarah?",
+        "reveal": "Menentukan kegiatan → Bermusyawarah → Membagi tugas → Bekerja bersama → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/gotong-royong-kelas6.webp",
+        "altText": "Warga bekerja bersama dan bermusyawarah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gotong Royong dan Musyawarah?",
+        "reveal": "Menerapkan gotong royong dan musyawarah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gotong-royong-kelas6.webp",
+        "altText": "Warga bekerja bersama dan bermusyawarah."
       }
     ]
   },

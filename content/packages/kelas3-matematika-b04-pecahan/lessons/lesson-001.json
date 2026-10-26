@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-pecahan-sederhana",
-    "matching-pecahan-sederhana"
+    "matching-pecahan-sederhana",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pecahan-sederhana.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

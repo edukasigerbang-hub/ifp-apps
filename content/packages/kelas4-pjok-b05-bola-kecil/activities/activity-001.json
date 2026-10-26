@@ -29,6 +29,20 @@
         "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong.",
         "reveal": "Agar permainan adil dan tidak ada yang cedera.",
         "hint": "Beri ruang saat bergerak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Kecil?",
+        "reveal": "Mengenal permainan bola kecil serta teknik dasar dan aturannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-kecil.webp",
+        "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bola-kecil.webp",
+        "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
       }
     ]
   },

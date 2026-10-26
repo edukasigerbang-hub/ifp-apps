@@ -29,6 +29,20 @@
         "altText": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki.",
         "reveal": "Matras, ruang cukup, dan pendamping.",
         "hint": "Jangan bercanda saat berguling."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/senam-dasar.webp",
+        "altText": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Senam Dasar?",
+        "reveal": "Melakukan pemanasan → Jongkok dengan dagu menempel dada → Meletakkan tengkuk di matras → Berguling ke depan → Berdiri tegak dan mengangkat kedua tangan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/senam-dasar.webp",
+        "altText": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki."
       }
     ]
   },

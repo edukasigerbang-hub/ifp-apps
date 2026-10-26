@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa yang terjadi pada air laut saat terkena panas matahari?",
+        "right": "Air menguap menjadi uap air (evaporasi)."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa yang terjadi pada uap air di atmosfer?",
+        "right": "Uap air mengembun menjadi titik-titik air dan membentuk awan (kondensasi)."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa hujan turun?",
+        "right": "Awan yang jenuh air menjatuhkan titik air sebagai hujan (presipitasi), lalu air kembali ke laut atau sungai."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Bumi, Cuaca, dan Siklus Air?",
+        "right": "Memahami tahapan siklus air, hubungannya dengan cuaca, dan pentingnya menjaga air."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Bumi, Cuaca, dan Siklus Air?",
+        "right": "Penguapan air laut → Pengembunan uap air → Pembentukan awan → Hujan turun → Air kembali ke laut atau sungai"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+  }
+}

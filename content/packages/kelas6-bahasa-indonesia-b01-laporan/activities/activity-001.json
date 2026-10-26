@@ -29,6 +29,20 @@
         "altText": "Anak menulis laporan hasil pengamatan.",
         "reveal": "Ejaan dan kelengkapan isi.",
         "hint": "Baca ulang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Teks Laporan?",
+        "reveal": "Menentukan tujuan → Mencatat kegiatan → Menyusun hasil → Menulis kesimpulan → Memeriksa bahasa",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/laporan-kelas6.webp",
+        "altText": "Anak menulis laporan hasil pengamatan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Laporan?",
+        "reveal": "Menulis laporan pengamatan dengan struktur yang benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/laporan-kelas6.webp",
+        "altText": "Anak menulis laporan hasil pengamatan."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-iman",
-    "kuis-iman"
+    "kuis-iman",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-iman"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

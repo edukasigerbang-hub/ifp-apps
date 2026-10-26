@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kesehatan-tubuh",
-    "matching-kesehatan-tubuh"
+    "matching-kesehatan-tubuh",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kesehatan-tubuh.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

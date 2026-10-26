@@ -29,6 +29,20 @@
         "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
         "reveal": "Melatih percaya diri, menghargai karya teman, dan berbagi hasil belajar.",
         "hint": "Hubungkan dengan perasaan bangga dan saling menghargai."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Pameran Kelas?",
+        "reveal": "Memilih karya → Menata karya → Membuat label karya → Membuka pameran → Mengapresiasi karya",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
+        "reveal": "Merencanakan, menata, dan menyajikan karya seni dalam pameran kelas sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
       }
     ]
   },

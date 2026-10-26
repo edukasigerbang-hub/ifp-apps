@@ -29,6 +29,20 @@
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Tenaga pulih.",
         "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kesehatan dan Kebersihan?",
+        "reveal": "Menjaga kesehatan dan kebersihan setiap hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kesehatan-kebersihan-kelas1.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kesehatan-kebersihan-kelas1.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
       }
     ]
   },

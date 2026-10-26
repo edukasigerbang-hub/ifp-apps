@@ -29,6 +29,20 @@
         "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
         "reveal": "Agar kehidupan tertib dan adil.",
         "hint": "Hak dan kewajiban berjalan bersama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban Warga Negara?",
+        "reveal": "Membedakan hak dan kewajiban serta melaksanakannya dengan seimbang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+      },
+      {
+        "prompt": "Contoh kewajiban di sekolah adalah ...",
+        "reveal": "Mematuhi aturan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
       }
     ]
   },

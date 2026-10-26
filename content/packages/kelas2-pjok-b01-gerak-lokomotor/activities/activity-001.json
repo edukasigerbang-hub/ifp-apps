@@ -29,6 +29,20 @@
         "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
         "reveal": "Pemanasan.",
         "hint": "Agar tidak cedera."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Lokomotor?",
+        "reveal": "Mempraktikkan gerak berpindah tempat dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan."
       }
     ]
   },

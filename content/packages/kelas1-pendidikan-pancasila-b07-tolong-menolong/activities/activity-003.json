@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu tolong-menolong?",
+        "right": "Saling membantu."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Contoh menolong di sekolah?",
+        "right": "Membantu teman jatuh."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa manfaatnya?",
+        "right": "Teman senang."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Kebersamaan dan Tolong-Menolong?",
+        "right": "Melihat teman yang kesulitan → Menanyakan keadaannya → Membantu → Menghibur → Melapor kepada guru bila perlu"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Kebersamaan dan Tolong-Menolong?",
+        "right": "Membiasakan tolong-menolong dalam kebersamaan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak saling menolong di sekolah."
+  }
+}

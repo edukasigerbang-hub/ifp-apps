@@ -29,6 +29,20 @@
         "altText": "Jam dan uang untuk belajar waktu serta nilai uang.",
         "reveal": "Rupiah.",
         "hint": "Ditulis Rp."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Waktu dan Uang?",
+        "reveal": "Membaca waktu dan mengenal nilai uang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/waktu-uang.webp",
+        "altText": "Jam dan uang untuk belajar waktu serta nilai uang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Jam dan uang untuk belajar waktu serta nilai uang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/waktu-uang.webp",
+        "altText": "Jam dan uang untuk belajar waktu serta nilai uang."
       }
     ]
   },

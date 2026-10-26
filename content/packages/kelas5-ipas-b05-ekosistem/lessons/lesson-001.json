@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-ekosistem",
-    "matching-ekosistem"
+    "matching-ekosistem",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/ekosistem-kelas5.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

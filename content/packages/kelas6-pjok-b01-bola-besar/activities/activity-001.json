@@ -29,6 +29,20 @@
         "altText": "Bola sepak, bola basket, dan bola voli.",
         "reveal": "Agar tim mencetak skor.",
         "hint": "Beri umpan tepat."
+      },
+      {
+        "prompt": "Agar tim menang, pemain harus ...",
+        "reveal": "Bekerja sama",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar?",
+        "reveal": "Mempraktikkan teknik dan kerja sama permainan bola besar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
       }
     ]
   },

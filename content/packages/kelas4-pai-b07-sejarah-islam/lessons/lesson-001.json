@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-sejarah-islam",
-    "ordering-sejarah-islam"
+    "ordering-sejarah-islam",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Garis waktu sejarah Islam dengan Ka'bah, Gua Hira, dan masjid berkubah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kebersihan",
-    "matching-kebersihan"
+    "matching-kebersihan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kebersihan-kelas1.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak mandi, sikat gigi, dan mencuci tangan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

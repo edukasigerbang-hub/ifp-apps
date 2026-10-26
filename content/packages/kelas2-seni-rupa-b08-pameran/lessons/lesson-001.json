@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-pameran-kelas2",
-    "ordering-pameran-kelas2"
+    "ordering-pameran-kelas2",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Pameran karya siswa di kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

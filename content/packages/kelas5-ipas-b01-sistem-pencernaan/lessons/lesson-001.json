@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-sistem-pencernaan",
-    "matching-sistem-pencernaan"
+    "matching-sistem-pencernaan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/sistem-pencernaan.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

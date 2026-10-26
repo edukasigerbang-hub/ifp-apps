@@ -29,6 +29,20 @@
         "altText": "Alat cetak dan kertas berisi pola.",
         "reveal": "Oles cat, tekan, angkat.",
         "hint": "Jangan terlalu banyak cat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Seni Cetak?",
+        "reveal": "Menyiapkan alat dan bahan → Membuat alat cetak → Mengoles cat → Menekan pada kertas → Mengangkat perlahan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Seni Cetak?",
+        "reveal": "Membuat karya seni cetak dengan pola berulang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola."
       }
     ]
   },

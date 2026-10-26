@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-iman-hari-akhir",
-    "kuis-iman-hari-akhir"
+    "kuis-iman-hari-akhir",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-iman-hari-akhir"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak berdoa sebagai wujud iman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

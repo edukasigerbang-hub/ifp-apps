@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa rasio 4 benda merah dan 3 benda biru?",
+        "right": "4 : 3."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa itu proporsi?",
+        "right": "Dua rasio yang senilai."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa hal penting yang kamu pelajari tentang Rasio dan Proporsi?",
+        "right": "Menulis, menyederhanakan, dan menerapkan rasio."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Rasio 6 : 9 disederhanakan menjadi ...",
+        "right": "2 : 3"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Pasangan yang senilai dengan 3 : 4 adalah ...",
+        "right": "9 : 12"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+  }
+}

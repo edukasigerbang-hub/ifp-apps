@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-iman-rasul",
-    "matching-iman-rasul"
+    "matching-iman-rasul",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/iman-rasul.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

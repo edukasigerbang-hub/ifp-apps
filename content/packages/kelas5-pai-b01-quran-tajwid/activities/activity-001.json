@@ -29,6 +29,20 @@
         "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
         "reveal": "Bersih, sopan, dan tenang.",
         "hint": "Mulai dengan ta'awuz."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Al-Qur'an dan Tajwid Dasar?",
+        "reveal": "Mengenal tajwid dasar dan membaca Al-Qur'an dengan tartil.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/quran-kelas5.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca Al-Qur'an dengan tartil di sajadah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/quran-kelas5.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
       }
     ]
   },

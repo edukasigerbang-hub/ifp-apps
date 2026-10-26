@@ -29,6 +29,20 @@
         "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
         "reveal": "20.",
         "hint": "Dua kelompok sepuluh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 20?",
+        "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 20.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/penjumlahan-20.webp",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/penjumlahan-20.webp",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
       }
     ]
   },

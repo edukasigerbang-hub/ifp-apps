@@ -29,6 +29,20 @@
         "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar.",
         "reveal": "1/2 lebih besar.",
         "hint": "Semakin banyak bagian, semakin kecil tiap bagian."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pecahan Sederhana?",
+        "reveal": "Mengenal pecahan 1/2, 1/3, dan 1/4 melalui gambar bagian sama besar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pecahan-sederhana.webp",
+        "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pecahan-sederhana.webp",
+        "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar."
       }
     ]
   },

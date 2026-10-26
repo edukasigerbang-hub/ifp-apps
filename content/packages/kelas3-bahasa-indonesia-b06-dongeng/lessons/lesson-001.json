@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-dongeng",
-    "kuis-dongeng"
+    "kuis-dongeng",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-dongeng"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak-anak mendengarkan dongeng tentang hewan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

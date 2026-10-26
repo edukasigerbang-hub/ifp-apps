@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kebugaran",
-    "matching-kebugaran"
+    "matching-kebugaran",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kebugaran.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

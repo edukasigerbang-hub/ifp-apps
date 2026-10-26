@@ -29,6 +29,20 @@
         "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak.",
         "reveal": "Contoh detail: menyapu kelas, merapikan meja, atau menyiram tanaman.",
         "hint": "Detail mendukung ide pokok, bukan ide utamanya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menyimak dan Menentukan Ide Pokok?",
+        "reveal": "Menyimak informasi, menemukan ide pokok, dan membedakannya dari detail pendukung.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
+      },
+      {
+        "prompt": "Manakah yang merupakan detail pendukung dari bacaan tersebut?",
+        "reveal": "Menyapu kelas",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
       }
     ]
   },

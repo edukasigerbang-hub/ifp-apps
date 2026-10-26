@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu rotasi bumi?",
+        "right": "Perputaran bumi pada porosnya."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa akibat rotasi?",
+        "right": "Siang dan malam."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa akibat revolusi?",
+        "right": "Pergantian musim."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Bumi dan Tata Surya?",
+        "right": "Memahami rotasi, revolusi, dan akibatnya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Bumi dan Tata Surya?",
+        "right": "Bumi berotasi → Terjadi siang dan malam → Bumi berevolusi → Terjadi pergantian musim → Terjadi gerhana"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet tata surya."
+  }
+}

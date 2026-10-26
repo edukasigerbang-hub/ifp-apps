@@ -1,0 +1,72 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Suku\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kelompok masyarakat"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Kebiasaan daerah"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Keyakinan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Budaya\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kelompok masyarakat"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Kebiasaan daerah"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Keyakinan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku dan budaya belajar bersama."
+  }
+}

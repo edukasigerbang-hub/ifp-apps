@@ -29,6 +29,20 @@
         "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
         "reveal": "Melaporkan dan mengevaluasi.",
         "hint": "Ceritakan pengalaman."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "reveal": "Memilih masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Proyek Kewargaan?",
+        "reveal": "Merancang dan melaksanakan proyek kewargaan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Panel surya, kincir angin, dan daur ulang.",
         "reveal": "Mengolah sampah menjadi barang baru.",
         "hint": "Mengurangi sampah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teknologi Ramah Lingkungan?",
+        "reveal": "Mengenal teknologi yang tidak merusak lingkungan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang."
+      },
+      {
+        "prompt": "Cara menghemat energi adalah ...",
+        "reveal": "Mematikan lampu saat tidak dipakai",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang."
       }
     ]
   },

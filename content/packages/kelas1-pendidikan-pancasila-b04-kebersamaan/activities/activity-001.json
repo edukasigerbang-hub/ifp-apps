@@ -29,6 +29,20 @@
         "altText": "Siswa belajar dan bermain bersama di sekolah.",
         "reveal": "Tidak bertengkar.",
         "hint": "Menghargai teman."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Kebersamaan di Sekolah?",
+        "reveal": "Datang ke sekolah → Belajar bersama → Bermain bersama → Membantu teman → Pulang dengan rapi",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/kebersamaan-kelas1.webp",
+        "altText": "Siswa belajar dan bermain bersama di sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebersamaan di Sekolah?",
+        "reveal": "Menjaga kebersamaan di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebersamaan-kelas1.webp",
+        "altText": "Siswa belajar dan bermain bersama di sekolah."
       }
     ]
   },

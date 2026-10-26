@@ -29,6 +29,20 @@
         "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja.",
         "reveal": "20.000 − 15.000 = 5.000.",
         "hint": "Kurangi total belanja dari uang yang dibayar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pemecahan Masalah Matematika?",
+        "reveal": "Menyelesaikan soal cerita dengan memahami informasi, memilih operasi, menghitung, dan memeriksa jawaban.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pemecahan-masalah.webp",
+        "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pemecahan-masalah.webp",
+        "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
       }
     ]
   },

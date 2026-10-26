@@ -29,6 +29,20 @@
         "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
         "reveal": "Makan buah dan tidur cukup agar tubuh tetap sehat.",
         "hint": "Perhatikan panel ketiga dan keempat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kesehatan dan Kebersihan Diri?",
+        "reveal": "Membiasakan kebersihan diri dan pola hidup sehat untuk mencegah penyakit.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebersihan-diri.webp",
+        "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebersihan-diri.webp",
+        "altText": "Empat panel kebiasaan sehat: mencuci tangan, menyikat gigi, makan buah, dan tidur cukup."
       }
     ]
   },

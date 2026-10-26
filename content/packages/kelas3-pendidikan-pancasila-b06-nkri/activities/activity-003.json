@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa arti NKRI?",
+        "right": "Negara Kesatuan Republik Indonesia."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa bendera Indonesia?",
+        "right": "Merah Putih."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa lambang negara?",
+        "right": "Garuda Pancasila."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang NKRI dan Simbol Negara?",
+        "right": "Mengenal NKRI dan simbol-simbol negara Indonesia."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bahasa persatuan Indonesia adalah ...",
+        "right": "Bahasa Indonesia"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
+  }
+}

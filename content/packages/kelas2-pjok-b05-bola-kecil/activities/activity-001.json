@@ -29,6 +29,20 @@
         "altText": "Bola tenis, kok, dan bet tenis meja.",
         "reveal": "Mencegah cedera.",
         "hint": "Lakukan dahulu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Kecil?",
+        "reveal": "Mengenal permainan bola kecil dan gerak dasarnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-kecil-kelas2.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bola tenis, kok, dan bet tenis meja.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bola-kecil-kelas2.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja."
       }
     ]
   },

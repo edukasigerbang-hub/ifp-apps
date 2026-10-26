@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-menulis-cerita",
-    "matching-menulis-cerita"
+    "matching-menulis-cerita",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/menulis-cerita-kelas3.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak menulis cerita pengalaman di buku."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

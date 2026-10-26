@@ -29,6 +29,20 @@
         "altText": "Siswa bermusyawarah bersama guru.",
         "reveal": "Melaksanakan keputusan.",
         "hint": "Semua bertanggung jawab."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Kebersamaan dan Musyawarah?",
+        "reveal": "Menyampaikan masalah → Memberi pendapat → Berdiskusi → Mengambil kesepakatan → Melaksanakan keputusan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/musyawarah-kelas2.webp",
+        "altText": "Siswa bermusyawarah bersama guru."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Siswa bermusyawarah bersama guru.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/musyawarah-kelas2.webp",
+        "altText": "Siswa bermusyawarah bersama guru."
       }
     ]
   },

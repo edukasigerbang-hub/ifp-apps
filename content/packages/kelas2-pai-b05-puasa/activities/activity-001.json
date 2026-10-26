@@ -29,6 +29,20 @@
         "altText": "Suasana berbuka puasa dengan kurma dan air.",
         "reveal": "Melatih sabar.",
         "hint": "Peduli kepada yang kekurangan."
+      },
+      {
+        "prompt": "Hikmah puasa adalah ...",
+        "reveal": "Melatih sabar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa-kelas2.webp",
+        "altText": "Suasana berbuka puasa dengan kurma dan air."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Suasana berbuka puasa dengan kurma dan air.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/puasa-kelas2.webp",
+        "altText": "Suasana berbuka puasa dengan kurma dan air."
       }
     ]
   },

@@ -1,0 +1,62 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Bagaimana adab kepada orang tua?",
+        "right": "Menghormati."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana adab kepada guru?",
+        "right": "Sopan."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana adab kepada teman?",
+        "right": "Baik dan tidak bertengkar."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Adab Sehari-hari?",
+        "right": "Membiasakan adab baik setiap hari."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Sikap kepada teman adalah ...",
+        "right": "Baik dan membantu"
+      },
+      {
+        "pairId": "pasangan-kelas2-6",
+        "left": "Bertamu",
+        "right": "Mengucapkan salam dan menunggu izin"
+      },
+      {
+        "pairId": "pasangan-kelas2-7",
+        "left": "Di tempat umum",
+        "right": "Menjaga suara dan kebersihan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  }
+}

@@ -29,6 +29,20 @@
         "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak.",
         "reveal": "85.",
         "hint": "Bandingkan puluhannya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 1–100?",
+        "reveal": "Membilang, mengenal nilai tempat, dan membandingkan bilangan 1–100.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bilangan-1-100.webp",
+        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+      },
+      {
+        "prompt": "Bilangan yang lebih besar adalah ...",
+        "reveal": "85",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/bilangan-1-100.webp",
+        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-proyek-kewargaan-kelas6",
-    "ordering-proyek-kewargaan-kelas6"
+    "ordering-proyek-kewargaan-kelas6",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu demokrasi?",
+        "right": "Pemerintahan dari rakyat, oleh rakyat, untuk rakyat."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa itu pemilu?",
+        "right": "Pemilihan umum untuk memilih pemimpin."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana menghargai hasil?",
+        "right": "Menerima keputusan bersama."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Demokrasi dan Pemilu?",
+        "right": "Memahami demokrasi dan tahapan pemilu."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Demokrasi dan Pemilu?",
+        "right": "Pendaftaran pemilih → Kampanye → Pemungutan suara → Penghitungan suara → Pelantikan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  }
+}

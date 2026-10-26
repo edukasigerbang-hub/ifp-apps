@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-hak-kewajiban-siswa",
-    "matching-hak-kewajiban-siswa"
+    "matching-hak-kewajiban-siswa",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/hak-kewajiban-siswa.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Siswa belajar dan menjaga kebersihan kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

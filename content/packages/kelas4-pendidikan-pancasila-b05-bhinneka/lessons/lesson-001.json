@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-bhinneka",
-    "matching-bhinneka"
+    "matching-bhinneka",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/bhinneka.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

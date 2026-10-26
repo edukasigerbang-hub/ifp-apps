@@ -29,6 +29,20 @@
         "altText": "Contoh warna hangat, dingin, dan susunan komposisi seimbang.",
         "reveal": "Susunan unsur dalam karya.",
         "hint": "Agar terlihat seimbang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh warna hangat, dingin, dan susunan komposisi seimbang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/warna-komposisi.webp",
+        "altText": "Contoh warna hangat, dingin, dan susunan komposisi seimbang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Warna dan Komposisi?",
+        "reveal": "Mengenal warna hangat, dingin, dan komposisi seimbang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/warna-komposisi.webp",
+        "altText": "Contoh warna hangat, dingin, dan susunan komposisi seimbang."
       }
     ]
   },

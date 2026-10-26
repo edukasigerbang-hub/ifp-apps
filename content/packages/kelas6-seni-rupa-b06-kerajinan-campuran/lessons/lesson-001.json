@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kerajinan-campuran-kelas6",
-    "matching-kerajinan-campuran-kelas6"
+    "matching-kerajinan-campuran-kelas6",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kerajinan-campuran-kelas6.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Kerajinan dari daun, ranting, kain, dan biji."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus.",
         "reveal": "Kotak titik-titik terasa kasar, kotak garis bertekstur garis, dan kotak biru muda halus.",
         "hint": "Bayangkan permukaannya saat disentuh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Warna dan Tekstur?",
+        "reveal": "Mengenal warna primer dan sekunder, warna hangat dan dingin, serta tekstur kasar dan halus.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/warna-tekstur.webp",
+        "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/warna-tekstur.webp",
+        "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus."
       }
     ]
   },

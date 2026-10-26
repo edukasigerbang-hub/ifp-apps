@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa teknik lanjutan sepak bola?",
+        "right": "Passing, dribbling, dan shooting."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa teknik lanjutan bola basket?",
+        "right": "Dribble, passing, dan shooting."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa kerja sama penting?",
+        "right": "Agar tim mencetak skor."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar Lanjutan?",
+        "right": "Mempraktikkan teknik lanjutan permainan bola besar."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Agar tim menang, pemain harus ...",
+        "right": "Bekerja sama"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  }
+}

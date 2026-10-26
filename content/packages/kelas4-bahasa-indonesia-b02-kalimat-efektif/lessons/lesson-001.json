@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-kalimat-efektif",
-    "kuis-kalimat-efektif"
+    "kuis-kalimat-efektif",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-kalimat-efektif"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

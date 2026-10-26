@@ -29,6 +29,20 @@
         "altText": "Anak menulis laporan hasil pengamatan di buku.",
         "reveal": "Ejaan, tanda baca, dan kelengkapan isi.",
         "hint": "Baca ulang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Laporan Sederhana?",
+        "reveal": "Menentukan tujuan → Mencatat kegiatan → Menyusun hasil → Menulis kesimpulan → Memeriksa bahasa",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Laporan Sederhana?",
+        "reveal": "Menulis laporan hasil pengamatan dengan struktur yang benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku."
       }
     ]
   },

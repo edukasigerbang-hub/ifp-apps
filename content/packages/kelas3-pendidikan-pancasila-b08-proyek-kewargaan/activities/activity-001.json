@@ -29,6 +29,20 @@
         "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah.",
         "reveal": "Melaporkan hasil dan evaluasi.",
         "hint": "Ceritakan pengalaman."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "reveal": "Memilih masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Proyek Kewargaan?",
+        "reveal": "Merancang dan melaksanakan proyek kewargaan sederhana di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
       }
     ]
   },

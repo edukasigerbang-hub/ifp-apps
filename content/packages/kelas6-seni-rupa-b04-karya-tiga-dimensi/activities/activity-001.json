@@ -29,6 +29,20 @@
         "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi.",
         "reveal": "Rancang, bentuk, lalu rapikan.",
         "hint": "Gunakan alat sesuai."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Karya Tiga Dimensi?",
+        "reveal": "Membuat karya tiga dimensi dari bahan sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/karya-tiga-dimensi.webp",
+        "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/karya-tiga-dimensi.webp",
+        "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi."
       }
     ]
   },

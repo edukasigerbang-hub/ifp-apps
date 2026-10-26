@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-rasio",
-    "kuis-rasio"
+    "kuis-rasio",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-rasio"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

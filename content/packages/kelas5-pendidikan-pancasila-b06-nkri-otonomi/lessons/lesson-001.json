@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-nkri-otonomi",
-    "kuis-nkri-otonomi"
+    "kuis-nkri-otonomi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-nkri-otonomi"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Upacara bendera dan peta daerah dalam NKRI."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Alat ukur panjang adalah ...",
+        "right": "Penggaris atau meteran."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Alat ukur berat adalah ...",
+        "right": "Timbangan."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mana yang lebih panjang, meja atau pensil?",
+        "right": "Meja."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Pengukuran Panjang dan Berat?",
+        "right": "Mengukur panjang dan berat dengan alat sederhana."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Satuan panjang adalah ...",
+        "right": "cm"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Penggaris, meteran, dan timbangan sederhana."
+  }
+}

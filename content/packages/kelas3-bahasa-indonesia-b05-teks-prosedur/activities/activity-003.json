@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa tujuan teks prosedur?",
+        "right": "Memberi petunjuk melakukan sesuatu."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana urutan langkah ditulis?",
+        "right": "Berurutan dari awal sampai akhir."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Kata apa yang biasa dipakai?",
+        "right": "Kata perintah seperti siapkan, masukkan, siram."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Teks Prosedur Sederhana?",
+        "right": "Mengenal teks prosedur dan menyusun langkah kegiatannya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Teks Prosedur Sederhana?",
+        "right": "Menyiapkan pot dan tanah → Menanam biji → Menyiram biji → Meletakkan di tempat terang → Merawat tanaman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  }
+}

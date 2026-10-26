@@ -29,6 +29,20 @@
         "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif.",
         "reveal": "-2.",
         "hint": "Maju 3 langkah dari -5."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Garis bilangan dengan bilangan negatif, nol, dan positif.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bilangan-bulat.webp",
+        "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan Bulat?",
+        "reveal": "Mengenal, membandingkan, dan menghitung bilangan bulat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bilangan-bulat.webp",
+        "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Jam, penggaris, dan timbangan sederhana.",
         "reveal": "Jam.",
         "hint": "Menunjukkan pukul berapa."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pengukuran Sederhana?",
+        "reveal": "Mengukur panjang, berat, dan waktu dengan cara sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pengukuran-kelas1.webp",
+        "altText": "Jam, penggaris, dan timbangan sederhana."
+      },
+      {
+        "prompt": "Panjang meja dapat diukur dengan ...",
+        "reveal": "Jengkal",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pengukuran-kelas1.webp",
+        "altText": "Jam, penggaris, dan timbangan sederhana."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Anak berwudu dan belajar gerakan salat.",
         "reveal": "Salam.",
         "hint": "Menoleh ke kanan dan kiri."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berwudu dan belajar gerakan salat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/belajar-salat.webp",
+        "altText": "Anak berwudu dan belajar gerakan salat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Belajar Salat?",
+        "reveal": "Mengenal wudu dan gerakan salat sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/belajar-salat.webp",
+        "altText": "Anak berwudu dan belajar gerakan salat."
       }
     ]
   },

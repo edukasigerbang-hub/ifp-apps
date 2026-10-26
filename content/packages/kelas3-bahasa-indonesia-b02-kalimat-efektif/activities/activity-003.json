@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa ciri kalimat efektif?",
+        "right": "Singkat, jelas, dan tidak berulang."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Mengapa kosakata baru perlu dicari artinya?",
+        "right": "Agar kalimat mudah dipahami."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana memperbaiki kalimat berulang?",
+        "right": "Hapus kata yang tidak perlu."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Kalimat Efektif dan Kosakata Baru?",
+        "right": "Mengenali kalimat efektif dan menggunakan kosakata baru dengan tepat."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Kalimat efektif adalah ...",
+        "right": "Siti membaca buku di perpustakaan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca."
+  }
+}

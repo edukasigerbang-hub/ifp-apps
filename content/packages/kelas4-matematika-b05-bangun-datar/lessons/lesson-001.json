@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bangun-datar",
-    "kuis-bangun-datar"
+    "kuis-bangun-datar",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bangun-datar"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

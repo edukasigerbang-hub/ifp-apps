@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-permainan-tradisional",
-    "kuis-permainan-tradisional"
+    "kuis-permainan-tradisional",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-permainan-tradisional"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak bermain permainan tradisional di lapangan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

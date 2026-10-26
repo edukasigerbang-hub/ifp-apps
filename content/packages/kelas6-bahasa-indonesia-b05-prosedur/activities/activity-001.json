@@ -29,6 +29,20 @@
         "altText": "Langkah menanam biji dalam pot.",
         "reveal": "Kata perintah.",
         "hint": "Siapkan, masukkan, siram."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Prosedur?",
+        "reveal": "Menyusun teks prosedur dengan langkah berurutan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/prosedur-kelas6.webp",
+        "altText": "Langkah menanam biji dalam pot."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Langkah menanam biji dalam pot.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/prosedur-kelas6.webp",
+        "altText": "Langkah menanam biji dalam pot."
       }
     ]
   },

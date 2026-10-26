@@ -29,6 +29,20 @@
         "altText": "Siswa berbaris tertib di sekolah.",
         "reveal": "Mendengarkan guru.",
         "hint": "Tidak ribut."
+      },
+      {
+        "prompt": "Manfaat aturan di sekolah adalah ...",
+        "reveal": "Belajar nyaman",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aturan-sekolah.webp",
+        "altText": "Siswa berbaris tertib di sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Aturan di Sekolah?",
+        "reveal": "Mengenal dan melaksanakan aturan di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aturan-sekolah.webp",
+        "altText": "Siswa berbaris tertib di sekolah."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-warna-teknik",
-    "kuis-warna-teknik"
+    "kuis-warna-teknik",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-warna-teknik"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Contoh warna dan tekstur dari berbagai teknik."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

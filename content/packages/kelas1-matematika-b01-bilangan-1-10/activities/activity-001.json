@@ -29,6 +29,20 @@
         "altText": "Kerangka sepuluh berisi tujuh buah apel.",
         "reveal": "5.",
         "hint": "Bandingkan jumlahnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 1–10?",
+        "reveal": "Membilang, mengenal lambang, dan mengurutkan bilangan 1–10.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bilangan-1-10.webp",
+        "altText": "Kerangka sepuluh berisi tujuh buah apel."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kerangka sepuluh berisi tujuh buah apel.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bilangan-1-10.webp",
+        "altText": "Kerangka sepuluh berisi tujuh buah apel."
       }
     ]
   },

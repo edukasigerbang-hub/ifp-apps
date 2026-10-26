@@ -29,6 +29,20 @@
         "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman.",
         "reveal": "Contoh: Sudut baca kelas kami rapi dan nyaman.",
         "hint": "Gunakan subjek dan predikat yang jelas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kalimat Efektif dan Kosakata Baru?",
+        "reveal": "Mengenali ciri kalimat efektif, memilih kata baku, dan memperbaiki kalimat agar jelas serta tidak mubazir.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sudut-baca.webp",
+        "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman."
+      },
+      {
+        "prompt": "Ciri kalimat efektif adalah ...",
+        "reveal": "Jelas, singkat, dan sesuai kaidah",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/sudut-baca.webp",
+        "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman."
       }
     ]
   },

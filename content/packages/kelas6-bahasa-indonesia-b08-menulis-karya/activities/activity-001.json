@@ -29,6 +29,20 @@
         "altText": "Anak menulis karya sastra di buku.",
         "reveal": "Pesan untuk pembaca.",
         "hint": "Disampaikan halus."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak menulis karya sastra di buku.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Karya?",
+        "reveal": "Menulis karya sastra dengan unsur yang lengkap.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku."
       }
     ]
   },

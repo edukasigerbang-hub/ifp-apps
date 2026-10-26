@@ -29,6 +29,20 @@
         "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
         "reveal": "Tujuh belas.",
         "hint": "Baca lambangnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 11–20?",
+        "reveal": "Membilang, mengenal lambang, dan mengurutkan bilangan 11–20.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bilangan-11-20.webp",
+        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bilangan-11-20.webp",
+        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
       }
     ]
   },

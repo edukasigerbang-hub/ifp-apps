@@ -29,6 +29,20 @@
         "altText": "Diagram batang dan tabel data sederhana.",
         "reveal": "Lihat batang tertinggi.",
         "hint": "Baca angkanya."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram batang dan tabel data sederhana.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/data-kelas2.webp",
+        "altText": "Diagram batang dan tabel data sederhana."
+      },
+      {
+        "prompt": "Diagram batang menunjukkan ...",
+        "reveal": "Perbandingan data",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/data-kelas2.webp",
+        "altText": "Diagram batang dan tabel data sederhana."
       }
     ]
   },

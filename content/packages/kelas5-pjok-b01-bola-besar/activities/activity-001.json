@@ -29,6 +29,20 @@
         "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli.",
         "reveal": "Agar tim dapat mencetak skor dan bermain adil.",
         "hint": "Beri umpan kepada teman."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar?",
+        "reveal": "Mengenal permainan bola besar dan mempraktikkan teknik dasarnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-besar-kelas5.webp",
+        "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga bola besar: sepak bola, bola basket, dan bola voli.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bola-besar-kelas5.webp",
+        "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli."
       }
     ]
   },

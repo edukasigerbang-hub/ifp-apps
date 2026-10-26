@@ -29,6 +29,20 @@
         "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan.",
         "reveal": "Akhlak terpuji disukai Allah dan manusia, serta membuat hidup harmonis.",
         "hint": "Hubungkan dengan perasaan orang lain."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Akhlak Terpuji?",
+        "reveal": "Membiasakan sikap jujur, amanah, santun, tolong-menolong, sabar, dan pemaaf dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/akhlak-terpuji.webp",
+        "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/akhlak-terpuji.webp",
+        "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan."
       }
     ]
   },

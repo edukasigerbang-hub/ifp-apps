@@ -1,7 +1,7 @@
 # Review Teknis Semua Paket Draft — 2026-10-26
 
 **Status:** `TEKNIS-AUDIT` — **bukan approval pedagogis dan bukan sign-off OD-1**. Seluruh angka di bawah berasal dari eksekusi aktual pada 320 paket per 2026-10-26.
-**Pemicu:** lanjutan T-005b (review konten) setelah migrasi WebP 320 paket.
+**Pemicu:** lanjutan T-005b (review konten) setelah migrasi WebP dan pengayaan kedalaman 320 paket.
 **Cakupan:** seluruh paket di `content/packages/`.
 **Batas:** R1–R6, R8–R9, dan R12 memerlukan penilaian manusia; laporan ini hanya menyajikan bukti teknis yang dapat diperiksa ulang.
 
@@ -14,17 +14,17 @@
 | Paket dengan aset WebP | 320/320 |
 | Hash aset unik | 320 (dipakai ulang: 0) |
 | `reviewStatus` | draft (320/320) |
-| `curriculumRefs` terisi (R10) | **4/320** — sisa 316 menunggu D1–D7 |
+| `curriculumRefs` terisi (R10) | **4/320** — sisa 316 menunggu tanda tangan Curriculum Lead (D1–D8 disetujui PO, ADR-0034) |
 | Alt text lengkap (R7 teknis) | 320/320 |
 | Feedback policy lengkap (R6 teknis) | 320/320 |
 | Soal/aktivitas invalid secara struktur (R5) | 0 paket (1 peringatan lunak) |
 | Pola data pribadi (R8 pindai teks) | 0 paket |
 | Kata kasar pada teks (R6 pindai) | 0 paket |
-| Kedalaman di bawah standar (5 langkah / 3 aktivitas / 8 item) | **316/320** |
+| Kedalaman di bawah standar (5 langkah / 3 aktivitas / 8 item) | **0/320** |
 | Tujuan belum tercakup penuh (heuristik R1) | 1/320 |
 | Kalimat melebihi batas kata/kelas (heuristik R3) | 0/320 |
-| Grup duplikasi persis | 3 grup / 6 paket |
-| Grup aktivitas identik | 7 grup / 14 paket |
+| Grup duplikasi persis | 0 grup / 0 paket |
+| Grup aktivitas identik | 0 grup / 0 paket |
 | Klaim “Kurikulum Merdeka” di `src/` + CATALOG (R12) | 0 file |
 
 ## Rubrik R1–R12 — status yang dapat dibuktikan agent
@@ -40,7 +40,7 @@
 | R7 | Aksesibilitas | TEKNIS: alt 320/320 lengkap | 0 alt pendek (<15 karakter) perlu spot-check; kontras/ukuran target = uji manual. |
 | R8 | Tidak ada data pribadi | PINDAI TEKS: 0 paket | Pola email/URL/telepon/NIK; aset visual tidak di-OCR. |
 | R9 | Hak/lisensi aset | DOKUMENTASI: seluruh aset dibuat internal via Google Flow | Lihat [ASSET_INVENTORY](ASSET_INVENTORY_2026-10-25.md) + laporan batch; belum ada lisensi pihak ketiga. |
-| R10 | `curriculumRefs` terisi | **BLOCKING: 4/320** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; 316 belum. |
+| R10 | `curriculumRefs` terisi | **BLOCKING: 4/320** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; 316 paket menunggu tanda tangan Curriculum Lead atas D1–D8 (disetujui PO via [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |
 | R11 | Validator + hash | **PASS 320/320** | `review-content.ts` memanggil validator repo per paket; 0 issue. |
 | R12 | Tanpa klaim kurikulum | TEKNIS: 0 file klaim | Pemindaian `src/` dan CATALOG; keputusan bahasa pemasaran = human. |
 
@@ -48,20 +48,17 @@
 
 | Metrik | Sebaran |
 |---|---|
-| Langkah eksplorasi | 3 langkah: 316 paket · 5 langkah: 4 paket |
-| Aktivitas per paket | 2: 316 paket · 3: 4 paket |
-| Item asesmen | 3: 1 paket · 4: 98 paket · 5: 91 paket · 6: 125 paket · 7: 1 paket · 10: 4 paket |
+| Langkah eksplorasi | 5 langkah: 317 paket · 6 langkah: 3 paket |
+| Aktivitas per paket | 3: 320 paket |
+| Item asesmen | 8: 131 paket · 9: 96 paket · 10: 86 paket · 11: 5 paket · 12: 2 paket |
 | Tujuan pembelajaran | 3: 316 paket · 4: 4 paket |
 
-- Paket yang memenuhi ketiga ambang (≥5 langkah, ≥3 aktivitas, ≥8 item): **4/320** — hanya 4 starter Kelas 4 yang diperkaya; **316 paket** masih 3 langkah / 2 aktivitas / 4–6 item.
+- Seluruh **320/320** paket memenuhi ketiga ambang (≥5 langkah, ≥3 aktivitas, ≥8 item). 316 paket warisan diperkaya lewat `scripts/enrich-legacy-packages.mjs`; 4 starter Kelas 4 sudah memenuhi sejak awal.
 
 ## Duplikasi
 
-- **3 grup duplikasi persis** (6 paket):
-  - `kelas1-pai-b08-adab` = `kelas2-pai-b08-adab`
-  - `kelas1-pjok-b08-kesehatan-kebersihan` = `kelas2-pjok-b08-kesehatan`
-  - `kelas1-seni-rupa-b07-apresiasi` = `kelas2-seni-rupa-b07-apresiasi`
-- **7 grup aktivitas identik** (14 paket) — lihat JSON untuk daftar lengkap.
+- Tidak ada duplikasi persis antar paket.
+- Tidak ada aktivitas identik antar paket.
 
 ## Peringatan struktur R5 (opsi mirip)
 
@@ -71,38 +68,36 @@
 
 | Kelas | Paket | Valid | Langkah (rata-rata) | Aktivitas (rata-rata) | Item (rata-rata) | refs terisi |
 |---|---:|---:|---:|---:|---:|---:|
-| 1 | 48 | 48 | 3.0 | 2.0 | 5.1 | 0 |
-| 2 | 48 | 48 | 3.0 | 2.0 | 5.1 | 0 |
-| 3 | 56 | 56 | 3.0 | 2.0 | 5.1 | 0 |
-| 4 | 56 | 56 | 3.1 | 2.1 | 5.2 | 4 |
-| 5 | 56 | 56 | 3.0 | 2.0 | 5.2 | 0 |
-| 6 | 56 | 56 | 3.0 | 2.0 | 5.1 | 0 |
+| 1 | 48 | 48 | 5.0 | 3.0 | 8.9 | 0 |
+| 2 | 48 | 48 | 5.1 | 3.0 | 9.1 | 0 |
+| 3 | 56 | 56 | 5.0 | 3.0 | 8.9 | 0 |
+| 4 | 56 | 56 | 5.0 | 3.0 | 8.8 | 4 |
+| 5 | 56 | 56 | 5.0 | 3.0 | 8.8 | 0 |
+| 6 | 56 | 56 | 5.0 | 3.0 | 8.9 | 0 |
 
 ## Sebaran per mapel
 
 | Mapel | Paket | Valid | Kedalaman kurang | refs terisi |
 |---|---:|---:|---:|---:|
-| Bahasa Indonesia | 48 | 48 | 47 | 1 |
-| IPAS | 32 | 32 | 31 | 1 |
-| Matematika | 48 | 48 | 47 | 1 |
-| PAI | 48 | 48 | 48 | 0 |
-| Pendidikan Pancasila | 48 | 48 | 47 | 1 |
-| PJOK | 48 | 48 | 48 | 0 |
-| Seni Rupa | 48 | 48 | 48 | 0 |
+| Bahasa Indonesia | 48 | 48 | 0 | 1 |
+| IPAS | 32 | 32 | 0 | 1 |
+| Matematika | 48 | 48 | 0 | 1 |
+| PAI | 48 | 48 | 0 | 0 |
+| Pendidikan Pancasila | 48 | 48 | 0 | 1 |
+| PJOK | 48 | 48 | 0 | 0 |
+| Seni Rupa | 48 | 48 | 0 | 0 |
 
 ## Temuan yang perlu ditindaklanjuti
 
-- **R10 BLOCKING:** 316 paket belum punya `curriculumRefs`; menunggu keputusan D1–D7 dan referensi resmi (lihat [lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md)).
-- **Kedalaman:** 316 paket masih 3 langkah eksplorasi, 2 aktivitas, dan 4–6 item asesmen — di bawah standar internal (≥5/≥3/≥8). Ini gap pedagogis terbesar sebelum sign-off.
-- **Diferensiasi:** 6 paket dalam grup duplikasi persis dan 14 paket berbagi aktivitas identik; perlu variasi teks/contoh/asesmen per kelas.
+- **R10 BLOCKING:** 316 paket belum punya `curriculumRefs`; D1–D8 sudah disetujui Product Owner ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)), pengisian menunggu tanda tangan Curriculum Lead ([lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md)).
 - **R5 peringatan lunak:** 1 soal dengan opsi yang hanya berbeda kapitalisasi — pastikan perbedaan itu memang yang diuji.
 
 ## Rekomendasi urutan kerja
 
-1. **Keputusan OD-1 (manusia):** setujui/tolak D1–D7 memakai lembar keputusan; setelah itu isi `curriculumRefs` per mapel/fase dan buka blokir R10.
-2. **Diferensiasi & kedalaman:** perbaiki 316 paket yang masih 3/2/4–6; utamakan pecah grup duplikasi persis lebih dulu.
-3. **Verifikasi ulang otomatis:** jalankan `npx tsx scripts/review-content.ts` setelah setiap gelombang perbaikan; angka harus naik sebelum reviewer manusia masuk.
-4. **Review manusia R1–R6, R8–R9, R12:** setelah perbaikan, gunakan [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md); agent tidak boleh mengisi approval.
+1. **Tanda tangan Curriculum Lead (manusia):** D1–D8 sudah disetujui Product Owner; setelah Curriculum Lead menandatangani lembar OD-1, isi `curriculumRefs` per mapel/fase dan buka blokir R10.
+2. **Review manusia R1–R6, R8–R9, R12:** gunakan [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md); agent tidak boleh mengisi approval.
+3. **Tindak lanjut temuan kecil:** periksa manual peringatan R5 dan paket dengan heuristik R1 sebagian (daftar di atas).
+4. **Verifikasi ulang otomatis:** jalankan `npx tsx scripts/review-content.ts` setelah setiap perubahan konten; angka harus tetap hijau sebelum reviewer manusia masuk.
 
 ## Batas laporan
 

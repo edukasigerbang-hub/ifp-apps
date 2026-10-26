@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-pola-bilangan",
-    "kuis-pola-bilangan"
+    "kuis-pola-bilangan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-pola-bilangan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Pola warna dan bilangan yang berulang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

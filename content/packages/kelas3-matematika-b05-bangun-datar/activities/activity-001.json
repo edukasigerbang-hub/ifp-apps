@@ -29,6 +29,20 @@
         "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
         "reveal": "Persegi semua sisi sama; persegi panjang memiliki dua pasang sisi sama.",
         "hint": "Bandingkan sisinya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Datar dan Cirinya?",
+        "reveal": "Mengenal bangun datar serta ciri sisi dan sudutnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bangun-datar-kelas3.webp",
+        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bangun-datar-kelas3.webp",
+        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
       }
     ]
   },

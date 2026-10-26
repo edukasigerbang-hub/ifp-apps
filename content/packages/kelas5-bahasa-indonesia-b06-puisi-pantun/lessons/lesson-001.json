@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-puisi-pantun",
-    "matching-puisi-pantun"
+    "matching-puisi-pantun",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/puisi-pantun.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak membaca puisi dan pantun di kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Anak melakukan senam ringan dan peregangan.",
         "reveal": "Tarik napas perlahan.",
         "hint": "Jangan menahan."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Senam Ringan?",
+        "reveal": "Pemanasan → Gerak kepala → Gerak tangan → Gerak kaki → Pendinginan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/senam-kelas2.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak melakukan senam ringan dan peregangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/senam-kelas2.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan."
       }
     ]
   },

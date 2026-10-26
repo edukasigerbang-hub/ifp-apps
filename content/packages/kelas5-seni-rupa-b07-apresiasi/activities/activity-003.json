@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa tujuan apresiasi?",
+        "right": "Mengamati dan menghargai karya."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Unsur apa yang diamati?",
+        "right": "Garis, warna, bentuk, dan tekstur."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana tanggapan yang baik?",
+        "right": "Sopan, beralasan, dan membangun."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Langkah pertama mengapresiasi karya adalah ...",
+        "right": "Mengamati dengan teliti"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Karya seni dipajang dan pengunjung mengamati."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan pengunjung mengamati."
+  }
+}

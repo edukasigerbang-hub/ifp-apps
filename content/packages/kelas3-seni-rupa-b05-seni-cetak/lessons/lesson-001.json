@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-seni-cetak",
-    "ordering-seni-cetak"
+    "ordering-seni-cetak",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

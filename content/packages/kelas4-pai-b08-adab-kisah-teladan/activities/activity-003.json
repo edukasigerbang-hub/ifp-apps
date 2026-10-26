@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Bagaimana adab kepada orang tua?",
+        "right": "Menghormati, mendengarkan, dan membantu."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana adab kepada guru dan teman?",
+        "right": "Sopan, jujur, sabar, dan saling membantu."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Sifat apa yang diteladani dari kisah Nabi dan sahabat?",
+        "right": "Jujur, amanah, sabar, dan dermawan."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Adab dan Kisah Teladan?",
+        "right": "Menerapkan adab kepada orang tua, guru, dan teman serta meneladani kisah Nabi dan sahabat."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Sifat Nabi Muhammad yang patut diteladani adalah ...",
+        "right": "Jujur dan amanah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman."
+  }
+}

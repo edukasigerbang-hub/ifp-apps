@@ -29,6 +29,20 @@
         "altText": "Anak menulis cerita pengalaman di buku.",
         "reveal": "Ejaan, huruf kapital, dan tanda baca.",
         "hint": "Baca ulang cerita."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Cerita Pengalaman?",
+        "reveal": "Menulis cerita pengalaman dengan urutan awal, tengah, dan akhir.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-cerita-kelas3.webp",
+        "altText": "Anak menulis cerita pengalaman di buku."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak menulis cerita pengalaman di buku.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/menulis-cerita-kelas3.webp",
+        "altText": "Anak menulis cerita pengalaman di buku."
       }
     ]
   },

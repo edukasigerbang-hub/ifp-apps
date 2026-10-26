@@ -29,6 +29,20 @@
         "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara.",
         "reveal": "Es mencair, air menguap, uap mengembun.",
         "hint": "Perubahan terjadi karena suhu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wujud Zat dan Perubahannya?",
+        "reveal": "Mengenal wujud padat, cair, dan gas serta contoh perubahannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wujud-zat-kelas3.webp",
+        "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/wujud-zat-kelas3.webp",
+        "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
       }
     ]
   },

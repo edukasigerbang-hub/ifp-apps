@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-teks-deskripsi-kelas5",
-    "matching-teks-deskripsi-kelas5"
+    "matching-teks-deskripsi-kelas5",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/teks-deskripsi-kelas5.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

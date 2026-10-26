@@ -29,6 +29,20 @@
         "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila.",
         "reveal": "Keadilan sosial.",
         "hint": "Bersikap adil kepada semua."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Nilai Pancasila dalam Kehidupan?",
+        "reveal": "Menerapkan nilai setiap sila Pancasila dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nilai-pancasila.webp",
+        "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Keberagaman siswa mencerminkan nilai-nilai Pancasila.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/nilai-pancasila.webp",
+        "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila."
       }
     ]
   },

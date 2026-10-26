@@ -29,6 +29,20 @@
         "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak.",
         "reveal": "Menghargai, mempelajari, dan melestarikan budaya daerah.",
         "hint": "Jangan mengejek budaya lain."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Keragaman Budaya Nusantara?",
+        "reveal": "Mengenali keragaman rumah adat, tarian, makanan, dan kain tradisional serta sikap menghargainya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/keragaman-budaya.webp",
+        "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/keragaman-budaya.webp",
+        "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak."
       }
     ]
   },

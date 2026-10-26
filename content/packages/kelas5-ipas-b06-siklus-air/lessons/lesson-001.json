@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-siklus-air",
-    "ordering-siklus-air"
+    "ordering-siklus-air",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

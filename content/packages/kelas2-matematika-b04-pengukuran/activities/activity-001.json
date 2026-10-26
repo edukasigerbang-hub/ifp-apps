@@ -29,6 +29,20 @@
         "altText": "Penggaris, meteran, dan timbangan sederhana.",
         "reveal": "Meja.",
         "hint": "Bandingkan ukurannya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pengukuran Panjang dan Berat?",
+        "reveal": "Mengukur panjang dan berat dengan alat sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pengukuran-kelas2.webp",
+        "altText": "Penggaris, meteran, dan timbangan sederhana."
+      },
+      {
+        "prompt": "Satuan panjang adalah ...",
+        "reveal": "cm",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pengukuran-kelas2.webp",
+        "altText": "Penggaris, meteran, dan timbangan sederhana."
       }
     ]
   },

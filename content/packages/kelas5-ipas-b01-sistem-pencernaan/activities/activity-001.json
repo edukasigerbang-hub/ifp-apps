@@ -29,6 +29,20 @@
         "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar.",
         "reveal": "Usus halus.",
         "hint": "Permukaannya penuh jonjot."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sistem Pencernaan Manusia?",
+        "reveal": "Mengenal organ pencernaan, fungsinya, dan cara menjaga kesehatannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sistem-pencernaan.webp",
+        "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/sistem-pencernaan.webp",
+        "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar."
       }
     ]
   },

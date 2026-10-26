@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-keliling-luas",
-    "kuis-keliling-luas"
+    "kuis-keliling-luas",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-keliling-luas"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

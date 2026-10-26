@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa tahap pertama siklus air?",
+        "right": "Penguapan air dari laut atau darat."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa itu pengembunan?",
+        "right": "Uap air berubah menjadi titik air."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana air kembali ke laut?",
+        "right": "Melalui hujan dan aliran sungai."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Siklus Air dan Cuaca?",
+        "right": "Memahami tahapan siklus air dan pengaruhnya terhadap cuaca."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Siklus Air dan Cuaca?",
+        "right": "Penguapan → Pengembunan → Hujan → Penyerapan air → Aliran kembali ke laut"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+  }
+}

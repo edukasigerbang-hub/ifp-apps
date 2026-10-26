@@ -29,6 +29,20 @@
         "altText": "Pameran karya siswa di kelas.",
         "reveal": "Menjelaskan karya.",
         "hint": "Menyambut pengunjung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pameran?",
+        "reveal": "Merencanakan dan melaksanakan pameran karya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pameran-kelas6.webp",
+        "altText": "Pameran karya siswa di kelas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Pameran karya siswa di kelas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pameran-kelas6.webp",
+        "altText": "Pameran karya siswa di kelas."
       }
     ]
   },

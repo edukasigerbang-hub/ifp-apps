@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-seni-cetak-kelas6",
-    "ordering-seni-cetak-kelas6"
+    "ordering-seni-cetak-kelas6",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Alat cetak dan kertas berisi pola."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

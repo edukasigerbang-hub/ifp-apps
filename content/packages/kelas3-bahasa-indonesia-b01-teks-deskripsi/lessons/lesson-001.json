@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-teks-deskripsi-k3",
-    "matching-teks-deskripsi-k3"
+    "matching-teks-deskripsi-k3",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/taman-sekolah.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

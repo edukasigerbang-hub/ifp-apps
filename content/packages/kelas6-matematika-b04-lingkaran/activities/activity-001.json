@@ -29,6 +29,20 @@
         "altText": "Lingkaran dengan jari-jari, diameter, dan pusat.",
         "reveal": "2 × π × r.",
         "hint": "π ≈ 3,14."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Lingkaran?",
+        "reveal": "Mengenal unsur lingkaran serta menghitung keliling dan luas.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/lingkaran.webp",
+        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lingkaran dengan jari-jari, diameter, dan pusat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/lingkaran.webp",
+        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
       }
     ]
   },

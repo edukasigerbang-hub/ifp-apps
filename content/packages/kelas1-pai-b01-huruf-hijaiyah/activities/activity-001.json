@@ -29,6 +29,20 @@
         "altText": "Anak membaca huruf hijaiyah di sajadah.",
         "reveal": "Bersih dan sopan.",
         "hint": "Mulai dengan ta'awuz."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca huruf hijaiyah di sajadah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Huruf Hijaiyah?",
+        "reveal": "Mengenal huruf hijaiyah dan cara membacanya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah."
       }
     ]
   },

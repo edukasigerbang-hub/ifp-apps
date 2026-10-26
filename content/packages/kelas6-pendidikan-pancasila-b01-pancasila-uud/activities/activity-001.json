@@ -29,6 +29,20 @@
         "altText": "Simbol Pancasila dan dokumen UUD 1945.",
         "reveal": "UUD menjabarkan nilai Pancasila.",
         "hint": "Saling melengkapi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pancasila dan UUD 1945?",
+        "reveal": "Memahami kedudukan Pancasila dan UUD 1945.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pancasila-uud.webp",
+        "altText": "Simbol Pancasila dan dokumen UUD 1945."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Simbol Pancasila dan dokumen UUD 1945.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pancasila-uud.webp",
+        "altText": "Simbol Pancasila dan dokumen UUD 1945."
       }
     ]
   },

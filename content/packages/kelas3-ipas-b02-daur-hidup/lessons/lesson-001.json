@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-daur-hidup",
-    "ordering-daur-hidup"
+    "ordering-daur-hidup",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

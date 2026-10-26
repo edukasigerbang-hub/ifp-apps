@@ -29,6 +29,20 @@
         "altText": "Kolase dari daun dan kertas yang ditempel.",
         "reveal": "Oles lem lalu tempel.",
         "hint": "Tekan pelan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kolase Sederhana?",
+        "reveal": "Membuat kolase sederhana dari bahan sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kolase-kelas1.webp",
+        "altText": "Kolase dari daun dan kertas yang ditempel."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Kolase Sederhana?",
+        "reveal": "Menyiapkan bahan → Menyusun pola → Mengoles lem → Menempel bahan → Merapikan karya",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/kolase-kelas1.webp",
+        "altText": "Kolase dari daun dan kertas yang ditempel."
       }
     ]
   },

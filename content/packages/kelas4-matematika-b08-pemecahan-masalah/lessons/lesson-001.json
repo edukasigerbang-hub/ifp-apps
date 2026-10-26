@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-pemecahan",
-    "kuis-pemecahan"
+    "kuis-pemecahan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-pemecahan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

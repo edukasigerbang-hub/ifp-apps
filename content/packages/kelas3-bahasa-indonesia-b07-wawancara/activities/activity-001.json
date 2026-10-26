@@ -29,6 +29,20 @@
         "altText": "Dua anak mewawancarai narasumber dengan sopan.",
         "reveal": "Bersikap sopan dan mencatat jawaban.",
         "hint": "Ucapkan terima kasih."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Wawancara Sederhana?",
+        "reveal": "Menentukan narasumber → Menyusun pertanyaan → Meminta izin dan memperkenalkan diri → Bertanya dan mencatat jawaban → Mengucapkan terima kasih",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/wawancara-kelas3.webp",
+        "altText": "Dua anak mewawancarai narasumber dengan sopan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wawancara Sederhana?",
+        "reveal": "Menyusun pertanyaan dan melakukan wawancara sederhana dengan sopan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wawancara-kelas3.webp",
+        "altText": "Dua anak mewawancarai narasumber dengan sopan."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Anak menulis cerita di buku.",
         "reveal": "Ejaan, tanda baca, dan keruntutan.",
         "hint": "Baca ulang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Cerita?",
+        "reveal": "Menentukan tema → Menyusun kerangka → Mengembangkan cerita → Memeriksa ejaan → Membacakan cerita",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Cerita?",
+        "reveal": "Menulis cerita dengan tokoh, latar, dan alur yang runtut.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku."
       }
     ]
   },

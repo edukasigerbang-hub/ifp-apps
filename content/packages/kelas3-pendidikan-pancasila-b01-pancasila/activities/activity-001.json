@@ -29,6 +29,20 @@
         "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
         "reveal": "Kemanusiaan yang adil dan beradab; mata rantai saling terhubung.",
         "hint": "Perhatikan bentuk rantai."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Simbol dan Makna Pancasila?",
+        "reveal": "Mengenal lima simbol sila Pancasila dan maknanya dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/simbol-pancasila.webp",
+        "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/simbol-pancasila.webp",
+        "altText": "Lima panel simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Jujur, sabar, dan peduli.",
         "hint": "Terapkan setiap hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Adab dan Kisah Teladan?",
+        "reveal": "Menerapkan adab baik dan meneladani kisah Nabi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/adab-kelas6.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
+      },
+      {
+        "prompt": "Sifat Nabi Muhammad yang diteladani adalah ...",
+        "reveal": "Jujur dan amanah",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/adab-kelas6.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
       }
     ]
   },

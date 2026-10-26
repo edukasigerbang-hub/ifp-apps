@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-atletik",
-    "matching-atletik"
+    "matching-atletik",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/atletik-kelas3.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lintasan lari, bak pasir lompat, dan pita finis."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

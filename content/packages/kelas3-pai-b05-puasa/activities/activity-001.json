@@ -29,6 +29,20 @@
         "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid.",
         "reveal": "Melatih sabar dan disiplin.",
         "hint": "Peduli kepada yang kekurangan."
+      },
+      {
+        "prompt": "Hikmah puasa adalah ...",
+        "reveal": "Melatih sabar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Puasa?",
+        "reveal": "Mengenal puasa, waktunya, dan hikmahnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
       }
     ]
   },

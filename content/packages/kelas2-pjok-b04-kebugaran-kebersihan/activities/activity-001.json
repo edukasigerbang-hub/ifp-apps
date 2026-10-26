@@ -29,6 +29,20 @@
         "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
         "reveal": "Agar tenaga pulih.",
         "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran dan Kebersihan?",
+        "reveal": "Menjaga kebugaran dan kebersihan diri.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.webp",
+        "altText": "Anak berolahraga, mencuci tangan, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berolahraga, mencuci tangan, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.webp",
+        "altText": "Anak berolahraga, mencuci tangan, dan beristirahat."
       }
     ]
   },

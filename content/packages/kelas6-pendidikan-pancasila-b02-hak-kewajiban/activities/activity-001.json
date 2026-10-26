@@ -29,6 +29,20 @@
         "altText": "Anak belajar dan menjaga kebersihan sekolah.",
         "reveal": "Agar kehidupan adil dan tertib.",
         "hint": "Keduanya berjalan bersama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban Warga Negara?",
+        "reveal": "Melaksanakan hak dan kewajiban secara seimbang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-kelas6.webp",
+        "altText": "Anak belajar dan menjaga kebersihan sekolah."
+      },
+      {
+        "prompt": "Hak dan kewajiban harus ...",
+        "reveal": "Dilaksanakan seimbang",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/hak-kewajiban-kelas6.webp",
+        "altText": "Anak belajar dan menjaga kebersihan sekolah."
       }
     ]
   },

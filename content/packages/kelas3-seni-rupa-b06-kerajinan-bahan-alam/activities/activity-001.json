@@ -29,6 +29,20 @@
         "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
         "reveal": "Lem yang aman.",
         "hint": "Gunakan sedikit lem."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kerajinan Bahan Alam?",
+        "reveal": "Membuat kerajinan sederhana dari bahan alam di sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
       }
     ]
   },

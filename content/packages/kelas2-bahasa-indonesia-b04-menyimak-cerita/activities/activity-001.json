@@ -29,6 +29,20 @@
         "altText": "Anak menyimak cerita yang dibacakan.",
         "reveal": "Isi cerita.",
         "hint": "Sebutkan tokohnya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menyimak Cerita?",
+        "reveal": "Duduk tenang → Mendengarkan cerita → Menyebutkan tokoh → Menceritakan kembali → Menyimpulkan pesan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menyimak Cerita?",
+        "reveal": "Menyimak cerita dan menceritakannya kembali.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-bola-kecil-kelas6",
-    "matching-bola-kecil-kelas6"
+    "matching-bola-kecil-kelas6",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/bola-kecil-kelas6.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Bola tenis, kok, dan bet tenis meja."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

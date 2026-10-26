@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-seni-cetak-kelas5",
-    "ordering-seni-cetak-kelas5"
+    "ordering-seni-cetak-kelas5",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Alat cetak, cat, dan kertas berisi cetakan pola."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

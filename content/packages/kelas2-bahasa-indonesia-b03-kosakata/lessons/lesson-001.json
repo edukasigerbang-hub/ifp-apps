@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kosakata-kelas2",
-    "matching-kosakata-kelas2"
+    "matching-kosakata-kelas2",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kosakata-kelas2.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak membaca buku untuk menambah kosakata."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

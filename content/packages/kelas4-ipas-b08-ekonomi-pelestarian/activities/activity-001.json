@@ -29,6 +29,20 @@
         "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon.",
         "reveal": "Pohon menjaga udara, tanah, dan air serta mencegah erosi.",
         "hint": "Hubungkan dengan sumber daya alam."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kegiatan Ekonomi dan Pelestarian Lingkungan?",
+        "reveal": "Mengenali kegiatan produksi, distribusi, dan konsumsi serta cara memanfaatkan sumber daya secara lestari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ekonomi-pelestarian.webp",
+        "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/ekonomi-pelestarian.webp",
+        "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon."
       }
     ]
   },

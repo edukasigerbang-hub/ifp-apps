@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-kisah-nabi",
-    "ordering-kisah-nabi"
+    "ordering-kisah-nabi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

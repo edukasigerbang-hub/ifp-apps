@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-zakat",
-    "matching-zakat"
+    "matching-zakat",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/zakat-kelas6.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Kotak amal, karung beras, dan koin."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-apresiasi-karya",
-    "kuis-apresiasi-karya"
+    "kuis-apresiasi-karya",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-apresiasi-karya"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

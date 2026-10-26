@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu bilangan bulat?",
+        "right": "Bilangan positif, negatif, dan nol."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Mana yang lebih kecil, -3 atau 2?",
+        "right": "-3."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Berapa hasil -5 + 3?",
+        "right": "-2."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Bilangan Bulat?",
+        "right": "Mengenal, membandingkan, dan menghitung bilangan bulat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+  }
+}

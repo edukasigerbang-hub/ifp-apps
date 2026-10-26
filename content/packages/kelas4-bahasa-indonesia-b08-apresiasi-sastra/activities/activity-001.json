@@ -29,6 +29,20 @@
         "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
         "reveal": "Menyebutkan hal menarik dan alasannya dengan sopan.",
         "hint": "Hindari mengejek karya teman."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Apresiasi Sastra?",
+        "reveal": "Mengenali unsur puisi dan cerita, menyampaikan tanggapan, serta menghargai karya sastra.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+      },
+      {
+        "prompt": "Apresiasi yang baik terhadap karya teman adalah ...",
+        "reveal": "menyebutkan hal menarik beserta alasannya",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
       }
     ]
   },

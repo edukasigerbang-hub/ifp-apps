@@ -29,6 +29,20 @@
         "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air.",
         "reveal": "Air menguap menjadi uap air yang berwujud gas.",
         "hint": "Perhatikan gelembung uap pada panel ketiga."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Wujud Zat dan Perubahannya?",
+        "reveal": "Es batu (padat) → Mencair menjadi air → Air (cair) → Menguap menjadi uap air (gas)",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/wujud-zat.webp",
+        "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wujud Zat dan Perubahannya?",
+        "reveal": "Mengenali wujud padat, cair, dan gas serta perubahan wujud yang terjadi karena pemanasan atau pendinginan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wujud-zat.webp",
+        "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
       }
     ]
   },

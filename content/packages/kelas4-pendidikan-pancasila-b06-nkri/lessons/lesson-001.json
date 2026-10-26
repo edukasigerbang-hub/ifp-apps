@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-nkri",
-    "matching-nkri"
+    "matching-nkri",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/upacara-bendera.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Upacara bendera di sekolah dengan siswa berbaris dan bendera merah putih."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

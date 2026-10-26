@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-wujud-zat",
-    "kuis-wujud-zat"
+    "kuis-wujud-zat",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-wujud-zat"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

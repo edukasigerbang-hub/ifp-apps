@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-diskusi-kelas6",
-    "kuis-diskusi-kelas6"
+    "kuis-diskusi-kelas6",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-diskusi-kelas6"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa berdiskusi dengan guru."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

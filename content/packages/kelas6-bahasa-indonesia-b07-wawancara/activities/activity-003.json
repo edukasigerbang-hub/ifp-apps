@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa pertanyaan yang baik?",
+        "right": "Singkat, jelas, dan relevan."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana sikap saat wawancara?",
+        "right": "Sopan dan mencatat jawaban."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang disiapkan untuk presentasi?",
+        "right": "Urutan materi dan suara jelas."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Wawancara dan Presentasi?",
+        "right": "Menentukan narasumber → Menyusun pertanyaan → Melakukan wawancara → Mencatat jawaban → Mempresentasikan hasil"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Wawancara dan Presentasi?",
+        "right": "Melakukan wawancara dan mempresentasikan hasil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mewawancarai narasumber."
+  }
+}

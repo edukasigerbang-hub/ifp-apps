@@ -29,6 +29,20 @@
         "altText": "Tiga panel cuaca: cerah, hujan, dan berangin.",
         "reveal": "Musim hujan dan musim kemarau.",
         "hint": "Berganti setiap beberapa bulan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Cuaca dan Musim?",
+        "reveal": "Mengenal jenis cuaca, tanda-tandanya, dan kegiatan yang sesuai.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/cuaca-musim.webp",
+        "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."
+      },
+      {
+        "prompt": "Cuaca cerah ditandai dengan ...",
+        "reveal": "Langit terang dan matahari bersinar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/cuaca-musim.webp",
+        "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-pecahan-senilai",
-    "kuis-pecahan-senilai"
+    "kuis-pecahan-senilai",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-pecahan-senilai"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga batang berukuran sama: batang pertama terbagi 2 dengan 1 bagian berwarna, batang kedua terbagi 4 dengan 2 bagian berwarna, batang ketiga terbagi 8 dengan 4 bagian berwarna."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

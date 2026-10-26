@@ -29,6 +29,20 @@
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Jujur, sabar, dan peduli.",
         "hint": "Terapkan setiap hari."
+      },
+      {
+        "prompt": "Manfaat berkata jujur adalah ...",
+        "reveal": "Dipercaya orang lain",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/adab-kelas3.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Adab dan Kisah Teladan?",
+        "reveal": "Menerapkan adab baik dan meneladani kisah Nabi serta sahabat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/adab-kelas3.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-jalan-lari",
-    "matching-jalan-lari"
+    "matching-jalan-lari",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/jalan-lari.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak berjalan dan berlari di lapangan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

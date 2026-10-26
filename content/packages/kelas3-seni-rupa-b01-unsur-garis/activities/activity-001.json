@@ -29,6 +29,20 @@
         "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
         "reveal": "Oranye.",
         "hint": "Coba campur cat di palet."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Unsur Garis dan Warna?",
+        "reveal": "Mengenal jenis garis dan warna dasar untuk membuat karya seni.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/unsur-garis-warna.webp",
+        "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/unsur-garis-warna.webp",
+        "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru."
       }
     ]
   },

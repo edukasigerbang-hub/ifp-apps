@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu keliling?",
+        "right": "Jumlah panjang semua sisi."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana menghitung luas persegi panjang?",
+        "right": "Panjang × lebar."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa satuan luas?",
+        "right": "Sentimeter persegi (cm²)."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Keliling dan Luas Sederhana?",
+        "right": "Menghitung keliling dan luas persegi serta persegi panjang."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+  }
+}

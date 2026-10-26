@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu globalisasi?",
+        "right": "Keterhubungan antarnegara."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa dampak positifnya?",
+        "right": "Ilmu dan teknologi berkembang."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana menjaga jati diri?",
+        "right": "Mencintai budaya dan produk dalam negeri."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang NKRI dan Globalisasi?",
+        "right": "Menghadapi globalisasi dengan tetap menjaga jati diri bangsa."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Cara menjaga jati diri bangsa adalah ...",
+        "right": "Mencintai budaya sendiri"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol persatuan NKRI."
+  }
+}

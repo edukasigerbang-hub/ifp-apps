@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-operasi-pecahan",
-    "matching-operasi-pecahan"
+    "matching-operasi-pecahan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/operasi-pecahan.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

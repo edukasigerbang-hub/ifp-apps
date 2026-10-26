@@ -29,6 +29,20 @@
         "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu.",
         "reveal": "Lem kayu atau lem serbaguna yang aman.",
         "hint": "Gunakan sedikit lem agar rapi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Membuat Kerajinan dari Bahan Alam?",
+        "reveal": "Mengenal bahan alam di sekitar dan menyusunnya menjadi karya sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-bahan-alam.webp",
+        "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-bahan-alam.webp",
+        "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu."
       }
     ]
   },

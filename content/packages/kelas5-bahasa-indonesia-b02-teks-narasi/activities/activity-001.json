@@ -29,6 +29,20 @@
         "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur.",
         "reveal": "Awal memperkenalkan, tengah berisi konflik, akhir penyelesaian.",
         "hint": "Urutkan peristiwa."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Teks Narasi: Tokoh dan Alur?",
+        "reveal": "Menentukan tema → Memilih tokoh → Menyusun alur → Menulis cerita → Memeriksa ejaan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/teks-narasi-kelas5.webp",
+        "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Narasi: Tokoh dan Alur?",
+        "reveal": "Mengenal tokoh dan alur dalam teks narasi serta menulis cerita sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teks-narasi-kelas5.webp",
+        "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
       }
     ]
   },

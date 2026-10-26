@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-aturan",
-    "kuis-aturan"
+    "kuis-aturan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-aturan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa berbaris tertib di depan kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

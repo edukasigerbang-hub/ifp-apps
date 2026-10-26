@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-perkalian-pembagian",
-    "matching-perkalian-pembagian"
+    "matching-perkalian-pembagian",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/perkalian-pembagian.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

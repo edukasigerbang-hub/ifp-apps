@@ -29,6 +29,20 @@
         "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku.",
         "reveal": "Sepatu menghentikan kaki di lantai.",
         "hint": "Gesekan memperlambat gerak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gaya dan Gerak di Sekitar?",
+        "reveal": "Mengenal jenis gaya dan pengaruhnya terhadap gerak benda.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gaya-gerak-kelas3.webp",
+        "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gaya-gerak-kelas3.webp",
+        "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku."
       }
     ]
   },

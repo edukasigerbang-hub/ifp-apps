@@ -29,6 +29,20 @@
         "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama.",
         "reveal": "Sopan dan tidak memotong.",
         "hint": "Angkat tangan dahulu."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Musyawarah dan Demokrasi?",
+        "reveal": "Menyampaikan masalah → Memberi pendapat → Berdiskusi → Mengambil kesepakatan → Melaksanakan keputusan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/musyawarah-demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Musyawarah dan Demokrasi?",
+        "reveal": "Menerapkan musyawarah dan nilai demokrasi di kelas.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/musyawarah-demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama."
       }
     ]
   },

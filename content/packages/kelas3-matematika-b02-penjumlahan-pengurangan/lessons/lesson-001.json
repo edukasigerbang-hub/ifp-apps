@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-penjumlahan-pengurangan",
-    "kuis-penjumlahan-pengurangan"
+    "kuis-penjumlahan-pengurangan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-penjumlahan-pengurangan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

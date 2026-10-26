@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-makhluk-hidup",
-    "matching-makhluk-hidup"
+    "matching-makhluk-hidup",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/makhluk-hidup-sekitar.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

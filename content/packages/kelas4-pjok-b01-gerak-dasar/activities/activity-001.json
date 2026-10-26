@@ -29,6 +29,20 @@
         "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk.",
         "reveal": "Lokomotor berpindah tempat (jalan, lari, lompat); non-lokomotor dilakukan di tempat (menekuk, memutar, mengayun).",
         "hint": "Bandingkan panel keempat dengan panel lainnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Lokomotor dan Non-lokomotor?",
+        "reveal": "Membedakan gerak berpindah tempat dan gerak di tempat, serta mempraktikkannya dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-dasar.webp",
+        "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gerak-dasar.webp",
+        "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk."
       }
     ]
   },

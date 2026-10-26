@@ -29,6 +29,20 @@
         "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
         "reveal": "Tidak, penyebut tetap.",
         "hint": "Hanya pembilang yang dihitung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Operasi Hitung Pecahan?",
+        "reveal": "Menjumlahkan dan mengurangkan pecahan berpenyebut sama.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/operasi-pecahan.webp",
+        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/operasi-pecahan.webp",
+        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
       }
     ]
   },

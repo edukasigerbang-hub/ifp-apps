@@ -29,6 +29,20 @@
         "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah.",
         "reveal": "Menyiapkan alat dan membuat sketsa tipis.",
         "hint": "Gunakan pensil."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menggambar Bentuk Sederhana?",
+        "reveal": "Menyiapkan alat → Menggambar bentuk dasar → Menyusun bentuk → Menambahkan detail → Mewarnai",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menggambar-bentuk-kelas3.webp",
+        "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/menggambar-bentuk-kelas3.webp",
+        "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
       }
     ]
   },

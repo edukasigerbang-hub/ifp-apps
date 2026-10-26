@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Bentuk dasar apa saja yang terlihat?",
+        "right": "Lingkaran, persegi, dan segitiga."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bentuk apa yang menjadi atap rumah?",
+        "right": "Segitiga."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa langkah pertama menggambar?",
+        "right": "Menyiapkan alat dan membuat sketsa tipis."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Menggambar Bentuk Sederhana?",
+        "right": "Menyiapkan alat → Menggambar bentuk dasar → Menyusun bentuk → Menambahkan detail → Mewarnai"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
+  }
+}

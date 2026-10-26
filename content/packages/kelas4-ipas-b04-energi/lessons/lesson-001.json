@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-energi",
-    "matching-energi"
+    "matching-energi",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/energi-perubahan.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

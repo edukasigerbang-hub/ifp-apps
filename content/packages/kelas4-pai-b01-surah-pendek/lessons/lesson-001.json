@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-surah-pendek",
-    "matching-surah-pendek"
+    "matching-surah-pendek",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/membaca-quran.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu gerak manipulatif?",
+        "right": "Gerak yang menggunakan alat atau benda."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana menangkap bola dengan aman?",
+        "right": "Pandangan ke bola, tangan siap, dan siku sedikit menekuk."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa kerja sama penting?",
+        "right": "Agar permainan berjalan lancar."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Gerak Manipulatif?",
+        "right": "Mempraktikkan melempar, menangkap, dan menendang dengan kerja sama."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Gerak Manipulatif?",
+        "right": "Berdiri siap → Memegang bola → Melempar ke teman → Teman menangkap → Mengembalikan bola"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak melempar dan menangkap bola."
+  }
+}

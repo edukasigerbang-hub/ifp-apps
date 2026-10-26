@@ -29,6 +29,20 @@
         "altText": "Kerajinan dari daun, ranting, kain, dan biji.",
         "reveal": "Lem serbaguna.",
         "hint": "Gunakan sedikit."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kerajinan Bahan Campuran?",
+        "reveal": "Membuat kerajinan dari campuran bahan alam dan buatan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-campuran.webp",
+        "altText": "Kerajinan dari daun, ranting, kain, dan biji."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kerajinan dari daun, ranting, kain, dan biji.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-campuran.webp",
+        "altText": "Kerajinan dari daun, ranting, kain, dan biji."
       }
     ]
   },

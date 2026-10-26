@@ -36,6 +36,16 @@
         "pairId": "pasangan-air",
         "left": "Air putih",
         "right": "Menghindari dehidrasi"
+      },
+      {
+        "pairId": "pasangan-kelas2-7",
+        "left": "Cuci tangan dengan sabun",
+        "right": "Menghilangkan kuman"
+      },
+      {
+        "pairId": "pasangan-kelas2-8",
+        "left": "Menutup mulut saat bersin",
+        "right": "Mencegah penyebaran kuman"
       }
     ]
   },

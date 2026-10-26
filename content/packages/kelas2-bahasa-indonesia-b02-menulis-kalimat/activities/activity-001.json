@@ -29,6 +29,20 @@
         "altText": "Anak menulis kalimat di buku.",
         "reveal": "Jarak.",
         "hint": "Agar mudah dibaca."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Kalimat?",
+        "reveal": "Menulis kalimat dengan huruf kapital dan tanda baca.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-kalimat-kelas2.webp",
+        "altText": "Anak menulis kalimat di buku."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Kalimat?",
+        "reveal": "Menentukan ide → Memilih kata → Menyusun kalimat → Memberi tanda baca → Memeriksa tulisan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-kalimat-kelas2.webp",
+        "altText": "Anak menulis kalimat di buku."
       }
     ]
   },

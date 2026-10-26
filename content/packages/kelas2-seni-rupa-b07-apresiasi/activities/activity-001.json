@@ -29,6 +29,27 @@
         "altText": "Karya seni dipajang dan anak mengamati.",
         "reveal": "Belajar menghargai.",
         "hint": "Menemukan ide."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Apresiasi Karya?",
+        "reveal": "Mengamati dan menghargai karya seni.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/apresiasi-kelas2.webp",
+        "altText": "Karya seni dipajang dan anak mengamati."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Karya seni dipajang dan anak mengamati.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/apresiasi-kelas2.webp",
+        "altText": "Karya seni dipajang dan anak mengamati."
+      },
+      {
+        "prompt": "Bagaimana cara memberi saran pada karya teman?",
+        "reveal": "Dengan kata sopan dan alasan yang jelas.",
+        "hint": "Mulai dari hal yang sudah bagus.",
+        "assetPath": "assets/apresiasi-kelas2.webp",
+        "altText": "Karya seni dipajang dan anak mengamati."
       }
     ]
   },

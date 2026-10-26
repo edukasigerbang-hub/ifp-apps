@@ -29,6 +29,20 @@
         "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan.",
         "reveal": "Bandingkan angka paling kiri lebih dahulu.",
         "hint": "Jika sama, lanjut ke angka berikutnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan sampai 10.000?",
+        "reveal": "Membaca, menulis, dan membandingkan bilangan sampai 10.000 melalui nilai tempat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nilai-tempat-10000.webp",
+        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/nilai-tempat-10000.webp",
+        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
       }
     ]
   },

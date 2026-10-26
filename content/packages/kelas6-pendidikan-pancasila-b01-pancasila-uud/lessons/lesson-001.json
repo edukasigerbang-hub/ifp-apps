@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-pancasila-uud",
-    "matching-pancasila-uud"
+    "matching-pancasila-uud",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pancasila-uud.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Simbol Pancasila dan dokumen UUD 1945."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

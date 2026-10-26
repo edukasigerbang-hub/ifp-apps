@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa langkah pertama?",
+        "right": "Memahami yang diketahui dan ditanya."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana memilih strategi?",
+        "right": "Pilih operasi atau rumus."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa memeriksa penting?",
+        "right": "Agar jawaban benar."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "right": "Memahami soal"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Anak menyelesaikan soal cerita matematika."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  }
+}

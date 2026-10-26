@@ -29,6 +29,20 @@
         "altText": "Anak berwudu dan melaksanakan gerakan salat.",
         "reveal": "Berdiri, takbir, rukuk, sujud, duduk, lalu salam.",
         "hint": "Lakukan dengan tenang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Salat?",
+        "reveal": "Mengenal kewajiban salat, waktu salat, dan urutan gerakannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/salat-kelas3.webp",
+        "altText": "Anak berwudu dan melaksanakan gerakan salat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berwudu dan melaksanakan gerakan salat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/salat-kelas3.webp",
+        "altText": "Anak berwudu dan melaksanakan gerakan salat."
       }
     ]
   },

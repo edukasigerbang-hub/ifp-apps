@@ -29,6 +29,20 @@
         "altText": "Matahari dan planet-planet dalam tata surya.",
         "reveal": "Bumi mengelilingi matahari.",
         "hint": "Memerlukan waktu satu tahun."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bumi dan Tata Surya?",
+        "reveal": "Mengenal tata surya, rotasi, dan revolusi bumi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Matahari dan planet-planet dalam tata surya.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kerajaan",
-    "matching-kerajaan"
+    "matching-kerajaan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kerajaan-nusantara.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

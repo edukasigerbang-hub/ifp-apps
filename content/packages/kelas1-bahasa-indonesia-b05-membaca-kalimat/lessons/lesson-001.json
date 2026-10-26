@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-membaca-kalimat",
-    "kuis-membaca-kalimat"
+    "kuis-membaca-kalimat",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-membaca-kalimat"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak membaca kalimat sederhana di sudut baca."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Bagaimana membaca lancar?",
+        "right": "Tidak terbata-bata."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa tanda berhenti?",
+        "right": "Titik."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa tanda bertanya?",
+        "right": "Tanda tanya."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Membaca Lancar?",
+        "right": "Membaca kalimat dengan lancar dan intonasi yang tepat."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Anak membaca dengan lancar di sudut baca."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dengan lancar di sudut baca."
+  }
+}

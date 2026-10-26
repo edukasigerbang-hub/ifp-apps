@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu konduktor?",
+        "right": "Bahan yang menghantarkan listrik."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa itu isolator?",
+        "right": "Bahan yang tidak menghantarkan listrik."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa kutub magnet?",
+        "right": "Ujung magnet yang menarik atau menolak."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Listrik dan Magnet?",
+        "right": "Mengenal listrik, magnet, dan penerapannya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Rangkaian listrik dan magnet menarik benda logam."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rangkaian listrik dan magnet menarik benda logam."
+  }
+}

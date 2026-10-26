@@ -29,6 +29,20 @@
         "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak.",
         "reveal": "Membantu yang membutuhkan dan melatih kepedulian.",
         "hint": "Harta menjadi lebih berkah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kotak amal, karung beras, dan koin untuk zakat dan infak.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/zakat-infak.webp",
+        "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Zakat dan Infak?",
+        "reveal": "Mengenal zakat dan infak serta manfaatnya bagi sesama.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/zakat-infak.webp",
+        "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak."
       }
     ]
   },

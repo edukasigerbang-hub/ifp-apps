@@ -29,6 +29,20 @@
         "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman.",
         "reveal": "Jujur, amanah, sabar, dan dermawan.",
         "hint": "Terapkan dalam kehidupan sehari-hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Adab dan Kisah Teladan?",
+        "reveal": "Menerapkan adab kepada orang tua, guru, dan teman serta meneladani kisah Nabi dan sahabat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/adab-kisah-teladan.webp",
+        "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman."
+      },
+      {
+        "prompt": "Sifat Nabi Muhammad yang patut diteladani adalah ...",
+        "reveal": "Jujur dan amanah",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/adab-kisah-teladan.webp",
+        "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman."
       }
     ]
   },

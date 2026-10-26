@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa yang dipamerkan di kelas?",
+        "right": "Karya seni siswa, seperti gambar dan karya tiga dimensi."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana karya ditata agar menarik?",
+        "right": "Karya dikelompokkan, diberi label, dan tidak berdesakan."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa pameran kelas bermanfaat?",
+        "right": "Melatih percaya diri, menghargai karya teman, dan berbagi hasil belajar."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Pameran Kelas?",
+        "right": "Memilih karya → Menata karya → Membuat label karya → Membuka pameran → Mengapresiasi karya"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
+        "right": "Merencanakan, menata, dan menyajikan karya seni dalam pameran kelas sederhana."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+  }
+}

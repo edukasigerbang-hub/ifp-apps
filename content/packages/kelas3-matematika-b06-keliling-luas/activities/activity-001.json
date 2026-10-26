@@ -29,6 +29,20 @@
         "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna.",
         "reveal": "Sentimeter persegi (cm²).",
         "hint": "Karena mengalikan dua panjang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Keliling dan Luas Sederhana?",
+        "reveal": "Menghitung keliling dan luas persegi serta persegi panjang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/keliling-luas.webp",
+        "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/keliling-luas.webp",
+        "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
       }
     ]
   },

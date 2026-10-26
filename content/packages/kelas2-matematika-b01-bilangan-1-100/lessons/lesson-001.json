@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bilangan-1-100",
-    "kuis-bilangan-1-100"
+    "kuis-bilangan-1-100",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bilangan-1-100"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

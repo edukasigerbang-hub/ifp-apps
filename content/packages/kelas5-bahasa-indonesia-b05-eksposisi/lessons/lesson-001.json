@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-eksposisi",
-    "kuis-eksposisi"
+    "kuis-eksposisi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-eksposisi"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak membaca teks eksposisi di sudut baca."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
         "reveal": "Kegiatan menggunakan barang atau jasa.",
         "hint": "Contohnya makan nasi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kegiatan Ekonomi Sederhana?",
+        "reveal": "Mengenal kegiatan produksi, distribusi, dan konsumsi di sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ekonomi-kelas3.webp",
+        "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/ekonomi-kelas3.webp",
+        "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang."
       }
     ]
   },

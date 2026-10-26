@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-gradasi-kelas2",
-    "kuis-gradasi-kelas2"
+    "kuis-gradasi-kelas2",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-gradasi-kelas2"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Contoh gradasi warna dari gelap ke terang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

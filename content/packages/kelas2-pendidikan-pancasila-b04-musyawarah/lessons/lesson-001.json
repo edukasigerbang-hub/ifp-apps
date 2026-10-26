@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-musyawarah-kelas2",
-    "ordering-musyawarah-kelas2"
+    "ordering-musyawarah-kelas2",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa bermusyawarah bersama guru."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

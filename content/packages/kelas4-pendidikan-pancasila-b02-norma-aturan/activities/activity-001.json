@@ -29,6 +29,20 @@
         "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding.",
         "reveal": "Agar kegiatan berjalan tertib, adil, dan aman bagi semua.",
         "hint": "Hubungkan aturan dengan rasa adil."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Norma dan Aturan di Rumah, Sekolah, dan Masyarakat?",
+        "reveal": "Mengenali jenis norma dan aturan, serta menerapkannya untuk hidup tertib dan adil.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/antrean-kelas.webp",
+        "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/antrean-kelas.webp",
+        "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Kubus, balok, tabung, dan kerucut.",
         "reveal": "Kaleng dan gelas.",
         "hint": "Memiliki sisi lingkaran."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Ruang?",
+        "reveal": "Mengenal bangun ruang dan ciri sisi, rusuk, serta titik sudutnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bangun-ruang-kelas5.webp",
+        "altText": "Kubus, balok, tabung, dan kerucut."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kubus, balok, tabung, dan kerucut.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bangun-ruang-kelas5.webp",
+        "altText": "Kubus, balok, tabung, dan kerucut."
       }
     ]
   },

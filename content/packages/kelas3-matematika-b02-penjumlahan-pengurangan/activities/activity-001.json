@@ -29,6 +29,20 @@
         "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
         "reveal": "Saat angka atas lebih kecil dari angka bawah.",
         "hint": "Pinjam 1 dari tempat di sebelah kiri."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan?",
+        "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 10.000 dengan teknik menyimpan dan meminjam.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/penjumlahan-pengurangan.webp",
+        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/penjumlahan-pengurangan.webp",
+        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
       }
     ]
   },

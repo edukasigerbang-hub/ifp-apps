@@ -29,6 +29,20 @@
         "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda.",
         "reveal": "Garuda Pancasila.",
         "hint": "Memuat simbol sila Pancasila."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang NKRI dan Simbol Negara?",
+        "reveal": "Mengenal NKRI dan simbol-simbol negara Indonesia.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nkri-kelas3.webp",
+        "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
+      },
+      {
+        "prompt": "NKRI adalah singkatan dari ...",
+        "reveal": "Negara Kesatuan Republik Indonesia",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/nkri-kelas3.webp",
+        "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
       }
     ]
   },

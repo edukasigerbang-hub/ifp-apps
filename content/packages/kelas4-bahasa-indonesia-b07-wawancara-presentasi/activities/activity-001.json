@@ -29,6 +29,20 @@
         "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas.",
         "reveal": "Agar wawancara terarah, tidak berulang, dan informasi lengkap.",
         "hint": "Bayangkan wawancara tanpa rencana."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Wawancara dan Presentasi?",
+        "reveal": "Menentukan topik → Menyusun pertanyaan → Melakukan wawancara → Mencatat jawaban → Menyajikan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/wawancara-presentasi.webp",
+        "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wawancara dan Presentasi?",
+        "reveal": "Menyusun pertanyaan wawancara, mencatat jawaban, dan menyajikan hasil dengan percaya diri.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wawancara-presentasi.webp",
+        "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas."
       }
     ]
   },

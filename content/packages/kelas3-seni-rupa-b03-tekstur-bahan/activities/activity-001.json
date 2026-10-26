@@ -29,6 +29,20 @@
         "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas.",
         "reveal": "Oleskan lem tipis lalu tekan pelan.",
         "hint": "Jangan terlalu banyak lem."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Tekstur dan Bahan?",
+        "reveal": "Mengenal tekstur kasar dan halus serta memilih bahan untuk karya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tekstur-bahan.webp",
+        "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/tekstur-bahan.webp",
+        "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-atletik-lanjutan",
-    "matching-atletik-lanjutan"
+    "matching-atletik-lanjutan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/atletik-lanjutan.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lintasan lari, bak lompat, dan pita finis."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

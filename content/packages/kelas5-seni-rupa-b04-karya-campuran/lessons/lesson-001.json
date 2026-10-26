@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-karya-campuran",
-    "ordering-karya-campuran"
+    "ordering-karya-campuran",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Karya campuran dari kertas, kain, daun, dan cat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

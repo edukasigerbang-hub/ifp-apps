@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-gotong-royong",
-    "matching-gotong-royong"
+    "matching-gotong-royong",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/gotong-royong.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

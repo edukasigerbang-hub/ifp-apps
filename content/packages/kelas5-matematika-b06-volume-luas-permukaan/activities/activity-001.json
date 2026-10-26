@@ -29,6 +29,20 @@
         "altText": "Balok yang tersusun dari kubus satuan.",
         "reveal": "Jumlah luas semua sisi bangun.",
         "hint": "Bayangkan membuka kotak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Volume dan Luas Permukaan?",
+        "reveal": "Menghitung volume dan luas permukaan bangun ruang sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/volume-kelas5.webp",
+        "altText": "Balok yang tersusun dari kubus satuan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Balok yang tersusun dari kubus satuan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/volume-kelas5.webp",
+        "altText": "Balok yang tersusun dari kubus satuan."
       }
     ]
   },

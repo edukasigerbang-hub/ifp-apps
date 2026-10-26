@@ -29,6 +29,20 @@
         "altText": "Anak membaca dan memahami isi bacaan.",
         "reveal": "Inti bacaan.",
         "hint": "Ceritakan dengan singkat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca dan memahami isi bacaan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/membaca-pemahaman-kelas2.webp",
+        "altText": "Anak membaca dan memahami isi bacaan."
+      },
+      {
+        "prompt": "Jawaban pertanyaan dicari di ...",
+        "reveal": "Bacaan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/membaca-pemahaman-kelas2.webp",
+        "altText": "Anak membaca dan memahami isi bacaan."
       }
     ]
   },

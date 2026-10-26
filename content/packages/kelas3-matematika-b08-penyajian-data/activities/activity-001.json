@@ -29,6 +29,20 @@
         "altText": "Diagram batang dan tabel data sederhana.",
         "reveal": "Lihat batang tertinggi.",
         "hint": "Baca angka pada sumbu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penyajian Data Sederhana?",
+        "reveal": "Membaca dan menyajikan data dalam tabel serta diagram batang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/penyajian-data-kelas3.webp",
+        "altText": "Diagram batang dan tabel data sederhana."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram batang dan tabel data sederhana.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/penyajian-data-kelas3.webp",
+        "altText": "Diagram batang dan tabel data sederhana."
       }
     ]
   },

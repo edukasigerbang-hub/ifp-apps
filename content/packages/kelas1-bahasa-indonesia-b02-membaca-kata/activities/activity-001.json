@@ -29,6 +29,20 @@
         "altText": "Anak membaca kata sederhana di sudut baca.",
         "reveal": "Dua.",
         "hint": "bu dan ku."
+      },
+      {
+        "prompt": "Suku kata ma-ta menjadi kata ...",
+        "reveal": "mata",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/membaca-kata.webp",
+        "altText": "Anak membaca kata sederhana di sudut baca."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Membaca Kata Sederhana?",
+        "reveal": "Membaca kata sederhana dari gabungan suku kata.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/membaca-kata.webp",
+        "altText": "Anak membaca kata sederhana di sudut baca."
       }
     ]
   },

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu kolase?",
+        "right": "Karya yang dibuat dengan menempel bahan pada bidang."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bahan alam apa yang dapat dipakai?",
+        "right": "Daun kering, biji, ranting, dan pelepah."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana menyusun kolase?",
+        "right": "Tata bahan membentuk pola, lalu tempel."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Kolase dari Bahan Alam?",
+        "right": "Membuat kolase sederhana dari bahan alam di sekitar."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Kolase dari Bahan Alam?",
+        "right": "Menyiapkan bahan → Menyusun pola → Mengoles lem → Menempel bahan → Menjemur karya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+  }
+}

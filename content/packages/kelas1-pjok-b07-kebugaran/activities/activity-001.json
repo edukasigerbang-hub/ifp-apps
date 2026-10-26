@@ -29,6 +29,20 @@
         "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
         "reveal": "Sayur, buah, dan lauk.",
         "hint": "Makan teratur."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran?",
+        "reveal": "Menjaga kebugaran dengan olahraga dan istirahat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
       }
     ]
   },

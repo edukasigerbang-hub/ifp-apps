@@ -29,6 +29,20 @@
         "altText": "Kotak amal, karung beras, dan koin.",
         "reveal": "Membantu sesama.",
         "hint": "Melatih kepedulian."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kotak amal, karung beras, dan koin.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/zakat-kelas6.webp",
+        "altText": "Kotak amal, karung beras, dan koin."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Zakat dan Infak?",
+        "reveal": "Memahami zakat dan infak serta manfaatnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/zakat-kelas6.webp",
+        "altText": "Kotak amal, karung beras, dan koin."
       }
     ]
   },

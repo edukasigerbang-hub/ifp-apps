@@ -29,6 +29,20 @@
         "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki.",
         "reveal": "Mencegah cedera otot.",
         "hint": "Lakukan gerakan ringan dahulu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Non-Lokomotor?",
+        "reveal": "Mempraktikkan gerak di tempat: menekuk, memutar, mengayun, dan menyeimbangkan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-non-lokomotor.webp",
+        "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki."
+      },
+      {
+        "prompt": "Contoh gerak non-lokomotor adalah ...",
+        "reveal": "Menekuk lutut",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/gerak-non-lokomotor.webp",
+        "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki."
       }
     ]
   },

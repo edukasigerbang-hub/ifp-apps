@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-peredaran-darah",
-    "matching-peredaran-darah"
+    "matching-peredaran-darah",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/peredaran-darah.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Diagram jantung, paru-paru, dan pembuluh darah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

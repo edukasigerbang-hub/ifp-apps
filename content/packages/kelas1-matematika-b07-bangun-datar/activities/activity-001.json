@@ -29,6 +29,20 @@
         "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
         "reveal": "Segitiga.",
         "hint": "Seperti atap."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Datar Sederhana?",
+        "reveal": "Mengenal bangun datar di sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bangun-datar-kelas1.webp",
+        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bangun-datar-kelas1.webp",
+        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga."
       }
     ]
   },

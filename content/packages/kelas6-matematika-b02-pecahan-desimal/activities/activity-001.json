@@ -29,6 +29,20 @@
         "altText": "Batang pecahan dan nilai desimal yang setara.",
         "reveal": "Sejajarkan tanda koma.",
         "hint": "Jumlahkan per nilai tempat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Operasi Pecahan dan Desimal?",
+        "reveal": "Mengubah dan menghitung pecahan serta desimal.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pecahan-desimal.webp",
+        "altText": "Batang pecahan dan nilai desimal yang setara."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Batang pecahan dan nilai desimal yang setara.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pecahan-desimal.webp",
+        "altText": "Batang pecahan dan nilai desimal yang setara."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-iman-allah",
-    "matching-iman-allah"
+    "matching-iman-allah",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/iman-allah-kelas2.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak berdoa sebagai wujud iman kepada Allah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

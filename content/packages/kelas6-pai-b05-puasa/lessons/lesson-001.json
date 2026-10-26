@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-puasa",
-    "kuis-puasa"
+    "kuis-puasa",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-puasa"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Suasana berbuka puasa dengan kurma dan air."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

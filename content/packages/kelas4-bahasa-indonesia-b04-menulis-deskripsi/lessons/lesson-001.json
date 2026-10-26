@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-menulis-deskripsi",
-    "kuis-menulis-deskripsi"
+    "kuis-menulis-deskripsi",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-menulis-deskripsi"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

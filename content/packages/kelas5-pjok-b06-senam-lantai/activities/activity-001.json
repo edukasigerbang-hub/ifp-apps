@@ -29,6 +29,20 @@
         "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
         "reveal": "Matras dan pendamping.",
         "hint": "Jangan bercanda."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Senam Lantai?",
+        "reveal": "Melakukan pemanasan → Berlatih guling depan → Berlatih guling belakang → Berlatih keseimbangan → Melakukan pendinginan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Senam Lantai?",
+        "reveal": "Mempraktikkan gerak senam lantai dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Anak berbagi, berkata jujur, dan membantu teman.",
         "reveal": "Disayangi keluarga dan teman.",
         "hint": "Hidup menjadi tenang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Akhlak Terpuji?",
+        "reveal": "Mengenal akhlak terpuji dan membiasakannya dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berbagi, berkata jujur, dan membantu teman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman."
       }
     ]
   },

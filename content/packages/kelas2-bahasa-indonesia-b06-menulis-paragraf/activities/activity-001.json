@@ -29,6 +29,20 @@
         "altText": "Anak menulis paragraf sederhana di buku.",
         "reveal": "Ejaan dan tanda baca.",
         "hint": "Baca ulang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Paragraf Sederhana?",
+        "reveal": "Menentukan ide pokok → Menulis kalimat → Menyusun paragraf → Memberi tanda baca → Memeriksa tulisan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-paragraf-kelas2.webp",
+        "altText": "Anak menulis paragraf sederhana di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Paragraf Sederhana?",
+        "reveal": "Menulis paragraf dua sampai tiga kalimat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-paragraf-kelas2.webp",
+        "altText": "Anak menulis paragraf sederhana di buku."
       }
     ]
   },

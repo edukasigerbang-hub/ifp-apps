@@ -29,6 +29,20 @@
         "altText": "Bangun datar lingkaran, persegi, dan segitiga.",
         "reveal": "Pola warna berulang.",
         "hint": "Lanjutkan polanya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bentuk dan Pola?",
+        "reveal": "Mengenal bentuk datar dan melanjutkan pola.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bentuk-pola.webp",
+        "altText": "Bangun datar lingkaran, persegi, dan segitiga."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bangun datar lingkaran, persegi, dan segitiga.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bentuk-pola.webp",
+        "altText": "Bangun datar lingkaran, persegi, dan segitiga."
       }
     ]
   },

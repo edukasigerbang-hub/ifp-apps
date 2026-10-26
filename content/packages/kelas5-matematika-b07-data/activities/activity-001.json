@@ -29,6 +29,20 @@
         "altText": "Diagram batang dan tabel data.",
         "reveal": "Informasi yang dapat diambil.",
         "hint": "Lihat nilai tertinggi dan terendah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penyajian dan Interpretasi Data?",
+        "reveal": "Membaca data dan menghitung rata-rata sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/data-kelas5.webp",
+        "altText": "Diagram batang dan tabel data."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram batang dan tabel data.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/data-kelas5.webp",
+        "altText": "Diagram batang dan tabel data."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-norma-aturan",
-    "matching-norma-aturan"
+    "matching-norma-aturan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/antrean-kelas.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
         "reveal": "Jujur.",
         "hint": "Dapat dipercaya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kisah Nabi?",
+        "reveal": "Mengenal kisah Nabi Muhammad secara sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kisah-nabi.webp",
+        "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Garis waktu sederhana dengan Ka'bah dan masjid.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kisah-nabi.webp",
+        "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
       }
     ]
   },

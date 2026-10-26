@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bola-besar-lanjutan",
-    "kuis-bola-besar-lanjutan"
+    "kuis-bola-besar-lanjutan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bola-besar-lanjutan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Bola sepak, bola basket, dan bola voli."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

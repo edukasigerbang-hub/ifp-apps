@@ -29,6 +29,20 @@
         "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
         "reveal": "Menghormati, tidak membeda-bedakan, dan mau bekerja sama.",
         "hint": "Bayangkan jika semua orang saling menghina."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bhinneka Tunggal Ika?",
+        "reveal": "Menghargai keberagaman suku, agama, bahasa, dan budaya dalam semangat persatuan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bhinneka.webp",
+        "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bhinneka.webp",
+        "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
       }
     ]
   },

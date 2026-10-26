@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Bilangan 452.316 dibaca ...",
+        "right": "Empat ratus lima puluh dua ribu tiga ratus enam belas."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa nilai tempat angka 5 pada 452.316?",
+        "right": "Puluh ribuan, nilainya 50.000."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana membandingkan dua bilangan?",
+        "right": "Bandingkan angka paling kiri lebih dahulu."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Bilangan sampai 1.000.000?",
+        "right": "Membaca, menulis, dan membandingkan bilangan cacah sampai 1.000.000."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
+  }
+}

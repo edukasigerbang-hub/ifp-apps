@@ -29,6 +29,20 @@
         "altText": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian.",
         "reveal": "12 : 3 = 4, karena 3 × 4 = 12.",
         "hint": "Pembagian adalah kebalikan perkalian."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian dan Pembagian?",
+        "reveal": "Memahami perkalian sebagai penjumlahan berulang dan pembagian sebagai kebalikannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/perkalian-pembagian.webp",
+        "altText": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/perkalian-pembagian.webp",
+        "altText": "Tiga kotak berisi empat bintang dan tiga kotak berisi empat titik untuk perkalian dan pembagian."
       }
     ]
   },

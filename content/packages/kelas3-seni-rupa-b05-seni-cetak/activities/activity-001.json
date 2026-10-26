@@ -29,6 +29,20 @@
         "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun.",
         "reveal": "Oleskan cat, tekan ke kertas, lalu angkat perlahan.",
         "hint": "Jangan terlalu banyak cat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Seni Cetak Sederhana?",
+        "reveal": "Membuat alat cetak sederhana dan mencetak pola berulang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/seni-cetak-kelas3.webp",
+        "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Seni Cetak Sederhana?",
+        "reveal": "Menyiapkan alat dan bahan → Memotong pelepah hingga rata → Mencelupkan pelepah ke cat → Menekan pelepah pada kertas → Mengangkat pelepah perlahan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/seni-cetak-kelas3.webp",
+        "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Sumber energi listrik, lampu, dan alat elektronik.",
         "reveal": "Matikan alat yang tidak dipakai.",
         "hint": "Gunakan lampu hemat energi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Energi dan Listrik?",
+        "reveal": "Mengenal sumber energi listrik dan cara menghematnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/energi-listrik.webp",
+        "altText": "Sumber energi listrik, lampu, dan alat elektronik."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Sumber energi listrik, lampu, dan alat elektronik.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/energi-listrik.webp",
+        "altText": "Sumber energi listrik, lampu, dan alat elektronik."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
         "reveal": "Dengan biji, tunas, atau cangkok.",
         "hint": "Contohnya padi dengan biji."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Perkembangbiakan Makhluk Hidup?",
+        "reveal": "Mengenal cara perkembangbiakan hewan dan tumbuhan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
       }
     ]
   },

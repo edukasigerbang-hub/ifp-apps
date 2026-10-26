@@ -29,6 +29,20 @@
         "altText": "Anak membaca fabel tentang hewan.",
         "reveal": "Nasihat dari cerita.",
         "hint": "Biasanya di akhir."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Teks Narasi dan Fabel?",
+        "reveal": "Menentukan tokoh hewan → Menentukan latar → Menyusun konflik → Menyusun penyelesaian → Menulis pesan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/fabel.webp",
+        "altText": "Anak membaca fabel tentang hewan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Narasi dan Fabel?",
+        "reveal": "Mengenal fabel dan menyusun cerita narasi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/fabel.webp",
+        "altText": "Anak membaca fabel tentang hewan."
       }
     ]
   },

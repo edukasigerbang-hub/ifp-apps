@@ -29,6 +29,20 @@
         "altText": "Matahari dan planet-planet tata surya.",
         "reveal": "Pergantian musim.",
         "hint": "Sekali revolusi ±365 hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bumi dan Tata Surya?",
+        "reveal": "Memahami rotasi, revolusi, dan akibatnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Bumi dan Tata Surya?",
+        "reveal": "Bumi berotasi → Terjadi siang dan malam → Bumi berevolusi → Terjadi pergantian musim → Terjadi gerhana",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-salat",
-    "ordering-salat"
+    "ordering-salat",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak berwudu dan melaksanakan salat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

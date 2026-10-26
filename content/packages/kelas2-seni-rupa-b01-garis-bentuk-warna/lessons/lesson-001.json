@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-garis-bentuk-warna",
-    "matching-garis-bentuk-warna"
+    "matching-garis-bentuk-warna",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/garis-bentuk-warna.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Contoh garis, bentuk, dan warna dalam karya seni."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

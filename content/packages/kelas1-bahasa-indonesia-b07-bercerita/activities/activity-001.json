@@ -29,6 +29,20 @@
         "altText": "Anak bercerita di depan kelas.",
         "reveal": "Percaya diri.",
         "hint": "Melihat teman."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Bercerita?",
+        "reveal": "Memilih cerita → Menceritakan awal → Menceritakan tengah → Menceritakan akhir → Mengucapkan terima kasih",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/bercerita.webp",
+        "altText": "Anak bercerita di depan kelas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bercerita?",
+        "reveal": "Bercerita dengan suara jelas dan urut.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bercerita.webp",
+        "altText": "Anak bercerita di depan kelas."
       }
     ]
   },

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Ani membeli 3 buku, masing-masing Rp5.000. Apa informasi pentingnya?",
+        "right": "Jumlah buku 3 dan harga per buku Rp5.000."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Operasi apa yang digunakan untuk menghitung total?",
+        "right": "Perkalian: 3 × 5.000 = 15.000."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Jika Ani membayar Rp20.000, berapa kembaliannya?",
+        "right": "20.000 − 15.000 = 5.000."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Pemecahan Masalah Matematika?",
+        "right": "Menyelesaikan soal cerita dengan memahami informasi, memilih operasi, menghitung, dan memeriksa jawaban."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
+  }
+}

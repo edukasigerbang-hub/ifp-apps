@@ -452,7 +452,7 @@ const lines: string[] = [];
 lines.push("# Review Teknis Semua Paket Draft — 2026-10-26");
 lines.push("");
 lines.push("**Status:** `TEKNIS-AUDIT` — **bukan approval pedagogis dan bukan sign-off OD-1**. Seluruh angka di bawah berasal dari eksekusi aktual pada 320 paket per 2026-10-26.");
-lines.push("**Pemicu:** lanjutan T-005b (review konten) setelah migrasi WebP 320 paket.");
+lines.push("**Pemicu:** lanjutan T-005b (review konten) setelah migrasi WebP dan pengayaan kedalaman 320 paket.");
 lines.push("**Cakupan:** seluruh paket di `content/packages/`.");
 lines.push("**Batas:** R1–R6, R8–R9, dan R12 memerlukan penilaian manusia; laporan ini hanya menyajikan bukti teknis yang dapat diperiksa ulang.");
 lines.push("");
@@ -465,7 +465,7 @@ lines.push(`| Validator + hash (R11) | **${summary.valid}/${summary.total} VALID
 lines.push(`| Paket dengan aset WebP | ${summary.webpPackages}/${summary.total} |`);
 lines.push(`| Hash aset unik | ${summary.uniqueAssetHashes} (dipakai ulang: ${summary.reusedAssetHashes}) |`);
 lines.push(`| \`reviewStatus\` | ${summary.reviewStatus.join(", ")} (${summary.total}/${summary.total}) |`);
-lines.push(`| \`curriculumRefs\` terisi (R10) | **${summary.refsFilled}/${summary.total}** — sisa ${summary.refsEmpty} menunggu D1–D7 |`);
+lines.push(`| \`curriculumRefs\` terisi (R10) | **${summary.refsFilled}/${summary.total}** — sisa ${summary.refsEmpty} menunggu tanda tangan Curriculum Lead (D1–D8 disetujui PO, ADR-0034) |`);
 lines.push(`| Alt text lengkap (R7 teknis) | ${summary.total - summary.altIncomplete}/${summary.total} |`);
 lines.push(`| Feedback policy lengkap (R6 teknis) | ${summary.total - summary.missingFeedbackPolicy}/${summary.total} |`);
 lines.push(`| Soal/aktivitas invalid secara struktur (R5) | ${summary.assessmentInvalid} paket (${summary.assessmentWarnings} peringatan lunak) |`);
@@ -491,7 +491,7 @@ lines.push(`| R6 | Feedback suportif | SEBAGIAN: policy ${summary.total - summar
 lines.push(`| R7 | Aksesibilitas | TEKNIS: alt ${summary.total - summary.altIncomplete}/${summary.total} lengkap | ${summary.shortAltEntries} alt pendek (<15 karakter) perlu spot-check; kontras/ukuran target = uji manual. |`);
 lines.push(`| R8 | Tidak ada data pribadi | PINDAI TEKS: ${summary.personalDataHits} paket | Pola email/URL/telepon/NIK; aset visual tidak di-OCR. |`);
 lines.push("| R9 | Hak/lisensi aset | DOKUMENTASI: seluruh aset dibuat internal via Google Flow | Lihat [ASSET_INVENTORY](ASSET_INVENTORY_2026-10-25.md) + laporan batch; belum ada lisensi pihak ketiga. |");
-lines.push(`| R10 | \`curriculumRefs\` terisi | **BLOCKING: ${summary.refsFilled}/${summary.total}** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; 316 belum. |`);
+lines.push(`| R10 | \`curriculumRefs\` terisi | **BLOCKING: ${summary.refsFilled}/${summary.total}** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; ${summary.refsEmpty} paket menunggu tanda tangan Curriculum Lead atas D1–D8 (disetujui PO via [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |`);
 lines.push(`| R11 | Validator + hash | **PASS ${summary.valid}/${summary.total}** | \`review-content.ts\` memanggil validator repo per paket; 0 issue. |`);
 lines.push(`| R12 | Tanpa klaim kurikulum | TEKNIS: ${summary.curriculumClaimFiles} file klaim | Pemindaian \`src/\` dan CATALOG; keputusan bahasa pemasaran = human. |`);
 lines.push("");
@@ -504,7 +504,11 @@ lines.push(`| Aktivitas per paket | ${[...new Set(records.map((record) => record
 lines.push(`| Item asesmen | ${[...new Set(records.map((record) => record.assessmentItems))].sort((a, b) => a - b).map((value) => `${value}: ${records.filter((record) => record.assessmentItems === value).length} paket`).join(" · ")} |`);
 lines.push(`| Tujuan pembelajaran | ${[...new Set(records.map((record) => record.objectives))].sort((a, b) => a - b).map((value) => `${value}: ${records.filter((record) => record.objectives === value).length} paket`).join(" · ")} |`);
 lines.push("");
-lines.push(`- Paket yang memenuhi ketiga ambang (≥5 langkah, ≥3 aktivitas, ≥8 item): **${summary.total - summary.depthShort}/${summary.total}** — hanya 4 starter Kelas 4 yang diperkaya; **${summary.depthShort} paket** masih 3 langkah / 2 aktivitas / 4–6 item.`);
+lines.push(
+  summary.depthShort === 0
+    ? `- Seluruh **${summary.total}/${summary.total}** paket memenuhi ketiga ambang (≥5 langkah, ≥3 aktivitas, ≥8 item). 316 paket warisan diperkaya lewat \`scripts/enrich-legacy-packages.mjs\`; 4 starter Kelas 4 sudah memenuhi sejak awal.`
+    : `- Paket yang memenuhi ketiga ambang (≥5 langkah, ≥3 aktivitas, ≥8 item): **${summary.total - summary.depthShort}/${summary.total}**; **${summary.depthShort} paket** masih di bawah ambang.`
+);
 lines.push("");
 lines.push("## Duplikasi");
 lines.push("");
@@ -556,7 +560,7 @@ lines.push("");
 lines.push("## Temuan yang perlu ditindaklanjuti");
 lines.push("");
 const findings: string[] = [];
-if (summary.refsEmpty > 0) findings.push(`- **R10 BLOCKING:** ${summary.refsEmpty} paket belum punya \`curriculumRefs\`; menunggu keputusan D1–D7 dan referensi resmi (lihat [lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md)).`);
+if (summary.refsEmpty > 0) findings.push(`- **R10 BLOCKING:** ${summary.refsEmpty} paket belum punya \`curriculumRefs\`; D1–D8 sudah disetujui Product Owner ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)), pengisian menunggu tanda tangan Curriculum Lead ([lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md)).`);
 if (summary.depthShort > 0) findings.push(`- **Kedalaman:** ${summary.depthShort} paket masih 3 langkah eksplorasi, 2 aktivitas, dan 4–6 item asesmen — di bawah standar internal (≥5/≥3/≥8). Ini gap pedagogis terbesar sebelum sign-off.`);
 if (summary.exactDuplicatePackages > 0 || summary.activityDuplicatePackages > 0) findings.push(`- **Diferensiasi:** ${summary.exactDuplicatePackages} paket dalam grup duplikasi persis dan ${summary.activityDuplicatePackages} paket berbagi aktivitas identik; perlu variasi teks/contoh/asesmen per kelas.`);
 if (summary.assessmentInvalid > 0) findings.push(`- **R5 struktur:** ${summary.assessmentInvalid} paket punya soal/aktivitas tidak valid — detail di JSON.`);
@@ -571,10 +575,10 @@ lines.push(...findings);
 lines.push("");
 lines.push("## Rekomendasi urutan kerja");
 lines.push("");
-lines.push("1. **Keputusan OD-1 (manusia):** setujui/tolak D1–D7 memakai lembar keputusan; setelah itu isi `curriculumRefs` per mapel/fase dan buka blokir R10.");
-lines.push("2. **Diferensiasi & kedalaman:** perbaiki 316 paket yang masih 3/2/4–6; utamakan pecah grup duplikasi persis lebih dulu.");
-lines.push("3. **Verifikasi ulang otomatis:** jalankan `npx tsx scripts/review-content.ts` setelah setiap gelombang perbaikan; angka harus naik sebelum reviewer manusia masuk.");
-lines.push("4. **Review manusia R1–R6, R8–R9, R12:** setelah perbaikan, gunakan [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md); agent tidak boleh mengisi approval.");
+lines.push("1. **Tanda tangan Curriculum Lead (manusia):** D1–D8 sudah disetujui Product Owner; setelah Curriculum Lead menandatangani lembar OD-1, isi `curriculumRefs` per mapel/fase dan buka blokir R10.");
+lines.push("2. **Review manusia R1–R6, R8–R9, R12:** gunakan [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md); agent tidak boleh mengisi approval.");
+lines.push("3. **Tindak lanjut temuan kecil:** periksa manual peringatan R5 dan paket dengan heuristik R1 sebagian (daftar di atas).");
+lines.push("4. **Verifikasi ulang otomatis:** jalankan `npx tsx scripts/review-content.ts` setelah setiap perubahan konten; angka harus tetap hijau sebelum reviewer manusia masuk.");
 lines.push("");
 lines.push("## Batas laporan");
 lines.push("");

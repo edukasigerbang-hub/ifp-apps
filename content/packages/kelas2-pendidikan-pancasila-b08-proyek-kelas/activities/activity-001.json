@@ -29,6 +29,20 @@
         "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
         "reveal": "Melaporkan hasil.",
         "hint": "Merapikan alat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kelas?",
+        "reveal": "Memilih kegiatan → Membagi tugas → Bekerja bersama → Menyelesaikan pekerjaan → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
         "reveal": "Menerima keputusan bersama.",
         "hint": "Tidak memaksakan kehendak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Demokrasi dan Pemilu?",
+        "reveal": "Memahami demokrasi dan tahapan pemilu.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Demokrasi dan Pemilu?",
+        "reveal": "Pendaftaran pemilih → Kampanye → Pemungutan suara → Penghitungan suara → Pelantikan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis."
       }
     ]
   },

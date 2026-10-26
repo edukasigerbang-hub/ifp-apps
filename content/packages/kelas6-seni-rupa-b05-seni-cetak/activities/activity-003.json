@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu seni cetak?",
+        "right": "Membuat gambar berulang dengan alat cetak."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa bahan alat cetak?",
+        "right": "Kentang, pelepah, atau tutup botol."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana mencetak?",
+        "right": "Oles cat, tekan, angkat."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Seni Cetak?",
+        "right": "Menyiapkan alat dan bahan → Membuat alat cetak → Mengoles cat → Menekan pada kertas → Mengangkat perlahan"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Seni Cetak?",
+        "right": "Membuat karya seni cetak dengan pola berulang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Alat cetak dan kertas berisi pola."
+  }
+}

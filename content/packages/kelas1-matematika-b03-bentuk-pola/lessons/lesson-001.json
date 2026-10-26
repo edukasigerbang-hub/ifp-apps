@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-bentuk-pola",
-    "matching-bentuk-pola"
+    "matching-bentuk-pola",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/bentuk-pola.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Bangun datar lingkaran, persegi, dan segitiga."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

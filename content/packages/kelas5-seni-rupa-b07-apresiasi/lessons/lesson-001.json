@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-apresiasi-kelas5",
-    "kuis-apresiasi-kelas5"
+    "kuis-apresiasi-kelas5",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-apresiasi-kelas5"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Karya seni dipajang dan pengunjung mengamati."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

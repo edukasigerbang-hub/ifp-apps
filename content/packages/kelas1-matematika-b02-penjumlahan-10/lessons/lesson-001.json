@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-penjumlahan-10",
-    "matching-penjumlahan-10"
+    "matching-penjumlahan-10",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/penjumlahan-10.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

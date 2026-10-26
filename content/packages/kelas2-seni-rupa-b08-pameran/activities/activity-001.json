@@ -29,6 +29,20 @@
         "altText": "Pameran karya siswa di kelas.",
         "reveal": "Menjelaskan karya.",
         "hint": "Menyambut pengunjung."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Pameran Kelas?",
+        "reveal": "Memilih karya → Menata karya → Memberi nama → Menjaga pameran → Merapikan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/pameran-kelas2.webp",
+        "altText": "Pameran karya siswa di kelas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
+        "reveal": "Menata dan memamerkan karya kelas.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pameran-kelas2.webp",
+        "altText": "Pameran karya siswa di kelas."
       }
     ]
   },

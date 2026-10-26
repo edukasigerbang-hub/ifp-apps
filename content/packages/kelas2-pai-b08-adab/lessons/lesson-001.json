@@ -2,7 +2,7 @@
   "lessonId": "adab",
   "packageId": "kelas2-pai-b08-adab",
   "title": "Adab Sehari-hari",
-  "summary": "Membiasakan adab baik setiap hari.",
+  "summary": "Membiasakan adab baik di rumah, sekolah, dan tempat umum.",
   "curriculumRefs": [],
   "learningObjectives": [
     "Menyebutkan adab sehari-hari.",
@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-adab",
-    "kuis-adab"
+    "kuis-adab",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-adab"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak menyapa orang tua dan membantu teman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

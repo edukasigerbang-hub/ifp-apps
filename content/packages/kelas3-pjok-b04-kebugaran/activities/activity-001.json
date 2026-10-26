@@ -29,6 +29,20 @@
         "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat.",
         "reveal": "Agar tubuh bersih dan sehat.",
         "hint": "Mandi dua kali sehari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran dan Kebersihan Diri?",
+        "reveal": "Menjaga kebugaran tubuh dan kebersihan diri setiap hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran-kelas3.webp",
+        "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berolahraga ringan, mencuci tangan, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran-kelas3.webp",
+        "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat."
       }
     ]
   },

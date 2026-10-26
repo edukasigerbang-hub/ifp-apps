@@ -29,6 +29,20 @@
         "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih.",
         "reveal": "18 Agustus 1945 oleh PPKI.",
         "hint": "Sehari setelah proklamasi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sejarah Perumusan Pancasila?",
+        "reveal": "Mengenal proses perumusan dan pengesahan Pancasila.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sejarah-pancasila.webp",
+        "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/sejarah-pancasila.webp",
+        "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
       }
     ]
   },

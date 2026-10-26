@@ -29,6 +29,20 @@
         "altText": "Siswa berdiskusi dengan guru.",
         "reveal": "Menimbang argumen.",
         "hint": "Ambil kesimpulan adil."
+      },
+      {
+        "prompt": "Teks diskusi membahas masalah dari ...",
+        "reveal": "Dua sisi",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru."
+      },
+      {
+        "prompt": "Argumen adalah ...",
+        "reveal": "Alasan yang mendukung pendapat",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru."
       }
     ]
   },

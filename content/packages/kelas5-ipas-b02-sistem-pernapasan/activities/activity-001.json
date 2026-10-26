@@ -29,6 +29,20 @@
         "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
         "reveal": "Hindari asap, rajin olahraga, dan pakai masker.",
         "hint": "Pilih udara bersih."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sistem Pernapasan Manusia?",
+        "reveal": "Mengenal organ pernapasan, pertukaran gas, dan cara menjaga kesehatannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram paru-paru manusia dengan trakea dan diafragma.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
       }
     ]
   },

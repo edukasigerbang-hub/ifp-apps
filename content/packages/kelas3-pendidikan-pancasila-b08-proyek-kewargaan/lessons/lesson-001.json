@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-proyek-kewargaan",
-    "ordering-proyek-kewargaan"
+    "ordering-proyek-kewargaan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

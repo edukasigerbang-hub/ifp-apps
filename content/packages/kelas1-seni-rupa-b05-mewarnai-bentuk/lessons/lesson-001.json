@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-mewarnai-bentuk",
-    "ordering-mewarnai-bentuk"
+    "ordering-mewarnai-bentuk",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

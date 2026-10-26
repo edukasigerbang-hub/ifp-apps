@@ -29,6 +29,20 @@
         "altText": "Anak-anak belajar membaca huruf dan suku kata.",
         "reveal": "buku.",
         "hint": "Baca utuh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Huruf dan Suku Kata?",
+        "reveal": "Mengenal huruf, membaca suku kata, dan menyusun kata.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-suku-kata.webp",
+        "altText": "Anak-anak belajar membaca huruf dan suku kata."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak-anak belajar membaca huruf dan suku kata.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-suku-kata.webp",
+        "altText": "Anak-anak belajar membaca huruf dan suku kata."
       }
     ]
   },

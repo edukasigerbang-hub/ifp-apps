@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-perkalian-dasar",
-    "matching-perkalian-dasar"
+    "matching-perkalian-dasar",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/perkalian-dasar.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Kelompok benda untuk memahami perkalian."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

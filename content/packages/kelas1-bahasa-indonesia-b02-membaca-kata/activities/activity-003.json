@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Baca kata bu-ku.",
+        "right": "buku."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Baca kata ma-ta.",
+        "right": "mata."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Berapa suku kata pada kata buku?",
+        "right": "Dua."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Membaca Kata Sederhana?",
+        "right": "Membaca kata sederhana dari gabungan suku kata."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bunyi awal kata bola adalah ...",
+        "right": "b"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kata sederhana di sudut baca."
+  }
+}

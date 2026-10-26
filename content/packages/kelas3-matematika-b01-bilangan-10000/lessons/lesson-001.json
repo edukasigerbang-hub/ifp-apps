@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bilangan-10000",
-    "kuis-bilangan-10000"
+    "kuis-bilangan-10000",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bilangan-10000"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Dua anak melempar dan menangkap bola.",
         "reveal": "Agar permainan lancar.",
         "hint": "Beri isyarat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Gerak Manipulatif?",
+        "reveal": "Berdiri siap → Memegang bola → Melempar ke teman → Teman menangkap → Mengembalikan bola",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/manipulatif-kelas2.webp",
+        "altText": "Dua anak melempar dan menangkap bola."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Manipulatif?",
+        "reveal": "Mempraktikkan melempar dan menangkap bola.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/manipulatif-kelas2.webp",
+        "altText": "Dua anak melempar dan menangkap bola."
       }
     ]
   },

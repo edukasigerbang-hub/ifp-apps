@@ -29,6 +29,20 @@
         "altText": "Lima simbol Pancasila dengan warna khasnya.",
         "reveal": "Kuning emas.",
         "hint": "Simbol sila kedua."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lima simbol Pancasila dengan warna khasnya.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Simbol dan Warna Pancasila?",
+        "reveal": "Mengenal simbol dan warna Pancasila.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya."
       }
     ]
   },

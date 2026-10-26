@@ -29,6 +29,20 @@
         "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil.",
         "reveal": "Urutan materi dan suara jelas.",
         "hint": "Latih sebelumnya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Wawancara dan Presentasi?",
+        "reveal": "Menentukan narasumber → Menyusun pertanyaan → Melakukan wawancara → Mencatat jawaban → Mempresentasikan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/wawancara-kelas5.webp",
+        "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mewawancarai narasumber dan mempresentasikan hasil.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/wawancara-kelas5.webp",
+        "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil."
       }
     ]
   },

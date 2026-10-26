@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Berapa 45 + 32?",
+        "right": "77."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Berapa 80 − 25?",
+        "right": "55."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Berapa 50 + 50?",
+        "right": "100."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 100?",
+        "right": "Menjumlahkan dan mengurangkan bilangan sampai 100."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+  }
+}

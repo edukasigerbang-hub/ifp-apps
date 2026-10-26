@@ -29,6 +29,20 @@
         "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid.",
         "reveal": "Melatih sabar, disiplin, dan peduli.",
         "hint": "Empati kepada yang kekurangan."
+      },
+      {
+        "prompt": "Hal yang membatalkan puasa adalah ...",
+        "reveal": "Makan dengan sengaja",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa-kelas5.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
+      },
+      {
+        "prompt": "Hikmah puasa adalah ...",
+        "reveal": "Melatih sabar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa-kelas5.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
       }
     ]
   },

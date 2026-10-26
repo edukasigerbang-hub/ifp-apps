@@ -29,6 +29,20 @@
         "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh.",
         "reveal": "Mencegah cedera.",
         "hint": "Lakukan dahulu."
+      },
+      {
+        "prompt": "Gerak non-lokomotor dilakukan ...",
+        "reveal": "Di tempat",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Non-Lokomotor?",
+        "reveal": "Mempraktikkan gerak di tempat dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
       }
     ]
   },

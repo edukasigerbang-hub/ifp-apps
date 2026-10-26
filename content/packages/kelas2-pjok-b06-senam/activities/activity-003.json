@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa gerak senam ringan?",
+        "right": "Peregangan dan gerak kepala."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Mengapa pemanasan penting?",
+        "right": "Mencegah cedera."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana bernapas?",
+        "right": "Tarik napas perlahan."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Senam Ringan?",
+        "right": "Pemanasan → Gerak kepala → Gerak tangan → Gerak kaki → Pendinginan"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Anak melakukan senam ringan dan peregangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan senam ringan dan peregangan."
+  }
+}

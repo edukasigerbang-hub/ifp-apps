@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-hak-kewajiban-rumah",
-    "matching-hak-kewajiban-rumah"
+    "matching-hak-kewajiban-rumah",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/hak-kewajiban-rumah.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak belajar dan membantu orang tua di rumah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

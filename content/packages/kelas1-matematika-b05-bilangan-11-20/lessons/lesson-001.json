@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-bilangan-11-20",
-    "matching-bilangan-11-20"
+    "matching-bilangan-11-20",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/bilangan-11-20.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

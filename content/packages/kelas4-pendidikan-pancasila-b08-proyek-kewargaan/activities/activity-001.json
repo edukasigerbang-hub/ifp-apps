@@ -29,6 +29,20 @@
         "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
         "reveal": "Menumbuhkan kepedulian, tanggung jawab, dan kerja sama.",
         "hint": "Hubungkan dengan lingkungan sekitar."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "reveal": "Menemukan masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan dan mengevaluasi",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
       }
     ]
   },

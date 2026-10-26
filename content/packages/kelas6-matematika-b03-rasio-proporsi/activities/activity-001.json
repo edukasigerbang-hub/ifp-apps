@@ -29,6 +29,20 @@
         "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
         "reveal": "Dua rasio yang senilai.",
         "hint": "3 : 4 = 9 : 12."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Rasio dan Proporsi?",
+        "reveal": "Menulis, menyederhanakan, dan menerapkan rasio.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/rasio.webp",
+        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+      },
+      {
+        "prompt": "Rasio 6 : 9 disederhanakan menjadi ...",
+        "reveal": "2 : 3",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/rasio.webp",
+        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
       }
     ]
   },

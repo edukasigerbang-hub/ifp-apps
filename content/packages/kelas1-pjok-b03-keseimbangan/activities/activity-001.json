@@ -29,6 +29,20 @@
         "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
         "reveal": "Hitung sampai lima.",
         "hint": "Lalu ganti kaki."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Gerak Keseimbangan?",
+        "reveal": "Pemanasan → Berdiri satu kaki → Merentangkan tangan → Menghitung sampai lima → Mengganti kaki",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/keseimbangan.webp",
+        "altText": "Anak berdiri satu kaki dan merentangkan tangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berdiri satu kaki dan merentangkan tangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/keseimbangan.webp",
+        "altText": "Anak berdiri satu kaki dan merentangkan tangan."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-adab-teladan",
-    "kuis-adab-teladan"
+    "kuis-adab-teladan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-adab-teladan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

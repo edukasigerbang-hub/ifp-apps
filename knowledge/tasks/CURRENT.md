@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — prasyarat konten sebagian terpenuhi; menunggu keputusan manusia
+**Status:** WIP — kedalaman & duplikasi 320 paket selesai; sisa prasyarat: tanda tangan Curriculum Lead + review manusia
 
 ## Selesai sesi ini
 
@@ -79,6 +79,7 @@
 | T-067 | Inventaris aset + prompt pack | CSV 320 aset (82 hash, 61 reuse) + 333 prompt (6 cover kelas, 7 cover mapel, 320 materi) untuk Google Flow |
 | T-068 | Review teknis 320 paket + lembar keputusan OD-1 | [Review 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md) (320/320 valid; R10 4/320; kedalaman 316 belum) + [lembar keputusan](../content/OD1_DECISION_SHEET_2026-10-26.md) D1–D8 |
 | T-069 | Persetujuan PO OD-1 | D1–D8 disetujui Product Owner 2026-10-26 ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)); Curriculum Lead belum tanda tangan; `curriculumRefs` belum diisi |
+| T-070 | Pengayaan kedalaman & diferensiasi 320 paket | 316 paket warisan dinaikkan ke ≥5 langkah/≥3 aktivitas/≥8 item; 3 paket duplikat persis didiferensiasi; review ulang 320/320 VALID, 0 grup duplikasi; `npm test` 85/85, build PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -95,7 +96,7 @@
 | Konten Kelas 2 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten inti Kelas 1–6 | **DONE (draft)** | **320 paket** (Fase A 96 + Fase B/C 224); semua VALID, `curriculumRefs` kosong |
 | Daftar mapel/kurikulum (OD-1) | **DISETUJUI PO — MENUNGGU CURRICULUM LEAD** | [lembar keputusan 2026-10-26](../content/OD1_DECISION_SHEET_2026-10-26.md) · [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) — D1–D8 disetujui PO; tanda tangan Curriculum Lead belum ada |
-| Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; R10 4/320 BLOCKING; kedalaman 316 belum |
+| Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; kedalaman 320/320; 0 duplikasi; R10 4/320 BLOCKING |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
 | Penyimpanan hasil lokal | **DONE** | SQLite native, transaksi attempt+respons+progress+outbox |
 | Hak/lisensi aset | **TERDOKUMENTASI** | 320 aset internal via Google Flow (inventaris + laporan batch); tanpa lisensi pihak ketiga |
@@ -103,10 +104,10 @@
 ## Next task
 
 **T-005b — Review Kelas 4 + sign-off OD-1** (butuh keputusan/reviewer manusia)
-1. ✅ Review teknis 320 paket (2026-10-26): 320/320 valid + hash; R10 4/320; R5 struktur bersih (1 peringatan lunak); kedalaman 316 paket di bawah standar; 3 grup duplikasi persis + 7 grup aktivitas identik — [laporan review](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md).
+1. ✅ Review teknis 320 paket (2026-10-26): 320/320 valid + hash; R10 4/320; R5 struktur bersih (1 peringatan lunak); kedalaman 320/320 memenuhi standar; 0 grup duplikasi persis/aktivitas identik — [laporan review](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md).
 2. ✅ Product Owner menyetujui D1–D8 (2026-10-26) — [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md); ⏳ Curriculum Lead menandatangani [lembar keputusan OD-1](../content/OD1_DECISION_SHEET_2026-10-26.md).
 3. ⏳ **Setelah tanda tangan Curriculum Lead:** isi `curriculumRefs` untuk 316 paket; jalankan ulang `npx tsx scripts/review-content.ts` sampai R10 320/320.
-4. ⏳ Perbaiki kedalaman (≥5 langkah/≥3 aktivitas/≥8 item) dan duplikasi; baru setelah itu reviewer manusia menilai R1–R6, R8–R9, R12.
+4. ✅ Perbaiki kedalaman (≥5 langkah/≥3 aktivitas/≥8 item) dan duplikasi — T-070 (2026-10-26): 316 paket warisan diperkaya; 320/320 memenuhi ambang; 0 duplikasi.
 5. ⏳ Tunjuk reviewer manusia (curriculum + bahasa + aksesibilitas); `reviewStatus` tetap `draft` sampai semua R1–R12 LULUS.
 
 **T-009 acceptance — BLOCKED** (tidak ada perangkat Android 14 fisik / Windows 11 / panel 4K; lihat [readiness](../device/DEVICE_SPIKE_READINESS.md)).
@@ -120,6 +121,9 @@
 
 | Check | Hasil |
 |---|---|
+| `npm test` (T-070) | **PASS** — 85/85 unit + 4/4 fixture + catalog 320/320 |
+| `npm run build` (T-070) | **PASS** — dist 320 WebP, 0 PNG |
+| Review konten ulang (T-070) | **PASS** — 320/320 VALID; kedalaman 320/320; 0 duplikasi; R10 4/320 BLOCKING |
 | `npm test` | **PASS** — 15 unit test + 4 golden fixture |
 | `npm run fixtures:check` | **PASS** — 4/4 cocok dengan expected (VALID/3/7/1 issue) |
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
@@ -241,4 +245,10 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - **Ambil resolusi penuh dari grid agent:** thumbnail di grid adalah `flow.google.com/asb/...=s512-rw`; ganti sufiks menjadi `=s1600-rw` → respons **WebP 1200×896** (bukan JPEG). `fetch` same-origin (flow.google.com) → POST blob langsung ke queue server, tanpa canvas.
 - Surface hanya dibutuhkan untuk mengirim prompt (Enter bekerja bila tab ter-attach); unduhan tidak lagi menyentuh panel.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md`; antrean gambar 152/152 tuntas dan migrasi WebP selesai — lanjut ke prioritas berikutnya: review konten OD-1 / gate rilis).
+### Handoff Pengayaan Konten (2026-10-26, T-070)
+
+**Status:** kedalaman & duplikasi **SELESAI** untuk 320 paket draft. 316 paket warisan diperkaya via `scripts/enrich-legacy-packages.mjs` (2 langkah eksplorasi baru + 1 aktivitas penguatan); 3 paket duplikat persis didiferensiasi via `scripts/differentiate-duplicate-packages.mjs`. Review ulang: 320/320 VALID, kedalaman 320/320 (≥5 langkah/≥3 aktivitas/≥8 item), 0 grup duplikasi persis, 0 grup aktivitas identik. `npm test` 85/85 + fixture 4/4 + catalog 320/320; `npm run build` dist 320 WebP / 0 PNG.
+
+**Sisa (butuh manusia):** tanda tangan Curriculum Lead atas D1–D8 → isi `curriculumRefs` 316 paket; reviewer manusia R1–R6, R8–R9, R12. `reviewStatus` tetap `draft`.
+
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md`; antrean gambar 152/152 tuntas, migrasi WebP dan pengayaan kedalaman selesai — lanjut ke prioritas berikutnya: tanda tangan Curriculum Lead / gate rilis).

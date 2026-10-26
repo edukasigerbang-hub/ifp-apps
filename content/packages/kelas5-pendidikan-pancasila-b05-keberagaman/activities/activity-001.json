@@ -29,6 +29,20 @@
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Hidup rukun dan damai.",
         "hint": "Kerja sama lancar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Keberagaman dan Toleransi?",
+        "reveal": "Menghargai keberagaman dan menerapkan toleransi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/keberagaman-kelas5.webp",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/keberagaman-kelas5.webp",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
       }
     ]
   },

@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-waktu-uang",
-    "matching-waktu-uang"
+    "matching-waktu-uang",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/waktu-uang.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Jam dan uang untuk belajar waktu serta nilai uang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

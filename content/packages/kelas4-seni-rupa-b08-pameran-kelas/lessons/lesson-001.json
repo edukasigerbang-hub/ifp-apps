@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-pameran",
-    "ordering-pameran"
+    "ordering-pameran",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

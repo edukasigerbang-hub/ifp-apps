@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-salam"
+      },
+      {
+        "questionId": "soal-kelas2-5",
+        "prompt": "Saat berkunjung ke rumah teman, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kelas2-5-1",
+            "text": "Mengucapkan salam"
+          },
+          {
+            "optionId": "opsi-kelas2-5-2",
+            "text": "Langsung masuk"
+          },
+          {
+            "optionId": "opsi-kelas2-5-3",
+            "text": "Berteriak"
+          },
+          {
+            "optionId": "opsi-kelas2-5-4",
+            "text": "Mengambil barang"
+          }
+        ],
+        "correctResponse": "opsi-kelas2-5-1"
       }
     ],
     "passingScore": 75

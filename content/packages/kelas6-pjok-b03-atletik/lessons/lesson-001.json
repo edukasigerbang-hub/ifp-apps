@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-atletik-kelas6",
-    "ordering-atletik-kelas6"
+    "ordering-atletik-kelas6",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Lintasan lari, bak lompat, dan pita finis."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

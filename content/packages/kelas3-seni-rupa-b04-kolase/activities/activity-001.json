@@ -29,6 +29,20 @@
         "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas.",
         "reveal": "Tata bahan membentuk pola, lalu tempel.",
         "hint": "Mulai dari bentuk besar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kolase dari Bahan Alam?",
+        "reveal": "Membuat kolase sederhana dari bahan alam di sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Kolase dari Bahan Alam?",
+        "reveal": "Menyiapkan bahan → Menyusun pola → Mengoles lem → Menempel bahan → Menjemur karya",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Menghargai lawan dan aturan.",
         "hint": "Tidak curang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Atletik Lanjutan?",
+        "reveal": "Mempraktikkan lari, lompat, dan lempar dengan teknik yang benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/atletik-lanjutan.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lintasan lari, bak lompat, dan pita finis.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/atletik-lanjutan.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis."
       }
     ]
   },

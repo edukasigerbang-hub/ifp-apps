@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kerajinan-kelas2",
-    "matching-kerajinan-kelas2"
+    "matching-kerajinan-kelas2",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kerajinan-kelas2.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Kerajinan dari daun, ranting, dan biji."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Permainan apa yang terlihat?",
+        "right": "Tenis, bulu tangkis, dan tenis meja."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa alat bulu tangkis?",
+        "right": "Raket dan kok."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa pemanasan penting?",
+        "right": "Mencegah cedera."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Permainan Bola Kecil?",
+        "right": "Mengenal permainan bola kecil dan mempraktikkan gerak dasarnya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Bola tenis, kok bulu tangkis, dan bet tenis meja."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja."
+  }
+}

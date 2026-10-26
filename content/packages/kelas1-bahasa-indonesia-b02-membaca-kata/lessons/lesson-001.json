@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-membaca-kata",
-    "kuis-membaca-kata"
+    "kuis-membaca-kata",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-membaca-kata"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Anak membaca kata sederhana di sudut baca."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

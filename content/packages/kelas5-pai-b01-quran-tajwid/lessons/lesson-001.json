@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-quran-tajwid",
-    "matching-quran-tajwid"
+    "matching-quran-tajwid",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/quran-kelas5.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

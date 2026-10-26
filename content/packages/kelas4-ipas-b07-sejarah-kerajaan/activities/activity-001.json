@@ -29,6 +29,20 @@
         "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara.",
         "reveal": "Prasasti mencatat peristiwa dan menjadi sumber sejarah.",
         "hint": "Perhatikan tulisan pada batu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sejarah Nusantara: Kerajaan?",
+        "reveal": "Mengenal kerajaan-kerajaan Nusantara, letaknya, dan peninggalan budayanya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajaan-nusantara.webp",
+        "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajaan-nusantara.webp",
+        "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara."
       }
     ]
   },

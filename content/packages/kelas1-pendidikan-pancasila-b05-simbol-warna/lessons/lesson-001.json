@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-simbol-warna",
-    "matching-simbol-warna"
+    "matching-simbol-warna",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/simbol-warna-pancasila.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lima simbol Pancasila dengan warna khasnya."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

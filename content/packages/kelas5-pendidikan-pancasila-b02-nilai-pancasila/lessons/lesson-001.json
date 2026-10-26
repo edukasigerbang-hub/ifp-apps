@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-nilai-pancasila",
-    "matching-nilai-pancasila"
+    "matching-nilai-pancasila",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/nilai-pancasila.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

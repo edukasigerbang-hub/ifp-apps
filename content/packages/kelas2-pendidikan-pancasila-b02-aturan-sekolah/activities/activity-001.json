@@ -29,6 +29,20 @@
         "altText": "Siswa berbaris tertib di sekolah.",
         "reveal": "Kegiatan terganggu.",
         "hint": "Teman dirugikan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Aturan di Sekolah?",
+        "reveal": "Mengenal dan melaksanakan aturan di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah."
+      },
+      {
+        "prompt": "Contoh aturan di sekolah adalah ...",
+        "reveal": "Datang tepat waktu",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah."
       }
     ]
   },

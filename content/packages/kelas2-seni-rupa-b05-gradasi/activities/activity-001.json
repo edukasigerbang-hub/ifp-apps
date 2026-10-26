@@ -29,6 +29,20 @@
         "altText": "Contoh gradasi warna dari gelap ke terang.",
         "reveal": "Kerapian warna.",
         "hint": "Kebersihan karya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mewarnai dan Gradasi?",
+        "reveal": "Mewarnai dengan gradasi sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh gradasi warna dari gelap ke terang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang."
       }
     ]
   },

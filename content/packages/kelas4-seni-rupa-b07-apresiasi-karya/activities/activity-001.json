@@ -29,6 +29,20 @@
         "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati.",
         "reveal": "Sopan, beralasan, dan memberi saran yang membangun.",
         "hint": "Hindari mengejek karya teman."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengapresiasi Karya Seni?",
+        "reveal": "Mengamati karya seni, menyebutkan unsur yang terlihat, dan memberi tanggapan sopan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/apresiasi-karya.webp",
+        "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati."
+      },
+      {
+        "prompt": "Langkah pertama dalam mengapresiasi karya seni adalah ...",
+        "reveal": "Mengamati karya dengan teliti",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/apresiasi-karya.webp",
+        "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati."
       }
     ]
   },

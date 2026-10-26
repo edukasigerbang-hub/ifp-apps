@@ -29,6 +29,20 @@
         "altText": "Kerajinan dari daun, ranting, dan biji.",
         "reveal": "Oles lem lalu tempel.",
         "hint": "Tekan pelan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kerajinan Bahan Alam?",
+        "reveal": "Membuat kerajinan dari bahan alam.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kerajinan dari daun, ranting, dan biji.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji."
       }
     ]
   },

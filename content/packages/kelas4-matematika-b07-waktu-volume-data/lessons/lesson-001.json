@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-waktu-volume",
-    "kuis-waktu-volume"
+    "kuis-waktu-volume",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-waktu-volume"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

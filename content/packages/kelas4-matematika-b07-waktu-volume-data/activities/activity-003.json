@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Pukul berapa waktu yang ditunjukkan jam pada panel pertama?",
+        "right": "Pukul 07.30 (tujuh lewat tiga puluh menit)."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Berapa volume air pada gelas ukur?",
+        "right": "Sekitar 600 mL, terbaca dari garis skala."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Data apa yang paling banyak pada diagram batang?",
+        "right": "Batang berwarna merah paling tinggi, berarti datanya paling banyak."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Waktu, Volume, dan Penyajian Data?",
+        "right": "Membaca waktu dan volume, mengonversi satuan, serta membaca diagram batang."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: jam, gelas ukur berisi air, dan diagram batang."
+  }
+}

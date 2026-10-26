@@ -29,6 +29,20 @@
         "altText": "Anak menulis kalimat sederhana di buku.",
         "reveal": "Antar kata diberi jarak.",
         "hint": "Jangan terlalu rapat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Kalimat Sederhana?",
+        "reveal": "Menentukan ide → Menulis kata → Menyusun kalimat → Memberi tanda baca → Memeriksa tulisan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Kalimat Sederhana?",
+        "reveal": "Menulis kalimat sederhana dengan huruf kapital dan tanda baca.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku."
       }
     ]
   },

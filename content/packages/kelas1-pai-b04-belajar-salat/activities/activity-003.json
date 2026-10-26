@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa yang dilakukan sebelum salat?",
+        "right": "Berwudu."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa gerakan pertama salat?",
+        "right": "Takbiratul ihram."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa gerakan terakhir?",
+        "right": "Salam."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Anak berwudu dan belajar gerakan salat."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Belajar Salat?",
+        "right": "Mengenal wudu dan gerakan salat sederhana."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan belajar gerakan salat."
+  }
+}

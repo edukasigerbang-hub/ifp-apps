@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu perspektif?",
+        "right": "Cara menggambar agar objek terlihat memiliki jarak."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa itu titik hilang?",
+        "right": "Titik tempat garis-garis bertemu di horizon."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa benda dekat tampak besar?",
+        "right": "Karena jaraknya dekat dengan pengamat."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Menggambar Perspektif Sederhana?",
+        "right": "Menentukan garis horizon → Menentukan titik hilang → Menggambar garis bantu → Menggambar objek → Menambahkan detail"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Menggambar Perspektif Sederhana?",
+        "right": "Menggambar objek dengan kesan jarak menggunakan garis perspektif."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
+  }
+}

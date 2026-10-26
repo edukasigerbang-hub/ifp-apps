@@ -29,6 +29,20 @@
         "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong.",
         "reveal": "Bentuk tersebar di beberapa bagian sehingga terasa seimbang, tidak menumpuk di satu sisi.",
         "hint": "Bandingkan kiri, kanan, atas, dan bawah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Unsur dan Prinsip Seni Rupa?",
+        "reveal": "Mengenali unsur garis, bentuk, warna, tekstur, dan ruang, lalu menyusun komposisi sederhana yang seimbang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/unsur-seni.webp",
+        "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/unsur-seni.webp",
+        "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong."
       }
     ]
   },

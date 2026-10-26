@@ -29,6 +29,20 @@
         "altText": "Anak menyelesaikan soal cerita matematika.",
         "reveal": "Agar jawaban benar.",
         "hint": "Hitung ulang."
+      },
+      {
+        "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "reveal": "Memahami soal",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pemecahan-masalah-kelas6.webp",
+        "altText": "Anak menyelesaikan soal cerita matematika."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak menyelesaikan soal cerita matematika.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pemecahan-masalah-kelas6.webp",
+        "altText": "Anak menyelesaikan soal cerita matematika."
       }
     ]
   },

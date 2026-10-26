@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-atletik-kelas5",
-    "matching-atletik-kelas5"
+    "matching-atletik-kelas5",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/atletik-kelas5.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lintasan lari, bak lompat pasir, dan pita finis."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

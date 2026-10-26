@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-gerak-manipulatif",
-    "matching-gerak-manipulatif"
+    "matching-gerak-manipulatif",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/gerak-manipulatif.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

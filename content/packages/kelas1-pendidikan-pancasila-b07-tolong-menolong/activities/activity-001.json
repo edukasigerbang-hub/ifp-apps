@@ -29,6 +29,20 @@
         "altText": "Anak saling menolong di sekolah.",
         "reveal": "Teman senang.",
         "hint": "Persahabatan erat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Kebersamaan dan Tolong-Menolong?",
+        "reveal": "Melihat teman yang kesulitan → Menanyakan keadaannya → Membantu → Menghibur → Melapor kepada guru bila perlu",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/tolong-menolong.webp",
+        "altText": "Anak saling menolong di sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebersamaan dan Tolong-Menolong?",
+        "reveal": "Membiasakan tolong-menolong dalam kebersamaan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tolong-menolong.webp",
+        "altText": "Anak saling menolong di sekolah."
       }
     ]
   },

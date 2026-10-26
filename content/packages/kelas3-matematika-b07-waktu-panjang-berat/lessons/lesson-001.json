@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-ukuran",
-    "matching-ukuran"
+    "matching-ukuran",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/waktu-panjang-berat.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

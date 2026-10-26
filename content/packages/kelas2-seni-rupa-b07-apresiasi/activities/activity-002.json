@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-hargai"
+      },
+      {
+        "questionId": "soal-kelas2-5",
+        "prompt": "Saat memberi saran pada karya teman, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kelas2-5-1",
+            "text": "Bersikap sopan"
+          },
+          {
+            "optionId": "opsi-kelas2-5-2",
+            "text": "Mengejek"
+          },
+          {
+            "optionId": "opsi-kelas2-5-3",
+            "text": "Merusak karya"
+          },
+          {
+            "optionId": "opsi-kelas2-5-4",
+            "text": "Menyembunyikan karya"
+          }
+        ],
+        "correctResponse": "opsi-kelas2-5-1"
       }
     ],
     "passingScore": 75

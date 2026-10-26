@@ -29,6 +29,20 @@
         "altText": "Sudut lancip, siku, dan tumpul pada bangun datar.",
         "reveal": "Sudut lebih dari 90 derajat.",
         "hint": "Lebih lebar dari siku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pengukuran Sudut dan Bangun Datar?",
+        "reveal": "Mengukur sudut dan mengenal sifat bangun datar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pengukuran-sudut.webp",
+        "altText": "Sudut lancip, siku, dan tumpul pada bangun datar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Sudut lancip, siku, dan tumpul pada bangun datar.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pengukuran-sudut.webp",
+        "altText": "Sudut lancip, siku, dan tumpul pada bangun datar."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bola-kecil",
-    "kuis-bola-kecil"
+    "kuis-bola-kecil",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bola-kecil"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

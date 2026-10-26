@@ -29,6 +29,20 @@
         "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
         "reveal": "Awan yang jenuh air menjatuhkan titik air sebagai hujan (presipitasi), lalu air kembali ke laut atau sungai.",
         "hint": "Perhatikan panah turun dari awan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bumi, Cuaca, dan Siklus Air?",
+        "reveal": "Memahami tahapan siklus air, hubungannya dengan cuaca, dan pentingnya menjaga air.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Bumi, Cuaca, dan Siklus Air?",
+        "reveal": "Penguapan air laut → Pengembunan uap air → Pembentukan awan → Hujan turun → Air kembali ke laut atau sungai",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-teknologi-ramah-lingkungan",
-    "kuis-teknologi-ramah-lingkungan"
+    "kuis-teknologi-ramah-lingkungan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-teknologi-ramah-lingkungan"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Panel surya, kincir angin, dan daur ulang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

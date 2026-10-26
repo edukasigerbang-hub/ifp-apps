@@ -29,6 +29,20 @@
         "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut.",
         "reveal": "Melalui hujan dan aliran sungai.",
         "hint": "Siklus berulang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Siklus Air dan Cuaca?",
+        "reveal": "Memahami tahapan siklus air dan pengaruhnya terhadap cuaca.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Siklus Air dan Cuaca?",
+        "reveal": "Penguapan → Pengembunan → Hujan → Penyerapan air → Aliran kembali ke laut",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
         "reveal": "100.",
         "hint": "Dua kelompok lima puluh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 100?",
+        "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 100.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/penjumlahan-100.webp",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/penjumlahan-100.webp",
+        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
       }
     ]
   },

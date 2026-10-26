@@ -29,6 +29,20 @@
         "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
         "reveal": "Melatih sabar, disiplin, dan peduli kepada yang kekurangan.",
         "hint": "Rasakan lapar agar tumbuh empati."
+      },
+      {
+        "prompt": "Hikmah puasa yang benar adalah ...",
+        "reveal": "Melatih sabar dan disiplin",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+      },
+      {
+        "prompt": "Puasa dimulai pada waktu ...",
+        "reveal": "Terbit fajar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
       }
     ]
   },

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa yang dilakukan anak pada gambar?",
+        "right": "Anak membaca buku sastra dengan tenang."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa yang bisa dinikmati dari sebuah puisi?",
+        "right": "Rima, pilihan kata, irama, dan amanat."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana cara memberi apresiasi yang baik?",
+        "right": "Menyebutkan hal menarik dan alasannya dengan sopan."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Apresiasi Sastra?",
+        "right": "Mengenali unsur puisi dan cerita, menyampaikan tanggapan, serta menghargai karya sastra."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apresiasi yang baik terhadap karya teman adalah ...",
+        "right": "menyebutkan hal menarik beserta alasannya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+  }
+}

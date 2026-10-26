@@ -29,6 +29,20 @@
         "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
         "reveal": "Belajar banyak hal baru dan mempererat persaudaraan.",
         "hint": "Bekerja sama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Keberagaman di Sekolah?",
+        "reveal": "Menghargai keberagaman suku, agama, dan budaya di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/keberagaman-kelas3.webp",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Siswa berbeda suku, agama, dan budaya belajar bersama.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/keberagaman-kelas3.webp",
+        "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-kolase",
-    "kuis-kolase"
+    "kuis-kolase",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-kolase"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

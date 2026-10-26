@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-teks-narasi-kelas5",
-    "ordering-teks-narasi-kelas5"
+    "ordering-teks-narasi-kelas5",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-wawancara-kelas6",
-    "ordering-wawancara-kelas6"
+    "ordering-wawancara-kelas6",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak mewawancarai narasumber."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

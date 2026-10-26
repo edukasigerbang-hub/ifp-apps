@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kesehatan-kebugaran",
-    "matching-kesehatan-kebugaran"
+    "matching-kesehatan-kebugaran",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kesehatan-kebugaran.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak mencuci tangan, berolahraga, dan beristirahat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

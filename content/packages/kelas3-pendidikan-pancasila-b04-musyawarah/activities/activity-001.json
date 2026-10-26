@@ -29,6 +29,20 @@
         "altText": "Siswa duduk melingkar bermusyawarah dengan guru.",
         "reveal": "Menghargai dan mencari kesepakatan.",
         "hint": "Voting jika perlu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Musyawarah di Kelas?",
+        "reveal": "Mengenal musyawarah, tata caranya, dan sikap menghargai pendapat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/musyawarah-kelas3.webp",
+        "altText": "Siswa duduk melingkar bermusyawarah dengan guru."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Musyawarah di Kelas?",
+        "reveal": "Menyampaikan masalah → Memberi kesempatan berpendapat → Mendiskusikan pilihan → Memilih kesepakatan → Melaksanakan hasil musyawarah",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/musyawarah-kelas3.webp",
+        "altText": "Siswa duduk melingkar bermusyawarah dengan guru."
       }
     ]
   },

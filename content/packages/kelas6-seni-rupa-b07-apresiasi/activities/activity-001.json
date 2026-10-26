@@ -29,6 +29,20 @@
         "altText": "Karya seni dipajang dan pengunjung mengamati.",
         "reveal": "Sopan dan jelas.",
         "hint": "Hindari mengejek."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Karya seni dipajang dan pengunjung mengamati.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/apresiasi-kelas6.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati."
+      },
+      {
+        "prompt": "Kritik yang baik bersifat ...",
+        "reveal": "Membangun",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/apresiasi-kelas6.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati."
       }
     ]
   },

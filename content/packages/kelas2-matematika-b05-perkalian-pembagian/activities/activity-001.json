@@ -29,6 +29,20 @@
         "altText": "Kelompok benda untuk perkalian dan pembagian.",
         "reveal": "Pembagian kebalikan perkalian.",
         "hint": "2 × 3 = 6, 6 : 2 = 3."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian dan Pembagian?",
+        "reveal": "Menghubungkan perkalian dan pembagian.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
+        "altText": "Kelompok benda untuk perkalian dan pembagian."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kelompok benda untuk perkalian dan pembagian.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
+        "altText": "Kelompok benda untuk perkalian dan pembagian."
       }
     ]
   },

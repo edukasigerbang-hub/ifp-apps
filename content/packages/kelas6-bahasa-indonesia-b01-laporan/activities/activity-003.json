@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa bagian laporan?",
+        "right": "Tujuan, kegiatan, hasil, kesimpulan."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bahasa apa yang dipakai?",
+        "right": "Baku dan objektif."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang diperiksa?",
+        "right": "Ejaan dan kelengkapan isi."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Teks Laporan?",
+        "right": "Menentukan tujuan → Mencatat kegiatan → Menyusun hasil → Menulis kesimpulan → Memeriksa bahasa"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Teks Laporan?",
+        "right": "Menulis laporan pengamatan dengan struktur yang benar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan."
+  }
+}

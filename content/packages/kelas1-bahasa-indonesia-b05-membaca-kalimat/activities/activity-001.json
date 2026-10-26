@@ -29,6 +29,20 @@
         "altText": "Anak membaca kalimat sederhana di sudut baca.",
         "reveal": "Tanda tanya.",
         "hint": "Tanda tanya (?)."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca kalimat sederhana di sudut baca.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Membaca Kalimat Sederhana?",
+        "reveal": "Membaca kalimat sederhana dengan lafal dan intonasi yang tepat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca."
       }
     ]
   },

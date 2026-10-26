@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-pewarisan-sifat",
-    "matching-pewarisan-sifat"
+    "matching-pewarisan-sifat",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pewarisan-sifat.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Induk dan anak dengan ciri fisik yang mirip."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

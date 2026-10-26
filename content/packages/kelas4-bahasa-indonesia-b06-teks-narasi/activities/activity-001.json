@@ -29,6 +29,20 @@
         "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung.",
         "reveal": "Anak menolong kucing dengan payung (resolusi).",
         "hint": "Perhatikan tindakan tokoh di akhir cerita."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Memahami dan Menulis Teks Narasi?",
+        "reveal": "Mengenali struktur teks narasi, tokoh, dan latar, lalu menyusun cerita sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teks-narasi.webp",
+        "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Memahami dan Menulis Teks Narasi?",
+        "reveal": "Orientasi: pengenalan tokoh dan latar → Komplikasi: munculnya masalah → Resolusi: penyelesaian masalah",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/teks-narasi.webp",
+        "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
       }
     ]
   },

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu musyawarah?",
+        "right": "Membicarakan masalah bersama untuk mencapai kesepakatan."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana menyampaikan pendapat?",
+        "right": "Sopan, singkat, dan tidak memotong."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang dilakukan bila pendapat berbeda?",
+        "right": "Menghargai dan mencari kesepakatan."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Musyawarah di Kelas?",
+        "right": "Mengenal musyawarah, tata caranya, dan sikap menghargai pendapat."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Musyawarah di Kelas?",
+        "right": "Menyampaikan masalah → Memberi kesempatan berpendapat → Mendiskusikan pilihan → Memilih kesepakatan → Melaksanakan hasil musyawarah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa duduk melingkar bermusyawarah dengan guru."
+  }
+}

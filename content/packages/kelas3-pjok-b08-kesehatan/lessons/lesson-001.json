@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kesehatan",
-    "matching-kesehatan"
+    "matching-kesehatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kesehatan-kelas3.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

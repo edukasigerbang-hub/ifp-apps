@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa sumber energi listrik?",
+        "right": "Air, angin, matahari, dan bahan bakar."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Apa perubahan energi pada lampu?",
+        "right": "Listrik menjadi cahaya."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana menghemat listrik?",
+        "right": "Matikan alat yang tidak dipakai."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Energi dan Listrik?",
+        "right": "Mengenal sumber energi listrik dan cara menghematnya."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Sumber energi listrik, lampu, dan alat elektronik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sumber energi listrik, lampu, dan alat elektronik."
+  }
+}

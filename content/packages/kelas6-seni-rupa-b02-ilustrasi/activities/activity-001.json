@@ -29,6 +29,20 @@
         "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
         "reveal": "Warna dan detail.",
         "hint": "Rapikan garis."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menggambar Ilustrasi?",
+        "reveal": "Menentukan tema → Membuat sketsa → Menebalkan garis → Mewarnai → Menambahkan detail",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menggambar Ilustrasi?",
+        "reveal": "Membuat ilustrasi sederhana untuk cerita.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
       }
     ]
   },

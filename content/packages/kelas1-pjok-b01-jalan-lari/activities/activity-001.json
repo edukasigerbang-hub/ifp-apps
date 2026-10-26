@@ -29,6 +29,20 @@
         "altText": "Anak berjalan dan berlari di lapangan.",
         "reveal": "Pemanasan.",
         "hint": "Agar tidak cedera."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Jalan dan Lari?",
+        "reveal": "Mempraktikkan gerak jalan dan lari dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berjalan dan berlari di lapangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan."
       }
     ]
   },

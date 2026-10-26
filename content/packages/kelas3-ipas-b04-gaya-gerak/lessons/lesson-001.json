@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-gaya-gerak",
-    "matching-gaya-gerak"
+    "matching-gaya-gerak",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/gaya-gerak-kelas3.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

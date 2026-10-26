@@ -29,6 +29,27 @@
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Baik dan tidak bertengkar.",
         "hint": "Saling membantu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Adab Sehari-hari?",
+        "reveal": "Membiasakan adab baik setiap hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/adab-kelas2.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
+      },
+      {
+        "prompt": "Sikap kepada teman adalah ...",
+        "reveal": "Baik dan membantu",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/adab-kelas2.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
+      },
+      {
+        "prompt": "Bagaimana adab saat bertamu ke rumah orang?",
+        "reveal": "Mengucapkan salam dan menunggu izin masuk.",
+        "hint": "Bersikap sopan dan sabar.",
+        "assetPath": "assets/adab-kelas2.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
       }
     ]
   },

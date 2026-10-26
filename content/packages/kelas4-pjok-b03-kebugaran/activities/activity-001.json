@@ -29,6 +29,20 @@
         "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
         "reveal": "Kelenturan memudahkan gerak dan mengurangi cedera; kecepatan membantu aktivitas yang membutuhkan gerak cepat.",
         "hint": "Hubungkan dengan kegiatan sehari-hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran Jasmani?",
+        "reveal": "Mengenali komponen kebugaran, mempraktikkan latihan sederhana, dan membiasakan hidup sehat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda.",
         "reveal": "Merapikan alat.",
         "hint": "Mencuci tangan."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Mewarnai Bentuk?",
+        "reveal": "Menyiapkan alat → Memilih warna → Mewarnai bentuk → Merapikan alat → Mencuci tangan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/mewarnai-bentuk.webp",
+        "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mewarnai Bentuk?",
+        "reveal": "Mewarnai bentuk dengan rapi dan warna yang sesuai.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/mewarnai-bentuk.webp",
+        "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
       }
     ]
   },

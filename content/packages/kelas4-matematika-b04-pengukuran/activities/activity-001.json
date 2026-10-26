@@ -29,6 +29,20 @@
         "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
         "reveal": "1 meter = 100 sentimeter.",
         "hint": "Kata 'senti' berarti seperseratus."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengukur Panjang dan Berat?",
+        "reveal": "Menggunakan alat ukur panjang dan berat, memahami satuan cm/m dan g/kg, serta menyelesaikan masalah sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pengukuran-panjang-berat.webp",
+        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+      },
+      {
+        "prompt": "Alat yang tepat untuk mengukur berat badan adalah ...",
+        "reveal": "timbangan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pengukuran-panjang-berat.webp",
+        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
       }
     ]
   },

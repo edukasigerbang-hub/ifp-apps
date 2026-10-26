@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-bola-kecil",
-    "kuis-bola-kecil"
+    "kuis-bola-kecil",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-bola-kecil"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

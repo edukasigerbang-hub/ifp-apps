@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Di mana Nabi Muhammad lahir?",
+        "right": "Makkah."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Siapa nama Nabi terakhir?",
+        "right": "Muhammad."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa sifat Nabi yang diteladani?",
+        "right": "Jujur."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Kisah Nabi?",
+        "right": "Mengenal kisah Nabi Muhammad secara sederhana."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa yang kamu amati pada gambar?",
+        "right": "Garis waktu sederhana dengan Ka'bah dan masjid."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
+  }
+}

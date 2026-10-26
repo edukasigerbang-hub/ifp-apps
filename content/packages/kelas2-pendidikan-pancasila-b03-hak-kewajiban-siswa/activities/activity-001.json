@@ -29,6 +29,20 @@
         "altText": "Siswa belajar dan menjaga kebersihan kelas.",
         "reveal": "Agar kelas nyaman.",
         "hint": "Semua mendapat kesempatan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban Siswa?",
+        "reveal": "Mengenal hak dan kewajiban sebagai siswa.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-siswa.webp",
+        "altText": "Siswa belajar dan menjaga kebersihan kelas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Siswa belajar dan menjaga kebersihan kelas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/hak-kewajiban-siswa.webp",
+        "altText": "Siswa belajar dan menjaga kebersihan kelas."
       }
     ]
   },

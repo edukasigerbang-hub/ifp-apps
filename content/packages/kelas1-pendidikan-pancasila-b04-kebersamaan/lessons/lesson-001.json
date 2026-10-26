@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-kebersamaan",
-    "ordering-kebersamaan"
+    "ordering-kebersamaan",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Siswa belajar dan bermain bersama di sekolah."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

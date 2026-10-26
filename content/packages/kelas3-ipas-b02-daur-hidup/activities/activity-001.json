@@ -29,6 +29,20 @@
         "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu.",
         "reveal": "Tidak; katak mengalami tahap berudu, ayam menetas dari telur.",
         "hint": "Bandingkan dua hewan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Daur Hidup Makhluk Hidup?",
+        "reveal": "Mengenal tahapan daur hidup hewan dan mengurutkannya dengan benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/daur-hidup.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/daur-hidup.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Warga bekerja bersama membersihkan lingkungan.",
         "reveal": "Pekerjaan cepat selesai.",
         "hint": "Persahabatan erat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Gotong Royong?",
+        "reveal": "Menentukan kegiatan → Membagi tugas → Bekerja bersama → Menyelesaikan pekerjaan → Merapikan alat",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gotong Royong?",
+        "reveal": "Menerapkan gotong royong di sekolah dan rumah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan."
       }
     ]
   },

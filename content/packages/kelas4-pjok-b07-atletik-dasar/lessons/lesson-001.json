@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-atletik-dasar",
-    "matching-atletik-dasar"
+    "matching-atletik-dasar",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/atletik-dasar.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lintasan lari, balok start, bak lompat pasir, dan pita finis."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -29,6 +29,20 @@
         "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid berkubah.",
         "reveal": "Untuk melindungi umat dan menyebarkan Islam.",
         "hint": "Hijrah ke Madinah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sejarah Islam?",
+        "reveal": "Mengenal peristiwa penting awal Islam secara berurutan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sejarah-islam-kelas3.webp",
+        "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid berkubah."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Sejarah Islam?",
+        "reveal": "Nabi Muhammad lahir di Makkah → Menerima wahyu di Gua Hira → Berdakwah di Makkah → Hijrah ke Madinah → Membangun Masjid Nabawi",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/sejarah-islam-kelas3.webp",
+        "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid berkubah."
       }
     ]
   },

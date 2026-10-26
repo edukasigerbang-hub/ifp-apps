@@ -29,6 +29,20 @@
         "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah).",
         "reveal": "Agar hidup tertib, adil, dan harmonis; hak tidak dipakai untuk merugikan orang lain.",
         "hint": "Bayangkan jika semua menuntut hak tanpa menjalankan kewajiban."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban di Rumah, Sekolah, dan Masyarakat?",
+        "reveal": "Mengenali hak dan kewajiban, serta memahami pentingnya keseimbangan keduanya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/belajar-dan-bertugas.webp",
+        "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah)."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah).",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/belajar-dan-bertugas.webp",
+        "altText": "Dua panel: anak belajar di meja (hak mendapat pendidikan) dan anak menyapu (kewajiban membantu di rumah)."
       }
     ]
   },

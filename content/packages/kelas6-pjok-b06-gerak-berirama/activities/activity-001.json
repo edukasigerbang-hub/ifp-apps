@@ -29,6 +29,20 @@
         "altText": "Anak melakukan gerak berirama mengikuti irama.",
         "reveal": "Agar gerakan serasi.",
         "hint": "Dengar hitungan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak melakukan gerak berirama mengikuti irama.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Berirama?",
+        "reveal": "Mempraktikkan gerak berirama dengan hitungan dan musik.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama."
       }
     ]
   },

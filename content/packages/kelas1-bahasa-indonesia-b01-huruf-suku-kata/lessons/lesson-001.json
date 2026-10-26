@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-huruf-suku-kata",
-    "matching-huruf-suku-kata"
+    "matching-huruf-suku-kata",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/huruf-suku-kata.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak-anak belajar membaca huruf dan suku kata."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

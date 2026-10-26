@@ -29,6 +29,20 @@
         "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
         "reveal": "Siddiq, amanah, tabligh, dan fatanah.",
         "hint": "Jujur, dipercaya, menyampaikan, cerdas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Iman kepada Rasul?",
+        "reveal": "Memahami iman kepada rasul dan sifat-sifat yang wajib diteladani.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
       }
     ]
   },

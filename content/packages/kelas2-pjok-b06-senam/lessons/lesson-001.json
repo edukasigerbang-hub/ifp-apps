@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-senam-kelas2",
-    "ordering-senam-kelas2"
+    "ordering-senam-kelas2",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak melakukan senam ringan dan peregangan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

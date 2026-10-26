@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-wujud-zat",
-    "ordering-wujud-zat"
+    "ordering-wujud-zat",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

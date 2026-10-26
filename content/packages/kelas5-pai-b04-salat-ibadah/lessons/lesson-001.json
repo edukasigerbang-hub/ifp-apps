@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-salat-ibadah",
-    "ordering-salat-ibadah"
+    "ordering-salat-ibadah",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak berwudu dan melaksanakan gerakan salat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa masalah yang dipilih?",
+        "right": "Masalah di lingkungan sekitar."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana merencanakan?",
+        "right": "Tentukan tujuan, tugas, dan waktu."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang dilakukan setelahnya?",
+        "right": "Melaporkan dan mengevaluasi."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "right": "Memilih masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan hasil"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Proyek Kewargaan?",
+        "right": "Merancang dan melaksanakan proyek kewargaan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+  }
+}

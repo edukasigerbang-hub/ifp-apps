@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kebugaran-kelas6",
-    "matching-kebugaran-kelas6"
+    "matching-kebugaran-kelas6",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kebugaran-kelas6.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

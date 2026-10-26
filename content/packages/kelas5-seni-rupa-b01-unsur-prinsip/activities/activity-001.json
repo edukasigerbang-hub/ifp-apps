@@ -29,6 +29,20 @@
         "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni.",
         "reveal": "Menggunakan warna dan bentuk yang saling mendukung.",
         "hint": "Jangan terlalu banyak gaya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Unsur dan Prinsip Seni Rupa?",
+        "reveal": "Mengenal unsur dan prinsip seni rupa serta menerapkannya dalam karya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/unsur-prinsip-kelas5.webp",
+        "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/unsur-prinsip-kelas5.webp",
+        "altText": "Contoh unsur garis, warna, tekstur, bentuk, dan ruang dalam karya seni."
       }
     ]
   },

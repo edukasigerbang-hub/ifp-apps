@@ -29,6 +29,20 @@
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Makhluk yang menguraikan sisa makhluk hidup.",
         "hint": "Bakteri dan jamur."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Ekosistem dan Rantai Makanan?",
+        "reveal": "Mengenal komponen ekosistem dan rantai makanan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ekosistem-kelas5.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/ekosistem-kelas5.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
       }
     ]
   },

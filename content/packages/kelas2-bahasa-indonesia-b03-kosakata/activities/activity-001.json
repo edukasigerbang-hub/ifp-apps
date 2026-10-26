@@ -29,6 +29,20 @@
         "altText": "Anak membaca buku untuk menambah kosakata.",
         "reveal": "Lambat.",
         "hint": "Berlawanan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kosakata, Sinonim, dan Antonim?",
+        "reveal": "Mengenal sinonim dan antonim kata.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca buku untuk menambah kosakata.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata."
       }
     ]
   },

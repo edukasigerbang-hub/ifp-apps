@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-kerajinan-bahan-alam",
-    "matching-kerajinan-bahan-alam"
+    "matching-kerajinan-bahan-alam",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kerajinan-bahan-alam-kelas1.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Daun, ranting, dan biji untuk kerajinan."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

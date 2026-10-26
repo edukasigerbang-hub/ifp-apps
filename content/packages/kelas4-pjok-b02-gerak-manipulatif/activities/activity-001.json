@@ -29,6 +29,20 @@
         "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola.",
         "reveal": "Pandangan ke depan, kontrol bola dengan kaki, dan jaga keselamatan sekitar.",
         "hint": "Perhatikan panel keempat dan gerak bola."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Manipulatif dengan Bola?",
+        "reveal": "Mempraktikkan melempar, menangkap, menendang, dan menggiring bola dengan koordinasi dan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-manipulatif.webp",
+        "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gerak-manipulatif.webp",
+        "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola."
       }
     ]
   },

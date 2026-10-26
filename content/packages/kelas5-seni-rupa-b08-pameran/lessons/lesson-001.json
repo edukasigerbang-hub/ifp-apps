@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-pameran-kelas5",
-    "matching-pameran-kelas5"
+    "matching-pameran-kelas5",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pameran-kelas5.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Pameran kelas dengan karya siswa dipajang."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

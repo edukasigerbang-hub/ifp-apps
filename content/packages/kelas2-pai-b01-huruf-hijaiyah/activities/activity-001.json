@@ -29,6 +29,20 @@
         "altText": "Anak membaca huruf hijaiyah dan harakat.",
         "reveal": "Kanan ke kiri.",
         "hint": "Berbeda dengan Latin."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca huruf hijaiyah dan harakat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Huruf Hijaiyah dan Harakat?",
+        "reveal": "Membaca huruf hijaiyah dengan harakat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat."
       }
     ]
   },

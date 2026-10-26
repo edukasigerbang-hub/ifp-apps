@@ -29,6 +29,20 @@
         "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
         "reveal": "Bakteri dan jamur pengurai sisa.",
         "hint": "Mengembalikan zat ke tanah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Ekosistem dan Keseimbangan?",
+        "reveal": "Mengenal komponen ekosistem dan menjaga keseimbangannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
       }
     ]
   },

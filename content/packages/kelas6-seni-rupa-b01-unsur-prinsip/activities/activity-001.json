@@ -29,6 +29,20 @@
         "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi.",
         "reveal": "Warna dan bentuk saling mendukung.",
         "hint": "Jangan terlalu banyak gaya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Unsur dan Prinsip Seni?",
+        "reveal": "Menerapkan unsur dan prinsip seni dalam karya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Unsur garis, warna, bentuk, dan prinsip komposisi.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
       }
     ]
   },

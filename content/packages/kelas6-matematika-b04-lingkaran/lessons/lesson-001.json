@@ -11,15 +11,18 @@
   ],
   "activityIds": [
     "eksplorasi-lingkaran",
-    "matching-lingkaran"
+    "matching-lingkaran",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/lingkaran.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Di kota mana Nabi Muhammad lahir?",
+        "right": "Makkah."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Di mana Nabi menerima wahyu pertama?",
+        "right": "Gua Hira."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Mengapa Nabi hijrah ke Madinah?",
+        "right": "Untuk menyebarkan Islam dan melindungi umat."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Apa hal penting yang kamu pelajari tentang Sejarah Islam?",
+        "right": "Mengenal peristiwa penting awal Islam dan mengambil teladan dari perjuangan Nabi Muhammad."
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Bagaimana urutan yang benar untuk Sejarah Islam?",
+        "right": "Nabi Muhammad lahir di Makkah → Menerima wahyu pertama di Gua Hira → Berdakwah di Makkah → Hijrah ke Madinah → Membangun Masjid Nabawi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sejarah Islam dengan Ka'bah, Gua Hira, dan masjid berkubah."
+  }
+}

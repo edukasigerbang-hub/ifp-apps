@@ -29,6 +29,20 @@
         "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
         "reveal": "Merah, kuning, biru.",
         "hint": "Warna dasar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Garis dan Warna?",
+        "reveal": "Mengenal garis dan warna untuk menggambar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
       }
     ]
   },

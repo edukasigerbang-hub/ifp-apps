@@ -29,6 +29,20 @@
         "altText": "Anak berwudu dan melaksanakan salat.",
         "reveal": "Salam.",
         "hint": "Menoleh kanan dan kiri."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Salat?",
+        "reveal": "Mengenal salat dan gerakannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berwudu dan melaksanakan salat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat."
       }
     ]
   },

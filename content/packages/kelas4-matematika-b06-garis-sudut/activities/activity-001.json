@@ -29,6 +29,20 @@
         "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
         "reveal": "Sudut lancip kurang dari 90°, sudut tumpul lebih dari 90°.",
         "hint": "Bandingkan dengan sudut siku-siku."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/garis-sudut.webp",
+        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
+      },
+      {
+        "prompt": "Alat yang digunakan untuk mengukur besar sudut adalah ...",
+        "reveal": "busur derajat",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/garis-sudut.webp",
+        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas.",
         "reveal": "Agar cerita mudah dipahami.",
         "hint": "Mulai dari awal, tengah, akhir."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Ide Pokok dan Menyimak Cerita?",
+        "reveal": "Menemukan ide pokok dan menyusun urutan peristiwa dari cerita yang disimak.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/mendengarkan-cerita-kelas3.webp",
+        "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Ide Pokok dan Menyimak Cerita?",
+        "reveal": "Menyimak cerita dengan tenang → Mencatat peristiwa penting → Menentukan ide pokok → Menyusun urutan peristiwa → Menceritakan kembali",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/mendengarkan-cerita-kelas3.webp",
+        "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
       }
     ]
   },

@@ -29,6 +29,20 @@
         "altText": "Diagram Venn dua lingkaran: faktor 12 di kiri, faktor 18 di kanan, dan faktor persekutuan di daerah oranye.",
         "reveal": "FPB 12 dan 18 adalah 6.",
         "hint": "Ambil faktor persekutuan yang paling besar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Faktor, Kelipatan, KPK, dan FPB?",
+        "reveal": "Menentukan faktor dan kelipatan, lalu menggunakan FPB dan KPK untuk menyelesaikan masalah sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/faktor-kelipatan.webp",
+        "altText": "Diagram Venn dua lingkaran: faktor 12 di kiri, faktor 18 di kanan, dan faktor persekutuan di daerah oranye."
+      },
+      {
+        "prompt": "Bilangan berikut yang BUKAN faktor 12 adalah ...",
+        "reveal": "5",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/faktor-kelipatan.webp",
+        "altText": "Diagram Venn dua lingkaran: faktor 12 di kiri, faktor 18 di kanan, dan faktor persekutuan di daerah oranye."
       }
     ]
   },

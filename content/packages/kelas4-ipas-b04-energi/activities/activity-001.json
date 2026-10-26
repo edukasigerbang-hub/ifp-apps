@@ -29,6 +29,20 @@
         "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari.",
         "reveal": "Energi kimia dari makanan berubah menjadi energi gerak.",
         "hint": "Tubuh memerlukan makanan untuk bergerak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Energi dan Perubahannya?",
+        "reveal": "Mengenali bentuk energi, perubahan energi di sekitar kita, dan cara menghemat energi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
       }
     ]
   },

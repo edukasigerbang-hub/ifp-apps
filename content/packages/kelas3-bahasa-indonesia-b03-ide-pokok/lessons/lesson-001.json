@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-ide-pokok",
-    "ordering-ide-pokok"
+    "ordering-ide-pokok",
+    "matching-penguatan"
   ],
   "assessmentRefs": [],
   "assetRefs": [
@@ -20,6 +21,6 @@
   "accessibilityMetadata": {
     "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }

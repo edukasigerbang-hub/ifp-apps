@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa yang ditentukan pertama?",
+        "right": "Tema cerita."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bagaimana menyusun alur?",
+        "right": "Awal, tengah, dan akhir."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Apa yang diperiksa?",
+        "right": "Ejaan, tanda baca, dan keruntutan."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Menulis Cerita?",
+        "right": "Menentukan tema → Menyusun kerangka → Mengembangkan cerita → Memeriksa ejaan → Membacakan cerita"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Menulis Cerita?",
+        "right": "Menulis cerita dengan tokoh, latar, dan alur yang runtut."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita di buku."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-penguatan-1",
+        "left": "Apa itu karya campuran?",
+        "right": "Karya yang memakai beberapa bahan dan teknik."
+      },
+      {
+        "pairId": "pasangan-penguatan-2",
+        "left": "Bahan apa yang dapat dipakai?",
+        "right": "Kertas, kain, daun, dan cat."
+      },
+      {
+        "pairId": "pasangan-penguatan-3",
+        "left": "Bagaimana menyusun karya?",
+        "right": "Tentukan tema, susun bahan, lalu tempel atau gambar."
+      },
+      {
+        "pairId": "pasangan-penguatan-4",
+        "left": "Bagaimana urutan yang benar untuk Karya Campuran (Mixed Media)?",
+        "right": "Menentukan tema → Menyiapkan bahan → Membuat rancangan → Menempel dan menggambar → Merapikan karya"
+      },
+      {
+        "pairId": "pasangan-penguatan-5",
+        "left": "Apa hal penting yang kamu pelajari tentang Karya Campuran (Mixed Media)?",
+        "right": "Membuat karya campuran dari berbagai bahan dan teknik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya campuran dari kertas, kain, daun, dan cat."
+  }
+}

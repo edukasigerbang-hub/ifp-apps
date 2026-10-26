@@ -29,6 +29,20 @@
         "altText": "Anak menyelesaikan soal cerita matematika.",
         "reveal": "Agar jawaban benar.",
         "hint": "Hitung ulang dengan cara lain."
+      },
+      {
+        "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "reveal": "Memahami soal",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
+        "altText": "Anak menyelesaikan soal cerita matematika."
+      },
+      {
+        "prompt": "Cara memeriksa jawaban adalah ...",
+        "reveal": "Menghitung ulang",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
+        "altText": "Anak menyelesaikan soal cerita matematika."
       }
     ]
   },

@@ -11,7 +11,8 @@
   ],
   "activityIds": [
     "eksplorasi-menggambar-bentuk",
-    "kuis-menggambar-bentuk"
+    "kuis-menggambar-bentuk",
+    "matching-penguatan"
   ],
   "assessmentRefs": [
     "kuis-menggambar-bentuk"
@@ -22,6 +23,6 @@
   "accessibilityMetadata": {
     "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
   },
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "reviewStatus": "draft"
 }
