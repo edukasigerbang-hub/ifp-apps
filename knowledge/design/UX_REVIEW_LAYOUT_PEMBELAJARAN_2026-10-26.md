@@ -118,12 +118,12 @@ Konsekuensi: label internal (UX-04) tidak perlu dihapus dari produk — cukup di
 | Model mode | `AppMode`, `navigationItemsForMode()`, `isScreenAllowedInMode()` di [navigation.ts](../../src/navigation.ts) |
 | Shell | [AppShell.tsx](../../src/components/layout/AppShell.tsx): sidebar mode admin; rail ikon mode belajar [StudentRail.tsx](../../src/components/layout/StudentRail.tsx) |
 | Sakelar | [TopBar.tsx](../../src/components/layout/TopBar.tsx): grup “Mode aplikasi” berisi dua tombol ikon (44 px) dengan `aria-pressed`, `aria-label`, dan `title` |
-| Filter kelas | [CurriculumScreen.tsx](../../src/screens/CurriculumScreen.tsx): tile thumbnail cover materi tiap kelas + chip “Semua kelas” (bukan dropdown); grid kartu 3 kolom di md+ |
+| Filter kelas | [CurriculumScreen.tsx](../../src/screens/CurriculumScreen.tsx): panel collapsible berisi tile thumbnail cover materi tiap kelas (bukan dropdown); header menampilkan chip “Semua kelas”/“Kelas N” dan menutup otomatis setelah memilih; grid kartu 3 kolom di md+ |
 | Thumbnail materi | `coverAsset` di katalog; [LessonThumbnail.tsx](../../src/components/content/LessonThumbnail.tsx) dipakai kartu Jelajah Materi dan “Lanjutkan belajar” (bundled + paket impor) |
 | Persistensi | `preferences.appMode` di `app_meta` (default `admin`; rekaman lama tanpa field tetap terbaca) |
 | Pengalihan | Layar di luar mode dipindahkan ke Beranda, hash diselaraskan ([App.tsx](../../src/App.tsx)) |
 
-Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 65/65, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 6/6 PASS (rail 80 px + restore setelah muat ulang), `home-catalog` 11/11 (tile kelas + thumbnail), serta regresi smoke 8/8, activities 8/8, journey 11/11, profile 7/7. Sakelar mode memakai ikon saja; thumbnail materi memakai aset paket yang sudah ada.
+Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 65/65, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 6/6 PASS (rail 80 px + restore setelah muat ulang), `home-catalog` 13/13 (tile kelas, panel collapsible “Kelas 3”, thumbnail), serta regresi smoke 8/8, activities 8/8, journey 11/11, profile 7/7. Sakelar mode memakai ikon saja; thumbnail materi memakai aset paket yang sudah ada.
 
 ### 5.1 Prinsip UX yang disepakati
 

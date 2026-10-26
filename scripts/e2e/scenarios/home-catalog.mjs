@@ -136,6 +136,21 @@ export async function run({ page, artifactDir, log }) {
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
 
   assert(await page.evaluate(clickGrade(3)), "Tile Kelas 3 tidak ditemukan.");
+  await page.waitFor(
+    `document.querySelector('button[aria-controls="filter-kelas-grid"]')?.textContent.includes("Kelas 3")`,
+    { label: "label kelas terpilih" }
+  );
+  const pickerCollapsed = await page.evaluate(`
+    (() => {
+      const toggle = document.querySelector('button[aria-controls="filter-kelas-grid"]');
+      return (
+        toggle?.getAttribute("aria-expanded") === "false" &&
+        document.getElementById("filter-kelas-grid") === null
+      );
+    })()
+  `);
+  assert(pickerCollapsed, "Panel pilihan kelas tidak menutup setelah kelas dipilih.");
+  log("Memilih kelas menutup panel dan menampilkan “Kelas 3” pada header.");
   assert(
     await page.evaluate(selectFilter("Filter mata pelajaran", "matematika")),
     "Filter mata pelajaran tidak ditemukan."
@@ -150,6 +165,22 @@ export async function run({ page, artifactDir, log }) {
   log("Filter kelas 3 + matematika tetap menampilkan materi.");
   await new Promise((resolve) => setTimeout(resolve, 300));
   await page.screenshot(path.join(artifactDir, "catalog-thumbnails.png"));
+
+  const toggledOpen = await page.evaluate(`
+    (() => {
+      const toggle = document.querySelector('button[aria-controls="filter-kelas-grid"]');
+      if (!toggle) return false;
+      toggle.click();
+      return true;
+    })()
+  `);
+  assert(toggledOpen, "Header pilihan kelas tidak ditemukan.");
+  await page.waitFor(
+    `document.querySelector('button[aria-controls="filter-kelas-grid"]')?.getAttribute("aria-expanded") === "true" &&
+     document.querySelector('[role="group"][aria-labelledby="filter-kelas-label"]') !== null`,
+    { label: "panel pilihan kelas terbuka kembali" }
+  );
+  log("Header pilihan kelas bisa dibuka kembali (collapsible).");
 
   const clickedPilot = await page.evaluate(`
     (() => {

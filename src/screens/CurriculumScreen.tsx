@@ -20,6 +20,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   const [query, setQuery] = useState("");
   const [grade, setGrade] = useState<number | null>(null);
   const [subject, setSubject] = useState<string | null>(null);
+  const [classesOpen, setClassesOpen] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -126,72 +127,110 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
           </label>
         </div>
         <div className="mt-4">
-          <p id="filter-kelas-label" className="text-sm font-medium">
-            Kelas
-          </p>
-          <div
-            role="group"
-            aria-labelledby="filter-kelas-label"
-            className="mt-2 grid grid-cols-4 gap-2 md:grid-cols-7"
+          <button
+            type="button"
+            aria-expanded={classesOpen}
+            aria-controls="filter-kelas-grid"
+            onClick={() => setClassesOpen((open) => !open)}
+            className="flex min-h-11 w-full items-center justify-between gap-3 rounded-control border border-ink/15 bg-surface px-3 text-left text-sm hover:border-primary/40"
           >
-            <button
-              type="button"
-              aria-pressed={grade === null}
-              onClick={() => setGrade(null)}
-              className={`flex min-h-11 items-center justify-center rounded-control border px-2 text-sm font-medium transition-colors ${
-                grade === null
-                  ? "border-primary bg-primary text-white"
-                  : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+            <span className="flex flex-wrap items-center gap-2">
+              <span id="filter-kelas-label" className="sr-only">
+                Kelas
+              </span>
+              <span
+                className={`rounded-full px-3 py-1.5 text-sm font-semibold ${
+                  grade === null ? "bg-teal/10 text-ink" : "bg-primary text-white"
+                }`}
+              >
+                {grade === null ? "Semua kelas" : `Kelas ${grade}`}
+              </span>
+            </span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className={`h-4 w-4 shrink-0 text-muted transition-transform ${
+                classesOpen ? "rotate-180" : ""
               }`}
             >
-              <span className="flex flex-col items-center gap-1.5">
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  className="h-6 w-6"
-                >
-                  <rect x="4" y="4" width="7" height="7" rx="1.5" />
-                  <rect x="13" y="4" width="7" height="7" rx="1.5" />
-                  <rect x="4" y="13" width="7" height="7" rx="1.5" />
-                  <rect x="13" y="13" width="7" height="7" rx="1.5" />
-                </svg>
-                Semua kelas
-              </span>
-            </button>
-            {facets.grades.map((value) => {
-              const isActive = grade === value;
-              const cover = gradeCovers.get(value);
-              return (
-                <button
-                  key={value}
-                  type="button"
-                  aria-pressed={isActive}
-                  onClick={() => setGrade(value)}
-                  className={`overflow-hidden rounded-control border text-center transition-colors ${
-                    isActive
-                      ? "border-primary ring-2 ring-primary"
-                      : "border-ink/15 hover:border-primary/40"
-                  }`}
-                >
-                  {cover ? (
-                    <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
-                  ) : (
-                    <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
-                  )}
-                  <span
-                    className={`block px-2 py-1.5 text-xs font-semibold ${
-                      isActive ? "bg-primary text-white" : "bg-surface text-ink"
+              <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          {classesOpen && (
+            <div
+              id="filter-kelas-grid"
+              role="group"
+              aria-labelledby="filter-kelas-label"
+              className="mt-2 grid grid-cols-4 gap-2 md:grid-cols-7"
+            >
+              <button
+                type="button"
+                aria-pressed={grade === null}
+                onClick={() => {
+                  setGrade(null);
+                  setClassesOpen(false);
+                }}
+                className={`flex min-h-11 items-center justify-center rounded-control border px-2 text-sm font-medium transition-colors ${
+                  grade === null
+                    ? "border-primary bg-primary text-white"
+                    : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+                }`}
+              >
+                <span className="flex flex-col items-center gap-1.5">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    className="h-6 w-6"
+                  >
+                    <rect x="4" y="4" width="7" height="7" rx="1.5" />
+                    <rect x="13" y="4" width="7" height="7" rx="1.5" />
+                    <rect x="4" y="13" width="7" height="7" rx="1.5" />
+                    <rect x="13" y="13" width="7" height="7" rx="1.5" />
+                  </svg>
+                  Semua kelas
+                </span>
+              </button>
+              {facets.grades.map((value) => {
+                const isActive = grade === value;
+                const cover = gradeCovers.get(value);
+                return (
+                  <button
+                    key={value}
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => {
+                      setGrade(value);
+                      setClassesOpen(false);
+                    }}
+                    className={`overflow-hidden rounded-control border text-center transition-colors ${
+                      isActive
+                        ? "border-primary ring-2 ring-primary"
+                        : "border-ink/15 hover:border-primary/40"
                     }`}
                   >
-                    Kelas {value}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+                    {cover ? (
+                      <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
+                    ) : (
+                      <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
+                    )}
+                    <span
+                      className={`block px-2 py-1.5 text-xs font-semibold ${
+                        isActive ? "bg-primary text-white" : "bg-surface text-ink"
+                      }`}
+                    >
+                      Kelas {value}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
         <p aria-live="polite" className="mt-3 text-sm text-muted">
           {loading ? "Memuat materi…" : `${visible.length} materi ditemukan.`}
