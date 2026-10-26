@@ -18,6 +18,28 @@ interface CurriculumScreenProps {
   onNavigate: (screen: ScreenId) => void;
 }
 
+// Menyebut filter yang aktif supaya hasil kosong tidak terbaca sebagai
+// "materi tidak ada" (mis. mengetik "ipas" saat chip mapel masih Matematika).
+function emptyStateMessage(
+  query: string,
+  grade: number | null,
+  subject: string | null
+): string {
+  const keyword = query.trim();
+  const filters: string[] = [];
+  if (subject !== null) filters.push(`mapel ${subjectLabel(subject)}`);
+  if (grade !== null) filters.push(`kelas ${grade}`);
+  const filterText = filters.join(" dan ");
+  if (keyword) {
+    return filterText
+      ? `Tidak ada materi untuk kata kunci “${keyword}” dengan filter ${filterText}.`
+      : `Tidak ada materi untuk kata kunci “${keyword}”.`;
+  }
+  return filterText
+    ? `Tidak ada materi untuk ${filterText}.`
+    : "Tidak ada materi untuk filter ini.";
+}
+
 export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   const [entries, setEntries] = useState<CatalogLessonEntry[]>([]);
   const [query, setQuery] = useState("");
@@ -366,9 +388,45 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
       </section>
 
       {!loading && visible.length === 0 ? (
-        <p className="mt-6 rounded-card border border-ink/10 bg-surface p-6 text-sm text-muted">
-          Tidak ada materi yang cocok. Ubah kata kunci atau filter.
-        </p>
+        <div
+          data-catalog-empty
+          className="mt-6 rounded-card border border-ink/10 bg-surface p-6"
+        >
+          <p className="text-sm text-muted">
+            {emptyStateMessage(query, grade, subject)}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {subject !== null && (
+              <button
+                type="button"
+                onClick={() => setSubject(null)}
+                className="min-h-11 rounded-control bg-primary px-4 text-sm font-semibold text-white hover:opacity-90"
+              >
+                Cari di semua mapel
+              </button>
+            )}
+            {grade !== null && (
+              <button
+                type="button"
+                onClick={() => setGrade(null)}
+                className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+              >
+                Cari di semua kelas
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={() => {
+                setQuery("");
+                setGrade(null);
+                setSubject(null);
+              }}
+              className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+            >
+              Hapus semua filter
+            </button>
+          </div>
+        </div>
       ) : (
         <ul className="mt-6 grid gap-4 md:grid-cols-3">
           {visible.map((entry) => (

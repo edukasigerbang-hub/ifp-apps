@@ -302,10 +302,11 @@ export async function run({ page, artifactDir, log }) {
   await page.screenshot(path.join(artifactDir, "filter-kelas.png"));
 
   assert(await page.evaluate(fillSearch("fotosintesis")), "Input pencarian tidak ditemukan.");
-  await page.waitFor(`document.body.textContent.includes("Tidak ada materi yang cocok")`, {
-    label: "hasil pencarian kosong"
-  });
-  log("Pencarian tanpa hasil menampilkan empty state.");
+  await page.waitFor(
+    `document.querySelector("[data-catalog-empty]")?.textContent.includes("kata kunci “fotosintesis”")`,
+    { label: "hasil pencarian kosong" }
+  );
+  log("Pencarian tanpa hasil menampilkan empty state yang menyebut kata kunci.");
 
   assert(await page.evaluate(fillSearch("pecahan")), "Input pencarian tidak ditemukan.");
   await page.waitFor(
@@ -317,6 +318,23 @@ export async function run({ page, artifactDir, log }) {
     { label: "thumbnail materi" }
   );
   log("Kartu materi menampilkan thumbnail dari aset paket bawaan dan impor.");
+  assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
+
+  assert(await page.evaluate(fillSearch("ipas")), "Input pencarian tidak ditemukan.");
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-catalog-subjects]")];
+      return (
+        cards.length > 0 &&
+        cards.every((card) => card.dataset.catalogSubjects.split(",").includes("ipas"))
+      );
+    })()`,
+    { label: "hasil pencarian ipas" }
+  );
+  const ipasCount = await page.evaluate(
+    `document.querySelectorAll("[data-catalog-subjects]").length`
+  );
+  log(`Pencarian kata "ipas" menemukan ${ipasCount} materi IPAS tanpa filter.`);
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
 
   assert(await page.evaluate(clickGrade(3)), "Tile Kelas 3 tidak ditemukan.");
@@ -378,6 +396,50 @@ export async function run({ page, artifactDir, log }) {
   log("Filter kelas 3 + matematika tetap menampilkan materi.");
   await new Promise((resolve) => setTimeout(resolve, 300));
   await page.screenshot(path.join(artifactDir, "catalog-thumbnails.png"));
+
+  // Regresi T-088: mengetik "ipas" saat chip mapel masih Matematika tidak boleh
+  // tampil sebagai "tidak ada" tanpa penjelasan.
+  assert(await page.evaluate(fillSearch("ipas")), "Input pencarian tidak ditemukan.");
+  await page.waitFor(
+    `(() => {
+      const empty = document.querySelector("[data-catalog-empty]");
+      if (!empty) return false;
+      const text = empty.textContent;
+      return (
+        text.includes("kata kunci “ipas”") &&
+        text.includes("Matematika") &&
+        text.includes("kelas 3") &&
+        text.includes("Cari di semua mapel")
+      );
+    })()`,
+    { label: "empty state menjelaskan filter mapel aktif" }
+  );
+  log(
+    "Pencarian “ipas” di filter Matematika + Kelas 3 menjelaskan filter aktif dan menawarkan “Cari di semua mapel”."
+  );
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "katalog-ipas-filter-aktif.png"));
+
+  await clickButton(page, "Cari di semua mapel");
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-catalog-subjects]")];
+      return (
+        cards.length > 0 &&
+        cards.every(
+          (card) =>
+            card.dataset.catalogSubjects.split(",").includes("ipas") &&
+            card.dataset.catalogGrades.split(",").every((grade) => grade === "3")
+        )
+      );
+    })()`,
+    { label: "hasil ipas setelah melepas filter mapel" }
+  );
+  const ipasKelas3 = await page.evaluate(
+    `document.querySelectorAll("[data-catalog-subjects]").length`
+  );
+  log(`“Cari di semua mapel” menampilkan ${ipasKelas3} materi IPAS kelas 3.`);
+  assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
 
   const toggledOpen = await page.evaluate(`
     (() => {
