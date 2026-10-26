@@ -28,6 +28,7 @@ const fields = [
   "subjects",
   "objectives",
   "activityCount",
+  "coverAsset",
   "source"
 ];
 

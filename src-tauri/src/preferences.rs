@@ -107,6 +107,38 @@ mod tests {
     }
 
     #[test]
+    fn app_mode_survives_database_reopen() {
+        let path = std::env::temp_dir().join(format!(
+            "ifp-preferences-{}.db",
+            std::process::id()
+        ));
+        let _ = std::fs::remove_file(&path);
+
+        {
+            let connection = crate::db::open(&path).expect("open");
+            set_preferences(
+                &connection,
+                &Preferences {
+                    reduced_motion: false,
+                    font_scale: "normal".to_string(),
+                    app_mode: "belajar".to_string(),
+                },
+            )
+            .expect("save");
+        }
+
+        {
+            let connection = crate::db::open(&path).expect("reopen");
+            let loaded = get_preferences(&connection).expect("load");
+            assert_eq!(loaded.app_mode, "belajar");
+        }
+
+        let _ = std::fs::remove_file(&path);
+        let _ = std::fs::remove_file(format!("{}-wal", path.display()));
+        let _ = std::fs::remove_file(format!("{}-shm", path.display()));
+    }
+
+    #[test]
     fn legacy_record_without_app_mode_keeps_other_preferences() {
         let connection = test_connection();
         app_meta::set(

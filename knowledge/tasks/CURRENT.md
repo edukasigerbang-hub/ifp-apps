@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; **mode belajar/admin selesai (T-077)**; a11y 17/17 PASS, E2E 6 skenario PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; **mode belajar/admin selesai (T-077) + sakelar ikon & thumbnail materi (T-078)**; a11y 17/17 PASS, E2E 6 skenario PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -87,6 +87,7 @@
 | T-075 | Eksekusi P0 UX yang tidak bergantung keputusan | 5 dari 6 butir P0 selesai: copy netral + istilah “Skor”, `subjectLabel()` bersama (Home/Curriculum/Player/Results), token kontras `teal-strong`/`danger-strong`, breadcrumb Beranda jadi tombol + alasan disabled matching, satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. `npm test` 89/89, build PASS; verifikasi DOM + 1 screenshot |
 | T-076 | UX-03 + a11y + E2E | Kartu hasil `tabIndex={-1}` + `scrollIntoView`/`focus()` setelah penilaian di kuis, mencocokkan, mengurutkan (3 komponen). Harness a11y & E2E diperbarui ke konten aktual (“Kuis Penguatan”, tombol “Lanjut berlatih”) dan 3 asersi fokus baru. `npm test` 89/89, build PASS, `npm run a11y` **PASS 16 pemeriksaan** (0 error, 7 warning reflow), E2E smoke 8/8 · activities 8/8 · home 9/9 · journey 11/11 · profile 7/7 |
 | T-077 | Dua mode: belajar & admin (D-UX-1) | Mode belajar = shell selebar perangkat **tanpa sidebar**, bar navigasi 4 tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar), layar Konten/Lisensi/Pengaturan disembunyikan. Mode admin = sidebar lengkap seperti sebelumnya. Sakelar “Belajar/Admin” di bilah atas (`aria-pressed`), tersimpan per perangkat (`preferences.appMode`, default `admin`; rekaman lama tetap terbaca). Layar di luar mode dialihkan ke Beranda. `npm test` 93/93, `cargo test` 64/64, build PASS, a11y **17 pemeriksaan PASS**, E2E baru `mode-switch` 5/5 + regresi 5 skenario PASS |
+| T-078 | Sakelar mode ikon + thumbnail materi | Sakelar mode kini **dua tombol ikon** (topi wisuda/slider), `aria-label` + `title`, target 44 px; persistensi tetap di SQLite `app_meta.preferences.appMode` (test baru `app_mode_survives_database_reopen`). Katalog membawa `coverAsset`; kartu Jelajah Materi dan kartu “Lanjutkan belajar” menampilkan thumbnail dari aset paket yang sudah ada (bundled via `import.meta.glob`, impor via `content_read_asset` → blob URL), fallback inisial subjek. `npm test` 93/93, `cargo test` 65/65, build PASS, a11y 17/17 PASS, E2E home 10/10 (+2 asersi thumbnail) + mode 5/5 + regresi 4 skenario PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -158,6 +159,12 @@
 | E2E mode-switch (T-077) | **PASS** — 5 pemeriksaan: sidebar admin, konten 1600 px tanpa sidebar di mode belajar, 4 tujuan belajar, mode tersimpan (`preferences_get`), navigasi ke Hasil Belajar, kembali ke admin |
 | E2E regresi (T-077) | **PASS** — smoke 8, home-catalog 9, activities 8, learning-journey 11, profile-lifecycle 7 |
 | Screenshot dua mode (T-077) | **ADA** — `mode-admin.png` + `mode-belajar.png` di artefak `.tmp-e2e/…` (tidak di-commit); a11y `a11y-mode-belajar.png` |
+| `cargo test` (T-078) | **PASS** — 65/65; tambah `app_mode_survives_database_reopen` (tulis → tutup → buka ulang DB → `appMode` tetap `belajar`) |
+| Persistensi mode di SQLite (T-078) | **VERIFIED** — DB perangkat `%APPDATA%/id.gerbangedukasi.ifp/ifp.db`, `app_meta.preferences` = `{"reducedMotion":false,"fontScale":"normal","appMode":"belajar"}` setelah sakelar dipakai; `App.tsx` membaca nilai ini saat start |
+| E2E home-catalog (T-078) | **PASS** — 10 pemeriksaan; 2 asersi thumbnail (bawaan + impor) dan screenshot `catalog-thumbnails.png` |
+| E2E mode-switch (T-078) | **PASS** — 5 pemeriksaan dengan tombol ikon (`aria-label` Belajar/Admin) |
+| E2E regresi (T-078) | **PASS** — smoke 8, activities 8, learning-journey 11, profile-lifecycle 7 |
+| `npm run a11y` (T-078) | **PASS** — 17 pemeriksaan; 0 error, 7 warning reflow/target sentuh |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -353,7 +360,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 **Catatan operasional:** proses `ifp-apps.exe` (PID 94584) masih hidup meski user menyatakan app ditutup; setelah konfirmasi user, proses ditutup dengan `taskkill /PID 94584 /F` agar harness bisa berjalan.
 
-**Sisa:** Hasil Belajar berisi data (belum diverifikasi dengan data desktop), NVDA/screen reader manual, D-UX-1…D-UX-6.
+**Sisa:** Hasil Belajar berisi data (belum diverifikasi dengan data desktop), NVDA/screen reader manual, D-UX-2…D-UX-6.
 
 ### Handoff Dua Mode: Belajar & Admin (2026-10-26, T-077)
 
@@ -362,7 +369,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Perilaku:**
 - Mode **admin** (default): sidebar navy lengkap (Belajar + Kelola), seperti sebelum T-077.
 - Mode **belajar**: sidebar tidak dirender; konten selebar perangkat; bar navigasi horizontal 4 tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar); Player tetap dapat dibuka dari materi/Beranda tetapi tidak menjadi tujuan navigasi; Konten/Lisensi/Pengaturan tidak dapat dibuka (layar dipindahkan ke Beranda, hash diselaraskan).
-- Sakelar “Belajar/Admin” di bilah atas (grup `Mode aplikasi`, `aria-pressed`); perubahan langsung berlaku dan disimpan ke `preferences.appMode`.
+- Sakelar mode di bilah atas: dua tombol ikon (topi wisuda = Belajar, slider = Admin) dengan grup `Mode aplikasi`, `aria-pressed`, `aria-label`, dan `title`; perubahan langsung berlaku dan disimpan ke `preferences.appMode` (SQLite `app_meta`).
 
 **Perubahan kode:**
 - `src/navigation.ts` — `AppMode`, `DEFAULT_APP_MODE` (`admin`), `studentNavigationItems`, `navigationItemsForMode()`, `isScreenAllowedInMode()`, `isAppMode()`.
@@ -380,3 +387,23 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan operasional:** proses dev (`npm run tauri dev`) dan `ifp-apps.exe` sisa ditutup agar harness bisa start; aplikasi dev dijalankan ulang setelah verifikasi.
 
 **Sisa:** skala tipografi/target sentuh mode siswa (D-UX-2), pemindahan metadata internal ke area pengelola (D-UX-4), keputusan PIN/kunci mode admin, verifikasi visual Hasil Belajar dengan data nyata + NVDA.
+
+### Handoff Sakelar Ikon + Thumbnail Materi (2026-10-26, T-078)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: sakelar mode cukup ikon, wajib tersimpan di memori/SQL; setiap pilihan materi diberi thumbnail dari gambar yang sudah ada.
+
+**Perubahan kode:**
+- `src/components/layout/TopBar.tsx` — dua tombol ikon SVG inline (topi wisuda untuk Belajar, slider untuk Admin), 44×44 px, `aria-label` = “Belajar”/“Admin”, `title` = “Mode belajar”/“Mode admin”, `aria-pressed` tetap.
+- `src/content/lessonCovers.ts` (baru) — peta URL aset bundled via `import.meta.glob(..., { eager: true, query: "?url" })` dan pemetaan media type dari ekstensi.
+- `src/components/content/LessonThumbnail.tsx` (baru) — thumbnail `object-cover` 16:9; bundled memakai URL glob, paket impor memakai `content_read_asset` → blob URL (di-revoke saat unmount); fallback inisial subjek bila aset tidak ada/gagal.
+- `src/content/catalog.ts`, `scripts/lib/contentCatalog.mjs`, `scripts/check-catalog-index.mjs` — field `coverAsset` (aset gambar pertama manifest) di 320/320 entri katalog.
+- `src/screens/CurriculumScreen.tsx` — kartu materi menampilkan thumbnail di atas judul.
+- `src/screens/HomeScreen.tsx` — kartu “Lanjutkan belajar” menampilkan thumbnail (56 px lebar di md+).
+- `src-tauri/src/preferences.rs` — test `app_mode_survives_database_reopen` membuktikan persistensi setelah DB ditutup dan dibuka ulang.
+- E2E: `mode-switch.mjs` mencocokkan tombol lewat `aria-label`; `a11y.mjs` `clickLabel` menerima `aria-label`; `home-catalog.mjs` menunggu dua thumbnail termuat + screenshot `catalog-thumbnails.png`.
+
+**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` 5/5 · `home-catalog` **10/10** · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-admin.png` memperlihatkan ikon topi (inaktif) + slider (aktif); `catalog-thumbnails.png` memperlihatkan thumbnail WebP pada dua kartu pertama.
+
+**Catatan persistensi:** nilai tersimpan di SQLite `app_meta` (key `preferences`), bukan localStorage; dibaca `App.tsx` saat start. DB perangkat diperiksa langsung dan berisi `appMode":"belajar"` setelah sakelar dipakai.
+
+**Sisa:** thumbnail memakai aset pertama paket (bukan gambar khusus sampul); belum ada uji relaunch end-to-end lewat harness (bukti: DB reopen test + pembacaan saat start); mode masih pembatas UI tanpa PIN.

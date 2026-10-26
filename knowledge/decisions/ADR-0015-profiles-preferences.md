@@ -13,6 +13,7 @@
 6. Preferensi diterapkan sebagai kelas pada `<html>`: `reduce-motion` (animasi/transisi dimatikan) dan `font-large` (root 112.5%).
 7. UI Pengaturan: daftar/aktifkan profil, form tambah profil, toggle animasi, dan ukuran teks.
 8. **Amandemen 2026-10-26 (T-077):** `appMode` diputuskan PO lewat instruksi sesi (D-UX-1). Default `admin`; rekaman lama tanpa `appMode` tetap terbaca (serde default). Mode belajar menyembunyikan sidebar dan layar grup “kelola” (Konten, Lisensi, Pengaturan); sakelar mode ada di bilah atas dan tersimpan per perangkat.
+9. **Amandemen 2026-10-26 (T-078):** sakelar mode berupa dua tombol ikon berlabel aksesibel; nilai tetap disimpan di tabel `app_meta` (key `preferences`, JSON `appMode`) — bukan localStorage — dan dibaca saat aplikasi start. Test `app_mode_survives_database_reopen` membuktikan nilai bertahan setelah koneksi DB ditutup dan dibuka ulang.
 
 ## Konsekuensi
 

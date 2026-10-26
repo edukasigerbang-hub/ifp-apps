@@ -44,6 +44,8 @@ export function buildCatalogEntries(packagesRoot) {
         subjects: manifest.subjects,
         objectives: lesson.learningObjectives,
         activityCount: lesson.activityIds.filter((id) => activityIds.has(id)).length,
+        coverAsset:
+          manifest.assets?.find((asset) => asset.mediaType?.startsWith("image/"))?.path ?? null,
         source: "bundled"
       });
     }

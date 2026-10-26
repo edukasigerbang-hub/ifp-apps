@@ -18,6 +18,7 @@ export interface CatalogLessonEntry {
   subjects: string[];
   objectives: string[];
   activityCount: number;
+  coverAsset: string | null;
   source: CatalogSource;
 }
 
@@ -57,6 +58,9 @@ export function buildCatalog(packages: CatalogPackageInput[]): CatalogLessonEntr
         subjects: data.manifest.subjects,
         objectives: lesson.learningObjectives,
         activityCount: lesson.activityIds.filter((id) => activityIds.has(id)).length,
+        coverAsset:
+          data.manifest.assets?.find((asset) => asset.mediaType?.startsWith("image/"))?.path ??
+          null,
         source
       });
     }

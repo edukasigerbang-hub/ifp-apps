@@ -347,8 +347,11 @@ function touchTargetsInPage() {
 async function clickLabel(page, label) {
   const result = await page.evaluate(`
     (() => {
-      const buttons = [...document.querySelectorAll("button")]
-        .filter((button) => button.textContent.trim() === ${JSON.stringify(label)});
+      const buttons = [...document.querySelectorAll("button")].filter(
+        (button) =>
+          button.textContent.trim() === ${JSON.stringify(label)} ||
+          button.getAttribute("aria-label") === ${JSON.stringify(label)}
+      );
       const target = buttons.find((button) => button.offsetParent !== null) ?? buttons[0];
       if (!target) return "missing";
       if (target.disabled) return "disabled";

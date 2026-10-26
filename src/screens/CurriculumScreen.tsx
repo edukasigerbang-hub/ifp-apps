@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { LessonThumbnail } from "../components/content/LessonThumbnail";
 import {
   catalogFacets,
   emptyCatalogFilters,
@@ -146,27 +147,30 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
           {visible.map((entry) => (
             <li
               key={`${entry.packageId}@${entry.version}:${entry.lessonId}`}
-              className="flex flex-col justify-between rounded-card border border-ink/10 bg-surface p-5"
+              className="flex flex-col overflow-hidden rounded-card border border-ink/10 bg-surface"
             >
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                  Kelas {entry.gradeLevels.join(", ")} ·{" "}
-                  {entry.subjects.map(subjectLabel).join(", ")}
-                </p>
-                <h2 className="mt-2 text-lg font-semibold">{entry.lessonTitle}</h2>
-                <p className="mt-1 text-sm text-muted">{entry.summary}</p>
-                <p className="mt-3 text-xs text-muted">
-                  {entry.activityCount} aktivitas ·{" "}
-                  {entry.source === "managed" ? "Paket impor" : "Paket bawaan build"}
-                </p>
+              <LessonThumbnail entry={entry} className="aspect-[16/9] w-full border-b border-ink/10" />
+              <div className="flex flex-1 flex-col justify-between p-5">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                    Kelas {entry.gradeLevels.join(", ")} ·{" "}
+                    {entry.subjects.map(subjectLabel).join(", ")}
+                  </p>
+                  <h2 className="mt-2 text-lg font-semibold">{entry.lessonTitle}</h2>
+                  <p className="mt-1 text-sm text-muted">{entry.summary}</p>
+                  <p className="mt-3 text-xs text-muted">
+                    {entry.activityCount} aktivitas ·{" "}
+                    {entry.source === "managed" ? "Paket impor" : "Paket bawaan build"}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => openLesson(entry)}
+                  className="mt-4 min-h-11 self-start rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
+                >
+                  Buka materi
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={() => openLesson(entry)}
-                className="mt-4 min-h-11 self-start rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
-              >
-                Buka materi
-              </button>
             </li>
           ))}
         </ul>

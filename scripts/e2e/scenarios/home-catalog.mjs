@@ -107,6 +107,11 @@ export async function run({ page, artifactDir, log }) {
     `document.body.textContent.includes("Pecahan Sederhana") && document.body.textContent.includes("Mengenal Pecahan")`,
     { label: "hasil pencarian pecahan" }
   );
+  await page.waitFor(
+    `[...document.querySelectorAll('img[data-lesson-thumb]')].filter((img) => img.complete && img.naturalWidth > 0).length >= 2`,
+    { label: "thumbnail materi" }
+  );
+  log("Kartu materi menampilkan thumbnail dari aset paket bawaan dan impor.");
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
 
   assert(await page.evaluate(selectFilter("Filter kelas", "3")), "Filter kelas tidak ditemukan.");
@@ -117,7 +122,13 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Bilangan sampai 10.000")`, {
     label: "hasil filter"
   });
+  await page.waitFor(
+    `[...document.querySelectorAll('img[data-lesson-thumb]')].slice(0, 2).every((img) => img.complete && img.naturalWidth > 0)`,
+    { label: "thumbnail pada hasil filter" }
+  );
   log("Filter kelas 3 + matematika tetap menampilkan materi.");
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "catalog-thumbnails.png"));
 
   const clickedPilot = await page.evaluate(`
     (() => {

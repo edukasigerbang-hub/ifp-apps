@@ -11,6 +11,36 @@ interface TopBarProps {
 
 const modeOrder: AppMode[] = ["belajar", "admin"];
 
+function ModeIcon({ mode }: { mode: AppMode }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+    >
+      {mode === "belajar" ? (
+        <>
+          <path d="M3 9.5 12 4l9 5.5-9 5.5-9-5.5Z" />
+          <path d="M7 12.4V16c0 1.5 2.2 2.7 5 2.7s5-1.2 5-2.7v-3.6" />
+          <path d="M21 10v4" />
+        </>
+      ) : (
+        <>
+          <path d="M4 7h4M12 7h8M4 12h8M16 12h4M4 17h2M10 17h10" />
+          <circle cx="10" cy="7" r="2" />
+          <circle cx="14" cy="12" r="2" />
+          <circle cx="8" cy="17" r="2" />
+        </>
+      )}
+    </svg>
+  );
+}
+
 export function TopBar({
   activeScreen,
   mode,
@@ -63,12 +93,14 @@ export function TopBar({
                 key={value}
                 type="button"
                 aria-pressed={isActive}
+                aria-label={appModeLabels[value]}
+                title={`Mode ${appModeLabels[value].toLowerCase()}`}
                 onClick={() => onModeChange(value)}
-                className={`min-h-11 rounded-control px-4 text-sm font-semibold transition-colors ${
+                className={`flex min-h-11 min-w-11 items-center justify-center rounded-control transition-colors ${
                   isActive ? "bg-primary text-white" : "text-muted hover:bg-surface hover:text-ink"
                 }`}
               >
-                {appModeLabels[value]}
+                <ModeIcon mode={value} />
               </button>
             );
           })}

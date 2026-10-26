@@ -21,6 +21,7 @@ function entry(overrides: Partial<CatalogLessonEntry> = {}): CatalogLessonEntry 
     subjects: ["matematika"],
     objectives: ["Menunjukkan pecahan 1/2"],
     activityCount: 2,
+    coverAsset: null,
     source: "bundled",
     ...overrides
   };

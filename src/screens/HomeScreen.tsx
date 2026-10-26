@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LessonThumbnail } from "../components/content/LessonThumbnail";
 import type { CatalogLessonEntry } from "../content/catalog";
 import { catalogFacets } from "../content/catalog";
 import { loadCatalog } from "../content/loadCatalog";
@@ -128,21 +129,29 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       </section>
 
       {resumeEntry && (
-        <section className="mt-6 rounded-card border border-teal/30 bg-teal/5 p-5 md:p-6">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-            Lanjutkan belajar
-          </h2>
-          <p className="mt-2 text-lg font-semibold">{resumeEntry.lessonTitle}</p>
-          <p className="mt-1 text-sm text-muted">
-            {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
-          </p>
-          <button
-            type="button"
-            onClick={resume}
-            className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
-          >
-            Lanjutkan
-          </button>
+        <section className="mt-6 overflow-hidden rounded-card border border-teal/30 bg-teal/5">
+          <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:p-6">
+            <LessonThumbnail
+              entry={resumeEntry}
+              className="aspect-[16/9] w-full rounded-control md:w-56 md:shrink-0"
+            />
+            <div className="min-w-0">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+                Lanjutkan belajar
+              </h2>
+              <p className="mt-2 text-lg font-semibold">{resumeEntry.lessonTitle}</p>
+              <p className="mt-1 text-sm text-muted">
+                {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
+              </p>
+              <button
+                type="button"
+                onClick={resume}
+                className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
+              >
+                Lanjutkan
+              </button>
+            </div>
+          </div>
         </section>
       )}
 

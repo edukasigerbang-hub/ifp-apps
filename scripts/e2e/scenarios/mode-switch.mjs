@@ -10,7 +10,7 @@ async function clickModeButton(page, label) {
   const result = await page.evaluate(`
     (() => {
       const target = [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
-        .find((button) => button.textContent.trim() === ${JSON.stringify(label)});
+        .find((button) => button.getAttribute("aria-label") === ${JSON.stringify(label)});
       if (!target) return "missing";
       if (target.disabled) return "disabled";
       target.click();
@@ -37,7 +37,7 @@ export async function run({ page, artifactDir, log }) {
       mainWidth: document.querySelector("main")?.getBoundingClientRect().width ?? 0,
       viewport: document.documentElement.clientWidth,
       modePressed: [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
-        .map((button) => ({ label: button.textContent.trim(), pressed: button.getAttribute("aria-pressed") }))
+        .map((button) => ({ label: button.getAttribute("aria-label"), pressed: button.getAttribute("aria-pressed") }))
     })
   `);
   assert(adminView.sidebar, "Mode admin harus menampilkan sidebar saat aplikasi dibuka.");
