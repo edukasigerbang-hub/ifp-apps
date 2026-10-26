@@ -133,6 +133,13 @@ impl AppError {
         Self::new("PROFILE_AVATAR_UNREADABLE", "File foto profil tidak dapat dibaca.")
     }
 
+    pub fn avatar_source_too_large() -> Self {
+        Self::new(
+            "PROFILE_AVATAR_SOURCE_TOO_LARGE",
+            "Foto sumber maksimal 20 MB sebelum dipotong.",
+        )
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")

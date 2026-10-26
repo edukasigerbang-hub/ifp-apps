@@ -91,10 +91,17 @@ export async function run({ page, artifactDir, log }) {
     window.__TAURI_INTERNALS__
       .invoke("profile_get_active")
       .then((active) =>
-        window.__TAURI_INTERNALS__.invoke("profile_avatar_set", {
-          profileId: active.id,
-          sourcePath: ${JSON.stringify(avatarSource)}
-        })
+        window.__TAURI_INTERNALS__
+          .invoke("profile_avatar_preview", { sourcePath: ${JSON.stringify(avatarSource)} })
+          .then((dataUrl) => {
+            if (!dataUrl.startsWith("data:image/")) {
+              throw new Error("pratinjau bukan data URL gambar");
+            }
+            return window.__TAURI_INTERNALS__.invoke("profile_avatar_set_data", {
+              profileId: active.id,
+              dataUrl
+            });
+          })
       )
       .then((profile) => ({ ok: true, hasAvatar: profile.hasAvatar }))
       .catch((error) => ({ ok: false, error: String(error) }))
@@ -103,6 +110,7 @@ export async function run({ page, artifactDir, log }) {
     avatarSet.ok && avatarSet.hasAvatar,
     `Foto profil demo gagal dipasang: ${JSON.stringify(avatarSet.error)}`
   );
+  log("Pratinjau sumber foto dan penyimpanan avatar data URL berfungsi.");
   await page.send("Page.reload");
   await page.waitFor(`typeof window.__TAURI_INTERNALS__?.invoke === "function"`, {
     label: "bridge Tauri setelah muat ulang"
@@ -123,6 +131,25 @@ export async function run({ page, artifactDir, log }) {
     { label: "foto profil dan ilustrasi Beranda" }
   );
   log("Beranda menampilkan foto profil dan ilustrasi belajar.");
+
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-subject-card]")];
+      return (
+        cards.length >= 5 &&
+        cards.every((card) => {
+          const img = card.querySelector("img[data-lesson-thumb]");
+          return img && img.complete && img.naturalWidth > 0;
+        })
+      );
+    })()`,
+    { label: "cover mata pelajaran Beranda" }
+  );
+  const subjectCardCount = await page.evaluate(
+    `document.querySelectorAll("[data-subject-card]").length`
+  );
+  log(`Kartu materi Beranda (${subjectCardCount}) menampilkan cover tiap mata pelajaran.`);
+  await new Promise((resolve) => setTimeout(resolve, 500));
   await page.screenshot(path.join(artifactDir, "hero-beranda.png"));
 
   const pilotPath = path.resolve(

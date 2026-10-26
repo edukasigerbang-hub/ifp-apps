@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { open } from "@tauri-apps/plugin-dialog";
 import { PageHeader } from "../components/ui/PageHeader";
+import { AvatarEditor } from "../components/profile/AvatarEditor";
 import { ProfileAvatar } from "../components/profile/ProfileAvatar";
 import { canPersistLocally } from "../data/learningRepository";
 import {
@@ -18,9 +19,10 @@ import {
   deleteProfile,
   getActiveProfile,
   listProfiles,
+  readAvatarSource,
   renameProfile,
+  saveProfileAvatar,
   setActiveProfile,
-  setProfileAvatar,
   type Profile
 } from "../data/profileRepository";
 import {
@@ -90,6 +92,11 @@ export function SettingsScreen() {
   const [renamingId, setRenamingId] = useState<string | null>(null);
   const [renameValue, setRenameValue] = useState("");
   const [deleteCandidate, setDeleteCandidate] = useState<DeleteCandidate | null>(null);
+  const [avatarEditor, setAvatarEditor] = useState<{
+    profileId: string;
+    profileName: string;
+    sourceUrl: string;
+  } | null>(null);
   const [preferences, setPreferencesState] = useState<Preferences | null>(null);
   const [preferencesMessage, setPreferencesMessage] = useState<string | null>(null);
   const [preferencesError, setPreferencesError] = useState<string | null>(null);
@@ -303,9 +310,30 @@ export function SettingsScreen() {
       });
       if (!picked || Array.isArray(picked)) return;
       setProfileBusy(true);
-      const updated = await setProfileAvatar(activeProfile.id, picked);
+      const sourceUrl = await readAvatarSource(picked);
+      setAvatarEditor({
+        profileId: activeProfile.id,
+        profileName: activeProfile.displayName,
+        sourceUrl
+      });
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleAvatarSave(dataUrl: string) {
+    if (!avatarEditor) return;
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const updated = await saveProfileAvatar(avatarEditor.profileId, dataUrl);
       await reloadProfiles();
-      setProfileMessage(`Foto profil "${updated.displayName}" diperbarui.`);
+      const name = updated.displayName;
+      setAvatarEditor(null);
+      setProfileMessage(`Foto profil "${name}" diperbarui.`);
     } catch (caught) {
       setProfileError(profileErrorDetails(caught).message);
     } finally {
@@ -499,7 +527,9 @@ export function SettingsScreen() {
                             Hapus foto
                           </button>
                         )}
-                        <span className="text-xs text-muted">PNG/JPEG/WebP, maks 1,5 MB</span>
+                        <span className="text-xs text-muted">
+                          PNG/JPEG/WebP · dipotong persegi &amp; dikompres otomatis
+                        </span>
                       </div>
                     )}
 
@@ -801,6 +831,21 @@ export function SettingsScreen() {
           </li>
         </ul>
       </section>
+
+      {avatarEditor && (
+        <AvatarEditor
+          sourceUrl={avatarEditor.sourceUrl}
+          profileName={avatarEditor.profileName}
+          busy={profileBusy}
+          error={profileError}
+          onCancel={() => {
+            if (profileBusy) return;
+            setAvatarEditor(null);
+            setProfileError(null);
+          }}
+          onSave={handleAvatarSave}
+        />
+      )}
     </div>
   );
 }

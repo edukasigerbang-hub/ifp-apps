@@ -443,3 +443,24 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan:** avatar disimpan sebagai BLOB di SQLite sehingga ikut dalam backup DB; tidak ada aset gambar baru yang dihasilkan (memakai cover Flow yang sudah ada, sesuai aturan Flow-only). Dialog pemilih berkas tidak diotomasi E2E (native); jalur set/clear diuji lewat perintah Rust + invoke.
 
 **Sisa:** foto profil belum dipotong persegi secara eksplisit (hanya `object-cover` pada lingkaran); belum ada validasi dimensi minimum; ilustrasi Beranda statis (bukan rotasi).
+
+### Handoff Cover Mapel Beranda + Editor Potong/Kompres Foto (2026-10-27, T-080)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: kartu mata pelajaran di Beranda diberi cover/thumbnail; karena batas ukuran foto profil, sediakan alat potong + kompres foto.
+
+**Perubahan kode:**
+- `src/screens/HomeScreen.tsx` — kartu “Materi tersedia” memakai `LessonThumbnail` 96×64 px (h-16 w-24) per mata pelajaran; cover diambil dari entri pertama yang punya `coverAsset` untuk subjek itu, fallback entri pertama → selalu ada gambar karena katalog `coverAsset` 320/320.
+- `src/components/profile/avatarCrop.ts` (baru) — helper murni: `coverScale`, `clampOffset`, `centeredOffset`, `cropDrawRect`; konstanta viewport 288 px, output 512 px, target 1 MB.
+- `src/components/profile/avatarCrop.test.ts` (baru) — 5 test (skala cover lanskap/portret/kosong, clamp, center, pemetaan crop→output).
+- `src/components/profile/AvatarEditor.tsx` (baru) — modal `role="dialog"` + `aria-modal`, pratinjau bulat `touch-none`; geser (pointer capture) untuk pan, slider zoom 1–4× yang recenter ke tengah gambar, pratinjau kanvas 512 px yang di-debounce 150 ms; encoder mencoba WebP 0,9→0,5 lalu JPEG 0,85/0,7 dan memilih hasil pertama ≤1 MB; perkiraan ukuran diumumkan lewat `aria-live`; Esc → Batal, fokus awal ke judul; viewport menyesuaikan lebar jendela (min 160 px).
+- `src-tauri/src/profile.rs` — `MAX_AVATAR_SOURCE_BYTES = 20 MB`; `profile_avatar_preview` membaca berkas → data URL (cek metadata, is_file, magic bytes); `profile_avatar_set_data` + `decode_avatar_data_url` (header wajib `data:image/*;base64`, decode base64 → `set_profile_avatar` yang tetap memvalidasi ulang magic bytes + 1,5 MB); perintah path-based `profile_avatar_set` **dihapus** (dead code).
+- `src-tauri/src/error.rs` — `PROFILE_AVATAR_SOURCE_TOO_LARGE` (“Foto sumber maksimal 20 MB sebelum dipotong.”).
+- `src/data/profileRepository.ts` — `readAvatarSource(sourcePath)` → `profile_avatar_preview`; `saveProfileAvatar(profileId, dataUrl)` → `profile_avatar_set_data` (invalidasi cache avatar); `setProfileAvatar` dihapus.
+- `src/screens/SettingsScreen.tsx` — “Pilih/Ganti foto…” membuka dialog native lalu editor; simpan → reload daftar profil + pesan `Foto profil "{nama}" diperbarui.`; petunjuk baris menjadi “PNG/JPEG/WebP · dipotong persegi & dikompres otomatis”.
+- `scripts/e2e/scenarios/home-catalog.mjs` — avatar demo via `profile_avatar_preview` → `profile_avatar_set_data`; tunggu kartu subjek (≥5, setiap `img[data-lesson-thumb]` termuat); jeda 500 ms sebelum `hero-beranda.png` agar compositor selesai melukis.
+
+**Verifikasi aktual:** `cargo test` **69/69** (2 test baru: data URL round-trip + penolakan, pratinjau sumber) · `npm test` **98/98** (12 berkas; `avatarCrop` 5 test) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · `npm run a11y` 17 pemeriksaan PASS (0 error, 7 warning) · E2E **home-catalog 16/16** (pratinjau+simpan avatar, cover 7 mapel, screenshot lengkap) · mode-switch 6/6 · profile-lifecycle 7/7 · smoke 8/8. Screenshot `hero-beranda.png` (`17-53-29`) menampilkan ketujuh cover mapel, avatar, dan ilustrasi.
+
+**Catatan:** `cargo fmt` sempat mereformat 13 berkas Rust lain; churn format itu dibatalkan sebelum commit (working tree hanya berisi berkas fase ini). Editor tidak diotomasi E2E karena dialog pemilih berkas native; matematika crop diuji unit dan penyimpanan data URL diuji Rust + invoke.
+
+**Sisa:** editor belum punya kontrol rotasi/mirror; tidak ada validasi dimensi minimum sumber; kompresi berhenti di target 1 MB (bukan kualitas tetap).

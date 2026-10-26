@@ -72,10 +72,19 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   );
   const facets = catalogFacets(entries);
   const subjectCounts = new Map<string, number>();
+  const subjectCovers = new Map<string, CatalogLessonEntry>();
   for (const entry of entries) {
     for (const subject of entry.subjects) {
       subjectCounts.set(subject, (subjectCounts.get(subject) ?? 0) + 1);
+      if (entry.coverAsset && !subjectCovers.has(subject)) {
+        subjectCovers.set(subject, entry);
+      }
     }
+  }
+  for (const subject of facets.subjects) {
+    if (subjectCovers.has(subject)) continue;
+    const fallback = entries.find((entry) => entry.subjects.includes(subject));
+    if (fallback) subjectCovers.set(subject, fallback);
   }
 
   function resume() {
@@ -209,9 +218,14 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             {facets.subjects.map((subject) => (
               <li
                 key={subject}
-                className="flex items-center justify-between gap-3 rounded-card border border-ink/10 bg-surface px-5 py-4"
+                data-subject-card
+                className="flex items-center gap-3 rounded-card border border-ink/10 bg-surface p-4"
               >
-                <div>
+                <LessonThumbnail
+                  entry={subjectCovers.get(subject)!}
+                  className="h-16 w-24 shrink-0 rounded-control"
+                />
+                <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold">{subjectLabel(subject)}</p>
                   <p className="text-xs text-muted">
                     {subjectCounts.get(subject) ?? 0} materi
@@ -220,7 +234,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
                 <button
                   type="button"
                   onClick={() => onNavigate("curriculum")}
-                  className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+                  className="min-h-11 shrink-0 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
                 >
                   Lihat
                 </button>

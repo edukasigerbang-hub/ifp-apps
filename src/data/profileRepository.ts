@@ -60,11 +60,15 @@ export async function readProfileAvatar(profileId: string): Promise<string | nul
   return dataUrl ?? null;
 }
 
-export async function setProfileAvatar(
+export async function readAvatarSource(sourcePath: string): Promise<string> {
+  return invoke<string>("profile_avatar_preview", { sourcePath });
+}
+
+export async function saveProfileAvatar(
   profileId: string,
-  sourcePath: string
+  dataUrl: string
 ): Promise<Profile> {
-  const profile = await invoke<Profile>("profile_avatar_set", { profileId, sourcePath });
+  const profile = await invoke<Profile>("profile_avatar_set_data", { profileId, dataUrl });
   avatarCache.delete(profileId);
   return profile;
 }
