@@ -11,6 +11,7 @@ import { subjectLabel } from "../content/subjectLabel";
 import { canPersistLocally, getLearningSummary, type LearningSummary } from "../data/learningRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
 import type { ScreenId } from "../navigation";
+import { setCatalogFilter } from "../state/catalogFilter";
 import { setPlaybackSelection } from "../state/playbackSelection";
 
 interface HomeScreenProps {
@@ -98,6 +99,11 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       lessonId: resumeEntry.lessonId
     });
     onNavigate("player");
+  }
+
+  function openSubject(subject: string) {
+    setCatalogFilter({ subject });
+    onNavigate("curriculum");
   }
 
   return (
@@ -217,7 +223,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             impor lewat Konten &amp; Pembaruan.
           </p>
         ) : (
-          <ul className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <ul className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {facets.subjects.map((subject) => {
               const coverUrl = subjectCoverUrl(subject);
               const cover = subjectCovers.get(subject);
@@ -225,30 +231,38 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
                 <li
                   key={subject}
                   data-subject-card
-                  className="flex items-center gap-3 rounded-card border border-ink/10 bg-surface p-4"
+                  className="overflow-hidden rounded-card border border-ink/10 bg-surface"
                 >
-                  {coverUrl ? (
-                    <CoverArt url={coverUrl} className="h-14 w-24 shrink-0 rounded-control" />
-                  ) : cover ? (
-                    <LessonThumbnail entry={cover} className="h-14 w-24 shrink-0 rounded-control" />
-                  ) : (
-                    <span
-                      aria-hidden="true"
-                      className="h-14 w-24 shrink-0 rounded-control bg-teal/10"
-                    />
-                  )}
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold">{subjectLabel(subject)}</p>
-                    <p className="text-xs text-muted">
-                      {subjectCounts.get(subject) ?? 0} materi
-                    </p>
-                  </div>
                   <button
                     type="button"
-                    onClick={() => onNavigate("curriculum")}
-                    className="min-h-11 shrink-0 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+                    onClick={() => openSubject(subject)}
+                    className="group flex h-full w-full flex-col text-left transition-colors hover:bg-paper"
                   >
-                    Lihat
+                    {coverUrl ? (
+                      <CoverArt url={coverUrl} className="aspect-[16/9] w-full" />
+                    ) : cover ? (
+                      <LessonThumbnail entry={cover} className="aspect-[16/9] w-full" />
+                    ) : (
+                      <span aria-hidden="true" className="block aspect-[16/9] w-full bg-teal/10" />
+                    )}
+                    <span className="flex flex-1 items-center justify-between gap-3 px-4 py-3">
+                      <span className="min-w-0">
+                        <span className="block text-base font-semibold">{subjectLabel(subject)}</span>
+                        <span className="mt-0.5 block text-xs text-muted">
+                          {subjectCounts.get(subject) ?? 0} materi
+                        </span>
+                      </span>
+                      <svg
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        className="h-5 w-5 shrink-0 text-muted transition-transform group-hover:translate-x-0.5"
+                      >
+                        <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
                   </button>
                 </li>
               );

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CoverArt } from "../components/content/CoverArt";
 import { LessonThumbnail } from "../components/content/LessonThumbnail";
 import {
@@ -11,6 +11,7 @@ import { gradeCoverUrl, subjectCoverUrl } from "../content/coverArt";
 import { loadCatalog } from "../content/loadCatalog";
 import { subjectLabel } from "../content/subjectLabel";
 import type { ScreenId } from "../navigation";
+import { clearCatalogFilter, getCatalogFilter } from "../state/catalogFilter";
 import { setPlaybackSelection } from "../state/playbackSelection";
 
 interface CurriculumScreenProps {
@@ -26,6 +27,27 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   const [subjectsOpen, setSubjectsOpen] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const appliedRequestRef = useRef(false);
+
+  // Permintaan filter dari Beranda diterapkan sekali per kunjungan; penjaga ref
+  // membuat penerapan ini tahan terhadap effect ganda StrictMode.
+  useEffect(() => {
+    if (appliedRequestRef.current) {
+      return;
+    }
+    appliedRequestRef.current = true;
+    const requested = getCatalogFilter();
+    clearCatalogFilter();
+    if (!requested) {
+      return;
+    }
+    if (requested.subject) {
+      setSubject(requested.subject);
+    }
+    if (typeof requested.grade === "number") {
+      setGrade(requested.grade);
+    }
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -349,6 +371,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
           {visible.map((entry) => (
             <li
               key={`${entry.packageId}@${entry.version}:${entry.lessonId}`}
+              data-catalog-subjects={entry.subjects.join(",")}
               className="flex flex-col overflow-hidden rounded-card border border-ink/10 bg-surface"
             >
               <LessonThumbnail entry={entry} className="aspect-[16/9] w-full border-b border-ink/10" />

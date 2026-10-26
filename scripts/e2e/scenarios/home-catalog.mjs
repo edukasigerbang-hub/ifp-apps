@@ -191,6 +191,46 @@ export async function run({ page, artifactDir, log }) {
   assert(!resumeVisible, "Beranda tanpa riwayat tidak boleh menampilkan kartu lanjutkan.");
   log("Beranda: sapaan, ringkasan, dan kartu mata pelajaran tampil.");
 
+  // Regresi T-086: kartu mapel harus membuka katalog yang sudah terfilter mapel itu.
+  const subjectClick = await page.evaluate(`
+    (() => {
+      const card = [...document.querySelectorAll("[data-subject-card]")]
+        .find((node) => node.textContent.includes("Matematika"));
+      if (!card) return "missing";
+      const button = card.querySelector("button");
+      if (!button) return "no-button";
+      button.click();
+      return "clicked";
+    })()
+  `);
+  assert(subjectClick === "clicked", `Kartu mapel Matematika tidak dapat diklik (${subjectClick}).`);
+  await page.waitFor(
+    `document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`,
+    { label: "katalog dibuka dari kartu mapel" }
+  );
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-catalog-subjects]")];
+      const chip = document.querySelector('button[aria-controls="filter-mapel-grid"]');
+      return (
+        cards.length > 0 &&
+        cards.every((card) => card.dataset.catalogSubjects.split(",").includes("matematika")) &&
+        Boolean(chip && chip.textContent.includes("Matematika"))
+      );
+    })()`,
+    { label: "kartu katalog terfilter matematika" }
+  );
+  const mathCount = await page.evaluate(
+    `document.querySelectorAll("[data-catalog-subjects]").length`
+  );
+  log(`Kartu mapel Beranda membuka katalog terfilter Matematika (${mathCount} kartu, semua matematika).`);
+
+  await clickButton(page, "Beranda");
+  await page.waitFor(`document.querySelector("main h1")?.textContent.includes("Halo")`, {
+    label: "Beranda setelah katalog terfilter"
+  });
+  log("Permintaan filter tidak menempel: kembali ke Beranda lalu buka katalog lagi tanpa filter.");
+
   await clickButton(page, "Jelajah Materi");
   await page.waitFor(
     `document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`,
