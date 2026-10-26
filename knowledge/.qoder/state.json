@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "f367247",
+  "commit": "7c13ed5",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 20,
+  "context_version": 21,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-081 filter mata pelajaran Jelajah Materi menjadi panel collapsible bergambar seperti filter kelas",
+  "last_task": "T-082 cover kelas/mapel khusus (13 aset Flow) disambungkan ke tile filter, kartu Beranda, dan hero",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-27T01:10:09+07:00",
-  "last_validation": "T-081 (2026-10-27): dropdown 'Filter mata pelajaran' di Jelajah Materi diganti panel collapsible bergambar seperti filter kelas — tombol header aria-expanded/aria-controls=filter-mapel-grid dengan chip 'Semua mapel'/label terpilih, grid role=group 8 tile (Semua mapel + 7 mapel) bercover coverAsset, memilih tile menutup panel dan bisa dibuka kembali, tombol kelas & mapel berdampingan md:flex-1. npm test 98/98 (12 berkas) + fixture 4/4 + catalog 320/320; cargo test 69/69 (tanpa perubahan Rust); npm run build PASS; a11y 17 pemeriksaan PASS (0 error, 7 warning, termasuk tile baru); E2E home-catalog 18/18 (7 thumbnail mapel termuat, screenshot filter-mapel.png, chip Matematika + panel tertutup), mode-switch 6/6, smoke 8/8. Tidak ADA perubahan kontrak API/DB.",
+  "last_updated": "2026-10-27T01:26:53+07:00",
+  "last_validation": "T-082 (2026-10-27): 13 cover khusus (6 kelas + 7 mapel, 1376x768) yang sebelumnya tidak terpakai kini disambungkan via src/content/coverArt.ts (glob bundel) dan CoverArt.tsx — tile kelas & mapel 16:9, kartu mapel Beranda 96x56, ilustrasi hero; fallback LessonThumbnail bila cover tidak ada. npm test 101/101 (13 berkas, coverArt 3 test) + fixture 4/4 + catalog 320/320; cargo test 69/69 (tanpa perubahan Rust); npm run build PASS (13 WebP cover di dist); a11y 17 pemeriksaan PASS (0 error, 7 warning); E2E home-catalog 18/18 (src cover-kelas-/cover-mapel- terverifikasi, screenshot filter-kelas.png baru), mode-switch 6/6, smoke 8/8. Tidak ada perubahan kontrak API/DB; tambahan bundel +/-1,46 MB.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Coba ganti foto profil di Pengaturan (dialog native → geser/zoom → Simpan) dan lihat cover 7 mapel di Beranda, cek dua mode, lalu verifikasi visual Hasil Belajar berisi data + NVDA. Keputusan desain yang memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
+  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Coba di app desktop: cover kelas/mapel khusus kini tampil di tile filter dan Beranda (T-082), ganti foto profil di Pengaturan (dialog native → geser/zoom → Simpan), cek dua mode, lalu verifikasi visual Hasil Belajar berisi data + NVDA. Keputusan desain yang memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
 }

@@ -478,3 +478,22 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan:** perilaku, bukan hanya tampilan — panel default terbuka seperti panel kelas, chip di header, tutup otomatis setelah memilih, dan bisa dibuka kembali. Grid mapel memakai `md:grid-cols-8` agar 8 tile muat satu baris di desktop.
 
 **Sisa:** pilihan filter belum dipertahankan saat berpindah layar; tidak ada tombol “reset semua filter”.
+
+### Handoff Cover Kelas/Mapel Khusus (2026-10-27, T-082)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: sambungkan 13 cover khusus yang sudah dibuat via Flow tetapi belum dipakai aplikasi.
+
+**Perubahan kode:**
+- `src/content/coverArt.ts` (baru) — `import.meta.glob` untuk `content/covers/kelas/cover-kelas-*.webp` (6) dan `content/covers/pelajaran/cover-mapel-*.webp` (7); `gradeCoverUrl(grade)` / `subjectCoverUrl(subject)` mengembalikan URL bundel atau `null`. Varian `_pilot-cover-kelas-4-chibi.webp` tidak cocok pola sehingga tidak ikut.
+- `src/content/coverArt.test.ts` (baru) — 3 test: keenam kelas, ketujuh mapel inti, dan `null` untuk kelas 7 / `bahasa-inggris`.
+- `src/components/content/CoverArt.tsx` (baru) — `<img data-cover-art>` dekoratif (`alt=""`, lazy) `object-cover` dengan placeholder `teal/10` bila URL kosong.
+- `src/screens/CurriculumScreen.tsx` — tile kelas memakai `gradeCoverUrl(value)`, tile mapel memakai `subjectCoverUrl(value)`; rasio tile 4:3 → **16:9** agar cocok dengan cover; fallback tetap `LessonThumbnail` (`coverAsset`) lalu placeholder.
+- `src/screens/HomeScreen.tsx` — kartu “Materi tersedia” memakai `CoverArt` 96×56 px (`h-14 w-24`, fallback `LessonThumbnail`); hero memakai `subjectCoverUrl(heroEntry.subjects[0])`.
+- `src/components/home/LearningIllustration.tsx` — prop `coverUrl`; memakai `CoverArt` 16:9, fallback `LessonThumbnail` 16:9.
+- `scripts/e2e/scenarios/home-catalog.mjs` — asersi `img[data-cover-art]` dan `src` memuat `cover-kelas-`/`cover-mapel-` (tile kelas, tile mapel, kartu Beranda, ilustrasi hero); screenshot baru `filter-kelas.png`; tetap **18 pemeriksaan**.
+
+**Verifikasi aktual:** `npm test` **101/101** (13 berkas; `coverArt` 3 test) + fixture 4/4 + catalog 320/320 · `cargo test` **69/69** (tanpa perubahan Rust) · `npm run build` PASS — 13 cover WebP masuk `dist/assets` · `npm run a11y` **17 pemeriksaan PASS** (0 error, 7 warning) · E2E **home-catalog 18/18** · mode-switch 6/6 · smoke 8/8. Bukti visual: `filter-kelas.png` (6 cover kelas 16:9), `filter-mapel.png` (7 cover mapel), `hero-beranda.png` (hero + 7 kartu mapel).
+
+**Catatan:** tambahan bundel ±1,46 MB (kelas 118–196 KB; mapel 60–102 KB); kartu materi di grid tetap memakai thumbnail aset paket karena itu thumbnail isi materi. Cover kelas membedakan gaya: kelas 1–3 chibi, kelas 4–6 semi-realistis.
+
+**Sisa:** cover belum dipakai di layar lain (mis. header Player); belum ada rotasi cover.
