@@ -1,0 +1,28 @@
+{
+  "lessonId": "hewan-tumbuhan-peliharaan",
+  "packageId": "kelas1-ipas-b07-hewan-tumbuhan-peliharaan",
+  "title": "Hewan dan Tumbuhan Peliharaan",
+  "summary": "Mengenal hewan dan tumbuhan peliharaan serta cara merawatnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh hewan dan tumbuhan peliharaan.",
+    "Menjelaskan kebutuhan hewan dan tumbuhan peliharaan.",
+    "Menunjukkan cara merawat peliharaan."
+  ],
+  "activityIds": [
+    "eksplorasi-hewan-tumbuhan-peliharaan",
+    "matching-hewan-tumbuhan-peliharaan",
+    "kuis-hewan-tumbuhan-peliharaan"
+  ],
+  "assessmentRefs": [
+    "kuis-hewan-tumbuhan-peliharaan"
+  ],
+  "assetRefs": [
+    "assets/hewan-tumbuhan-peliharaan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

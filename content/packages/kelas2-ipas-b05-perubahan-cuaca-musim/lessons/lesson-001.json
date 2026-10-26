@@ -1,0 +1,28 @@
+{
+  "lessonId": "perubahan-cuaca-musim",
+  "packageId": "kelas2-ipas-b05-perubahan-cuaca-musim",
+  "title": "Perubahan Cuaca dan Musim",
+  "summary": "Mengenal perubahan cuaca serta musim hujan dan kemarau di Indonesia.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan cuaca dan musim.",
+    "Menyebutkan ciri musim hujan dan kemarau.",
+    "Menjelaskan kegiatan yang sesuai pada setiap musim."
+  ],
+  "activityIds": [
+    "eksplorasi-perubahan-cuaca-musim",
+    "matching-perubahan-cuaca-musim",
+    "kuis-perubahan-cuaca-musim"
+  ],
+  "assessmentRefs": [
+    "kuis-perubahan-cuaca-musim"
+  ],
+  "assetRefs": [
+    "assets/perubahan-cuaca-musim.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

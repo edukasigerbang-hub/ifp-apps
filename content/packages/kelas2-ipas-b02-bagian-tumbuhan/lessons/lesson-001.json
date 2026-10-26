@@ -1,0 +1,28 @@
+{
+  "lessonId": "bagian-tumbuhan",
+  "packageId": "kelas2-ipas-b02-bagian-tumbuhan",
+  "title": "Bagian Tumbuhan dan Fungsinya",
+  "summary": "Mengenal akar, batang, daun, bunga, dan buah beserta fungsinya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bagian utama tumbuhan.",
+    "Menjelaskan fungsi setiap bagian tumbuhan.",
+    "Menemukan bagian tumbuhan di lingkungan sekitar."
+  ],
+  "activityIds": [
+    "eksplorasi-bagian-tumbuhan",
+    "matching-bagian-tumbuhan",
+    "kuis-bagian-tumbuhan"
+  ],
+  "assessmentRefs": [
+    "kuis-bagian-tumbuhan"
+  ],
+  "assetRefs": [
+    "assets/bagian-tumbuhan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

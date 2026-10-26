@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-lingkungan-bersih-sehat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Lingkungan Bersih",
+  "instructions": "Amati gambar, lalu diskusikan ciri lingkungan bersih dan kotor.",
+  "assets": [
+    "assets/lingkungan-bersih-sehat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri lingkungan bersih?",
+        "assetPath": "assets/lingkungan-bersih-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Sampah ada di tempatnya, lantai bersih, dan udara segar.",
+        "hint": "Lihat sekelilingmu."
+      },
+      {
+        "prompt": "Apa akibat lingkungan kotor?",
+        "assetPath": "assets/lingkungan-bersih-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Banyak lalat dan nyamuk, bau tidak sedap, dan mudah sakit.",
+        "hint": "Sampah menumpuk berbahaya."
+      },
+      {
+        "prompt": "Bagaimana menjaga lingkungan bersama?",
+        "assetPath": "assets/lingkungan-bersih-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Kerja bakti, membuang sampah pada tempatnya, dan menanam pohon.",
+        "hint": "Lingkungan dijaga bersama-sama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Lingkungan Bersih dan Sehat?",
+        "reveal": "Menjaga kebersihan lingkungan rumah dan sekolah agar tetap sehat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/lingkungan-bersih-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      },
+      {
+        "prompt": "Apa yang kamu lakukan jika melihat sampah di halaman?",
+        "reveal": "Memungutnya dan membuangnya ke tempat sampah.",
+        "hint": "Mulai dari diri sendiri.",
+        "assetPath": "assets/lingkungan-bersih-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

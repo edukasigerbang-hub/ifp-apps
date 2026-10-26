@@ -1,0 +1,28 @@
+{
+  "lessonId": "merawat-tubuh",
+  "packageId": "kelas1-ipas-b03-merawat-tubuh",
+  "title": "Merawat Tubuh dan Kebersihan",
+  "summary": "Membiasakan merawat tubuh dan menjaga kebersihan diri setiap hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan cara merawat tubuh setiap hari.",
+    "Menyebutkan alat kebersihan dan kegunaannya.",
+    "Menunjukkan kebiasaan hidup bersih."
+  ],
+  "activityIds": [
+    "eksplorasi-merawat-tubuh",
+    "matching-merawat-tubuh",
+    "kuis-merawat-tubuh"
+  ],
+  "assessmentRefs": [
+    "kuis-merawat-tubuh"
+  ],
+  "assetRefs": [
+    "assets/merawat-tubuh.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

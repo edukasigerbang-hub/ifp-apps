@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-hewan-tumbuhan-peliharaan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Peliharaan dan Ciri",
+  "instructions": "Pasangkan setiap hewan atau tumbuhan dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hewan-tumbuhan-peliharaan-1",
+        "left": "Kucing",
+        "right": "Suka susu"
+      },
+      {
+        "pairId": "pasangan-hewan-tumbuhan-peliharaan-2",
+        "left": "Ikan",
+        "right": "Hidup di air"
+      },
+      {
+        "pairId": "pasangan-hewan-tumbuhan-peliharaan-3",
+        "left": "Ayam",
+        "right": "Bertelur"
+      },
+      {
+        "pairId": "pasangan-hewan-tumbuhan-peliharaan-4",
+        "left": "Tanaman",
+        "right": "Butuh disiram"
+      },
+      {
+        "pairId": "pasangan-hewan-tumbuhan-peliharaan-5",
+        "left": "Bunga",
+        "right": "Butuh cahaya matahari"
+      },
+      {
+        "pairId": "pasangan-hewan-tumbuhan-peliharaan-6",
+        "left": "Burung",
+        "right": "Hidup di kandang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

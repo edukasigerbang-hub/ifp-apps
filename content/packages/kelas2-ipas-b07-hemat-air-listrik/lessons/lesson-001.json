@@ -1,0 +1,28 @@
+{
+  "lessonId": "hemat-air-listrik",
+  "packageId": "kelas2-ipas-b07-hemat-air-listrik",
+  "title": "Hemat Air dan Listrik",
+  "summary": "Membiasakan menghemat air dan listrik di rumah dan di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan kegunaan air dan listrik.",
+    "Menyebutkan cara menghemat air dan listrik.",
+    "Menunjukkan kebiasaan hemat energi."
+  ],
+  "activityIds": [
+    "eksplorasi-hemat-air-listrik",
+    "matching-hemat-air-listrik",
+    "kuis-hemat-air-listrik"
+  ],
+  "assessmentRefs": [
+    "kuis-hemat-air-listrik"
+  ],
+  "assetRefs": [
+    "assets/hemat-air-listrik.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

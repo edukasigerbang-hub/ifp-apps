@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-tubuh-dan-indera",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Indera dan Kegunaannya",
+  "instructions": "Pasangkan setiap indera dengan kegunaannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-tubuh-dan-indera-1",
+        "left": "Mata",
+        "right": "Melihat"
+      },
+      {
+        "pairId": "pasangan-tubuh-dan-indera-2",
+        "left": "Telinga",
+        "right": "Mendengar"
+      },
+      {
+        "pairId": "pasangan-tubuh-dan-indera-3",
+        "left": "Hidung",
+        "right": "Mencium bau"
+      },
+      {
+        "pairId": "pasangan-tubuh-dan-indera-4",
+        "left": "Lidah",
+        "right": "Merasakan rasa"
+      },
+      {
+        "pairId": "pasangan-tubuh-dan-indera-5",
+        "left": "Kulit",
+        "right": "Meraba"
+      },
+      {
+        "pairId": "pasangan-tubuh-dan-indera-6",
+        "left": "Kaki",
+        "right": "Berjalan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

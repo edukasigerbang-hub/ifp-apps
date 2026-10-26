@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-makanan-sehat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Makanan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan makanan dan minuman yang sehat.",
+  "assets": [
+    "assets/makanan-sehat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Makanan apa yang sehat untuk tubuh?",
+        "assetPath": "assets/makanan-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Sayur, buah, nasi, telur, dan ikan.",
+        "hint": "Pilih makanan yang tidak berminyak."
+      },
+      {
+        "prompt": "Minuman apa yang paling baik?",
+        "assetPath": "assets/makanan-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Air putih. Air putih membuat tubuh tetap segar.",
+        "hint": "Minuman manis sebaiknya jarang diminum."
+      },
+      {
+        "prompt": "Apa akibat terlalu banyak makan makanan manis?",
+        "assetPath": "assets/makanan-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Gigi bisa berlubang dan tubuh menjadi tidak sehat.",
+        "hint": "Gula berlebih tidak baik untuk gigi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Makanan dan Minuman Sehat?",
+        "reveal": "Mengenal makanan dan minuman sehat serta membiasakan pilihan yang aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/makanan-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      },
+      {
+        "prompt": "Sebutkan buah yang kamu suka.",
+        "reveal": "Misalnya pisang, pepaya, atau jeruk. Buah baik untuk tubuh.",
+        "hint": "Buah berwarna cerah biasanya banyak vitamin.",
+        "assetPath": "assets/makanan-sehat.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

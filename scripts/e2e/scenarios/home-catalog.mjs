@@ -335,7 +335,80 @@ export async function run({ page, artifactDir, log }) {
     `document.querySelectorAll("[data-catalog-subjects]").length`
   );
   log(`Pencarian kata "ipas" menemukan ${ipasCount} materi IPAS tanpa filter.`);
+
+  // Regresi T-089: paket IPAS kelas 1–2 harus muncul saat kelas difilter.
+  const openGradePanel = await page.evaluate(`
+    (() => {
+      const toggle = document.querySelector('button[aria-controls="filter-kelas-grid"]');
+      if (!toggle) return "missing";
+      if (toggle.getAttribute("aria-expanded") !== "true") toggle.click();
+      return "open";
+    })()
+  `);
+  assert(openGradePanel === "open", "Header pilihan kelas tidak ditemukan.");
+  await page.waitFor(
+    `document.querySelector('[role="group"][aria-labelledby="filter-kelas-label"]') !== null`,
+    { label: "panel pilihan kelas untuk IPAS kelas 1" }
+  );
+  assert(await page.evaluate(clickGrade(1)), "Tile Kelas 1 tidak ditemukan.");
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-catalog-subjects]")];
+      return (
+        cards.length === 8 &&
+        cards.every(
+          (card) =>
+            card.dataset.catalogSubjects.split(",").includes("ipas") &&
+            card.dataset.catalogGrades.split(",").every((grade) => grade === "1")
+        )
+      );
+    })()`,
+    { label: "hasil ipas kelas 1" }
+  );
+  log("Pencarian “ipas” + Kelas 1 menampilkan 8 paket IPAS kelas 1.");
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "katalog-ipas-kelas1.png"));
+
+  const reopenGradePanel = await page.evaluate(`
+    (() => {
+      const toggle = document.querySelector('button[aria-controls="filter-kelas-grid"]');
+      if (!toggle) return "missing";
+      if (toggle.getAttribute("aria-expanded") !== "true") toggle.click();
+      return "open";
+    })()
+  `);
+  assert(reopenGradePanel === "open", "Header pilihan kelas tidak ditemukan saat mereset filter.");
+  await page.waitFor(
+    `document.querySelector('[role="group"][aria-labelledby="filter-kelas-label"]') !== null`,
+    { label: "panel pilihan kelas saat mereset filter" }
+  );
+  await clickButton(page, "Semua kelas");
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-catalog-subjects]")];
+      return (
+        cards.length === ${JSON.stringify(ipasCount)} &&
+        cards.every((card) => card.dataset.catalogSubjects.split(",").includes("ipas"))
+      );
+    })()`,
+    { label: "ipas kembali tanpa filter kelas" }
+  );
+  log("Filter kelas dilepas: semua materi IPAS tampil kembali.");
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
+
+  const ensureGradePanel = await page.evaluate(`
+    (() => {
+      const toggle = document.querySelector('button[aria-controls="filter-kelas-grid"]');
+      if (!toggle) return "missing";
+      if (toggle.getAttribute("aria-expanded") !== "true") toggle.click();
+      return "open";
+    })()
+  `);
+  assert(ensureGradePanel === "open", "Header pilihan kelas tidak ditemukan.");
+  await page.waitFor(
+    `document.querySelector('[role="group"][aria-labelledby="filter-kelas-label"]') !== null`,
+    { label: "panel pilihan kelas terbuka" }
+  );
 
   assert(await page.evaluate(clickGrade(3)), "Tile Kelas 3 tidak ditemukan.");
   await page.waitFor(

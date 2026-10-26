@@ -1,0 +1,28 @@
+{
+  "lessonId": "lingkungan-rumah-sekolah",
+  "packageId": "kelas1-ipas-b06-lingkungan-rumah-sekolah",
+  "title": "Lingkungan Rumah dan Sekolah",
+  "summary": "Mengenal ruangan di rumah dan sekolah serta menjaga kebersihannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan ruangan penting di rumah dan sekolah.",
+    "Menjelaskan kegunaan tempat di rumah dan sekolah.",
+    "Menunjukkan cara menjaga kebersihan lingkungan."
+  ],
+  "activityIds": [
+    "eksplorasi-lingkungan-rumah-sekolah",
+    "matching-lingkungan-rumah-sekolah",
+    "kuis-lingkungan-rumah-sekolah"
+  ],
+  "assessmentRefs": [
+    "kuis-lingkungan-rumah-sekolah"
+  ],
+  "assetRefs": [
+    "assets/lingkungan-rumah-sekolah.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,72 @@
+{
+  "activityId": "kuis-bagian-tumbuhan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan: Bagian Tumbuhan dan Fungsinya",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-bagian-tumbuhan-1",
+        "prompt": "Bagian tumbuhan yang menyerap air adalah …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bagian-tumbuhan-1-1",
+            "text": "Daun"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-1-2",
+            "text": "Akar"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-1-3",
+            "text": "Bunga"
+          }
+        ],
+        "correctResponse": "opsi-bagian-tumbuhan-1-2"
+      },
+      {
+        "questionId": "soal-bagian-tumbuhan-2",
+        "prompt": "Daun berwarna hijau berfungsi untuk …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-1",
+            "text": "Membuat makanan"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-2",
+            "text": "Menarik air"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-3",
+            "text": "Menyimpan batu"
+          }
+        ],
+        "correctResponse": "opsi-bagian-tumbuhan-2-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

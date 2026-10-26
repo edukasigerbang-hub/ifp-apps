@@ -1,0 +1,72 @@
+{
+  "activityId": "kuis-lingkungan-bersih-sehat",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan: Lingkungan Bersih dan Sehat",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-lingkungan-bersih-sehat-1",
+        "prompt": "Sampah yang dibiarkan menumpuk menjadi sarang …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-1-1",
+            "text": "Nyamuk"
+          },
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-1-2",
+            "text": "Kupu-kupu"
+          },
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-1-3",
+            "text": "Burung"
+          }
+        ],
+        "correctResponse": "opsi-lingkungan-bersih-sehat-1-1"
+      },
+      {
+        "questionId": "soal-lingkungan-bersih-sehat-2",
+        "prompt": "Lingkungan bersih membuat tubuh …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-2-1",
+            "text": "Sehat"
+          },
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-2-2",
+            "text": "Sakit"
+          },
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-2-3",
+            "text": "Lemah"
+          }
+        ],
+        "correctResponse": "opsi-lingkungan-bersih-sehat-2-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "cuaca-di-sekitarku",
+  "packageId": "kelas1-ipas-b05-cuaca-di-sekitarku",
+  "title": "Cuaca di Sekitarku",
+  "summary": "Mengenali cuaca cerah, berawan, dan hujan serta cara menyesuaikan diri.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis cuaca.",
+    "Menjelaskan tanda-tanda cuaca.",
+    "Memilih pakaian dan kegiatan yang sesuai cuaca."
+  ],
+  "activityIds": [
+    "eksplorasi-cuaca-di-sekitarku",
+    "matching-cuaca-di-sekitarku",
+    "kuis-cuaca-di-sekitarku"
+  ],
+  "assessmentRefs": [
+    "kuis-cuaca-di-sekitarku"
+  ],
+  "assetRefs": [
+    "assets/cuaca-di-sekitarku.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

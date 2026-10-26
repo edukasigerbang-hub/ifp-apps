@@ -1,0 +1,72 @@
+{
+  "activityId": "kuis-cuaca-di-sekitarku",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan: Cuaca di Sekitarku",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-cuaca-di-sekitarku-1",
+        "prompt": "Apa yang kita bawa saat hujan?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cuaca-di-sekitarku-1-1",
+            "text": "Payung"
+          },
+          {
+            "optionId": "opsi-cuaca-di-sekitarku-1-2",
+            "text": "Kacamata renang"
+          },
+          {
+            "optionId": "opsi-cuaca-di-sekitarku-1-3",
+            "text": "Selimut"
+          }
+        ],
+        "correctResponse": "opsi-cuaca-di-sekitarku-1-1"
+      },
+      {
+        "questionId": "soal-cuaca-di-sekitarku-2",
+        "prompt": "Matahari bersinar terang. Cuaca saat itu adalah …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cuaca-di-sekitarku-2-1",
+            "text": "Hujan"
+          },
+          {
+            "optionId": "opsi-cuaca-di-sekitarku-2-2",
+            "text": "Cerah"
+          },
+          {
+            "optionId": "opsi-cuaca-di-sekitarku-2-3",
+            "text": "Berawan"
+          }
+        ],
+        "correctResponse": "opsi-cuaca-di-sekitarku-2-2"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-cuaca-di-sekitarku",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Cuaca",
+  "instructions": "Amati gambar, lalu jawab pertanyaan tentang cuaca hari ini.",
+  "assets": [
+    "assets/cuaca-di-sekitarku.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Cuaca apa saja yang sering kamu lihat?",
+        "assetPath": "assets/cuaca-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Cerah, berawan, dan hujan.",
+        "hint": "Lihat langit dan awan."
+      },
+      {
+        "prompt": "Apa tanda cuaca akan hujan?",
+        "assetPath": "assets/cuaca-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Awan gelap, angin bertiup, dan udara terasa dingin.",
+        "hint": "Langit berwarna gelap."
+      },
+      {
+        "prompt": "Apa yang dibawa saat hujan?",
+        "assetPath": "assets/cuaca-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Payung atau jas hujan, dan pakaian yang hangat.",
+        "hint": "Supaya tubuh tetap kering."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Cuaca di Sekitarku?",
+        "reveal": "Mengenali cuaca cerah, berawan, dan hujan serta cara menyesuaikan diri.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/cuaca-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      },
+      {
+        "prompt": "Cuaca hari ini bagaimana? Sebutkan tanda yang kamu lihat.",
+        "reveal": "Jawaban sesuai pengamatan, misalnya cerah karena matahari bersinar.",
+        "hint": "Lihat keluar jendela.",
+        "assetPath": "assets/cuaca-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

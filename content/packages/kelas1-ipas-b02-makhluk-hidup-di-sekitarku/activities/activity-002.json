@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-makhluk-hidup-di-sekitarku",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Makhluk Hidup dan Cirinya",
+  "instructions": "Pasangkan setiap makhluk atau benda dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-makhluk-hidup-di-sekitarku-1",
+        "left": "Kucing",
+        "right": "Bisa bergerak sendiri"
+      },
+      {
+        "pairId": "pasangan-makhluk-hidup-di-sekitarku-2",
+        "left": "Pohon",
+        "right": "Bisa tumbuh tinggi"
+      },
+      {
+        "pairId": "pasangan-makhluk-hidup-di-sekitarku-3",
+        "left": "Batu",
+        "right": "Tidak bernapas"
+      },
+      {
+        "pairId": "pasangan-makhluk-hidup-di-sekitarku-4",
+        "left": "Burung",
+        "right": "Bertelur"
+      },
+      {
+        "pairId": "pasangan-makhluk-hidup-di-sekitarku-5",
+        "left": "Rumput",
+        "right": "Berwarna hijau"
+      },
+      {
+        "pairId": "pasangan-makhluk-hidup-di-sekitarku-6",
+        "left": "Meja",
+        "right": "Benda tak hidup"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

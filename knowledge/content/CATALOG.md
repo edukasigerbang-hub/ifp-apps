@@ -1,6 +1,6 @@
 # Katalog Konten
 
-**Status:** 320 paket draft · 0 paket disetujui · review manusia belum
+**Status:** 336 paket draft (320 inti + 16 IPAS kelas 1–2) · 0 paket disetujui · review manusia belum
 
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
@@ -773,3 +773,33 @@ Empat paket dinaikkan ke versi **0.2.0**:
 Perubahan: 5 langkah eksplorasi, 3 aktivitas, 10 item asesmen, 4 tujuan tercakup, aset baru unik.
 Status G1–G12: **11/12 PASS**; G8 terisi provisional (ADR-0033), G10 menunggu review manusia.
 Detail: [PILOT_GOLD_KELAS4_B01_2026-10-25.md](PILOT_GOLD_KELAS4_B01_2026-10-25.md).
+
+## Tambahan IPAS Kelas 1–2 (2026-10-27, T-089)
+
+Permintaan PO: materi IPAS juga untuk kelas 1–2. IPAS **bukan mapel mandiri Fase A** pada Kurikulum Merdeka (IPAS dimulai Fase B/kelas 3), jadi 16 paket ini berada di luar matriks 6 mapel Fase A dan menunggu keputusan Curriculum Lead (OD-1). `curriculumRefs` memakai `fase-a` tingkat fase (ADR-0033), `reviewStatus` dan `releaseState` tetap `draft`.
+
+| packageId | Kelas | Topik |
+|---|---|---|
+| `kelas1-ipas-b01-tubuh-dan-indera` | 1 | Tubuhku dan Inderaku |
+| `kelas1-ipas-b02-makhluk-hidup-di-sekitarku` | 1 | Makhluk Hidup di Sekitar Kita |
+| `kelas1-ipas-b03-merawat-tubuh` | 1 | Merawat Tubuh dan Kebersihan |
+| `kelas1-ipas-b04-makanan-sehat` | 1 | Makanan dan Minuman Sehat |
+| `kelas1-ipas-b05-cuaca-di-sekitarku` | 1 | Cuaca di Sekitarku |
+| `kelas1-ipas-b06-lingkungan-rumah-sekolah` | 1 | Lingkungan Rumah dan Sekolah |
+| `kelas1-ipas-b07-hewan-tumbuhan-peliharaan` | 1 | Hewan dan Tumbuhan Peliharaan |
+| `kelas1-ipas-b08-keselamatan-diri` | 1 | Keselamatan Diri |
+| `kelas2-ipas-b01-pertumbuhan-manusia-hewan` | 2 | Pertumbuhan Manusia dan Hewan |
+| `kelas2-ipas-b02-bagian-tumbuhan` | 2 | Bagian Tumbuhan dan Fungsinya |
+| `kelas2-ipas-b03-siklus-hidup-sederhana` | 2 | Siklus Hidup Sederhana |
+| `kelas2-ipas-b04-wujud-benda` | 2 | Wujud Benda Padat dan Cair |
+| `kelas2-ipas-b05-perubahan-cuaca-musim` | 2 | Perubahan Cuaca dan Musim |
+| `kelas2-ipas-b06-sumber-daya-alam` | 2 | Sumber Daya Alam di Sekitar |
+| `kelas2-ipas-b07-hemat-air-listrik` | 2 | Hemat Air dan Listrik |
+| `kelas2-ipas-b08-lingkungan-bersih-sehat` | 2 | Lingkungan Bersih dan Sehat |
+
+- Struktur sama dengan paket IPAS lain: 1 lesson + 3 aktivitas (eksplorasi 5 langkah, matching 6 pasangan, kuis 2 soal dengan `passingScore` 75).
+- Aset **sementara** memakai `content/covers/pelajaran/cover-mapel-ipas.webp` yang disalin ke `assets/<slug>.webp` (16 berkas, hash identik). Ilustrasi Flow menyusul; penimpaan cukup pada berkas yang sama.
+- Digenerate `scripts/add-ipas-kelas1-2.mjs` (melewati folder yang sudah ada; `--force` untuk menulis ulang).
+- Validasi: **16/16 VALID**, 0 issue, 1 warning per paket (lesson masih draft).
+- Katalog: **336 entri / 336 paket** — tiap kelas 56, tiap mapel 48. `lessonId` baru dipastikan unik lintas paket (tidak menambah 38 tabrakan `lessonId@version` yang sudah ada).
+- E2E home-catalog **28/28** — cek baru: pencarian “ipas” + Kelas 1 = 8 kartu IPAS kelas 1 (`katalog-ipas-kelas1.png`).

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-perubahan-cuaca-musim",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Musim dan Cirinya",
+  "instructions": "Pasangkan setiap musim atau benda dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-perubahan-cuaca-musim-1",
+        "left": "Musim hujan",
+        "right": "Sering turun hujan"
+      },
+      {
+        "pairId": "pasangan-perubahan-cuaca-musim-2",
+        "left": "Musim kemarau",
+        "right": "Tanah menjadi kering"
+      },
+      {
+        "pairId": "pasangan-perubahan-cuaca-musim-3",
+        "left": "Payung",
+        "right": "Dibawa saat hujan"
+      },
+      {
+        "pairId": "pasangan-perubahan-cuaca-musim-4",
+        "left": "Jas hujan",
+        "right": "Melindungi tubuh dari air"
+      },
+      {
+        "pairId": "pasangan-perubahan-cuaca-musim-5",
+        "left": "Kipas",
+        "right": "Dipakai saat udara panas"
+      },
+      {
+        "pairId": "pasangan-perubahan-cuaca-musim-6",
+        "left": "Air hujan",
+        "right": "Mengisi sumur dan sungai"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

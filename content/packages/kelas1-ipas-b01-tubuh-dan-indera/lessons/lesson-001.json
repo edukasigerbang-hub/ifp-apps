@@ -1,0 +1,28 @@
+{
+  "lessonId": "tubuh-dan-indera",
+  "packageId": "kelas1-ipas-b01-tubuh-dan-indera",
+  "title": "Tubuhku dan Inderaku",
+  "summary": "Mengenal bagian tubuh dan lima indera beserta kegunaannya dalam kegiatan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bagian utama tubuh manusia.",
+    "Menjelaskan kegunaan lima indera.",
+    "Menunjukkan cara merawat tubuh agar tetap sehat."
+  ],
+  "activityIds": [
+    "eksplorasi-tubuh-dan-indera",
+    "matching-tubuh-dan-indera",
+    "kuis-tubuh-dan-indera"
+  ],
+  "assessmentRefs": [
+    "kuis-tubuh-dan-indera"
+  ],
+  "assetRefs": [
+    "assets/tubuh-dan-indera.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

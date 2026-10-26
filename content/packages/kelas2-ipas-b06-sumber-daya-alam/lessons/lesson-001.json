@@ -1,0 +1,28 @@
+{
+  "lessonId": "sumber-daya-alam",
+  "packageId": "kelas2-ipas-b06-sumber-daya-alam",
+  "title": "Sumber Daya Alam di Sekitar",
+  "summary": "Mengenal sumber daya alam di sekitar dan cara memakainya dengan bijak.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh sumber daya alam.",
+    "Membedakan sumber daya alam yang dapat diperbarui dan tidak.",
+    "Menjelaskan cara menghemat sumber daya alam."
+  ],
+  "activityIds": [
+    "eksplorasi-sumber-daya-alam",
+    "matching-sumber-daya-alam",
+    "kuis-sumber-daya-alam"
+  ],
+  "assessmentRefs": [
+    "kuis-sumber-daya-alam"
+  ],
+  "assetRefs": [
+    "assets/sumber-daya-alam.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

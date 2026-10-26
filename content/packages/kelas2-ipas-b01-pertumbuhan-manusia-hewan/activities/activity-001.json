@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-pertumbuhan-manusia-hewan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pertumbuhan",
+  "instructions": "Amati gambar, lalu diskusikan perubahan saat makhluk hidup tumbuh.",
+  "assets": [
+    "assets/pertumbuhan-manusia-hewan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana tubuhmu berubah sejak bayi?",
+        "assetPath": "assets/pertumbuhan-manusia-hewan.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Bertambah tinggi, bertambah berat, dan semakin pandai.",
+        "hint": "Bandingkan foto bayi dengan dirimu sekarang."
+      },
+      {
+        "prompt": "Bagaimana anak kucing tumbuh?",
+        "assetPath": "assets/pertumbuhan-manusia-hewan.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Menjadi lebih besar dan kuat, lalu bisa makan sendiri.",
+        "hint": "Hewan butuh waktu untuk tumbuh."
+      },
+      {
+        "prompt": "Apa yang dibutuhkan anak agar tumbuh sehat?",
+        "assetPath": "assets/pertumbuhan-manusia-hewan.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Makanan bergizi, air, tidur cukup, dan olahraga.",
+        "hint": "Tidur cukup membantu tubuh tumbuh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pertumbuhan Manusia dan Hewan?",
+        "reveal": "Mengenal perubahan tubuh manusia dan hewan ketika tumbuh.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pertumbuhan-manusia-hewan.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      },
+      {
+        "prompt": "Sebutkan satu hal baru yang bisa kamu lakukan sekarang.",
+        "reveal": "Misalnya membaca, bersepeda, atau menulis. Itu tanda kamu tumbuh.",
+        "hint": "Ingat saat kamu masih kecil.",
+        "assetPath": "assets/pertumbuhan-manusia-hewan.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

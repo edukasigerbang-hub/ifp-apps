@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-sumber-daya-alam",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Sumber Daya Alam",
+  "instructions": "Amati gambar, lalu diskusikan sumber daya alam di sekitarmu.",
+  "assets": [
+    "assets/sumber-daya-alam.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Sumber daya alam apa yang ada di sekitar?",
+        "assetPath": "assets/sumber-daya-alam.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Air, tanah, tumbuhan, hewan, dan sinar matahari.",
+        "hint": "Semua berasal dari alam."
+      },
+      {
+        "prompt": "Mana yang dapat diperbarui?",
+        "assetPath": "assets/sumber-daya-alam.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Tumbuhan, hewan, air, dan sinar matahari dapat diperbarui.",
+        "hint": "Bisa tumbuh atau tersedia kembali."
+      },
+      {
+        "prompt": "Bagaimana menghemat sumber daya alam?",
+        "assetPath": "assets/sumber-daya-alam.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Hemat air, tidak menebang pohon sembarangan, dan membuang sampah pada tempatnya.",
+        "hint": "Gunakan secukupnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sumber Daya Alam di Sekitar?",
+        "reveal": "Mengenal sumber daya alam di sekitar dan cara memakainya dengan bijak.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sumber-daya-alam.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      },
+      {
+        "prompt": "Sebutkan satu sumber daya alam di sekolahmu.",
+        "reveal": "Air di keran, pohon di halaman, atau sinar matahari.",
+        "hint": "Lihat di sekitar halaman.",
+        "assetPath": "assets/sumber-daya-alam.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

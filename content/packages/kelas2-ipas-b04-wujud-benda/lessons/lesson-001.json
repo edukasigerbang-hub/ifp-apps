@@ -1,0 +1,28 @@
+{
+  "lessonId": "wujud-benda",
+  "packageId": "kelas2-ipas-b04-wujud-benda",
+  "title": "Wujud Benda Padat dan Cair",
+  "summary": "Membedakan benda padat dan benda cair melalui pengamatan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh benda padat dan cair.",
+    "Menjelaskan sifat benda padat dan cair.",
+    "Mengelompokkan benda berdasarkan wujudnya."
+  ],
+  "activityIds": [
+    "eksplorasi-wujud-benda",
+    "matching-wujud-benda",
+    "kuis-wujud-benda"
+  ],
+  "assessmentRefs": [
+    "kuis-wujud-benda"
+  ],
+  "assetRefs": [
+    "assets/wujud-benda.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

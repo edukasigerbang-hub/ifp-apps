@@ -1,0 +1,28 @@
+{
+  "lessonId": "makhluk-hidup-di-sekitarku",
+  "packageId": "kelas1-ipas-b02-makhluk-hidup-di-sekitarku",
+  "title": "Makhluk Hidup di Sekitar Kita",
+  "summary": "Mengenal makhluk hidup dan benda tak hidup di rumah dan di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan makhluk hidup dan benda tak hidup.",
+    "Menyebutkan contoh makhluk hidup di sekitar.",
+    "Menjelaskan kebutuhan makhluk hidup."
+  ],
+  "activityIds": [
+    "eksplorasi-makhluk-hidup-di-sekitarku",
+    "matching-makhluk-hidup-di-sekitarku",
+    "kuis-makhluk-hidup-di-sekitarku"
+  ],
+  "assessmentRefs": [
+    "kuis-makhluk-hidup-di-sekitarku"
+  ],
+  "assetRefs": [
+    "assets/makhluk-hidup-di-sekitarku.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-cuaca-di-sekitarku",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Cuaca dan Ciri",
+  "instructions": "Pasangkan setiap cuaca atau benda dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-cuaca-di-sekitarku-1",
+        "left": "Cerah",
+        "right": "Matahari bersinar"
+      },
+      {
+        "pairId": "pasangan-cuaca-di-sekitarku-2",
+        "left": "Berawan",
+        "right": "Awan menutup langit"
+      },
+      {
+        "pairId": "pasangan-cuaca-di-sekitarku-3",
+        "left": "Hujan",
+        "right": "Tetes air turun"
+      },
+      {
+        "pairId": "pasangan-cuaca-di-sekitarku-4",
+        "left": "Payung",
+        "right": "Dibawa saat hujan"
+      },
+      {
+        "pairId": "pasangan-cuaca-di-sekitarku-5",
+        "left": "Jaket",
+        "right": "Dipakai saat dingin"
+      },
+      {
+        "pairId": "pasangan-cuaca-di-sekitarku-6",
+        "left": "Kipas",
+        "right": "Dipakai saat panas"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

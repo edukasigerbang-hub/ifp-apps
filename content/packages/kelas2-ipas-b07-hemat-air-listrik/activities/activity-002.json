@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-hemat-air-listrik",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Tindakan dan Manfaatnya",
+  "instructions": "Pasangkan setiap benda atau tindakan dengan manfaatnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hemat-air-listrik-1",
+        "left": "Keran",
+        "right": "Ditutup setelah dipakai"
+      },
+      {
+        "pairId": "pasangan-hemat-air-listrik-2",
+        "left": "Lampu",
+        "right": "Dimatikan saat tidak dipakai"
+      },
+      {
+        "pairId": "pasangan-hemat-air-listrik-3",
+        "left": "Kipas angin",
+        "right": "Dimatikan saat kelas kosong"
+      },
+      {
+        "pairId": "pasangan-hemat-air-listrik-4",
+        "left": "Pengisi daya",
+        "right": "Dicabut setelah selesai"
+      },
+      {
+        "pairId": "pasangan-hemat-air-listrik-5",
+        "left": "Air hujan",
+        "right": "Ditampung untuk menyiram"
+      },
+      {
+        "pairId": "pasangan-hemat-air-listrik-6",
+        "left": "Ember",
+        "right": "Menghemat air saat mencuci"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

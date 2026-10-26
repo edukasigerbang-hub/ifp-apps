@@ -1,0 +1,28 @@
+{
+  "lessonId": "makanan-sehat",
+  "packageId": "kelas1-ipas-b04-makanan-sehat",
+  "title": "Makanan dan Minuman Sehat",
+  "summary": "Mengenal makanan dan minuman sehat serta membiasakan pilihan yang aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh makanan sehat.",
+    "Menjelaskan alasan memilih minuman sehat.",
+    "Menyebutkan akibat sering makan makanan manis."
+  ],
+  "activityIds": [
+    "eksplorasi-makanan-sehat",
+    "matching-makanan-sehat",
+    "kuis-makanan-sehat"
+  ],
+  "assessmentRefs": [
+    "kuis-makanan-sehat"
+  ],
+  "assetRefs": [
+    "assets/makanan-sehat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

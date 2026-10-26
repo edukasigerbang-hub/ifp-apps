@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-bagian-tumbuhan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bagian dan Fungsinya",
+  "instructions": "Pasangkan setiap bagian tumbuhan dengan fungsinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-bagian-tumbuhan-1",
+        "left": "Akar",
+        "right": "Menyerap air dari tanah"
+      },
+      {
+        "pairId": "pasangan-bagian-tumbuhan-2",
+        "left": "Batang",
+        "right": "Menopang tubuh tumbuhan"
+      },
+      {
+        "pairId": "pasangan-bagian-tumbuhan-3",
+        "left": "Daun",
+        "right": "Membuat makanan"
+      },
+      {
+        "pairId": "pasangan-bagian-tumbuhan-4",
+        "left": "Bunga",
+        "right": "Berkembang menjadi buah"
+      },
+      {
+        "pairId": "pasangan-bagian-tumbuhan-5",
+        "left": "Buah",
+        "right": "Berisi biji"
+      },
+      {
+        "pairId": "pasangan-bagian-tumbuhan-6",
+        "left": "Tanah",
+        "right": "Tempat tumbuhan hidup"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

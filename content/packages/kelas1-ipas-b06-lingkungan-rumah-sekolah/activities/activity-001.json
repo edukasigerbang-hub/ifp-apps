@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-lingkungan-rumah-sekolah",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Lingkungan Rumah dan Sekolah",
+  "instructions": "Amati gambar, lalu diskusikan tempat di rumah dan sekolah serta kegunaannya.",
+  "assets": [
+    "assets/lingkungan-rumah-sekolah.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Ruang apa saja yang ada di rumahmu?",
+        "assetPath": "assets/lingkungan-rumah-sekolah.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Kamar tidur, dapur, kamar mandi, dan ruang tamu.",
+        "hint": "Ingat denah rumahmu."
+      },
+      {
+        "prompt": "Tempat apa saja yang ada di sekolah?",
+        "assetPath": "assets/lingkungan-rumah-sekolah.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Kelas, perpustakaan, kantin, dan halaman.",
+        "hint": "Ingat sekolahmu."
+      },
+      {
+        "prompt": "Bagaimana menjaga lingkungan tetap bersih?",
+        "assetPath": "assets/lingkungan-rumah-sekolah.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "reveal": "Membuang sampah di tempat sampah dan menyapu lantai.",
+        "hint": "Jangan membiarkan sampah berserakan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Lingkungan Rumah dan Sekolah?",
+        "reveal": "Mengenal ruangan di rumah dan sekolah serta menjaga kebersihannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/lingkungan-rumah-sekolah.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      },
+      {
+        "prompt": "Di mana kamu membaca buku di sekolah?",
+        "reveal": "Di perpustakaan atau di kelas.",
+        "hint": "Ada rak buku di sana.",
+        "assetPath": "assets/lingkungan-rumah-sekolah.webp",
+        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

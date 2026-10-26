@@ -1,0 +1,28 @@
+{
+  "lessonId": "lingkungan-bersih-sehat",
+  "packageId": "kelas2-ipas-b08-lingkungan-bersih-sehat",
+  "title": "Lingkungan Bersih dan Sehat",
+  "summary": "Menjaga kebersihan lingkungan rumah dan sekolah agar tetap sehat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan ciri lingkungan bersih dan kotor.",
+    "Menjelaskan akibat lingkungan kotor.",
+    "Menunjukkan cara menjaga lingkungan bersama."
+  ],
+  "activityIds": [
+    "eksplorasi-lingkungan-bersih-sehat",
+    "matching-lingkungan-bersih-sehat",
+    "kuis-lingkungan-bersih-sehat"
+  ],
+  "assessmentRefs": [
+    "kuis-lingkungan-bersih-sehat"
+  ],
+  "assetRefs": [
+    "assets/lingkungan-bersih-sehat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

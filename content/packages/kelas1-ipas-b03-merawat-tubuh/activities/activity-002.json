@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-merawat-tubuh",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Alat dan Kegunaannya",
+  "instructions": "Pasangkan setiap alat kebersihan dengan kegunaannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-merawat-tubuh-1",
+        "left": "Sabun",
+        "right": "Membersihkan tubuh"
+      },
+      {
+        "pairId": "pasangan-merawat-tubuh-2",
+        "left": "Sikat gigi",
+        "right": "Membersihkan gigi"
+      },
+      {
+        "pairId": "pasangan-merawat-tubuh-3",
+        "left": "Sampo",
+        "right": "Mencuci rambut"
+      },
+      {
+        "pairId": "pasangan-merawat-tubuh-4",
+        "left": "Handuk",
+        "right": "Mengeringkan badan"
+      },
+      {
+        "pairId": "pasangan-merawat-tubuh-5",
+        "left": "Gunting kuku",
+        "right": "Memotong kuku"
+      },
+      {
+        "pairId": "pasangan-merawat-tubuh-6",
+        "left": "Sisir",
+        "right": "Merapikan rambut"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  }
+}

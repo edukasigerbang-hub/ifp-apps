@@ -1,0 +1,28 @@
+{
+  "lessonId": "siklus-hidup-sederhana",
+  "packageId": "kelas2-ipas-b03-siklus-hidup-sederhana",
+  "title": "Siklus Hidup Sederhana",
+  "summary": "Mengenal tahapan hidup kupu-kupu, ayam, dan tanaman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan tahap hidup kupu-kupu.",
+    "Mengurutkan tahap hidup tanaman.",
+    "Menjelaskan bahwa makhluk hidup berkembang biak."
+  ],
+  "activityIds": [
+    "eksplorasi-siklus-hidup-sederhana",
+    "matching-siklus-hidup-sederhana",
+    "kuis-siklus-hidup-sederhana"
+  ],
+  "assessmentRefs": [
+    "kuis-siklus-hidup-sederhana"
+  ],
+  "assetRefs": [
+    "assets/siklus-hidup-sederhana.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}
