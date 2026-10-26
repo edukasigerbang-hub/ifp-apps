@@ -4,7 +4,7 @@
 
 ## Kondisi terverifikasi
 
-- Git `main`, HEAD `4dfa548` (sakelar mode ikon + thumbnail materi + rail ikon + tile kelas + tata letak lebar penuh, T-078).
+- Git `main`, HEAD `00959b5` (sakelar mode ikon + thumbnail materi + rail ikon + tile kelas collapsible + tata letak lebar penuh, T-078).
 - App shell Tauri 2 + React 19 + TS + Vite + Tailwind; SQLite native; sync client + backend referensi.
 - Konten: **320 paket draft** Kelas 1–6 (Fase A 96 + Fase B/C 224); seluruh aset paket **WebP** (320 hash unik, 0 reuse).
 - Review teknis 2026-10-26 (pasca-T-070/T-071): **320/320 VALID**; alt/feedbackPolicy 320/320; kedalaman **320/320**; **0 duplikasi**; R10 `curriculumRefs` **320/320** (fase A/B/C, versi 2024).
