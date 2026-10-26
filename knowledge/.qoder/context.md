@@ -1,10 +1,10 @@
 # Context — L0 Active
 
-**Sesi:** SESSION-2026-10-24-1 · **Autonomy:** L1 · **Fase:** pra-review agent + perbaikan loader (T-073) + dokumen review UX gabungan (T-074) + P0 UX 5/6 selesai (T-075) + UX-03 & audit a11y/E2E hijau (T-076) + dua mode Belajar/Admin (T-077) + sakelar ikon & thumbnail materi (T-078); menunggu reviewer manusia & keputusan desain
+**Sesi:** SESSION-2026-10-24-1 · **Autonomy:** L1 · **Fase:** pra-review agent + perbaikan loader (T-073) + dokumen review UX gabungan (T-074) + P0 UX 5/6 selesai (T-075) + UX-03 & audit a11y/E2E hijau (T-076) + dua mode Belajar/Admin (T-077) + sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078) + foto profil lokal & ilustrasi Beranda (T-079); menunggu reviewer manusia & keputusan desain
 
 ## Kondisi terverifikasi
 
-- Git `main`, HEAD `00959b5` (sakelar mode ikon + thumbnail materi + rail ikon + tile kelas collapsible + tata letak lebar penuh, T-078).
+- Git `main`, HEAD `4f4b6f6` (foto profil lokal + ilustrasi Beranda, T-079).
 - App shell Tauri 2 + React 19 + TS + Vite + Tailwind; SQLite native; sync client + backend referensi.
 - Konten: **320 paket draft** Kelas 1–6 (Fase A 96 + Fase B/C 224); seluruh aset paket **WebP** (320 hash unik, 0 reuse).
 - Review teknis 2026-10-26 (pasca-T-070/T-071): **320/320 VALID**; alt/feedbackPolicy 320/320; kedalaman **320/320**; **0 duplikasi**; R10 `curriculumRefs` **320/320** (fase A/B/C, versi 2024).
@@ -18,6 +18,7 @@
 - Grid katalog (T-078): kartu materi **3 kolom** mulai 768 px (`md:grid-cols-3`, tetap satu kolom di ponsel); filter kelas berupa panel **collapsible** berisi **tile thumbnail** cover materi tiap kelas — header menampilkan chip “Semua kelas”/“Kelas N”, panel menutup otomatis setelah memilih dan bisa dibuka lagi (T-078f); E2E `home-catalog` 13/13 + a11y 17/17.
 - Tata letak (T-078e): Beranda & Jelajah Materi memakai **lebar penuh** (mapel Beranda 3 kolom di xl); layar baca (Hasil, Pengaturan, Konten, Lisensi, Player) dipusatkan `mx-auto max-w-4xl`; tile “Semua kelas” berikon grid.
 - Thumbnail materi (T-078): katalog membawa `coverAsset` **320/320**; [LessonThumbnail](../../src/components/content/LessonThumbnail.tsx) dipakai kartu Jelajah Materi dan kartu “Lanjutkan belajar” — bundled via URL glob, paket impor via `content_read_asset` → blob URL, fallback inisial subjek. Bukti visual: `catalog-thumbnails.png` (artefak E2E).
+- Foto profil + ilustrasi Beranda (T-079): migrasi **`0006_profile_avatars`** — avatar sebagai BLOB (`mime_type` CHECK PNG/JPEG/WebP, FK cascade) sehingga ikut backup DB; perintah `profile_avatar_set/clear/get` memvalidasi magic bytes + batas **1,5 MB**; `Profile.hasAvatar` lewat `EXISTS`. [ProfileAvatar](../../src/components/profile/ProfileAvatar.tsx) menampilkan foto bulat atau inisial; Pengaturan memakai dialog native (`@tauri-apps/plugin-dialog`) untuk pilih/hapus foto. Beranda memakai hero gradasi dengan avatar, eyebrow “Ruang belajar”, sapaan “Halo, {nama}”, dan [LearningIllustration](../../src/components/home/LearningIllustration.tsx) — cover matematika kelas 3 (fallback cover pertama) dalam bingkai + aksen dekoratif, **tanpa aset baru** (aturan Flow-only). Bukti: `hero-beranda.png`.
 - Blocker rilis: 8 item terdaftar ([RELEASE_BLOCKERS](../api/RELEASE_BLOCKERS_2026-10-24.md)); B-03 kode selesai tetapi belum di-deploy; B-07 secret sementara belum dibersihkan.
 - Aset: 152 gambar Kelas 1–3 + 168 Kelas 4–6 dibuat internal via Google Flow; lisensi pihak ketiga: tidak ada.
 
@@ -29,8 +30,8 @@
 
 - `npm run content:prereview`: 320 paket → [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) · [sampel 40 paket](../content/PEDAGOGICAL_SAMPLE_2026-10-26.md) · [CSV flag](../content/prereview-flags-2026-10-26.csv) · [JSON bukti](../content/prereview-evidence-2026-10-26.json). Status: **PRA-REVIEW AGENT — BUKAN APPROVAL**.
 - `npx tsx scripts/review-content.ts`: 320 paket dianalisis (kedalaman 320/320, R10 320/320, 0 duplikasi); ringkasan ada di [REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md).
-- `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` 65/65 · validator 320/320 VALID · `npm run build` PASS (dist 320 WebP, 0 PNG).
-- `npm run a11y` **PASS** 17 pemeriksaan (0 error, 7 warning reflow/target sentuh; termasuk shell mode belajar 640/320) · E2E smoke 8/8 · activities 8/8 · **home 11/11** · journey 11/11 · profile 7/7 · **mode-switch 6/6** (rail 80 px + restore setelah muat ulang).
+- `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **67/67** · validator 320/320 VALID · `npm run build` PASS (dist 320 WebP, 0 PNG).
+- `npm run a11y` **PASS** 17 pemeriksaan (0 error, 7 warning reflow/target sentuh; termasuk shell mode belajar 640/320) · E2E smoke 8/8 · activities 8/8 · **home 14/14** (avatar + ilustrasi termuat setelah muat ulang) · journey 11/11 · profile 7/7 · **mode-switch 6/6** (rail 80 px + restore setelah muat ulang).
 - DV-01…DV-20 NOT RUN; mesin dev Windows 10 vs target Windows 11 + Android 14.
 
 ## Next
@@ -38,5 +39,5 @@
 1. ⏳ Reviewer manusia menilai R1–R6, R8–R9, R12 memakai [lembar kerja](../release/REVIEW_WORKSHEET_2026-10-25.md) + paket pra-review; **agent tidak boleh mengisi PASS/FAIL**.
 2. ⏳ Verifikasi CP/ATP per bab oleh Curriculum Lead (referensi phase-level belum klaim per bab).
 3. ⏳ Tindak lanjut temuan pra-review: 170 paket matching identik dengan eksplorasi, 91 paket bias posisi kunci, 82 kalimat panjang, 67 tujuan cakupan kata kunci rendah, label PAI di katalog.
-4. ⏳ Coba dua mode di app desktop (sakelar Belajar/Admin di bilah atas), lalu verifikasi visual Hasil Belajar berisi data + NVDA. **D-UX-1 sudah diputuskan dan diterapkan (T-077).** Keputusan desain yang masih memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). P0 butir 1–2, 4–6 dan UX-03 selesai (T-075/T-076).
+4. ⏳ Coba dua mode di app desktop (sakelar Belajar/Admin di bilah atas), ganti foto profil dari Pengaturan untuk melihat hero Beranda, lalu verifikasi visual Hasil Belajar berisi data + NVDA. **D-UX-1 sudah diputuskan dan diterapkan (T-077).** Keputusan desain yang masih memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). P0 butir 1–2, 4–6 dan UX-03 selesai (T-075/T-076).
 5. Gate rilis lain: B-07 → B-02 → B-03, signing, DV-01…DV-20.

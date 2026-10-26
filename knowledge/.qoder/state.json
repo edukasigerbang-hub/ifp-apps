@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "00959b5",
+  "commit": "4f4b6f6",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 17,
+  "context_version": 18,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-078f pemilih kelas collapsible + chip kelas terpilih di header",
+  "last_task": "T-079 foto profil lokal (migrasi 0006, perintah avatar, UI Pengaturan) + ilustrasi Beranda",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T21:20:00+07:00",
-  "last_validation": "T-078f (2026-10-26): pemilih kelas di Jelajah Materi kini panel collapsible — tombol header aria-expanded/aria-controls menampilkan chip 'Semua kelas' atau 'Kelas N' dari state grade, panel tile menutup otomatis setelah memilih (termasuk 'Semua kelas') dan bisa dibuka lagi lewat header/chevron; grup tile tetap role=group berlabel sr-only sehingga struktur a11y tidak berubah. npm test 93/93 + fixture 4/4 + catalog 320/320; npm run build PASS; a11y 17 pemeriksaan PASS (0 error, 7 warning reflow; Jelajah Materi 0 error); E2E home-catalog 13/13 (baru: panel tertutup + header 'Kelas 3' setelah memilih, lalu terbuka lagi), mode-switch 6/6, smoke 8/8, activities 8/8, learning-journey 11/11, profile-lifecycle 7/7; screenshot catalog-thumbnails.png memperlihatkan header tertutup 'Kelas 3' + 9 materi. Filter tidak dipersistensikan: muat ulang mengembalikan panel terbuka dan grade null.",
+  "last_updated": "2026-10-27T00:32:00+07:00",
+  "last_validation": "T-079 (2026-10-27): avatar profil disimpan sebagai BLOB di tabel baru profile_avatars (migrasi 0006, mime CHECK PNG/JPEG/WebP, FK cascade, ikut backup DB); perintah profile_avatar_set/clear/get memvalidasi magic bytes + batas 1,5 MB; Profile.hasAvatar via EXISTS; Pengaturan memakai dialog native untuk pilih/hapus foto; Beranda memakai hero gradasi dengan avatar bulat, eyebrow 'Ruang belajar', sapaan, dan ilustrasi cover matematika kelas 3 (fallback cover pertama) dalam bingkai — tanpa aset baru. cargo test 67/67 (2 test avatar); npm test PASS (fixture 4/4, catalog 320/320); npm run build PASS; a11y 17 pemeriksaan PASS (0 error, 7 warning); E2E home-catalog 14/14 (avatar + ilustrasi termuat setelah reload), mode-switch 6/6, profile-lifecycle 7/7, smoke 8/8; screenshot hero-beranda.png. Dialog pemilih berkas native tidak diotomasi (jalur set/clear diuji lewat perintah Rust + invoke).",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Coba dua mode di app desktop (sakelar Belajar/Admin di bilah atas) lalu verifikasi visual Hasil Belajar berisi data + NVDA. Keputusan desain yang memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
+  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Coba ganti foto profil dari Pengaturan dan lihat hero Beranda di app desktop, cek dua mode, lalu verifikasi visual Hasil Belajar berisi data + NVDA. Keputusan desain yang memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
 }
