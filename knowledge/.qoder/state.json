@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "a42a8f6",
+  "commit": "55d3e24",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -48,7 +48,7 @@
   "last_command": "DOCUMENT",
   "last_command_status": "PASS",
   "open_wave": null,
-  "dirty": true,
+  "dirty": false,
   "drift_detected": true,
   "drift_types": [
     "DOC_DRIFT"

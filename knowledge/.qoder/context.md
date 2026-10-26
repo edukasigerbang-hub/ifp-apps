@@ -4,7 +4,7 @@
 
 ## Kondisi terverifikasi
 
-- Git `main`, HEAD `a42a8f6` sebelum commit pra-review; working tree berisi artefak pra-review + lembar kerja yang disinkronkan.
+- Git `main`, HEAD `55d3e24` (pra-review agent T-072); working tree bersih.
 - App shell Tauri 2 + React 19 + TS + Vite + Tailwind; SQLite native; sync client + backend referensi.
 - Konten: **320 paket draft** Kelas 1–6 (Fase A 96 + Fase B/C 224); seluruh aset paket **WebP** (320 hash unik, 0 reuse).
 - Review teknis 2026-10-26 (pasca-T-070/T-071): **320/320 VALID**; alt/feedbackPolicy 320/320; kedalaman **320/320**; **0 duplikasi**; R10 `curriculumRefs` **320/320** (fase A/B/C, versi 2024).
