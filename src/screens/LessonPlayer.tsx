@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import { CoverArt } from "../components/content/CoverArt";
 import { ExplorationActivity } from "../components/content/ExplorationActivity";
 import { MatchingActivity } from "../components/content/MatchingActivity";
 import { OrderingActivity } from "../components/content/OrderingActivity";
 import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
+import { gradeCoverUrl, subjectCoverUrl } from "../content/coverArt";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
 import { subjectLabel } from "../content/subjectLabel";
+import type { ScreenId } from "../navigation";
 import { getPlaybackSelection } from "../state/playbackSelection";
 import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
 import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
@@ -47,7 +50,7 @@ type ContentLoadState =
   | { status: "error"; message: string }
   | { status: "empty" };
 
-export function LessonPlayer() {
+export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) => void }) {
   const [state, setState] = useState<ContentLoadState>({ status: "loading" });
   const [switching, setSwitching] = useState(false);
   const objectUrlsRef = useRef<string[]>([]);
@@ -246,6 +249,7 @@ export function LessonPlayer() {
         contentPackage={state.contentPackage}
         source={state.source}
         lessonId={state.lessonId}
+        onNavigate={onNavigate}
       />
     </div>
   );
@@ -254,11 +258,13 @@ export function LessonPlayer() {
 function LessonView({
   contentPackage,
   source,
-  lessonId
+  lessonId,
+  onNavigate
 }: {
   contentPackage: LoadedContentPackage;
   source: "managed" | "bundled";
   lessonId: string | null;
+  onNavigate?: (screen: ScreenId) => void;
 }) {
   const lesson =
     (lessonId
@@ -270,6 +276,9 @@ function LessonView({
 
   const [activeActivityId, setActiveActivityId] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
+  const [scores, setScores] = useState<Record<string, number>>({});
+  const [lastScore, setLastScore] = useState<number | null>(null);
+  const [visited, setVisited] = useState<string[]>([]);
   const [storage, setStorage] = useState<StorageState>({
     status: "starting",
     message: "Menyiapkan penyimpanan lokal..."
@@ -319,6 +328,33 @@ function LessonView({
   }, [contentPackage, lesson.lessonId]);
 
   const activeActivity = activities.find((activity) => activity.activityId === activeActivityId) ?? activities[0];
+
+  useEffect(() => {
+    const current = activeActivity?.activityId;
+    if (!current) {
+      return;
+    }
+    setVisited((previous) => (previous.includes(current) ? previous : [...previous, current]));
+  }, [activeActivity?.activityId]);
+
+  const gradedCount = activities.filter((activity) => scores[activity.activityId] !== undefined).length;
+  const gradedScores = Object.values(scores);
+  const averageScore =
+    gradedScores.length === 0
+      ? null
+      : Math.round(gradedScores.reduce((sum, score) => sum + score, 0) / gradedScores.length);
+  const progressPercent = activities.length === 0 ? 0 : Math.round((gradedCount / activities.length) * 100);
+
+  const manifestCoverPath = contentPackage.data.manifest.assets.find((asset) =>
+    asset.mediaType.startsWith("image/")
+  )?.path;
+  const lessonCoverPath = lesson.assetRefs.find((path) => contentPackage.assets[path]);
+  const coverUrl =
+    (manifestCoverPath ? contentPackage.assets[manifestCoverPath] : null) ??
+    (lessonCoverPath ? contentPackage.assets[lessonCoverPath] : null) ??
+    subjectCoverUrl(contentPackage.data.manifest.subjects[0] ?? "") ??
+    gradeCoverUrl(contentPackage.data.manifest.gradeLevels[0] ?? 0);
+
   const assessmentActivityId = lesson.assessmentRefs.find((activityId) =>
     activities.some((activity) => activity.activityId === activityId)
   );
@@ -342,6 +378,9 @@ function LessonView({
   }
 
   async function handleGraded(activityId: string, outcome: QuizGradedOutcome) {
+    setScores((previous) => ({ ...previous, [activityId]: outcome.score }));
+    setLastScore(outcome.score);
+
     if (!canPersistLocally()) {
       return;
     }
@@ -384,29 +423,44 @@ function LessonView({
 
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-3">
-        <StatusBadge tone={reviewTone} label={reviewLabel} />
-        <StatusBadge
-          tone="neutral"
-          label={
-            source === "managed"
-              ? `Paket impor v${contentPackage.data.manifest.packageVersion}`
-              : "Paket bawaan build"
-          }
-        />
-        <span className="text-sm text-muted">
-          Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
-          {contentPackage.data.manifest.subjects.map(subjectLabel).join(", ")} · v
-          {contentPackage.data.manifest.packageVersion}
-        </span>
-      </div>
+      <header
+        data-player-hero
+        className="overflow-hidden rounded-card border border-ink/10 bg-surface"
+      >
+        <div className="flex flex-col gap-5 p-5 md:flex-row md:items-center md:gap-6 md:p-6">
+          <div className="min-w-0 md:flex-1">
+            <div className="flex flex-wrap items-center gap-3">
+              <StatusBadge tone={reviewTone} label={reviewLabel} />
+              <StatusBadge
+                tone="neutral"
+                label={
+                  source === "managed"
+                    ? `Paket impor v${contentPackage.data.manifest.packageVersion}`
+                    : "Paket bawaan build"
+                }
+              />
+              <span className="text-sm text-muted">
+                Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
+                {contentPackage.data.manifest.subjects.map(subjectLabel).join(", ")} · v
+                {contentPackage.data.manifest.packageVersion}
+              </span>
+            </div>
 
-      <h1 className="mt-4 max-w-4xl text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
-      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
+            <h1 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
+              {lesson.summary}
+            </p>
+          </div>
+
+          <div data-player-cover className="w-full shrink-0 md:w-56 lg:w-72">
+            <CoverArt url={coverUrl} className="aspect-[16/9] w-full rounded-control" />
+          </div>
+        </div>
+      </header>
 
       <div
         data-player-layout
-        className="mt-6 grid gap-x-6 gap-y-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_22rem]"
+        className="mt-5 grid gap-x-6 gap-y-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_22rem]"
       >
         <div
           data-player-aside
@@ -430,6 +484,55 @@ function LessonView({
                   {objective}
                 </li>
               ))}
+            </ul>
+          </section>
+
+          <section
+            data-player-progress
+            aria-labelledby="player-progress-heading"
+            className="rounded-card border border-ink/10 bg-surface p-5"
+          >
+            <h2
+              id="player-progress-heading"
+              className="text-sm font-semibold uppercase tracking-[0.12em] text-muted"
+            >
+              Aktivitas &amp; kemajuan
+            </h2>
+            <p className="mt-2 text-sm text-muted">
+              {gradedCount} dari {activities.length} aktivitas dinilai pada sesi ini.
+            </p>
+            <div
+              role="progressbar"
+              aria-label="Aktivitas dinilai"
+              aria-valuemin={0}
+              aria-valuemax={activities.length}
+              aria-valuenow={gradedCount}
+              aria-valuetext={`${gradedCount} dari ${activities.length} aktivitas`}
+              className="mt-3 h-2 overflow-hidden rounded-full bg-ink/10"
+            >
+              <span
+                aria-hidden="true"
+                className="block h-full rounded-full bg-teal transition-[width] duration-300"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+            <ul className="mt-4 space-y-2">
+              {activities.map((activity) => {
+                const score = scores[activity.activityId];
+                const opened = visited.includes(activity.activityId);
+                return (
+                  <li key={activity.activityId} className="flex items-start justify-between gap-3 text-sm">
+                    <span className="min-w-0">{activity.title}</span>
+                    <span
+                      className={`shrink-0 text-xs font-semibold uppercase tracking-[0.08em] ${
+                        score !== undefined ? "text-teal-strong" : opened ? "text-ink" : "text-muted"
+                      }`}
+                    >
+                      {score !== undefined ? `Skor ${score}` : opened ? "Dibuka" : "Belum"}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>
@@ -531,6 +634,49 @@ function LessonView({
           )}
         </section>
       </div>
+
+      <section
+        data-session-summary
+        aria-labelledby="session-summary-heading"
+        className="mt-5 rounded-card border border-ink/10 bg-surface p-5 md:p-6"
+      >
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="min-w-0">
+            <h2
+              id="session-summary-heading"
+              className="text-sm font-semibold uppercase tracking-[0.12em] text-muted"
+            >
+              Ringkasan sesi
+            </h2>
+            <dl className="mt-3 flex flex-wrap gap-x-10 gap-y-3">
+              <div>
+                <dt className="text-xs text-muted">Aktivitas dinilai</dt>
+                <dd className="text-lg font-semibold">
+                  {gradedCount} dari {activities.length}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs text-muted">Skor terakhir</dt>
+                <dd className="text-lg font-semibold">{lastScore === null ? "—" : lastScore}</dd>
+              </div>
+              <div>
+                <dt className="text-xs text-muted">Rata-rata aktivitas</dt>
+                <dd className="text-lg font-semibold">{averageScore === null ? "—" : averageScore}</dd>
+              </div>
+            </dl>
+            <p className="mt-2 text-xs text-muted">
+              Diukur dari sesi ini; riwayat lengkap tersimpan di Hasil Belajar.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => onNavigate?.("results")}
+            className="min-h-11 shrink-0 rounded-control bg-navy px-5 text-sm font-medium text-white"
+          >
+            Buka Hasil Belajar
+          </button>
+        </div>
+      </section>
     </div>
   );
 }

@@ -376,6 +376,31 @@ export async function run({ page, artifactDir, log }) {
     log(`Layout Player satu kolom pada ${layout.viewport}px (di bawah breakpoint lg).`);
   }
 
+  const surfaces = await page.evaluate(`
+    (() => {
+      const hero = document.querySelector("[data-player-hero]");
+      const cover = document.querySelector("[data-player-cover] img[data-cover-art]");
+      const progress = document.querySelector("[data-player-progress]");
+      const bar = progress?.querySelector('[role="progressbar"]');
+      const summary = document.querySelector("[data-session-summary]");
+      return {
+        hero: Boolean(hero && hero.querySelector("h1")),
+        coverLoaded: Boolean(cover && cover.complete && cover.naturalWidth > 0),
+        coverSrc: cover ? cover.getAttribute("src") : null,
+        progress: Boolean(progress && bar),
+        progressMax: bar ? Number(bar.getAttribute("aria-valuemax")) : null,
+        summary: Boolean(summary && summary.textContent.includes("Ringkasan sesi"))
+      };
+    })()
+  `);
+  assert(surfaces.hero, "Header Player (data-player-hero) dengan judul tidak ditemukan.");
+  assert(surfaces.coverLoaded, `Cover header Player tidak termuat (src ${surfaces.coverSrc}).`);
+  assert(surfaces.progress && surfaces.progressMax > 0, "Kartu Aktivitas & kemajuan tidak ditemukan.");
+  assert(surfaces.summary, "Band Ringkasan sesi tidak ditemukan.");
+  log(
+    `Header Player memakai cover ${surfaces.coverSrc}; kartu kemajuan (maks ${surfaces.progressMax}) dan ringkasan sesi tampil.`
+  );
+
   await clickButton(page, "Benar atau Salah");
   await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
     label: "kuis benar-salah"
@@ -394,6 +419,32 @@ export async function run({ page, artifactDir, log }) {
     label: "fokus kartu hasil benar-salah"
   });
   log("Aktivitas benar-salah dinilai 100, tersimpan, dan kartu hasil difokuskan.");
+
+  const progress = await page.evaluate(`
+    (() => {
+      const card = document.querySelector("[data-player-progress]");
+      const bar = card?.querySelector('[role="progressbar"]');
+      const summary = document.querySelector("[data-session-summary]");
+      if (!card || !bar || !summary) return null;
+      return {
+        now: Number(bar.getAttribute("aria-valuenow")),
+        max: Number(bar.getAttribute("aria-valuemax")),
+        cardText: card.textContent,
+        summaryText: summary.textContent
+      };
+    })()
+  `);
+  assert(progress, "Kartu kemajuan atau ringkasan sesi hilang setelah penilaian.");
+  assert(
+    progress.now === 1 && progress.max === 5,
+    `Kemajuan ${progress.now}/${progress.max}, harus 1/5.`
+  );
+  assert(progress.cardText.includes("Skor 100"), "Skor aktivitas tidak tampil di kartu kemajuan.");
+  assert(
+    progress.summaryText.includes("1 dari 5") && progress.summaryText.includes("100"),
+    "Ringkasan sesi tidak memuat jumlah aktivitas dinilai dan skor terakhir."
+  );
+  log("Kartu kemajuan menandai 1/5 aktivitas berskor 100 dan ringkasan sesi ikut diperbarui.");
 
   await clickButton(page, "Jawaban Singkat");
   await page.waitFor(`document.body.textContent.includes("Tuliskan nama pecahan 1/2")`, {
@@ -488,36 +539,48 @@ export async function run({ page, artifactDir, log }) {
 
   const sticky = await page.evaluate(`
     (async () => {
-      const main = document.querySelector("#main-content");
       const aside = document.querySelector("[data-player-aside]");
-      if (!main || !aside) return null;
-      if (main.scrollHeight <= main.clientHeight + 120) {
+      const scroller = document.scrollingElement ?? document.documentElement;
+      if (!aside || !scroller) return null;
+      const maxScroll = scroller.scrollHeight - scroller.clientHeight;
+      if (maxScroll <= 120) {
         return { exercised: false, viewport: window.innerWidth };
       }
+      const frame = () => new Promise((resolve) => requestAnimationFrame(resolve));
+      scroller.scrollTop = 0;
+      await frame();
       const topBefore = Math.round(aside.getBoundingClientRect().top);
-      main.scrollTop = 160;
-      await new Promise((resolve) => requestAnimationFrame(resolve));
+      const target = Math.min(maxScroll, Math.round(topBefore - 24) + 40);
+      const extra = target - Math.round(topBefore - 24);
+      scroller.scrollTop = target;
+      await frame();
       const topAfter = Math.round(aside.getBoundingClientRect().top);
-      const mainTop = Math.round(main.getBoundingClientRect().top);
-      main.scrollTop = 0;
+      scroller.scrollTop = 0;
+      if (extra < 10) {
+        return { exercised: false, viewport: window.innerWidth, maxScroll, topBefore };
+      }
       return {
         exercised: true,
-        scrollTop: main.scrollHeight - main.clientHeight,
+        maxScroll,
         topBefore,
         topAfter,
-        mainTop,
-        stuck: topAfter >= mainTop && topAfter < topBefore
+        extra,
+        stuck: Math.abs(topAfter - 24) <= 2
       };
     })()
   `);
   if (sticky?.exercised && layout.viewport >= 1024) {
     assert(
       sticky.stuck,
-      `Kolom samping tidak menempel saat menggulir (top ${sticky.topBefore} → ${sticky.topAfter}, main ${sticky.mainTop}).`
+      `Kolom samping tidak menempel saat menggulir ${sticky.extra}px (top ${sticky.topBefore} → ${sticky.topAfter}, harus 24).`
     );
-    log(`Kolom samping menempel saat menggulir (top ${sticky.topBefore} → ${sticky.topAfter}px).`);
+    log(
+      `Kolom samping menempel: top ${sticky.topBefore} → ${sticky.topAfter}px setelah menggulir ${sticky.extra}px.`
+    );
   } else {
-    log("Kolom samping menempel: tidak diuji (viewport sempit atau halaman tidak dapat digulir).");
+    log(
+      `Kolom samping menempel: tidak diuji (${sticky?.exercised === false ? `ruang gulir ${sticky.maxScroll ?? 0}px` : "elemen tidak ditemukan"}).`
+    );
   }
 
   const profileId = await page.evaluate(
@@ -534,4 +597,20 @@ export async function run({ page, artifactDir, log }) {
 
   await page.screenshot(path.join(artifactDir, "activities.png"));
   log("Screenshot aktivitas baru tersimpan.");
+
+  await page.evaluate(
+    `(() => {
+      (document.scrollingElement ?? document.documentElement).scrollTop = 0;
+      return true;
+    })()`
+  );
+  await page.screenshot(path.join(artifactDir, "activities-hero.png"));
+  log("Screenshot header Player (cover + ringkasan) tersimpan.");
+
+  await clickButton(page, "Buka Hasil Belajar");
+  await page.waitFor(
+    `document.querySelector("h1")?.textContent.trim() === "Hasil Belajar"`,
+    { label: "layar Hasil Belajar dari ringkasan sesi" }
+  );
+  log("Tombol Buka Hasil Belajar pada ringkasan sesi membuka layar Hasil Belajar.");
 }

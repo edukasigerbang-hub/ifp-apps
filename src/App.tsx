@@ -105,7 +105,7 @@ export default function App() {
       ) : activeScreen === "curriculum" ? (
         <CurriculumScreen onNavigate={navigate} />
       ) : activeScreen === "player" ? (
-        <LessonPlayer />
+        <LessonPlayer onNavigate={navigate} />
       ) : activeScreen === "results" ? (
         <ResultsScreen />
       ) : activeScreen === "settings" ? (
