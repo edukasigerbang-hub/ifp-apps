@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "02dc4e4",
+  "commit": "ffb33f5",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 9,
+  "context_version": 10,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-075 Eksekusi P0 UX (5/6 butir; metadata internal tertahan keputusan)",
+  "last_task": "T-076 UX-03 (fokus kartu hasil) + audit a11y + 5 skenario E2E",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T17:25:10+07:00",
-  "last_validation": "T-075 (2026-10-26): 5/6 butir P0 UX selesai — copy netral + istilah skor; subjectLabel bersama (7 slug + fallback, 3 unit test) dipakai Home/Curriculum/Player/Hasil Belajar; token teal-strong #0b6f69 dan danger-strong #a8323c; breadcrumb Beranda jadi tombol; hint matching; satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. npm test 89/89 + fixture 4/4 + catalog 320/320; npm run build PASS. Verifikasi DOM dev PASS (label, breadcrumb, hint, copy kuis/eksplorasi, pesan tunggal). Screenshot PARTIAL (hanya Jelajah Materi; surface browser tersembunyi untuk Player). npm run a11y dan Hasil Belajar berisi data NOT RUN. T-072: pra-review agent 320 paket (bukan approval). T-073: packageDirOf diperbaiki; npm test 86/86. T-074: dokumen review UX/UI gabungan knowledge/design/ (20 temuan, 6 keputusan D-UX-1..D-UX-6); berkas eksternal 337 baris/14.998 byte digabung; 4 klaim dikoreksi; tautan 50/50 valid.",
+  "last_updated": "2026-10-26T18:23:02+07:00",
+  "last_validation": "T-076 (2026-10-26): UX-03 selesai — kartu hasil kuis/matching/ordering memakai tabIndex=-1 + scrollIntoView + focus() setelah penilaian. Harness diperbarui ke konten aktual (kuis bawaan 'Kuis Penguatan', tombol 'Lanjut berlatih') + 3 asersi fokus. npm test 89/89 + fixture 4/4 + catalog 320/320; npm run build PASS; npm run a11y PASS 16 pemeriksaan (0 error, 7 warning reflow); E2E smoke 8/8, activities 8/8, home 9/9, journey 11/11, profile 7/7; tautan knowledge 375/375 valid. Belum: verifikasi visual Hasil Belajar berisi data, NVDA. T-075: 5/6 butir P0 UX (metadata internal tertahan D-UX-1/D-UX-4). T-072: pra-review agent 320 paket (bukan approval). T-074: dokumen review UX/UI gabungan knowledge/design/ (20 temuan, 6 keputusan D-UX-1..D-UX-6).",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. P0 UX 5/6 selesai; butir 3 tertahan D-UX-1 (dua mode) dan D-UX-4 (metadata), P1 tertahan D-UX-2 (skala IFP) dan D-UX-6 (prioritas matching). Verifikasi Hasil Belajar dengan data nyata di desktop; jalankan npm run a11y. reviewStatus tetap draft"
+  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Verifikasi visual Hasil Belajar berisi data di desktop + NVDA (butuh jendela app). Keputusan desain yang memblokir sisa UX: D-UX-1 (dua mode), D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
 }
