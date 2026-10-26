@@ -52,6 +52,7 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 
 - E2E: penulisan attempt pertama setelah aplikasi baru dinyalakan kadang melewati batas tunggu 30 s (`Tersimpan lokal`) pada skenario `activities` / `learning-journey` / `home-catalog`, lalu PASS saat diulang tanpa perubahan kode (bukti 2026-10-27 lanjutan 65). Perlu diagnosis waktu tulis pertama (inisialisasi DB/outbox) atau timeout yang diperpanjang dengan alasan.
 - Boot: sidebar admin ter-render sesaat sebelum preferensi `appMode` terbaca sehingga mode belajar "berkedip" dari admin setelah muat ulang. Skenario `mode-switch` sudah menunggu rail belajar, tetapi aplikasi sebaiknya tidak menggambar shell admin sebelum mode diketahui.
+- Player: materi terpilih hanya disimpan di memori proses (`playbackSelection`), jadi memuat ulang halaman langsung di `#player` kembali ke paket pertama. Usulan: deep link `#player/<packageId>/<lessonId>` agar muat ulang, tautan, dan riwayat tetap membuka materi yang sama (T-084).
 - Retensi & index DB belum dirancang (menunggu OD-4).
 - Skema `sync_outbox` state enum belum ditetapkan.
 - Remote GitHub aktif (`origin`); CI berjalan di remote sejak 2026-10-24 (run `40040384407` PASS).

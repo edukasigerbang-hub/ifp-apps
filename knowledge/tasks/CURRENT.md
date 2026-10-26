@@ -516,3 +516,19 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan:** flake tulis-perdana dan kedipan sidebar saat boot dicatat sebagai utang teknis di BACKLOG; keduanya tidak disebabkan perubahan layout.
 
 **Sisa:** kolom samping masih kosong di bawah kartunya bila panel aktivitas jauh lebih tinggi; ruang vertikal bawah Player belum dimanfaatkan (mis. ringkasan progres); cover khusus belum dipakai di header Player.
+
+### Handoff Seleksi Materi Player (2026-10-27, T-084)
+
+**Status:** selesai dan terverifikasi. Laporan PO: semua materi selalu membuka “Mengenal Huruf dan Suku Kata”.
+
+**Akar masalah (terbukti):** `consumePlaybackSelection()` membaca lalu menghapus seleksi. Effect React berjalan dua kali di StrictMode; pembacaan kedua bernilai `null` → Player jatuh ke paket pertama. Instrumentasi mencatat `["kelas6-pai-b06-zakat", null]` pada satu klik.
+
+**Perubahan kode:**
+- `src/state/playbackSelection.ts` — `getPlaybackSelection()` idempoten menggantikan `consumePlaybackSelection()`.
+- `src/screens/LessonPlayer.tsx` — effect memakai pembacaan idempoten.
+- `src/state/playbackSelection.test.ts` — 2 test regresi.
+- `scripts/e2e/scenarios/home-catalog.mjs` — buka materi dari paket lain dan cocokkan `h1` dengan judul kartu; helper `openMaterial()` mencocokkan `li` kartu (bukan teks seluruh `<ul>`). **19 pemeriksaan.**
+
+**Verifikasi aktual:** `npm test` **103/103** (14 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 19/19**, **activities 10/10**, **learning-journey 11/11**, **content-rollback 9/9**, **smoke 8/8**, **a11y 17/17** (0 error, 7 warning) · uji manual: klik “Zakat dan Infak” → `h1` “Zakat dan Infak”. `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Sisa:** seleksi hanya di memori — muat ulang langsung di `#player` kembali ke paket pertama; belum ada deep link materi di hash.
