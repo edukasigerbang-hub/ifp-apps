@@ -6,7 +6,7 @@ import { QuizActivity, type QuizGradedOutcome } from "../components/content/Quiz
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
 import { subjectLabel } from "../content/subjectLabel";
-import { consumePlaybackSelection } from "../state/playbackSelection";
+import { getPlaybackSelection } from "../state/playbackSelection";
 import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
 import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
 import type { Activity } from "../content/schema/activity";
@@ -63,7 +63,7 @@ export function LessonPlayer() {
     let cancelled = false;
 
     (async () => {
-      const requested = consumePlaybackSelection();
+      const requested = getPlaybackSelection();
       try {
         if (canPersistLocally()) {
           const summaries = await listManagedPackages();

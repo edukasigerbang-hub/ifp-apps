@@ -4,14 +4,14 @@ export interface PlaybackSelection {
   lessonId?: string;
 }
 
-let pending: PlaybackSelection | null = null;
+let current: PlaybackSelection | null = null;
 
 export function setPlaybackSelection(selection: PlaybackSelection): void {
-  pending = selection;
+  current = selection;
 }
 
-export function consumePlaybackSelection(): PlaybackSelection | null {
-  const current = pending;
-  pending = null;
+// Pembacaan harus idempoten: effect React berjalan dua kali di StrictMode,
+// dan pembacaan sekali-pakai membuat jalur kedua jatuh ke paket pertama.
+export function getPlaybackSelection(): PlaybackSelection | null {
   return current;
 }

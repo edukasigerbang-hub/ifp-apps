@@ -38,6 +38,24 @@ function fillSearch(value) {
   `;
 }
 
+async function openMaterial(page, titleFragment) {
+  return page.evaluate(`
+    (() => {
+      const buttons = [...document.querySelectorAll("button")].filter(
+        (button) => button.textContent.trim() === "Buka materi"
+      );
+      const target = buttons.find((button) => {
+        const title = button.closest("li")?.querySelector("h2")?.textContent?.trim() ?? "";
+        return title.includes(${JSON.stringify(titleFragment)});
+      });
+      if (!target) return { status: "missing" };
+      const title = target.closest("li")?.querySelector("h2")?.textContent?.trim() ?? null;
+      target.click();
+      return { status: "clicked", title };
+    })()
+  `);
+}
+
 function clickGrade(value) {
   return `
     (() => {
@@ -285,24 +303,8 @@ export async function run({ page, artifactDir, log }) {
   );
   log("Header pilihan kelas bisa dibuka kembali (collapsible).");
 
-  const clickedPilot = await page.evaluate(`
-    (() => {
-      const buttons = [...document.querySelectorAll("button")].filter(
-        (button) => button.textContent.trim() === "Buka materi"
-      );
-      const target = buttons.find((button) => {
-        let node = button;
-        for (let depth = 0; depth < 6 && node; depth += 1, node = node.parentElement) {
-          if (node.textContent.includes("Mengenal Pecahan 1/2")) return true;
-        }
-        return false;
-      });
-      if (!target) return "missing";
-      target.click();
-      return "clicked";
-    })()
-  `);
-  assert(clickedPilot === "clicked", `Tombol Buka materi pilot tidak ditemukan (${clickedPilot}).`);
+  const openedPilot = await openMaterial(page, "Mengenal Pecahan 1/2");
+  assert(openedPilot.status === "clicked", `Tombol Buka materi pilot tidak ditemukan (${openedPilot.status}).`);
   await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
     label: "Player dibuka"
   });
@@ -314,6 +316,51 @@ export async function run({ page, artifactDir, log }) {
     label: "sumber paket impor"
   });
   log("Buka materi membuka lesson yang dipilih di Player.");
+
+  // Regresi T-084: materi dari paket lain harus tampil, bukan jatuh ke paket pertama.
+  await clickButton(page, "Jelajah Materi");
+  await page.waitFor(`document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`, {
+    label: "kembali ke katalog"
+  });
+  await page.waitFor(
+    `document.body.textContent.includes("materi ditemukan.") &&
+     [...document.querySelectorAll("button")].filter((button) => button.textContent.trim() === "Buka materi").length > 100`,
+    { label: "kartu katalog kembali penuh" }
+  );
+  const openedOther = await openMaterial(page, "Zakat dan Infak");
+  assert(
+    openedOther.status === "clicked" && openedOther.title,
+    `Tombol Buka materi paket lain tidak ditemukan (${openedOther.status}).`
+  );
+  await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
+    label: "Player dibuka untuk paket lain"
+  });
+  await page.waitFor(`document.querySelector("main h1")?.textContent.trim() === ${JSON.stringify(openedOther.title)}`, {
+    label: `judul "${openedOther.title}" di Player`
+  });
+  log(`Materi kedua “${openedOther.title}” tampil sesuai pilihan, bukan paket pertama.`);
+
+  await clickButton(page, "Jelajah Materi");
+  await page.waitFor(`document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`, {
+    label: "kembali ke katalog"
+  });
+  await page.waitFor(
+    `document.body.textContent.includes("materi ditemukan.") &&
+     [...document.querySelectorAll("button")].filter((button) => button.textContent.trim() === "Buka materi").length > 100`,
+    { label: "kartu katalog kembali penuh" }
+  );
+  const reopenedPilot = await openMaterial(page, "Mengenal Pecahan 1/2");
+  assert(
+    reopenedPilot.status === "clicked",
+    `Tombol Buka materi pilot tidak ditemukan saat dibuka ulang (${reopenedPilot.status}).`
+  );
+  await page.waitFor(
+    `document.querySelector("main h1")?.textContent.includes("Mengenal Pecahan")`,
+    { label: "judul pilot saat dibuka ulang" }
+  );
+  await page.waitFor(`document.body.textContent.includes("Paket impor v0.1.0")`, {
+    label: "sumber paket impor saat dibuka ulang"
+  });
 
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
