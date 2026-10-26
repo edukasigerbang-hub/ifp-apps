@@ -225,6 +225,58 @@ export async function run({ page, artifactDir, log }) {
   );
   log(`Kartu mapel Beranda membuka katalog terfilter Matematika (${mathCount} kartu, semua matematika).`);
 
+  const arrival = await page.evaluate(`(() => {
+    const scroller = document.scrollingElement ?? document.documentElement;
+    const subjectToggle = document.querySelector('button[aria-controls="filter-mapel-grid"]');
+    const subjectGrid = document.getElementById("filter-mapel-grid");
+    const classGrid = document.getElementById("filter-kelas-grid");
+    return {
+      scrollTop: scroller.scrollTop,
+      subjectCollapsed: subjectToggle?.getAttribute("aria-expanded") === "false" && !subjectGrid,
+      classOpen: Boolean(classGrid),
+      classToggle: document.querySelector('button[aria-controls="filter-kelas-grid"]')?.textContent.trim()
+    };
+  })()`);
+  assert(
+    arrival.scrollTop === 0,
+    `Katalog terbuka pada posisi gulir ${arrival.scrollTop}, seharusnya 0.`
+  );
+  assert(
+    arrival.subjectCollapsed && arrival.classOpen,
+    `Setelah memilih mapel, grid mapel harus terlipat dan grid kelas terbuka (${JSON.stringify(arrival)}).`
+  );
+  log(
+    `Katalog terbuka di posisi atas, grid mapel terlipat, dan pilihan kelas langsung tersedia (${arrival.classToggle}).`
+  );
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  await page.screenshot(path.join(artifactDir, "katalog-dari-mapel.png"));
+
+  await clickButton(page, "Kelas 3");
+  await page.waitFor(
+    `(() => {
+      const cards = [...document.querySelectorAll("[data-catalog-subjects]")];
+      const chips = [...document.querySelectorAll("main span")].map((node) => node.textContent.trim());
+      return (
+        cards.length > 0 &&
+        cards.every(
+          (card) =>
+            card.dataset.catalogSubjects.split(",").includes("matematika") &&
+            card.dataset.catalogGrades.split(",").every((grade) => grade === "3")
+        ) &&
+        chips.includes("Kelas 3") &&
+        chips.includes("Matematika")
+      );
+    })()`,
+    { label: "katalog terfilter matematika kelas 3" }
+  );
+  const classCount = await page.evaluate(
+    `document.querySelectorAll("[data-catalog-subjects]").length`
+  );
+  assert(classCount < mathCount, `Filter kelas tidak mempersempit hasil (${classCount} vs ${mathCount}).`);
+  log(`Pilih kelas setelah mapel: ${classCount} kartu matematika kelas 3 (dari ${mathCount}).`);
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  await page.screenshot(path.join(artifactDir, "katalog-matematika-kelas3.png"));
+
   await clickButton(page, "Beranda");
   await page.waitFor(`document.querySelector("main h1")?.textContent.includes("Halo")`, {
     label: "Beranda setelah katalog terfilter"

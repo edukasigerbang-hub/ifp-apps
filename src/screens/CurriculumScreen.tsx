@@ -43,6 +43,9 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
     }
     if (requested.subject) {
       setSubject(requested.subject);
+      // Mapel sudah dipilih di Beranda; lipat grid mapel agar langkah berikutnya
+      // (pilih kelas) langsung terlihat tanpa menggulir.
+      setSubjectsOpen(false);
     }
     if (typeof requested.grade === "number") {
       setGrade(requested.grade);
@@ -372,6 +375,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
             <li
               key={`${entry.packageId}@${entry.version}:${entry.lessonId}`}
               data-catalog-subjects={entry.subjects.join(",")}
+              data-catalog-grades={entry.gradeLevels.join(",")}
               className="flex flex-col overflow-hidden rounded-card border border-ink/10 bg-surface"
             >
               <LessonThumbnail entry={entry} className="aspect-[16/9] w-full border-b border-ink/10" />

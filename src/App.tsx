@@ -58,6 +58,14 @@ export default function App() {
     };
   }, []);
 
+  // Dokumen yang menggulir (bukan `main`), jadi tanpa ini layar baru terbuka di
+  // posisi gulir layar sebelumnya dan judul/filter di atas tidak terlihat.
+  useEffect(() => {
+    const scroller = document.scrollingElement ?? document.documentElement;
+    scroller.scrollTop = 0;
+    document.getElementById("main-content")?.scrollTo({ top: 0 });
+  }, [activeScreen]);
+
   function navigate(screen: ScreenId) {
     const next = isScreenAllowedInMode(appMode, screen) ? screen : "home";
     setActiveScreen(next);
