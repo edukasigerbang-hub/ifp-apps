@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "6f83829",
+  "commit": "300c29f",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 27,
+  "context_version": 28,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-088 pencarian 'ipas' kosong: empty state katalog menyebut filter aktif + tombol Cari di semua mapel/kelas",
+  "last_task": "T-089 16 paket IPAS kelas 1–2 (draft, di luar matriks Fase A; aset sementara = cover mapel IPAS)",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-27T03:28:00+07:00",
-  "last_validation": "T-088 (2026-10-27): pencarian bebas terbukti menemukan IPAS (32 entri; IPAS hanya kelas 3-6, 8 per kelas); hasil kosong berasal dari filter aktif (chip mapel Matematika dan/atau kelas 1-2) yang tidak disebut empty state lama. Diganti kartu empty state yang menyebut kata kunci + filter dan menyediakan Cari di semua mapel, Cari di semua kelas, Hapus semua filter. npm test 105/105 (15 berkas) + fixture 4/4 + catalog 320/320; npm run build PASS; E2E home-catalog 26/26 (termasuk 'ipas' di Matematika+Kelas 3 menjelaskan filter, lalu Cari di semua mapel -> 8 materi IPAS kelas 3), a11y 17/17 (0 error, 7 warning), activities 14/14, smoke 8/8; cargo test tidak dijalankan (tanpa perubahan Rust).",
+  "last_updated": "2026-10-27T03:36:00+07:00",
+  "last_validation": "T-089 (2026-10-27): 16 paket IPAS kelas 1–2 dibuat via scripts/add-ipas-kelas1-2.mjs (5 langkah eksplorasi, matching 6 pasangan, kuis 2 soal = 8 item dinilai; aset sementara salinan cover mapel IPAS). Validator 16/16 VALID (0 issue, 1 warning draft/paket); katalog dibangun ulang 336 entri/336 paket (tiap kelas 56, tiap mapel 48); npm test 105/105 (15 berkas) + fixture 4/4 + catalog 336/336; npm run build PASS; E2E home-catalog 28/28 (chip Kelas 1 -> 8 kartu IPAS), activities 14/14, smoke 8/8, a11y 17/17 (0 error, 7 warning). cargo test tidak dijalankan (tanpa perubahan Rust). IPAS di luar matriks Fase A OD-1: curriculumRefs fase-a provisional, reviewStatus draft.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Verifikasi manual di app desktop: Jelajah Materi dengan chip Matematika + Kelas 3, ketik 'ipas' — kartu kosong harus menyebut kedua filter dan tombol 'Cari di semua mapel' menampilkan 8 materi IPAS kelas 3 (T-088). Catatan konten: IPAS memang belum tersedia untuk kelas 1-2. Berikutnya: Beranda -> kartu Matematika harus membuka katalog di atas dengan pilihan kelas terlihat (T-087); buka beberapa materi di Player dan pastikan judul mengikuti pilihan (T-084). Reviewer manusia menilai R1-R6/R8-R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Keputusan desain yang memblokir sisa UX: D-UX-2, D-UX-4, D-UX-5, D-UX-6. reviewStatus tetap draft"
+  "next_step": "Verifikasi manual di app desktop: Jelajah Materi -> panel kelas -> Kelas 1 -> harus tampil 8 materi IPAS kelas 1 (dan Kelas 2 untuk 8 lainnya), buka salah satunya di Player. Berikutnya: 16 ilustrasi Flow per topik (4:3 1200x896) lalu migrasi manifest dari aset sementara ke aset unik + validasi ulang + rebuild katalog; minta keputusan Curriculum Lead soal IPAS di Fase A (OD-1). Reviewer manusia menilai R1-R6/R8-R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Keputusan desain yang memblokir sisa UX: D-UX-2, D-UX-4, D-UX-5, D-UX-6. reviewStatus tetap draft"
 }

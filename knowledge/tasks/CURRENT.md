@@ -104,6 +104,7 @@
 | Konten Kelas 1 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten Kelas 2 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten inti Kelas 1–6 | **DONE (draft)** | **320 paket** (Fase A 96 + Fase B/C 224); semua VALID, `curriculumRefs` kosong |
+| IPAS Kelas 1–2 (T-089) | **DONE (draft) — DI LUAR MATRIKS FASE A** | 16 paket (8 kelas 1 + 8 kelas 2), VALID; `curriculumRefs` fase-a provisional; IPAS tidak ada di daftar mapel Fase A OD-1 sehingga perlu keputusan Curriculum Lead |
 | Daftar mapel/kurikulum (OD-1) | **DISETUJUI PO + CURRICULUM LEAD (via sesi) — 2026-10-26** | [lembar keputusan 2026-10-26](../content/OD1_DECISION_SHEET_2026-10-26.md) · [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) — D1–D8 disetujui kedua peran; tanpa tanda tangan tertulis; CP/ATP per bab belum diverifikasi |
 | Rubrik review pedagogis | **TEKNIS PASS / PRA-REVIEW AGENT ADA / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; kedalaman 320/320; 0 duplikasi; R10 320/320 (phase-level) · [Pra-review agent R1–R6/R8–R9/R12](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) (bukan approval) |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
@@ -131,6 +132,13 @@
 
 | Check | Hasil |
 |---|---|
+| Paket IPAS kelas 1–2 (T-089) | **PASS** — 16 paket baru (8 kelas 1 + 8 kelas 2) VALID 16/16, 0 issue, 1 warning/paket (draft) |
+| Katalog (T-089) | **PASS** — 336 entri / 336 paket; tiap kelas 56, tiap mapel 48; `content:catalog:check` ikut `npm test` |
+| `npm test` (T-089) | **PASS** — 105/105 unit (15 berkas) + fixture 4/4 + catalog 336/336 |
+| `npm run build` (T-089) | **PASS** — `tsc --noEmit` + Vite |
+| E2E home-catalog (T-089) | **PASS** — **28/28**; regresi baru: chip Kelas 1 → 8 kartu IPAS kelas 1 (`katalog-ipas-kelas1.png`) |
+| E2E regresi (T-089) | **PASS** — activities 14/14, smoke 8/8, a11y 17/17 (0 error, 7 warning) |
+| `cargo test` (T-089) | **NOT RUN** — tanpa perubahan Rust |
 | `npm test` (T-070) | **PASS** — 85/85 unit + 4/4 fixture + catalog 320/320 |
 | `npm run build` (T-070) | **PASS** — dist 320 WebP, 0 PNG |
 | Review konten ulang (T-070) | **PASS** — 320/320 VALID; kedalaman 320/320; 0 duplikasi; R10 4/320 saat itu |
@@ -592,4 +600,27 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 **Verifikasi aktual:** `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 26/26**, **a11y 17/17** (0 error, 7 warning), **activities 14/14**, **smoke 8/8**. `cargo test` tidak dijalankan (tanpa perubahan Rust).
 
-**Sisa:** pencarian tetap di dalam filter aktif (bukan global) — kini dijelaskan; IPAS memang belum ada untuk kelas 1–2.
+**Sisa:** pencarian tetap di dalam filter aktif (bukan global) — kini dijelaskan; IPAS memang belum ada untuk kelas 1–2. *(Sejak T-089 IPAS kelas 1–2 sudah tersedia — lihat handoff di bawah.)*
+
+### Handoff Paket IPAS Kelas 1–2 (2026-10-27, T-089)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: "tambah materi IPAS kelas 1-2 juga". Keputusan PO untuk ilustrasi: **paket dulu, gambar menyusul** — 16 paket dibuat lengkap sekarang dengan salinan cover mapel IPAS sebagai aset sementara; ilustrasi Flow menyusul saat kuota/akun tersedia.
+
+**Konteks kurikulum (mengikat):** pada matriks OD-1, Fase A (kelas 1–2) berisi **6 mapel inti** dan **IPAS baru mulai Fase B (kelas 3)**. Ke-16 paket ini karena itu **di luar matriks yang disetujui**; `curriculumRefs` diisi `fase-a/2024` secara **provisional** mengikuti preseden ADR-0033, `reviewStatus` dan `releaseState` tetap `draft`. Perluasan IPAS ke Fase A **belum diputuskan Curriculum Lead** — jangan diklaim sesuai kurikulum.
+
+**Paket baru (16):**
+- Kelas 1: `kelas1-ipas-b01-tubuh-dan-indera`, `b02-makhluk-hidup-di-sekitarku`, `b03-merawat-tubuh`, `b04-makanan-sehat`, `b05-cuaca-di-sekitarku`, `b06-lingkungan-rumah-sekolah`, `b07-hewan-tumbuhan-peliharaan`, `b08-keselamatan-diri`.
+- Kelas 2: `kelas2-ipas-b01-pertumbuhan-manusia-hewan`, `b02-bagian-tumbuhan`, `b03-siklus-hidup-sederhana`, `b04-wujud-benda`, `b05-perubahan-cuaca-musim`, `b06-sumber-daya-alam`, `b07-hemat-air-listrik`, `b08-lingkungan-bersih-sehat`.
+
+**Struktur tiap paket:** `manifest.json` (v0.2.0, `gradeLevels` satu kelas, `subjects ["ipas"]`, 1 aset) + `lessons/lesson-001.json` (4 tujuan, 3 activityIds, 1 assessmentRef) + 3 aktivitas: eksplorasi **5 langkah**, matching **6 pasangan**, kuis pilihan ganda **2 soal** → **8 item dinilai**. `lessonId` = slug paket sehingga tidak menambah tabrakan `lessonId@version` (tetap 38 benturan lama di paket warisan).
+
+**Perubahan kode/alat:**
+- `scripts/add-ipas-kelas1-2.mjs` (baru) — generator satu-kali dari array `topics` (judul, ringkasan, tujuan, langkah, pasangan, soal); menyalin `content/covers/pelajaran/cover-mapel-ipas.webp` ke `assets/<slug>.webp` dan menghitung SHA-256; melewati folder yang sudah ada kecuali `--force`.
+- `public/content-catalog.json` — dibangun ulang: **336 entri / 336 paket** (setiap kelas 56, setiap mapel 48; ipas 48).
+- `scripts/e2e/scenarios/home-catalog.mjs` — regresi baru: setelah pencarian "ipas", buka panel kelas (kondisional — panel terbuka default), klik **Kelas 1** → 8 kartu IPAS kelas 1, artefak `katalog-ipas-kelas1.png`; lalu "Semua kelas" mengembalikan 48 hasil, sebelum alur Kelas 3 yang sudah ada. **28 pemeriksaan.**
+
+**Verifikasi aktual:** validator 16/16 **VALID** (0 issue, 1 warning draft per paket) · `npm test` **105/105** + fixture 4/4 + catalog **336/336** · `npm run build` PASS · E2E **home-catalog 28/28**, **activities 14/14**, **smoke 8/8**, `npm run a11y` **17/17** (0 error, 7 warning) · `cargo test` tidak dijalankan (tanpa perubahan Rust). Bukti visual: `katalog-ipas-kelas1.png` (chip "Kelas 1", "8 materi ditemukan", kartu "KELAS 1 · IPAS").
+
+**Batasan (jujur):** ke-16 thumbnail masih memakai **satu gambar yang sama** (cover mapel IPAS) — belum ada ilustrasi per topik · belum ada review pedagogis manusia, jadi `reviewStatus` tetap `draft` · E2E memverifikasi tampilan **kelas 1**; kelas 2 diverifikasi lewat validator, katalog, dan data paket, bukan klik UI · kuis hanya 2 soal (ambang ≥8 item dipenuhi via matching).
+
+**Sisa:** buat 16 ilustrasi Flow (satu per topik, 4:3 1200×896), migrasikan manifest ke aset unik, lalu jalankan ulang validator + katalog; minta keputusan Curriculum Lead soal IPAS di Fase A.
