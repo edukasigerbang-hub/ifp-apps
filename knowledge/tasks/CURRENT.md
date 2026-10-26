@@ -218,7 +218,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 **Akun & perkakas aktif (2026-10-26):** generasi dilanjutkan di akun **Dewi Gardenia** (label akun diverifikasi di UI), project `218ad195-1801-4997-bffc-c754043067d6` (“Okt 25 - 15:50”). Karakter bernama **Ayu** dan **Bima** dibuat di akun ini (Karakter → Karakter baru → “Tambahkan dari project” → `ayu.jpg`/`bima.jpg` → nama + kepribadian → Selesai) dan dilampirkan ke setiap prompt satu per satu via “Tambahkan bahan ke kotak perintah”. Indeks 89–91 tuntas.
 
-**Blocker surface AKTIF (2026-10-26 07:26 +07:00):** panel in-app Browser hidden saat akan mengirim indeks 92 (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`, `visibilityState=hidden`); prompt indeks 92 sudah terisi di composer dengan dua chip “Bahan karakter”. Perlu user membuka panel; jangan mengulang klik otomatis.
+**Blocker surface AKTIF (2026-10-26 07:28 +07:00):** panel in-app Browser hidden saat akan mengirim indeks 92 (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`, `visibilityState=hidden`); prompt indeks 92 sudah terisi di composer, chip karakter belum dilampirkan (picker tidak bisa dibuka saat hidden). Perlu user membuka panel; jangan mengulang klik otomatis.
 
 **Blocker banner (2026-10-26):** indeks 91 kena banner “aktivitas yang tidak biasa”; diselesaikan dengan satu retry “Coba lagi” lalu satu refresh halaman, lalu prompt dikirim ulang (prosedur sama seperti indeks 76/83/84/86/87; tanpa bypass, tanpa ganti akun).
 

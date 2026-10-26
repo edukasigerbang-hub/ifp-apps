@@ -28,5 +28,5 @@ Ketiganya 1200×896 WebP di `content/materi/kelas2/` (129.050 B; 134.088 B; 114.
 
 ## Blocker aktif
 
-- Panel in-app Browser kembali **hidden** saat akan mengirim indeks 92 (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`, `visibilityState=hidden`). Prompt indeks 92 sudah terisi di composer dengan dua chip “Bahan karakter”; menunggu user membuka panel.
+- Panel in-app Browser kembali **hidden** saat akan mengirim indeks 92 (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`, `visibilityState=hidden`). Prompt indeks 92 sudah terisi di composer; chip karakter **belum** dilampirkan karena picker tidak dapat dibuka saat surface hidden. Menunggu user membuka panel.
 - Tidak ada klik yang diulang otomatis saat surface hidden.
