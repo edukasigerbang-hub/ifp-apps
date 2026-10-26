@@ -143,7 +143,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
           Tidak ada materi yang cocok. Ubah kata kunci atau filter.
         </p>
       ) : (
-        <ul className="mt-6 grid gap-4 md:grid-cols-2">
+        <ul className="mt-6 grid gap-4 md:grid-cols-3">
           {visible.map((entry) => (
             <li
               key={`${entry.packageId}@${entry.version}:${entry.lessonId}`}

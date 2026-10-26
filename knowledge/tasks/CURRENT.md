@@ -165,6 +165,7 @@
 | E2E mode-switch (T-078) | **PASS** — 6 pemeriksaan: tombol ikon (`aria-label` Belajar/Admin), mode tersimpan, dan **restore setelah `Page.reload`** (simulasi restart: tetap tanpa sidebar + 4 tujuan belajar) |
 | E2E regresi (T-078) | **PASS** — smoke 8, activities 8, learning-journey 11, profile-lifecycle 7 |
 | `npm run a11y` (T-078) | **PASS** — 17 pemeriksaan; 0 error, 7 warning reflow/target sentuh |
+| Grid katalog 3 kolom (T-078c) | **PASS** — `md:grid-cols-3`; E2E `home-catalog` 10/10 + screenshot 3 kartu per baris; a11y 17/17 |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
