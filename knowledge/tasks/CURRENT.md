@@ -83,6 +83,7 @@
 | T-071 | Persetujuan Curriculum Lead + `curriculumRefs` | D1–D8 disetujui Curriculum Lead via instruksi sesi 2026-10-26; 316 refs diisi via `scripts/fill-curriculum-refs.mjs`; R10 **320/320**; review 320/320 VALID |
 | T-072 | Pra-review agent R1–R6/R8–R9/R12 | 320 paket dipindai deterministik: R1 66 paket sinyal, R3 40, R4 0, R5 184 (170 matching identik dengan langkah eksplorasi, 91 bias posisi kunci), R6/R8/R9 bersih, R12 1 temuan label PAI. **Bukan approval**; `reviewStatus` tetap `draft` — [laporan](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) |
 | T-073 | Perbaikan pemuatan paket bawaan | `packageDirOf` di `src/content/loadPackages.ts` salah menurunkan direktori untuk modul `lessons/`/`activities/`, sehingga Player menampilkan “Paket bawaan gagal divalidasi” dan Beranda 0 paket. Diperbaiki + unit test `loadPackages.test.ts`; paket bawaan terbuka di Player |
+| T-074 | Dokumen review UX/UI gabungan | 7 screenshot full-page + audit kode + review eksternal digabung menjadi [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](../design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md): 20 temuan (5 P1, 10 P2, 5 P3), rekomendasi dua mode, baseline skala IFP, roadmap P0–P3, 5 keputusan terbuka. **Bukan approval**; tidak ada usability test |
 
 ## Status prasyarat materi pembelajaran
 
@@ -135,6 +136,8 @@
 | Sampel baca stratifikasi (T-072) | **ADA** — 40 paket (1 per sel kelas×mapel), teks apa adanya untuk ahli mapel |
 | Pemuatan paket bawaan (T-073) | **PASS** — bug `packageDirOf` diperbaiki; Player membuka paket bawaan (Kelas 1 Bahasa Indonesia, 3 aktivitas, 5 langkah); `npm test` 86/86; `npm run build` PASS |
 | E2E home/journey setelah T-073 | **NOT RUN** — aplikasi desktop sedang berjalan (harness menolak start bila app aktif) |
+| Tautan & nomor baris dokumen UX (T-074) | **PASS** — seluruh tautan relatif ada; semua anotasi `#L<n>` ≤ jumlah baris berkas |
+| Review UX dengan pengguna (T-074) | **NOT RUN** — tidak ada sesi dengan guru/siswa; skor 6,5/10 bersifat heuristik eksternal |
 | `npm test` | **PASS** — 15 unit test + 4 golden fixture |
 | `npm run fixtures:check` | **PASS** — 4/4 cocok dengan expected (VALID/3/7/1 issue) |
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
@@ -282,3 +285,13 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Temuan desain utama untuk reviewer:** 170 paket memakai pasangan matching yang identik dengan prompt/reveal eksplorasi (beban ganda, bukan penguatan), dan 91 paket menempatkan seluruh kunci pilihan ganda pada posisi opsi yang sama.
 
 **Lembar kerja reviewer** (`knowledge/release/REVIEW_WORKSHEET_2026-10-25.md` + CSV) sudah disinkronkan: jumlah aktivitas terbaru, kolom R1–R12 dan reviewer tetap kosong.
+
+### Handoff Review UX/UI (2026-10-26, T-074)
+
+**Status:** dokumen gabungan selesai di [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](../design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md) — **bukan approval**, tanpa usability test. Menggabungkan review eksternal (ChatGPT share, skor heuristik 6,5/10) dengan audit kode aktual.
+
+**Angka:** 20 temuan — P1 5 (skala IFP, feedback per jawaban, hasil di luar viewport, metadata internal, copy hardcoded), P2 10, P3 5. Kontras terukur: teal 2,81–2,95:1, danger di tint 4,23:1, label sidebar 4,06:1; muted 4,76:1 dan putih/primary 5,38:1 lolos.
+
+**Yang perlu diputuskan manusia (bukan agent):** D-UX-1 dua mode Siswa/Pengelola · D-UX-2 baseline skala IFP (16–18 px vs 20–24 px) · D-UX-3 font · D-UX-4 perlakuan metadata DRAFT/versi · D-UX-5 bentuk matching.
+
+**Catatan bukti:** screenshot ada di `F:\_ifp-apps\.tmp-screenshots\` (git-ignored; zip `layout-pembelajaran-2026-10-26.zip`); Hasil Belajar berisi data **belum** diverifikasi karena butuh jendela desktop.

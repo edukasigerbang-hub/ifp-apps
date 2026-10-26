@@ -38,12 +38,12 @@
   "context_version": 8,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-073 Perbaikan pemuatan paket bawaan (packageDirOf) + unit test",
+  "last_task": "T-074 Dokumen review UX/UI gabungan (knowledge/design/)",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T16:45:00+07:00",
-  "last_validation": "T-072 pra-review agent (2026-10-26): 320 paket dipindai deterministik via scripts/pedagogical-prereview.mjs -> R1 66 paket, R3 40, R4 0, R5 184, R6 0, R8 0, R9 0, R12 1 temuan. BUKAN approval. T-073: packageDirOf di src/content/loadPackages.ts diperbaiki (modul lessons/activities kini dipetakan ke direktori paket); Player membuka paket bawaan; npm test 86/86 + fixture 4/4 + catalog 320/320; npm run build PASS; npm run tauri dev berjalan. E2E home/journey NOT RUN (app aktif).",
+  "last_updated": "2026-10-26T16:56:00+07:00",
+  "last_validation": "T-072 pra-review agent (2026-10-26): 320 paket dipindai deterministik -> R1 66, R3 40, R4 0, R5 184, R6 0, R8 0, R9 0, R12 1 temuan. BUKAN approval. T-073: packageDirOf diperbaiki; Player membuka paket bawaan; npm test 86/86; build PASS. T-074: dokumen review UX/UI gabungan di knowledge/design/ (20 temuan: 5 P1, 10 P2, 5 P3; 5 keputusan terbuka D-UX-1..D-UX-5); verifikasi tautan 41/41 valid; tidak ada perubahan kode; belum ada usability test.",
   "last_test_status": "pass",
   "last_command": "DOCUMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review (laporan + sampel 40 paket + CSV) pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab oleh Curriculum Lead; reviewStatus tetap draft sampai lulus"
+  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab; lalu keputusan desain D-UX-1 (dua mode) dan D-UX-2 (baseline skala IFP) sebelum eksekusi P0 knowledge/design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md; reviewStatus tetap draft"
 }
