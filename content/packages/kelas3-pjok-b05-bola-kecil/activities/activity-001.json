@@ -5,27 +5,27 @@
   "title": "Mengamati Alat Bola Kecil",
   "instructions": "Amati gambar, lalu diskusikan permainan dan alatnya.",
   "assets": [
-    "assets/bola-kecil-kelas3.png"
+    "assets/bola-kecil-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Permainan apa yang terlihat?",
-        "assetPath": "assets/bola-kecil-kelas3.png",
+        "assetPath": "assets/bola-kecil-kelas3.webp",
         "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja.",
         "reveal": "Tenis, bulu tangkis, dan tenis meja.",
         "hint": "Amati alatnya."
       },
       {
         "prompt": "Apa alat bulu tangkis?",
-        "assetPath": "assets/bola-kecil-kelas3.png",
+        "assetPath": "assets/bola-kecil-kelas3.webp",
         "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja.",
         "reveal": "Raket dan kok.",
         "hint": "Kok dipukul melewati net."
       },
       {
         "prompt": "Mengapa pemanasan penting?",
-        "assetPath": "assets/bola-kecil-kelas3.png",
+        "assetPath": "assets/bola-kecil-kelas3.webp",
         "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja.",
         "reveal": "Mencegah cedera.",
         "hint": "Lakukan sebelum bermain."

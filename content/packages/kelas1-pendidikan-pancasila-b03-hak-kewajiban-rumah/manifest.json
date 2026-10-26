@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/hak-kewajiban-rumah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5788,
-      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+      "path": "assets/hak-kewajiban-rumah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169830,
+      "sha256": "2b801ef63a332804b29be22df4f3ed7f721c26b4f8cca6ea21fc5bb30a175028"
     }
   ],
   "dependencies": [],

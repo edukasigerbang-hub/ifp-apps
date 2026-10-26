@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/permainan-sederhana.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5655,
-      "sha256": "b4918b240660e6713984909948f7d8ce5169a57534c85d53904058ba0b1abae1"
+      "path": "assets/permainan-sederhana.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 216266,
+      "sha256": "49499c6363e49e590fee733223967d77fe9c2b31201d741bc0937aea688a5eab"
     }
   ],
   "dependencies": [],

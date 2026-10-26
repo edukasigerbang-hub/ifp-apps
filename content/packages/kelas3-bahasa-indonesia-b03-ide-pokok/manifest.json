@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/mendengarkan-cerita-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5394,
-      "sha256": "6e1233743d87e4cef342c4f6de4a37649d556b9e5137ceaa10a8e619be800d75"
+      "path": "assets/mendengarkan-cerita-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 124620,
+      "sha256": "d7f93d261520c19408794a0005da6452411e1afb44794b55bc0d50e85e72c277"
     }
   ],
   "dependencies": [],

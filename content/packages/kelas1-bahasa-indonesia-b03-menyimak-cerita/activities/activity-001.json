@@ -5,27 +5,27 @@
   "title": "Mendengarkan Cerita",
   "instructions": "Amati gambar, lalu diskusikan cara menyimak.",
   "assets": [
-    "assets/menyimak-cerita.png"
+    "assets/menyimak-cerita.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana sikap menyimak?",
-        "assetPath": "assets/menyimak-cerita.png",
+        "assetPath": "assets/menyimak-cerita.webp",
         "altText": "Anak-anak menyimak cerita yang dibacakan.",
         "reveal": "Duduk tenang.",
         "hint": "Tidak berbicara."
       },
       {
         "prompt": "Apa yang didengarkan?",
-        "assetPath": "assets/menyimak-cerita.png",
+        "assetPath": "assets/menyimak-cerita.webp",
         "altText": "Anak-anak menyimak cerita yang dibacakan.",
         "reveal": "Cerita dari guru.",
         "hint": "Dengarkan sampai selesai."
       },
       {
         "prompt": "Apa yang diceritakan kembali?",
-        "assetPath": "assets/menyimak-cerita.png",
+        "assetPath": "assets/menyimak-cerita.webp",
         "altText": "Anak-anak menyimak cerita yang dibacakan.",
         "reveal": "Isi cerita.",
         "hint": "Sebutkan tokohnya."

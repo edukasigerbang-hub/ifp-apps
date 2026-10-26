@@ -5,27 +5,27 @@
   "title": "Mengamati Karya",
   "instructions": "Amati gambar, lalu diskusikan unsur karya dan cara menanggapinya.",
   "assets": [
-    "assets/apresiasi-kelas3.png"
+    "assets/apresiasi-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa tujuan apresiasi?",
-        "assetPath": "assets/apresiasi-kelas3.png",
+        "assetPath": "assets/apresiasi-kelas3.webp",
         "altText": "Tiga karya berbingkai di dinding pameran dan pengunjung mengamati.",
         "reveal": "Mengamati dan menghargai karya.",
         "hint": "Bukan hanya menilai."
       },
       {
         "prompt": "Unsur apa yang dapat diamati?",
-        "assetPath": "assets/apresiasi-kelas3.png",
+        "assetPath": "assets/apresiasi-kelas3.webp",
         "altText": "Tiga karya berbingkai di dinding pameran dan pengunjung mengamati.",
         "reveal": "Garis, warna, dan bentuk.",
         "hint": "Lihat detail karya."
       },
       {
         "prompt": "Bagaimana memberi tanggapan?",
-        "assetPath": "assets/apresiasi-kelas3.png",
+        "assetPath": "assets/apresiasi-kelas3.webp",
         "altText": "Tiga karya berbingkai di dinding pameran dan pengunjung mengamati.",
         "reveal": "Sopan dan beralasan.",
         "hint": "Hindari mengejek."

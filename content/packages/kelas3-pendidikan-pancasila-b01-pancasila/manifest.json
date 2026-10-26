@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/simbol-pancasila.png",
-      "mediaType": "image/png",
-      "sizeBytes": 10802,
-      "sha256": "9543d996bc285a00f4d3389c43b0f5c2a140591bf95494db6c198aae7c06d653"
+      "path": "assets/simbol-pancasila.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 133812,
+      "sha256": "c1ff81a4d11418a80c56b6cb057dd1800bf6cf0159021cd1f8be03272d813ed3"
     }
   ],
   "dependencies": [],

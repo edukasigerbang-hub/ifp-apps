@@ -5,27 +5,27 @@
   "title": "Mengamati Gerak Berpindah",
   "instructions": "Amati gambar, lalu tirukan gerakannya.",
   "assets": [
-    "assets/gerak-lokomotor-kelas2.png"
+    "assets/gerak-lokomotor-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu gerak lokomotor?",
-        "assetPath": "assets/gerak-lokomotor-kelas2.png",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
         "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
         "reveal": "Gerak berpindah tempat.",
         "hint": "Jalan, lari, lompat."
       },
       {
         "prompt": "Bagaimana mendarat saat lompat?",
-        "assetPath": "assets/gerak-lokomotor-kelas2.png",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
         "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
         "reveal": "Lutut ditekuk.",
         "hint": "Mendarat pelan."
       },
       {
         "prompt": "Apa yang dilakukan sebelum bergerak?",
-        "assetPath": "assets/gerak-lokomotor-kelas2.png",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
         "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
         "reveal": "Pemanasan.",
         "hint": "Agar tidak cedera."

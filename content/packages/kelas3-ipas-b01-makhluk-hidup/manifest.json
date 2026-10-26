@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/makhluk-hidup-sekitar.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5227,
-      "sha256": "f1cb1923d2faac497985c73a9e298ac04629b35f058a3cca1fba400f21423985"
+      "path": "assets/makhluk-hidup-sekitar.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 223080,
+      "sha256": "fcb4143ee1781d0012f6b7223aeaedea7e6ca6618b574243ba3a3b8cce1101b5"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Menyusun Paragraf",
   "instructions": "Amati gambar, lalu diskusikan langkah menulis paragraf.",
   "assets": [
-    "assets/menulis-paragraf-kelas2.png"
+    "assets/menulis-paragraf-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa ide pokok?",
-        "assetPath": "assets/menulis-paragraf-kelas2.png",
+        "assetPath": "assets/menulis-paragraf-kelas2.webp",
         "altText": "Anak menulis paragraf sederhana di buku.",
         "reveal": "Gagasan utama.",
         "hint": "Menjadi inti paragraf."
       },
       {
         "prompt": "Berapa kalimat dalam paragraf?",
-        "assetPath": "assets/menulis-paragraf-kelas2.png",
+        "assetPath": "assets/menulis-paragraf-kelas2.webp",
         "altText": "Anak menulis paragraf sederhana di buku.",
         "reveal": "Dua sampai tiga.",
         "hint": "Saling berhubungan."
       },
       {
         "prompt": "Apa yang diperiksa?",
-        "assetPath": "assets/menulis-paragraf-kelas2.png",
+        "assetPath": "assets/menulis-paragraf-kelas2.webp",
         "altText": "Anak menulis paragraf sederhana di buku.",
         "reveal": "Ejaan dan tanda baca.",
         "hint": "Baca ulang."

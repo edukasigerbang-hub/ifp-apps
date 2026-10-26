@@ -5,27 +5,27 @@
   "title": "Mengamati Kegiatan di Rumah",
   "instructions": "Amati gambar, lalu diskusikan hak dan kewajiban.",
   "assets": [
-    "assets/hak-kewajiban-rumah.png"
+    "assets/hak-kewajiban-rumah.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa hak anak di rumah?",
-        "assetPath": "assets/hak-kewajiban-rumah.png",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
         "altText": "Anak belajar dan membantu orang tua di rumah.",
         "reveal": "Mendapat kasih sayang.",
         "hint": "Mendapat makanan."
       },
       {
         "prompt": "Apa kewajiban anak?",
-        "assetPath": "assets/hak-kewajiban-rumah.png",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
         "altText": "Anak belajar dan membantu orang tua di rumah.",
         "reveal": "Membantu orang tua.",
         "hint": "Belajar."
       },
       {
         "prompt": "Mana yang didahulukan?",
-        "assetPath": "assets/hak-kewajiban-rumah.png",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
         "altText": "Anak belajar dan membantu orang tua di rumah.",
         "reveal": "Kewajiban dahulu.",
         "hint": "Lalu menerima hak."

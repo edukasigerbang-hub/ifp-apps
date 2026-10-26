@@ -5,27 +5,27 @@
   "title": "Mengamati Alat Ukur",
   "instructions": "Amati gambar, lalu diskusikan alat ukurnya.",
   "assets": [
-    "assets/pengukuran-kelas1.png"
+    "assets/pengukuran-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Alat ukur panjang sederhana adalah ...",
-        "assetPath": "assets/pengukuran-kelas1.png",
+        "assetPath": "assets/pengukuran-kelas1.webp",
         "altText": "Jam, penggaris, dan timbangan sederhana.",
         "reveal": "Jengkal.",
         "hint": "Dari ibu jari ke jari kelingking."
       },
       {
         "prompt": "Alat ukur berat adalah ...",
-        "assetPath": "assets/pengukuran-kelas1.png",
+        "assetPath": "assets/pengukuran-kelas1.webp",
         "altText": "Jam, penggaris, dan timbangan sederhana.",
         "reveal": "Timbangan.",
         "hint": "Untuk mengetahui berat."
       },
       {
         "prompt": "Alat penunjuk waktu adalah ...",
-        "assetPath": "assets/pengukuran-kelas1.png",
+        "assetPath": "assets/pengukuran-kelas1.webp",
         "altText": "Jam, penggaris, dan timbangan sederhana.",
         "reveal": "Jam.",
         "hint": "Menunjukkan pukul berapa."

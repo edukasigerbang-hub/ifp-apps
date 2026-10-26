@@ -5,27 +5,27 @@
   "title": "Mengamati Harakat",
   "instructions": "Amati gambar, lalu tirukan bacaan harakat.",
   "assets": [
-    "assets/huruf-harakat.png"
+    "assets/huruf-harakat.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Harakat fathah dibaca ...",
-        "assetPath": "assets/huruf-harakat.png",
+        "assetPath": "assets/huruf-harakat.webp",
         "altText": "Anak belajar huruf hijaiyah dan harakat.",
         "reveal": "a.",
         "hint": "Di atas huruf."
       },
       {
         "prompt": "Harakat kasrah dibaca ...",
-        "assetPath": "assets/huruf-harakat.png",
+        "assetPath": "assets/huruf-harakat.webp",
         "altText": "Anak belajar huruf hijaiyah dan harakat.",
         "reveal": "i.",
         "hint": "Di bawah huruf."
       },
       {
         "prompt": "Harakat dammah dibaca ...",
-        "assetPath": "assets/huruf-harakat.png",
+        "assetPath": "assets/huruf-harakat.webp",
         "altText": "Anak belajar huruf hijaiyah dan harakat.",
         "reveal": "u.",
         "hint": "Di atas huruf."

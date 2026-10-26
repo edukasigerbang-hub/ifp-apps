@@ -5,27 +5,27 @@
   "title": "Mengamati Gerakan Salat",
   "instructions": "Amati gambar, lalu tirukan gerakan salat.",
   "assets": [
-    "assets/belajar-salat.png"
+    "assets/belajar-salat.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dilakukan sebelum salat?",
-        "assetPath": "assets/belajar-salat.png",
+        "assetPath": "assets/belajar-salat.webp",
         "altText": "Anak berwudu dan belajar gerakan salat.",
         "reveal": "Berwudu.",
         "hint": "Membersihkan diri."
       },
       {
         "prompt": "Apa gerakan pertama salat?",
-        "assetPath": "assets/belajar-salat.png",
+        "assetPath": "assets/belajar-salat.webp",
         "altText": "Anak berwudu dan belajar gerakan salat.",
         "reveal": "Takbiratul ihram.",
         "hint": "Mengangkat tangan."
       },
       {
         "prompt": "Apa gerakan terakhir?",
-        "assetPath": "assets/belajar-salat.png",
+        "assetPath": "assets/belajar-salat.webp",
         "altText": "Anak berwudu dan belajar gerakan salat.",
         "reveal": "Salam.",
         "hint": "Menoleh ke kanan dan kiri."

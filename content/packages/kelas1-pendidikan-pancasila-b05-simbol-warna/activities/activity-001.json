@@ -5,27 +5,27 @@
   "title": "Mengamati Simbol dan Warna",
   "instructions": "Amati gambar, lalu sebutkan simbol dan warnanya.",
   "assets": [
-    "assets/simbol-warna-pancasila.png"
+    "assets/simbol-warna-pancasila.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bintang berwarna ...",
-        "assetPath": "assets/simbol-warna-pancasila.png",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
         "altText": "Lima simbol Pancasila dengan warna khasnya.",
         "reveal": "Kuning emas.",
         "hint": "Simbol sila pertama."
       },
       {
         "prompt": "Pohon beringin berwarna ...",
-        "assetPath": "assets/simbol-warna-pancasila.png",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
         "altText": "Lima simbol Pancasila dengan warna khasnya.",
         "reveal": "Hijau.",
         "hint": "Simbol sila ketiga."
       },
       {
         "prompt": "Rantai berwarna ...",
-        "assetPath": "assets/simbol-warna-pancasila.png",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
         "altText": "Lima simbol Pancasila dengan warna khasnya.",
         "reveal": "Kuning emas.",
         "hint": "Simbol sila kedua."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/musyawarah-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5400,
-      "sha256": "ed1531741d8356cf8a57eb0a618546c36c3ac4cea8d6feac4dbd593a891a3189"
+      "path": "assets/musyawarah-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 113574,
+      "sha256": "9e80bb5e93d1aefefb0ea72da1e92cdcb31d249bb6f1dee46b753d89ef0acb9a"
     }
   ],
   "dependencies": [],

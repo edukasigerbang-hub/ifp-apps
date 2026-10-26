@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/membaca-lancar.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/membaca-lancar.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 160914,
+      "sha256": "48bcdb9916b2ece3f9b7f38294fdd65716341483728053d6b99bf99e65ad7ce0"
     }
   ],
   "dependencies": [],

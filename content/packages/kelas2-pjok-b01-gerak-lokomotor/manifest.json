@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gerak-lokomotor-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9314,
-      "sha256": "378bb297592a69945aa4d07585f1af520baf28d2e102fdded37533151951180a"
+      "path": "assets/gerak-lokomotor-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 233324,
+      "sha256": "0eca34864fd26cd801c986706c6afda38bbbbad29f0b3b1e646f8bbb8b9f1ad6"
     }
   ],
   "dependencies": [],

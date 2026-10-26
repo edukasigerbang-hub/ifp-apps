@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/garis-bentuk-warna.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5520,
-      "sha256": "7a269f7e15bf260566de418ce44b533f5f65efda4a0baee468c490fa231adab5"
+      "path": "assets/garis-bentuk-warna.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 159066,
+      "sha256": "f8e118c5be88a1b6f2bbfa5245dacff40c541ae6b15bebd9bbf9107416afe7c2"
     }
   ],
   "dependencies": [],

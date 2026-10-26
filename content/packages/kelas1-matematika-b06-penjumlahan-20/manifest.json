@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/penjumlahan-20.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6237,
-      "sha256": "ed058b2e4a3efbc6eee945ba424553e6732d9a127f564ff29b821cf11313ac29"
+      "path": "assets/penjumlahan-20.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 155842,
+      "sha256": "dd988e57b914a4a9b320f48344b1fc9d3e9acbfddd4f3ba67bda25ba2fb444d2"
     }
   ],
   "dependencies": [],

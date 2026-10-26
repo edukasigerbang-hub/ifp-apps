@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/senam-dasar-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5678,
-      "sha256": "8754a62badbab5e2d499e0ac0ea7480cda6839254b58e6577d91c2ab9e62e0d9"
+      "path": "assets/senam-dasar-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 147226,
+      "sha256": "391b2e76648e53955ff664cade50122a79b1b1b08bd87e61dae5688e381b5710"
     }
   ],
   "dependencies": [],

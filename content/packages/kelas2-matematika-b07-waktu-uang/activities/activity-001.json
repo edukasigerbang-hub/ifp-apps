@@ -5,27 +5,27 @@
   "title": "Mengamati Jam dan Uang",
   "instructions": "Amati gambar, lalu diskusikan waktu dan nilai uang.",
   "assets": [
-    "assets/waktu-uang.png"
+    "assets/waktu-uang.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa menit dalam 1 jam?",
-        "assetPath": "assets/waktu-uang.png",
+        "assetPath": "assets/waktu-uang.webp",
         "altText": "Jam dan uang untuk belajar waktu serta nilai uang.",
         "reveal": "60 menit.",
         "hint": "Lihat jam."
       },
       {
         "prompt": "Berapa jam dalam 1 hari?",
-        "assetPath": "assets/waktu-uang.png",
+        "assetPath": "assets/waktu-uang.webp",
         "altText": "Jam dan uang untuk belajar waktu serta nilai uang.",
         "reveal": "24 jam.",
         "hint": "Sehari semalam."
       },
       {
         "prompt": "Apa mata uang Indonesia?",
-        "assetPath": "assets/waktu-uang.png",
+        "assetPath": "assets/waktu-uang.webp",
         "altText": "Jam dan uang untuk belajar waktu serta nilai uang.",
         "reveal": "Rupiah.",
         "hint": "Ditulis Rp."

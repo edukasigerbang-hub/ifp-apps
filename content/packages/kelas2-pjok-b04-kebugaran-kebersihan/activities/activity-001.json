@@ -5,27 +5,27 @@
   "title": "Mengamati Kebiasaan Sehat",
   "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
   "assets": [
-    "assets/kebugaran-kebersihan-kelas2.png"
+    "assets/kebugaran-kebersihan-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang membuat bugar?",
-        "assetPath": "assets/kebugaran-kebersihan-kelas2.png",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.webp",
         "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
         "reveal": "Olahraga teratur.",
         "hint": "Bergerak setiap hari."
       },
       {
         "prompt": "Kapan mencuci tangan?",
-        "assetPath": "assets/kebugaran-kebersihan-kelas2.png",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.webp",
         "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
         "reveal": "Sebelum makan.",
         "hint": "Setelah bermain."
       },
       {
         "prompt": "Mengapa perlu istirahat?",
-        "assetPath": "assets/kebugaran-kebersihan-kelas2.png",
+        "assetPath": "assets/kebugaran-kebersihan-kelas2.webp",
         "altText": "Anak berolahraga, mencuci tangan, dan beristirahat.",
         "reveal": "Agar tenaga pulih.",
         "hint": "Tidur cukup."

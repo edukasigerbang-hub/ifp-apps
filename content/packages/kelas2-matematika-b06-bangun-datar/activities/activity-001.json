@@ -5,27 +5,27 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati gambar, lalu sebutkan bangunnya.",
   "assets": [
-    "assets/bangun-datar-kelas2.png"
+    "assets/bangun-datar-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bentuk bulat disebut ...",
-        "assetPath": "assets/bangun-datar-kelas2.png",
+        "assetPath": "assets/bangun-datar-kelas2.webp",
         "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
         "reveal": "Lingkaran.",
         "hint": "Tanpa sudut."
       },
       {
         "prompt": "Bentuk dengan 4 sisi sama disebut ...",
-        "assetPath": "assets/bangun-datar-kelas2.png",
+        "assetPath": "assets/bangun-datar-kelas2.webp",
         "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
         "reveal": "Persegi.",
         "hint": "Semua sisi sama."
       },
       {
         "prompt": "Bentuk dengan 3 sisi disebut ...",
-        "assetPath": "assets/bangun-datar-kelas2.png",
+        "assetPath": "assets/bangun-datar-kelas2.webp",
         "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
         "reveal": "Segitiga.",
         "hint": "Seperti atap."

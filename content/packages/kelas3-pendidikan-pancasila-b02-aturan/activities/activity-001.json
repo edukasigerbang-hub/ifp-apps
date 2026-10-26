@@ -5,27 +5,27 @@
   "title": "Mengamati Antrean Kelas",
   "instructions": "Amati gambar, lalu diskusikan aturan dan manfaatnya.",
   "assets": [
-    "assets/antrean-kelas3.png"
+    "assets/antrean-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Aturan apa yang terlihat pada gambar?",
-        "assetPath": "assets/antrean-kelas3.png",
+        "assetPath": "assets/antrean-kelas3.webp",
         "altText": "Siswa berbaris tertib di depan kelas.",
         "reveal": "Antre dengan tertib.",
         "hint": "Amati barisan siswa."
       },
       {
         "prompt": "Mengapa aturan diperlukan?",
-        "assetPath": "assets/antrean-kelas3.png",
+        "assetPath": "assets/antrean-kelas3.webp",
         "altText": "Siswa berbaris tertib di depan kelas.",
         "reveal": "Agar kegiatan berjalan aman dan teratur.",
         "hint": "Bayangkan bila tidak ada aturan."
       },
       {
         "prompt": "Apa akibat melanggar aturan?",
-        "assetPath": "assets/antrean-kelas3.png",
+        "assetPath": "assets/antrean-kelas3.webp",
         "altText": "Siswa berbaris tertib di depan kelas.",
         "reveal": "Kegiatan terganggu dan orang lain dirugikan.",
         "hint": "Aturan melindungi semua."

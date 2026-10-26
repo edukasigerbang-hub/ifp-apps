@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menggambar-bebas.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5490,
-      "sha256": "c85e2d499ba466cc1ffbbcc143dca3928ad4e1f52dc6d4af2b85268cbe5c7635"
+      "path": "assets/menggambar-bebas.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 191704,
+      "sha256": "e454e26187d7b291ac66f70b9cf0ebba107178f52dd73753e9542a85c548a6f6"
     }
   ],
   "dependencies": [],

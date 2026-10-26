@@ -5,27 +5,27 @@
   "title": "Mengamati Gambar",
   "instructions": "Amati gambar, lalu diskusikan alat dan langkahnya.",
   "assets": [
-    "assets/menggambar-bebas.png"
+    "assets/menggambar-bebas.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Alat apa yang dipakai?",
-        "assetPath": "assets/menggambar-bebas.png",
+        "assetPath": "assets/menggambar-bebas.webp",
         "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
         "reveal": "Pensil, krayon, dan kertas.",
         "hint": "Pilih yang aman."
       },
       {
         "prompt": "Apa yang digambar?",
-        "assetPath": "assets/menggambar-bebas.png",
+        "assetPath": "assets/menggambar-bebas.webp",
         "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
         "reveal": "Bebas sesuai ide.",
         "hint": "Bisa rumah atau hewan."
       },
       {
         "prompt": "Apa langkah terakhir?",
-        "assetPath": "assets/menggambar-bebas.png",
+        "assetPath": "assets/menggambar-bebas.webp",
         "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
         "reveal": "Mewarnai.",
         "hint": "Rapikan hasil."

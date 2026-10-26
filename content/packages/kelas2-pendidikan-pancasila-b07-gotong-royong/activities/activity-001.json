@@ -5,27 +5,27 @@
   "title": "Mengamati Kerja Bersama",
   "instructions": "Amati gambar, lalu diskusikan manfaat gotong royong.",
   "assets": [
-    "assets/gotong-royong-kelas2.png"
+    "assets/gotong-royong-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu gotong royong?",
-        "assetPath": "assets/gotong-royong-kelas2.png",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
         "altText": "Warga bekerja bersama membersihkan lingkungan.",
         "reveal": "Bekerja bersama.",
         "hint": "Untuk kepentingan bersama."
       },
       {
         "prompt": "Contoh di sekolah?",
-        "assetPath": "assets/gotong-royong-kelas2.png",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
         "altText": "Warga bekerja bersama membersihkan lingkungan.",
         "reveal": "Kerja bakti kelas.",
         "hint": "Dibagi tugas."
       },
       {
         "prompt": "Apa manfaatnya?",
-        "assetPath": "assets/gotong-royong-kelas2.png",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
         "altText": "Warga bekerja bersama membersihkan lingkungan.",
         "reveal": "Pekerjaan cepat selesai.",
         "hint": "Persahabatan erat."

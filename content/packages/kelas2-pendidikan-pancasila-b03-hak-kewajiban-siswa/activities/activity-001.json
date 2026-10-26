@@ -5,27 +5,27 @@
   "title": "Mengamati Hak dan Kewajiban",
   "instructions": "Amati gambar, lalu diskusikan hak dan kewajiban siswa.",
   "assets": [
-    "assets/hak-kewajiban-siswa.png"
+    "assets/hak-kewajiban-siswa.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa hak siswa?",
-        "assetPath": "assets/hak-kewajiban-siswa.png",
+        "assetPath": "assets/hak-kewajiban-siswa.webp",
         "altText": "Siswa belajar dan menjaga kebersihan kelas.",
         "reveal": "Mendapat pelajaran.",
         "hint": "Bertanya kepada guru."
       },
       {
         "prompt": "Apa kewajiban siswa?",
-        "assetPath": "assets/hak-kewajiban-siswa.png",
+        "assetPath": "assets/hak-kewajiban-siswa.webp",
         "altText": "Siswa belajar dan menjaga kebersihan kelas.",
         "reveal": "Belajar dan menjaga kebersihan.",
         "hint": "Mematuhi aturan."
       },
       {
         "prompt": "Mengapa harus seimbang?",
-        "assetPath": "assets/hak-kewajiban-siswa.png",
+        "assetPath": "assets/hak-kewajiban-siswa.webp",
         "altText": "Siswa belajar dan menjaga kebersihan kelas.",
         "reveal": "Agar kelas nyaman.",
         "hint": "Semua mendapat kesempatan."

@@ -5,27 +5,27 @@
   "title": "Mengamati Senam Ringan",
   "instructions": "Amati gambar, lalu tirukan gerakannya.",
   "assets": [
-    "assets/senam-ringan.png"
+    "assets/senam-ringan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa gerak senam ringan?",
-        "assetPath": "assets/senam-ringan.png",
+        "assetPath": "assets/senam-ringan.webp",
         "altText": "Anak melakukan senam ringan dan peregangan.",
         "reveal": "Peregangan dan gerak kepala.",
         "hint": "Lakukan pelan."
       },
       {
         "prompt": "Mengapa pemanasan penting?",
-        "assetPath": "assets/senam-ringan.png",
+        "assetPath": "assets/senam-ringan.webp",
         "altText": "Anak melakukan senam ringan dan peregangan.",
         "reveal": "Mencegah cedera.",
         "hint": "Sebelum senam."
       },
       {
         "prompt": "Bagaimana bernapas saat senam?",
-        "assetPath": "assets/senam-ringan.png",
+        "assetPath": "assets/senam-ringan.webp",
         "altText": "Anak melakukan senam ringan dan peregangan.",
         "reveal": "Tarik napas perlahan.",
         "hint": "Jangan menahan."

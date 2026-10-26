@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/hak-kewajiban-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5788,
-      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+      "path": "assets/hak-kewajiban-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 149906,
+      "sha256": "0dfe3d8550a610ef923ad86312af90bb468d9f745f8f8c8ea119e8cc3e3c8f87"
     }
   ],
   "dependencies": [],

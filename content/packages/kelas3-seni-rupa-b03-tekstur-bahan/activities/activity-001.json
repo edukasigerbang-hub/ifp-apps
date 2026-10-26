@@ -5,27 +5,27 @@
   "title": "Mengamati Tekstur",
   "instructions": "Amati gambar, lalu diskusikan tekstur setiap bahan.",
   "assets": [
-    "assets/tekstur-bahan.png"
+    "assets/tekstur-bahan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bahan mana yang bertekstur kasar?",
-        "assetPath": "assets/tekstur-bahan.png",
+        "assetPath": "assets/tekstur-bahan.webp",
         "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas.",
         "reveal": "Batu dan daun kering.",
         "hint": "Sentuh permukaannya dengan hati-hati."
       },
       {
         "prompt": "Bahan mana yang bertekstur halus?",
-        "assetPath": "assets/tekstur-bahan.png",
+        "assetPath": "assets/tekstur-bahan.webp",
         "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas.",
         "reveal": "Kapas dan kain.",
         "hint": "Bandingkan dengan batu."
       },
       {
         "prompt": "Bagaimana menempelkan bahan?",
-        "assetPath": "assets/tekstur-bahan.png",
+        "assetPath": "assets/tekstur-bahan.webp",
         "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas.",
         "reveal": "Oleskan lem tipis lalu tekan pelan.",
         "hint": "Jangan terlalu banyak lem."

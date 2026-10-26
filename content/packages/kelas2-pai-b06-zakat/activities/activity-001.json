@@ -5,27 +5,27 @@
   "title": "Mengamati Zakat dan Infak",
   "instructions": "Amati gambar, lalu diskusikan pengertiannya.",
   "assets": [
-    "assets/zakat-kelas2.png"
+    "assets/zakat-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu zakat?",
-        "assetPath": "assets/zakat-kelas2.png",
+        "assetPath": "assets/zakat-kelas2.webp",
         "altText": "Kotak amal, karung beras, dan koin.",
         "reveal": "Harta wajib bagi yang mampu.",
         "hint": "Ada kadarnya."
       },
       {
         "prompt": "Apa itu infak?",
-        "assetPath": "assets/zakat-kelas2.png",
+        "assetPath": "assets/zakat-kelas2.webp",
         "altText": "Kotak amal, karung beras, dan koin.",
         "reveal": "Pemberian sukarela.",
         "hint": "Kapan saja."
       },
       {
         "prompt": "Apa manfaatnya?",
-        "assetPath": "assets/zakat-kelas2.png",
+        "assetPath": "assets/zakat-kelas2.webp",
         "altText": "Kotak amal, karung beras, dan koin.",
         "reveal": "Membantu sesama.",
         "hint": "Melatih kepedulian."

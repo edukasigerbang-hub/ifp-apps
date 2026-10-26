@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/daur-hidup.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6273,
-      "sha256": "1162f22f629514cd8f8ce40df1a79d2449156b93c107c9efc8fdc9d95786682d"
+      "path": "assets/daur-hidup.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 119774,
+      "sha256": "13489fd284f6e35bd3d622346283cb491b66e4ea3b1d83b6e937ea072aace2e0"
     }
   ],
   "dependencies": [],

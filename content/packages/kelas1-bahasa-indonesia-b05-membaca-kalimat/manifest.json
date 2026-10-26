@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/membaca-kalimat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/membaca-kalimat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 186720,
+      "sha256": "1f353a2ce930e8dd750962afeb1f83edc494613f64968f91213e855d3bd87806"
     }
   ],
   "dependencies": [],

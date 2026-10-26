@@ -5,27 +5,27 @@
   "title": "Mengamati Bahan Alam",
   "instructions": "Amati gambar, lalu diskusikan bahan dan karyanya.",
   "assets": [
-    "assets/kerajinan-kelas2.png"
+    "assets/kerajinan-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bahan alam apa yang terlihat?",
-        "assetPath": "assets/kerajinan-kelas2.png",
+        "assetPath": "assets/kerajinan-kelas2.webp",
         "altText": "Kerajinan dari daun, ranting, dan biji.",
         "reveal": "Daun, ranting, dan biji.",
         "hint": "Dari sekitar."
       },
       {
         "prompt": "Bagaimana memilih bahan?",
-        "assetPath": "assets/kerajinan-kelas2.png",
+        "assetPath": "assets/kerajinan-kelas2.webp",
         "altText": "Kerajinan dari daun, ranting, dan biji.",
         "reveal": "Bersih dan tidak tajam.",
         "hint": "Aman untuk tangan."
       },
       {
         "prompt": "Bagaimana menempel?",
-        "assetPath": "assets/kerajinan-kelas2.png",
+        "assetPath": "assets/kerajinan-kelas2.webp",
         "altText": "Kerajinan dari daun, ranting, dan biji.",
         "reveal": "Oles lem lalu tempel.",
         "hint": "Tekan pelan."

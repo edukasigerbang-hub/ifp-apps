@@ -5,27 +5,27 @@
   "title": "Menyusun Bentuk Dasar",
   "instructions": "Amati gambar, lalu diskusikan bentuk dasar yang menyusunnya.",
   "assets": [
-    "assets/menggambar-bentuk-kelas3.png"
+    "assets/menggambar-bentuk-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bentuk dasar apa saja yang terlihat?",
-        "assetPath": "assets/menggambar-bentuk-kelas3.png",
+        "assetPath": "assets/menggambar-bentuk-kelas3.webp",
         "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah.",
         "reveal": "Lingkaran, persegi, dan segitiga.",
         "hint": "Amati bangun penyusun gambar."
       },
       {
         "prompt": "Bentuk apa yang menjadi atap rumah?",
-        "assetPath": "assets/menggambar-bentuk-kelas3.png",
+        "assetPath": "assets/menggambar-bentuk-kelas3.webp",
         "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah.",
         "reveal": "Segitiga.",
         "hint": "Perhatikan sisi miringnya."
       },
       {
         "prompt": "Apa langkah pertama menggambar?",
-        "assetPath": "assets/menggambar-bentuk-kelas3.png",
+        "assetPath": "assets/menggambar-bentuk-kelas3.webp",
         "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah.",
         "reveal": "Menyiapkan alat dan membuat sketsa tipis.",
         "hint": "Gunakan pensil."

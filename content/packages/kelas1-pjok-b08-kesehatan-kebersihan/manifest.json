@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kesehatan-kebersihan-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "path": "assets/kesehatan-kebersihan-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 117330,
+      "sha256": "7213b1bc4590aeade46e12e3ea49ed28a8f8c20fa28a8575ffabc97cef2de710"
     }
   ],
   "dependencies": [],

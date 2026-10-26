@@ -5,27 +5,27 @@
   "title": "Belajar Kata",
   "instructions": "Amati gambar, lalu diskusikan kata yang mirip dan berlawanan.",
   "assets": [
-    "assets/kosakata-kelas2.png"
+    "assets/kosakata-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa sinonim kata senang?",
-        "assetPath": "assets/kosakata-kelas2.png",
+        "assetPath": "assets/kosakata-kelas2.webp",
         "altText": "Anak membaca buku untuk menambah kosakata.",
         "reveal": "Gembira.",
         "hint": "Artinya mirip."
       },
       {
         "prompt": "Apa antonim kata besar?",
-        "assetPath": "assets/kosakata-kelas2.png",
+        "assetPath": "assets/kosakata-kelas2.webp",
         "altText": "Anak membaca buku untuk menambah kosakata.",
         "reveal": "Kecil.",
         "hint": "Artinya berlawanan."
       },
       {
         "prompt": "Apa antonim kata cepat?",
-        "assetPath": "assets/kosakata-kelas2.png",
+        "assetPath": "assets/kosakata-kelas2.webp",
         "altText": "Anak membaca buku untuk menambah kosakata.",
         "reveal": "Lambat.",
         "hint": "Berlawanan."

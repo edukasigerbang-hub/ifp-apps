@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bangun-datar-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9036,
-      "sha256": "e9a2f3653ef36ae0addced2b043c7382fd85fe5b3549b2a18842ceed5fd1f687"
+      "path": "assets/bangun-datar-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 119934,
+      "sha256": "5736480be9872d6cc8a9b255d20384723758c2545342b3b225a6a04389903074"
     }
   ],
   "dependencies": [],

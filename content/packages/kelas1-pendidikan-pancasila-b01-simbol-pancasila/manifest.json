@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/simbol-pancasila-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 10802,
-      "sha256": "9543d996bc285a00f4d3389c43b0f5c2a140591bf95494db6c198aae7c06d653"
+      "path": "assets/simbol-pancasila-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 178292,
+      "sha256": "c1ac889cf1a922da5d0c1d1762eaf5bb76f7e857d0b2c57bff9447ace5ad9ca1"
     }
   ],
   "dependencies": [],

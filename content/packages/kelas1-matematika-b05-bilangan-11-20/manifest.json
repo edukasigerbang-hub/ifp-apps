@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bilangan-11-20.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5539,
-      "sha256": "0ccdb9efa2a86d948b0473e86f3d5f9b6f2eabb121ea3b86d2107a34de2e6e07"
+      "path": "assets/bilangan-11-20.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 122480,
+      "sha256": "acdadd48347dc61ea8c4782dcb0bc0fffe01b5a9be60a8048a608f44f6b1752b"
     }
   ],
   "dependencies": [],

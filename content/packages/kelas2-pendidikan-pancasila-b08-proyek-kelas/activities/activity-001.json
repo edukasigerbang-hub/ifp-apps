@@ -5,27 +5,27 @@
   "title": "Mengamati Proyek Kelas",
   "instructions": "Amati gambar, lalu diskusikan kegiatan proyek.",
   "assets": [
-    "assets/proyek-kelas-kelas2.png"
+    "assets/proyek-kelas-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa proyek kelas?",
-        "assetPath": "assets/proyek-kelas-kelas2.png",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
         "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
         "reveal": "Kegiatan bersama.",
         "hint": "Contoh: membersihkan kelas."
       },
       {
         "prompt": "Bagaimana membagi tugas?",
-        "assetPath": "assets/proyek-kelas-kelas2.png",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
         "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
         "reveal": "Adil untuk semua.",
         "hint": "Sesuai kemampuan."
       },
       {
         "prompt": "Apa setelah selesai?",
-        "assetPath": "assets/proyek-kelas-kelas2.png",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
         "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
         "reveal": "Melaporkan hasil.",
         "hint": "Merapikan alat."

@@ -5,27 +5,27 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati gambar, lalu diskusikan sisi dan sudut setiap bangun.",
   "assets": [
-    "assets/bangun-datar-kelas3.png"
+    "assets/bangun-datar-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bangun datar apa saja yang terlihat?",
-        "assetPath": "assets/bangun-datar-kelas3.png",
+        "assetPath": "assets/bangun-datar-kelas3.webp",
         "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
         "reveal": "Persegi, persegi panjang, segitiga, dan lingkaran.",
         "hint": "Amati bentuknya."
       },
       {
         "prompt": "Apa ciri persegi?",
-        "assetPath": "assets/bangun-datar-kelas3.png",
+        "assetPath": "assets/bangun-datar-kelas3.webp",
         "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
         "reveal": "Empat sisi sama panjang dan empat sudut.",
         "hint": "Ukur sisinya."
       },
       {
         "prompt": "Apa beda persegi dan persegi panjang?",
-        "assetPath": "assets/bangun-datar-kelas3.png",
+        "assetPath": "assets/bangun-datar-kelas3.webp",
         "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
         "reveal": "Persegi semua sisi sama; persegi panjang memiliki dua pasang sisi sama.",
         "hint": "Bandingkan sisinya."

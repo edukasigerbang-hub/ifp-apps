@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/non-lokomotor-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9721,
-      "sha256": "001c405ce7b10069eddc4f885cea402f96de958c020be5b27589789b14574b15"
+      "path": "assets/non-lokomotor-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 199252,
+      "sha256": "57860b66dd8631c4f4b26aa86d3e211490350bb35c2a8d989a7d797cdb678b5d"
     }
   ],
   "dependencies": [],

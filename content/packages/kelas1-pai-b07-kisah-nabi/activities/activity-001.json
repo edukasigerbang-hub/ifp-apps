@@ -5,27 +5,27 @@
   "title": "Mendengar Kisah Nabi",
   "instructions": "Amati gambar, lalu diskusikan kisah Nabi.",
   "assets": [
-    "assets/kisah-nabi.png"
+    "assets/kisah-nabi.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Di mana Nabi Muhammad lahir?",
-        "assetPath": "assets/kisah-nabi.png",
+        "assetPath": "assets/kisah-nabi.webp",
         "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
         "reveal": "Makkah.",
         "hint": "Kota dengan Ka'bah."
       },
       {
         "prompt": "Siapa nama Nabi terakhir?",
-        "assetPath": "assets/kisah-nabi.png",
+        "assetPath": "assets/kisah-nabi.webp",
         "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
         "reveal": "Muhammad.",
         "hint": "Utusan Allah."
       },
       {
         "prompt": "Apa sifat Nabi yang diteladani?",
-        "assetPath": "assets/kisah-nabi.png",
+        "assetPath": "assets/kisah-nabi.webp",
         "altText": "Garis waktu sederhana dengan Ka'bah dan masjid.",
         "reveal": "Jujur.",
         "hint": "Dapat dipercaya."

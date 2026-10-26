@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bentuk-pola.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9036,
-      "sha256": "e9a2f3653ef36ae0addced2b043c7382fd85fe5b3549b2a18842ceed5fd1f687"
+      "path": "assets/bentuk-pola.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 101978,
+      "sha256": "476b4a7485c56b4ef24c361e3ad7c34e1faef2de8e963792efec3c82efd389d2"
     }
   ],
   "dependencies": [],

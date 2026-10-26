@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/huruf-hijaiyah-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5306,
-      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+      "path": "assets/huruf-hijaiyah-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 176248,
+      "sha256": "b9579f7cc327cdf4635f1b37573549475bcb17c1cbf24b04f5c3c3f2cfa28f91"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Mengamati Pola",
   "instructions": "Amati gambar, lalu lanjutkan polanya.",
   "assets": [
-    "assets/pola-bilangan.png"
+    "assets/pola-bilangan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Pola 1, 2, 3, ... berlanjut dengan ...",
-        "assetPath": "assets/pola-bilangan.png",
+        "assetPath": "assets/pola-bilangan.webp",
         "altText": "Pola warna dan bilangan yang berulang.",
         "reveal": "4.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Pola 2, 4, 6, ... berlanjut dengan ...",
-        "assetPath": "assets/pola-bilangan.png",
+        "assetPath": "assets/pola-bilangan.webp",
         "altText": "Pola warna dan bilangan yang berulang.",
         "reveal": "8.",
         "hint": "Tambahkan dua."
       },
       {
         "prompt": "Pola 5, 10, 15, ... berlanjut dengan ...",
-        "assetPath": "assets/pola-bilangan.png",
+        "assetPath": "assets/pola-bilangan.webp",
         "altText": "Pola warna dan bilangan yang berulang.",
         "reveal": "20.",
         "hint": "Tambahkan lima."

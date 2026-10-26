@@ -5,27 +5,27 @@
   "title": "Mengamati Warna",
   "instructions": "Amati gambar, lalu diskusikan cara mewarnai.",
   "assets": [
-    "assets/mewarnai-bentuk.png"
+    "assets/mewarnai-bentuk.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Warna apa yang dipakai?",
-        "assetPath": "assets/mewarnai-bentuk.png",
+        "assetPath": "assets/mewarnai-bentuk.webp",
         "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda.",
         "reveal": "Merah, kuning, dan biru.",
         "hint": "Pilih warna kesukaan."
       },
       {
         "prompt": "Bagaimana mewarnai rapi?",
-        "assetPath": "assets/mewarnai-bentuk.png",
+        "assetPath": "assets/mewarnai-bentuk.webp",
         "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda.",
         "reveal": "Jangan keluar garis.",
         "hint": "Warnai pelan."
       },
       {
         "prompt": "Apa yang dilakukan setelah mewarnai?",
-        "assetPath": "assets/mewarnai-bentuk.png",
+        "assetPath": "assets/mewarnai-bentuk.webp",
         "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda.",
         "reveal": "Merapikan alat.",
         "hint": "Mencuci tangan."

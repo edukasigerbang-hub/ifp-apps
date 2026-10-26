@@ -5,27 +5,27 @@
   "title": "Mengamati Garis dan Warna",
   "instructions": "Amati gambar, lalu diskusikan jenis garis dan warna.",
   "assets": [
-    "assets/unsur-garis-warna.png"
+    "assets/unsur-garis-warna.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Garis apa saja yang terlihat?",
-        "assetPath": "assets/unsur-garis-warna.png",
+        "assetPath": "assets/unsur-garis-warna.webp",
         "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
         "reveal": "Garis lurus, lengkung, dan zigzag.",
         "hint": "Amati arah dan bentuknya."
       },
       {
         "prompt": "Apa saja warna primer?",
-        "assetPath": "assets/unsur-garis-warna.png",
+        "assetPath": "assets/unsur-garis-warna.webp",
         "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
         "reveal": "Merah, kuning, dan biru.",
         "hint": "Warna dasar yang tidak dicampur."
       },
       {
         "prompt": "Apa hasil campuran merah dan kuning?",
-        "assetPath": "assets/unsur-garis-warna.png",
+        "assetPath": "assets/unsur-garis-warna.webp",
         "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru.",
         "reveal": "Oranye.",
         "hint": "Coba campur cat di palet."

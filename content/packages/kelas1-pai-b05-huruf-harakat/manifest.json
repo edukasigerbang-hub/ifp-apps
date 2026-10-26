@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/huruf-harakat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5306,
-      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+      "path": "assets/huruf-harakat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 98302,
+      "sha256": "23f2ce9227611c0567c8b258aad6f8e61f6f48b0a82071313fc584aeb8385e25"
     }
   ],
   "dependencies": [],

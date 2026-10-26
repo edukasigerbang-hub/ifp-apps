@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menulis-kalimat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4931,
-      "sha256": "1a58835a3ace0cdc678a39e6881f047089d6e3547d4f6dab059072ef8905ef32"
+      "path": "assets/menulis-kalimat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169806,
+      "sha256": "44751385d10e91562e8d5ef981671dc58bc8d38069a59714eda0415d62bc9b7c"
     }
   ],
   "dependencies": [],

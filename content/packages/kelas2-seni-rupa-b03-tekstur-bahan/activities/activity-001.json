@@ -5,27 +5,27 @@
   "title": "Mengamati Tekstur",
   "instructions": "Amati gambar, lalu bandingkan teksturnya.",
   "assets": [
-    "assets/tekstur-bahan-kelas2.png"
+    "assets/tekstur-bahan-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bahan kasar adalah ...",
-        "assetPath": "assets/tekstur-bahan-kelas2.png",
+        "assetPath": "assets/tekstur-bahan-kelas2.webp",
         "altText": "Bahan bertekstur kasar dan halus.",
         "reveal": "Batu.",
         "hint": "Terasa bergerigi."
       },
       {
         "prompt": "Bahan halus adalah ...",
-        "assetPath": "assets/tekstur-bahan-kelas2.png",
+        "assetPath": "assets/tekstur-bahan-kelas2.webp",
         "altText": "Bahan bertekstur kasar dan halus.",
         "reveal": "Kapas.",
         "hint": "Terasa lembut."
       },
       {
         "prompt": "Apa perekat yang aman?",
-        "assetPath": "assets/tekstur-bahan-kelas2.png",
+        "assetPath": "assets/tekstur-bahan-kelas2.webp",
         "altText": "Bahan bertekstur kasar dan halus.",
         "reveal": "Lem.",
         "hint": "Gunakan sedikit."

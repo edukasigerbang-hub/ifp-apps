@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/akhlak-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6401,
-      "sha256": "cb3323e30359b952f6aafef037a5d2bc877628a5f95e8047e9dbc3dcb85e0942"
+      "path": "assets/akhlak-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 71972,
+      "sha256": "2d1118cab9d3bb685723fbe0e160c5dcd713fa7baf1f10a433dcbbb0f045417e"
     }
   ],
   "dependencies": [],

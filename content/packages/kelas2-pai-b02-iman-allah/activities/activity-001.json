@@ -5,27 +5,27 @@
   "title": "Mengamati Wujud Iman",
   "instructions": "Amati gambar, lalu diskusikan arti iman.",
   "assets": [
-    "assets/iman-allah-kelas2.png"
+    "assets/iman-allah-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa arti iman?",
-        "assetPath": "assets/iman-allah-kelas2.png",
+        "assetPath": "assets/iman-allah-kelas2.webp",
         "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
         "reveal": "Percaya.",
         "hint": "Yakin kepada Allah."
       },
       {
         "prompt": "Allah Maha Pengasih disebut ...",
-        "assetPath": "assets/iman-allah-kelas2.png",
+        "assetPath": "assets/iman-allah-kelas2.webp",
         "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
         "reveal": "Ar-Rahman.",
         "hint": "Mengasihi makhluk."
       },
       {
         "prompt": "Bagaimana wujud iman?",
-        "assetPath": "assets/iman-allah-kelas2.png",
+        "assetPath": "assets/iman-allah-kelas2.webp",
         "altText": "Anak berdoa sebagai wujud iman kepada Allah.",
         "reveal": "Berdoa dan berbuat baik.",
         "hint": "Rajin belajar."

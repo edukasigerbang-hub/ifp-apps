@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kebersihan-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8120,
-      "sha256": "1ded837d89da7b4470313fb05cb8a7df8201e85094c83d5827bd71f2dc81b9f7"
+      "path": "assets/kebersihan-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 99608,
+      "sha256": "af9356e3766f6d9fd7a0c99e3e3db5220ccde3b94aa098334cf6a059137903ca"
     }
   ],
   "dependencies": [],

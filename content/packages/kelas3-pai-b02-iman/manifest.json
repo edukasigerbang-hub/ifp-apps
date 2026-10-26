@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/iman-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5292,
-      "sha256": "7f269925c376edfea92bb28102222ddac334c23325c7b89504636597215014fb"
+      "path": "assets/iman-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 102584,
+      "sha256": "e4f918f679fe9d9c081f3ff1f85f16751e32b7fefe6bdfa455eb4e324102a149"
     }
   ],
   "dependencies": [],

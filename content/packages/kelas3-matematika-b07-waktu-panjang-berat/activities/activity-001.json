@@ -5,27 +5,27 @@
   "title": "Mengamati Alat Ukur",
   "instructions": "Amati gambar, lalu diskusikan satuan pada alat ukur.",
   "assets": [
-    "assets/waktu-panjang-berat.png"
+    "assets/waktu-panjang-berat.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa menit dalam 1 jam?",
-        "assetPath": "assets/waktu-panjang-berat.png",
+        "assetPath": "assets/waktu-panjang-berat.webp",
         "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
         "reveal": "60 menit.",
         "hint": "Lihat angka pada jam."
       },
       {
         "prompt": "Berapa sentimeter dalam 1 meter?",
-        "assetPath": "assets/waktu-panjang-berat.png",
+        "assetPath": "assets/waktu-panjang-berat.webp",
         "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
         "reveal": "100 cm.",
         "hint": "Lihat penggaris."
       },
       {
         "prompt": "Berapa gram dalam 1 kilogram?",
-        "assetPath": "assets/waktu-panjang-berat.png",
+        "assetPath": "assets/waktu-panjang-berat.webp",
         "altText": "Jam, penggaris, dan timbangan untuk mengukur waktu, panjang, dan berat.",
         "reveal": "1.000 gram.",
         "hint": "Lihat timbangan."

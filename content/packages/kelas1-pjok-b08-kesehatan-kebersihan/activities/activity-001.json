@@ -5,27 +5,27 @@
   "title": "Mengamati Kebiasaan Sehat",
   "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
   "assets": [
-    "assets/kesehatan-kebersihan-kelas1.png"
+    "assets/kesehatan-kebersihan-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Kapan cuci tangan?",
-        "assetPath": "assets/kesehatan-kebersihan-kelas1.png",
+        "assetPath": "assets/kesehatan-kebersihan-kelas1.webp",
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Sebelum makan.",
         "hint": "Setelah bermain."
       },
       {
         "prompt": "Mengapa mandi?",
-        "assetPath": "assets/kesehatan-kebersihan-kelas1.png",
+        "assetPath": "assets/kesehatan-kebersihan-kelas1.webp",
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Agar tubuh bersih.",
         "hint": "Mandi pagi dan sore."
       },
       {
         "prompt": "Apa manfaat istirahat?",
-        "assetPath": "assets/kesehatan-kebersihan-kelas1.png",
+        "assetPath": "assets/kesehatan-kebersihan-kelas1.webp",
         "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
         "reveal": "Tenaga pulih.",
         "hint": "Tidur cukup."

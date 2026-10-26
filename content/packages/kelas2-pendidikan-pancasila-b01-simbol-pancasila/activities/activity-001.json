@@ -5,27 +5,27 @@
   "title": "Mengamati Simbol",
   "instructions": "Amati gambar, lalu diskusikan makna simbol.",
   "assets": [
-    "assets/simbol-pancasila-kelas2.png"
+    "assets/simbol-pancasila-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa makna bintang?",
-        "assetPath": "assets/simbol-pancasila-kelas2.png",
+        "assetPath": "assets/simbol-pancasila-kelas2.webp",
         "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
         "reveal": "Ketuhanan.",
         "hint": "Sila pertama."
       },
       {
         "prompt": "Apa makna rantai?",
-        "assetPath": "assets/simbol-pancasila-kelas2.png",
+        "assetPath": "assets/simbol-pancasila-kelas2.webp",
         "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
         "reveal": "Kemanusiaan.",
         "hint": "Sila kedua."
       },
       {
         "prompt": "Apa makna pohon beringin?",
-        "assetPath": "assets/simbol-pancasila-kelas2.png",
+        "assetPath": "assets/simbol-pancasila-kelas2.webp",
         "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
         "reveal": "Persatuan.",
         "hint": "Tempat berlindung."

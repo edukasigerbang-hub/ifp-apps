@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kosakata-baru.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4941,
-      "sha256": "84a669e8419616c51ba98a7482c056673a86efd84edead5048fd53b3f5f7525d"
+      "path": "assets/kosakata-baru.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 201840,
+      "sha256": "67b33ff42bbcd814d6d86d1114727c95316d42480da11ea0c6dcc1fea488b0d0"
     }
   ],
   "dependencies": [],

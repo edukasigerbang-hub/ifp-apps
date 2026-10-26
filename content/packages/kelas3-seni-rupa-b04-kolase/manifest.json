@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kolase-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6253,
-      "sha256": "28993a4c5cd827b23b5ac06c7f8814e454966d8f64cfacc008614bd72a6d249b"
+      "path": "assets/kolase-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 114494,
+      "sha256": "f8c4c4c466c8c00725ad7a2fc8958790f9d457e57acc7493c20341ff486ed047"
     }
   ],
   "dependencies": [],

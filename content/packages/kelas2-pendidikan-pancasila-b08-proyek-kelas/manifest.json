@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/proyek-kelas-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5289,
-      "sha256": "4220db918e8938546a6713ba9f91d6a917c09b082b8f89f8b127fbb078c8743a"
+      "path": "assets/proyek-kelas-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 210944,
+      "sha256": "1e88f403b6b641e997011c5939e57d1c06a3a8d4b67ab69f632b3187412efb2b"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/membaca-kata.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/membaca-kata.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 195446,
+      "sha256": "fcdbc0ab1726cd103ada9c9d9ff34a48028e0a495ca5a070e7a7b1627cbc75ef"
     }
   ],
   "dependencies": [],

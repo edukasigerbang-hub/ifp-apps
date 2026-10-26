@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/dongeng-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7908,
-      "sha256": "a7bea868c4e223e23ede989ccaaae987cb0d0cbcb3044d699923b466cd91225e"
+      "path": "assets/dongeng-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 88762,
+      "sha256": "1511bdfb037dd5416d734c3e51694b9e39c88e5dd8c3e8fa93ec80308b5c6204"
     }
   ],
   "dependencies": [],

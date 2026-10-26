@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/taman-sekolah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5886,
-      "sha256": "2f624852ab9fe70e3cd51aef55c03b890d6ae651a7efaa553afe1e1e27b0be6d"
+      "path": "assets/taman-sekolah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 65794,
+      "sha256": "c0f653c29ff421b4117d4954f492c97233123a0b5b2caf9600045be3c90c45dd"
     }
   ],
   "dependencies": [],

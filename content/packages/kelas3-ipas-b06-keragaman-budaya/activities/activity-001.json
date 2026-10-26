@@ -5,27 +5,27 @@
   "title": "Mengamati Budaya Daerah",
   "instructions": "Amati gambar, lalu diskusikan budaya daerah dan sikap menghargainya.",
   "assets": [
-    "assets/keragaman-budaya-kelas3.png"
+    "assets/keragaman-budaya-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Budaya apa yang terlihat?",
-        "assetPath": "assets/keragaman-budaya-kelas3.png",
+        "assetPath": "assets/keragaman-budaya-kelas3.webp",
         "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah.",
         "reveal": "Rumah adat, pakaian adat, tarian, dan makanan khas.",
         "hint": "Amati bentuk dan warnanya."
       },
       {
         "prompt": "Mengapa budaya berbeda?",
-        "assetPath": "assets/keragaman-budaya-kelas3.png",
+        "assetPath": "assets/keragaman-budaya-kelas3.webp",
         "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah.",
         "reveal": "Setiap daerah memiliki kebiasaan dan lingkungan berbeda.",
         "hint": "Keragaman adalah kekayaan."
       },
       {
         "prompt": "Bagaimana menghargai budaya lain?",
-        "assetPath": "assets/keragaman-budaya-kelas3.png",
+        "assetPath": "assets/keragaman-budaya-kelas3.webp",
         "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah.",
         "reveal": "Mengenal, tidak mengejek, dan ikut melestarikan.",
         "hint": "Bersikap toleran."

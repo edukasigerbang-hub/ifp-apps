@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/hak-kewajiban-siswa.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5788,
-      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+      "path": "assets/hak-kewajiban-siswa.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 135012,
+      "sha256": "59bf4b5f704a656078929edc0ee1ad13f0a14e60c452294da8f96adbbf1d7231"
     }
   ],
   "dependencies": [],

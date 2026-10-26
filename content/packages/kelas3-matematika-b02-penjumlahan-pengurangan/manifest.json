@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/penjumlahan-pengurangan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6237,
-      "sha256": "ed058b2e4a3efbc6eee945ba424553e6732d9a127f564ff29b821cf11313ac29"
+      "path": "assets/penjumlahan-pengurangan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 111110,
+      "sha256": "8e96b168724de808b923522ebba875ffb5f6668c8250ff280a89e2304bbd240e"
     }
   ],
   "dependencies": [],

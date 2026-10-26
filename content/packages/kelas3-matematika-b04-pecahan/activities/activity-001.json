@@ -5,27 +5,27 @@
   "title": "Mengamati Bagian Sama Besar",
   "instructions": "Amati batang pecahan, lalu diskusikan bagian yang diwarnai.",
   "assets": [
-    "assets/pecahan-sederhana.png"
+    "assets/pecahan-sederhana.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Gambar mana yang menunjukkan 1/2?",
-        "assetPath": "assets/pecahan-sederhana.png",
+        "assetPath": "assets/pecahan-sederhana.webp",
         "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar.",
         "reveal": "Bagian yang dibagi dua sama besar dan satu bagian diwarnai.",
         "hint": "Bagian harus sama besar."
       },
       {
         "prompt": "Berapa bagian yang diwarnai pada gambar ketiga?",
-        "assetPath": "assets/pecahan-sederhana.png",
+        "assetPath": "assets/pecahan-sederhana.webp",
         "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar.",
         "reveal": "1 dari 3 bagian, ditulis 1/3.",
         "hint": "Penyebut adalah jumlah bagian."
       },
       {
         "prompt": "Mana yang lebih besar, 1/2 atau 1/4?",
-        "assetPath": "assets/pecahan-sederhana.png",
+        "assetPath": "assets/pecahan-sederhana.webp",
         "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar.",
         "reveal": "1/2 lebih besar.",
         "hint": "Semakin banyak bagian, semakin kecil tiap bagian."

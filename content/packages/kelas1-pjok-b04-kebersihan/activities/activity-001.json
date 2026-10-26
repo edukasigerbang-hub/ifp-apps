@@ -5,27 +5,27 @@
   "title": "Mengamati Kebiasaan Bersih",
   "instructions": "Amati gambar, lalu diskusikan kebiasaan bersih.",
   "assets": [
-    "assets/kebersihan-kelas1.png"
+    "assets/kebersihan-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Kapan mandi?",
-        "assetPath": "assets/kebersihan-kelas1.png",
+        "assetPath": "assets/kebersihan-kelas1.webp",
         "altText": "Anak mandi, sikat gigi, dan mencuci tangan.",
         "reveal": "Pagi dan sore.",
         "hint": "Gunakan sabun."
       },
       {
         "prompt": "Kapan sikat gigi?",
-        "assetPath": "assets/kebersihan-kelas1.png",
+        "assetPath": "assets/kebersihan-kelas1.webp",
         "altText": "Anak mandi, sikat gigi, dan mencuci tangan.",
         "reveal": "Pagi dan sebelum tidur.",
         "hint": "Gosok dengan benar."
       },
       {
         "prompt": "Kapan cuci tangan?",
-        "assetPath": "assets/kebersihan-kelas1.png",
+        "assetPath": "assets/kebersihan-kelas1.webp",
         "altText": "Anak mandi, sikat gigi, dan mencuci tangan.",
         "reveal": "Sebelum makan.",
         "hint": "Setelah bermain."

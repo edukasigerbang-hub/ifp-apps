@@ -5,27 +5,27 @@
   "title": "Mengamati Nomor Atletik",
   "instructions": "Amati gambar, lalu diskusikan nomor atletik dan tekniknya.",
   "assets": [
-    "assets/atletik-kelas3.png"
+    "assets/atletik-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Nomor atletik apa yang terlihat?",
-        "assetPath": "assets/atletik-kelas3.png",
+        "assetPath": "assets/atletik-kelas3.webp",
         "altText": "Lintasan lari, bak pasir lompat, dan pita finis.",
         "reveal": "Lari, lompat jauh, dan lempar.",
         "hint": "Amati lintasan dan bak pasir."
       },
       {
         "prompt": "Bagaimana sikap start?",
-        "assetPath": "assets/atletik-kelas3.png",
+        "assetPath": "assets/atletik-kelas3.webp",
         "altText": "Lintasan lari, bak pasir lompat, dan pita finis.",
         "reveal": "Siap, pandangan ke depan.",
         "hint": "Kaki menolak kuat."
       },
       {
         "prompt": "Apa urutan lompat jauh?",
-        "assetPath": "assets/atletik-kelas3.png",
+        "assetPath": "assets/atletik-kelas3.webp",
         "altText": "Lintasan lari, bak pasir lompat, dan pita finis.",
         "reveal": "Awalan, tolakan, melayang, mendarat.",
         "hint": "Tolak dengan satu kaki."

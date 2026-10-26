@@ -5,27 +5,27 @@
   "title": "Mengamati Bentuk dan Pola",
   "instructions": "Amati gambar, lalu sebutkan bentuk dan polanya.",
   "assets": [
-    "assets/bentuk-pola.png"
+    "assets/bentuk-pola.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bentuk yang bulat disebut ...",
-        "assetPath": "assets/bentuk-pola.png",
+        "assetPath": "assets/bentuk-pola.webp",
         "altText": "Bangun datar lingkaran, persegi, dan segitiga.",
         "reveal": "Lingkaran.",
         "hint": "Tidak punya sudut."
       },
       {
         "prompt": "Bentuk dengan 4 sisi sama disebut ...",
-        "assetPath": "assets/bentuk-pola.png",
+        "assetPath": "assets/bentuk-pola.webp",
         "altText": "Bangun datar lingkaran, persegi, dan segitiga.",
         "reveal": "Persegi.",
         "hint": "Semua sisi sama."
       },
       {
         "prompt": "Apa pola merah-kuning-merah?",
-        "assetPath": "assets/bentuk-pola.png",
+        "assetPath": "assets/bentuk-pola.webp",
         "altText": "Bangun datar lingkaran, persegi, dan segitiga.",
         "reveal": "Pola warna berulang.",
         "hint": "Lanjutkan polanya."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/sudut-baca-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/sudut-baca-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 79952,
+      "sha256": "badf4242eabd655a242c71446a8333ed07ca960bb28a9407e99c5c0c79dcff4e"
     }
   ],
   "dependencies": [],

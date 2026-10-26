@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/huruf-suku-kata.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6003,
-      "sha256": "7ace4f7dfec8e23895264436d6e5335c6f1ec8f8338d1ebb309dc2a9b0818aaf"
+      "path": "assets/huruf-suku-kata.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177598,
+      "sha256": "b0f669991f4342cd14ec87cfc2b5ade76ed1c4dced794bef3320ed94e0c573c6"
     }
   ],
   "dependencies": [],

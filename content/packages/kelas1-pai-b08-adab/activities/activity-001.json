@@ -5,27 +5,27 @@
   "title": "Mengamati Adab",
   "instructions": "Amati gambar, lalu diskusikan adab baik.",
   "assets": [
-    "assets/adab-kelas1.png"
+    "assets/adab-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana adab kepada orang tua?",
-        "assetPath": "assets/adab-kelas1.png",
+        "assetPath": "assets/adab-kelas1.webp",
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Menghormati.",
         "hint": "Mengucapkan salam."
       },
       {
         "prompt": "Bagaimana adab kepada guru?",
-        "assetPath": "assets/adab-kelas1.png",
+        "assetPath": "assets/adab-kelas1.webp",
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Sopan.",
         "hint": "Mendengarkan."
       },
       {
         "prompt": "Bagaimana adab kepada teman?",
-        "assetPath": "assets/adab-kelas1.png",
+        "assetPath": "assets/adab-kelas1.webp",
         "altText": "Anak menyapa orang tua dan membantu teman.",
         "reveal": "Baik dan tidak bertengkar.",
         "hint": "Saling membantu."

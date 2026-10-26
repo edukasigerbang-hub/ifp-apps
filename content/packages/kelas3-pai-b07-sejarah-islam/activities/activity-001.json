@@ -5,27 +5,27 @@
   "title": "Mengamati Peristiwa Awal Islam",
   "instructions": "Amati gambar, lalu diskusikan urutan peristiwa.",
   "assets": [
-    "assets/sejarah-islam-kelas3.png"
+    "assets/sejarah-islam-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Di mana Nabi Muhammad lahir?",
-        "assetPath": "assets/sejarah-islam-kelas3.png",
+        "assetPath": "assets/sejarah-islam-kelas3.webp",
         "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid berkubah.",
         "reveal": "Makkah.",
         "hint": "Kota dengan Ka'bah."
       },
       {
         "prompt": "Di mana wahyu pertama diterima?",
-        "assetPath": "assets/sejarah-islam-kelas3.png",
+        "assetPath": "assets/sejarah-islam-kelas3.webp",
         "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid berkubah.",
         "reveal": "Gua Hira.",
         "hint": "Terletak di Jabal Nur."
       },
       {
         "prompt": "Mengapa Nabi hijrah?",
-        "assetPath": "assets/sejarah-islam-kelas3.png",
+        "assetPath": "assets/sejarah-islam-kelas3.webp",
         "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid berkubah.",
         "reveal": "Untuk melindungi umat dan menyebarkan Islam.",
         "hint": "Hijrah ke Madinah."

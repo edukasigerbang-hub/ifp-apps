@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/bercerita.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5394,
-      "sha256": "6e1233743d87e4cef342c4f6de4a37649d556b9e5137ceaa10a8e619be800d75"
+      "path": "assets/bercerita.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 134084,
+      "sha256": "6cdec3597668f67f5b7c33051fb1fd94258370db54b6a7afdabf484b998b48c8"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menggambar-bentuk-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5490,
-      "sha256": "c85e2d499ba466cc1ffbbcc143dca3928ad4e1f52dc6d4af2b85268cbe5c7635"
+      "path": "assets/menggambar-bentuk-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 82722,
+      "sha256": "433a1bb82233221292a5ebc53ffe4274981121ef720230de35f7d77646e139dc"
     }
   ],
   "dependencies": [],

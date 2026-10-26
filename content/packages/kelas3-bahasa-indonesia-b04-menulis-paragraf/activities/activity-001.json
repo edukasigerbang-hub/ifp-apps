@@ -5,27 +5,27 @@
   "title": "Menyusun Paragraf",
   "instructions": "Amati gambar, lalu diskusikan bagian-bagian paragraf.",
   "assets": [
-    "assets/menulis-paragraf.png"
+    "assets/menulis-paragraf.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa bagian pertama paragraf?",
-        "assetPath": "assets/menulis-paragraf.png",
+        "assetPath": "assets/menulis-paragraf.webp",
         "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
         "reveal": "Kalimat topik.",
         "hint": "Berisi ide utama."
       },
       {
         "prompt": "Bagaimana kalimat pendukung bekerja?",
-        "assetPath": "assets/menulis-paragraf.png",
+        "assetPath": "assets/menulis-paragraf.webp",
         "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
         "reveal": "Menjelaskan kalimat topik.",
         "hint": "Tambahkan contoh atau ciri."
       },
       {
         "prompt": "Apa yang perlu diperiksa setelah menulis?",
-        "assetPath": "assets/menulis-paragraf.png",
+        "assetPath": "assets/menulis-paragraf.webp",
         "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
         "reveal": "Huruf kapital, tanda baca, dan ejaan.",
         "hint": "Baca ulang dengan suara pelan."

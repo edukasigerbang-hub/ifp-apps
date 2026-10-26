@@ -5,27 +5,27 @@
   "title": "Menghitung Benda",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/bilangan-11-20.png"
+    "assets/bilangan-11-20.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bilangan setelah 15 adalah ...",
-        "assetPath": "assets/bilangan-11-20.png",
+        "assetPath": "assets/bilangan-11-20.webp",
         "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
         "reveal": "16.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Bilangan sebelum 20 adalah ...",
-        "assetPath": "assets/bilangan-11-20.png",
+        "assetPath": "assets/bilangan-11-20.webp",
         "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
         "reveal": "19.",
         "hint": "Kurangi satu."
       },
       {
         "prompt": "Angka 17 dibaca ...",
-        "assetPath": "assets/bilangan-11-20.png",
+        "assetPath": "assets/bilangan-11-20.webp",
         "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
         "reveal": "Tujuh belas.",
         "hint": "Baca lambangnya."

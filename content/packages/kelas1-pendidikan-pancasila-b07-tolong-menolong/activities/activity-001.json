@@ -5,27 +5,27 @@
   "title": "Mengamati Tolong-Menolong",
   "instructions": "Amati gambar, lalu diskusikan sikap menolong.",
   "assets": [
-    "assets/tolong-menolong.png"
+    "assets/tolong-menolong.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu tolong-menolong?",
-        "assetPath": "assets/tolong-menolong.png",
+        "assetPath": "assets/tolong-menolong.webp",
         "altText": "Anak saling menolong di sekolah.",
         "reveal": "Saling membantu.",
         "hint": "Tanpa diminta."
       },
       {
         "prompt": "Contoh menolong di sekolah?",
-        "assetPath": "assets/tolong-menolong.png",
+        "assetPath": "assets/tolong-menolong.webp",
         "altText": "Anak saling menolong di sekolah.",
         "reveal": "Membantu teman jatuh.",
         "hint": "Meminjamkan alat tulis."
       },
       {
         "prompt": "Apa manfaatnya?",
-        "assetPath": "assets/tolong-menolong.png",
+        "assetPath": "assets/tolong-menolong.webp",
         "altText": "Anak saling menolong di sekolah.",
         "reveal": "Teman senang.",
         "hint": "Persahabatan erat."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/huruf-hijaiyah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5306,
-      "sha256": "937dd2f6017c1332da18c3b36399945a2a4a241816eec6bc8c3a6070c6539044"
+      "path": "assets/huruf-hijaiyah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 191102,
+      "sha256": "eaac63674ca608ab3283be126f231997aa8bc2319af60dd8807e83f4865b427a"
     }
   ],
   "dependencies": [],

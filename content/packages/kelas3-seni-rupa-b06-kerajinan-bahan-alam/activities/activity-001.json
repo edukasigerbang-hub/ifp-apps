@@ -5,27 +5,27 @@
   "title": "Mengamati Bahan Alam",
   "instructions": "Amati gambar, lalu diskusikan bahan dan hasil kerajinannya.",
   "assets": [
-    "assets/kerajinan-kelas3.png"
+    "assets/kerajinan-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bahan alam apa yang terlihat?",
-        "assetPath": "assets/kerajinan-kelas3.png",
+        "assetPath": "assets/kerajinan-kelas3.webp",
         "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
         "reveal": "Daun, ranting, biji, dan bambu.",
         "hint": "Amati teksturnya."
       },
       {
         "prompt": "Bagaimana memilih bahan?",
-        "assetPath": "assets/kerajinan-kelas3.png",
+        "assetPath": "assets/kerajinan-kelas3.webp",
         "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
         "reveal": "Bersih, kering, dan aman.",
         "hint": "Hindari bahan tajam."
       },
       {
         "prompt": "Apa yang digunakan untuk menempel?",
-        "assetPath": "assets/kerajinan-kelas3.png",
+        "assetPath": "assets/kerajinan-kelas3.webp",
         "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
         "reveal": "Lem yang aman.",
         "hint": "Gunakan sedikit lem."

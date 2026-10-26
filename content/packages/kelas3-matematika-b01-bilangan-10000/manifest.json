@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/nilai-tempat-10000.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7736,
-      "sha256": "446b80c2f4e103d55481a2a0fc257ff1795c47e13664547b1fcb654cf53462f6"
+      "path": "assets/nilai-tempat-10000.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 101438,
+      "sha256": "1a23c712384dcab796433a603b99c8b71e16150e282d0a19461862f1f6d712bb"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Mengamati Taman Sekolah",
   "instructions": "Amati gambar taman sekolah, lalu diskusikan ciri-cirinya.",
   "assets": [
-    "assets/taman-sekolah.png"
+    "assets/taman-sekolah.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Objek apa yang digambarkan pada gambar?",
-        "assetPath": "assets/taman-sekolah.png",
+        "assetPath": "assets/taman-sekolah.webp",
         "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera.",
         "reveal": "Taman sekolah yang hijau dan rapi.",
         "hint": "Amati pohon, bunga, dan bangku."
       },
       {
         "prompt": "Kata indra apa yang dapat digunakan?",
-        "assetPath": "assets/taman-sekolah.png",
+        "assetPath": "assets/taman-sekolah.webp",
         "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera.",
         "reveal": "Hijau, harum, sejuk, dan merdu.",
         "hint": "Gunakan penglihatan, penciuman, dan pendengaran."
       },
       {
         "prompt": "Bagaimana urutan deskripsi yang baik?",
-        "assetPath": "assets/taman-sekolah.png",
+        "assetPath": "assets/taman-sekolah.webp",
         "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera.",
         "reveal": "Sebutkan objek, ciri-cirinya, lalu kesan.",
         "hint": "Mulai dari yang terlihat."

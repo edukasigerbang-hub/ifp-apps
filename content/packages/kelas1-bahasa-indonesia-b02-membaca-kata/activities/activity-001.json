@@ -5,27 +5,27 @@
   "title": "Membaca Bersama",
   "instructions": "Amati gambar, lalu baca kata bersama-sama.",
   "assets": [
-    "assets/membaca-kata.png"
+    "assets/membaca-kata.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Baca kata bu-ku.",
-        "assetPath": "assets/membaca-kata.png",
+        "assetPath": "assets/membaca-kata.webp",
         "altText": "Anak membaca kata sederhana di sudut baca.",
         "reveal": "buku.",
         "hint": "Gabungkan suku katanya."
       },
       {
         "prompt": "Baca kata ma-ta.",
-        "assetPath": "assets/membaca-kata.png",
+        "assetPath": "assets/membaca-kata.webp",
         "altText": "Anak membaca kata sederhana di sudut baca.",
         "reveal": "mata.",
         "hint": "Ulangi pelan-pelan."
       },
       {
         "prompt": "Berapa suku kata pada kata buku?",
-        "assetPath": "assets/membaca-kata.png",
+        "assetPath": "assets/membaca-kata.webp",
         "altText": "Anak membaca kata sederhana di sudut baca.",
         "reveal": "Dua.",
         "hint": "bu dan ku."

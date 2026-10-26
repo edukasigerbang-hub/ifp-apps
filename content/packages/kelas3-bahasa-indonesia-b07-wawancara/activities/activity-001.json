@@ -5,27 +5,27 @@
   "title": "Mengamati Wawancara",
   "instructions": "Amati gambar, lalu diskusikan cara bertanya dan mencatat jawaban.",
   "assets": [
-    "assets/wawancara-kelas3.png"
+    "assets/wawancara-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Siapa yang diwawancarai?",
-        "assetPath": "assets/wawancara-kelas3.png",
+        "assetPath": "assets/wawancara-kelas3.webp",
         "altText": "Dua anak mewawancarai narasumber dengan sopan.",
         "reveal": "Narasumber.",
         "hint": "Pilih orang yang mengetahui topik."
       },
       {
         "prompt": "Bagaimana pertanyaan yang baik?",
-        "assetPath": "assets/wawancara-kelas3.png",
+        "assetPath": "assets/wawancara-kelas3.webp",
         "altText": "Dua anak mewawancarai narasumber dengan sopan.",
         "reveal": "Singkat, jelas, dan mudah dijawab.",
         "hint": "Hindari pertanyaan berlapis."
       },
       {
         "prompt": "Apa yang dilakukan saat wawancara?",
-        "assetPath": "assets/wawancara-kelas3.png",
+        "assetPath": "assets/wawancara-kelas3.webp",
         "altText": "Dua anak mewawancarai narasumber dengan sopan.",
         "reveal": "Bersikap sopan dan mencatat jawaban.",
         "hint": "Ucapkan terima kasih."

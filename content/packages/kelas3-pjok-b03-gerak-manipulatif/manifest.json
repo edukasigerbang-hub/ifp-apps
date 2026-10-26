@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gerak-manipulatif-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9256,
-      "sha256": "1d696e9101ebc9eb2f2b4e07369a757e185610aed44907c435c37d7e911100bc"
+      "path": "assets/gerak-manipulatif-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 142480,
+      "sha256": "d7d3335a25c0fdcb834e61fb375afae26df8095af394307d2f5e8cdbe3f443ab"
     }
   ],
   "dependencies": [],

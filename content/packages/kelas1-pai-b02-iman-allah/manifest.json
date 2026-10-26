@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/iman-allah-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5292,
-      "sha256": "7f269925c376edfea92bb28102222ddac334c23325c7b89504636597215014fb"
+      "path": "assets/iman-allah-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 105492,
+      "sha256": "e748fdc881b9eb47b86871009a07dcd78e4ecd4b8b004dd1c785be381817dd8d"
     }
   ],
   "dependencies": [],

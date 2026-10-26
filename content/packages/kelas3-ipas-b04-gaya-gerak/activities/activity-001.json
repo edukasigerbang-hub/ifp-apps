@@ -5,27 +5,27 @@
   "title": "Mengamati Gaya pada Benda",
   "instructions": "Amati gambar, lalu diskusikan gaya yang bekerja pada benda.",
   "assets": [
-    "assets/gaya-gerak-kelas3.png"
+    "assets/gaya-gerak-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang membuat bola bergerak?",
-        "assetPath": "assets/gaya-gerak-kelas3.png",
+        "assetPath": "assets/gaya-gerak-kelas3.webp",
         "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku.",
         "reveal": "Gaya, misalnya dorongan atau tarikan.",
         "hint": "Amati arah gerak."
       },
       {
         "prompt": "Apa pengaruh gaya pada benda?",
-        "assetPath": "assets/gaya-gerak-kelas3.png",
+        "assetPath": "assets/gaya-gerak-kelas3.webp",
         "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku.",
         "reveal": "Membuat benda bergerak, berhenti, atau berubah arah.",
         "hint": "Bandingkan mendorong dan menarik."
       },
       {
         "prompt": "Apa contoh gaya gesek?",
-        "assetPath": "assets/gaya-gerak-kelas3.png",
+        "assetPath": "assets/gaya-gerak-kelas3.webp",
         "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku.",
         "reveal": "Sepatu menghentikan kaki di lantai.",
         "hint": "Gesekan memperlambat gerak."

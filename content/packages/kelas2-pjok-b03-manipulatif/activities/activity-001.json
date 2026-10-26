@@ -5,27 +5,27 @@
   "title": "Mengamati Lempar-Tangkap",
   "instructions": "Amati gambar, lalu diskusikan gerakannya.",
   "assets": [
-    "assets/manipulatif-kelas2.png"
+    "assets/manipulatif-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu gerak manipulatif?",
-        "assetPath": "assets/manipulatif-kelas2.png",
+        "assetPath": "assets/manipulatif-kelas2.webp",
         "altText": "Dua anak melempar dan menangkap bola.",
         "reveal": "Gerak dengan benda atau alat.",
         "hint": "Melempar dan menangkap."
       },
       {
         "prompt": "Bagaimana menangkap bola?",
-        "assetPath": "assets/manipulatif-kelas2.png",
+        "assetPath": "assets/manipulatif-kelas2.webp",
         "altText": "Dua anak melempar dan menangkap bola.",
         "reveal": "Pandangan ke bola.",
         "hint": "Tangkap dengan dua tangan."
       },
       {
         "prompt": "Mengapa kerja sama penting?",
-        "assetPath": "assets/manipulatif-kelas2.png",
+        "assetPath": "assets/manipulatif-kelas2.webp",
         "altText": "Dua anak melempar dan menangkap bola.",
         "reveal": "Agar permainan lancar.",
         "hint": "Beri isyarat."

@@ -5,27 +5,27 @@
   "title": "Mengamati Garis dan Warna",
   "instructions": "Amati gambar, lalu tunjuk garis dan warnanya.",
   "assets": [
-    "assets/garis-warna-kelas1.png"
+    "assets/garis-warna-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Garis yang lurus disebut ...",
-        "assetPath": "assets/garis-warna-kelas1.png",
+        "assetPath": "assets/garis-warna-kelas1.webp",
         "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
         "reveal": "Garis lurus.",
         "hint": "Seperti penggaris."
       },
       {
         "prompt": "Garis yang melengkung disebut ...",
-        "assetPath": "assets/garis-warna-kelas1.png",
+        "assetPath": "assets/garis-warna-kelas1.webp",
         "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
         "reveal": "Garis lengkung.",
         "hint": "Seperti pelangi."
       },
       {
         "prompt": "Sebutkan warna primer.",
-        "assetPath": "assets/garis-warna-kelas1.png",
+        "assetPath": "assets/garis-warna-kelas1.webp",
         "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
         "reveal": "Merah, kuning, biru.",
         "hint": "Warna dasar."

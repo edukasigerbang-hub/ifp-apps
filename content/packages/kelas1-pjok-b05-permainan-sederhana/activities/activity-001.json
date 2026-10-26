@@ -5,27 +5,27 @@
   "title": "Mengamati Permainan",
   "instructions": "Amati gambar, lalu diskusikan aturan dan kerja samanya.",
   "assets": [
-    "assets/permainan-sederhana.png"
+    "assets/permainan-sederhana.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Mengapa aturan penting?",
-        "assetPath": "assets/permainan-sederhana.png",
+        "assetPath": "assets/permainan-sederhana.webp",
         "altText": "Anak bermain permainan sederhana di lapangan.",
         "reveal": "Agar permainan adil.",
         "hint": "Semua menaati."
       },
       {
         "prompt": "Bagaimana bermain bersama?",
-        "assetPath": "assets/permainan-sederhana.png",
+        "assetPath": "assets/permainan-sederhana.webp",
         "altText": "Anak bermain permainan sederhana di lapangan.",
         "reveal": "Bergiliran dan bekerja sama.",
         "hint": "Tidak berebut."
       },
       {
         "prompt": "Bagaimana sikap setelah bermain?",
-        "assetPath": "assets/permainan-sederhana.png",
+        "assetPath": "assets/permainan-sederhana.webp",
         "altText": "Anak bermain permainan sederhana di lapangan.",
         "reveal": "Bersalaman.",
         "hint": "Tidak marah bila kalah."

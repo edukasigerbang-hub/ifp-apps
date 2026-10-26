@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/tekstur-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5945,
-      "sha256": "3faf047ec3813f555e302c665b430c53314799b655e56a04da30c1241199cc66"
+      "path": "assets/tekstur-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 187192,
+      "sha256": "6ecccd89ae43755819a90e32c2f0d180ce6f328e1165f7ce4ee576208fcd70e5"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kerajinan-bahan-alam-kelas1.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6907,
-      "sha256": "8575605abb6914a8ba88299c59198a58d4960dbdecc668f1a8e5a9532e4ab50b"
+      "path": "assets/kerajinan-bahan-alam-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 155860,
+      "sha256": "c750994eec10b8caa8ec3573fd925259ee56ba9156b91f69ce58ba2172e3704b"
     }
   ],
   "dependencies": [],

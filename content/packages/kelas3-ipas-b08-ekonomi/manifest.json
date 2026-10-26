@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/ekonomi-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6204,
-      "sha256": "fed38773c93ebea9e5443ec3644237d56e1269e17bea1a8456911a8cec0a4077"
+      "path": "assets/ekonomi-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 101998,
+      "sha256": "53f169b5d5b0740b159c8fc4aa72e5f318dccdb3417abd1fb7e32633518a5f83"
     }
   ],
   "dependencies": [],

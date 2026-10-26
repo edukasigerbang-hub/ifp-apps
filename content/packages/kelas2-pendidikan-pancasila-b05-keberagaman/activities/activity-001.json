@@ -5,27 +5,27 @@
   "title": "Mengamati Keberagaman",
   "instructions": "Amati gambar, lalu diskusikan perbedaan dan sikapnya.",
   "assets": [
-    "assets/keberagaman-kelas2.png"
+    "assets/keberagaman-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Keberagaman apa yang terlihat?",
-        "assetPath": "assets/keberagaman-kelas2.png",
+        "assetPath": "assets/keberagaman-kelas2.webp",
         "altText": "Siswa berbeda suku dan budaya belajar bersama.",
         "reveal": "Suku dan budaya.",
         "hint": "Setiap teman berbeda."
       },
       {
         "prompt": "Bagaimana sikap terhadap perbedaan?",
-        "assetPath": "assets/keberagaman-kelas2.png",
+        "assetPath": "assets/keberagaman-kelas2.webp",
         "altText": "Siswa berbeda suku dan budaya belajar bersama.",
         "reveal": "Menghargai.",
         "hint": "Tidak mengejek."
       },
       {
         "prompt": "Apa manfaat keberagaman?",
-        "assetPath": "assets/keberagaman-kelas2.png",
+        "assetPath": "assets/keberagaman-kelas2.webp",
         "altText": "Siswa berbeda suku dan budaya belajar bersama.",
         "reveal": "Belajar hal baru.",
         "hint": "Persahabatan luas."

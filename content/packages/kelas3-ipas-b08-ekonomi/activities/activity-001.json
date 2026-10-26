@@ -5,27 +5,27 @@
   "title": "Mengamati Kegiatan Ekonomi",
   "instructions": "Amati gambar, lalu diskusikan kegiatan ekonomi yang terlihat.",
   "assets": [
-    "assets/ekonomi-kelas3.png"
+    "assets/ekonomi-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu produksi?",
-        "assetPath": "assets/ekonomi-kelas3.png",
+        "assetPath": "assets/ekonomi-kelas3.webp",
         "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
         "reveal": "Kegiatan membuat atau menghasilkan barang.",
         "hint": "Contohnya petani menanam padi."
       },
       {
         "prompt": "Apa itu distribusi?",
-        "assetPath": "assets/ekonomi-kelas3.png",
+        "assetPath": "assets/ekonomi-kelas3.webp",
         "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
         "reveal": "Kegiatan mengantar barang dari produsen ke pembeli.",
         "hint": "Contohnya pedagang mengantar barang."
       },
       {
         "prompt": "Apa itu konsumsi?",
-        "assetPath": "assets/ekonomi-kelas3.png",
+        "assetPath": "assets/ekonomi-kelas3.webp",
         "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang.",
         "reveal": "Kegiatan menggunakan barang atau jasa.",
         "hint": "Contohnya makan nasi."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/cuaca-musim.png",
-      "mediaType": "image/png",
-      "sizeBytes": 8773,
-      "sha256": "ba8dc32839eb114da9aea1b47ff91b6973329fa60814c8a099fa0582fe1af1fe"
+      "path": "assets/cuaca-musim.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 146434,
+      "sha256": "9c3d1a22b1ae7d5891bf79ebffa3021b77a6648536135988e839f003f6dc10c2"
     }
   ],
   "dependencies": [],

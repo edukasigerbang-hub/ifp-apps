@@ -5,27 +5,27 @@
   "title": "Mengamati Wujud Zat",
   "instructions": "Amati gambar, lalu diskusikan sifat dan perubahan wujud zat.",
   "assets": [
-    "assets/wujud-zat-kelas3.png"
+    "assets/wujud-zat-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Wujud zat apa saja pada gambar?",
-        "assetPath": "assets/wujud-zat-kelas3.png",
+        "assetPath": "assets/wujud-zat-kelas3.webp",
         "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara.",
         "reveal": "Padat, cair, dan gas.",
         "hint": "Perhatikan bentuk dan isinya."
       },
       {
         "prompt": "Apa sifat zat cair?",
-        "assetPath": "assets/wujud-zat-kelas3.png",
+        "assetPath": "assets/wujud-zat-kelas3.webp",
         "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara.",
         "reveal": "Bentuk mengikuti wadah, volume tetap.",
         "hint": "Bandingkan air dan batu."
       },
       {
         "prompt": "Apa contoh perubahan wujud?",
-        "assetPath": "assets/wujud-zat-kelas3.png",
+        "assetPath": "assets/wujud-zat-kelas3.webp",
         "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara.",
         "reveal": "Es mencair, air menguap, uap mengembun.",
         "hint": "Perubahan terjadi karena suhu."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menulis-kalimat-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4931,
-      "sha256": "1a58835a3ace0cdc678a39e6881f047089d6e3547d4f6dab059072ef8905ef32"
+      "path": "assets/menulis-kalimat-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 134864,
+      "sha256": "194ac37f40cc0ae5454c63fca74bcddaee496a66c34e070a1f4068e29f441118"
     }
   ],
   "dependencies": [],

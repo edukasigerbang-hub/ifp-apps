@@ -17,7 +17,7 @@
     "kuis-cuaca-musim"
   ],
   "assetRefs": [
-    "assets/cuaca-musim.png"
+    "assets/cuaca-musim.webp"
   ],
   "accessibilityMetadata": {
     "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."

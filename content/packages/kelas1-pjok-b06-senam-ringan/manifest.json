@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/senam-ringan.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5678,
-      "sha256": "8754a62badbab5e2d499e0ac0ea7480cda6839254b58e6577d91c2ab9e62e0d9"
+      "path": "assets/senam-ringan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172514,
+      "sha256": "ce87725f87fb20d072123c4e374aee23da3eb6b5c4a3c73653258f838a319c84"
     }
   ],
   "dependencies": [],

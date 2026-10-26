@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/puisi-pantun-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4941,
-      "sha256": "84a669e8419616c51ba98a7482c056673a86efd84edead5048fd53b3f5f7525d"
+      "path": "assets/puisi-pantun-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 129050,
+      "sha256": "c843ed87ddf9fc23b9c63e0baf5af330060431b8352a7b81d63e82dd2a0432fc"
     }
   ],
   "dependencies": [],

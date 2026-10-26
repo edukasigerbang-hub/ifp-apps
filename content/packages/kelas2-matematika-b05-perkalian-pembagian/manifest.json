@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/perkalian-pembagian-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7319,
-      "sha256": "0744b0d9141d28e6bc9d6589bb5616f6635b6bcfd8f6a1e18d7ef91d3a683957"
+      "path": "assets/perkalian-pembagian-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 156674,
+      "sha256": "92a874b04e7115bfd17de8a7b9304e5b338c8ff9affacb6f8412284ab4c17a20"
     }
   ],
   "dependencies": [],

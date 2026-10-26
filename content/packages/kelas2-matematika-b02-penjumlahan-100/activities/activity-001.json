@@ -5,27 +5,27 @@
   "title": "Menghitung sampai 100",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/penjumlahan-100.png"
+    "assets/penjumlahan-100.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 45 + 32?",
-        "assetPath": "assets/penjumlahan-100.png",
+        "assetPath": "assets/penjumlahan-100.webp",
         "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
         "reveal": "77.",
         "hint": "Jumlahkan puluhan lalu satuan."
       },
       {
         "prompt": "Berapa 80 − 25?",
-        "assetPath": "assets/penjumlahan-100.png",
+        "assetPath": "assets/penjumlahan-100.webp",
         "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
         "reveal": "55.",
         "hint": "Kurangi puluhan lalu satuan."
       },
       {
         "prompt": "Berapa 50 + 50?",
-        "assetPath": "assets/penjumlahan-100.png",
+        "assetPath": "assets/penjumlahan-100.webp",
         "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
         "reveal": "100.",
         "hint": "Dua kelompok lima puluh."

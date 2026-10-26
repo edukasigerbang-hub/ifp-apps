@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/salat-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4621,
-      "sha256": "5eed3951d0be92cf7676f2ca4d808ecb3a3b55cdde6d6a926443d36b34d370d2"
+      "path": "assets/salat-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 97652,
+      "sha256": "87273e589cca6a16acdf94670830a078828b2a165cb4289fe4e7e0a982e7bbab"
     }
   ],
   "dependencies": [],

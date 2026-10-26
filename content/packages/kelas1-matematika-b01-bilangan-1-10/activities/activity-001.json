@@ -5,27 +5,27 @@
   "title": "Menghitung Apel",
   "instructions": "Amati gambar, lalu hitung apel bersama-sama.",
   "assets": [
-    "assets/bilangan-1-10.png"
+    "assets/bilangan-1-10.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Ada berapa apel?",
-        "assetPath": "assets/bilangan-1-10.png",
+        "assetPath": "assets/bilangan-1-10.webp",
         "altText": "Kerangka sepuluh berisi tujuh buah apel.",
         "reveal": "Tujuh.",
         "hint": "Hitung satu per satu."
       },
       {
         "prompt": "Angka untuk tujuh adalah ...",
-        "assetPath": "assets/bilangan-1-10.png",
+        "assetPath": "assets/bilangan-1-10.webp",
         "altText": "Kerangka sepuluh berisi tujuh buah apel.",
         "reveal": "7.",
         "hint": "Tujuh ditulis 7."
       },
       {
         "prompt": "Mana yang lebih banyak, 5 atau 3?",
-        "assetPath": "assets/bilangan-1-10.png",
+        "assetPath": "assets/bilangan-1-10.webp",
         "altText": "Kerangka sepuluh berisi tujuh buah apel.",
         "reveal": "5.",
         "hint": "Bandingkan jumlahnya."

@@ -5,27 +5,27 @@
   "title": "Mengamati Nomor Atletik",
   "instructions": "Amati gambar, lalu diskusikan geraknya.",
   "assets": [
-    "assets/atletik-kelas2.png"
+    "assets/atletik-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana sikap start?",
-        "assetPath": "assets/atletik-kelas2.png",
+        "assetPath": "assets/atletik-kelas2.webp",
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Siap dan pandangan ke depan.",
         "hint": "Kaki menolak kuat."
       },
       {
         "prompt": "Apa urutan lompat jauh?",
-        "assetPath": "assets/atletik-kelas2.png",
+        "assetPath": "assets/atletik-kelas2.webp",
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Awalan, tolakan, mendarat.",
         "hint": "Tolak satu kaki."
       },
       {
         "prompt": "Apa itu sportivitas?",
-        "assetPath": "assets/atletik-kelas2.png",
+        "assetPath": "assets/atletik-kelas2.webp",
         "altText": "Lintasan lari, bak lompat, dan pita finis.",
         "reveal": "Menghargai lawan.",
         "hint": "Tidak curang."

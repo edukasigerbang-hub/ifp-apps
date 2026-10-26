@@ -5,27 +5,27 @@
   "title": "Mengamati Langkah Menanam",
   "instructions": "Amati gambar, lalu diskusikan urutan langkah menanam biji.",
   "assets": [
-    "assets/teks-prosedur-kelas3.png"
+    "assets/teks-prosedur-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa tujuan teks prosedur?",
-        "assetPath": "assets/teks-prosedur-kelas3.png",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
         "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
         "reveal": "Memberi petunjuk melakukan sesuatu.",
         "hint": "Ada alat dan langkah."
       },
       {
         "prompt": "Bagaimana urutan langkah ditulis?",
-        "assetPath": "assets/teks-prosedur-kelas3.png",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
         "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
         "reveal": "Berurutan dari awal sampai akhir.",
         "hint": "Gunakan kata pertama, lalu, kemudian."
       },
       {
         "prompt": "Kata apa yang biasa dipakai?",
-        "assetPath": "assets/teks-prosedur-kelas3.png",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
         "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
         "reveal": "Kata perintah seperti siapkan, masukkan, siram.",
         "hint": "Mulai dengan kata kerja."

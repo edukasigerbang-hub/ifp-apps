@@ -5,27 +5,27 @@
   "title": "Mengamati Kebersamaan",
   "instructions": "Amati gambar, lalu diskusikan kegiatan bersama.",
   "assets": [
-    "assets/kebersamaan-kelas1.png"
+    "assets/kebersamaan-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu kebersamaan?",
-        "assetPath": "assets/kebersamaan-kelas1.png",
+        "assetPath": "assets/kebersamaan-kelas1.webp",
         "altText": "Siswa belajar dan bermain bersama di sekolah.",
         "reveal": "Melakukan sesuatu bersama-sama.",
         "hint": "Saling membantu."
       },
       {
         "prompt": "Contoh kebersamaan di sekolah?",
-        "assetPath": "assets/kebersamaan-kelas1.png",
+        "assetPath": "assets/kebersamaan-kelas1.webp",
         "altText": "Siswa belajar dan bermain bersama di sekolah.",
         "reveal": "Belajar dan bermain bersama.",
         "hint": "Berbagi alat tulis."
       },
       {
         "prompt": "Bagaimana menjaga kebersamaan?",
-        "assetPath": "assets/kebersamaan-kelas1.png",
+        "assetPath": "assets/kebersamaan-kelas1.webp",
         "altText": "Siswa belajar dan bermain bersama di sekolah.",
         "reveal": "Tidak bertengkar.",
         "hint": "Menghargai teman."

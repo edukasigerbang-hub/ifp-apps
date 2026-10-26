@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gerak-non-lokomotor.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9721,
-      "sha256": "001c405ce7b10069eddc4f885cea402f96de958c020be5b27589789b14574b15"
+      "path": "assets/gerak-non-lokomotor.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 90740,
+      "sha256": "794a7bf9c14c84a3f9c0404bcf8f6295067c56843d159a77d9d1ad16872133b1"
     }
   ],
   "dependencies": [],

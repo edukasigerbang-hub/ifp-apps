@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/melompat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9314,
-      "sha256": "378bb297592a69945aa4d07585f1af520baf28d2e102fdded37533151951180a"
+      "path": "assets/melompat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 158718,
+      "sha256": "fa138d4868720e0a473957dafe65922707f8cccfb9f69a1a2cbbfbb53d2b76ae"
     }
   ],
   "dependencies": [],

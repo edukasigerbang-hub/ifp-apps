@@ -43,3 +43,10 @@
 - **Deviasi 151:** properti menjadi uang kertas di tangan (bukan amplop/parsel), buku terbuka di rehal (bukan Qur'an tertutup bersampul polos), tanpa kurma/air; uang dan halaman buku hanya tekstur guilloche/titik yang tidak terbaca pada 1×.
 - **Penyesuaian prompt:** 147–151 memakai kalimat adegan spesifik menggantikan templat subjek generik pada antrean (agar tidak menduplikasi 146); bagian gaya dan larangan teks dipertahankan.
 - Tidak ada bypass autentikasi, ganti akun, atau pengetikan kredensial.
+
+## Pasca-152: migrasi, validasi, test, build
+
+- **Migrasi:** `scripts/migrate-materi-assets-to-webp.mjs` diperluas dari `kelas[456]` menjadi `kelas[1-6]` (satu-satunya perubahan skrip: pola filter dan penangkapan grade). Dry run: 320 paket, 0 masalah. `--apply`: **320 updated, 0 skipped, 0 missing, 669 referensi lesson/activity diperbarui**. Re-run dry: 0 referensi tersisa (idempoten).
+- **Validasi paket:** **320/320 VALID** (636 warning bawaan: lesson masih draft dan manifest belum punya `curriculumRefs`); tidak ada isu.
+- **Test:** `npm test` — 8 file test, **85/85 lulus**; fixture 4/4 cocok; catalog index **320 entri / 320 paket**.
+- **Build:** `npm run build` — `tsc --noEmit` + `vite build` sukses (22,46 s); `dist` memuat **320 WebP, 0 PNG**.

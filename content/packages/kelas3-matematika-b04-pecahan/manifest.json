@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pecahan-sederhana.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5577,
-      "sha256": "883ae8bf75dda04715f0770ced36197724a3511e8152b02031398b1fdba91f6a"
+      "path": "assets/pecahan-sederhana.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 92554,
+      "sha256": "bf52679636f09389f35a244d5e58a6d8ec324d8f90c00f49d150b9145cd3e1e1"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/apresiasi-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6661,
-      "sha256": "11562ca14172bc9bb10a28e8f6fc694523118e09d468b409c581d7d5bac9a6d8"
+      "path": "assets/apresiasi-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 134992,
+      "sha256": "da5825179408966aca335bf4676e6034862d84d246ea60b8be1fac031d3d71e9"
     }
   ],
   "dependencies": [],

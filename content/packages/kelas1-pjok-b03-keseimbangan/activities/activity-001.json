@@ -5,27 +5,27 @@
   "title": "Mengamati Gerak Keseimbangan",
   "instructions": "Amati gambar, lalu tirukan gerakannya.",
   "assets": [
-    "assets/keseimbangan.png"
+    "assets/keseimbangan.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana berdiri satu kaki?",
-        "assetPath": "assets/keseimbangan.png",
+        "assetPath": "assets/keseimbangan.webp",
         "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
         "reveal": "Angkat satu kaki.",
         "hint": "Pandangan ke depan."
       },
       {
         "prompt": "Apa yang membantu keseimbangan?",
-        "assetPath": "assets/keseimbangan.png",
+        "assetPath": "assets/keseimbangan.webp",
         "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
         "reveal": "Merentangkan tangan.",
         "hint": "Tubuh tetap tegak."
       },
       {
         "prompt": "Berapa lama berlatih?",
-        "assetPath": "assets/keseimbangan.png",
+        "assetPath": "assets/keseimbangan.webp",
         "altText": "Anak berdiri satu kaki dan merentangkan tangan.",
         "reveal": "Hitung sampai lima.",
         "hint": "Lalu ganti kaki."

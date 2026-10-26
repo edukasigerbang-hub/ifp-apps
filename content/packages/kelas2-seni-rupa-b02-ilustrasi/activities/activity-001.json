@@ -5,27 +5,27 @@
   "title": "Mengamati Ilustrasi",
   "instructions": "Amati gambar, lalu diskusikan langkahnya.",
   "assets": [
-    "assets/ilustrasi-kelas2.png"
+    "assets/ilustrasi-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu ilustrasi?",
-        "assetPath": "assets/ilustrasi-kelas2.png",
+        "assetPath": "assets/ilustrasi-kelas2.webp",
         "altText": "Ilustrasi sederhana dari bentuk dasar.",
         "reveal": "Gambar untuk menjelaskan cerita.",
         "hint": "Membantu memahami."
       },
       {
         "prompt": "Apa langkah pertama?",
-        "assetPath": "assets/ilustrasi-kelas2.png",
+        "assetPath": "assets/ilustrasi-kelas2.webp",
         "altText": "Ilustrasi sederhana dari bentuk dasar.",
         "reveal": "Menentukan tema.",
         "hint": "Buat sketsa tipis."
       },
       {
         "prompt": "Apa langkah terakhir?",
-        "assetPath": "assets/ilustrasi-kelas2.png",
+        "assetPath": "assets/ilustrasi-kelas2.webp",
         "altText": "Ilustrasi sederhana dari bentuk dasar.",
         "reveal": "Mewarnai.",
         "hint": "Rapikan hasil."

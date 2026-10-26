@@ -5,27 +5,27 @@
   "title": "Mengamati Kebun",
   "instructions": "Amati makhluk hidup pada gambar, lalu diskusikan ciri dan kebutuhannya.",
   "assets": [
-    "assets/makhluk-hidup-sekitar.png"
+    "assets/makhluk-hidup-sekitar.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Makhluk hidup apa yang terlihat?",
-        "assetPath": "assets/makhluk-hidup-sekitar.png",
+        "assetPath": "assets/makhluk-hidup-sekitar.webp",
         "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing.",
         "reveal": "Kupu-kupu, burung, ikan, tumbuhan, dan kucing.",
         "hint": "Amati yang bergerak dan tumbuh."
       },
       {
         "prompt": "Apa ciri makhluk hidup?",
-        "assetPath": "assets/makhluk-hidup-sekitar.png",
+        "assetPath": "assets/makhluk-hidup-sekitar.webp",
         "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing.",
         "reveal": "Bernapas, bergerak, tumbuh, berkembang biak, dan peka terhadap rangsang.",
         "hint": "Bandingkan dengan batu."
       },
       {
         "prompt": "Apa kebutuhan makhluk hidup?",
-        "assetPath": "assets/makhluk-hidup-sekitar.png",
+        "assetPath": "assets/makhluk-hidup-sekitar.webp",
         "altText": "Kebun dengan kupu-kupu, burung, ikan di kolam, tumbuhan, dan kucing.",
         "reveal": "Air, udara, makanan, dan tempat hidup.",
         "hint": "Setiap makhluk punya kebutuhan berbeda."

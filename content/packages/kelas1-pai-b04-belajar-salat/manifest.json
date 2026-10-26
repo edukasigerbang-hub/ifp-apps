@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/belajar-salat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4621,
-      "sha256": "5eed3951d0be92cf7676f2ca4d808ecb3a3b55cdde6d6a926443d36b34d370d2"
+      "path": "assets/belajar-salat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 94592,
+      "sha256": "c25d599b6444f7e26455125faf37c1c4fd3eb3a83ca6ebfa02cd5706a13d3251"
     }
   ],
   "dependencies": [],

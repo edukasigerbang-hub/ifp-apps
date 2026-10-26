@@ -5,27 +5,27 @@
   "title": "Membaca dan Memahami",
   "instructions": "Amati gambar, lalu diskusikan isi bacaan.",
   "assets": [
-    "assets/membaca-pemahaman-kelas2.png"
+    "assets/membaca-pemahaman-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dibaca?",
-        "assetPath": "assets/membaca-pemahaman-kelas2.png",
+        "assetPath": "assets/membaca-pemahaman-kelas2.webp",
         "altText": "Anak membaca dan memahami isi bacaan.",
         "reveal": "Bacaan pendek.",
         "hint": "Baca dengan teliti."
       },
       {
         "prompt": "Bagaimana menjawab pertanyaan?",
-        "assetPath": "assets/membaca-pemahaman-kelas2.png",
+        "assetPath": "assets/membaca-pemahaman-kelas2.webp",
         "altText": "Anak membaca dan memahami isi bacaan.",
         "reveal": "Cari jawaban di bacaan.",
         "hint": "Baca ulang bila perlu."
       },
       {
         "prompt": "Apa itu kesimpulan?",
-        "assetPath": "assets/membaca-pemahaman-kelas2.png",
+        "assetPath": "assets/membaca-pemahaman-kelas2.webp",
         "altText": "Anak membaca dan memahami isi bacaan.",
         "reveal": "Inti bacaan.",
         "hint": "Ceritakan dengan singkat."

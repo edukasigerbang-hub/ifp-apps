@@ -5,27 +5,27 @@
   "title": "Mengamati Karya",
   "instructions": "Amati gambar, lalu diskusikan karya yang terlihat.",
   "assets": [
-    "assets/apresiasi-kelas1.png"
+    "assets/apresiasi-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang terlihat pada karya?",
-        "assetPath": "assets/apresiasi-kelas1.png",
+        "assetPath": "assets/apresiasi-kelas1.webp",
         "altText": "Karya seni dipajang dan anak mengamati.",
         "reveal": "Warna dan bentuk.",
         "hint": "Amati dengan teliti."
       },
       {
         "prompt": "Bagaimana menanggapi karya teman?",
-        "assetPath": "assets/apresiasi-kelas1.png",
+        "assetPath": "assets/apresiasi-kelas1.webp",
         "altText": "Karya seni dipajang dan anak mengamati.",
         "reveal": "Sopan.",
         "hint": "Tidak mengejek."
       },
       {
         "prompt": "Apa manfaat apresiasi?",
-        "assetPath": "assets/apresiasi-kelas1.png",
+        "assetPath": "assets/apresiasi-kelas1.webp",
         "altText": "Karya seni dipajang dan anak mengamati.",
         "reveal": "Belajar menghargai.",
         "hint": "Menemukan ide."

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/mewarnai-bentuk.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5945,
-      "sha256": "3faf047ec3813f555e302c665b430c53314799b655e56a04da30c1241199cc66"
+      "path": "assets/mewarnai-bentuk.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 152686,
+      "sha256": "34625e43b119a70d224932a7c1ae702e30b16058b2650707ca634b3d5be8031f"
     }
   ],
   "dependencies": [],

@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/adab-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5684,
-      "sha256": "214bc9499ec734820e7d8b0333a7eb0583b746f27905f87651f0947530d72603"
+      "path": "assets/adab-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 149044,
+      "sha256": "acfeb4062983dfb5074b47e08ad13aabf8278a72a401eac717423d41052175fc"
     }
   ],
   "dependencies": [],

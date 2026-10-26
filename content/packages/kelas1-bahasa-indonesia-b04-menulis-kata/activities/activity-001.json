@@ -5,27 +5,27 @@
   "title": "Belajar Menulis",
   "instructions": "Amati gambar, lalu tirukan menulis bersama.",
   "assets": [
-    "assets/menulis-kata.png"
+    "assets/menulis-kata.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana memegang pensil?",
-        "assetPath": "assets/menulis-kata.png",
+        "assetPath": "assets/menulis-kata.webp",
         "altText": "Anak menulis huruf dan kata di buku.",
         "reveal": "Dengan tiga jari.",
         "hint": "Jangan terlalu kuat."
       },
       {
         "prompt": "Apa yang ditulis pertama?",
-        "assetPath": "assets/menulis-kata.png",
+        "assetPath": "assets/menulis-kata.webp",
         "altText": "Anak menulis huruf dan kata di buku.",
         "reveal": "Huruf.",
         "hint": "Mulai dari huruf mudah."
       },
       {
         "prompt": "Apa yang ditulis setelah suku kata?",
-        "assetPath": "assets/menulis-kata.png",
+        "assetPath": "assets/menulis-kata.webp",
         "altText": "Anak menulis huruf dan kata di buku.",
         "reveal": "Kata.",
         "hint": "Gabungkan suku kata."

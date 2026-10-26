@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/jalan-lari.png",
-      "mediaType": "image/png",
-      "sizeBytes": 9314,
-      "sha256": "378bb297592a69945aa4d07585f1af520baf28d2e102fdded37533151951180a"
+      "path": "assets/jalan-lari.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 153732,
+      "sha256": "5f52dbc5e90e31b8d5eb725ce6624d11f6e9b44b3afd319e4f603a4682b06d1d"
     }
   ],
   "dependencies": [],

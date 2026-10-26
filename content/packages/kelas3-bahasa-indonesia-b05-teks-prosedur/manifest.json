@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/teks-prosedur-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7196,
-      "sha256": "88239c490e6b747b3d00bd1a20d0edfdc3622a015d33ddf17e9501da155ecdb3"
+      "path": "assets/teks-prosedur-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 88900,
+      "sha256": "399d0614ffa251f736a61910c11ecd13e24a35f0318a7b32c696e781ef27a82a"
     }
   ],
   "dependencies": [],

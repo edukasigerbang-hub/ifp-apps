@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/gaya-gerak-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6196,
-      "sha256": "be34607fdefbd7e5481afa22d41640b36addf836f4f8e0b3b8a595d5d30b1736"
+      "path": "assets/gaya-gerak-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 130460,
+      "sha256": "9c283bfe873a6db24e2d4a45773a8709c75dcd999c3e52e5b87d2a1544896bc0"
     }
   ],
   "dependencies": [],

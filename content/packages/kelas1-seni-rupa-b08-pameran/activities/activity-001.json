@@ -5,27 +5,27 @@
   "title": "Mengamati Pameran",
   "instructions": "Amati gambar, lalu diskusikan penataan karya.",
   "assets": [
-    "assets/pameran-kelas1.png"
+    "assets/pameran-kelas1.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa yang dipamerkan?",
-        "assetPath": "assets/pameran-kelas1.png",
+        "assetPath": "assets/pameran-kelas1.webp",
         "altText": "Pameran karya siswa di kelas.",
         "reveal": "Karya siswa.",
         "hint": "Pilih karya terbaik."
       },
       {
         "prompt": "Bagaimana menata karya?",
-        "assetPath": "assets/pameran-kelas1.png",
+        "assetPath": "assets/pameran-kelas1.webp",
         "altText": "Pameran karya siswa di kelas.",
         "reveal": "Rapi dan mudah dilihat.",
         "hint": "Beri nama."
       },
       {
         "prompt": "Apa yang dilakukan penjaga?",
-        "assetPath": "assets/pameran-kelas1.png",
+        "assetPath": "assets/pameran-kelas1.webp",
         "altText": "Pameran karya siswa di kelas.",
         "reveal": "Menjelaskan karya.",
         "hint": "Menyambut pengunjung."

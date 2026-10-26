@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/waktu-panjang-berat.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5229,
-      "sha256": "e21de68d447ddec784ff718c27fbbb542859a7dfbd7cc1afc95889e32ffcd3de"
+      "path": "assets/waktu-panjang-berat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 94888,
+      "sha256": "acbdf4301d2aef2ab1ae967c2f4d3d45c38c5a99b84d52c951c12251328db122"
     }
   ],
   "dependencies": [],

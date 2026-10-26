@@ -5,27 +5,27 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan datanya.",
   "assets": [
-    "assets/data-kelas2.png"
+    "assets/data-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa isi tabel data?",
-        "assetPath": "assets/data-kelas2.png",
+        "assetPath": "assets/data-kelas2.webp",
         "altText": "Diagram batang dan tabel data sederhana.",
         "reveal": "Keterangan dan jumlah.",
         "hint": "Baca angkanya."
       },
       {
         "prompt": "Apa yang ditunjukkan diagram batang?",
-        "assetPath": "assets/data-kelas2.png",
+        "assetPath": "assets/data-kelas2.webp",
         "altText": "Diagram batang dan tabel data sederhana.",
         "reveal": "Banyak data.",
         "hint": "Bandingkan tinggi batang."
       },
       {
         "prompt": "Bagaimana mencari data terbanyak?",
-        "assetPath": "assets/data-kelas2.png",
+        "assetPath": "assets/data-kelas2.webp",
         "altText": "Diagram batang dan tabel data sederhana.",
         "reveal": "Lihat batang tertinggi.",
         "hint": "Baca angkanya."

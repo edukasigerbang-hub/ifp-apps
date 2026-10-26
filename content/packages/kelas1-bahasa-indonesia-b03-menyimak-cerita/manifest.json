@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menyimak-cerita.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5394,
-      "sha256": "6e1233743d87e4cef342c4f6de4a37649d556b9e5137ceaa10a8e619be800d75"
+      "path": "assets/menyimak-cerita.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 195126,
+      "sha256": "257f0628cce32e018215c0eb6ef19b3b1b1bbb1608867c9518000271e6b7ab69"
     }
   ],
   "dependencies": [],

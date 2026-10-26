@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/unsur-garis-warna.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5520,
-      "sha256": "7a269f7e15bf260566de418ce44b533f5f65efda4a0baee468c490fa231adab5"
+      "path": "assets/unsur-garis-warna.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 131914,
+      "sha256": "38be35409c3e71901e93cc3f33fad7ae5e5b7c0e299111e0ae00ee59f0219122"
     }
   ],
   "dependencies": [],

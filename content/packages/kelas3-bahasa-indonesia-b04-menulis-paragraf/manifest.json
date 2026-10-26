@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/menulis-paragraf.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4931,
-      "sha256": "1a58835a3ace0cdc678a39e6881f047089d6e3547d4f6dab059072ef8905ef32"
+      "path": "assets/menulis-paragraf.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 90170,
+      "sha256": "2166dd60a90ccb273c5d32e01375814bedffb8b0eb97af95cea551a8667e8ea0"
     }
   ],
   "dependencies": [],

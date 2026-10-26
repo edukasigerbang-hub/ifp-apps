@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/keragaman-budaya-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6476,
-      "sha256": "7049f7c68f3fdb2d704b1bd135d7b08e6da772f7a5e50a859087fa932e0e50fb"
+      "path": "assets/keragaman-budaya-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 208068,
+      "sha256": "5188c3841a941f4c8af4c3d11f06a333bb4c30e654a4642c513e045a1756d408"
     }
   ],
   "dependencies": [],

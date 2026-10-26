@@ -10,14 +10,14 @@ const sha256 = (file) => crypto.createHash('sha256').update(fs.readFileSync(file
 
 const packages = fs
   .readdirSync(PACKAGE_ROOT)
-  .filter((dir) => /^kelas[456]-/.test(dir))
+  .filter((dir) => /^kelas[1-6]-/.test(dir))
   .sort();
 
 const summary = { updated: 0, skipped: 0, missingSource: 0, extraRefs: 0 };
 const problems = [];
 
 for (const dir of packages) {
-  const grade = /^kelas([456])-/.exec(dir)[1];
+  const grade = /^kelas([1-6])-/.exec(dir)[1];
   const packageDir = path.join(PACKAGE_ROOT, dir);
   const manifestPath = path.join(packageDir, 'manifest.json');
   if (!fs.existsSync(manifestPath)) {

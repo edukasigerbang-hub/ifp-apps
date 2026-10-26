@@ -5,27 +5,27 @@
   "title": "Menghitung Bersama",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/penjumlahan-10.png"
+    "assets/penjumlahan-10.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 2 + 3?",
-        "assetPath": "assets/penjumlahan-10.png",
+        "assetPath": "assets/penjumlahan-10.webp",
         "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
         "reveal": "5.",
         "hint": "Hitung 2 lalu tambah 3."
       },
       {
         "prompt": "Berapa 5 − 2?",
-        "assetPath": "assets/penjumlahan-10.png",
+        "assetPath": "assets/penjumlahan-10.webp",
         "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
         "reveal": "3.",
         "hint": "Ambil 2 dari 5."
       },
       {
         "prompt": "Bagaimana menghitung dengan jari?",
-        "assetPath": "assets/penjumlahan-10.png",
+        "assetPath": "assets/penjumlahan-10.webp",
         "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
         "reveal": "Buka jari sesuai bilangan.",
         "hint": "Hitung satu per satu."

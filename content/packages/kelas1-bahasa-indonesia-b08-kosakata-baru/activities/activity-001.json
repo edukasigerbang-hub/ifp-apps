@@ -5,27 +5,27 @@
   "title": "Belajar Kata Baru",
   "instructions": "Amati gambar, lalu diskusikan arti kata.",
   "assets": [
-    "assets/kosakata-baru.png"
+    "assets/kosakata-baru.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa arti kata gembira?",
-        "assetPath": "assets/kosakata-baru.png",
+        "assetPath": "assets/kosakata-baru.webp",
         "altText": "Anak membaca buku dan belajar kosakata baru.",
         "reveal": "Senang.",
         "hint": "Hati senang."
       },
       {
         "prompt": "Apa arti kata cepat?",
-        "assetPath": "assets/kosakata-baru.png",
+        "assetPath": "assets/kosakata-baru.webp",
         "altText": "Anak membaca buku dan belajar kosakata baru.",
         "reveal": "Tidak lambat.",
         "hint": "Bergerak sigap."
       },
       {
         "prompt": "Bagaimana menggunakan kata baru?",
-        "assetPath": "assets/kosakata-baru.png",
+        "assetPath": "assets/kosakata-baru.webp",
         "altText": "Anak membaca buku dan belajar kosakata baru.",
         "reveal": "Buat kalimat.",
         "hint": "Contoh: Saya gembira."

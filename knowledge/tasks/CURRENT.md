@@ -214,17 +214,17 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-26, lanjutan)
 
-**Status:** **152/152 gambar LENGKAP** — Kelas 1 48/48; Kelas 2 48/48; **Kelas 3 56/56** (96–151). Seluruh 152 file WebP ada di `content/materi/kelas1-3` dan cocok dengan `content/materi/queue-kelas1-3.json`. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH38_2026-10-26.md`.
+**Status:** **152/152 gambar LENGKAP** — Kelas 1 48/48; Kelas 2 48/48; **Kelas 3 56/56** (96–151). Seluruh 152 file WebP ada di `content/materi/kelas1`–`kelas3` dan cocok dengan `content/materi/queue-kelas1-3.json`. **Migrasi manifest selesai:** 320/320 paket (Kelas 1–6) kini menunjuk WebP; validasi 320/320 VALID; `npm test` 85/85 lulus; `npm run build` sukses (dist 320 WebP, 0 PNG). Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH38_2026-10-26.md`.
 
 **Akun & perkakas aktif (2026-10-26):** generasi dilanjutkan di akun **Dewi Gardenia** (label akun diverifikasi di UI), project `218ad195-1801-4997-bffc-c754043067d6` (“Okt 25 - 15:50”). Karakter bernama **Ayu** dan **Bima** dibuat di akun ini (Karakter → Karakter baru → “Tambahkan dari project” → `ayu.jpg`/`bima.jpg` → nama + kepribadian → Selesai) dan dilampirkan ke setiap prompt satu per satu via “Tambahkan bahan ke kotak perintah” (picker hanya menampilkan karakter yang belum terpasang; pasang dua chip per prompt). Indeks 89–123 tuntas.
 
 **Catatan banner (2026-10-26):** indeks 91 sempat kena banner “aktivitas yang tidak biasa”; diselesaikan dengan satu retry “Coba lagi” lalu satu refresh halaman, lalu prompt dikirim ulang (prosedur sama seperti indeks 76/83/84/86/87; tanpa bypass, tanpa ganti akun). Batch 26 (92–95) bebas banner.
 
-**Saat lanjut (pasca-152):**
-1. Migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`.
-2. Validasi 320 paket (materi + kuis) dengan validator repo; catat angka aktual.
-3. `npm test` (85 test) dan `npm run build`; catat hasil aktual, lalu commit.
-4. Bila ada paket yang masih menunjuk PNG lama atau nama aset tak cocok, perbaiki manifes bertarget dan ulangi validasi.
+**Pasca-152 (SELESAI 2026-10-26):**
+1. ✅ Migrasi manifes Kelas 1–6 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply` — 320 paket, 669 referensi lesson/activity, idempoten.
+2. ✅ Validasi 320/320 paket **VALID** (636 warning draft/curriculumRefs).
+3. ✅ `npm test` 85/85 lulus; fixture 4/4; catalog 320 entri/320 paket. `npm run build` sukses (22,46 s; dist 320 WebP, 0 PNG).
+4. ✅ Tidak ada paket yang masih menunjuk PNG; seluruh aset paket kini `.webp`.
 
 ### Catatan operasional Flow (2026-10-25 20:47 +07:00)
 
@@ -238,4 +238,4 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - **Ambil resolusi penuh dari grid agent:** thumbnail di grid adalah `flow.google.com/asb/...=s512-rw`; ganti sufiks menjadi `=s1600-rw` → respons **WebP 1200×896** (bukan JPEG). `fetch` same-origin (flow.google.com) → POST blob langsung ke queue server, tanpa canvas.
 - Surface hanya dibutuhkan untuk mengirim prompt (Enter bekerja bila tab ter-attach); unduhan tidak lagi menyentuh panel.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md`; antrean gambar tuntas — mulai migrasi manifest WebP + validasi + test + build).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md`; antrean gambar 152/152 tuntas dan migrasi WebP selesai — lanjut ke prioritas berikutnya: review konten OD-1 / gate rilis).

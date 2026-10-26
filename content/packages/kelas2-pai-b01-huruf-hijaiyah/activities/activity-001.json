@@ -5,27 +5,27 @@
   "title": "Mengamati Huruf dan Harakat",
   "instructions": "Amati gambar, lalu tirukan bacaannya.",
   "assets": [
-    "assets/huruf-hijaiyah-kelas2.png"
+    "assets/huruf-hijaiyah-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Huruf hijaiyah pertama adalah ...",
-        "assetPath": "assets/huruf-hijaiyah-kelas2.png",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
         "altText": "Anak membaca huruf hijaiyah dan harakat.",
         "reveal": "Alif.",
         "hint": "Huruf Arab."
       },
       {
         "prompt": "Harakat fathah dibaca ...",
-        "assetPath": "assets/huruf-hijaiyah-kelas2.png",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
         "altText": "Anak membaca huruf hijaiyah dan harakat.",
         "reveal": "a.",
         "hint": "Di atas huruf."
       },
       {
         "prompt": "Arah membaca huruf Arab ...",
-        "assetPath": "assets/huruf-hijaiyah-kelas2.png",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
         "altText": "Anak membaca huruf hijaiyah dan harakat.",
         "reveal": "Kanan ke kiri.",
         "hint": "Berbeda dengan Latin."

@@ -5,27 +5,27 @@
   "title": "Mengamati Keliling dan Luas",
   "instructions": "Amati gambar, lalu diskusikan cara menghitung keliling dan luas.",
   "assets": [
-    "assets/keliling-luas.png"
+    "assets/keliling-luas.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu keliling?",
-        "assetPath": "assets/keliling-luas.png",
+        "assetPath": "assets/keliling-luas.webp",
         "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna.",
         "reveal": "Jumlah panjang semua sisi.",
         "hint": "Jelusuri tepi bangun."
       },
       {
         "prompt": "Bagaimana menghitung luas persegi panjang?",
-        "assetPath": "assets/keliling-luas.png",
+        "assetPath": "assets/keliling-luas.webp",
         "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna.",
         "reveal": "Panjang × lebar.",
         "hint": "Hitung kotak satuan."
       },
       {
         "prompt": "Apa satuan luas?",
-        "assetPath": "assets/keliling-luas.png",
+        "assetPath": "assets/keliling-luas.webp",
         "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna.",
         "reveal": "Sentimeter persegi (cm²).",
         "hint": "Karena mengalikan dua panjang."

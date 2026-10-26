@@ -5,27 +5,27 @@
   "title": "Mengamati Aturan Sekolah",
   "instructions": "Amati gambar, lalu diskusikan aturan sekolah.",
   "assets": [
-    "assets/aturan-sekolah-kelas2.png"
+    "assets/aturan-sekolah-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa contoh aturan sekolah?",
-        "assetPath": "assets/aturan-sekolah-kelas2.png",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
         "altText": "Siswa berbaris tertib di sekolah.",
         "reveal": "Datang tepat waktu.",
         "hint": "Berbaris tertib."
       },
       {
         "prompt": "Mengapa aturan penting?",
-        "assetPath": "assets/aturan-sekolah-kelas2.png",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
         "altText": "Siswa berbaris tertib di sekolah.",
         "reveal": "Agar belajar nyaman.",
         "hint": "Semua tertib."
       },
       {
         "prompt": "Apa akibat melanggar aturan?",
-        "assetPath": "assets/aturan-sekolah-kelas2.png",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
         "altText": "Siswa berbaris tertib di sekolah.",
         "reveal": "Kegiatan terganggu.",
         "hint": "Teman dirugikan."

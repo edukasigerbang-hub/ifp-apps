@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/nkri-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6032,
-      "sha256": "ad6fe0079c34a1cc4513b6a893f93c26aa125f411b4447f6b6e63af4df7cae94"
+      "path": "assets/nkri-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168736,
+      "sha256": "76311f623c02158f832511267b6b69321e0a293f04b1b56aa98310f47a32ee51"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Mengamati Gerak Jalan dan Lari",
   "instructions": "Amati gambar, lalu tirukan gerakannya.",
   "assets": [
-    "assets/jalan-lari.png"
+    "assets/jalan-lari.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Jalan dilakukan dengan ...",
-        "assetPath": "assets/jalan-lari.png",
+        "assetPath": "assets/jalan-lari.webp",
         "altText": "Anak berjalan dan berlari di lapangan.",
         "reveal": "Pelan.",
         "hint": "Kaki melangkah."
       },
       {
         "prompt": "Lari dilakukan dengan ...",
-        "assetPath": "assets/jalan-lari.png",
+        "assetPath": "assets/jalan-lari.webp",
         "altText": "Anak berjalan dan berlari di lapangan.",
         "reveal": "Cepat.",
         "hint": "Kaki lebih cepat."
       },
       {
         "prompt": "Sebelum bergerak kita ...",
-        "assetPath": "assets/jalan-lari.png",
+        "assetPath": "assets/jalan-lari.webp",
         "altText": "Anak berjalan dan berlari di lapangan.",
         "reveal": "Pemanasan.",
         "hint": "Agar tidak cedera."

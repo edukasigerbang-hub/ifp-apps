@@ -5,27 +5,27 @@
   "title": "Mengamati Aturan di Rumah",
   "instructions": "Amati gambar, lalu diskusikan aturan di rumah.",
   "assets": [
-    "assets/aturan-rumah.png"
+    "assets/aturan-rumah.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa contoh aturan di rumah?",
-        "assetPath": "assets/aturan-rumah.png",
+        "assetPath": "assets/aturan-rumah.webp",
         "altText": "Anak merapikan tempat tidur dan membantu di rumah.",
         "reveal": "Merapikan tempat tidur.",
         "hint": "Bangun pagi."
       },
       {
         "prompt": "Mengapa aturan penting?",
-        "assetPath": "assets/aturan-rumah.png",
+        "assetPath": "assets/aturan-rumah.webp",
         "altText": "Anak merapikan tempat tidur dan membantu di rumah.",
         "reveal": "Agar rumah tertib dan nyaman.",
         "hint": "Semua senang."
       },
       {
         "prompt": "Apa yang dilakukan sebelum pergi?",
-        "assetPath": "assets/aturan-rumah.png",
+        "assetPath": "assets/aturan-rumah.webp",
         "altText": "Anak merapikan tempat tidur dan membantu di rumah.",
         "reveal": "Meminta izin orang tua.",
         "hint": "Beri tahu tujuan."

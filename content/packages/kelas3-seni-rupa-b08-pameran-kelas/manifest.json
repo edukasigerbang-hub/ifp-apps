@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pameran-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6763,
-      "sha256": "113db76083609268be0214ac037033954369ce1f51bbb5f66aa4d3260b454476"
+      "path": "assets/pameran-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 106522,
+      "sha256": "b34c597b0451403e17eb537daae97d8d3aba49fa65fa512f79dca06523ff31df"
     }
   ],
   "dependencies": [],

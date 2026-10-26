@@ -5,27 +5,27 @@
   "title": "Menyusun Kalimat",
   "instructions": "Amati gambar, lalu susun kalimat bersama.",
   "assets": [
-    "assets/menulis-kalimat-kelas2.png"
+    "assets/menulis-kalimat-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Kalimat dimulai dengan huruf ...",
-        "assetPath": "assets/menulis-kalimat-kelas2.png",
+        "assetPath": "assets/menulis-kalimat-kelas2.webp",
         "altText": "Anak menulis kalimat di buku.",
         "reveal": "Kapital.",
         "hint": "Contoh: Ayah."
       },
       {
         "prompt": "Akhir kalimat berita ...",
-        "assetPath": "assets/menulis-kalimat-kelas2.png",
+        "assetPath": "assets/menulis-kalimat-kelas2.webp",
         "altText": "Anak menulis kalimat di buku.",
         "reveal": "Titik.",
         "hint": "Tanda titik."
       },
       {
         "prompt": "Antar kata diberi ...",
-        "assetPath": "assets/menulis-kalimat-kelas2.png",
+        "assetPath": "assets/menulis-kalimat-kelas2.webp",
         "altText": "Anak menulis kalimat di buku.",
         "reveal": "Jarak.",
         "hint": "Agar mudah dibaca."

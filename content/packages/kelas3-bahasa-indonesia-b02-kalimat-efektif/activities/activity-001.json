@@ -5,27 +5,27 @@
   "title": "Membaca di Sudut Baca",
   "instructions": "Amati gambar, lalu diskusikan kalimat yang jelas dan kosakata baru.",
   "assets": [
-    "assets/sudut-baca-kelas3.png"
+    "assets/sudut-baca-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa ciri kalimat efektif?",
-        "assetPath": "assets/sudut-baca-kelas3.png",
+        "assetPath": "assets/sudut-baca-kelas3.webp",
         "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca.",
         "reveal": "Singkat, jelas, dan tidak berulang.",
         "hint": "Satu kalimat satu ide pokok."
       },
       {
         "prompt": "Mengapa kosakata baru perlu dicari artinya?",
-        "assetPath": "assets/sudut-baca-kelas3.png",
+        "assetPath": "assets/sudut-baca-kelas3.webp",
         "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca.",
         "reveal": "Agar kalimat mudah dipahami.",
         "hint": "Gunakan kamus."
       },
       {
         "prompt": "Bagaimana memperbaiki kalimat berulang?",
-        "assetPath": "assets/sudut-baca-kelas3.png",
+        "assetPath": "assets/sudut-baca-kelas3.webp",
         "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca.",
         "reveal": "Hapus kata yang tidak perlu.",
         "hint": "Baca ulang kalimatnya."

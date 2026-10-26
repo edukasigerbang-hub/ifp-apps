@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/lingkungan-pelestarian.png",
-      "mediaType": "image/png",
-      "sizeBytes": 6204,
-      "sha256": "fed38773c93ebea9e5443ec3644237d56e1269e17bea1a8456911a8cec0a4077"
+      "path": "assets/lingkungan-pelestarian.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 166006,
+      "sha256": "28f2398b9c885d55221d700e24b73846fee484553d331247b54154c1c476f936"
     }
   ],
   "dependencies": [],

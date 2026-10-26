@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/aturan-rumah.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5788,
-      "sha256": "b6e010cae2c645543b486485a52941d799bf07fdfeb299d43d28d1ab1a6ee90f"
+      "path": "assets/aturan-rumah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 186836,
+      "sha256": "7c9020abcdeb97b7f95f2a28dc724423fbd484c0783ada8bc3b7d40490e576ae"
     }
   ],
   "dependencies": [],

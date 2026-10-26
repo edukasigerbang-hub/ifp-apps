@@ -5,27 +5,27 @@
   "title": "Mengamati Simbol Negara",
   "instructions": "Amati gambar, lalu diskusikan simbol negara.",
   "assets": [
-    "assets/nkri-kelas2.png"
+    "assets/nkri-kelas2.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa arti NKRI?",
-        "assetPath": "assets/nkri-kelas2.png",
+        "assetPath": "assets/nkri-kelas2.webp",
         "altText": "Upacara bendera dan simbol negara.",
         "reveal": "Negara Kesatuan Republik Indonesia.",
         "hint": "Satu negara."
       },
       {
         "prompt": "Apa bendera Indonesia?",
-        "assetPath": "assets/nkri-kelas2.png",
+        "assetPath": "assets/nkri-kelas2.webp",
         "altText": "Upacara bendera dan simbol negara.",
         "reveal": "Merah Putih.",
         "hint": "Dikibarkan saat upacara."
       },
       {
         "prompt": "Apa lambang negara?",
-        "assetPath": "assets/nkri-kelas2.png",
+        "assetPath": "assets/nkri-kelas2.webp",
         "altText": "Upacara bendera dan simbol negara.",
         "reveal": "Garuda Pancasila.",
         "hint": "Memuat simbol Pancasila."

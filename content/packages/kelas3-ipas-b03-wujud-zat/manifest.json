@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/wujud-zat-kelas3.png",
-      "mediaType": "image/png",
-      "sizeBytes": 7504,
-      "sha256": "82a12f6f313be470cd52fdb258ec58fe1cf908b71baf0624a6b9e50c5796c99a"
+      "path": "assets/wujud-zat-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 91026,
+      "sha256": "3f702e18d0455af25f2ea2f51a2a5f5b269d4624dc9ab7a245b7ae5c3954d7fb"
     }
   ],
   "dependencies": [],

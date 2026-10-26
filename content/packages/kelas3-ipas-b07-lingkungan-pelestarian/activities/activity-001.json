@@ -5,27 +5,27 @@
   "title": "Mengamati Lingkungan Bersih",
   "instructions": "Amati gambar, lalu diskusikan cara menjaga lingkungan.",
   "assets": [
-    "assets/lingkungan-pelestarian.png"
+    "assets/lingkungan-pelestarian.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Mengapa lingkungan harus bersih?",
-        "assetPath": "assets/lingkungan-pelestarian.png",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
         "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah.",
         "reveal": "Agar sehat dan nyaman.",
         "hint": "Sampah dapat menimbulkan penyakit."
       },
       {
         "prompt": "Apa penyebab lingkungan kotor?",
-        "assetPath": "assets/lingkungan-pelestarian.png",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
         "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah.",
         "reveal": "Sampah dibuang sembarangan dan penebangan pohon.",
         "hint": "Amati lingkungan sekitar."
       },
       {
         "prompt": "Bagaimana menjaga lingkungan?",
-        "assetPath": "assets/lingkungan-pelestarian.png",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
         "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah.",
         "reveal": "Membuang sampah pada tempatnya dan menanam pohon.",
         "hint": "Mulai dari kelas."

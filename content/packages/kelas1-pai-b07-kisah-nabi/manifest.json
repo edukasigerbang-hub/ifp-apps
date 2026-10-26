@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/kisah-nabi.png",
-      "mediaType": "image/png",
-      "sizeBytes": 4706,
-      "sha256": "f49cb5e370c9b19c7e612746f61d811a1d8234dcee891bed134c1291bdc536ad"
+      "path": "assets/kisah-nabi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 192034,
+      "sha256": "16095c39f0a98727772bb85a355b3b74d676b540e464ae973ad6f6edc9585e98"
     }
   ],
   "dependencies": [],

@@ -5,27 +5,27 @@
   "title": "Mengamati Musyawarah Kelas",
   "instructions": "Amati gambar, lalu diskusikan tata cara musyawarah.",
   "assets": [
-    "assets/musyawarah-kelas3.png"
+    "assets/musyawarah-kelas3.webp"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu musyawarah?",
-        "assetPath": "assets/musyawarah-kelas3.png",
+        "assetPath": "assets/musyawarah-kelas3.webp",
         "altText": "Siswa duduk melingkar bermusyawarah dengan guru.",
         "reveal": "Membicarakan masalah bersama untuk mencapai kesepakatan.",
         "hint": "Semua diberi kesempatan."
       },
       {
         "prompt": "Bagaimana menyampaikan pendapat?",
-        "assetPath": "assets/musyawarah-kelas3.png",
+        "assetPath": "assets/musyawarah-kelas3.webp",
         "altText": "Siswa duduk melingkar bermusyawarah dengan guru.",
         "reveal": "Sopan, singkat, dan tidak memotong.",
         "hint": "Angkat tangan dahulu."
       },
       {
         "prompt": "Apa yang dilakukan bila pendapat berbeda?",
-        "assetPath": "assets/musyawarah-kelas3.png",
+        "assetPath": "assets/musyawarah-kelas3.webp",
         "altText": "Siswa duduk melingkar bermusyawarah dengan guru.",
         "reveal": "Menghargai dan mencari kesepakatan.",
         "hint": "Voting jika perlu."

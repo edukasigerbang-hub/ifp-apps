@@ -14,10 +14,10 @@
   "curriculumRefs": [],
   "assets": [
     {
-      "path": "assets/pengukuran-kelas2.png",
-      "mediaType": "image/png",
-      "sizeBytes": 5229,
-      "sha256": "e21de68d447ddec784ff718c27fbbb542859a7dfbd7cc1afc95889e32ffcd3de"
+      "path": "assets/pengukuran-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168170,
+      "sha256": "aa541ccaf4a78cca5c270ab33da608fa273d1e01d5de34ea2505a78c8822b075"
     }
   ],
   "dependencies": [],
