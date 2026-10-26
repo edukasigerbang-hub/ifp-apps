@@ -143,14 +143,15 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 | `profile_create` | `displayName`, `profileType` | profil baru |
 | `profile_get_active` | — | profil aktif (buat default bila kosong) |
 | `profile_set_active` | `profileId` | profil aktif |
-| `profile_avatar_set` | `profileId`, `sourcePath` | profil dengan `hasAvatar: true` |
+| `profile_avatar_preview` | `sourcePath` | data URL sumber (`data:image/...;base64,...`), tanpa menulis DB |
+| `profile_avatar_set_data` | `profileId`, `dataUrl` | profil dengan `hasAvatar: true` |
 | `profile_avatar_clear` | `profileId` | profil dengan `hasAvatar: false` |
 | `profile_avatar_get` | `profileId` | data URL (`data:image/...;base64,...`) atau `null` |
 | `preferences_get` | — | `reducedMotion`, `fontScale`, `appMode` |
 | `preferences_set` | `reducedMotion`, `fontScale`, `appMode` | preferensi tersimpan |
 
 - Profil aktif mengikat sesi/hasil belajar; preferensi diterapkan ke `<html>` (`reduce-motion`, `font-large`). `appMode` (`belajar|admin`) mengatur shell: mode belajar tanpa sidebar dan tanpa layar kelola. Rekaman lama tanpa `appMode` dibaca sebagai `admin`.
-- Foto profil disimpan di SQLite (`profile_avatars`, migrasi 0006) sehingga ikut backup DB. `profile_avatar_set` menerima path berkas lokal, memvalidasi magic bytes PNG/JPEG/WebP dan batas 1,5 MB; error `PROFILE_AVATAR_INVALID`, `PROFILE_AVATAR_TOO_LARGE`, `PROFILE_AVATAR_UNREADABLE`. Webview menerima data URL dan menyimpannya di cache modul.
+- Foto profil disimpan di SQLite (`profile_avatars`, migrasi 0006) sehingga ikut backup DB. Alur UI: `profile_avatar_preview` membaca berkas lokal (maks **20 MB**, magic bytes PNG/JPEG/WebP, error `PROFILE_AVATAR_SOURCE_TOO_LARGE`/`PROFILE_AVATAR_UNREADABLE`/`PROFILE_AVATAR_INVALID`) → editor crop/kompres di webview menghasilkan persegi 512 px (WebP/JPEG, target ≤1 MB) → `profile_avatar_set_data` mendekode data URL, memvalidasi ulang magic bytes + batas **1,5 MB**, lalu UPSERT. Error: `PROFILE_AVATAR_INVALID`, `PROFILE_AVATAR_TOO_LARGE`. Webview menerima data URL dan menyimpannya di cache modul.
 
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
