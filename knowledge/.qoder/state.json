@@ -42,8 +42,8 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T13:10:00+07:00",
-  "last_validation": "Batch 33 QA PASS: kesehatan, kolase, lingkungan-pelestarian, makhluk-hidup (4 WebP 1200x896; crop 2-20x tanpa teks/angka terbaca; klausa pemandangan 121/122/123 diadaptasi ke topik; editor 121 via data-media-id); Kelas 3 28/56; total 123/152",
+  "last_updated": "2026-10-26T14:20:00+07:00",
+  "last_validation": "Batch 36 QA PASS: pameran-kelas, pecahan, penjumlahan-pengurangan, penyajian-data (4 WebP 1200x896; crop 3-22x tanpa teks/angka terbaca; kandidat 132a ditolak karena huruf terbaca; 132-135 masing-masing 1 dari 2 gambar ditolak kebijakan Flow); Kelas 3 40/56; total 135/152",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PARTIAL",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Kirim indeks 132-151 (sisa Kelas 3, 20 gambar); commit tiap batch + laporan; total 131/152 selesai"
+  "next_step": "Kirim indeks 136-151 (sisa Kelas 3, 16 gambar); commit tiap batch + laporan; total 135/152 selesai"
 }
