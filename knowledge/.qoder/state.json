@@ -42,11 +42,11 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T07:26:00+07:00",
-  "last_validation": "Batch 25 QA PASS: puisi-pantun, salat, senam (3 WebP 1200x896; crop 5-7x tanpa teks terbaca); total 92/152; indeks 92 menunggu panel in-app Browser",
+  "last_updated": "2026-10-26T08:25:00+07:00",
+  "last_validation": "Batch 26 QA PASS: simbol-pancasila, tekstur-bahan, waktu-uang, zakat (4 WebP 1200x896; crop 3-12x tanpa teks/angka terbaca); Kelas 2 LENGKAP 48/48; total 95/152",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
-  "last_command_status": "BLOCKED",
+  "last_command_status": "PARTIAL",
   "open_wave": null,
   "dirty": true,
   "drift_detected": true,
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Buka panel in-app Browser (akun Dewi Gardenia, project 218ad195); kirim indeks 92 (kelas2-pendidikan-pancasila-b01-simbol-pancasila), lanjut 93-95, lalu Kelas 3 96-151; commit tiap batch + laporan; total 92/152 selesai"
+  "next_step": "Kirim indeks 96 (kelas3-pai-b08-adab-kisah-teladan) dan lanjut 97-151; buat content/materi/kelas3; commit tiap batch + laporan; total 95/152 selesai"
 }

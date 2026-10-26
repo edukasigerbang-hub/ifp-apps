@@ -214,19 +214,18 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 ### Handoff Aset Materi Kelas 1–3 (2026-10-26, lanjutan)
 
-**Status:** 92/152 gambar selesai — Kelas 1 LENGKAP (48/48); Kelas 2 44/48. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 92 (`kelas2-pendidikan-pancasila-b01-simbol-pancasila`)**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH25_2026-10-26.md`.
+**Status:** 95/152 gambar selesai — Kelas 1 LENGKAP (48/48); **Kelas 2 LENGKAP (48/48)**; Kelas 3 0/56. Antrean: `content/materi/queue-kelas1-3.json`, **indeks berikutnya = 96 (`kelas3-pai-b08-adab-kisah-teladan`)**. Laporan: `knowledge/content/MATERI_KELAS1-3_BATCH1_2026-10-25.md` … `MATERI_KELAS1-3_BATCH26_2026-10-26.md`.
 
-**Akun & perkakas aktif (2026-10-26):** generasi dilanjutkan di akun **Dewi Gardenia** (label akun diverifikasi di UI), project `218ad195-1801-4997-bffc-c754043067d6` (“Okt 25 - 15:50”). Karakter bernama **Ayu** dan **Bima** dibuat di akun ini (Karakter → Karakter baru → “Tambahkan dari project” → `ayu.jpg`/`bima.jpg` → nama + kepribadian → Selesai) dan dilampirkan ke setiap prompt satu per satu via “Tambahkan bahan ke kotak perintah”. Indeks 89–91 tuntas.
+**Akun & perkakas aktif (2026-10-26):** generasi dilanjutkan di akun **Dewi Gardenia** (label akun diverifikasi di UI), project `218ad195-1801-4997-bffc-c754043067d6` (“Okt 25 - 15:50”). Karakter bernama **Ayu** dan **Bima** dibuat di akun ini (Karakter → Karakter baru → “Tambahkan dari project” → `ayu.jpg`/`bima.jpg` → nama + kepribadian → Selesai) dan dilampirkan ke setiap prompt satu per satu via “Tambahkan bahan ke kotak perintah” (picker hanya menampilkan karakter yang belum terpasang; pasang dua chip per prompt). Indeks 89–95 tuntas.
 
-**Blocker surface AKTIF (2026-10-26 07:28 +07:00):** panel in-app Browser hidden saat akan mengirim indeks 92 (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`, `visibilityState=hidden`); prompt indeks 92 sudah terisi di composer, chip karakter belum dilampirkan (picker tidak bisa dibuka saat hidden). Perlu user membuka panel; jangan mengulang klik otomatis.
-
-**Blocker banner (2026-10-26):** indeks 91 kena banner “aktivitas yang tidak biasa”; diselesaikan dengan satu retry “Coba lagi” lalu satu refresh halaman, lalu prompt dikirim ulang (prosedur sama seperti indeks 76/83/84/86/87; tanpa bypass, tanpa ganti akun).
+**Catatan banner (2026-10-26):** indeks 91 sempat kena banner “aktivitas yang tidak biasa”; diselesaikan dengan satu retry “Coba lagi” lalu satu refresh halaman, lalu prompt dikirim ulang (prosedur sama seperti indeks 76/83/84/86/87; tanpa bypass, tanpa ganti akun). Batch 26 (92–95) bebas banner.
 
 **Saat lanjut:**
 1. Buka panel in-app Browser; verifikasi akun **Dewi Gardenia** dan project `218ad195-…`; karakter Ayu/Bima ada di sidebar.
-2. Kirim indeks 92 (prompt sudah di composer); lanjut 93–95 untuk menuntaskan Kelas 2, lalu Kelas 3 indeks 96–151 (buat folder `content/materi/kelas3`).
-3. Unduh: editor Flow → URL `flow-content.google/image/<uuid>` (JPEG native 1200×896) → `fetch` Node → WebP q90 effort 5 (`sharp` sementara di `.tmp-tools`) → rename atomik; QA crop 5–7× (tanpa teks; Ayu lengan panjang; tanpa adegan salat berjajar lawan jenis).
-4. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
+2. Kirim indeks 96–151 (Kelas 3, 56 gambar); buat folder `content/materi/kelas3` saat menyimpan hasil pertama.
+3. Unduh: editor Flow → URL `flow-content.google/image/<uuid>` (JPEG native 1200×896) → `fetch` Node → WebP q90 effort 5 (`sharp` sementara di `.tmp-tools`) → rename atomik; QA crop 3–12× (tanpa teks/angka; Ayu lengan panjang; makanan/minuman tangan kanan dan tetap di meja).
+4. Navigasi antar-opsi: buka URL project langsung (tombol back kadang mendarat di editor gambar sebelumnya), lalu pilih kartu editor dari snapshot baru.
+5. Setelah 152 selesai: migrasikan manifes Kelas 1–3 dengan `scripts/migrate-materi-assets-to-webp.mjs --apply`, lalu validasi + `npm test` + build.
 
 ### Catatan operasional Flow (2026-10-25 20:47 +07:00)
 
@@ -240,4 +239,4 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - **Ambil resolusi penuh dari grid agent:** thumbnail di grid adalah `flow.google.com/asb/...=s512-rw`; ganti sufiks menjadi `=s1600-rw` → respons **WebP 1200×896** (bukan JPEG). `fetch` same-origin (flow.google.com) → POST blob langsung ke queue server, tanpa canvas.
 - Surface hanya dibutuhkan untuk mengirim prompt (Enter bekerja bila tab ter-attach); unduhan tidak lagi menyentuh panel.
 
-**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 92; buka panel in-app Browser lebih dulu).
+**Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md` + antrean indeks 96; buka panel in-app Browser lebih dulu).
