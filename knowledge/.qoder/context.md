@@ -4,7 +4,7 @@
 
 ## Kondisi terverifikasi
 
-- Git `main`, HEAD `ef4651c` (sakelar mode ikon + thumbnail materi + bukti restore setelah muat ulang, T-078/T-078b).
+- Git `main`, HEAD `ef7b89c` (sakelar mode ikon + thumbnail materi + grid katalog 3 kolom, T-078).
 - App shell Tauri 2 + React 19 + TS + Vite + Tailwind; SQLite native; sync client + backend referensi.
 - Konten: **320 paket draft** Kelas 1–6 (Fase A 96 + Fase B/C 224); seluruh aset paket **WebP** (320 hash unik, 0 reuse).
 - Review teknis 2026-10-26 (pasca-T-070/T-071): **320/320 VALID**; alt/feedbackPolicy 320/320; kedalaman **320/320**; **0 duplikasi**; R10 `curriculumRefs` **320/320** (fase A/B/C, versi 2024).
@@ -15,6 +15,7 @@
 - P0 UX (T-075): **5/6 selesai** — copy netral, `subjectLabel()` bersama (7 slug + fallback), token `teal-strong`/`danger-strong`, breadcrumb Beranda tombol, hint matching, satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4; P1 tertahan D-UX-2. Verifikasi DOM dev PASS; screenshot hanya Jelajah Materi.
 - UX-03 (T-076): kartu hasil kuis/mencocokkan/mengurutkan `tabIndex={-1}` + `scrollIntoView`/`focus()` setelah penilaian; 3 asersi fokus di `e2e:activities`. Harness a11y memakai kuis bawaan “Kuis Penguatan”; tombol eksplorasi “Lanjut berlatih”. Hasil: a11y **16/16 PASS** (0 error, 7 warning reflow), E2E smoke 8 · activities 8 · home 9 · journey 11 · profile 7 PASS.
 - Dua mode (T-077): `AppMode` `belajar|admin` di [navigation.ts](../../src/navigation.ts); mode belajar memakai lebar perangkat penuh tanpa sidebar + bar empat tujuan [StudentNavigation](../../src/components/layout/StudentNavigation.tsx), layar Konten/Lisensi/Pengaturan dialihkan ke Beranda; mode admin tetap sidebar lengkap. Sakelar “Mode aplikasi” di bilah atas berupa **dua tombol ikon** (`aria-pressed`), tersimpan per perangkat sebagai `preferences.appMode` di **SQLite `app_meta`** (default `admin`; rekaman lama tanpa field tetap terbaca). Bukti persistensi: test Rust `app_mode_survives_database_reopen` + DB perangkat berisi `"appMode":"belajar"` setelah sakelar dipakai. **Restore setelah muat ulang** dibuktikan E2E (T-078b). **Belum:** PIN/otorisasi mode admin, skala tipografi mode siswa (D-UX-2).
+- Grid katalog (T-078): kartu materi **3 kolom** mulai 768 px (`md:grid-cols-3`, tetap satu kolom di ponsel); E2E `home-catalog` 10/10 + a11y 17/17.
 - Thumbnail materi (T-078): katalog membawa `coverAsset` **320/320**; [LessonThumbnail](../../src/components/content/LessonThumbnail.tsx) dipakai kartu Jelajah Materi dan kartu “Lanjutkan belajar” — bundled via URL glob, paket impor via `content_read_asset` → blob URL, fallback inisial subjek. Bukti visual: `catalog-thumbnails.png` (artefak E2E).
 - Blocker rilis: 8 item terdaftar ([RELEASE_BLOCKERS](../api/RELEASE_BLOCKERS_2026-10-24.md)); B-03 kode selesai tetapi belum di-deploy; B-07 secret sementara belum dibersihkan.
 - Aset: 152 gambar Kelas 1–3 + 168 Kelas 4–6 dibuat internal via Google Flow; lisensi pihak ketiga: tidak ada.
