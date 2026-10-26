@@ -545,3 +545,20 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Verifikasi aktual:** `npm test` **103/103** (14 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **activities 14/14** (layout 1600 px: panel 889 px, samping 352/566 px dalam grid 700 px) · **home-catalog 19/19** · **a11y 17/17** (0 error, 7 warning) · **learning-journey 11/11** · **content-rollback 9/9** · **smoke 8/8**. `cargo test` tidak dijalankan (tanpa perubahan Rust). Commit `f80ff8f`.
 
 **Sisa:** cover header = gambar pertama manifest, jadi paket >1 lesson akan berbagi cover (belum ada paket seperti itu); kartu kemajuan hanya sesi berjalan (riwayat per aktivitas belum dimuat dari DB); jendela sticky belum teruji pada 1600×900 (jarak gulir dokumen 227 px) dan belum dilihat di IFP 1920 px asli.
+
+### Handoff Kartu Mapel Beranda & Katalog Terfilter (2026-10-27, T-086)
+
+**Status:** selesai dan terverifikasi. PO melaporkan thumbnail mapel Beranda terlalu kecil dan klik “Matematika” menampilkan semua pelajaran.
+
+**Akar masalah (terbukti):** tombol “Lihat” pada kartu mapel hanya memanggil `onNavigate("curriculum")` tanpa membawa mapel — katalog selalu terbuka tanpa filter.
+
+**Perubahan kode:**
+- `src/state/catalogFilter.ts` (baru) — `setCatalogFilter()` / `getCatalogFilter()` idempoten / `clearCatalogFilter()`; pembacaan idempoten agar aman terhadap effect ganda StrictMode (pelajaran T-084).
+- `src/state/catalogFilter.test.ts` (baru) — 2 test regresi.
+- `src/screens/HomeScreen.tsx` — kartu mapel jadi tile 16:9 selebar kolom (grid 2/3/4 kolom), seluruh kartu `<button>`, label + jumlah materi + chevron; klik menyetel filter mapel lalu navigasi ke katalog.
+- `src/screens/CurriculumScreen.tsx` — effect sekali-per-kunjungan (penjaga `useRef`) menerapkan lalu menghapus permintaan filter; `<li>` hasil membawa `data-catalog-subjects`.
+- `scripts/e2e/scenarios/home-catalog.mjs` — klik Kartu “Matematika” → katalog terfilter (49 kartu, semua `matematika`, chip “Matematika”); kembali ke Beranda lalu buka katalog lagi tanpa filter. **21 pemeriksaan.**
+
+**Verifikasi aktual:** `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 21/21**, **a11y 17/17** (0 error, 0 warning), **activities 14/14**, **learning-journey 11/11**, **content-rollback 9/9**, **smoke 8/8** · artefak `hero-beranda.png`. `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Sisa:** permintaan filter hanya di memori proses (muat ulang di `#curriculum` kembali tanpa filter); layar lain (Aktivitas Interaktif, Hasil Belajar) belum ikut memakai mapel terpilih.
