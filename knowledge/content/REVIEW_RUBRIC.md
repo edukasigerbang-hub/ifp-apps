@@ -1,7 +1,9 @@
 # Rubrik Review Pedagogis — Gerbang Sebelum Produksi
 
-**Status:** TEMPLATE — **belum ada materi yang direview**.
+**Status:** TEMPLATE — **belum ada materi yang direview manusia**.
 Rubrik ini dipakai reviewer manusia (guru/curriculum lead), bukan oleh agent. Agent tidak boleh menandai `approved`.
+
+**Bahan pra-review agent (2026-10-26):** [laporan](PEDAGOGICAL_PREREVIEW_2026-10-26.md) · [sampel baca 40 paket](PEDAGOGICAL_SAMPLE_2026-10-26.md) · [CSV flag](prereview-flags-2026-10-26.csv) · [JSON bukti](prereview-evidence-2026-10-26.json) — keluaran agent yang hanya mengumpulkan bukti; **bukan review, bukan approval**, dan status kriteria tetap NOT REVIEWED sampai reviewer manusia menilai.
 
 ## Peran reviewer
 

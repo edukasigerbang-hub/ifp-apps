@@ -46,6 +46,7 @@
 | Checklist B-01 signing & B-04 SMTP (2026-10-25) | [`release/CHECKLIST_B01_B04_2026-10-25.md`](release/CHECKLIST_B01_B04_2026-10-25.md) |
 | Checklist B-02, B-05, B-06, B-07, B-08 (2026-10-25) | [`release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md`](release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md) |
 | Lembar kerja review R1–R12 (2026-10-25) | [panduan](release/REVIEW_WORKSHEET_2026-10-25.md) · [CSV](release/review-worksheet-2026-10-25.csv) |
+| Pra-review agent R1–R6/R8–R9/R12 (2026-10-26, **bukan approval**) | [laporan](content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) · [sampel baca 40 paket](content/PEDAGOGICAL_SAMPLE_2026-10-26.md) · [CSV flag](content/prereview-flags-2026-10-26.csv) · [JSON bukti](content/prereview-evidence-2026-10-26.json) |
 | Analisis gap kualitas 320 paket (2026-10-25) | [`content/QUALITY_GAP_2026-10-25.md`](content/QUALITY_GAP_2026-10-25.md) · [JSON](content/quality-gap-2026-10-25.json) |
 | Pilot gold Kelas 4 B01 (2026-10-25) | [`content/PILOT_GOLD_KELAS4_B01_2026-10-25.md`](content/PILOT_GOLD_KELAS4_B01_2026-10-25.md) |
 | Inventaris aset konten (2026-10-25) | [`content/ASSET_INVENTORY_2026-10-25.md`](content/ASSET_INVENTORY_2026-10-25.md) · [CSV](content/asset-inventory-2026-10-25.csv) |
@@ -70,7 +71,7 @@
 | Konteks aktif (L0) | [`.qoder/context.md`](.qoder/context.md) |
 | State mesin | [`.qoder/state.json`](.qoder/state.json) |
 | Status index kode | [`.qoder/index/index-state.json`](.qoder/index/index-state.json) |
-| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) |
+| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) · [`logs/2026-10-25.md`](logs/2026-10-25.md) · [`logs/2026-10-26.md`](logs/2026-10-26.md) |
 
 ## Modul
 

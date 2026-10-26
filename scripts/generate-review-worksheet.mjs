@@ -65,8 +65,8 @@ const csvRows = entries.map((entry) =>
     "",
     "",
     "",
-    "BLOCKED-D6",
-    "PASS (otomatis)",
+    "FASE-LEVEL (CP/ATP BELUM)",
+    "PASS (otomatis 2026-10-26)",
     "",
     "",
     "draft"
@@ -95,8 +95,10 @@ lines.push("# Lembar Kerja Review Pedagogis — 2026-10-25");
 lines.push("");
 lines.push("**Status:** `LEMBAR-KERJA` — bukan approval. Hanya reviewer manusia yang boleh menaikkan `reviewStatus`.");
 lines.push("**Cakupan:** 320 paket draft (Kelas 1–6).");
+lines.push("**Diperbarui:** 2026-10-26 — jumlah aktivitas mengikuti konten terbaru (kedalaman 320/320); kolom reviewer/R1–R12 tetap kosong.");
 lines.push("**Rubrik:** [REVIEW_RUBRIC.md](../content/REVIEW_RUBRIC.md)");
 lines.push("**CSV siap isi:** [`review-worksheet-2026-10-25.csv`](review-worksheet-2026-10-25.csv)");
+lines.push("**Bahan pra-review agent (bukan approval):** [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) · [sampel baca 40 paket](../content/PEDAGOGICAL_SAMPLE_2026-10-26.md) · [flag per paket](../content/prereview-flags-2026-10-26.csv)");
 lines.push("");
 lines.push("## Cara pakai");
 lines.push("");
@@ -112,8 +114,8 @@ lines.push("| Kolom | Siapa | Catatan |");
 lines.push("|---|---|---|");
 lines.push("| R1–R6, R8, R9, R12 | Reviewer manusia | Wajib penilaian ahli/bahasa |");
 lines.push("| R7 | Reviewer + teknis | Alt text sudah teknis PASS; cek visual/manual |");
-lines.push("| R10 | Curriculum Lead | **BLOCKED** sampai D6; jangan diisi PASS sebelum ada referensi resmi |");
-lines.push("| R11 | Otomatis | Validator 320/320 PASS per 2026-10-25; reviewer boleh spot-check |");
+lines.push("| R10 | Curriculum Lead | Fase A/B/C terisi 320/320 (phase-level); CP/ATP per bab **belum** diverifikasi — jangan PASS sebelum referensi resmi per mapel |");
+lines.push("| R11 | Otomatis | Validator 320/320 PASS per 2026-10-26; reviewer boleh spot-check |");
 lines.push("");
 lines.push("## Ringkasan");
 lines.push("");

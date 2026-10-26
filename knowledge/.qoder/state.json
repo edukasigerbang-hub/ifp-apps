@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "04e51d0",
+  "commit": "a42a8f6",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,24 +35,24 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 7,
+  "context_version": 8,
   "skill_registry_version": 0,
-  "current_task": "OD-1 disetujui PO + Curriculum Lead via sesi; curriculumRefs 320/320; menunggu review manusia R1–R12",
-  "last_task": "T-071 Persetujuan Curriculum Lead + pengisian curriculumRefs 320/320",
+  "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
+  "last_task": "T-072 Pra-review agent R1–R6/R8–R9/R12 untuk 320 paket",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T15:52:00+07:00",
-  "last_validation": "T-071 OD-1 + curriculumRefs (2026-10-26): PO + Curriculum Lead menyetujui D1–D8 via instruksi sesi (tanpa tanda tangan tertulis, ADR-0034); scripts/fill-curriculum-refs.mjs mengisi 316 paket (4 sudah sesuai, 0 konflik) -> R10 320/320 fase A/B/C versi 2024. Review: 320/320 VALID, kedalaman 320/320, 0 duplikasi, R5 1 peringatan lunak. npm test 85/85 + fixture 4/4 + catalog 320/320. CP/ATP per bab belum diverifikasi; reviewStatus tetap draft.",
+  "last_updated": "2026-10-26T16:30:00+07:00",
+  "last_validation": "T-072 pra-review agent (2026-10-26): 320 paket dipindai deterministik via scripts/pedagogical-prereview.mjs -> R1 66 paket, R3 40, R4 0, R5 184 (170 matching identik dengan eksplorasi, 91 bias posisi kunci), R6 0, R8 0, R9 0, R12 1 temuan (CATALOG.md tanpa label 'Pendidikan Agama Islam'). Output: laporan + sampel 40 paket + CSV 320 baris + JSON bukti. BUKAN approval: tidak ada PASS/FAIL, reviewStatus tetap draft. npm test 85/85 + fixture 4/4 + catalog 320/320.",
   "last_test_status": "pass",
   "last_command": "DOCUMENT",
   "last_command_status": "PASS",
   "open_wave": null,
-  "dirty": false,
+  "dirty": true,
   "drift_detected": true,
   "drift_types": [
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Review manusia R1–R6, R8–R9, R12 + verifikasi CP/ATP per bab; reviewStatus tetap draft sampai lulus"
+  "next_step": "Reviewer manusia menilai R1–R6/R8–R9/R12 memakai paket pra-review (laporan + sampel 40 paket + CSV) pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab oleh Curriculum Lead; reviewStatus tetap draft sampai lulus"
 }

@@ -11,6 +11,7 @@
     "content:catalog": "node scripts/build-content-catalog.mjs",
     "content:catalog:check": "node scripts/check-catalog-index.mjs",
     "content:review-sheet": "node scripts/generate-review-worksheet.mjs",
+    "content:prereview": "node scripts/pedagogical-prereview.mjs",
     "content:quality-gap": "node scripts/analyze-content-quality.mjs",
     "content:asset-plan": "node scripts/generate-asset-plan.mjs",
     "preview": "vite preview",

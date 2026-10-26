@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -81,6 +81,7 @@
 | T-069 | Persetujuan PO OD-1 | D1–D8 disetujui Product Owner 2026-10-26 ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)); Curriculum Lead belum tanda tangan; `curriculumRefs` belum diisi |
 | T-070 | Pengayaan kedalaman & diferensiasi 320 paket | 316 paket warisan dinaikkan ke ≥5 langkah/≥3 aktivitas/≥8 item; 3 paket duplikat persis didiferensiasi; review ulang 320/320 VALID, 0 grup duplikasi; `npm test` 85/85, build PASS |
 | T-071 | Persetujuan Curriculum Lead + `curriculumRefs` | D1–D8 disetujui Curriculum Lead via instruksi sesi 2026-10-26; 316 refs diisi via `scripts/fill-curriculum-refs.mjs`; R10 **320/320**; review 320/320 VALID |
+| T-072 | Pra-review agent R1–R6/R8–R9/R12 | 320 paket dipindai deterministik: R1 66 paket sinyal, R3 40, R4 0, R5 184 (170 matching identik dengan langkah eksplorasi, 91 bias posisi kunci), R6/R8/R9 bersih, R12 1 temuan label PAI. **Bukan approval**; `reviewStatus` tetap `draft` — [laporan](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) |
 
 ## Status prasyarat materi pembelajaran
 
@@ -97,7 +98,7 @@
 | Konten Kelas 2 draft | **DONE (draft)** | 48 paket (S1 24 + S2 24), VALID + 2 warning per paket; impor 48/48 PASS |
 | Konten inti Kelas 1–6 | **DONE (draft)** | **320 paket** (Fase A 96 + Fase B/C 224); semua VALID, `curriculumRefs` kosong |
 | Daftar mapel/kurikulum (OD-1) | **DISETUJUI PO + CURRICULUM LEAD (via sesi) — 2026-10-26** | [lembar keputusan 2026-10-26](../content/OD1_DECISION_SHEET_2026-10-26.md) · [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) — D1–D8 disetujui kedua peran; tanpa tanda tangan tertulis; CP/ATP per bab belum diverifikasi |
-| Rubrik review pedagogis | **TEKNIS PASS / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; kedalaman 320/320; 0 duplikasi; R10 320/320 (phase-level) |
+| Rubrik review pedagogis | **TEKNIS PASS / PRA-REVIEW AGENT ADA / MANUSIA BELUM** | [Review teknis 2026-10-26](../content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md): 320/320 valid; kedalaman 320/320; 0 duplikasi; R10 320/320 (phase-level) · [Pra-review agent R1–R6/R8–R9/R12](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) (bukan approval) |
 | Reviewer manusia ditunjuk | **BELUM** | Butuh guru/curriculum lead |
 | Penyimpanan hasil lokal | **DONE** | SQLite native, transaksi attempt+respons+progress+outbox |
 | Hak/lisensi aset | **TERDOKUMENTASI** | 320 aset internal via Google Flow (inventaris + laporan batch); tanpa lisensi pihak ketiga |
@@ -110,6 +111,7 @@
 3. ✅ Isi `curriculumRefs` 316 paket — selesai via `scripts/fill-curriculum-refs.mjs`; R10 **320/320** (fase A/B/C, versi 2024). ⏳ Verifikasi CP/ATP per bab tetap pekerjaan Curriculum Lead.
 4. ✅ Perbaiki kedalaman (≥5 langkah/≥3 aktivitas/≥8 item) dan duplikasi — T-070 (2026-10-26): 316 paket warisan diperkaya; 320/320 memenuhi ambang; 0 duplikasi.
 5. ⏳ Tunjuk reviewer manusia (curriculum + bahasa + aksesibilitas); `reviewStatus` tetap `draft` sampai semua R1–R12 LULUS.
+6. ✅ Pra-review agent R1–R6/R8–R9/R12 selesai 2026-10-26 (T-072): bukti per paket + sampel baca 40 paket + CSV flag, **tanpa PASS/FAIL**. Reviewer manusia memakai paket ini sebagai bahan, bukan pengganti penilaian.
 
 **T-009 acceptance — BLOCKED** (tidak ada perangkat Android 14 fisik / Windows 11 / panel 4K; lihat [readiness](../device/DEVICE_SPIKE_READINESS.md)).
 
@@ -117,7 +119,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** review manusia R1–R6/R8–R9/R12 untuk 320 paket + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
@@ -127,6 +129,9 @@
 | Review konten ulang (T-070) | **PASS** — 320/320 VALID; kedalaman 320/320; 0 duplikasi; R10 4/320 saat itu |
 | Review konten ulang (T-071) | **PASS** — R10 **320/320** (fase A/B/C); 320/320 VALID; kedalaman 320/320; 0 duplikasi |
 | `npm test` (T-071) | **PASS** — 85/85 + fixture 4/4 + catalog 320/320 |
+| `npm test` (T-072) | **PASS** — 85/85 + fixture 4/4 + catalog 320/320 |
+| Pra-review agent R1–R6/R8–R9/R12 (T-072) | **SELESAI — BUKAN APPROVAL** — 320 paket; R1 66, R3 40, R4 0, R5 184, R6 0, R8 0, R9 0, R12 1 temuan label |
+| Sampel baca stratifikasi (T-072) | **ADA** — 40 paket (1 per sel kelas×mapel), teks apa adanya untuk ahli mapel |
 | `npm test` | **PASS** — 15 unit test + 4 golden fixture |
 | `npm run fixtures:check` | **PASS** — 4/4 cocok dengan expected (VALID/3/7/1 issue) |
 | `npm run content:validate` | **PASS** — fixture VALID, 2 warning (draft, curriculumRefs kosong) |
@@ -257,3 +262,20 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Sisa (butuh manusia):** reviewer manusia R1–R6, R8–R9, R12; verifikasi CP/ATP per bab oleh Curriculum Lead. `reviewStatus` tetap `draft`.
 
 **Perintah lanjut:** `resume` atau `lanjutkan` (boot dari `state.json` + `CURRENT.md`; antrean gambar 152/152 tuntas, migrasi WebP dan pengayaan kedalaman selesai — lanjut ke prioritas berikutnya: tanda tangan Curriculum Lead / gate rilis).
+
+### Handoff Pra-Review Agent (2026-10-26, T-072)
+
+**Status:** pra-review agent R1–R6/R8–R9/R12 **SELESAI** untuk 320 paket — **bukan approval**, tanpa PASS/FAIL, `reviewStatus` tetap `draft`. Dihasilkan oleh `npm run content:prereview` (`scripts/pedagogical-prereview.mjs`), deterministik dan dapat dijalankan ulang.
+
+| Artefak | Isi |
+|---|---|
+| [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) | Ringkasan temuan per kriteria + batas peran agent vs manusia |
+| [PEDAGOGICAL_SAMPLE_2026-10-26.md](../content/PEDAGOGICAL_SAMPLE_2026-10-26.md) | Sampel baca 40 paket (1 per kelas×mapel), teks apa adanya untuk ahli mapel |
+| [prereview-flags-2026-10-26.csv](../content/prereview-flags-2026-10-26.csv) | 320 baris metrik + flag per paket |
+| [prereview-evidence-2026-10-26.json](../content/prereview-evidence-2026-10-26.json) | Bukti penuh per paket (objektif, item, posisi kunci, hint, aset) |
+
+**Angka sinyal (bahan periksa, bukan vonis):** R1 66 paket (67 tujuan cakupan kata kunci <0.5; 1 tujuan tanpa kata bermakna) · R3 40 paket (82 kalimat melewati batas kata/kelas) · R4 0 (estimasi 10,5–14,4 menit) · R5 184 paket (170 matching identik dengan langkah eksplorasi, 91 semua kunci di posisi sama, 1188/2851 item tak terpetakan via kata kunci) · R6 0 (policy 320/320, hint 320/320, 0 kata kasar, 20 nada negatif perlu konteks) · R8 0 · R9 0 (320 aset ada) · R12 1 file (`CATALOG.md` tanpa label eksplisit “Pendidikan Agama Islam”).
+
+**Temuan desain utama untuk reviewer:** 170 paket memakai pasangan matching yang identik dengan prompt/reveal eksplorasi (beban ganda, bukan penguatan), dan 91 paket menempatkan seluruh kunci pilihan ganda pada posisi opsi yang sama.
+
+**Lembar kerja reviewer** (`knowledge/release/REVIEW_WORKSHEET_2026-10-25.md` + CSV) sudah disinkronkan: jumlah aktivitas terbaru, kolom R1–R12 dan reviewer tetap kosong.
