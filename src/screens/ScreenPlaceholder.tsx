@@ -11,7 +11,7 @@ export function ScreenPlaceholder({ item }: ScreenPlaceholderProps) {
     <>
       <PageHeader title={item.label} description={item.description} />
 
-      <section className="mt-6 max-w-3xl rounded-card border border-ink/10 bg-surface p-6 md:p-8">
+      <section className="mx-auto mt-6 w-full max-w-3xl rounded-card border border-ink/10 bg-surface p-6 md:p-8">
         <StatusBadge tone="neutral" label="Scaffold Fase C" />
         <p className="mt-4 text-sm leading-relaxed text-muted">
           Layar ini belum diimplementasikan. Kontrak data, status pemrosesan, dan aksi

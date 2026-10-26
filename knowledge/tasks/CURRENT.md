@@ -168,6 +168,7 @@
 | Grid katalog 3 kolom (T-078c) | **PASS** — `md:grid-cols-3`; E2E `home-catalog` 10/10 + screenshot 3 kartu per baris; a11y 17/17 |
 | Rail ikon mode belajar (T-078d) | **PASS** — rail 80 px, 4 tujuan (label sr-only + tooltip), konten 1520 px pada viewport 1600; E2E `mode-switch` 6/6 termasuk restore setelah muat ulang |
 | Tile kelas thumbnail (T-078d) | **PASS** — 6 tile kelas memakai cover materi (aset paket), chip “Semua kelas”; E2E `home-catalog` 11/11 |
+| Tata letak lebar penuh (T-078e) | **PASS** — Beranda/Jelajah memakai lebar penuh (grid 3 kolom, mapel 3 kolom di xl); layar baca dipusatkan `mx-auto max-w-4xl`; build PASS, E2E 11/11 + 6/6, a11y 17/17, regresi PASS |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -402,11 +403,12 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - `src/content/catalog.ts`, `scripts/lib/contentCatalog.mjs`, `scripts/check-catalog-index.mjs` — field `coverAsset` (aset gambar pertama manifest) di 320/320 entri katalog.
 - `src/screens/CurriculumScreen.tsx` — kartu materi menampilkan thumbnail di atas judul, grid **3 kolom** (md+); filter kelas berupa **tile thumbnail** (cover materi per kelas) + chip “Semua kelas”, menggantikan dropdown.
 - `src/components/layout/StudentRail.tsx` (baru) — rail ikon 80 px untuk mode belajar: 4 tujuan, ikon SVG inline, label sr-only + tooltip, `aria-current`; menggantikan bar horizontal `StudentNavigation.tsx` (dihapus).
+- Tata letak (T-078e) — Beranda & Jelajah Materi memakai lebar penuh (`w-full`); daftar mapel Beranda 3 kolom di xl; layar baca (Results, Settings, Content, License, Player, placeholder) dipusatkan `mx-auto w-full max-w-4xl`.
 - `src/screens/HomeScreen.tsx` — kartu “Lanjutkan belajar” menampilkan thumbnail (56 px lebar di md+).
 - `src-tauri/src/preferences.rs` — test `app_mode_survives_database_reopen` membuktikan persistensi setelah DB ditutup dan dibuka ulang.
 - E2E: `mode-switch.mjs` mencocokkan tombol lewat `aria-label`, mengukur rail 80 px dan konten sisa; `a11y.mjs` `clickLabel` menerima `aria-label`; `home-catalog.mjs` menunggu tile kelas + dua thumbnail termuat + screenshot `catalog-thumbnails.png`.
 
-**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` **6/6** (rail + restore setelah muat ulang) · `home-catalog` **11/11** (tile kelas + thumbnail) · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-belajar.png` memperlihatkan rail ikon; `catalog-thumbnails.png` memperlihatkan tile kelas dan 3 kartu per baris.
+**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` **6/6** (rail + restore setelah muat ulang) · `home-catalog` **11/11** (tile kelas + thumbnail) · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-belajar.png` memperlihatkan rail ikon dan Beranda selebar layar; `catalog-thumbnails.png` memperlihatkan tile kelas dan 3 kartu per baris.
 
 **Catatan persistensi:** nilai tersimpan di SQLite `app_meta` (key `preferences`), bukan localStorage; dibaca `App.tsx` saat start. DB perangkat diperiksa langsung dan berisi `appMode":"belajar"` setelah sakelar dipakai.
 

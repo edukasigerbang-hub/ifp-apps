@@ -77,7 +77,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   }
 
   return (
-    <div className="max-w-5xl">
+    <div className="w-full">
       <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
         {profile ? `Halo, ${profile.displayName}` : "Halo"}
       </h1>
@@ -175,7 +175,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             impor lewat Konten &amp; Pembaruan.
           </p>
         ) : (
-          <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {facets.subjects.map((subject) => (
               <li
                 key={subject}

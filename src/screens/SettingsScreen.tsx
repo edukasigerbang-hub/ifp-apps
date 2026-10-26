@@ -327,7 +327,7 @@ export function SettingsScreen() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       <PageHeader
         title="Pengaturan"
         description="Profil, preferensi perangkat, dan status sinkronisasi hasil belajar."

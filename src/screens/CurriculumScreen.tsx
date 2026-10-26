@@ -81,7 +81,7 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   }
 
   return (
-    <div className="max-w-5xl">
+    <div className="w-full">
       <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">Jelajah Materi</h1>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
         Temukan materi berdasarkan kelas dan mata pelajaran, lalu buka di Player.
@@ -144,7 +144,22 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
                   : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
               }`}
             >
-              Semua kelas
+              <span className="flex flex-col items-center gap-1.5">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-6 w-6"
+                >
+                  <rect x="4" y="4" width="7" height="7" rx="1.5" />
+                  <rect x="13" y="4" width="7" height="7" rx="1.5" />
+                  <rect x="4" y="13" width="7" height="7" rx="1.5" />
+                  <rect x="13" y="13" width="7" height="7" rx="1.5" />
+                </svg>
+                Semua kelas
+              </span>
             </button>
             {facets.grades.map((value) => {
               const isActive = grade === value;

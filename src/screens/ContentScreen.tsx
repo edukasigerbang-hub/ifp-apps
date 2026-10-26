@@ -185,7 +185,7 @@ export function ContentScreen() {
     );
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       <PageHeader
         title="Konten & Pembaruan"
         description="Impor paket konten, validasi, aktivasi atomik, dan rollback."

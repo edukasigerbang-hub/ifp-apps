@@ -208,7 +208,7 @@ export function LessonPlayer() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       {state.source === "managed" && state.summaries.length > 1 && (
         <section aria-label="Pilih paket konten" className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Pilih paket</p>
@@ -383,7 +383,7 @@ function LessonView({
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       <div className="flex flex-wrap items-center gap-3">
         <StatusBadge tone={reviewTone} label={reviewLabel} />
         <StatusBadge
