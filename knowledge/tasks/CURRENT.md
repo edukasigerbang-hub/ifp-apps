@@ -579,3 +579,17 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Verifikasi aktual:** `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 23/23**, **a11y 17/17** (0 error, 7 warning; percobaan pertama kena flake timeout simpan kuis, lolos pada ulangan), **activities 14/14**, **learning-journey 11/11**, **content-rollback 9/9**, **profile-lifecycle 7/7**, **mode-switch 6/6**, **smoke 8/8**. `cargo test` tidak dijalankan (tanpa perubahan Rust).
 
 **Sisa:** pemilihan kelas tetap di halaman katalog yang sama (bukan wizard dua langkah); permintaan filter hanya di memori proses.
+
+### Handoff Pencarian "ipas" Kosong (2026-10-27, T-088)
+
+**Status:** selesai dan terverifikasi. PO melaporkan pencarian pelajaran IPAS "tidak ada".
+
+**Temuan (terbukti):** pencarian bebas menemukan IPAS (32 entri; IPAS = 8 materi × kelas 3–6). Hasil kosong terjadi karena **filter aktif**: chip mapel masih Matematika dan/atau kelas 1–2 (IPAS mulai kelas 3). Empty state lama tidak menyebut filter sehingga terbaca sebagai materi hilang.
+
+**Perubahan kode:**
+- `src/screens/CurriculumScreen.tsx` — empty state `data-catalog-empty` menyebut kata kunci + filter aktif; tombol **Cari di semua mapel**, **Cari di semua kelas**, **Hapus semua filter**; helper `emptyStateMessage()`.
+- `scripts/e2e/scenarios/home-catalog.mjs` — 2 regresi baru (penjelasan filter aktif saat mencari “ipas” di Matematika + Kelas 3; “Cari di semua mapel” → **8 materi IPAS kelas 3**), artefak `katalog-ipas-filter-aktif.png`. **26 pemeriksaan.**
+
+**Verifikasi aktual:** `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 26/26**, **a11y 17/17** (0 error, 7 warning), **activities 14/14**, **smoke 8/8**. `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Sisa:** pencarian tetap di dalam filter aktif (bukan global) — kini dijelaskan; IPAS memang belum ada untuk kelas 1–2.
