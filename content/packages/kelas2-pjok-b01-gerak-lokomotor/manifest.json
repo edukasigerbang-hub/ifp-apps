@@ -11,7 +11,13 @@
   "subjects": [
     "pjok"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/gerak-lokomotor-kelas2.webp",

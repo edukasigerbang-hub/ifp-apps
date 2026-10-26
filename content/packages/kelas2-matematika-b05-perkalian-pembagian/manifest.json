@@ -11,7 +11,13 @@
   "subjects": [
     "matematika"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/perkalian-pembagian-kelas2.webp",

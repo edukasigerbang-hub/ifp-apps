@@ -11,7 +11,13 @@
   "subjects": [
     "seni-rupa"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/tekstur-bahan-kelas2.webp",

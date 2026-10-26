@@ -11,7 +11,13 @@
   "subjects": [
     "pai"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/iman-hari-akhir.webp",

@@ -19,7 +19,7 @@
 |---|---|---|
 | R1–R6, R8, R9, R12 | Reviewer manusia | Wajib penilaian ahli/bahasa |
 | R7 | Reviewer + teknis | Alt text sudah teknis PASS; cek visual/manual |
-| R10 | Curriculum Lead | **BLOCKED** sampai D6; jangan diisi PASS sebelum ada referensi resmi |
+| R10 | Curriculum Lead | Phase-level A/B/C terisi 320/320 (2026-10-26); CP/ATP per bab belum diverifikasi — jangan PASS sebelum referensi resmi |
 | R11 | Otomatis | Validator 320/320 PASS per 2026-10-25; reviewer boleh spot-check |
 
 ## Ringkasan

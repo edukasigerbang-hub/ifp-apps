@@ -1,9 +1,9 @@
 # Proposal OD-1 — Matriks Mata Pelajaran & Kurikulum
 
-**Status:** `DISETUJUI PRODUCT OWNER — MENUNGGU CURRICULUM LEAD` (sejak 2026-10-26). Persetujuan PO tercatat di [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md); keputusan belum sah untuk produksi dan tidak boleh dipakai mengklaim kesesuaian kurikulum sampai Curriculum Lead menandatangani.
+**Status:** `DISETUJUI PRODUCT OWNER + CURRICULUM LEAD (via instruksi sesi) — 2026-10-26`. Persetujuan tercatat di [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md); `curriculumRefs` phase-level sudah diisi 320/320. Pemetaan CP/ATP per bab belum diverifikasi dan klaim “sesuai Kurikulum Merdeka” tetap dilarang.
 
 **Pemilik keputusan:** Product Owner + Curriculum Lead.
-**Tanggal:** 2026-10-23 (proposal) · 2026-10-26 (persetujuan PO) · **Menghambat:** pengisian `curriculumRefs` 316 paket, klaim kurikulum, schema konten final.
+**Tanggal:** 2026-10-23 (proposal) · 2026-10-26 (persetujuan PO + Curriculum Lead) · **Menghambat:** verifikasi CP/ATP per bab dan klaim kurikulum; pengisian phase-level sudah selesai.
 
 ## Mengapa ini harus diputuskan manusia
 
@@ -30,7 +30,7 @@ Schema konten sengaja **tidak** mengunci daftar mapel. Yang belum ada adalah oto
 
 Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belum terverifikasi**: [induk](OUTLINE_KELAS4_MERDEKA_DRAFT.md), [Semester 1](KELAS4_SEMESTER1_MERDEKA_DRAFT.md), [Semester 2](KELAS4_SEMESTER2_MERDEKA_DRAFT.md). Dokumen-dokumen itu hanya usulan urutan bab dan aktivitas untuk memulai produksi; D3–D7 masih harus diputuskan sebelum dianggap resmi.
 
-## Template matriks (ISI SETELAH D1–D7 disetujui)
+## Template matriks (ISI SETELAH CP/ATP per bab diverifikasi)
 
 | subjectId (slug) | Label tampilan | Kelas 1–3 | Kelas 4–6 | Wajib? | Catatan |
 |---|---|---|---|---|---|
@@ -44,12 +44,12 @@ Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belu
 | `bahasa-inggris` | Bahasa Inggris | _TBD_ | _TBD_ | _TBD_ | D3 |
 | `mulok` | Muatan Lokal | _TBD_ | _TBD_ | _TBD_ | D5 |
 
-> Tabel di atas sengaja berisi `TBD`. Mengisinya tanpa persetujuan Curriculum Lead akan menciptakan klaim palsu.
+> Tabel di atas sengaja berisi `TBD`. Mengisinya tanpa pemetaan CP/ATP resmi dari Curriculum Lead akan menciptakan klaim palsu.
 
 ## Kriteria penerimaan proposal
 
 - [x] D1–D8 disetujui Product Owner (2026-10-26, via instruksi sesi; tanpa tanda tangan tertulis).
-- [ ] D1–D8 ditandatangani Curriculum Lead pada [lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md).
+- [x] D1–D8 disetujui Curriculum Lead (2026-10-26, via instruksi sesi; tanpa tanda tangan tertulis) pada [lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md).
 - [ ] Setiap baris matriks punya referensi resmi (dokumen + pasal/halaman) di `curriculumRefs`.
 - [x] Daftar unit minimum per kelas/mapel disepakati: 8 unit/tahun/mapel (D7).
 - [x] Keputusan dicatat sebagai [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) (provisional).
@@ -64,5 +64,5 @@ Outline kelas 4 berbasis Kurikulum Merdeka (Fase B) tersedia sebagai **draf belu
 
 - D6 diadopsi **provisional** sesuai ADR-0033: `{framework, id, version}` dengan referensi phase-level `kurikulum-merdeka` / `fase-b` / `2024`.
 - Pilot Kelas 4 B01 sudah memakai referensi ini.
-- Product Owner menyetujui D6 pada 2026-10-26; keputusan tetap **provisional** sampai Curriculum Lead memverifikasi referensi resmi.
-- Pemetaan per mata pelajaran/bab ke CP/ATP resmi **belum** diverifikasi; R10 tetap memerlukan Curriculum Lead dan 316 paket belum diisi.
+- Product Owner dan Curriculum Lead menyetujui D6 pada 2026-10-26; referensi phase-level sudah diisi ke **320/320** paket (`scripts/fill-curriculum-refs.mjs`).
+- Pemetaan per mata pelajaran/bab ke CP/ATP resmi **belum** diverifikasi; referensi phase-level belum boleh diklaim sebagai kesesuaian per bab.

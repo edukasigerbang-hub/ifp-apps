@@ -11,7 +11,13 @@
   "subjects": [
     "seni-rupa"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/perspektif.webp",

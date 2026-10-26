@@ -11,7 +11,13 @@
   "subjects": [
     "pai"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/puasa-kelas2.webp",

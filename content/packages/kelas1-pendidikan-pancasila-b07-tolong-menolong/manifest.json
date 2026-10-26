@@ -11,7 +11,13 @@
   "subjects": [
     "pendidikan-pancasila"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/tolong-menolong.webp",

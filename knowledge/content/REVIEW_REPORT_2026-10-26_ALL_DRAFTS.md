@@ -14,7 +14,7 @@
 | Paket dengan aset WebP | 320/320 |
 | Hash aset unik | 320 (dipakai ulang: 0) |
 | `reviewStatus` | draft (320/320) |
-| `curriculumRefs` terisi (R10) | **4/320** — sisa 316 menunggu tanda tangan Curriculum Lead (D1–D8 disetujui PO, ADR-0034) |
+| `curriculumRefs` terisi (R10) | **320/320** — fase A/B/C `kurikulum-merdeka`/2024 (D1–D8 disetujui PO + Curriculum Lead via sesi, ADR-0034) |
 | Alt text lengkap (R7 teknis) | 320/320 |
 | Feedback policy lengkap (R6 teknis) | 320/320 |
 | Soal/aktivitas invalid secara struktur (R5) | 0 paket (1 peringatan lunak) |
@@ -40,7 +40,7 @@
 | R7 | Aksesibilitas | TEKNIS: alt 320/320 lengkap | 0 alt pendek (<15 karakter) perlu spot-check; kontras/ukuran target = uji manual. |
 | R8 | Tidak ada data pribadi | PINDAI TEKS: 0 paket | Pola email/URL/telepon/NIK; aset visual tidak di-OCR. |
 | R9 | Hak/lisensi aset | DOKUMENTASI: seluruh aset dibuat internal via Google Flow | Lihat [ASSET_INVENTORY](ASSET_INVENTORY_2026-10-25.md) + laporan batch; belum ada lisensi pihak ketiga. |
-| R10 | `curriculumRefs` terisi | **BLOCKING: 4/320** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; 316 paket menunggu tanda tangan Curriculum Lead atas D1–D8 (disetujui PO via [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |
+| R10 | `curriculumRefs` terisi | **PASS 320/320** | Semua paket memakai referensi phase-level `kurikulum-merdeka` fase A/B/C versi 2024; pemetaan CP/ATP per bab belum diklaim dan tetap perlu verifikasi Curriculum Lead ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |
 | R11 | Validator + hash | **PASS 320/320** | `review-content.ts` memanggil validator repo per paket; 0 issue. |
 | R12 | Tanpa klaim kurikulum | TEKNIS: 0 file klaim | Pemindaian `src/` dan CATALOG; keputusan bahasa pemasaran = human. |
 
@@ -68,33 +68,32 @@
 
 | Kelas | Paket | Valid | Langkah (rata-rata) | Aktivitas (rata-rata) | Item (rata-rata) | refs terisi |
 |---|---:|---:|---:|---:|---:|---:|
-| 1 | 48 | 48 | 5.0 | 3.0 | 8.9 | 0 |
-| 2 | 48 | 48 | 5.1 | 3.0 | 9.1 | 0 |
-| 3 | 56 | 56 | 5.0 | 3.0 | 8.9 | 0 |
-| 4 | 56 | 56 | 5.0 | 3.0 | 8.8 | 4 |
-| 5 | 56 | 56 | 5.0 | 3.0 | 8.8 | 0 |
-| 6 | 56 | 56 | 5.0 | 3.0 | 8.9 | 0 |
+| 1 | 48 | 48 | 5.0 | 3.0 | 8.9 | 48 |
+| 2 | 48 | 48 | 5.1 | 3.0 | 9.1 | 48 |
+| 3 | 56 | 56 | 5.0 | 3.0 | 8.9 | 56 |
+| 4 | 56 | 56 | 5.0 | 3.0 | 8.8 | 56 |
+| 5 | 56 | 56 | 5.0 | 3.0 | 8.8 | 56 |
+| 6 | 56 | 56 | 5.0 | 3.0 | 8.9 | 56 |
 
 ## Sebaran per mapel
 
 | Mapel | Paket | Valid | Kedalaman kurang | refs terisi |
 |---|---:|---:|---:|---:|
-| Bahasa Indonesia | 48 | 48 | 0 | 1 |
-| IPAS | 32 | 32 | 0 | 1 |
-| Matematika | 48 | 48 | 0 | 1 |
-| PAI | 48 | 48 | 0 | 0 |
-| Pendidikan Pancasila | 48 | 48 | 0 | 1 |
-| PJOK | 48 | 48 | 0 | 0 |
-| Seni Rupa | 48 | 48 | 0 | 0 |
+| Bahasa Indonesia | 48 | 48 | 0 | 48 |
+| IPAS | 32 | 32 | 0 | 32 |
+| Matematika | 48 | 48 | 0 | 48 |
+| PAI | 48 | 48 | 0 | 48 |
+| Pendidikan Pancasila | 48 | 48 | 0 | 48 |
+| PJOK | 48 | 48 | 0 | 48 |
+| Seni Rupa | 48 | 48 | 0 | 48 |
 
 ## Temuan yang perlu ditindaklanjuti
 
-- **R10 BLOCKING:** 316 paket belum punya `curriculumRefs`; D1–D8 sudah disetujui Product Owner ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)), pengisian menunggu tanda tangan Curriculum Lead ([lembar keputusan OD-1](OD1_DECISION_SHEET_2026-10-26.md)).
 - **R5 peringatan lunak:** 1 soal dengan opsi yang hanya berbeda kapitalisasi — pastikan perbedaan itu memang yang diuji.
 
 ## Rekomendasi urutan kerja
 
-1. **Tanda tangan Curriculum Lead (manusia):** D1–D8 sudah disetujui Product Owner; setelah Curriculum Lead menandatangani lembar OD-1, isi `curriculumRefs` per mapel/fase dan buka blokir R10.
+1. **Verifikasi CP/ATP per bab (Curriculum Lead):** `curriculumRefs` sudah terisi phase-level A/B/C; pemetaan CP/ATP per mapel/bab tetap perlu verifikasi sebelum klaim kesesuaian kurikulum.
 2. **Review manusia R1–R6, R8–R9, R12:** gunakan [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md); agent tidak boleh mengisi approval.
 3. **Tindak lanjut temuan kecil:** periksa manual peringatan R5 dan paket dengan heuristik R1 sebagian (daftar di atas).
 4. **Verifikasi ulang otomatis:** jalankan `npx tsx scripts/review-content.ts` setelah setiap perubahan konten; angka harus tetap hijau sebelum reviewer manusia masuk.

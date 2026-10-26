@@ -11,7 +11,13 @@
   "subjects": [
     "ipas"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/ekosistem-kelas6.webp",

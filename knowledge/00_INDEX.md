@@ -110,18 +110,18 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0031](decisions/ADR-0031-content-catalog-index.md) | Indeks katalog konten build-time untuk 320 paket | Accepted (implemented) |
 | [ADR-0032](decisions/ADR-0032-admin-api-token-provisional.md) | Token admin provisial untuk transfer/deaktivasi lisensi | Accepted (provisional) |
 | [ADR-0033](decisions/ADR-0033-curriculum-refs-d6-provisional.md) | Format & pengisian awal `curriculumRefs` (D6 provisional) | Accepted (provisional) |
-| [ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) | OD-1 D1–D8: persetujuan Product Owner | Provisional (Curriculum Lead belum) |
+| [ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) | OD-1 D1–D8: persetujuan Product Owner + Curriculum Lead | Accepted via sesi 2026-10-26; CP/ATP per bab belum diverifikasi |
 | [ADR-0028](decisions/ADR-0028-supabase-cloudflare.md) | Stack backend: Supabase + Cloudflare | Accepted (increment 2) |
 | [ADR-0029](decisions/ADR-0029-ifp-devices-isolation.md) | Isolasi perangkat IFP dengan `ifp_devices` (project dipakai bersama Fanakon) | Accepted |
 | [ADR-0030](decisions/ADR-0030-worker-license-signing.md) | Penerbitan lisensi Ed25519 di Worker (kunci provisional `prod-1`) | Accepted (provisional) |
 
-OD-1 kini tercatat di ADR-0034 (PO setuju; menunggu Curriculum Lead) — catatan: proposal lama menyebut “ADR-0004”, nomor itu sudah dipakai persistensi lokal. Keputusan berikutnya yang perlu ADR: license semantics (OD-5), API contract (OD-7).
+OD-1 kini tercatat di ADR-0034 (PO + Curriculum Lead setuju via sesi; tanpa tanda tangan tertulis) — catatan: proposal lama menyebut “ADR-0004”, nomor itu sudah dipakai persistensi lokal. Keputusan berikutnya yang perlu ADR: license semantics (OD-5), API contract (OD-7).
 
 ### Proposal keputusan terbuka
 
 | ID | Proposal |
 |---|---|
-| OD-1 | [Matriks kurikulum & opsi](content/CURRICULUM_PROPOSAL.md) — PO setuju D1–D8 ([ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)); menunggu Curriculum Lead |
+| OD-1 | [Matriks kurikulum & opsi](content/CURRICULUM_PROPOSAL.md) — PO + Curriculum Lead setuju D1–D8 ([ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)); `curriculumRefs` 320/320, CP/ATP per bab belum diverifikasi |
 | OD-4 | [Privasi, retensi, penghapusan](decisions/PROPOSAL-OD-4-privacy-retention.md) |
 | OD-5 | [Kebijakan lisensi](decisions/PROPOSAL-OD-5-license-policy.md) |
 | OD-6 | [Identitas rilis & signing](decisions/PROPOSAL-OD-6-release-identity.md) |

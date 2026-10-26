@@ -465,7 +465,11 @@ lines.push(`| Validator + hash (R11) | **${summary.valid}/${summary.total} VALID
 lines.push(`| Paket dengan aset WebP | ${summary.webpPackages}/${summary.total} |`);
 lines.push(`| Hash aset unik | ${summary.uniqueAssetHashes} (dipakai ulang: ${summary.reusedAssetHashes}) |`);
 lines.push(`| \`reviewStatus\` | ${summary.reviewStatus.join(", ")} (${summary.total}/${summary.total}) |`);
-lines.push(`| \`curriculumRefs\` terisi (R10) | **${summary.refsFilled}/${summary.total}** — sisa ${summary.refsEmpty} menunggu tanda tangan Curriculum Lead (D1–D8 disetujui PO, ADR-0034) |`);
+lines.push(
+  summary.refsEmpty === 0
+    ? `| \`curriculumRefs\` terisi (R10) | **${summary.refsFilled}/${summary.total}** — fase A/B/C \`kurikulum-merdeka\`/2024 (D1–D8 disetujui PO + Curriculum Lead via sesi, ADR-0034) |`
+    : `| \`curriculumRefs\` terisi (R10) | **${summary.refsFilled}/${summary.total}** — sisa ${summary.refsEmpty} menunggu tanda tangan Curriculum Lead (D1–D8 disetujui PO, ADR-0034) |`
+);
 lines.push(`| Alt text lengkap (R7 teknis) | ${summary.total - summary.altIncomplete}/${summary.total} |`);
 lines.push(`| Feedback policy lengkap (R6 teknis) | ${summary.total - summary.missingFeedbackPolicy}/${summary.total} |`);
 lines.push(`| Soal/aktivitas invalid secara struktur (R5) | ${summary.assessmentInvalid} paket (${summary.assessmentWarnings} peringatan lunak) |`);
@@ -491,7 +495,11 @@ lines.push(`| R6 | Feedback suportif | SEBAGIAN: policy ${summary.total - summar
 lines.push(`| R7 | Aksesibilitas | TEKNIS: alt ${summary.total - summary.altIncomplete}/${summary.total} lengkap | ${summary.shortAltEntries} alt pendek (<15 karakter) perlu spot-check; kontras/ukuran target = uji manual. |`);
 lines.push(`| R8 | Tidak ada data pribadi | PINDAI TEKS: ${summary.personalDataHits} paket | Pola email/URL/telepon/NIK; aset visual tidak di-OCR. |`);
 lines.push("| R9 | Hak/lisensi aset | DOKUMENTASI: seluruh aset dibuat internal via Google Flow | Lihat [ASSET_INVENTORY](ASSET_INVENTORY_2026-10-25.md) + laporan batch; belum ada lisensi pihak ketiga. |");
-lines.push(`| R10 | \`curriculumRefs\` terisi | **BLOCKING: ${summary.refsFilled}/${summary.total}** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; ${summary.refsEmpty} paket menunggu tanda tangan Curriculum Lead atas D1–D8 (disetujui PO via [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |`);
+lines.push(
+  summary.refsEmpty === 0
+    ? `| R10 | \`curriculumRefs\` terisi | **PASS ${summary.refsFilled}/${summary.total}** | Semua paket memakai referensi phase-level \`kurikulum-merdeka\` fase A/B/C versi 2024; pemetaan CP/ATP per bab belum diklaim dan tetap perlu verifikasi Curriculum Lead ([ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |`
+    : `| R10 | \`curriculumRefs\` terisi | **BLOCKING: ${summary.refsFilled}/${summary.total}** | 4 paket starter Kelas 4 memakai referensi provisional ADR-0033; ${summary.refsEmpty} paket menunggu tanda tangan Curriculum Lead atas D1–D8 (disetujui PO via [ADR-0034](../decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)). |`
+);
 lines.push(`| R11 | Validator + hash | **PASS ${summary.valid}/${summary.total}** | \`review-content.ts\` memanggil validator repo per paket; 0 issue. |`);
 lines.push(`| R12 | Tanpa klaim kurikulum | TEKNIS: ${summary.curriculumClaimFiles} file klaim | Pemindaian \`src/\` dan CATALOG; keputusan bahasa pemasaran = human. |`);
 lines.push("");
@@ -575,7 +583,7 @@ lines.push(...findings);
 lines.push("");
 lines.push("## Rekomendasi urutan kerja");
 lines.push("");
-lines.push("1. **Tanda tangan Curriculum Lead (manusia):** D1–D8 sudah disetujui Product Owner; setelah Curriculum Lead menandatangani lembar OD-1, isi `curriculumRefs` per mapel/fase dan buka blokir R10.");
+lines.push("1. **Verifikasi CP/ATP per bab (Curriculum Lead):** `curriculumRefs` sudah terisi phase-level A/B/C; pemetaan CP/ATP per mapel/bab tetap perlu verifikasi sebelum klaim kesesuaian kurikulum.");
 lines.push("2. **Review manusia R1–R6, R8–R9, R12:** gunakan [lembar kerja review](../release/REVIEW_WORKSHEET_2026-10-25.md); agent tidak boleh mengisi approval.");
 lines.push("3. **Tindak lanjut temuan kecil:** periksa manual peringatan R5 dan paket dengan heuristik R1 sebagian (daftar di atas).");
 lines.push("4. **Verifikasi ulang otomatis:** jalankan `npx tsx scripts/review-content.ts` setelah setiap perubahan konten; angka harus tetap hijau sebelum reviewer manusia masuk.");

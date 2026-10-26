@@ -11,7 +11,13 @@
   "subjects": [
     "pai"
   ],
-  "curriculumRefs": [],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
   "assets": [
     {
       "path": "assets/adab-kelas3.webp",
