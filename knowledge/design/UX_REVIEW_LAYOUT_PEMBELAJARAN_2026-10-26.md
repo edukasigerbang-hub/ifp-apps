@@ -5,8 +5,9 @@
 **Sumber:** 7 screenshot full-page (pratinjau browser, 1320 px) + kode aktual + review eksternal AI
 
 > Dokumen ini menggabungkan dua review atas screenshot yang sama:
-> (1) review eksternal ChatGPT pada tautan share `chatgpt.com/share/6adf2314-74f0-83ec-8c78-a8f5291cba48` (judul “Review Dan Rekomendasi Desain”, skor heuristik 6,5/10), dan
+> (1) review eksternal ChatGPT pada tautan share `chatgpt.com/share/6adf2314-74f0-83ec-8c78-a8f5291cba48` (judul “Review Dan Rekomendasi Desain”, skor heuristik 6,5/10; dokumen `.md`-nya diunduh 2026-10-26 — `review-layout-pembelajaran-gerbang-edukasi.md`, 337 baris / 14.998 byte UTF-8, dibaca penuh), dan
 > (2) review UX/UI berbasis kode pada sesi ini.
+> Isi unik dari berkas eksternal (skor per area, 8 prinsip UX, daftar state interaksi, aturan ilustrasi, checklist penerimaan) sudah digabung ke §5.1, §7.1, §8.1, §9.1–§9.2. Berkas aslinya disimpan sementara di `.tmp-external/` (git-ignored, tidak di-commit karena karya pihak ketiga); substansinya masuk ke dokumen kanonik ini dengan atribusi.
 > Keduanya **bukan** pengganti pengujian dengan guru/siswa. Tidak ada PASS/FAIL, tidak ada keputusan desain yang diambil sepihak.
 
 ## 1. Ringkasan eksekutif
@@ -19,7 +20,7 @@ Tiga hal yang paling menahan kualitas pengalaman belajar:
 2. **Metadata internal bocor ke layar siswa/guru.** `DRAFT — belum direview`, `Paket bawaan build`, `scaffold`, slug `bahasa-indonesia`, dan ID mentah `activity-001` di Hasil Belajar.
 3. **Konten belajar tenggelam oleh chrome.** Di 1080p, soal pertama berada di bawah lipatan karena badge + banner + tujuan + tab memakai ±545 px lebih dulu.
 
-Skor 6,5/10 dari review eksternal adalah **penilaian heuristik visual** (diakui sendiri oleh penulisnya), bukan hasil pengukuran. Review ini tidak memberi skor gabungan karena tidak ada usability test; gunakan daftar temuan dan kriteria penerimaan di §9.
+Skor 6,5/10 dari review eksternal adalah **penilaian heuristik visual** (diakui sendiri oleh penulisnya), bukan hasil pengukuran. Review ini tidak memberi skor gabungan karena tidak ada usability test; gunakan daftar temuan dan checklist di §9.2.
 
 ## 2. Metode, bukti, dan batas
 
@@ -30,7 +31,10 @@ Skor 6,5/10 dari review eksternal adalah **penilaian heuristik visual** (diakui 
 | Bukti kode | `src/screens/*`, `src/components/content/*`, `src/components/layout/*`, `src/components/ui/*`, `src/index.css` |
 | Kontras | Dihitung dari token CSS dengan rumus WCAG 2.x (bukan alat otomatis) |
 | Sudut pandang IFP | **INFERRED**: asumsi panel 65" 16:9, jarak 3 m, 1080 px CSS pada 100% scaling |
+| Objek review eksternal | Arsip `layout-pembelajaran-2026-10-26.zip` (7 screenshot yang sama), tanpa akses kode |
 | Tidak dinilai | Beranda dan Hasil Belajar **berisi data** (butuh jendela desktop/native); perilaku sentuh nyata di panel; tablet/Android; pengujian dengan anak atau guru |
+| Tidak dinilai (review eksternal) | Performa, keamanan/privasi, kebenaran pedagogis, ketahanan penyimpanan/sinkronisasi, dan aksesibilitas menurut standar — dinyatakan sendiri oleh penulisnya |
+| Audit aksesibilitas | Dokumen ini hanya menghitung rasio kontras token; skenario `npm run a11y` (`scripts/e2e/scenarios/a11y.mjs`, audit kustom) **tidak** dijalankan ulang di sesi ini; bukan audit WCAG penuh |
 
 Catatan kondisi: pratinjau browser tidak memiliki database lokal, sehingga Hasil Belajar tampil kosong dan banner “hasil belajar tidak disimpan” muncul dua kali. Ini **artefak pratinjau**, bukan perilaku aplikasi desktop.
 
@@ -70,7 +74,7 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 **UX-10 · Jelajah memindai lambat.** 48 kartu identik tanpa thumbnail (padahal aset WebP tersedia), 48 tombol biru identik, tanpa kode warna mapel, tanpa status selesai/belum ([CurriculumScreen.tsx:149-175](../../src/screens/CurriculumScreen.tsx#L149)); filter tanpa reset/chip aktif ([CurriculumScreen.tsx:88-141](../../src/screens/CurriculumScreen.tsx#L88)). → Kartu berilustrasi + warna mapel + status progres; klik seluruh kartu; chip filter + reset; kelompokkan per mapel.
 
-**UX-11 · Breadcrumb mati & tanpa jalan pulang.** “Beranda” bukan tautan ([TopBar.tsx:18](../../src/components/layout/TopBar.tsx#L18)); dari Player tidak ada kembali ke Jelajah atau materi berikutnya. → Jadikan breadcrumb interaktif; tambah “Materi berikutnya” setelah aktivitas selesai.
+**UX-11 · Breadcrumb mati & jalan pulang tidak konsisten.** “Beranda” bukan tautan ([TopBar.tsx:18](../../src/components/layout/TopBar.tsx#L18)); dari Player tidak ada kembali ke Jelajah atau materi berikutnya; navigasi langkah hanya ada di eksplorasi (`Sebelumnya`/`Lanjut` 44 px, [ExplorationActivity.tsx:155-169](../../src/components/content/ExplorationActivity.tsx#L155)), sedangkan matching/kuis hanya punya “Periksa” tanpa “Sebelumnya”. → Jadikan breadcrumb interaktif; samakan pola navigasi langkah di semua tipe aktivitas; tambah “Materi berikutnya”.
 
 **UX-12 · Profil tidak terlihat saat belajar.** Player tidak menampilkan profil aktif, padahal perangkat dipakai bergantian ([LessonPlayer.tsx:289](../../src/screens/LessonPlayer.tsx#L289)); Hasil Belajar justru menampilkannya. → Indikator profil di header (nama + tombol ganti) sebelum menyimpan attempt.
 
@@ -107,6 +111,21 @@ Direkomendasikan oleh review eksternal dan konsisten dengan kebutuhan produk (mo
 
 Konsekuensi: label internal (UX-04) tidak perlu dihapus dari produk — cukup dipindahkan ke Mode Pengelola/area debug.
 
+### 5.1 Prinsip UX yang disepakati
+
+Delapan prinsip dari berkas review eksternal (§6 di sana) disetujui karena cocok dengan temuan kode; kolom terakhir menunjukkan di mana prinsip itu punya konsekuensi konkret, supaya tidak berhenti sebagai slogan.
+
+| # | Prinsip | Konsekuensi di dokumen ini |
+|---|---|---|
+| 1 | **Content-first** — materi/aktivitas lebih dominan daripada chrome UI | UX-06 (soal di bawah lipatan), UX-01 (kolom 896 px) |
+| 2 | **Local-first clarity** — status lokal & sinkronisasi dijelaskan dalam bahasa pengguna | UX-07 (pesan ganda), status `saved`/`error` yang sudah ada (§8) |
+| 3 | **Progress over score** — tampilkan proses & penyelesaian, bukan hanya angka | UX-14 (progres tidak konsisten), UX-05 (copy hasil) |
+| 4 | **Accessible interaction** — alternatif tap selain drag-and-drop, dukungan keyboard | UX-15 (tanpa pressed state), P2 matching tap-to-match |
+| 5 | **Age-appropriate UI** — instruksi singkat, target besar, istilah sesuai usia | §6 skala IFP, UX-20 istilah campur |
+| 6 | **Consistent navigation** — posisi lanjut/kembali/progres tidak berubah tanpa alasan | UX-11 (breadcrumb mati, tanpa “materi berikutnya”), UX-13 |
+| 7 | **Graceful empty states** — halaman tanpa data tetap menjelaskan & menawarkan langkah | Hasil Belajar kosong, Aktivitas Interaktif, Jelajah tanpa hasil (sudah ada teks, belum ada CTA/reset) |
+| 8 | **Pedagogical feedback** — respons benar/salah membantu pemahaman & memberi kesempatan mengulang | UX-02 (tanpa penanda benar/salah), UX-03 (skor di luar viewport) |
+
 ## 6. Skala IFP — angka yang perlu diputuskan
 
 Asumsi **INFERRED**: panel 65" 16:9, 1080 px CSS, jarak pandang 3 m → 1 px ≈ 0,75 mm.
@@ -141,6 +160,16 @@ Review eksternal mengusulkan 16–18 px instruksi dan tombol 48–56 px. Itu cuk
 
 Kesimpulan: masalah desain bukan palet, melainkan **skala, hierarki, dan state interaksi**. Mengganti palet hanya menambah churn tanpa memperbaiki UX-01/02/03.
 
+### 7.1 Ilustrasi & ikon
+
+Aturan dari review eksternal (§5.3 di sana), disesuaikan dengan kondisi aset project:
+
+1. **Satu gaya per layar.** Jangan mencampur ikon outline, ilustrasi datar, dan karakter 3D dalam satu tampilan tanpa aturan eksplisit.
+2. **Ilustrasi menjelaskan konsep**, bukan dekorasi; kalau tidak menambah pemahaman, hapus.
+3. **Gambar tidak boleh menggeser keterbacaan**: instruksi dan opsi jawaban tetap ≥20 px (Mode Siswa), area gambar maksimal ±60% tinggi konten pada 1080p (§6).
+4. **Katalog memakai aset yang sudah ada.** 320 paket sudah memiliki aset WebP cover/materi, tetapi `CurriculumScreen` belum menampilkan satu pun ([CurriculumScreen.tsx:149-175](../../src/screens/CurriculumScreen.tsx#L149)) — ini UX-10, bukan pekerjaan desain baru.
+5. **Ikon navigasi**: satu set, 24–32 px, selalu berpasangan dengan label teks; jangan ikon saja untuk anak kelas awal.
+
 ## 8. Rekonsiliasi dengan review eksternal
 
 | Poin review eksternal | Status di dokumen ini | Catatan |
@@ -150,11 +179,32 @@ Kesimpulan: masalah desain bukan palet, melainkan **skala, hierarki, dan state i
 | Teks & tombol diperbesar | **Setuju, dengan koreksi** | 16–18 px/48–56 px kurang untuk IFP; lihat §6 |
 | Matching dropdown → kartu tap/drag | **Setuju** | Data `pairs` sudah ada; tidak perlu ubah skema |
 | Umpan balik benar/salah | **Setuju** | Dipertajam: kunci jawaban wajib tampil (UX-02) |
-| Hasil Belajar 3 state | **Setuju** | Tambahan: state “belum ada hasil” harus punya CTA, dan data harus diverifikasi di desktop |
+| Hasil Belajar 4 state (kosong / lokal / menunggu sinkron / gagal) | **Setuju** | Tambahan: state “belum ada hasil” harus punya CTA, dan data harus diverifikasi di desktop |
 | Aktivitas Interaktif terlalu kosong | **Setuju** | Item nav sebaiknya disembunyikan sampai siap (UX-04/13) |
 | Ganti palet/token | **Ditolak (sebagian)** | Palet hampir sama; teal usulan tetap gagal kontras |
 | Tidak menangkap defect kode | **Tambahan** | UX-02/04/05/11/12/16–18 tidak terlihat dari screenshot |
 | Inter untuk tipografi | **Ditunda** | Perlu keputusan desain; bukan blocker |
+| Matching diprioritaskan P1 (literasi kelas awal) | **Tidak diikuti — tetap P2** | Kontrak `pairs` sudah memadai dan dampak P1 Player lebih besar; naikkan ke P1 bila pilot kelas 1 literasi dijadwalkan lebih dulu (D-UX-6) |
+| “Satukan Sebelumnya, Lanjut, dan indikator langkah” | **Setuju + koreksi fakta** | `Sebelumnya`/`Lanjut` sudah ada, tetapi hanya di eksplorasi langkah ([ExplorationActivity.tsx:155-169](../../src/components/content/ExplorationActivity.tsx#L155)); matching/kuis tidak memilikinya. Masuk P1 sebagai konsistensi, bukan fitur baru |
+| “Pencarian dan filter tersedia” | **Diverifikasi akurat** | Pencarian (`query`) dan filter kelas/mapel benar-benar memfilter ([CurriculumScreen.tsx:55-64](../../src/screens/CurriculumScreen.tsx#L55)); yang hilang hanya reset/chip (UX-10) |
+| “Jangan nyatakan data tersimpan/aman tanpa konfirmasi aplikasi” | **Sebagian sudah dipenuhi** | Player sudah punya status `saved`/`error` eksplisit ([LessonPlayer.tsx:27-33](../../src/screens/LessonPlayer.tsx#L27)); yang tersisa: duplikasi & bahasa teknis (UX-07) serta pesan pratinjau yang muncul di layar siswa |
+| Aksesibilitas | **Di luar lingkup review eksternal** | Review eksternal menyatakan tidak mengaudit a11y; dokumen ini hanya menghitung kontras token (§2) |
+
+### 8.1 Skor heuristik eksternal per area
+
+Angka berikut berasal dari berkas eksternal (§3 di sana), dihitung dari screenshot tanpa akses kode. Dicatat untuk melacak prioritas penulisnya — **bukan** hasil pengukuran dan tidak digabung menjadi skor dokumen ini.
+
+| Area | Skor eksternal | Catatan |
+|---|---:|---|
+| Struktur navigasi | 7/10 | Konsisten dengan §3 dokumen ini |
+| Katalog materi | 7/10 | Berlebihan bila dibanding UX-10 (48 kartu identik tanpa thumbnail) |
+| Player pembelajaran | 7/10 | Inkonsisten dengan temuan utama penulisnya sendiri (“peluang peningkatan terbesar”); UX-01/02/03 menunjukkan masalah yang lebih dalam |
+| Aktivitas mencocokkan | 5/10 | Sesuai UX-02/09 |
+| Kuis | 6/10 | Sesuai UX-02/03/19 |
+| Aktivitas Interaktif | 4/10 | Sesuai UX-04/13 (placeholder) |
+| Hasil Belajar | 4/10 | Hanya menilai kondisi kosong; layar berisi data belum pernah dilihat |
+| Konsistensi visual | 7/10 | Sesuai §3 |
+| **Keseluruhan** | **6,5/10** | Heuristik visual, diakui penulisnya |
 
 ## 9. Roadmap gabungan + kriteria penerimaan
 
@@ -192,6 +242,44 @@ Kesimpulan: masalah desain bukan palet, melainkan **skala, hierarki, dan state i
 3. Tablet/Android & layout 1280; state loading/error yang konsisten.
 4. Pemisahan navigasi per peran.
 
+### 9.1 State interaksi wajib
+
+Daftar dari review eksternal (§5.4 di sana) dengan status aktual di kode. Kolom status adalah bukti, bukan penilaian.
+
+| State | Dipakai pada | Status sekarang |
+|---|---|---|
+| default | semua kontrol | Ada |
+| hover | perangkat berpointer | Ada (`hover:opacity-90`), tetapi tidak terasa di layar sentuh |
+| focus | semua kontrol | Ada — `:focus-visible` 3 px ([index.css:3](../../src/index.css#L3)) |
+| selected | opsi kuis, tab, filter | Ada (`checked`, `aria-selected`, nilai select) |
+| correct | opsi/kartu setelah dinilai | **Tidak ada** (UX-02) |
+| incorrect | opsi/kartu setelah dinilai | **Tidak ada**; matching hanya menulis “Salah” 14 px ([MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83)) |
+| disabled | CTA “Periksa” | Ada, tetapi tanpa alasan (UX-09) |
+| loading | katalog, player, ekspor | Katalog (`Memuat materi…`) dan player (`Memuat konten…`, [LessonPlayer.tsx:178-181](../../src/screens/LessonPlayer.tsx#L178)) ada; ekspor hanya menonaktifkan tombol tanpa label proses ([ResultsScreen.tsx:104](../../src/screens/ResultsScreen.tsx#L104)) |
+| error | katalog, penyimpanan, ekspor | Ada di katalog, penyimpanan (`saved`/`error`), ekspor, dan Hasil Belajar |
+| completed | tab/langkah setelah selesai | **Tidak ada** (UX-14) |
+| pressed/active | CTA sentuh (tambahan dokumen ini) | **Tidak ada** (UX-15) |
+
+Kesimpulan dari tabel: celah state bukan pada loading/error (yang sudah ditangani), melainkan pada **umpan balik jawaban (`correct`/`incorrect`)**, **penyelesaian (`completed`)**, dan **respons sentuh (`pressed`)** — tiga hal yang paling terasa oleh siswa.
+
+### 9.2 Checklist penerimaan gabungan
+
+Dipakai sebelum menyatakan redesign selesai — digabung dari §8 berkas eksternal dan kriteria P0/P1 di atas. Tidak ada item yang boleh dicentang tanpa bukti screenshot/uji.
+
+- [ ] Siswa dapat menemukan dan membuka materi tanpa kebingungan (uji tugas, bukan opini).
+- [ ] Instruksi dipahami tanpa membaca paragraf panjang.
+- [ ] Semua tombol utama mudah dikenali; tidak ada target <56 px di Mode Siswa.
+- [ ] Setiap jawaban punya status benar/salah **dan** kunci jawaban (UX-02).
+- [ ] Navigasi maju/mundur konsisten di semua tipe aktivitas (sekarang hanya eksplorasi yang punya `Sebelumnya`/`Lanjut`).
+- [ ] Halaman tanpa data punya pesan dan CTA tindakan (Hasil Belajar, Aktivitas Interaktif, Jelajah tanpa hasil).
+- [ ] Status penyimpanan/sinkronisasi tidak menyesatkan; aplikasi tidak mengklaim “tersimpan” sebelum konfirmasi.
+- [ ] Soal pertama dan skor terlihat tanpa menggulir pada 1080p.
+- [ ] Tampilan terbaca pada 1920×1080 dan 4K sesuai §6.
+- [ ] Interaksi inti dapat diselesaikan tanpa drag-and-drop.
+- [ ] Tidak ada ID mentah, slug, DRAFT, atau “scaffold” di layar siswa.
+- [ ] Guru/pengelola tetap efisien mengakses fungsi administrasi (Mode Pengelola).
+- [ ] Hasil uji dengan siswa/guru nyata dipakai memvalidasi keputusan desain.
+
 ## 10. Keputusan terbuka (bukan milik agent)
 
 | ID | Keputusan | Pemilik | Dampak bila ditunda |
@@ -201,10 +289,12 @@ Kesimpulan: masalah desain bukan palet, melainkan **skala, hierarki, dan state i
 | D-UX-3 | Inter vs Segoe UI | Desain | Churn font tanpa manfaat jelas |
 | D-UX-4 | Perlakuan metadata DRAFT/versi | PO + Curriculum Lead | Guru melihat status draft secara menyesatkan |
 | D-UX-5 | Bentuk matching (kartu vs select) | Desain + QA sentuh | UX-02/P2 tertahan |
+| D-UX-6 | Prioritas matching P1 (literasi kelas 1) vs P2 (semua kelas) | PO + desain | Menentukan urutan P1/P2 pada pilot pertama |
 
 ## 11. Traceability & batas klaim
 
 - Semua tautan kode di dokumen ini menunjuk baris yang dibaca langsung pada 2026-10-26; tidak ada nomor baris yang dikarang.
+- Berkas eksternal `review-layout-pembelajaran-gerbang-edukasi.md` (337 baris, 14.998 byte, diunduh 2026-10-26 dari tautan share) dibaca penuh; isi yang digabung ditandai di §5.1, §7.1, §8.1, §9.1–§9.2. Klaimnya tidak naik menjadi VERIFIED tanpa pengecekan kode (lihat §8).
 - Angka kontras dihitung dari token di `src/index.css`; angka sudut pandang adalah **estimasi** dengan asumsi yang dinyatakan.
 - Screenshot berada di folder sementara (git-ignored); dokumen ini tidak mengklaim screenshot sebagai artefak rilis.
 - Tidak ada pengujian dengan siswa/guru, tidak ada pengukuran waktu tugas, tidak ada klaim peningkatan hasil belajar.
@@ -212,7 +302,12 @@ Kesimpulan: masalah desain bukan palet, melainkan **skala, hierarki, dan state i
 
 ## 12. Langkah berikutnya
 
+Urutan gabungan (menggantikan urutan P0–P3 bila keduanya bertabrakan): **P0 → prototipe → uji → P1**.
+
 1. Putuskan D-UX-1 dan D-UX-2.
 2. Eksekusi P0 (perubahan kecil, dapat diverifikasi dengan screenshot + a11y).
 3. Verifikasi Hasil Belajar **di desktop dengan data nyata** sebelum mendesain ulang layar tersebut.
-4. Susun prototipe alur kelas 1: Jelajah → Player → Aktivitas → Kuis → Hasil, memakai baseline skala IFP.
+4. Susun prototipe alur kelas 1: Jelajah → Player → Aktivitas → Kuis → Hasil, memakai baseline skala IFP §6.
+5. Render prototipe di 1920×1080, 4K, dan 1280; tandai ukuran teks/tombol terkecil yang masih terbaca dari ±3 m.
+6. Uji dengan 5 siswa kelas 1 + 2 guru memakai tugas nyata; catat waktu tugas, kesalahan, dan bantuan yang diminta.
+7. Implementasikan komponen bersama + seluruh state di §9.1, lalu terapkan pola ke mapel/kelas lain.
