@@ -497,3 +497,22 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Catatan:** tambahan bundel ±1,46 MB (kelas 118–196 KB; mapel 60–102 KB); kartu materi di grid tetap memakai thumbnail aset paket karena itu thumbnail isi materi. Cover kelas membedakan gaya: kelas 1–3 chibi, kelas 4–6 semi-realistis.
 
 **Sisa:** cover belum dipakai di layar lain (mis. header Player); belum ada rotasi cover.
+
+### Handoff Layout Konten Materi (2026-10-27, T-083)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: perbaiki layout konten materi karena banyak ruang kosong.
+
+**Diagnosis terukur (sebelum):** kontainer Player dipatok `max-w-4xl` (896 px) di tengah area utama 1152 px; gambar eksplorasi `max-w-xl` → hanya 601×431 px; kartu “Tujuan pembelajaran” 896 px dengan teks terisi ±40 %; kolom kanan kosong total pada IFP 1920 px.
+
+**Perubahan kode:**
+- `src/screens/LessonPlayer.tsx` — kontainer luar `max-w-4xl` → `max-w-[1400px]`; `LessonView` disusun ulang sebagai grid `lg:grid-cols-[minmax(0,1fr)_20rem]` / `xl:…22rem` (`gap-x-6 gap-y-5`): tab + panel aktivitas di kolom kiri, pesan penyimpanan + kartu “Tujuan pembelajaran” di kolom kanan (`data-player-aside`, `lg:sticky lg:top-6`); judul `max-w-4xl`, ringkasan `max-w-3xl`. Kolom kanan memakai `<div>` bukan `<aside>` agar tidak rancu dengan sidembar admin (deteksi mode E2E).
+- `src/components/content/ExplorationActivity.tsx` — gambar langkah: `w-full max-w-xl` → `mx-auto max-h-[60vh] w-auto max-w-full` (IFP 1080 px → ±864×648 px).
+- `scripts/e2e/scenarios/activities.mjs` — pemeriksaan layout baru (kolom samping ada & di kanan panel, panel ≥ 55 % lebar grid pada ≥ 1024 px, `position: sticky`, ada ruang menempel, tanpa gulir horizontal) + uji menempel saat menggulir bila halaman dapat digulir. **10 pemeriksaan.**
+- `scripts/e2e/scenarios/a11y.mjs` — penanda mode diganti `nav[aria-label="Navigasi utama"]`; tambah pemeriksaan overflow horizontal Player pada 1600×900.
+- `scripts/e2e/scenarios/mode-switch.mjs` — menunggu rail belajar muncul setelah muat ulang (menghapus balapan sidebar admin).
+
+**Verifikasi aktual:** `npm test` **101/101** + fixture 4/4 + catalog 320/320 · `npm run build` PASS · `npm run a11y` **17/17** (0 error, 7 warning) · E2E **activities 10/10** (`panel 889px, samping 352px; 312px dalam grid 700px, position sticky` pada 1600 px) · **learning-journey 11/11** · **home-catalog 18/18** · **mode-switch 6/6** · **smoke 8/8**. Ukuran sesudah pada viewport 1247 px: grid 1088 px, panel 744 px, kolom samping 320 px (x=880), tanpa gulir horizontal. Bukti visual: `activities.png`, `a11y-mode-belajar.png`. `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Catatan:** flake tulis-perdana dan kedipan sidebar saat boot dicatat sebagai utang teknis di BACKLOG; keduanya tidak disebabkan perubahan layout.
+
+**Sisa:** kolom samping masih kosong di bawah kartunya bila panel aktivitas jauh lebih tinggi; ruang vertikal bawah Player belum dimanfaatkan (mis. ringkasan progres); cover khusus belum dipakai di header Player.
