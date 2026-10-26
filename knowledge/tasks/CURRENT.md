@@ -532,3 +532,16 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Verifikasi aktual:** `npm test` **103/103** (14 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 19/19**, **activities 10/10**, **learning-journey 11/11**, **content-rollback 9/9**, **smoke 8/8**, **a11y 17/17** (0 error, 7 warning) · uji manual: klik “Zakat dan Infak” → `h1` “Zakat dan Infak”. `cargo test` tidak dijalankan (tanpa perubahan Rust).
 
 **Sisa:** seleksi hanya di memori — muat ulang langsung di `#player` kembali ke paket pertama; belum ada deep link materi di hash.
+
+### Handoff Sisa Layout Player (2026-10-27, T-085)
+
+**Status:** selesai dan terverifikasi. PO memilih tiga sisa item T-083: isi ruang kosong kolom samping, manfaatkan ruang vertikal bawah, pakai cover khusus di header Player.
+
+**Perubahan kode:**
+- `src/screens/LessonPlayer.tsx` — header `data-player-hero` (badge + judul + ringkasan di kiri; cover 16:9 `data-player-cover` di kanan, sumber: gambar pertama `manifest.assets` → `lesson.assetRefs` → `subjectCoverUrl` → `gradeCoverUrl`); kartu `data-player-progress` “Aktivitas & kemajuan” (`role="progressbar"`, bar teal, status per aktivitas `Skor N`/`Dibuka`/`Belum`, label “sesi ini”); band `data-session-summary` lebar penuh dengan Aktivitas dinilai, Skor terakhir, Rata-rata aktivitas, dan tombol Buka Hasil Belajar; prop opsional `onNavigate`.
+- `src/App.tsx` — `<LessonPlayer onNavigate={navigate} />`.
+- `scripts/e2e/scenarios/activities.mjs` — 4 pemeriksaan baru (header+cover termuat, kartu kemajuan, ringkasan ikut diperbarui, tombol Hasil Belajar), artefak `activities-hero.png`; probe sticky kini memakai `document.scrollingElement` dan ambang 24 px. **14 pemeriksaan.**
+
+**Verifikasi aktual:** `npm test` **103/103** (14 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **activities 14/14** (layout 1600 px: panel 889 px, samping 352/566 px dalam grid 700 px) · **home-catalog 19/19** · **a11y 17/17** (0 error, 7 warning) · **learning-journey 11/11** · **content-rollback 9/9** · **smoke 8/8**. `cargo test` tidak dijalankan (tanpa perubahan Rust). Commit `f80ff8f`.
+
+**Sisa:** cover header = gambar pertama manifest, jadi paket >1 lesson akan berbagi cover (belum ada paket seperti itu); kartu kemajuan hanya sesi berjalan (riwayat per aktivitas belum dimuat dari DB); jendela sticky belum teruji pada 1600×900 (jarak gulir dokumen 227 px) dan belum dilihat di IFP 1920 px asli.

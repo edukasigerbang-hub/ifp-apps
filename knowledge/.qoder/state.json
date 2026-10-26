@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "63d3702",
+  "commit": "f80ff8f",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 23,
+  "context_version": 24,
   "skill_registry_version": 0,
   "current_task": "Review manusia R1–R6/R8–R9/R12 atas 320 paket; pra-review agent (T-072) selesai sebagai bahan, bukan approval",
-  "last_task": "T-084 seleksi materi Player: getPlaybackSelection idempoten (bukan baca-hapus) supaya StrictMode tidak jatuh ke paket pertama",
+  "last_task": "T-085 sisa layout Player: cover khusus di header, kartu Aktivitas & kemajuan, band Ringkasan sesi + tombol Hasil Belajar",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-27T02:25:00+07:00",
-  "last_validation": "T-084 (2026-10-27): consumePlaybackSelection terbukti dipanggil dua kali per klik ([\"kelas6-pai-b06-zakat\", null]) sehingga semua materi jatuh ke paket pertama; diganti getPlaybackSelection idempoten. npm test 103/103 (14 berkas) + fixture 4/4 + catalog 320/320; npm run build PASS; E2E home-catalog 19/19 (termasuk buka materi paket lain), activities 10/10, learning-journey 11/11, content-rollback 9/9, smoke 8/8, a11y 17/17 (0 error, 7 warning); cargo test tidak dijalankan (tanpa perubahan Rust).",
+  "last_updated": "2026-10-27T02:31:00+07:00",
+  "last_validation": "T-085 (2026-10-27): header Player memakai cover paket (manifest image → lesson.assetRefs → cover mapel/kelas), kartu progres sesi, dan band ringkasan sesi. npm test 103/103 (14 berkas) + fixture 4/4 + catalog 320/320; npm run build PASS; E2E activities 14/14 (cover termuat naturalWidth>0, progres 1/5→5/5, ringkasan sesi, tombol Hasil Belajar), home-catalog 19/19, a11y 17/17 (0 error, 7 warning), learning-journey 11/11, content-rollback 9/9, smoke 8/8; probe sticky E2E kini menggulir document.scrollingElement dan dilaporkan tidak teruji (jendela ±6 px pada 1600x900); cargo test tidak dijalankan (tanpa perubahan Rust).",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Verifikasi manual di app desktop: buka beberapa materi berbeda di Player dan pastikan judul mengikuti pilihan (T-084); Reviewer manusia menilai R1-R6/R8-R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Coba di app desktop: layout Player dua kolom (T-083) pada IFP 1920 px asli, cover kelas/mapel khusus di tile & Beranda (T-082), ganti foto profil di Pengaturan, cek dua mode, lalu verifikasi visual Hasil Belajar berisi data + NVDA. Dua utang teknis baru di BACKLOG: timeout tulis-perdana di E2E dan kedipan sidebar admin saat boot. Keputusan desain yang memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
+  "next_step": "Verifikasi manual di app desktop: buka beberapa materi berbeda di Player, lihat cover di header, kartu Aktivitas & kemajuan, dan band Ringkasan sesi pada IFP 1920 px asli (T-085); Reviewer manusia menilai R1-R6/R8-R9/R12 memakai paket pra-review pada knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; verifikasi CP/ATP per bab. Coba di app desktop: cover kelas/mapel khusus di tile & Beranda (T-082), ganti foto profil di Pengaturan, cek dua mode, lalu verifikasi visual Hasil Belajar berisi data + NVDA. Utang teknis di BACKLOG: timeout tulis-perdana E2E, kedipan sidebar admin saat boot, main#main-content overflow-y-auto tidak pernah menggulir (dokumen yang menggulir) sehingga jendela uji sticky sempit. Keputusan desain yang memblokir sisa UX: D-UX-2 (skala IFP), D-UX-4 (metadata), D-UX-5 (bentuk matching), D-UX-6 (prioritas matching). reviewStatus tetap draft"
 }
