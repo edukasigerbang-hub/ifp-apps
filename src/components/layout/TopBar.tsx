@@ -3,9 +3,10 @@ import { OfflineIndicator } from "../ui/OfflineIndicator";
 
 interface TopBarProps {
   activeScreen: ScreenId;
+  onNavigate: (screen: ScreenId) => void;
 }
 
-export function TopBar({ activeScreen }: TopBarProps) {
+export function TopBar({ activeScreen, onNavigate }: TopBarProps) {
   const item = findNavItem(activeScreen);
 
   return (
@@ -15,7 +16,15 @@ export function TopBar({ activeScreen }: TopBarProps) {
           <ol className="flex items-center gap-2">
             {activeScreen !== "home" && (
               <>
-                <li>Beranda</li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => onNavigate("home")}
+                    className="rounded px-1 py-0.5 hover:text-ink hover:underline"
+                  >
+                    Beranda
+                  </button>
+                </li>
                 <li aria-hidden="true">/</li>
               </>
             )}

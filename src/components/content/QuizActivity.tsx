@@ -113,7 +113,8 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
   return (
     <div>
       <p className="text-sm text-muted">
-        Jawab semua soal, lalu periksa jawaban. Nilai lulus: {passingScore}. Terjawab {answeredCount} dari {questions.length}.
+        Jawab semua soal, lalu periksa jawaban. Skor minimal lulus: {passingScore} dari 100.
+        Terjawab {answeredCount} dari {questions.length}.
       </p>
 
       <div className="mt-5 space-y-5">
@@ -213,7 +214,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
             </p>
             <p className="mt-1 text-sm text-muted">
               {result.passed
-                ? "Bagus! Kamu sudah memahami pecahan sederhana."
+                ? "Kerja bagus! Jawabanmu sudah tepat."
                 : "Belum apa-apa. Ayo baca lagi penjelasannya, lalu coba sekali lagi."}
             </p>
           </div>

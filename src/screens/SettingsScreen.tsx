@@ -425,7 +425,7 @@ export function SettingsScreen() {
                                 ? "Profil terakhir tidak dapat dihapus"
                                 : undefined
                             }
-                            className="min-h-11 rounded-control border border-danger/40 px-4 text-sm font-medium text-danger hover:bg-danger/5 disabled:opacity-40"
+                            className="min-h-11 rounded-control border border-danger/40 px-4 text-sm font-medium text-danger-strong hover:bg-danger/5 disabled:opacity-40"
                           >
                             Hapus
                           </button>
@@ -436,7 +436,7 @@ export function SettingsScreen() {
                     {candidate && (
                       <div className="border-t border-ink/10 p-3">
                         {candidate.requiresData ? (
-                          <p className="text-sm text-danger">{candidate.message}</p>
+                          <p className="text-sm text-danger-strong">{candidate.message}</p>
                         ) : (
                           <p className="text-sm">
                             Hapus profil "{profile.displayName}"? Tindakan ini tidak dapat
@@ -505,7 +505,7 @@ export function SettingsScreen() {
             {profileMessage ?? ""}
           </p>
           {profileError && (
-            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
               {profileError}
             </p>
           )}
@@ -524,7 +524,7 @@ export function SettingsScreen() {
         )}
 
         {state.status === "error" && (
-          <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+          <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
             {state.message}
           </p>
         )}
@@ -607,7 +607,7 @@ export function SettingsScreen() {
             {backupMessage ?? ""}
           </p>
           {backupError && (
-            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
               {backupError}
             </p>
           )}
@@ -668,7 +668,7 @@ export function SettingsScreen() {
               {preferencesMessage ?? ""}
             </p>
             {preferencesError && (
-              <p className="rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              <p className="rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
                 {preferencesError}
               </p>
             )}
@@ -695,7 +695,7 @@ export function SettingsScreen() {
               {diagnosticsMessage ?? ""}
             </p>
             {diagnosticsError && (
-              <p className="mt-2 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              <p className="mt-2 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
                 {diagnosticsError}
               </p>
             )}

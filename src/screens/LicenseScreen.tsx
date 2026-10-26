@@ -216,7 +216,7 @@ export function LicenseScreen() {
               {message ?? ""}
             </p>
             {error && (
-              <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
                 {error}
               </p>
             )}

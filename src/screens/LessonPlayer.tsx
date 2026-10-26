@@ -5,6 +5,7 @@ import { OrderingActivity } from "../components/content/OrderingActivity";
 import { QuizActivity, type QuizGradedOutcome } from "../components/content/QuizActivity";
 import { StatusBadge, type StatusTone } from "../components/ui/StatusBadge";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
+import { subjectLabel } from "../content/subjectLabel";
 import { consumePlaybackSelection } from "../state/playbackSelection";
 import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
 import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
@@ -29,7 +30,7 @@ const storageClasses: Record<StorageStatus, string> = {
   ready: "border-ink/10 bg-paper text-muted",
   saving: "border-ink/10 bg-paper text-muted",
   saved: "border-teal/30 bg-teal/5 text-ink",
-  error: "border-danger/30 bg-danger/5 text-danger",
+  error: "border-danger/30 bg-danger/5 text-danger-strong",
   preview: "border-warning/40 bg-warning/10 text-ink"
 };
 
@@ -229,7 +230,8 @@ export function LessonPlayer() {
                 >
                   <span className="block text-sm font-medium">{summary.title}</span>
                   <span className={`mt-0.5 block text-xs ${active ? "text-white/70" : "text-muted"}`}>
-                    Kelas {summary.gradeLevels.join(", ")} · {summary.subjects.join(", ")} · v
+                    Kelas {summary.gradeLevels.join(", ")} ·{" "}
+                    {summary.subjects.map(subjectLabel).join(", ")} · v
                     {summary.version}
                   </span>
                 </button>
@@ -296,7 +298,10 @@ function LessonView({
         });
         if (!cancelled) {
           setSessionId(session.sessionId);
-          setStorage({ status: "ready", message: "Penyimpanan lokal siap." });
+          setStorage({
+            status: "ready",
+            message: "Penyimpanan lokal siap. Hasil belum disinkronkan ke server."
+          });
         }
       } catch (error) {
         if (!cancelled) {
@@ -364,7 +369,10 @@ function LessonView({
           isCorrect: answer.isCorrect
         }))
       });
-      setStorage({ status: "saved", message: `Tersimpan lokal — percobaan ke-${attempt.attemptNo}.` });
+      setStorage({
+        status: "saved",
+        message: `Tersimpan lokal — percobaan ke-${attempt.attemptNo}. Belum disinkronkan ke server.`
+      });
       notifyOutboxChanged();
     } catch (error) {
       setStorage({
@@ -388,7 +396,8 @@ function LessonView({
         />
         <span className="text-sm text-muted">
           Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
-          {contentPackage.data.manifest.subjects.join(", ")} · v{contentPackage.data.manifest.packageVersion}
+          {contentPackage.data.manifest.subjects.map(subjectLabel).join(", ")} · v
+          {contentPackage.data.manifest.packageVersion}
         </span>
       </div>
 
@@ -506,12 +515,6 @@ function LessonView({
           </p>
         )}
       </section>
-
-      <p className="mt-4 text-xs text-muted">
-        {canPersistLocally()
-          ? "Hasil kuis disimpan di perangkat ini dan belum disinkronkan ke server."
-          : "Pratinjau browser: hasil tidak disimpan. Data hanya tersedia di aplikasi desktop."}
-      </p>
     </div>
   );
 }

@@ -82,7 +82,7 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
               </label>
               {correct !== null && (
                 <span
-                  className={`text-sm font-medium ${correct ? "text-teal" : "text-danger"}`}
+                  className={`text-sm font-medium ${correct ? "text-teal-strong" : "text-danger-strong"}`}
                 >
                   {correct ? "Benar" : "Salah"}
                 </span>
@@ -106,16 +106,23 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
         )}
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-6 flex flex-wrap items-center gap-4">
         {result === null ? (
-          <button
-            type="button"
-            onClick={submit}
-            disabled={!allAnswered}
-            className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            Periksa pasangan
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={submit}
+              disabled={!allAnswered}
+              className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Periksa pasangan
+            </button>
+            {!allAnswered && (
+              <p className="text-sm text-muted">
+                Lengkapi {pairs.length - answered} pasangan lagi untuk memeriksa.
+              </p>
+            )}
+          </>
         ) : (
           <button
             type="button"

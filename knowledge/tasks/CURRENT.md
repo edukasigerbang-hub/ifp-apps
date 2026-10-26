@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan keputusan); sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -84,6 +84,7 @@
 | T-072 | Pra-review agent R1–R6/R8–R9/R12 | 320 paket dipindai deterministik: R1 66 paket sinyal, R3 40, R4 0, R5 184 (170 matching identik dengan langkah eksplorasi, 91 bias posisi kunci), R6/R8/R9 bersih, R12 1 temuan label PAI. **Bukan approval**; `reviewStatus` tetap `draft` — [laporan](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) |
 | T-073 | Perbaikan pemuatan paket bawaan | `packageDirOf` di `src/content/loadPackages.ts` salah menurunkan direktori untuk modul `lessons/`/`activities/`, sehingga Player menampilkan “Paket bawaan gagal divalidasi” dan Beranda 0 paket. Diperbaiki + unit test `loadPackages.test.ts`; paket bawaan terbuka di Player |
 | T-074 | Dokumen review UX/UI gabungan | 7 screenshot full-page + audit kode + review eksternal digabung menjadi [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](../design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md): 20 temuan (5 P1, 10 P2, 5 P3), 8 prinsip UX, matriks 10 state interaksi, checklist 13 item, rekomendasi dua mode, baseline skala IFP, roadmap P0–P3, 6 keputusan terbuka. Berkas eksternal `.md` (337 baris/14.998 byte) diunduh & isinya digabung; 4 klaimnya dikoreksi setelah cek kode. **Bukan approval**; tidak ada usability test |
+| T-075 | Eksekusi P0 UX yang tidak bergantung keputusan | 5 dari 6 butir P0 selesai: copy netral + istilah “Skor”, `subjectLabel()` bersama (Home/Curriculum/Player/Results), token kontras `teal-strong`/`danger-strong`, breadcrumb Beranda jadi tombol + alasan disabled matching, satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. `npm test` 89/89, build PASS; verifikasi DOM + 1 screenshot |
 
 ## Status prasyarat materi pembelajaran
 
@@ -136,6 +137,13 @@
 | Sampel baca stratifikasi (T-072) | **ADA** — 40 paket (1 per sel kelas×mapel), teks apa adanya untuk ahli mapel |
 | Pemuatan paket bawaan (T-073) | **PASS** — bug `packageDirOf` diperbaiki; Player membuka paket bawaan (Kelas 1 Bahasa Indonesia, 3 aktivitas, 5 langkah); `npm test` 86/86; `npm run build` PASS |
 | E2E home/journey setelah T-073 | **NOT RUN** — aplikasi desktop sedang berjalan (harness menolak start bila app aktif) |
+| Perbaikan P0 UX (T-075) | **PASS (sebagian)** — copy, label subjek, kontras, breadcrumb/hint, satu pesan penyimpanan selesai; metadata internal tertahan D-UX-1/D-UX-4 |
+| `npm test` (T-075) | **PASS** — 89/89 unit test + fixture 4/4 + catalog 320 entri/320 paket |
+| `npm run build` (T-075) | **PASS** — `tsc --noEmit` + Vite; 2082 modul ditransformasi; utilitas `text-teal-strong`/`text-danger-strong` ada di CSS hasil build |
+| Verifikasi DOM (T-075) | **PASS** — opsi mapel “Bahasa Indonesia/PAI/PJOK/Pendidikan Pancasila”, breadcrumb pindah ke `#home`, hint “Lengkapi 6 pasangan lagi”, copy kuis “Skor minimal lulus: 75 dari 100”, eksplorasi “menyelesaikan 5 langkah”, satu pesan pratinjau |
+| Verifikasi Hasil Belajar dengan data (T-075) | **NOT RUN** — data lokal hanya ada di jendela desktop; browser pratinjau menampilkan state kosong |
+| Screenshot ulang P0 (T-075) | **PARTIAL** — `p0-01-kurikulum-label.png` tersimpan; screenshot Player gagal karena surface in-app Browser tersembunyi (`NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`) |
+| `npm run a11y` (T-075) | **NOT RUN** — belum dijalankan pada perubahan ini |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -298,6 +306,20 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 
 **Merge berkas eksternal (2026-10-26):** `review-layout-pembelajaran-gerbang-edukasi.md` diunduh dari share page (tombol “Download file” membuka URL raw; pointer click gagal karena surface browser tersembunyi, tombol dipicu via DOM satu kali) → 337 baris/14.998 byte UTF-8. Isi unik digabung: 8 prinsip UX (§5.1), aturan ilustrasi/ikon (§7.1), skor heuristik per area (§8.1), matriks state interaksi (§9.1), checklist 13 item (§9.2), urutan P0 → prototipe → uji → P1 (§12). Berkas asli tidak di-commit (karya pihak ketiga); substansi masuk dokumen kanonik dengan atribusi.
 
-**Koreksi setelah cek kode:** review eksternal menyebut player belum punya state memuat/penyimpanan eksplisit dan `Sebelumnya` belum ada — setelah verifikasi, `Memuat konten…` ada ([LessonPlayer.tsx:178-181](../../src/screens/LessonPlayer.tsx#L178)), storage `saved`/`error` ada ([LessonPlayer.tsx:27-33](../../src/screens/LessonPlayer.tsx#L27)), dan `Sebelumnya`/`Lanjut` ada di eksplorasi ([ExplorationActivity.tsx:155-169](../../src/components/content/ExplorationActivity.tsx#L155)); celah sebenarnya adalah konsistensi antar tipe aktivitas.
+**Koreksi setelah cek kode:** review eksternal menyebut player belum punya state memuat/penyimpanan eksplisit dan `Sebelumnya` belum ada — setelah verifikasi, `Memuat konten…` ada ([LessonPlayer.tsx:179-185](../../src/screens/LessonPlayer.tsx#L179)), storage `saved`/`error` ada ([LessonPlayer.tsx:28-34](../../src/screens/LessonPlayer.tsx#L28)), dan `Sebelumnya`/`Lanjut` ada di eksplorasi ([ExplorationActivity.tsx:156-170](../../src/components/content/ExplorationActivity.tsx#L156)); celah sebenarnya adalah konsistensi antar tipe aktivitas.
 
 **Catatan bukti:** screenshot ada di `F:\_ifp-apps\.tmp-screenshots\` (git-ignored; zip `layout-pembelajaran-2026-10-26.zip`); Hasil Belajar berisi data **belum** diverifikasi karena butuh jendela desktop.
+
+### Handoff Eksekusi P0 UX (2026-10-26, T-075)
+
+**Status:** 5 dari 6 butir P0 di [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](../design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md) selesai. Butir 3 (sembunyikan metadata internal) **tidak dieksekusi** karena menunggu D-UX-1 (dua mode) dan D-UX-4 (perlakuan metadata).
+
+**Perubahan:**
+- Copy: `QuizActivity` memakai “Skor minimal lulus: N dari 100” + pujian netral; `ExplorationActivity` memakai jumlah langkah dinamis dan tombol “Lanjut berlatih”.
+- Label: modul baru [`src/content/subjectLabel.ts`](../../src/content/subjectLabel.ts) dengan peta 7 slug mapel katalog + fallback; dipakai Home, Curriculum, Player (metadata & pemilih paket), dan Hasil Belajar (judul lesson/aktivitas via katalog + paket bawaan).
+- Kontras: token `--color-teal-strong #0b6f69` dan `--color-danger-strong #a8323c`; seluruh teks error di tint danger memakai `danger-strong`; label grup & footer sidebar `white/70`; teks “scaffold” dihapus.
+- Afordansi: breadcrumb “Beranda” menjadi tombol (klik terverifikasi → `#home`); matching menyebut sisa pasangan saat tombol nonaktif; pesan penyimpanan footer dihapus dan informasi “belum disinkronkan” dipindah ke banner status.
+
+**Verifikasi:** `npm test` **89/89** (3 test baru `subjectLabel`) + fixture 4/4 + catalog 320/320; `npm run build` **PASS**; DOM dev terverifikasi untuk label, breadcrumb, hint, copy kuis/eksplorasi, dan pesan tunggal. Screenshot: `p0-01-kurikulum-label.png` (`.tmp-screenshots/`, git-ignored); screenshot Player gagal karena surface browser tersembunyi. `npm run a11y` dan Hasil Belajar berisi data **belum** dijalankan/diverifikasi.
+
+**Sisa:** butir 3 P0 (gated), P1 (skala IFP, feedback per jawaban, hasil di viewport, progres lintas aktivitas, target sentuh), P2/P3; keputusan D-UX-1…D-UX-6.

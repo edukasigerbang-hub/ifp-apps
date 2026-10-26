@@ -21,7 +21,7 @@ export function AppShell({ activeScreen, onNavigate, children }: AppShellProps) 
       </a>
       <SidebarNavigation activeScreen={activeScreen} onNavigate={onNavigate} />
       <div className="flex min-w-0 flex-1 flex-col">
-        <TopBar activeScreen={activeScreen} />
+        <TopBar activeScreen={activeScreen} onNavigate={onNavigate} />
         <main
           id="main-content"
           className="flex-1 overflow-y-auto px-4 pb-28 pt-6 md:px-8 md:pb-10"

@@ -64,7 +64,8 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
       <div aria-live="polite" className="rounded-card border border-teal/30 bg-teal/5 p-6">
         <h3 className="text-lg font-semibold">Aktivitas selesai</h3>
         <p className="mt-2 text-sm text-muted">
-          Kamu sudah mengamati keempat gambar. Lanjut ke kuis untuk berlatih.
+          Kamu sudah menyelesaikan {steps.length} langkah. Lanjut berlatih untuk menguji
+          pemahamanmu.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <button
@@ -80,7 +81,7 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
               onClick={onFinish}
               className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
             >
-              Lanjut ke kuis
+              Lanjut berlatih
             </button>
           )}
         </div>

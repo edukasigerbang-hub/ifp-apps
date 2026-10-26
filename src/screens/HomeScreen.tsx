@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { CatalogLessonEntry } from "../content/catalog";
 import { catalogFacets } from "../content/catalog";
 import { loadCatalog } from "../content/loadCatalog";
+import { subjectLabel } from "../content/subjectLabel";
 import { canPersistLocally, getLearningSummary, type LearningSummary } from "../data/learningRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
 import type { ScreenId } from "../navigation";
@@ -9,10 +10,6 @@ import { setPlaybackSelection } from "../state/playbackSelection";
 
 interface HomeScreenProps {
   onNavigate: (screen: ScreenId) => void;
-}
-
-function subjectLabel(subject: string): string {
-  return subject.charAt(0).toUpperCase() + subject.slice(1);
 }
 
 function formatScore(score: number | null): string {

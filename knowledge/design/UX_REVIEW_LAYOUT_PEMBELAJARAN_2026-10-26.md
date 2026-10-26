@@ -56,7 +56,7 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 **UX-02 · Tidak ada umpan balik benar/salah per jawaban.** Opsi kuis setelah dinilai hanya `disabled opacity-80`, tanpa penanda benar/salah maupun kunci ([QuizActivity.tsx:148-196](../../src/components/content/QuizActivity.tsx#L148)); matching menulis “Salah” tetapi tidak menunjukkan pasangan yang benar ([MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83)). → Tiga keadaan: dipilih–benar, dipilih–salah, dan kunci jawaban; tambah kalimat koreksi singkat.
 
-**UX-03 · Kartu hasil di luar viewport.** Kartu skor berada di atas tombol, setelah 6 baris matching / 2 fieldset ([MatchingActivity.tsx:95-107](../../src/components/content/MatchingActivity.tsx#L95), [QuizActivity.tsx:204-221](../../src/components/content/QuizActivity.tsx#L204)); siswa melihat tombol berubah “Ulangi” tanpa melihat skor. → Auto-scroll/fokus ke hasil, atau bar hasil sticky.
+**UX-03 · Kartu hasil di luar viewport.** Kartu skor berada di atas tombol, setelah 6 baris matching / 2 fieldset ([MatchingActivity.tsx:95-107](../../src/components/content/MatchingActivity.tsx#L95), [QuizActivity.tsx:205-222](../../src/components/content/QuizActivity.tsx#L205)); siswa melihat tombol berubah “Ulangi” tanpa melihat skor. → Auto-scroll/fokus ke hasil, atau bar hasil sticky.
 
 **UX-04 · Metadata internal di layar belajar.** Badge DRAFT dan “Paket bawaan build” ([LessonPlayer.tsx:379-393](../../src/screens/LessonPlayer.tsx#L379)), “Versi 0.1.0 · scaffold” ([SidebarNavigation.tsx:59](../../src/components/layout/SidebarNavigation.tsx#L59)), “Scaffold Fase C” ([ScreenPlaceholder.tsx:15](../../src/screens/ScreenPlaceholder.tsx#L15)), slug `bahasa-indonesia` ([LessonPlayer.tsx:389-392](../../src/screens/LessonPlayer.tsx#L389)), dan ID mentah di Hasil Belajar ([ResultsScreen.tsx:166-168](../../src/screens/ResultsScreen.tsx#L166)). → Pindahkan metadata QA ke area admin/debug; pakai `subjectLabel()` untuk subjek; Hasil Belajar menampilkan judul lesson/aktivitas, bukan ID.
 
@@ -68,7 +68,7 @@ Format: **ID · prioritas · layar · temuan → rekomendasi**. Prioritas P1 = s
 
 **UX-07 · Pesan penyimpanan ganda & berbahasa developer.** Banner “Penyimpanan lokal siap.” ([LessonPlayer.tsx:398-403](../../src/screens/LessonPlayer.tsx#L398)) lalu diulang di footer ([LessonPlayer.tsx:510-514](../../src/screens/LessonPlayer.tsx#L510)). Di browser pesan pratinjau juga muncul dua kali. → Satu indikator, bahasa pengguna, detail teknis hanya di Pengaturan/Diagnostik.
 
-**UX-08 · CTA bersaing.** “Tampilkan penjelasan” biru penuh ([ExplorationActivity.tsx:136-151](../../src/components/content/ExplorationActivity.tsx#L136)) dan “Lanjut” biru penuh ([ExplorationActivity.tsx:163-169](../../src/components/content/ExplorationActivity.tsx#L163)). → Satu primary per layar; reveal jadi secondary.
+**UX-08 · CTA bersaing.** “Tampilkan penjelasan” biru penuh ([ExplorationActivity.tsx:137-152](../../src/components/content/ExplorationActivity.tsx#L137)) dan “Lanjut” biru penuh ([ExplorationActivity.tsx:164-170](../../src/components/content/ExplorationActivity.tsx#L164)). → Satu primary per layar; reveal jadi secondary.
 
 **UX-09 · Disabled tanpa alasan.** “Periksa pasangan” 40% opacity (kontras 1,65:1) dan masih tampak aktif ([MatchingActivity.tsx:109-118](../../src/components/content/MatchingActivity.tsx#L109)). → Sertakan hint “Lengkapi 6 pasangan dulu”, atau aktifkan tombol dan beri pesan validasi.
 
@@ -187,7 +187,7 @@ Aturan dari review eksternal (§5.3 di sana), disesuaikan dengan kondisi aset pr
 | Matching diprioritaskan P1 (literasi kelas awal) | **Tidak diikuti — tetap P2** | Kontrak `pairs` sudah memadai dan dampak P1 Player lebih besar; naikkan ke P1 bila pilot kelas 1 literasi dijadwalkan lebih dulu (D-UX-6) |
 | “Satukan Sebelumnya, Lanjut, dan indikator langkah” | **Setuju + koreksi fakta** | `Sebelumnya`/`Lanjut` sudah ada, tetapi hanya di eksplorasi langkah ([ExplorationActivity.tsx:155-169](../../src/components/content/ExplorationActivity.tsx#L155)); matching/kuis tidak memilikinya. Masuk P1 sebagai konsistensi, bukan fitur baru |
 | “Pencarian dan filter tersedia” | **Diverifikasi akurat** | Pencarian (`query`) dan filter kelas/mapel benar-benar memfilter ([CurriculumScreen.tsx:55-64](../../src/screens/CurriculumScreen.tsx#L55)); yang hilang hanya reset/chip (UX-10) |
-| “Jangan nyatakan data tersimpan/aman tanpa konfirmasi aplikasi” | **Sebagian sudah dipenuhi** | Player sudah punya status `saved`/`error` eksplisit ([LessonPlayer.tsx:27-33](../../src/screens/LessonPlayer.tsx#L27)); yang tersisa: duplikasi & bahasa teknis (UX-07) serta pesan pratinjau yang muncul di layar siswa |
+| “Jangan nyatakan data tersimpan/aman tanpa konfirmasi aplikasi” | **Sebagian sudah dipenuhi** | Player sudah punya status `saved`/`error` eksplisit ([LessonPlayer.tsx:28-34](../../src/screens/LessonPlayer.tsx#L28)); yang tersisa: duplikasi & bahasa teknis (UX-07) serta pesan pratinjau yang muncul di layar siswa |
 | Aksesibilitas | **Di luar lingkup review eksternal** | Review eksternal menyatakan tidak mengaudit a11y; dokumen ini hanya menghitung kontras token (§2) |
 
 ### 8.1 Skor heuristik eksternal per area
@@ -218,6 +218,19 @@ Angka berikut berasal dari berkas eksternal (§3 di sana), dihitung dari screens
 6. Satu pesan penyimpanan (bukan dua).
 
 **Kriteria penerimaan P0:** tidak ada ID mentah/jargon di layar siswa; semua teks status ≥4,5:1; tombol disabled punya alasan; screenshot ulang sebagai bukti.
+
+**Status implementasi (2026-10-26):** butir 1, 2, 4, 5, 6 **selesai** dan diverifikasi build/uji/DOM; butir 3 **tertahan keputusan** D-UX-1/D-UX-4.
+
+| Butir | Status | Bukti |
+|---|---|---|
+| 1 Copy hardcoded & istilah | Selesai | `QuizActivity` memakai “Skor minimal lulus: N dari 100” dan copy netral; `ExplorationActivity` memakai `{steps.length} langkah`; DOM menampilkan “Kamu sudah menyelesaikan 5 langkah.” |
+| 2 Label subjek & judul | Selesai | [`subjectLabel.ts`](../../src/content/subjectLabel.ts) dipakai Home, Curriculum, Player, Results; 3 unit test; DOM menampilkan “Bahasa Indonesia”, “PAI”, “PJOK”, “Pendidikan Pancasila” |
+| 3 Sembunyikan metadata internal | **Tertahan** | Menunggu D-UX-1 (dua mode) dan D-UX-4 (perlakuan metadata DRAFT/versi) |
+| 4 Kontras | Selesai | Token `--color-teal-strong #0b6f69` dan `--color-danger-strong #a8323c`; label sidebar `white/70`; utilitas terverifikasi di CSS hasil build |
+| 5 Breadcrumb & alasan disabled | Selesai | `TopBar` menerima `onNavigate`; klik “Beranda” terverifikasi pindah ke `#home`; matching menampilkan “Lengkapi N pasangan lagi…” |
+| 6 Satu pesan penyimpanan | Selesai | Pesan footer ganda dihapus; banner menyimpan status siap/tersimpan + “belum disinkronkan” |
+
+**Batas bukti:** screenshot baru hanya untuk layar Jelajah Materi (`p0-01-kurikulum-label.png`); surface in-app Browser kembali tersembunyi sebelum screenshot Player (galat `NATIVE_BROWSER_VIEWPORT_UNAVAILABLE`), sehingga butir lain diverifikasi lewat DOM + build, bukan tangkapan layar. Uji ulang a11y belum dijalankan pada perubahan ini.
 
 ### P1 — Player siswa (dampak terbesar)
 
@@ -253,9 +266,9 @@ Daftar dari review eksternal (§5.4 di sana) dengan status aktual di kode. Kolom
 | focus | semua kontrol | Ada — `:focus-visible` 3 px ([index.css:3](../../src/index.css#L3)) |
 | selected | opsi kuis, tab, filter | Ada (`checked`, `aria-selected`, nilai select) |
 | correct | opsi/kartu setelah dinilai | **Tidak ada** (UX-02) |
-| incorrect | opsi/kartu setelah dinilai | **Tidak ada**; matching hanya menulis “Salah” 14 px ([MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83)) |
-| disabled | CTA “Periksa” | Ada, tetapi tanpa alasan (UX-09) |
-| loading | katalog, player, ekspor | Katalog (`Memuat materi…`) dan player (`Memuat konten…`, [LessonPlayer.tsx:178-181](../../src/screens/LessonPlayer.tsx#L178)) ada; ekspor hanya menonaktifkan tombol tanpa label proses ([ResultsScreen.tsx:104](../../src/screens/ResultsScreen.tsx#L104)) |
+| incorrect | opsi/kartu setelah dinilai | **Tidak ada** untuk opsi kuis; matching/ordering menulis “Salah” dengan warna `danger-strong` yang lolos kontras ([MatchingActivity.tsx:83-89](../../src/components/content/MatchingActivity.tsx#L83)) |
+| disabled | CTA “Periksa” | Ada dengan alasan: matching menyebut jumlah pasangan tersisa; kuis menampilkan “Terjawab X dari Y” (UX-09 sebagian selesai) |
+| loading | katalog, player, ekspor | Katalog (`Memuat materi…`) dan player (`Memuat konten…`, [LessonPlayer.tsx:179-185](../../src/screens/LessonPlayer.tsx#L179)) ada; ekspor hanya menonaktifkan tombol tanpa label proses ([ResultsScreen.tsx:138-142](../../src/screens/ResultsScreen.tsx#L138)) |
 | error | katalog, penyimpanan, ekspor | Ada di katalog, penyimpanan (`saved`/`error`), ekspor, dan Hasil Belajar |
 | completed | tab/langkah setelah selesai | **Tidak ada** (UX-14) |
 | pressed/active | CTA sentuh (tambahan dokumen ini) | **Tidak ada** (UX-15) |

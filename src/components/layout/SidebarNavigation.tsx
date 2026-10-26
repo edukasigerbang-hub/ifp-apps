@@ -26,7 +26,7 @@ export function SidebarNavigation({ activeScreen, onNavigate }: SidebarNavigatio
       <nav aria-label="Navigasi utama" className="mt-8 flex flex-col gap-6">
         {(["belajar", "kelola"] as const).map((group) => (
           <div key={group}>
-            <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">
+            <p className="px-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/70">
               {groupLabels[group]}
             </p>
             <ul className="mt-2 space-y-1">
@@ -56,8 +56,8 @@ export function SidebarNavigation({ activeScreen, onNavigate }: SidebarNavigatio
         ))}
       </nav>
 
-      <p className="mt-auto px-2 pt-8 text-xs leading-relaxed text-white/50">
-        Versi 0.1.0 · scaffold
+      <p className="mt-auto px-2 pt-8 text-xs leading-relaxed text-white/70">
+        Versi 0.1.0
       </p>
     </aside>
   );

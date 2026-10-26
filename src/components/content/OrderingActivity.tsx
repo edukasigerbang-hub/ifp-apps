@@ -88,7 +88,7 @@ export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) 
               </div>
               {correct !== null && (
                 <span
-                  className={`text-sm font-medium ${correct ? "text-teal" : "text-danger"}`}
+                  className={`text-sm font-medium ${correct ? "text-teal-strong" : "text-danger-strong"}`}
                 >
                   {correct ? "Benar" : "Salah"}
                 </span>

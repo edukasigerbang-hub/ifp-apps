@@ -8,9 +8,11 @@
   --color-primary: #2764d8;
   --color-navy: #173b69;
   --color-teal: #13a89e;
+  --color-teal-strong: #0b6f69;
   --color-success: #1b9b69;
   --color-warning: #f2a441;
   --color-danger: #c94b55;
+  --color-danger-strong: #a8323c;
 
   --radius-card: 1.25rem;
   --radius-control: 0.75rem;

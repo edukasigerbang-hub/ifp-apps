@@ -6,15 +6,12 @@ import {
   type CatalogLessonEntry
 } from "../content/catalog";
 import { loadCatalog } from "../content/loadCatalog";
+import { subjectLabel } from "../content/subjectLabel";
 import type { ScreenId } from "../navigation";
 import { setPlaybackSelection } from "../state/playbackSelection";
 
 interface CurriculumScreenProps {
   onNavigate: (screen: ScreenId) => void;
-}
-
-function subjectLabel(subject: string): string {
-  return subject.charAt(0).toUpperCase() + subject.slice(1);
 }
 
 export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
