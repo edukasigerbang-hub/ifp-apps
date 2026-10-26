@@ -42,8 +42,8 @@
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-26T10:40:00+07:00",
-  "last_validation": "Batch 31 QA PASS: iman, kalimat-efektif, keberagaman, kebugaran (4 WebP 1200x896; crop 3-10x tanpa teks/angka/aksara terbaca; lencana timbul tak terbaca pada 9-10x); Kelas 3 20/56; total 115/152",
+  "last_updated": "2026-10-26T11:15:00+07:00",
+  "last_validation": "Batch 32 QA PASS: ekonomi, keliling-luas, keragaman-budaya, kerajinan-bahan-alam (4 WebP 1200x896; crop 2-20x tanpa teks/angka terbaca; klausa pemandangan 116/118 diadaptasi ke topik); Kelas 3 24/56; total 119/152",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PARTIAL",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Kirim indeks 116-151 (sisa Kelas 3, 36 gambar); commit tiap batch + laporan; total 115/152 selesai"
+  "next_step": "Kirim indeks 120-151 (sisa Kelas 3, 32 gambar); commit tiap batch + laporan; total 119/152 selesai"
 }
