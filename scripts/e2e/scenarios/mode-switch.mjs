@@ -34,6 +34,7 @@ export async function run({ page, artifactDir, log }) {
   const adminView = await page.evaluate(`
     ({
       sidebar: Boolean(document.querySelector("aside")),
+      sidebarWidth: document.querySelector("aside")?.getBoundingClientRect().width ?? 0,
       mainWidth: document.querySelector("main")?.getBoundingClientRect().width ?? 0,
       viewport: document.documentElement.clientWidth,
       modePressed: [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
@@ -57,6 +58,8 @@ export async function run({ page, artifactDir, log }) {
   const studentView = await page.evaluate(`
     ({
       sidebar: Boolean(document.querySelector("aside")),
+      railWidth:
+        document.querySelector('nav[aria-label="Navigasi belajar"]')?.getBoundingClientRect().width ?? 0,
       mainWidth: document.querySelector("main")?.getBoundingClientRect().width ?? 0,
       viewport: document.documentElement.clientWidth,
       navLabels: [...document.querySelectorAll('nav[aria-label="Navigasi belajar"] button')]
@@ -66,13 +69,21 @@ export async function run({ page, artifactDir, log }) {
       )
     })
   `);
-  assert(!studentView.sidebar, "Mode belajar tidak boleh menampilkan sidebar.");
+  assert(!studentView.sidebar, "Mode belajar tidak boleh menampilkan sidebar admin.");
   assert(
-    studentView.mainWidth >= studentView.viewport - 1,
-    `Konten mode belajar harus selebar perangkat (${studentView.mainWidth} vs ${studentView.viewport}).`
+    studentView.railWidth >= 64 && studentView.railWidth <= 120,
+    `Rail belajar harus ringkas (lebar ${studentView.railWidth} px).`
   );
   assert(
-    studentView.mainWidth > adminView.mainWidth + 200,
+    studentView.mainWidth >= studentView.viewport - studentView.railWidth - 1,
+    `Konten mode belajar harus mengisi lebar perangkat dikurangi rail (${studentView.mainWidth} vs ${studentView.viewport - studentView.railWidth}).`
+  );
+  assert(
+    studentView.railWidth < adminView.sidebarWidth,
+    `Rail belajar harus lebih ringkas daripada sidebar admin (${studentView.railWidth} vs ${adminView.sidebarWidth}).`
+  );
+  assert(
+    studentView.mainWidth > adminView.mainWidth + 100,
     "Konten mode belajar harus lebih lebar daripada mode admin."
   );
   assert(
@@ -85,7 +96,7 @@ export async function run({ page, artifactDir, log }) {
     `Layar kelola masih tampil di mode belajar: ${studentView.adminLabels.join(", ")}`
   );
   log(
-    `Mode belajar tanpa sidebar; konten ${Math.round(studentView.mainWidth)} px dan ${studentView.navLabels.length} tujuan belajar.`
+    `Mode belajar memakai rail ikon ${Math.round(studentView.railWidth)} px; konten ${Math.round(studentView.mainWidth)} px dan ${studentView.navLabels.length} tujuan belajar.`
   );
   await page.evaluate(`document.querySelector("main")?.scrollTo(0, 0)`);
   await new Promise((resolve) => setTimeout(resolve, 300));
@@ -114,7 +125,7 @@ export async function run({ page, artifactDir, log }) {
         .map((button) => ({ label: button.getAttribute("aria-label"), pressed: button.getAttribute("aria-pressed") }))
     })
   `);
-  assert(!restoredView.sidebar, "Setelah muat ulang, mode belajar harus tetap tanpa sidebar.");
+  assert(!restoredView.sidebar, "Setelah muat ulang, mode belajar harus tetap tanpa sidebar admin.");
   assert(
     JSON.stringify(restoredView.navLabels) ===
       JSON.stringify(["Beranda", "Jelajah Materi", "Aktivitas Interaktif", "Hasil Belajar"]),
@@ -137,7 +148,7 @@ export async function run({ page, artifactDir, log }) {
     label: "layar Hasil Belajar"
   });
   await page.waitFor(`window.location.hash === "#results"`, { label: "hash hasil" });
-  log("Navigasi belajar dari bar horizontal membuka Hasil Belajar.");
+  log("Navigasi belajar dari rail membuka Hasil Belajar.");
 
   await clickModeButton(page, "Admin");
   await page.waitFor(`document.querySelector("aside") !== null`, {

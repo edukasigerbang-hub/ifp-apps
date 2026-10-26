@@ -54,6 +54,21 @@ function selectFilter(label, value) {
   `;
 }
 
+function clickGrade(value) {
+  return `
+    (() => {
+      const group = document.querySelector('[role="group"][aria-labelledby="filter-kelas-label"]');
+      if (!group) return false;
+      const target = [...group.querySelectorAll("button")].find(
+        (button) => button.textContent.trim() === ${JSON.stringify(`Kelas ${value}`)}
+      );
+      if (!target) return false;
+      target.click();
+      return true;
+    })()
+  `;
+}
+
 export async function run({ page, artifactDir, log }) {
   await page.waitFor(
     `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
@@ -96,6 +111,12 @@ export async function run({ page, artifactDir, log }) {
   });
   log("Katalog memuat materi bawaan + impor.");
 
+  await page.waitFor(
+    `[...document.querySelectorAll('[role="group"][aria-labelledby="filter-kelas-label"] img')].filter((img) => img.complete && img.naturalWidth > 0).length >= 6`,
+    { label: "thumbnail pilihan kelas" }
+  );
+  log("Pilihan kelas berupa tile thumbnail dari aset paket.");
+
   assert(await page.evaluate(fillSearch("fotosintesis")), "Input pencarian tidak ditemukan.");
   await page.waitFor(`document.body.textContent.includes("Tidak ada materi yang cocok")`, {
     label: "hasil pencarian kosong"
@@ -114,7 +135,7 @@ export async function run({ page, artifactDir, log }) {
   log("Kartu materi menampilkan thumbnail dari aset paket bawaan dan impor.");
   assert(await page.evaluate(fillSearch("")), "Input pencarian tidak ditemukan.");
 
-  assert(await page.evaluate(selectFilter("Filter kelas", "3")), "Filter kelas tidak ditemukan.");
+  assert(await page.evaluate(clickGrade(3)), "Tile Kelas 3 tidak ditemukan.");
   assert(
     await page.evaluate(selectFilter("Filter mata pelajaran", "matematika")),
     "Filter mata pelajaran tidak ditemukan."

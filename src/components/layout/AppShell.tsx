@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import type { AppMode, ScreenId } from "../../navigation";
 import { MobileNavigation } from "./MobileNavigation";
 import { SidebarNavigation } from "./SidebarNavigation";
-import { StudentNavigation } from "./StudentNavigation";
+import { StudentRail } from "./StudentRail";
 import { TopBar } from "./TopBar";
 
 interface AppShellProps {
@@ -30,8 +30,10 @@ export function AppShell({
       >
         Lewati ke konten utama
       </a>
-      {mode === "admin" && (
+      {mode === "admin" ? (
         <SidebarNavigation activeScreen={activeScreen} onNavigate={onNavigate} />
+      ) : (
+        <StudentRail activeScreen={activeScreen} onNavigate={onNavigate} />
       )}
       <div className="flex min-w-0 flex-1 flex-col">
         <TopBar
@@ -41,9 +43,6 @@ export function AppShell({
           onNavigate={onNavigate}
           onModeChange={onModeChange}
         />
-        {mode === "belajar" && (
-          <StudentNavigation activeScreen={activeScreen} onNavigate={onNavigate} />
-        )}
         <main
           id="main-content"
           className="flex-1 overflow-y-auto px-4 pb-28 pt-6 md:px-8 md:pb-10"

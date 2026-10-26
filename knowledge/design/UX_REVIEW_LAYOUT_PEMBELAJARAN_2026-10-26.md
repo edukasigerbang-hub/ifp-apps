@@ -111,18 +111,19 @@ Direkomendasikan oleh review eksternal dan konsisten dengan kebutuhan produk (mo
 
 Konsekuensi: label internal (UX-04) tidak perlu dihapus dari produk — cukup dipindahkan ke Mode Pengelola/area debug.
 
-**Status implementasi (2026-10-26, T-077):** D-UX-1 diputuskan PO lewat instruksi sesi. Mode belajar diterapkan: shell selebar perangkat tanpa sidebar, bar navigasi empat tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar), layar Konten/Lisensi/Pengaturan disembunyikan; mode admin mempertahankan sidebar lengkap. Sakelar Belajar/Admin ada di bilah atas dan tersimpan per perangkat (`preferences.appMode`, default `admin`). Skala tipografi/target sentuh mode siswa (§6, D-UX-2) belum diterapkan, dan metadata internal (UX-04) belum dipindahkan ke area pengelola.
+**Status implementasi (2026-10-26, T-077/T-078):** D-UX-1 diputuskan PO lewat instruksi sesi. Mode belajar diterapkan dengan **rail ikon 80 px** (empat tujuan: Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar; label lewat tooltip dan teks sr-only), bukan sidebar admin; konten mengisi sisa lebar perangkat. Layar Konten/Lisensi/Pengaturan disembunyikan; mode admin mempertahankan sidebar lengkap. Sakelar Belajar/Admin berupa dua tombol ikon di bilah atas dan tersimpan per perangkat (`preferences.appMode`, default `admin`). Skala tipografi/target sentuh mode siswa (§6, D-UX-2) belum diterapkan, dan metadata internal (UX-04) belum dipindahkan ke area pengelola.
 
 | Aspek | Implementasi (bukti kode) |
 |---|---|
 | Model mode | `AppMode`, `navigationItemsForMode()`, `isScreenAllowedInMode()` di [navigation.ts](../../src/navigation.ts) |
-| Shell | [AppShell.tsx](../../src/components/layout/AppShell.tsx): sidebar hanya mode admin; bar belajar [StudentNavigation.tsx](../../src/components/layout/StudentNavigation.tsx) |
+| Shell | [AppShell.tsx](../../src/components/layout/AppShell.tsx): sidebar mode admin; rail ikon mode belajar [StudentRail.tsx](../../src/components/layout/StudentRail.tsx) |
 | Sakelar | [TopBar.tsx](../../src/components/layout/TopBar.tsx): grup “Mode aplikasi” berisi dua tombol ikon (44 px) dengan `aria-pressed`, `aria-label`, dan `title` |
+| Filter kelas | [CurriculumScreen.tsx](../../src/screens/CurriculumScreen.tsx): tile thumbnail cover materi tiap kelas + chip “Semua kelas” (bukan dropdown); grid kartu 3 kolom di md+ |
 | Thumbnail materi | `coverAsset` di katalog; [LessonThumbnail.tsx](../../src/components/content/LessonThumbnail.tsx) dipakai kartu Jelajah Materi dan “Lanjutkan belajar” (bundled + paket impor) |
 | Persistensi | `preferences.appMode` di `app_meta` (default `admin`; rekaman lama tanpa field tetap terbaca) |
 | Pengalihan | Layar di luar mode dipindahkan ke Beranda, hash diselaraskan ([App.tsx](../../src/App.tsx)) |
 
-Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 65/65, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 6/6 PASS (termasuk restore setelah muat ulang), `home-catalog` 10/10 (termasuk thumbnail), serta regresi smoke 8/8, activities 8/8, journey 11/11, profile 7/7. Sakelar mode memakai ikon saja; thumbnail materi memakai aset paket yang sudah ada.
+Verifikasi 2026-10-26: `npm test` 93/93, `cargo test` 65/65, `npm run build` PASS, a11y 17 pemeriksaan PASS (0 error, 7 warning reflow), E2E `mode-switch` 6/6 PASS (rail 80 px + restore setelah muat ulang), `home-catalog` 11/11 (tile kelas + thumbnail), serta regresi smoke 8/8, activities 8/8, journey 11/11, profile 7/7. Sakelar mode memakai ikon saja; thumbnail materi memakai aset paket yang sudah ada.
 
 ### 5.1 Prinsip UX yang disepakati
 

@@ -648,10 +648,10 @@ export async function run({ page, artifactDir, log }) {
 
   await clickLabel(page, "Belajar");
   await page.waitFor(`!document.querySelector("aside")`, {
-    label: "mode belajar tanpa sidebar"
+    label: "mode belajar tanpa sidebar admin"
   });
   await page.waitFor(`document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`, {
-    label: "navigasi belajar"
+    label: "rail navigasi belajar"
   });
   const modeReflow = [];
   for (const width of [640, 320]) {
@@ -679,7 +679,7 @@ export async function run({ page, artifactDir, log }) {
     issues: modeIssues
   });
   log(
-    `Mode belajar tanpa sidebar: ${modeErrors.length} error, ${modeWarnings.length} warning.`
+    `Mode belajar (rail ikon): ${modeErrors.length} error, ${modeWarnings.length} warning.`
   );
   await page.screenshot(path.join(artifactDir, "a11y-mode-belajar.png"));
   await clickLabel(page, "Admin");

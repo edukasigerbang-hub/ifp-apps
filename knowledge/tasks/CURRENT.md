@@ -87,7 +87,7 @@
 | T-075 | Eksekusi P0 UX yang tidak bergantung keputusan | 5 dari 6 butir P0 selesai: copy netral + istilah “Skor”, `subjectLabel()` bersama (Home/Curriculum/Player/Results), token kontras `teal-strong`/`danger-strong`, breadcrumb Beranda jadi tombol + alasan disabled matching, satu pesan penyimpanan. Butir 3 (metadata internal) tertahan D-UX-1/D-UX-4. `npm test` 89/89, build PASS; verifikasi DOM + 1 screenshot |
 | T-076 | UX-03 + a11y + E2E | Kartu hasil `tabIndex={-1}` + `scrollIntoView`/`focus()` setelah penilaian di kuis, mencocokkan, mengurutkan (3 komponen). Harness a11y & E2E diperbarui ke konten aktual (“Kuis Penguatan”, tombol “Lanjut berlatih”) dan 3 asersi fokus baru. `npm test` 89/89, build PASS, `npm run a11y` **PASS 16 pemeriksaan** (0 error, 7 warning reflow), E2E smoke 8/8 · activities 8/8 · home 9/9 · journey 11/11 · profile 7/7 |
 | T-077 | Dua mode: belajar & admin (D-UX-1) | Mode belajar = shell selebar perangkat **tanpa sidebar**, bar navigasi 4 tujuan (Beranda, Jelajah Materi, Aktivitas Interaktif, Hasil Belajar), layar Konten/Lisensi/Pengaturan disembunyikan. Mode admin = sidebar lengkap seperti sebelumnya. Sakelar “Belajar/Admin” di bilah atas (`aria-pressed`), tersimpan per perangkat (`preferences.appMode`, default `admin`; rekaman lama tetap terbaca). Layar di luar mode dialihkan ke Beranda. `npm test` 93/93, `cargo test` 64/64, build PASS, a11y **17 pemeriksaan PASS**, E2E baru `mode-switch` 5/5 + regresi 5 skenario PASS |
-| T-078 | Sakelar mode ikon + thumbnail materi | Sakelar mode kini **dua tombol ikon** (topi wisuda/slider), `aria-label` + `title`, target 44 px; persistensi tetap di SQLite `app_meta.preferences.appMode` (test baru `app_mode_survives_database_reopen`). Katalog membawa `coverAsset`; kartu Jelajah Materi dan kartu “Lanjutkan belajar” menampilkan thumbnail dari aset paket yang sudah ada (bundled via `import.meta.glob`, impor via `content_read_asset` → blob URL), fallback inisial subjek. `npm test` 93/93, `cargo test` 65/65, build PASS, a11y 17/17 PASS, E2E home 10/10 (+2 asersi thumbnail) + mode 5/5 + regresi 4 skenario PASS |
+| T-078 | Sakelar mode ikon + thumbnail materi + rail + tile kelas | Sakelar mode kini **dua tombol ikon** (topi wisuda/slider), `aria-label` + `title`, target 44 px; persistensi tetap di SQLite `app_meta.preferences.appMode` (test baru `app_mode_survives_database_reopen`). Mode belajar memakai **rail ikon 80 px** (4 tujuan, label lewat tooltip + teks sr-only), bukan bar atas. Katalog membawa `coverAsset`; kartu Jelajah Materi dan kartu “Lanjutkan belajar” menampilkan thumbnail dari aset paket yang sudah ada (bundled via `import.meta.glob`, impor via `content_read_asset` → blob URL), fallback inisial subjek. Filter kelas berupa **tile thumbnail cover materi tiap kelas** (bukan dropdown) + chip “Semua kelas”; grid materi 3 kolom. `npm test` 93/93, `cargo test` 65/65, build PASS, a11y 17/17 PASS, E2E home **11/11** + mode **6/6** + regresi 4 skenario PASS |
 
 ## Status prasyarat materi pembelajaran
 
@@ -166,6 +166,8 @@
 | E2E regresi (T-078) | **PASS** — smoke 8, activities 8, learning-journey 11, profile-lifecycle 7 |
 | `npm run a11y` (T-078) | **PASS** — 17 pemeriksaan; 0 error, 7 warning reflow/target sentuh |
 | Grid katalog 3 kolom (T-078c) | **PASS** — `md:grid-cols-3`; E2E `home-catalog` 10/10 + screenshot 3 kartu per baris; a11y 17/17 |
+| Rail ikon mode belajar (T-078d) | **PASS** — rail 80 px, 4 tujuan (label sr-only + tooltip), konten 1520 px pada viewport 1600; E2E `mode-switch` 6/6 termasuk restore setelah muat ulang |
+| Tile kelas thumbnail (T-078d) | **PASS** — 6 tile kelas memakai cover materi (aset paket), chip “Semua kelas”; E2E `home-catalog` 11/11 |
 | Tautan & nomor baris dokumen UX (T-074) | **PASS** — 50 tautan relatif valid, 0 hilang; semua anotasi `#L<n>` ≤ jumlah baris berkas dan menunjuk baris tidak kosong |
 | Unduh berkas review eksternal (T-074) | **PASS** — `review-layout-pembelajaran-gerbang-edukasi.md` 337 baris / 14.998 byte UTF-8; disimpan di `.tmp-external/` (git-ignored), tidak di-commit |
 | Klaim eksternal vs kode (T-074) | **PASS** — 4 klaim diperiksa: player punya `loading` & storage `saved/error`; `Sebelumnya/Lanjut` ada di eksplorasi; pencarian & filter berfungsi |
@@ -376,7 +378,7 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - `src/navigation.ts` — `AppMode`, `DEFAULT_APP_MODE` (`admin`), `studentNavigationItems`, `navigationItemsForMode()`, `isScreenAllowedInMode()`, `isAppMode()`.
 - `src/components/layout/AppShell.tsx` — sidebar hanya mode admin; `StudentNavigation` hanya mode belajar; `MobileNavigation` memakai item sesuai mode.
 - `src/components/layout/TopBar.tsx` — sakelar mode; pesan `aria-live` bila penyimpanan gagal.
-- `src/components/layout/StudentNavigation.tsx` (baru), `src/components/layout/MobileNavigation.tsx`.
+- `src/components/layout/StudentNavigation.tsx` (baru; **digantikan rail ikon `StudentRail.tsx` pada T-078d**), `src/components/layout/MobileNavigation.tsx`.
 - `src/App.tsx` — memuat `appMode` saat start, pengalihan layar terlarang, simpan via `preferences_set`.
 - `src/data/preferencesRepository.ts` — `Preferences.appMode`.
 - `src-tauri/src/preferences.rs` — `app_mode` dengan serde default `admin` (rekaman lama tetap terbaca), validasi `belajar|admin`, 2 test baru.
@@ -398,13 +400,14 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 - `src/content/lessonCovers.ts` (baru) — peta URL aset bundled via `import.meta.glob(..., { eager: true, query: "?url" })` dan pemetaan media type dari ekstensi.
 - `src/components/content/LessonThumbnail.tsx` (baru) — thumbnail `object-cover` 16:9; bundled memakai URL glob, paket impor memakai `content_read_asset` → blob URL (di-revoke saat unmount); fallback inisial subjek bila aset tidak ada/gagal.
 - `src/content/catalog.ts`, `scripts/lib/contentCatalog.mjs`, `scripts/check-catalog-index.mjs` — field `coverAsset` (aset gambar pertama manifest) di 320/320 entri katalog.
-- `src/screens/CurriculumScreen.tsx` — kartu materi menampilkan thumbnail di atas judul.
+- `src/screens/CurriculumScreen.tsx` — kartu materi menampilkan thumbnail di atas judul, grid **3 kolom** (md+); filter kelas berupa **tile thumbnail** (cover materi per kelas) + chip “Semua kelas”, menggantikan dropdown.
+- `src/components/layout/StudentRail.tsx` (baru) — rail ikon 80 px untuk mode belajar: 4 tujuan, ikon SVG inline, label sr-only + tooltip, `aria-current`; menggantikan bar horizontal `StudentNavigation.tsx` (dihapus).
 - `src/screens/HomeScreen.tsx` — kartu “Lanjutkan belajar” menampilkan thumbnail (56 px lebar di md+).
 - `src-tauri/src/preferences.rs` — test `app_mode_survives_database_reopen` membuktikan persistensi setelah DB ditutup dan dibuka ulang.
-- E2E: `mode-switch.mjs` mencocokkan tombol lewat `aria-label`; `a11y.mjs` `clickLabel` menerima `aria-label`; `home-catalog.mjs` menunggu dua thumbnail termuat + screenshot `catalog-thumbnails.png`.
+- E2E: `mode-switch.mjs` mencocokkan tombol lewat `aria-label`, mengukur rail 80 px dan konten sisa; `a11y.mjs` `clickLabel` menerima `aria-label`; `home-catalog.mjs` menunggu tile kelas + dua thumbnail termuat + screenshot `catalog-thumbnails.png`.
 
-**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` **6/6** (termasuk restore setelah muat ulang) · `home-catalog` **10/10** · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-admin.png` memperlihatkan ikon topi (inaktif) + slider (aktif); `catalog-thumbnails.png` memperlihatkan thumbnail WebP pada dua kartu pertama.
+**Verifikasi aktual:** `npm test` 93/93 + fixture 4/4 + catalog 320/320 · `cargo test` **65/65** · `npm run build` PASS · `npm run a11y` **PASS 17** (0 error, 7 warning) · E2E `mode-switch` **6/6** (rail + restore setelah muat ulang) · `home-catalog` **11/11** (tile kelas + thumbnail) · smoke 8/8 · activities 8/8 · journey 11/11 · profile 7/7. Screenshot `mode-belajar.png` memperlihatkan rail ikon; `catalog-thumbnails.png` memperlihatkan tile kelas dan 3 kartu per baris.
 
 **Catatan persistensi:** nilai tersimpan di SQLite `app_meta` (key `preferences`), bukan localStorage; dibaca `App.tsx` saat start. DB perangkat diperiksa langsung dan berisi `appMode":"belajar"` setelah sakelar dipakai.
 
-**Sisa:** thumbnail memakai aset pertama paket (bukan gambar khusus sampul); belum ada uji relaunch end-to-end lewat harness (bukti: DB reopen test + pembacaan saat start); mode masih pembatas UI tanpa PIN.
+**Sisa:** thumbnail memakai aset pertama paket (bukan gambar khusus sampul); mode masih pembatas UI tanpa PIN. Pada lebar 768–1023 px grid 3 kolom terasa sempit (judul membungkus).

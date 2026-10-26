@@ -50,6 +50,16 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   }, []);
 
   const facets = useMemo(() => catalogFacets(entries), [entries]);
+  const gradeCovers = useMemo(() => {
+    const covers = new Map<number, CatalogLessonEntry>();
+    for (const entry of entries) {
+      if (!entry.coverAsset) continue;
+      for (const level of entry.gradeLevels) {
+        if (!covers.has(level)) covers.set(level, entry);
+      }
+    }
+    return covers;
+  }, [entries]);
   const visible = useMemo(
     () =>
       filterCatalog(entries, {
@@ -97,24 +107,6 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
             />
           </label>
           <label className="text-sm">
-            Kelas
-            <select
-              value={grade ?? ""}
-              aria-label="Filter kelas"
-              onChange={(event) =>
-                setGrade(event.target.value === "" ? null : Number(event.target.value))
-              }
-              className="mt-1 block min-h-11 rounded-control border border-ink/15 px-3 text-sm"
-            >
-              <option value="">Semua kelas</option>
-              {facets.grades.map((value) => (
-                <option key={value} value={value}>
-                  Kelas {value}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="text-sm">
             Mata pelajaran
             <select
               value={subject ?? ""}
@@ -132,6 +124,59 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
               ))}
             </select>
           </label>
+        </div>
+        <div className="mt-4">
+          <p id="filter-kelas-label" className="text-sm font-medium">
+            Kelas
+          </p>
+          <div
+            role="group"
+            aria-labelledby="filter-kelas-label"
+            className="mt-2 grid grid-cols-4 gap-2 md:grid-cols-7"
+          >
+            <button
+              type="button"
+              aria-pressed={grade === null}
+              onClick={() => setGrade(null)}
+              className={`flex min-h-11 items-center justify-center rounded-control border px-2 text-sm font-medium transition-colors ${
+                grade === null
+                  ? "border-primary bg-primary text-white"
+                  : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+              }`}
+            >
+              Semua kelas
+            </button>
+            {facets.grades.map((value) => {
+              const isActive = grade === value;
+              const cover = gradeCovers.get(value);
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  aria-pressed={isActive}
+                  onClick={() => setGrade(value)}
+                  className={`overflow-hidden rounded-control border text-center transition-colors ${
+                    isActive
+                      ? "border-primary ring-2 ring-primary"
+                      : "border-ink/15 hover:border-primary/40"
+                  }`}
+                >
+                  {cover ? (
+                    <LessonThumbnail entry={cover} className="aspect-[4/3] w-full" />
+                  ) : (
+                    <span aria-hidden="true" className="block aspect-[4/3] w-full bg-teal/10" />
+                  )}
+                  <span
+                    className={`block px-2 py-1.5 text-xs font-semibold ${
+                      isActive ? "bg-primary text-white" : "bg-surface text-ink"
+                    }`}
+                  >
+                    Kelas {value}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
         <p aria-live="polite" className="mt-3 text-sm text-muted">
           {loading ? "Memuat materi…" : `${visible.length} materi ditemukan.`}
