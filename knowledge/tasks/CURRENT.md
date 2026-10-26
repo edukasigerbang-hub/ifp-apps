@@ -562,3 +562,20 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Verifikasi aktual:** `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 21/21**, **a11y 17/17** (0 error, 0 warning), **activities 14/14**, **learning-journey 11/11**, **content-rollback 9/9**, **smoke 8/8** · artefak `hero-beranda.png`. `cargo test` tidak dijalankan (tanpa perubahan Rust).
 
 **Sisa:** permintaan filter hanya di memori proses (muat ulang di `#curriculum` kembali tanpa filter); layar lain (Aktivitas Interaktif, Hasil Belajar) belum ikut memakai mapel terpilih.
+
+### Handoff Alur Beranda → Mapel → Kelas (2026-10-27, T-087)
+
+**Status:** selesai dan terverifikasi. PO menguji alur dan melaporkan halaman setelah memilih mapel tidak menuntun ke pemilihan kelas.
+
+**Akar masalah (terbukti):**
+1. `navigate()` tidak mengembalikan posisi gulir; yang menggulir adalah dokumen, jadi katalog terbuka di tengah daftar (judul + pemilih kelas di atas tak terlihat).
+2. Grid mapel tetap terbuka setelah mapel dipilih dari Beranda sehingga grid kelas terdorong jauh ke bawah.
+
+**Perubahan kode:**
+- `src/App.tsx` — effect pada `activeScreen` mengembalikan `document.scrollingElement.scrollTop` ke 0.
+- `src/screens/CurriculumScreen.tsx` — kunjungan ber-filter mapel melipat grid mapel (`subjectsOpen = false`) sehingga grid kelas langsung terlihat; kartu hasil menambah `data-catalog-grades`.
+- `scripts/e2e/scenarios/home-catalog.mjs` — 2 pemeriksaan alur baru (tiba di `scrollTop 0` + grid mapel terlipat + grid kelas terbuka; klik “Kelas 3” → 49 jadi **9 kartu**, semua `matematika` grade 3), artefak `katalog-dari-mapel.png` + `katalog-matematika-kelas3.png`. **23 pemeriksaan.**
+
+**Verifikasi aktual:** `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog 320/320 · `npm run build` PASS · E2E **home-catalog 23/23**, **a11y 17/17** (0 error, 7 warning; percobaan pertama kena flake timeout simpan kuis, lolos pada ulangan), **activities 14/14**, **learning-journey 11/11**, **content-rollback 9/9**, **profile-lifecycle 7/7**, **mode-switch 6/6**, **smoke 8/8**. `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Sisa:** pemilihan kelas tetap di halaman katalog yang sama (bukan wizard dua langkah); permintaan filter hanya di memori proses.
