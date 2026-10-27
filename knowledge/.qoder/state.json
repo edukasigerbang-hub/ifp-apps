@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "0e24dbc",
+  "commit": "abc1be6",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 30,
+  "context_version": 31,
   "skill_registry_version": 0,
-  "current_task": "Review manusia R1–R6/R8–R9/R12 atas 336 paket; temuan deterministik R5 (bias posisi kunci + duplikasi matching) sudah dibereskan agent T-091 sebagai bahan, bukan approval",
-  "last_task": "T-091 perbaiki temuan deterministik R5: siarkan posisi kunci kuis (T-091a) + hapus 908 pasangan matching yang menyalin eksplorasi (T-091b)",
+  "current_task": "Review guru atas 695 soal + 361 pasangan baru (T-092) dan keputusan OD-9 soal 88 paket tanpa aktivitas kuis; review manusia R1–R6/R8–R9/R12 atas 336 paket",
+  "last_task": "T-092 volume latihan kelas 1–6 (695 soal kuis + 361 pasangan) + T-093 Player padat dengan mode layar penuh",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-27T11:23:08+07:00",
-  "last_validation": "T-091 (2026-10-27): dua sinyal R5 yang mekanis dibereskan pada 336 paket. T-091a posisi kunci (commit 12ce2e1, 199 berkas aktivitas): sebelum 694 soal — indeks 0 = 528 (76,1%), 1 = 147, 2 = 19, 3 = 0 dan 91 paket semua kuncinya di satu posisi; sesudah 206/189/203/96 (29,7/27,2/29,3/13,8%), 0 paket menumpuk, share per-paket tertinggi 66,7%; urutan opsi dipindah ke (hash(packageId)+ordinal)%jumlahOpsi, optionId ikut bergerak sehingga correctResponse tetap; benar/salah tidak dijamah. T-091b matching (commit 0e24dbc, 184 berkas): sebelum 1.828 pasangan, 908 identik byte dengan prompt+reveal langkah eksplorasi di 184 paket (230 juga boilerplate refleksi); sesudah 1.602 pasangan, 0 cermin, 0 boilerplate — 230 dihapus, 678 ditulis ulang (128 override tulisan tangan di scripts/data/matching-rewrite-2026-10-27.json, 550 aturan pola tanya), 4 pasangan authored ditambah ke 2 paket; pairId dinomori ulang, instruksi jadi 'Pasangkan setiap petunjuk dengan jawaban yang tepat.'; transform dry-run default + idempoten, snapshot SHA-256 336 berkas di .tmp-assets/snapshots-before-matching/. Verifikasi aktual: validator 336/336 VALID (0 issue, 336 warning draft) · analisis korpus (semantik detektor sama) fullMirror 0 / partialMirror 0 / packagesWithAnyMirroredPair 0 / positionBias100 0 / pairsTotal 1602 / longestCorrect100 10 · kedalaman minimum aktual 5 langkah/3 aktivitas/8 item, 0 paket di bawah ambang · npm test 105/105 (15 berkas) + fixture 4/4 + catalog 336/336 · npm run build PASS · npm run a11y 17/17 (0 error, 7 warning) · E2E activities 14/14, home-catalog 28/28, smoke 8/8 · cargo test tidak dijalankan (tanpa perubahan Rust). BELUM: 10 paket kunci-terpanjang butuh penulisan teks · 550 petunjuk hasil aturan belum dinilai guru · pencocokan tujuan-item tidak disentuh · reviewStatus tetap draft · scripts/pedagogical-prereview.mjs dan review-content.ts menulis ke path bertanggal tetap sehingga tidak dijalankan ulang (menimpa bukti historis).",
+  "last_updated": "2026-10-27T20:36:20+07:00",
+  "last_validation": "T-092+T-093 (2026-10-27, HEAD abc1be6/e56149f): validator 336/336 VALID (0 issue, 336 warning draft) · volume gate 'Semua aktivitas dinilai berada dalam rentang target' (kelas 1–2 kuis 5/5 pasangan 5–6; kelas 3–6 kuis 6/6 pasangan 6–7) · kedalaman minimum 5 langkah/3 aktivitas/10 item, 0 paket di bawah ambang · R5 cermin 0 / bias posisi 0 paket (413/393/410/163) / kunci-terpanjang 0 paket (sebelumnya 10) · npm test 105/105 (15 berkas) + fixture 4/4 + catalog 336/336 · npm run build PASS · npm run a11y 17/17 (0 error, 7 warning) · E2E player-fullscreen 6/6, activities 14/14, learning-journey 11/11, smoke 8/8, mode-switch 6/6 · cargo test tidak dijalankan (tanpa perubahan Rust). Pengukuran T-093: panel aktivitas 601→1225 px (1280) dan 689→969 px (1024) saat layar penuh. BELUM: 88 paket (26%) tanpa aktivitas kuis (OD-9, keputusan PO+Curriculum Lead) · item baru belum dinilai guru, reviewStatus tetap draft · mode layar penuh belum diuji pada mode belajar lewat klik UI · D-UX-2/4/5/6 · scripts/pedagogical-prereview.mjs dan review-content.ts menulis ke path bertanggal tetap sehingga tidak dijalankan ulang.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Coba app desktop: buka 2–3 paket berbeda dan jalankan aktivitas mencocokkan + kuis untuk menilai apakah petunjuk baru terbaca wajar (reviewer manusia, bukan agent). Berikutnya: reviewer manusia R1-R6/R8-R9/R12 memakai knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; keputusan Curriculum Lead soal IPAS di Fase A (OD-1); verifikasi CP/ATP per bab. Utang konten dari T-091: 10 paket dengan kunci selalu opsi terpanjang butuh penulisan ulang teks opsi; tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts perlu diparameterkan agar laporan bisa dibangun ulang tanpa menimpa bukti. Keputusan desain yang memblokir sisa UX: D-UX-2, D-UX-4, D-UX-5, D-UX-6. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Coba mode layar penuh di app desktop (tombol 'Layar penuh' pada Player; Escape untuk keluar) dan baca 2–3 paket latihan kelas 6 untuk menilai kewajaran soal baru (reviewer manusia, bukan agent). Berikutnya: keputusan OD-9 (88 paket tanpa kuis) + review guru daftar paket bermateri tipis di BACKLOG; reviewer manusia R1-R6/R8-R9/R12 memakai knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; keputusan Curriculum Lead soal IPAS di Fase A (OD-1); verifikasi CP/ATP per bab. Utang: tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts perlu diparameterkan agar laporan bisa dibangun ulang tanpa menimpa bukti. Keputusan desain yang memblokir sisa UX: D-UX-2, D-UX-4, D-UX-5, D-UX-6. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }

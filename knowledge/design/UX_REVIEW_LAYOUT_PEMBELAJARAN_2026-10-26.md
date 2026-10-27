@@ -340,3 +340,17 @@ Urutan gabungan (menggantikan urutan P0–P3 bila keduanya bertabrakan): **P0 �
 5. Render prototipe di 1920×1080, 4K, dan 1280; tandai ukuran teks/tombol terkecil yang masih terbaca dari ±3 m.
 6. Uji dengan 5 siswa kelas 1 + 2 guru memakai tugas nyata; catat waktu tugas, kesalahan, dan bantuan yang diminta.
 7. Implementasikan komponen bersama + seluruh state di §9.1, lalu terapkan pola ke mapel/kelas lain.
+
+## 13. Tindak lanjut 2026-10-27 — kepadatan Player + mode layar penuh (T-093)
+
+**Konteks:** PO menilai Player masih menyisakan banyak ruang kosong dan meminta mode layar penuh yang hanya menampilkan halaman interaktif (tanpa header tujuan pembelajaran dan kartu progres). Ini **tindak lanjut**, bukan perubahan atas rekomendasi di atas; D-UX-2 (skala IFP) tetap keputusan terbuka.
+
+**Perubahan nyata:**
+- **Mode layar penuh** dikendalikan state di `App` (bukan Fullscreen API native — tidak konsisten di WebView2/pratinjau browser). Tombol "Layar penuh"/"Keluar layar penuh" dengan `aria-pressed`, ditambah Escape; keluar otomatis saat berpindah layar atau berganti mode.
+- **Chrome shell** dibungkus `display:none` dan blok lesson memakai atribut `hidden`, jadi `<main>` dan panel aktivitas **tidak di-remount** — jawaban kuis yang belum diperiksa bertahan saat mode dibuka-tutup (dibuktikan E2E). Ini keputusan teknis yang juga keputusan UX: tidak kehilangan pekerjaan siswa karena mengganti tampilan.
+- **Kepadatan mode normal:** hero lebih rapat (padding 4/5, cover `md:w-64 lg:w-72 xl:w-80`), strip penyimpanan pindah dari kolom samping ke baris status di bawah tab, ringkasan sesi lebih ringkas, dan tata letak dua kolom baru aktif di `xl` — pada 1024 Player memakai satu kolom penuh (panel 345 → 689 px).
+- **Isi aktivitas:** tiap aktivitas dibatasi kolom baca `max-w-5xl` dan opsi kuis memakai `sm:grid-cols-2`, agar baris opsi tidak melar selebar panel di layar penuh.
+
+**Bukti terukur:** panel aktivitas **601 → 1225 px** (1280×800) dan **689 → 969 px** (1024×768); chrome, tujuan pembelajaran, kartu kemajuan, dan ringkasan sesi tidak terlihat di layar penuh; tepat 1 `<h1>`; tanpa overflow horizontal; semua warna/heading lolos `npm run a11y` (17/17, 0 error). Screenshot di `.tmp-e2e/<stamp>/player-{normal,fullscreen}-{1280,1024}.png`.
+
+**Belum terjawab / batas:** (1) "layar penuh" adalah mode dalam jendela aplikasi, bukan fullscreen OS — bila IFP membutuhkan mode kiosk, itu pekerjaan Tauri/window manager terpisah. (2) Sisa ruang kosong di layar penuh berasal dari gambar eksplorasi yang mempertahankan rasio aspek (di-center). (3) Skala teks/tombol untuk IFP 1920×1080 & 4K (D-UX-2) tidak berubah. (4) Mode layar penuh belum dicoba pada mode belajar lewat klik UI, dan belum diuji dengan guru/siswa.

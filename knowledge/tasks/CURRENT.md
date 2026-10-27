@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan: bias posisi kunci 91→0 paket dan 908 pasangan matching yang menyalin eksplorasi→0 (T-091)**; a11y 17/17 PASS, E2E 7 skenario PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan: bias posisi kunci 91→0 paket dan 908 pasangan matching yang menyalin eksplorasi→0 (T-091)**; **volume latihan kelas 1–6 dinaikkan ke 5–10 item per aktivitas dinilai (T-092: +695 soal kuis, +361 pasangan)**; **Player dipadatkan + mode layar penuh (T-093: panel aktivitas 601→1225 px pada 1280)**; a11y 17/17 PASS, E2E smoke/activities/journey/mode-switch/player-fullscreen PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -127,11 +127,25 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091: 0 paket bias posisi kunci, 0 pasangan matching yang menyalin eksplorasi) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** review guru atas item latihan baru T-092 (daftar paket bermateri tipis di BACKLOG) + keputusan menambah kuis ke 88 paket yang belum punya aktivitas kuis; review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091: 0 paket bias posisi kunci, 0 pasangan matching yang menyalin eksplorasi) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
 |---|---|
+| Volume latihan kelas 1–2 (T-092) | **PASS** — kuis 5 soal/paket (min 5, maks 5), mencocokkan 5 pasangan (min 5, maks 6); 112 paket |
+| Volume latihan kelas 3–6 (T-092) | **PASS** — kuis 6 soal (min 6, maks 6), mencocokkan 6 pasangan (min 6, maks 7) pada 224 paket; `check-practice-volume.mjs`: "Semua aktivitas dinilai berada dalam rentang target" |
+| Kedalaman pasca T-092 | **PASS** — minimum aktual 5 langkah / 3 aktivitas / **10 item** (sebelumnya 8); 0 paket di bawah ambang |
+| R5 pasca T-092 | **PASS** — cermin 0, posisi kunci 0 paket menumpuk (413/393/410/163), kunci-terpanjang 0 paket (sebelumnya 10/3) |
+| Validator konten (T-092) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
+| `npm test` (T-092) | **PASS** — 105/105 unit (15 berkas) + fixture 4/4 + catalog 336/336 |
+| `npm run build` (T-092) | **PASS** — `tsc --noEmit` + Vite |
+| Cakupan kuis per paket (T-092) | **TIDAK TERPENUHI + TERCATAT** — 88 paket (26%) tidak punya aktivitas kuis sama sekali (eksplorasi + mencocokkan + mengurutkan); lihat BACKLOG |
+| E2E player-fullscreen (T-093) | **PASS** — 6 pemeriksaan; chrome/tujuan/kemajuan/ringkasan tersembunyi, tepat 1 h1, tanpa overflow horizontal, Escape keluar, jawaban kuis bertahan saat mode dibuka-tutup (1280 & 1024) |
+| Pengukuran panel aktivitas (T-093) | **TERUKUR** — 1280: 601 → 1225 px; 1024: 689 → 969 px (chrome + sidebar hilang) |
+| `npm run a11y` (T-093) | **PASS** — 17/17 (0 error, 7 warning reflow/target sentuh); Player 0 error/0 warning |
+| `npm test` / `npm run build` (T-093) | **PASS** — 105/105 + fixture 4/4 + catalog 336/336; build PASS |
+| E2E (T-093) | **PASS** — smoke 8/8, activities 14/14, learning-journey 11/11, mode-switch 6/6, player-fullscreen 6/6 |
+| `cargo test` (T-092/T-093) | **NOT RUN** — tanpa perubahan Rust |
 | Bias posisi kunci kuis sebelum T-091a | **TERUKUR** — 694 soal pilihan ganda: posisi 0 = 528 (76,1%), posisi 1 = 147 (21,2%), posisi 2 = 19 (2,7%), posisi 3 = 0; **91 paket** (≥3 soal) menempatkan semua kunci di posisi sama |
 | Bias posisi kunci setelah T-091a | **PASS** — posisi 0 = 206 (29,7%), 1 = 189 (27,2%), 2 = 203 (29,3%), 3 = 96 (13,8%); **0 paket** semua kunci di posisi sama; share per-paket tertinggi 66,7% (199 berkas aktivitas berubah, commit `12ce2e1`) |
 | Pasangan matching menyalin eksplorasi sebelum T-091b | **TERUKUR** — 1.828 pasangan di 336 aktivitas; **908 identik byte** dengan `prompt`+`reveal` langkah eksplorasi paket yang sama (di 184 paket), 230 di antaranya juga boilerplate refleksi |
@@ -143,7 +157,7 @@
 | `npm run a11y` (T-091) | **PASS** — 17/17 (0 error, 7 warning reflow/target sentuh) |
 | E2E (T-091) | **PASS** — activities 14/14, home-catalog 28/28, smoke 8/8 |
 | Idempotensi transform (T-091b) | **PASS** — dijalankan ulang `rewrite-matching-pairs.mjs --apply`: 0 berkas berubah, residuals 0, belowFloor 0, collisions 0, authoredUnused 0 |
-| Sinyal R5 yang tersisa (T-091) | **BELUM SELESAI** — **10 paket** masih punya kunci selalu merupakan opsi terpanjang (`longestCorrectRatio = 1`); butuh penulisan ulang teks opsi, bukan transform mekanis |
+| Sinyal R5 yang tersisa (T-091) | **BELUM SELESAI saat itu** — **10 paket** masih punya kunci selalu merupakan opsi terpanjang (`longestCorrectRatio = 1`); butuh penulisan ulang teks opsi, bukan transform mekanis. **Diukur ulang pasca T-092 (2026-10-27): 0 paket.** |
 | `cargo test` (T-091) | **NOT RUN** — tanpa perubahan Rust |
 | Paket IPAS kelas 1–2 (T-089) | **PASS** — 16 paket baru (8 kelas 1 + 8 kelas 2) VALID 16/16, 0 issue, 1 warning/paket (draft) |
 | Katalog (T-089) | **PASS** — 336 entri / 336 paket; tiap kelas 56, tiap mapel 48; `content:catalog:check` ikut `npm test` |
@@ -691,3 +705,46 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 6. E2E tidak menguji 336 paket satu per satu; ia memuat aktivitas matching bawaan. Cross-check korpus dilakukan lewat skrip, bukan UI.
 
 **Sisa:** 10 paket kunci-terpanjang · reviewer manusia R1–R6/R8–R9/R12 · keputusan Curriculum Lead IPAS Fase A (OD-1) · CP/ATP per bab · D-UX-2/4/5/6 · blocker rilis B-01…B-08.
+
+### Handoff Volume Latihan per Kelas (2026-10-27, T-092)
+
+**Status:** selesai dan terverifikasi untuk seluruh kelas 1–6. Permintaan PO: "kerjakan sesuai kelas saja — saya ingin setiap latihan berisi 5–10 soal". Ruang lingkup dikunci lewat pilihan PO: **kuis + mencocokkan + mengurutkan**, dengan target **5 soal kelas 1–2** dan **6–8 soal kelas 3–6** (dioperasionalkan: kelas 1–2 = tepat 5 kuis + 5 pasangan; kelas 3–6 = tepat 6 kuis + 6 pasangan; mengurutkan ≥5; plafon 10).
+
+**Alur per kelas (1 → 6):** digest materi → `needs-kelas<N>-{a,b,c}.json` (kekurangan per paket) → 3 agen penulis paralel (satu berkas data per agen, dilarang menyentuh `content/packages/`) → `precheck.mjs` → `add-practice-items.mjs --apply` → `spread-answer-positions.mjs --apply` → `check-practice-volume.mjs` → validator 336 paket → analisis R5 → cek kedalaman → `npm test` + `npm run build` → commit per kelas.
+
+**Hasil terukur (19 berkas `scripts/data/practice-items-kelas*-2026-10-27.json`):**
+- Kelas 1: +95 soal / +38 pasangan (56 paket; commit `3ea86e6`) — kuis min 5 maks 5, pasangan min 5 maks 6.
+- Kelas 2: +93 / +33 (commit `06fa649`) — kuis 5/5, pasangan 5–8.
+- Kelas 3: +126 / +78 (commit `4d52f15`) — kuis 6/6, pasangan 6/6.
+- Kelas 4: +123 / +71 (commit `034bb27`) — kuis 6/6, pasangan 6/6.
+- Kelas 5: +132 / +71 (commit `0c7e020`) — kuis 6/6, pasangan 6/6.
+- Kelas 6: +126 / +70 (commit `abc1be6`) — kuis 6/6, pasangan 6–7.
+- **Total +695 soal kuis + 361 pasangan.** `check-practice-volume.mjs`: "Semua aktivitas dinilai berada dalam rentang target".
+
+**Verifikasi aktual (pohon kerja = HEAD `abc1be6`):** validator **336/336 VALID** (0 issue, 336 warning draft) · kedalaman minimum **5 langkah / 3 aktivitas / 10 item**, 0 paket di bawah ambang · R5: cermin **0**, bias posisi kunci **0 paket** (sebaran 413/393/410/163), kunci-selalu-terpanjang **0 paket** (sebelumnya 10) · `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog **336/336** · `npm run build` PASS · `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Batas (jujur):**
+1. **88 paket (26%) tidak memiliki aktivitas kuis sama sekali** — kombinasinya eksplorasi + mencocokkan + mengurutkan (umumnya keterampilan menulis/bercerita/seni/PJOK/PAI praktik). Target "5–10 item" terpenuhi untuk **setiap aktivitas dinilai yang ada**, tetapi bukan untuk setiap paket. Menambah kuis ke 88 paket itu keputusan desain konten — tercatat sebagai pertanyaan terbuka di BACKLOG.
+2. Item ditulis agen dari digest paket, **belum dinilai guru**; `reviewStatus` tetap `draft`. Daftar paket bermateri tipis ada di BACKLOG.
+3. E2E tidak menguji isi 695 soal baru; verifikasi isi lewat skrip korpus (R5, kedalaman, validator), bukan penilaian pedagogis.
+
+**Sisa:** review guru atas item baru (lihat BACKLOG) · keputusan 88 paket tanpa kuis · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
+
+### Handoff Player Padat + Mode Layar Penuh (2026-10-27, T-093)
+
+**Status:** selesai dan terverifikasi. Permintaan PO (sebagai UX/UI): "perbaiki halaman Player Pembelajaran karena masih banyak ruang kosong; saya ingin ada fullscreen mode yang bila diaktifkan hanya menampilkan halaman interaktif, tanpa header tujuan pembelajaran dan progres belajar".
+
+**Desain yang dipilih:**
+- **Mode layar penuh = state di `App`**, bukan Fullscreen API native (WebView2/pratinjau browser tidak konsisten). Tombol "Layar penuh"/"Keluar layar penuh" ada di baris status Player, `aria-pressed` mengikuti state; Escape juga keluar; berpindah layar atau berganti mode otomatis mematikan mode ini.
+- **Tanpa remount:** chrome shell dibungkus `<div className="contents" style={{display:"none"}}>` dan blok lesson memakai atribut `hidden`, sehingga panel aktivitas tidak dilepas dari DOM — **jawaban kuis yang belum diperiksa bertahan** saat mode dibuka-tutup (dibuktikan E2E).
+- Di layar penuh hanya tersisa: strip judul (h1 + kelas/mapel), baris tab aktivitas, satu baris status (disembunyikan kecuali `preview`/`error`), dan panel aktivitas selebar layar.
+- **Kepadatan normal:** hero lebih rapat (padding 4/5, cover 16–20rem), strip penyimpanan pindah dari kolom samping ke baris status, ringkasan sesi lebih ringkas, dan tata letak dua kolom baru aktif di `xl` (1280) sehingga 1024 memakai satu kolom penuh.
+- **Isi aktivitas:** tiap aktivitas dibatasi kolom baca `max-w-5xl` dan opsi kuis memakai dua kolom di layar lebar, agar baris opsi tidak melar selebar panel.
+
+**Bukti terukur (skenario `e2e/player-fullscreen`, 1280×800 & 1024×768):** panel aktivitas **601 → 1225 px** (1280) dan **689 → 969 px** (1024); sidebar, top bar, "Tujuan pembelajaran", kartu kemajuan, dan ringkasan sesi tidak terlihat; tepat **1** `<h1>` terlihat; tanpa overflow horizontal; Escape keluar; jawaban kuis tetap tersimpan. Screenshot: `player-normal-1280.png`, `player-fullscreen-1280.png`, `player-normal-1024.png`, `player-fullscreen-1024.png` di `.tmp-e2e/<stamp>/`.
+
+**Verifikasi aktual:** `npm run a11y` **17/17** (0 error, 7 warning reflow/target sentuh; Player 0 error/0 warning) · E2E **player-fullscreen 6/6**, **activities 14/14**, **learning-journey 11/11**, **smoke 8/8**, **mode-switch 6/6** · `npm test` **105/105** + fixture 4/4 + catalog 336/336 · `npm run build` PASS · commit `e56149f`.
+
+**Batas (jujur):** layar penuh adalah mode di dalam jendela aplikasi, **bukan** fullscreen OS. Ruang kosong yang tersisa di layar penuh berasal dari gambar eksplorasi yang mempertahankan rasio aspek (di-center), bukan dari layout. Mode layar penuh diuji pada mode admin (sidebar) — mekanisme penyembunyian chrome sama untuk mode belajar (rail ikon), tetapi klik UI pada mode belajar belum diuji dengan layar penuh.
+
+**Sisa:** keputusan D-UX-2/4/5/6 · utang shell `main` vs dokumen sebagai scroller (BACKLOG) · review visual guru/PO.

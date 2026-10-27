@@ -32,6 +32,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | **PROPOSED** — [brief identitas rilis & signing](../decisions/PROPOSAL-OD-6-release-identity.md) |
 | OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | **PARTIAL** — Supabase + Cloudflare dipilih; OpenAPI v1, Worker enrollment/sync, skema RLS ([ADR-0027](../decisions/ADR-0027-device-auth-openapi.md), [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md)); lisensi di Worker, RBAC admin, signing konten belum |
 | OD-8 | Standar "konten lengkap" per mapel/unit | Gerbang rilis konten | OPEN |
+| OD-9 | Apakah **88 paket tanpa aktivitas kuis** perlu diberi kuis? | Bentuk latihan, beban guru, target "5–10 soal" per paket | OPEN — temuan T-092 (2026-10-27): 244 paket eksplorasi+mencocokkan+pilihan ganda · **88 paket eksplorasi+mencocokkan+mengurutkan** · 4 paket eksplorasi+mencocokkan+jawaban singkat. Target 5–10 item sudah terpenuhi untuk setiap aktivitas dinilai yang ada; paket tanpa kuis umumnya keterampilan menulis/bercerita/seni/PJOK/PAI praktik. Butuh keputusan PO + Curriculum Lead, bukan kerja mekanis |
 
 ## Gap terverifikasi
 
@@ -61,3 +62,15 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 - Alat QA: `scripts/pedagogical-prereview.mjs` dan `scripts/review-content.ts` menulis ke **path bertanggal tetap** (`PEDAGOGICAL_PREREVIEW_2026-10-26.md`, `review-flags-2026-10-26.json`, dst.). Menjalankannya ulang **menimpa bukti historis**, jadi keduanya tidak bisa dipakai untuk memverifikasi perbaikan setelah tanggal itu. Perlu: tanggal sebagai argumen (default hari ini) + tolak menulis di atas berkas yang sudah ada kecuali `--force`.
 - Remote GitHub aktif (`origin`); CI berjalan di remote sejak 2026-10-24 (run `40040384407` PASS).
 - Branch protection `main`: wajib PR + required checks `Web + server tests`, `Rust tests` (strict), admin terikat.
+
+## Review guru tertunda — item latihan T-092 (2026-10-27)
+
+695 soal kuis + 361 pasangan ditulis agen dari materi paket lalu dipasang otomatis. Semua lolos validator, volume gate, dan detektor R5, tetapi **belum dinilai manusia**; `reviewStatus` tetap `draft`. Paket berikut materi sumbernya tipis sehingga item sebagian berupa parafrase jauh atau diturunkan dari langkah urutan/eksplorasi — prioritaskan saat review guru:
+
+- **Kelas 1–2:** `kelas2-bahasa-indonesia` b02, b04, b06, b07 · `kelas2-matematika` b08 · `kelas2-pai` b04, b05, b07
+- **Kelas 3:** `kelas3-pendidikan-pancasila` b06, b08 · `kelas3-ipas` b07 · `kelas3-pai` b04 · `kelas3-pjok` b06 · `kelas3-seni-rupa` b05
+- **Kelas 4:** `kelas4-ipas` b01, b05, b07 · `kelas4-pendidikan-pancasila` b08 · `kelas4-pai` b04, b07 · `kelas4-pjok` b06 · `kelas4-seni-rupa` b05, b08
+- **Kelas 5:** `kelas5-bahasa-indonesia` b02, b04, b07, b08 · `kelas5-matematika` b03 (ejaan "FPB/KPK" sesuai kurikulum)
+- **Kelas 6:** `kelas6-bahasa-indonesia` b01, b02, b03, b07 · `kelas6-matematika` b05 (alas tabung = lingkaran disimpulkan), b07 (peluang mata genap 3/6 tidak dinyatakan) · `kelas6-ipas` b02 (3 fakta inti, variasi sudut pandang), b04, b05 · `kelas6-pai` b02 (materi paling tipis) · `kelas6-pjok` b03, b05 (pasangan bersifat peralatan/keselamatan) · `kelas6-seni-rupa` b02, b04, b06, b08 · `kelas6-pendidikan-pancasila` b07 (pasangan disimpulkan dari langkah ordering)
+
+Catatan: daftar ini **bukan** penilaian kualitas; ia hanya menandai paket yang materinya paling sedikit sehingga item baru lebih berisiko melenceng dari tujuan pembelajaran.
