@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Pekerjaan dan Kegiatan",
-  "instructions": "Pasangkan setiap pekerjaan atau tindakan dengan kegiatannya.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/ekonomi-pelestarian.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-pohon",
         "left": "Menanam pohon",
         "right": "Menjaga lingkungan"
+      },
+      {
+        "pairId": "pasangan-konsumen-menjalankan-kegiatan-te",
+        "left": "Konsumen menjalankan kegiatan ... terhadap barang",
+        "right": "konsumsi"
       }
     ]
   },

@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Kubus, bola, dan tabung di atas meja",
         "right": "Bangun ruang"
+      },
+      {
+        "pairId": "pasangan-wadah-air-minum-di-rumah-yang-be",
+        "left": "Wadah air minum di rumah yang bentuknya mencontoh bangun tabung",
+        "right": "Botol"
+      },
+      {
+        "pairId": "pasangan-arah-jatuh-bayangan-bila-cahaya",
+        "left": "Arah jatuh bayangan bila cahaya datang dari kiri atas",
+        "right": "Ke sebelah kanan"
       }
     ]
   },

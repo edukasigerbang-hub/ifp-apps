@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Unsur dan Contoh",
-  "instructions": "Pasangkan setiap unsur seni rupa dengan contoh yang sesuai.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/unsur-seni.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-ruang",
         "left": "Ruang",
         "right": "Area kosong di sekitar objek"
+      },
+      {
+        "pairId": "pasangan-bentuk-bentuk-yang-terlihat-pada",
+        "left": "Bentuk-bentuk yang terlihat pada contoh komposisi di paket ini",
+        "right": "Persegi, lingkaran, dan elips"
       }
     ]
   },

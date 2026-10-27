@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-sikap-yang-tepat-terhadap-teman",
+        "prompt": "Sikap yang tepat terhadap teman yang berbeda suku adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-t-0",
+            "text": "menghargai"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-t-1",
+            "text": "membeda-bedakan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-t-2",
+            "text": "mengejek"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-tepat-terhadap-t-0"
+      },
+      {
+        "questionId": "soal-keberagaman-suku-dan-budaya-di-i",
+        "prompt": "Keberagaman suku dan budaya di Indonesia seharusnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-keberagaman-suku-dan-budaya-1",
+            "text": "memecah belah bangsa"
+          },
+          {
+            "optionId": "opsi-soal-keberagaman-suku-dan-budaya-0",
+            "text": "memperkuat persatuan"
+          },
+          {
+            "optionId": "opsi-soal-keberagaman-suku-dan-budaya-2",
+            "text": "menimbulkan pertengkaran"
+          }
+        ],
+        "correctResponse": "opsi-soal-keberagaman-suku-dan-budaya-0"
+      },
+      {
+        "questionId": "soal-saat-teman-dari-daerah-lain-berc",
+        "prompt": "Saat teman dari daerah lain bercerita, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-teman-dari-daerah-lain-1",
+            "text": "menertawakannya"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-dari-daerah-lain-2",
+            "text": "memotong ucapannya"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-dari-daerah-lain-0",
+            "text": "mendengarkannya"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-teman-dari-daerah-lain-0"
       }
     ],
     "passingScore": 75

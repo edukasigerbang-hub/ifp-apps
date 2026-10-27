@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Wujud zat yang bentuk dan volumenya tetap",
         "right": "Benda padat"
+      },
+      {
+        "pairId": "pasangan-air-yang-kita-minum-termasuk-zat",
+        "left": "Air yang kita minum termasuk zat berwujud",
+        "right": "cair"
       }
     ]
   },

@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Langkah pertama dalam mengapresiasi karya seni adalah",
         "right": "Mengamati karya dengan teliti"
+      },
+      {
+        "pairId": "pasangan-sikap-ketika-menemukan-karya-yan",
+        "left": "Sikap ketika menemukan karya yang kurang menarik menurut kita",
+        "right": "Menanggapi dengan sopan"
+      },
+      {
+        "pairId": "pasangan-penyangga-pendapat-ketika-member",
+        "left": "Penyangga pendapat ketika memberi apresiasi, selain sopan",
+        "right": "Beralasan"
       }
     ]
   },

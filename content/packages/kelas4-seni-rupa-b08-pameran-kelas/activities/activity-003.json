@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Alasan karya siswa dipamerkan",
         "right": "Melatih percaya diri"
+      },
+      {
+        "pairId": "pasangan-kartu-keterangan-singkat-yang-di",
+        "left": "Kartu keterangan singkat yang dipasang di dekat karya pameran",
+        "right": "Label karya"
+      },
+      {
+        "pairId": "pasangan-jenis-karya-yang-dipamerkan-sela",
+        "left": "Jenis karya yang dipamerkan selain gambar dua dimensi",
+        "right": "Karya tiga dimensi"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-karya-di",
+        "left": "Langkah pertama sebelum karya ditata di pameran kelas",
+        "right": "Memilih karya"
       }
     ]
   },

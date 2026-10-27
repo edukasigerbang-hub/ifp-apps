@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-rumah-gadang-adalah-rumah-adat-d",
+        "prompt": "Rumah Gadang adalah rumah adat dari daerah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rumah-gadang-adalah-rumah-a-0",
+            "text": "Sumatera Barat"
+          },
+          {
+            "optionId": "opsi-soal-rumah-gadang-adalah-rumah-a-1",
+            "text": "Sumatera Utara"
+          },
+          {
+            "optionId": "opsi-soal-rumah-gadang-adalah-rumah-a-2",
+            "text": "Aceh"
+          }
+        ],
+        "correctResponse": "opsi-soal-rumah-gadang-adalah-rumah-a-0"
+      },
+      {
+        "questionId": "soal-tari-saman-berasal-dari-daerah",
+        "prompt": "Tari Saman berasal dari daerah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tari-saman-berasal-dari-dae-1",
+            "text": "Bali"
+          },
+          {
+            "optionId": "opsi-soal-tari-saman-berasal-dari-dae-0",
+            "text": "Aceh"
+          },
+          {
+            "optionId": "opsi-soal-tari-saman-berasal-dari-dae-2",
+            "text": "Jawa"
+          }
+        ],
+        "correctResponse": "opsi-soal-tari-saman-berasal-dari-dae-0"
+      },
+      {
+        "questionId": "soal-kain-tradisional-yang-berasal-da",
+        "prompt": "Kain tradisional yang berasal dari Sumatera Utara adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kain-tradisional-yang-beras-1",
+            "text": "batik"
+          },
+          {
+            "optionId": "opsi-soal-kain-tradisional-yang-beras-2",
+            "text": "songket"
+          },
+          {
+            "optionId": "opsi-soal-kain-tradisional-yang-beras-0",
+            "text": "ulos"
+          }
+        ],
+        "correctResponse": "opsi-soal-kain-tradisional-yang-beras-0"
+      },
+      {
+        "questionId": "soal-semua-budaya-daerah-di-indonesia",
+        "prompt": "Semua budaya daerah di Indonesia sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-semua-budaya-daerah-di-indo-0",
+            "text": "hargai"
+          },
+          {
+            "optionId": "opsi-soal-semua-budaya-daerah-di-indo-1",
+            "text": "lestarikan"
+          },
+          {
+            "optionId": "opsi-soal-semua-budaya-daerah-di-indo-2",
+            "text": "lupakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-semua-budaya-daerah-di-indo-0"
       }
     ],
     "passingScore": 75

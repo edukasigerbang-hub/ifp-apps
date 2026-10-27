@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-20"
+      },
+      {
+        "questionId": "soal-tali-sepanjang-3-meter-sama-deng",
+        "prompt": "Tali sepanjang 3 meter sama dengan ... cm",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tali-sepanjang-3-meter-sama-0",
+            "text": "300"
+          },
+          {
+            "optionId": "opsi-soal-tali-sepanjang-3-meter-sama-1",
+            "text": "30"
+          },
+          {
+            "optionId": "opsi-soal-tali-sepanjang-3-meter-sama-2",
+            "text": "3.000"
+          }
+        ],
+        "correctResponse": "opsi-soal-tali-sepanjang-3-meter-sama-0"
+      },
+      {
+        "questionId": "soal-berat-apel-500-gram-dan-jeruk-1",
+        "prompt": "Berat apel 500 gram dan jeruk 1 kilogram. Total berat keduanya ... gram",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berat-apel-500-gram-dan-jer-1",
+            "text": "1.000"
+          },
+          {
+            "optionId": "opsi-soal-berat-apel-500-gram-dan-jer-0",
+            "text": "1.500"
+          },
+          {
+            "optionId": "opsi-soal-berat-apel-500-gram-dan-jer-2",
+            "text": "2.000"
+          }
+        ],
+        "correctResponse": "opsi-soal-berat-apel-500-gram-dan-jer-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sesuatu-yang-seharusnya-kita-ter",
+        "prompt": "Sesuatu yang seharusnya kita terima disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sesuatu-yang-seharusnya-kit-0",
+            "text": "hak"
+          },
+          {
+            "optionId": "opsi-soal-sesuatu-yang-seharusnya-kit-1",
+            "text": "kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-sesuatu-yang-seharusnya-kit-2",
+            "text": "aturan"
+          }
+        ],
+        "correctResponse": "opsi-soal-sesuatu-yang-seharusnya-kit-0"
+      },
+      {
+        "questionId": "soal-mengerjakan-tugas-dari-guru-meru",
+        "prompt": "Mengerjakan tugas dari guru merupakan ... siswa di sekolah.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengerjakan-tugas-dari-guru-1",
+            "text": "hak"
+          },
+          {
+            "optionId": "opsi-soal-mengerjakan-tugas-dari-guru-0",
+            "text": "kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-mengerjakan-tugas-dari-guru-2",
+            "text": "pilihan"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengerjakan-tugas-dari-guru-0"
+      },
+      {
+        "questionId": "soal-mendapat-pembelajaran-di-sekolah",
+        "prompt": "Mendapat pembelajaran di sekolah merupakan ... setiap siswa.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mendapat-pembelajaran-di-se-1",
+            "text": "kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-mendapat-pembelajaran-di-se-2",
+            "text": "tugas"
+          },
+          {
+            "optionId": "opsi-soal-mendapat-pembelajaran-di-se-0",
+            "text": "hak"
+          }
+        ],
+        "correctResponse": "opsi-soal-mendapat-pembelajaran-di-se-0"
+      },
+      {
+        "questionId": "soal-agar-hidup-tertib-dan-adil-hak-d",
+        "prompt": "Agar hidup tertib dan adil, hak dan kewajiban harus dijalankan secara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-hidup-tertib-dan-adil-0",
+            "text": "seimbang"
+          },
+          {
+            "optionId": "opsi-soal-agar-hidup-tertib-dan-adil-1",
+            "text": "berat sebelah"
+          },
+          {
+            "optionId": "opsi-soal-agar-hidup-tertib-dan-adil-2",
+            "text": "terburu-buru"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-hidup-tertib-dan-adil-0"
       }
     ],
     "passingScore": 75

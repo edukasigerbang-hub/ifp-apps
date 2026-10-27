@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-kita-percaya-tuhan-dan-beribadah",
+        "prompt": "Kita percaya Tuhan dan beribadah dengan teratur. Perilaku itu termasuk norma ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kita-percaya-tuhan-dan-beri-1",
+            "text": "kesopanan"
+          },
+          {
+            "optionId": "opsi-soal-kita-percaya-tuhan-dan-beri-0",
+            "text": "agama"
+          },
+          {
+            "optionId": "opsi-soal-kita-percaya-tuhan-dan-beri-2",
+            "text": "hukum"
+          }
+        ],
+        "correctResponse": "opsi-soal-kita-percaya-tuhan-dan-beri-0"
+      },
+      {
+        "questionId": "soal-aturan-dibuat-agar-kegiatan-bers",
+        "prompt": "Aturan dibuat agar kegiatan bersama berjalan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-aturan-dibuat-agar-kegiatan-1",
+            "text": "kacau"
+          },
+          {
+            "optionId": "opsi-soal-aturan-dibuat-agar-kegiatan-2",
+            "text": "semrawut"
+          },
+          {
+            "optionId": "opsi-soal-aturan-dibuat-agar-kegiatan-0",
+            "text": "tertib"
+          }
+        ],
+        "correctResponse": "opsi-soal-aturan-dibuat-agar-kegiatan-0"
+      },
+      {
+        "questionId": "soal-saat-melewati-orang-yang-lebih-t",
+        "prompt": "Saat melewati orang yang lebih tua, sebaiknya kita berkata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-melewati-orang-yang-le-0",
+            "text": "permisi"
+          },
+          {
+            "optionId": "opsi-soal-saat-melewati-orang-yang-le-1",
+            "text": "terima kasih"
+          },
+          {
+            "optionId": "opsi-soal-saat-melewati-orang-yang-le-2",
+            "text": "maaf ya"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-melewati-orang-yang-le-0"
       }
     ],
     "passingScore": 75

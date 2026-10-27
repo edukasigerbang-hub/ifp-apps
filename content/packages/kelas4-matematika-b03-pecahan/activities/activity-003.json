@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Bentuk paling sederhana dari 4/8 adalah",
         "right": "1/2"
+      },
+      {
+        "pairId": "pasangan-bagian-berwarna-pada-batang-yang",
+        "left": "Bagian berwarna pada batang yang dibagi 4 sama besar dengan 1 bagian berwarna",
+        "right": "1/4"
+      },
+      {
+        "pairId": "pasangan-dua-pecahan-yang-menunjukkan-bes",
+        "left": "Dua pecahan yang menunjukkan besar bagian yang sama disebut pecahan",
+        "right": "senilai"
       }
     ]
   },

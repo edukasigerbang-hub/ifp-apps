@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Energi dan Contohnya",
-  "instructions": "Pasangkan setiap bentuk energi dengan contoh yang sesuai.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/energi-perubahan.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-panas",
         "left": "Energi panas",
         "right": "Kompor memanaskan air"
+      },
+      {
+        "pairId": "pasangan-perubahan-energi-yang-terjadi-pa",
+        "left": "Perubahan energi yang terjadi pada lampu saat menyala",
+        "right": "energi listrik menjadi energi cahaya"
       }
     ]
   },

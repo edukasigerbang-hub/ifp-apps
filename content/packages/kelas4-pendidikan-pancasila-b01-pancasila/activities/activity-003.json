@@ -33,6 +33,18 @@
         "prompt": "Padi dan kapas melambangkan sila ke ...",
         "responseType": "text",
         "correctResponse": "5"
+      },
+      {
+        "questionId": "soal-sila-ketiga-pancasila-dilambangk",
+        "prompt": "Sila ketiga Pancasila dilambangkan dengan pohon ...",
+        "responseType": "text",
+        "correctResponse": "beringin"
+      },
+      {
+        "questionId": "soal-sila-keempat-pancasila-dilambang",
+        "prompt": "Sila keempat Pancasila dilambangkan dengan gambar kepala ...",
+        "responseType": "text",
+        "correctResponse": "banteng"
       }
     ],
     "passingScore": 75

@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Norma dan Contoh",
-  "instructions": "Pasangkan setiap jenis norma dengan contoh perilaku yang sesuai.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/antrean-kelas.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-sekolah",
         "left": "Aturan sekolah",
         "right": "Datang tepat waktu"
+      },
+      {
+        "pairId": "pasangan-tujuan-siswa-mengantre-dengan-te",
+        "left": "Tujuan siswa mengantre dengan tertib di depan kelas",
+        "right": "kegiatan berjalan tertib, adil, dan aman"
       }
     ]
   },

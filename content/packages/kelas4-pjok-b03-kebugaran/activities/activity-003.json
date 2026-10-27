@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-latihan-duduk-lalu-menjangkau-uj",
+        "prompt": "Latihan duduk lalu menjangkau ujung kaki bertujuan melatih ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-latihan-duduk-lalu-menjangk-1",
+            "text": "kekuatan otot"
+          },
+          {
+            "optionId": "opsi-soal-latihan-duduk-lalu-menjangk-0",
+            "text": "kelenturan"
+          },
+          {
+            "optionId": "opsi-soal-latihan-duduk-lalu-menjangk-2",
+            "text": "kecepatan lari"
+          }
+        ],
+        "correctResponse": "opsi-soal-latihan-duduk-lalu-menjangk-0"
+      },
+      {
+        "questionId": "soal-latihan-yang-membiasakan-jantung",
+        "prompt": "Latihan yang membiasakan jantung dan paru-paru bekerja lebih lama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-latihan-yang-membiasakan-ja-1",
+            "text": "lari cepat pendek"
+          },
+          {
+            "optionId": "opsi-soal-latihan-yang-membiasakan-ja-2",
+            "text": "jalan di tempat"
+          },
+          {
+            "optionId": "opsi-soal-latihan-yang-membiasakan-ja-0",
+            "text": "lari jarak jauh"
+          }
+        ],
+        "correctResponse": "opsi-soal-latihan-yang-membiasakan-ja-0"
+      },
+      {
+        "questionId": "soal-kemampuan-bergerak-secepat-mungk",
+        "prompt": "Kemampuan bergerak secepat mungkin dalam jarak pendek dilatih melalui ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kemampuan-bergerak-secepat-0",
+            "text": "lari cepat"
+          },
+          {
+            "optionId": "opsi-soal-kemampuan-bergerak-secepat-1",
+            "text": "jalan santai"
+          },
+          {
+            "optionId": "opsi-soal-kemampuan-bergerak-secepat-2",
+            "text": "duduk menjangkau"
+          }
+        ],
+        "correctResponse": "opsi-soal-kemampuan-bergerak-secepat-0"
+      },
+      {
+        "questionId": "soal-kelenturan-tubuh-penting-karena",
+        "prompt": "Kelenturan tubuh penting karena membuat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kelenturan-tubuh-penting-ka-1",
+            "text": "otot menjadi mudah pegal"
+          },
+          {
+            "optionId": "opsi-soal-kelenturan-tubuh-penting-ka-0",
+            "text": "gerakan lebih leluasa"
+          },
+          {
+            "optionId": "opsi-soal-kelenturan-tubuh-penting-ka-2",
+            "text": "tubuh cepat merasa lelah"
+          }
+        ],
+        "correctResponse": "opsi-soal-kelenturan-tubuh-penting-ka-0"
       }
     ],
     "passingScore": 75

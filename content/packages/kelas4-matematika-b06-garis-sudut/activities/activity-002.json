@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-busur"
+      },
+      {
+        "questionId": "soal-sudut-yang-besarnya-lebih-dari-9",
+        "prompt": "Sudut yang besarnya lebih dari 90° disebut sudut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sudut-yang-besarnya-lebih-d-1",
+            "text": "lancip"
+          },
+          {
+            "optionId": "opsi-soal-sudut-yang-besarnya-lebih-d-2",
+            "text": "siku-siku"
+          },
+          {
+            "optionId": "opsi-soal-sudut-yang-besarnya-lebih-d-0",
+            "text": "tumpul"
+          }
+        ],
+        "correctResponse": "opsi-soal-sudut-yang-besarnya-lebih-d-0"
+      },
+      {
+        "questionId": "soal-dua-garis-yang-berpotongan-membe",
+        "prompt": "Dua garis yang berpotongan membentuk sudut 90° disebut saling ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-garis-yang-berpotongan-0",
+            "text": "tegak lurus"
+          },
+          {
+            "optionId": "opsi-soal-dua-garis-yang-berpotongan-1",
+            "text": "sejajar"
+          },
+          {
+            "optionId": "opsi-soal-dua-garis-yang-berpotongan-2",
+            "text": "berhimpit"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-garis-yang-berpotongan-0"
       }
     ],
     "passingScore": 75

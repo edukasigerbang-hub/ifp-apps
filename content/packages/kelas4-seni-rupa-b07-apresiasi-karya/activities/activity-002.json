@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-menghargai"
+      },
+      {
+        "questionId": "soal-saran-yang-kita-sampaikan-saat-m",
+        "prompt": "Saran yang kita sampaikan saat mengapresiasi karya teman sebaiknya bersifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saran-yang-kita-sampaikan-s-1",
+            "text": "menjatuhkan"
+          },
+          {
+            "optionId": "opsi-soal-saran-yang-kita-sampaikan-s-2",
+            "text": "mengejek"
+          },
+          {
+            "optionId": "opsi-soal-saran-yang-kita-sampaikan-s-0",
+            "text": "membangun"
+          }
+        ],
+        "correctResponse": "opsi-soal-saran-yang-kita-sampaikan-s-0"
+      },
+      {
+        "questionId": "soal-selain-garis-warna-bentuk-dan-te",
+        "prompt": "Selain garis, warna, bentuk, dan tekstur, unsur karya yang dapat diamati adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-garis-warna-bentuk-d-0",
+            "text": "tema"
+          },
+          {
+            "optionId": "opsi-soal-selain-garis-warna-bentuk-d-1",
+            "text": "harga karya"
+          },
+          {
+            "optionId": "opsi-soal-selain-garis-warna-bentuk-d-2",
+            "text": "warna seragam sekolah"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-garis-warna-bentuk-d-0"
       }
     ],
     "passingScore": 75

@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Gaya dan Contohnya",
-  "instructions": "Pasangkan setiap jenis gaya dengan contoh yang sesuai.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/gaya-gerak.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-magnet",
         "left": "Gaya magnet",
         "right": "Paku menempel pada magnet"
+      },
+      {
+        "pairId": "pasangan-arah-tarikan-gaya-gravitasi-bumi",
+        "left": "Arah tarikan gaya gravitasi bumi terhadap semua benda",
+        "right": "ke bawah"
       }
     ]
   },

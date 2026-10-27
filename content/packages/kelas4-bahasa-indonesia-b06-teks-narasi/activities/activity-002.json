@@ -10,6 +10,10 @@
   "interactionConfig": {
     "items": [
       {
+        "itemId": "langkah-menentukan-tema",
+        "text": "Menentukan tema, tokoh, dan latar cerita"
+      },
+      {
         "itemId": "item-orientasi",
         "text": "Orientasi: pengenalan tokoh dan latar"
       },
@@ -20,12 +24,18 @@
       {
         "itemId": "item-resolusi",
         "text": "Resolusi: penyelesaian masalah"
+      },
+      {
+        "itemId": "langkah-penutup",
+        "text": "Penutup: akhir cerita dan pesan yang disampaikan"
       }
     ],
     "correctOrder": [
+      "langkah-menentukan-tema",
       "item-orientasi",
       "item-komplikasi",
-      "item-resolusi"
+      "item-resolusi",
+      "langkah-penutup"
     ]
   },
   "completionPolicy": {

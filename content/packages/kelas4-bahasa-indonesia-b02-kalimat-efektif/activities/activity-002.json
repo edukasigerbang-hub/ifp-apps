@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-sangat-rajin"
+      },
+      {
+        "questionId": "soal-kalimat-yang-memakai-kata-berleb",
+        "prompt": "Kalimat yang memakai kata berlebihan sampai maknanya berulang disebut kalimat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kalimat-yang-memakai-kata-b-1",
+            "text": "sangat efektif"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-yang-memakai-kata-b-2",
+            "text": "perintah"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-yang-memakai-kata-b-0",
+            "text": "tidak efektif"
+          }
+        ],
+        "correctResponse": "opsi-soal-kalimat-yang-memakai-kata-b-0"
+      },
+      {
+        "questionId": "soal-bentuk-baku-dari-kata-praktek-ya",
+        "prompt": "Bentuk baku dari kata 'praktek' yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bentuk-baku-dari-kata-prakt-0",
+            "text": "praktik"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-baku-dari-kata-prakt-1",
+            "text": "praktek"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-baku-dari-kata-prakt-2",
+            "text": "praktekan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bentuk-baku-dari-kata-prakt-0"
       }
     ],
     "passingScore": 75

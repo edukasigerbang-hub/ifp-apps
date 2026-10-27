@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Bola tenis, kok, dan bola pingpong",
         "right": "Permainan bola kecil"
+      },
+      {
+        "pairId": "pasangan-alat-pemukul-berbentuk-papan-unt",
+        "left": "Alat pemukul berbentuk papan untuk permainan tenis meja",
+        "right": "Bet"
+      },
+      {
+        "pairId": "pasangan-bola-kecil-yang-dipakai-dalam-pe",
+        "left": "Bola kecil yang dipakai dalam permainan tenis meja",
+        "right": "Bola pingpong"
       }
     ]
   },

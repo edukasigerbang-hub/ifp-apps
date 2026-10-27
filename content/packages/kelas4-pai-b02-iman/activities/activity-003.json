@@ -49,6 +49,94 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-percaya-dalam-hati-diucapkan-den",
+        "prompt": "Percaya dalam hati, diucapkan dengan lisan, dan diamalkan dengan perbuatan adalah arti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-percaya-dalam-hati-diucapka-1",
+            "text": "amal jariyah"
+          },
+          {
+            "optionId": "opsi-soal-percaya-dalam-hati-diucapka-2",
+            "text": "ikhtiar"
+          },
+          {
+            "optionId": "opsi-soal-percaya-dalam-hati-diucapka-0",
+            "text": "iman"
+          }
+        ],
+        "correctResponse": "opsi-soal-percaya-dalam-hati-diucapka-0"
+      },
+      {
+        "questionId": "soal-rukun-iman-yang-harus-diyakini-s",
+        "prompt": "Rukun iman yang harus diyakini seorang muslim ada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rukun-iman-yang-harus-diyak-1",
+            "text": "empat"
+          },
+          {
+            "optionId": "opsi-soal-rukun-iman-yang-harus-diyak-2",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-soal-rukun-iman-yang-harus-diyak-0",
+            "text": "enam"
+          },
+          {
+            "optionId": "opsi-soal-rukun-iman-yang-harus-diyak-3",
+            "text": "tujuh"
+          }
+        ],
+        "correctResponse": "opsi-soal-rukun-iman-yang-harus-diyak-0"
+      },
+      {
+        "questionId": "soal-meyakini-semua-utusan-allah-term",
+        "prompt": "Meyakini semua utusan Allah termasuk rukun iman kepada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-meyakini-semua-utusan-allah-1",
+            "text": "malaikat"
+          },
+          {
+            "optionId": "opsi-soal-meyakini-semua-utusan-allah-2",
+            "text": "kitab"
+          },
+          {
+            "optionId": "opsi-soal-meyakini-semua-utusan-allah-3",
+            "text": "qada dan qadar"
+          },
+          {
+            "optionId": "opsi-soal-meyakini-semua-utusan-allah-0",
+            "text": "rasul"
+          }
+        ],
+        "correctResponse": "opsi-soal-meyakini-semua-utusan-allah-0"
+      },
+      {
+        "questionId": "soal-contoh-meneladani-akhlak-rasul-d",
+        "prompt": "Contoh meneladani akhlak Rasul di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-contoh-meneladani-akhlak-ra-1",
+            "text": "menyembunyikan kesalahan teman"
+          },
+          {
+            "optionId": "opsi-soal-contoh-meneladani-akhlak-ra-2",
+            "text": "mengejek teman yang berbeda"
+          },
+          {
+            "optionId": "opsi-soal-contoh-meneladani-akhlak-ra-0",
+            "text": "berkataan jujur"
+          }
+        ],
+        "correctResponse": "opsi-soal-contoh-meneladani-akhlak-ra-0"
       }
     ],
     "passingScore": 75

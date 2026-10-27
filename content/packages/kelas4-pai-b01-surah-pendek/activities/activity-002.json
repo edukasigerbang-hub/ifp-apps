@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Surah dan Tema",
-  "instructions": "Pasangkan setiap surah pendek dengan tema utamanya.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/membaca-quran.webp"
   ],
@@ -28,6 +28,16 @@
         "pairId": "pasangan-nas",
         "left": "An-Nas",
         "right": "Perlindungan dari bisikan"
+      },
+      {
+        "pairId": "pasangan-cara-berlatih-membaca-surah-pend",
+        "left": "Cara berlatih membaca surah pendek di kelas",
+        "right": "Dengan bimbingan guru"
+      },
+      {
+        "pairId": "pasangan-hal-yang-dilakukan-sebelum-memba",
+        "left": "Hal yang dilakukan sebelum membaca Al-Qur'an agar tubuh bersih",
+        "right": "Bersuci"
       }
     ]
   },

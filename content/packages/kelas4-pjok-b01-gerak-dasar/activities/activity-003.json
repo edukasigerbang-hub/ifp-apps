@@ -41,6 +41,90 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-gerakan-yang-tidak-memindahkan-p",
+        "prompt": "Gerakan yang tidak memindahkan posisi tubuh disebut gerak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerakan-yang-tidak-memindah-1",
+            "text": "lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-yang-tidak-memindah-2",
+            "text": "manipulatif"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-yang-tidak-memindah-0",
+            "text": "non-lokomotor"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerakan-yang-tidak-memindah-0"
+      },
+      {
+        "questionId": "soal-melompat-termasuk-gerak-lokomoto",
+        "prompt": "Melompat termasuk gerak lokomotor karena saat melompat tubuh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-melompat-termasuk-gerak-lok-0",
+            "text": "berpindah tempat"
+          },
+          {
+            "optionId": "opsi-soal-melompat-termasuk-gerak-lok-1",
+            "text": "mengayun lengan saja"
+          },
+          {
+            "optionId": "opsi-soal-melompat-termasuk-gerak-lok-2",
+            "text": "tetap di tempat"
+          }
+        ],
+        "correctResponse": "opsi-soal-melompat-termasuk-gerak-lok-0"
+      },
+      {
+        "questionId": "soal-berikut-ini-yang-termasuk-contoh",
+        "prompt": "Berikut ini yang termasuk contoh gerak non-lokomotor adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berikut-ini-yang-termasuk-c-1",
+            "text": "lari di lintasan"
+          },
+          {
+            "optionId": "opsi-soal-berikut-ini-yang-termasuk-c-0",
+            "text": "memutar badan"
+          },
+          {
+            "optionId": "opsi-soal-berikut-ini-yang-termasuk-c-2",
+            "text": "jalan berbaris"
+          },
+          {
+            "optionId": "opsi-soal-berikut-ini-yang-termasuk-c-3",
+            "text": "lompat jauh"
+          }
+        ],
+        "correctResponse": "opsi-soal-berikut-ini-yang-termasuk-c-0"
+      },
+      {
+        "questionId": "soal-supaya-latihan-gerak-dasar-berla",
+        "prompt": "Supaya latihan gerak dasar berlangsung aman, sebelum mulai kita melakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-supaya-latihan-gerak-dasar-1",
+            "text": "makan sampai kenyang"
+          },
+          {
+            "optionId": "opsi-soal-supaya-latihan-gerak-dasar-2",
+            "text": "tidur lebih dulu"
+          },
+          {
+            "optionId": "opsi-soal-supaya-latihan-gerak-dasar-0",
+            "text": "pemanasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-supaya-latihan-gerak-dasar-0"
       }
     ],
     "passingScore": 75

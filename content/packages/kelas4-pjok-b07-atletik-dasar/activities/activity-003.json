@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-start-jongkok-merupakan-teknik-a",
+        "prompt": "Start jongkok merupakan teknik awal untuk nomor ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-start-jongkok-merupakan-tek-1",
+            "text": "lompat jauh"
+          },
+          {
+            "optionId": "opsi-soal-start-jongkok-merupakan-tek-0",
+            "text": "lari cepat"
+          },
+          {
+            "optionId": "opsi-soal-start-jongkok-merupakan-tek-2",
+            "text": "lempar bola"
+          }
+        ],
+        "correctResponse": "opsi-soal-start-jongkok-merupakan-tek-0"
+      },
+      {
+        "questionId": "soal-sebelum-melakukan-tolakan-pada-l",
+        "prompt": "Sebelum melakukan tolakan pada lompat jauh, atlet lebih dahulu mengambil ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-melakukan-tolakan-p-1",
+            "text": "pendinginan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-melakukan-tolakan-p-2",
+            "text": "pendaratan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-melakukan-tolakan-p-0",
+            "text": "awalan"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-melakukan-tolakan-p-0"
+      },
+      {
+        "questionId": "soal-tempat-pendaratan-atlet-lompat-j",
+        "prompt": "Tempat pendaratan atlet lompat jauh berupa bak berisi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tempat-pendaratan-atlet-lom-0",
+            "text": "pasir"
+          },
+          {
+            "optionId": "opsi-soal-tempat-pendaratan-atlet-lom-1",
+            "text": "kerikil tajam"
+          },
+          {
+            "optionId": "opsi-soal-tempat-pendaratan-atlet-lom-2",
+            "text": "semen kering"
+          }
+        ],
+        "correctResponse": "opsi-soal-tempat-pendaratan-atlet-lom-0"
+      },
+      {
+        "questionId": "soal-sikap-sportivitas-seorang-atlet",
+        "prompt": "Sikap sportivitas seorang atlet ketika bertemu lawan berarti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-sportivitas-seorang-a-1",
+            "text": "meremehkan lawan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-sportivitas-seorang-a-0",
+            "text": "menghargai lawan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-sportivitas-seorang-a-2",
+            "text": "menyalahkan juri"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-sportivitas-seorang-a-0"
       }
     ],
     "passingScore": 75

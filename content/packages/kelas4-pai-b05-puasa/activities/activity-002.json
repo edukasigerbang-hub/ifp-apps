@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-sabar"
+      },
+      {
+        "questionId": "soal-orang-yang-berpuasa-berhenti-men",
+        "prompt": "Orang yang berpuasa berhenti menahan makan dan minum ketika ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-1",
+            "text": "fajar baru terbit"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-0",
+            "text": "matahari terbenam"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-2",
+            "text": "siang hari tiba"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-berpuasa-berhent-0"
+      },
+      {
+        "questionId": "soal-puasa-menumbuhkan-sikap-peduli-k",
+        "prompt": "Puasa menumbuhkan sikap peduli kepada orang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-puasa-menumbuhkan-sikap-ped-1",
+            "text": "berkecukupan"
+          },
+          {
+            "optionId": "opsi-soal-puasa-menumbuhkan-sikap-ped-2",
+            "text": "hidup berkelebihan"
+          },
+          {
+            "optionId": "opsi-soal-puasa-menumbuhkan-sikap-ped-0",
+            "text": "berkekurangan"
+          }
+        ],
+        "correctResponse": "opsi-soal-puasa-menumbuhkan-sikap-ped-0"
       }
     ],
     "passingScore": 75

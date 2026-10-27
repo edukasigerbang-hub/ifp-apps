@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-3-6-9"
+      },
+      {
+        "questionId": "soal-faktor-terbesar-dari-bilangan-10",
+        "prompt": "Faktor terbesar dari bilangan 10 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-faktor-terbesar-dari-bilang-1",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-faktor-terbesar-dari-bilang-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-faktor-terbesar-dari-bilang-0",
+            "text": "10"
+          }
+        ],
+        "correctResponse": "opsi-soal-faktor-terbesar-dari-bilang-0"
+      },
+      {
+        "questionId": "soal-kpk-dari-6-dan-8-adalah",
+        "prompt": "KPK dari 6 dan 8 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kpk-dari-6-dan-8-adalah-0",
+            "text": "24"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-6-dan-8-adalah-1",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-6-dan-8-adalah-2",
+            "text": "48"
+          }
+        ],
+        "correctResponse": "opsi-soal-kpk-dari-6-dan-8-adalah-0"
       }
     ],
     "passingScore": 75

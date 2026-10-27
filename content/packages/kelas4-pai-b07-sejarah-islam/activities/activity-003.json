@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Alasan Nabi hijrah ke Madinah",
         "right": "Untuk menyebarkan Islam dan melindungi umat"
+      },
+      {
+        "pairId": "pasangan-kegiatan-nabi-muhammad-setelah-m",
+        "left": "Kegiatan Nabi Muhammad setelah menerima wahyu pertama",
+        "right": "Berdakwah di Makkah"
+      },
+      {
+        "pairId": "pasangan-masjid-yang-dibangun-nabi-setela",
+        "left": "Masjid yang dibangun Nabi setelah sampai di kota tujuan hijrah",
+        "right": "Masjid Nabawi"
+      },
+      {
+        "pairId": "pasangan-kota-tujuan-hijrah-nabi-muhammad",
+        "left": "Kota tujuan hijrah Nabi Muhammad untuk menyebarkan Islam",
+        "right": "Madinah"
       }
     ]
   },

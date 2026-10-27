@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-pekerjaan-yang-berat-akan-terasa",
+        "prompt": "Pekerjaan yang berat akan terasa ... bila dikerjakan dengan gotong royong.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pekerjaan-yang-berat-akan-t-1",
+            "text": "lebih berat"
+          },
+          {
+            "optionId": "opsi-soal-pekerjaan-yang-berat-akan-t-2",
+            "text": "terlambat selesai"
+          },
+          {
+            "optionId": "opsi-soal-pekerjaan-yang-berat-akan-t-0",
+            "text": "lebih ringan"
+          }
+        ],
+        "correctResponse": "opsi-soal-pekerjaan-yang-berat-akan-t-0"
+      },
+      {
+        "questionId": "soal-berikut-yang-termasuk-contoh-got",
+        "prompt": "Berikut yang termasuk contoh gotong royong di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berikut-yang-termasuk-conto-0",
+            "text": "piket kelas"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-termasuk-conto-1",
+            "text": "belajar sendiri di rumah"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-termasuk-conto-2",
+            "text": "berlari di lapangan"
+          }
+        ],
+        "correctResponse": "opsi-soal-berikut-yang-termasuk-conto-0"
+      },
+      {
+        "questionId": "soal-selain-pekerjaan-cepat-selesai-g",
+        "prompt": "Selain pekerjaan cepat selesai, gotong royong juga mempererat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-pekerjaan-cepat-sele-1",
+            "text": "perselisihan"
+          },
+          {
+            "optionId": "opsi-soal-selain-pekerjaan-cepat-sele-0",
+            "text": "persatuan"
+          },
+          {
+            "optionId": "opsi-soal-selain-pekerjaan-cepat-sele-2",
+            "text": "permusuhan"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-pekerjaan-cepat-sele-0"
       }
     ],
     "passingScore": 75

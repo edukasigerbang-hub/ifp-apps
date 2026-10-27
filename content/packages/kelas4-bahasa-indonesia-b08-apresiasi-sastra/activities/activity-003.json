@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Apresiasi yang baik terhadap karya teman adalah",
         "right": "menyebutkan hal menarik beserta alasannya"
+      },
+      {
+        "pairId": "pasangan-unsur-cerita-yang-berisi-pesan-p",
+        "left": "Unsur cerita yang berisi pesan penulis untuk pembacanya",
+        "right": "amanat"
+      },
+      {
+        "pairId": "pasangan-kumpulan-baris-yang-membentuk-sa",
+        "left": "Kumpulan baris yang membentuk satu bagian dalam puisi disebut",
+        "right": "bait"
       }
     ]
   },

@@ -24,13 +24,18 @@
       {
         "itemId": "item-menguap",
         "text": "Menguap menjadi uap air (gas)"
+      },
+      {
+        "itemId": "langkah-mengembun",
+        "text": "Uap air didinginkan kembali menjadi air (mengembun)"
       }
     ],
     "correctOrder": [
       "item-es-batu",
       "item-mencair",
       "item-air",
-      "item-menguap"
+      "item-menguap",
+      "langkah-mengembun"
     ]
   },
   "completionPolicy": {

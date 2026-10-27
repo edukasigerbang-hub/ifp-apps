@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-tertinggi"
+      },
+      {
+        "questionId": "soal-dua-jam-sama-dengan-menit",
+        "prompt": "Dua jam sama dengan ... menit",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-jam-sama-dengan-menit-0",
+            "text": "120"
+          },
+          {
+            "optionId": "opsi-soal-dua-jam-sama-dengan-menit-1",
+            "text": "100"
+          },
+          {
+            "optionId": "opsi-soal-dua-jam-sama-dengan-menit-2",
+            "text": "200"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-jam-sama-dengan-menit-0"
+      },
+      {
+        "questionId": "soal-air-2-liter-dituang-habis-ke-gel",
+        "prompt": "Air 2 liter dituang habis ke gelas berukuran 500 mL. Banyak gelas yang dibutuhkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-air-2-liter-dituang-habis-k-1",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-air-2-liter-dituang-habis-k-0",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-air-2-liter-dituang-habis-k-2",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-soal-air-2-liter-dituang-habis-k-0"
       }
     ],
     "passingScore": 75

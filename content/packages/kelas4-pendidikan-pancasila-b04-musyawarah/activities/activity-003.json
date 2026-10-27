@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Alasan keputusan musyawarah harus dilaksanakan bersama",
         "right": "Agar keputusan adil dan menjadi tanggung jawab bersama"
+      },
+      {
+        "pairId": "pasangan-langkah-musyawarah-setelah-menca",
+        "left": "Langkah musyawarah setelah mencatat usulan",
+        "right": "menyimpulkan atau memilih keputusan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-terakhir-musyawarah-set",
+        "left": "Kegiatan terakhir musyawarah setelah keputusan disepakati",
+        "right": "melaksanakan keputusan bersama"
+      },
+      {
+        "pairId": "pasangan-sikap-saat-pendapat-teman-berbed",
+        "left": "Sikap saat pendapat teman berbeda dari pendapat kita",
+        "right": "mendengarkan dan menghargai"
       }
     ]
   },

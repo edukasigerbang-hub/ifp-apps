@@ -69,6 +69,74 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-unsur-seni-rupa-berupa-area-koso",
+        "prompt": "Unsur seni rupa berupa area kosong di sekitar objek disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-berupa-area-1",
+            "text": "garis"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-berupa-area-0",
+            "text": "ruang"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-berupa-area-2",
+            "text": "warna"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-berupa-area-3",
+            "text": "bentuk"
+          }
+        ],
+        "correctResponse": "opsi-soal-unsur-seni-rupa-berupa-area-0"
+      },
+      {
+        "questionId": "soal-unsur-seni-rupa-yang-berkaitan-d",
+        "prompt": "Unsur seni rupa yang berkaitan dengan kesan kasar atau halus permukaan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-berkai-1",
+            "text": "bentuk"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-berkai-2",
+            "text": "ruang"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-berkai-0",
+            "text": "tekstur"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-berkai-3",
+            "text": "warna"
+          }
+        ],
+        "correctResponse": "opsi-soal-unsur-seni-rupa-yang-berkai-0"
+      },
+      {
+        "questionId": "soal-agar-komposisi-terasa-seimbang-b",
+        "prompt": "Agar komposisi terasa seimbang, bentuk pada karya sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-komposisi-terasa-seimb-1",
+            "text": "ditumpuk di satu sisi saja"
+          },
+          {
+            "optionId": "opsi-soal-agar-komposisi-terasa-seimb-2",
+            "text": "diletakkan saling menutupi"
+          },
+          {
+            "optionId": "opsi-soal-agar-komposisi-terasa-seimb-0",
+            "text": "tersebar merata"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-komposisi-terasa-seimb-0"
       }
     ],
     "passingScore": 75

@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-dasar-negara-indonesia-adalah",
+        "prompt": "Dasar negara Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dasar-negara-indonesia-adal-1",
+            "text": "UUD 1945"
+          },
+          {
+            "optionId": "opsi-soal-dasar-negara-indonesia-adal-2",
+            "text": "Bhinneka Tunggal Ika"
+          },
+          {
+            "optionId": "opsi-soal-dasar-negara-indonesia-adal-0",
+            "text": "Pancasila"
+          }
+        ],
+        "correctResponse": "opsi-soal-dasar-negara-indonesia-adal-0"
+      },
+      {
+        "questionId": "soal-bhinneka-tunggal-ika-digunakan-b",
+        "prompt": "Bhinneka Tunggal Ika digunakan bangsa Indonesia sebagai ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bhinneka-tunggal-ika-diguna-0",
+            "text": "semboyan"
+          },
+          {
+            "optionId": "opsi-soal-bhinneka-tunggal-ika-diguna-1",
+            "text": "dasar negara"
+          },
+          {
+            "optionId": "opsi-soal-bhinneka-tunggal-ika-diguna-2",
+            "text": "undang-undang"
+          }
+        ],
+        "correctResponse": "opsi-soal-bhinneka-tunggal-ika-diguna-0"
+      },
+      {
+        "questionId": "soal-saat-mengikuti-upacara-bendera-s",
+        "prompt": "Saat mengikuti upacara bendera, sikap siswa sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-mengikuti-upacara-bend-1",
+            "text": "ramai"
+          },
+          {
+            "optionId": "opsi-soal-saat-mengikuti-upacara-bend-0",
+            "text": "tertib"
+          },
+          {
+            "optionId": "opsi-soal-saat-mengikuti-upacara-bend-2",
+            "text": "bergerombol"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-mengikuti-upacara-bend-0"
       }
     ],
     "passingScore": 75

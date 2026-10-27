@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-saat-memindahkan-lemari-dengan-c",
+        "prompt": "Saat memindahkan lemari dengan cara ditarik, gaya yang bekerja adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-memindahkan-lemari-den-1",
+            "text": "gaya dorong"
+          },
+          {
+            "optionId": "opsi-soal-saat-memindahkan-lemari-den-2",
+            "text": "gaya magnet"
+          },
+          {
+            "optionId": "opsi-soal-saat-memindahkan-lemari-den-0",
+            "text": "gaya tarik"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-memindahkan-lemari-den-0"
+      },
+      {
+        "questionId": "soal-buku-yang-didorong-di-atas-meja",
+        "prompt": "Buku yang didorong di atas meja lama-kelamaan berhenti karena pengaruh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-buku-yang-didorong-di-atas-0",
+            "text": "gaya gesek"
+          },
+          {
+            "optionId": "opsi-soal-buku-yang-didorong-di-atas-1",
+            "text": "gaya gravitasi"
+          },
+          {
+            "optionId": "opsi-soal-buku-yang-didorong-di-atas-2",
+            "text": "gaya magnet"
+          }
+        ],
+        "correctResponse": "opsi-soal-buku-yang-didorong-di-atas-0"
+      },
+      {
+        "questionId": "soal-bola-yang-ditendang-melambung-ti",
+        "prompt": "Bola yang ditendang melambung tinggi akhirnya turun kembali ke tanah karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bola-yang-ditendang-melambu-1",
+            "text": "gaya dorong"
+          },
+          {
+            "optionId": "opsi-soal-bola-yang-ditendang-melambu-0",
+            "text": "gaya gravitasi"
+          },
+          {
+            "optionId": "opsi-soal-bola-yang-ditendang-melambu-2",
+            "text": "gaya gesek"
+          }
+        ],
+        "correctResponse": "opsi-soal-bola-yang-ditendang-melambu-0"
       }
     ],
     "passingScore": 75

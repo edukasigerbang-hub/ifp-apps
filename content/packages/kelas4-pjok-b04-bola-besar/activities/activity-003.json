@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-permainan-yang-cara-mencetak-poi",
+        "prompt": "Permainan yang cara mencetak poinnya dengan memasukkan bola ke ring adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-yang-cara-menceta-1",
+            "text": "bola voli"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-cara-menceta-2",
+            "text": "sepak bola"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-cara-menceta-0",
+            "text": "bola basket"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-yang-cara-menceta-0"
+      },
+      {
+        "questionId": "soal-dalam-permainan-bola-besar-mengo",
+        "prompt": "Dalam permainan bola besar, mengoper bola kepada teman disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-0",
+            "text": "passing"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-1",
+            "text": "dribbling"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-2",
+            "text": "menjaga gawang"
+          }
+        ],
+        "correctResponse": "opsi-soal-dalam-permainan-bola-besar-0"
+      },
+      {
+        "questionId": "soal-agar-permainan-bola-besar-berhas",
+        "prompt": "Agar permainan bola besar berhasil, setiap pemain wajib mengutamakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-permainan-bola-besar-b-1",
+            "text": "bertindak sendiri"
+          },
+          {
+            "optionId": "opsi-soal-agar-permainan-bola-besar-b-0",
+            "text": "kerja sama tim"
+          },
+          {
+            "optionId": "opsi-soal-agar-permainan-bola-besar-b-2",
+            "text": "menyembunyikan bola"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-permainan-bola-besar-b-0"
+      },
+      {
+        "questionId": "soal-permainan-bola-voli-dilakukan-de",
+        "prompt": "Permainan bola voli dilakukan dengan memukul bola melewati ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-bola-voli-dilakuk-1",
+            "text": "gerbang kecil"
+          },
+          {
+            "optionId": "opsi-soal-permainan-bola-voli-dilakuk-2",
+            "text": "lingkaran ring"
+          },
+          {
+            "optionId": "opsi-soal-permainan-bola-voli-dilakuk-0",
+            "text": "net"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-bola-voli-dilakuk-0"
       }
     ],
     "passingScore": 75

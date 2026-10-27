@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-perbandingan"
+      },
+      {
+        "questionId": "soal-benda-di-sekitar-kita-yang-bentu",
+        "prompt": "Benda di sekitar kita yang bentuk dasarnya menyerupai tabung adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-benda-di-sekitar-kita-yang-1",
+            "text": "bola kasti"
+          },
+          {
+            "optionId": "opsi-soal-benda-di-sekitar-kita-yang-0",
+            "text": "gelas"
+          },
+          {
+            "optionId": "opsi-soal-benda-di-sekitar-kita-yang-2",
+            "text": "buku tulis tipis"
+          }
+        ],
+        "correctResponse": "opsi-soal-benda-di-sekitar-kita-yang-0"
+      },
+      {
+        "questionId": "soal-menggambar-bentuk-perlu-memperha",
+        "prompt": "Menggambar bentuk perlu memperhatikan proporsi agar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menggambar-bentuk-perlu-mem-1",
+            "text": "warna gambar menjadi lebih gelap"
+          },
+          {
+            "optionId": "opsi-soal-menggambar-bentuk-perlu-mem-2",
+            "text": "kertas gambar cepat terpakai"
+          },
+          {
+            "optionId": "opsi-soal-menggambar-bentuk-perlu-mem-0",
+            "text": "ukuran bagian gambar wajar"
+          }
+        ],
+        "correctResponse": "opsi-soal-menggambar-bentuk-perlu-mem-0"
       }
     ],
     "passingScore": 75

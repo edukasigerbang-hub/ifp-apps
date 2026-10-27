@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Langkah pertama membuat kolase adalah",
         "right": "menyiapkan bahan dan merancang"
+      },
+      {
+        "pairId": "pasangan-cara-membentuk-potongan-kertas-w",
+        "left": "Cara membentuk potongan kertas warna sebelum ditempel",
+        "right": "Dipotong atau dirobek"
+      },
+      {
+        "pairId": "pasangan-bidang-dasar-tempat-bahan-kolase",
+        "left": "Bidang dasar tempat bahan kolase ditempelkan",
+        "right": "Bidang tempel"
       }
     ]
   },

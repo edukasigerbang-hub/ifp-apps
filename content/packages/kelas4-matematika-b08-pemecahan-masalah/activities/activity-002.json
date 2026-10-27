@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-memahami"
+      },
+      {
+        "questionId": "soal-lima-buku-harganya-sama-dan-tota",
+        "prompt": "Lima buku harganya sama dan totalnya Rp10.000. Harga satu buku ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lima-buku-harganya-sama-dan-1",
+            "text": "Rp1.500"
+          },
+          {
+            "optionId": "opsi-soal-lima-buku-harganya-sama-dan-0",
+            "text": "Rp2.000"
+          },
+          {
+            "optionId": "opsi-soal-lima-buku-harganya-sama-dan-2",
+            "text": "Rp5.000"
+          }
+        ],
+        "correctResponse": "opsi-soal-lima-buku-harganya-sama-dan-0"
+      },
+      {
+        "questionId": "soal-setelah-informasi-penting-diketa",
+        "prompt": "Setelah informasi penting diketahui, langkah berikutnya pada soal cerita adalah memilih ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-informasi-penting-d-1",
+            "text": "warna pensil"
+          },
+          {
+            "optionId": "opsi-soal-setelah-informasi-penting-d-2",
+            "text": "tempat duduk"
+          },
+          {
+            "optionId": "opsi-soal-setelah-informasi-penting-d-0",
+            "text": "operasi hitung"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-informasi-penting-d-0"
       }
     ],
     "passingScore": 75

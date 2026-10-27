@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Pelepah pisang, cat, dan rol cetak",
         "right": "Alat cetak sederhana"
+      },
+      {
+        "pairId": "pasangan-sayuran-yang-dapat-dipotong-dan",
+        "left": "Sayuran yang dapat dipotong dan dipakai sebagai alat cetak",
+        "right": "Wortel"
+      },
+      {
+        "pairId": "pasangan-ciri-hasil-karya-cetak-yang-dike",
+        "left": "Ciri hasil karya cetak yang dikerjakan dengan rapi",
+        "right": "Pola tercetak berulang"
       }
     ]
   },

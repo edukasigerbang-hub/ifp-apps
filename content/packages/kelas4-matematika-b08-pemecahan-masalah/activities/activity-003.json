@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Lapak, keranjang, dan uang pada ilustrasi belanja",
         "right": "Soal cerita belanja"
+      },
+      {
+        "pairId": "pasangan-uang-rp10-000-dibelanjakan-rp6-5",
+        "left": "Uang Rp10.000 dibelanjakan Rp6.500, sisa uangnya",
+        "right": "Rp3.500"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-sebelum-menulis",
+        "left": "Langkah terakhir sebelum menuliskan jawaban soal cerita",
+        "right": "memeriksa kembali perhitungan"
       }
     ]
   },

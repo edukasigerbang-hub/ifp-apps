@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-persegi"
+      },
+      {
+        "questionId": "soal-keliling-persegi-panjang-dengan",
+        "prompt": "Keliling persegi panjang dengan panjang 6 cm dan lebar 3 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-keliling-persegi-panjang-de-0",
+            "text": "18 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-persegi-panjang-de-1",
+            "text": "15 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-persegi-panjang-de-2",
+            "text": "9 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-keliling-persegi-panjang-de-0"
+      },
+      {
+        "questionId": "soal-luas-persegi-yang-sisinya-6-cm-a",
+        "prompt": "Luas persegi yang sisinya 6 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-luas-persegi-yang-sisinya-6-1",
+            "text": "12 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-persegi-yang-sisinya-6-0",
+            "text": "36 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-persegi-yang-sisinya-6-2",
+            "text": "24 cm²"
+          }
+        ],
+        "correctResponse": "opsi-soal-luas-persegi-yang-sisinya-6-0"
       }
     ],
     "passingScore": 75

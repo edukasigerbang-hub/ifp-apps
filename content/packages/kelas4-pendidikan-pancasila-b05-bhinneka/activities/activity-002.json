@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Keberagaman dan Sikap",
-  "instructions": "Pasangkan setiap bentuk keberagaman dengan sikap yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/bhinneka.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-pendapat",
         "left": "Pendapat berbeda",
         "right": "Bermusyawarah"
+      },
+      {
+        "pairId": "pasangan-makna-semboyan-bhinneka-tunggal",
+        "left": "Makna semboyan Bhinneka Tunggal Ika",
+        "right": "berbeda-beda tetapi tetap satu"
       }
     ]
   },

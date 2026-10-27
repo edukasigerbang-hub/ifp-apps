@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-ringkas-benar"
+      },
+      {
+        "questionId": "soal-gagasan-utama-yang-menjadi-dasar",
+        "prompt": "Gagasan utama yang menjadi dasar sebuah paragraf disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gagasan-utama-yang-menjadi-1",
+            "text": "judul paragraf"
+          },
+          {
+            "optionId": "opsi-soal-gagasan-utama-yang-menjadi-0",
+            "text": "ide pokok"
+          },
+          {
+            "optionId": "opsi-soal-gagasan-utama-yang-menjadi-2",
+            "text": "amanat cerita"
+          }
+        ],
+        "correctResponse": "opsi-soal-gagasan-utama-yang-menjadi-0"
+      },
+      {
+        "questionId": "soal-tugas-detail-pendukung-dalam-seb",
+        "prompt": "Tugas detail pendukung dalam sebuah paragraf adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tugas-detail-pendukung-dala-1",
+            "text": "memperpanjang judul bacaan"
+          },
+          {
+            "optionId": "opsi-soal-tugas-detail-pendukung-dala-2",
+            "text": "menutup paragraf"
+          },
+          {
+            "optionId": "opsi-soal-tugas-detail-pendukung-dala-0",
+            "text": "menjelaskan ide pokok"
+          }
+        ],
+        "correctResponse": "opsi-soal-tugas-detail-pendukung-dala-0"
       }
     ],
     "passingScore": 75

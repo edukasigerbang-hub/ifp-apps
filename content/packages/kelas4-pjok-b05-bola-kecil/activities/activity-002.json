@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-permainan-bola-kecil-yang-memaka",
+        "prompt": "Permainan bola kecil yang memakai raket dan kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-bola-kecil-yang-m-1",
+            "text": "tenis meja"
+          },
+          {
+            "optionId": "opsi-soal-permainan-bola-kecil-yang-m-0",
+            "text": "bulu tangkis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-bola-kecil-yang-m-2",
+            "text": "tenis lapangan"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-bola-kecil-yang-m-0"
+      },
+      {
+        "questionId": "soal-aturan-permainan-dipatuhi-saat-b",
+        "prompt": "Aturan permainan dipatuhi saat bermain bola kecil agar permainan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-aturan-permainan-dipatuhi-s-1",
+            "text": "berjalan semakin lama"
+          },
+          {
+            "optionId": "opsi-soal-aturan-permainan-dipatuhi-s-2",
+            "text": "membuat pemain makin populer"
+          },
+          {
+            "optionId": "opsi-soal-aturan-permainan-dipatuhi-s-0",
+            "text": "adil dan aman dari cedera"
+          }
+        ],
+        "correctResponse": "opsi-soal-aturan-permainan-dipatuhi-s-0"
       }
     ],
     "passingScore": 75

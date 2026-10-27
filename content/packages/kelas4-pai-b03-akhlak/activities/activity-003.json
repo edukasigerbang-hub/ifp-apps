@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-mengembalikan-barang-pinjaman-da",
+        "prompt": "Mengembalikan barang pinjaman dalam keadaan utuh termasuk sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengembalikan-barang-pinjam-0",
+            "text": "amanah"
+          },
+          {
+            "optionId": "opsi-soal-mengembalikan-barang-pinjam-1",
+            "text": "berat hati"
+          },
+          {
+            "optionId": "opsi-soal-mengembalikan-barang-pinjam-2",
+            "text": "buruk sangka"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengembalikan-barang-pinjam-0"
+      },
+      {
+        "questionId": "soal-menahan-diri-ketika-ingin-marah",
+        "prompt": "Menahan diri ketika ingin marah berarti kita melatih sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-ingin-m-1",
+            "text": "pemberani"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-ingin-m-0",
+            "text": "sabar"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-ingin-m-2",
+            "text": "rajin belajar"
+          }
+        ],
+        "correctResponse": "opsi-soal-menahan-diri-ketika-ingin-m-0"
+      },
+      {
+        "questionId": "soal-akhlak-terpuji-penting-dibiasaka",
+        "prompt": "Akhlak terpuji penting dibiasakan karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-penting-dibi-1",
+            "text": "agar menang perlombaan"
+          },
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-penting-dibi-2",
+            "text": "mudah mendapat pujian orang"
+          },
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-penting-dibi-0",
+            "text": "disukai Allah dan manusia"
+          }
+        ],
+        "correctResponse": "opsi-soal-akhlak-terpuji-penting-dibi-0"
+      },
+      {
+        "questionId": "soal-memaafkan-kesalahan-teman-tanpa",
+        "prompt": "Memaafkan kesalahan teman tanpa dendam termasuk akhlak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-memaafkan-kesalahan-teman-t-0",
+            "text": "pemaaf"
+          },
+          {
+            "optionId": "opsi-soal-memaafkan-kesalahan-teman-t-1",
+            "text": "pendendam"
+          },
+          {
+            "optionId": "opsi-soal-memaafkan-kesalahan-teman-t-2",
+            "text": "pelupa"
+          }
+        ],
+        "correctResponse": "opsi-soal-memaafkan-kesalahan-teman-t-0"
       }
     ],
     "passingScore": 75

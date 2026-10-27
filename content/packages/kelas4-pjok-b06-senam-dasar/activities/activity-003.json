@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Guling depan, peregangan, dan keseimbangan",
         "right": "Senam dasar"
+      },
+      {
+        "pairId": "pasangan-bagian-tubuh-yang-menempel-pada",
+        "left": "Bagian tubuh yang menempel pada dada saat jongkok sebelum guling depan",
+        "right": "Dagu"
+      },
+      {
+        "pairId": "pasangan-bagian-tubuh-yang-diletakkan-pad",
+        "left": "Bagian tubuh yang diletakkan pada matras sesaat sebelum berguling",
+        "right": "Tengkuk"
       }
     ]
   },

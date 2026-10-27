@@ -33,6 +33,18 @@
         "prompt": "Peran tumbuhan adalah menghasilkan ...",
         "responseType": "text",
         "correctResponse": "oksigen"
+      },
+      {
+        "questionId": "soal-capung-bernapas-dengan",
+        "prompt": "Capung bernapas dengan ...",
+        "responseType": "text",
+        "correctResponse": "trakea"
+      },
+      {
+        "questionId": "soal-selain-oksigen-tumbuhan-juga-men",
+        "prompt": "Selain oksigen, tumbuhan juga menghasilkan ... untuk makhluk hidup lain.",
+        "responseType": "text",
+        "correctResponse": "makanan"
       }
     ],
     "passingScore": 75

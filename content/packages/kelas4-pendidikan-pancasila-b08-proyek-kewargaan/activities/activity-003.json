@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Kerja sama siswa untuk kepentingan bersama",
         "right": "Proyek kewargaan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-proyek-setelah-rencana",
+        "left": "Kegiatan proyek setelah rencana disusun dan tugas dibagi",
+        "right": "melaksanakan proyek"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-proyek-kewargaa",
+        "left": "Langkah terakhir proyek kewargaan setelah kegiatan selesai",
+        "right": "melaporkan dan mengevaluasi hasil"
       }
     ]
   },

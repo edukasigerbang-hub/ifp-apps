@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Kerajaan dan Letaknya",
-  "instructions": "Pasangkan setiap kerajaan dengan daerah/letaknya.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/kerajaan-nusantara.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-tarumanegara",
         "left": "Tarumanegara",
         "right": "Kerajaan di Jawa Barat"
+      },
+      {
+        "pairId": "pasangan-bukti-aktivitas-pelayaran-dan-pe",
+        "left": "Bukti aktivitas pelayaran dan perdagangan pada masa kerajaan",
+        "right": "kapal layar"
       }
     ]
   },

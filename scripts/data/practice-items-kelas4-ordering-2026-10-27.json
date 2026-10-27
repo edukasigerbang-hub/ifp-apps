@@ -1,0 +1,27 @@
+{
+  "packages": {
+    "kelas4-bahasa-indonesia-b06-teks-narasi": {
+      "ordering": [
+        {
+          "id": "langkah-menentukan-tema",
+          "afterItemId": "",
+          "text": "Menentukan tema, tokoh, dan latar cerita"
+        },
+        {
+          "id": "langkah-penutup",
+          "afterItemId": "item-resolusi",
+          "text": "Penutup: akhir cerita dan pesan yang disampaikan"
+        }
+      ]
+    },
+    "kelas4-ipas-b02-wujud-zat": {
+      "ordering": [
+        {
+          "id": "langkah-mengembun",
+          "afterItemId": "item-menguap",
+          "text": "Uap air didinginkan kembali menjadi air (mengembun)"
+        }
+      ]
+    }
+  }
+}

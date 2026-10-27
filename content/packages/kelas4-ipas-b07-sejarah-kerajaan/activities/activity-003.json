@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-batu-bertulis-yang-mencatat-peri",
+        "prompt": "Batu bertulis yang mencatat peristiwa sejarah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-batu-bertulis-yang-mencatat-0",
+            "text": "prasasti"
+          },
+          {
+            "optionId": "opsi-soal-batu-bertulis-yang-mencatat-1",
+            "text": "candi"
+          },
+          {
+            "optionId": "opsi-soal-batu-bertulis-yang-mencatat-2",
+            "text": "kapal"
+          }
+        ],
+        "correctResponse": "opsi-soal-batu-bertulis-yang-mencatat-0"
+      },
+      {
+        "questionId": "soal-kerajaan-maritim-yang-terletak-d",
+        "prompt": "Kerajaan maritim yang terletak di Sumatera adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kerajaan-maritim-yang-terle-1",
+            "text": "Majapahit"
+          },
+          {
+            "optionId": "opsi-soal-kerajaan-maritim-yang-terle-0",
+            "text": "Sriwijaya"
+          },
+          {
+            "optionId": "opsi-soal-kerajaan-maritim-yang-terle-2",
+            "text": "Kutai"
+          }
+        ],
+        "correctResponse": "opsi-soal-kerajaan-maritim-yang-terle-0"
+      },
+      {
+        "questionId": "soal-kerajaan-hindu-tertua-di-kaliman",
+        "prompt": "Kerajaan Hindu tertua di Kalimantan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kerajaan-hindu-tertua-di-ka-1",
+            "text": "Tarumanegara"
+          },
+          {
+            "optionId": "opsi-soal-kerajaan-hindu-tertua-di-ka-2",
+            "text": "Mataram Kuno"
+          },
+          {
+            "optionId": "opsi-soal-kerajaan-hindu-tertua-di-ka-0",
+            "text": "Kutai"
+          }
+        ],
+        "correctResponse": "opsi-soal-kerajaan-hindu-tertua-di-ka-0"
       }
     ],
     "passingScore": 75

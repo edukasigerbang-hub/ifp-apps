@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-siapkan"
+      },
+      {
+        "questionId": "soal-kolase-terlihat-menarik-apabila",
+        "prompt": "Kolase terlihat menarik apabila susunan warna, bentuk, dan ukurannya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kolase-terlihat-menarik-apa-1",
+            "text": "bertumpuk"
+          },
+          {
+            "optionId": "opsi-soal-kolase-terlihat-menarik-apa-0",
+            "text": "seimbang"
+          },
+          {
+            "optionId": "opsi-soal-kolase-terlihat-menarik-apa-2",
+            "text": "berantakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kolase-terlihat-menarik-apa-0"
+      },
+      {
+        "questionId": "soal-bahan-untuk-merekatkan-potongan",
+        "prompt": "Bahan untuk merekatkan potongan kertas pada kolase adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-untuk-merekatkan-poto-1",
+            "text": "benang jahit"
+          },
+          {
+            "optionId": "opsi-soal-bahan-untuk-merekatkan-poto-2",
+            "text": "kapur tulis"
+          },
+          {
+            "optionId": "opsi-soal-bahan-untuk-merekatkan-poto-0",
+            "text": "lem"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-untuk-merekatkan-poto-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-campuran-cat-merah-dan-biru-akan",
+        "prompt": "Campuran cat merah dan biru akan menghasilkan warna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-campuran-cat-merah-dan-biru-1",
+            "text": "hijau"
+          },
+          {
+            "optionId": "opsi-soal-campuran-cat-merah-dan-biru-0",
+            "text": "ungu"
+          },
+          {
+            "optionId": "opsi-soal-campuran-cat-merah-dan-biru-2",
+            "text": "oranye"
+          }
+        ],
+        "correctResponse": "opsi-soal-campuran-cat-merah-dan-biru-0"
+      },
+      {
+        "questionId": "soal-yang-termasuk-kelompok-warna-din",
+        "prompt": "Yang termasuk kelompok warna dingin adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-yang-termasuk-kelompok-warn-1",
+            "text": "oranye"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-kelompok-warn-2",
+            "text": "kuning"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-kelompok-warn-0",
+            "text": "biru"
+          }
+        ],
+        "correctResponse": "opsi-soal-yang-termasuk-kelompok-warn-0"
+      },
+      {
+        "questionId": "soal-warna-hangat-pada-karya-seni-rup",
+        "prompt": "Warna hangat pada karya seni rupa contohnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-hangat-pada-karya-sen-0",
+            "text": "merah, kuning, oranye"
+          },
+          {
+            "optionId": "opsi-soal-warna-hangat-pada-karya-sen-1",
+            "text": "biru, hijau, ungu"
+          },
+          {
+            "optionId": "opsi-soal-warna-hangat-pada-karya-sen-2",
+            "text": "hitam, putih, abu-abu"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-hangat-pada-karya-sen-0"
+      },
+      {
+        "questionId": "soal-permukaan-karya-bertekstur-titik",
+        "prompt": "Permukaan karya bertekstur titik-titik terasa ... ketika diraba.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permukaan-karya-bertekstur-1",
+            "text": "licin"
+          },
+          {
+            "optionId": "opsi-soal-permukaan-karya-bertekstur-0",
+            "text": "kasar"
+          },
+          {
+            "optionId": "opsi-soal-permukaan-karya-bertekstur-2",
+            "text": "tipis"
+          }
+        ],
+        "correctResponse": "opsi-soal-permukaan-karya-bertekstur-0"
       }
     ],
     "passingScore": 75

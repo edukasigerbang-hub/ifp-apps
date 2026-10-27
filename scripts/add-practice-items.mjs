@@ -201,8 +201,8 @@ for (const [packageId, items] of Object.entries(data.packages ?? {})) {
         return;
       }
       const anchor = String(item.afterItemId ?? "").trim();
-      const anchorIndex = order.indexOf(anchor);
-      if (anchorIndex < 0) {
+      const anchorIndex = anchor === "" ? -1 : order.indexOf(anchor);
+      if (anchor !== "" && anchorIndex < 0) {
         report.errors.push(`${packageId}: langkah ke-${index + 1} rujukan afterItemId tidak ada (${anchor})`);
         return;
       }
@@ -211,7 +211,7 @@ for (const [packageId, items] of Object.entries(data.packages ?? {})) {
         report.errors.push(`${packageId}: itemId duplikat ${itemId}`);
         return;
       }
-      const itemIndex = items3.findIndex((i) => i.itemId === anchor);
+      const itemIndex = anchor === "" ? -1 : items3.findIndex((i) => i.itemId === anchor);
       items3.splice(itemIndex + 1, 0, { itemId, text });
       order.splice(anchorIndex + 1, 0, itemId);
       existingTexts.add(text.toLowerCase());

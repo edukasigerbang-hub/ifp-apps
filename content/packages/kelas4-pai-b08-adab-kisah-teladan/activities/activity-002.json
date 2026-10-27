@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-dipercaya"
+      },
+      {
+        "questionId": "soal-saat-guru-sedang-menjelaskan-pel",
+        "prompt": "Saat guru sedang menjelaskan pelajaran di kelas, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-guru-sedang-menjelaska-0",
+            "text": "mendengarkan dengan saksama"
+          },
+          {
+            "optionId": "opsi-soal-saat-guru-sedang-menjelaska-1",
+            "text": "berbisik dengan teman"
+          },
+          {
+            "optionId": "opsi-soal-saat-guru-sedang-menjelaska-2",
+            "text": "mengerjakan pekerjaan lain"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-guru-sedang-menjelaska-0"
+      },
+      {
+        "questionId": "soal-sifat-dermawan-yang-diteladani-d",
+        "prompt": "Sifat dermawan yang diteladani dari kisah Nabi dan sahabat berarti gemar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-dermawan-yang-ditelad-1",
+            "text": "menimbun"
+          },
+          {
+            "optionId": "opsi-soal-sifat-dermawan-yang-ditelad-0",
+            "text": "memberi"
+          },
+          {
+            "optionId": "opsi-soal-sifat-dermawan-yang-ditelad-2",
+            "text": "berhutang"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-dermawan-yang-ditelad-0"
       }
     ],
     "passingScore": 75

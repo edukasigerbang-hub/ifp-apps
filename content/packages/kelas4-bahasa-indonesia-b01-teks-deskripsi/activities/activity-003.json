@@ -33,6 +33,18 @@
         "prompt": "Kalimat yang berisi ide utama disebut ...",
         "responseType": "text",
         "correctResponse": "kalimat topik"
+      },
+      {
+        "questionId": "soal-tempat-duduk-pengunjung-yang-ada",
+        "prompt": "Tempat duduk pengunjung yang ada pada deskripsi taman kota adalah ...",
+        "responseType": "text",
+        "correctResponse": "bangku"
+      },
+      {
+        "questionId": "soal-hewan-pada-deskripsi-taman-kota",
+        "prompt": "Hewan pada deskripsi taman kota yang suara kicaunya didengar adalah ...",
+        "responseType": "text",
+        "correctResponse": "burung"
       }
     ],
     "passingScore": 75

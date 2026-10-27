@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-kesan"
+      },
+      {
+        "questionId": "soal-sebelum-paragraf-ditulis-ciri-ob",
+        "prompt": "Sebelum paragraf ditulis, ciri objek hasil amatan disusun lebih dulu dalam bentuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-paragraf-ditulis-ci-1",
+            "text": "daftar harga"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-paragraf-ditulis-ci-2",
+            "text": "laporan panjang"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-paragraf-ditulis-ci-0",
+            "text": "kerangka"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-paragraf-ditulis-ci-0"
+      },
+      {
+        "questionId": "soal-suara-kucing-yang-lembut-pada-de",
+        "prompt": "Suara kucing yang lembut pada deskripsi ditangkap melalui indra ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-suara-kucing-yang-lembut-pa-0",
+            "text": "pendengaran"
+          },
+          {
+            "optionId": "opsi-soal-suara-kucing-yang-lembut-pa-1",
+            "text": "penciuman"
+          },
+          {
+            "optionId": "opsi-soal-suara-kucing-yang-lembut-pa-2",
+            "text": "perabaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-suara-kucing-yang-lembut-pa-0"
       }
     ],
     "passingScore": 75

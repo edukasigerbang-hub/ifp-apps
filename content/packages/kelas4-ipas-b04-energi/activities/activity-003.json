@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-sumber-energi-utama-yang-membant",
+        "prompt": "Sumber energi utama yang membantu tanaman membuat makanan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sumber-energi-utama-yang-me-0",
+            "text": "matahari"
+          },
+          {
+            "optionId": "opsi-soal-sumber-energi-utama-yang-me-1",
+            "text": "energi listrik"
+          },
+          {
+            "optionId": "opsi-soal-sumber-energi-utama-yang-me-2",
+            "text": "energi bunyi"
+          }
+        ],
+        "correctResponse": "opsi-soal-sumber-energi-utama-yang-me-0"
+      },
+      {
+        "questionId": "soal-lampu-yang-menyala-menunjukkan-p",
+        "prompt": "Lampu yang menyala menunjukkan perubahan energi listrik menjadi energi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lampu-yang-menyala-menunjuk-1",
+            "text": "gerak"
+          },
+          {
+            "optionId": "opsi-soal-lampu-yang-menyala-menunjuk-0",
+            "text": "cahaya"
+          },
+          {
+            "optionId": "opsi-soal-lampu-yang-menyala-menunjuk-2",
+            "text": "bunyi"
+          }
+        ],
+        "correctResponse": "opsi-soal-lampu-yang-menyala-menunjuk-0"
+      },
+      {
+        "questionId": "soal-saat-anak-berlari-energi-dari-ma",
+        "prompt": "Saat anak berlari, energi dari makanan berubah menjadi energi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-anak-berlari-energi-da-1",
+            "text": "cahaya"
+          },
+          {
+            "optionId": "opsi-soal-saat-anak-berlari-energi-da-2",
+            "text": "panas"
+          },
+          {
+            "optionId": "opsi-soal-saat-anak-berlari-energi-da-0",
+            "text": "gerak"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-anak-berlari-energi-da-0"
       }
     ],
     "passingScore": 75

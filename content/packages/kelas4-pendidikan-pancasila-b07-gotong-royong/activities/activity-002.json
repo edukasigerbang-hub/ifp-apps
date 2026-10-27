@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Istilah dan Makna",
-  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/gotong-royong.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-persatuan",
         "left": "Persatuan",
         "right": "Bersatu dalam perbedaan"
+      },
+      {
+        "pairId": "pasangan-contoh-kegiatan-gotong-royong-ya",
+        "left": "Contoh kegiatan gotong royong yang terjadwal di kelas",
+        "right": "piket kelas"
       }
     ]
   },

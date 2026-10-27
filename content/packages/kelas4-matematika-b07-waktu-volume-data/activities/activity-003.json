@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Jam, gelas ukur, dan diagram batang",
         "right": "Waktu, volume, data"
+      },
+      {
+        "pairId": "pasangan-alat-berkaca-bertanda-skala-untu",
+        "left": "Alat berkaca bertanda skala untuk mengukur volume air",
+        "right": "gelas ukur"
+      },
+      {
+        "pairId": "pasangan-penyajian-data-yang-tingginya-me",
+        "left": "Penyajian data yang tingginya menunjukkan banyaknya data",
+        "right": "diagram batang"
       }
     ]
   },

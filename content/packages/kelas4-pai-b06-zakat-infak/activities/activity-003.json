@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-zakat-harta-menjadi-kewajiban-ba",
+        "prompt": "Zakat harta menjadi kewajiban bagi orang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-harta-menjadi-kewajib-0",
+            "text": "mampu"
+          },
+          {
+            "optionId": "opsi-soal-zakat-harta-menjadi-kewajib-1",
+            "text": "masih kesulitan"
+          },
+          {
+            "optionId": "opsi-soal-zakat-harta-menjadi-kewajib-2",
+            "text": "ingin dipuji orang"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-harta-menjadi-kewajib-0"
+      },
+      {
+        "questionId": "soal-berbeda-dari-zakat-infak-dapat-d",
+        "prompt": "Berbeda dari zakat, infak dapat diberikan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berbeda-dari-zakat-infak-da-1",
+            "text": "dengan kadar tetap"
+          },
+          {
+            "optionId": "opsi-soal-berbeda-dari-zakat-infak-da-0",
+            "text": "kapan saja"
+          },
+          {
+            "optionId": "opsi-soal-berbeda-dari-zakat-infak-da-2",
+            "text": "hanya pada akhir tahun"
+          }
+        ],
+        "correctResponse": "opsi-soal-berbeda-dari-zakat-infak-da-0"
+      },
+      {
+        "questionId": "soal-orang-yang-bertugas-mengelola-da",
+        "prompt": "Orang yang bertugas mengelola dan menyalurkan zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-bertugas-mengelo-1",
+            "text": "mustahik"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-bertugas-mengelo-2",
+            "text": "orang yang bersedekah"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-bertugas-mengelo-0",
+            "text": "amil"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-bertugas-mengelo-0"
+      },
+      {
+        "questionId": "soal-zakat-dan-infak-bermanfaat-bagi",
+        "prompt": "Zakat dan infak bermanfaat bagi masyarakat karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-dan-infak-bermanfaat-0",
+            "text": "menolong yang membutuhkan"
+          },
+          {
+            "optionId": "opsi-soal-zakat-dan-infak-bermanfaat-1",
+            "text": "menambah kekayaan orang kaya"
+          },
+          {
+            "optionId": "opsi-soal-zakat-dan-infak-bermanfaat-2",
+            "text": "membuat orang ingin dipuji"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-dan-infak-bermanfaat-0"
       }
     ],
     "passingScore": 75

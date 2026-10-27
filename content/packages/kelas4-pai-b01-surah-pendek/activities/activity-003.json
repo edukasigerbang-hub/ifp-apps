@@ -89,6 +89,46 @@
           }
         ],
         "correctResponse": "opsi-penguatan-4-1"
+      },
+      {
+        "questionId": "soal-membaca-al-qur-an-dengan-pelan-d",
+        "prompt": "Membaca Al-Qur'an dengan pelan dan jelas, tidak tergesa-gesa, berarti membaca dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-dengan-pe-1",
+            "text": "sekilas cepat"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-dengan-pe-0",
+            "text": "tartil"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-dengan-pe-2",
+            "text": "suara keras"
+          }
+        ],
+        "correctResponse": "opsi-soal-membaca-al-qur-an-dengan-pe-0"
+      },
+      {
+        "questionId": "soal-surah-al-ikhlas-mengajarkan-kita",
+        "prompt": "Surah Al-Ikhlas mengajarkan kita tentang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-surah-al-ikhlas-mengajarkan-1",
+            "text": "keberhasilan para nabi"
+          },
+          {
+            "optionId": "opsi-soal-surah-al-ikhlas-mengajarkan-2",
+            "text": "malaikat-malaikat Allah"
+          },
+          {
+            "optionId": "opsi-soal-surah-al-ikhlas-mengajarkan-0",
+            "text": "Keesaan Allah"
+          }
+        ],
+        "correctResponse": "opsi-soal-surah-al-ikhlas-mengajarkan-0"
       }
     ],
     "passingScore": 75

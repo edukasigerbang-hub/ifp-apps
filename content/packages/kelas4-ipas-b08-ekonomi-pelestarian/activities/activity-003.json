@@ -69,6 +69,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-petani-menanam-padi-dan-nelayan",
+        "prompt": "Petani menanam padi dan nelayan menangkap ikan. Keduanya menjalankan kegiatan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-petani-menanam-padi-dan-nel-1",
+            "text": "distribusi"
+          },
+          {
+            "optionId": "opsi-soal-petani-menanam-padi-dan-nel-2",
+            "text": "konsumsi"
+          },
+          {
+            "optionId": "opsi-soal-petani-menanam-padi-dan-nel-0",
+            "text": "produksi"
+          }
+        ],
+        "correctResponse": "opsi-soal-petani-menanam-padi-dan-nel-0"
+      },
+      {
+        "questionId": "soal-orang-yang-menggunakan-barang-ha",
+        "prompt": "Orang yang menggunakan barang hasil produksi disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-menggunakan-bara-0",
+            "text": "konsumen"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menggunakan-bara-1",
+            "text": "produsen"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menggunakan-bara-2",
+            "text": "pedagang"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-menggunakan-bara-0"
+      },
+      {
+        "questionId": "soal-menanam-pohon-penting-karena-poh",
+        "prompt": "Menanam pohon penting karena pohon menjaga udara, tanah, dan air serta mencegah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menanam-pohon-penting-karen-1",
+            "text": "polusi"
+          },
+          {
+            "optionId": "opsi-soal-menanam-pohon-penting-karen-0",
+            "text": "erosi"
+          },
+          {
+            "optionId": "opsi-soal-menanam-pohon-penting-karen-2",
+            "text": "kekeringan"
+          }
+        ],
+        "correctResponse": "opsi-soal-menanam-pohon-penting-karen-0"
       }
     ],
     "passingScore": 75

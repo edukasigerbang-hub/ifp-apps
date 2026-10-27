@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Teks berisi langkah berurutan dan kata perintah",
         "right": "Teks prosedur"
+      },
+      {
+        "pairId": "pasangan-bagian-teks-prosedur-yang-menyeb",
+        "left": "Bagian teks prosedur yang menyebut pot, tanah, dan biji",
+        "right": "alat dan bahan"
+      },
+      {
+        "pairId": "pasangan-kata-siapkan-dan-sirami-pada-tek",
+        "left": "Kata 'siapkan' dan 'sirami' pada teks prosedur termasuk jenis kata",
+        "right": "perintah"
+      },
+      {
+        "pairId": "pasangan-setelah-disiram-pot-biji-diletak",
+        "left": "Setelah disiram, pot biji diletakkan di tempat yang",
+        "right": "terang"
       }
     ]
   },

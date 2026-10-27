@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Alat yang digunakan untuk mengukur besar sudut adalah",
         "right": "busur derajat"
+      },
+      {
+        "pairId": "pasangan-tanda-yang-dipakai-pada-gambar-u",
+        "left": "Tanda yang dipakai pada gambar untuk menunjukkan sudut siku-siku",
+        "right": "kotak kecil"
       }
     ]
   },

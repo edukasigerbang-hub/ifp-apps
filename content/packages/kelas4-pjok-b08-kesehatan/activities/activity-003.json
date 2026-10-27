@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-agar-kuman-di-tangan-hilang-kita",
+        "prompt": "Agar kuman di tangan hilang, kita mencuci tangan menggunakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-kuman-di-tangan-hilang-1",
+            "text": "tisu basah saja"
+          },
+          {
+            "optionId": "opsi-soal-agar-kuman-di-tangan-hilang-2",
+            "text": "air saja tanpa gosok"
+          },
+          {
+            "optionId": "opsi-soal-agar-kuman-di-tangan-hilang-0",
+            "text": "air dan sabun"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-kuman-di-tangan-hilang-0"
+      },
+      {
+        "questionId": "soal-menyikat-gigi-secara-rutin-mence",
+        "prompt": "Menyikat gigi secara rutin mencegah penyakit ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menyikat-gigi-secara-rutin-0",
+            "text": "gigi berlubang"
+          },
+          {
+            "optionId": "opsi-soal-menyikat-gigi-secara-rutin-1",
+            "text": "mata kabur"
+          },
+          {
+            "optionId": "opsi-soal-menyikat-gigi-secara-rutin-2",
+            "text": "sakit kepala"
+          }
+        ],
+        "correctResponse": "opsi-soal-menyikat-gigi-secara-rutin-0"
+      },
+      {
+        "questionId": "soal-supaya-tidak-mengalami-dehidrasi",
+        "prompt": "Supaya tidak mengalami dehidrasi, tubuh setiap hari memerlukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-supaya-tidak-mengalami-dehi-1",
+            "text": "minuman manis saja"
+          },
+          {
+            "optionId": "opsi-soal-supaya-tidak-mengalami-dehi-0",
+            "text": "air putih yang cukup"
+          },
+          {
+            "optionId": "opsi-soal-supaya-tidak-mengalami-dehi-2",
+            "text": "es teh kental saja"
+          }
+        ],
+        "correctResponse": "opsi-soal-supaya-tidak-mengalami-dehi-0"
+      },
+      {
+        "questionId": "soal-tubuh-memulihkan-diri-paling-bai",
+        "prompt": "Tubuh memulihkan diri paling baik setelah kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tubuh-memulihkan-diri-palin-1",
+            "text": "bermain semalaman"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-memulihkan-diri-palin-2",
+            "text": "ngemil larut malam"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-memulihkan-diri-palin-0",
+            "text": "tidur cukup"
+          }
+        ],
+        "correctResponse": "opsi-soal-tubuh-memulihkan-diri-palin-0"
       }
     ],
     "passingScore": 75

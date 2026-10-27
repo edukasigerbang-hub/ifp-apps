@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Puasa dimulai pada waktu",
         "right": "Terbit fajar"
+      },
+      {
+        "pairId": "pasangan-kegiatan-yang-dilakukan-saat-wak",
+        "left": "Kegiatan yang dilakukan saat waktu magrib tiba untuk mengakhiri puasa",
+        "right": "Berbuka"
       }
     ]
   },

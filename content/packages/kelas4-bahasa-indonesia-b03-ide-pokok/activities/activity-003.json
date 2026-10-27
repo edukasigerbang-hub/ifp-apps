@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Contoh kegiatan pagi di kelas yang mendukung ide pokok",
         "right": "Menyapu kelas"
+      },
+      {
+        "pairId": "pasangan-kegiatan-pagi-selain-menyapu-kel",
+        "left": "Kegiatan pagi selain menyapu kelas yang menjadi detail pendukung bacaan",
+        "right": "menyiram tanaman"
+      },
+      {
+        "pairId": "pasangan-uraian-singkat-seluruh-isi-bacaa",
+        "left": "Uraian singkat seluruh isi bacaan dengan bahasa sendiri disebut",
+        "right": "ringkasan"
       }
     ]
   },

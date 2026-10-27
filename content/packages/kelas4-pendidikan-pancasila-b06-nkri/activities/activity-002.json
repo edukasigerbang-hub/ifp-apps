@@ -3,7 +3,7 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Memasangkan Istilah dan Makna",
-  "instructions": "Pasangkan setiap istilah kenegaraan dengan maknanya.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [
     "assets/upacara-bendera.webp"
   ],
@@ -33,6 +33,11 @@
         "pairId": "pasangan-musyawarah",
         "left": "Musyawarah",
         "right": "Cara mengambil keputusan"
+      },
+      {
+        "pairId": "pasangan-sikap-yang-dilatih-siswa-melalui",
+        "left": "Sikap yang dilatih siswa melalui upacara bendera di sekolah",
+        "right": "menghormati lambang negara dan menjaga persatuan"
       }
     ]
   },

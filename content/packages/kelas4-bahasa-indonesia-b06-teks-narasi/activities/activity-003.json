@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Urutan peristiwa dari awal sampai akhir",
         "right": "Alur"
+      },
+      {
+        "pairId": "pasangan-benda-yang-dipakai-anak-menolong",
+        "left": "Benda yang dipakai anak menolong kucing dari hujan",
+        "right": "payung"
       }
     ]
   },

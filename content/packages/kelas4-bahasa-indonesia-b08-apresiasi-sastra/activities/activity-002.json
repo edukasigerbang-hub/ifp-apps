@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-alasan"
+      },
+      {
+        "questionId": "soal-unsur-puisi-yang-dapat-dinikmati",
+        "prompt": "Unsur puisi yang dapat dinikmati selain rima, irama, dan amanat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-unsur-puisi-yang-dapat-dini-0",
+            "text": "pilihan kata"
+          },
+          {
+            "optionId": "opsi-soal-unsur-puisi-yang-dapat-dini-1",
+            "text": "nama pengarang"
+          },
+          {
+            "optionId": "opsi-soal-unsur-puisi-yang-dapat-dini-2",
+            "text": "harga buku"
+          }
+        ],
+        "correctResponse": "opsi-soal-unsur-puisi-yang-dapat-dini-0"
+      },
+      {
+        "questionId": "soal-sikap-yang-tepat-terhadap-karya",
+        "prompt": "Sikap yang tepat terhadap karya sastra buatan orang lain adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-k-1",
+            "text": "mengejek karya"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-k-0",
+            "text": "menghargai"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-k-2",
+            "text": "meremehkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-tepat-terhadap-k-0"
       }
     ],
     "passingScore": 75

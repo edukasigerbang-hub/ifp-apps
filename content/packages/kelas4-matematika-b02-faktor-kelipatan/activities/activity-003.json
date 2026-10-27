@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Bilangan berikut yang BUKAN faktor 12 adalah",
         "right": "5"
+      },
+      {
+        "pairId": "pasangan-daftar-kelipatan-5-yang-kurang-d",
+        "left": "Daftar kelipatan 5 yang kurang dari 30",
+        "right": "5, 10, 15, 20, 25"
+      },
+      {
+        "pairId": "pasangan-faktor-persekutuan-terbesar-dari",
+        "left": "Faktor persekutuan terbesar dari 8 dan 12",
+        "right": "4"
       }
     ]
   },

@@ -33,6 +33,18 @@
         "prompt": "Berapa nilai angka 4 pada 12.345?",
         "responseType": "text",
         "correctResponse": "40"
+      },
+      {
+        "questionId": "soal-pada-bilangan-24-518-angka-5-men",
+        "prompt": "Pada bilangan 24.518, angka 5 menempati nilai tempat ...",
+        "responseType": "text",
+        "correctResponse": "ratusan"
+      },
+      {
+        "questionId": "soal-pada-bilangan-36-702-angka-yang",
+        "prompt": "Pada bilangan 36.702, angka yang menempati tempat satuan adalah ...",
+        "responseType": "text",
+        "correctResponse": "2"
       }
     ],
     "passingScore": 75

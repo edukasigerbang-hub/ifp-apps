@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Ciri kalimat efektif adalah",
         "right": "Jelas, singkat, dan sesuai kaidah"
+      },
+      {
+        "pairId": "pasangan-kata-yang-penulisannya-sesuai-ka",
+        "left": "Kata yang penulisannya sesuai kaidah bahasa dan kamus disebut kata",
+        "right": "baku"
+      },
+      {
+        "pairId": "pasangan-pemakaian-dua-kata-bermakna-sama",
+        "left": "Pemakaian dua kata bermakna sama dalam satu kalimat termasuk",
+        "right": "pemborosan kata"
       }
     ]
   },
