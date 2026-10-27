@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-mengirim-bola-kepada-teman-dalam",
+        "prompt": "Mengirim bola kepada teman dalam permainan sepak bola disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengirim-bola-kepada-teman-0",
+            "text": "Mengoper"
+          },
+          {
+            "optionId": "opsi-soal-mengirim-bola-kepada-teman-1",
+            "text": "Menggiring"
+          },
+          {
+            "optionId": "opsi-soal-mengirim-bola-kepada-teman-2",
+            "text": "Menendang"
+          },
+          {
+            "optionId": "opsi-soal-mengirim-bola-kepada-teman-3",
+            "text": "Menangkap"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengirim-bola-kepada-teman-0"
+      },
+      {
+        "questionId": "soal-permainan-yang-termasuk-permaina",
+        "prompt": "Permainan yang termasuk permainan bola besar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-yang-termasuk-per-1",
+            "text": "Tenis meja"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-termasuk-per-0",
+            "text": "Bola basket"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-termasuk-per-2",
+            "text": "Bulu tangkis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-termasuk-per-3",
+            "text": "Tenis lapangan"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-yang-termasuk-per-0"
       }
     ],
     "passingScore": 75

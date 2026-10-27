@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-sampah"
+      },
+      {
+        "questionId": "soal-hak-dan-kewajiban-yang-dilaksana",
+        "prompt": "Hak dan kewajiban yang dilaksanakan seimbang membuat kehidupan menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-yang-dila-1",
+            "text": "Penuh konflik"
+          },
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-yang-dila-2",
+            "text": "Tidak adil"
+          },
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-yang-dila-3",
+            "text": "Penuh pertengkaran"
+          },
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-yang-dila-0",
+            "text": "Tertib dan adil"
+          }
+        ],
+        "correctResponse": "opsi-soal-hak-dan-kewajiban-yang-dila-0"
+      },
+      {
+        "questionId": "soal-mendapat-pelayanan-kesehatan-men",
+        "prompt": "Mendapat pelayanan kesehatan menunjukkan warga negara memperoleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mendapat-pelayanan-kesehata-0",
+            "text": "Hak"
+          },
+          {
+            "optionId": "opsi-soal-mendapat-pelayanan-kesehata-1",
+            "text": "Kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-mendapat-pelayanan-kesehata-2",
+            "text": "Aturan"
+          },
+          {
+            "optionId": "opsi-soal-mendapat-pelayanan-kesehata-3",
+            "text": "Pajak"
+          }
+        ],
+        "correctResponse": "opsi-soal-mendapat-pelayanan-kesehata-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-mencuci-tangan-sebaiknya-dilakuk",
+        "prompt": "Mencuci tangan sebaiknya dilakukan sebelum makan dan setelah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebaiknya-di-0",
+            "text": "Bermain"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebaiknya-di-1",
+            "text": "Belajar"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebaiknya-di-2",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebaiknya-di-3",
+            "text": "Mandi"
+          }
+        ],
+        "correctResponse": "opsi-soal-mencuci-tangan-sebaiknya-di-0"
+      },
+      {
+        "questionId": "soal-tenaga-yang-menurun-setelah-bero",
+        "prompt": "Tenaga yang menurun setelah berolahraga dikembalikan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tenaga-yang-menurun-setelah-1",
+            "text": "Makan permen"
+          },
+          {
+            "optionId": "opsi-soal-tenaga-yang-menurun-setelah-0",
+            "text": "Istirahat"
+          },
+          {
+            "optionId": "opsi-soal-tenaga-yang-menurun-setelah-2",
+            "text": "Berdiam di tempat"
+          },
+          {
+            "optionId": "opsi-soal-tenaga-yang-menurun-setelah-3",
+            "text": "Begadang"
+          }
+        ],
+        "correctResponse": "opsi-soal-tenaga-yang-menurun-setelah-0"
+      },
+      {
+        "questionId": "soal-makan-makanan-bergizi-berguna-un",
+        "prompt": "Makan makanan bergizi berguna untuk menjaga ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-bergu-1",
+            "text": "Banyaknya keringat"
+          },
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-bergu-2",
+            "text": "Dehidrasi"
+          },
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-bergu-0",
+            "text": "Daya tahan"
+          },
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-bergu-3",
+            "text": "Cedera"
+          }
+        ],
+        "correctResponse": "opsi-soal-makan-makanan-bergizi-bergu-0"
+      },
+      {
+        "questionId": "soal-mandi-setiap-hari-bermanfaat-unt",
+        "prompt": "Mandi setiap hari bermanfaat untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bermanfaa-1",
+            "text": "Memulihkan tenaga"
+          },
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bermanfaa-2",
+            "text": "Mencegah cedera"
+          },
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bermanfaa-3",
+            "text": "Menghindari dehidrasi"
+          },
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bermanfaa-0",
+            "text": "Membersihkan tubuh"
+          }
+        ],
+        "correctResponse": "opsi-soal-mandi-setiap-hari-bermanfaa-0"
       }
     ],
     "passingScore": 75

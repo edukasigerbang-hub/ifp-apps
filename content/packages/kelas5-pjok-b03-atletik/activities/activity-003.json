@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-nomor-yang-termasuk-cabang-atlet",
+        "prompt": "Nomor yang termasuk cabang atletik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nomor-yang-termasuk-cabang-1",
+            "text": "Bola voli"
+          },
+          {
+            "optionId": "opsi-soal-nomor-yang-termasuk-cabang-2",
+            "text": "Bulu tangkis"
+          },
+          {
+            "optionId": "opsi-soal-nomor-yang-termasuk-cabang-0",
+            "text": "Lompat jauh"
+          },
+          {
+            "optionId": "opsi-soal-nomor-yang-termasuk-cabang-3",
+            "text": "Tenis meja"
+          }
+        ],
+        "correctResponse": "opsi-soal-nomor-yang-termasuk-cabang-0"
+      },
+      {
+        "questionId": "soal-saat-bersiap-di-start-jongkok-pa",
+        "prompt": "Saat bersiap di start jongkok, pandangan mata diarahkan ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-start-jongk-1",
+            "text": "Belakang"
+          },
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-start-jongk-2",
+            "text": "Atas"
+          },
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-start-jongk-3",
+            "text": "Samping"
+          },
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-start-jongk-0",
+            "text": "Depan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-bersiap-di-start-jongk-0"
+      },
+      {
+        "questionId": "soal-gerakan-pertama-dalam-urutan-lom",
+        "prompt": "Gerakan pertama dalam urutan lompat jauh adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerakan-pertama-dalam-uruta-0",
+            "text": "Awalan"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-pertama-dalam-uruta-1",
+            "text": "Tolakan"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-pertama-dalam-uruta-2",
+            "text": "Melayang"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-pertama-dalam-uruta-3",
+            "text": "Mendarat"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerakan-pertama-dalam-uruta-0"
+      },
+      {
+        "questionId": "soal-pemain-yang-mau-menghargai-lawan",
+        "prompt": "Pemain yang mau menghargai lawan disebut pemain ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pemain-yang-mau-menghargai-1",
+            "text": "Pemalas"
+          },
+          {
+            "optionId": "opsi-soal-pemain-yang-mau-menghargai-0",
+            "text": "Sportif"
+          },
+          {
+            "optionId": "opsi-soal-pemain-yang-mau-menghargai-2",
+            "text": "Kasar"
+          },
+          {
+            "optionId": "opsi-soal-pemain-yang-mau-menghargai-3",
+            "text": "Sombong"
+          }
+        ],
+        "correctResponse": "opsi-soal-pemain-yang-mau-menghargai-0"
       }
     ],
     "passingScore": 75

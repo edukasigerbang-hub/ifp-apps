@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-cara-mencegah-penyebaran-kuman-p",
+        "prompt": "Cara mencegah penyebaran kuman penyakit di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cara-mencegah-penyebaran-ku-1",
+            "text": "Berbagi botol minum"
+          },
+          {
+            "optionId": "opsi-soal-cara-mencegah-penyebaran-ku-0",
+            "text": "Rajin mencuci tangan"
+          },
+          {
+            "optionId": "opsi-soal-cara-mencegah-penyebaran-ku-2",
+            "text": "Jarang membersihkan diri"
+          },
+          {
+            "optionId": "opsi-soal-cara-mencegah-penyebaran-ku-3",
+            "text": "Malas bergerak"
+          }
+        ],
+        "correctResponse": "opsi-soal-cara-mencegah-penyebaran-ku-0"
+      },
+      {
+        "questionId": "soal-makan-makanan-bergizi-penting-ka",
+        "prompt": "Makan makanan bergizi penting karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-penti-1",
+            "text": "Menyebabkan mudah sakit"
+          },
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-penti-2",
+            "text": "Menyebabkan kantuk"
+          },
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-penti-0",
+            "text": "Menjaga daya tahan"
+          },
+          {
+            "optionId": "opsi-soal-makan-makanan-bergizi-penti-3",
+            "text": "Menambah kuman"
+          }
+        ],
+        "correctResponse": "opsi-soal-makan-makanan-bergizi-penti-0"
+      },
+      {
+        "questionId": "soal-olahraga-yang-teratur-membuat-tu",
+        "prompt": "Olahraga yang teratur membuat tubuh menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-olahraga-yang-teratur-membu-1",
+            "text": "Cepat lelah"
+          },
+          {
+            "optionId": "opsi-soal-olahraga-yang-teratur-membu-2",
+            "text": "Sering sakit"
+          },
+          {
+            "optionId": "opsi-soal-olahraga-yang-teratur-membu-3",
+            "text": "Mudah mengantuk"
+          },
+          {
+            "optionId": "opsi-soal-olahraga-yang-teratur-membu-0",
+            "text": "Kuat dan bugar"
+          }
+        ],
+        "correctResponse": "opsi-soal-olahraga-yang-teratur-membu-0"
+      },
+      {
+        "questionId": "soal-kebiasaan-yang-menjaga-gigi-teta",
+        "prompt": "Kebiasaan yang menjaga gigi tetap sehat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-gigi-0",
+            "text": "Sikat gigi"
+          },
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-gigi-1",
+            "text": "Istirahat cukup"
+          },
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-gigi-2",
+            "text": "Minum air putih"
+          },
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-gigi-3",
+            "text": "Sering jajan manis"
+          }
+        ],
+        "correctResponse": "opsi-soal-kebiasaan-yang-menjaga-gigi-0"
       }
     ],
     "passingScore": 75

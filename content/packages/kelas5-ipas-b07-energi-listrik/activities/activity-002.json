@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-logam"
+      },
+      {
+        "questionId": "soal-lampu-yang-dinyalakan-mengubah-e",
+        "prompt": "Lampu yang dinyalakan mengubah energi listrik menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lampu-yang-dinyalakan-mengu-1",
+            "text": "Gelombang bunyi"
+          },
+          {
+            "optionId": "opsi-soal-lampu-yang-dinyalakan-mengu-2",
+            "text": "Angin"
+          },
+          {
+            "optionId": "opsi-soal-lampu-yang-dinyalakan-mengu-0",
+            "text": "Cahaya"
+          },
+          {
+            "optionId": "opsi-soal-lampu-yang-dinyalakan-mengu-3",
+            "text": "Gerak"
+          }
+        ],
+        "correctResponse": "opsi-soal-lampu-yang-dinyalakan-mengu-0"
+      },
+      {
+        "questionId": "soal-berikut-yang-bukan-sumber-energi",
+        "prompt": "Berikut yang bukan sumber energi listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berikut-yang-bukan-sumber-e-1",
+            "text": "Air"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-bukan-sumber-e-2",
+            "text": "Angin"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-bukan-sumber-e-3",
+            "text": "Matahari"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-bukan-sumber-e-0",
+            "text": "Batu"
+          }
+        ],
+        "correctResponse": "opsi-soal-berikut-yang-bukan-sumber-e-0"
       }
     ],
     "passingScore": 75

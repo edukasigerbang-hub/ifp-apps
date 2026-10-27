@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Balok tersusun dari kubus satuan",
         "right": "Volume"
+      },
+      {
+        "pairId": "pasangan-cara-menghitung-volume-kubus",
+        "left": "Cara menghitung volume kubus",
+        "right": "Sisi × sisi × sisi"
+      },
+      {
+        "pairId": "pasangan-satuan-untuk-luas-permukaan",
+        "left": "Satuan untuk luas permukaan",
+        "right": "Sentimeter persegi (cm²)"
       }
     ]
   },

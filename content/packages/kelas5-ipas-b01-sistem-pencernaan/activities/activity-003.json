@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-makanan-dikunyah-dan-dihancurkan",
+        "prompt": "Makanan dikunyah dan dihancurkan di dalam organ ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makanan-dikunyah-dan-dihanc-1",
+            "text": "Lambung"
+          },
+          {
+            "optionId": "opsi-soal-makanan-dikunyah-dan-dihanc-2",
+            "text": "Usus halus"
+          },
+          {
+            "optionId": "opsi-soal-makanan-dikunyah-dan-dihanc-0",
+            "text": "Mulut"
+          },
+          {
+            "optionId": "opsi-soal-makanan-dikunyah-dan-dihanc-3",
+            "text": "Kerongkongan"
+          }
+        ],
+        "correctResponse": "opsi-soal-makanan-dikunyah-dan-dihanc-0"
+      },
+      {
+        "questionId": "soal-organ-yang-mencerna-makanan-deng",
+        "prompt": "Organ yang mencerna makanan dengan bantuan asam dan gerakan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-organ-yang-mencerna-makanan-1",
+            "text": "Usus halus"
+          },
+          {
+            "optionId": "opsi-soal-organ-yang-mencerna-makanan-2",
+            "text": "Usus besar"
+          },
+          {
+            "optionId": "opsi-soal-organ-yang-mencerna-makanan-3",
+            "text": "Kerongkongan"
+          },
+          {
+            "optionId": "opsi-soal-organ-yang-mencerna-makanan-0",
+            "text": "Lambung"
+          }
+        ],
+        "correctResponse": "opsi-soal-organ-yang-mencerna-makanan-0"
+      },
+      {
+        "questionId": "soal-sari-makanan-diserap-oleh-tubuh",
+        "prompt": "Sari makanan diserap oleh tubuh di organ ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sari-makanan-diserap-oleh-t-0",
+            "text": "Usus halus"
+          },
+          {
+            "optionId": "opsi-soal-sari-makanan-diserap-oleh-t-1",
+            "text": "Usus besar"
+          },
+          {
+            "optionId": "opsi-soal-sari-makanan-diserap-oleh-t-2",
+            "text": "Lambung"
+          },
+          {
+            "optionId": "opsi-soal-sari-makanan-diserap-oleh-t-3",
+            "text": "Anus"
+          }
+        ],
+        "correctResponse": "opsi-soal-sari-makanan-diserap-oleh-t-0"
+      },
+      {
+        "questionId": "soal-fungsi-usus-besar-dalam-pencerna",
+        "prompt": "Fungsi usus besar dalam pencernaan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-fungsi-usus-besar-dalam-pen-1",
+            "text": "Mengunyah makanan"
+          },
+          {
+            "optionId": "opsi-soal-fungsi-usus-besar-dalam-pen-0",
+            "text": "Menyerap air"
+          },
+          {
+            "optionId": "opsi-soal-fungsi-usus-besar-dalam-pen-2",
+            "text": "Menyalurkan makanan"
+          },
+          {
+            "optionId": "opsi-soal-fungsi-usus-besar-dalam-pen-3",
+            "text": "Menyerap sari makanan"
+          }
+        ],
+        "correctResponse": "opsi-soal-fungsi-usus-besar-dalam-pen-0"
       }
     ],
     "passingScore": 75

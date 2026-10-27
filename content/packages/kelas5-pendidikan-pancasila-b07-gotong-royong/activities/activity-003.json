@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Manfaatnya",
         "right": "Pekerjaan cepat selesai dan mempererat persaudaraan"
+      },
+      {
+        "pairId": "pasangan-membersihkan-selokan-sekolah-ber",
+        "left": "Membersihkan selokan sekolah bersama-sama merupakan contoh kegiatan ...",
+        "right": "Gotong royong"
+      },
+      {
+        "pairId": "pasangan-berkat-gotong-royong-pekerjaan-t",
+        "left": "Berkat gotong royong, pekerjaan terasa lebih ...",
+        "right": "Cepat selesai"
+      },
+      {
+        "pairId": "pasangan-setelah-pekerjaan-selesai-alat-a",
+        "left": "Setelah pekerjaan selesai, alat-alat harus ...",
+        "right": "Dirapikan"
       }
     ]
   },

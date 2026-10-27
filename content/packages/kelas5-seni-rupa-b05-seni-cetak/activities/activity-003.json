@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Mencetak",
         "right": "Oles cat, tekan, lalu angkat"
+      },
+      {
+        "pairId": "pasangan-langkah-sesudah-mengoles-cat-pad",
+        "left": "Langkah sesudah mengoles cat pada alat cetak",
+        "right": "Menekan pada kertas"
+      },
+      {
+        "pairId": "pasangan-cara-mengangkat-alat-cetak-dari",
+        "left": "Cara mengangkat alat cetak dari kertas",
+        "right": "Perlahan"
+      },
+      {
+        "pairId": "pasangan-barang-bekas-di-rumah-yang-dapat",
+        "left": "Barang bekas di rumah yang dapat dijadikan alat cetak",
+        "right": "Tutup botol"
       }
     ]
   },

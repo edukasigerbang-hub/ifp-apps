@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Sumber listrik, lampu, dan alat elektronik",
         "right": "Energi listrik"
+      },
+      {
+        "pairId": "pasangan-pembangkit-listrik-yang-memakai",
+        "left": "Pembangkit listrik yang memakai kekuatan air mengalir",
+        "right": "PLTA"
+      },
+      {
+        "pairId": "pasangan-mencabut-alat-listrik-yang-tidak",
+        "left": "Mencabut alat listrik yang tidak dipakai termasuk ...",
+        "right": "Penghematan listrik"
       }
     ]
   },

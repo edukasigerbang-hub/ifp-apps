@@ -105,6 +105,50 @@
           }
         ],
         "correctResponse": "opsi-alasan"
+      },
+      {
+        "questionId": "soal-bagian-terakhir-struktur-teks-ek",
+        "prompt": "Bagian terakhir struktur teks eksposisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-1",
+            "text": "tesis"
+          },
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-0",
+            "text": "penegasan"
+          },
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-2",
+            "text": "argumen"
+          },
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-3",
+            "text": "penjelasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-terakhir-struktur-te-0"
+      },
+      {
+        "questionId": "soal-informasi-pada-teks-eksposisi-di",
+        "prompt": "Informasi pada teks eksposisi disampaikan secara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-informasi-pada-teks-eksposi-0",
+            "text": "objektif"
+          },
+          {
+            "optionId": "opsi-soal-informasi-pada-teks-eksposi-1",
+            "text": "berlebihan"
+          },
+          {
+            "optionId": "opsi-soal-informasi-pada-teks-eksposi-2",
+            "text": "memihak"
+          }
+        ],
+        "correctResponse": "opsi-soal-informasi-pada-teks-eksposi-0"
       }
     ],
     "passingScore": 75

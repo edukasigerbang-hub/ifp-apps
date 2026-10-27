@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-permainan-yang-menggunakan-kok-a",
+        "prompt": "Permainan yang menggunakan kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-1",
+            "text": "Tenis meja"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-2",
+            "text": "Tenis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-0",
+            "text": "Bulu tangkis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-3",
+            "text": "Bola voli"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-yang-menggunakan-0"
+      },
+      {
+        "questionId": "soal-pemanasan-dilakukan-sebelum-berm",
+        "prompt": "Pemanasan dilakukan sebelum bermain dengan tujuan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-1",
+            "text": "Memulihkan tenaga"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-2",
+            "text": "Menambah berat badan"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-3",
+            "text": "Mencegah penyakit"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-0",
+            "text": "Mencegah cedera"
+          }
+        ],
+        "correctResponse": "opsi-soal-pemanasan-dilakukan-sebelum-0"
       }
     ],
     "passingScore": 75

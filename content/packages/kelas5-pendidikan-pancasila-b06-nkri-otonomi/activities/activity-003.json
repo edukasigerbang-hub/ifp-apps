@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Otonomi daerah berarti",
         "right": "Daerah mengatur urusannya sendiri"
+      },
+      {
+        "pairId": "pasangan-kewenangan-daerah-untuk-mengatur",
+        "left": "Kewenangan daerah untuk mengatur urusannya sendiri disebut ...",
+        "right": "Otonomi daerah"
+      },
+      {
+        "pairId": "pasangan-negara-kesatuan-republik-indones",
+        "left": "Negara Kesatuan Republik Indonesia disingkat ...",
+        "right": "NKRI"
       }
     ]
   },

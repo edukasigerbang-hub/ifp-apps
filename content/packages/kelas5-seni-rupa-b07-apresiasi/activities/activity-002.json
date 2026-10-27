@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-hargai"
+      },
+      {
+        "questionId": "soal-apresiasi-karya-seni-melatih-kit",
+        "prompt": "Apresiasi karya seni melatih kita untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-apresiasi-karya-seni-melati-1",
+            "text": "Meremehkan"
+          },
+          {
+            "optionId": "opsi-soal-apresiasi-karya-seni-melati-0",
+            "text": "Menghargai"
+          },
+          {
+            "optionId": "opsi-soal-apresiasi-karya-seni-melati-2",
+            "text": "Menertawakan"
+          },
+          {
+            "optionId": "opsi-soal-apresiasi-karya-seni-melati-3",
+            "text": "Membuang"
+          }
+        ],
+        "correctResponse": "opsi-soal-apresiasi-karya-seni-melati-0"
+      },
+      {
+        "questionId": "soal-saat-mengamati-karya-seni-sikap",
+        "prompt": "Saat mengamati karya seni, sikap kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-mengamati-karya-seni-s-1",
+            "text": "Terburu-buru"
+          },
+          {
+            "optionId": "opsi-soal-saat-mengamati-karya-seni-s-2",
+            "text": "Bising"
+          },
+          {
+            "optionId": "opsi-soal-saat-mengamati-karya-seni-s-0",
+            "text": "Teliti"
+          },
+          {
+            "optionId": "opsi-soal-saat-mengamati-karya-seni-s-3",
+            "text": "Acuh"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-mengamati-karya-seni-s-0"
       }
     ],
     "passingScore": 75

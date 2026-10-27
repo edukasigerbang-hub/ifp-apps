@@ -49,6 +49,98 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kata-debur-ombak-pada-teks-deskr",
+        "prompt": "Kata \"debur ombak\" pada teks deskripsi pantai termasuk kata pengindraan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-debur-ombak-pada-teks-1",
+            "text": "penglihatan"
+          },
+          {
+            "optionId": "opsi-soal-kata-debur-ombak-pada-teks-0",
+            "text": "pendengaran"
+          },
+          {
+            "optionId": "opsi-soal-kata-debur-ombak-pada-teks-2",
+            "text": "penciuman"
+          },
+          {
+            "optionId": "opsi-soal-kata-debur-ombak-pada-teks-3",
+            "text": "peraba"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-debur-ombak-pada-teks-0"
+      },
+      {
+        "questionId": "soal-kalimat-pasir-putih-terasa-hanga",
+        "prompt": "Kalimat \"Pasir putih terasa hangat di telapak kaki\" memakai indra ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kalimat-pasir-putih-terasa-1",
+            "text": "penciuman"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-pasir-putih-terasa-2",
+            "text": "pendengaran"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-pasir-putih-terasa-0",
+            "text": "peraba"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-pasir-putih-terasa-3",
+            "text": "penglihatan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kalimat-pasir-putih-terasa-0"
+      },
+      {
+        "questionId": "soal-objek-yang-dideskripsikan-dengan",
+        "prompt": "Objek yang dideskripsikan dengan kata biru, debur ombak, dan bau asin adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-objek-yang-dideskripsikan-d-1",
+            "text": "gunung"
+          },
+          {
+            "optionId": "opsi-soal-objek-yang-dideskripsikan-d-2",
+            "text": "hutan"
+          },
+          {
+            "optionId": "opsi-soal-objek-yang-dideskripsikan-d-3",
+            "text": "kota"
+          },
+          {
+            "optionId": "opsi-soal-objek-yang-dideskripsikan-d-0",
+            "text": "pantai"
+          }
+        ],
+        "correctResponse": "opsi-soal-objek-yang-dideskripsikan-d-0"
+      },
+      {
+        "questionId": "soal-ide-utama-sebuah-paragraf-teks-d",
+        "prompt": "Ide utama sebuah paragraf teks deskripsi terdapat pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-ide-utama-sebuah-paragraf-t-0",
+            "text": "kalimat topik"
+          },
+          {
+            "optionId": "opsi-soal-ide-utama-sebuah-paragraf-t-1",
+            "text": "kalimat penjelas"
+          },
+          {
+            "optionId": "opsi-soal-ide-utama-sebuah-paragraf-t-2",
+            "text": "judul paragraf"
+          }
+        ],
+        "correctResponse": "opsi-soal-ide-utama-sebuah-paragraf-t-0"
       }
     ],
     "passingScore": 75

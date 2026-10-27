@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bahan-alam-yang-dipakai-untuk-me",
+        "prompt": "Bahan alam yang dipakai untuk membuat mozaik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-0",
+            "text": "Biji"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-1",
+            "text": "Bambu"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-2",
+            "text": "Kain perca"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-3",
+            "text": "Lem"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-alam-yang-dipakai-unt-0"
+      },
+      {
+        "questionId": "soal-anyaman-pada-kerajinan-biasanya",
+        "prompt": "Anyaman pada kerajinan biasanya dibuat dari bahan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-1",
+            "text": "Biji"
+          },
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-0",
+            "text": "Bambu"
+          },
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-2",
+            "text": "Kain perca"
+          },
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-3",
+            "text": "Daun kering"
+          }
+        ],
+        "correctResponse": "opsi-soal-anyaman-pada-kerajinan-bias-0"
+      },
+      {
+        "questionId": "soal-bahan-kerajinan-yang-baik-harus",
+        "prompt": "Bahan kerajinan yang baik harus bersih, aman, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-1",
+            "text": "Sulit diperoleh"
+          },
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-2",
+            "text": "Berat"
+          },
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-0",
+            "text": "Mudah dibentuk"
+          },
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-3",
+            "text": "Mahal"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-kerajinan-yang-baik-h-0"
+      },
+      {
+        "questionId": "soal-perekat-yang-aman-untuk-menempel",
+        "prompt": "Perekat yang aman untuk menempel bahan kerajinan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-1",
+            "text": "Tiner"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-2",
+            "text": "Benang jahit"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-3",
+            "text": "Cat air"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-0",
+            "text": "Lem serbaguna"
+          }
+        ],
+        "correctResponse": "opsi-soal-perekat-yang-aman-untuk-men-0"
       }
     ],
     "passingScore": 75

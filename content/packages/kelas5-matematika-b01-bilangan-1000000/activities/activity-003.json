@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Enam kolom angka dari ratus ribuan sampai satuan",
         "right": "Nilai tempat"
+      },
+      {
+        "pairId": "pasangan-nilai-angka-4-pada-bilangan-452",
+        "left": "Nilai angka 4 pada bilangan 452.316",
+        "right": "400.000"
+      },
+      {
+        "pairId": "pasangan-nama-bilangan-1-000-000",
+        "left": "Nama bilangan 1.000.000",
+        "right": "Satu juta"
       }
     ]
   },

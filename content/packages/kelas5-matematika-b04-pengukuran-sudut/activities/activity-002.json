@@ -105,6 +105,50 @@
           }
         ],
         "correctResponse": "opsi-180"
+      },
+      {
+        "questionId": "soal-sudut-45-derajat-termasuk-jenis",
+        "prompt": "Sudut 45 derajat termasuk jenis sudut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sudut-45-derajat-termasuk-j-1",
+            "text": "tumpul"
+          },
+          {
+            "optionId": "opsi-soal-sudut-45-derajat-termasuk-j-2",
+            "text": "siku-siku"
+          },
+          {
+            "optionId": "opsi-soal-sudut-45-derajat-termasuk-j-0",
+            "text": "lancip"
+          }
+        ],
+        "correctResponse": "opsi-soal-sudut-45-derajat-termasuk-j-0"
+      },
+      {
+        "questionId": "soal-alat-untuk-mengukur-besar-sudut",
+        "prompt": "Alat untuk mengukur besar sudut adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alat-untuk-mengukur-besar-s-1",
+            "text": "mistar"
+          },
+          {
+            "optionId": "opsi-soal-alat-untuk-mengukur-besar-s-2",
+            "text": "jangka"
+          },
+          {
+            "optionId": "opsi-soal-alat-untuk-mengukur-besar-s-0",
+            "text": "busur derajat"
+          },
+          {
+            "optionId": "opsi-soal-alat-untuk-mengukur-besar-s-3",
+            "text": "kalkulator"
+          }
+        ],
+        "correctResponse": "opsi-soal-alat-untuk-mengukur-besar-s-0"
       }
     ],
     "passingScore": 75

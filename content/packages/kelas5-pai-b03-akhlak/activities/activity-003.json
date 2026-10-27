@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-akhlak-terpuji-yang-berarti-berk",
+        "prompt": "Akhlak terpuji yang berarti berkata benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-yang-berarti-0",
+            "text": "Jujur"
+          },
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-yang-berarti-1",
+            "text": "Sabar"
+          },
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-yang-berarti-2",
+            "text": "Sopan"
+          },
+          {
+            "optionId": "opsi-soal-akhlak-terpuji-yang-berarti-3",
+            "text": "Membantu"
+          }
+        ],
+        "correctResponse": "opsi-soal-akhlak-terpuji-yang-berarti-0"
+      },
+      {
+        "questionId": "soal-menahan-diri-ketika-mendapat-kes",
+        "prompt": "Menahan diri ketika mendapat kesulitan termasuk akhlak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-mendapa-1",
+            "text": "Amanah"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-mendapa-0",
+            "text": "Sabar"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-mendapa-2",
+            "text": "Jujur"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-mendapa-3",
+            "text": "Sopan"
+          }
+        ],
+        "correctResponse": "opsi-soal-menahan-diri-ketika-mendapa-0"
+      },
+      {
+        "questionId": "soal-meringankan-beban-pekerjaan-tema",
+        "prompt": "Meringankan beban pekerjaan teman berarti kita telah berakhlak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-meringankan-beban-pekerjaan-1",
+            "text": "Mengalah"
+          },
+          {
+            "optionId": "opsi-soal-meringankan-beban-pekerjaan-2",
+            "text": "Bermalas-malasan"
+          },
+          {
+            "optionId": "opsi-soal-meringankan-beban-pekerjaan-0",
+            "text": "Membantu"
+          },
+          {
+            "optionId": "opsi-soal-meringankan-beban-pekerjaan-3",
+            "text": "Berdiam diri"
+          }
+        ],
+        "correctResponse": "opsi-soal-meringankan-beban-pekerjaan-0"
+      },
+      {
+        "questionId": "soal-anak-yang-membiasakan-akhlak-ter",
+        "prompt": "Anak yang membiasakan akhlak terpuji akan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-anak-yang-membiasakan-akhla-1",
+            "text": "Dirugikan teman"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-membiasakan-akhla-2",
+            "text": "Dilupakan teman"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-membiasakan-akhla-3",
+            "text": "Dijauhi teman"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-membiasakan-akhla-0",
+            "text": "Disayangi teman"
+          }
+        ],
+        "correctResponse": "opsi-soal-anak-yang-membiasakan-akhla-0"
       }
     ],
     "passingScore": 75

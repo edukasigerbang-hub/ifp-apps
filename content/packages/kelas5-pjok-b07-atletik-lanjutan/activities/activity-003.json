@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-tahap-lompat-jauh-yang-dilakukan",
+        "prompt": "Tahap lompat jauh yang dilakukan tepat sebelum melayang adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tahap-lompat-jauh-yang-dila-0",
+            "text": "Tolakan"
+          },
+          {
+            "optionId": "opsi-soal-tahap-lompat-jauh-yang-dila-1",
+            "text": "Awalan"
+          },
+          {
+            "optionId": "opsi-soal-tahap-lompat-jauh-yang-dila-2",
+            "text": "Mendarat"
+          },
+          {
+            "optionId": "opsi-soal-tahap-lompat-jauh-yang-dila-3",
+            "text": "Berjalan"
+          }
+        ],
+        "correctResponse": "opsi-soal-tahap-lompat-jauh-yang-dila-0"
+      },
+      {
+        "questionId": "soal-dalam-start-jongkok-kaki-berfung",
+        "prompt": "Dalam start jongkok, kaki berfungsi untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dalam-start-jongkok-kaki-be-1",
+            "text": "Santai"
+          },
+          {
+            "optionId": "opsi-soal-dalam-start-jongkok-kaki-be-0",
+            "text": "Menolak kuat"
+          },
+          {
+            "optionId": "opsi-soal-dalam-start-jongkok-kaki-be-2",
+            "text": "Berjinjit"
+          },
+          {
+            "optionId": "opsi-soal-dalam-start-jongkok-kaki-be-3",
+            "text": "Berlari balik"
+          }
+        ],
+        "correctResponse": "opsi-soal-dalam-start-jongkok-kaki-be-0"
+      },
+      {
+        "questionId": "soal-pita-yang-dipasang-di-ujung-lint",
+        "prompt": "Pita yang dipasang di ujung lintasan menandai ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pita-yang-dipasang-di-ujung-1",
+            "text": "Garis start"
+          },
+          {
+            "optionId": "opsi-soal-pita-yang-dipasang-di-ujung-2",
+            "text": "Bak pasir"
+          },
+          {
+            "optionId": "opsi-soal-pita-yang-dipasang-di-ujung-0",
+            "text": "Garis finis"
+          },
+          {
+            "optionId": "opsi-soal-pita-yang-dipasang-di-ujung-3",
+            "text": "Lintasan lari"
+          }
+        ],
+        "correctResponse": "opsi-soal-pita-yang-dipasang-di-ujung-0"
+      },
+      {
+        "questionId": "soal-sportivitas-dalam-atletik-berart",
+        "prompt": "Sportivitas dalam atletik berarti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sportivitas-dalam-atletik-b-1",
+            "text": "Mencuri start"
+          },
+          {
+            "optionId": "opsi-soal-sportivitas-dalam-atletik-b-2",
+            "text": "Mengabaikan aturan"
+          },
+          {
+            "optionId": "opsi-soal-sportivitas-dalam-atletik-b-3",
+            "text": "Berkata kasar"
+          },
+          {
+            "optionId": "opsi-soal-sportivitas-dalam-atletik-b-0",
+            "text": "Menghargai lawan"
+          }
+        ],
+        "correctResponse": "opsi-soal-sportivitas-dalam-atletik-b-0"
       }
     ],
     "passingScore": 75

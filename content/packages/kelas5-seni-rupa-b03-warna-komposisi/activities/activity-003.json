@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-warna-berikut-yang-tergolong-war",
+        "prompt": "Warna berikut yang tergolong warna dingin adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-berikut-yang-tergolon-1",
+            "text": "Merah"
+          },
+          {
+            "optionId": "opsi-soal-warna-berikut-yang-tergolon-2",
+            "text": "Oranye"
+          },
+          {
+            "optionId": "opsi-soal-warna-berikut-yang-tergolon-0",
+            "text": "Ungu"
+          },
+          {
+            "optionId": "opsi-soal-warna-berikut-yang-tergolon-3",
+            "text": "Kuning"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-berikut-yang-tergolon-0"
+      },
+      {
+        "questionId": "soal-merah-oranye-dan-kuning-termasuk",
+        "prompt": "Merah, oranye, dan kuning termasuk kelompok ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-merah-oranye-dan-kuning-ter-1",
+            "text": "Warna dingin"
+          },
+          {
+            "optionId": "opsi-soal-merah-oranye-dan-kuning-ter-2",
+            "text": "Warna gelap"
+          },
+          {
+            "optionId": "opsi-soal-merah-oranye-dan-kuning-ter-3",
+            "text": "Warna netral"
+          },
+          {
+            "optionId": "opsi-soal-merah-oranye-dan-kuning-ter-0",
+            "text": "Warna hangat"
+          }
+        ],
+        "correctResponse": "opsi-soal-merah-oranye-dan-kuning-ter-0"
+      },
+      {
+        "questionId": "soal-susunan-unsur-unsur-di-dalam-seb",
+        "prompt": "Susunan unsur-unsur di dalam sebuah karya disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-susunan-unsur-unsur-di-dala-0",
+            "text": "Komposisi"
+          },
+          {
+            "optionId": "opsi-soal-susunan-unsur-unsur-di-dala-1",
+            "text": "Kontras"
+          },
+          {
+            "optionId": "opsi-soal-susunan-unsur-unsur-di-dala-2",
+            "text": "Simetris"
+          },
+          {
+            "optionId": "opsi-soal-susunan-unsur-unsur-di-dala-3",
+            "text": "Asimetris"
+          }
+        ],
+        "correctResponse": "opsi-soal-susunan-unsur-unsur-di-dala-0"
+      },
+      {
+        "questionId": "soal-perbedaan-warna-yang-mencolok-pa",
+        "prompt": "Perbedaan warna yang mencolok pada karya disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perbedaan-warna-yang-mencol-1",
+            "text": "Komposisi"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-warna-yang-mencol-0",
+            "text": "Kontras"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-warna-yang-mencol-2",
+            "text": "Simetris"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-warna-yang-mencol-3",
+            "text": "Bentuk"
+          }
+        ],
+        "correctResponse": "opsi-soal-perbedaan-warna-yang-mencol-0"
       }
     ],
     "passingScore": 75

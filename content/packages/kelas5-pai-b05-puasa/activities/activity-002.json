@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-sabar"
+      },
+      {
+        "questionId": "soal-orang-yang-berpuasa-berhenti-men",
+        "prompt": "Orang yang berpuasa berhenti menahan makan dan minum ketika tiba waktu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-1",
+            "text": "Subuh"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-2",
+            "text": "Dzuhur"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-0",
+            "text": "Magrib"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berpuasa-berhent-3",
+            "text": "Isya"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-berpuasa-berhent-0"
+      },
+      {
+        "questionId": "soal-selain-sabar-dan-peduli-ibadah-p",
+        "prompt": "Selain sabar dan peduli, ibadah puasa juga melatih sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-sabar-dan-peduli-iba-1",
+            "text": "Pemarah"
+          },
+          {
+            "optionId": "opsi-soal-selain-sabar-dan-peduli-iba-2",
+            "text": "Malas"
+          },
+          {
+            "optionId": "opsi-soal-selain-sabar-dan-peduli-iba-3",
+            "text": "Sombong"
+          },
+          {
+            "optionId": "opsi-soal-selain-sabar-dan-peduli-iba-0",
+            "text": "Disiplin"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-sabar-dan-peduli-iba-0"
       }
     ],
     "passingScore": 75

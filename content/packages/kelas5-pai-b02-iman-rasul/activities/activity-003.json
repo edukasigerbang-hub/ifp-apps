@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-jumlah-nabi-dan-rasul-yang-wajib",
+        "prompt": "Jumlah nabi dan rasul yang wajib diketahui umat Islam adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-jumlah-nabi-dan-rasul-yang-1",
+            "text": "20"
+          },
+          {
+            "optionId": "opsi-soal-jumlah-nabi-dan-rasul-yang-2",
+            "text": "10"
+          },
+          {
+            "optionId": "opsi-soal-jumlah-nabi-dan-rasul-yang-0",
+            "text": "25"
+          },
+          {
+            "optionId": "opsi-soal-jumlah-nabi-dan-rasul-yang-3",
+            "text": "100"
+          }
+        ],
+        "correctResponse": "opsi-soal-jumlah-nabi-dan-rasul-yang-0"
+      },
+      {
+        "questionId": "soal-sifat-wajib-rasul-yang-berarti-j",
+        "prompt": "Sifat wajib rasul yang berarti jujur adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-wajib-rasul-yang-bera-1",
+            "text": "Amanah"
+          },
+          {
+            "optionId": "opsi-soal-sifat-wajib-rasul-yang-bera-2",
+            "text": "Tabligh"
+          },
+          {
+            "optionId": "opsi-soal-sifat-wajib-rasul-yang-bera-3",
+            "text": "Fatanah"
+          },
+          {
+            "optionId": "opsi-soal-sifat-wajib-rasul-yang-bera-0",
+            "text": "Siddiq"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-wajib-rasul-yang-bera-0"
+      },
+      {
+        "questionId": "soal-fatanah-adalah-sifat-wajib-rasul",
+        "prompt": "Fatanah adalah sifat wajib rasul yang artinya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-fatanah-adalah-sifat-wajib-0",
+            "text": "Cerdas"
+          },
+          {
+            "optionId": "opsi-soal-fatanah-adalah-sifat-wajib-1",
+            "text": "Jujur"
+          },
+          {
+            "optionId": "opsi-soal-fatanah-adalah-sifat-wajib-2",
+            "text": "Dapat dipercaya"
+          },
+          {
+            "optionId": "opsi-soal-fatanah-adalah-sifat-wajib-3",
+            "text": "Menyampaikan"
+          }
+        ],
+        "correctResponse": "opsi-soal-fatanah-adalah-sifat-wajib-0"
+      },
+      {
+        "questionId": "soal-iman-kepada-rasul-berarti-kepada",
+        "prompt": "Iman kepada rasul berarti ... kepada beliau.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-iman-kepada-rasul-berarti-k-1",
+            "text": "Ragu-ragu"
+          },
+          {
+            "optionId": "opsi-soal-iman-kepada-rasul-berarti-k-0",
+            "text": "Percaya"
+          },
+          {
+            "optionId": "opsi-soal-iman-kepada-rasul-berarti-k-2",
+            "text": "Tidak peduli"
+          },
+          {
+            "optionId": "opsi-soal-iman-kepada-rasul-berarti-k-3",
+            "text": "Mudah lupa"
+          }
+        ],
+        "correctResponse": "opsi-soal-iman-kepada-rasul-berarti-k-0"
       }
     ],
     "passingScore": 75

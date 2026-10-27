@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Menanya narasumber lalu menyampaikan hasil",
         "right": "Wawancara dan presentasi"
+      },
+      {
+        "pairId": "pasangan-orang-yang-memberi-informasi-dal",
+        "left": "Orang yang memberi informasi dalam kegiatan wawancara",
+        "right": "Narasumber"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menyampaikan-hasil-wawa",
+        "left": "Kegiatan menyampaikan hasil wawancara di depan kelas",
+        "right": "Presentasi"
       }
     ]
   },

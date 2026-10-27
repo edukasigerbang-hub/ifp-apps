@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Air kembali ke laut",
         "right": "Melalui hujan dan aliran sungai"
+      },
+      {
+        "pairId": "pasangan-proses-air-di-laut-atau-darat-be",
+        "left": "Proses air di laut atau darat berubah menjadi uap",
+        "right": "Penguapan"
+      },
+      {
+        "pairId": "pasangan-uap-air-di-udara-berubah-menjadi",
+        "left": "Uap air di udara berubah menjadi titik-titik air",
+        "right": "Pengembunan"
+      },
+      {
+        "pairId": "pasangan-setelah-hujan-air-dari-darat-kem",
+        "left": "Setelah hujan, air dari darat kembali ke laut melalui ...",
+        "right": "Aliran sungai"
       }
     ]
   },

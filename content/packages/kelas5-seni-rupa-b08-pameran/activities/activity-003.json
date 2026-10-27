@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kegiatan-menulis-nama-dan-judul",
+        "prompt": "Kegiatan menulis nama dan judul pada karya pameran disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-menulis-nama-dan-j-1",
+            "text": "Menata karya"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-menulis-nama-dan-j-2",
+            "text": "Merapikan"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-menulis-nama-dan-j-3",
+            "text": "Menjaga pameran"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-menulis-nama-dan-j-0",
+            "text": "Memberi label"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-menulis-nama-dan-j-0"
+      },
+      {
+        "questionId": "soal-tempat-karya-dikembalikan-sepert",
+        "prompt": "Tempat karya dikembalikan seperti semula sesudah pameran. Kegiatan ini disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tempat-karya-dikembalikan-s-0",
+            "text": "Merapikan"
+          },
+          {
+            "optionId": "opsi-soal-tempat-karya-dikembalikan-s-1",
+            "text": "Memberi label"
+          },
+          {
+            "optionId": "opsi-soal-tempat-karya-dikembalikan-s-2",
+            "text": "Memilih karya"
+          },
+          {
+            "optionId": "opsi-soal-tempat-karya-dikembalikan-s-3",
+            "text": "Menjaga pameran"
+          }
+        ],
+        "correctResponse": "opsi-soal-tempat-karya-dikembalikan-s-0"
+      },
+      {
+        "questionId": "soal-sikap-saat-menjelaskan-karya-kep",
+        "prompt": "Sikap saat menjelaskan karya kepada pengunjung pameran adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-saat-menjelaskan-kary-1",
+            "text": "Keras kepala"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-menjelaskan-kary-0",
+            "text": "Sopan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-menjelaskan-kary-2",
+            "text": "Malas"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-menjelaskan-kary-3",
+            "text": "Terburu-buru"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-saat-menjelaskan-kary-0"
+      },
+      {
+        "questionId": "soal-karya-yang-dipamerkan-pada-pamer",
+        "prompt": "Karya yang dipamerkan pada pameran kelas adalah karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-karya-yang-dipamerkan-pada-1",
+            "text": "Guru"
+          },
+          {
+            "optionId": "opsi-soal-karya-yang-dipamerkan-pada-2",
+            "text": "Orang tua"
+          },
+          {
+            "optionId": "opsi-soal-karya-yang-dipamerkan-pada-0",
+            "text": "Siswa"
+          },
+          {
+            "optionId": "opsi-soal-karya-yang-dipamerkan-pada-3",
+            "text": "Seniman"
+          }
+        ],
+        "correctResponse": "opsi-soal-karya-yang-dipamerkan-pada-0"
       }
     ],
     "passingScore": 75

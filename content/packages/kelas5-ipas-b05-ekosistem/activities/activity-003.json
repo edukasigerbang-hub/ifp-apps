@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-makhluk-hidup-yang-membuat-makan",
+        "prompt": "Makhluk hidup yang membuat makanannya sendiri disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-membuat-1",
+            "text": "Konsumen"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-membuat-2",
+            "text": "Pengurai"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-membuat-3",
+            "text": "Hewan"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-membuat-0",
+            "text": "Produsen"
+          }
+        ],
+        "correctResponse": "opsi-soal-makhluk-hidup-yang-membuat-0"
+      },
+      {
+        "questionId": "soal-berikut-yang-berperan-sebagai-pr",
+        "prompt": "Berikut yang berperan sebagai produsen adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berikut-yang-berperan-sebag-0",
+            "text": "Tumbuhan"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-berperan-sebag-1",
+            "text": "Belalang"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-berperan-sebag-2",
+            "text": "Ular"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-berperan-sebag-3",
+            "text": "Burung elang"
+          }
+        ],
+        "correctResponse": "opsi-soal-berikut-yang-berperan-sebag-0"
+      },
+      {
+        "questionId": "soal-makhluk-hidup-yang-menguraikan-s",
+        "prompt": "Makhluk hidup yang menguraikan sisa makhluk hidup disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-1",
+            "text": "Produsen"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-0",
+            "text": "Pengurai"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-2",
+            "text": "Konsumen"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-3",
+            "text": "Tumbuhan"
+          }
+        ],
+        "correctResponse": "opsi-soal-makhluk-hidup-yang-mengurai-0"
+      },
+      {
+        "questionId": "soal-urutan-makhluk-hidup-yang-makan",
+        "prompt": "Urutan makhluk hidup yang makan dan dimakan dalam ekosistem disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-urutan-makhluk-hidup-yang-m-1",
+            "text": "Simbiosis"
+          },
+          {
+            "optionId": "opsi-soal-urutan-makhluk-hidup-yang-m-2",
+            "text": "Ekosistem"
+          },
+          {
+            "optionId": "opsi-soal-urutan-makhluk-hidup-yang-m-0",
+            "text": "Rantai makanan"
+          },
+          {
+            "optionId": "opsi-soal-urutan-makhluk-hidup-yang-m-3",
+            "text": "Komponen ekosistem"
+          }
+        ],
+        "correctResponse": "opsi-soal-urutan-makhluk-hidup-yang-m-0"
       }
     ],
     "passingScore": 75

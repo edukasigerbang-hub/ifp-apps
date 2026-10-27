@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang diperiksa",
         "right": "Ejaan, tanda baca, dan keruntutan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-yang-dilakukan-setelah",
+        "left": "Kegiatan yang dilakukan setelah tema ditentukan",
+        "right": "Menyusun kerangka"
+      },
+      {
+        "pairId": "pasangan-penutup-urutan-menulis-cerita-di",
+        "left": "Penutup urutan menulis cerita di kelas",
+        "right": "Membacakan cerita"
+      },
+      {
+        "pairId": "pasangan-sifat-cerita-yang-alur-dan-bagia",
+        "left": "Sifat cerita yang alur dan bagian-bagiannya urut serta nyambung",
+        "right": "Runtut"
       }
     ]
   },

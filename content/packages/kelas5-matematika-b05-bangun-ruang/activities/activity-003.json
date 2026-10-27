@@ -49,6 +49,94 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pertemuan-dua-sisi-pada-bangun-r",
+        "prompt": "Pertemuan dua sisi pada bangun ruang disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pertemuan-dua-sisi-pada-ban-1",
+            "text": "titik sudut"
+          },
+          {
+            "optionId": "opsi-soal-pertemuan-dua-sisi-pada-ban-0",
+            "text": "rusuk"
+          },
+          {
+            "optionId": "opsi-soal-pertemuan-dua-sisi-pada-ban-2",
+            "text": "sisi"
+          }
+        ],
+        "correctResponse": "opsi-soal-pertemuan-dua-sisi-pada-ban-0"
+      },
+      {
+        "questionId": "soal-bangun-ruang-yang-memiliki-satu",
+        "prompt": "Bangun ruang yang memiliki satu titik puncak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-1",
+            "text": "tabung"
+          },
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-2",
+            "text": "kubus"
+          },
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-0",
+            "text": "kerucut"
+          },
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-3",
+            "text": "balok"
+          }
+        ],
+        "correctResponse": "opsi-soal-bangun-ruang-yang-memiliki-0"
+      },
+      {
+        "questionId": "soal-banyak-rusuk-sebuah-kubus-adalah",
+        "prompt": "Banyak rusuk sebuah kubus adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-banyak-rusuk-sebuah-kubus-a-1",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-soal-banyak-rusuk-sebuah-kubus-a-2",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-banyak-rusuk-sebuah-kubus-a-3",
+            "text": "10"
+          },
+          {
+            "optionId": "opsi-soal-banyak-rusuk-sebuah-kubus-a-0",
+            "text": "12"
+          }
+        ],
+        "correctResponse": "opsi-soal-banyak-rusuk-sebuah-kubus-a-0"
+      },
+      {
+        "questionId": "soal-kaleng-dan-gelas-merupakan-conto",
+        "prompt": "Kaleng dan gelas merupakan contoh benda berbentuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kaleng-dan-gelas-merupakan-1",
+            "text": "kerucut"
+          },
+          {
+            "optionId": "opsi-soal-kaleng-dan-gelas-merupakan-0",
+            "text": "tabung"
+          },
+          {
+            "optionId": "opsi-soal-kaleng-dan-gelas-merupakan-2",
+            "text": "kubus"
+          }
+        ],
+        "correctResponse": "opsi-soal-kaleng-dan-gelas-merupakan-0"
       }
     ],
     "passingScore": 75

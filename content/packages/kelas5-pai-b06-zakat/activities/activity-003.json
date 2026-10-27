@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-petugas-yang-mengelola-zakat-dis",
+        "prompt": "Petugas yang mengelola zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-petugas-yang-mengelola-zaka-0",
+            "text": "Amil"
+          },
+          {
+            "optionId": "opsi-soal-petugas-yang-mengelola-zaka-1",
+            "text": "Mustahik"
+          },
+          {
+            "optionId": "opsi-soal-petugas-yang-mengelola-zaka-2",
+            "text": "Sedekah"
+          },
+          {
+            "optionId": "opsi-soal-petugas-yang-mengelola-zaka-3",
+            "text": "Infak"
+          }
+        ],
+        "correctResponse": "opsi-soal-petugas-yang-mengelola-zaka-0"
+      },
+      {
+        "questionId": "soal-orang-yang-menerima-zakat-disebu",
+        "prompt": "Orang yang menerima zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-menerima-zakat-d-1",
+            "text": "Amil"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menerima-zakat-d-0",
+            "text": "Mustahik"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menerima-zakat-d-2",
+            "text": "Sedekah"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menerima-zakat-d-3",
+            "text": "Zakat"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-menerima-zakat-d-0"
+      },
+      {
+        "questionId": "soal-memberi-tanpa-mengharap-balasan",
+        "prompt": "Memberi tanpa mengharap balasan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-memberi-tanpa-mengharap-bal-1",
+            "text": "Infak"
+          },
+          {
+            "optionId": "opsi-soal-memberi-tanpa-mengharap-bal-2",
+            "text": "Zakat"
+          },
+          {
+            "optionId": "opsi-soal-memberi-tanpa-mengharap-bal-0",
+            "text": "Sedekah"
+          },
+          {
+            "optionId": "opsi-soal-memberi-tanpa-mengharap-bal-3",
+            "text": "Amil"
+          }
+        ],
+        "correctResponse": "opsi-soal-memberi-tanpa-mengharap-bal-0"
+      },
+      {
+        "questionId": "soal-berbeda-dari-infak-zakat-bagi-ya",
+        "prompt": "Berbeda dari infak, zakat bagi yang mampu bersifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berbeda-dari-infak-zakat-ba-1",
+            "text": "Sukarela"
+          },
+          {
+            "optionId": "opsi-soal-berbeda-dari-infak-zakat-ba-2",
+            "text": "Sesekali"
+          },
+          {
+            "optionId": "opsi-soal-berbeda-dari-infak-zakat-ba-3",
+            "text": "Terlambat"
+          },
+          {
+            "optionId": "opsi-soal-berbeda-dari-infak-zakat-ba-0",
+            "text": "Wajib"
+          }
+        ],
+        "correctResponse": "opsi-soal-berbeda-dari-infak-zakat-ba-0"
       }
     ],
     "passingScore": 75

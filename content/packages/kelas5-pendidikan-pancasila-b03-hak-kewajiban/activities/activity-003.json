@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Contoh kewajiban di sekolah adalah",
         "right": "Mematuhi aturan"
+      },
+      {
+        "pairId": "pasangan-hak-dan-kewajiban-dilaksanakan-s",
+        "left": "Hak dan kewajiban dilaksanakan secara ...",
+        "right": "Seimbang"
+      },
+      {
+        "pairId": "pasangan-selain-pendidikan-warga-negara-b",
+        "left": "Selain pendidikan, warga negara berhak memperoleh ...",
+        "right": "Pelayanan kesehatan"
       }
     ]
   },

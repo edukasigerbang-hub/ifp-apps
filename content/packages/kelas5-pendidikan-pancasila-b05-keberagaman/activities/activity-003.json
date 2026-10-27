@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-perbedaan-kebiasaan-daerah-yang",
+        "prompt": "Perbedaan kebiasaan daerah yang dimiliki teman-teman merupakan keberagaman di bidang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perbedaan-kebiasaan-daerah-0",
+            "text": "Budaya"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-kebiasaan-daerah-1",
+            "text": "Agama"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-kebiasaan-daerah-2",
+            "text": "Suku"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-kebiasaan-daerah-3",
+            "text": "Keyakinan"
+          }
+        ],
+        "correctResponse": "opsi-soal-perbedaan-kebiasaan-daerah-0"
+      },
+      {
+        "questionId": "soal-sikap-menerima-dan-menghargai-pe",
+        "prompt": "Sikap menerima dan menghargai perbedaan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-menerima-dan-mengharg-1",
+            "text": "Intoleransi"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-dan-mengharg-0",
+            "text": "Toleransi"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-dan-mengharg-2",
+            "text": "Egois"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-dan-mengharg-3",
+            "text": "Acuh tak acuh"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-menerima-dan-mengharg-0"
+      },
+      {
+        "questionId": "soal-jika-semua-siswa-bersikap-tolera",
+        "prompt": "Jika semua siswa bersikap toleransi, kehidupan di kelas menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-jika-semua-siswa-bersikap-t-1",
+            "text": "Sering bertengkar"
+          },
+          {
+            "optionId": "opsi-soal-jika-semua-siswa-bersikap-t-2",
+            "text": "Penuh konflik"
+          },
+          {
+            "optionId": "opsi-soal-jika-semua-siswa-bersikap-t-0",
+            "text": "Rukun dan damai"
+          },
+          {
+            "optionId": "opsi-soal-jika-semua-siswa-bersikap-t-3",
+            "text": "Kacau"
+          }
+        ],
+        "correctResponse": "opsi-soal-jika-semua-siswa-bersikap-t-0"
+      },
+      {
+        "questionId": "soal-agama-teman-berbeda-dengan-agama",
+        "prompt": "Agama teman berbeda dengan agama kita. Sikap kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agama-teman-berbeda-dengan-1",
+            "text": "Memaksakan kehendak"
+          },
+          {
+            "optionId": "opsi-soal-agama-teman-berbeda-dengan-2",
+            "text": "Menertawakannya"
+          },
+          {
+            "optionId": "opsi-soal-agama-teman-berbeda-dengan-3",
+            "text": "Melarang ibadahnya"
+          },
+          {
+            "optionId": "opsi-soal-agama-teman-berbeda-dengan-0",
+            "text": "Menghormatinya"
+          }
+        ],
+        "correctResponse": "opsi-soal-agama-teman-berbeda-dengan-0"
       }
     ],
     "passingScore": 75

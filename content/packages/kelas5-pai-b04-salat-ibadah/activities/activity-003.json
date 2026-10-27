@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Berwudu dan mengerjakan gerakan salat",
         "right": "Salat"
+      },
+      {
+        "pairId": "pasangan-gerakan-salat-yang-dilakukan-set",
+        "left": "Gerakan salat yang dilakukan setelah rukuk",
+        "right": "Sujud"
+      },
+      {
+        "pairId": "pasangan-arah-yang-menghadap-saat-berdiri",
+        "left": "Arah yang menghadap saat berdiri dalam salat",
+        "right": "Kiblat"
       }
     ]
   },

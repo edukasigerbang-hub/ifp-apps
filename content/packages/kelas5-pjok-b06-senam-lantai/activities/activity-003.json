@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang harus disiapkan",
         "right": "Matras dan pendamping"
+      },
+      {
+        "pairId": "pasangan-latihan-penutup-setelah-berlatih",
+        "left": "Latihan penutup setelah berlatih gerak keseimbangan",
+        "right": "Pendinginan"
+      },
+      {
+        "pairId": "pasangan-gerak-yang-dipelajari-sesudah-gu",
+        "left": "Gerak yang dipelajari sesudah guling depan",
+        "right": "Guling belakang"
+      },
+      {
+        "pairId": "pasangan-hal-yang-harus-dijaga-selama-ber",
+        "left": "Hal yang harus dijaga selama berlatih senam lantai",
+        "right": "Keselamatan"
       }
     ]
   },

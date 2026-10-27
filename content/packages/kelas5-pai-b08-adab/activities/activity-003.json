@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Manfaat berkata jujur adalah",
         "right": "Dipercaya orang lain"
+      },
+      {
+        "pairId": "pasangan-sikap-menahan-diri-ketika-mendap",
+        "left": "Sikap menahan diri ketika mendapat cobaan",
+        "right": "Sabar"
+      },
+      {
+        "pairId": "pasangan-orang-di-sekolah-yang-wajib-kita",
+        "left": "Orang di sekolah yang wajib kita hormati dan kita dengarkan",
+        "right": "Guru"
       }
     ]
   },

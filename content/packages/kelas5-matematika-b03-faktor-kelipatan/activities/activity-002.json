@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-faktor-dari-10-adalah",
+        "prompt": "Faktor dari 10 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-faktor-dari-10-adalah-1",
+            "text": "1, 2, 3, 10"
+          },
+          {
+            "optionId": "opsi-soal-faktor-dari-10-adalah-2",
+            "text": "2, 5, 10, 20"
+          },
+          {
+            "optionId": "opsi-soal-faktor-dari-10-adalah-3",
+            "text": "1, 5, 10, 25"
+          },
+          {
+            "optionId": "opsi-soal-faktor-dari-10-adalah-0",
+            "text": "1, 2, 5, 10"
+          }
+        ],
+        "correctResponse": "opsi-soal-faktor-dari-10-adalah-0"
+      },
+      {
+        "questionId": "soal-kpk-dari-3-dan-5-adalah",
+        "prompt": "KPK dari 3 dan 5 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kpk-dari-3-dan-5-adalah-0",
+            "text": "15"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-3-dan-5-adalah-1",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-3-dan-5-adalah-2",
+            "text": "30"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-3-dan-5-adalah-3",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-soal-kpk-dari-3-dan-5-adalah-0"
       }
     ],
     "passingScore": 75

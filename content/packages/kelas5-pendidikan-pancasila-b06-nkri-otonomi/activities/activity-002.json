@@ -105,6 +105,50 @@
           }
         ],
         "correctResponse": "opsi-indonesia"
+      },
+      {
+        "questionId": "soal-dengan-otonomi-daerah-sebuah-dae",
+        "prompt": "Dengan otonomi daerah, sebuah daerah memperoleh kewenangan untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dengan-otonomi-daerah-sebua-0",
+            "text": "Mengatur urusannya sendiri"
+          },
+          {
+            "optionId": "opsi-soal-dengan-otonomi-daerah-sebua-1",
+            "text": "Memisahkan diri dari Indonesia"
+          },
+          {
+            "optionId": "opsi-soal-dengan-otonomi-daerah-sebua-2",
+            "text": "Menyerahkan semua urusan kepada pusat"
+          }
+        ],
+        "correctResponse": "opsi-soal-dengan-otonomi-daerah-sebua-0"
+      },
+      {
+        "questionId": "soal-negara-kita-yang-terdiri-atas-ba",
+        "prompt": "Negara kita yang terdiri atas banyak pulau dan daerah disingkat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-negara-kita-yang-terdiri-at-0",
+            "text": "NKRI"
+          },
+          {
+            "optionId": "opsi-soal-negara-kita-yang-terdiri-at-1",
+            "text": "Pancasila"
+          },
+          {
+            "optionId": "opsi-soal-negara-kita-yang-terdiri-at-2",
+            "text": "Garuda"
+          },
+          {
+            "optionId": "opsi-soal-negara-kita-yang-terdiri-at-3",
+            "text": "Merdeka"
+          }
+        ],
+        "correctResponse": "opsi-soal-negara-kita-yang-terdiri-at-0"
       }
     ],
     "passingScore": 75

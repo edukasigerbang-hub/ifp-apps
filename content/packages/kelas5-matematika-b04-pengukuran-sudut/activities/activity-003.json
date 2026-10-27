@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Sudut kurang, tepat, dan lebih dari 90°",
         "right": "Jenis sudut"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-mengukur-besar-sudut",
+        "left": "Alat untuk mengukur besar sudut",
+        "right": "Busur derajat"
+      },
+      {
+        "pairId": "pasangan-besar-sudut-siku-siku",
+        "left": "Besar sudut siku-siku",
+        "right": "90 derajat"
       }
     ]
   },

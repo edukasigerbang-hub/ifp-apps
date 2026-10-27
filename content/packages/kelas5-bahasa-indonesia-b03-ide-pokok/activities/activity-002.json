@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-kumpulan"
+      },
+      {
+        "questionId": "soal-setelah-mengetahui-ide-pokok-pem",
+        "prompt": "Setelah mengetahui ide pokok, pembaca dapat ... paragraf itu.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-mengetahui-ide-poko-0",
+            "text": "menyimpulkan isi"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mengetahui-ide-poko-1",
+            "text": "menentukan judul buku"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mengetahui-ide-poko-2",
+            "text": "menghitung jumlah kalimat"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-mengetahui-ide-poko-0"
+      },
+      {
+        "questionId": "soal-sebuah-paragraf-yang-baik-memuat",
+        "prompt": "Sebuah paragraf yang baik memuat ... gagasan.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebuah-paragraf-yang-baik-m-1",
+            "text": "banyak"
+          },
+          {
+            "optionId": "opsi-soal-sebuah-paragraf-yang-baik-m-0",
+            "text": "satu"
+          },
+          {
+            "optionId": "opsi-soal-sebuah-paragraf-yang-baik-m-2",
+            "text": "lima"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebuah-paragraf-yang-baik-m-0"
       }
     ],
     "passingScore": 75

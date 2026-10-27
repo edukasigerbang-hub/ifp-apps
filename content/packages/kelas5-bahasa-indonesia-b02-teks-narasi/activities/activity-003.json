@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Urutan awal, tengah, dan akhir cerita",
         "right": "Alur cerita"
+      },
+      {
+        "pairId": "pasangan-masalah-yang-dialami-tokoh-pada",
+        "left": "Masalah yang dialami tokoh pada bagian tengah cerita",
+        "right": "Konflik"
+      },
+      {
+        "pairId": "pasangan-langkah-awal-menulis-teks-narasi",
+        "left": "Langkah awal menulis teks narasi",
+        "right": "Menentukan tema"
+      },
+      {
+        "pairId": "pasangan-bagian-akhir-cerita-narasi-beris",
+        "left": "Bagian akhir cerita narasi berisi",
+        "right": "Penyelesaian masalah"
       }
     ]
   },

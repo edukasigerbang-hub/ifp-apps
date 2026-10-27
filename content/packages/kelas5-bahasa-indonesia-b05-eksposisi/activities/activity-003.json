@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Struktur teks eksposisi adalah",
         "right": "Tesis, argumen, penegasan"
+      },
+      {
+        "pairId": "pasangan-bagian-teks-eksposisi-yang-mendu",
+        "left": "Bagian teks eksposisi yang mendukung pendapat dengan alasan dan bukti",
+        "right": "Argumen"
+      },
+      {
+        "pairId": "pasangan-bagian-awal-struktur-teks-ekspos",
+        "left": "Bagian awal struktur teks eksposisi",
+        "right": "Tesis"
       }
     ]
   },

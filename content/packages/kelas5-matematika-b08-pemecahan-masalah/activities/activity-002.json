@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-hitung"
+      },
+      {
+        "questionId": "soal-andi-membeli-4-buku-harga-tiap-b",
+        "prompt": "Andi membeli 4 buku. Harga tiap buku Rp5.000. Total harga buku Andi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-1",
+            "text": "Rp5.000"
+          },
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-0",
+            "text": "Rp20.000"
+          },
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-2",
+            "text": "Rp9.000"
+          },
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-3",
+            "text": "Rp25.000"
+          }
+        ],
+        "correctResponse": "opsi-soal-andi-membeli-4-buku-harga-t-0"
+      },
+      {
+        "questionId": "soal-kata-sisa-pada-soal-cerita-biasa",
+        "prompt": "Kata \"sisa\" pada soal cerita biasanya mengarahkan kita menggunakan operasi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-1",
+            "text": "penjumlahan"
+          },
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-2",
+            "text": "perkalian"
+          },
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-0",
+            "text": "pengurangan"
+          },
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-3",
+            "text": "pembagian"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-sisa-pada-soal-cerita-0"
       }
     ],
     "passingScore": 75

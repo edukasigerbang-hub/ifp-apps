@@ -49,6 +49,94 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-organ-yang-memompa-darah-ke-selu",
+        "prompt": "Organ yang memompa darah ke seluruh tubuh adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-organ-yang-memompa-darah-ke-0",
+            "text": "Jantung"
+          },
+          {
+            "optionId": "opsi-soal-organ-yang-memompa-darah-ke-1",
+            "text": "Paru-paru"
+          },
+          {
+            "optionId": "opsi-soal-organ-yang-memompa-darah-ke-2",
+            "text": "Ginjal"
+          },
+          {
+            "optionId": "opsi-soal-organ-yang-memompa-darah-ke-3",
+            "text": "Hati"
+          }
+        ],
+        "correctResponse": "opsi-soal-organ-yang-memompa-darah-ke-0"
+      },
+      {
+        "questionId": "soal-pembuluh-darah-yang-membawa-dara",
+        "prompt": "Pembuluh darah yang membawa darah dari jantung disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pembuluh-darah-yang-membawa-1",
+            "text": "Vena"
+          },
+          {
+            "optionId": "opsi-soal-pembuluh-darah-yang-membawa-0",
+            "text": "Arteri"
+          },
+          {
+            "optionId": "opsi-soal-pembuluh-darah-yang-membawa-2",
+            "text": "Kapiler"
+          }
+        ],
+        "correctResponse": "opsi-soal-pembuluh-darah-yang-membawa-0"
+      },
+      {
+        "questionId": "soal-fungsi-pembuluh-vena-adalah",
+        "prompt": "Fungsi pembuluh vena adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-fungsi-pembuluh-vena-adalah-1",
+            "text": "Membawa darah dari jantung"
+          },
+          {
+            "optionId": "opsi-soal-fungsi-pembuluh-vena-adalah-2",
+            "text": "Memompa darah"
+          },
+          {
+            "optionId": "opsi-soal-fungsi-pembuluh-vena-adalah-0",
+            "text": "Membawa darah ke jantung"
+          },
+          {
+            "optionId": "opsi-soal-fungsi-pembuluh-vena-adalah-3",
+            "text": "Menukar oksigen"
+          }
+        ],
+        "correctResponse": "opsi-soal-fungsi-pembuluh-vena-adalah-0"
+      },
+      {
+        "questionId": "soal-pembuluh-tempat-terjadinya-pertu",
+        "prompt": "Pembuluh tempat terjadinya pertukaran zat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pembuluh-tempat-terjadinya-0",
+            "text": "Kapiler"
+          },
+          {
+            "optionId": "opsi-soal-pembuluh-tempat-terjadinya-1",
+            "text": "Arteri"
+          },
+          {
+            "optionId": "opsi-soal-pembuluh-tempat-terjadinya-2",
+            "text": "Pembuluh vena"
+          }
+        ],
+        "correctResponse": "opsi-soal-pembuluh-tempat-terjadinya-0"
       }
     ],
     "passingScore": 75

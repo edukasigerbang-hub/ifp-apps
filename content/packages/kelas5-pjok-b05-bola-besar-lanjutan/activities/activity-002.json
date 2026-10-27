@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-kerjasama"
+      },
+      {
+        "questionId": "soal-tembakan-yang-diarahkan-ke-ring",
+        "prompt": "Tembakan yang diarahkan ke ring atau gawang lawan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-1",
+            "text": "Passing"
+          },
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-2",
+            "text": "Dribbling"
+          },
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-0",
+            "text": "Shooting"
+          },
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-3",
+            "text": "Servis"
+          }
+        ],
+        "correctResponse": "opsi-soal-tembakan-yang-diarahkan-ke-0"
+      },
+      {
+        "questionId": "soal-dalam-permainan-bola-besar-seora",
+        "prompt": "Dalam permainan bola besar, seorang pemain tidak boleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-1",
+            "text": "Bekerja sama"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-2",
+            "text": "Berkomunikasi"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-3",
+            "text": "Berpindah posisi"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-0",
+            "text": "Bermain sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-dalam-permainan-bola-besar-0"
       }
     ],
     "passingScore": 75

@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Karya dipajang dan dilihat pengunjung",
         "right": "Pameran seni"
+      },
+      {
+        "pairId": "pasangan-orang-yang-melihat-karya-pada-ke",
+        "left": "Orang yang melihat karya pada kegiatan apresiasi",
+        "right": "Pengunjung"
       }
     ]
   },

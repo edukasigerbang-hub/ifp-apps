@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-percaya"
+      },
+      {
+        "questionId": "soal-adab-kepada-guru-ketika-beliau-m",
+        "prompt": "Adab kepada guru ketika beliau menjelaskan pelajaran adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-ketika-bel-1",
+            "text": "Mengoceh"
+          },
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-ketika-bel-2",
+            "text": "Bermain"
+          },
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-ketika-bel-3",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-ketika-bel-0",
+            "text": "Mendengarkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-adab-kepada-guru-ketika-bel-0"
+      },
+      {
+        "questionId": "soal-selain-jujur-dan-sabar-sifat-tel",
+        "prompt": "Selain jujur dan sabar, sifat teladan dari kisah Nabi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-0",
+            "text": "Peduli"
+          },
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-1",
+            "text": "Sombong"
+          },
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-2",
+            "text": "Kikir"
+          },
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-3",
+            "text": "Pemarah"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-jujur-dan-sabar-sifa-0"
       }
     ],
     "passingScore": 75

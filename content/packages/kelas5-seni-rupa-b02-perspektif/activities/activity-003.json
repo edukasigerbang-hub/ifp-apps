@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Alasan benda dekat tampak besar",
         "right": "Karena jaraknya dekat dengan pengamat"
+      },
+      {
+        "pairId": "pasangan-garis-yang-ditentukan-lebih-dahu",
+        "left": "Garis yang ditentukan lebih dahulu sebelum mencari titik hilang",
+        "right": "Garis horizon"
+      },
+      {
+        "pairId": "pasangan-benda-yang-letaknya-dekat-dengan",
+        "left": "Benda yang letaknya dekat dengan pengamat tampak ...",
+        "right": "Lebih besar"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-dalam-menggamba",
+        "left": "Langkah terakhir dalam menggambar perspektif",
+        "right": "Menambahkan detail"
       }
     ]
   },

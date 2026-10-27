@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Agar tim menang, pemain harus",
         "right": "Bekerja sama"
+      },
+      {
+        "pairId": "pasangan-teknik-menembak-bola-ke-arah-rin",
+        "left": "Teknik menembak bola ke arah ring atau gawang",
+        "right": "Shooting"
+      },
+      {
+        "pairId": "pasangan-istilah-teknik-mengoper-bola-dal",
+        "left": "Istilah teknik mengoper bola dalam permainan",
+        "right": "Passing"
       }
     ]
   },

@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Cara memeriksa jawaban adalah",
         "right": "Menghitung ulang"
+      },
+      {
+        "pairId": "pasangan-soal-tentang-total-harga-beberap",
+        "left": "Soal tentang total harga beberapa barang yang sama mahal",
+        "right": "Gunakan perkalian"
       }
     ]
   },

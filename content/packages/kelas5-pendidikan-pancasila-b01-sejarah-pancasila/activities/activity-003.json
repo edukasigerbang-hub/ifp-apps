@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Meja, dokumen, dan bendera pada sidang",
         "right": "Sidang Pancasila"
+      },
+      {
+        "pairId": "pasangan-panitia-yang-menyusun-piagam-jak",
+        "left": "Panitia yang menyusun Piagam Jakarta",
+        "right": "Panitia Sembilan"
+      },
+      {
+        "pairId": "pasangan-badan-yang-mengesahkan-pancasila",
+        "left": "Badan yang mengesahkan Pancasila sebagai dasar negara",
+        "right": "PPKI"
       }
     ]
   },

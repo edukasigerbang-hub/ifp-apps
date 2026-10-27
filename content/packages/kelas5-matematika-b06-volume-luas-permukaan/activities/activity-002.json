@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-54"
+      },
+      {
+        "questionId": "soal-volume-balok-dengan-panjang-5-cm",
+        "prompt": "Volume balok dengan panjang 5 cm, lebar 4 cm, dan tinggi 3 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-volume-balok-dengan-panjang-0",
+            "text": "60 cm³"
+          },
+          {
+            "optionId": "opsi-soal-volume-balok-dengan-panjang-1",
+            "text": "60 cm²"
+          },
+          {
+            "optionId": "opsi-soal-volume-balok-dengan-panjang-2",
+            "text": "20 cm³"
+          },
+          {
+            "optionId": "opsi-soal-volume-balok-dengan-panjang-3",
+            "text": "94 cm³"
+          }
+        ],
+        "correctResponse": "opsi-soal-volume-balok-dengan-panjang-0"
+      },
+      {
+        "questionId": "soal-luas-permukaan-kubus-dengan-panj",
+        "prompt": "Luas permukaan kubus dengan panjang sisi 2 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-luas-permukaan-kubus-dengan-1",
+            "text": "8 cm³"
+          },
+          {
+            "optionId": "opsi-soal-luas-permukaan-kubus-dengan-0",
+            "text": "24 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-permukaan-kubus-dengan-2",
+            "text": "12 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-permukaan-kubus-dengan-3",
+            "text": "48 cm²"
+          }
+        ],
+        "correctResponse": "opsi-soal-luas-permukaan-kubus-dengan-0"
       }
     ],
     "passingScore": 75

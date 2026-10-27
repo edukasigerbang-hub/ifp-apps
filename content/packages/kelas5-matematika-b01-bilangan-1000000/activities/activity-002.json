@@ -105,6 +105,50 @@
           }
         ],
         "correctResponse": "opsi-lebih"
+      },
+      {
+        "questionId": "soal-angka-6-pada-bilangan-126-450-me",
+        "prompt": "Angka 6 pada bilangan 126.450 menempati nilai tempat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-angka-6-pada-bilangan-126-4-0",
+            "text": "ribuan"
+          },
+          {
+            "optionId": "opsi-soal-angka-6-pada-bilangan-126-4-1",
+            "text": "ratusan"
+          },
+          {
+            "optionId": "opsi-soal-angka-6-pada-bilangan-126-4-2",
+            "text": "puluhan ribu"
+          },
+          {
+            "optionId": "opsi-soal-angka-6-pada-bilangan-126-4-3",
+            "text": "ratus ribuan"
+          }
+        ],
+        "correctResponse": "opsi-soal-angka-6-pada-bilangan-126-4-0"
+      },
+      {
+        "questionId": "soal-saat-membandingkan-dua-bilangan",
+        "prompt": "Saat membandingkan dua bilangan cacah, angka yang diperiksa pertama kali adalah angka ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-membandingkan-dua-bila-0",
+            "text": "paling kiri"
+          },
+          {
+            "optionId": "opsi-soal-saat-membandingkan-dua-bila-1",
+            "text": "paling kanan"
+          },
+          {
+            "optionId": "opsi-soal-saat-membandingkan-dua-bila-2",
+            "text": "pada satuan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-membandingkan-dua-bila-0"
       }
     ],
     "passingScore": 75

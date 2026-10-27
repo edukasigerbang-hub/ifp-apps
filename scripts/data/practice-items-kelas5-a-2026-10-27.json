@@ -1,0 +1,276 @@
+{
+  "packages": {
+    "kelas5-bahasa-indonesia-b01-teks-deskripsi": {
+      "quiz": [
+        {
+          "prompt": "Kata \"debur ombak\" pada teks deskripsi pantai termasuk kata pengindraan ...",
+          "answer": "pendengaran",
+          "distractors": ["penglihatan", "penciuman", "peraba"]
+        },
+        {
+          "prompt": "Kalimat \"Pasir putih terasa hangat di telapak kaki\" memakai indra ...",
+          "answer": "peraba",
+          "distractors": ["penciuman", "pendengaran", "penglihatan"]
+        },
+        {
+          "prompt": "Objek yang dideskripsikan dengan kata biru, debur ombak, dan bau asin adalah ...",
+          "answer": "pantai",
+          "distractors": ["gunung", "hutan", "kota"]
+        },
+        {
+          "prompt": "Ide utama sebuah paragraf teks deskripsi terdapat pada ...",
+          "answer": "kalimat topik",
+          "distractors": ["kalimat penjelas", "judul paragraf"]
+        }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b02-teks-narasi": {
+      "matching": [
+        { "left": "Masalah yang dialami tokoh pada bagian tengah cerita", "right": "Konflik" },
+        { "left": "Langkah awal menulis teks narasi", "right": "Menentukan tema" },
+        { "left": "Bagian akhir cerita narasi berisi", "right": "Penyelesaian masalah" }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b03-ide-pokok": {
+      "quiz": [
+        {
+          "prompt": "Setelah mengetahui ide pokok, pembaca dapat ... paragraf itu.",
+          "answer": "menyimpulkan isi",
+          "distractors": ["menentukan judul buku", "menghitung jumlah kalimat"]
+        },
+        {
+          "prompt": "Sebuah paragraf yang baik memuat ... gagasan.",
+          "answer": "satu",
+          "distractors": ["banyak", "lima"]
+        }
+      ],
+      "matching": [
+        { "left": "Selain di awal, kalimat utama dapat berada di bagian ini", "right": "Akhir paragraf" },
+        { "left": "Hal yang dilakukan sebelum menentukan inti paragraf", "right": "Membaca seluruh paragraf" }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b04-laporan": {
+      "matching": [
+        { "left": "Bagian laporan yang menjadi ringkasan akhir", "right": "Kesimpulan" },
+        { "left": "Bagian yang ditentukan lebih dahulu saat menulis laporan", "right": "Tujuan" },
+        { "left": "Menulis hasil pengamatan secara tertulis dengan struktur yang benar", "right": "Menulis laporan" }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b05-eksposisi": {
+      "quiz": [
+        {
+          "prompt": "Bagian terakhir struktur teks eksposisi adalah ...",
+          "answer": "penegasan",
+          "distractors": ["tesis", "argumen", "penjelasan"]
+        },
+        {
+          "prompt": "Informasi pada teks eksposisi disampaikan secara ...",
+          "answer": "objektif",
+          "distractors": ["berlebihan", "memihak"]
+        }
+      ],
+      "matching": [
+        { "left": "Bagian teks eksposisi yang mendukung pendapat dengan alasan dan bukti", "right": "Argumen" },
+        { "left": "Bagian awal struktur teks eksposisi", "right": "Tesis" }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b06-puisi-pantun": {
+      "quiz": [
+        {
+          "prompt": "Baris pertama dan kedua pada pantun disebut ...",
+          "answer": "sampiran",
+          "distractors": ["isi", "rima", "bait"]
+        },
+        {
+          "prompt": "Isi atau maksud pantun disampaikan pada baris ...",
+          "answer": "ketiga dan keempat",
+          "distractors": ["pertama dan kedua", "kedua dan ketiga"]
+        },
+        {
+          "prompt": "Bunyi yang sama pada akhir baris-baris pantun disebut ...",
+          "answer": "rima",
+          "distractors": ["bait", "sampiran", "isi"]
+        },
+        {
+          "prompt": "Bahasa puisi bersifat ...",
+          "answer": "indah dan padat",
+          "distractors": ["berbelit-belit", "kasar dan panjang"]
+        }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b07-wawancara-presentasi": {
+      "matching": [
+        { "left": "Orang yang memberi informasi dalam kegiatan wawancara", "right": "Narasumber" },
+        { "left": "Kegiatan menyampaikan hasil wawancara di depan kelas", "right": "Presentasi" }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b08-menulis-cerita": {
+      "matching": [
+        { "left": "Kegiatan yang dilakukan setelah tema ditentukan", "right": "Menyusun kerangka" },
+        { "left": "Penutup urutan menulis cerita di kelas", "right": "Membacakan cerita" },
+        { "left": "Sifat cerita yang alur dan bagian-bagiannya urut serta nyambung", "right": "Runtut" }
+      ]
+    },
+    "kelas5-matematika-b01-bilangan-1000000": {
+      "quiz": [
+        {
+          "prompt": "Angka 6 pada bilangan 126.450 menempati nilai tempat ...",
+          "answer": "ribuan",
+          "distractors": ["ratusan", "puluhan ribu", "ratus ribuan"]
+        },
+        {
+          "prompt": "Saat membandingkan dua bilangan cacah, angka yang diperiksa pertama kali adalah angka ...",
+          "answer": "paling kiri",
+          "distractors": ["paling kanan", "pada satuan"]
+        }
+      ],
+      "matching": [
+        { "left": "Nilai angka 4 pada bilangan 452.316", "right": "400.000" },
+        { "left": "Nama bilangan 1.000.000", "right": "Satu juta" }
+      ]
+    },
+    "kelas5-matematika-b02-operasi-pecahan": {
+      "quiz": [
+        {
+          "prompt": "Hasil dari 2/7 + 3/7 adalah ...",
+          "answer": "5/7",
+          "distractors": ["5/14", "6/7"]
+        },
+        {
+          "prompt": "Nilai 5/8 − 2/8 sama dengan ...",
+          "answer": "3/8",
+          "distractors": ["3/16", "7/8"]
+        },
+        {
+          "prompt": "Pada pecahan 3/5, angka 5 disebut ...",
+          "answer": "penyebut",
+          "distractors": ["pembilang", "bilangan cacah"]
+        },
+        {
+          "prompt": "Saat menjumlahkan pecahan berpenyebut sama, penyebutnya ...",
+          "answer": "tetap",
+          "distractors": ["ikut dijumlahkan", "ikut dikurangkan"]
+        }
+      ]
+    },
+    "kelas5-matematika-b03-faktor-kelipatan": {
+      "quiz": [
+        {
+          "prompt": "Faktor dari 10 adalah ...",
+          "answer": "1, 2, 5, 10",
+          "distractors": ["1, 2, 3, 10", "2, 5, 10, 20", "1, 5, 10, 25"]
+        },
+        {
+          "prompt": "KPK dari 3 dan 5 adalah ...",
+          "answer": "15",
+          "distractors": ["8", "30", "5"]
+        }
+      ],
+      "matching": [
+        { "left": "Singkatan dari faktor persekutuan terbesar", "right": "FPB" },
+        { "left": "Singkatan dari Kelipatan Persekutuan Terkecil", "right": "KPK" }
+      ]
+    },
+    "kelas5-matematika-b04-pengukuran-sudut": {
+      "quiz": [
+        {
+          "prompt": "Sudut 45 derajat termasuk jenis sudut ...",
+          "answer": "lancip",
+          "distractors": ["tumpul", "siku-siku"]
+        },
+        {
+          "prompt": "Alat untuk mengukur besar sudut adalah ...",
+          "answer": "busur derajat",
+          "distractors": ["mistar", "jangka", "kalkulator"]
+        }
+      ],
+      "matching": [
+        { "left": "Alat untuk mengukur besar sudut", "right": "Busur derajat" },
+        { "left": "Besar sudut siku-siku", "right": "90 derajat" }
+      ]
+    },
+    "kelas5-matematika-b05-bangun-ruang": {
+      "quiz": [
+        {
+          "prompt": "Pertemuan dua sisi pada bangun ruang disebut ...",
+          "answer": "rusuk",
+          "distractors": ["titik sudut", "sisi"]
+        },
+        {
+          "prompt": "Bangun ruang yang memiliki satu titik puncak adalah ...",
+          "answer": "kerucut",
+          "distractors": ["tabung", "kubus", "balok"]
+        },
+        {
+          "prompt": "Banyak rusuk sebuah kubus adalah ...",
+          "answer": "12",
+          "distractors": ["6", "8", "10"]
+        },
+        {
+          "prompt": "Kaleng dan gelas merupakan contoh benda berbentuk ...",
+          "answer": "tabung",
+          "distractors": ["kerucut", "kubus"]
+        }
+      ]
+    },
+    "kelas5-matematika-b06-volume-luas-permukaan": {
+      "quiz": [
+        {
+          "prompt": "Volume balok dengan panjang 5 cm, lebar 4 cm, dan tinggi 3 cm adalah ...",
+          "answer": "60 cm³",
+          "distractors": ["60 cm²", "20 cm³", "94 cm³"]
+        },
+        {
+          "prompt": "Luas permukaan kubus dengan panjang sisi 2 cm adalah ...",
+          "answer": "24 cm²",
+          "distractors": ["8 cm³", "12 cm²", "48 cm²"]
+        }
+      ],
+      "matching": [
+        { "left": "Cara menghitung volume kubus", "right": "Sisi × sisi × sisi" },
+        { "left": "Satuan untuk luas permukaan", "right": "Sentimeter persegi (cm²)" }
+      ]
+    },
+    "kelas5-matematika-b07-data": {
+      "quiz": [
+        {
+          "prompt": "Rata-rata dari data 4, 5, dan 6 adalah ...",
+          "answer": "5",
+          "distractors": ["15", "6"]
+        },
+        {
+          "prompt": "Untuk menghitung rata-rata, jumlah data dibagi dengan ...",
+          "answer": "banyak data",
+          "distractors": ["nilai terbesar", "nilai terkecil"]
+        },
+        {
+          "prompt": "Diagram batang dipakai untuk menunjukkan ...",
+          "answer": "banyak data tiap kelompok",
+          "distractors": ["menceritakan suatu peristiwa", "langkah membuat benda"]
+        },
+        {
+          "prompt": "Garis skala pada diagram disebut ...",
+          "answer": "sumbu",
+          "distractors": ["judul diagram", "kotak tabel"]
+        }
+      ]
+    },
+    "kelas5-matematika-b08-pemecahan-masalah": {
+      "quiz": [
+        {
+          "prompt": "Andi membeli 4 buku. Harga tiap buku Rp5.000. Total harga buku Andi adalah ...",
+          "answer": "Rp20.000",
+          "distractors": ["Rp5.000", "Rp9.000", "Rp25.000"]
+        },
+        {
+          "prompt": "Kata \"sisa\" pada soal cerita biasanya mengarahkan kita menggunakan operasi ...",
+          "answer": "pengurangan",
+          "distractors": ["penjumlahan", "perkalian", "pembagian"]
+        }
+      ],
+      "matching": [
+        { "left": "Soal tentang total harga beberapa barang yang sama mahal", "right": "Gunakan perkalian" }
+      ]
+    }
+  }
+}

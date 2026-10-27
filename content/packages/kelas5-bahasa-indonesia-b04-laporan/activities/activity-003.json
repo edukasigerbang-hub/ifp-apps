@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang perlu diperiksa",
         "right": "Ejaan, tanda baca, dan kelengkapan isi"
+      },
+      {
+        "pairId": "pasangan-bagian-laporan-yang-menjadi-ring",
+        "left": "Bagian laporan yang menjadi ringkasan akhir",
+        "right": "Kesimpulan"
+      },
+      {
+        "pairId": "pasangan-bagian-yang-ditentukan-lebih-dah",
+        "left": "Bagian yang ditentukan lebih dahulu saat menulis laporan",
+        "right": "Tujuan"
+      },
+      {
+        "pairId": "pasangan-menulis-hasil-pengamatan-secara",
+        "left": "Menulis hasil pengamatan secara tertulis dengan struktur yang benar",
+        "right": "Menulis laporan"
       }
     ]
   },
