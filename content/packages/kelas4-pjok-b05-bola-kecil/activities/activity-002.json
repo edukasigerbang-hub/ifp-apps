@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-raket",
-            "text": "Raket"
-          },
-          {
             "optionId": "opsi-bet",
             "text": "Bet"
           },
           {
             "optionId": "opsi-pemukul",
             "text": "Pemukul kasti"
+          },
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket"
           },
           {
             "optionId": "opsi-tongkat",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tenis-meja",
-            "text": "Tenis meja"
-          },
-          {
             "optionId": "opsi-bulu-tangkis",
             "text": "Bulu tangkis"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-bola-voli",
             "text": "Bola voli"
+          },
+          {
+            "optionId": "opsi-tenis-meja",
+            "text": "Tenis meja"
           }
         ],
         "correctResponse": "opsi-tenis-meja"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salaman",
-            "text": "Bersalaman dengan lawan"
-          },
-          {
             "optionId": "opsi-marah",
             "text": "Marah bila kalah"
+          },
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman dengan lawan"
           },
           {
             "optionId": "opsi-menyalahkan",

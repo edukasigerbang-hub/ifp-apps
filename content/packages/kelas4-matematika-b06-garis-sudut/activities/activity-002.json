@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-siku",
-            "text": "siku-siku"
-          },
-          {
             "optionId": "opsi-lancip",
             "text": "lancip"
           },
           {
             "optionId": "opsi-tumpul",
             "text": "tumpul"
+          },
+          {
+            "optionId": "opsi-siku",
+            "text": "siku-siku"
           },
           {
             "optionId": "opsi-lurus",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lancip",
-            "text": "lancip"
-          },
-          {
             "optionId": "opsi-siku",
             "text": "siku-siku"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-lurus",
             "text": "lurus"
+          },
+          {
+            "optionId": "opsi-lancip",
+            "text": "lancip"
           }
         ],
         "correctResponse": "opsi-lancip"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-busur",
-            "text": "busur derajat"
-          },
-          {
             "optionId": "opsi-penggaris",
             "text": "penggaris"
+          },
+          {
+            "optionId": "opsi-busur",
+            "text": "busur derajat"
           },
           {
             "optionId": "opsi-jangka",

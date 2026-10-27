@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sahur",
-            "text": "Sahur"
-          },
-          {
             "optionId": "opsi-buka",
             "text": "Berbuka"
+          },
+          {
+            "optionId": "opsi-sahur",
+            "text": "Sahur"
           },
           {
             "optionId": "opsi-iftar",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-makan",
-            "text": "Makan dengan sengaja"
-          },
-          {
             "optionId": "opsi-tidur",
             "text": "Tidur"
           },
           {
             "optionId": "opsi-baca",
             "text": "Membaca Al-Qur'an"
+          },
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan dengan sengaja"
           },
           {
             "optionId": "opsi-bantu",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sabar",
-            "text": "Melatih sabar"
-          },
-          {
             "optionId": "opsi-lemah",
             "text": "Membuat lemah"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-malas",
             "text": "Menjadi malas"
+          },
+          {
+            "optionId": "opsi-sabar",
+            "text": "Melatih sabar"
           }
         ],
         "correctResponse": "opsi-sabar"

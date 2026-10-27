@@ -20,12 +20,12 @@
             "text": "Batu"
           },
           {
-            "optionId": "opsi-makhluk-hidup-di-sekitarku-1-2",
-            "text": "Kucing"
-          },
-          {
             "optionId": "opsi-makhluk-hidup-di-sekitarku-1-3",
             "text": "Meja"
+          },
+          {
+            "optionId": "opsi-makhluk-hidup-di-sekitarku-1-2",
+            "text": "Kucing"
           }
         ],
         "correctResponse": "opsi-makhluk-hidup-di-sekitarku-1-2"

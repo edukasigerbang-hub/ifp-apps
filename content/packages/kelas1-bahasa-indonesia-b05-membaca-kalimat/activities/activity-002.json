@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-titik",
-            "text": "Titik"
-          },
-          {
             "optionId": "opsi-tanya",
             "text": "Tanda tanya"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-koma",
             "text": "Koma"
+          },
+          {
+            "optionId": "opsi-titik",
+            "text": "Titik"
           }
         ],
         "correctResponse": "opsi-titik"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-benar",
-            "text": "Budi bermain bola."
-          },
-          {
             "optionId": "opsi-a",
             "text": "budi bermain bola"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "Budi bermain bola."
           },
           {
             "optionId": "opsi-b",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kiri",
-            "text": "Kiri ke kanan"
-          },
-          {
             "optionId": "opsi-kanan",
             "text": "Kanan ke kiri"
           },
           {
             "optionId": "opsi-atas",
             "text": "Atas ke bawah"
+          },
+          {
+            "optionId": "opsi-kiri",
+            "text": "Kiri ke kanan"
           },
           {
             "optionId": "opsi-bawah",

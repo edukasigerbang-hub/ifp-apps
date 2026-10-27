@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-passing",
-            "text": "Passing"
-          },
-          {
             "optionId": "opsi-dribble",
             "text": "Dribbling"
           },
           {
             "optionId": "opsi-shooting",
             "text": "Shooting"
+          },
+          {
+            "optionId": "opsi-passing",
+            "text": "Passing"
           },
           {
             "optionId": "opsi-servis",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dribble",
-            "text": "Dribbling"
-          },
-          {
             "optionId": "opsi-passing",
             "text": "Passing"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-smash",
             "text": "Smash"
+          },
+          {
+            "optionId": "opsi-dribble",
+            "text": "Dribbling"
           }
         ],
         "correctResponse": "opsi-dribble"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kerjasama",
-            "text": "Bekerja sama"
-          },
-          {
             "optionId": "opsi-sendiri",
             "text": "Bermain sendiri"
+          },
+          {
+            "optionId": "opsi-kerjasama",
+            "text": "Bekerja sama"
           },
           {
             "optionId": "opsi-berebut",

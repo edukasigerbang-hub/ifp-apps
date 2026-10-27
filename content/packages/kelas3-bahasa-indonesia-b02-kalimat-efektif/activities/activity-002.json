@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-a",
-            "text": "Siti membaca buku di perpustakaan."
-          },
-          {
             "optionId": "opsi-b",
             "text": "Siti dia membaca buku buku di perpustakaan."
           },
           {
             "optionId": "opsi-c",
             "text": "Membaca Siti buku di perpustakaan sekolahnya sekolah."
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "Siti membaca buku di perpustakaan."
           },
           {
             "optionId": "opsi-d",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-cantik",
-            "text": "Cantik"
-          },
-          {
             "optionId": "opsi-jelek",
             "text": "Jelek"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-cepat",
             "text": "Cepat"
+          },
+          {
+            "optionId": "opsi-cantik",
+            "text": "Cantik"
           }
         ],
         "correctResponse": "opsi-cantik"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-rajin",
-            "text": "Rajin dan bersungguh-sungguh"
-          },
-          {
             "optionId": "opsi-malas",
             "text": "Malas"
+          },
+          {
+            "optionId": "opsi-rajin",
+            "text": "Rajin dan bersungguh-sungguh"
           },
           {
             "optionId": "opsi-marah",

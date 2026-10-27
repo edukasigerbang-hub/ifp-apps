@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-utama",
-            "text": "Tokoh utama"
-          },
-          {
             "optionId": "opsi-latar",
             "text": "Latar"
+          },
+          {
+            "optionId": "opsi-utama",
+            "text": "Tokoh utama"
           },
           {
             "optionId": "opsi-amanat",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-amanat",
-            "text": "Amanat"
-          },
-          {
             "optionId": "opsi-tokoh",
             "text": "Tokoh"
           },
           {
             "optionId": "opsi-latar",
             "text": "Latar"
+          },
+          {
+            "optionId": "opsi-amanat",
+            "text": "Amanat"
           },
           {
             "optionId": "opsi-judul",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ambil",
-            "text": "Mengambil pesan baik"
-          },
-          {
             "optionId": "opsi-lupa",
             "text": "Melupakan cerita"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-marah",
             "text": "Marah pada tokoh"
+          },
+          {
+            "optionId": "opsi-ambil",
+            "text": "Mengambil pesan baik"
           }
         ],
         "correctResponse": "opsi-ambil"

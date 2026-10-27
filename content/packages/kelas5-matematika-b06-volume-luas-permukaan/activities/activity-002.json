@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-cm3",
-            "text": "cm³"
-          },
-          {
             "optionId": "opsi-cm2",
             "text": "cm²"
+          },
+          {
+            "optionId": "opsi-cm3",
+            "text": "cm³"
           },
           {
             "optionId": "opsi-cm",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-27",
-            "text": "27 cm³"
-          },
-          {
             "optionId": "opsi-9",
             "text": "9 cm³"
           },
           {
             "optionId": "opsi-18",
             "text": "18 cm³"
+          },
+          {
+            "optionId": "opsi-27",
+            "text": "27 cm³"
           },
           {
             "optionId": "opsi-54",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-54",
-            "text": "54 cm²"
-          },
-          {
             "optionId": "opsi-27",
             "text": "27 cm²"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-9",
             "text": "9 cm²"
+          },
+          {
+            "optionId": "opsi-54",
+            "text": "54 cm²"
           }
         ],
         "correctResponse": "opsi-54"

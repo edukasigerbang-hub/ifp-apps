@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-listrik",
-            "text": "Listrik"
-          },
-          {
             "optionId": "opsi-bunyi",
             "text": "Bunyi"
+          },
+          {
+            "optionId": "opsi-listrik",
+            "text": "Listrik"
           },
           {
             "optionId": "opsi-panas",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-angin",
-            "text": "Angin"
-          },
-          {
             "optionId": "opsi-batu",
             "text": "Batu bara"
           },
           {
             "optionId": "opsi-bensin",
             "text": "Bensin"
+          },
+          {
+            "optionId": "opsi-angin",
+            "text": "Angin"
           },
           {
             "optionId": "opsi-diesel",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sampah",
-            "text": "Mengurangi sampah"
-          },
-          {
             "optionId": "opsi-tambah",
             "text": "Menambah sampah"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-buang",
             "text": "Membuang sampah"
+          },
+          {
+            "optionId": "opsi-sampah",
+            "text": "Mengurangi sampah"
           }
         ],
         "correctResponse": "opsi-sampah"

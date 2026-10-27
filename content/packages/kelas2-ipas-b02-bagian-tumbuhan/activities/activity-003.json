@@ -36,16 +36,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-bagian-tumbuhan-2-1",
-            "text": "Membuat makanan"
-          },
-          {
             "optionId": "opsi-bagian-tumbuhan-2-2",
             "text": "Menarik air"
           },
           {
             "optionId": "opsi-bagian-tumbuhan-2-3",
             "text": "Menyimpan batu"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-1",
+            "text": "Membuat makanan"
           }
         ],
         "correctResponse": "opsi-bagian-tumbuhan-2-1"

@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-10",
-            "text": "10"
-          },
-          {
             "optionId": "opsi-5",
             "text": "5"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-1",
             "text": "1"
+          },
+          {
+            "optionId": "opsi-10",
+            "text": "10"
           }
         ],
         "correctResponse": "opsi-10"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-taat",
-            "text": "Taat kepada Allah"
-          },
-          {
             "optionId": "opsi-makan",
             "text": "Makan"
+          },
+          {
+            "optionId": "opsi-taat",
+            "text": "Taat kepada Allah"
           },
           {
             "optionId": "opsi-tidur",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dua",
-            "text": "Dua"
-          },
-          {
             "optionId": "opsi-satu",
             "text": "Satu"
           },
           {
             "optionId": "opsi-tiga",
             "text": "Tiga"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua"
           },
           {
             "optionId": "opsi-lima",

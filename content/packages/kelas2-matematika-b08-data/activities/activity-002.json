@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-1",
-            "text": "1"
-          },
-          {
             "optionId": "opsi-2",
             "text": "2"
+          },
+          {
+            "optionId": "opsi-1",
+            "text": "1"
           },
           {
             "optionId": "opsi-3",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-banding",
-            "text": "Perbandingan data"
-          },
-          {
             "optionId": "opsi-warna",
             "text": "Warna"
           },
           {
             "optionId": "opsi-berat",
             "text": "Berat"
+          },
+          {
+            "optionId": "opsi-banding",
+            "text": "Perbandingan data"
           },
           {
             "optionId": "opsi-ukuran",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-hitung",
-            "text": "Menghitung dan mencatat"
-          },
-          {
             "optionId": "opsi-tebak",
             "text": "Menebak"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-gambar",
             "text": "Menggambar bebas"
+          },
+          {
+            "optionId": "opsi-hitung",
+            "text": "Menghitung dan mencatat"
           }
         ],
         "correctResponse": "opsi-hitung"

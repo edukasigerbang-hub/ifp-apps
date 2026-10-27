@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-menentukan-objek",
-            "text": "Menentukan objek yang dideskripsikan"
-          },
-          {
             "optionId": "opsi-menghitung",
             "text": "Menghitung jumlah kata"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-membeli",
             "text": "Membeli buku baru"
+          },
+          {
+            "optionId": "opsi-menentukan-objek",
+            "text": "Menentukan objek yang dideskripsikan"
           }
         ],
         "correctResponse": "opsi-menentukan-objek"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-baik",
-            "text": "Kucingku berbulu oranye dan bermata bulat."
-          },
-          {
             "optionId": "opsi-pendek",
             "text": "Kucing."
+          },
+          {
+            "optionId": "opsi-baik",
+            "text": "Kucingku berbulu oranye dan bermata bulat."
           },
           {
             "optionId": "opsi-acak",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kesan",
-            "text": "Kesan atau perasaan penulis"
-          },
-          {
             "optionId": "opsi-daftar",
             "text": "Daftar pustaka"
           },
           {
             "optionId": "opsi-langkah",
             "text": "Langkah-langkah kegiatan"
+          },
+          {
+            "optionId": "opsi-kesan",
+            "text": "Kesan atau perasaan penulis"
           },
           {
             "optionId": "opsi-dialog",

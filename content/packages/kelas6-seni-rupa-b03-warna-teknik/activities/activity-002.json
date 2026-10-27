@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-mkb",
-            "text": "Merah, kuning, biru"
-          },
-          {
             "optionId": "opsi-hijau",
             "text": "Hijau, ungu, oranye"
+          },
+          {
+            "optionId": "opsi-mkb",
+            "text": "Merah, kuning, biru"
           },
           {
             "optionId": "opsi-hitam",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ungu",
-            "text": "Ungu"
-          },
-          {
             "optionId": "opsi-hijau",
             "text": "Hijau"
           },
           {
             "optionId": "opsi-oranye",
             "text": "Oranye"
+          },
+          {
+            "optionId": "opsi-ungu",
+            "text": "Ungu"
           },
           {
             "optionId": "opsi-coklat",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-bertahap",
-            "text": "Perubahan warna bertahap"
-          },
-          {
             "optionId": "opsi-sama",
             "text": "Warna sama"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-putih",
             "text": "Warna putih saja"
+          },
+          {
+            "optionId": "opsi-bertahap",
+            "text": "Perubahan warna bertahap"
           }
         ],
         "correctResponse": "opsi-bertahap"

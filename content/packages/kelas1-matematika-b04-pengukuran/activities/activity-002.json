@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jengkal",
-            "text": "Jengkal"
-          },
-          {
             "optionId": "opsi-timbangan",
             "text": "Timbangan"
+          },
+          {
+            "optionId": "opsi-jengkal",
+            "text": "Jengkal"
           },
           {
             "optionId": "opsi-jam",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-timbangan",
-            "text": "Timbangan"
-          },
-          {
             "optionId": "opsi-penggaris",
             "text": "Penggaris"
           },
           {
             "optionId": "opsi-jam",
             "text": "Jam"
+          },
+          {
+            "optionId": "opsi-timbangan",
+            "text": "Timbangan"
           },
           {
             "optionId": "opsi-jengkal",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jam",
-            "text": "Jam"
-          },
-          {
             "optionId": "opsi-timbangan",
             "text": "Timbangan"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-pensil",
             "text": "Pensil"
+          },
+          {
+            "optionId": "opsi-jam",
+            "text": "Jam"
           }
         ],
         "correctResponse": "opsi-jam"

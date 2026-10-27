@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-amati",
-            "text": "Mengamati dengan teliti"
-          },
-          {
             "optionId": "opsi-nilai",
             "text": "Langsung menilai"
+          },
+          {
+            "optionId": "opsi-amati",
+            "text": "Mengamati dengan teliti"
           },
           {
             "optionId": "opsi-ejek",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tekstur",
-            "text": "Tekstur"
-          },
-          {
             "optionId": "opsi-warna",
             "text": "Warna"
           },
           {
             "optionId": "opsi-garis",
             "text": "Garis"
+          },
+          {
+            "optionId": "opsi-tekstur",
+            "text": "Tekstur"
           },
           {
             "optionId": "opsi-tema",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sopan",
-            "text": "Sopan dan beralasan"
-          },
-          {
             "optionId": "opsi-tawa",
             "text": "Menertawakan"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-diam",
             "text": "Diam lalu pergi"
+          },
+          {
+            "optionId": "opsi-sopan",
+            "text": "Sopan dan beralasan"
           }
         ],
         "correctResponse": "opsi-sopan"

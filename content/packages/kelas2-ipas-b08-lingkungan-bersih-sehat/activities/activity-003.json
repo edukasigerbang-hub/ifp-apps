@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lingkungan-bersih-sehat-1-1",
-            "text": "Nyamuk"
-          },
-          {
             "optionId": "opsi-lingkungan-bersih-sehat-1-2",
             "text": "Kupu-kupu"
+          },
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-1-1",
+            "text": "Nyamuk"
           },
           {
             "optionId": "opsi-lingkungan-bersih-sehat-1-3",
@@ -36,16 +36,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lingkungan-bersih-sehat-2-1",
-            "text": "Sehat"
-          },
-          {
             "optionId": "opsi-lingkungan-bersih-sehat-2-2",
             "text": "Sakit"
           },
           {
             "optionId": "opsi-lingkungan-bersih-sehat-2-3",
             "text": "Lemah"
+          },
+          {
+            "optionId": "opsi-lingkungan-bersih-sehat-2-1",
+            "text": "Sehat"
           }
         ],
         "correctResponse": "opsi-lingkungan-bersih-sehat-2-1"

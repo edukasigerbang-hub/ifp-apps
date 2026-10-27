@@ -20,12 +20,12 @@
             "text": "1"
           },
           {
-            "optionId": "opsi-3",
-            "text": "3"
-          },
-          {
             "optionId": "opsi-5",
             "text": "5"
+          },
+          {
+            "optionId": "opsi-3",
+            "text": "3"
           },
           {
             "optionId": "opsi-6",
@@ -72,12 +72,12 @@
             "text": "8"
           },
           {
-            "optionId": "opsi-12",
-            "text": "12"
-          },
-          {
             "optionId": "opsi-24",
             "text": "24"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12"
           }
         ],
         "correctResponse": "opsi-12"

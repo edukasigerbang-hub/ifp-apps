@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tertib",
-            "text": "Rumah tertib"
-          },
-          {
             "optionId": "opsi-ribut",
             "text": "Rumah ribut"
+          },
+          {
+            "optionId": "opsi-tertib",
+            "text": "Rumah tertib"
           },
           {
             "optionId": "opsi-kotor",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-izin",
-            "text": "Meminta izin"
-          },
-          {
             "optionId": "opsi-diam",
             "text": "Diam saja"
           },
           {
             "optionId": "opsi-lari",
             "text": "Langsung pergi"
+          },
+          {
+            "optionId": "opsi-izin",
+            "text": "Meminta izin"
           },
           {
             "optionId": "opsi-sembunyi",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dengar",
-            "text": "Mendengarkan"
-          },
-          {
             "optionId": "opsi-bantah",
             "text": "Membantah"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-pergi",
             "text": "Pergi"
+          },
+          {
+            "optionId": "opsi-dengar",
+            "text": "Mendengarkan"
           }
         ],
         "correctResponse": "opsi-dengar"

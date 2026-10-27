@@ -20,12 +20,12 @@
             "text": "10"
           },
           {
-            "optionId": "opsi-100",
-            "text": "100"
-          },
-          {
             "optionId": "opsi-1000",
             "text": "1.000"
+          },
+          {
+            "optionId": "opsi-100",
+            "text": "100"
           },
           {
             "optionId": "opsi-10000",
@@ -48,12 +48,12 @@
             "text": "200"
           },
           {
-            "optionId": "opsi-2000",
-            "text": "2.000"
-          },
-          {
             "optionId": "opsi-20000",
             "text": "20.000"
+          },
+          {
+            "optionId": "opsi-2000",
+            "text": "2.000"
           }
         ],
         "correctResponse": "opsi-2000"
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
+            "optionId": "opsi-timbangan",
+            "text": "timbangan"
+          },
+          {
             "optionId": "opsi-penggaris",
             "text": "penggaris"
           },
           {
             "optionId": "opsi-meteran",
             "text": "meteran"
-          },
-          {
-            "optionId": "opsi-timbangan",
-            "text": "timbangan"
           },
           {
             "optionId": "opsi-jam",

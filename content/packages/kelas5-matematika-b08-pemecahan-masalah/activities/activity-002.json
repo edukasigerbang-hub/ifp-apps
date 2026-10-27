@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-45000",
-            "text": "Rp45.000"
-          },
-          {
             "optionId": "opsi-15000",
             "text": "Rp15.000"
+          },
+          {
+            "optionId": "opsi-45000",
+            "text": "Rp45.000"
           },
           {
             "optionId": "opsi-30000",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-7",
-            "text": "7"
-          },
-          {
             "optionId": "opsi-13",
             "text": "13"
           },
           {
             "optionId": "opsi-3",
             "text": "3"
+          },
+          {
+            "optionId": "opsi-7",
+            "text": "7"
           },
           {
             "optionId": "opsi-30",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-paham",
-            "text": "Memahami soal"
-          },
-          {
             "optionId": "opsi-jawab",
             "text": "Langsung menjawab"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-abaikan",
             "text": "Mengabaikan angka"
+          },
+          {
+            "optionId": "opsi-paham",
+            "text": "Memahami soal"
           }
         ],
         "correctResponse": "opsi-paham"

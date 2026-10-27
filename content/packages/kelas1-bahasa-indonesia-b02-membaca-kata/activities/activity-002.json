@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-mata",
-            "text": "mata"
-          },
-          {
             "optionId": "opsi-mama",
             "text": "mama"
+          },
+          {
+            "optionId": "opsi-mata",
+            "text": "mata"
           },
           {
             "optionId": "opsi-tama",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-b",
-            "text": "b"
-          },
-          {
             "optionId": "opsi-o",
             "text": "o"
           },
           {
             "optionId": "opsi-l",
             "text": "l"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "b"
           },
           {
             "optionId": "opsi-a",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-buku",
-            "text": "buku"
-          },
-          {
             "optionId": "opsi-dan",
             "text": "dan"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-ke",
             "text": "ke"
+          },
+          {
+            "optionId": "opsi-buku",
+            "text": "buku"
           }
         ],
         "correctResponse": "opsi-buku"

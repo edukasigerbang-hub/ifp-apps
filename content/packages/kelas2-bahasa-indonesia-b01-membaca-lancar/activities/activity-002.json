@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lancar",
-            "text": "Tidak terbata-bata"
-          },
-          {
             "optionId": "opsi-lambat",
             "text": "Sangat lambat"
           },
           {
             "optionId": "opsi-diam",
             "text": "Diam saja"
+          },
+          {
+            "optionId": "opsi-lancar",
+            "text": "Tidak terbata-bata"
           },
           {
             "optionId": "opsi-teriak",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-berhenti",
-            "text": "Berhenti sejenak"
-          },
-          {
             "optionId": "opsi-lanjut",
             "text": "Terus tanpa jeda"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-cepat",
             "text": "Membaca cepat"
+          },
+          {
+            "optionId": "opsi-berhenti",
+            "text": "Berhenti sejenak"
           }
         ],
         "correctResponse": "opsi-berhenti"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-latih",
-            "text": "Berlatih setiap hari"
-          },
-          {
             "optionId": "opsi-tidur",
             "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-latih",
+            "text": "Berlatih setiap hari"
           },
           {
             "optionId": "opsi-diam",

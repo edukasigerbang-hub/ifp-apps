@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ring",
-            "text": "Ring"
-          },
-          {
             "optionId": "opsi-gawang",
             "text": "Gawang"
+          },
+          {
+            "optionId": "opsi-ring",
+            "text": "Ring"
           },
           {
             "optionId": "opsi-net",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-net",
-            "text": "Net"
-          },
-          {
             "optionId": "opsi-ring",
             "text": "Ring"
           },
           {
             "optionId": "opsi-gawang",
             "text": "Gawang"
+          },
+          {
+            "optionId": "opsi-net",
+            "text": "Net"
           },
           {
             "optionId": "opsi-garis",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pemanasan",
-            "text": "Pemanasan"
-          },
-          {
             "optionId": "opsi-tidur",
             "text": "Tidur"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-duduk",
             "text": "Duduk diam"
+          },
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
           }
         ],
         "correctResponse": "opsi-pemanasan"

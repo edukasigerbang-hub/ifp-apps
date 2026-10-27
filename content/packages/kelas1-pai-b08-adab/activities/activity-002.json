@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-hormat",
-            "text": "Menghormati"
-          },
-          {
             "optionId": "opsi-bantah",
             "text": "Membantah"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-marah",
             "text": "Marah"
+          },
+          {
+            "optionId": "opsi-hormat",
+            "text": "Menghormati"
           }
         ],
         "correctResponse": "opsi-hormat"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-baik",
-            "text": "Baik dan membantu"
-          },
-          {
             "optionId": "opsi-bertengkar",
             "text": "Bertengkar"
+          },
+          {
+            "optionId": "opsi-baik",
+            "text": "Baik dan membantu"
           },
           {
             "optionId": "opsi-ejek",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salam",
-            "text": "Salam"
-          },
-          {
             "optionId": "opsi-teriak",
             "text": "Terlakan"
           },
           {
             "optionId": "opsi-diam",
             "text": "Diam saja"
+          },
+          {
+            "optionId": "opsi-salam",
+            "text": "Salam"
           },
           {
             "optionId": "opsi-pergi",

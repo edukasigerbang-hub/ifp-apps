@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-benar",
-            "text": "Negara Kesatuan Republik Indonesia"
-          },
-          {
             "optionId": "opsi-a",
             "text": "Negara Kuat Republik Indonesia"
           },
           {
             "optionId": "opsi-b",
             "text": "Negara Kesatuan Rakyat Indonesia"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "Negara Kesatuan Republik Indonesia"
           },
           {
             "optionId": "opsi-c",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-merah-putih",
-            "text": "Merah Putih"
-          },
-          {
             "optionId": "opsi-merah-biru",
             "text": "Merah Biru"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-kuning-merah",
             "text": "Kuning Merah"
+          },
+          {
+            "optionId": "opsi-merah-putih",
+            "text": "Merah Putih"
           }
         ],
         "correctResponse": "opsi-merah-putih"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-indonesia",
-            "text": "Bahasa Indonesia"
-          },
-          {
             "optionId": "opsi-daerah",
             "text": "Bahasa daerah"
+          },
+          {
+            "optionId": "opsi-indonesia",
+            "text": "Bahasa Indonesia"
           },
           {
             "optionId": "opsi-inggris",

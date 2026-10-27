@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tempel",
-            "text": "menempel bahan pada bidang"
-          },
-          {
             "optionId": "opsi-ukir",
             "text": "mengukir kayu"
+          },
+          {
+            "optionId": "opsi-tempel",
+            "text": "menempel bahan pada bidang"
           },
           {
             "optionId": "opsi-tenun",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lem",
-            "text": "lem"
-          },
-          {
             "optionId": "opsi-air",
             "text": "air"
           },
           {
             "optionId": "opsi-pasir",
             "text": "pasir"
+          },
+          {
+            "optionId": "opsi-lem",
+            "text": "lem"
           },
           {
             "optionId": "opsi-cat",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-gunting",
-            "text": "gunting"
-          },
-          {
             "optionId": "opsi-penggaris",
             "text": "penggaris"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-kuas",
             "text": "kuas"
+          },
+          {
+            "optionId": "opsi-gunting",
+            "text": "gunting"
           }
         ],
         "correctResponse": "opsi-gunting"

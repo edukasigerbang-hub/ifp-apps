@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-angkat",
-            "text": "Mengangkat tangan"
-          },
-          {
             "optionId": "opsi-teriak",
             "text": "Berteriak"
+          },
+          {
+            "optionId": "opsi-angkat",
+            "text": "Mengangkat tangan"
           },
           {
             "optionId": "opsi-potong",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-baik",
-            "text": "Baik dan membantu"
-          },
-          {
             "optionId": "opsi-bertengkar",
             "text": "Bertengkar"
           },
           {
             "optionId": "opsi-ejek",
             "text": "Mengejek"
+          },
+          {
+            "optionId": "opsi-baik",
+            "text": "Baik dan membantu"
           },
           {
             "optionId": "opsi-dorong",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salam",
-            "text": "Salam"
-          },
-          {
             "optionId": "opsi-teriak",
             "text": "Terlakan"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-pergi",
             "text": "Pergi"
+          },
+          {
+            "optionId": "opsi-salam",
+            "text": "Salam"
           }
         ],
         "correctResponse": "opsi-salam"

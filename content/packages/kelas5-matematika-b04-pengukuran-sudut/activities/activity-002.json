@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-siku",
-            "text": "Sudut siku-siku"
-          },
-          {
             "optionId": "opsi-lancip",
             "text": "Sudut lancip"
+          },
+          {
+            "optionId": "opsi-siku",
+            "text": "Sudut siku-siku"
           },
           {
             "optionId": "opsi-tumpul",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lancip",
-            "text": "Sudut lancip"
-          },
-          {
             "optionId": "opsi-siku",
             "text": "Sudut siku-siku"
           },
           {
             "optionId": "opsi-tumpul",
             "text": "Sudut tumpul"
+          },
+          {
+            "optionId": "opsi-lancip",
+            "text": "Sudut lancip"
           },
           {
             "optionId": "opsi-lurus",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tumpul",
-            "text": "Sudut tumpul"
-          },
-          {
             "optionId": "opsi-lancip",
             "text": "Sudut lancip"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-nol",
             "text": "Sudut nol"
+          },
+          {
+            "optionId": "opsi-tumpul",
+            "text": "Sudut tumpul"
           }
         ],
         "correctResponse": "opsi-tumpul"

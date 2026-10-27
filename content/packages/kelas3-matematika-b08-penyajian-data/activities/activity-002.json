@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-selasa",
-            "text": "Selasa"
-          },
-          {
             "optionId": "opsi-senin",
             "text": "Senin"
+          },
+          {
+            "optionId": "opsi-selasa",
+            "text": "Selasa"
           },
           {
             "optionId": "opsi-rabu",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-1",
-            "text": "1"
-          },
-          {
             "optionId": "opsi-2",
             "text": "2"
           },
           {
             "optionId": "opsi-3",
             "text": "3"
+          },
+          {
+            "optionId": "opsi-1",
+            "text": "1"
           },
           {
             "optionId": "opsi-4",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-perbandingan",
-            "text": "Perbandingan banyak data"
-          },
-          {
             "optionId": "opsi-warna",
             "text": "Warna gambar"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-ukuran",
             "text": "Ukuran kertas"
+          },
+          {
+            "optionId": "opsi-perbandingan",
+            "text": "Perbandingan banyak data"
           }
         ],
         "correctResponse": "opsi-perbandingan"

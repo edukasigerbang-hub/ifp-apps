@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jelas",
-            "text": "Menjelaskan informasi"
-          },
-          {
             "optionId": "opsi-cerita",
             "text": "Menceritakan khayalan"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-langkah",
             "text": "Memberi langkah"
+          },
+          {
+            "optionId": "opsi-jelas",
+            "text": "Menjelaskan informasi"
           }
         ],
         "correctResponse": "opsi-jelas"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-baku",
-            "text": "Baku dan jelas"
-          },
-          {
             "optionId": "opsi-gaul",
             "text": "Gaul"
+          },
+          {
+            "optionId": "opsi-baku",
+            "text": "Baku dan jelas"
           },
           {
             "optionId": "opsi-puitis",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-alasan",
-            "text": "Alasan dan bukti"
-          },
-          {
             "optionId": "opsi-tokoh",
             "text": "Tokoh cerita"
           },
           {
             "optionId": "opsi-langkah",
             "text": "Langkah kegiatan"
+          },
+          {
+            "optionId": "opsi-alasan",
+            "text": "Alasan dan bukti"
           },
           {
             "optionId": "opsi-sampiran",

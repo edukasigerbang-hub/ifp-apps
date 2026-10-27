@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-warna",
-            "text": "Warna"
-          },
-          {
             "optionId": "opsi-harga",
             "text": "Harga"
+          },
+          {
+            "optionId": "opsi-warna",
+            "text": "Warna"
           },
           {
             "optionId": "opsi-berat",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sopan",
-            "text": "Bersikap sopan"
-          },
-          {
             "optionId": "opsi-tawa",
             "text": "Menertawakan"
           },
           {
             "optionId": "opsi-rusak",
             "text": "Merusak"
+          },
+          {
+            "optionId": "opsi-sopan",
+            "text": "Bersikap sopan"
           },
           {
             "optionId": "opsi-ambil",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-hargai",
-            "text": "Menghargai karya"
-          },
-          {
             "optionId": "opsi-rusak",
             "text": "Merusak karya"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-malas",
             "text": "Menjadi malas"
+          },
+          {
+            "optionId": "opsi-hargai",
+            "text": "Menghargai karya"
           }
         ],
         "correctResponse": "opsi-hargai"

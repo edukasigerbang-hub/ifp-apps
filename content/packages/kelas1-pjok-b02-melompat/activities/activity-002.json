@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tekuk",
-            "text": "Ditekuk sedikit"
-          },
-          {
             "optionId": "opsi-kaku",
             "text": "Kaku"
+          },
+          {
+            "optionId": "opsi-tekuk",
+            "text": "Ditekuk sedikit"
           },
           {
             "optionId": "opsi-lurus",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pemanasan",
-            "text": "Pemanasan"
-          },
-          {
             "optionId": "opsi-tidur",
             "text": "Tidur"
           },
           {
             "optionId": "opsi-makan",
             "text": "Makan besar"
+          },
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
           },
           {
             "optionId": "opsi-duduk",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ruang",
-            "text": "Ruang yang lapang"
-          },
-          {
             "optionId": "opsi-tangga",
             "text": "Tangga"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-dekat",
             "text": "Dekat teman"
+          },
+          {
+            "optionId": "opsi-ruang",
+            "text": "Ruang yang lapang"
           }
         ],
         "correctResponse": "opsi-ruang"

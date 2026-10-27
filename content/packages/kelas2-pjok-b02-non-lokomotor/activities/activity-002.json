@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tempat",
-            "text": "Di tempat"
-          },
-          {
             "optionId": "opsi-pindah",
             "text": "Sambil berpindah"
+          },
+          {
+            "optionId": "opsi-tempat",
+            "text": "Di tempat"
           },
           {
             "optionId": "opsi-lari",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-satu",
-            "text": "Berdiri satu kaki"
-          },
-          {
             "optionId": "opsi-lari",
             "text": "Berlari cepat"
           },
           {
             "optionId": "opsi-lompat",
             "text": "Melompat tinggi"
+          },
+          {
+            "optionId": "opsi-satu",
+            "text": "Berdiri satu kaki"
           },
           {
             "optionId": "opsi-guling",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pemanasan",
-            "text": "Pemanasan"
-          },
-          {
             "optionId": "opsi-dorong",
             "text": "Mendorong teman"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-berdesak",
             "text": "Berdesakan"
+          },
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
           }
         ],
         "correctResponse": "opsi-pemanasan"

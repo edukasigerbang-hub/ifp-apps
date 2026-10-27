@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-gobak",
-            "text": "Gobak sodor"
-          },
-          {
             "optionId": "opsi-game",
             "text": "Permainan ponsel"
           },
           {
             "optionId": "opsi-basket",
             "text": "Bola basket"
+          },
+          {
+            "optionId": "opsi-gobak",
+            "text": "Gobak sodor"
           },
           {
             "optionId": "opsi-tenis",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ditaati",
-            "text": "Ditaati semua"
-          },
-          {
             "optionId": "opsi-dilanggar",
             "text": "Dilanggar"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-ubah",
             "text": "Diubah sendiri"
+          },
+          {
+            "optionId": "opsi-ditaati",
+            "text": "Ditaati semua"
           }
         ],
         "correctResponse": "opsi-ditaati"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salaman",
-            "text": "Bersalaman dengan teman"
-          },
-          {
             "optionId": "opsi-marah",
             "text": "Marah bila kalah"
+          },
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman dengan teman"
           },
           {
             "optionId": "opsi-tinggal",

@@ -36,16 +36,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-hewan-tumbuhan-peliharaan-2-1",
-            "text": "Disiram"
-          },
-          {
             "optionId": "opsi-hewan-tumbuhan-peliharaan-2-2",
             "text": "Dicabut"
           },
           {
             "optionId": "opsi-hewan-tumbuhan-peliharaan-2-3",
             "text": "Dipetik"
+          },
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-2-1",
+            "text": "Disiram"
           }
         ],
         "correctResponse": "opsi-hewan-tumbuhan-peliharaan-2-1"

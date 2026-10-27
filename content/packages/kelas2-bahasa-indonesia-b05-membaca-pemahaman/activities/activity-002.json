@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-teliti",
-            "text": "Teliti"
-          },
-          {
             "optionId": "opsi-cepat",
             "text": "Sangat cepat"
+          },
+          {
+            "optionId": "opsi-teliti",
+            "text": "Teliti"
           },
           {
             "optionId": "opsi-lupa",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-bacaan",
-            "text": "Bacaan"
-          },
-          {
             "optionId": "opsi-gambar",
             "text": "Gambar saja"
           },
           {
             "optionId": "opsi-luar",
             "text": "Luar kelas"
+          },
+          {
+            "optionId": "opsi-bacaan",
+            "text": "Bacaan"
           },
           {
             "optionId": "opsi-teman",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-inti",
-            "text": "Inti bacaan"
-          },
-          {
             "optionId": "opsi-judul",
             "text": "Judul saja"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-awal",
             "text": "Kalimat pertama saja"
+          },
+          {
+            "optionId": "opsi-inti",
+            "text": "Inti bacaan"
           }
         ],
         "correctResponse": "opsi-inti"

@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-1-1",
-            "text": "Memompa darah"
-          },
-          {
             "optionId": "opsi-penguatan-1-2",
             "text": "Membawa darah dari jantung"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Memompa darah"
           },
           {
             "optionId": "opsi-penguatan-1-3",
@@ -40,12 +40,12 @@
             "text": "Memompa darah"
           },
           {
-            "optionId": "opsi-penguatan-2-2",
-            "text": "Membawa darah dari jantung"
-          },
-          {
             "optionId": "opsi-penguatan-2-3",
             "text": "Membawa darah ke jantung"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Membawa darah dari jantung"
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"

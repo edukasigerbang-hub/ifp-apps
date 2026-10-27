@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jelas-singkat",
-            "text": "Jelas, singkat, dan sesuai kaidah"
-          },
-          {
             "optionId": "opsi-panjang",
             "text": "Sangat panjang dan bertele-tele"
+          },
+          {
+            "optionId": "opsi-jelas-singkat",
+            "text": "Jelas, singkat, dan sesuai kaidah"
           },
           {
             "optionId": "opsi-berulang",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-para-siswa",
-            "text": "Para siswa masuk ke kelas."
-          },
-          {
             "optionId": "opsi-siswa-siswa",
             "text": "Para siswa-siswa masuk ke dalam kelas."
           },
           {
             "optionId": "opsi-masuk-kedalam",
             "text": "Siswa masuk ke dalam ke kelas."
+          },
+          {
+            "optionId": "opsi-para-siswa",
+            "text": "Para siswa masuk ke kelas."
           },
           {
             "optionId": "opsi-para-masuk",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-apotek",
-            "text": "apotek"
-          },
-          {
             "optionId": "opsi-apotik",
             "text": "apotik"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-jadual",
             "text": "jadual"
+          },
+          {
+            "optionId": "opsi-apotek",
+            "text": "apotek"
           }
         ],
         "correctResponse": "opsi-apotek"

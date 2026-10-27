@@ -36,12 +36,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-makanan-sehat-2-1",
-            "text": "Sayur"
-          },
-          {
             "optionId": "opsi-makanan-sehat-2-2",
             "text": "Permen"
+          },
+          {
+            "optionId": "opsi-makanan-sehat-2-1",
+            "text": "Sayur"
           },
           {
             "optionId": "opsi-makanan-sehat-2-3",

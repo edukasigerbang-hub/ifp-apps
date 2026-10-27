@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-payung",
-            "text": "Membawa payung"
-          },
-          {
             "optionId": "opsi-jemur",
             "text": "Menjemur pakaian"
+          },
+          {
+            "optionId": "opsi-payung",
+            "text": "Membawa payung"
           },
           {
             "optionId": "opsi-tidur",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dua",
-            "text": "Hujan dan kemarau"
-          },
-          {
             "optionId": "opsi-salju",
             "text": "Salju dan panas"
           },
           {
             "optionId": "opsi-gugur",
             "text": "Gugur dan semi"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Hujan dan kemarau"
           },
           {
             "optionId": "opsi-dingin",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jaket",
-            "text": "Jaket"
-          },
-          {
             "optionId": "opsi-kaus",
             "text": "Kaus tipis"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-topi",
             "text": "Topi pantai"
+          },
+          {
+            "optionId": "opsi-jaket",
+            "text": "Jaket"
           }
         ],
         "correctResponse": "opsi-jaket"

@@ -20,12 +20,12 @@
             "text": "Sabun"
           },
           {
-            "optionId": "opsi-merawat-tubuh-1-2",
-            "text": "Sikat gigi"
-          },
-          {
             "optionId": "opsi-merawat-tubuh-1-3",
             "text": "Handuk"
+          },
+          {
+            "optionId": "opsi-merawat-tubuh-1-2",
+            "text": "Sikat gigi"
           }
         ],
         "correctResponse": "opsi-merawat-tubuh-1-2"

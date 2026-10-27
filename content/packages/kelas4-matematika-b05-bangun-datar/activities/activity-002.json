@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-segitiga",
-            "text": "segitiga"
-          },
-          {
             "optionId": "opsi-persegi",
             "text": "persegi"
+          },
+          {
+            "optionId": "opsi-segitiga",
+            "text": "segitiga"
           },
           {
             "optionId": "opsi-lingkaran",
@@ -72,12 +72,12 @@
             "text": "24 cm²"
           },
           {
-            "optionId": "opsi-32",
-            "text": "32 cm²"
-          },
-          {
             "optionId": "opsi-40",
             "text": "40 cm²"
+          },
+          {
+            "optionId": "opsi-32",
+            "text": "32 cm²"
           }
         ],
         "correctResponse": "opsi-32"

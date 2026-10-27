@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ratusan",
-            "text": "Ratusan"
-          },
-          {
             "optionId": "opsi-ribuan",
             "text": "Ribuan"
           },
           {
             "optionId": "opsi-puluhan",
             "text": "Puluhan"
+          },
+          {
+            "optionId": "opsi-ratusan",
+            "text": "Ratusan"
           },
           {
             "optionId": "opsi-satuan",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-benar",
-            "text": "Dua ribu lima ratus tiga puluh"
-          },
-          {
             "optionId": "opsi-a",
             "text": "Dua ribu lima ratus tiga"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-c",
             "text": "Dua ribu lima ratus"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "Dua ribu lima ratus tiga puluh"
           }
         ],
         "correctResponse": "opsi-benar"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lebih",
-            "text": ">"
-          },
-          {
             "optionId": "opsi-kurang",
             "text": "<"
+          },
+          {
+            "optionId": "opsi-lebih",
+            "text": ">"
           },
           {
             "optionId": "opsi-sama",

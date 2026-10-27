@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-terhubung",
-            "text": "Semakin terhubung"
-          },
-          {
             "optionId": "opsi-terpisah",
             "text": "Semakin terpisah"
           },
           {
             "optionId": "opsi-tutup",
             "text": "Menutup diri"
+          },
+          {
+            "optionId": "opsi-terhubung",
+            "text": "Semakin terhubung"
           },
           {
             "optionId": "opsi-berhenti",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-teknologi",
-            "text": "Teknologi berkembang"
-          },
-          {
             "optionId": "opsi-lupa",
             "text": "Lupa budaya sendiri"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-boros",
             "text": "Hidup boros"
+          },
+          {
+            "optionId": "opsi-teknologi",
+            "text": "Teknologi berkembang"
           }
         ],
         "correctResponse": "opsi-teknologi"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-selektif",
-            "text": "Selektif dan bijak"
-          },
-          {
             "optionId": "opsi-tolak",
             "text": "Menolak semuanya"
+          },
+          {
+            "optionId": "opsi-selektif",
+            "text": "Selektif dan bijak"
           },
           {
             "optionId": "opsi-ikut",

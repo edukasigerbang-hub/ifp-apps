@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-passing",
-            "text": "Passing"
-          },
-          {
             "optionId": "opsi-dribble",
             "text": "Dribbling"
+          },
+          {
+            "optionId": "opsi-passing",
+            "text": "Passing"
           },
           {
             "optionId": "opsi-shooting",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dribble",
-            "text": "Dribbling"
-          },
-          {
             "optionId": "opsi-passing",
             "text": "Passing"
           },
           {
             "optionId": "opsi-servis",
             "text": "Servis"
+          },
+          {
+            "optionId": "opsi-dribble",
+            "text": "Dribbling"
           },
           {
             "optionId": "opsi-smash",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-servis",
-            "text": "Servis"
-          },
-          {
             "optionId": "opsi-smash",
             "text": "Smash"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-dribble",
             "text": "Dribbling"
+          },
+          {
+            "optionId": "opsi-servis",
+            "text": "Servis"
           }
         ],
         "correctResponse": "opsi-servis"

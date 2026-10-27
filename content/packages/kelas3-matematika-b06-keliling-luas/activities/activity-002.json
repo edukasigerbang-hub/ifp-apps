@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-20",
-            "text": "20 cm"
-          },
-          {
             "optionId": "opsi-10",
             "text": "10 cm"
           },
           {
             "optionId": "opsi-25",
             "text": "25 cm"
+          },
+          {
+            "optionId": "opsi-20",
+            "text": "20 cm"
           },
           {
             "optionId": "opsi-15",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-24",
-            "text": "24 cm²"
-          },
-          {
             "optionId": "opsi-20",
             "text": "20 cm²"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-12",
             "text": "12 cm²"
+          },
+          {
+            "optionId": "opsi-24",
+            "text": "24 cm²"
           }
         ],
         "correctResponse": "opsi-24"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-12",
-            "text": "12 cm"
-          },
-          {
             "optionId": "opsi-10",
             "text": "10 cm"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12 cm"
           },
           {
             "optionId": "opsi-15",

@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-1-1",
-            "text": "Berkata sesuai kenyataan"
-          },
-          {
             "optionId": "opsi-penguatan-1-2",
             "text": "Menjalankan tugas dengan tanggung jawab"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Berkata sesuai kenyataan"
           },
           {
             "optionId": "opsi-penguatan-1-3",
@@ -40,12 +40,12 @@
             "text": "Berkata sesuai kenyataan"
           },
           {
-            "optionId": "opsi-penguatan-2-2",
-            "text": "Menjalankan tugas dengan tanggung jawab"
-          },
-          {
             "optionId": "opsi-penguatan-2-3",
             "text": "Berbicara dengan sopan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Menjalankan tugas dengan tanggung jawab"
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"

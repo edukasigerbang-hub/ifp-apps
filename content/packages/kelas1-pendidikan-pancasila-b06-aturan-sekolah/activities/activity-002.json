@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tepat",
-            "text": "Datang tepat waktu"
-          },
-          {
             "optionId": "opsi-terlambat",
             "text": "Datang terlambat"
           },
           {
             "optionId": "opsi-ribut",
             "text": "Ribut di kelas"
+          },
+          {
+            "optionId": "opsi-tepat",
+            "text": "Datang tepat waktu"
           },
           {
             "optionId": "opsi-buang",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-nyaman",
-            "text": "Belajar nyaman"
-          },
-          {
             "optionId": "opsi-ribut",
             "text": "Kelas ribut"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-malas",
             "text": "Semua malas"
+          },
+          {
+            "optionId": "opsi-nyaman",
+            "text": "Belajar nyaman"
           }
         ],
         "correctResponse": "opsi-nyaman"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tertib",
-            "text": "Tertib"
-          },
-          {
             "optionId": "opsi-dorong",
             "text": "Mendorong"
+          },
+          {
+            "optionId": "opsi-tertib",
+            "text": "Tertib"
           },
           {
             "optionId": "opsi-serobot",

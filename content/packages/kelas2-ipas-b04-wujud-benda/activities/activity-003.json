@@ -36,16 +36,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-wujud-benda-2-1",
-            "text": "Meja"
-          },
-          {
             "optionId": "opsi-wujud-benda-2-2",
             "text": "Susu"
           },
           {
             "optionId": "opsi-wujud-benda-2-3",
             "text": "Air"
+          },
+          {
+            "optionId": "opsi-wujud-benda-2-1",
+            "text": "Meja"
           }
         ],
         "correctResponse": "opsi-wujud-benda-2-1"

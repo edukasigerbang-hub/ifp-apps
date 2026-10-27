@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-batu",
-            "text": "Batu"
-          },
-          {
             "optionId": "opsi-kapas",
             "text": "Kapas"
           },
           {
             "optionId": "opsi-kain",
             "text": "Kain"
+          },
+          {
+            "optionId": "opsi-batu",
+            "text": "Batu"
           },
           {
             "optionId": "opsi-kertas",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kapas",
-            "text": "Kapas"
-          },
-          {
             "optionId": "opsi-batu",
             "text": "Batu"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-kulit",
             "text": "Kulit kayu"
+          },
+          {
+            "optionId": "opsi-kapas",
+            "text": "Kapas"
           }
         ],
         "correctResponse": "opsi-kapas"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lem",
-            "text": "Lem"
-          },
-          {
             "optionId": "opsi-gunting",
             "text": "Gunting"
+          },
+          {
+            "optionId": "opsi-lem",
+            "text": "Lem"
           },
           {
             "optionId": "opsi-pensil",

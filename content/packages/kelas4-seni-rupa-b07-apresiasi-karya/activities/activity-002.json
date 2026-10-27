@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-mengamati",
-            "text": "Mengamati karya dengan teliti"
-          },
-          {
             "optionId": "opsi-menilai",
             "text": "Langsung memberi nilai"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-menjual",
             "text": "Menjual karya teman"
+          },
+          {
+            "optionId": "opsi-mengamati",
+            "text": "Mengamati karya dengan teliti"
           }
         ],
         "correctResponse": "opsi-mengamati"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sopan",
-            "text": "Menyampaikan pendapat dengan sopan"
-          },
-          {
             "optionId": "opsi-menertawakan",
             "text": "Menertawakan karya teman"
+          },
+          {
+            "optionId": "opsi-sopan",
+            "text": "Menyampaikan pendapat dengan sopan"
           },
           {
             "optionId": "opsi-merusak",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-menghargai",
-            "text": "Belajar menghargai dan menemukan ide baru"
-          },
-          {
             "optionId": "opsi-merusak",
             "text": "Membuat karya orang lain rusak"
           },
           {
             "optionId": "opsi-bersaing",
             "text": "Menumbuhkan persaingan tidak sehat"
+          },
+          {
+            "optionId": "opsi-menghargai",
+            "text": "Belajar menghargai dan menemukan ide baru"
           },
           {
             "optionId": "opsi-menghindar",

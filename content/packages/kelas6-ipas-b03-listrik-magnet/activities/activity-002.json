@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-logam",
-            "text": "Logam"
-          },
-          {
             "optionId": "opsi-kayu",
             "text": "Kayu"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-karet",
             "text": "Karet"
+          },
+          {
+            "optionId": "opsi-logam",
+            "text": "Logam"
           }
         ],
         "correctResponse": "opsi-logam"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dua",
-            "text": "Dua kutub"
-          },
-          {
             "optionId": "opsi-satu",
             "text": "Satu kutub"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua kutub"
           },
           {
             "optionId": "opsi-tiga",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-paralel",
-            "text": "Paralel"
-          },
-          {
             "optionId": "opsi-seri",
             "text": "Seri"
           },
           {
             "optionId": "opsi-terbuka",
             "text": "Terbuka"
+          },
+          {
+            "optionId": "opsi-paralel",
+            "text": "Paralel"
           },
           {
             "optionId": "opsi-tertutup",

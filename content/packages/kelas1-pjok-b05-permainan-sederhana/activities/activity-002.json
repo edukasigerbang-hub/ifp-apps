@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ditaati",
-            "text": "Ditaati"
-          },
-          {
             "optionId": "opsi-dilanggar",
             "text": "Dilanggar"
+          },
+          {
+            "optionId": "opsi-ditaati",
+            "text": "Ditaati"
           },
           {
             "optionId": "opsi-abaikan",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-gilir",
-            "text": "Bergiliran"
-          },
-          {
             "optionId": "opsi-berebut",
             "text": "Berebut"
           },
           {
             "optionId": "opsi-dorong",
             "text": "Mendorong"
+          },
+          {
+            "optionId": "opsi-gilir",
+            "text": "Bergiliran"
           },
           {
             "optionId": "opsi-marah",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salaman",
-            "text": "Bersalaman"
-          },
-          {
             "optionId": "opsi-marah",
             "text": "Marah"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-salah",
             "text": "Menyalahkan teman"
+          },
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman"
           }
         ],
         "correctResponse": "opsi-salaman"

@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-bertahap",
-            "text": "Perubahan warna bertahap"
-          },
-          {
             "optionId": "opsi-sama",
             "text": "Warna sama"
           },
           {
             "optionId": "opsi-acak",
             "text": "Warna acak"
+          },
+          {
+            "optionId": "opsi-bertahap",
+            "text": "Perubahan warna bertahap"
           },
           {
             "optionId": "opsi-putih",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-gelap",
-            "text": "Gelap ke terang"
-          },
-          {
             "optionId": "opsi-acak",
             "text": "Acak"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-hitam",
             "text": "Hitam saja"
+          },
+          {
+            "optionId": "opsi-gelap",
+            "text": "Gelap ke terang"
           }
         ],
         "correctResponse": "opsi-gelap"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-krayon",
-            "text": "Krayon"
-          },
-          {
             "optionId": "opsi-gunting",
             "text": "Gunting"
+          },
+          {
+            "optionId": "opsi-krayon",
+            "text": "Krayon"
           },
           {
             "optionId": "opsi-lem",

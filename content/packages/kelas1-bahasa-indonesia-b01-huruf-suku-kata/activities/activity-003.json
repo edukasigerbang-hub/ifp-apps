@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-1-1",
-            "text": "a, i, u, e, o"
-          },
-          {
             "optionId": "opsi-penguatan-1-2",
             "text": "b, c, d"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "a, i, u, e, o"
           },
           {
             "optionId": "opsi-penguatan-1-3",
@@ -40,12 +40,12 @@
             "text": "a, i, u, e, o"
           },
           {
-            "optionId": "opsi-penguatan-2-2",
-            "text": "b, c, d"
-          },
-          {
             "optionId": "opsi-penguatan-2-3",
             "text": "ba"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "b, c, d"
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"

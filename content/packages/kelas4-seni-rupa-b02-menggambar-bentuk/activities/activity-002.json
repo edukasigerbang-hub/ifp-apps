@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lingkaran",
-            "text": "lingkaran"
-          },
-          {
             "optionId": "opsi-persegi",
             "text": "persegi"
+          },
+          {
+            "optionId": "opsi-lingkaran",
+            "text": "lingkaran"
           },
           {
             "optionId": "opsi-segitiga",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pensil",
-            "text": "pensil"
-          },
-          {
             "optionId": "opsi-kuas",
             "text": "kuas lebar"
           },
           {
             "optionId": "opsi-jari",
             "text": "jari tangan"
+          },
+          {
+            "optionId": "opsi-pensil",
+            "text": "pensil"
           },
           {
             "optionId": "opsi-penghapus",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kiri",
-            "text": "sisi kiri"
-          },
-          {
             "optionId": "opsi-kanan",
             "text": "sisi kanan"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-belakang",
             "text": "sisi belakang"
+          },
+          {
+            "optionId": "opsi-kiri",
+            "text": "sisi kiri"
           }
         ],
         "correctResponse": "opsi-kiri"

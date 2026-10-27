@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pertumbuhan-manusia-hewan-1-1",
-            "text": "Bergizi"
-          },
-          {
             "optionId": "opsi-pertumbuhan-manusia-hewan-1-2",
             "text": "Permen"
+          },
+          {
+            "optionId": "opsi-pertumbuhan-manusia-hewan-1-1",
+            "text": "Bergizi"
           },
           {
             "optionId": "opsi-pertumbuhan-manusia-hewan-1-3",
@@ -40,12 +40,12 @@
             "text": "Batu"
           },
           {
-            "optionId": "opsi-pertumbuhan-manusia-hewan-2-2",
-            "text": "Anak ayam"
-          },
-          {
             "optionId": "opsi-pertumbuhan-manusia-hewan-2-3",
             "text": "Ember"
+          },
+          {
+            "optionId": "opsi-pertumbuhan-manusia-hewan-2-2",
+            "text": "Anak ayam"
           }
         ],
         "correctResponse": "opsi-pertumbuhan-manusia-hewan-2-2"

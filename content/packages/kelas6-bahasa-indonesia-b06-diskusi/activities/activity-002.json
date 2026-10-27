@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-dua",
-            "text": "Dua sisi"
-          },
-          {
             "optionId": "opsi-satu",
             "text": "Satu sisi"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-cerita",
             "text": "Cerita khayalan"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua sisi"
           }
         ],
         "correctResponse": "opsi-dua"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-hargai",
-            "text": "Menghargai pendapatnya"
-          },
-          {
             "optionId": "opsi-marah",
             "text": "Marah"
+          },
+          {
+            "optionId": "opsi-hargai",
+            "text": "Menghargai pendapatnya"
           },
           {
             "optionId": "opsi-potong",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-timbang",
-            "text": "Menimbang semua argumen"
-          },
-          {
             "optionId": "opsi-satu",
             "text": "Satu pendapat saja"
           },
           {
             "optionId": "opsi-tebak",
             "text": "Menebak"
+          },
+          {
+            "optionId": "opsi-timbang",
+            "text": "Menimbang semua argumen"
           },
           {
             "optionId": "opsi-awal",

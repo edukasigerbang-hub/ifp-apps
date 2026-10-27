@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-10000",
-            "text": "Rp10.000"
-          },
-          {
             "optionId": "opsi-15000",
             "text": "Rp15.000"
+          },
+          {
+            "optionId": "opsi-10000",
+            "text": "Rp10.000"
           },
           {
             "optionId": "opsi-20000",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-memahami",
-            "text": "memahami masalah"
-          },
-          {
             "optionId": "opsi-menebak",
             "text": "menebak jawaban"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-berhenti",
             "text": "berhenti mengerjakan"
+          },
+          {
+            "optionId": "opsi-memahami",
+            "text": "memahami masalah"
           }
         ],
         "correctResponse": "opsi-memahami"

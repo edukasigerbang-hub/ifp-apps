@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-angkat",
-            "text": "Mengangkat tangan dan sopan"
-          },
-          {
             "optionId": "opsi-teriak",
             "text": "Berteriak"
+          },
+          {
+            "optionId": "opsi-angkat",
+            "text": "Mengangkat tangan dan sopan"
           },
           {
             "optionId": "opsi-potong",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jujur",
-            "text": "Jujur dan amanah"
-          },
-          {
             "optionId": "opsi-sombong",
             "text": "Sombong"
           },
           {
             "optionId": "opsi-marah",
             "text": "Pemarah"
+          },
+          {
+            "optionId": "opsi-jujur",
+            "text": "Jujur dan amanah"
           },
           {
             "optionId": "opsi-bohong",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-percaya",
-            "text": "Dipercaya orang lain"
-          },
-          {
             "optionId": "opsi-jauhi",
             "text": "Dijauhi teman"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-hilang",
             "text": "Kehilangan teman"
+          },
+          {
+            "optionId": "opsi-percaya",
+            "text": "Dipercaya orang lain"
           }
         ],
         "correctResponse": "opsi-percaya"

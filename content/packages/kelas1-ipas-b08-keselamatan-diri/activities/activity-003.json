@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-keselamatan-diri-1-1",
-            "text": "Zebra cross"
-          },
-          {
             "optionId": "opsi-keselamatan-diri-1-2",
             "text": "Tengah jalan"
           },
           {
             "optionId": "opsi-keselamatan-diri-1-3",
             "text": "Jembatan"
+          },
+          {
+            "optionId": "opsi-keselamatan-diri-1-1",
+            "text": "Zebra cross"
           }
         ],
         "correctResponse": "opsi-keselamatan-diri-1-1"

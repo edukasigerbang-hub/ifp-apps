@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-2-4",
-            "text": "2/4"
-          },
-          {
             "optionId": "opsi-1-3",
             "text": "1/3"
+          },
+          {
+            "optionId": "opsi-2-4",
+            "text": "2/4"
           },
           {
             "optionId": "opsi-2-3",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-1-2",
-            "text": "1/2"
-          },
-          {
             "optionId": "opsi-2-4",
             "text": "2/4"
           },
           {
             "optionId": "opsi-1-4",
             "text": "1/4"
+          },
+          {
+            "optionId": "opsi-1-2",
+            "text": "1/2"
           },
           {
             "optionId": "opsi-3-4",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-3-4",
-            "text": "3/4"
-          },
-          {
             "optionId": "opsi-2-3",
             "text": "2/3"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-tidak-bisa",
             "text": "Tidak dapat dibandingkan"
+          },
+          {
+            "optionId": "opsi-3-4",
+            "text": "3/4"
           }
         ],
         "correctResponse": "opsi-3-4"

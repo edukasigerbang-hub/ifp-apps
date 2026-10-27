@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-benar",
-            "text": "Empat ratus lima puluh dua ribu tiga ratus enam belas"
-          },
-          {
             "optionId": "opsi-a",
             "text": "Empat ratus lima puluh dua ribu tiga ratus enam puluh"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "Empat ratus lima puluh dua ribu tiga ratus enam belas"
           },
           {
             "optionId": "opsi-b",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-599909",
-            "text": "599.909"
-          },
-          {
             "optionId": "opsi-599099",
             "text": "599.099"
           },
           {
             "optionId": "opsi-590999",
             "text": "590.999"
+          },
+          {
+            "optionId": "opsi-599909",
+            "text": "599.909"
           },
           {
             "optionId": "opsi-509999",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-lebih",
-            "text": ">"
-          },
-          {
             "optionId": "opsi-kurang",
             "text": "<"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-tidak",
             "text": "Tidak dapat dibandingkan"
+          },
+          {
+            "optionId": "opsi-lebih",
+            "text": ">"
           }
         ],
         "correctResponse": "opsi-lebih"

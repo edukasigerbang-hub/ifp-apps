@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-hemat-air-listrik-1-1",
-            "text": "Menutupnya"
-          },
-          {
             "optionId": "opsi-hemat-air-listrik-1-2",
             "text": "Membiarkannya terbuka"
           },
           {
             "optionId": "opsi-hemat-air-listrik-1-3",
             "text": "Membukanya lebih besar"
+          },
+          {
+            "optionId": "opsi-hemat-air-listrik-1-1",
+            "text": "Menutupnya"
           }
         ],
         "correctResponse": "opsi-hemat-air-listrik-1-1"

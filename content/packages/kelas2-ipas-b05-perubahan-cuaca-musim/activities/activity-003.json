@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-perubahan-cuaca-musim-1-1",
-            "text": "Musim hujan dan kemarau"
-          },
-          {
             "optionId": "opsi-perubahan-cuaca-musim-1-2",
             "text": "Musim salju dan gugur"
+          },
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-1-1",
+            "text": "Musim hujan dan kemarau"
           },
           {
             "optionId": "opsi-perubahan-cuaca-musim-1-3",
@@ -36,16 +36,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-perubahan-cuaca-musim-2-1",
-            "text": "Hemat air"
-          },
-          {
             "optionId": "opsi-perubahan-cuaca-musim-2-2",
             "text": "Bermain di genangan"
           },
           {
             "optionId": "opsi-perubahan-cuaca-musim-2-3",
             "text": "Memakai jas hujan"
+          },
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-2-1",
+            "text": "Hemat air"
           }
         ],
         "correctResponse": "opsi-perubahan-cuaca-musim-2-1"

@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sangkakala",
-            "text": "Terompet sangkakala ditiup"
-          },
-          {
             "optionId": "opsi-hujan",
             "text": "Hujan turun"
+          },
+          {
+            "optionId": "opsi-sangkakala",
+            "text": "Terompet sangkakala ditiup"
           },
           {
             "optionId": "opsi-panas",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-baik",
-            "text": "Rajin berbuat baik"
-          },
-          {
             "optionId": "opsi-bohong",
             "text": "Berbohong"
           },
           {
             "optionId": "opsi-malas",
             "text": "Malas beribadah"
+          },
+          {
+            "optionId": "opsi-baik",
+            "text": "Rajin berbuat baik"
           },
           {
             "optionId": "opsi-curang",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-rahasia",
-            "text": "Hanya Allah yang tahu"
-          },
-          {
             "optionId": "opsi-tahun",
             "text": "Diketahui tahun depan"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-hari",
             "text": "Diketahui hari ini"
+          },
+          {
+            "optionId": "opsi-rahasia",
+            "text": "Hanya Allah yang tahu"
           }
         ],
         "correctResponse": "opsi-rahasia"

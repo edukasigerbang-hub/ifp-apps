@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-plta",
-            "text": "PLTA"
-          },
-          {
             "optionId": "opsi-pln",
             "text": "PLN"
           },
           {
             "optionId": "opsi-baterai",
             "text": "Baterai"
+          },
+          {
+            "optionId": "opsi-plta",
+            "text": "PLTA"
           },
           {
             "optionId": "opsi-solar",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-surya",
-            "text": "Panel surya"
-          },
-          {
             "optionId": "opsi-bensin",
             "text": "Bensin"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-diesel",
             "text": "Diesel"
+          },
+          {
+            "optionId": "opsi-surya",
+            "text": "Panel surya"
           }
         ],
         "correctResponse": "opsi-surya"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-logam",
-            "text": "Logam"
-          },
-          {
             "optionId": "opsi-kayu",
             "text": "Kayu"
+          },
+          {
+            "optionId": "opsi-logam",
+            "text": "Logam"
           },
           {
             "optionId": "opsi-plastik",

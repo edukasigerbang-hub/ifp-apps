@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-1-1",
-            "text": "Satu dari dua bagian"
-          },
-          {
             "optionId": "opsi-penguatan-1-2",
             "text": "Satu dari tiga bagian"
           },
           {
             "optionId": "opsi-penguatan-1-3",
             "text": "Satu dari empat bagian"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Satu dari dua bagian"
           }
         ],
         "correctResponse": "opsi-penguatan-1-1"
@@ -36,12 +36,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-2-1",
-            "text": "Satu dari dua bagian"
-          },
-          {
             "optionId": "opsi-penguatan-2-2",
             "text": "Satu dari tiga bagian"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Satu dari dua bagian"
           },
           {
             "optionId": "opsi-penguatan-2-3",

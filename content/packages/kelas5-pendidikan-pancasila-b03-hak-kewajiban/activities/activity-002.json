@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pendidikan",
-            "text": "Mendapat pendidikan"
-          },
-          {
             "optionId": "opsi-kebersihan",
             "text": "Menjaga kebersihan"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-pajak",
             "text": "Membayar pajak"
+          },
+          {
+            "optionId": "opsi-pendidikan",
+            "text": "Mendapat pendidikan"
           }
         ],
         "correctResponse": "opsi-pendidikan"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-seimbang",
-            "text": "Dilaksanakan seimbang"
-          },
-          {
             "optionId": "opsi-hak",
             "text": "Hak saja"
+          },
+          {
+            "optionId": "opsi-seimbang",
+            "text": "Dilaksanakan seimbang"
           },
           {
             "optionId": "opsi-kewajiban",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sampah",
-            "text": "Membuang sampah pada tempatnya"
-          },
-          {
             "optionId": "opsi-coret",
             "text": "Mencoret dinding"
           },
           {
             "optionId": "opsi-tebang",
             "text": "Menebang pohon sembarangan"
+          },
+          {
+            "optionId": "opsi-sampah",
+            "text": "Membuang sampah pada tempatnya"
           },
           {
             "optionId": "opsi-buang",

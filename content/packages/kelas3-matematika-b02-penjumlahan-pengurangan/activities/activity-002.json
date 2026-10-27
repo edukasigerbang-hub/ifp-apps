@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-3725",
-            "text": "3.725"
-          },
-          {
             "optionId": "opsi-3715",
             "text": "3.715"
+          },
+          {
+            "optionId": "opsi-3725",
+            "text": "3.725"
           },
           {
             "optionId": "opsi-3825",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-2750",
-            "text": "2.750"
-          },
-          {
             "optionId": "opsi-2850",
             "text": "2.850"
           },
           {
             "optionId": "opsi-2700",
             "text": "2.700"
+          },
+          {
+            "optionId": "opsi-2750",
+            "text": "2.750"
           },
           {
             "optionId": "opsi-3250",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-3785",
-            "text": "3.785"
-          },
-          {
             "optionId": "opsi-3775",
             "text": "3.775"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-3685",
             "text": "3.685"
+          },
+          {
+            "optionId": "opsi-3785",
+            "text": "3.785"
           }
         ],
         "correctResponse": "opsi-3785"

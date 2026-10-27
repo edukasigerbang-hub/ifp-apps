@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-membeku",
-            "text": "Membeku"
-          },
-          {
             "optionId": "opsi-mencair",
             "text": "Mencair"
+          },
+          {
+            "optionId": "opsi-membeku",
+            "text": "Membeku"
           },
           {
             "optionId": "opsi-menguap",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-mengisi",
-            "text": "Mengisi seluruh ruang"
-          },
-          {
             "optionId": "opsi-tetap",
             "text": "Bentuk dan volume tetap"
           },
           {
             "optionId": "opsi-wadah",
             "text": "Bentuk mengikuti wadah, volume tetap"
+          },
+          {
+            "optionId": "opsi-mengisi",
+            "text": "Mengisi seluruh ruang"
           },
           {
             "optionId": "opsi-keras",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-mengembun",
-            "text": "Mengembun"
-          },
-          {
             "optionId": "opsi-menguap",
             "text": "Menguap"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-mencair",
             "text": "Mencair"
+          },
+          {
+            "optionId": "opsi-mengembun",
+            "text": "Mengembun"
           }
         ],
         "correctResponse": "opsi-mengembun"

@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-bait",
-            "text": "bait"
-          },
-          {
             "optionId": "opsi-rima",
             "text": "rima"
+          },
+          {
+            "optionId": "opsi-bait",
+            "text": "bait"
           },
           {
             "optionId": "opsi-amanat",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-rima",
-            "text": "rima"
-          },
-          {
             "optionId": "opsi-bait",
             "text": "bait"
           },
           {
             "optionId": "opsi-tokoh",
             "text": "tokoh"
+          },
+          {
+            "optionId": "opsi-rima",
+            "text": "rima"
           },
           {
             "optionId": "opsi-alur",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-amanat",
-            "text": "amanat"
-          },
-          {
             "optionId": "opsi-latar",
             "text": "latar"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-bait",
             "text": "bait"
+          },
+          {
+            "optionId": "opsi-amanat",
+            "text": "amanat"
           }
         ],
         "correctResponse": "opsi-amanat"

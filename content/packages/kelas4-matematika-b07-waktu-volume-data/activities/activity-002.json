@@ -68,16 +68,16 @@
             "text": "08.00"
           },
           {
-            "optionId": "opsi-0815",
-            "text": "08.15"
-          },
-          {
             "optionId": "opsi-0830",
             "text": "08.30"
           },
           {
             "optionId": "opsi-0745",
             "text": "07.45"
+          },
+          {
+            "optionId": "opsi-0815",
+            "text": "08.15"
           }
         ],
         "correctResponse": "opsi-0815"

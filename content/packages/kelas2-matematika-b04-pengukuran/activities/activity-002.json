@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-timbangan",
-            "text": "Timbangan"
-          },
-          {
             "optionId": "opsi-penggaris",
             "text": "Penggaris"
+          },
+          {
+            "optionId": "opsi-timbangan",
+            "text": "Timbangan"
           },
           {
             "optionId": "opsi-meteran",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-cm",
-            "text": "cm"
-          },
-          {
             "optionId": "opsi-kg",
             "text": "kg"
           },
           {
             "optionId": "opsi-gram",
             "text": "gram"
+          },
+          {
+            "optionId": "opsi-cm",
+            "text": "cm"
           },
           {
             "optionId": "opsi-jam",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-meja",
-            "text": "Meja"
-          },
-          {
             "optionId": "opsi-pensil",
             "text": "Pensil"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-kertas",
             "text": "Kertas"
+          },
+          {
+            "optionId": "opsi-meja",
+            "text": "Meja"
           }
         ],
         "correctResponse": "opsi-meja"

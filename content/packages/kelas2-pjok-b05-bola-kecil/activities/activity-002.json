@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-bet",
-            "text": "Bet dan bola pingpong"
-          },
-          {
             "optionId": "opsi-raket",
             "text": "Raket dan kok"
+          },
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet dan bola pingpong"
           },
           {
             "optionId": "opsi-bola",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-pemanasan",
-            "text": "Pemanasan"
-          },
-          {
             "optionId": "opsi-tidur",
             "text": "Tidur"
           },
           {
             "optionId": "opsi-makan",
             "text": "Makan besar"
+          },
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
           },
           {
             "optionId": "opsi-duduk",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salaman",
-            "text": "Bersalaman"
-          },
-          {
             "optionId": "opsi-marah",
             "text": "Marah"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-salah",
             "text": "Menyalahkan teman"
+          },
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman"
           }
         ],
         "correctResponse": "opsi-salaman"

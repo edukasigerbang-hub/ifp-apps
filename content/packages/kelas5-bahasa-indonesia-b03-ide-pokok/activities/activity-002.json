@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-utama",
-            "text": "Gagasan utama paragraf"
-          },
-          {
             "optionId": "opsi-contoh",
             "text": "Kalimat contoh"
           },
           {
             "optionId": "opsi-judul",
             "text": "Judul buku"
+          },
+          {
+            "optionId": "opsi-utama",
+            "text": "Gagasan utama paragraf"
           },
           {
             "optionId": "opsi-akhir",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-awal",
-            "text": "Awal paragraf"
-          },
-          {
             "optionId": "opsi-gambar",
             "text": "Dalam gambar"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-sampul",
             "text": "Sampul buku"
+          },
+          {
+            "optionId": "opsi-awal",
+            "text": "Awal paragraf"
           }
         ],
         "correctResponse": "opsi-awal"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kumpulan",
-            "text": "Kumpulan kalimat yang satu gagasan"
-          },
-          {
             "optionId": "opsi-kata",
             "text": "Satu kata saja"
+          },
+          {
+            "optionId": "opsi-kumpulan",
+            "text": "Kumpulan kalimat yang satu gagasan"
           },
           {
             "optionId": "opsi-gambar",

@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-4",
-            "text": "4 buku"
-          },
-          {
             "optionId": "opsi-3",
             "text": "3 buku"
           },
           {
             "optionId": "opsi-9",
             "text": "9 buku"
+          },
+          {
+            "optionId": "opsi-4",
+            "text": "4 buku"
           },
           {
             "optionId": "opsi-15",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-7500",
-            "text": "Rp7.500"
-          },
-          {
             "optionId": "opsi-2500",
             "text": "Rp2.500"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-10000",
             "text": "Rp10.000"
+          },
+          {
+            "optionId": "opsi-7500",
+            "text": "Rp7.500"
           }
         ],
         "correctResponse": "opsi-7500"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-paham",
-            "text": "Memahami soal"
-          },
-          {
             "optionId": "opsi-jawab",
             "text": "Langsung menjawab"
+          },
+          {
+            "optionId": "opsi-paham",
+            "text": "Memahami soal"
           },
           {
             "optionId": "opsi-tebak",

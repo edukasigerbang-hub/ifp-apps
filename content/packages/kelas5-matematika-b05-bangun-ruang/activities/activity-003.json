@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-1-1",
-            "text": "6 sisi sama"
-          },
-          {
             "optionId": "opsi-penguatan-1-2",
             "text": "6 sisi persegi panjang"
           },
           {
             "optionId": "opsi-penguatan-1-3",
             "text": "2 sisi lingkaran"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "6 sisi sama"
           }
         ],
         "correctResponse": "opsi-penguatan-1-1"
@@ -36,12 +36,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-penguatan-2-1",
-            "text": "6 sisi sama"
-          },
-          {
             "optionId": "opsi-penguatan-2-2",
             "text": "6 sisi persegi panjang"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "6 sisi sama"
           },
           {
             "optionId": "opsi-penguatan-2-3",

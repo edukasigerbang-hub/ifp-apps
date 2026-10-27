@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-fajar",
-            "text": "Terbit fajar"
-          },
-          {
             "optionId": "opsi-malam",
             "text": "Tengah malam"
           },
           {
             "optionId": "opsi-magrib",
             "text": "Magrib"
+          },
+          {
+            "optionId": "opsi-fajar",
+            "text": "Terbit fajar"
           },
           {
             "optionId": "opsi-pagi",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sahur",
-            "text": "Sahur"
-          },
-          {
             "optionId": "opsi-buka",
             "text": "Berbuka"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-tarawih",
             "text": "Tarawih"
+          },
+          {
+            "optionId": "opsi-sahur",
+            "text": "Sahur"
           }
         ],
         "correctResponse": "opsi-sahur"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-sabar",
-            "text": "Melatih sabar"
-          },
-          {
             "optionId": "opsi-lemah",
             "text": "Membuat lemah"
+          },
+          {
+            "optionId": "opsi-sabar",
+            "text": "Melatih sabar"
           },
           {
             "optionId": "opsi-marah",

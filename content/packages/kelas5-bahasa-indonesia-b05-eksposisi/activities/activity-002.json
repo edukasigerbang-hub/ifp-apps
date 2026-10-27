@@ -16,12 +16,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jelas",
-            "text": "Menjelaskan informasi"
-          },
-          {
             "optionId": "opsi-cerita",
             "text": "Menceritakan khayalan"
+          },
+          {
+            "optionId": "opsi-jelas",
+            "text": "Menjelaskan informasi"
           },
           {
             "optionId": "opsi-bujuk",
@@ -40,16 +40,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tesis",
-            "text": "Tesis, argumen, penegasan"
-          },
-          {
             "optionId": "opsi-awal",
             "text": "Awal, tengah, akhir"
           },
           {
             "optionId": "opsi-sampiran",
             "text": "Sampiran dan isi"
+          },
+          {
+            "optionId": "opsi-tesis",
+            "text": "Tesis, argumen, penegasan"
           },
           {
             "optionId": "opsi-resep",
@@ -64,10 +64,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-baku",
-            "text": "Baku dan jelas"
-          },
-          {
             "optionId": "opsi-gaul",
             "text": "Gaul"
           },
@@ -78,6 +74,10 @@
           {
             "optionId": "opsi-lucu",
             "text": "Lucu"
+          },
+          {
+            "optionId": "opsi-baku",
+            "text": "Baku dan jelas"
           }
         ],
         "correctResponse": "opsi-baku"

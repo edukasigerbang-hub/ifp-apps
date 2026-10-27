@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-rahman",
-            "text": "Ar-Rahman"
-          },
-          {
             "optionId": "opsi-rahim",
             "text": "Ar-Rahim"
+          },
+          {
+            "optionId": "opsi-rahman",
+            "text": "Ar-Rahman"
           },
           {
             "optionId": "opsi-malik",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-salat",
-            "text": "Rajin salat"
-          },
-          {
             "optionId": "opsi-bohong",
             "text": "Berbohong"
           },
           {
             "optionId": "opsi-malas",
             "text": "Malas belajar"
+          },
+          {
+            "optionId": "opsi-salat",
+            "text": "Rajin salat"
           },
           {
             "optionId": "opsi-marah",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-jujur",
-            "text": "Jujur"
-          },
-          {
             "optionId": "opsi-sombong",
             "text": "Sombong"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-bohong",
             "text": "Berbohong"
+          },
+          {
+            "optionId": "opsi-jujur",
+            "text": "Jujur"
           }
         ],
         "correctResponse": "opsi-jujur"

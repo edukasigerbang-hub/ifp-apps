@@ -16,10 +16,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kebersihan",
-            "text": "Siswa kelas 4 bekerja sama menjaga kebersihan kelas"
-          },
-          {
             "optionId": "opsi-pagi",
             "text": "Kegiatan dimulai setiap pagi"
           },
@@ -30,6 +26,10 @@
           {
             "optionId": "opsi-meja",
             "text": "Meja harus dirapikan"
+          },
+          {
+            "optionId": "opsi-kebersihan",
+            "text": "Siswa kelas 4 bekerja sama menjaga kebersihan kelas"
           }
         ],
         "correctResponse": "opsi-kebersihan"
@@ -64,12 +64,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-kelas-bersih",
-            "text": "Kelas Bersih, Belajar Nyaman"
-          },
-          {
             "optionId": "opsi-liburan",
             "text": "Liburan di Sekolah"
+          },
+          {
+            "optionId": "opsi-kelas-bersih",
+            "text": "Kelas Bersih, Belajar Nyaman"
           },
           {
             "optionId": "opsi-olahraga",
@@ -88,16 +88,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ringkas-benar",
-            "text": "Siswa kelas 4 bergotong royong menjaga kebersihan kelas."
-          },
-          {
             "optionId": "opsi-ringkas-salah",
             "text": "Siswa kelas 4 bermain di kelas setiap pagi."
           },
           {
             "optionId": "opsi-ringkas-salah-2",
             "text": "Guru menyiram tanaman di kelas."
+          },
+          {
+            "optionId": "opsi-ringkas-benar",
+            "text": "Siswa kelas 4 bergotong royong menjaga kebersihan kelas."
           },
           {
             "optionId": "opsi-ringkas-salah-3",

@@ -40,12 +40,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-neg2",
-            "text": "-2"
-          },
-          {
             "optionId": "opsi-8",
             "text": "8"
+          },
+          {
+            "optionId": "opsi-neg2",
+            "text": "-2"
           },
           {
             "optionId": "opsi-2p",
@@ -64,16 +64,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-neg3",
-            "text": "-3"
-          },
-          {
             "optionId": "opsi-3",
             "text": "3"
           },
           {
             "optionId": "opsi-11",
             "text": "11"
+          },
+          {
+            "optionId": "opsi-neg3",
+            "text": "-3"
           },
           {
             "optionId": "opsi-neg11",
@@ -88,10 +88,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-benar",
-            "text": "-5, -2, 0, 3"
-          },
-          {
             "optionId": "opsi-a",
             "text": "0, -2, 3, -5"
           },
@@ -102,6 +98,10 @@
           {
             "optionId": "opsi-c",
             "text": "-2, -5, 0, 3"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "-5, -2, 0, 3"
           }
         ],
         "correctResponse": "opsi-benar"

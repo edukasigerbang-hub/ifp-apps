@@ -16,16 +16,16 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-rapi",
-            "text": "Merapikan tempat tidur"
-          },
-          {
             "optionId": "opsi-lari",
             "text": "Berlari di dalam kelas"
           },
           {
             "optionId": "opsi-coret",
             "text": "Mencoret dinding"
+          },
+          {
+            "optionId": "opsi-rapi",
+            "text": "Merapikan tempat tidur"
           },
           {
             "optionId": "opsi-teriak",
@@ -40,10 +40,6 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-tertib",
-            "text": "Hidup tertib dan aman"
-          },
-          {
             "optionId": "opsi-bebas",
             "text": "Membuat semua bebas"
           },
@@ -54,6 +50,10 @@
           {
             "optionId": "opsi-hak",
             "text": "Menghilangkan hak"
+          },
+          {
+            "optionId": "opsi-tertib",
+            "text": "Hidup tertib dan aman"
           }
         ],
         "correctResponse": "opsi-tertib"
@@ -88,12 +88,12 @@
         "responseType": "single-choice",
         "options": [
           {
-            "optionId": "opsi-ingat",
-            "text": "Mengingatkan dengan sopan"
-          },
-          {
             "optionId": "opsi-ikut",
             "text": "Ikut melanggar"
+          },
+          {
+            "optionId": "opsi-ingat",
+            "text": "Mengingatkan dengan sopan"
           },
           {
             "optionId": "opsi-diam",
