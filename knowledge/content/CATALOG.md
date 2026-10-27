@@ -2,6 +2,8 @@
 
 **Status:** 336 paket draft (320 inti + 16 IPAS kelas 1–2) · 0 paket disetujui · review manusia belum
 
+**Aset:** 336 ilustrasi unik — 320 paket inti + 16 IPAS kelas 1–2 (T-090, cover per topik dengan Ayu & Bima). Tidak ada lagi aset bersama antar paket.
+
 | packageId | Versi | Kelas | Mapel | Topik | Status | Validasi | Reviewer |
 |---|---|---|---|---|---|---|---|
 | `kelas4-matematika-b03-pecahan` | 0.2.0 | 4 | matematika | Pecahan senilai | **DRAFT** | VALID (2 warning) | belum |

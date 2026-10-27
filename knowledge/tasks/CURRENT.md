@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; a11y 17/17 PASS, E2E 7 skenario PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; a11y 17/17 PASS, E2E 7 skenario PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -624,3 +624,21 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Batasan (jujur):** ke-16 thumbnail masih memakai **satu gambar yang sama** (cover mapel IPAS) — belum ada ilustrasi per topik · belum ada review pedagogis manusia, jadi `reviewStatus` tetap `draft` · E2E memverifikasi tampilan **kelas 1**; kelas 2 diverifikasi lewat validator, katalog, dan data paket, bukan klik UI · kuis hanya 2 soal (ambang ≥8 item dipenuhi via matching).
 
 **Sisa:** buat 16 ilustrasi Flow (satu per topik, 4:3 1200×896), migrasikan manifest ke aset unik, lalu jalankan ulang validator + katalog; minta keputusan Curriculum Lead soal IPAS di Fase A.
+
+### Handoff Cover Unik per Topik IPAS Kelas 1–2 (2026-10-27, T-090)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: "ganti gambar cover per topik berbeda" — melunasi janji "gambar menyusul" dari T-089.
+
+**Koreksi cast (diakui):** 5 ilustrasi pertama sempat dibuat dengan anak generik (perempuan tanpa hijab). Setelah PO bertanya, seluruh 16 topik **diregenerasi** memakai prefiks karakter baku yang sama dengan 152 ilustrasi Kelas 1–3: *"Gunakan karakter Ayu dan Bima yang dilampirkan sebagai desain karakter yang sama persis (Ayu: hijab putih, seragam lengan panjang; Bima: kemeja putih, dasi merah, celana merah)."* Setiap scene menyebut Ayu/Bima secara eksplisit.
+
+**Produksi:** Google Flow project `218ad195-1801-4997-bffc-c754043067d6` (akun Dewi Gardenia, label diverifikasi), 2 kandidat per topik (Nano Banana 2.1), unduh `=s1600-rw` → WebP 1200×896 lewat queue server `127.0.0.1:4789`. Tidak ada otomasi picker karakter (diblokir classifier Auto-mode), tidak ada bypass, tidak ada kredensial diketik.
+
+**Pilihan final:** Kelas 1 → 1A 2A 3B 4B 5A 6A 7A 8A · Kelas 2 → 9A 10A 11A 12B 13A 14A 15A 16A. Kriteria: komposisi bersih, wajah kedua anak terlihat, kesesuaian adegan, tanpa teks terbaca. `hemat-air-listrik` opsi B ditolak (keran mengalir — bertentangan dengan topik); `wujud-benda` opsi B dipilih karena latar krem polos dan tokoh besar.
+
+**Wiring:** `content/packages/kelas{1,2}-ipas-b0*/assets/<slug>.webp` diganti bytes pilihan; `manifest.json` `sizeBytes` + `sha256` dihitung ulang (**16/16 cocok**, 0 selisih); `lesson-001.json` + `activity-001.json` memakai `altText` spesifik topik. 32 `altText` aktivitas matching/kuis yang masih menyalin deskripsi aset lama ("tanaman muda berakar…") diperbaiki menjadi deskripsi aktivitas. 33 berkas kandidat `-a`/`-b` dihapus setelah pemilihan.
+
+**Verifikasi aktual:** validator **336/336 VALID** (0 issue, 1 warning draft/paket) · `npm test` **105/105** (15 berkas) + fixture 4/4 + catalog **336/336** · `npm run build` PASS · E2E **home-catalog 28/28**, **activities 14/14**, **smoke 8/8** · `npm run a11y` **17/17** (0 error, 7 warning reflow/target sentuh) · `cargo test` tidak dijalankan (tanpa perubahan Rust). Bukti visual: `katalog-ipas-kelas1.png` — kartu "Cuaca di Sekitarku", "Hewan dan Tumbuhan Peliharaan", "Keselamatan Diri" memakai ilustrasi berbeda berisi Ayu & Bima.
+
+**Batas (jujur):** belum ada review visual manusia (guru/PO) selain pemeriksaan agent · `reviewStatus`/`releaseState` tetap `draft` · ilustrasi tidak memuat teks terbaca (disengaja) sehingga topik hanya dikenali dari adegan · kuis tetap 2 soal (ambang ≥8 item dipenuhi via matching) · E2E memverifikasi tampilan kelas 1; kelas 2 diverifikasi lewat validator, katalog, dan hash aset.
+
+**Sisa:** keputusan Curriculum Lead soal IPAS di Fase A (OD-1) · review manusia R1–R6/R8–R9/R12 · verifikasi CP/ATP per bab · D-UX-2/4/5/6 · blocker rilis B-01…B-08.
