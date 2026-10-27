@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-lem"
+      },
+      {
+        "questionId": "soal-cara-mengenali-tekstur-bahan-ada",
+        "prompt": "Cara mengenali tekstur bahan adalah dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cara-mengenali-tekstur-baha-1",
+            "text": "mencium"
+          },
+          {
+            "optionId": "opsi-soal-cara-mengenali-tekstur-baha-0",
+            "text": "meraba"
+          },
+          {
+            "optionId": "opsi-soal-cara-mengenali-tekstur-baha-2",
+            "text": "mendengarkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-cara-mengenali-tekstur-baha-0"
       }
     ],
     "passingScore": 75

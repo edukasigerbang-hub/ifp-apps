@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-indonesia"
+      },
+      {
+        "questionId": "soal-negara-tempat-kita-tinggal-berna",
+        "prompt": "Negara tempat kita tinggal bernama Republik ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-1",
+            "text": "Malaysia"
+          },
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-2",
+            "text": "Singapura"
+          },
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-0",
+            "text": "Indonesia"
+          },
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-3",
+            "text": "Thailand"
+          }
+        ],
+        "correctResponse": "opsi-soal-negara-tempat-kita-tinggal-0"
       }
     ],
     "passingScore": 75

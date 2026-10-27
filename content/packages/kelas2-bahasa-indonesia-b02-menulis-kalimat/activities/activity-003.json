@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Antar kata diberi",
         "right": "Jarak"
+      },
+      {
+        "pairId": "pasangan-sebelum-menulis-kalimat-kita-men",
+        "left": "Sebelum menulis kalimat, kita menentukan",
+        "right": "ide"
+      },
+      {
+        "pairId": "pasangan-setelah-memberi-tanda-baca-tulis",
+        "left": "Setelah memberi tanda baca, tulisan perlu",
+        "right": "diperiksa"
       }
     ]
   },

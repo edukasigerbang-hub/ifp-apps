@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-hasil-dari-5-kali-3-adalah",
+        "prompt": "Hasil dari 5 kali 3 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-dari-5-kali-3-adalah-0",
+            "text": "15"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-5-kali-3-adalah-1",
+            "text": "10"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-5-kali-3-adalah-2",
+            "text": "8"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-dari-5-kali-3-adalah-0"
+      },
+      {
+        "questionId": "soal-hasil-dari-4-kali-4-adalah",
+        "prompt": "Hasil dari 4 kali 4 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-dari-4-kali-4-adalah-1",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-4-kali-4-adalah-0",
+            "text": "16"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-4-kali-4-adalah-2",
+            "text": "8"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-dari-4-kali-4-adalah-0"
+      },
+      {
+        "questionId": "soal-tiap-anak-mendapat-4-pensil-tiga",
+        "prompt": "Tiap anak mendapat 4 pensil. Tiga anak mendapat pensil sebanyak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tiap-anak-mendapat-4-pensil-1",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-soal-tiap-anak-mendapat-4-pensil-2",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-tiap-anak-mendapat-4-pensil-0",
+            "text": "12"
+          }
+        ],
+        "correctResponse": "opsi-soal-tiap-anak-mendapat-4-pensil-0"
       }
     ],
     "passingScore": 75

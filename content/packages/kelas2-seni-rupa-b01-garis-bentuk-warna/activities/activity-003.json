@@ -49,6 +49,70 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-warna-primer-adalah-merah-kuning",
+        "prompt": "Warna primer adalah merah, kuning, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-1",
+            "text": "hijau"
+          },
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-0",
+            "text": "biru"
+          },
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-2",
+            "text": "ungu"
+          },
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-3",
+            "text": "cokelat"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-primer-adalah-merah-k-0"
+      },
+      {
+        "questionId": "soal-garis-yang-bergigi-seperti-gerig",
+        "prompt": "Garis yang bergigi seperti gerigi disebut garis ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-garis-yang-bergigi-seperti-0",
+            "text": "zigzag"
+          },
+          {
+            "optionId": "opsi-soal-garis-yang-bergigi-seperti-1",
+            "text": "lurus"
+          },
+          {
+            "optionId": "opsi-soal-garis-yang-bergigi-seperti-2",
+            "text": "lingkar"
+          }
+        ],
+        "correctResponse": "opsi-soal-garis-yang-bergigi-seperti-0"
+      },
+      {
+        "questionId": "soal-bentuk-dasar-yang-memiliki-tiga",
+        "prompt": "Bentuk dasar yang memiliki tiga sisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bentuk-dasar-yang-memiliki-1",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-dasar-yang-memiliki-0",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-dasar-yang-memiliki-2",
+            "text": "lingkaran"
+          }
+        ],
+        "correctResponse": "opsi-soal-bentuk-dasar-yang-memiliki-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pencipta-alam-semesta-adalah",
+        "prompt": "Pencipta alam semesta adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pencipta-alam-semesta-adala-1",
+            "text": "manusia"
+          },
+          {
+            "optionId": "opsi-soal-pencipta-alam-semesta-adala-2",
+            "text": "nabi"
+          },
+          {
+            "optionId": "opsi-soal-pencipta-alam-semesta-adala-0",
+            "text": "Allah"
+          }
+        ],
+        "correctResponse": "opsi-soal-pencipta-alam-semesta-adala-0"
+      },
+      {
+        "questionId": "soal-allah-maha-pengasih-disebut",
+        "prompt": "Allah Maha Pengasih disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-allah-maha-pengasih-disebut-0",
+            "text": "Ar-Rahman"
+          },
+          {
+            "optionId": "opsi-soal-allah-maha-pengasih-disebut-1",
+            "text": "Pencipta"
+          },
+          {
+            "optionId": "opsi-soal-allah-maha-pengasih-disebut-2",
+            "text": "iman"
+          }
+        ],
+        "correctResponse": "opsi-soal-allah-maha-pengasih-disebut-0"
+      },
+      {
+        "questionId": "soal-memohon-kepada-allah-disebut",
+        "prompt": "Memohon kepada Allah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-memohon-kepada-allah-disebu-1",
+            "text": "syukur"
+          },
+          {
+            "optionId": "opsi-soal-memohon-kepada-allah-disebu-0",
+            "text": "doa"
+          },
+          {
+            "optionId": "opsi-soal-memohon-kepada-allah-disebu-2",
+            "text": "iman"
+          }
+        ],
+        "correctResponse": "opsi-soal-memohon-kepada-allah-disebu-0"
       }
     ],
     "passingScore": 75

@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Alasan kerja sama penting",
         "right": "Agar permainan lancar"
+      },
+      {
+        "pairId": "pasangan-gerak-yang-memakai-bola-atau-ala",
+        "left": "Gerak yang memakai bola atau alat",
+        "right": "Manipulatif"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-melempar-bola-ke",
+        "left": "Langkah setelah melempar bola ke teman",
+        "right": "Teman menangkap"
       }
     ]
   },

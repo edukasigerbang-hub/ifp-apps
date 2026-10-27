@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-seratus"
+      },
+      {
+        "questionId": "soal-pada-bilangan-63-angka-6-menempa",
+        "prompt": "Pada bilangan 63, angka 6 menempati tempat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-bilangan-63-angka-6-me-1",
+            "text": "satuan"
+          },
+          {
+            "optionId": "opsi-soal-pada-bilangan-63-angka-6-me-0",
+            "text": "puluhan"
+          },
+          {
+            "optionId": "opsi-soal-pada-bilangan-63-angka-6-me-2",
+            "text": "ratusan"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-bilangan-63-angka-6-me-0"
       }
     ],
     "passingScore": 75

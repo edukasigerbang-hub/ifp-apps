@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-krayon"
+      },
+      {
+        "questionId": "soal-gradasi-warna-biasanya-dibuat-da",
+        "prompt": "Gradasi warna biasanya dibuat dari warna gelap menuju warna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gradasi-warna-biasanya-dibu-1",
+            "text": "gelap lagi"
+          },
+          {
+            "optionId": "opsi-soal-gradasi-warna-biasanya-dibu-0",
+            "text": "terang"
+          },
+          {
+            "optionId": "opsi-soal-gradasi-warna-biasanya-dibu-2",
+            "text": "acak tanpa arah"
+          }
+        ],
+        "correctResponse": "opsi-soal-gradasi-warna-biasanya-dibu-0"
       }
     ],
     "passingScore": 75

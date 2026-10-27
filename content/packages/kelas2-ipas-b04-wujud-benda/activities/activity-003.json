@@ -49,6 +49,70 @@
           }
         ],
         "correctResponse": "opsi-wujud-benda-2-1"
+      },
+      {
+        "questionId": "soal-benda-padat-mempunyai-bentuk-yan",
+        "prompt": "Benda padat mempunyai bentuk yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-benda-padat-mempunyai-bentu-0",
+            "text": "tetap"
+          },
+          {
+            "optionId": "opsi-soal-benda-padat-mempunyai-bentu-1",
+            "text": "berubah-ubah"
+          },
+          {
+            "optionId": "opsi-soal-benda-padat-mempunyai-bentu-2",
+            "text": "mengalir"
+          }
+        ],
+        "correctResponse": "opsi-soal-benda-padat-mempunyai-bentu-0"
+      },
+      {
+        "questionId": "soal-kecap-dan-minyak-goreng-di-dapur",
+        "prompt": "Kecap dan minyak goreng di dapur termasuk benda ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kecap-dan-minyak-goreng-di-1",
+            "text": "padat"
+          },
+          {
+            "optionId": "opsi-soal-kecap-dan-minyak-goreng-di-0",
+            "text": "cair"
+          },
+          {
+            "optionId": "opsi-soal-kecap-dan-minyak-goreng-di-2",
+            "text": "keras"
+          }
+        ],
+        "correctResponse": "opsi-soal-kecap-dan-minyak-goreng-di-0"
+      },
+      {
+        "questionId": "soal-benda-berikut-yang-bentuknya-tid",
+        "prompt": "Benda berikut yang bentuknya tidak berubah saat dipindahkan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-benda-berikut-yang-bentukny-1",
+            "text": "air"
+          },
+          {
+            "optionId": "opsi-soal-benda-berikut-yang-bentukny-0",
+            "text": "batu"
+          },
+          {
+            "optionId": "opsi-soal-benda-berikut-yang-bentukny-2",
+            "text": "susu"
+          },
+          {
+            "optionId": "opsi-soal-benda-berikut-yang-bentukny-3",
+            "text": "sirup"
+          }
+        ],
+        "correctResponse": "opsi-soal-benda-berikut-yang-bentukny-0"
       }
     ],
     "passingScore": 75

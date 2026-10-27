@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-80"
+      },
+      {
+        "questionId": "soal-36-21",
+        "prompt": "36 + 21 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-36-21-1",
+            "text": "55"
+          },
+          {
+            "optionId": "opsi-soal-36-21-0",
+            "text": "57"
+          },
+          {
+            "optionId": "opsi-soal-36-21-2",
+            "text": "58"
+          }
+        ],
+        "correctResponse": "opsi-soal-36-21-0"
       }
     ],
     "passingScore": 75

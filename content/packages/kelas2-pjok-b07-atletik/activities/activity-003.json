@@ -49,6 +49,70 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-saat-bersiap-di-garis-start-pand",
+        "prompt": "Saat bersiap di garis start, pandangan kita ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-garis-start-1",
+            "text": "belakang"
+          },
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-garis-start-0",
+            "text": "depan"
+          },
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-garis-start-2",
+            "text": "bawah"
+          },
+          {
+            "optionId": "opsi-soal-saat-bersiap-di-garis-start-3",
+            "text": "samping"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-bersiap-di-garis-start-0"
+      },
+      {
+        "questionId": "soal-urutan-lompat-jauh-yang-benar-ad",
+        "prompt": "Urutan lompat jauh yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-urutan-lompat-jauh-yang-ben-0",
+            "text": "awalan, tolakan, mendarat"
+          },
+          {
+            "optionId": "opsi-soal-urutan-lompat-jauh-yang-ben-1",
+            "text": "tolakan, awalan, mendarat"
+          },
+          {
+            "optionId": "opsi-soal-urutan-lompat-jauh-yang-ben-2",
+            "text": "mendarat, tolakan, awalan"
+          }
+        ],
+        "correctResponse": "opsi-soal-urutan-lompat-jauh-yang-ben-0"
+      },
+      {
+        "questionId": "soal-sikap-menghargai-lawan-saat-bert",
+        "prompt": "Sikap menghargai lawan saat bertanding disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-menghargai-lawan-saat-1",
+            "text": "melanggar aturan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menghargai-lawan-saat-0",
+            "text": "sportif"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menghargai-lawan-saat-2",
+            "text": "membantah wasit"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-menghargai-lawan-saat-0"
       }
     ],
     "passingScore": 75

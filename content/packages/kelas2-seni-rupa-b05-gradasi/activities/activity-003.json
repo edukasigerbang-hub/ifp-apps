@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Warna berubah dari gelap ke terang",
         "right": "Gradasi"
+      },
+      {
+        "pairId": "pasangan-perubahan-warna-yang-dilakukan-s",
+        "left": "Perubahan warna yang dilakukan sedikit demi sedikit",
+        "right": "Gradasi"
       }
     ]
   },

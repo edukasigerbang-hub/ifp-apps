@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Siswa bergotong royong menjalankan proyek",
         "right": "Proyek kelas"
+      },
+      {
+        "pairId": "pasangan-tahap-awal-sebelum-tugas-proyek",
+        "left": "Tahap awal sebelum tugas proyek kelas dibagikan",
+        "right": "memilih kegiatan"
       }
     ]
   },

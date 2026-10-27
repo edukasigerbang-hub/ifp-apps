@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pelajaran-yang-diterima-siswa-di",
+        "prompt": "Pelajaran yang diterima siswa di kelas termasuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pelajaran-yang-diterima-sis-1",
+            "text": "kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-pelajaran-yang-diterima-sis-2",
+            "text": "hukuman"
+          },
+          {
+            "optionId": "opsi-soal-pelajaran-yang-diterima-sis-0",
+            "text": "hak"
+          }
+        ],
+        "correctResponse": "opsi-soal-pelajaran-yang-diterima-sis-0"
+      },
+      {
+        "questionId": "soal-menjaga-kebersihan-kelas-termasu",
+        "prompt": "Menjaga kebersihan kelas termasuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menjaga-kebersihan-kelas-te-0",
+            "text": "kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-menjaga-kebersihan-kelas-te-1",
+            "text": "hak"
+          },
+          {
+            "optionId": "opsi-soal-menjaga-kebersihan-kelas-te-2",
+            "text": "hadiah"
+          }
+        ],
+        "correctResponse": "opsi-soal-menjaga-kebersihan-kelas-te-0"
+      },
+      {
+        "questionId": "soal-hak-dan-kewajiban-dijalankan-sei",
+        "prompt": "Hak dan kewajiban dijalankan seimbang agar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-dijalanka-1",
+            "text": "kelas ribut"
+          },
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-dijalanka-0",
+            "text": "kelas nyaman"
+          },
+          {
+            "optionId": "opsi-soal-hak-dan-kewajiban-dijalanka-2",
+            "text": "kelas kosong"
+          }
+        ],
+        "correctResponse": "opsi-soal-hak-dan-kewajiban-dijalanka-0"
       }
     ],
     "passingScore": 75

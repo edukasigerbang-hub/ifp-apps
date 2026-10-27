@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pantun-anak-terdiri-atas",
+        "prompt": "Pantun anak terdiri atas ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pantun-anak-terdiri-atas-1",
+            "text": "dua baris"
+          },
+          {
+            "optionId": "opsi-soal-pantun-anak-terdiri-atas-2",
+            "text": "tiga baris"
+          },
+          {
+            "optionId": "opsi-soal-pantun-anak-terdiri-atas-0",
+            "text": "empat baris"
+          }
+        ],
+        "correctResponse": "opsi-soal-pantun-anak-terdiri-atas-0"
+      },
+      {
+        "questionId": "soal-dua-baris-pertama-pada-pantun-di",
+        "prompt": "Dua baris pertama pada pantun disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-baris-pertama-pada-pant-0",
+            "text": "sampiran"
+          },
+          {
+            "optionId": "opsi-soal-dua-baris-pertama-pada-pant-1",
+            "text": "isi"
+          },
+          {
+            "optionId": "opsi-soal-dua-baris-pertama-pada-pant-2",
+            "text": "bait"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-baris-pertama-pada-pant-0"
+      },
+      {
+        "questionId": "soal-bunyi-yang-sama-di-akhir-baris-p",
+        "prompt": "Bunyi yang sama di akhir baris puisi disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-di-akhir-ba-1",
+            "text": "bait"
+          },
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-di-akhir-ba-0",
+            "text": "rima"
+          },
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-di-akhir-ba-2",
+            "text": "judul"
+          }
+        ],
+        "correctResponse": "opsi-soal-bunyi-yang-sama-di-akhir-ba-0"
       }
     ],
     "passingScore": 75

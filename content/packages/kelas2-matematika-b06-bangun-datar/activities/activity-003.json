@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bangun-datar-yang-memiliki-tiga",
+        "prompt": "Bangun datar yang memiliki tiga sisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bangun-datar-yang-memiliki-1",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-soal-bangun-datar-yang-memiliki-2",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-soal-bangun-datar-yang-memiliki-0",
+            "text": "segitiga"
+          }
+        ],
+        "correctResponse": "opsi-soal-bangun-datar-yang-memiliki-0"
+      },
+      {
+        "questionId": "soal-bangun-datar-yang-tidak-memiliki",
+        "prompt": "Bangun datar yang tidak memiliki sudut adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bangun-datar-yang-tidak-mem-0",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-soal-bangun-datar-yang-tidak-mem-1",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-soal-bangun-datar-yang-tidak-mem-2",
+            "text": "persegi panjang"
+          }
+        ],
+        "correctResponse": "opsi-soal-bangun-datar-yang-tidak-mem-0"
+      },
+      {
+        "questionId": "soal-garis-batas-pada-bangun-datar-di",
+        "prompt": "Garis batas pada bangun datar disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-garis-batas-pada-bangun-dat-1",
+            "text": "sudut"
+          },
+          {
+            "optionId": "opsi-soal-garis-batas-pada-bangun-dat-0",
+            "text": "sisi"
+          },
+          {
+            "optionId": "opsi-soal-garis-batas-pada-bangun-dat-2",
+            "text": "titik"
+          }
+        ],
+        "correctResponse": "opsi-soal-garis-batas-pada-bangun-dat-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-zakat-ditunaikan-oleh-orang-yang",
+        "prompt": "Zakat ditunaikan oleh orang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-ditunaikan-oleh-orang-1",
+            "text": "terpaksa"
+          },
+          {
+            "optionId": "opsi-soal-zakat-ditunaikan-oleh-orang-0",
+            "text": "mampu"
+          },
+          {
+            "optionId": "opsi-soal-zakat-ditunaikan-oleh-orang-2",
+            "text": "enggan memberi"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-ditunaikan-oleh-orang-0"
+      },
+      {
+        "questionId": "soal-pengelola-zakat-disebut",
+        "prompt": "Pengelola zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengelola-zakat-disebut-1",
+            "text": "mustahik"
+          },
+          {
+            "optionId": "opsi-soal-pengelola-zakat-disebut-2",
+            "text": "pemberi infak"
+          },
+          {
+            "optionId": "opsi-soal-pengelola-zakat-disebut-0",
+            "text": "amil"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengelola-zakat-disebut-0"
+      },
+      {
+        "questionId": "soal-orang-yang-berhak-menerima-zakat",
+        "prompt": "Orang yang berhak menerima zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-berhak-menerima-0",
+            "text": "mustahik"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berhak-menerima-1",
+            "text": "pengelola zakat"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-berhak-menerima-2",
+            "text": "pemberi sedekah"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-berhak-menerima-0"
       }
     ],
     "passingScore": 75

@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-hitung"
+      },
+      {
+        "questionId": "soal-banyak-bola-merah-5-kuning-3-hij",
+        "prompt": "Banyak bola: merah 5, kuning 3, hijau 7. Warna bola terbanyak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-5-kuning-1",
+            "text": "merah"
+          },
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-5-kuning-2",
+            "text": "kuning"
+          },
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-5-kuning-0",
+            "text": "hijau"
+          }
+        ],
+        "correctResponse": "opsi-soal-banyak-bola-merah-5-kuning-0"
       }
     ],
     "passingScore": 75

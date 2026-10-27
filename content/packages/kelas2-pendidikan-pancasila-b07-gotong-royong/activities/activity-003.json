@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Manfaatnya",
         "right": "Pekerjaan cepat selesai"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-kerja-ba",
+        "left": "Langkah pertama sebelum kerja bakti dimulai",
+        "right": "menentukan kegiatan"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-pada-alat-setelah",
+        "left": "Yang dilakukan pada alat setelah pekerjaan selesai",
+        "right": "merapikan alat"
       }
     ]
   },

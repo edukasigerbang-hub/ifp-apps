@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Upacara bendera dan simbol negara",
         "right": "NKRI"
+      },
+      {
+        "pairId": "pasangan-kegiatan-di-sekolah-untuk-mengho",
+        "left": "Kegiatan di sekolah untuk menghormati bendera negara",
+        "right": "upacara bendera"
       }
     ]
   },

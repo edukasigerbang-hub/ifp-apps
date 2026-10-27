@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Yang diperiksa",
         "right": "Ejaan dan tanda baca"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-saat-menulis-par",
+        "left": "Langkah pertama saat menulis paragraf",
+        "right": "menentukan ide pokok"
+      },
+      {
+        "pairId": "pasangan-setelah-kalimat-tersusun-kita-me",
+        "left": "Setelah kalimat tersusun, kita memberi",
+        "right": "tanda baca"
       }
     ]
   },

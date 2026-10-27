@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-sabar"
+      },
+      {
+        "questionId": "soal-berbuka-puasa-dilakukan-ketika-d",
+        "prompt": "Berbuka puasa dilakukan ketika datang waktu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berbuka-puasa-dilakukan-ket-1",
+            "text": "subuh"
+          },
+          {
+            "optionId": "opsi-soal-berbuka-puasa-dilakukan-ket-0",
+            "text": "magrib"
+          },
+          {
+            "optionId": "opsi-soal-berbuka-puasa-dilakukan-ket-2",
+            "text": "tengah hari"
+          }
+        ],
+        "correctResponse": "opsi-soal-berbuka-puasa-dilakukan-ket-0"
       }
     ],
     "passingScore": 75

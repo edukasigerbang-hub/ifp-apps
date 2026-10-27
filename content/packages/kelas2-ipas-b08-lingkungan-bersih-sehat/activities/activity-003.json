@@ -49,6 +49,70 @@
           }
         ],
         "correctResponse": "opsi-lingkungan-bersih-sehat-2-1"
+      },
+      {
+        "questionId": "soal-membersihkan-kelas-dan-halaman-b",
+        "prompt": "Membersihkan kelas dan halaman bersama-sama disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-membersihkan-kelas-dan-hala-0",
+            "text": "kerja bakti"
+          },
+          {
+            "optionId": "opsi-soal-membersihkan-kelas-dan-hala-1",
+            "text": "libur sekolah"
+          },
+          {
+            "optionId": "opsi-soal-membersihkan-kelas-dan-hala-2",
+            "text": "ujian kelas"
+          }
+        ],
+        "correctResponse": "opsi-soal-membersihkan-kelas-dan-hala-0"
+      },
+      {
+        "questionId": "soal-menanam-pohon-di-halaman-membuat",
+        "prompt": "Menanam pohon di halaman membuat udara menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menanam-pohon-di-halaman-me-1",
+            "text": "pengap"
+          },
+          {
+            "optionId": "opsi-soal-menanam-pohon-di-halaman-me-0",
+            "text": "segar"
+          },
+          {
+            "optionId": "opsi-soal-menanam-pohon-di-halaman-me-2",
+            "text": "berdebu"
+          }
+        ],
+        "correctResponse": "opsi-soal-menanam-pohon-di-halaman-me-0"
+      },
+      {
+        "questionId": "soal-mencuci-tangan-sebelum-makan-men",
+        "prompt": "Mencuci tangan sebelum makan mencegah kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebelum-maka-1",
+            "text": "sehat"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebelum-maka-0",
+            "text": "sakit"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebelum-maka-2",
+            "text": "kenyang"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-sebelum-maka-3",
+            "text": "lapar"
+          }
+        ],
+        "correctResponse": "opsi-soal-mencuci-tangan-sebelum-maka-0"
       }
     ],
     "passingScore": 75

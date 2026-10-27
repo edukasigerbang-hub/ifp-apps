@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-ulang"
+      },
+      {
+        "questionId": "soal-sebelum-menjawab-pertanyaan-baca",
+        "prompt": "Sebelum menjawab pertanyaan bacaan, kita membaca bacaan itu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-menjawab-pertanyaan-1",
+            "text": "satu baris saja"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-menjawab-pertanyaan-0",
+            "text": "sampai selesai"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-menjawab-pertanyaan-2",
+            "text": "tanpa melihat"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-menjawab-pertanyaan-0"
       }
     ],
     "passingScore": 75

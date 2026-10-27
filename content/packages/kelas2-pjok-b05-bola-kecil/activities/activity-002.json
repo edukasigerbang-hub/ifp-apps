@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-permainan-yang-memakai-kok-adala",
+        "prompt": "Permainan yang memakai kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-yang-memakai-kok-0",
+            "text": "bulu tangkis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-memakai-kok-1",
+            "text": "tenis meja"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-memakai-kok-2",
+            "text": "kasti"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-yang-memakai-kok-0"
       }
     ],
     "passingScore": 75

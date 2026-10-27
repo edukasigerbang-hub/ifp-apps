@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Langkah terakhir",
         "right": "Mewarnai"
+      },
+      {
+        "pairId": "pasangan-sebelum-diwarnai-garis-hasil-ske",
+        "left": "Sebelum diwarnai, garis hasil sketsa perlu ...",
+        "right": "Ditebalkan"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-setelah-ilustra",
+        "left": "Langkah terakhir setelah ilustrasi diwarnai",
+        "right": "Merapikan karya"
       }
     ]
   },

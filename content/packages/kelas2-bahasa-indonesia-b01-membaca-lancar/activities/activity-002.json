@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-latih"
+      },
+      {
+        "questionId": "soal-tanda-baca-yang-dipakai-pada-akh",
+        "prompt": "Tanda baca yang dipakai pada akhir kalimat tanya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanda-baca-yang-dipakai-pad-1",
+            "text": "tanda seru"
+          },
+          {
+            "optionId": "opsi-soal-tanda-baca-yang-dipakai-pad-2",
+            "text": "tanda titik"
+          },
+          {
+            "optionId": "opsi-soal-tanda-baca-yang-dipakai-pad-0",
+            "text": "tanda tanya"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanda-baca-yang-dipakai-pad-0"
       }
     ],
     "passingScore": 75

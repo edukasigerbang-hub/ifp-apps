@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Bilangan 100 dibaca ...",
         "right": "Seratus"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-terletak-di-antara",
+        "left": "Bilangan yang terletak di antara 69 dan 71",
+        "right": "70"
       }
     ]
   },

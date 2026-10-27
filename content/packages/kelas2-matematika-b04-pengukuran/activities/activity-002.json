@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-meja"
+      },
+      {
+        "questionId": "soal-meteran-merupakan-alat-untuk-men",
+        "prompt": "Meteran merupakan alat untuk mengukur ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-meteran-merupakan-alat-untu-1",
+            "text": "berat"
+          },
+          {
+            "optionId": "opsi-soal-meteran-merupakan-alat-untu-2",
+            "text": "waktu"
+          },
+          {
+            "optionId": "opsi-soal-meteran-merupakan-alat-untu-0",
+            "text": "panjang"
+          }
+        ],
+        "correctResponse": "opsi-soal-meteran-merupakan-alat-untu-0"
       }
     ],
     "passingScore": 75

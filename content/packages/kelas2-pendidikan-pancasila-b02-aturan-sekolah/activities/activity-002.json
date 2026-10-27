@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-tertib"
+      },
+      {
+        "questionId": "soal-pelanggaran-aturan-membuat-kegia",
+        "prompt": "Pelanggaran aturan membuat kegiatan belajar di kelas menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pelanggaran-aturan-membuat-1",
+            "text": "nyaman"
+          },
+          {
+            "optionId": "opsi-soal-pelanggaran-aturan-membuat-2",
+            "text": "lebih cepat"
+          },
+          {
+            "optionId": "opsi-soal-pelanggaran-aturan-membuat-0",
+            "text": "terganggu"
+          }
+        ],
+        "correctResponse": "opsi-soal-pelanggaran-aturan-membuat-0"
       }
     ],
     "passingScore": 75

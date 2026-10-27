@@ -49,6 +49,74 @@
           }
         ],
         "correctResponse": "opsi-sumber-daya-alam-2-1"
+      },
+      {
+        "questionId": "soal-sumber-daya-alam-yang-berasal-da",
+        "prompt": "Sumber daya alam yang berasal dari hewan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sumber-daya-alam-yang-beras-1",
+            "text": "padi"
+          },
+          {
+            "optionId": "opsi-soal-sumber-daya-alam-yang-beras-0",
+            "text": "ikan"
+          },
+          {
+            "optionId": "opsi-soal-sumber-daya-alam-yang-beras-2",
+            "text": "jagung"
+          },
+          {
+            "optionId": "opsi-soal-sumber-daya-alam-yang-beras-3",
+            "text": "kedelai"
+          }
+        ],
+        "correctResponse": "opsi-soal-sumber-daya-alam-yang-beras-0"
+      },
+      {
+        "questionId": "soal-bahan-bakar-yang-tidak-dapat-dip",
+        "prompt": "Bahan bakar yang tidak dapat diperbarui adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-bakar-yang-tidak-dapa-1",
+            "text": "sinar matahari"
+          },
+          {
+            "optionId": "opsi-soal-bahan-bakar-yang-tidak-dapa-2",
+            "text": "air sungai"
+          },
+          {
+            "optionId": "opsi-soal-bahan-bakar-yang-tidak-dapa-0",
+            "text": "batu bara"
+          },
+          {
+            "optionId": "opsi-soal-bahan-bakar-yang-tidak-dapa-3",
+            "text": "tumbuhan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-bakar-yang-tidak-dapa-0"
+      },
+      {
+        "questionId": "soal-memakai-air-secukupnya-dan-tidak",
+        "prompt": "Memakai air secukupnya dan tidak berlebih disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-memakai-air-secukupnya-dan-0",
+            "text": "hemat"
+          },
+          {
+            "optionId": "opsi-soal-memakai-air-secukupnya-dan-1",
+            "text": "boros"
+          },
+          {
+            "optionId": "opsi-soal-memakai-air-secukupnya-dan-2",
+            "text": "banyak"
+          }
+        ],
+        "correctResponse": "opsi-soal-memakai-air-secukupnya-dan-0"
       }
     ],
     "passingScore": 75

@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Membaca tanpa tersendat-sendat",
         "right": "Membaca lancar"
+      },
+      {
+        "pairId": "pasangan-tinggi-rendah-suara-waktu-kita-m",
+        "left": "Tinggi rendah suara waktu kita membaca kalimat",
+        "right": "intonasi"
       }
     ]
   },

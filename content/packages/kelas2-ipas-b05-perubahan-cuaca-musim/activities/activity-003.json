@@ -49,6 +49,70 @@
           }
         ],
         "correctResponse": "opsi-perubahan-cuaca-musim-2-1"
+      },
+      {
+        "questionId": "soal-saat-musim-hujan-udara-di-sekita",
+        "prompt": "Saat musim hujan, udara di sekitar terasa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-0",
+            "text": "lembap"
+          },
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-1",
+            "text": "panas"
+          },
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-2",
+            "text": "kering"
+          },
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-3",
+            "text": "berdebu"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-musim-hujan-udara-di-s-0"
+      },
+      {
+        "questionId": "soal-musim-yang-jarang-turun-hujan-di",
+        "prompt": "Musim yang jarang turun hujan di Indonesia adalah musim ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-musim-yang-jarang-turun-huj-1",
+            "text": "hujan"
+          },
+          {
+            "optionId": "opsi-soal-musim-yang-jarang-turun-huj-0",
+            "text": "kemarau"
+          },
+          {
+            "optionId": "opsi-soal-musim-yang-jarang-turun-huj-2",
+            "text": "semi"
+          }
+        ],
+        "correctResponse": "opsi-soal-musim-yang-jarang-turun-huj-0"
+      },
+      {
+        "questionId": "soal-kipas-angin-biasanya-kita-nyalak",
+        "prompt": "Kipas angin biasanya kita nyalakan ketika udara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kipas-angin-biasanya-kita-n-1",
+            "text": "dingin"
+          },
+          {
+            "optionId": "opsi-soal-kipas-angin-biasanya-kita-n-2",
+            "text": "sejuk"
+          },
+          {
+            "optionId": "opsi-soal-kipas-angin-biasanya-kita-n-0",
+            "text": "panas"
+          }
+        ],
+        "correctResponse": "opsi-soal-kipas-angin-biasanya-kita-n-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-anak-yang-jujur-adalah-anak-yang",
+        "prompt": "Anak yang jujur adalah anak yang selalu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-anak-yang-jujur-adalah-anak-1",
+            "text": "berkata bohong"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-jujur-adalah-anak-0",
+            "text": "berkata benar"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-jujur-adalah-anak-2",
+            "text": "banyak alasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-anak-yang-jujur-adalah-anak-0"
+      },
+      {
+        "questionId": "soal-menahan-diri-ketika-menunggu-lam",
+        "prompt": "Menahan diri ketika menunggu lama adalah contoh sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-menungg-1",
+            "text": "amanah"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-menungg-2",
+            "text": "sopan"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-ketika-menungg-0",
+            "text": "sabar"
+          }
+        ],
+        "correctResponse": "opsi-soal-menahan-diri-ketika-menungg-0"
+      },
+      {
+        "questionId": "soal-meringankan-beban-teman-adalah-s",
+        "prompt": "Meringankan beban teman adalah sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-meringankan-beban-teman-ada-0",
+            "text": "membantu"
+          },
+          {
+            "optionId": "opsi-soal-meringankan-beban-teman-ada-1",
+            "text": "memuji"
+          },
+          {
+            "optionId": "opsi-soal-meringankan-beban-teman-ada-2",
+            "text": "membiarkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-meringankan-beban-teman-ada-0"
       }
     ],
     "passingScore": 75

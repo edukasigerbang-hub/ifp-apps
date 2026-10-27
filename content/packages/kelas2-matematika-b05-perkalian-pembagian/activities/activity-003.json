@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-hasil-dari-12-dibagi-3-adalah",
+        "prompt": "Hasil dari 12 dibagi 3 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-dari-12-dibagi-3-adal-1",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-12-dibagi-3-adal-0",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-12-dibagi-3-adal-2",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-dari-12-dibagi-3-adal-0"
+      },
+      {
+        "questionId": "soal-karena-4-kali-5-sama-dengan-20-m",
+        "prompt": "Karena 4 kali 5 sama dengan 20, maka 20 dibagi 5 sama dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-karena-4-kali-5-sama-dengan-1",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-karena-4-kali-5-sama-dengan-2",
+            "text": "20"
+          },
+          {
+            "optionId": "opsi-soal-karena-4-kali-5-sama-dengan-0",
+            "text": "4"
+          }
+        ],
+        "correctResponse": "opsi-soal-karena-4-kali-5-sama-dengan-0"
+      },
+      {
+        "questionId": "soal-24-permen-dibagikan-sama-rata-ke",
+        "prompt": "24 permen dibagikan sama rata kepada 4 anak. Setiap anak mendapat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-24-permen-dibagikan-sama-ra-0",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-soal-24-permen-dibagikan-sama-ra-1",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-24-permen-dibagikan-sama-ra-2",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-soal-24-permen-dibagikan-sama-ra-0"
       }
     ],
     "passingScore": 75

@@ -73,6 +73,46 @@
           }
         ],
         "correctResponse": "opsi-kelas2-3-1"
+      },
+      {
+        "questionId": "soal-mandi-agar-tubuh-bersih-sebaikny",
+        "prompt": "Mandi agar tubuh bersih sebaiknya dilakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mandi-agar-tubuh-bersih-seb-1",
+            "text": "satu kali seminggu"
+          },
+          {
+            "optionId": "opsi-soal-mandi-agar-tubuh-bersih-seb-2",
+            "text": "hanya saat libur"
+          },
+          {
+            "optionId": "opsi-soal-mandi-agar-tubuh-bersih-seb-0",
+            "text": "dua kali sehari"
+          }
+        ],
+        "correctResponse": "opsi-soal-mandi-agar-tubuh-bersih-seb-0"
+      },
+      {
+        "questionId": "soal-tidur-yang-cukup-berguna-agar",
+        "prompt": "Tidur yang cukup berguna agar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-berguna-ag-0",
+            "text": "tenaga pulih"
+          },
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-berguna-ag-1",
+            "text": "badan lemas"
+          },
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-berguna-ag-2",
+            "text": "mudah sakit"
+          }
+        ],
+        "correctResponse": "opsi-soal-tidur-yang-cukup-berguna-ag-0"
       }
     ],
     "passingScore": 75

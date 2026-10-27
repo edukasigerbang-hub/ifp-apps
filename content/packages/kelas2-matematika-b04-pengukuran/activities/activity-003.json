@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Satuan panjang adalah",
         "right": "cm"
+      },
+      {
+        "pairId": "pasangan-benda-yang-lebih-berat-buku-tuli",
+        "left": "Benda yang lebih berat, buku tulis atau lemari",
+        "right": "lemari"
       }
     ]
   },

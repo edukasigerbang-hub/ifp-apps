@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Gerak non-lokomotor dilakukan",
         "right": "Di tempat"
+      },
+      {
+        "pairId": "pasangan-gerak-menekuk-lutut-tanpa-berpin",
+        "left": "Gerak menekuk lutut tanpa berpindah tempat",
+        "right": "Gerak non-lokomotor"
       }
     ]
   },

@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-hemat-air-listrik-2-1"
+      },
+      {
+        "questionId": "soal-listrik-di-rumah-kita-pakai-untu",
+        "prompt": "Listrik di rumah kita pakai untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-listrik-di-rumah-kita-pakai-1",
+            "text": "menyiram tanaman"
+          },
+          {
+            "optionId": "opsi-soal-listrik-di-rumah-kita-pakai-0",
+            "text": "menyalakan lampu"
+          },
+          {
+            "optionId": "opsi-soal-listrik-di-rumah-kita-pakai-2",
+            "text": "menjemur pakaian"
+          }
+        ],
+        "correctResponse": "opsi-soal-listrik-di-rumah-kita-pakai-0"
+      },
+      {
+        "questionId": "soal-pengisi-daya-ponsel-sebaiknya-se",
+        "prompt": "Pengisi daya ponsel sebaiknya ... setelah selesai mengisi.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengisi-daya-ponsel-sebaikn-1",
+            "text": "dibiarkan terpasang"
+          },
+          {
+            "optionId": "opsi-soal-pengisi-daya-ponsel-sebaikn-2",
+            "text": "disambungkan lagi"
+          },
+          {
+            "optionId": "opsi-soal-pengisi-daya-ponsel-sebaikn-0",
+            "text": "dicabut"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengisi-daya-ponsel-sebaikn-0"
+      },
+      {
+        "questionId": "soal-saat-mencuci-air-lebih-sedikit-t",
+        "prompt": "Saat mencuci, air lebih sedikit terpakai jika kita memakai ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-mencuci-air-lebih-sedi-0",
+            "text": "ember"
+          },
+          {
+            "optionId": "opsi-soal-saat-mencuci-air-lebih-sedi-1",
+            "text": "selang"
+          },
+          {
+            "optionId": "opsi-soal-saat-mencuci-air-lebih-sedi-2",
+            "text": "gayung"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-mencuci-air-lebih-sedi-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-satu-minggu-memiliki",
+        "prompt": "Satu minggu memiliki ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-satu-minggu-memiliki-1",
+            "text": "5 hari"
+          },
+          {
+            "optionId": "opsi-soal-satu-minggu-memiliki-0",
+            "text": "7 hari"
+          },
+          {
+            "optionId": "opsi-soal-satu-minggu-memiliki-2",
+            "text": "6 hari"
+          }
+        ],
+        "correctResponse": "opsi-soal-satu-minggu-memiliki-0"
+      },
+      {
+        "questionId": "soal-mata-uang-negara-indonesia-adala",
+        "prompt": "Mata uang negara Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mata-uang-negara-indonesia-1",
+            "text": "ringgit"
+          },
+          {
+            "optionId": "opsi-soal-mata-uang-negara-indonesia-2",
+            "text": "baht"
+          },
+          {
+            "optionId": "opsi-soal-mata-uang-negara-indonesia-0",
+            "text": "rupiah"
+          }
+        ],
+        "correctResponse": "opsi-soal-mata-uang-negara-indonesia-0"
+      },
+      {
+        "questionId": "soal-uang-rp2-000-dibaca",
+        "prompt": "Uang Rp2.000 dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-uang-rp2-000-dibaca-0",
+            "text": "dua ribu rupiah"
+          },
+          {
+            "optionId": "opsi-soal-uang-rp2-000-dibaca-1",
+            "text": "seribu rupiah"
+          },
+          {
+            "optionId": "opsi-soal-uang-rp2-000-dibaca-2",
+            "text": "dua ratus rupiah"
+          }
+        ],
+        "correctResponse": "opsi-soal-uang-rp2-000-dibaca-0"
       }
     ],
     "passingScore": 75

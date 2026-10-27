@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Garis berangka berurutan yang dipakai menjumlah sampai 100",
         "right": "Garis bilangan"
+      },
+      {
+        "pairId": "pasangan-hasil-dari-70-dikurangi-30",
+        "left": "Hasil dari 70 dikurangi 30",
+        "right": "40"
       }
     ]
   },

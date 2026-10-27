@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-lawan-kata-dari-panas-adalah",
+        "prompt": "Lawan kata dari 'panas' adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lawan-kata-dari-panas-adala-1",
+            "text": "hangat"
+          },
+          {
+            "optionId": "opsi-soal-lawan-kata-dari-panas-adala-0",
+            "text": "dingin"
+          },
+          {
+            "optionId": "opsi-soal-lawan-kata-dari-panas-adala-2",
+            "text": "gerah"
+          }
+        ],
+        "correctResponse": "opsi-soal-lawan-kata-dari-panas-adala-0"
+      },
+      {
+        "questionId": "soal-persamaan-kata-dari-indah-adalah",
+        "prompt": "Persamaan kata dari 'indah' adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-persamaan-kata-dari-indah-a-1",
+            "text": "bagus"
+          },
+          {
+            "optionId": "opsi-soal-persamaan-kata-dari-indah-a-2",
+            "text": "menawan"
+          },
+          {
+            "optionId": "opsi-soal-persamaan-kata-dari-indah-a-0",
+            "text": "cantik"
+          }
+        ],
+        "correctResponse": "opsi-soal-persamaan-kata-dari-indah-a-0"
+      },
+      {
+        "questionId": "soal-dua-kata-yang-memiliki-arti-sama",
+        "prompt": "Dua kata yang memiliki arti sama disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-kata-yang-memiliki-arti-0",
+            "text": "sinonim"
+          },
+          {
+            "optionId": "opsi-soal-dua-kata-yang-memiliki-arti-1",
+            "text": "antonim"
+          },
+          {
+            "optionId": "opsi-soal-dua-kata-yang-memiliki-arti-2",
+            "text": "kalimat"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-kata-yang-memiliki-arti-0"
       }
     ],
     "passingScore": 75

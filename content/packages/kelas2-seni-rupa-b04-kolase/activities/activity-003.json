@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Menempel",
         "right": "Oles lem lalu tempel"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-menyiapkan-bahan",
+        "left": "Langkah setelah menyiapkan bahan dan sebelum mengoles lem",
+        "right": "Menyusun pola"
+      },
+      {
+        "pairId": "pasangan-kegiatan-terakhir-setelah-bahan",
+        "left": "Kegiatan terakhir setelah bahan kolase ditempel",
+        "right": "Merapikan karya"
       }
     ]
   },

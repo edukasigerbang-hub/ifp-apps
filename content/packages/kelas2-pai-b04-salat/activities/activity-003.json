@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Berwudu lalu melaksanakan salat",
         "right": "Salat"
+      },
+      {
+        "pairId": "pasangan-arah-yang-dihadapi-saat-berdiri",
+        "left": "Arah yang dihadapi saat berdiri salat",
+        "right": "Kiblat"
       }
     ]
   },

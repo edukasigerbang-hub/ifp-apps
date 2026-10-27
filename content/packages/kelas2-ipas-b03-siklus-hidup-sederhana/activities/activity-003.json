@@ -49,6 +49,74 @@
           }
         ],
         "correctResponse": "opsi-siklus-hidup-sederhana-2-1"
+      },
+      {
+        "questionId": "soal-tahap-hidup-kupu-kupu-setelah-me",
+        "prompt": "Tahap hidup kupu-kupu setelah menetas dari telur adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tahap-hidup-kupu-kupu-setel-0",
+            "text": "ulat"
+          },
+          {
+            "optionId": "opsi-soal-tahap-hidup-kupu-kupu-setel-1",
+            "text": "kepompong"
+          },
+          {
+            "optionId": "opsi-soal-tahap-hidup-kupu-kupu-setel-2",
+            "text": "kupu-kupu"
+          },
+          {
+            "optionId": "opsi-soal-tahap-hidup-kupu-kupu-setel-3",
+            "text": "telur"
+          }
+        ],
+        "correctResponse": "opsi-soal-tahap-hidup-kupu-kupu-setel-0"
+      },
+      {
+        "questionId": "soal-makhluk-hidup-berkembang-biak-su",
+        "prompt": "Makhluk hidup berkembang biak supaya jenisnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makhluk-hidup-berkembang-bi-1",
+            "text": "mudah hilang"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-berkembang-bi-0",
+            "text": "tetap ada"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-berkembang-bi-2",
+            "text": "segera punah"
+          }
+        ],
+        "correctResponse": "opsi-soal-makhluk-hidup-berkembang-bi-0"
+      },
+      {
+        "questionId": "soal-hewan-berikut-yang-menetas-dari",
+        "prompt": "Hewan berikut yang menetas dari telur adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hewan-berikut-yang-menetas-1",
+            "text": "sapi"
+          },
+          {
+            "optionId": "opsi-soal-hewan-berikut-yang-menetas-2",
+            "text": "kucing"
+          },
+          {
+            "optionId": "opsi-soal-hewan-berikut-yang-menetas-0",
+            "text": "ayam"
+          },
+          {
+            "optionId": "opsi-soal-hewan-berikut-yang-menetas-3",
+            "text": "kambing"
+          }
+        ],
+        "correctResponse": "opsi-soal-hewan-berikut-yang-menetas-0"
       }
     ],
     "passingScore": 75

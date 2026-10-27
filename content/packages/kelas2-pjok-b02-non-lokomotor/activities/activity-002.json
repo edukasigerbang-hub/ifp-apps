@@ -105,6 +105,26 @@
           }
         ],
         "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-mengayunkan-lengan-di-tempat-tan",
+        "prompt": "Mengayunkan lengan di tempat tanpa berpindah termasuk gerak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengayunkan-lengan-di-tempa-0",
+            "text": "non-lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-mengayunkan-lengan-di-tempa-1",
+            "text": "lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-mengayunkan-lengan-di-tempa-2",
+            "text": "manipulatif"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengayunkan-lengan-di-tempa-0"
       }
     ],
     "passingScore": 75

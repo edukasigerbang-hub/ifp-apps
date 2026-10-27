@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kepala-banteng-menjadi-simbol-si",
+        "prompt": "Kepala banteng menjadi simbol sila yang bermakna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kepala-banteng-menjadi-simb-0",
+            "text": "musyawarah"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-menjadi-simb-1",
+            "text": "persatuan"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-menjadi-simb-2",
+            "text": "keadilan sosial"
+          }
+        ],
+        "correctResponse": "opsi-soal-kepala-banteng-menjadi-simb-0"
+      },
+      {
+        "questionId": "soal-sila-yang-dilambangkan-padi-dan",
+        "prompt": "Sila yang dilambangkan padi dan kapas adalah sila ke-...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sila-yang-dilambangkan-padi-1",
+            "text": "dua"
+          },
+          {
+            "optionId": "opsi-soal-sila-yang-dilambangkan-padi-0",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-soal-sila-yang-dilambangkan-padi-2",
+            "text": "empat"
+          }
+        ],
+        "correctResponse": "opsi-soal-sila-yang-dilambangkan-padi-0"
+      },
+      {
+        "questionId": "soal-siswa-yang-beribadah-dengan-tena",
+        "prompt": "Siswa yang beribadah dengan tenang melaksanakan sila ke-...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-siswa-yang-beribadah-dengan-1",
+            "text": "kedua"
+          },
+          {
+            "optionId": "opsi-soal-siswa-yang-beribadah-dengan-2",
+            "text": "ketiga"
+          },
+          {
+            "optionId": "opsi-soal-siswa-yang-beribadah-dengan-0",
+            "text": "pertama"
+          }
+        ],
+        "correctResponse": "opsi-soal-siswa-yang-beribadah-dengan-0"
       }
     ],
     "passingScore": 75

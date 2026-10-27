@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Manfaat aturan adalah ...",
         "right": "Belajar nyaman"
+      },
+      {
+        "pairId": "pasangan-cara-siswa-mematuhi-aturan-di-se",
+        "left": "Cara siswa mematuhi aturan di sekolah",
+        "right": "melaksanakan aturan itu"
       }
     ]
   },

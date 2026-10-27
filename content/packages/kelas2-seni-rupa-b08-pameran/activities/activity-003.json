@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Tugas penjaga",
         "right": "Menjelaskan karya"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-menata-k",
+        "left": "Langkah pertama sebelum menata karya untuk pameran kelas",
+        "right": "Memilih karya"
+      },
+      {
+        "pairId": "pasangan-supaya-penonton-mengenal-sebuah",
+        "left": "Supaya penonton mengenal sebuah karya, karya itu diberi ...",
+        "right": "Nama"
       }
     ]
   },

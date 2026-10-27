@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Siswa berdiskusi bersama guru",
         "right": "Musyawarah"
+      },
+      {
+        "pairId": "pasangan-keputusan-yang-dihasilkan-bersam",
+        "left": "Keputusan yang dihasilkan bersama lewat musyawarah",
+        "right": "kesepakatan"
       }
     ]
   },

@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Sifat Nabi",
         "right": "Jujur"
+      },
+      {
+        "pairId": "pasangan-peristiwa-yang-terjadi-sebelum-n",
+        "left": "Peristiwa yang terjadi sebelum Nabi berdakwah",
+        "right": "Menerima wahyu"
+      },
+      {
+        "pairId": "pasangan-nabi-muhammad-dijadikan-contoh-h",
+        "left": "Nabi Muhammad dijadikan contoh hidup oleh umat, artinya beliau menjadi ...",
+        "right": "Teladan"
       }
     ]
   },

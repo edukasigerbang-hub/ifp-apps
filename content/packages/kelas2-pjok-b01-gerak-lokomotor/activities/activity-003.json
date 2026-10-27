@@ -49,6 +49,66 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-gerak-berpindah-tempat-disebut-g",
+        "prompt": "Gerak berpindah tempat disebut gerak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerak-berpindah-tempat-dise-1",
+            "text": "non-lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerak-berpindah-tempat-dise-0",
+            "text": "lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerak-berpindah-tempat-dise-2",
+            "text": "manipulatif"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerak-berpindah-tempat-dise-0"
+      },
+      {
+        "questionId": "soal-saat-melompat-kita-mendarat-deng",
+        "prompt": "Saat melompat, kita mendarat dengan lutut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-melompat-kita-mendarat-1",
+            "text": "diluruskan"
+          },
+          {
+            "optionId": "opsi-soal-saat-melompat-kita-mendarat-2",
+            "text": "terbuka"
+          },
+          {
+            "optionId": "opsi-soal-saat-melompat-kita-mendarat-0",
+            "text": "ditekuk"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-melompat-kita-mendarat-0"
+      },
+      {
+        "questionId": "soal-sebelum-berlari-di-lapangan-kita",
+        "prompt": "Sebelum berlari di lapangan, kita melakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-berlari-di-lapangan-0",
+            "text": "pemanasan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-berlari-di-lapangan-1",
+            "text": "pendinginan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-berlari-di-lapangan-2",
+            "text": "tidur lebih dulu"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-berlari-di-lapangan-0"
       }
     ],
     "passingScore": 75

@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Yang diceritakan kembali",
         "right": "Isi cerita"
+      },
+      {
+        "pairId": "pasangan-setelah-mendengarkan-cerita-kita",
+        "left": "Setelah mendengarkan cerita, kita menyebutkan",
+        "right": "tokoh"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-saat-menyimak-c",
+        "left": "Langkah terakhir saat menyimak cerita",
+        "right": "menyimpulkan pesan"
       }
     ]
   },

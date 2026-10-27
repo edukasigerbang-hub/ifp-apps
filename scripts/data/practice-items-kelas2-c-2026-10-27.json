@@ -1,0 +1,148 @@
+{
+  "_comment": "T-092c kelompok kelas 2 (PAI, PJOK, Seni Rupa). Item ditulis tangan per paket sesuai needs-kelas2-c.json: 22 paket, 34 soal kuis, 15 pasangan mencocokkan.",
+  "packages": {
+    "kelas2-pai-b01-huruf-hijaiyah": {
+      "quiz": [
+        { "prompt": "Harakat kasrah membuat huruf dibaca dengan bunyi ...", "answer": "i", "distractors": ["a", "u"] },
+        { "prompt": "Huruf Arab dibaca dengan arah ...", "answer": "kanan ke kiri", "distractors": ["kiri ke kanan", "bawah ke atas"] },
+        { "prompt": "Membaca dengan pelan dan jelas disebut ...", "answer": "tartil", "distractors": ["adab", "harakat"] }
+      ]
+    },
+    "kelas2-pai-b02-iman-allah": {
+      "quiz": [
+        { "prompt": "Pencipta alam semesta adalah ...", "answer": "Allah", "distractors": ["manusia", "nabi"] },
+        { "prompt": "Allah Maha Pengasih disebut ...", "answer": "Ar-Rahman", "distractors": ["Pencipta", "iman"] },
+        { "prompt": "Memohon kepada Allah disebut ...", "answer": "doa", "distractors": ["syukur", "iman"] }
+      ]
+    },
+    "kelas2-pai-b03-akhlak": {
+      "quiz": [
+        { "prompt": "Anak yang jujur adalah anak yang selalu ...", "answer": "berkata benar", "distractors": ["berkata bohong", "banyak alasan"] },
+        { "prompt": "Menahan diri ketika menunggu lama adalah contoh sikap ...", "answer": "sabar", "distractors": ["amanah", "sopan"] },
+        { "prompt": "Meringankan beban teman adalah sikap ...", "answer": "membantu", "distractors": ["memuji", "membiarkan"] }
+      ]
+    },
+    "kelas2-pai-b04-salat": {
+      "matching": [
+        { "left": "Arah yang dihadapi saat berdiri salat", "right": "Kiblat" }
+      ]
+    },
+    "kelas2-pai-b05-puasa": {
+      "quiz": [
+        { "prompt": "Berbuka puasa dilakukan ketika datang waktu ...", "answer": "magrib", "distractors": ["subuh", "tengah hari"] }
+      ]
+    },
+    "kelas2-pai-b06-zakat": {
+      "quiz": [
+        { "prompt": "Zakat ditunaikan oleh orang yang ...", "answer": "mampu", "distractors": ["terpaksa", "enggan memberi"] },
+        { "prompt": "Pengelola zakat disebut ...", "answer": "amil", "distractors": ["mustahik", "pemberi infak"] },
+        { "prompt": "Orang yang berhak menerima zakat disebut ...", "answer": "mustahik", "distractors": ["pengelola zakat", "pemberi sedekah"] }
+      ]
+    },
+    "kelas2-pai-b07-kisah-nabi": {
+      "matching": [
+        { "left": "Peristiwa yang terjadi sebelum Nabi berdakwah", "right": "Menerima wahyu" },
+        { "left": "Nabi Muhammad dijadikan contoh hidup oleh umat, artinya beliau menjadi ...", "right": "Teladan" }
+      ]
+    },
+    "kelas2-pjok-b01-gerak-lokomotor": {
+      "quiz": [
+        { "prompt": "Gerak berpindah tempat disebut gerak ...", "answer": "lokomotor", "distractors": ["non-lokomotor", "manipulatif"] },
+        { "prompt": "Saat melompat, kita mendarat dengan lutut ...", "answer": "ditekuk", "distractors": ["diluruskan", "terbuka"] },
+        { "prompt": "Sebelum berlari di lapangan, kita melakukan ...", "answer": "pemanasan", "distractors": ["pendinginan", "tidur lebih dulu"] }
+      ]
+    },
+    "kelas2-pjok-b02-non-lokomotor": {
+      "quiz": [
+        { "prompt": "Mengayunkan lengan di tempat tanpa berpindah termasuk gerak ...", "answer": "non-lokomotor", "distractors": ["lokomotor", "manipulatif"] }
+      ],
+      "matching": [
+        { "left": "Gerak menekuk lutut tanpa berpindah tempat", "right": "Gerak non-lokomotor" }
+      ]
+    },
+    "kelas2-pjok-b03-manipulatif": {
+      "matching": [
+        { "left": "Gerak yang memakai bola atau alat", "right": "Manipulatif" },
+        { "left": "Langkah setelah melempar bola ke teman", "right": "Teman menangkap" }
+      ]
+    },
+    "kelas2-pjok-b04-kebugaran-kebersihan": {
+      "quiz": [
+        { "prompt": "Tubuh menjadi bugar bila kita ...", "answer": "berolahraga", "distractors": ["begadang", "malas bergerak"] },
+        { "prompt": "Mencuci tangan paling penting dilakukan ...", "answer": "sebelum makan", "distractors": ["setelah makan", "saat mandi"] },
+        { "prompt": "Setelah berolahraga, tenaga dipulihkan dengan ...", "answer": "istirahat", "distractors": ["makan permen", "bermain sampai larut malam"] }
+      ]
+    },
+    "kelas2-pjok-b05-bola-kecil": {
+      "quiz": [
+        { "prompt": "Permainan yang memakai kok adalah ...", "answer": "bulu tangkis", "distractors": ["tenis meja", "kasti"] }
+      ],
+      "matching": [
+        { "left": "Alat untuk memukul bola pada permainan tenis meja", "right": "Bet" }
+      ]
+    },
+    "kelas2-pjok-b06-senam": {
+      "matching": [
+        { "left": "Gerakan penutup senam ringan setelah gerak kaki", "right": "Pendinginan" }
+      ]
+    },
+    "kelas2-pjok-b07-atletik": {
+      "quiz": [
+        { "prompt": "Saat bersiap di garis start, pandangan kita ke ...", "answer": "depan", "distractors": ["belakang", "bawah", "samping"] },
+        { "prompt": "Urutan lompat jauh yang benar adalah ...", "answer": "awalan, tolakan, mendarat", "distractors": ["tolakan, awalan, mendarat", "mendarat, tolakan, awalan"] },
+        { "prompt": "Sikap menghargai lawan saat bertanding disebut ...", "answer": "sportif", "distractors": ["melanggar aturan", "membantah wasit"] }
+      ]
+    },
+    "kelas2-pjok-b08-kesehatan": {
+      "quiz": [
+        { "prompt": "Mandi agar tubuh bersih sebaiknya dilakukan ...", "answer": "dua kali sehari", "distractors": ["satu kali seminggu", "hanya saat libur"] },
+        { "prompt": "Tidur yang cukup berguna agar ...", "answer": "tenaga pulih", "distractors": ["badan lemas", "mudah sakit"] }
+      ]
+    },
+    "kelas2-seni-rupa-b01-garis-bentuk-warna": {
+      "quiz": [
+        { "prompt": "Warna primer adalah merah, kuning, dan ...", "answer": "biru", "distractors": ["hijau", "ungu", "cokelat"] },
+        { "prompt": "Garis yang bergigi seperti gerigi disebut garis ...", "answer": "zigzag", "distractors": ["lurus", "lingkar"] },
+        { "prompt": "Bentuk dasar yang memiliki tiga sisi adalah ...", "answer": "segitiga", "distractors": ["persegi", "lingkaran"] }
+      ]
+    },
+    "kelas2-seni-rupa-b02-ilustrasi": {
+      "matching": [
+        { "left": "Sebelum diwarnai, garis hasil sketsa perlu ...", "right": "Ditebalkan" },
+        { "left": "Langkah terakhir setelah ilustrasi diwarnai", "right": "Merapikan karya" }
+      ]
+    },
+    "kelas2-seni-rupa-b03-tekstur-bahan": {
+      "quiz": [
+        { "prompt": "Cara mengenali tekstur bahan adalah dengan ...", "answer": "meraba", "distractors": ["mencium", "mendengarkan"] }
+      ]
+    },
+    "kelas2-seni-rupa-b04-kolase": {
+      "matching": [
+        { "left": "Langkah setelah menyiapkan bahan dan sebelum mengoles lem", "right": "Menyusun pola" },
+        { "left": "Kegiatan terakhir setelah bahan kolase ditempel", "right": "Merapikan karya" }
+      ]
+    },
+    "kelas2-seni-rupa-b05-gradasi": {
+      "quiz": [
+        { "prompt": "Gradasi warna biasanya dibuat dari warna gelap menuju warna ...", "answer": "terang", "distractors": ["gelap lagi", "acak tanpa arah"] }
+      ],
+      "matching": [
+        { "left": "Perubahan warna yang dilakukan sedikit demi sedikit", "right": "Gradasi" }
+      ]
+    },
+    "kelas2-seni-rupa-b06-kerajinan": {
+      "quiz": [
+        { "prompt": "Biji yang ditempelkan rapat dan rapi menjadi karya ...", "answer": "mozaik", "distractors": ["anyaman", "bingkai"] },
+        { "prompt": "Bambu biasa dibuat menjadi karya ...", "answer": "anyaman", "distractors": ["mozaik", "bingkai"] },
+        { "prompt": "Bahan alam untuk kerajinan harus dipilih yang ...", "answer": "bersih", "distractors": ["berdebu", "tajam", "berbau"] }
+      ]
+    },
+    "kelas2-seni-rupa-b08-pameran": {
+      "matching": [
+        { "left": "Langkah pertama sebelum menata karya untuk pameran kelas", "right": "Memilih karya" },
+        { "left": "Supaya penonton mengenal sebuah karya, karya itu diberi ...", "right": "Nama" }
+      ]
+    }
+  }
+}

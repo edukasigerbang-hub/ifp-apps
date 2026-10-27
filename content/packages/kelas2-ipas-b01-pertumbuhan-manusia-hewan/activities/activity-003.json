@@ -49,6 +49,70 @@
           }
         ],
         "correctResponse": "opsi-pertumbuhan-manusia-hewan-2-2"
+      },
+      {
+        "questionId": "soal-saat-tumbuh-tubuh-anak-bertambah",
+        "prompt": "Saat tumbuh, tubuh anak bertambah berat dan bertambah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-tumbuh-tubuh-anak-bert-0",
+            "text": "tinggi"
+          },
+          {
+            "optionId": "opsi-soal-saat-tumbuh-tubuh-anak-bert-1",
+            "text": "pendek"
+          },
+          {
+            "optionId": "opsi-soal-saat-tumbuh-tubuh-anak-bert-2",
+            "text": "kurus"
+          },
+          {
+            "optionId": "opsi-soal-saat-tumbuh-tubuh-anak-bert-3",
+            "text": "ringan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-tumbuh-tubuh-anak-bert-0"
+      },
+      {
+        "questionId": "soal-hal-baru-yang-menandakan-kamu-su",
+        "prompt": "Hal baru yang menandakan kamu sudah tumbuh adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hal-baru-yang-menandakan-ka-1",
+            "text": "belum bisa bicara"
+          },
+          {
+            "optionId": "opsi-soal-hal-baru-yang-menandakan-ka-0",
+            "text": "bisa menulis"
+          },
+          {
+            "optionId": "opsi-soal-hal-baru-yang-menandakan-ka-2",
+            "text": "masih menangis"
+          }
+        ],
+        "correctResponse": "opsi-soal-hal-baru-yang-menandakan-ka-0"
+      },
+      {
+        "questionId": "soal-kegiatan-yang-membantu-tubuh-tum",
+        "prompt": "Kegiatan yang membantu tubuh tumbuh sehat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-yang-membantu-tubu-1",
+            "text": "begadang"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-yang-membantu-tubu-2",
+            "text": "tidur seharian"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-yang-membantu-tubu-0",
+            "text": "berolahraga"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-yang-membantu-tubu-0"
       }
     ],
     "passingScore": 75
