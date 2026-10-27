@@ -127,7 +127,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** keempat temuan review 10 paket sudah diterapkan (T-097: F-03/F-04; T-098: F-01/F-02). Sisa pekerjaan konten: **tanda tangan guru manusia** atas daftar di BACKLOG — termasuk memastikan daftar varian jawaban teks (F-02) memadai dan menyetujui pilihan "teks menyesuaikan gambar" untuk IPAS kelas 4 (F-01). Lalu review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092/T-096/T-097/T-098. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** empat temuan review 10 paket sudah diterapkan (T-097: F-03/F-04; T-098: F-01/F-02) dan utang kosmetik F-05 sudah dibereskan (T-099: 39 pasangan di 27 paket). Sisa pekerjaan konten: **tanda tangan guru manusia** atas daftar di BACKLOG — termasuk memastikan daftar varian jawaban teks (F-02) memadai dan menyetujui pilihan "teks menyesuaikan gambar" untuk IPAS kelas 4 (F-01); **F-06** (311 pasangan di 159 paket yang masih dapat dijawab dengan menyalin reveal eksplorasi) butuh penulisan ulang item, bukan perbaikan kosmetik. Lalu review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092/T-096/T-097/T-098/T-099. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
@@ -148,6 +148,9 @@
 | Unit test pasca-F-01/F-02 (T-098) | **PASS** — `Tests 110 passed (110)` (15 berkas), `4/4 fixture cocok dengan expected`, `catalog-index OK: 336 entri, 336 paket` |
 | Build (T-098) | **PASS** — `npm run build` (`tsc --noEmit` + vite) |
 | E2E activities (T-098) | **PASS** — 14 pemeriksaan; termasuk "Aktivitas jawaban singkat dinilai 100 (normalisasi huruf) dan tersimpan", layout dua kolom, cover header blob, kartu kemajuan 1/5, ringkasan sesi, tombol Hasil Belajar |
+| Pasangan berelipsis (F-05, T-099) | **DITERAPKAN** — 37 pasangan di 27 paket: `left` berelipsis → frasa petunjuk; 2 pasangan duplikat jawaban dibetulkan (`kelas1-seni-rupa-b05`: "Merah, kuning, dan biru" ×2; `kelas6-matematika-b03`: "4 : 3" ×2). Total **39 pasangan**; jumlah pasangan tetap **1.963**; tidak ada `pairId` ditambah/dihapus |
+| Verifikasi F-05 (T-099) | **PASS** — detektor elipsis ulang **0/1.963**; duplikat kiri/kanan **0** pada 27 paket terdampak; validator **336/336 VALID** (0 issue, 336 warning draft); volume gate "Semua aktivitas dinilai berada dalam rentang target"; `npm test` **110/110** (15 berkas) + fixture 4/4 + katalog 336/336; `npm run build` **PASS** |
+| E2E setelah F-05 (T-099) | **NOT RUN** — perubahan hanya teks `left`/`right` pada aktivitas matching; tidak ada perubahan kode/UI. Skenario `activities` memakai paket fixture sendiri, jadi tidak merender paket yang disunting |
 | Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
 | Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
 | Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
@@ -872,3 +875,26 @@ Jumlah item, optionId, pasangan, dan posisi kunci tidak berubah. `scripts/apply-
 **Tidak dijalankan:** a11y, E2E lain, dan `cargo test` (tidak ada perubahan Rust).
 
 **Sisa:** guru perlu menyetujui solusi F-01 (teks menyesuaikan gambar) dan memastikan daftar varian F-02 memadai · tanda tangan guru manusia · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
+
+### Handoff Perbaikan F-05 — 39 Pasangan Mencocokkan (2026-10-28, T-099)
+
+**Status:** diterapkan + diverifikasi. Permintaan PO: "lanjut ke backlog berikutnya" — item terpilih **F-05** dari laporan review 10 paket prioritas.
+
+**Masalah:** 37 pasangan `matching` di 27 paket memakai teks soal kuis sebagai sisi kiri dan membawa elipsis (`...`) yang tidak berfungsi sebagai petunjuk di kartu mencocokkan. Dua pasangan tambahan ditemukan saat audit aktivitas yang sama: kartu jawabannya duplikat dengan pasangan lain (`kelas1-seni-rupa-b05-mewarnai-bentuk`, `kelas6-matematika-b03-rasio-proporsi`) sehingga siswa tidak bisa membedakan pasangan mana yang dimaksud.
+
+**Perubahan:** 39 pasangan di 27 paket, semuanya `activity-003.json`. Contoh:
+- `kelas1-bahasa-indonesia-b02-membaca-kata`: "Bunyi awal kata bola adalah ..." → "Huruf pertama pada kata bola".
+- `kelas3-pendidikan-pancasila-b06-nkri`: "Bahasa persatuan Indonesia adalah ..." → "Alat pemersatu bangsa".
+- `kelas5-ipas-b07-energi-listrik`: "Mencabut alat listrik yang tidak dipakai termasuk ..." → "Bahan yang dapat menghantarkan listrik" (kuis: logam).
+- `kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi`: tiga pasangan memakai urutan langkah ("Langkah pertama dalam musyawarah" → "Menyampaikan masalah", dst.).
+- Duplikat: `kelas1-seni-rupa-b05` pasangan-1 → "Langkah pertama sebelum mewarnai" / "Menyiapkan alat"; `kelas6-matematika-b03` pasangan terakhir → "Rasio 10 : 5 sama dengan" / "2 : 1".
+
+Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau opsi kuis paket itu sendiri. Jumlah pasangan tidak berubah (**1.963** di korpus); tidak ada `pairId` ditambah/dihapus; semua item tetap `reviewStatus: draft`.
+
+**Alat & bukti:** `scripts/apply-item-patches.mjs` (dry-run lalu `--apply`). Patch: `scripts/data/item-patches-2026-10-28-f05.json` (27 paket / 39 pasangan) dan `scripts/data/item-patches-2026-10-28-f05b.json` (2 koreksi wording setelah audit grounding: `kelas1-pai-b06` "Sikap malaikat terhadap Allah" / "Selalu taat"; `kelas5-ppkn-b08` "Langkah sesudah menyusun rencana proyek" / "Membagi tugas", menggantikan "Bersama" yang tidak berbasis materi).
+
+**Verifikasi aktual:** detektor elipsis ulang → **0/1.963** · pemeriksa duplikat kiri/kanan pada 27 paket terdampak → **0** · validator per direktori **336/336 VALID** (0 issue, 336 warning draft) · `check-practice-volume.mjs` "Semua aktivitas dinilai berada dalam rentang target" · `npm test` → `Tests 110 passed (110)` (15 berkas), `4/4 fixture cocok dengan expected`, `catalog-index OK: 336 entri, 336 paket` · `npm run build` **PASS**.
+
+**Tidak dijalankan:** a11y, E2E, dan `cargo test` — perubahan hanya teks data matching, tanpa perubahan kode/UI/Rust. Skenario `activities` juga memakai paket fixture sendiri sehingga tidak akan merender 27 paket yang disunting.
+
+**Sisa:** F-06 (311 pasangan / 159 paket yang masih dapat dijawab dengan menyalin reveal eksplorasi) · tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05 ini · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.

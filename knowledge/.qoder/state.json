@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "6f6646b",
+  "commit": "f7a86ee",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 36,
+  "context_version": 37,
   "skill_registry_version": 0,
-  "current_task": "Tanda tangan guru manusia atas daftar di BACKLOG (termasuk menyetujui pendekatan F-01 dan daftar alternatif F-02); D-UX-2/4/5/6; OD-1 IPAS Fase A",
-  "last_task": "T-098 terapkan F-01 dan F-02 dari review 10 paket prioritas (T-096): teks IPAS kelas 4 disesuaikan dengan gambar kolam (siput, kupu-kupu — bukan katak/capung); penilai jawaban singkat menerima daftar jawaban + normalisasi",
+  "current_task": "F-06: 311 pasangan (159 paket) masih dapat dijawab dengan menyalin reveal eksplorasi — butuh penulisan ulang item; tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A",
+  "last_task": "T-099 perbaikan F-05: 39 pasangan mencocokkan di 27 paket (37 elipsis -> frasa petunjuk, 2 kartu jawaban duplikat dibetulkan); jumlah pasangan tetap 1.963",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T03:32:00+07:00",
-  "last_validation": "T-098 (2026-10-28, HEAD 6f6646b): menerapkan F-01 dan F-02 dari review T-096. F-01 (teks menyesuaikan gambar; gambar kolam-ekosistem.webp diperiksa langsung dan tidak memuat katak/capung): kelas4-ipas-b01-makhluk-hidup reveal langkah 1 -> 'Ikan, siput, kupu-kupu, dan tumbuhan air.'; 5 altText langkah + accessibilityMetadata.altText activity-001 dan lesson -> 'Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai.'; pasangan-1 Katak -> Siput/'Merayap di atas batu'; pasangan-3 Capung -> Kupu-kupu/'Terbang menghisap madu bunga'; soal 'Capung bernapas dengan ...' -> 'Kupu-kupu bernapas dengan ...' (questionId ikut, kunci trakea tetap); 0 sisa penyebutan katak/capung. F-02 (perbaikan akar, bukan konversi ke pilihan ganda): src/content/quiz.ts menambah normalizeFreeText (NFKC, huruf kecil, buang tanda baca . , ; : ! ? kutip/kurung, rapikan spasi; garis miring & tanda hubung dipertahankan) dan cabang text menerima correctResponse string ATAU array (cocok bila salah satu entri sama setelah normalisasi; jawaban kosong tetap salah); skema activity.ts sudah mengizinkan array sehingga tidak diubah. Alternatif jawaban ditambahkan ke 14 dari 24 soal teks di 4 paket (BI 5, Pancasila 2, Matematika 5, IPAS 2); 10 soal sengaja satu kunci. +5 unit test di src/content/__tests__/quiz.test.ts (16 test). Verifikasi aktual: validator seluruh korpus packages=336 valid=336 invalid=0 issues=0 warnings=336; check-practice-volume.mjs 'Semua aktivitas dinilai berada dalam rentang target.'; npm test Tests 110 passed (110), 4/4 fixture cocok dengan expected, catalog-index OK: 336 entri, 336 paket; npm run build PASS (tsc --noEmit + vite build). E2E activities PASS 14 pemeriksaan setelah aplikasi desktop ditutup (artefak .tmp-e2e/2026-10-27T20-24-54-673Z), termasuk jalur jawaban singkat dinilai 100 dengan normalisasi huruf dan layout dua kolom; skenario memakai paket fixture sendiri sehingga teks IPAS yang disunting tidak dirender. BELUM: cargo test tidak dijalankan (tanpa perubahan Rust); a11y dan E2E skenario lain tidak dijalankan ulang. Batasan F-02: sinonim yang tidak didaftarkan tetap dinilai salah; titik dibuang sehingga 12.354 == 12354 (disengaja untuk soal nilai tempat). reviewStatus tetap draft.",
+  "last_updated": "2026-10-28T03:38:00+07:00",
+  "last_validation": "T-099 (2026-10-28, HEAD f7a86ee): menerapkan F-05 dari review T-096. 37 pasangan matching di 27 paket yang sisi kirinya berupa teks soal kuis berelipsis diubah menjadi frasa petunjuk (contoh: \"Bilangan 100 dibaca ...\" -> \"Nama bilangan 100\"; \"Bahasa persatuan Indonesia adalah ...\" -> \"Alat pemersatu bangsa\"); 2 pasangan tambahan dibetulkan karena kartu jawabannya duplikat dengan pasangan lain (kelas1-seni-rupa-b05-mewarnai-bentuk: \"Merah, kuning, dan biru\" x2 -> \"Langkah pertama sebelum mewarnai\"/\"Menyiapkan alat\"; kelas6-matematika-b03-rasio-proporsi: \"4 : 3\" x2 -> \"Rasio 10 : 5 sama dengan\"/\"2 : 1\"). Total 39 pasangan; semua pengganti bersumber dari eksplorasi/petunjuk/urutan langkah/opsi kuis paket masing-masing; jumlah pasangan korpus tetap 1.963; tidak ada pairId ditambah/dihapus; 2 koreksi wording setelah audit grounding (kelas1-pai-b06 pasangan-5 -> \"Sikap malaikat terhadap Allah\"/\"Selalu taat\"; kelas5-ppkn-b08 pasangan terakhir -> \"Langkah sesudah menyusun rencana proyek\"/\"Membagi tugas\"). Bukti: scripts/data/item-patches-2026-10-28-f05.json dan -f05b.json; commit f7a86ee. Verifikasi aktual: detektor elipsis ulang 0 dari 1.963 pasangan; pemeriksa duplikat kiri/kanan pada 27 paket terdampak 0; validator seluruh korpus packages=336 valid=336 invalid=0 issues=0 warnings=336; check-practice-volume.mjs \"Semua aktivitas dinilai berada dalam rentang target.\"; npm test Tests 110 passed (110), 4/4 fixture cocok dengan expected, catalog-index OK: 336 entri, 336 paket; npm run build PASS (tsc --noEmit + vite build). BELUM: a11y, E2E, dan cargo test tidak dijalankan (hanya teks data matching, tanpa perubahan kode/UI/Rust; skenario activities memakai paket fixture sendiri). reviewStatus tetap draft; 39 pasangan ini menunggu penilaian guru bersama 550 pasangan hasil aturan + 119 override T-091b.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Tanda tangan guru manusia atas daftar di BACKLOG — termasuk menyetujui pendekatan F-01 (teks menyesuaikan gambar, tanpa aset Flow baru) dan menilai apakah 14 daftar alternatif F-02 cukup (sinonim tak terdaftar masih salah) atau 24 soal teks sebaiknya diubah bentuknya. F-01..F-04 sudah diterapkan (T-097/T-098). Berikutnya: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Utang alat: parameterkan tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts. E2E activities sudah PASS 14/14 pada 2026-10-28. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "F-06: 311 pasangan (15,8%) di 159 paket masih dapat dijawab dengan menyalin reveal eksplorasi — perlu penulisan ulang sisi kiri agar tidak memuat kata kunci jawaban (bukan perbaikan kosmetik). Lalu tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Utang alat: parameterkan tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }

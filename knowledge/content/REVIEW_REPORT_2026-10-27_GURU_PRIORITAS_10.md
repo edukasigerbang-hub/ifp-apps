@@ -92,12 +92,24 @@ Perbaikan yang diterapkan: item ke-5 menjadi **"Keluar dari bak lompat"** (`item
 setelah mendarat. Agar materi tidak bertentangan dengan aktivitas, reveal langkah eksplorasi "Apa urutan lompat jauh?"
 dan pasangan `Urutan lompat jauh` diperbarui memuat langkah yang sama. Jumlah item, jumlah pasangan, dan posisi kunci lain tidak berubah.
 
-### F-05 — Petunjuk mencocokkan menyalin teks soal (Rendah, 27 paket)
+### F-05 — Petunjuk mencocokkan menyalin teks soal (Rendah, 27 paket) — **DIPERBAIKI 2026-10-28**
 
 **37 pasangan** di 27 paket memakai teks soal kuis sebagai sisi kiri, termasuk elipsis yang tertinggal
 (mis. `Bahasa persatuan Indonesia adalah ...`, `Bilangan 100 dibaca ...`). Di kartu mencocokkan, elipsis itu tidak berfungsi
 sebagai petunjuk dan terbaca seperti potongan soal yang belum selesai. Dua di antaranya ada di paket prioritas
 (`kelas3-pendidikan-pancasila-b06-nkri`, `kelas2-pai-b05-puasa`). Usul: buang elipsis dan ubah menjadi frasa petunjuk.
+
+Perbaikan yang diterapkan: **39 pasangan di 27 paket** — 37 elipsis diubah menjadi frasa petunjuk
+(mis. `Bilangan 100 dibaca ...` → `Nama bilangan 100`; `Bahasa persatuan Indonesia adalah ...` → `Alat pemersatu bangsa`),
+ditambah **2 pasangan** yang kartu jawabannya duplikat dengan pasangan lain di aktivitas yang sama
+(`kelas1-seni-rupa-b05-mewarnai-bentuk`: jawaban `Merah, kuning, dan biru` muncul dua kali;
+`kelas6-matematika-b03-rasio-proporsi`: jawaban `4 : 3` muncul dua kali). Setiap pengganti diambil dari
+langkah eksplorasi, petunjuk, atau opsi kuis paket itu sendiri — tidak ada fakta baru di luar materi.
+Jumlah pasangan tidak berubah (1.963 di korpus); tidak ada `pairId` yang ditambah/dihapus.
+
+Verifikasi: detektor elipsis ulang → **0 dari 1.963 pasangan**; pemeriksa duplikat kiri/kanan pada 27 paket
+terdampak → 0; validator korpus **336/336 VALID**; volume gate OK; `npm test` **110/110**; `npm run build` PASS.
+Bukti: `scripts/data/item-patches-2026-10-28-f05.json` dan `scripts/data/item-patches-2026-10-28-f05b.json`.
 
 ### F-06 — Mencocokkan masih menyalin langkah eksplorasi (Struktural, Rendah)
 
@@ -145,7 +157,7 @@ Enam paket (`kelas1-matematika-b01`, `kelas1-matematika-b06`, `kelas2-matematika
 Tiga ukuran di bawah dihitung dengan skrip sekali-pakai pada sesi 2026-10-27 (tidak di-commit, agar tidak
 menimpa bukti bertanggal). Definisi yang dipakai:
 
-- **F-05**: pasangan `matching` dengan `left` berakhir `...` → 37 pasangan / 27 paket.
+- **F-05**: pasangan `matching` dengan `left` berakhir `...` → 37 pasangan / 27 paket (sebelum perbaikan 2026-10-28; kini **0**).
 - **F-06**: pasangan `matching` yang memenuhi dua syarat sekaligus: `right` sama persis (setelah normalisasi
   huruf kecil + buang tanda baca) dengan `reveal` salah satu langkah eksplorasi, **dan** ≥ 70% kata pada `left`
   muncul di `prompt` langkah yang sama → 311 pasangan / 159 paket dari 1.963 pasangan.
