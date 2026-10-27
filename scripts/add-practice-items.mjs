@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * T-092 — Memasukkan soal kuis dan pasangan mencocokkan hasil penulisan per kelas.
+ * T-092 — Memasukkan soal kuis, pasangan mencocokkan, dan langkah mengurutkan
+ * hasil penulisan per kelas.
  *
  * Aturan yang dijaga:
  *  - Item baru berasal dari berkas data yang ditulis tangan per paket, bukan template.
@@ -64,6 +65,7 @@ const report = {
   packages: 0,
   quizAdded: 0,
   pairAdded: 0,
+  orderingAdded: 0,
   skippedDuplicateQuiz: 0,
   skippedDuplicatePair: 0,
   errors: []
@@ -161,6 +163,64 @@ for (const [packageId, items] of Object.entries(data.packages ?? {})) {
     });
 
     if (changedQuestions.length > 0) {
+      touched = true;
+      writeAtomic(path.join(dir, "activities", target.file), `${JSON.stringify(activity, null, 2)}\n`);
+    }
+  }
+
+  // --- langkah mengurutkan ---
+  if ((items.ordering ?? []).length > 0) {
+    const target = files.find(({ json }) => json.type === "ordering");
+    if (!target) {
+      report.errors.push(`${packageId}: tidak ada aktivitas ordering untuk ${items.ordering.length} langkah`);
+      continue;
+    }
+    const activity = target.json;
+    const items3 = activity.interactionConfig?.items;
+    const order = activity.interactionConfig?.correctOrder;
+    if (!Array.isArray(items3) || !Array.isArray(order)) {
+      report.errors.push(`${packageId}: interactionConfig.items/correctOrder tidak ada di ${target.file}`);
+      continue;
+    }
+    const existingTexts = new Set(items3.map((i) => String(i.text).trim().toLowerCase()));
+    const existingItemIds = new Set(items3.map((i) => i.itemId));
+    let added = 0;
+
+    (items.ordering ?? []).forEach((item, index) => {
+      const text = String(item.text).trim();
+      if (items3.length + added + 1 > 12) {
+        report.errors.push(`${packageId}: melewati plafon 12 langkah di ${target.file}`);
+        return;
+      }
+      if (text.length < 1 || text.length > 200) {
+        report.errors.push(`${packageId}: langkah ke-${index + 1} di luar batas 1-200 karakter`);
+        return;
+      }
+      if (existingTexts.has(text.toLowerCase())) {
+        report.skippedDuplicatePair += 1;
+        return;
+      }
+      const anchor = String(item.afterItemId ?? "").trim();
+      const anchorIndex = order.indexOf(anchor);
+      if (anchorIndex < 0) {
+        report.errors.push(`${packageId}: langkah ke-${index + 1} rujukan afterItemId tidak ada (${anchor})`);
+        return;
+      }
+      const itemId = item.id ?? `langkah-${slug(text, `tambah-${items3.length + index + 1}`)}`;
+      if (existingItemIds.has(itemId)) {
+        report.errors.push(`${packageId}: itemId duplikat ${itemId}`);
+        return;
+      }
+      const itemIndex = items3.findIndex((i) => i.itemId === anchor);
+      items3.splice(itemIndex + 1, 0, { itemId, text });
+      order.splice(anchorIndex + 1, 0, itemId);
+      existingTexts.add(text.toLowerCase());
+      existingItemIds.add(itemId);
+      added += 1;
+      report.orderingAdded += 1;
+    });
+
+    if (added > 0) {
       touched = true;
       writeAtomic(path.join(dir, "activities", target.file), `${JSON.stringify(activity, null, 2)}\n`);
     }

@@ -33,11 +33,12 @@ for (const grade of Object.keys(TARGETS)) {
     for (const file of readdirSync(actsDir).filter((f) => f.endsWith(".json")).sort()) {
       const activity = JSON.parse(readFileSync(path.join(actsDir, file), "utf8"));
       const label = `${dir}/${file}`;
-      if (activity.type === "multiple-choice") {
+      if (activity.type === "multiple-choice" || activity.type === "short-answer" || activity.type === "true-false") {
         const n = activity.assessmentConfig?.questions?.length ?? 0;
         counts.quiz += 1;
-        if (n < target.questions) violations.push(`${label}: kuis ${n} soal (min ${target.questions})`);
-        else if (n > CEILING) violations.push(`${label}: kuis ${n} soal (maks ${CEILING})`);
+        const kind = activity.type === "multiple-choice" ? "kuis" : `kuis ${activity.type}`;
+        if (n < target.questions) violations.push(`${label}: ${kind} ${n} soal (min ${target.questions})`);
+        else if (n > CEILING) violations.push(`${label}: ${kind} ${n} soal (maks ${CEILING})`);
       } else if (activity.type === "matching") {
         const n = (activity.interactionConfig?.pairs ?? []).length;
         counts.matching += 1;
