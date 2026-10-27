@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-dokumen-yang-menjadi-hukum-dasar",
+        "prompt": "Dokumen yang menjadi hukum dasar negara Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dokumen-yang-menjadi-hukum-1",
+            "text": "Pancasila"
+          },
+          {
+            "optionId": "opsi-soal-dokumen-yang-menjadi-hukum-0",
+            "text": "UUD 1945"
+          },
+          {
+            "optionId": "opsi-soal-dokumen-yang-menjadi-hukum-2",
+            "text": "Bhinneka Tunggal Ika"
+          }
+        ],
+        "correctResponse": "opsi-soal-dokumen-yang-menjadi-hukum-0"
+      },
+      {
+        "questionId": "soal-bagian-awal-sebelum-pasal-pasal",
+        "prompt": "Bagian awal sebelum pasal-pasal pada UUD 1945 disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-awal-sebelum-pasal-p-1",
+            "text": "Amandemen"
+          },
+          {
+            "optionId": "opsi-soal-bagian-awal-sebelum-pasal-p-2",
+            "text": "Lampiran"
+          },
+          {
+            "optionId": "opsi-soal-bagian-awal-sebelum-pasal-p-0",
+            "text": "Pembukaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-awal-sebelum-pasal-p-0"
+      },
+      {
+        "questionId": "soal-hubungan-pancasila-dengan-uud-19",
+        "prompt": "Hubungan Pancasila dengan UUD 1945 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hubungan-pancasila-dengan-u-0",
+            "text": "UUD menjabarkan Pancasila"
+          },
+          {
+            "optionId": "opsi-soal-hubungan-pancasila-dengan-u-1",
+            "text": "UUD menggantikan Pancasila"
+          },
+          {
+            "optionId": "opsi-soal-hubungan-pancasila-dengan-u-2",
+            "text": "Pancasila bagian UUD"
+          }
+        ],
+        "correctResponse": "opsi-soal-hubungan-pancasila-dengan-u-0"
+      },
+      {
+        "questionId": "soal-semboyan-bangsa-indonesia-adalah",
+        "prompt": "Semboyan bangsa Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-semboyan-bangsa-indonesia-a-1",
+            "text": "Tut Wuri Handayani"
+          },
+          {
+            "optionId": "opsi-soal-semboyan-bangsa-indonesia-a-0",
+            "text": "Bhinneka Tunggal Ika"
+          },
+          {
+            "optionId": "opsi-soal-semboyan-bangsa-indonesia-a-2",
+            "text": "Ing Ngarsa Sung Tuladha"
+          }
+        ],
+        "correctResponse": "opsi-soal-semboyan-bangsa-indonesia-a-0"
       }
     ],
     "passingScore": 75

@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Warna dan tekstur dari berbagai teknik",
         "right": "Teknik menggambar"
+      },
+      {
+        "pairId": "pasangan-bahan-pewarna-pada-teknik-basah",
+        "left": "Bahan pewarna pada teknik basah",
+        "right": "Cat air"
       }
     ]
   },

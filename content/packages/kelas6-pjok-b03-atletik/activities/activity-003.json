@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Lintasan lari, bak lompat, dan pita finis",
         "right": "Atletik"
+      },
+      {
+        "pairId": "pasangan-alat-penanda-garis-akhir-lomba-l",
+        "left": "Alat penanda garis akhir lomba lari",
+        "right": "Pita finis"
+      },
+      {
+        "pairId": "pasangan-tempat-mendarat-setelah-melompat",
+        "left": "Tempat mendarat setelah melompat",
+        "right": "Bak lompat"
       }
     ]
   },

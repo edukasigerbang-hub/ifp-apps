@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Kegiatan setelah proyek kewargaan selesai",
         "right": "Melapor dan mengevaluasi"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-menyusun",
+        "left": "Langkah pertama sebelum menyusun rencana proyek",
+        "right": "Memilih masalah"
+      },
+      {
+        "pairId": "pasangan-pembagian-pekerjaan-kepada-setia",
+        "left": "Pembagian pekerjaan kepada setiap anggota kelompok",
+        "right": "Membagi tugas"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menjalankan-rencana-yan",
+        "left": "Kegiatan menjalankan rencana yang sudah disusun",
+        "right": "Melaksanakan proyek"
       }
     ]
   },

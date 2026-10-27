@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-baris-pertama-dan-kedua-pantun-d",
+        "prompt": "Baris pertama dan kedua pantun disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pan-1",
+            "text": "Isi pantun"
+          },
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pan-2",
+            "text": "Rima bait"
+          },
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pan-0",
+            "text": "Sampiran"
+          },
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pan-3",
+            "text": "Judul puisi"
+          }
+        ],
+        "correctResponse": "opsi-soal-baris-pertama-dan-kedua-pan-0"
+      },
+      {
+        "questionId": "soal-dua-baris-akhir-pantun-berisi-ba",
+        "prompt": "Dua baris akhir pantun berisi bagian yang disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-baris-akhir-pantun-beri-1",
+            "text": "Sampiran"
+          },
+          {
+            "optionId": "opsi-soal-dua-baris-akhir-pantun-beri-2",
+            "text": "Bait"
+          },
+          {
+            "optionId": "opsi-soal-dua-baris-akhir-pantun-beri-3",
+            "text": "Rima"
+          },
+          {
+            "optionId": "opsi-soal-dua-baris-akhir-pantun-beri-0",
+            "text": "Isi"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-baris-akhir-pantun-beri-0"
+      },
+      {
+        "questionId": "soal-kumpulan-baris-dalam-sebuah-puis",
+        "prompt": "Kumpulan baris dalam sebuah puisi disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kumpulan-baris-dalam-sebuah-0",
+            "text": "Bait"
+          },
+          {
+            "optionId": "opsi-soal-kumpulan-baris-dalam-sebuah-1",
+            "text": "Rima"
+          },
+          {
+            "optionId": "opsi-soal-kumpulan-baris-dalam-sebuah-2",
+            "text": "Sampiran"
+          },
+          {
+            "optionId": "opsi-soal-kumpulan-baris-dalam-sebuah-3",
+            "text": "Judul"
+          }
+        ],
+        "correctResponse": "opsi-soal-kumpulan-baris-dalam-sebuah-0"
+      },
+      {
+        "questionId": "soal-puisi-menggunakan-bahasa-yang-kh",
+        "prompt": "Puisi menggunakan bahasa yang khas, yaitu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-puisi-menggunakan-bahasa-ya-1",
+            "text": "Gaya sehari-hari"
+          },
+          {
+            "optionId": "opsi-soal-puisi-menggunakan-bahasa-ya-0",
+            "text": "Indah dan padat"
+          },
+          {
+            "optionId": "opsi-soal-puisi-menggunakan-bahasa-ya-2",
+            "text": "Kaku dan resmi"
+          },
+          {
+            "optionId": "opsi-soal-puisi-menggunakan-bahasa-ya-3",
+            "text": "Panjang dan bertele-tele"
+          }
+        ],
+        "correctResponse": "opsi-soal-puisi-menggunakan-bahasa-ya-0"
       }
     ],
     "passingScore": 75

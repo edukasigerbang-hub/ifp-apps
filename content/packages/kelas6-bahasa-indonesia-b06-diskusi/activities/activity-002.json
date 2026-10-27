@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-timbang"
+      },
+      {
+        "questionId": "soal-pendapat-teman-yang-berbeda-dari",
+        "prompt": "Pendapat teman yang berbeda dari pendapat kita dalam diskusi sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pendapat-teman-yang-berbeda-1",
+            "text": "Kita tolak"
+          },
+          {
+            "optionId": "opsi-soal-pendapat-teman-yang-berbeda-2",
+            "text": "Kita ejek lebih dulu"
+          },
+          {
+            "optionId": "opsi-soal-pendapat-teman-yang-berbeda-3",
+            "text": "Kita diamkan"
+          },
+          {
+            "optionId": "opsi-soal-pendapat-teman-yang-berbeda-0",
+            "text": "Kita hormati"
+          }
+        ],
+        "correctResponse": "opsi-soal-pendapat-teman-yang-berbeda-0"
+      },
+      {
+        "questionId": "soal-argumen-pendukung-dan-penentang",
+        "prompt": "Argumen pendukung dan penentang dalam diskusi ditimbang untuk memperoleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-argumen-pendukung-dan-penen-0",
+            "text": "Kesimpulan"
+          },
+          {
+            "optionId": "opsi-soal-argumen-pendukung-dan-penen-1",
+            "text": "Narasumber"
+          },
+          {
+            "optionId": "opsi-soal-argumen-pendukung-dan-penen-2",
+            "text": "Amanat"
+          },
+          {
+            "optionId": "opsi-soal-argumen-pendukung-dan-penen-3",
+            "text": "Sampiran"
+          }
+        ],
+        "correctResponse": "opsi-soal-argumen-pendukung-dan-penen-0"
       }
     ],
     "passingScore": 75

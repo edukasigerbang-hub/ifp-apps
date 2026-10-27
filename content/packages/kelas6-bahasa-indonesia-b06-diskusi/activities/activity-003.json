@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Saat teman berbeda pendapat, kita ...",
         "right": "Menghargai pendapatnya"
+      },
+      {
+        "pairId": "pasangan-hasil-akhir-yang-dibuat-setelah",
+        "left": "Hasil akhir yang dibuat setelah semua argumen ditimbang",
+        "right": "Kesimpulan"
       }
     ]
   },

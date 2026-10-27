@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang diperiksa",
         "right": "Ejaan dan kelengkapan isi"
+      },
+      {
+        "pairId": "pasangan-bagian-penutup-laporan-pengamata",
+        "left": "Bagian penutup laporan pengamatan",
+        "right": "Kesimpulan"
+      },
+      {
+        "pairId": "pasangan-hal-pertama-yang-ditentukan-sebe",
+        "left": "Hal pertama yang ditentukan sebelum menulis laporan",
+        "right": "Tujuan"
+      },
+      {
+        "pairId": "pasangan-isi-laporan-ditulis-apa-adanya-t",
+        "left": "Isi laporan ditulis apa adanya, tanpa memihak, bersifat",
+        "right": "Objektif"
       }
     ]
   },

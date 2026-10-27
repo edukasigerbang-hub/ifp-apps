@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Hak dan kewajiban harus",
         "right": "Dilaksanakan seimbang"
+      },
+      {
+        "pairId": "pasangan-contoh-hak-siswa-di-sekolah",
+        "left": "Contoh hak siswa di sekolah",
+        "right": "Mendapat pelajaran"
+      },
+      {
+        "pairId": "pasangan-contoh-kewajiban-siswa-di-rumah",
+        "left": "Contoh kewajiban siswa di rumah",
+        "right": "Menjaga kebersihan rumah"
       }
     ]
   },

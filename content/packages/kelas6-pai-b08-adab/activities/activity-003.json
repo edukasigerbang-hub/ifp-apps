@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Sifat Nabi Muhammad yang diteladani adalah",
         "right": "Jujur dan amanah"
+      },
+      {
+        "pairId": "pasangan-sifat-yang-membuat-orang-lain-pe",
+        "left": "Sifat yang membuat orang lain percaya",
+        "right": "Jujur"
+      },
+      {
+        "pairId": "pasangan-sifat-menahan-diri-saat-menghada",
+        "left": "Sifat menahan diri saat menghadapi kesulitan",
+        "right": "Sabar"
       }
     ]
   },

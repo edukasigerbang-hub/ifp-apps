@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-mati"
+      },
+      {
+        "questionId": "soal-mengolah-sampah-plastik-bekas-me",
+        "prompt": "Mengolah sampah plastik bekas menjadi pot termasuk kegiatan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengolah-sampah-plastik-bek-0",
+            "text": "Daur ulang"
+          },
+          {
+            "optionId": "opsi-soal-mengolah-sampah-plastik-bek-1",
+            "text": "Pembakaran"
+          },
+          {
+            "optionId": "opsi-soal-mengolah-sampah-plastik-bek-2",
+            "text": "Penimbunan"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengolah-sampah-plastik-bek-0"
+      },
+      {
+        "questionId": "soal-alat-di-atap-rumah-yang-menangka",
+        "prompt": "Alat di atap rumah yang menangkap energi matahari adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alat-di-atap-rumah-yang-men-1",
+            "text": "Kincir angin"
+          },
+          {
+            "optionId": "opsi-soal-alat-di-atap-rumah-yang-men-0",
+            "text": "Panel surya"
+          },
+          {
+            "optionId": "opsi-soal-alat-di-atap-rumah-yang-men-2",
+            "text": "Baterai"
+          }
+        ],
+        "correctResponse": "opsi-soal-alat-di-atap-rumah-yang-men-0"
       }
     ],
     "passingScore": 75

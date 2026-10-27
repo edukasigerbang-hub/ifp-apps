@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sifat-yang-sudah-ada-sejak-lahir",
+        "prompt": "Sifat yang sudah ada sejak lahir dan berasal dari orang tua disebut sifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-yang-sudah-ada-sejak-1",
+            "text": "Lingkungan"
+          },
+          {
+            "optionId": "opsi-soal-sifat-yang-sudah-ada-sejak-0",
+            "text": "Bawaan"
+          },
+          {
+            "optionId": "opsi-soal-sifat-yang-sudah-ada-sejak-2",
+            "text": "Kebiasaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-yang-sudah-ada-sejak-0"
+      },
+      {
+        "questionId": "soal-warna-kulit-dan-bentuk-rambut-ya",
+        "prompt": "Warna kulit dan bentuk rambut yang mirip orang tua termasuk ciri ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-kulit-dan-bentuk-ramb-1",
+            "text": "Menular"
+          },
+          {
+            "optionId": "opsi-soal-warna-kulit-dan-bentuk-ramb-2",
+            "text": "Dipelajari"
+          },
+          {
+            "optionId": "opsi-soal-warna-kulit-dan-bentuk-ramb-0",
+            "text": "Menurun"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-kulit-dan-bentuk-ramb-0"
+      },
+      {
+        "questionId": "soal-bagian-di-dalam-tubuh-yang-menja",
+        "prompt": "Bagian di dalam tubuh yang menjadi pembawa sifat dari orang tua adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-di-dalam-tubuh-yang-0",
+            "text": "Gen"
+          },
+          {
+            "optionId": "opsi-soal-bagian-di-dalam-tubuh-yang-1",
+            "text": "Sel"
+          },
+          {
+            "optionId": "opsi-soal-bagian-di-dalam-tubuh-yang-2",
+            "text": "Jaringan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-di-dalam-tubuh-yang-0"
+      },
+      {
+        "questionId": "soal-makanan-dan-kebiasaan-sehari-har",
+        "prompt": "Makanan dan kebiasaan sehari-hari yang membentuk diri kita termasuk faktor ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makanan-dan-kebiasaan-sehar-1",
+            "text": "Keturunan"
+          },
+          {
+            "optionId": "opsi-soal-makanan-dan-kebiasaan-sehar-0",
+            "text": "Lingkungan"
+          },
+          {
+            "optionId": "opsi-soal-makanan-dan-kebiasaan-sehar-2",
+            "text": "Bawaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-makanan-dan-kebiasaan-sehar-0"
       }
     ],
     "passingScore": 75

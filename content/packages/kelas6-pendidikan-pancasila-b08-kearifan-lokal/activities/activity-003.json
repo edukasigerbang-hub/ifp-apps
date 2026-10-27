@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-nilai-dan-kebiasaan-baik-yang-di",
+        "prompt": "Nilai dan kebiasaan baik yang diwarisi masyarakat suatu daerah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nilai-dan-kebiasaan-baik-ya-1",
+            "text": "Budaya asing"
+          },
+          {
+            "optionId": "opsi-soal-nilai-dan-kebiasaan-baik-ya-0",
+            "text": "Kearifan lokal"
+          },
+          {
+            "optionId": "opsi-soal-nilai-dan-kebiasaan-baik-ya-2",
+            "text": "Kemajuan zaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-nilai-dan-kebiasaan-baik-ya-0"
+      },
+      {
+        "questionId": "soal-pakaian-yang-dipakai-pada-upacar",
+        "prompt": "Pakaian yang dipakai pada upacara adat disebut pakaian ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pakaian-yang-dipakai-pada-u-1",
+            "text": "Seragam"
+          },
+          {
+            "optionId": "opsi-soal-pakaian-yang-dipakai-pada-u-2",
+            "text": "Modern"
+          },
+          {
+            "optionId": "opsi-soal-pakaian-yang-dipakai-pada-u-0",
+            "text": "Adat"
+          }
+        ],
+        "correctResponse": "opsi-soal-pakaian-yang-dipakai-pada-u-0"
+      },
+      {
+        "questionId": "soal-kearifan-lokal-dilestarikan-deng",
+        "prompt": "Kearifan lokal dilestarikan dengan mengenal, menghormati, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kearifan-lokal-dilestarikan-0",
+            "text": "Mempraktikkan"
+          },
+          {
+            "optionId": "opsi-soal-kearifan-lokal-dilestarikan-1",
+            "text": "Mengabaikannya"
+          },
+          {
+            "optionId": "opsi-soal-kearifan-lokal-dilestarikan-2",
+            "text": "Melupakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kearifan-lokal-dilestarikan-0"
+      },
+      {
+        "questionId": "soal-kegiatan-kerja-bakti-warga-merup",
+        "prompt": "Kegiatan kerja bakti warga merupakan contoh kearifan lokal berupa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-kerja-bakti-warga-1",
+            "text": "Pameran budaya"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-kerja-bakti-warga-0",
+            "text": "Gotong royong"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-kerja-bakti-warga-2",
+            "text": "Lomba kampung"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-kerja-bakti-warga-0"
       }
     ],
     "passingScore": 75

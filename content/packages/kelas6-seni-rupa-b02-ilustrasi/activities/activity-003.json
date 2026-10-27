@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang ditambahkan terakhir",
         "right": "Warna dan detail"
+      },
+      {
+        "pairId": "pasangan-gambar-rancangan-awal-sebelum-di",
+        "left": "Gambar rancangan awal sebelum diwarnai",
+        "right": "Sketsa"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-sketsa-selesai",
+        "left": "Langkah setelah sketsa selesai",
+        "right": "Menebalkan garis"
+      },
+      {
+        "pairId": "pasangan-kegiatan-memberi-warna-pada-gamb",
+        "left": "Kegiatan memberi warna pada gambar",
+        "right": "Mewarnai"
       }
     ]
   },

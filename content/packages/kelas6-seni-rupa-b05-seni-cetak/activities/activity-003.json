@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Mencetak",
         "right": "Oles cat, tekan, angkat"
+      },
+      {
+        "pairId": "pasangan-alat-cetak-dari-umbi",
+        "left": "Alat cetak dari umbi",
+        "right": "Kentang"
+      },
+      {
+        "pairId": "pasangan-bahan-cetak-dari-bagian-pohon-pi",
+        "left": "Bahan cetak dari bagian pohon pisang",
+        "right": "Pelepah"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-cat-dioleskan-pa",
+        "left": "Langkah setelah cat dioleskan pada alat cetak",
+        "right": "Menekan ke kertas"
       }
     ]
   },

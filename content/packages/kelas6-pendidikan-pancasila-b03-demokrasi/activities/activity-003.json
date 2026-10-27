@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Menghargai hasil",
         "right": "Menerima keputusan bersama"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menyampaikan-janji-dan",
+        "left": "Kegiatan menyampaikan janji dan program sebelum pemungutan suara",
+        "right": "Kampanye"
+      },
+      {
+        "pairId": "pasangan-kegiatan-mencatat-warga-yang-ber",
+        "left": "Kegiatan mencatat warga yang berhak memilih",
+        "right": "Pendaftaran pemilih"
+      },
+      {
+        "pairId": "pasangan-pengambilan-sumpah-pemimpin-yang",
+        "left": "Pengambilan sumpah pemimpin yang menang dalam pemilu",
+        "right": "Pelantikan"
       }
     ]
   },

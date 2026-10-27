@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-sikap-yang-harus-dijaga-agar-per",
+        "prompt": "Sikap yang harus dijaga agar permainan berjalan adil adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-harus-dijaga-aga-0",
+            "text": "Sportivitas"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-harus-dijaga-aga-1",
+            "text": "Berbuat curang"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-harus-dijaga-aga-2",
+            "text": "Cepat marah"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-harus-dijaga-aga-0"
+      },
+      {
+        "questionId": "soal-permainan-kasti-termasuk-jenis-p",
+        "prompt": "Permainan kasti termasuk jenis permainan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-kasti-termasuk-je-1",
+            "text": "Olahraga modern"
+          },
+          {
+            "optionId": "opsi-soal-permainan-kasti-termasuk-je-0",
+            "text": "Tradisional"
+          },
+          {
+            "optionId": "opsi-soal-permainan-kasti-termasuk-je-2",
+            "text": "Permainan digital"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-kasti-termasuk-je-0"
       }
     ],
     "passingScore": 75

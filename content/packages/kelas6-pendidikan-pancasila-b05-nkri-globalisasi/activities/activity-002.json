@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-selektif"
+      },
+      {
+        "questionId": "soal-pengaruh-budaya-asing-yang-tidak",
+        "prompt": "Pengaruh budaya asing yang tidak sesuai nilai bangsa sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengaruh-budaya-asing-yang-0",
+            "text": "Menyaring"
+          },
+          {
+            "optionId": "opsi-soal-pengaruh-budaya-asing-yang-1",
+            "text": "Meniru"
+          },
+          {
+            "optionId": "opsi-soal-pengaruh-budaya-asing-yang-2",
+            "text": "Melupakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengaruh-budaya-asing-yang-0"
+      },
+      {
+        "questionId": "soal-produk-buatan-dalam-negeri-sebai",
+        "prompt": "Produk buatan dalam negeri sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-produk-buatan-dalam-negeri-1",
+            "text": "Tinggalkan"
+          },
+          {
+            "optionId": "opsi-soal-produk-buatan-dalam-negeri-0",
+            "text": "Cintai"
+          },
+          {
+            "optionId": "opsi-soal-produk-buatan-dalam-negeri-2",
+            "text": "Ragukan"
+          }
+        ],
+        "correctResponse": "opsi-soal-produk-buatan-dalam-negeri-0"
       }
     ],
     "passingScore": 75

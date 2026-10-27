@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-alat-pemukul-dalam-tenis-meja-di",
+        "prompt": "Alat pemukul dalam tenis meja disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alat-pemukul-dalam-tenis-me-1",
+            "text": "Raket"
+          },
+          {
+            "optionId": "opsi-soal-alat-pemukul-dalam-tenis-me-0",
+            "text": "Bet"
+          },
+          {
+            "optionId": "opsi-soal-alat-pemukul-dalam-tenis-me-2",
+            "text": "Kok"
+          }
+        ],
+        "correctResponse": "opsi-soal-alat-pemukul-dalam-tenis-me-0"
+      },
+      {
+        "questionId": "soal-bola-kecil-yang-dipakai-dalam-bu",
+        "prompt": "Bola kecil yang dipakai dalam bulu tangkis disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bola-kecil-yang-dipakai-dal-1",
+            "text": "Bet"
+          },
+          {
+            "optionId": "opsi-soal-bola-kecil-yang-dipakai-dal-2",
+            "text": "Net"
+          },
+          {
+            "optionId": "opsi-soal-bola-kecil-yang-dipakai-dal-0",
+            "text": "Kok"
+          }
+        ],
+        "correctResponse": "opsi-soal-bola-kecil-yang-dipakai-dal-0"
+      },
+      {
+        "questionId": "soal-sebelum-bermain-sebaiknya-kita-m",
+        "prompt": "Sebelum bermain, sebaiknya kita melakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-bermain-sebaiknya-k-0",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-bermain-sebaiknya-k-1",
+            "text": "Pendinginan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-bermain-sebaiknya-k-2",
+            "text": "Istirahat"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-bermain-sebaiknya-k-0"
+      },
+      {
+        "questionId": "soal-tenis-dimainkan-dengan-memukul-b",
+        "prompt": "Tenis dimainkan dengan memukul bola melewati ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tenis-dimainkan-dengan-memu-1",
+            "text": "Gawang"
+          },
+          {
+            "optionId": "opsi-soal-tenis-dimainkan-dengan-memu-0",
+            "text": "Net"
+          },
+          {
+            "optionId": "opsi-soal-tenis-dimainkan-dengan-memu-2",
+            "text": "Ring"
+          }
+        ],
+        "correctResponse": "opsi-soal-tenis-dimainkan-dengan-memu-0"
       }
     ],
     "passingScore": 75

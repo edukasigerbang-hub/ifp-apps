@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-rahasia"
+      },
+      {
+        "questionId": "soal-yang-ditiup-sebagai-tanda-datang",
+        "prompt": "Yang ditiup sebagai tanda datangnya hari akhir adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-yang-ditiup-sebagai-tanda-d-1",
+            "text": "Bedug masjid"
+          },
+          {
+            "optionId": "opsi-soal-yang-ditiup-sebagai-tanda-d-0",
+            "text": "Sangkakala"
+          },
+          {
+            "optionId": "opsi-soal-yang-ditiup-sebagai-tanda-d-2",
+            "text": "Gendang"
+          }
+        ],
+        "correctResponse": "opsi-soal-yang-ditiup-sebagai-tanda-d-0"
+      },
+      {
+        "questionId": "soal-pengetahuan-tentang-waktu-hari-a",
+        "prompt": "Pengetahuan tentang waktu hari akhir hanya dimiliki oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengetahuan-tentang-waktu-h-1",
+            "text": "Nabi"
+          },
+          {
+            "optionId": "opsi-soal-pengetahuan-tentang-waktu-h-2",
+            "text": "Malaikat"
+          },
+          {
+            "optionId": "opsi-soal-pengetahuan-tentang-waktu-h-0",
+            "text": "Allah"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengetahuan-tentang-waktu-h-0"
       }
     ],
     "passingScore": 75

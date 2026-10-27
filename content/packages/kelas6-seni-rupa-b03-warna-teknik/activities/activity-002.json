@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-basah"
+      },
+      {
+        "questionId": "soal-warna-ungu-terbentuk-dari-campur",
+        "prompt": "Warna ungu terbentuk dari campuran ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-ungu-terbentuk-dari-c-1",
+            "text": "Merah dan kuning"
+          },
+          {
+            "optionId": "opsi-soal-warna-ungu-terbentuk-dari-c-2",
+            "text": "Kuning dan biru"
+          },
+          {
+            "optionId": "opsi-soal-warna-ungu-terbentuk-dari-c-0",
+            "text": "Merah dan biru"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-ungu-terbentuk-dari-c-0"
+      },
+      {
+        "questionId": "soal-perubahan-warna-dari-gelap-ke-te",
+        "prompt": "Perubahan warna dari gelap ke terang secara bertahap disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perubahan-warna-dari-gelap-0",
+            "text": "Gradasi"
+          },
+          {
+            "optionId": "opsi-soal-perubahan-warna-dari-gelap-1",
+            "text": "Kontras"
+          },
+          {
+            "optionId": "opsi-soal-perubahan-warna-dari-gelap-2",
+            "text": "Tekstur"
+          }
+        ],
+        "correctResponse": "opsi-soal-perubahan-warna-dari-gelap-0"
       }
     ],
     "passingScore": 75

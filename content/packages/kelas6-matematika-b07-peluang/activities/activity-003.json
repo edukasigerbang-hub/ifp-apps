@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-banyak-hasil-yang-mungkin-ketika",
+        "prompt": "Banyak hasil yang mungkin ketika melempar sebuah dadu adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-banyak-hasil-yang-mungkin-k-1",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-banyak-hasil-yang-mungkin-k-2",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-banyak-hasil-yang-mungkin-k-3",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-soal-banyak-hasil-yang-mungkin-k-0",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-soal-banyak-hasil-yang-mungkin-k-0"
+      },
+      {
+        "questionId": "soal-peluang-muncul-mata-dadu-genap-a",
+        "prompt": "Peluang muncul mata dadu genap adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-peluang-muncul-mata-dadu-ge-0",
+            "text": "1/2"
+          },
+          {
+            "optionId": "opsi-soal-peluang-muncul-mata-dadu-ge-1",
+            "text": "1/3"
+          },
+          {
+            "optionId": "opsi-soal-peluang-muncul-mata-dadu-ge-2",
+            "text": "1/6"
+          },
+          {
+            "optionId": "opsi-soal-peluang-muncul-mata-dadu-ge-3",
+            "text": "2/3"
+          }
+        ],
+        "correctResponse": "opsi-soal-peluang-muncul-mata-dadu-ge-0"
+      },
+      {
+        "questionId": "soal-kejadian-yang-tidak-mungkin-terj",
+        "prompt": "Kejadian yang tidak mungkin terjadi memiliki peluang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kejadian-yang-tidak-mungkin-1",
+            "text": "1"
+          },
+          {
+            "optionId": "opsi-soal-kejadian-yang-tidak-mungkin-0",
+            "text": "0"
+          },
+          {
+            "optionId": "opsi-soal-kejadian-yang-tidak-mungkin-2",
+            "text": "1/2"
+          },
+          {
+            "optionId": "opsi-soal-kejadian-yang-tidak-mungkin-3",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-soal-kejadian-yang-tidak-mungkin-0"
+      },
+      {
+        "questionId": "soal-roda-putar-dibagi-rata-menjadi-e",
+        "prompt": "Roda putar dibagi rata menjadi empat warna. Peluang muncul satu warna tertentu adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-roda-putar-dibagi-rata-menj-1",
+            "text": "1/2"
+          },
+          {
+            "optionId": "opsi-soal-roda-putar-dibagi-rata-menj-2",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-roda-putar-dibagi-rata-menj-0",
+            "text": "1/4"
+          },
+          {
+            "optionId": "opsi-soal-roda-putar-dibagi-rata-menj-3",
+            "text": "1/3"
+          }
+        ],
+        "correctResponse": "opsi-soal-roda-putar-dibagi-rata-menj-0"
       }
     ],
     "passingScore": 75

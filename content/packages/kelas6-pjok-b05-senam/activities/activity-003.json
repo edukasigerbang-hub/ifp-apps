@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Guling depan dan keseimbangan tubuh",
         "right": "Senam"
+      },
+      {
+        "pairId": "pasangan-alas-empuk-untuk-senam-lantai",
+        "left": "Alas empuk untuk senam lantai",
+        "right": "Matras"
+      },
+      {
+        "pairId": "pasangan-orang-yang-membantu-menjaga-kese",
+        "left": "Orang yang membantu menjaga keselamatan saat latihan",
+        "right": "Pendamping"
       }
     ]
   },

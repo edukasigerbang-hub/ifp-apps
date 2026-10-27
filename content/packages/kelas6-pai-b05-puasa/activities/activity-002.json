@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-sabar"
+      },
+      {
+        "questionId": "soal-waktu-berbuka-puasa-adalah-saat",
+        "prompt": "Waktu berbuka puasa adalah saat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-waktu-berbuka-puasa-adalah-1",
+            "text": "Terbit fajar"
+          },
+          {
+            "optionId": "opsi-soal-waktu-berbuka-puasa-adalah-2",
+            "text": "Tengah malam"
+          },
+          {
+            "optionId": "opsi-soal-waktu-berbuka-puasa-adalah-0",
+            "text": "Magrib"
+          }
+        ],
+        "correctResponse": "opsi-soal-waktu-berbuka-puasa-adalah-0"
+      },
+      {
+        "questionId": "soal-berpuasa-membuat-kita-terbiasa-b",
+        "prompt": "Berpuasa membuat kita terbiasa bersikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berpuasa-membuat-kita-terbi-0",
+            "text": "Sabar"
+          },
+          {
+            "optionId": "opsi-soal-berpuasa-membuat-kita-terbi-1",
+            "text": "Malas"
+          },
+          {
+            "optionId": "opsi-soal-berpuasa-membuat-kita-terbi-2",
+            "text": "Cepat marah"
+          }
+        ],
+        "correctResponse": "opsi-soal-berpuasa-membuat-kita-terbi-0"
       }
     ],
     "passingScore": 75

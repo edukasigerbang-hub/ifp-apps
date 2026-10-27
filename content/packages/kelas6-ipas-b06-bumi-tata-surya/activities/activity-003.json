@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Akibat revolusi",
         "right": "Pergantian musim"
+      },
+      {
+        "pairId": "pasangan-gerak-bumi-mengelilingi-matahari",
+        "left": "Gerak bumi mengelilingi matahari",
+        "right": "Revolusi bumi"
+      },
+      {
+        "pairId": "pasangan-peristiwa-gelapnya-matahari-atau",
+        "left": "Peristiwa gelapnya matahari atau bulan karena posisi benda langit",
+        "right": "Gerhana"
+      },
+      {
+        "pairId": "pasangan-benda-langit-yang-menjadi-pusat",
+        "left": "Benda langit yang menjadi pusat tata surya",
+        "right": "Matahari"
       }
     ]
   },

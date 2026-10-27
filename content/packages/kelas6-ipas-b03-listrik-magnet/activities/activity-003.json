@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Rangkaian listrik dan magnet menarik logam",
         "right": "Listrik dan magnet"
+      },
+      {
+        "pairId": "pasangan-benda-logam-yang-ditarik-kuat-ol",
+        "left": "Benda logam yang ditarik kuat oleh magnet",
+        "right": "Besi"
+      },
+      {
+        "pairId": "pasangan-rangkaian-listrik-yang-semua-lam",
+        "left": "Rangkaian listrik yang semua lampunya padam bila satu lampu putus",
+        "right": "Rangkaian seri"
       }
     ]
   },

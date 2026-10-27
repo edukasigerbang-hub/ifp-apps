@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kemampuan-untuk-melakukan-kerja",
+        "prompt": "Kemampuan untuk melakukan kerja dalam ilmu pengetahuan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kemampuan-untuk-melakukan-k-0",
+            "text": "Energi"
+          },
+          {
+            "optionId": "opsi-soal-kemampuan-untuk-melakukan-k-1",
+            "text": "Kekuatan"
+          },
+          {
+            "optionId": "opsi-soal-kemampuan-untuk-melakukan-k-2",
+            "text": "Kecepatan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kemampuan-untuk-melakukan-k-0"
+      },
+      {
+        "questionId": "soal-saat-lampu-menyala-energi-listri",
+        "prompt": "Saat lampu menyala, energi listrik berubah menjadi energi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-lampu-menyala-energi-l-1",
+            "text": "Bunyi"
+          },
+          {
+            "optionId": "opsi-soal-saat-lampu-menyala-energi-l-0",
+            "text": "Cahaya"
+          },
+          {
+            "optionId": "opsi-soal-saat-lampu-menyala-energi-l-2",
+            "text": "Gerak"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-lampu-menyala-energi-l-0"
+      },
+      {
+        "questionId": "soal-energi-yang-dihasilkan-api-kompo",
+        "prompt": "Energi yang dihasilkan api kompor untuk memasak air adalah energi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-energi-yang-dihasilkan-api-1",
+            "text": "Bunyi"
+          },
+          {
+            "optionId": "opsi-soal-energi-yang-dihasilkan-api-2",
+            "text": "Listrik"
+          },
+          {
+            "optionId": "opsi-soal-energi-yang-dihasilkan-api-0",
+            "text": "Panas"
+          }
+        ],
+        "correctResponse": "opsi-soal-energi-yang-dihasilkan-api-0"
+      },
+      {
+        "questionId": "soal-saat-ruangan-sudah-terang-oleh-s",
+        "prompt": "Saat ruangan sudah terang oleh sinar matahari, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-ruangan-sudah-terang-o-0",
+            "text": "Mematikan lampu"
+          },
+          {
+            "optionId": "opsi-soal-saat-ruangan-sudah-terang-o-1",
+            "text": "Menyalakan kipas"
+          },
+          {
+            "optionId": "opsi-soal-saat-ruangan-sudah-terang-o-2",
+            "text": "Menambah lampu"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-ruangan-sudah-terang-o-0"
       }
     ],
     "passingScore": 75

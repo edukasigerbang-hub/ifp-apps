@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Mean dari 70, 80, 90 adalah",
         "right": "80"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-menentuk",
+        "left": "Langkah pertama sebelum menentukan nilai tengah (median)",
+        "right": "Mengurutkan data"
+      },
+      {
+        "pairId": "pasangan-hasil-bagi-jumlah-data-dengan-ba",
+        "left": "Hasil bagi jumlah data dengan banyak data",
+        "right": "Mean"
       }
     ]
   },

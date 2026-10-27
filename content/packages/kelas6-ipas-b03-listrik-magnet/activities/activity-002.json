@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-paralel"
+      },
+      {
+        "questionId": "soal-lapisan-pelindung-pada-kabel-lis",
+        "prompt": "Lapisan pelindung pada kabel listrik dibuat dari bahan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lapisan-pelindung-pada-kabe-1",
+            "text": "Konduktor"
+          },
+          {
+            "optionId": "opsi-soal-lapisan-pelindung-pada-kabe-2",
+            "text": "Logam"
+          },
+          {
+            "optionId": "opsi-soal-lapisan-pelindung-pada-kabe-0",
+            "text": "Isolator"
+          }
+        ],
+        "correctResponse": "opsi-soal-lapisan-pelindung-pada-kabe-0"
+      },
+      {
+        "questionId": "soal-dua-kutub-magnet-yang-jenisnya-s",
+        "prompt": "Dua kutub magnet yang jenisnya sama akan saling ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-kutub-magnet-yang-jenis-0",
+            "text": "Menolak"
+          },
+          {
+            "optionId": "opsi-soal-dua-kutub-magnet-yang-jenis-1",
+            "text": "Menarik"
+          },
+          {
+            "optionId": "opsi-soal-dua-kutub-magnet-yang-jenis-2",
+            "text": "Menempel"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-kutub-magnet-yang-jenis-0"
       }
     ],
     "passingScore": 75

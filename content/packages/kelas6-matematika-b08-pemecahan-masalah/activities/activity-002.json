@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-paham"
+      },
+      {
+        "questionId": "soal-24-donat-dibagikan-sama-rata-kep",
+        "prompt": "24 donat dibagikan sama rata kepada 6 anak. Setiap anak mendapat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-24-donat-dibagikan-sama-rat-1",
+            "text": "5 donat"
+          },
+          {
+            "optionId": "opsi-soal-24-donat-dibagikan-sama-rat-2",
+            "text": "6 donat"
+          },
+          {
+            "optionId": "opsi-soal-24-donat-dibagikan-sama-rat-0",
+            "text": "4 donat"
+          },
+          {
+            "optionId": "opsi-soal-24-donat-dibagikan-sama-rat-3",
+            "text": "18 donat"
+          }
+        ],
+        "correctResponse": "opsi-soal-24-donat-dibagikan-sama-rat-0"
+      },
+      {
+        "questionId": "soal-setelah-jawaban-diperoleh-langka",
+        "prompt": "Setelah jawaban diperoleh, langkah terakhir yang sebaiknya dilakukan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-jawaban-diperoleh-l-1",
+            "text": "Mengubah soal yang diberikan"
+          },
+          {
+            "optionId": "opsi-soal-setelah-jawaban-diperoleh-l-2",
+            "text": "Langsung menebak jawaban lain"
+          },
+          {
+            "optionId": "opsi-soal-setelah-jawaban-diperoleh-l-3",
+            "text": "Menghapus jawaban lama"
+          },
+          {
+            "optionId": "opsi-soal-setelah-jawaban-diperoleh-l-0",
+            "text": "Memeriksa jawaban"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-jawaban-diperoleh-l-0"
       }
     ],
     "passingScore": 75

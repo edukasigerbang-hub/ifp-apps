@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-petugas-pengelola-zakat-disebut",
+        "prompt": "Petugas pengelola zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-petugas-pengelola-zakat-dis-1",
+            "text": "Mustahik"
+          },
+          {
+            "optionId": "opsi-soal-petugas-pengelola-zakat-dis-0",
+            "text": "Amil"
+          },
+          {
+            "optionId": "opsi-soal-petugas-pengelola-zakat-dis-2",
+            "text": "Donatur"
+          }
+        ],
+        "correctResponse": "opsi-soal-petugas-pengelola-zakat-dis-0"
+      },
+      {
+        "questionId": "soal-zakat-hanya-wajib-bagi-orang-yan",
+        "prompt": "Zakat hanya wajib bagi orang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-hanya-wajib-bagi-oran-1",
+            "text": "Sehat"
+          },
+          {
+            "optionId": "opsi-soal-zakat-hanya-wajib-bagi-oran-2",
+            "text": "Pintar"
+          },
+          {
+            "optionId": "opsi-soal-zakat-hanya-wajib-bagi-oran-0",
+            "text": "Mampu"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-hanya-wajib-bagi-oran-0"
+      },
+      {
+        "questionId": "soal-harta-yang-wajib-dikeluarkan-den",
+        "prompt": "Harta yang wajib dikeluarkan dengan kadar tertentu disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-harta-yang-wajib-dikeluarka-0",
+            "text": "Zakat"
+          },
+          {
+            "optionId": "opsi-soal-harta-yang-wajib-dikeluarka-1",
+            "text": "Infak"
+          },
+          {
+            "optionId": "opsi-soal-harta-yang-wajib-dikeluarka-2",
+            "text": "Sedekah"
+          }
+        ],
+        "correctResponse": "opsi-soal-harta-yang-wajib-dikeluarka-0"
+      },
+      {
+        "questionId": "soal-sedekah-adalah-memberi-tanpa-men",
+        "prompt": "Sedekah adalah memberi tanpa mengharap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sedekah-adalah-memberi-tanp-1",
+            "text": "Hadiah kecil"
+          },
+          {
+            "optionId": "opsi-soal-sedekah-adalah-memberi-tanp-0",
+            "text": "Balasan"
+          },
+          {
+            "optionId": "opsi-soal-sedekah-adalah-memberi-tanp-2",
+            "text": "Upah kerja"
+          }
+        ],
+        "correctResponse": "opsi-soal-sedekah-adalah-memberi-tanp-0"
       }
     ],
     "passingScore": 75

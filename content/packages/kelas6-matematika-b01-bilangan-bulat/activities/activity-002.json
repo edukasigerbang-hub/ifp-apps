@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-hasil-4-9-adalah",
+        "prompt": "Hasil -4 + 9 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-0",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-1",
+            "text": "-5"
+          },
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-2",
+            "text": "13"
+          },
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-3",
+            "text": "-13"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-4-9-adalah-0"
+      },
+      {
+        "questionId": "soal-pada-garis-bilangan-bilangan-neg",
+        "prompt": "Pada garis bilangan, bilangan negatif terletak di sebelah ... nol.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-1",
+            "text": "Kanan"
+          },
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-0",
+            "text": "Kiri"
+          },
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-2",
+            "text": "Atas"
+          },
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-3",
+            "text": "Bawah"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-garis-bilangan-bilanga-0"
       }
     ],
     "passingScore": 75

@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-12"
+      },
+      {
+        "questionId": "soal-rasio-12-18-disederhanakan-menja",
+        "prompt": "Rasio 12 : 18 disederhanakan menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rasio-12-18-disederhanakan-1",
+            "text": "3 : 2"
+          },
+          {
+            "optionId": "opsi-soal-rasio-12-18-disederhanakan-2",
+            "text": "6 : 9"
+          },
+          {
+            "optionId": "opsi-soal-rasio-12-18-disederhanakan-0",
+            "text": "2 : 3"
+          },
+          {
+            "optionId": "opsi-soal-rasio-12-18-disederhanakan-3",
+            "text": "1 : 3"
+          }
+        ],
+        "correctResponse": "opsi-soal-rasio-12-18-disederhanakan-0"
+      },
+      {
+        "questionId": "soal-perbandingan-ayam-dan-bebek-3-5",
+        "prompt": "Perbandingan ayam dan bebek 3 : 5. Banyak ayam 12 ekor. Banyak bebek ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perbandingan-ayam-dan-bebek-1",
+            "text": "15"
+          },
+          {
+            "optionId": "opsi-soal-perbandingan-ayam-dan-bebek-2",
+            "text": "16"
+          },
+          {
+            "optionId": "opsi-soal-perbandingan-ayam-dan-bebek-3",
+            "text": "25"
+          },
+          {
+            "optionId": "opsi-soal-perbandingan-ayam-dan-bebek-0",
+            "text": "20"
+          }
+        ],
+        "correctResponse": "opsi-soal-perbandingan-ayam-dan-bebek-0"
       }
     ],
     "passingScore": 75

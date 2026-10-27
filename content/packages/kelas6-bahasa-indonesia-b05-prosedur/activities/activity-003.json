@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Menanam biji dalam pot secara berurutan",
         "right": "Teks prosedur"
+      },
+      {
+        "pairId": "pasangan-alat-yang-disiapkan-sebelum-mena",
+        "left": "Alat yang disiapkan sebelum menanam biji",
+        "right": "Pot dan tanah"
+      },
+      {
+        "pairId": "pasangan-langkah-menanam-biji-tepat-setel",
+        "left": "Langkah menanam biji tepat setelah menyiram",
+        "right": "Meletakkan di tempat terang"
       }
     ]
   },

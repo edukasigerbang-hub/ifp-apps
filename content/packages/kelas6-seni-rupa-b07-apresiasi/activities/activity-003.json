@@ -31,6 +31,11 @@
         "pairId": "pasangan-5",
         "left": "Kritik yang baik bersifat",
         "right": "Membangun"
+      },
+      {
+        "pairId": "pasangan-sikap-penonton-terhadap-karya-te",
+        "left": "Sikap penonton terhadap karya teman",
+        "right": "Menghargai"
       }
     ]
   },

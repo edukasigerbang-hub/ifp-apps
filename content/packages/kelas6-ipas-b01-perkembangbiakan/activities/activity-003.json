@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Telur, ulat, kepompong, kupu-kupu",
         "right": "Metamorfosis"
+      },
+      {
+        "pairId": "pasangan-tahap-pertama-pada-daur-hidup-ku",
+        "left": "Tahap pertama pada daur hidup kupu-kupu",
+        "right": "Telur"
+      },
+      {
+        "pairId": "pasangan-cara-tumbuhan-berkembang-biak-se",
+        "left": "Cara tumbuhan berkembang biak selain dengan biji",
+        "right": "Tunas dan cangkok"
       }
     ]
   },

@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-sampah"
+      },
+      {
+        "questionId": "soal-sesuatu-yang-kita-terima-setelah",
+        "prompt": "Sesuatu yang kita terima setelah menunaikan kewajiban disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sesuatu-yang-kita-terima-se-0",
+            "text": "Hak"
+          },
+          {
+            "optionId": "opsi-soal-sesuatu-yang-kita-terima-se-1",
+            "text": "Tugas"
+          },
+          {
+            "optionId": "opsi-soal-sesuatu-yang-kita-terima-se-2",
+            "text": "Larangan"
+          }
+        ],
+        "correctResponse": "opsi-soal-sesuatu-yang-kita-terima-se-0"
+      },
+      {
+        "questionId": "soal-membayar-pajak-dan-menaati-rambu",
+        "prompt": "Membayar pajak dan menaati rambu lalu lintas termasuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-membayar-pajak-dan-menaati-1",
+            "text": "Hak"
+          },
+          {
+            "optionId": "opsi-soal-membayar-pajak-dan-menaati-0",
+            "text": "Kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-membayar-pajak-dan-menaati-2",
+            "text": "Fasilitas"
+          }
+        ],
+        "correctResponse": "opsi-soal-membayar-pajak-dan-menaati-0"
       }
     ],
     "passingScore": 75

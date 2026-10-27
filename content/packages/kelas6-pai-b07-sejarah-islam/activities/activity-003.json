@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Alasan Nabi hijrah",
         "right": "Melindungi umat"
+      },
+      {
+        "pairId": "pasangan-kota-yang-dituju-nabi-saat-hijra",
+        "left": "Kota yang dituju Nabi saat hijrah",
+        "right": "Madinah"
+      },
+      {
+        "pairId": "pasangan-masjid-yang-dibangun-nabi-di-mad",
+        "left": "Masjid yang dibangun Nabi di Madinah",
+        "right": "Masjid Nabawi"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menyampaikan-ajaran-isl",
+        "left": "Kegiatan menyampaikan ajaran Islam",
+        "right": "Dakwah"
       }
     ]
   },

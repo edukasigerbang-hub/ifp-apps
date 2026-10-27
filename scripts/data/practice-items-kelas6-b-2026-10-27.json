@@ -1,0 +1,261 @@
+{
+  "packages": {
+    "kelas6-ipas-b01-perkembangbiakan": {
+      "matching": [
+        { "left": "Tahap pertama pada daur hidup kupu-kupu", "right": "Telur" },
+        { "left": "Cara tumbuhan berkembang biak selain dengan biji", "right": "Tunas dan cangkok" }
+      ]
+    },
+    "kelas6-ipas-b02-pewarisan-sifat": {
+      "quiz": [
+        {
+          "prompt": "Sifat yang sudah ada sejak lahir dan berasal dari orang tua disebut sifat ...",
+          "answer": "Bawaan",
+          "distractors": ["Lingkungan", "Kebiasaan"]
+        },
+        {
+          "prompt": "Warna kulit dan bentuk rambut yang mirip orang tua termasuk ciri ...",
+          "answer": "Menurun",
+          "distractors": ["Menular", "Dipelajari"]
+        },
+        {
+          "prompt": "Bagian di dalam tubuh yang menjadi pembawa sifat dari orang tua adalah ...",
+          "answer": "Gen",
+          "distractors": ["Sel", "Jaringan"]
+        },
+        {
+          "prompt": "Makanan dan kebiasaan sehari-hari yang membentuk diri kita termasuk faktor ...",
+          "answer": "Lingkungan",
+          "distractors": ["Keturunan", "Bawaan"]
+        }
+      ]
+    },
+    "kelas6-ipas-b03-listrik-magnet": {
+      "quiz": [
+        {
+          "prompt": "Lapisan pelindung pada kabel listrik dibuat dari bahan ...",
+          "answer": "Isolator",
+          "distractors": ["Konduktor", "Logam"]
+        },
+        {
+          "prompt": "Dua kutub magnet yang jenisnya sama akan saling ...",
+          "answer": "Menolak",
+          "distractors": ["Menarik", "Menempel"]
+        }
+      ],
+      "matching": [
+        { "left": "Benda logam yang ditarik kuat oleh magnet", "right": "Besi" },
+        { "left": "Rangkaian listrik yang semua lampunya padam bila satu lampu putus", "right": "Rangkaian seri" }
+      ]
+    },
+    "kelas6-ipas-b04-energi": {
+      "quiz": [
+        {
+          "prompt": "Kemampuan untuk melakukan kerja dalam ilmu pengetahuan disebut ...",
+          "answer": "Energi",
+          "distractors": ["Kekuatan", "Kecepatan"]
+        },
+        {
+          "prompt": "Saat lampu menyala, energi listrik berubah menjadi energi ...",
+          "answer": "Cahaya",
+          "distractors": ["Bunyi", "Gerak"]
+        },
+        {
+          "prompt": "Energi yang dihasilkan api kompor untuk memasak air adalah energi ...",
+          "answer": "Panas",
+          "distractors": ["Bunyi", "Listrik"]
+        },
+        {
+          "prompt": "Saat ruangan sudah terang oleh sinar matahari, kita sebaiknya ...",
+          "answer": "Mematikan lampu",
+          "distractors": ["Menyalakan kipas", "Menambah lampu"]
+        }
+      ]
+    },
+    "kelas6-ipas-b05-ekosistem": {
+      "quiz": [
+        {
+          "prompt": "Makhluk hidup yang menguraikan sisa makhluk lain menjadi zat hara disebut ...",
+          "answer": "Pengurai",
+          "distractors": ["Produsen", "Konsumen"]
+        },
+        {
+          "prompt": "Urutan peristiwa makan dan dimakan di dalam ekosistem disebut ...",
+          "answer": "Rantai makanan",
+          "distractors": ["Simbiosis", "Keseimbangan"]
+        },
+        {
+          "prompt": "Pada rantai makanan tumbuhan, belalang, burung, lalu ular, hewan di puncak adalah ...",
+          "answer": "Ular",
+          "distractors": ["Belalang", "Burung"]
+        },
+        {
+          "prompt": "Hubungan erat antara dua makhluk hidup yang hidup bersama disebut ...",
+          "answer": "Simbiosis",
+          "distractors": ["Rantai makanan", "Keseimbangan"]
+        }
+      ]
+    },
+    "kelas6-ipas-b06-bumi-tata-surya": {
+      "matching": [
+        { "left": "Gerak bumi mengelilingi matahari", "right": "Revolusi bumi" },
+        { "left": "Peristiwa gelapnya matahari atau bulan karena posisi benda langit", "right": "Gerhana" },
+        { "left": "Benda langit yang menjadi pusat tata surya", "right": "Matahari" }
+      ]
+    },
+    "kelas6-ipas-b07-teknologi-ramah-lingkungan": {
+      "quiz": [
+        {
+          "prompt": "Mengolah sampah plastik bekas menjadi pot termasuk kegiatan ...",
+          "answer": "Daur ulang",
+          "distractors": ["Pembakaran", "Penimbunan"]
+        },
+        {
+          "prompt": "Alat di atap rumah yang menangkap energi matahari adalah ...",
+          "answer": "Panel surya",
+          "distractors": ["Kincir angin", "Baterai"]
+        }
+      ],
+      "matching": [
+        { "left": "Sumber energi yang ditangkap panel surya", "right": "Matahari" },
+        { "left": "Sumber energi yang memutar kincir angin", "right": "Angin" }
+      ]
+    },
+    "kelas6-ipas-b08-pelestarian": {
+      "matching": [
+        { "left": "Cara memisahkan sampah rumah tangga sebelum dibuang", "right": "Memilah sampah" },
+        { "left": "Tindakan menghemat listrik di rumah", "right": "Mematikan alat yang tidak dipakai" },
+        { "left": "Cara menjaga air sungai tetap bersih", "right": "Tidak membuang sampah ke sungai" }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b01-pancasila-uud": {
+      "quiz": [
+        {
+          "prompt": "Dokumen yang menjadi hukum dasar negara Indonesia adalah ...",
+          "answer": "UUD 1945",
+          "distractors": ["Pancasila", "Bhinneka Tunggal Ika"]
+        },
+        {
+          "prompt": "Bagian awal sebelum pasal-pasal pada UUD 1945 disebut ...",
+          "answer": "Pembukaan",
+          "distractors": ["Amandemen", "Lampiran"]
+        },
+        {
+          "prompt": "Hubungan Pancasila dengan UUD 1945 adalah ...",
+          "answer": "UUD menjabarkan Pancasila",
+          "distractors": ["UUD menggantikan Pancasila", "Pancasila bagian UUD"]
+        },
+        {
+          "prompt": "Semboyan bangsa Indonesia adalah ...",
+          "answer": "Bhinneka Tunggal Ika",
+          "distractors": ["Tut Wuri Handayani", "Ing Ngarsa Sung Tuladha"]
+        }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b02-hak-kewajiban": {
+      "quiz": [
+        {
+          "prompt": "Sesuatu yang kita terima setelah menunaikan kewajiban disebut ...",
+          "answer": "Hak",
+          "distractors": ["Tugas", "Larangan"]
+        },
+        {
+          "prompt": "Membayar pajak dan menaati rambu lalu lintas termasuk ...",
+          "answer": "Kewajiban",
+          "distractors": ["Hak", "Fasilitas"]
+        }
+      ],
+      "matching": [
+        { "left": "Contoh hak siswa di sekolah", "right": "Mendapat pelajaran" },
+        { "left": "Contoh kewajiban siswa di rumah", "right": "Menjaga kebersihan rumah" }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b03-demokrasi": {
+      "matching": [
+        { "left": "Kegiatan menyampaikan janji dan program sebelum pemungutan suara", "right": "Kampanye" },
+        { "left": "Kegiatan mencatat warga yang berhak memilih", "right": "Pendaftaran pemilih" },
+        { "left": "Pengambilan sumpah pemimpin yang menang dalam pemilu", "right": "Pelantikan" }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b04-keberagaman": {
+      "quiz": [
+        {
+          "prompt": "Sikap menerima perbedaan tanpa mengejek disebut ...",
+          "answer": "Toleransi",
+          "distractors": ["Persatuan", "Kerja sama"]
+        },
+        {
+          "prompt": "Alasan persatuan penting bagi Indonesia adalah ...",
+          "answer": "Negara tetap kuat",
+          "distractors": ["Daerah mudah terpisah", "Budaya daerah hilang"]
+        },
+        {
+          "prompt": "Perbedaan keyakinan yang dianut masyarakat disebut keberagaman ...",
+          "answer": "Agama",
+          "distractors": ["Suku", "Budaya"]
+        },
+        {
+          "prompt": "Saat teman merayakan hari raya yang berbeda, sikap kita sebaiknya ...",
+          "answer": "Menghormati",
+          "distractors": ["Mengejek", "Mengabaikan"]
+        }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b05-nkri-globalisasi": {
+      "quiz": [
+        {
+          "prompt": "Pengaruh budaya asing yang tidak sesuai nilai bangsa sebaiknya kita ...",
+          "answer": "Menyaring",
+          "distractors": ["Meniru", "Melupakan"]
+        },
+        {
+          "prompt": "Produk buatan dalam negeri sebaiknya kita ...",
+          "answer": "Cintai",
+          "distractors": ["Tinggalkan", "Ragukan"]
+        }
+      ],
+      "matching": [
+        { "left": "Sikap bijak dalam menghadapi pengaruh asing", "right": "Selektif" },
+        { "left": "Akibat globalisasi bagi hubungan antarnegara", "right": "Semakin terhubung" }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b06-gotong-royong": {
+      "matching": [
+        { "left": "Cara menetapkan keputusan bersama dalam kelompok", "right": "Musyawarah" },
+        { "left": "Langkah setelah tugas dibagi dalam kerja kelompok", "right": "Bekerja bersama" },
+        { "left": "Kegiatan menyampaikan hasil kerja kelompok", "right": "Melaporkan hasil" }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b07-proyek-kewargaan": {
+      "matching": [
+        { "left": "Langkah pertama sebelum menyusun rencana proyek", "right": "Memilih masalah" },
+        { "left": "Pembagian pekerjaan kepada setiap anggota kelompok", "right": "Membagi tugas" },
+        { "left": "Kegiatan menjalankan rencana yang sudah disusun", "right": "Melaksanakan proyek" }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b08-kearifan-lokal": {
+      "quiz": [
+        {
+          "prompt": "Nilai dan kebiasaan baik yang diwarisi masyarakat suatu daerah disebut ...",
+          "answer": "Kearifan lokal",
+          "distractors": ["Budaya asing", "Kemajuan zaman"]
+        },
+        {
+          "prompt": "Pakaian yang dipakai pada upacara adat disebut pakaian ...",
+          "answer": "Adat",
+          "distractors": ["Seragam", "Modern"]
+        },
+        {
+          "prompt": "Kearifan lokal dilestarikan dengan mengenal, menghormati, dan ...",
+          "answer": "Mempraktikkan",
+          "distractors": ["Mengabaikannya", "Melupakan"]
+        },
+        {
+          "prompt": "Kegiatan kerja bakti warga merupakan contoh kearifan lokal berupa ...",
+          "answer": "Gotong royong",
+          "distractors": ["Pameran budaya", "Lomba kampung"]
+        }
+      ]
+    }
+  }
+}

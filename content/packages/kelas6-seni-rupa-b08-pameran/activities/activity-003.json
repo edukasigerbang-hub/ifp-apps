@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-karya-yang-dipajang-dalam-pamera",
+        "prompt": "Karya yang dipajang dalam pameran kelas adalah karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-karya-yang-dipajang-dalam-p-0",
+            "text": "Siswa"
+          },
+          {
+            "optionId": "opsi-soal-karya-yang-dipajang-dalam-p-1",
+            "text": "Guru"
+          },
+          {
+            "optionId": "opsi-soal-karya-yang-dipajang-dalam-p-2",
+            "text": "Seniman"
+          }
+        ],
+        "correctResponse": "opsi-soal-karya-yang-dipajang-dalam-p-0"
+      },
+      {
+        "questionId": "soal-label-pada-karya-berisi-nama-pem",
+        "prompt": "Label pada karya berisi nama pembuat dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-label-pada-karya-berisi-nam-1",
+            "text": "Harga karya"
+          },
+          {
+            "optionId": "opsi-soal-label-pada-karya-berisi-nam-0",
+            "text": "Judul karya"
+          },
+          {
+            "optionId": "opsi-soal-label-pada-karya-berisi-nam-2",
+            "text": "Berat karya"
+          }
+        ],
+        "correctResponse": "opsi-soal-label-pada-karya-berisi-nam-0"
+      },
+      {
+        "questionId": "soal-saat-pengunjung-bertanya-tentang",
+        "prompt": "Saat pengunjung bertanya tentang karya, penjaga pameran akan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-pengunjung-bertanya-te-1",
+            "text": "Mencatat nama"
+          },
+          {
+            "optionId": "opsi-soal-saat-pengunjung-bertanya-te-2",
+            "text": "Menjual karya"
+          },
+          {
+            "optionId": "opsi-soal-saat-pengunjung-bertanya-te-0",
+            "text": "Menjelaskan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-pengunjung-bertanya-te-0"
+      },
+      {
+        "questionId": "soal-karya-dipajang-dengan-rapi-agar",
+        "prompt": "Karya dipajang dengan rapi agar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-karya-dipajang-dengan-rapi-0",
+            "text": "Mudah dilihat"
+          },
+          {
+            "optionId": "opsi-soal-karya-dipajang-dengan-rapi-1",
+            "text": "Cepat rusak"
+          },
+          {
+            "optionId": "opsi-soal-karya-dipajang-dengan-rapi-2",
+            "text": "Sulit dicari"
+          }
+        ],
+        "correctResponse": "opsi-soal-karya-dipajang-dengan-rapi-0"
       }
     ],
     "passingScore": 75

@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Pasangan yang senilai dengan 3 : 4 adalah ...",
         "right": "9 : 12"
+      },
+      {
+        "pairId": "pasangan-hasil-penyederhanaan-rasio-8-6",
+        "left": "Hasil penyederhanaan rasio 8 : 6",
+        "right": "4 : 3"
+      },
+      {
+        "pairId": "pasangan-rasio-merah-dan-biru-2-3-jika-me",
+        "left": "Rasio merah dan biru 2 : 3. Jika merah 6, banyak biru",
+        "right": "9"
       }
     ]
   },

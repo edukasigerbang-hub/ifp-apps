@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-7"
+      },
+      {
+        "questionId": "soal-modus-dari-data-4-5-5-6-7-adalah",
+        "prompt": "Modus dari data 4, 5, 5, 6, 7 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-modus-dari-data-4-5-5-6-7-a-1",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-modus-dari-data-4-5-5-6-7-a-2",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-soal-modus-dari-data-4-5-5-6-7-a-3",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-soal-modus-dari-data-4-5-5-6-7-a-0",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-soal-modus-dari-data-4-5-5-6-7-a-0"
+      },
+      {
+        "questionId": "soal-median-dari-data-50-60-80-adalah",
+        "prompt": "Median dari data 50, 60, 80 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-median-dari-data-50-60-80-a-0",
+            "text": "60"
+          },
+          {
+            "optionId": "opsi-soal-median-dari-data-50-60-80-a-1",
+            "text": "50"
+          },
+          {
+            "optionId": "opsi-soal-median-dari-data-50-60-80-a-2",
+            "text": "80"
+          },
+          {
+            "optionId": "opsi-soal-median-dari-data-50-60-80-a-3",
+            "text": "63"
+          }
+        ],
+        "correctResponse": "opsi-soal-median-dari-data-50-60-80-a-0"
       }
     ],
     "passingScore": 75

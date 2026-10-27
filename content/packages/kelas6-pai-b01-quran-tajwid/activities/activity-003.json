@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-panjang-bacaan-mad-thabi-i-adala",
+        "prompt": "Panjang bacaan mad thabi'i adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-1",
+            "text": "Satu harakat"
+          },
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-0",
+            "text": "Dua harakat"
+          },
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-2",
+            "text": "Tiga harakat"
+          }
+        ],
+        "correctResponse": "opsi-soal-panjang-bacaan-mad-thabi-i-0"
+      },
+      {
+        "questionId": "soal-cara-membaca-al-qur-an-dengan-pe",
+        "prompt": "Cara membaca Al-Qur'an dengan pelan dan jelas disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cara-membaca-al-qur-an-deng-1",
+            "text": "Tajwid"
+          },
+          {
+            "optionId": "opsi-soal-cara-membaca-al-qur-an-deng-2",
+            "text": "Mad"
+          },
+          {
+            "optionId": "opsi-soal-cara-membaca-al-qur-an-deng-0",
+            "text": "Tartil"
+          }
+        ],
+        "correctResponse": "opsi-soal-cara-membaca-al-qur-an-deng-0"
+      },
+      {
+        "questionId": "soal-sikap-yang-tepat-saat-membaca-al",
+        "prompt": "Sikap yang tepat saat membaca Al-Qur'an adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-saat-memba-0",
+            "text": "Tenang dan bersih"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-saat-memba-1",
+            "text": "Sambil bermain"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-saat-memba-2",
+            "text": "Dengan suara keras"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-tepat-saat-memba-0"
+      },
+      {
+        "questionId": "soal-surah-dalam-al-qur-an-berarti",
+        "prompt": "Surah dalam Al-Qur'an berarti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-surah-dalam-al-qur-an-berar-1",
+            "text": "Ayat"
+          },
+          {
+            "optionId": "opsi-soal-surah-dalam-al-qur-an-berar-0",
+            "text": "Bab"
+          },
+          {
+            "optionId": "opsi-soal-surah-dalam-al-qur-an-berar-2",
+            "text": "Juz"
+          }
+        ],
+        "correctResponse": "opsi-soal-surah-dalam-al-qur-an-berar-0"
       }
     ],
     "passingScore": 75

@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Tujuan teks eksposisi adalah ...",
         "right": "Menjelaskan informasi"
+      },
+      {
+        "pairId": "pasangan-bagian-awal-teks-eksposisi",
+        "left": "Bagian awal teks eksposisi",
+        "right": "Tesis"
+      },
+      {
+        "pairId": "pasangan-alasan-dan-bukti-pada-teks-ekspo",
+        "left": "Alasan dan bukti pada teks eksposisi tertulis di bagian",
+        "right": "Argumen"
       }
     ]
   },

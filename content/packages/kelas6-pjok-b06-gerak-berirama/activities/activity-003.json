@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-gerak-yang-mengikuti-hitungan-at",
+        "prompt": "Gerak yang mengikuti hitungan atau musik disebut gerak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerak-yang-mengikuti-hitung-0",
+            "text": "Berirama"
+          },
+          {
+            "optionId": "opsi-soal-gerak-yang-mengikuti-hitung-1",
+            "text": "Bebas"
+          },
+          {
+            "optionId": "opsi-soal-gerak-yang-mengikuti-hitung-2",
+            "text": "Lantai"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerak-yang-mengikuti-hitung-0"
+      },
+      {
+        "questionId": "soal-agar-gerakan-kelompok-terlihat-s",
+        "prompt": "Agar gerakan kelompok terlihat serasi, setiap anggota harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-gerakan-kelompok-terli-1",
+            "text": "Bersaing"
+          },
+          {
+            "optionId": "opsi-soal-agar-gerakan-kelompok-terli-0",
+            "text": "Kompak"
+          },
+          {
+            "optionId": "opsi-soal-agar-gerakan-kelompok-terli-2",
+            "text": "Bermain sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-gerakan-kelompok-terli-0"
+      },
+      {
+        "questionId": "soal-gerakan-yang-tidak-kaku-disebut",
+        "prompt": "Gerakan yang tidak kaku disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerakan-yang-tidak-kaku-dis-1",
+            "text": "Kasar"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-yang-tidak-kaku-dis-2",
+            "text": "Cepat"
+          },
+          {
+            "optionId": "opsi-soal-gerakan-yang-tidak-kaku-dis-0",
+            "text": "Luwes"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerakan-yang-tidak-kaku-dis-0"
+      },
+      {
+        "questionId": "soal-panduan-gerak-dalam-senam-irama",
+        "prompt": "Panduan gerak dalam senam irama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-panduan-gerak-dalam-senam-i-0",
+            "text": "Hitungan"
+          },
+          {
+            "optionId": "opsi-soal-panduan-gerak-dalam-senam-i-1",
+            "text": "Peluit"
+          },
+          {
+            "optionId": "opsi-soal-panduan-gerak-dalam-senam-i-2",
+            "text": "Sorakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-panduan-gerak-dalam-senam-i-0"
       }
     ],
     "passingScore": 75

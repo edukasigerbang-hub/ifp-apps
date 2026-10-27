@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-makhluk-hidup-yang-menguraikan-s",
+        "prompt": "Makhluk hidup yang menguraikan sisa makhluk lain menjadi zat hara disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-1",
+            "text": "Produsen"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-2",
+            "text": "Konsumen"
+          },
+          {
+            "optionId": "opsi-soal-makhluk-hidup-yang-mengurai-0",
+            "text": "Pengurai"
+          }
+        ],
+        "correctResponse": "opsi-soal-makhluk-hidup-yang-mengurai-0"
+      },
+      {
+        "questionId": "soal-urutan-peristiwa-makan-dan-dimak",
+        "prompt": "Urutan peristiwa makan dan dimakan di dalam ekosistem disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-urutan-peristiwa-makan-dan-0",
+            "text": "Rantai makanan"
+          },
+          {
+            "optionId": "opsi-soal-urutan-peristiwa-makan-dan-1",
+            "text": "Simbiosis"
+          },
+          {
+            "optionId": "opsi-soal-urutan-peristiwa-makan-dan-2",
+            "text": "Keseimbangan"
+          }
+        ],
+        "correctResponse": "opsi-soal-urutan-peristiwa-makan-dan-0"
+      },
+      {
+        "questionId": "soal-pada-rantai-makanan-tumbuhan-bel",
+        "prompt": "Pada rantai makanan tumbuhan, belalang, burung, lalu ular, hewan di puncak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-rantai-makanan-tumbuha-1",
+            "text": "Belalang"
+          },
+          {
+            "optionId": "opsi-soal-pada-rantai-makanan-tumbuha-0",
+            "text": "Ular"
+          },
+          {
+            "optionId": "opsi-soal-pada-rantai-makanan-tumbuha-2",
+            "text": "Burung"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-rantai-makanan-tumbuha-0"
+      },
+      {
+        "questionId": "soal-hubungan-erat-antara-dua-makhluk",
+        "prompt": "Hubungan erat antara dua makhluk hidup yang hidup bersama disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hubungan-erat-antara-dua-ma-1",
+            "text": "Rantai makanan"
+          },
+          {
+            "optionId": "opsi-soal-hubungan-erat-antara-dua-ma-2",
+            "text": "Keseimbangan"
+          },
+          {
+            "optionId": "opsi-soal-hubungan-erat-antara-dua-ma-0",
+            "text": "Simbiosis"
+          }
+        ],
+        "correctResponse": "opsi-soal-hubungan-erat-antara-dua-ma-0"
       }
     ],
     "passingScore": 75

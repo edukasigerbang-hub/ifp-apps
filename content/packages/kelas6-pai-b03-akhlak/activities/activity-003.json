@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sikap-dapat-dipercaya-dalam-menj",
+        "prompt": "Sikap dapat dipercaya dalam menjalankan tugas disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-dapat-dipercaya-dalam-1",
+            "text": "Jujur"
+          },
+          {
+            "optionId": "opsi-soal-sikap-dapat-dipercaya-dalam-0",
+            "text": "Amanah"
+          },
+          {
+            "optionId": "opsi-soal-sikap-dapat-dipercaya-dalam-2",
+            "text": "Sabar"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-dapat-dipercaya-dalam-0"
+      },
+      {
+        "questionId": "soal-menahan-diri-saat-marah-termasuk",
+        "prompt": "Menahan diri saat marah termasuk sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menahan-diri-saat-marah-ter-1",
+            "text": "Sopan"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-saat-marah-ter-2",
+            "text": "Amanah"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-saat-marah-ter-0",
+            "text": "Sabar"
+          }
+        ],
+        "correctResponse": "opsi-soal-menahan-diri-saat-marah-ter-0"
+      },
+      {
+        "questionId": "soal-tutur-kata-yang-baik-menunjukkan",
+        "prompt": "Tutur kata yang baik menunjukkan sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tutur-kata-yang-baik-menunj-0",
+            "text": "Sopan"
+          },
+          {
+            "optionId": "opsi-soal-tutur-kata-yang-baik-menunj-1",
+            "text": "Jujur"
+          },
+          {
+            "optionId": "opsi-soal-tutur-kata-yang-baik-menunj-2",
+            "text": "Amanah"
+          }
+        ],
+        "correctResponse": "opsi-soal-tutur-kata-yang-baik-menunj-0"
+      },
+      {
+        "questionId": "soal-peduli-kepada-teman-yang-kesulit",
+        "prompt": "Peduli kepada teman yang kesulitan dapat ditunjukkan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-peduli-kepada-teman-yang-ke-1",
+            "text": "Membiarkan"
+          },
+          {
+            "optionId": "opsi-soal-peduli-kepada-teman-yang-ke-0",
+            "text": "Membantu"
+          },
+          {
+            "optionId": "opsi-soal-peduli-kepada-teman-yang-ke-2",
+            "text": "Menegur"
+          }
+        ],
+        "correctResponse": "opsi-soal-peduli-kepada-teman-yang-ke-0"
       }
     ],
     "passingScore": 75

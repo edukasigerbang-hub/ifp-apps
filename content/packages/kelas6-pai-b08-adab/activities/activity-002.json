@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-percaya"
+      },
+      {
+        "questionId": "soal-saat-guru-menjelaskan-pelajaran",
+        "prompt": "Saat guru menjelaskan pelajaran, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-guru-menjelaskan-pelaj-0",
+            "text": "Mendengarkan"
+          },
+          {
+            "optionId": "opsi-soal-saat-guru-menjelaskan-pelaj-1",
+            "text": "Berbicara sendiri"
+          },
+          {
+            "optionId": "opsi-soal-saat-guru-menjelaskan-pelaj-2",
+            "text": "Bermain sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-guru-menjelaskan-pelaj-0"
+      },
+      {
+        "questionId": "soal-saat-bertemu-guru-di-lorong-seko",
+        "prompt": "Saat bertemu guru di lorong sekolah, sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-bertemu-guru-di-lorong-1",
+            "text": "Menghindar"
+          },
+          {
+            "optionId": "opsi-soal-saat-bertemu-guru-di-lorong-0",
+            "text": "Menyapa"
+          },
+          {
+            "optionId": "opsi-soal-saat-bertemu-guru-di-lorong-2",
+            "text": "Diam saja"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-bertemu-guru-di-lorong-0"
       }
     ],
     "passingScore": 75

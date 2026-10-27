@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Melestarikan hutan",
         "right": "Menanam dan tidak menebang sembarangan"
+      },
+      {
+        "pairId": "pasangan-cara-memisahkan-sampah-rumah-tan",
+        "left": "Cara memisahkan sampah rumah tangga sebelum dibuang",
+        "right": "Memilah sampah"
+      },
+      {
+        "pairId": "pasangan-tindakan-menghemat-listrik-di-ru",
+        "left": "Tindakan menghemat listrik di rumah",
+        "right": "Mematikan alat yang tidak dipakai"
+      },
+      {
+        "pairId": "pasangan-cara-menjaga-air-sungai-tetap-be",
+        "left": "Cara menjaga air sungai tetap bersih",
+        "right": "Tidak membuang sampah ke sungai"
       }
     ]
   },

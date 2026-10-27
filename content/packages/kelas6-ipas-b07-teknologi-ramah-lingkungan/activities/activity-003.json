@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Cara menghemat energi adalah",
         "right": "Mematikan lampu saat tidak dipakai"
+      },
+      {
+        "pairId": "pasangan-sumber-energi-yang-ditangkap-pan",
+        "left": "Sumber energi yang ditangkap panel surya",
+        "right": "Matahari"
+      },
+      {
+        "pairId": "pasangan-sumber-energi-yang-memutar-kinci",
+        "left": "Sumber energi yang memutar kincir angin",
+        "right": "Angin"
       }
     ]
   },

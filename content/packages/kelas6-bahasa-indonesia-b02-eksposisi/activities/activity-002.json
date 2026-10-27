@@ -105,6 +105,54 @@
           }
         ],
         "correctResponse": "opsi-alasan"
+      },
+      {
+        "questionId": "soal-teks-eksposisi-menyampaikan-info",
+        "prompt": "Teks eksposisi menyampaikan informasi dengan sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-teks-eksposisi-menyampaikan-1",
+            "text": "Memihak"
+          },
+          {
+            "optionId": "opsi-soal-teks-eksposisi-menyampaikan-2",
+            "text": "Berlebihan"
+          },
+          {
+            "optionId": "opsi-soal-teks-eksposisi-menyampaikan-3",
+            "text": "Puitis"
+          },
+          {
+            "optionId": "opsi-soal-teks-eksposisi-menyampaikan-0",
+            "text": "Objektif"
+          }
+        ],
+        "correctResponse": "opsi-soal-teks-eksposisi-menyampaikan-0"
+      },
+      {
+        "questionId": "soal-bagian-teks-eksposisi-yang-beris",
+        "prompt": "Bagian teks eksposisi yang berisi alasan dan bukti disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-teks-eksposisi-yang-0",
+            "text": "Argumen"
+          },
+          {
+            "optionId": "opsi-soal-bagian-teks-eksposisi-yang-1",
+            "text": "Tesis"
+          },
+          {
+            "optionId": "opsi-soal-bagian-teks-eksposisi-yang-2",
+            "text": "Penegasan"
+          },
+          {
+            "optionId": "opsi-soal-bagian-teks-eksposisi-yang-3",
+            "text": "Judul"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-teks-eksposisi-yang-0"
       }
     ],
     "passingScore": 75

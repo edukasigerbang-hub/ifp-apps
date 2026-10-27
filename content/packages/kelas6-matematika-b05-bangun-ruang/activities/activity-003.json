@@ -49,6 +49,102 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bangun-ruang-yang-memiliki-6-sis",
+        "prompt": "Bangun ruang yang memiliki 6 sisi sama besar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-0",
+            "text": "Kubus"
+          },
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-1",
+            "text": "Balok"
+          },
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-2",
+            "text": "Tabung"
+          },
+          {
+            "optionId": "opsi-soal-bangun-ruang-yang-memiliki-3",
+            "text": "Kerucut"
+          }
+        ],
+        "correctResponse": "opsi-soal-bangun-ruang-yang-memiliki-0"
+      },
+      {
+        "questionId": "soal-rumus-volume-tabung-adalah",
+        "prompt": "Rumus volume tabung adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rumus-volume-tabung-adalah-1",
+            "text": "2 × π × r"
+          },
+          {
+            "optionId": "opsi-soal-rumus-volume-tabung-adalah-0",
+            "text": "π × r² × t"
+          },
+          {
+            "optionId": "opsi-soal-rumus-volume-tabung-adalah-2",
+            "text": "Panjang × lebar × tinggi"
+          },
+          {
+            "optionId": "opsi-soal-rumus-volume-tabung-adalah-3",
+            "text": "π × r²"
+          }
+        ],
+        "correctResponse": "opsi-soal-rumus-volume-tabung-adalah-0"
+      },
+      {
+        "questionId": "soal-alas-sebuah-tabung-berbentuk",
+        "prompt": "Alas sebuah tabung berbentuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alas-sebuah-tabung-berbentu-1",
+            "text": "Segitiga"
+          },
+          {
+            "optionId": "opsi-soal-alas-sebuah-tabung-berbentu-2",
+            "text": "Persegi panjang"
+          },
+          {
+            "optionId": "opsi-soal-alas-sebuah-tabung-berbentu-0",
+            "text": "Lingkaran"
+          },
+          {
+            "optionId": "opsi-soal-alas-sebuah-tabung-berbentu-3",
+            "text": "Persegi"
+          }
+        ],
+        "correctResponse": "opsi-soal-alas-sebuah-tabung-berbentu-0"
+      },
+      {
+        "questionId": "soal-banyak-sisi-pada-sebuah-kubus-ad",
+        "prompt": "Banyak sisi pada sebuah kubus adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-banyak-sisi-pada-sebuah-kub-1",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-banyak-sisi-pada-sebuah-kub-2",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-banyak-sisi-pada-sebuah-kub-3",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-banyak-sisi-pada-sebuah-kub-0",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-soal-banyak-sisi-pada-sebuah-kub-0"
       }
     ],
     "passingScore": 75

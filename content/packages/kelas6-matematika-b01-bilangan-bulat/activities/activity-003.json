@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Garis berangka dari negatif, nol, sampai positif",
         "right": "Bilangan bulat"
+      },
+      {
+        "pairId": "pasangan-lawan-dari-bilangan-bulat-7",
+        "left": "Lawan dari bilangan bulat 7",
+        "right": "-7"
+      },
+      {
+        "pairId": "pasangan-bilangan-bulat-yang-bukan-positi",
+        "left": "Bilangan bulat yang bukan positif dan bukan negatif",
+        "right": "Nol"
       }
     ]
   },

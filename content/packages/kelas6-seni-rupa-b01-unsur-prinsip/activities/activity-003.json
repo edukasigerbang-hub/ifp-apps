@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kesan-permukaan-suatu-benda-dise",
+        "prompt": "Kesan permukaan suatu benda disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kesan-permukaan-suatu-benda-0",
+            "text": "Tekstur"
+          },
+          {
+            "optionId": "opsi-soal-kesan-permukaan-suatu-benda-1",
+            "text": "Bidang datar"
+          },
+          {
+            "optionId": "opsi-soal-kesan-permukaan-suatu-benda-2",
+            "text": "Ruang kosong"
+          }
+        ],
+        "correctResponse": "opsi-soal-kesan-permukaan-suatu-benda-0"
+      },
+      {
+        "questionId": "soal-susunan-gambar-yang-tidak-berat",
+        "prompt": "Susunan gambar yang tidak berat sebelah menunjukkan prinsip ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-susunan-gambar-yang-tidak-b-1",
+            "text": "Kesatuan bentuk"
+          },
+          {
+            "optionId": "opsi-soal-susunan-gambar-yang-tidak-b-0",
+            "text": "Keseimbangan"
+          },
+          {
+            "optionId": "opsi-soal-susunan-gambar-yang-tidak-b-2",
+            "text": "Garis lurus"
+          }
+        ],
+        "correctResponse": "opsi-soal-susunan-gambar-yang-tidak-b-0"
+      },
+      {
+        "questionId": "soal-unsur-seni-rupa-yang-memanjang-d",
+        "prompt": "Unsur seni rupa yang memanjang disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-memanj-1",
+            "text": "Bentuk"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-memanj-2",
+            "text": "Ruang"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-memanj-0",
+            "text": "Garis"
+          }
+        ],
+        "correctResponse": "opsi-soal-unsur-seni-rupa-yang-memanj-0"
+      },
+      {
+        "questionId": "soal-perpaduan-warna-dan-bentuk-yang",
+        "prompt": "Perpaduan warna dan bentuk yang saling mendukung menciptakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perpaduan-warna-dan-bentuk-0",
+            "text": "Kesatuan"
+          },
+          {
+            "optionId": "opsi-soal-perpaduan-warna-dan-bentuk-1",
+            "text": "Keseimbangan"
+          },
+          {
+            "optionId": "opsi-soal-perpaduan-warna-dan-bentuk-2",
+            "text": "Tekstur"
+          }
+        ],
+        "correctResponse": "opsi-soal-perpaduan-warna-dan-bentuk-0"
       }
     ],
     "passingScore": 75

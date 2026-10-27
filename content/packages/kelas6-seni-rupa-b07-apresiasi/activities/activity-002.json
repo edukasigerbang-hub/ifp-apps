@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-sopan"
+      },
+      {
+        "questionId": "soal-saat-melihat-karya-teman-yang-ku",
+        "prompt": "Saat melihat karya teman yang kurang rapi, sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-melihat-karya-teman-ya-1",
+            "text": "Menertawakan"
+          },
+          {
+            "optionId": "opsi-soal-saat-melihat-karya-teman-ya-2",
+            "text": "Merusak karya"
+          },
+          {
+            "optionId": "opsi-soal-saat-melihat-karya-teman-ya-0",
+            "text": "Memberi saran"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-melihat-karya-teman-ya-0"
+      },
+      {
+        "questionId": "soal-sebelum-memberi-kritik-kita-perl",
+        "prompt": "Sebelum memberi kritik, kita perlu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-memberi-kritik-kita-0",
+            "text": "Mengamati"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-memberi-kritik-kita-1",
+            "text": "Membeli karya"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-memberi-kritik-kita-2",
+            "text": "Menghitung harga"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-memberi-kritik-kita-0"
       }
     ],
     "passingScore": 75

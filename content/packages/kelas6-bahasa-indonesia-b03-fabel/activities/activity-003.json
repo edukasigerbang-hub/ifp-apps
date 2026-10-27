@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Pesan fabel",
         "right": "Nasihat dari cerita"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-menyusun-cerita",
+        "left": "Langkah pertama menyusun cerita fabel",
+        "right": "Menentukan tokoh hewan"
+      },
+      {
+        "pairId": "pasangan-bagian-cerita-fabel-tempat-masal",
+        "left": "Bagian cerita fabel tempat masalah mulai muncul",
+        "right": "Konflik"
+      },
+      {
+        "pairId": "pasangan-bagian-yang-mengakhiri-masalah-d",
+        "left": "Bagian yang mengakhiri masalah dalam cerita fabel",
+        "right": "Penyelesaian"
       }
     ]
   },

@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-kerjasama"
+      },
+      {
+        "questionId": "soal-teknik-menendang-mengoper-dan-me",
+        "prompt": "Teknik menendang, mengoper, dan menggiring termasuk dasar permainan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-teknik-menendang-mengoper-d-1",
+            "text": "Bola basket"
+          },
+          {
+            "optionId": "opsi-soal-teknik-menendang-mengoper-d-2",
+            "text": "Bola voli"
+          },
+          {
+            "optionId": "opsi-soal-teknik-menendang-mengoper-d-0",
+            "text": "Sepak bola"
+          }
+        ],
+        "correctResponse": "opsi-soal-teknik-menendang-mengoper-d-0"
+      },
+      {
+        "questionId": "soal-teknik-memasukkan-bola-ke-ring-b",
+        "prompt": "Teknik memasukkan bola ke ring basket disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-teknik-memasukkan-bola-ke-r-0",
+            "text": "Shooting"
+          },
+          {
+            "optionId": "opsi-soal-teknik-memasukkan-bola-ke-r-1",
+            "text": "Passing"
+          },
+          {
+            "optionId": "opsi-soal-teknik-memasukkan-bola-ke-r-2",
+            "text": "Dribbling"
+          }
+        ],
+        "correctResponse": "opsi-soal-teknik-memasukkan-bola-ke-r-0"
       }
     ],
     "passingScore": 75
