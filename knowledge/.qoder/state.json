@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "7dccf60",
+  "commit": "eaf2067",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 39,
+  "context_version": 40,
   "skill_registry_version": 0,
   "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A",
-  "last_task": "T-101 parameterisasi tanggal alat review + promosi detektor F-06 ke skrip baku (scripts/lib/reviewOutput.mjs, scripts/lib/mirrorPairs.mjs); 309 pasangan/160 paket direproduksi identik dengan CSV F-06",
+  "last_task": "T-102 analisis gap kualitas bertanggal (--date/--out-dir/--force via scripts/lib/reviewOutput.mjs) + koreksi detektor G11 (duplikat = teks persis; kapitalisasi-saja jadi catatan)",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T06:10:00+07:00",
-  "last_validation": "T-101 (2026-10-28, HEAD 0680828 + perubahan kode belum di-commit): menutup utang alat. scripts/lib/reviewOutput.mjs memberi --date YYYY-MM-DD (default hari ini), --out-dir, --force, dan menolak menimpa bukti bertanggal (diuji exit 1 tanpa --force, exit 0 dengan --force pada kedua skrip). scripts/lib/mirrorPairs.mjs memuat detektor F-06 longgar (right ternormalisasi = reveal; min(|L∩P|/|L|,|L∩P|/|P|) >= 0,70 terhadap prompt langkah pertama yang reveal-nya cocok; token = kata dengan tanda baca tepi dibuang, panjang >= 3) dan dipakai pedagogical-prereview.mjs sebagai metrik informasi R5 + kolom CSV explorationCopies/explorationCopyShare (bukan flag). Judul/nama berkas/tautan/hitungan paket kini dinamis. Verifikasi aktual: pratinjau di .tmp-assets/prereview-check = 336 paket dengan 309 pasangan/160 paket, 309 kunci (packageId+aktivitas+pairId+wordOverlap) identik dengan knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv (0 selisih); .tmp-assets/review-check = 336 paket VALID 336/336; npm test 110/110 (15 berkas) + fixture 4/4 + catalog 336/336; npm run build PASS; npx tsc --noEmit exit 0. Bukti historis 2026-10-26 tidak ditulis ulang; validator korpus, a11y, E2E, dan cargo test tidak dijalankan ulang (tanpa perubahan konten/UI/Rust). Catatan: scripts/analyze-content-quality.mjs masih path bertanggal tetap; entri log T-100 mengoreksi deskripsi aturan token.",
+  "last_updated": "2026-10-28T07:05:00+07:00",
+  "last_validation": "T-102 (2026-10-28, HEAD 223349c + perubahan skrip belum di-commit): scripts/analyze-content-quality.mjs kini memakai parseReviewArgs/ensureWritable (--date YYYY-MM-DD default hari ini, --out-dir, --force) dan menulis QUALITY_GAP_<tanggal>.md + quality-gap-<tanggal>.json; kalimat mati (320 paket, 3 langkah/2 aktivitas) diganti angka terhitung; JSON menambah generatedAt. Detektor G11 dikoreksi: duplikat = teks persis per soal (sebelumnya case-insensitive sehingga menandai paket yang menguji kapitalisasi), kapitalisasi-saja dilaporkan terpisah. Verifikasi aktual: run ke .tmp-assets/quality-check --date 2026-10-28 exit 0 (336 paket); run ulang tanpa --force exit 1 menolak menimpa 2 berkas; --force exit 0; npm test 110/110 (15 berkas) + fixture 4/4 + katalog 336/336. Bukti historis QUALITY_GAP_2026-10-25.* tidak tersentuh; angka G11 319/320 di laporan itu dinyatakan positif palsu tanpa menulis ulang laporan. build/a11y/E2E/cargo test tidak dijalankan (hanya .mjs di luar tsconfig src dan suite). Angka 2026-10-28: G1/G2/G3/G5/G6/G7/G8/G9/G11/G12 336/336, G4 295/336, G10 0/336, 0 grup duplikasi, 336 hash aset unik.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Sisa alat kecil: parameterkan scripts/analyze-content-quality.mjs (QUALITY_GAP_2026-10-25.* masih path tetap). Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
