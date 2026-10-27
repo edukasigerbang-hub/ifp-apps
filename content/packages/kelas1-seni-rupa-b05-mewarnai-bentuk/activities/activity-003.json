@@ -9,8 +9,8 @@
     "pairs": [
       {
         "pairId": "pasangan-1",
-        "left": "Warna yang dipakai",
-        "right": "Merah, kuning, dan biru"
+        "left": "Langkah pertama sebelum mewarnai",
+        "right": "Menyiapkan alat"
       },
       {
         "pairId": "pasangan-2",
@@ -29,8 +29,8 @@
       },
       {
         "pairId": "pasangan-setelah-mewarnai-tangan-kita",
-        "left": "Setelah mewarnai, tangan kita ...",
-        "right": "Dicuci"
+        "left": "Kegiatan terakhir dalam mewarnai bentuk",
+        "right": "Mencuci tangan"
       }
     ]
   },

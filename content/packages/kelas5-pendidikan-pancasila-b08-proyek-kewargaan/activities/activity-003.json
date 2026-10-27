@@ -24,18 +24,18 @@
       },
       {
         "pairId": "pasangan-langkah-setelah-membagi-tugas-da",
-        "left": "Langkah setelah membagi tugas dalam proyek adalah ...",
+        "left": "Langkah setelah membagi tugas dalam proyek",
         "right": "Melaksanakan proyek"
       },
       {
         "pairId": "pasangan-langkah-terakhir-sebuah-proyek-k",
-        "left": "Langkah terakhir sebuah proyek kewargaan adalah ...",
-        "right": "Melaporkan hasil"
+        "left": "Kegiatan penutup proyek selain melaporkan hasil",
+        "right": "Evaluasi"
       },
       {
         "pairId": "pasangan-selain-tugas-dan-waktu-hal-yang",
-        "left": "Selain tugas dan waktu, hal yang ditentukan saat menyusun rencana adalah ...",
-        "right": "Tujuan"
+        "left": "Langkah sesudah menyusun rencana proyek",
+        "right": "Membagi tugas"
       }
     ]
   },
