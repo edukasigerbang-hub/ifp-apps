@@ -24,8 +24,8 @@
         "text": "Mendarat"
       },
       {
-        "itemId": "langkah-rapi",
-        "text": "Merapikan posisi"
+        "itemId": "langkah-keluar-bak",
+        "text": "Keluar dari bak lompat"
       }
     ],
     "correctOrder": [
@@ -33,7 +33,7 @@
       "langkah-tolakan",
       "langkah-melayang",
       "langkah-mendarat",
-      "langkah-rapi"
+      "langkah-keluar-bak"
     ]
   },
   "completionPolicy": {

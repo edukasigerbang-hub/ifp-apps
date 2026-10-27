@@ -24,7 +24,7 @@
       },
       {
         "questionId": "soal-3",
-        "prompt": "Benda tak hidup pada gambar adalah ...",
+        "prompt": "Benda tak hidup yang ada di tepi kolam pada gambar adalah ...",
         "responseType": "text",
         "correctResponse": "batu"
       },
