@@ -11,9 +11,7 @@ interface OrderingActivityProps {
 export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) {
   const { items, correctOrder } = useMemo(() => readOrdering(activity), [activity]);
   const threshold =
-    activity.completionPolicy.type === "score-threshold"
-      ? activity.completionPolicy.threshold ?? 70
-      : 70;
+    activity.completionPolicy.type === "score-threshold" ? (activity.completionPolicy.threshold ?? 70) : 70;
   const [order, setOrder] = useState<string[]>(() => items.map((item) => item.itemId));
   const [result, setResult] = useState<{ score: number; passed: boolean } | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
@@ -54,7 +52,7 @@ export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) 
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-5xl">
       <p className="text-sm text-muted">{activity.instructions}</p>
 
       <ol className="mt-5 space-y-2">

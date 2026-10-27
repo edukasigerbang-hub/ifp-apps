@@ -23,7 +23,7 @@ function readSteps(activity: Activity): ExplorationStep[] {
     assetPath: typeof step.assetPath === "string" ? step.assetPath : undefined,
     altText: typeof step.altText === "string" ? step.altText : undefined,
     reveal: typeof step.reveal === "string" ? step.reveal : undefined,
-    hint: typeof step.hint === "string" ? step.hint : undefined
+    hint: typeof step.hint === "string" ? step.hint : undefined,
   }));
 }
 
@@ -61,11 +61,10 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
 
   if (finished) {
     return (
-      <div aria-live="polite" className="rounded-card border border-teal/30 bg-teal/5 p-6">
+      <div aria-live="polite" className="mx-auto max-w-5xl rounded-card border border-teal/30 bg-teal/5 p-6">
         <h3 className="text-lg font-semibold">Aktivitas selesai</h3>
         <p className="mt-2 text-sm text-muted">
-          Kamu sudah menyelesaikan {steps.length} langkah. Lanjut berlatih untuk menguji
-          pemahamanmu.
+          Kamu sudah menyelesaikan {steps.length} langkah. Lanjut berlatih untuk menguji pemahamanmu.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <button
@@ -90,7 +89,7 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-5xl">
       <div className="flex items-center justify-between gap-4 text-sm text-muted">
         <span>
           Langkah {index + 1} dari {steps.length}
@@ -130,7 +129,9 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
           >
             {showHint ? "Sembunyikan petunjuk" : "Lihat petunjuk"}
           </button>
-          {showHint && <p className="mt-3 rounded-control bg-paper px-4 py-3 text-sm text-muted">{step.hint}</p>}
+          {showHint && (
+            <p className="mt-3 rounded-control bg-paper px-4 py-3 text-sm text-muted">{step.hint}</p>
+          )}
         </div>
       )}
 

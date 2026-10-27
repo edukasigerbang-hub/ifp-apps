@@ -18,7 +18,7 @@ import {
   canPersistLocally,
   ensureLocalProfile,
   getOrStartSession,
-  saveAttempt
+  saveAttempt,
 } from "../data/learningRepository";
 
 type StorageStatus = "starting" | "ready" | "saving" | "saved" | "error" | "preview";
@@ -34,7 +34,7 @@ const storageClasses: Record<StorageStatus, string> = {
   saving: "border-ink/10 bg-paper text-muted",
   saved: "border-teal/30 bg-teal/5 text-ink",
   error: "border-danger/30 bg-danger/5 text-danger-strong",
-  preview: "border-warning/40 bg-warning/10 text-ink"
+  preview: "border-warning/40 bg-warning/10 text-ink",
 };
 
 type ContentLoadState =
@@ -50,7 +50,15 @@ type ContentLoadState =
   | { status: "error"; message: string }
   | { status: "empty" };
 
-export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) => void }) {
+export function LessonPlayer({
+  onNavigate,
+  fullscreen = false,
+  onFullscreenChange,
+}: {
+  onNavigate?: (screen: ScreenId) => void;
+  fullscreen?: boolean;
+  onFullscreenChange?: (value: boolean) => void;
+}) {
   const [state, setState] = useState<ContentLoadState>({ status: "loading" });
   const [switching, setSwitching] = useState(false);
   const objectUrlsRef = useRef<string[]>([]);
@@ -74,7 +82,7 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
             ? summaries.find(
                 (summary) =>
                   summary.packageId === requested.packageId &&
-                  (!requested.version || summary.version === requested.version)
+                  (!requested.version || summary.version === requested.version),
               )
             : summaries[0];
           if (pick) {
@@ -87,8 +95,11 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
                   contentPackage: managed,
                   source: "managed",
                   summaries,
-                  selected: { packageId: pick.packageId, version: pick.version },
-                  lessonId: requested?.lessonId ?? null
+                  selected: {
+                    packageId: pick.packageId,
+                    version: pick.version,
+                  },
+                  lessonId: requested?.lessonId ?? null,
                 });
               }
               return;
@@ -102,7 +113,10 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
             .flatMap((error) => error.issues.map((issue) => `${issue.code}: ${issue.message}`))
             .join("; ");
           if (!cancelled) {
-            setState({ status: "error", message: `Paket bawaan gagal divalidasi. ${detail}` });
+            setState({
+              status: "error",
+              message: `Paket bawaan gagal divalidasi. ${detail}`,
+            });
           }
           return;
         }
@@ -114,9 +128,7 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
 
         const chosen =
           (requested
-            ? packages.find(
-                (pkg) => pkg.data.manifest.packageId === requested.packageId
-              )
+            ? packages.find((pkg) => pkg.data.manifest.packageId === requested.packageId)
             : undefined) ?? packages[0];
 
         if (!cancelled) {
@@ -128,15 +140,15 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
             selected: null,
             lessonId:
               requested && chosen.data.manifest.packageId === requested.packageId
-                ? requested.lessonId ?? null
-                : null
+                ? (requested.lessonId ?? null)
+                : null,
           });
         }
       } catch (error) {
         if (!cancelled) {
           setState({
             status: "error",
-            message: error instanceof Error ? error.message : "Konten gagal dimuat."
+            message: error instanceof Error ? error.message : "Konten gagal dimuat.",
           });
         }
       }
@@ -167,12 +179,12 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
         source: "managed",
         summaries: state.summaries,
         selected: { packageId: summary.packageId, version: summary.version },
-        lessonId: null
+        lessonId: null,
       });
     } catch (error) {
       setState({
         status: "error",
-        message: error instanceof Error ? error.message : "Paket gagal dimuat."
+        message: error instanceof Error ? error.message : "Paket gagal dimuat.",
       });
     } finally {
       setSwitching(false);
@@ -211,9 +223,9 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
   }
 
   return (
-    <div className="mx-auto w-full max-w-[1400px]">
+    <div className={`mx-auto w-full ${fullscreen ? "max-w-none" : "max-w-[1400px]"}`}>
       {state.source === "managed" && state.summaries.length > 1 && (
-        <section aria-label="Pilih paket konten" className="mb-6">
+        <section aria-label="Pilih paket konten" hidden={fullscreen} className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">Pilih paket</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {state.summaries.map((summary) => {
@@ -226,16 +238,13 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
                   disabled={switching}
                   onClick={() => void selectPackage(summary)}
                   className={`min-h-11 rounded-control px-4 py-2 text-left disabled:opacity-60 ${
-                    active
-                      ? "bg-navy text-white"
-                      : "border border-ink/15 bg-surface hover:bg-paper"
+                    active ? "bg-navy text-white" : "border border-ink/15 bg-surface hover:bg-paper"
                   }`}
                 >
                   <span className="block text-sm font-medium">{summary.title}</span>
                   <span className={`mt-0.5 block text-xs ${active ? "text-white/70" : "text-muted"}`}>
-                    Kelas {summary.gradeLevels.join(", ")} ·{" "}
-                    {summary.subjects.map(subjectLabel).join(", ")} · v
-                    {summary.version}
+                    Kelas {summary.gradeLevels.join(", ")} · {summary.subjects.map(subjectLabel).join(", ")} ·
+                    v{summary.version}
                   </span>
                 </button>
               );
@@ -249,6 +258,8 @@ export function LessonPlayer({ onNavigate }: { onNavigate?: (screen: ScreenId) =
         contentPackage={state.contentPackage}
         source={state.source}
         lessonId={state.lessonId}
+        fullscreen={fullscreen}
+        onFullscreenChange={onFullscreenChange}
         onNavigate={onNavigate}
       />
     </div>
@@ -259,19 +270,24 @@ function LessonView({
   contentPackage,
   source,
   lessonId,
-  onNavigate
+  fullscreen,
+  onFullscreenChange,
+  onNavigate,
 }: {
   contentPackage: LoadedContentPackage;
   source: "managed" | "bundled";
   lessonId: string | null;
+  fullscreen: boolean;
+  onFullscreenChange?: (value: boolean) => void;
   onNavigate?: (screen: ScreenId) => void;
 }) {
   const lesson =
-    (lessonId
-      ? contentPackage.data.lessons.find((entry) => entry.lessonId === lessonId)
-      : undefined) ?? contentPackage.data.lessons[0];
+    (lessonId ? contentPackage.data.lessons.find((entry) => entry.lessonId === lessonId) : undefined) ??
+    contentPackage.data.lessons[0];
   const activities = lesson.activityIds
-    .map((activityId) => contentPackage.data.activities.find((activity) => activity.activityId === activityId))
+    .map((activityId) =>
+      contentPackage.data.activities.find((activity) => activity.activityId === activityId),
+    )
     .filter((activity): activity is Activity => activity !== undefined);
 
   const [activeActivityId, setActiveActivityId] = useState<string | null>(null);
@@ -281,7 +297,7 @@ function LessonView({
   const [visited, setVisited] = useState<string[]>([]);
   const [storage, setStorage] = useState<StorageState>({
     status: "starting",
-    message: "Menyiapkan penyimpanan lokal..."
+    message: "Menyiapkan penyimpanan lokal...",
   });
 
   useEffect(() => {
@@ -289,7 +305,7 @@ function LessonView({
       setStorage({
         status: "preview",
         message:
-          "Pratinjau browser: hasil belajar tidak disimpan. Jalankan aplikasi desktop untuk menyimpan hasil."
+          "Pratinjau browser: hasil belajar tidak disimpan. Jalankan aplikasi desktop untuk menyimpan hasil.",
       });
       return;
     }
@@ -303,20 +319,20 @@ function LessonView({
           profileId,
           packageId: contentPackage.data.manifest.packageId,
           packageVersion: contentPackage.data.manifest.packageVersion,
-          lessonId: lesson.lessonId
+          lessonId: lesson.lessonId,
         });
         if (!cancelled) {
           setSessionId(session.sessionId);
           setStorage({
             status: "ready",
-            message: "Penyimpanan lokal siap. Hasil belum disinkronkan ke server."
+            message: "Penyimpanan lokal siap. Hasil belum disinkronkan ke server.",
           });
         }
       } catch (error) {
         if (!cancelled) {
           setStorage({
             status: "error",
-            message: error instanceof Error ? error.message : "Penyimpanan lokal tidak tersedia."
+            message: error instanceof Error ? error.message : "Penyimpanan lokal tidak tersedia.",
           });
         }
       }
@@ -327,7 +343,8 @@ function LessonView({
     };
   }, [contentPackage, lesson.lessonId]);
 
-  const activeActivity = activities.find((activity) => activity.activityId === activeActivityId) ?? activities[0];
+  const activeActivity =
+    activities.find((activity) => activity.activityId === activeActivityId) ?? activities[0];
 
   useEffect(() => {
     const current = activeActivity?.activityId;
@@ -336,6 +353,21 @@ function LessonView({
     }
     setVisited((previous) => (previous.includes(current) ? previous : [...previous, current]));
   }, [activeActivity?.activityId]);
+
+  useEffect(() => {
+    if (!fullscreen) {
+      return;
+    }
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        onFullscreenChange?.(false);
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [fullscreen, onFullscreenChange]);
 
   const gradedCount = activities.filter((activity) => scores[activity.activityId] !== undefined).length;
   const gradedScores = Object.values(scores);
@@ -346,7 +378,7 @@ function LessonView({
   const progressPercent = activities.length === 0 ? 0 : Math.round((gradedCount / activities.length) * 100);
 
   const manifestCoverPath = contentPackage.data.manifest.assets.find((asset) =>
-    asset.mediaType.startsWith("image/")
+    asset.mediaType.startsWith("image/"),
   )?.path;
   const lessonCoverPath = lesson.assetRefs.find((path) => contentPackage.assets[path]);
   const coverUrl =
@@ -356,17 +388,24 @@ function LessonView({
     gradeCoverUrl(contentPackage.data.manifest.gradeLevels[0] ?? 0);
 
   const assessmentActivityId = lesson.assessmentRefs.find((activityId) =>
-    activities.some((activity) => activity.activityId === activityId)
+    activities.some((activity) => activity.activityId === activityId),
   );
 
   const reviewTone: StatusTone =
-    lesson.reviewStatus === "approved" ? "positive" : lesson.reviewStatus === "reviewed" ? "neutral" : "warning";
+    lesson.reviewStatus === "approved"
+      ? "positive"
+      : lesson.reviewStatus === "reviewed"
+        ? "neutral"
+        : "warning";
   const reviewLabel =
     lesson.reviewStatus === "approved"
       ? "Disetujui reviewer"
       : lesson.reviewStatus === "reviewed"
         ? "Sudah direview"
         : "DRAFT — belum direview";
+
+  // Di layar penuh hanya peringatan penyimpanan yang perlu terlihat.
+  const storageAlert = storage.status === "preview" || storage.status === "error";
 
   if (!activeActivity) {
     return (
@@ -385,7 +424,10 @@ function LessonView({
       return;
     }
     if (!sessionId) {
-      setStorage({ status: "error", message: "Sesi belajar belum siap; hasil belum disimpan." });
+      setStorage({
+        status: "error",
+        message: "Sesi belajar belum siap; hasil belum disimpan.",
+      });
       return;
     }
 
@@ -405,29 +447,42 @@ function LessonView({
           questionId: answer.questionId,
           optionId: answer.optionId,
           responseText: answer.responseText,
-          isCorrect: answer.isCorrect
-        }))
+          isCorrect: answer.isCorrect,
+        })),
       });
       setStorage({
         status: "saved",
-        message: `Tersimpan lokal — percobaan ke-${attempt.attemptNo}. Belum disinkronkan ke server.`
+        message: `Tersimpan lokal — percobaan ke-${attempt.attemptNo}. Belum disinkronkan ke server.`,
       });
       notifyOutboxChanged();
     } catch (error) {
       setStorage({
         status: "error",
-        message: error instanceof Error ? error.message : "Hasil belajar gagal disimpan."
+        message: error instanceof Error ? error.message : "Hasil belajar gagal disimpan.",
       });
     }
   }
 
   return (
     <div>
+      <div
+        data-player-focus-bar
+        hidden={!fullscreen}
+        className="mb-3 flex items-center justify-between gap-4 rounded-card border border-ink/10 bg-surface px-4 py-2.5"
+      >
+        <h1 className="min-w-0 truncate text-base font-semibold md:text-lg">{lesson.title}</h1>
+        <p className="shrink-0 text-xs text-muted">
+          Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
+          {contentPackage.data.manifest.subjects.map(subjectLabel).join(", ")}
+        </p>
+      </div>
+
       <header
         data-player-hero
+        hidden={fullscreen}
         className="overflow-hidden rounded-card border border-ink/10 bg-surface"
       >
-        <div className="flex flex-col gap-5 p-5 md:flex-row md:items-center md:gap-6 md:p-6">
+        <div className="flex flex-col gap-4 p-4 md:flex-row md:items-center md:gap-5 md:p-5">
           <div className="min-w-0 md:flex-1">
             <div className="flex flex-wrap items-center gap-3">
               <StatusBadge tone={reviewTone} label={reviewLabel} />
@@ -447,12 +502,10 @@ function LessonView({
             </div>
 
             <h1 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
-              {lesson.summary}
-            </p>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
           </div>
 
-          <div data-player-cover className="w-full shrink-0 md:w-56 lg:w-72">
+          <div data-player-cover className="w-full shrink-0 md:w-64 lg:w-72 xl:w-80">
             <CoverArt url={coverUrl} className="aspect-[16/9] w-full rounded-control" />
           </div>
         </div>
@@ -460,19 +513,17 @@ function LessonView({
 
       <div
         data-player-layout
-        className="mt-5 grid gap-x-6 gap-y-5 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start xl:grid-cols-[minmax(0,1fr)_22rem]"
+        className={
+          fullscreen
+            ? "mt-3 grid"
+            : "mt-4 grid gap-x-6 gap-y-4 xl:grid-cols-[minmax(0,1fr)_20rem] xl:items-start 2xl:grid-cols-[minmax(0,1fr)_22rem]"
+        }
       >
         <div
           data-player-aside
-          className="space-y-4 lg:sticky lg:top-6 lg:col-start-2 lg:row-span-2 lg:row-start-1"
+          hidden={fullscreen}
+          className="order-last space-y-4 xl:order-none xl:sticky xl:top-6 xl:col-start-2 xl:row-span-2 xl:row-start-1"
         >
-          <p
-            aria-live="polite"
-            className={`rounded-control border px-4 py-3 text-sm ${storageClasses[storage.status]}`}
-          >
-            {storage.message}
-          </p>
-
           <section className="rounded-card border border-ink/10 bg-surface p-5">
             <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
               Tujuan pembelajaran
@@ -537,60 +588,84 @@ function LessonView({
           </section>
         </div>
 
-        <div
-          role="tablist"
-          aria-label="Aktivitas pembelajaran"
-          className="flex flex-wrap gap-2 lg:col-start-1 lg:row-start-1"
-        >
-          {activities.map((activity) => {
-            const isActive = activity.activityId === activeActivity.activityId;
-            return (
-              <button
-                key={activity.activityId}
-                id={`activity-tab-${activity.activityId}`}
-                type="button"
-                role="tab"
-                aria-selected={isActive}
-                aria-controls="activity-panel"
-                tabIndex={isActive ? 0 : -1}
-                onKeyDown={(event) => {
-                  if (
-                    event.key !== "ArrowRight" &&
-                    event.key !== "ArrowLeft" &&
-                    event.key !== "Home" &&
-                    event.key !== "End"
-                  ) {
-                    return;
-                  }
-                  event.preventDefault();
-                  const currentIndex = activities.findIndex(
-                    (entry) => entry.activityId === activity.activityId
-                  );
-                  let nextIndex = currentIndex;
-                  if (event.key === "ArrowRight") {
-                    nextIndex = (currentIndex + 1) % activities.length;
-                  } else if (event.key === "ArrowLeft") {
-                    nextIndex = (currentIndex - 1 + activities.length) % activities.length;
-                  } else if (event.key === "Home") {
-                    nextIndex = 0;
-                  } else if (event.key === "End") {
-                    nextIndex = activities.length - 1;
-                  }
-                  const next = activities[nextIndex];
-                  setActiveActivityId(next.activityId);
-                  requestAnimationFrame(() => {
-                    document.getElementById(`activity-tab-${next.activityId}`)?.focus();
-                  });
-                }}
-                onClick={() => setActiveActivityId(activity.activityId)}
-                className={`min-h-11 rounded-control px-4 text-sm font-medium ${
-                  isActive ? "bg-navy text-white" : "border border-ink/15 bg-surface text-ink hover:bg-paper"
-                }`}
-              >
-                {activity.title}
-              </button>
-            );
-          })}
+        <div className="min-w-0 xl:col-start-1 xl:row-start-1">
+          <div role="tablist" aria-label="Aktivitas pembelajaran" className="flex min-w-0 flex-wrap gap-2">
+            {activities.map((activity) => {
+              const isActive = activity.activityId === activeActivity.activityId;
+              return (
+                <button
+                  key={activity.activityId}
+                  id={`activity-tab-${activity.activityId}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="activity-panel"
+                  tabIndex={isActive ? 0 : -1}
+                  onKeyDown={(event) => {
+                    if (
+                      event.key !== "ArrowRight" &&
+                      event.key !== "ArrowLeft" &&
+                      event.key !== "Home" &&
+                      event.key !== "End"
+                    ) {
+                      return;
+                    }
+                    event.preventDefault();
+                    const currentIndex = activities.findIndex(
+                      (entry) => entry.activityId === activity.activityId,
+                    );
+                    let nextIndex = currentIndex;
+                    if (event.key === "ArrowRight") {
+                      nextIndex = (currentIndex + 1) % activities.length;
+                    } else if (event.key === "ArrowLeft") {
+                      nextIndex = (currentIndex - 1 + activities.length) % activities.length;
+                    } else if (event.key === "Home") {
+                      nextIndex = 0;
+                    } else if (event.key === "End") {
+                      nextIndex = activities.length - 1;
+                    }
+                    const next = activities[nextIndex];
+                    setActiveActivityId(next.activityId);
+                    requestAnimationFrame(() => {
+                      document.getElementById(`activity-tab-${next.activityId}`)?.focus();
+                    });
+                  }}
+                  onClick={() => setActiveActivityId(activity.activityId)}
+                  className={`min-h-11 rounded-control px-4 text-sm font-medium ${
+                    isActive
+                      ? "bg-navy text-white"
+                      : "border border-ink/15 bg-surface text-ink hover:bg-paper"
+                  }`}
+                >
+                  {activity.title}
+                </button>
+              );
+            })}
+          </div>
+
+          <div
+            className={`mt-2 flex flex-wrap items-center gap-2 ${fullscreen ? "justify-end" : ""}`}
+          >
+            <p
+              aria-live="polite"
+              hidden={fullscreen && !storageAlert}
+              className={`min-w-0 flex-1 rounded-control border px-3 py-1.5 text-xs ${storageClasses[storage.status]}`}
+            >
+              {storage.message}
+            </p>
+            <button
+              type="button"
+              aria-pressed={fullscreen}
+              onClick={() => onFullscreenChange?.(!fullscreen)}
+              className={`min-h-11 shrink-0 rounded-control px-4 text-sm font-medium ${
+                fullscreen
+                  ? "bg-navy text-white hover:bg-navy/90"
+                  : "border border-ink/15 bg-surface text-ink hover:bg-paper"
+              }`}
+            >
+              {fullscreen ? "Keluar layar penuh" : "Layar penuh"}
+            </button>
+          </div>
         </div>
 
         <section
@@ -598,7 +673,7 @@ function LessonView({
           role="tabpanel"
           aria-labelledby={`activity-tab-${activeActivity.activityId}`}
           tabIndex={0}
-          className="min-w-0 rounded-card border border-ink/10 bg-surface p-5 md:p-6 lg:col-start-1 lg:row-start-2"
+          className="min-w-0 rounded-card border border-ink/10 bg-surface p-5 md:p-6 xl:col-start-1 xl:row-start-2"
         >
           {activeActivity.type === "exploration" ? (
             <ExplorationActivity
@@ -638,7 +713,8 @@ function LessonView({
       <section
         data-session-summary
         aria-labelledby="session-summary-heading"
-        className="mt-5 rounded-card border border-ink/10 bg-surface p-5 md:p-6"
+        hidden={fullscreen}
+        className="mt-4 rounded-card border border-ink/10 bg-surface p-5 md:p-6"
       >
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0">

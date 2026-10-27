@@ -66,7 +66,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
         ...current,
         [questionId]: list.includes(optionId)
           ? list.filter((value) => value !== optionId)
-          : [...list, optionId]
+          : [...list, optionId],
       };
     });
   }
@@ -81,15 +81,13 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
         const answer = answers[question.questionId];
         if (question.responseType === "multiple-choice") {
           const selected = Array.isArray(answer) ? answer : [];
-          const correctSet = Array.isArray(question.correctResponse)
-            ? question.correctResponse
-            : [];
+          const correctSet = Array.isArray(question.correctResponse) ? question.correctResponse : [];
           for (const optionId of selected) {
             graded.push({
               questionId: question.questionId,
               optionId,
               responseText: null,
-              isCorrect: correctSet.includes(optionId)
+              isCorrect: correctSet.includes(optionId),
             });
           }
         } else if (question.responseType === "text") {
@@ -97,14 +95,14 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
             questionId: question.questionId,
             optionId: null,
             responseText: typeof answer === "string" ? answer.trim() : null,
-            isCorrect: isAnswerCorrect(question, answer)
+            isCorrect: isAnswerCorrect(question, answer),
           });
         } else {
           graded.push({
             questionId: question.questionId,
             optionId: typeof answer === "string" ? answer : null,
             responseText: null,
-            isCorrect: isAnswerCorrect(question, answer)
+            isCorrect: isAnswerCorrect(question, answer),
           });
         }
       }
@@ -119,19 +117,19 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
 
   return (
     <div>
-      <p className="text-sm text-muted">
-        Jawab semua soal, lalu periksa jawaban. Skor minimal lulus: {passingScore} dari 100.
-        Terjawab {answeredCount} dari {questions.length}.
+      <p className="mx-auto max-w-5xl text-sm text-muted">
+        Jawab semua soal, lalu periksa jawaban. Skor minimal lulus: {passingScore} dari 100. Terjawab{" "}
+        {answeredCount} dari {questions.length}.
       </p>
 
-      <div className="mt-5 space-y-5">
+      <div className="mx-auto mt-5 max-w-5xl space-y-5">
         {questions.map((question, index) => (
           <fieldset key={question.questionId} className="rounded-card border border-ink/10 bg-surface p-5">
             <legend className="px-1 text-sm font-semibold text-muted">Soal {index + 1}</legend>
             <p className="mt-1 text-base font-medium leading-relaxed">{question.prompt}</p>
-            <div className="mt-4 space-y-2">
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
               {question.responseType === "text" ? (
-                <label className="block text-sm">
+                <label className="block text-sm sm:col-span-2">
                   Jawaban
                   <input
                     type="text"
@@ -143,7 +141,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
                     aria-label={question.prompt}
                     disabled={result !== null}
                     onChange={(event) => choose(question.questionId, event.target.value)}
-                    className="mt-1 block min-h-11 w-full max-w-md rounded-control border border-ink/15 px-3 text-sm disabled:opacity-80"
+                    className="mt-1 block min-h-11 w-full max-w-xl rounded-control border border-ink/15 px-3 text-sm disabled:opacity-80"
                   />
                 </label>
               ) : question.responseType === "multiple-choice" ? (
@@ -154,9 +152,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
                     <label
                       key={option.optionId}
                       className={`flex min-h-11 cursor-pointer items-center gap-3 rounded-control border px-4 py-2 text-sm ${
-                        checked
-                          ? "border-primary bg-primary/5 font-medium"
-                          : "border-ink/10 hover:bg-paper"
+                        checked ? "border-primary bg-primary/5 font-medium" : "border-ink/10 hover:bg-paper"
                       } ${result ? "cursor-default opacity-80" : ""}`}
                     >
                       <input
@@ -176,7 +172,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
                 (question.responseType === "boolean"
                   ? [
                       { optionId: "true", text: "Benar" },
-                      { optionId: "false", text: "Salah" }
+                      { optionId: "false", text: "Salah" },
                     ]
                   : (question.options ?? [])
                 ).map((option) => {
@@ -185,9 +181,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
                     <label
                       key={option.optionId}
                       className={`flex min-h-11 cursor-pointer items-center gap-3 rounded-control border px-4 py-2 text-sm ${
-                        checked
-                          ? "border-primary bg-primary/5 font-medium"
-                          : "border-ink/10 hover:bg-paper"
+                        checked ? "border-primary bg-primary/5 font-medium" : "border-ink/10 hover:bg-paper"
                       } ${result ? "cursor-default opacity-80" : ""}`}
                     >
                       <input
@@ -209,7 +203,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
         ))}
       </div>
 
-      <div aria-live="polite" className="mt-6">
+      <div aria-live="polite" className="mx-auto mt-6 max-w-5xl">
         {result && (
           <div
             ref={resultRef}
@@ -230,7 +224,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
         )}
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mx-auto mt-6 flex max-w-5xl flex-wrap gap-3">
         {result === null ? (
           <button
             type="button"

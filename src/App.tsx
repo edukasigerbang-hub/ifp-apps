@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { AppShell } from "./components/layout/AppShell";
 import { canPersistLocally } from "./data/learningRepository";
-import {
-  applyPreferences,
-  getPreferences,
-  setPreferences
-} from "./data/preferencesRepository";
+import { applyPreferences, getPreferences, setPreferences } from "./data/preferencesRepository";
 import { useSyncScheduler } from "./hooks/useSyncScheduler";
 import {
   DEFAULT_APP_MODE,
@@ -14,7 +10,7 @@ import {
   isScreenAllowedInMode,
   isScreenId,
   type AppMode,
-  type ScreenId
+  type ScreenId,
 } from "./navigation";
 import { ContentScreen } from "./screens/ContentScreen";
 import { CurriculumScreen } from "./screens/CurriculumScreen";
@@ -34,6 +30,7 @@ export default function App() {
   const [activeScreen, setActiveScreen] = useState<ScreenId>(initialScreen);
   const [appMode, setAppMode] = useState<AppMode>(DEFAULT_APP_MODE);
   const [modeNotice, setModeNotice] = useState<string | null>(null);
+  const [playerFullscreen, setPlayerFullscreen] = useState(false);
   const activeItem = findNavItem(activeScreen);
   useSyncScheduler();
 
@@ -69,11 +66,15 @@ export default function App() {
   function navigate(screen: ScreenId) {
     const next = isScreenAllowedInMode(appMode, screen) ? screen : "home";
     setActiveScreen(next);
+    if (next !== "player") {
+      setPlayerFullscreen(false);
+    }
     window.history.replaceState(null, "", `#${next}`);
   }
 
   function applyMode(mode: AppMode) {
     setAppMode(mode);
+    setPlayerFullscreen(false);
     setActiveScreen((current) => {
       if (isScreenAllowedInMode(mode, current)) {
         return current;
@@ -103,6 +104,7 @@ export default function App() {
   return (
     <AppShell
       activeScreen={activeScreen}
+      fullscreen={playerFullscreen && activeScreen === "player"}
       mode={appMode}
       modeNotice={modeNotice}
       onNavigate={navigate}
@@ -113,7 +115,11 @@ export default function App() {
       ) : activeScreen === "curriculum" ? (
         <CurriculumScreen onNavigate={navigate} />
       ) : activeScreen === "player" ? (
-        <LessonPlayer onNavigate={navigate} />
+        <LessonPlayer
+          fullscreen={playerFullscreen}
+          onFullscreenChange={setPlayerFullscreen}
+          onNavigate={navigate}
+        />
       ) : activeScreen === "results" ? (
         <ResultsScreen />
       ) : activeScreen === "settings" ? (

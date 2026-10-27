@@ -11,9 +11,7 @@ interface MatchingActivityProps {
 export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) {
   const pairs = useMemo(() => readMatchingPairs(activity), [activity]);
   const threshold =
-    activity.completionPolicy.type === "score-threshold"
-      ? activity.completionPolicy.threshold ?? 70
-      : 70;
+    activity.completionPolicy.type === "score-threshold" ? (activity.completionPolicy.threshold ?? 70) : 70;
   const [selections, setSelections] = useState<Record<string, string>>({});
   const [result, setResult] = useState<{ score: number; passed: boolean } | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
@@ -48,7 +46,7 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-5xl">
       <p className="text-sm text-muted">{activity.instructions}</p>
       <p className="mt-1 text-sm text-muted">
         Terjawab {answered} dari {pairs.length}.
