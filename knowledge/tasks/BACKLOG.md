@@ -56,5 +56,8 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 - Shell: `main#main-content` memakai `overflow-y-auto` tetapi induknya `flex min-h-screen` tanpa tinggi tetap, sehingga tidak pernah menggulir sendiri — yang menggulir adalah dokumen. Akibatnya probe sticky E2E dulu membaca elemen yang salah dan jendela uji menempel sempit (±6 px pada 1600×900). Perlu keputusan: beri tinggi `h-screen` pada shell (menu tetap, konten menggulir) atau lepas `overflow-y-auto` yang tidak berfungsi.
 - Retensi & index DB belum dirancang (menunggu OD-4).
 - Skema `sync_outbox` state enum belum ditetapkan.
+- Konten: **10 paket** masih memicu sinyal R5 "opsi benar selalu yang terpanjang" (`longestCorrectRatio = 1`). Tidak dapat diperbaiki dengan transform mekanis — butuh penulisan ulang teks opsi agar panjangnya setara (temuan T-091, 2026-10-27).
+- Konten: **550 pasangan matching hasil aturan bahasa** (T-091b) belum dinilai guru; 119 override tulisan tangan juga belum. Bentuknya sudah terbukti berhenti menyalin langkah eksplorasi, tetapi mutu petunjuknya belum ada penilaian manusia.
+- Alat QA: `scripts/pedagogical-prereview.mjs` dan `scripts/review-content.ts` menulis ke **path bertanggal tetap** (`PEDAGOGICAL_PREREVIEW_2026-10-26.md`, `review-flags-2026-10-26.json`, dst.). Menjalankannya ulang **menimpa bukti historis**, jadi keduanya tidak bisa dipakai untuk memverifikasi perbaikan setelah tanggal itu. Perlu: tanggal sebagai argumen (default hari ini) + tolak menulis di atas berkas yang sudah ada kecuali `--force`.
 - Remote GitHub aktif (`origin`); CI berjalan di remote sejak 2026-10-24 (run `40040384407` PASS).
 - Branch protection `main`: wajib PR + required checks `Web + server tests`, `Rust tests` (strict), admin terikat.

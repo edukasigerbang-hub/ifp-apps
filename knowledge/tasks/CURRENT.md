@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; a11y 17/17 PASS, E2E 7 skenario PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan: bias posisi kunci 91→0 paket dan 908 pasangan matching yang menyalin eksplorasi→0 (T-091)**; a11y 17/17 PASS, E2E 7 skenario PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -127,11 +127,24 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091: 0 paket bias posisi kunci, 0 pasangan matching yang menyalin eksplorasi) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
 |---|---|
+| Bias posisi kunci kuis sebelum T-091a | **TERUKUR** — 694 soal pilihan ganda: posisi 0 = 528 (76,1%), posisi 1 = 147 (21,2%), posisi 2 = 19 (2,7%), posisi 3 = 0; **91 paket** (≥3 soal) menempatkan semua kunci di posisi sama |
+| Bias posisi kunci setelah T-091a | **PASS** — posisi 0 = 206 (29,7%), 1 = 189 (27,2%), 2 = 203 (29,3%), 3 = 96 (13,8%); **0 paket** semua kunci di posisi sama; share per-paket tertinggi 66,7% (199 berkas aktivitas berubah, commit `12ce2e1`) |
+| Pasangan matching menyalin eksplorasi sebelum T-091b | **TERUKUR** — 1.828 pasangan di 336 aktivitas; **908 identik byte** dengan `prompt`+`reveal` langkah eksplorasi paket yang sama (di 184 paket), 230 di antaranya juga boilerplate refleksi |
+| Pasangan matching setelah T-091b | **PASS** — 1.602 pasangan; **0 cermin** (penuh maupun sebagian), **0 boilerplate**; 230 dihapus, 678 ditulis ulang (128 lewat override authored, 550 lewat aturan), 4 pasangan authored ditambahkan ke 2 paket |
+| Ambang item dinilai (pasca T-091b) | **PASS** — 336/336 paket ≥5 langkah / ≥3 aktivitas / ≥8 item (minimum aktual: 5 langkah, 3 aktivitas, 8 item) |
+| Validator konten (pasca T-091b) | **PASS** — 336/336 **VALID**, 0 issue, 336 warning (draft, per paket) |
+| `npm test` (T-091) | **PASS** — 105/105 unit (15 berkas) + fixture 4/4 + catalog 336/336 |
+| `npm run build` (T-091) | **PASS** — `tsc --noEmit` + Vite; katalog 336 entri; dist 349 WebP, 0 PNG |
+| `npm run a11y` (T-091) | **PASS** — 17/17 (0 error, 7 warning reflow/target sentuh) |
+| E2E (T-091) | **PASS** — activities 14/14, home-catalog 28/28, smoke 8/8 |
+| Idempotensi transform (T-091b) | **PASS** — dijalankan ulang `rewrite-matching-pairs.mjs --apply`: 0 berkas berubah, residuals 0, belowFloor 0, collisions 0, authoredUnused 0 |
+| Sinyal R5 yang tersisa (T-091) | **BELUM SELESAI** — **10 paket** masih punya kunci selalu merupakan opsi terpanjang (`longestCorrectRatio = 1`); butuh penulisan ulang teks opsi, bukan transform mekanis |
+| `cargo test` (T-091) | **NOT RUN** — tanpa perubahan Rust |
 | Paket IPAS kelas 1–2 (T-089) | **PASS** — 16 paket baru (8 kelas 1 + 8 kelas 2) VALID 16/16, 0 issue, 1 warning/paket (draft) |
 | Katalog (T-089) | **PASS** — 336 entri / 336 paket; tiap kelas 56, tiap mapel 48; `content:catalog:check` ikut `npm test` |
 | `npm test` (T-089) | **PASS** — 105/105 unit (15 berkas) + fixture 4/4 + catalog 336/336 |
@@ -642,3 +655,39 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Batas (jujur):** belum ada review visual manusia (guru/PO) selain pemeriksaan agent · `reviewStatus`/`releaseState` tetap `draft` · ilustrasi tidak memuat teks terbaca (disengaja) sehingga topik hanya dikenali dari adegan · kuis tetap 2 soal (ambang ≥8 item dipenuhi via matching) · E2E memverifikasi tampilan kelas 1; kelas 2 diverifikasi lewat validator, katalog, dan hash aset.
 
 **Sisa:** keputusan Curriculum Lead soal IPAS di Fase A (OD-1) · review manusia R1–R6/R8–R9/R12 · verifikasi CP/ATP per bab · D-UX-2/4/5/6 · blocker rilis B-01…B-08.
+
+### Handoff Perbaikan Temuan Deterministik R5 (2026-10-27, T-091)
+
+**Status:** selesai dan terverifikasi untuk dua sinyal R5 yang bersifat mekanis. Permintaan PO: "kerjakan rekomendasi nomor 1" dari ringkasan pasca-T-090, yaitu membereskan temuan deterministik pra-review (bias posisi kunci + duplikasi matching). Keputusan PO atas pilihan ruang lingkup: **opsi A — ganti yang rusak + tulis ulang** (bukan penulisan ulang penuh ±1.100 pasangan lintas sesi, dan bukan hanya menghapus 230 yang rusak).
+
+**Definisi yang dipakai (diambil dari `scripts/pedagogical-prereview.mjs`, bukan asumsi):**
+- *Cermin* = pasangan matching yang `left` identik byte dengan `step.prompt` **dan** `right` identik dengan `step.reveal` pada aktivitas eksplorasi paket yang sama.
+- *Bias posisi* = paket dengan ≥3 soal pilihan ganda di mana seluruh kunci berada pada indeks opsi yang sama.
+- *Kunci terpanjang* = paket di mana opsi benar selalu opsi terpanjang (`longestCorrectRatio = 1`) — **sinyal tekstual, tidak diperbaiki pada sesi ini.**
+
+**T-091a — siarkan posisi kunci (`scripts/spread-answer-positions.mjs`, commit `12ce2e1`, 199 berkas aktivitas):**
+- Sebelum: 694 soal — indeks 0 = 528 (76,1%), 1 = 147 (21,2%), 2 = 19 (2,7%), 3 = 0; **91 paket** kuncinya menumpuk di satu posisi.
+- Sesudah: indeks 0 = 206 (29,7%), 1 = 189 (27,2%), 2 = 203 (29,3%), 3 = 96 (13,8%); **0 paket** semua kunci di posisi sama; share per-paket tertinggi 66,7%.
+- Metode: **susun ulang urutan opsi, bukan isinya** — kunci dipindah ke `(hash(packageId) + ordinal soal dalam paket) % jumlah opsi`; `optionId` bergerak bersama teksnya sehingga `correctResponse` dan penilaian tidak berubah. Deterministik dan idempoten. Soal dengan <3 opsi dibiarkan (memindahkannya tidak memberi pilihan yang berarti); pada soal multi-jawaban hanya opsi benar pertama yang digeser, mengikuti cara detektor mengukur posisi kunci. Aktivitas benar/salah **tidak dijamah** karena tampilan Benar/Salah di-hardcode di `src/components/content/QuizActivity.tsx`, jadi menggeser array tidak mengubah posisi yang dilihat siswa.
+
+**T-091b — hapus duplikasi matching (`scripts/rewrite-matching-pairs.mjs` + `scripts/data/matching-rewrite-2026-10-27.json`, commit `0e24dbc`, 184 berkas aktivitas):**
+- Sebelum: 1.828 pasangan di 336 aktivitas mencocokkan; **908 di antaranya cermin langkah eksplorasi** di 184 paket; 230 dari 908 itu juga boilerplate refleksi ("Apa hal penting yang kamu pelajari…", "Bagaimana urutan yang benar untuk…").
+- Sesudah: 1.602 pasangan; **0 cermin**, 0 boilerplate, 0 pasangan duplikat dalam satu aktivitas.
+- Rincian 908 cermin: **230 dihapus** (boilerplate), **678 ditulis ulang** menjadi bentuk petunjuk→jawaban — 128 pasangan memakai override yang ditulis tangan (119 entri `pairOverrides`, dikunci pada `left`+`right` asli), 550 memakai aturan pola kalimat tanya (`Apa yang…` → `Yang…`, `Berapa…` → `Banyak…`, `Kapan…` → `Waktu…`, isian `…` → batang kalimat, ds.), dan **4 pasangan authored ditambahkan** ke 2 paket yang akan turun di bawah ambang 8 item setelah penghapusan.
+- Ikutan: `pairId` dinomori ulang `pasangan-N` (skema hanya menuntut keunikan; penilaian tidak bergantung urutan), instruksi 184 aktivitas berubah menjadi "Pasangkan setiap petunjuk dengan jawaban yang tepat.", `altText` diregenerasi hanya bila polanya masih menyalin judul aktivitas. 152 paket lain (matching di `activity-002.json`) tidak tersentuh karena tidak punya pasangan cermin.
+- Alat: **snapshot SHA-256** 336 berkas sebelum transform di `.tmp-assets/snapshots-before-matching/` (git-ignored); skrip **dry-run default**, `--apply` untuk menulis, dan **idempoten** — dijalankan ulang menghasilkan 0 perubahan. Digunakan dua kali untuk rollback + terapkan ulang setelah aturan diperbaiki (sisa "Banyak banyak…": digabung lewat `withPrefix()`; petunjuk berakhiran titik: strip final `.`).
+
+**Ambang & validasi setelah kedua fase (angka di bawah diukur pada pohon kerja = HEAD `0e24dbc`):**
+- Validator: **336/336 VALID**, 0 issue, 336 warning (draft).
+- Kedalaman (aturan kanonik `scripts/review-content.ts` — langkah eksplorasi, jumlah aktivitas, item dinilai): minimum aktual **5 langkah / 3 aktivitas / 8 item**, **0 paket di bawah ambang**.
+- `npm test` **105/105** + fixture 4/4 + konsistensi katalog 336/336 · `npm run build` PASS · `npm run a11y` **17/17** (0 error, 7 warning) · E2E **activities 14/14**, **home-catalog 28/28**, **smoke 8/8** · `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Batas (jujur, tidak disembunyikan):**
+1. **10 paket** masih memicu sinyal R5 lain: opsi benar selalu yang terpanjang. Ini butuh penulisan ulang teks opsi (bukan transform mekanis) — sengaja ditinggalkan, tercatat di BACKLOG.
+2. Penulisan ulang 550 pasangan memakai **aturan bahasa**, bukan penilaian guru; frasanya sah secara pedoman tapi belum tentu paling tepat secara pedagogis. Bentuknya menghilangkan beban ganda (soal tidak lagi menyalin jawaban eksplorasi), itu klaim yang didukung bukti; kualitas petunjuk adalah klaim yang **tidak** didukung bukti.
+3. Sinyal R5 lain dari pra-review 2026-10-26 (1.188/2.851 item tak terpetakan oleh kata kunci tujuan) **tidak disentuh** — itu soal cakupan tujuan, bukan duplikasi.
+4. `reviewStatus`/`releaseState` tetap `draft`. Tidak ada approval manusia; perbaikan ini mengurangi beban kerja reviewer, bukan menggantikannya.
+5. `scripts/pedagogical-prereview.mjs` dan `scripts/review-content.ts` **menulis ke path bertanggal tetap** (`…_2026-10-26.*`), sehingga keduanya **tidak dijalankan ulang** — menjalankan akan menimpa laporan historis. Verifikasi memakai analisis di `.tmp-assets/` yang mengimplementasikan semantik detektor yang sama; angka "0 cermin / 0 bias" berasal dari sana, bukan dari laporan pra-review baru.
+6. E2E tidak menguji 336 paket satu per satu; ia memuat aktivitas matching bawaan. Cross-check korpus dilakukan lewat skrip, bukan UI.
+
+**Sisa:** 10 paket kunci-terpanjang · reviewer manusia R1–R6/R8–R9/R12 · keputusan Curriculum Lead IPAS Fase A (OD-1) · CP/ATP per bab · D-UX-2/4/5/6 · blocker rilis B-01…B-08.
