@@ -69,7 +69,7 @@ Perbaikan yang diterapkan (jalur akar, bukan menutupi empat soal):
 
 - **Mesin penilai** menerima `correctResponse` berupa **daftar jawaban** untuk `responseType: "text"` (skema sudah mengizinkannya sejak awal; hanya penilainya yang menolak). `isAnswerCorrect` kini mencocokkan jawaban dengan salah satu entri daftar.
 - **Normalisasi** sebelum membandingkan: NFKC, huruf kecil, tanda baca dibuang, spasi berlebih dirapatkan. `batu`, `Batu.`, dan `  batu  ` sama; `1/4` tetap `1/4` (garis miring tidak dibuang).
-- **Data**: daftar alternatif ditambahkan pada 15 soal di 4 paket — 9 soal lain tetap satu kunci karena memang hanya punya satu jawaban. Tidak ada soal baru dan jumlah soal tidak berubah.
+- **Data**: daftar alternatif ditambahkan pada 14 soal di 4 paket — 10 soal lain tetap satu kunci karena memang hanya punya satu jawaban. Tidak ada soal baru dan jumlah soal tidak berubah.
 - **Test**: 5 test baru (`src/content/__tests__/quiz.test.ts`) menutup daftar jawaban, varian angka/kata, tanda baca, angka bertitik, dan penolakan jawaban non-teks. Suite **110/110**.
 
 Batasan: alternatif yang tidak terdaftar tetap dihukum (tidak ada penilaian semantik). Guru masih perlu menambah varian bila menemukannya saat uji coba.

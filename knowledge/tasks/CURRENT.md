@@ -862,7 +862,7 @@ Jumlah item, optionId, pasangan, dan posisi kunci tidak berubah. `scripts/apply-
 
 **F-02 — mesin penilai + data:**
 - `src/content/quiz.ts`: soal `text` menerima `correctResponse` string **atau** array; normalisasi NFKC + huruf kecil + buang tanda baca + rapatkan spasi (garis miring dipertahankan agar `1/4` tidak berubah). Jawaban kosong/whitespace tetap salah. Soal boolean/single-choice/multi tidak berubah.
-- Data alternatif: 15 soal di 4 paket — IPAS 3 (ciri makhluk hidup, peran tumbuhan, plus soal kupu-kupu), Bahasa Indonesia 5, Pancasila 2 (sila 4/5 + kata), Matematika 5 (nilai tempat/nilai angka). 9 soal lain tetap satu kunci karena memang satu jawaban.
+- Data alternatif: 14 soal di 4 paket — IPAS 2 (ciri makhluk hidup, peran tumbuhan), Bahasa Indonesia 5, Pancasila 2 (sila 4/5 + kata), Matematika 5 (nilai tempat/nilai angka). 10 soal lain tetap satu kunci karena memang satu jawaban.
 - `src/content/__tests__/quiz.test.ts`: +5 test (daftar jawaban, varian angka/kata, tanda baca/spasi, angka bertitik `12.354` vs `12354`, penolakan jawaban non-teks).
 
 **Verifikasi aktual:** validator seluruh korpus **336/336 VALID, 0 issue, 336 warning (draft)** · `check-practice-volume.mjs` "Semua aktivitas dinilai berada dalam rentang target" · `npm test` → `Tests 110 passed (110)` (15 berkas), `4/4 fixture cocok dengan expected`, `catalog-index OK: 336 entri, 336 paket` · `npm run build` **PASS** (`tsc --noEmit` + vite).
