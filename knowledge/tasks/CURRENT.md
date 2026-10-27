@@ -144,10 +144,10 @@
 | Volume aktivitas (T-097) | **PASS** — "Semua aktivitas dinilai berada dalam rentang target" |
 | Unit test + fixture + katalog (T-097) | **PASS** — `Tests 105 passed (105)`, `4/4 fixture cocok dengan expected`, `catalog-index OK: 336 entri, 336 paket` |
 | Perbaikan F-01 (T-098) | **DITERAPKAN** — `kelas4-ipas-b01-makhluk-hidup`: langkah 1 → "Ikan, siput, kupu-kupu, dan tumbuhan air"; altText 4 berkas → "Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai"; pasangan Katak/Capung → Siput/Kupu-kupu; soal "Capung bernapas" → "Kupu-kupu bernapas" (kunci `trakea` tetap); 0 sisa kata katak/capung |
-| Perbaikan F-02 (T-098) | **DITERAPKAN** — `src/content/quiz.ts`: soal teks menerima daftar `correctResponse` + normalisasi NFKC/huruf/tanda baca/spasi; 15 soal di 4 paket mendapat alternatif; 5 unit test baru |
+| Perbaikan F-02 (T-098) | **DITERAPKAN** — `src/content/quiz.ts`: soal teks menerima daftar `correctResponse` + normalisasi NFKC/huruf/tanda baca/spasi; 14 soal di 4 paket mendapat alternatif; 5 unit test baru |
 | Unit test pasca-F-01/F-02 (T-098) | **PASS** — `Tests 110 passed (110)` (15 berkas), `4/4 fixture cocok dengan expected`, `catalog-index OK: 336 entri, 336 paket` |
 | Build (T-098) | **PASS** — `npm run build` (`tsc --noEmit` + vite) |
-| E2E activities (T-098) | **TIDAK DIJALANKAN** — aplikasi desktop masih berjalan (PID 17504), harness menolak agar WebView2 tidak bentrok |
+| E2E activities (T-098) | **PASS** — 14 pemeriksaan; termasuk "Aktivitas jawaban singkat dinilai 100 (normalisasi huruf) dan tersimpan", layout dua kolom, cover header blob, kartu kemajuan 1/5, ringkasan sesi, tombol Hasil Belajar |
 | Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
 | Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
 | Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
@@ -867,6 +867,8 @@ Jumlah item, optionId, pasangan, dan posisi kunci tidak berubah. `scripts/apply-
 
 **Verifikasi aktual:** validator seluruh korpus **336/336 VALID, 0 issue, 336 warning (draft)** · `check-practice-volume.mjs` "Semua aktivitas dinilai berada dalam rentang target" · `npm test` → `Tests 110 passed (110)` (15 berkas), `4/4 fixture cocok dengan expected`, `catalog-index OK: 336 entri, 336 paket` · `npm run build` **PASS** (`tsc --noEmit` + vite).
 
-**Tidak dijalankan:** E2E `activities` — aplikasi desktop sedang berjalan (PID 17504) dan harness menolak agar WebView2 tidak bentrok; a11y, E2E lain, dan `cargo test` juga tidak dijalankan (tidak ada perubahan Rust). Jadi perilaku kolom jawaban belum diuji ulang di UI.
+**E2E:** `npm run e2e:activities` **PASS** — 14 pemeriksaan (dijalankan setelah aplikasi desktop ditutup, artefak `.tmp-e2e/2026-10-27T20-24-54-673Z`). Skenario memakai paket fixture sendiri dan memeriksa jalur jawaban singkat ("dinilai 100 (normalisasi huruf)"), jadi normalisasi baru terbukti lewat unit test, bukan lewat teks IPAS yang disunting.
+
+**Tidak dijalankan:** a11y, E2E lain, dan `cargo test` (tidak ada perubahan Rust).
 
 **Sisa:** guru perlu menyetujui solusi F-01 (teks menyesuaikan gambar) dan memastikan daftar varian F-02 memadai · tanda tangan guru manusia · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.

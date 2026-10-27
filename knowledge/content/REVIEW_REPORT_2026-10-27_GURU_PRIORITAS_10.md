@@ -136,8 +136,9 @@ Enam paket (`kelas1-matematika-b01`, `kelas1-matematika-b06`, `kelas2-matematika
 - Review ini menilai teks dan gambar yang ada; tidak menjalankan aplikasi untuk merasakan tampilan soal.
 - Kesesuaian dengan CP/ATP per bab tetap tugas Curriculum Lead (OD-1 sudah disetujui, verifikasi per bab belum).
 - Putusan "LAYAK" di sini berarti **tidak ditemukan cacat**, bukan persetujuan rilis.
-- Perbaikan F-02 diverifikasi lewat unit test dan `npm run build`; E2E `activities` tidak dapat dijalankan karena
-  aplikasi desktop sedang berjalan (WebView2 bentrok), jadi perilaku kolom jawaban belum diuji ulang di UI.
+- Perbaikan F-02 diverifikasi lewat unit test dan `npm run build`; E2E `activities` menyusul **PASS 14/14**
+  (termasuk "Aktivitas jawaban singkat dinilai 100 (normalisasi huruf)"), tetapi skenario itu memakai paket
+  fixture sendiri — bukan teks IPAS yang disunting — sehingga kesesuaian gambar↔teks tetap dinilai dari berkas.
 
 ## 5. Cara mengukur ulang temuan
 
