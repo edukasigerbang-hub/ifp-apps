@@ -141,6 +141,7 @@
 | `npm test` / `npm run build` (T-094/T-095) | **PASS** — 105/105 + fixture 4/4 + catalog 336/336; `tsc` + Vite PASS |
 | `npm run a11y` (T-094) | **PASS** — 17/17 (0 error, 7 warning reflow/target sentuh) |
 | E2E (T-094) | **PASS** — player-fullscreen 6/6, learning-journey 11/11, activities 14/14 (satu percobaan kena timeout simpan pertama yang sudah tercatat sebagai flake, lalu PASS tanpa perubahan kode) |
+| E2E quiz-coverage (T-094) | **PASS** — 4 pemeriksaan: paket 4 aktivitas (Menyimak Cerita) dan 3 aktivitas, tab "Kuis Penguatan" ada, 5 soal dirender & dapat dijawab, skor tampil. Temuan: 4 tab membungkus ke 2 baris (96 px) pada 1280 karena judul aktivitas panjang — berfungsi, belum dirapikan lebih jauh |
 | `cargo test` (T-094/T-095) | **NOT RUN** — tanpa perubahan Rust |
 | Volume latihan kelas 1–2 (T-092) | **PASS** — kuis 5 soal/paket (min 5, maks 5), mencocokkan 5 pasangan (min 5, maks 6); 112 paket |
 | Volume latihan kelas 3–6 (T-092) | **PASS** — kuis 6 soal (min 6, maks 6), mencocokkan 6 pasangan (min 6, maks 7) pada 224 paket; `check-practice-volume.mjs`: "Semua aktivitas dinilai berada dalam rentang target" |
