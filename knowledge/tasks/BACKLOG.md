@@ -57,7 +57,9 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 - Shell: `main#main-content` memakai `overflow-y-auto` tetapi induknya `flex min-h-screen` tanpa tinggi tetap, sehingga tidak pernah menggulir sendiri — yang menggulir adalah dokumen. Akibatnya probe sticky E2E dulu membaca elemen yang salah dan jendela uji menempel sempit (±6 px pada 1600×900). Perlu keputusan: beri tinggi `h-screen` pada shell (menu tetap, konten menggulir) atau lepas `overflow-y-auto` yang tidak berfungsi.
 - Retensi & index DB belum dirancang (menunggu OD-4).
 - Skema `sync_outbox` state enum belum ditetapkan.
-- Konten: **10 paket** masih memicu sinyal R5 "opsi benar selalu yang terpanjang" (`longestCorrectRatio = 1`). Tidak dapat diperbaiki dengan transform mekanis — butuh penulisan ulang teks opsi agar panjangnya setara (temuan T-091, 2026-10-27).
+- Konten: ~~**10 paket** masih memicu sinyal R5 "opsi benar selalu yang terpanjang"~~ **DITUTUP 2026-10-27 (positif palsu)** — diukur ulang pada 336 paket: 0 paket dengan kunci selalu opsi terpanjang-**unik**; 6 paket hanya seri panjang pada soal angka/urutan (`1, 2, 3, 4` vs `4, 3, 2, 1`), semuanya matematika. Bukti di [review 10 paket prioritas](../content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md) §F-07.
+- Konten: **37 pasangan matching** di 27 paket memakai teks soal kuis sebagai sisi kiri, elipsis ikut tertinggal (mis. `Bahasa persatuan Indonesia adalah ...`). Kosmetik, tetapi terbaca seperti soal menggantung di kartu mencocokkan (temuan F-05).
+- Konten: **311 pasangan (15,8%) di 159 paket** masih dapat dicocokkan dengan menyalin jawaban yang sudah tertulis di layar eksplorasi (sisi kiri ≥70% kata sama dengan prompt langkah eksplorasi, sisi kanan identik dengan reveal). Detektor R5 lama melaporkan 0 karena mensyaratkan prompt identik. Beban kognitif rendah; aturan untuk batch berikutnya: sisi kiri tidak boleh memuat kata kunci jawaban (temuan F-06).
 - Konten: **550 pasangan matching hasil aturan bahasa** (T-091b) belum dinilai guru; 119 override tulisan tangan juga belum. Bentuknya sudah terbukti berhenti menyalin langkah eksplorasi, tetapi mutu petunjuknya belum ada penilaian manusia.
 - Alat QA: `scripts/pedagogical-prereview.mjs` dan `scripts/review-content.ts` menulis ke **path bertanggal tetap** (`PEDAGOGICAL_PREREVIEW_2026-10-26.md`, `review-flags-2026-10-26.json`, dst.). Menjalankannya ulang **menimpa bukti historis**, jadi keduanya tidak bisa dipakai untuk memverifikasi perbaikan setelah tanggal itu. Perlu: tanggal sebagai argumen (default hari ini) + tolak menulis di atas berkas yang sudah ada kecuali `--force`.
 - Remote GitHub aktif (`origin`); CI berjalan di remote sejak 2026-10-24 (run `40040384407` PASS).
@@ -67,7 +69,16 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 
 **Sudah dijalankan 2026-10-27:** audit baca-penuh atas 49 paket bermateri tertipis (11 paket kelas 1–2, 16 paket kelas 3–4, 22 paket kelas 5–6; 283 soal + 283 pasangan diperiksa). Hasil: **21 item cacat di 17 paket** dibetulkan (8 soal kuis: pengecoh mustahil, soal ambigu, fakta di luar materi; 13 pasangan: jawaban duplikat/sinonim atau salah pasang). Pengganti memakai fakta yang ada di materi; jumlah item/optionId/posisi kunci tidak berubah. Alat `scripts/apply-item-patches.mjs` (dry-run default), bukti `scripts/data/item-patches-kelas{12,34,56}-2026-10-27.json`, commit `983bd09`. Audit tidak menemukan jawaban kuis yang bertentangan dengan materi atau salah hitung pada 12 soal matematika yang diperiksa manual.
 
-**Masih perlu penilaian guru** (bukan cacat terverifikasi, tetapi materi sumbernya tipis sehingga paling berisiko):
+**Review lanjutan 2026-10-27 atas 10 paket di daftar ini** — [REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md](../content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md). 141 item dibaca penuh (58 soal kuis, 58 pasangan, 25 langkah urutan). Tidak ada jawaban salah atau salah hitung. Putusan: 1 **perlu perbaikan** (`kelas4-ipas-b01-makhluk-hidup`), 1 perlu perbaikan kecil (`kelas6-pjok-b03-atletik`), 7 layak dengan catatan, 1 layak (`kelas6-pai-b07-sejarah-islam`). Temuan yang perlu tindakan:
+
+- **F-01** `kelas4-ipas-b01-makhluk-hidup`: ilustrasi tidak memuat katak/capung, tetapi eksplorasi, altText, 2 pasangan, dan 1 soal menyebut keduanya.
+- **F-02** Jawaban singkat dinilai persis satu string (`src/content/quiz.ts:33`) — 4 paket / 24 soal; mis. "Sebutkan satu ciri makhluk hidup" hanya menerima `bernapas`, padahal "bergerak"/"tumbuh" juga benar menurut materi. Akar masalah ada di mesin penilai, bukan hanya teks.
+- **F-03** "Benda tak hidup pada gambar" (`kelas4-ipas-b01`) punya dua jawaban sah: batu dan air.
+- **F-04** `kelas6-pjok-b03-atletik`: langkah urutan ke-5 "Merapikan posisi" adalah pengisi untuk memenuhi ambang 5 langkah.
+
+Sisa 7 paket tidak memerlukan perubahan wajib; catatan per paket (istilah "selisih" di kelas 2, soal yang bertumpu pengetahuan umum, pengecoh lemah) ada di laporan §3.
+
+**Masih perlu penilaian guru manusia** (review di atas dilakukan agent; bukan tanda tangan guru):
 - `kelas2-matematika-b08-data` — materi tidak memuat angka/tabel; soal bergantung pada diagram batang yang hanya ada di kuis.
 - `kelas6-bahasa-indonesia-b02-eksposisi` — materi ≈10 kata isi; kuis menanyakan isi argumen dan sikap objektif.
 - `kelas3-pendidikan-pancasila-b06-nkri` — 3 langkah fakta; soal "bahasa persatuan" dan pasangan ke-4 bertumpu pada pengetahuan umum NKRI.
@@ -75,4 +86,4 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 - `kelas2-pai-b05-puasa`, `kelas3-pjok-b06-senam-dasar`, `kelas4-seni-rupa-b08-pameran-kelas`, `kelas5-pjok-b06-senam-lantai`, `kelas6-pai-b07-sejarah-islam`, `kelas6-pjok-b03-atletik` — beberapa pengecoh/pasangan bertumpu pada pengetahuan umum di luar teks paket.
 - Catatan reviewer: sejumlah kuis memakai 4 opsi dengan pengecoh lemah (mis. PAI "Hari libur/Hari ujian"). Format 4 opsi sah menurut aturan; pemangkasan menjadi 3 opsi butuh penulisan ulang manual, belum dikerjakan.
 
-Semua item tetap `reviewStatus: draft`. Audit ini menurunkan risiko, bukan menggantikan penilaian guru.
+Sepuluh paket di atas sudah ditinjau agent 2026-10-27 (laporan tertaut); yang tersisa adalah tanda tangan guru. Semua item tetap `reviewStatus: draft`. Audit menurunkan risiko, bukan menggantikan penilaian guru.
