@@ -631,7 +631,7 @@ function LessonView({
                     });
                   }}
                   onClick={() => setActiveActivityId(activity.activityId)}
-                  className={`min-h-11 rounded-control px-4 text-sm font-medium ${
+                  className={`min-h-11 rounded-control px-3 text-sm font-medium ${
                     isActive
                       ? "bg-navy text-white"
                       : "border border-ink/15 bg-surface text-ink hover:bg-paper"
@@ -643,9 +643,7 @@ function LessonView({
             })}
           </div>
 
-          <div
-            className={`mt-2 flex flex-wrap items-center gap-2 ${fullscreen ? "justify-end" : ""}`}
-          >
+          <div className={`mt-2 flex flex-wrap items-center gap-2 ${fullscreen ? "justify-end" : ""}`}>
             <p
               aria-live="polite"
               hidden={fullscreen && !storageAlert}

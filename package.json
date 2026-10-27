@@ -29,6 +29,7 @@
     "e2e:review": "node scripts/e2e/run.mjs content-review",
     "e2e:mode": "node scripts/e2e/run.mjs mode-switch",
     "e2e:player-fullscreen": "node scripts/e2e/run.mjs player-fullscreen",
+    "e2e:quiz-coverage": "node scripts/e2e/run.mjs quiz-coverage",
     "a11y": "node scripts/e2e/run.mjs a11y",
     "fixtures:check": "tsx scripts/check-fixtures.ts",
     "content:validate": "tsx scripts/validate-content.ts",
