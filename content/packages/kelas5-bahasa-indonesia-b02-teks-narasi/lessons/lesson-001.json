@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-teks-narasi-kelas5",
     "ordering-teks-narasi-kelas5",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/teks-narasi-kelas5.webp"
   ],

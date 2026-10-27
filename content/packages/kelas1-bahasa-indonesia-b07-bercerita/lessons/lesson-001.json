@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-bercerita",
     "ordering-bercerita",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/bercerita.webp"
   ],

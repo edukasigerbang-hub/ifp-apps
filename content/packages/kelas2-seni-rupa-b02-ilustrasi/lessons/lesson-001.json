@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-ilustrasi-kelas2",
     "ordering-ilustrasi-kelas2",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/ilustrasi-kelas2.webp"
   ],

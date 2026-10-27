@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Cerita yang tokohnya hewan dan berperilaku seperti manusia disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "legenda"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "fabel"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "pantun"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Tokoh utama sebuah fabel umumnya berupa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "manusia"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "tumbuhan"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "hewan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Masalah dalam cerita fabel mulai muncul pada bagian ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "konflik"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "latar"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "pesan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Konflik dalam fabel akhirnya diakhiri pada bagian ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "konflik"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "penyelesaian"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "latar"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Langkah terakhir ketika menyusun fabel adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "menyusun konflik"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "menentukan tokoh hewan"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "menulis pesan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Nasihat dalam fabel biasanya diletakkan pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "akhir cerita"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "awal cerita"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "tengah cerita"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca fabel tentang hewan."
+  }
+}

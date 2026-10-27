@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-proyek-kewargaan-kelas5",
     "ordering-proyek-kewargaan-kelas5",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/proyek-kewargaan-kelas5.webp"
   ],

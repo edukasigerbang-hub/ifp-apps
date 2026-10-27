@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Teks yang berisi rangkaian peristiwa dan pelakunya disebut teks ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Laporan"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Narasi"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Deskripsi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Bagian cerita yang berisi masalah yang dihadapi tokoh adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Penyelesaian"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Pengenalan"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Konflik"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Orang yang menjalani peristiwa di dalam cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Tokoh"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Penulis"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Pembaca"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Saat menulis cerita, kegiatan yang dilakukan sesudah memilih tokoh adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Memeriksa ejaan"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Menyusun alur"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Menentukan tema"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Bagian cerita yang muncul paling awal adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Penyelesaian"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Konflik"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Pengenalan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Sifat pribadi yang dimiliki tokoh cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "Watak"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "Alur"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "Tema"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Gagasan utama yang menjadi inti sebuah paragraf disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "ide pokok"
+          },
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "kalimat penutup"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "judul bacaan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Kalimat yang memuat gagasan utama sebuah paragraf dinamakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "kalimat perintah"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "kalimat utama"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "kalimat tanya"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Apa manfaat menyusun peristiwa cerita secara berurutan?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "cerita menjadi lebih panjang"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "tokoh cerita bertambah"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "cerita mudah dipahami"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Sikap yang tepat ketika teman sedang membacakan cerita adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "menyimak dengan tenang"
+          },
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "berbicara dengan teman sebangku"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "bermain sendiri di belakang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Setelah mencatat peristiwa penting, langkah berikutnya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "mewarnai gambar cerita"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "menentukan ide pokok"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "menghafal semua kalimat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Kegiatan terakhir setelah urutan peristiwa tersusun adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "menghafal seluruh kalimat"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "mewarnai gambar sampul"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "menceritakan kembali"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
+  }
+}

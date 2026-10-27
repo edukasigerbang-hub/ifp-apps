@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-keseimbangan",
     "ordering-keseimbangan",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/keseimbangan.webp"
   ],

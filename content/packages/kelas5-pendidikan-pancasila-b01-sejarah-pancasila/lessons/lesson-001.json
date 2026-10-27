@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-sejarah-pancasila",
     "ordering-sejarah-pancasila",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/sejarah-pancasila.webp"
   ],

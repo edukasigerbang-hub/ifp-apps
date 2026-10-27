@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-siklus-air",
     "ordering-siklus-air",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/siklus-air.webp"
   ],

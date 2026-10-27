@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-menulis-kalimat-kelas2",
     "ordering-menulis-kalimat-kelas2",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/menulis-kalimat-kelas2.webp"
   ],

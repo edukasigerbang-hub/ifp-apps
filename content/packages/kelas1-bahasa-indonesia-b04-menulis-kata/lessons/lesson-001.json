@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-menulis-kata",
     "ordering-menulis-kata",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/menulis-kata.webp"
   ],

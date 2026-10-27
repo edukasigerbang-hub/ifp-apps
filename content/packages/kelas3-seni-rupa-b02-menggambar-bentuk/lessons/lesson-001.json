@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-menggambar-bentuk",
     "ordering-menggambar-bentuk",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/menggambar-bentuk-kelas3.webp"
   ],

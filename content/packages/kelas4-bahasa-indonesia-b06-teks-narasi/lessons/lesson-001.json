@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-teks-narasi",
     "ordering-teks-narasi",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/teks-narasi.webp"
   ],

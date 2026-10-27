@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-kebersamaan",
     "ordering-kebersamaan",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kebersamaan-kelas1.webp"
   ],

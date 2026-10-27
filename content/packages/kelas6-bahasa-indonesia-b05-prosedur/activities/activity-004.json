@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Teks yang berisi petunjuk untuk melakukan sesuatu disebut teks ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "laporan"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "fabel"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "prosedur"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Kata seperti \"masukkan\" dan \"siramlah\" termasuk kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "perintah"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "tanya"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "benda"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Tujuan teks prosedur adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "menghibur pembaca"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "memberi petunjuk"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "menceritakan kisah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Setelah disiram, pot berisi biji sebaiknya diletakkan di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "tempat gelap"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "dalam lemari"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "tempat terang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Sebelum menanam biji, kita perlu menyiapkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "pot dan tanah"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "cat dan kuas"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "gunting dan lem"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Selain alat dan bahan, teks prosedur harus memuat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "tokoh"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "langkah"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "latar"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji dalam pot."
+  }
+}

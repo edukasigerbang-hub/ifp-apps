@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-sejarah-islam",
     "ordering-sejarah-islam",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/sejarah-islam-kelas5.webp"
   ],

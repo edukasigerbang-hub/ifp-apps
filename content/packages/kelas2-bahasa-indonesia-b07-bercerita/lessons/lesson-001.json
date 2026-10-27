@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-bercerita-kelas2",
     "ordering-bercerita-kelas2",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/bercerita-kelas2.webp"
   ],

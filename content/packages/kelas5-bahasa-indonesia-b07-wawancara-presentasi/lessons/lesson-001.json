@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-wawancara-presentasi",
     "ordering-wawancara-presentasi",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/wawancara-kelas5.webp"
   ],

@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-gerak-manipulatif",
     "ordering-gerak-manipulatif",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/gerak-manipulatif-kelas3.webp"
   ],

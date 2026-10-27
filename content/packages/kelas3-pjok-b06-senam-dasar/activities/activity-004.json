@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Pemanasan sebelum senam berguna untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "menambah lapar"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "menghemat tenaga"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "mencegah cedera"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Gerak berguling ke depan dalam senam disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "guling depan"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "guling samping"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "kayang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Alas yang dipakai agar berguling terasa aman adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "karpet tipis"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "matras"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "papan kayu"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Saat bersiap berguling, dagu ditempelkan ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "lutut"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "matras"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "dada"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Bagian tubuh yang diletakkan di matras sebelum berguling adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "tengkuk"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "dahi"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "punggung"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Gerakan terakhir setelah berguling ke depan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "duduk bersila"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "berdiri tegak"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "berlari cepat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+  }
+}

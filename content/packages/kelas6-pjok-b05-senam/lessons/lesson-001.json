@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-senam-kelas6",
     "ordering-senam-kelas6",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/senam-kelas6.webp"
   ],

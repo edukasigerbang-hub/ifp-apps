@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Gotong royong berarti bekerja ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Sendirian"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Bergiliran"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Bersama"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Contoh gotong royong di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Kerja bakti kelas"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Belajar sendiri"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Bermain di rumah teman"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Salah satu manfaat gotong royong adalah pekerjaan menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Makin banyak"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Cepat selesai"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Terus tertunda"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Agar pekerjaan kerja bakti teratur, tugas perlu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Ditunda"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Dihitung ulang"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Dibagi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Usai kerja bakti, alat kebersihan perlu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Dirapikan"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Ditinggal"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Dibuang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama membersihkan lingkungan."
+  }
+}

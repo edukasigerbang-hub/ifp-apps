@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-mewarnai-bentuk",
     "ordering-mewarnai-bentuk",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/mewarnai-bentuk.webp"
   ],

@@ -1,0 +1,164 @@
+{
+  "packages": {
+    "kelas3-bahasa-indonesia-b03-ide-pokok": {
+      "questions": [
+        { "prompt": "Gagasan utama yang menjadi inti sebuah paragraf disebut ...", "answer": "ide pokok", "distractors": ["kalimat penutup", "judul bacaan"] },
+        { "prompt": "Kalimat yang memuat gagasan utama sebuah paragraf dinamakan ...", "answer": "kalimat utama", "distractors": ["kalimat perintah", "kalimat tanya"] },
+        { "prompt": "Apa manfaat menyusun peristiwa cerita secara berurutan?", "answer": "cerita mudah dipahami", "distractors": ["cerita menjadi lebih panjang", "tokoh cerita bertambah"] },
+        { "prompt": "Sikap yang tepat ketika teman sedang membacakan cerita adalah ...", "answer": "menyimak dengan tenang", "distractors": ["berbicara dengan teman sebangku", "bermain sendiri di belakang"] },
+        { "prompt": "Setelah mencatat peristiwa penting, langkah berikutnya adalah ...", "answer": "menentukan ide pokok", "distractors": ["mewarnai gambar cerita", "menghafal semua kalimat"] },
+        { "prompt": "Kegiatan terakhir setelah urutan peristiwa tersusun adalah ...", "answer": "menceritakan kembali", "distractors": ["menghafal seluruh kalimat", "mewarnai gambar sampul"] }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b04-menulis-paragraf": {
+      "questions": [
+        { "prompt": "Kalimat pembuka paragraf yang memuat ide utama disebut ...", "answer": "kalimat topik", "distractors": ["kalimat ajakan", "kalimat larangan"] },
+        { "prompt": "Tugas kalimat pendukung dalam paragraf adalah ...", "answer": "menjelaskan topik", "distractors": ["mengganti judul bacaan", "menutup seluruh cerita"] },
+        { "prompt": "Paragraf sederhana untuk kelas tiga sebaiknya terdiri atas ...", "answer": "tiga sampai empat kalimat", "distractors": ["satu sampai dua kalimat", "tujuh sampai delapan kalimat"] },
+        { "prompt": "Salah satu hal yang diperiksa saat membaca ulang paragraf adalah ...", "answer": "ejaan", "distractors": ["warna tinta", "ukuran kertas"] },
+        { "prompt": "Agar kalimat topik tidak melenceng, sebelumnya kita menetapkan ...", "answer": "ide pokok", "distractors": ["jumlah paragraf", "nama tokoh"] },
+        { "prompt": "Kegiatan yang dilakukan paling akhir setelah paragraf ditulis adalah ...", "answer": "membaca ulang", "distractors": ["menambah gambar", "mengganti buku"] }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b05-teks-prosedur": {
+      "questions": [
+        { "prompt": "Tujuan utama sebuah teks prosedur adalah ...", "answer": "memberi petunjuk", "distractors": ["menghibur pembaca", "menceritakan masa lalu"] },
+        { "prompt": "Kata 'siram' dan 'masukkan' dalam teks prosedur termasuk kata ...", "answer": "perintah", "distractors": ["sifat", "bilangan"] },
+        { "prompt": "Langkah dalam teks prosedur ditulis dengan urutan ...", "answer": "dari awal ke akhir", "distractors": ["dari akhir ke awal", "secara acak"] },
+        { "prompt": "Setelah biji ditanam, pot diletakkan di tempat yang ...", "answer": "terang", "distractors": ["gelap dan lembap", "teduh dan sejuk"] },
+        { "prompt": "Alat yang disiapkan pada langkah pertama menanam biji adalah ...", "answer": "pot dan tanah", "distractors": ["gunting dan lem", "cat dan kuas"] },
+        { "prompt": "Langkah terakhir dalam urutan menanam biji adalah ...", "answer": "merawat tanaman", "distractors": ["membeli pot baru", "memotong daun"] }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b07-wawancara": {
+      "questions": [
+        { "prompt": "Orang yang memberi jawaban dalam wawancara disebut ...", "answer": "narasumber", "distractors": ["pewawancara", "pendengar"] },
+        { "prompt": "Pertanyaan wawancara sebaiknya disusun secara ...", "answer": "singkat dan jelas", "distractors": ["panjang dan berbelit", "cepat dan berbisik"] },
+        { "prompt": "Sebelum bertanya kepada narasumber, kita perlu ...", "answer": "meminta izin", "distractors": ["membawa hadiah", "menyela pembicara"] },
+        { "prompt": "Alat yang dipakai untuk mencatat jawaban narasumber adalah ...", "answer": "buku catatan", "distractors": ["papan tulis", "kotak pensil"] },
+        { "prompt": "Setelah semua jawaban dicatat, sebaiknya kita mengucapkan ...", "answer": "terima kasih", "distractors": ["silakan duduk", "permisi, saya masuk"] },
+        { "prompt": "Langkah kedua dalam melakukan wawancara adalah ...", "answer": "menyusun pertanyaan", "distractors": ["mencatat semua jawaban", "memilih narasumber"] }
+      ]
+    },
+    "kelas3-ipas-b02-daur-hidup": {
+      "questions": [
+        { "prompt": "Daur hidup kupu-kupu dimulai dari ...", "answer": "telur", "distractors": ["ulat", "kepompong"] },
+        { "prompt": "Setelah menetas, kupu-kupu muda berbentuk ...", "answer": "ulat", "distractors": ["berudu", "anak ayam"] },
+        { "prompt": "Tahap istirahat sebelum menjadi kupu-kupu dewasa disebut ...", "answer": "kepompong", "distractors": ["telur kupu-kupu", "berudu kecil"] },
+        { "prompt": "Hewan yang mengalami tahap berudu adalah ...", "answer": "katak", "distractors": ["ayam", "kupu-kupu"] },
+        { "prompt": "Ayam memulai hidupnya dengan cara ...", "answer": "menetas dari telur", "distractors": ["menetas dari kepompong", "lahir sebagai ulat"] },
+        { "prompt": "Setelah menjadi kupu-kupu dewasa, daur hidup berlanjut dengan ...", "answer": "bertelur lagi", "distractors": ["berubah menjadi ulat", "masuk ke kepompong"] }
+      ]
+    },
+    "kelas3-ipas-b07-lingkungan-pelestarian": {
+      "questions": [
+        { "prompt": "Lingkungan yang bersih membuat penghuninya ...", "answer": "sehat dan nyaman", "distractors": ["sakit dan mudah lelah", "malas dan cepat bosan"] },
+        { "prompt": "Agar halaman sekolah hijau dan teduh, sebaiknya kita ...", "answer": "menanam pohon", "distractors": ["menebang pohon", "membakar sampah"] },
+        { "prompt": "Sampah sebaiknya dibuang ...", "answer": "di tempat sampah", "distractors": ["ke sungai dekat rumah", "di halaman sekolah"] },
+        { "prompt": "Sampah yang dibuang ke sungai dapat menyebabkan ... saat hujan", "answer": "banjir", "distractors": ["gempa", "kekeringan"] },
+        { "prompt": "Kegiatan pertama saat membersihkan kelas bersama adalah ...", "answer": "menyiapkan alat", "distractors": ["mencuci tangan", "membuang sampah"] },
+        { "prompt": "Setelah sampah dipilah, langkah berikutnya adalah ...", "answer": "membuang sampah", "distractors": ["mencuci tangan", "menyiapkan alat"] }
+      ]
+    },
+    "kelas3-pai-b04-salat": {
+      "questions": [
+        { "prompt": "Jumlah salat wajib dalam sehari ada ...", "answer": "lima waktu", "distractors": ["tiga waktu", "tujuh waktu"] },
+        { "prompt": "Salat wajib yang dikerjakan paling pagi adalah ...", "answer": "subuh", "distractors": ["zuhur", "isya"] },
+        { "prompt": "Sebelum salat, kita membersihkan diri dengan ...", "answer": "berwudu", "distractors": ["berolahraga", "bernyanyi"] },
+        { "prompt": "Gerakan yang menutup rangkaian salat adalah ...", "answer": "salam", "distractors": ["takbir", "sujud"] },
+        { "prompt": "Gerakan setelah rukuk dalam salat adalah ...", "answer": "sujud", "distractors": ["salam", "takbir"] },
+        { "prompt": "Salat dikerjakan dengan menghadap ...", "answer": "kiblat", "distractors": ["papan tulis", "jendela"] }
+      ]
+    },
+    "kelas3-pai-b07-sejarah-islam": {
+      "questions": [
+        { "prompt": "Nabi Muhammad saw. dilahirkan di kota ...", "answer": "Makkah", "distractors": ["Madinah", "Thaif"] },
+        { "prompt": "Wahyu pertama diterima Nabi Muhammad di ...", "answer": "Gua Hira", "distractors": ["Masjid Nabawi", "Gua Tsur"] },
+        { "prompt": "Nabi Muhammad hijrah menuju kota ...", "answer": "Madinah", "distractors": ["kota Makkah", "kota Thaif"] },
+        { "prompt": "Kegiatan Nabi Muhammad setelah menerima wahyu adalah ...", "answer": "berdakwah", "distractors": ["berdagang", "menulis buku"] },
+        { "prompt": "Masjid yang dibangun Nabi setelah tiba di Madinah bernama ...", "answer": "Masjid Nabawi", "distractors": ["Masjidil Haram", "Masjid Agung"] },
+        { "prompt": "Nabi Muhammad berpindah ke Madinah agar dapat ...", "answer": "melindungi umat", "distractors": ["mencari tanah baru", "membuka pasar baru"] }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b04-musyawarah": {
+      "questions": [
+        { "prompt": "Kegiatan membicarakan masalah bersama untuk mencapai kesepakatan disebut ...", "answer": "musyawarah", "distractors": ["pemungutan suara", "kerja bakti"] },
+        { "prompt": "Saat menyampaikan pendapat, sebaiknya kita berbicara dengan ...", "answer": "sopan dan singkat", "distractors": ["keras dan panjang", "sambil memotong teman"] },
+        { "prompt": "Bila pendapat teman berbeda dengan pendapat kita, sikap kita adalah ...", "answer": "menghargainya", "distractors": ["menertawakannya", "meninggalkan kelas"] },
+        { "prompt": "Setelah kesepakatan dipilih, semua peserta wajib ...", "answer": "melaksanakannya", "distractors": ["mengubahnya lagi", "meninggalkannya"] },
+        { "prompt": "Langkah pertama dalam musyawarah kelas adalah ...", "answer": "menyampaikan masalah", "distractors": ["menghitung suara", "menulis notulen rapat"] },
+        { "prompt": "Hasil kesepakatan musyawarah dijalankan dengan penuh ...", "answer": "tanggung jawab", "distractors": ["kebanggaan diri", "keterpaksaan"] }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b07-gotong-royong": {
+      "questions": [
+        { "prompt": "Bekerja bersama untuk kepentingan bersama disebut ...", "answer": "gotong royong", "distractors": ["kerja pribadi", "lomba kelompok"] },
+        { "prompt": "Contoh gotong royong di sekolah adalah ...", "answer": "membersihkan kelas", "distractors": ["mengerjakan ulangan", "bermain di kantin"] },
+        { "prompt": "Dengan gotong royong, pekerjaan berat menjadi terasa ...", "answer": "ringan", "distractors": ["semakin berat", "semakin lama"] },
+        { "prompt": "Agar pekerjaan tidak menumpuk pada satu orang, kita perlu ...", "answer": "membagi tugas", "distractors": ["membeli alat baru", "menghitung hasil"] },
+        { "prompt": "Setelah pekerjaan selesai, alat-alat sebaiknya ...", "answer": "dirapikan", "distractors": ["ditinggalkan", "disembunyikan"] },
+        { "prompt": "Dengan bergotong royong, hubungan antarwarga menjadi ...", "answer": "semakin akrab", "distractors": ["semakin renggang", "semakin tegang"] }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "questions": [
+        { "prompt": "Proyek kewargaan sebaiknya dimulai dengan ...", "answer": "memilih masalah", "distractors": ["membagi hadiah", "menutup laporan"] },
+        { "prompt": "Masalah yang dipilih untuk proyek kelas sebaiknya berada di ...", "answer": "sekitar sekolah", "distractors": ["kota lain yang jauh", "negeri yang jauh"] },
+        { "prompt": "Rencana proyek memuat tujuan, tugas, dan ...", "answer": "waktu", "distractors": ["harga", "warna"] },
+        { "prompt": "Setelah rencana tersusun, langkah berikutnya adalah ...", "answer": "membagi tugas", "distractors": ["melaporkan hasil", "memilih masalah"] },
+        { "prompt": "Kegiatan setelah seluruh tugas selesai dikerjakan adalah ...", "answer": "melaporkan hasil", "distractors": ["mengulang rencana", "membagi tugas lagi"] },
+        { "prompt": "Evaluasi dilakukan agar kegiatan berikutnya dapat ...", "answer": "diperbaiki", "distractors": ["diperpanjang", "diulang dari awal"] }
+      ]
+    },
+    "kelas3-pjok-b03-gerak-manipulatif": {
+      "questions": [
+        { "prompt": "Gerakan yang memakai bola atau alat disebut gerak ...", "answer": "manipulatif", "distractors": ["lokomotor", "nonlokomotor"] },
+        { "prompt": "Saat menangkap bola, pandangan diarahkan ke ...", "answer": "bola", "distractors": ["teman", "tanah"] },
+        { "prompt": "Posisi siku saat menangkap bola sebaiknya ...", "answer": "agak menekuk", "distractors": ["lurus kaku", "diputar ke belakang"] },
+        { "prompt": "Permainan lempar tangkap berjalan ... jika semua bekerja sama", "answer": "lancar", "distractors": ["kacau", "lambat"] },
+        { "prompt": "Langkah pertama dalam permainan lempar tangkap adalah ...", "answer": "berdiri siap", "distractors": ["menangkap bola", "mengembalikan bola"] },
+        { "prompt": "Setelah teman menangkap bola, bola sebaiknya ...", "answer": "dikembalikan", "distractors": ["disimpan di tas", "ditendang jauh"] }
+      ]
+    },
+    "kelas3-pjok-b06-senam-dasar": {
+      "questions": [
+        { "prompt": "Pemanasan sebelum senam berguna untuk ...", "answer": "mencegah cedera", "distractors": ["menambah lapar", "menghemat tenaga"] },
+        { "prompt": "Gerak berguling ke depan dalam senam disebut ...", "answer": "guling depan", "distractors": ["guling samping", "kayang"] },
+        { "prompt": "Alas yang dipakai agar berguling terasa aman adalah ...", "answer": "matras", "distractors": ["karpet tipis", "papan kayu"] },
+        { "prompt": "Saat bersiap berguling, dagu ditempelkan ke ...", "answer": "dada", "distractors": ["lutut", "matras"] },
+        { "prompt": "Bagian tubuh yang diletakkan di matras sebelum berguling adalah ...", "answer": "tengkuk", "distractors": ["dahi", "punggung"] },
+        { "prompt": "Gerakan terakhir setelah berguling ke depan adalah ...", "answer": "berdiri tegak", "distractors": ["duduk bersila", "berlari cepat"] }
+      ]
+    },
+    "kelas3-seni-rupa-b02-menggambar-bentuk": {
+      "questions": [
+        { "prompt": "Bentuk dasar yang menjadi atap rumah pada contoh gambar adalah ...", "answer": "segitiga", "distractors": ["lingkaran", "persegi"] },
+        { "prompt": "Sketsa awal sebaiknya dibuat dengan garis ...", "answer": "tipis", "distractors": ["tebal", "putus-putus"] },
+        { "prompt": "Sebelum mewarnai, langkah yang harus dilakukan adalah ...", "answer": "menambahkan detail", "distractors": ["menghapus seluruh sketsa", "memotong kertas gambar"] },
+        { "prompt": "Setelah bentuk dasar selesai digambar, langkah berikutnya adalah ...", "answer": "menyusun bentuk", "distractors": ["mewarnai gambar", "menyiapkan alat"] },
+        { "prompt": "Alat tulis yang dipakai untuk membuat sketsa adalah ...", "answer": "pensil", "distractors": ["gunting", "lem"] },
+        { "prompt": "Gambar rumah pada materi disusun dari ...", "answer": "bentuk dasar", "distractors": ["bahan alam", "potongan kain"] }
+      ]
+    },
+    "kelas3-seni-rupa-b04-kolase": {
+      "questions": [
+        { "prompt": "Karya seni dengan menempel bahan pada bidang disebut ...", "answer": "kolase", "distractors": ["lukisan", "patung"] },
+        { "prompt": "Contoh bahan alam untuk kolase adalah ...", "answer": "daun kering", "distractors": ["plastik bekas", "kaca jendela"] },
+        { "prompt": "Bahan alam yang butirannya kecil dan keras adalah ...", "answer": "biji", "distractors": ["ranting", "pelepah"] },
+        { "prompt": "Sebelum menempel bahan, sebaiknya kita ...", "answer": "menyusun pola", "distractors": ["menjemur karya", "mewarnai bidang"] },
+        { "prompt": "Setelah semua bahan menempel, karya kolase ...", "answer": "dijemur", "distractors": ["dilipat", "direndam"] },
+        { "prompt": "Bahan yang dioleskan agar bahan kolase menempel adalah ...", "answer": "lem", "distractors": ["cat", "air"] }
+      ]
+    },
+    "kelas3-seni-rupa-b05-seni-cetak": {
+      "questions": [
+        { "prompt": "Membuat gambar berulang dengan alat cetak disebut ...", "answer": "seni cetak", "distractors": ["seni lukis", "seni tari"] },
+        { "prompt": "Bahan dapur yang dapat dijadikan alat cap adalah ...", "answer": "kentang", "distractors": ["beras mentah", "telur ayam"] },
+        { "prompt": "Barang bekas yang dapat dipakai sebagai cap adalah ...", "answer": "tutup botol", "distractors": ["kertas koran", "sedotan plastik"] },
+        { "prompt": "Pelepah pisang dipotong agar permukaannya ...", "answer": "rata", "distractors": ["tebal", "lengkung"] },
+        { "prompt": "Setelah alat cetak ditekan pada kertas, langkah berikutnya adalah ...", "answer": "mengangkat perlahan", "distractors": ["menekan sekuat tenaga", "mengoleskan cat lagi"] },
+        { "prompt": "Sebelum menekan alat cetak ke kertas, alat tersebut ...", "answer": "dicelup ke cat", "distractors": ["dipotong kecil", "dijemur di panas"] }
+      ]
+    }
+  }
+}

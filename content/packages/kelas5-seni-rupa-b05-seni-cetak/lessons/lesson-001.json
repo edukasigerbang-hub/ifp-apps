@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-seni-cetak-kelas5",
     "ordering-seni-cetak-kelas5",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/seni-cetak-kelas5.webp"
   ],

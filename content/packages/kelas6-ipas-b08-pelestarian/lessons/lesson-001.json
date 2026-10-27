@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-pelestarian",
     "ordering-pelestarian",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pelestarian-kelas6.webp"
   ],

@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-kolase",
     "ordering-kolase",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/kolase-kelas2.webp"
   ],

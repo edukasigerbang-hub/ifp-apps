@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-proyek-kewargaan",
     "ordering-proyek-kewargaan",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/proyek-kewargaan-kelas3.webp"
   ],

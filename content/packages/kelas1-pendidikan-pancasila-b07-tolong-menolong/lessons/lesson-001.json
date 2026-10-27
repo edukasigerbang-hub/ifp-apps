@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-tolong-menolong",
     "ordering-tolong-menolong",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/tolong-menolong.webp"
   ],

@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-senam-dasar",
     "ordering-senam-dasar",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/senam-dasar.webp"
   ],

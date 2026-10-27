@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-wujud-zat",
     "ordering-wujud-zat",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/wujud-zat.webp"
   ],

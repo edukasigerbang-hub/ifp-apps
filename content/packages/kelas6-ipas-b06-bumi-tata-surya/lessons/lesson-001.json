@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-bumi-tata-surya",
     "ordering-bumi-tata-surya",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/tata-surya-kelas6.webp"
   ],

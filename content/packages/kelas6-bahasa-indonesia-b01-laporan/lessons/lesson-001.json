@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-laporan-kelas6",
     "ordering-laporan-kelas6",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/laporan-kelas6.webp"
   ],

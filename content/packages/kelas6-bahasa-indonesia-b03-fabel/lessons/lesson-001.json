@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-fabel",
     "ordering-fabel",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/fabel.webp"
   ],

@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-atletik-kelas6",
     "ordering-atletik-kelas6",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/atletik-kelas6.webp"
   ],

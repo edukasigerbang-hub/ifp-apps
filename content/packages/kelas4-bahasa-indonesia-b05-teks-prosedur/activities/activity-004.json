@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Teks yang berisi langkah berurutan dan memakai kata perintah disebut teks ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "prosedur"
+          },
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "narasi"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "deskripsi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Kata 'siramlah' pada teks prosedur termasuk jenis kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "benda"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "perintah"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "tanya"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Langkah yang dikerjakan tepat setelah biji ditanam adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "merawat tanaman"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "meletakkan di tempat terang"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "menyiram biji"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Alasan langkah pada teks prosedur tidak boleh diacak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "agar mudah diikuti orang lain"
+          },
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "agar teks terlihat lebih panjang"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "agar bahasa terdengar indah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Agar tunas tumbuh, pot berisi biji diletakkan di tempat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "gelap"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "terang"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "tertutup"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Ciri teks prosedur yang membedakannya dari cerita adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "tokoh dan latar"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "masalah dan penyelesaian"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "langkah berurutan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas."
+  }
+}

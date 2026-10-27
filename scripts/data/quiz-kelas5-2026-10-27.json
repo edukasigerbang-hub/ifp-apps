@@ -1,0 +1,514 @@
+{
+  "packages": {
+    "kelas5-bahasa-indonesia-b02-teks-narasi": {
+      "questions": [
+        {
+          "prompt": "Teks yang berisi rangkaian peristiwa dan pelakunya disebut teks ...",
+          "answer": "Narasi",
+          "distractors": ["Laporan", "Deskripsi"]
+        },
+        {
+          "prompt": "Bagian cerita yang berisi masalah yang dihadapi tokoh adalah ...",
+          "answer": "Konflik",
+          "distractors": ["Penyelesaian", "Pengenalan"]
+        },
+        {
+          "prompt": "Orang yang menjalani peristiwa di dalam cerita disebut ...",
+          "answer": "Tokoh",
+          "distractors": ["Penulis", "Pembaca"]
+        },
+        {
+          "prompt": "Saat menulis cerita, kegiatan yang dilakukan sesudah memilih tokoh adalah ...",
+          "answer": "Menyusun alur",
+          "distractors": ["Memeriksa ejaan", "Menentukan tema"]
+        },
+        {
+          "prompt": "Bagian cerita yang muncul paling awal adalah ...",
+          "answer": "Pengenalan",
+          "distractors": ["Penyelesaian", "Konflik"]
+        },
+        {
+          "prompt": "Sifat pribadi yang dimiliki tokoh cerita disebut ...",
+          "answer": "Watak",
+          "distractors": ["Alur", "Tema"]
+        }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b04-laporan": {
+      "questions": [
+        {
+          "prompt": "Teks yang berisi hasil pengamatan secara tertulis disebut ...",
+          "answer": "Laporan",
+          "distractors": ["Cerita", "Pantun"]
+        },
+        {
+          "prompt": "Bahasa yang dipakai dalam laporan sebaiknya ...",
+          "answer": "Baku",
+          "distractors": ["Gaul", "Puitis"]
+        },
+        {
+          "prompt": "Bagian laporan yang berisi ringkasan akhir disebut ...",
+          "answer": "Kesimpulan",
+          "distractors": ["Tujuan", "Kegiatan"]
+        },
+        {
+          "prompt": "Bagian laporan yang ditulis paling awal adalah ...",
+          "answer": "Tujuan",
+          "distractors": ["Hasil", "Kesimpulan"]
+        },
+        {
+          "prompt": "Saat memeriksa laporan, hal yang perlu diperhatikan adalah ...",
+          "answer": "Tanda baca",
+          "distractors": ["Warna sampul", "Gambar hiasan"]
+        },
+        {
+          "prompt": "Langkah sesudah mencatat kegiatan adalah ...",
+          "answer": "Menyusun hasil",
+          "distractors": ["Menulis kesimpulan", "Memeriksa bahasa"]
+        }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b07-wawancara-presentasi": {
+      "questions": [
+        {
+          "prompt": "Orang yang memberikan informasi saat wawancara disebut ...",
+          "answer": "Narasumber",
+          "distractors": ["Pewawancara", "Pendengar"]
+        },
+        {
+          "prompt": "Pertanyaan wawancara sebaiknya disusun secara ...",
+          "answer": "Singkat",
+          "distractors": ["Panjang", "Berbelit"]
+        },
+        {
+          "prompt": "Sikap yang tepat saat mewawancarai narasumber adalah ...",
+          "answer": "Sopan",
+          "distractors": ["Acuh", "Tergesa-gesa"]
+        },
+        {
+          "prompt": "Saat narasumber menjawab, kita sebaiknya ...",
+          "answer": "Mencatat jawaban",
+          "distractors": ["Memotong ucapan", "Mengalihkan topik"]
+        },
+        {
+          "prompt": "Sebelum presentasi, hal yang perlu disiapkan adalah ...",
+          "answer": "Urutan materi",
+          "distractors": ["Pengeras suara", "Daftar hadir"]
+        },
+        {
+          "prompt": "Kegiatan penutup setelah mencatat jawaban narasumber adalah ...",
+          "answer": "Presentasi",
+          "distractors": ["Menyusun pertanyaan", "Mencari narasumber"]
+        }
+      ]
+    },
+    "kelas5-bahasa-indonesia-b08-menulis-cerita": {
+      "questions": [
+        {
+          "prompt": "Bagian alur cerita yang berisi pengenalan tokoh dan situasi adalah ...",
+          "answer": "Awal",
+          "distractors": ["Tengah", "Akhir"]
+        },
+        {
+          "prompt": "Puncak masalah dalam cerita terdapat pada bagian ...",
+          "answer": "Tengah",
+          "distractors": ["Awal", "Akhir"]
+        },
+        {
+          "prompt": "Kegiatan menyusun bagian-bagian cerita sebelum menulis disebut menyusun ...",
+          "answer": "Kerangka",
+          "distractors": ["Kesimpulan", "Daftar pustaka"]
+        },
+        {
+          "prompt": "Setelah cerita selesai ditulis, langkah berikutnya adalah memeriksa ...",
+          "answer": "Ejaan",
+          "distractors": ["Gambar sampul", "Jumlah halaman"]
+        },
+        {
+          "prompt": "Cerita yang bagian-bagiannya urut dan saling bersambung disebut ...",
+          "answer": "Runtut",
+          "distractors": ["Acak", "Panjang"]
+        },
+        {
+          "prompt": "Kegiatan penutup setelah memeriksa ejaan cerita adalah ...",
+          "answer": "Membacakan cerita",
+          "distractors": ["Menyusun kerangka", "Menentukan tema"]
+        }
+      ]
+    },
+    "kelas5-ipas-b06-siklus-air": {
+      "questions": [
+        {
+          "prompt": "Perubahan air menjadi uap karena panas disebut ...",
+          "answer": "Penguapan",
+          "distractors": ["Pengembunan", "Penyerapan"]
+        },
+        {
+          "prompt": "Uap air yang berubah menjadi titik-titik air disebut ...",
+          "answer": "Pengembunan",
+          "distractors": ["Penguapan", "Penyaringan"]
+        },
+        {
+          "prompt": "Tahap siklus air yang terjadi setelah pengembunan adalah ...",
+          "answer": "Hujan",
+          "distractors": ["Penguapan", "Penyerapan"]
+        },
+        {
+          "prompt": "Air hujan yang meresap ke dalam tanah mengalami proses ...",
+          "answer": "Penyerapan",
+          "distractors": ["Penguapan", "Pengembunan"]
+        },
+        {
+          "prompt": "Air hujan yang jatuh di darat akan meresap lalu mengalir kembali ke ...",
+          "answer": "Laut",
+          "distractors": ["Awan", "Angin"]
+        },
+        {
+          "prompt": "Dua tahap awal dalam siklus air adalah ...",
+          "answer": "Penguapan lalu pengembunan",
+          "distractors": ["Pengembunan lalu hujan", "Penyerapan lalu penguapan"]
+        }
+      ]
+    },
+    "kelas5-pai-b04-salat-ibadah": {
+      "questions": [
+        {
+          "prompt": "Jumlah salat wajib dalam sehari ada ...",
+          "answer": "Lima waktu",
+          "distractors": ["Tiga waktu", "Empat waktu"]
+        },
+        {
+          "prompt": "Hal yang wajib dilakukan sebelum mengerjakan salat adalah ...",
+          "answer": "Berwudu",
+          "distractors": ["Berdandan", "Bercerita"]
+        },
+        {
+          "prompt": "Gerakan salat yang dilakukan sesudah rukuk adalah ...",
+          "answer": "Sujud",
+          "distractors": ["Salam", "Takbir"]
+        },
+        {
+          "prompt": "Arah yang dituju saat berdiri dalam salat disebut ...",
+          "answer": "Kiblat",
+          "distractors": ["Mihrab", "Mimbar"]
+        },
+        {
+          "prompt": "Gerakan duduk yang dilakukan sebelum salam disebut ...",
+          "answer": "Tasyahud",
+          "distractors": ["Takbir", "Rukuk"]
+        },
+        {
+          "prompt": "Salat diakhiri dengan mengucapkan ...",
+          "answer": "Salam",
+          "distractors": ["Takbir", "Sujud"]
+        }
+      ]
+    },
+    "kelas5-pai-b07-sejarah-islam": {
+      "questions": [
+        {
+          "prompt": "Nabi Muhammad dilahirkan di kota ...",
+          "answer": "Makkah",
+          "distractors": ["Madinah", "Thaif"]
+        },
+        {
+          "prompt": "Wahyu pertama diterima Nabi di ...",
+          "answer": "Gua Hira",
+          "distractors": ["Masjid Nabawi", "Gua Tsur"]
+        },
+        {
+          "prompt": "Nabi Muhammad hijrah menuju kota ...",
+          "answer": "Madinah",
+          "distractors": ["Makkah", "Yaman"]
+        },
+        {
+          "prompt": "Alasan Nabi hijrah adalah untuk ...",
+          "answer": "Melindungi umat",
+          "distractors": ["Mencari harta", "Menghindari perang"]
+        },
+        {
+          "prompt": "Sesudah menerima wahyu, Nabi berdakwah di ...",
+          "answer": "Makkah",
+          "distractors": ["Madinah", "Mesir"]
+        },
+        {
+          "prompt": "Bangunan yang didirikan Nabi di Madinah adalah ...",
+          "answer": "Masjid Nabawi",
+          "distractors": ["Masjidil Haram", "Masjid Al-Aqsa"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b01-sejarah-pancasila": {
+      "questions": [
+        {
+          "prompt": "Badan yang bertugas membahas dasar negara sebelum kemerdekaan adalah ...",
+          "answer": "BPUPKI",
+          "distractors": ["PPKI", "DPR"]
+        },
+        {
+          "prompt": "Panitia yang menyusun Piagam Jakarta adalah ...",
+          "answer": "Panitia Sembilan",
+          "distractors": ["Panitia Delapan", "Panitia Lima"]
+        },
+        {
+          "prompt": "Pancasila disahkan pada tanggal ...",
+          "answer": "18 Agustus 1945",
+          "distractors": ["17 Agustus 1945", "1 Juni 1945"]
+        },
+        {
+          "prompt": "Badan yang mengesahkan Pancasila sebagai dasar negara adalah ...",
+          "answer": "PPKI",
+          "distractors": ["BPUPKI", "MPR"]
+        },
+        {
+          "prompt": "Salah satu tokoh yang menyampaikan usulan dasar negara adalah ...",
+          "answer": "Soepomo",
+          "distractors": ["Hatta", "Sjahrir"]
+        },
+        {
+          "prompt": "Setelah disahkan, Pancasila berkedudukan sebagai ...",
+          "answer": "Dasar negara",
+          "distractors": ["Bahasa negara", "Lambang negara"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi": {
+      "questions": [
+        {
+          "prompt": "Kegiatan membicarakan masalah bersama untuk mencapai kesepakatan disebut ...",
+          "answer": "Musyawarah",
+          "distractors": ["Pemungutan", "Perdebatan"]
+        },
+        {
+          "prompt": "Pendapat dalam musyawarah sebaiknya disampaikan dengan cara ...",
+          "answer": "Sopan",
+          "distractors": ["Keras", "Marah"]
+        },
+        {
+          "prompt": "Ketika teman menyampaikan pendapat, kita sebaiknya ...",
+          "answer": "Mendengarkan",
+          "distractors": ["Memotong", "Menertawakan"]
+        },
+        {
+          "prompt": "Keputusan hasil musyawarah harus ...",
+          "answer": "Dilaksanakan",
+          "distractors": ["Diabaikan", "Ditunda"]
+        },
+        {
+          "prompt": "Musyawarah dimulai dengan ... masalah bersama.",
+          "answer": "Menyampaikan",
+          "distractors": ["Menghindari", "Menyembunyikan"]
+        },
+        {
+          "prompt": "Perbedaan pendapat dalam diskusi sebaiknya ...",
+          "answer": "Dihargai",
+          "distractors": ["Diabaikan", "Dilarang"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b07-gotong-royong": {
+      "questions": [
+        {
+          "prompt": "Kerja sama warga untuk kepentingan bersama disebut ...",
+          "answer": "Gotong royong",
+          "distractors": ["Kerja lembur", "Kerja pabrik"]
+        },
+        {
+          "prompt": "Contoh gotong royong di sekolah adalah ...",
+          "answer": "Kerja bakti",
+          "distractors": ["Ujian tertulis", "Belajar sendiri"]
+        },
+        {
+          "prompt": "Manfaat gotong royong adalah pekerjaan menjadi lebih ...",
+          "answer": "Cepat",
+          "distractors": ["Lambat", "Mahal"]
+        },
+        {
+          "prompt": "Langkah sesudah menentukan kegiatan kerja bakti adalah ...",
+          "answer": "Membagi tugas",
+          "distractors": ["Menghitung biaya", "Merapikan alat"]
+        },
+        {
+          "prompt": "Sesudah kerja bakti berakhir, alat kebersihan sebaiknya ...",
+          "answer": "Dirapikan",
+          "distractors": ["Ditinggalkan", "Dibuang"]
+        },
+        {
+          "prompt": "Gotong royong dapat mempererat ...",
+          "answer": "Persaudaraan",
+          "distractors": ["Persaingan antarwarga", "Perpecahan kelompok"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "questions": [
+        {
+          "prompt": "Masalah yang dipilih dalam proyek kewargaan sebaiknya berasal dari ...",
+          "answer": "Sekitar sekolah",
+          "distractors": ["Negeri jauh", "Berita internet"]
+        },
+        {
+          "prompt": "Saat menyusun rencana proyek, kita menentukan tujuan, tugas, dan ...",
+          "answer": "Waktu",
+          "distractors": ["Jumlah dana", "Nama anggota"]
+        },
+        {
+          "prompt": "Langkah setelah membagi tugas adalah ...",
+          "answer": "Melaksanakan",
+          "distractors": ["Memilih masalah", "Menyusun rencana"]
+        },
+        {
+          "prompt": "Tahap terakhir proyek kewargaan adalah ...",
+          "answer": "Pelaporan hasil",
+          "distractors": ["Pembagian tugas", "Pemilihan masalah"]
+        },
+        {
+          "prompt": "Selain melaporkan hasil, kegiatan penutup proyek adalah ...",
+          "answer": "Evaluasi",
+          "distractors": ["Perayaan", "Perlombaan"]
+        },
+        {
+          "prompt": "Proyek kewargaan dikerjakan secara ...",
+          "answer": "Bersama",
+          "distractors": ["Sendiri", "Rahasia"]
+        }
+      ]
+    },
+    "kelas5-pjok-b06-senam-lantai": {
+      "questions": [
+        {
+          "prompt": "Senam yang dilakukan di atas matras disebut senam ...",
+          "answer": "Lantai",
+          "distractors": ["Ritmik", "Artistik"]
+        },
+        {
+          "prompt": "Alasan pemanasan sebelum senam adalah untuk ...",
+          "answer": "Mencegah cedera",
+          "distractors": ["Menghemat tenaga", "Mempercepat tidur"]
+        },
+        {
+          "prompt": "Salah satu gerak senam lantai selain guling adalah ...",
+          "answer": "Keseimbangan",
+          "distractors": ["Renang", "Lari estafet"]
+        },
+        {
+          "prompt": "Latihan yang dilakukan sesudah guling depan adalah ...",
+          "answer": "Guling belakang",
+          "distractors": ["Latihan keseimbangan", "Pendinginan"]
+        },
+        {
+          "prompt": "Kegiatan yang dilakukan setelah semua latihan adalah ...",
+          "answer": "Pendinginan",
+          "distractors": ["Pemanasan", "Perlombaan"]
+        },
+        {
+          "prompt": "Saat berlatih senam lantai, kita perlu didampingi oleh ...",
+          "answer": "Pendamping",
+          "distractors": ["Penonton", "Wasit"]
+        }
+      ]
+    },
+    "kelas5-seni-rupa-b02-perspektif": {
+      "questions": [
+        {
+          "prompt": "Cara menggambar agar objek tampak berjarak disebut ...",
+          "answer": "Perspektif",
+          "distractors": ["Proporsi", "Komposisi"]
+        },
+        {
+          "prompt": "Titik tempat garis-garis bertemu di garis horizon disebut ...",
+          "answer": "Titik hilang",
+          "distractors": ["Titik fokus", "Titik tengah"]
+        },
+        {
+          "prompt": "Garis yang ditentukan sebelum titik hilang adalah garis ...",
+          "answer": "Horizon",
+          "distractors": ["Vertikal", "Diagonal"]
+        },
+        {
+          "prompt": "Benda yang dekat dengan pengamat akan tampak ...",
+          "answer": "Besar",
+          "distractors": ["Kecil", "Tipis"]
+        },
+        {
+          "prompt": "Kegiatan penutup dalam menggambar perspektif adalah ...",
+          "answer": "Menambahkan detail",
+          "distractors": ["Menentukan horizon", "Menggambar objek"]
+        },
+        {
+          "prompt": "Sebelum menggambar objek, kita membuat garis ...",
+          "answer": "Bantu",
+          "distractors": ["Lengkung", "Putus"]
+        }
+      ]
+    },
+    "kelas5-seni-rupa-b04-karya-campuran": {
+      "questions": [
+        {
+          "prompt": "Karya yang memakai beberapa bahan dan teknik disebut karya ...",
+          "answer": "Campuran",
+          "distractors": ["Lukisan", "Patung"]
+        },
+        {
+          "prompt": "Bahan alami yang dapat dipakai untuk karya campuran adalah ...",
+          "answer": "Daun",
+          "distractors": ["Besi", "Kaca"]
+        },
+        {
+          "prompt": "Sebelum menyiapkan bahan, kita menentukan ... lebih dahulu.",
+          "answer": "Tema",
+          "distractors": ["Lem", "Gunting"]
+        },
+        {
+          "prompt": "Bahan ditempel setelah ... dibuat.",
+          "answer": "Rancangan",
+          "distractors": ["Laporan", "Jadwal"]
+        },
+        {
+          "prompt": "Kegiatan terakhir setelah menempel dan menggambar adalah ...",
+          "answer": "Merapikan karya",
+          "distractors": ["Menentukan tema", "Menyiapkan bahan"]
+        },
+        {
+          "prompt": "Bahan tekstil yang dapat ditempel pada karya campuran adalah ...",
+          "answer": "Kain",
+          "distractors": ["Pasir", "Kayu"]
+        }
+      ]
+    },
+    "kelas5-seni-rupa-b05-seni-cetak": {
+      "questions": [
+        {
+          "prompt": "Karya yang dibuat dengan menekan alat berwarna ke kertas disebut seni ...",
+          "answer": "Cetak",
+          "distractors": ["Tari", "Musik"]
+        },
+        {
+          "prompt": "Bahan alami yang dapat dijadikan alat cetak adalah ...",
+          "answer": "Kentang",
+          "distractors": ["Plastik", "Kaca"]
+        },
+        {
+          "prompt": "Langkah sesudah mengoles cat pada alat cetak adalah ...",
+          "answer": "Menekan",
+          "distractors": ["Mengangkat", "Memotong"]
+        },
+        {
+          "prompt": "Alat cetak diangkat dari kertas secara ...",
+          "answer": "Perlahan",
+          "distractors": ["Cepat", "Keras"]
+        },
+        {
+          "prompt": "Pola yang dihasilkan seni cetak biasanya ...",
+          "answer": "Berulang",
+          "distractors": ["Berubah-ubah", "Tidak tentu"]
+        },
+        {
+          "prompt": "Selain kentang, bahan bekas yang dapat menjadi alat cetak adalah ...",
+          "answer": "Tutup botol",
+          "distractors": ["Gelas kaca", "Sendok logam"]
+        }
+      ]
+    }
+  }
+}

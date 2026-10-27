@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Tujuan utama sebuah teks prosedur adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "menghibur pembaca"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "memberi petunjuk"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "menceritakan masa lalu"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Kata 'siram' dan 'masukkan' dalam teks prosedur termasuk kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "sifat"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "bilangan"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "perintah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Langkah dalam teks prosedur ditulis dengan urutan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "dari awal ke akhir"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "dari akhir ke awal"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "secara acak"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Setelah biji ditanam, pot diletakkan di tempat yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "gelap dan lembap"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "terang"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "teduh dan sejuk"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Alat yang disiapkan pada langkah pertama menanam biji adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "gunting dan lem"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "cat dan kuas"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "pot dan tanah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Langkah terakhir dalam urutan menanam biji adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "merawat tanaman"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "membeli pot baru"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "memotong daun"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  }
+}

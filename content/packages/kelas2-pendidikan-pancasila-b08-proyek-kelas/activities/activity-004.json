@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Proyek kelas merupakan kegiatan yang dikerjakan secara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Sendirian"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Bersama"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Cepat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Pembagian tugas dalam proyek kelas harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Cepat"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Sulit"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Adil"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Setelah proyek selesai, siswa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Melaporkan hasil"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Membagi tugas"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Memilih tema"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Langkah pertama dalam proyek kelas adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Membagi tugas"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Memilih kegiatan"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Menulis laporan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Tugas dibagi sesuai ... setiap siswa.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Keinginan"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Uang"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Kemampuan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+  }
+}

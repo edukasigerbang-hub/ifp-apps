@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-senam-lantai",
     "ordering-senam-lantai",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/senam-lantai.webp"
   ],

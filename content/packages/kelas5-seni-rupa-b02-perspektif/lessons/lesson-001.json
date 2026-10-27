@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-perspektif",
     "ordering-perspektif",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/perspektif.webp"
   ],

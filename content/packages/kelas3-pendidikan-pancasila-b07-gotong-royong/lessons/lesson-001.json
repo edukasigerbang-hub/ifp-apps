@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-gotong-royong",
     "ordering-gotong-royong",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/gotong-royong-kelas3.webp"
   ],

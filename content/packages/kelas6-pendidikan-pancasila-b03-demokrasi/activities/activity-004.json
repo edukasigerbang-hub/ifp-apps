@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Pemerintahan yang berasal dari rakyat, oleh rakyat, dan untuk rakyat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "monarki"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "otokrasi"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "demokrasi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Tahapan pemilu yang paling awal adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "pendaftaran pemilih"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "penghitungan suara"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "pelantikan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Setelah pemungutan suara, tahapan berikutnya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "pendaftaran pemilih"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "penghitungan suara"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "kampanye"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Pemilihan umum dilakukan untuk memilih ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "peraturan"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "jadwal"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "pemimpin"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Sikap yang tepat terhadap hasil pemilihan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "menerima keputusan bersama"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "memaksakan kehendak sendiri"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "menolak hasil dengan marah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Sebelum pemungutan suara, para calon menyampaikan janji dan program. Kegiatan itu disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "pelantikan"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "kampanye"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "musyawarah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  }
+}

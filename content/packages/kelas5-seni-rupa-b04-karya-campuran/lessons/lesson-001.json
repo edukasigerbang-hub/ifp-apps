@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-karya-campuran",
     "ordering-karya-campuran",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/karya-campuran.webp"
   ],

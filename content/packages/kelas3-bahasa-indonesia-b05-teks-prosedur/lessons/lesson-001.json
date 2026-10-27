@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-teks-prosedur",
     "ordering-teks-prosedur",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/teks-prosedur-kelas3.webp"
   ],

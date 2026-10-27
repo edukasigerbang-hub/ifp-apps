@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-salat",
     "ordering-salat",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/salat-kelas2.webp"
   ],

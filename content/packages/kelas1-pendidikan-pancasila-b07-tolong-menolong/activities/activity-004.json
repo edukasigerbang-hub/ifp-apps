@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Tolong-menolong berarti saling ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "mengejek"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "membantu"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "menyaingi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Saat teman terjatuh di kelas, sikap kita adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "menertawakan"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "membiarkan"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "menolong"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Jika kita suka menolong, persahabatan menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "erat"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "renggang"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "hilang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Sesudah teman ditolong, kita berusaha ... hatinya.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "menyalahkan"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "menghibur"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "mengabaikan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Jika teman terluka cukup parah, kita ... kepada guru.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "bersembunyi"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "berpura-pura"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "melapor"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak saling menolong di sekolah."
+  }
+}

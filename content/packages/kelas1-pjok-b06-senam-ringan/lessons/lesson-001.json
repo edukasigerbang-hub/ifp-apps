@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-senam-ringan",
     "ordering-senam-ringan",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/senam-ringan.webp"
   ],

@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-pameran-kelas1",
     "ordering-pameran-kelas1",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/pameran-kelas1.webp"
   ],

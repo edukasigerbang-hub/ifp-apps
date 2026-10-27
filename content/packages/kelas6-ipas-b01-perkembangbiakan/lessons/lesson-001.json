@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-perkembangbiakan",
     "ordering-perkembangbiakan",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/perkembangbiakan.webp"
   ],

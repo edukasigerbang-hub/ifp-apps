@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-musyawarah-demokrasi",
     "ordering-musyawarah-demokrasi",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/musyawarah-demokrasi.webp"
   ],

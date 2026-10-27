@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-ide-pokok",
     "ordering-ide-pokok",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/mendengarkan-cerita-kelas3.webp"
   ],

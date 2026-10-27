@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-salat-ibadah",
     "ordering-salat-ibadah",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/salat-ibadah.webp"
   ],

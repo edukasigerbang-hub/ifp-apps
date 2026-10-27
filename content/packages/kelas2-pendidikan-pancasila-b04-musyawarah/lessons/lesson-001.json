@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-musyawarah-kelas2",
     "ordering-musyawarah-kelas2",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/musyawarah-kelas2.webp"
   ],

@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-wawancara-kelas6",
     "ordering-wawancara-kelas6",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/wawancara-kelas6.webp"
   ],

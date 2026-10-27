@@ -12,9 +12,12 @@
   "activityIds": [
     "eksplorasi-prosedur-kelas6",
     "ordering-prosedur-kelas6",
-    "matching-penguatan"
+    "matching-penguatan",
+    "kuis-penguatan"
   ],
-  "assessmentRefs": [],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
   "assetRefs": [
     "assets/prosedur-kelas6.webp"
   ],
