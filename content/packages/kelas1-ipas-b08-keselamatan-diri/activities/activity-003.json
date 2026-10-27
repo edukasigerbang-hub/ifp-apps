@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-keselamatan-diri-2-1"
+      },
+      {
+        "questionId": "soal-benda-di-rumah-yang-bisa-menyeba",
+        "prompt": "Benda di rumah yang bisa menyebabkan kebakaran adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-benda-di-rumah-yang-bisa-me-1",
+            "text": "sendok"
+          },
+          {
+            "optionId": "opsi-soal-benda-di-rumah-yang-bisa-me-0",
+            "text": "api kompor"
+          },
+          {
+            "optionId": "opsi-soal-benda-di-rumah-yang-bisa-me-2",
+            "text": "buku"
+          },
+          {
+            "optionId": "opsi-soal-benda-di-rumah-yang-bisa-me-3",
+            "text": "handuk"
+          }
+        ],
+        "correctResponse": "opsi-soal-benda-di-rumah-yang-bisa-me-0"
+      },
+      {
+        "questionId": "soal-saat-menyeberang-jalan-kita-berp",
+        "prompt": "Saat menyeberang jalan, kita berpegangan pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-menyeberang-jalan-kita-1",
+            "text": "layangan"
+          },
+          {
+            "optionId": "opsi-soal-saat-menyeberang-jalan-kita-2",
+            "text": "bola"
+          },
+          {
+            "optionId": "opsi-soal-saat-menyeberang-jalan-kita-0",
+            "text": "tangan orang dewasa"
+          },
+          {
+            "optionId": "opsi-soal-saat-menyeberang-jalan-kita-3",
+            "text": "payung"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-menyeberang-jalan-kita-0"
+      },
+      {
+        "questionId": "soal-helm-dipakai-untuk-melindungi",
+        "prompt": "Helm dipakai untuk melindungi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-helm-dipakai-untuk-melindun-1",
+            "text": "lutut"
+          },
+          {
+            "optionId": "opsi-soal-helm-dipakai-untuk-melindun-2",
+            "text": "jari kaki"
+          },
+          {
+            "optionId": "opsi-soal-helm-dipakai-untuk-melindun-3",
+            "text": "perut"
+          },
+          {
+            "optionId": "opsi-soal-helm-dipakai-untuk-melindun-0",
+            "text": "kepala"
+          }
+        ],
+        "correctResponse": "opsi-soal-helm-dipakai-untuk-melindun-0"
       }
     ],
     "passingScore": 75

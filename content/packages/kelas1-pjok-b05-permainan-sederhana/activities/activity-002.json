@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-lapang"
+      },
+      {
+        "questionId": "soal-saat-teman-jatuh-ketika-bermain",
+        "prompt": "Saat teman jatuh ketika bermain, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-1",
+            "text": "menertawakan"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-0",
+            "text": "membantu"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-2",
+            "text": "memarahi"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-3",
+            "text": "membiarkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-teman-jatuh-ketika-ber-0"
       }
     ],
     "passingScore": 75

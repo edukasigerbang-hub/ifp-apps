@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Yang ditulis setelah suku kata",
         "right": "Kata"
+      },
+      {
+        "pairId": "pasangan-alat-tulis-yang-dipegang-dengan",
+        "left": "Alat tulis yang dipegang dengan tiga jari",
+        "right": "Pensil"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-menulis-k",
+        "left": "Yang dilakukan setelah menulis kata",
+        "right": "Memeriksa tulisan"
       }
     ]
   },

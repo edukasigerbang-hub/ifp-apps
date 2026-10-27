@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Langkah terakhir",
         "right": "Mewarnai"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-mewarnai-gambar",
+        "left": "Alat untuk mewarnai gambar",
+        "right": "Krayon"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-mewarnai",
+        "left": "Yang dilakukan setelah mewarnai",
+        "right": "Merapikan alat"
       }
     ]
   },

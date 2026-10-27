@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-hargai"
+      },
+      {
+        "questionId": "soal-saat-gambar-teman-belum-bagus-ki",
+        "prompt": "Saat gambar teman belum bagus, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-gambar-teman-belum-bag-1",
+            "text": "menertawakan"
+          },
+          {
+            "optionId": "opsi-soal-saat-gambar-teman-belum-bag-0",
+            "text": "memberi semangat"
+          },
+          {
+            "optionId": "opsi-soal-saat-gambar-teman-belum-bag-2",
+            "text": "merusak"
+          },
+          {
+            "optionId": "opsi-soal-saat-gambar-teman-belum-bag-3",
+            "text": "mengambil"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-gambar-teman-belum-bag-0"
       }
     ],
     "passingScore": 75

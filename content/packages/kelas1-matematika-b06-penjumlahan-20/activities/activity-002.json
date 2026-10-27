@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-18"
+      },
+      {
+        "questionId": "soal-14-5",
+        "prompt": "14 + 5 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-14-5-1",
+            "text": "18"
+          },
+          {
+            "optionId": "opsi-soal-14-5-0",
+            "text": "19"
+          },
+          {
+            "optionId": "opsi-soal-14-5-2",
+            "text": "9"
+          },
+          {
+            "optionId": "opsi-soal-14-5-3",
+            "text": "20"
+          }
+        ],
+        "correctResponse": "opsi-soal-14-5-0"
       }
     ],
     "passingScore": 75

@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Garis berangka berurutan yang dipakai menjumlah sampai 20",
         "right": "Garis bilangan"
+      },
+      {
+        "pairId": "pasangan-hasil-dari-15-tambah-5",
+        "left": "Hasil dari 15 tambah 5",
+        "right": "20"
       }
     ]
   },

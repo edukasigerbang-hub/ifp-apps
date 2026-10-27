@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-ruang"
+      },
+      {
+        "questionId": "soal-melompat-di-lantai-yang-licin-da",
+        "prompt": "Melompat di lantai yang licin dapat menyebabkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-melompat-di-lantai-yang-lic-0",
+            "text": "terjatuh"
+          },
+          {
+            "optionId": "opsi-soal-melompat-di-lantai-yang-lic-1",
+            "text": "lompat lebih tinggi"
+          },
+          {
+            "optionId": "opsi-soal-melompat-di-lantai-yang-lic-2",
+            "text": "lompat lebih cepat"
+          },
+          {
+            "optionId": "opsi-soal-melompat-di-lantai-yang-lic-3",
+            "text": "jadi lebih kuat"
+          }
+        ],
+        "correctResponse": "opsi-soal-melompat-di-lantai-yang-lic-0"
       }
     ],
     "passingScore": 75

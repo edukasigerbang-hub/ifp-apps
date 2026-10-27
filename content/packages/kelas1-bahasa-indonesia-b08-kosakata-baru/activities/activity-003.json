@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kata-gembira-artinya",
+        "prompt": "Kata 'gembira' artinya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-gembira-artinya-0",
+            "text": "senang"
+          },
+          {
+            "optionId": "opsi-soal-kata-gembira-artinya-1",
+            "text": "sedih"
+          },
+          {
+            "optionId": "opsi-soal-kata-gembira-artinya-2",
+            "text": "marah"
+          },
+          {
+            "optionId": "opsi-soal-kata-gembira-artinya-3",
+            "text": "ngantuk"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-gembira-artinya-0"
+      },
+      {
+        "questionId": "soal-lawan-kata-cepat-adalah",
+        "prompt": "Lawan kata 'cepat' adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lawan-kata-cepat-adalah-1",
+            "text": "tinggi"
+          },
+          {
+            "optionId": "opsi-soal-lawan-kata-cepat-adalah-0",
+            "text": "lambat"
+          },
+          {
+            "optionId": "opsi-soal-lawan-kata-cepat-adalah-2",
+            "text": "besar"
+          },
+          {
+            "optionId": "opsi-soal-lawan-kata-cepat-adalah-3",
+            "text": "panas"
+          }
+        ],
+        "correctResponse": "opsi-soal-lawan-kata-cepat-adalah-0"
+      },
+      {
+        "questionId": "soal-meja-dan-kursi-termasuk",
+        "prompt": "Meja dan kursi termasuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-meja-dan-kursi-termasuk-1",
+            "text": "hewan"
+          },
+          {
+            "optionId": "opsi-soal-meja-dan-kursi-termasuk-2",
+            "text": "buah"
+          },
+          {
+            "optionId": "opsi-soal-meja-dan-kursi-termasuk-0",
+            "text": "perabot"
+          },
+          {
+            "optionId": "opsi-soal-meja-dan-kursi-termasuk-3",
+            "text": "buku"
+          }
+        ],
+        "correctResponse": "opsi-soal-meja-dan-kursi-termasuk-0"
       }
     ],
     "passingScore": 75

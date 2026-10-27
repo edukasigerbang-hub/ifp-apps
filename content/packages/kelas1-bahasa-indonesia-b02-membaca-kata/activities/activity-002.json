@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-buku"
+      },
+      {
+        "questionId": "soal-kata-mata-tersusun-dari-suku-kat",
+        "prompt": "Kata 'mata' tersusun dari suku kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-0",
+            "text": "ma dan ta"
+          },
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-1",
+            "text": "m dan ata"
+          },
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-2",
+            "text": "ta dan ma"
+          },
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-3",
+            "text": "mta"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-mata-tersusun-dari-suk-0"
       }
     ],
     "passingScore": 75

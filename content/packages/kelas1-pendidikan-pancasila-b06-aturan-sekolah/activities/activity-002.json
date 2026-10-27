@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-tertib"
+      },
+      {
+        "questionId": "soal-aturan-di-sekolah-menghendaki-ki",
+        "prompt": "Aturan di sekolah menghendaki kita datang secara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-aturan-di-sekolah-menghenda-1",
+            "text": "terlambat"
+          },
+          {
+            "optionId": "opsi-soal-aturan-di-sekolah-menghenda-2",
+            "text": "tidak masuk"
+          },
+          {
+            "optionId": "opsi-soal-aturan-di-sekolah-menghenda-0",
+            "text": "tepat waktu"
+          },
+          {
+            "optionId": "opsi-soal-aturan-di-sekolah-menghenda-3",
+            "text": "pulang cepat"
+          }
+        ],
+        "correctResponse": "opsi-soal-aturan-di-sekolah-menghenda-0"
       }
     ],
     "passingScore": 75

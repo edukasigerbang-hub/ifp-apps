@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Warna dan bilangan yang terus berulang",
         "right": "Pola bilangan"
+      },
+      {
+        "pairId": "pasangan-pola-4-8-12-berlanjut-dengan",
+        "left": "Pola 4, 8, 12, ... berlanjut dengan",
+        "right": "16"
       }
     ]
   },

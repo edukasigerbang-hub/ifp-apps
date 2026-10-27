@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-tubuh-dan-indera-2-2"
+      },
+      {
+        "questionId": "soal-indera-yang-kita-pakai-untuk-men",
+        "prompt": "Indera yang kita pakai untuk mencium bau adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-indera-yang-kita-pakai-untu-1",
+            "text": "mata"
+          },
+          {
+            "optionId": "opsi-soal-indera-yang-kita-pakai-untu-2",
+            "text": "lidah"
+          },
+          {
+            "optionId": "opsi-soal-indera-yang-kita-pakai-untu-3",
+            "text": "telinga"
+          },
+          {
+            "optionId": "opsi-soal-indera-yang-kita-pakai-untu-0",
+            "text": "hidung"
+          }
+        ],
+        "correctResponse": "opsi-soal-indera-yang-kita-pakai-untu-0"
+      },
+      {
+        "questionId": "soal-rasa-manis-dan-asin-kita-ketahui",
+        "prompt": "Rasa manis dan asin kita ketahui dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rasa-manis-dan-asin-kita-ke-0",
+            "text": "lidah"
+          },
+          {
+            "optionId": "opsi-soal-rasa-manis-dan-asin-kita-ke-1",
+            "text": "kulit"
+          },
+          {
+            "optionId": "opsi-soal-rasa-manis-dan-asin-kita-ke-2",
+            "text": "hidung"
+          },
+          {
+            "optionId": "opsi-soal-rasa-manis-dan-asin-kita-ke-3",
+            "text": "mata"
+          }
+        ],
+        "correctResponse": "opsi-soal-rasa-manis-dan-asin-kita-ke-0"
+      },
+      {
+        "questionId": "soal-agar-tubuh-bersih-dan-segar-kita",
+        "prompt": "Agar tubuh bersih dan segar, kita mandi setiap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-tubuh-bersih-dan-segar-1",
+            "text": "bulan"
+          },
+          {
+            "optionId": "opsi-soal-agar-tubuh-bersih-dan-segar-0",
+            "text": "hari"
+          },
+          {
+            "optionId": "opsi-soal-agar-tubuh-bersih-dan-segar-2",
+            "text": "tahun"
+          },
+          {
+            "optionId": "opsi-soal-agar-tubuh-bersih-dan-segar-3",
+            "text": "pekan"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-tubuh-bersih-dan-segar-0"
       }
     ],
     "passingScore": 75

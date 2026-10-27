@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Bunyi awal kata bola adalah ...",
         "right": "b"
+      },
+      {
+        "pairId": "pasangan-kata-dari-suku-kata-ka-dan-ta",
+        "left": "Kata dari suku kata ka dan ta",
+        "right": "kata"
       }
     ]
   },

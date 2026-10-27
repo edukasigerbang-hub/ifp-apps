@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Manfaat aturan adalah",
         "right": "Rumah tertib"
+      },
+      {
+        "pairId": "pasangan-alasan-meminta-izin-sebelum-perg",
+        "left": "Alasan meminta izin sebelum pergi",
+        "right": "Agar orang tua tidak khawatir"
       }
     ]
   },

@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-berjalan-dilakukan-dengan-geraka",
+        "prompt": "Berjalan dilakukan dengan gerakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berjalan-dilakukan-dengan-g-1",
+            "text": "cepat"
+          },
+          {
+            "optionId": "opsi-soal-berjalan-dilakukan-dengan-g-2",
+            "text": "sangat tinggi"
+          },
+          {
+            "optionId": "opsi-soal-berjalan-dilakukan-dengan-g-3",
+            "text": "terbalik"
+          },
+          {
+            "optionId": "opsi-soal-berjalan-dilakukan-dengan-g-0",
+            "text": "pelan"
+          }
+        ],
+        "correctResponse": "opsi-soal-berjalan-dilakukan-dengan-g-0"
+      },
+      {
+        "questionId": "soal-saat-berjalan-posisi-tangan",
+        "prompt": "Saat berjalan, posisi tangan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-berjalan-posisi-tangan-0",
+            "text": "mengayun"
+          },
+          {
+            "optionId": "opsi-soal-saat-berjalan-posisi-tangan-1",
+            "text": "kaku"
+          },
+          {
+            "optionId": "opsi-soal-saat-berjalan-posisi-tangan-2",
+            "text": "dipegang teman"
+          },
+          {
+            "optionId": "opsi-soal-saat-berjalan-posisi-tangan-3",
+            "text": "di atas kepala terus-menerus"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-berjalan-posisi-tangan-0"
+      },
+      {
+        "questionId": "soal-agar-tidak-menabrak-teman-kita-b",
+        "prompt": "Agar tidak menabrak teman, kita berjalan di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-tidak-menabrak-teman-k-1",
+            "text": "tempat sempit"
+          },
+          {
+            "optionId": "opsi-soal-agar-tidak-menabrak-teman-k-0",
+            "text": "ruang yang aman"
+          },
+          {
+            "optionId": "opsi-soal-agar-tidak-menabrak-teman-k-2",
+            "text": "dekat kaca"
+          },
+          {
+            "optionId": "opsi-soal-agar-tidak-menabrak-teman-k-3",
+            "text": "tangga"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-tidak-menabrak-teman-k-0"
       }
     ],
     "passingScore": 75

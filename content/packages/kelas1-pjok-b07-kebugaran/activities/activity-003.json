@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-tubuh-menjadi-bugar-karena-kita",
+        "prompt": "Tubuh menjadi bugar karena kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-karena-1",
+            "text": "begadang"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-karena-2",
+            "text": "malas bergerak"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-karena-0",
+            "text": "berolahraga"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-karena-3",
+            "text": "makan permen"
+          }
+        ],
+        "correctResponse": "opsi-soal-tubuh-menjadi-bugar-karena-0"
+      },
+      {
+        "questionId": "soal-setelah-berolahraga-tenaga-dipul",
+        "prompt": "Setelah berolahraga, tenaga dipulihkan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-berolahraga-tenaga-1",
+            "text": "marah"
+          },
+          {
+            "optionId": "opsi-soal-setelah-berolahraga-tenaga-2",
+            "text": "bertengkar"
+          },
+          {
+            "optionId": "opsi-soal-setelah-berolahraga-tenaga-3",
+            "text": "begadang"
+          },
+          {
+            "optionId": "opsi-soal-setelah-berolahraga-tenaga-0",
+            "text": "istirahat"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-berolahraga-tenaga-0"
+      },
+      {
+        "questionId": "soal-makanan-yang-bergizi-untuk-tubuh",
+        "prompt": "Makanan yang bergizi untuk tubuh adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makanan-yang-bergizi-untuk-0",
+            "text": "sayur, buah, dan lauk"
+          },
+          {
+            "optionId": "opsi-soal-makanan-yang-bergizi-untuk-1",
+            "text": "permen dan soda"
+          },
+          {
+            "optionId": "opsi-soal-makanan-yang-bergizi-untuk-2",
+            "text": "keripik saja"
+          },
+          {
+            "optionId": "opsi-soal-makanan-yang-bergizi-untuk-3",
+            "text": "gula"
+          }
+        ],
+        "correctResponse": "opsi-soal-makanan-yang-bergizi-untuk-0"
       }
     ],
     "passingScore": 75

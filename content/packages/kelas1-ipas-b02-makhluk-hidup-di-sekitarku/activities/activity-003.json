@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-makhluk-hidup-di-sekitarku-2-1"
+      },
+      {
+        "questionId": "soal-yang-termasuk-benda-tak-hidup-ad",
+        "prompt": "Yang termasuk benda tak hidup adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-yang-termasuk-benda-tak-hid-1",
+            "text": "kucing"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-benda-tak-hid-2",
+            "text": "pohon"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-benda-tak-hid-0",
+            "text": "batu"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-benda-tak-hid-3",
+            "text": "rumput"
+          }
+        ],
+        "correctResponse": "opsi-soal-yang-termasuk-benda-tak-hid-0"
+      },
+      {
+        "questionId": "soal-kucing-ayam-dan-burung-termasuk",
+        "prompt": "Kucing, ayam, dan burung termasuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kucing-ayam-dan-burung-term-1",
+            "text": "benda tak hidup"
+          },
+          {
+            "optionId": "opsi-soal-kucing-ayam-dan-burung-term-2",
+            "text": "mainan"
+          },
+          {
+            "optionId": "opsi-soal-kucing-ayam-dan-burung-term-3",
+            "text": "makanan"
+          },
+          {
+            "optionId": "opsi-soal-kucing-ayam-dan-burung-term-0",
+            "text": "makhluk hidup"
+          }
+        ],
+        "correctResponse": "opsi-soal-kucing-ayam-dan-burung-term-0"
+      },
+      {
+        "questionId": "soal-batu-bukan-makhluk-hidup-karena",
+        "prompt": "Batu bukan makhluk hidup karena batu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-batu-bukan-makhluk-hidup-ka-0",
+            "text": "tidak bernapas"
+          },
+          {
+            "optionId": "opsi-soal-batu-bukan-makhluk-hidup-ka-1",
+            "text": "berwarna abu-abu"
+          },
+          {
+            "optionId": "opsi-soal-batu-bukan-makhluk-hidup-ka-2",
+            "text": "sangat keras"
+          },
+          {
+            "optionId": "opsi-soal-batu-bukan-makhluk-hidup-ka-3",
+            "text": "berat"
+          }
+        ],
+        "correctResponse": "opsi-soal-batu-bukan-makhluk-hidup-ka-0"
       }
     ],
     "passingScore": 75

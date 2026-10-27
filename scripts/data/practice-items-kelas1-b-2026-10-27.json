@@ -1,0 +1,110 @@
+{
+  "_comment": "T-092a kelompok 2 (kelas 1: PAI dan Pendidikan Pancasila). Sama seperti kelompok 1: item ditulis tangan per paket, target kuis 5 soal dan mencocokkan minimal 5 pasangan.",
+  "packages": {
+    "kelas1-pai-b01-huruf-hijaiyah": {
+      "quiz": [
+        { "prompt": "Huruf hijaiyah yang pertama adalah ...", "answer": "Alif", "distractors": ["Ba", "Jim", "Mim"] },
+        { "prompt": "Huruf hijaiyah dibaca dari arah ...", "answer": "kanan ke kiri", "distractors": ["kiri ke kanan", "atas ke bawah", "bawah ke atas"] },
+        { "prompt": "Adab membaca huruf hijaiyah adalah dalam keadaan ...", "answer": "bersih dan sopan", "distractors": ["kotor", "berteriak", "berlari"] }
+      ]
+    },
+    "kelas1-pai-b02-iman-allah": {
+      "quiz": [
+        { "prompt": "Iman artinya ...", "answer": "percaya", "distractors": ["ragu", "lupa", "diam"] },
+        { "prompt": "Wujud iman kepada Allah adalah berdoa dan ...", "answer": "berbuat baik", "distractors": ["bertengkar", "bermalas-malasan", "berteriak"] },
+        { "prompt": "Allah adalah ... segala sesuatu.", "answer": "Pencipta", "distractors": ["ciptaan", "pelajar", "teman"] }
+      ]
+    },
+    "kelas1-pai-b03-akhlak": {
+      "quiz": [
+        { "prompt": "Berkata benar disebut perilaku ...", "answer": "jujur", "distractors": ["pemalas", "penakut", "sombong"] },
+        { "prompt": "Sabar berarti ...", "answer": "menahan diri", "distractors": ["bertengkar", "berteriak", "mendorong teman"] },
+        { "prompt": "Anak yang amanah adalah anak yang ...", "answer": "dapat dipercaya", "distractors": ["suka berbohong", "suka menangis", "suka bermain sendiri"] }
+      ]
+    },
+    "kelas1-pai-b04-belajar-salat": {
+      "matching": [
+        { "left": "Arah yang dihadapi saat salat", "right": "Kiblat" }
+      ]
+    },
+    "kelas1-pai-b05-huruf-harakat": {
+      "quiz": [
+        { "prompt": "Harakat fathah dibaca ...", "answer": "a", "distractors": ["i", "u", "ng"] },
+        { "prompt": "Harakat dammah dibaca ...", "answer": "u", "distractors": ["a", "i", "o"] },
+        { "prompt": "Tanda baca pada huruf hijaiyah disebut ...", "answer": "harakat", "distractors": ["huruf", "angka", "gambar"] }
+      ]
+    },
+    "kelas1-pai-b06-mengenal-malaikat": {
+      "quiz": [
+        { "prompt": "Sifat malaikat adalah ...", "answer": "tidak makan dan tidak tidur", "distractors": ["makan dan tidur", "marah dan lupa", "sakit dan lelah"] }
+      ]
+    },
+    "kelas1-pai-b07-kisah-nabi": {
+      "matching": [
+        { "left": "Kegiatan Nabi menyampaikan kebaikan kepada orang lain", "right": "Berdakwah" }
+      ]
+    },
+    "kelas1-pai-b08-adab": {
+      "quiz": [
+        { "prompt": "Adab kepada guru adalah bersikap ...", "answer": "sopan", "distractors": ["membantah", "berteriak", "pergi"] }
+      ],
+      "matching": [
+        { "left": "Ucapan saat bertemu orang", "right": "Salam" }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b01-simbol-pancasila": {
+      "quiz": [
+        { "prompt": "Simbol sila pertama Pancasila adalah ...", "answer": "bintang", "distractors": ["rantai", "pohon beringin", "kepala banteng"] },
+        { "prompt": "Padi dan kapas adalah simbol sila ke- ...", "answer": "lima", "distractors": ["dua", "tiga", "empat"] },
+        { "prompt": "Sikap yang sesuai dengan sila pertama adalah ...", "answer": "rajin beribadah", "distractors": ["bertengkar", "malas belajar", "membuang sampah sembarangan"] }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b02-aturan-rumah": {
+      "quiz": [
+        { "prompt": "Merapikan tempat tidur adalah contoh ... di rumah.", "answer": "aturan", "distractors": ["hukuman", "permainan", "liburan"] }
+      ],
+      "matching": [
+        { "left": "Alasan meminta izin sebelum pergi", "right": "Agar orang tua tidak khawatir" }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b03-hak-kewajiban-rumah": {
+      "quiz": [
+        { "prompt": "Kasih sayang dan makanan adalah ... anak di rumah.", "answer": "hak", "distractors": ["kewajiban", "hukuman", "perintah"] },
+        { "prompt": "Kewajiban anak di rumah adalah ...", "answer": "membantu orang tua", "distractors": ["bertengkar dengan kakak", "bermain terus-menerus", "membantah orang tua"] },
+        { "prompt": "Sebelum meminta sesuatu, yang kita dahulukan adalah ...", "answer": "kewajiban", "distractors": ["hak", "mainan", "permintaan"] }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b04-kebersamaan": {
+      "matching": [
+        { "left": "Kegiatan bersama sebelum pulang", "right": "Membantu teman" },
+        { "left": "Cara pulang dari sekolah", "right": "Dengan rapi" }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b05-simbol-warna": {
+      "quiz": [
+        { "prompt": "Bintang pada lambang Pancasila berwarna ...", "answer": "kuning emas", "distractors": ["hijau", "hitam", "merah putih"] },
+        { "prompt": "Simbol pohon beringin berwarna ...", "answer": "hijau", "distractors": ["kuning emas", "hitam", "biru"] },
+        { "prompt": "Kepala banteng adalah simbol sila ke- ...", "answer": "empat", "distractors": ["satu", "dua", "lima"] }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b06-aturan-sekolah": {
+      "quiz": [
+        { "prompt": "Aturan di sekolah menghendaki kita datang secara ...", "answer": "tepat waktu", "distractors": ["terlambat", "tidak masuk", "pulang cepat"] }
+      ],
+      "matching": [
+        { "left": "Kegiatan sebelum masuk kelas", "right": "Berbaris" }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b07-tolong-menolong": {
+      "matching": [
+        { "left": "Orang yang membutuhkan pertolongan saat bermain", "right": "Teman yang kesulitan" },
+        { "left": "Kegiatan setelah membantu teman", "right": "Menghibur" }
+      ]
+    },
+    "kelas1-pendidikan-pancasila-b08-proyek-kelas": {
+      "matching": [
+        { "left": "Kegiatan pertama dalam proyek kelas", "right": "Memilih kegiatan" }
+      ]
+    }
+  }
+}

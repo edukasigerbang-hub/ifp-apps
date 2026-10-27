@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-mandi-dilakukan-dua-kali-yaitu-p",
+        "prompt": "Mandi dilakukan dua kali, yaitu pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-1",
+            "text": "seminggu sekali"
+          },
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-2",
+            "text": "hanya saat libur"
+          },
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-3",
+            "text": "tengah malam"
+          },
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-0",
+            "text": "pagi dan sore"
+          }
+        ],
+        "correctResponse": "opsi-soal-mandi-dilakukan-dua-kali-ya-0"
+      },
+      {
+        "questionId": "soal-sikat-gigi-dilakukan-pada",
+        "prompt": "Sikat gigi dilakukan pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-0",
+            "text": "pagi dan sebelum tidur"
+          },
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-1",
+            "text": "siang dan sore"
+          },
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-2",
+            "text": "sebulan sekali"
+          },
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-3",
+            "text": "hanya saat libur"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikat-gigi-dilakukan-pada-0"
+      },
+      {
+        "questionId": "soal-kuku-yang-panjang-sebaiknya",
+        "prompt": "Kuku yang panjang sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-1",
+            "text": "dibiarkan"
+          },
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-0",
+            "text": "dipotong"
+          },
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-2",
+            "text": "dilukis"
+          },
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-3",
+            "text": "dibasahi"
+          }
+        ],
+        "correctResponse": "opsi-soal-kuku-yang-panjang-sebaiknya-0"
       }
     ],
     "passingScore": 75

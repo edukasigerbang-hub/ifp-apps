@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Agar aman, melompat di",
         "right": "Ruang yang lapang"
+      },
+      {
+        "pairId": "pasangan-alasan-mendarat-dengan-lutut-dit",
+        "left": "Alasan mendarat dengan lutut ditekuk",
+        "right": "Agar kaki tidak sakit"
       }
     ]
   },

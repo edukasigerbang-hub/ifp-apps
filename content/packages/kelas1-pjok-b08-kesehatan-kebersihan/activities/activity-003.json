@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kuman-mudah-masuk-ke-tubuh-lewat",
+        "prompt": "Kuman mudah masuk ke tubuh lewat tangan yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kuman-mudah-masuk-ke-tubuh-1",
+            "text": "bersih"
+          },
+          {
+            "optionId": "opsi-soal-kuman-mudah-masuk-ke-tubuh-2",
+            "text": "sudah disabuni"
+          },
+          {
+            "optionId": "opsi-soal-kuman-mudah-masuk-ke-tubuh-0",
+            "text": "kotor"
+          },
+          {
+            "optionId": "opsi-soal-kuman-mudah-masuk-ke-tubuh-3",
+            "text": "segar"
+          }
+        ],
+        "correctResponse": "opsi-soal-kuman-mudah-masuk-ke-tubuh-0"
+      },
+      {
+        "questionId": "soal-tidur-yang-cukup-membuat-tubuh-m",
+        "prompt": "Tidur yang cukup membuat tubuh menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-membuat-tu-1",
+            "text": "lemas"
+          },
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-membuat-tu-2",
+            "text": "sakit"
+          },
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-membuat-tu-3",
+            "text": "marah"
+          },
+          {
+            "optionId": "opsi-soal-tidur-yang-cukup-membuat-tu-0",
+            "text": "segar"
+          }
+        ],
+        "correctResponse": "opsi-soal-tidur-yang-cukup-membuat-tu-0"
+      },
+      {
+        "questionId": "soal-sebelum-makan-tangan-dicuci-deng",
+        "prompt": "Sebelum makan, tangan dicuci dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-makan-tangan-dicuci-0",
+            "text": "air dan sabun"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-makan-tangan-dicuci-1",
+            "text": "minyak"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-makan-tangan-dicuci-2",
+            "text": "soda"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-makan-tangan-dicuci-3",
+            "text": "air keruh"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-makan-tangan-dicuci-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-cuaca-di-sekitarku-2-2"
+      },
+      {
+        "questionId": "soal-tanda-cuaca-akan-hujan-adalah",
+        "prompt": "Tanda cuaca akan hujan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanda-cuaca-akan-hujan-adal-1",
+            "text": "matahari terik"
+          },
+          {
+            "optionId": "opsi-soal-tanda-cuaca-akan-hujan-adal-2",
+            "text": "langit biru"
+          },
+          {
+            "optionId": "opsi-soal-tanda-cuaca-akan-hujan-adal-0",
+            "text": "awan gelap"
+          },
+          {
+            "optionId": "opsi-soal-tanda-cuaca-akan-hujan-adal-3",
+            "text": "pelangi"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanda-cuaca-akan-hujan-adal-0"
+      },
+      {
+        "questionId": "soal-saat-cuaca-panas-kita-memakai",
+        "prompt": "Saat cuaca panas, kita memakai ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-cuaca-panas-kita-memak-1",
+            "text": "jaket tebal"
+          },
+          {
+            "optionId": "opsi-soal-saat-cuaca-panas-kita-memak-2",
+            "text": "sikat gigi"
+          },
+          {
+            "optionId": "opsi-soal-saat-cuaca-panas-kita-memak-3",
+            "text": "sarung tangan"
+          },
+          {
+            "optionId": "opsi-soal-saat-cuaca-panas-kita-memak-0",
+            "text": "kipas"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-cuaca-panas-kita-memak-0"
+      },
+      {
+        "questionId": "soal-langit-tertutup-awan-cuaca-saat",
+        "prompt": "Langit tertutup awan. Cuaca saat itu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-langit-tertutup-awan-cuaca-0",
+            "text": "berawan"
+          },
+          {
+            "optionId": "opsi-soal-langit-tertutup-awan-cuaca-1",
+            "text": "cerah"
+          },
+          {
+            "optionId": "opsi-soal-langit-tertutup-awan-cuaca-2",
+            "text": "hujan"
+          },
+          {
+            "optionId": "opsi-soal-langit-tertutup-awan-cuaca-3",
+            "text": "berangin kencang sekali"
+          }
+        ],
+        "correctResponse": "opsi-soal-langit-tertutup-awan-cuaca-0"
       }
     ],
     "passingScore": 75

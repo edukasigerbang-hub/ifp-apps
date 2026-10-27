@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-berulang"
+      },
+      {
+        "questionId": "soal-pola-3-6-9-berlanjut-dengan",
+        "prompt": "Pola 3, 6, 9, ... berlanjut dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pola-3-6-9-berlanjut-dengan-0",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-soal-pola-3-6-9-berlanjut-dengan-1",
+            "text": "10"
+          },
+          {
+            "optionId": "opsi-soal-pola-3-6-9-berlanjut-dengan-2",
+            "text": "11"
+          },
+          {
+            "optionId": "opsi-soal-pola-3-6-9-berlanjut-dengan-3",
+            "text": "15"
+          }
+        ],
+        "correctResponse": "opsi-soal-pola-3-6-9-berlanjut-dengan-0"
       }
     ],
     "passingScore": 75

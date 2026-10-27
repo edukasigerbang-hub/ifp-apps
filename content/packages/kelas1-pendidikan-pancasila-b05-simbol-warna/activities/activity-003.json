@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bintang-pada-lambang-pancasila-b",
+        "prompt": "Bintang pada lambang Pancasila berwarna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bintang-pada-lambang-pancas-1",
+            "text": "hijau"
+          },
+          {
+            "optionId": "opsi-soal-bintang-pada-lambang-pancas-2",
+            "text": "hitam"
+          },
+          {
+            "optionId": "opsi-soal-bintang-pada-lambang-pancas-0",
+            "text": "kuning emas"
+          },
+          {
+            "optionId": "opsi-soal-bintang-pada-lambang-pancas-3",
+            "text": "merah putih"
+          }
+        ],
+        "correctResponse": "opsi-soal-bintang-pada-lambang-pancas-0"
+      },
+      {
+        "questionId": "soal-simbol-pohon-beringin-berwarna",
+        "prompt": "Simbol pohon beringin berwarna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-simbol-pohon-beringin-berwa-1",
+            "text": "kuning emas"
+          },
+          {
+            "optionId": "opsi-soal-simbol-pohon-beringin-berwa-2",
+            "text": "hitam"
+          },
+          {
+            "optionId": "opsi-soal-simbol-pohon-beringin-berwa-3",
+            "text": "biru"
+          },
+          {
+            "optionId": "opsi-soal-simbol-pohon-beringin-berwa-0",
+            "text": "hijau"
+          }
+        ],
+        "correctResponse": "opsi-soal-simbol-pohon-beringin-berwa-0"
+      },
+      {
+        "questionId": "soal-kepala-banteng-adalah-simbol-sil",
+        "prompt": "Kepala banteng adalah simbol sila ke- ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kepala-banteng-adalah-simbo-0",
+            "text": "empat"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-adalah-simbo-1",
+            "text": "satu"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-adalah-simbo-2",
+            "text": "dua"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-adalah-simbo-3",
+            "text": "lima"
+          }
+        ],
+        "correctResponse": "opsi-soal-kepala-banteng-adalah-simbo-0"
       }
     ],
     "passingScore": 75

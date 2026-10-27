@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-merawat-tubuh-2-1"
+      },
+      {
+        "questionId": "soal-alat-untuk-memotong-kuku-adalah",
+        "prompt": "Alat untuk memotong kuku adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alat-untuk-memotong-kuku-ad-1",
+            "text": "sikat gigi"
+          },
+          {
+            "optionId": "opsi-soal-alat-untuk-memotong-kuku-ad-2",
+            "text": "sisir"
+          },
+          {
+            "optionId": "opsi-soal-alat-untuk-memotong-kuku-ad-3",
+            "text": "handuk"
+          },
+          {
+            "optionId": "opsi-soal-alat-untuk-memotong-kuku-ad-0",
+            "text": "gunting kuku"
+          }
+        ],
+        "correctResponse": "opsi-soal-alat-untuk-memotong-kuku-ad-0"
+      },
+      {
+        "questionId": "soal-setelah-mandi-badan-dikeringkan",
+        "prompt": "Setelah mandi, badan dikeringkan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-mandi-badan-dikerin-0",
+            "text": "handuk"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mandi-badan-dikerin-1",
+            "text": "sisir"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mandi-badan-dikerin-2",
+            "text": "sabun"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mandi-badan-dikerin-3",
+            "text": "sampo"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-mandi-badan-dikerin-0"
+      },
+      {
+        "questionId": "soal-kita-menyikat-gigi-agar",
+        "prompt": "Kita menyikat gigi agar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kita-menyikat-gigi-agar-1",
+            "text": "rambut panjang"
+          },
+          {
+            "optionId": "opsi-soal-kita-menyikat-gigi-agar-0",
+            "text": "gigi bersih"
+          },
+          {
+            "optionId": "opsi-soal-kita-menyikat-gigi-agar-2",
+            "text": "kuku pendek"
+          },
+          {
+            "optionId": "opsi-soal-kita-menyikat-gigi-agar-3",
+            "text": "baju basah"
+          }
+        ],
+        "correctResponse": "opsi-soal-kita-menyikat-gigi-agar-0"
       }
     ],
     "passingScore": 75

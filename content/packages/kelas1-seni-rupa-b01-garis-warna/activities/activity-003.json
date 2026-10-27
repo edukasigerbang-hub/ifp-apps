@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-garis-yang-berkelok-kelok-disebu",
+        "prompt": "Garis yang berkelok-kelok disebut garis ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-garis-yang-berkelok-kelok-d-1",
+            "text": "lurus"
+          },
+          {
+            "optionId": "opsi-soal-garis-yang-berkelok-kelok-d-2",
+            "text": "tipis"
+          },
+          {
+            "optionId": "opsi-soal-garis-yang-berkelok-kelok-d-0",
+            "text": "zigzag"
+          },
+          {
+            "optionId": "opsi-soal-garis-yang-berkelok-kelok-d-3",
+            "text": "putus"
+          }
+        ],
+        "correctResponse": "opsi-soal-garis-yang-berkelok-kelok-d-0"
+      },
+      {
+        "questionId": "soal-warna-primer-adalah-merah-kuning",
+        "prompt": "Warna primer adalah merah, kuning, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-1",
+            "text": "hijau"
+          },
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-2",
+            "text": "ungu"
+          },
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-3",
+            "text": "cokelat"
+          },
+          {
+            "optionId": "opsi-soal-warna-primer-adalah-merah-k-0",
+            "text": "biru"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-primer-adalah-merah-k-0"
+      },
+      {
+        "questionId": "soal-garis-lurus-cocok-dipakai-untuk",
+        "prompt": "Garis lurus cocok dipakai untuk menggambar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-garis-lurus-cocok-dipakai-u-0",
+            "text": "tepi meja"
+          },
+          {
+            "optionId": "opsi-soal-garis-lurus-cocok-dipakai-u-1",
+            "text": "gelembung sabun"
+          },
+          {
+            "optionId": "opsi-soal-garis-lurus-cocok-dipakai-u-2",
+            "text": "roda berputar"
+          },
+          {
+            "optionId": "opsi-soal-garis-lurus-cocok-dipakai-u-3",
+            "text": "awan bergerak"
+          }
+        ],
+        "correctResponse": "opsi-soal-garis-lurus-cocok-dipakai-u-0"
       }
     ],
     "passingScore": 75

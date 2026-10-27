@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Benda yang lebih panjang adalah ...",
         "right": "Meja"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-mengukur-panjang-bend",
+        "left": "Alat untuk mengukur panjang benda",
+        "right": "Penggaris"
       }
     ]
   },

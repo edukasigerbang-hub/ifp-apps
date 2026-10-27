@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bangun-yang-bentuknya-bulat-adal",
+        "prompt": "Bangun yang bentuknya bulat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bangun-yang-bentuknya-bulat-0",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-soal-bangun-yang-bentuknya-bulat-1",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-soal-bangun-yang-bentuknya-bulat-2",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-soal-bangun-yang-bentuknya-bulat-3",
+            "text": "kotak"
+          }
+        ],
+        "correctResponse": "opsi-soal-bangun-yang-bentuknya-bulat-0"
+      },
+      {
+        "questionId": "soal-segitiga-memiliki-sisi",
+        "prompt": "Segitiga memiliki ... sisi.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-segitiga-memiliki-sisi-1",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-segitiga-memiliki-sisi-0",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-soal-segitiga-memiliki-sisi-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-segitiga-memiliki-sisi-3",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-soal-segitiga-memiliki-sisi-0"
+      },
+      {
+        "questionId": "soal-pola-merah-kuning-merah-kuning-b",
+        "prompt": "Pola merah, kuning, merah, kuning, ... berlanjut dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pola-merah-kuning-merah-kun-1",
+            "text": "kuning"
+          },
+          {
+            "optionId": "opsi-soal-pola-merah-kuning-merah-kun-2",
+            "text": "hijau"
+          },
+          {
+            "optionId": "opsi-soal-pola-merah-kuning-merah-kun-0",
+            "text": "merah"
+          },
+          {
+            "optionId": "opsi-soal-pola-merah-kuning-merah-kun-3",
+            "text": "hitam"
+          }
+        ],
+        "correctResponse": "opsi-soal-pola-merah-kuning-merah-kun-0"
       }
     ],
     "passingScore": 75

@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-biji-bijian-yang-ditempel-rapi-m",
+        "prompt": "Biji-bijian yang ditempel rapi menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditempel-r-1",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditempel-r-0",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditempel-r-2",
+            "text": "lukisan"
+          },
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditempel-r-3",
+            "text": "patung es"
+          }
+        ],
+        "correctResponse": "opsi-soal-biji-bijian-yang-ditempel-r-0"
+      },
+      {
+        "questionId": "soal-bambu-dapat-dibuat-menjadi",
+        "prompt": "Bambu dapat dibuat menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bambu-dapat-dibuat-menjadi-1",
+            "text": "kertas"
+          },
+          {
+            "optionId": "opsi-soal-bambu-dapat-dibuat-menjadi-2",
+            "text": "cat"
+          },
+          {
+            "optionId": "opsi-soal-bambu-dapat-dibuat-menjadi-0",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-bambu-dapat-dibuat-menjadi-3",
+            "text": "kain"
+          }
+        ],
+        "correctResponse": "opsi-soal-bambu-dapat-dibuat-menjadi-0"
+      },
+      {
+        "questionId": "soal-bahan-alam-untuk-kerajinan-dipil",
+        "prompt": "Bahan alam untuk kerajinan dipilih yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-1",
+            "text": "tajam dan kotor"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-2",
+            "text": "basah dan berdebu"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-3",
+            "text": "halus dan mahal"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-0",
+            "text": "bersih dan aman"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-alam-untuk-kerajinan-0"
       }
     ],
     "passingScore": 75

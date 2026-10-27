@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-dengar"
+      },
+      {
+        "questionId": "soal-merapikan-tempat-tidur-adalah-co",
+        "prompt": "Merapikan tempat tidur adalah contoh ... di rumah.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-merapikan-tempat-tidur-adal-0",
+            "text": "aturan"
+          },
+          {
+            "optionId": "opsi-soal-merapikan-tempat-tidur-adal-1",
+            "text": "hukuman"
+          },
+          {
+            "optionId": "opsi-soal-merapikan-tempat-tidur-adal-2",
+            "text": "permainan"
+          },
+          {
+            "optionId": "opsi-soal-merapikan-tempat-tidur-adal-3",
+            "text": "liburan"
+          }
+        ],
+        "correctResponse": "opsi-soal-merapikan-tempat-tidur-adal-0"
       }
     ],
     "passingScore": 75

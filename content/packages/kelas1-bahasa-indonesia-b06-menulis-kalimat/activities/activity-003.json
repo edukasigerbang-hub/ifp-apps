@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Menulis rapi",
         "right": "Antar kata diberi jarak"
+      },
+      {
+        "pairId": "pasangan-alasan-antar-kata-diberi-jarak",
+        "left": "Alasan antar kata diberi jarak",
+        "right": "Supaya tulisan rapi"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-memberi-t",
+        "left": "Yang dilakukan setelah memberi tanda baca",
+        "right": "Memeriksa tulisan"
       }
     ]
   },

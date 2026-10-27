@@ -10,6 +10,9 @@ src-tauri/target/
 .tmp-*/
 server/data/
 
+# Runtime snapshot artifacts (rollback only, not knowledge)
+knowledge/.qoder/index/snapshots/
+
 # Local env
 .env
 .env.*

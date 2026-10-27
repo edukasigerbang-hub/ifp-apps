@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Gerakan ringan dan peregangan tubuh",
         "right": "Senam ringan"
+      },
+      {
+        "pairId": "pasangan-gerakan-terakhir-senam-ringan",
+        "left": "Gerakan terakhir senam ringan",
+        "right": "Pendinginan"
       }
     ]
   },

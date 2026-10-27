@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-berkata-benar-disebut-perilaku",
+        "prompt": "Berkata benar disebut perilaku ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berkata-benar-disebut-peril-0",
+            "text": "jujur"
+          },
+          {
+            "optionId": "opsi-soal-berkata-benar-disebut-peril-1",
+            "text": "pemalas"
+          },
+          {
+            "optionId": "opsi-soal-berkata-benar-disebut-peril-2",
+            "text": "penakut"
+          },
+          {
+            "optionId": "opsi-soal-berkata-benar-disebut-peril-3",
+            "text": "sombong"
+          }
+        ],
+        "correctResponse": "opsi-soal-berkata-benar-disebut-peril-0"
+      },
+      {
+        "questionId": "soal-sabar-berarti",
+        "prompt": "Sabar berarti ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sabar-berarti-1",
+            "text": "bertengkar"
+          },
+          {
+            "optionId": "opsi-soal-sabar-berarti-0",
+            "text": "menahan diri"
+          },
+          {
+            "optionId": "opsi-soal-sabar-berarti-2",
+            "text": "berteriak"
+          },
+          {
+            "optionId": "opsi-soal-sabar-berarti-3",
+            "text": "mendorong teman"
+          }
+        ],
+        "correctResponse": "opsi-soal-sabar-berarti-0"
+      },
+      {
+        "questionId": "soal-anak-yang-amanah-adalah-anak-yan",
+        "prompt": "Anak yang amanah adalah anak yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-anak-yang-amanah-adalah-ana-1",
+            "text": "suka berbohong"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-amanah-adalah-ana-2",
+            "text": "suka menangis"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-amanah-adalah-ana-0",
+            "text": "dapat dipercaya"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-amanah-adalah-ana-3",
+            "text": "suka bermain sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-anak-yang-amanah-adalah-ana-0"
       }
     ],
     "passingScore": 75

@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Gambar sepuluh kotak yang diisi apel",
         "right": "Kerangka sepuluh"
+      },
+      {
+        "pairId": "pasangan-banyak-jari-pada-satu-tangan",
+        "left": "Banyak jari pada satu tangan",
+        "right": "Lima"
       }
     ]
   },

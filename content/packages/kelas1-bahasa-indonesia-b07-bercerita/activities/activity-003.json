@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Sikap bercerita",
         "right": "Percaya diri"
+      },
+      {
+        "pairId": "pasangan-bagian-cerita-yang-disampaikan-p",
+        "left": "Bagian cerita yang disampaikan pertama",
+        "right": "Awal"
+      },
+      {
+        "pairId": "pasangan-ucapan-setelah-bercerita",
+        "left": "Ucapan setelah bercerita",
+        "right": "Terima kasih"
       }
     ]
   },

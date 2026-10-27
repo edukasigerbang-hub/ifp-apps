@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-huruf-hijaiyah-yang-pertama-adal",
+        "prompt": "Huruf hijaiyah yang pertama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-0",
+            "text": "Alif"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-1",
+            "text": "Ba"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-2",
+            "text": "Jim"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-3",
+            "text": "Mim"
+          }
+        ],
+        "correctResponse": "opsi-soal-huruf-hijaiyah-yang-pertama-0"
+      },
+      {
+        "questionId": "soal-huruf-hijaiyah-dibaca-dari-arah",
+        "prompt": "Huruf hijaiyah dibaca dari arah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-1",
+            "text": "kiri ke kanan"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-0",
+            "text": "kanan ke kiri"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-2",
+            "text": "atas ke bawah"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-3",
+            "text": "bawah ke atas"
+          }
+        ],
+        "correctResponse": "opsi-soal-huruf-hijaiyah-dibaca-dari-0"
+      },
+      {
+        "questionId": "soal-adab-membaca-huruf-hijaiyah-adal",
+        "prompt": "Adab membaca huruf hijaiyah adalah dalam keadaan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-1",
+            "text": "kotor"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-2",
+            "text": "berteriak"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-0",
+            "text": "bersih dan sopan"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-3",
+            "text": "berlari"
+          }
+        ],
+        "correctResponse": "opsi-soal-adab-membaca-huruf-hijaiyah-0"
       }
     ],
     "passingScore": 75

@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Berdiri satu kaki dengan tangan terentang",
         "right": "Keseimbangan"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-menghitun",
+        "left": "Yang dilakukan setelah menghitung sampai lima",
+        "right": "Mengganti kaki"
       }
     ]
   },

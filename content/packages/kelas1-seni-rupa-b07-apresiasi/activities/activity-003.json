@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Karya dipajang untuk diamati",
         "right": "Apresiasi seni"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-mengapresiasi-ka",
+        "left": "Langkah pertama mengapresiasi karya",
+        "right": "Mengamati"
       }
     ]
   },

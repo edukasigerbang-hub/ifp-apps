@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bangun-yang-memiliki-empat-sisi",
+        "prompt": "Bangun yang memiliki empat sisi sama panjang adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bangun-yang-memiliki-empat-1",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-soal-bangun-yang-memiliki-empat-2",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-soal-bangun-yang-memiliki-empat-0",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-soal-bangun-yang-memiliki-empat-3",
+            "text": "persegi panjang"
+          }
+        ],
+        "correctResponse": "opsi-soal-bangun-yang-memiliki-empat-0"
+      },
+      {
+        "questionId": "soal-permukaan-uang-logam-berbentuk",
+        "prompt": "Permukaan uang logam berbentuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permukaan-uang-logam-berben-1",
+            "text": "persegi"
+          },
+          {
+            "optionId": "opsi-soal-permukaan-uang-logam-berben-2",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-soal-permukaan-uang-logam-berben-3",
+            "text": "kotak"
+          },
+          {
+            "optionId": "opsi-soal-permukaan-uang-logam-berben-0",
+            "text": "lingkaran"
+          }
+        ],
+        "correctResponse": "opsi-soal-permukaan-uang-logam-berben-0"
+      },
+      {
+        "questionId": "soal-sudut-pada-bangun-datar-adalah",
+        "prompt": "Sudut pada bangun datar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sudut-pada-bangun-datar-ada-0",
+            "text": "pertemuan dua sisi"
+          },
+          {
+            "optionId": "opsi-soal-sudut-pada-bangun-datar-ada-1",
+            "text": "garis di tengah bangun"
+          },
+          {
+            "optionId": "opsi-soal-sudut-pada-bangun-datar-ada-2",
+            "text": "warna bangun"
+          },
+          {
+            "optionId": "opsi-soal-sudut-pada-bangun-datar-ada-3",
+            "text": "sisi yang lengkung"
+          }
+        ],
+        "correctResponse": "opsi-soal-sudut-pada-bangun-datar-ada-0"
       }
     ],
     "passingScore": 75

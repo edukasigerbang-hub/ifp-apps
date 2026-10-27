@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Anak bermain di lapangan terbuka",
         "right": "Permainan sederhana"
+      },
+      {
+        "pairId": "pasangan-syarat-agar-permainan-berjalan-a",
+        "left": "Syarat agar permainan berjalan adil",
+        "right": "Aturan ditaati"
       }
     ]
   },

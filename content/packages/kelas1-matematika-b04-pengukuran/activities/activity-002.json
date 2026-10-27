@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-meja"
+      },
+      {
+        "questionId": "soal-benda-yang-paling-berat-di-antar",
+        "prompt": "Benda yang paling berat di antara berikut adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-benda-yang-paling-berat-di-1",
+            "text": "penghapus"
+          },
+          {
+            "optionId": "opsi-soal-benda-yang-paling-berat-di-0",
+            "text": "kursi"
+          },
+          {
+            "optionId": "opsi-soal-benda-yang-paling-berat-di-2",
+            "text": "koin"
+          },
+          {
+            "optionId": "opsi-soal-benda-yang-paling-berat-di-3",
+            "text": "pensil"
+          }
+        ],
+        "correctResponse": "opsi-soal-benda-yang-paling-berat-di-0"
       }
     ],
     "passingScore": 75

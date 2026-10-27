@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-simbol-sila-pertama-pancasila-ad",
+        "prompt": "Simbol sila pertama Pancasila adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-1",
+            "text": "rantai"
+          },
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-0",
+            "text": "bintang"
+          },
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-2",
+            "text": "pohon beringin"
+          },
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-3",
+            "text": "kepala banteng"
+          }
+        ],
+        "correctResponse": "opsi-soal-simbol-sila-pertama-pancasi-0"
+      },
+      {
+        "questionId": "soal-padi-dan-kapas-adalah-simbol-sil",
+        "prompt": "Padi dan kapas adalah simbol sila ke- ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-padi-dan-kapas-adalah-simbo-1",
+            "text": "dua"
+          },
+          {
+            "optionId": "opsi-soal-padi-dan-kapas-adalah-simbo-2",
+            "text": "tiga"
+          },
+          {
+            "optionId": "opsi-soal-padi-dan-kapas-adalah-simbo-0",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-soal-padi-dan-kapas-adalah-simbo-3",
+            "text": "empat"
+          }
+        ],
+        "correctResponse": "opsi-soal-padi-dan-kapas-adalah-simbo-0"
+      },
+      {
+        "questionId": "soal-sikap-yang-sesuai-dengan-sila-pe",
+        "prompt": "Sikap yang sesuai dengan sila pertama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-sesuai-dengan-si-1",
+            "text": "bertengkar"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-sesuai-dengan-si-2",
+            "text": "malas belajar"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-sesuai-dengan-si-3",
+            "text": "membuang sampah sembarangan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-sesuai-dengan-si-0",
+            "text": "rajin beribadah"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-sesuai-dengan-si-0"
       }
     ],
     "passingScore": 75

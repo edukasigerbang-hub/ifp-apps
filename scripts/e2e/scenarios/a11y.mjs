@@ -610,7 +610,25 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
     label: "kuis tampil"
   });
-  for (const optionId of ["opsi-penguatan-1-1", "opsi-penguatan-2-2"]) {
+  // Kunci jawaban soal kuis paket bawaan pertama (kelas1-bahasa-indonesia-b01).
+  // Daftar ini WAJIB sama panjangnya dengan jumlah soal di paket itu — diperiksa di bawah.
+  const quizKeys = [
+    "opsi-penguatan-1-1",
+    "opsi-penguatan-2-2",
+    "opsi-soal-huruf-a-i-u-e-o-disebut-hur-0",
+    "opsi-soal-huruf-b-c-d-termasuk-huruf-0",
+    "opsi-soal-kegiatan-mendengarkan-cerit-0"
+  ];
+  const questionCount = await page.evaluate(
+    `(() => [...document.querySelectorAll("legend")]
+      .filter((legend) => /^Soal /.test(legend.textContent.trim())).length)()`
+  );
+  if (questionCount !== quizKeys.length) {
+    throw new Error(
+      `Kuis paket pertama memuat ${questionCount} soal, skrip mengunci ${quizKeys.length} kunci — perbarui daftar quizKeys.`
+    );
+  }
+  for (const optionId of quizKeys) {
     const chosen = await page.evaluate(`
       (() => {
         const input = document.querySelector('input[value="${optionId}"]');

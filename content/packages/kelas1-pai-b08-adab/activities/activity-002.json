@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-salam"
+      },
+      {
+        "questionId": "soal-adab-kepada-guru-adalah-bersikap",
+        "prompt": "Adab kepada guru adalah bersikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-adalah-ber-1",
+            "text": "membantah"
+          },
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-adalah-ber-2",
+            "text": "berteriak"
+          },
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-adalah-ber-3",
+            "text": "pergi"
+          },
+          {
+            "optionId": "opsi-soal-adab-kepada-guru-adalah-ber-0",
+            "text": "sopan"
+          }
+        ],
+        "correctResponse": "opsi-soal-adab-kepada-guru-adalah-ber-0"
       }
     ],
     "passingScore": 75

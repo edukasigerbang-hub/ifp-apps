@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Manfaat aturan di sekolah adalah",
         "right": "Belajar nyaman"
+      },
+      {
+        "pairId": "pasangan-kegiatan-sebelum-masuk-kelas",
+        "left": "Kegiatan sebelum masuk kelas",
+        "right": "Berbaris"
       }
     ]
   },

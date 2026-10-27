@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-kiri"
+      },
+      {
+        "questionId": "soal-huruf-pertama-pada-kalimat-siti",
+        "prompt": "Huruf pertama pada kalimat 'Siti membaca buku.' ditulis ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-huruf-pertama-pada-kalimat-1",
+            "text": "kecil"
+          },
+          {
+            "optionId": "opsi-soal-huruf-pertama-pada-kalimat-2",
+            "text": "miring"
+          },
+          {
+            "optionId": "opsi-soal-huruf-pertama-pada-kalimat-3",
+            "text": "tipis"
+          },
+          {
+            "optionId": "opsi-soal-huruf-pertama-pada-kalimat-0",
+            "text": "kapital"
+          }
+        ],
+        "correctResponse": "opsi-soal-huruf-pertama-pada-kalimat-0"
       }
     ],
     "passingScore": 75

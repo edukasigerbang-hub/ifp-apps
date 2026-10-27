@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-bilangan-setelah-7-adalah",
+        "prompt": "Bilangan setelah 7 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bilangan-setelah-7-adalah-1",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-setelah-7-adalah-2",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-setelah-7-adalah-0",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-setelah-7-adalah-3",
+            "text": "9"
+          }
+        ],
+        "correctResponse": "opsi-soal-bilangan-setelah-7-adalah-0"
       }
     ],
     "passingScore": 75

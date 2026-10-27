@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Menempel",
         "right": "Oles lem lalu tempel"
+      },
+      {
+        "pairId": "pasangan-bahan-alam-yang-biasa-ditempel-u",
+        "left": "Bahan alam yang biasa ditempel untuk kolase",
+        "right": "Daun kering"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-merekatkan-bahan-kola",
+        "left": "Alat untuk merekatkan bahan kolase",
+        "right": "Lem"
       }
     ]
   },

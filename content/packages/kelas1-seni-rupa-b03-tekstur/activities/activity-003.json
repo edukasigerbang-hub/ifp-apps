@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Permukaan bahan yang kasar dan halus",
         "right": "Tekstur"
+      },
+      {
+        "pairId": "pasangan-kesan-saat-meraba-permukaan-bend",
+        "left": "Kesan saat meraba permukaan benda",
+        "right": "Tekstur"
       }
     ]
   },

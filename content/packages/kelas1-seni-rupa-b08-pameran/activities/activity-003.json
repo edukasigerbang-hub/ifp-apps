@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Yang dilakukan penjaga",
         "right": "Menjelaskan karya"
+      },
+      {
+        "pairId": "pasangan-kegiatan-sebelum-menata-karya-di",
+        "left": "Kegiatan sebelum menata karya di pameran",
+        "right": "Memilih karya"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-pameran-s",
+        "left": "Yang dilakukan setelah pameran selesai",
+        "right": "Merapikan"
       }
     ]
   },

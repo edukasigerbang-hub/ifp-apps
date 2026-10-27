@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-iman-artinya",
+        "prompt": "Iman artinya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-iman-artinya-1",
+            "text": "ragu"
+          },
+          {
+            "optionId": "opsi-soal-iman-artinya-2",
+            "text": "lupa"
+          },
+          {
+            "optionId": "opsi-soal-iman-artinya-3",
+            "text": "diam"
+          },
+          {
+            "optionId": "opsi-soal-iman-artinya-0",
+            "text": "percaya"
+          }
+        ],
+        "correctResponse": "opsi-soal-iman-artinya-0"
+      },
+      {
+        "questionId": "soal-wujud-iman-kepada-allah-adalah-b",
+        "prompt": "Wujud iman kepada Allah adalah berdoa dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-wujud-iman-kepada-allah-ada-0",
+            "text": "berbuat baik"
+          },
+          {
+            "optionId": "opsi-soal-wujud-iman-kepada-allah-ada-1",
+            "text": "bertengkar"
+          },
+          {
+            "optionId": "opsi-soal-wujud-iman-kepada-allah-ada-2",
+            "text": "bermalas-malasan"
+          },
+          {
+            "optionId": "opsi-soal-wujud-iman-kepada-allah-ada-3",
+            "text": "berteriak"
+          }
+        ],
+        "correctResponse": "opsi-soal-wujud-iman-kepada-allah-ada-0"
+      },
+      {
+        "questionId": "soal-allah-adalah-segala-sesuatu",
+        "prompt": "Allah adalah ... segala sesuatu.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-allah-adalah-segala-sesuatu-1",
+            "text": "ciptaan"
+          },
+          {
+            "optionId": "opsi-soal-allah-adalah-segala-sesuatu-0",
+            "text": "Pencipta"
+          },
+          {
+            "optionId": "opsi-soal-allah-adalah-segala-sesuatu-2",
+            "text": "pelajar"
+          },
+          {
+            "optionId": "opsi-soal-allah-adalah-segala-sesuatu-3",
+            "text": "teman"
+          }
+        ],
+        "correctResponse": "opsi-soal-allah-adalah-segala-sesuatu-0"
       }
     ],
     "passingScore": 75

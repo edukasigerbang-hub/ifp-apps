@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-sifat-malaikat-adalah",
+        "prompt": "Sifat malaikat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-1",
+            "text": "makan dan tidur"
+          },
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-2",
+            "text": "marah dan lupa"
+          },
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-3",
+            "text": "sakit dan lelah"
+          },
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-0",
+            "text": "tidak makan dan tidak tidur"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-malaikat-adalah-0"
       }
     ],
     "passingScore": 75

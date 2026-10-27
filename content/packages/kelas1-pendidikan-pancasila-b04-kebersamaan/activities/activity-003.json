@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Menjaga kebersamaan",
         "right": "Tidak bertengkar"
+      },
+      {
+        "pairId": "pasangan-kegiatan-bersama-sebelum-pulang",
+        "left": "Kegiatan bersama sebelum pulang",
+        "right": "Membantu teman"
+      },
+      {
+        "pairId": "pasangan-cara-pulang-dari-sekolah",
+        "left": "Cara pulang dari sekolah",
+        "right": "Dengan rapi"
       }
     ]
   },

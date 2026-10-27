@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Anak belajar berwudu dan gerakan salat",
         "right": "Belajar salat"
+      },
+      {
+        "pairId": "pasangan-arah-yang-dihadapi-saat-salat",
+        "left": "Arah yang dihadapi saat salat",
+        "right": "Kiblat"
       }
     ]
   },

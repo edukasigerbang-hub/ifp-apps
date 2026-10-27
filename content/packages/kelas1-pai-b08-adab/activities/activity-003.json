@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Sikap kepada teman adalah",
         "right": "Baik dan membantu"
+      },
+      {
+        "pairId": "pasangan-ucapan-saat-bertemu-orang",
+        "left": "Ucapan saat bertemu orang",
+        "right": "Salam"
       }
     ]
   },

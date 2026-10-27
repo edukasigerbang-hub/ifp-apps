@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-lingkungan-rumah-sekolah-2-2"
+      },
+      {
+        "questionId": "soal-tempat-membaca-buku-di-sekolah-a",
+        "prompt": "Tempat membaca buku di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tempat-membaca-buku-di-seko-0",
+            "text": "perpustakaan"
+          },
+          {
+            "optionId": "opsi-soal-tempat-membaca-buku-di-seko-1",
+            "text": "kantin"
+          },
+          {
+            "optionId": "opsi-soal-tempat-membaca-buku-di-seko-2",
+            "text": "dapur"
+          },
+          {
+            "optionId": "opsi-soal-tempat-membaca-buku-di-seko-3",
+            "text": "kamar mandi"
+          }
+        ],
+        "correctResponse": "opsi-soal-tempat-membaca-buku-di-seko-0"
+      },
+      {
+        "questionId": "soal-di-dapur-kita",
+        "prompt": "Di dapur kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-di-dapur-kita-1",
+            "text": "tidur"
+          },
+          {
+            "optionId": "opsi-soal-di-dapur-kita-0",
+            "text": "memasak"
+          },
+          {
+            "optionId": "opsi-soal-di-dapur-kita-2",
+            "text": "mandi"
+          },
+          {
+            "optionId": "opsi-soal-di-dapur-kita-3",
+            "text": "bermain bola"
+          }
+        ],
+        "correctResponse": "opsi-soal-di-dapur-kita-0"
+      },
+      {
+        "questionId": "soal-sapu-dipakai-untuk",
+        "prompt": "Sapu dipakai untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sapu-dipakai-untuk-1",
+            "text": "menyiram ikan"
+          },
+          {
+            "optionId": "opsi-soal-sapu-dipakai-untuk-2",
+            "text": "memasak nasi"
+          },
+          {
+            "optionId": "opsi-soal-sapu-dipakai-untuk-0",
+            "text": "menyapu lantai"
+          },
+          {
+            "optionId": "opsi-soal-sapu-dipakai-untuk-3",
+            "text": "keramas"
+          }
+        ],
+        "correctResponse": "opsi-soal-sapu-dipakai-untuk-0"
       }
     ],
     "passingScore": 75

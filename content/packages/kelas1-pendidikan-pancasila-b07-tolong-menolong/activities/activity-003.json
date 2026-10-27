@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Manfaatnya",
         "right": "Teman senang"
+      },
+      {
+        "pairId": "pasangan-orang-yang-membutuhkan-pertolong",
+        "left": "Orang yang membutuhkan pertolongan saat bermain",
+        "right": "Teman yang kesulitan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-setelah-membantu-teman",
+        "left": "Kegiatan setelah membantu teman",
+        "right": "Menghibur"
       }
     ]
   },

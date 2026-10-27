@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-hewan-tumbuhan-peliharaan-2-1"
+      },
+      {
+        "questionId": "soal-hewan-peliharaan-setiap-hari-mem",
+        "prompt": "Hewan peliharaan setiap hari membutuhkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-1",
+            "text": "buku tulis"
+          },
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-2",
+            "text": "listrik"
+          },
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-3",
+            "text": "baju baru"
+          },
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-0",
+            "text": "makanan dan air"
+          }
+        ],
+        "correctResponse": "opsi-soal-hewan-peliharaan-setiap-har-0"
+      },
+      {
+        "questionId": "soal-tanaman-menjadi-layu-karena",
+        "prompt": "Tanaman menjadi layu karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-0",
+            "text": "kurang air"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-1",
+            "text": "terlalu banyak tanah"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-2",
+            "text": "kelebihan makanan"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-3",
+            "text": "banyak teman"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanaman-menjadi-layu-karena-0"
+      },
+      {
+        "questionId": "soal-burung-peliharaan-biasanya-ditem",
+        "prompt": "Burung peliharaan biasanya ditempatkan di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-1",
+            "text": "panci"
+          },
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-0",
+            "text": "kandang"
+          },
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-2",
+            "text": "lemari"
+          },
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-3",
+            "text": "sepatu"
+          }
+        ],
+        "correctResponse": "opsi-soal-burung-peliharaan-biasanya-0"
       }
     ],
     "passingScore": 75

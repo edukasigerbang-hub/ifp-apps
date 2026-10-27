@@ -21,6 +21,16 @@
         "pairId": "pasangan-3",
         "left": "Yang dilakukan setelah mewarnai",
         "right": "Merapikan alat"
+      },
+      {
+        "pairId": "pasangan-warna-primer-untuk-mewarnai",
+        "left": "Warna primer untuk mewarnai",
+        "right": "Merah, kuning, dan biru"
+      },
+      {
+        "pairId": "pasangan-setelah-mewarnai-tangan-kita",
+        "left": "Setelah mewarnai, tangan kita ...",
+        "right": "Dicuci"
       }
     ]
   },

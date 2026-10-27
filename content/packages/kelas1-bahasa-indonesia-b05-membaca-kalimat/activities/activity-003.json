@@ -26,6 +26,11 @@
         "pairId": "pasangan-4",
         "left": "Kegiatan membaca kalimat pendek di sudut baca",
         "right": "Membaca kalimat"
+      },
+      {
+        "pairId": "pasangan-kegiatan-melihat-tulisan-dan-mel",
+        "left": "Kegiatan melihat tulisan dan melafalkannya",
+        "right": "Membaca"
       }
     ]
   },

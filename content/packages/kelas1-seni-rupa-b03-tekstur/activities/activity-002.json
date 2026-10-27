@@ -105,6 +105,30 @@
           }
         ],
         "correctResponse": "opsi-lem"
+      },
+      {
+        "questionId": "soal-kain-dan-kapas-bila-diraba-teras",
+        "prompt": "Kain dan kapas bila diraba terasa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kain-dan-kapas-bila-diraba-1",
+            "text": "kasar"
+          },
+          {
+            "optionId": "opsi-soal-kain-dan-kapas-bila-diraba-2",
+            "text": "tajam"
+          },
+          {
+            "optionId": "opsi-soal-kain-dan-kapas-bila-diraba-0",
+            "text": "halus"
+          },
+          {
+            "optionId": "opsi-soal-kain-dan-kapas-bila-diraba-3",
+            "text": "berat"
+          }
+        ],
+        "correctResponse": "opsi-soal-kain-dan-kapas-bila-diraba-0"
       }
     ],
     "passingScore": 75

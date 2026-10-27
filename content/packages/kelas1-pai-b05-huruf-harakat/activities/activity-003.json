@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-harakat-fathah-dibaca",
+        "prompt": "Harakat fathah dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-harakat-fathah-dibaca-1",
+            "text": "i"
+          },
+          {
+            "optionId": "opsi-soal-harakat-fathah-dibaca-0",
+            "text": "a"
+          },
+          {
+            "optionId": "opsi-soal-harakat-fathah-dibaca-2",
+            "text": "u"
+          },
+          {
+            "optionId": "opsi-soal-harakat-fathah-dibaca-3",
+            "text": "ng"
+          }
+        ],
+        "correctResponse": "opsi-soal-harakat-fathah-dibaca-0"
+      },
+      {
+        "questionId": "soal-harakat-dammah-dibaca",
+        "prompt": "Harakat dammah dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-harakat-dammah-dibaca-1",
+            "text": "a"
+          },
+          {
+            "optionId": "opsi-soal-harakat-dammah-dibaca-2",
+            "text": "i"
+          },
+          {
+            "optionId": "opsi-soal-harakat-dammah-dibaca-0",
+            "text": "u"
+          },
+          {
+            "optionId": "opsi-soal-harakat-dammah-dibaca-3",
+            "text": "o"
+          }
+        ],
+        "correctResponse": "opsi-soal-harakat-dammah-dibaca-0"
+      },
+      {
+        "questionId": "soal-tanda-baca-pada-huruf-hijaiyah-d",
+        "prompt": "Tanda baca pada huruf hijaiyah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanda-baca-pada-huruf-hijai-1",
+            "text": "huruf"
+          },
+          {
+            "optionId": "opsi-soal-tanda-baca-pada-huruf-hijai-2",
+            "text": "angka"
+          },
+          {
+            "optionId": "opsi-soal-tanda-baca-pada-huruf-hijai-3",
+            "text": "gambar"
+          },
+          {
+            "optionId": "opsi-soal-tanda-baca-pada-huruf-hijai-0",
+            "text": "harakat"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanda-baca-pada-huruf-hijai-0"
       }
     ],
     "passingScore": 75

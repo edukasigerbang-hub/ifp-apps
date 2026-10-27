@@ -49,6 +49,78 @@
           }
         ],
         "correctResponse": "opsi-makanan-sehat-2-1"
+      },
+      {
+        "questionId": "soal-makanan-manis-yang-sebaiknya-tid",
+        "prompt": "Makanan manis yang sebaiknya tidak dimakan terlalu sering adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makanan-manis-yang-sebaikny-1",
+            "text": "buah"
+          },
+          {
+            "optionId": "opsi-soal-makanan-manis-yang-sebaikny-2",
+            "text": "sayur"
+          },
+          {
+            "optionId": "opsi-soal-makanan-manis-yang-sebaikny-3",
+            "text": "nasi"
+          },
+          {
+            "optionId": "opsi-soal-makanan-manis-yang-sebaikny-0",
+            "text": "permen"
+          }
+        ],
+        "correctResponse": "opsi-soal-makanan-manis-yang-sebaikny-0"
+      },
+      {
+        "questionId": "soal-yang-termasuk-buah-sehat-adalah",
+        "prompt": "Yang termasuk buah sehat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-yang-termasuk-buah-sehat-ad-0",
+            "text": "pisang"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-buah-sehat-ad-1",
+            "text": "permen"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-buah-sehat-ad-2",
+            "text": "keripik"
+          },
+          {
+            "optionId": "opsi-soal-yang-termasuk-buah-sehat-ad-3",
+            "text": "soda"
+          }
+        ],
+        "correctResponse": "opsi-soal-yang-termasuk-buah-sehat-ad-0"
+      },
+      {
+        "questionId": "soal-makan-sayur-dan-buah-membuat-tub",
+        "prompt": "Makan sayur dan buah membuat tubuh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-makan-sayur-dan-buah-membua-1",
+            "text": "sakit"
+          },
+          {
+            "optionId": "opsi-soal-makan-sayur-dan-buah-membua-0",
+            "text": "sehat"
+          },
+          {
+            "optionId": "opsi-soal-makan-sayur-dan-buah-membua-2",
+            "text": "gigi berlubang"
+          },
+          {
+            "optionId": "opsi-soal-makan-sayur-dan-buah-membua-3",
+            "text": "kotor"
+          }
+        ],
+        "correctResponse": "opsi-soal-makan-sayur-dan-buah-membua-0"
       }
     ],
     "passingScore": 75
