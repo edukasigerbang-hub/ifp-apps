@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "10f1c16",
+  "commit": "6f6646b",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 35,
+  "context_version": 36,
   "skill_registry_version": 0,
-  "current_task": "Keputusan PO atas F-01 (ilustrasi vs altText IPAS kelas 4) dan F-02 (penilai jawaban singkat satu-string); tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A",
-  "last_task": "T-097 terapkan F-03 dan F-04 dari review 10 paket prioritas (T-096): prompt soal benda tak hidup jadi 'di tepi kolam'; langkah urutan atletik ke-5 jadi 'Keluar dari bak lompat'",
+  "current_task": "Tanda tangan guru manusia atas daftar di BACKLOG (termasuk menyetujui pendekatan F-01 dan daftar alternatif F-02); D-UX-2/4/5/6; OD-1 IPAS Fase A",
+  "last_task": "T-098 terapkan F-01 dan F-02 dari review 10 paket prioritas (T-096): teks IPAS kelas 4 disesuaikan dengan gambar kolam (siput, kupu-kupu — bukan katak/capung); penilai jawaban singkat menerima daftar jawaban + normalisasi",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-27T23:35:00+07:00",
-  "last_validation": "T-097 (2026-10-27, HEAD 10f1c16 + working tree): menerapkan F-03 dan F-04 dari review T-096. F-03: kelas4-ipas-b01-makhluk-hidup soal-3 prompt 'Benda tak hidup pada gambar adalah ...' -> 'Benda tak hidup yang ada di tepi kolam pada gambar adalah ...', kunci tetap batu (usul awal 'keras dan padat' ditolak karena pensil/buku/tiang bendera/bangunan pada gambar juga keras dan padat). F-04: kelas6-pjok-b03-atletik item urutan ke-5 langkah-rapi/'Merapikan posisi' -> langkah-keluar-bak/'Keluar dari bak lompat', correctOrder disesuaikan; reveal eksplorasi langkah 'Apa urutan lompat jauh?' dan pasangan-2 matching diselaraskan. Jumlah item, optionId, pasangan, dan posisi kunci tidak berubah. scripts/apply-item-patches.mjs tidak dipakai (hanya mendukung quiz/matching); suntingan ordering & short-answer langsung, diperiksa git diff. Verifikasi aktual: validator seluruh korpus packages=336 valid=336 invalid=0 issues=0 warnings=336; check-practice-volume.mjs 'Semua aktivitas dinilai berada dalam rentang target.'; npm test Tests 105 passed (105), 4/4 fixture cocok dengan expected, catalog-index OK: 336 entri, 336 paket. Diff: 4 berkas konten, 6 insertions/6 deletions. BELUM: npm run build, a11y, E2E, cargo test tidak dijalankan (tidak ada perubahan kode/UI) · F-01 dan F-02 tidak disentuh (menunggu keputusan PO) · reviewStatus tetap draft.",
+  "last_updated": "2026-10-28T03:40:00+07:00",
+  "last_validation": "T-098 (2026-10-28, HEAD 6f6646b): menerapkan F-01 dan F-02 dari review T-096. F-01 (teks menyesuaikan gambar; gambar kolam-ekosistem.webp diperiksa langsung dan tidak memuat katak/capung): kelas4-ipas-b01-makhluk-hidup reveal langkah 1 -> 'Ikan, siput, kupu-kupu, dan tumbuhan air.'; 5 altText langkah + accessibilityMetadata.altText activity-001 dan lesson -> 'Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai.'; pasangan-1 Katak -> Siput/'Merayap di atas batu'; pasangan-3 Capung -> Kupu-kupu/'Terbang menghisap madu bunga'; soal 'Capung bernapas dengan ...' -> 'Kupu-kupu bernapas dengan ...' (questionId ikut, kunci trakea tetap); 0 sisa penyebutan katak/capung. F-02 (perbaikan akar, bukan konversi ke pilihan ganda): src/content/quiz.ts menambah normalizeFreeText (NFKC, huruf kecil, buang tanda baca . , ; : ! ? kutip/kurung, rapikan spasi; garis miring & tanda hubung dipertahankan) dan cabang text menerima correctResponse string ATAU array (cocok bila salah satu entri sama setelah normalisasi; jawaban kosong tetap salah); skema activity.ts sudah mengizinkan array sehingga tidak diubah. Alternatif jawaban ditambahkan ke 15 dari 24 soal teks di 4 paket (BI 5, Pancasila 2, Matematika 5, IPAS 3); 9 soal sengaja satu kunci. +5 unit test di src/content/__tests__/quiz.test.ts (16 test). Verifikasi aktual: validator seluruh korpus packages=336 valid=336 invalid=0 issues=0 warnings=336; check-practice-volume.mjs 'Semua aktivitas dinilai berada dalam rentang target.'; npm test Tests 110 passed (110), 4/4 fixture cocok dengan expected, catalog-index OK: 336 entri, 336 paket; npm run build PASS (tsc --noEmit + vite build). BELUM: E2E activities tidak dijalankan karena aplikasi desktop berjalan (PID 17504, WebView2 bentrok) dan aplikasi user tidak ditutup paksa; cargo test tidak dijalankan (tanpa perubahan Rust); a11y tidak dijalankan ulang. Batasan F-02: sinonim yang tidak didaftarkan tetap dinilai salah; titik dibuang sehingga 12.354 == 12354 (disengaja untuk soal nilai tempat). reviewStatus tetap draft.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "PO memutuskan dua temuan yang tersisa dari T-096: (F-01) teks IPAS kelas 4 menyesuaikan gambar atau gambar dibuat ulang dengan katak+capung; (F-02) mesin penilai jawaban singkat menerima daftar jawaban + normalisasi angka/kata, atau 4 prompt terbuka diubah jadi pilihan ganda. F-03 dan F-04 sudah diterapkan (T-097). Sesudah itu tanda tangan guru manusia atas daftar di BACKLOG; review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Utang alat: parameterkan tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Tanda tangan guru manusia atas daftar di BACKLOG — termasuk menyetujui pendekatan F-01 (teks menyesuaikan gambar, tanpa aset Flow baru) dan menilai apakah 15 daftar alternatif F-02 cukup (sinonim tak terdaftar masih salah) atau 24 soal teks sebaiknya diubah bentuknya. F-01..F-04 sudah diterapkan (T-097/T-098). Berikutnya: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Utang alat: parameterkan tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts. E2E activities perlu dijalankan ulang saat aplikasi desktop ditutup. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }

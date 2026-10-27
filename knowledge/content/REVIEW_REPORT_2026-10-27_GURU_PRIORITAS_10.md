@@ -13,7 +13,7 @@ Tidak ada `reviewStatus` yang diubah. Semua paket tetap `draft`. Tanda tangan gu
 | `kelas2-matematika-b08-data` | 5 | 5 | — | LAYAK DENGAN CATATAN |
 | `kelas6-bahasa-indonesia-b02-eksposisi` | 6 | 6 | — | LAYAK DENGAN CATATAN |
 | `kelas3-pendidikan-pancasila-b06-nkri` | 6 | 6 | — | LAYAK DENGAN CATATAN |
-| `kelas4-ipas-b01-makhluk-hidup` | 6 | 6 | — | **PERLU PERBAIKAN** (F-01 tersisa; F-03 sudah diperbaiki) |
+| `kelas4-ipas-b01-makhluk-hidup` | 6 | 6 | — | **LAYAK** (setelah perbaikan F-01/F-03) |
 | `kelas2-pai-b05-puasa` | 5 | 5 | — | LAYAK DENGAN CATATAN |
 | `kelas3-pjok-b06-senam-dasar` | 6 | 6 | 5 | LAYAK DENGAN CATATAN |
 | `kelas4-seni-rupa-b08-pameran-kelas` | 6 | 6 | 5 | LAYAK |
@@ -24,43 +24,55 @@ Tidak ada `reviewStatus` yang diubah. Semua paket tetap `draft`. Tanda tangan gu
 Tidak ditemukan jawaban salah, salah hitung, atau fakta keliru pada 58 soal kuis. Urutan pada 4 dari 5 aktivitas urutan
 sesuai prosedur (guling depan, menyiapkan pameran, latihan senam lantai, peristiwa awal Islam).
 
-**Perbaikan diterapkan 2026-10-27:** F-03 dan F-04 (lihat §2). Analisis ulang: 336/336 paket lolos validator,
-gerbang volume aktivitas lolos, `npm test` 105/105. F-01 dan F-02 **belum** dikerjakan — menunggu keputusan PO.
+**Perbaikan diterapkan 2026-10-27:** F-01, F-02, F-03, dan F-04 (lihat §2). Analisis ulang: 336/336 paket lolos validator,
+gerbang volume aktivitas lolos, `npm test` 110/110 (5 test baru untuk penilai jawaban teks), `npm run build` PASS.
 
 ## 2. Temuan terverifikasi
 
-### F-01 — Ilustrasi dan altText tidak cocok dengan materi (Sedang) — `kelas4-ipas-b01-makhluk-hidup`
+### F-01 — Ilustrasi dan altText tidak cocok dengan materi (Sedang) — `kelas4-ipas-b01-makhluk-hidup` — **DIPERBAIKI 2026-10-27**
 
-`assets/kolam-ekosistem.webp` menampilkan ikan, siput, kupu-kupu, teratai/daun air, batu, rumput, dan air.
-**Tidak ada katak dan tidak ada capung.** Namun:
+`assets/kolam-ekosistem.webp` menampilkan dua siswa (Bima mencatat, Ayu memegang kaca pembesar) di tepi kolam:
+**ikan, siput di atas batu, kupu-kupu, teratai, rumput, dan batu**. **Tidak ada katak dan tidak ada capung.** Namun:
 
 - eksplorasi langkah 1 menjawab "Katak, ikan, capung, dan tumbuhan air";
 - `altText` aset berbunyi "Kolam dengan katak, ikan, capung, teratai, batu, dan air" — deskripsi yang salah bagi pembaca layar;
 - pasangan `Katak => Bernapas dengan kulit dan paru-paru` dan `Capung => Bernapas dengan trakea` menguji hewan yang tidak ada di gambar;
 - soal "Capung bernapas dengan ..." bergantung pada hewan yang sama.
 
-Usul perbaikan (pilih satu):
-1. **Teks menyesuaikan gambar** (tanpa kerja aset): ubah jawaban langkah 1 menjadi "Ikan, siput, kupu-kupu, dan tumbuhan air"; ganti dua pasangan tersebut dengan fakta bergambar (mis. `Siput => Merayap di batu`, `Kupu-kupu => Terbang menghisap madu bunga`); perbaiki `altText`.
-2. **Gambar menyesuaikan teks**: buat ulang ilustrasi dengan katak dan capung (butuh generate Flow).
+Jalur yang dipilih: **teks menyesuaikan gambar** (tanpa kerja aset Flow). Alternatif membuat ulang ilustrasi dengan katak
+dan capung tidak diambil karena gambar yang ada sudah benar sebagai ekosistem kolam; yang salah adalah teksnya.
 
-### F-02 — Jawaban singkat dinilai persis satu string (Tinggi, lintas paket)
+- Langkah 1 eksplorasi kini menjawab **"Ikan, siput, kupu-kupu, dan tumbuhan air."**
+- `altText` (5 langkah + metadata aktivitas + lesson) menjadi **"Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."**
+- `pasangan-1` menjadi **`Siput => Merayap di atas batu`**; `pasangan-3` menjadi **`Kupu-kupu => Terbang menghisap madu bunga`**. Keduanya fakta yang terlihat pada gambar; jumlah pasangan tetap 6.
+- Soal kuis menjadi **"Kupu-kupu bernapas dengan ..."** (kunci `trakea` tetap, `questionId` `soal-kupu-kupu-bernapas-dengan`). Kupu-kupu serangga, jadi jawabannya tidak berubah; hewan yang ditanyakan kini ada di gambar.
 
-`src/content/quiz.ts:33` membandingkan `answer.trim().toLowerCase() === correct.trim().toLowerCase()`.
+Catatan: mekanisme pernapasan serangga (trakea) tetap pengetahuan umum di luar teks eksplorasi — sama seperti soal lama.
+Tidak ada sisa kata "katak" atau "capung" di paket ini.
+
+### F-02 — Jawaban singkat dinilai persis satu string (Tinggi, lintas paket) — **DIPERBAIKI 2026-10-27**
+
+Sebelumnya `src/content/quiz.ts` membandingkan `answer.trim().toLowerCase() === correct.trim().toLowerCase()`.
 Tidak ada sinonim, tidak ada varian angka/kata, dan input tidak memberi petunjuk format.
 
 Terdampak **4 paket / 24 soal** (semua paket `short-answer` di korpus). Contoh nyata:
 
-| Paket | Soal | Kunci | Jawaban benar lain yang dihukum |
+| Paket | Soal | Kunci lama | Jawaban benar lain yang dulu dihukum |
 |---|---|---|---|
 | `kelas4-ipas-b01-makhluk-hidup` | Sebutkan satu ciri makhluk hidup | `bernapas` | "bergerak", "tumbuh", "berkembang biak" — semuanya ada di materi |
 | `kelas4-ipas-b01-makhluk-hidup` | Peran tumbuhan adalah menghasilkan ... | `oksigen` | "makanan" — materi menyebut "oksigen dan makanan" |
-| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Sebutkan satu kata penglihatan pada gambar | `hijau` | kata penglihatan lain yang sah |
-| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Sebutkan satu kata pendengaran pada gambar | `kicau burung` | "berkicau", "suara burung" |
-| `kelas4-pendidikan-pancasila-b01-pancasila` | Musyawarah termasuk sila ke ... | `4` | "keempat", "empat" |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Sebutkan satu kata penglihatan pada gambar | `hijau` | "merah", "biru" — reveal menyebut ketiganya |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Sebutkan satu kata pendengaran pada gambar | `kicau burung` | "gemericik air", "berkicau", "suara burung" |
+| `kelas4-pendidikan-pancasila-b01-pancasila` | Musyawarah termasuk sila ke ... | `4` | "empat", "keempat" |
 
-Skema sudah mengizinkan `correctResponse` berupa array (12 nilai), tetapi mesin penilai menolak array untuk `responseType: "text"`.
-Usul: (a) terima daftar jawaban untuk soal teks + normalisasi angka/kata; atau (b) ubah empat prompt terbuka
-("sebutkan satu ...") menjadi pilihan ganda. (a) memperbaiki akar, (b) hanya menutupi empat soal.
+Perbaikan yang diterapkan (jalur akar, bukan menutupi empat soal):
+
+- **Mesin penilai** menerima `correctResponse` berupa **daftar jawaban** untuk `responseType: "text"` (skema sudah mengizinkannya sejak awal; hanya penilainya yang menolak). `isAnswerCorrect` kini mencocokkan jawaban dengan salah satu entri daftar.
+- **Normalisasi** sebelum membandingkan: NFKC, huruf kecil, tanda baca dibuang, spasi berlebih dirapatkan. `batu`, `Batu.`, dan `  batu  ` sama; `1/4` tetap `1/4` (garis miring tidak dibuang).
+- **Data**: daftar alternatif ditambahkan pada 15 soal di 4 paket — 9 soal lain tetap satu kunci karena memang hanya punya satu jawaban. Tidak ada soal baru dan jumlah soal tidak berubah.
+- **Test**: 5 test baru (`src/content/__tests__/quiz.test.ts`) menutup daftar jawaban, varian angka/kata, tanda baca, angka bertitik, dan penolakan jawaban non-teks. Suite **110/110**.
+
+Batasan: alternatif yang tidak terdaftar tetap dihukum (tidak ada penilaian semantik). Guru masih perlu menambah varian bila menemukannya saat uji coba.
 
 ### F-03 — Soal "benda tak hidup" punya dua jawaban sah (Sedang) — `kelas4-ipas-b01-makhluk-hidup` — **DIPERBAIKI 2026-10-27**
 
@@ -124,6 +136,8 @@ Enam paket (`kelas1-matematika-b01`, `kelas1-matematika-b06`, `kelas2-matematika
 - Review ini menilai teks dan gambar yang ada; tidak menjalankan aplikasi untuk merasakan tampilan soal.
 - Kesesuaian dengan CP/ATP per bab tetap tugas Curriculum Lead (OD-1 sudah disetujui, verifikasi per bab belum).
 - Putusan "LAYAK" di sini berarti **tidak ditemukan cacat**, bukan persetujuan rilis.
+- Perbaikan F-02 diverifikasi lewat unit test dan `npm run build`; E2E `activities` tidak dapat dijalankan karena
+  aplikasi desktop sedang berjalan (WebView2 bentrok), jadi perilaku kolom jawaban belum diuji ulang di UI.
 
 ## 5. Cara mengukur ulang temuan
 
