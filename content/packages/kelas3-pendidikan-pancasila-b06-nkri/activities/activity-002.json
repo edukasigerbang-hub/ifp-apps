@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-indonesia"
+      },
+      {
+        "questionId": "soal-sikap-yang-benar-saat-bendera-me",
+        "prompt": "Sikap yang benar saat bendera Merah Putih dikibarkan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-benar-saat-bende-1",
+            "text": "berlari-lari"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-benar-saat-bende-2",
+            "text": "mengobrol dengan teman"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-benar-saat-bende-0",
+            "text": "berdiri tegak"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-benar-saat-bende-0"
+      },
+      {
+        "questionId": "soal-perilaku-yang-menunjukkan-cinta",
+        "prompt": "Perilaku yang menunjukkan cinta tanah air di lingkungan sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perilaku-yang-menunjukkan-c-0",
+            "text": "menjaga persatuan antar siswa"
+          },
+          {
+            "optionId": "opsi-soal-perilaku-yang-menunjukkan-c-1",
+            "text": "berkelahi dengan teman"
+          },
+          {
+            "optionId": "opsi-soal-perilaku-yang-menunjukkan-c-2",
+            "text": "mengejek daerah sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-perilaku-yang-menunjukkan-c-0"
       }
     ],
     "passingScore": 75

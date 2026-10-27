@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kegiatan-mengantar-barang-dari-p",
+        "prompt": "Kegiatan mengantar barang dari produsen sampai ke tangan pembeli disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-mengantar-barang-d-1",
+            "text": "produksi"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-mengantar-barang-d-2",
+            "text": "konsumsi"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-mengantar-barang-d-0",
+            "text": "distribusi"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-mengantar-barang-d-0"
+      },
+      {
+        "questionId": "soal-padi-yang-kita-makan-merupakan-h",
+        "prompt": "Padi yang kita makan merupakan hasil kerja ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-padi-yang-kita-makan-merupa-0",
+            "text": "petani"
+          },
+          {
+            "optionId": "opsi-soal-padi-yang-kita-makan-merupa-1",
+            "text": "pedagang"
+          },
+          {
+            "optionId": "opsi-soal-padi-yang-kita-makan-merupa-2",
+            "text": "pegawai"
+          }
+        ],
+        "correctResponse": "opsi-soal-padi-yang-kita-makan-merupa-0"
+      },
+      {
+        "questionId": "soal-orang-yang-menggunakan-barang-at",
+        "prompt": "Orang yang menggunakan barang atau jasa disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-menggunakan-bara-1",
+            "text": "produsen"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menggunakan-bara-0",
+            "text": "konsumen"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-menggunakan-bara-2",
+            "text": "penjual"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-menggunakan-bara-0"
+      },
+      {
+        "questionId": "soal-bentuk-menghargai-kerja-penjual",
+        "prompt": "Bentuk menghargai kerja penjual saat kita membeli makanan di kantin adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bentuk-menghargai-kerja-pen-1",
+            "text": "memarahi karena lama"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-menghargai-kerja-pen-2",
+            "text": "pergi tanpa membayar"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-menghargai-kerja-pen-0",
+            "text": "berkata terima kasih"
+          }
+        ],
+        "correctResponse": "opsi-soal-bentuk-menghargai-kerja-pen-0"
       }
     ],
     "passingScore": 75

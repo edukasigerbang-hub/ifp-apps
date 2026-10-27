@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-gerak-menekuk-dan-memutar-badan",
+        "prompt": "Gerak menekuk dan memutar badan tanpa berpindah tempat termasuk gerak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerak-menekuk-dan-memutar-b-0",
+            "text": "non-lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerak-menekuk-dan-memutar-b-1",
+            "text": "lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerak-menekuk-dan-memutar-b-2",
+            "text": "manipulatif"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerak-menekuk-dan-memutar-b-0"
+      },
+      {
+        "questionId": "soal-pemanasan-sebelum-bergerak-bergu",
+        "prompt": "Pemanasan sebelum bergerak berguna menjaga tubuh dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pemanasan-sebelum-bergerak-1",
+            "text": "manfaat"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-sebelum-bergerak-0",
+            "text": "cedera"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-sebelum-bergerak-2",
+            "text": "olahraga"
+          }
+        ],
+        "correctResponse": "opsi-soal-pemanasan-sebelum-bergerak-0"
       }
     ],
     "passingScore": 75

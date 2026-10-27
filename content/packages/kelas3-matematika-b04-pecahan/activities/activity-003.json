@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pecahan-untuk-satu-bagian-dari-e",
+        "prompt": "Pecahan untuk satu bagian dari empat bagian sama besar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pecahan-untuk-satu-bagian-d-1",
+            "text": "1/2"
+          },
+          {
+            "optionId": "opsi-soal-pecahan-untuk-satu-bagian-d-0",
+            "text": "1/4"
+          },
+          {
+            "optionId": "opsi-soal-pecahan-untuk-satu-bagian-d-2",
+            "text": "1/3"
+          }
+        ],
+        "correctResponse": "opsi-soal-pecahan-untuk-satu-bagian-d-0"
+      },
+      {
+        "questionId": "soal-tanda-yang-tepat-untuk-1-2-1-4-a",
+        "prompt": "Tanda yang tepat untuk 1/2 ... 1/4 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanda-yang-tepat-untuk-1-2-1",
+            "text": "<"
+          },
+          {
+            "optionId": "opsi-soal-tanda-yang-tepat-untuk-1-2-2",
+            "text": "="
+          },
+          {
+            "optionId": "opsi-soal-tanda-yang-tepat-untuk-1-2-0",
+            "text": ">"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanda-yang-tepat-untuk-1-2-0"
+      },
+      {
+        "questionId": "soal-nama-bagian-bawah-pada-sebuah-pe",
+        "prompt": "Nama bagian bawah pada sebuah pecahan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nama-bagian-bawah-pada-sebu-0",
+            "text": "penyebut"
+          },
+          {
+            "optionId": "opsi-soal-nama-bagian-bawah-pada-sebu-1",
+            "text": "pembilang"
+          },
+          {
+            "optionId": "opsi-soal-nama-bagian-bawah-pada-sebu-2",
+            "text": "nilai"
+          }
+        ],
+        "correctResponse": "opsi-soal-nama-bagian-bawah-pada-sebu-0"
+      },
+      {
+        "questionId": "soal-sepuluh-kelereng-dibagi-dua-sama",
+        "prompt": "Sepuluh kelereng dibagi dua sama besar. Setiap bagian berisi ... butir",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sepuluh-kelereng-dibagi-dua-1",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-sepuluh-kelereng-dibagi-dua-0",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-sepuluh-kelereng-dibagi-dua-2",
+            "text": "10"
+          }
+        ],
+        "correctResponse": "opsi-soal-sepuluh-kelereng-dibagi-dua-0"
       }
     ],
     "passingScore": 75

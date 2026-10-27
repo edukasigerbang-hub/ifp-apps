@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Cara mencetak",
         "right": "Oleskan cat, tekan ke kertas, lalu angkat perlahan"
+      },
+      {
+        "pairId": "pasangan-bahan-dapur-yang-dapat-dipotong",
+        "left": "Bahan dapur yang dapat dipotong lalu dijadikan alat cap",
+        "right": "Kentang"
+      },
+      {
+        "pairId": "pasangan-langkah-sesudah-menekan-alat-cet",
+        "left": "Langkah sesudah menekan alat cetak pada kertas",
+        "right": "Mengangkat perlahan"
+      },
+      {
+        "pairId": "pasangan-barang-bekas-di-meja-guru-yang-d",
+        "left": "Barang bekas di meja guru yang dapat dipakai sebagai cap",
+        "right": "Tutup botol"
       }
     ]
   },

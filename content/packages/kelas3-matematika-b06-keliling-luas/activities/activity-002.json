@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-12"
+      },
+      {
+        "questionId": "soal-keliling-persegi-dengan-sisi-8-c",
+        "prompt": "Keliling persegi dengan sisi 8 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-keliling-persegi-dengan-sis-0",
+            "text": "32 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-persegi-dengan-sis-1",
+            "text": "24 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-persegi-dengan-sis-2",
+            "text": "64 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-keliling-persegi-dengan-sis-0"
+      },
+      {
+        "questionId": "soal-luas-persegi-panjang-berukuran-9",
+        "prompt": "Luas persegi panjang berukuran 9 cm × 3 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-luas-persegi-panjang-beruku-1",
+            "text": "24 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-persegi-panjang-beruku-0",
+            "text": "27 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-persegi-panjang-beruku-2",
+            "text": "12 cm²"
+          }
+        ],
+        "correctResponse": "opsi-soal-luas-persegi-panjang-beruku-0"
       }
     ],
     "passingScore": 75

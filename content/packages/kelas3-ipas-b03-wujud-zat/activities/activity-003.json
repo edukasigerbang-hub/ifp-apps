@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Benda yang bentuknya tetap, air dalam wadah, uap di udara",
         "right": "Padat, cair, gas"
+      },
+      {
+        "pairId": "pasangan-perubahan-wujud-uap-air-menjadi",
+        "left": "Perubahan wujud uap air menjadi titik-titik air pada gelas dingin",
+        "right": "mengembun"
+      },
+      {
+        "pairId": "pasangan-wujud-zat-yang-bentuk-dan-volume",
+        "left": "Wujud zat yang bentuk dan volumenya tetap",
+        "right": "padat"
       }
     ]
   },

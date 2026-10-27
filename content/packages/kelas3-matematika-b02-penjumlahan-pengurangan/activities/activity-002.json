@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-4250"
+      },
+      {
+        "questionId": "soal-hasil-dari-3-250-1-475-adalah",
+        "prompt": "Hasil dari 3.250 + 1.475 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-dari-3-250-1-475-adal-1",
+            "text": "4.625"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-3-250-1-475-adal-0",
+            "text": "4.725"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-3-250-1-475-adal-2",
+            "text": "4.735"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-dari-3-250-1-475-adal-0"
+      },
+      {
+        "questionId": "soal-perpustakaan-punya-2-100-buku-se",
+        "prompt": "Perpustakaan punya 2.100 buku, sebanyak 850 buku sedang dipinjam. Sisa buku adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perpustakaan-punya-2-100-bu-1",
+            "text": "1.150"
+          },
+          {
+            "optionId": "opsi-soal-perpustakaan-punya-2-100-bu-2",
+            "text": "1.350"
+          },
+          {
+            "optionId": "opsi-soal-perpustakaan-punya-2-100-bu-0",
+            "text": "1.250"
+          }
+        ],
+        "correctResponse": "opsi-soal-perpustakaan-punya-2-100-bu-0"
       }
     ],
     "passingScore": 75

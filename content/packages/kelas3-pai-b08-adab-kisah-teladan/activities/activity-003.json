@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Manfaat berkata jujur adalah",
         "right": "Dipercaya orang lain"
+      },
+      {
+        "pairId": "pasangan-sikap-kepada-orang-tua-setelah-m",
+        "left": "Sikap kepada orang tua setelah menghormati",
+        "right": "Membantu"
+      },
+      {
+        "pairId": "pasangan-adab-kepada-guru-ketika-pelajara",
+        "left": "Adab kepada guru ketika pelajaran sedang berjalan",
+        "right": "Mendengarkan dengan sopan"
       }
     ]
   },

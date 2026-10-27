@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang dilakukan setelah proyek",
         "right": "Melaporkan hasil dan evaluasi"
+      },
+      {
+        "pairId": "pasangan-hal-pertama-yang-dilakukan-sebel",
+        "left": "Hal pertama yang dilakukan sebelum menyusun rencana proyek kelas",
+        "right": "memilih masalah"
+      },
+      {
+        "pairId": "pasangan-kegiatan-setelah-tugas-proyek-di",
+        "left": "Kegiatan setelah tugas proyek dibagi kepada anggota kelompok",
+        "right": "melaksanakan proyek"
+      },
+      {
+        "pairId": "pasangan-manfaat-mengevaluasi-hasil-proye",
+        "left": "Manfaat mengevaluasi hasil proyek kewargaan",
+        "right": "memperbaiki kegiatan berikutnya"
       }
     ]
   },

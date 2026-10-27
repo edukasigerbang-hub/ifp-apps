@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sebelum-berlari-kita-bersikap-si",
+        "prompt": "Sebelum berlari, kita bersikap siap dengan pandangan ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-berlari-kita-bersik-1",
+            "text": "belakang"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-berlari-kita-bersik-0",
+            "text": "depan"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-berlari-kita-bersik-2",
+            "text": "bawah"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-berlari-kita-bersik-0"
+      },
+      {
+        "questionId": "soal-tahapan-lompat-jauh-yang-benar-d",
+        "prompt": "Tahapan lompat jauh yang benar dimulai dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tahapan-lompat-jauh-yang-be-1",
+            "text": "tolakan, awalan, mendarat, melayang"
+          },
+          {
+            "optionId": "opsi-soal-tahapan-lompat-jauh-yang-be-2",
+            "text": "mendarat, melayang, tolakan, awalan"
+          },
+          {
+            "optionId": "opsi-soal-tahapan-lompat-jauh-yang-be-0",
+            "text": "awalan, tolakan, melayang, mendarat"
+          }
+        ],
+        "correctResponse": "opsi-soal-tahapan-lompat-jauh-yang-be-0"
+      },
+      {
+        "questionId": "soal-penanda-akhir-lintasan-lari-pada",
+        "prompt": "Penanda akhir lintasan lari pada gambar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-penanda-akhir-lintasan-lari-0",
+            "text": "pita finis"
+          },
+          {
+            "optionId": "opsi-soal-penanda-akhir-lintasan-lari-1",
+            "text": "balok start"
+          },
+          {
+            "optionId": "opsi-soal-penanda-akhir-lintasan-lari-2",
+            "text": "bak pasir"
+          }
+        ],
+        "correctResponse": "opsi-soal-penanda-akhir-lintasan-lari-0"
+      },
+      {
+        "questionId": "soal-mengakui-kekalahan-tanpa-marah-s",
+        "prompt": "Mengakui kekalahan tanpa marah saat lomba berarti kita bersikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengakui-kekalahan-tanpa-ma-1",
+            "text": "melanggar aturan"
+          },
+          {
+            "optionId": "opsi-soal-mengakui-kekalahan-tanpa-ma-0",
+            "text": "sportif"
+          },
+          {
+            "optionId": "opsi-soal-mengakui-kekalahan-tanpa-ma-2",
+            "text": "berkelahi dengan teman"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengakui-kekalahan-tanpa-ma-0"
       }
     ],
     "passingScore": 75

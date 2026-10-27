@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Manfaat gotong royong",
         "right": "Pekerjaan cepat selesai dan mempererat persaudaraan"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-bekerja",
+        "left": "Langkah pertama sebelum bekerja bersama dalam kegiatan gotong royong",
+        "right": "membagi tugas"
+      },
+      {
+        "pairId": "pasangan-setelah-pekerjaan-gotong-royong",
+        "left": "Setelah pekerjaan gotong royong selesai, semua alat harus ...",
+        "right": "dirapikan kembali"
+      },
+      {
+        "pairId": "pasangan-pekerjaan-yang-berat-saat-dikerj",
+        "left": "Pekerjaan yang berat saat dikerjakan bersama-sama akan terasa ...",
+        "right": "lebih ringan"
       }
     ]
   },

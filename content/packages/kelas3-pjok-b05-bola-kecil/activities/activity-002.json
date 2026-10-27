@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-bulu-tangkis-dimainkan-menggunak",
+        "prompt": "Bulu tangkis dimainkan menggunakan raket dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bulu-tangkis-dimainkan-meng-1",
+            "text": "bola tenis"
+          },
+          {
+            "optionId": "opsi-soal-bulu-tangkis-dimainkan-meng-2",
+            "text": "bola pingpong"
+          },
+          {
+            "optionId": "opsi-soal-bulu-tangkis-dimainkan-meng-0",
+            "text": "kok"
+          }
+        ],
+        "correctResponse": "opsi-soal-bulu-tangkis-dimainkan-meng-0"
+      },
+      {
+        "questionId": "soal-pemain-permainan-bola-kecil-waji",
+        "prompt": "Pemain permainan bola kecil wajib mematuhi aturan dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pemain-permainan-bola-kecil-0",
+            "text": "bekerja sama"
+          },
+          {
+            "optionId": "opsi-soal-pemain-permainan-bola-kecil-1",
+            "text": "bertengkar"
+          },
+          {
+            "optionId": "opsi-soal-pemain-permainan-bola-kecil-2",
+            "text": "curang"
+          }
+        ],
+        "correctResponse": "opsi-soal-pemain-permainan-bola-kecil-0"
       }
     ],
     "passingScore": 75

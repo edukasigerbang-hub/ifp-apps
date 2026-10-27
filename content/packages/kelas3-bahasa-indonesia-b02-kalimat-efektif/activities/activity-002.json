@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-rajin"
+      },
+      {
+        "questionId": "soal-kalimat-siti-sangat-cantik-sekal",
+        "prompt": "Kalimat 'Siti sangat cantik sekali' tidak efektif karena memakai kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kalimat-siti-sangat-cantik-1",
+            "text": "baru"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-siti-sangat-cantik-2",
+            "text": "asing"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-siti-sangat-cantik-0",
+            "text": "berulang"
+          }
+        ],
+        "correctResponse": "opsi-soal-kalimat-siti-sangat-cantik-0"
+      },
+      {
+        "questionId": "soal-agar-kalimat-menjadi-efektif-kat",
+        "prompt": "Agar kalimat menjadi efektif, kata yang tidak perlu sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-kalimat-menjadi-efekti-0",
+            "text": "dihapus"
+          },
+          {
+            "optionId": "opsi-soal-agar-kalimat-menjadi-efekti-1",
+            "text": "diulang-ulang"
+          },
+          {
+            "optionId": "opsi-soal-agar-kalimat-menjadi-efekti-2",
+            "text": "ditambah lagi"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-kalimat-menjadi-efekti-0"
       }
     ],
     "passingScore": 75

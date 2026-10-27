@@ -49,6 +49,90 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-tanaman-kecil-di-kebun-semakin-l",
+        "prompt": "Tanaman kecil di kebun semakin lama semakin tinggi. Hal itu menunjukkan ciri makhluk hidup yaitu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanaman-kecil-di-kebun-sema-1",
+            "text": "bernapas"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-kecil-di-kebun-sema-2",
+            "text": "peka terhadap rangsang"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-kecil-di-kebun-sema-3",
+            "text": "berkembang biak"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-kecil-di-kebun-sema-0",
+            "text": "tumbuh"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanaman-kecil-di-kebun-sema-0"
+      },
+      {
+        "questionId": "soal-saat-disentuh-daun-pohon-putri-m",
+        "prompt": "Saat disentuh, daun pohon putri malu langsung ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-disentuh-daun-pohon-pu-1",
+            "text": "berguguran"
+          },
+          {
+            "optionId": "opsi-soal-saat-disentuh-daun-pohon-pu-2",
+            "text": "mekar"
+          },
+          {
+            "optionId": "opsi-soal-saat-disentuh-daun-pohon-pu-0",
+            "text": "mengatup"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-disentuh-daun-pohon-pu-0"
+      },
+      {
+        "questionId": "soal-kemampuan-makhluk-hidup-untuk-me",
+        "prompt": "Kemampuan makhluk hidup untuk menghasilkan keturunan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kemampuan-makhluk-hidup-unt-0",
+            "text": "berkembang biak"
+          },
+          {
+            "optionId": "opsi-soal-kemampuan-makhluk-hidup-unt-1",
+            "text": "bernapas"
+          },
+          {
+            "optionId": "opsi-soal-kemampuan-makhluk-hidup-unt-2",
+            "text": "bergerak"
+          }
+        ],
+        "correctResponse": "opsi-soal-kemampuan-makhluk-hidup-unt-0"
+      },
+      {
+        "questionId": "soal-tempat-tinggal-makhluk-hidup-mis",
+        "prompt": "Tempat tinggal makhluk hidup, misalnya kolam bagi ikan, disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tempat-tinggal-makhluk-hidu-1",
+            "text": "makanan"
+          },
+          {
+            "optionId": "opsi-soal-tempat-tinggal-makhluk-hidu-0",
+            "text": "tempat hidup"
+          },
+          {
+            "optionId": "opsi-soal-tempat-tinggal-makhluk-hidu-2",
+            "text": "tempat bermain"
+          }
+        ],
+        "correctResponse": "opsi-soal-tempat-tinggal-makhluk-hidu-0"
       }
     ],
     "passingScore": 75

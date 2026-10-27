@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-hasil-dari-7-6-adalah",
+        "prompt": "Hasil dari 7 × 6 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-dari-7-6-adalah-1",
+            "text": "36"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-7-6-adalah-0",
+            "text": "42"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-7-6-adalah-2",
+            "text": "48"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-dari-7-6-adalah-0"
+      },
+      {
+        "questionId": "soal-perkalian-3-6-ditulis-sebagai-pe",
+        "prompt": "Perkalian 3 × 6 ditulis sebagai penjumlahan berulang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perkalian-3-6-ditulis-sebag-1",
+            "text": "3 + 3"
+          },
+          {
+            "optionId": "opsi-soal-perkalian-3-6-ditulis-sebag-2",
+            "text": "6 + 6"
+          },
+          {
+            "optionId": "opsi-soal-perkalian-3-6-ditulis-sebag-0",
+            "text": "6 + 6 + 6"
+          }
+        ],
+        "correctResponse": "opsi-soal-perkalian-3-6-ditulis-sebag-0"
+      },
+      {
+        "questionId": "soal-karena-6-7-42-maka-42-6",
+        "prompt": "Karena 6 × 7 = 42, maka 42 : 6 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-karena-6-7-42-maka-42-6-0",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-soal-karena-6-7-42-maka-42-6-1",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-soal-karena-6-7-42-maka-42-6-2",
+            "text": "42"
+          }
+        ],
+        "correctResponse": "opsi-soal-karena-6-7-42-maka-42-6-0"
+      },
+      {
+        "questionId": "soal-sebuah-kotak-berisi-8-jeruk-bany",
+        "prompt": "Sebuah kotak berisi 8 jeruk. Banyak jeruk dalam 6 kotak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebuah-kotak-berisi-8-jeruk-1",
+            "text": "42"
+          },
+          {
+            "optionId": "opsi-soal-sebuah-kotak-berisi-8-jeruk-0",
+            "text": "48"
+          },
+          {
+            "optionId": "opsi-soal-sebuah-kotak-berisi-8-jeruk-2",
+            "text": "14"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebuah-kotak-berisi-8-jeruk-0"
       }
     ],
     "passingScore": 75

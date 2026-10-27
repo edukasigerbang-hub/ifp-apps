@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pengenalan-tokoh-dan-tempat-terj",
+        "prompt": "Pengenalan tokoh dan tempat terjadi pada bagian cerita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengenalan-tokoh-dan-tempat-1",
+            "text": "tengah"
+          },
+          {
+            "optionId": "opsi-soal-pengenalan-tokoh-dan-tempat-0",
+            "text": "awal"
+          },
+          {
+            "optionId": "opsi-soal-pengenalan-tokoh-dan-tempat-2",
+            "text": "akhir"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengenalan-tokoh-dan-tempat-0"
+      },
+      {
+        "questionId": "soal-cerita-tentang-kejadian-yang-per",
+        "prompt": "Cerita tentang kejadian yang pernah kita alami sendiri disebut cerita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cerita-tentang-kejadian-yan-1",
+            "text": "berita"
+          },
+          {
+            "optionId": "opsi-soal-cerita-tentang-kejadian-yan-2",
+            "text": "khayalan"
+          },
+          {
+            "optionId": "opsi-soal-cerita-tentang-kejadian-yan-0",
+            "text": "pengalaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-cerita-tentang-kejadian-yan-0"
+      },
+      {
+        "questionId": "soal-ide-utama-yang-menjadi-dasar-pen",
+        "prompt": "Ide utama yang menjadi dasar penulisan sebuah cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-ide-utama-yang-menjadi-dasa-0",
+            "text": "tema"
+          },
+          {
+            "optionId": "opsi-soal-ide-utama-yang-menjadi-dasa-1",
+            "text": "judul"
+          },
+          {
+            "optionId": "opsi-soal-ide-utama-yang-menjadi-dasa-2",
+            "text": "latar"
+          }
+        ],
+        "correctResponse": "opsi-soal-ide-utama-yang-menjadi-dasa-0"
+      },
+      {
+        "questionId": "soal-masalah-cerita-biasa-muncul-pada",
+        "prompt": "Masalah cerita biasa muncul pada bagian ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-masalah-cerita-biasa-muncul-1",
+            "text": "awal"
+          },
+          {
+            "optionId": "opsi-soal-masalah-cerita-biasa-muncul-0",
+            "text": "tengah"
+          },
+          {
+            "optionId": "opsi-soal-masalah-cerita-biasa-muncul-2",
+            "text": "akhir"
+          }
+        ],
+        "correctResponse": "opsi-soal-masalah-cerita-biasa-muncul-0"
       }
     ],
     "passingScore": 75

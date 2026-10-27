@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-anak-yang-selalu-berkata-jujur-a",
+        "prompt": "Anak yang selalu berkata jujur akan ... teman.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-anak-yang-selalu-berkata-ju-1",
+            "text": "dijauhi"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-selalu-berkata-ju-0",
+            "text": "dipercaya"
+          },
+          {
+            "optionId": "opsi-soal-anak-yang-selalu-berkata-ju-2",
+            "text": "dimarahi"
+          }
+        ],
+        "correctResponse": "opsi-soal-anak-yang-selalu-berkata-ju-0"
+      },
+      {
+        "questionId": "soal-menahan-diri-saat-mendapat-musib",
+        "prompt": "Menahan diri saat mendapat musibah termasuk sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menahan-diri-saat-mendapat-1",
+            "text": "amanah"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-saat-mendapat-2",
+            "text": "kasih sayang"
+          },
+          {
+            "optionId": "opsi-soal-menahan-diri-saat-mendapat-0",
+            "text": "sabar"
+          }
+        ],
+        "correctResponse": "opsi-soal-menahan-diri-saat-mendapat-0"
+      },
+      {
+        "questionId": "soal-orang-yang-selalu-menepati-titip",
+        "prompt": "Orang yang selalu menepati titipan dan janji memiliki sifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-orang-yang-selalu-menepati-0",
+            "text": "amanah"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-selalu-menepati-1",
+            "text": "sopan"
+          },
+          {
+            "optionId": "opsi-soal-orang-yang-selalu-menepati-2",
+            "text": "dermawan"
+          }
+        ],
+        "correctResponse": "opsi-soal-orang-yang-selalu-menepati-0"
+      },
+      {
+        "questionId": "soal-bertutur-kata-baik-kepada-siapa",
+        "prompt": "Bertutur kata baik kepada siapa saja adalah contoh akhlak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bertutur-kata-baik-kepada-s-1",
+            "text": "jujur"
+          },
+          {
+            "optionId": "opsi-soal-bertutur-kata-baik-kepada-s-0",
+            "text": "sopan"
+          },
+          {
+            "optionId": "opsi-soal-bertutur-kata-baik-kepada-s-2",
+            "text": "sabar"
+          }
+        ],
+        "correctResponse": "opsi-soal-bertutur-kata-baik-kepada-s-0"
       }
     ],
     "passingScore": 75

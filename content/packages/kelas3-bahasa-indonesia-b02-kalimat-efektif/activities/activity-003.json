@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Kalimat efektif adalah",
         "right": "Siti membaca buku di perpustakaan"
+      },
+      {
+        "pairId": "pasangan-kata-baru-yang-belum-kita-pahami",
+        "left": "Kata baru yang belum kita pahami sebaiknya",
+        "right": "dicari artinya"
+      },
+      {
+        "pairId": "pasangan-kata-indah-dan-cantik-memiliki-a",
+        "left": "Kata 'indah' dan 'cantik' memiliki arti yang sama, disebut",
+        "right": "sinonim"
       }
     ]
   },

@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-sabar"
+      },
+      {
+        "questionId": "soal-saat-puasa-kita-menahan-makan-da",
+        "prompt": "Saat puasa kita menahan makan dan minum hingga waktu ... tiba.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-puasa-kita-menahan-mak-1",
+            "text": "tengah malam"
+          },
+          {
+            "optionId": "opsi-soal-saat-puasa-kita-menahan-mak-0",
+            "text": "magrib"
+          },
+          {
+            "optionId": "opsi-soal-saat-puasa-kita-menahan-mak-2",
+            "text": "siang hari"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-puasa-kita-menahan-mak-0"
+      },
+      {
+        "questionId": "soal-puasa-melatih-kita-bersabar-dan",
+        "prompt": "Puasa melatih kita bersabar dan bersikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-puasa-melatih-kita-bersabar-1",
+            "text": "malas"
+          },
+          {
+            "optionId": "opsi-soal-puasa-melatih-kita-bersabar-2",
+            "text": "mudah marah"
+          },
+          {
+            "optionId": "opsi-soal-puasa-melatih-kita-bersabar-0",
+            "text": "disiplin"
+          }
+        ],
+        "correctResponse": "opsi-soal-puasa-melatih-kita-bersabar-0"
       }
     ],
     "passingScore": 75

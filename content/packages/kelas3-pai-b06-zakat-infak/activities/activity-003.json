@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-zakat-wajib-ditunaikan-oleh-oran",
+        "prompt": "Zakat wajib ditunaikan oleh orang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-wajib-ditunaikan-oleh-1",
+            "text": "terpaksa"
+          },
+          {
+            "optionId": "opsi-soal-zakat-wajib-ditunaikan-oleh-2",
+            "text": "enggan memberi"
+          },
+          {
+            "optionId": "opsi-soal-zakat-wajib-ditunaikan-oleh-0",
+            "text": "mampu"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-wajib-ditunaikan-oleh-0"
+      },
+      {
+        "questionId": "soal-zakat-berbeda-dari-infak-karena",
+        "prompt": "Zakat berbeda dari infak karena zakat bersifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-berbeda-dari-infak-ka-0",
+            "text": "wajib"
+          },
+          {
+            "optionId": "opsi-soal-zakat-berbeda-dari-infak-ka-1",
+            "text": "sumbangan"
+          },
+          {
+            "optionId": "opsi-soal-zakat-berbeda-dari-infak-ka-2",
+            "text": "sukarela"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-berbeda-dari-infak-ka-0"
+      },
+      {
+        "questionId": "soal-petugas-yang-ditunjuk-untuk-meng",
+        "prompt": "Petugas yang ditunjuk untuk mengelola zakat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-petugas-yang-ditunjuk-untuk-1",
+            "text": "mustahik"
+          },
+          {
+            "optionId": "opsi-soal-petugas-yang-ditunjuk-untuk-0",
+            "text": "amil"
+          },
+          {
+            "optionId": "opsi-soal-petugas-yang-ditunjuk-untuk-2",
+            "text": "dermawan"
+          }
+        ],
+        "correctResponse": "opsi-soal-petugas-yang-ditunjuk-untuk-0"
+      },
+      {
+        "questionId": "soal-zakat-dan-infak-sama-sama-dituju",
+        "prompt": "Zakat dan infak sama-sama ditujukan untuk menolong orang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-zakat-dan-infak-sama-sama-d-1",
+            "text": "berkelebihan"
+          },
+          {
+            "optionId": "opsi-soal-zakat-dan-infak-sama-sama-d-2",
+            "text": "jauh mata pandangnya"
+          },
+          {
+            "optionId": "opsi-soal-zakat-dan-infak-sama-sama-d-0",
+            "text": "membutuhkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-zakat-dan-infak-sama-sama-d-0"
       }
     ],
     "passingScore": 75

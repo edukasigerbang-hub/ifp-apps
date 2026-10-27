@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-mencuci-tangan-perlu-dilakukan-s",
+        "prompt": "Mencuci tangan perlu dilakukan sebelum makan dan setelah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mencuci-tangan-perlu-dilaku-1",
+            "text": "berhitung"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-perlu-dilaku-2",
+            "text": "membaca"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-perlu-dilaku-0",
+            "text": "bermain"
+          }
+        ],
+        "correctResponse": "opsi-soal-mencuci-tangan-perlu-dilaku-0"
+      },
+      {
+        "questionId": "soal-istirahat-yang-cukup-membuat-tub",
+        "prompt": "Istirahat yang cukup membuat tubuh menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-istirahat-yang-cukup-membua-0",
+            "text": "segar"
+          },
+          {
+            "optionId": "opsi-soal-istirahat-yang-cukup-membua-1",
+            "text": "lemas"
+          },
+          {
+            "optionId": "opsi-soal-istirahat-yang-cukup-membua-2",
+            "text": "kantuk"
+          }
+        ],
+        "correctResponse": "opsi-soal-istirahat-yang-cukup-membua-0"
+      },
+      {
+        "questionId": "soal-mandi-menjaga-tubuh-tetap",
+        "prompt": "Mandi menjaga tubuh tetap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mandi-menjaga-tubuh-tetap-1",
+            "text": "kotor dan gatal"
+          },
+          {
+            "optionId": "opsi-soal-mandi-menjaga-tubuh-tetap-0",
+            "text": "bersih dan sehat"
+          },
+          {
+            "optionId": "opsi-soal-mandi-menjaga-tubuh-tetap-2",
+            "text": "lemas dan pusing"
+          }
+        ],
+        "correctResponse": "opsi-soal-mandi-menjaga-tubuh-tetap-0"
+      },
+      {
+        "questionId": "soal-supaya-gigi-tetap-sehat-kita-raj",
+        "prompt": "Supaya gigi tetap sehat kita rajin ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-supaya-gigi-tetap-sehat-kit-1",
+            "text": "jajan manis"
+          },
+          {
+            "optionId": "opsi-soal-supaya-gigi-tetap-sehat-kit-2",
+            "text": "minum soda"
+          },
+          {
+            "optionId": "opsi-soal-supaya-gigi-tetap-sehat-kit-0",
+            "text": "sikat gigi"
+          }
+        ],
+        "correctResponse": "opsi-soal-supaya-gigi-tetap-sehat-kit-0"
       }
     ],
     "passingScore": 75

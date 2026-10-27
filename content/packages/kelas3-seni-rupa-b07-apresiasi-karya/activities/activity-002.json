@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-hargai"
+      },
+      {
+        "questionId": "soal-kegiatan-mengamati-sekaligus-men",
+        "prompt": "Kegiatan mengamati sekaligus menghargai karya orang lain disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-mengamati-sekaligu-1",
+            "text": "pameran karya"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-mengamati-sekaligu-0",
+            "text": "apresiasi"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-mengamati-sekaligu-2",
+            "text": "kolase"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-mengamati-sekaligu-0"
+      },
+      {
+        "questionId": "soal-tujuan-apresiasi-karya-seni-adal",
+        "prompt": "Tujuan apresiasi karya seni adalah mengamati dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tujuan-apresiasi-karya-seni-1",
+            "text": "mengejek"
+          },
+          {
+            "optionId": "opsi-soal-tujuan-apresiasi-karya-seni-2",
+            "text": "merusak"
+          },
+          {
+            "optionId": "opsi-soal-tujuan-apresiasi-karya-seni-0",
+            "text": "menghargai"
+          }
+        ],
+        "correctResponse": "opsi-soal-tujuan-apresiasi-karya-seni-0"
       }
     ],
     "passingScore": 75

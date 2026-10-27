@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Bangun datar pada kotak satuan dengan tepi berwarna",
         "right": "Keliling dan luas"
+      },
+      {
+        "pairId": "pasangan-keliling-persegi-panjang-dengan",
+        "left": "Keliling persegi panjang dengan panjang 7 cm dan lebar 2 cm",
+        "right": "18 cm"
+      },
+      {
+        "pairId": "pasangan-luas-persegi-yang-sisinya-6-cm",
+        "left": "Luas persegi yang sisinya 6 cm",
+        "right": "36 cm²"
       }
     ]
   },

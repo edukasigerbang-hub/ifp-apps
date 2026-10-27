@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Diagram batang dan tabel sederhana",
         "right": "Penyajian data"
+      },
+      {
+        "pairId": "pasangan-banyak-buku-senin-5-selasa-7-rab",
+        "left": "Banyak buku: Senin 5, Selasa 7, Rabu 3. Jumlah seluruh buku",
+        "right": "15"
+      },
+      {
+        "pairId": "pasangan-setiap-kelompok-data-pada-diagra",
+        "left": "Setiap kelompok data pada diagram digambarkan sebagai",
+        "right": "batang"
       }
     ]
   },

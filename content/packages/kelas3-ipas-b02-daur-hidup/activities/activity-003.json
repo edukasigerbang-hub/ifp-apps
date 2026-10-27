@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Urutan telur, ulat, kepompong, kupu-kupu",
         "right": "Daur hidup kupu-kupu"
+      },
+      {
+        "pairId": "pasangan-anak-katak-yang-hidup-dan-berena",
+        "left": "Anak katak yang hidup dan berenang di air",
+        "right": "berudu"
+      },
+      {
+        "pairId": "pasangan-tahap-akhir-daur-hidup-kupu-kupu",
+        "left": "Tahap akhir daur hidup kupu-kupu yang dapat terbang",
+        "right": "kupu-kupu"
       }
     ]
   },

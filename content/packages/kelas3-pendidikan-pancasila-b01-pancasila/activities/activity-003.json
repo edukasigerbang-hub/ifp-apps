@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-jumlah-sila-dalam-pancasila-adal",
+        "prompt": "Jumlah sila dalam Pancasila adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-jumlah-sila-dalam-pancasila-0",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-soal-jumlah-sila-dalam-pancasila-1",
+            "text": "empat"
+          },
+          {
+            "optionId": "opsi-soal-jumlah-sila-dalam-pancasila-2",
+            "text": "enam"
+          }
+        ],
+        "correctResponse": "opsi-soal-jumlah-sila-dalam-pancasila-0"
+      },
+      {
+        "questionId": "soal-simbol-sila-pertama-pancasila-ad",
+        "prompt": "Simbol sila pertama Pancasila adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-1",
+            "text": "rantai"
+          },
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-0",
+            "text": "bintang emas"
+          },
+          {
+            "optionId": "opsi-soal-simbol-sila-pertama-pancasi-2",
+            "text": "kepala banteng"
+          }
+        ],
+        "correctResponse": "opsi-soal-simbol-sila-pertama-pancasi-0"
+      },
+      {
+        "questionId": "soal-sila-ketiga-pancasila-dilambangk",
+        "prompt": "Sila ketiga Pancasila dilambangkan dengan gambar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sila-ketiga-pancasila-dilam-1",
+            "text": "kepala banteng"
+          },
+          {
+            "optionId": "opsi-soal-sila-ketiga-pancasila-dilam-2",
+            "text": "rantai"
+          },
+          {
+            "optionId": "opsi-soal-sila-ketiga-pancasila-dilam-0",
+            "text": "pohon beringin"
+          }
+        ],
+        "correctResponse": "opsi-soal-sila-ketiga-pancasila-dilam-0"
+      },
+      {
+        "questionId": "soal-musyawarah-memilih-ketua-kelas-m",
+        "prompt": "Musyawarah memilih ketua kelas merupakan pengamalan sila yang dilambangkan oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-musyawarah-memilih-ketua-ke-0",
+            "text": "kepala banteng"
+          },
+          {
+            "optionId": "opsi-soal-musyawarah-memilih-ketua-ke-1",
+            "text": "padi dan kapas"
+          },
+          {
+            "optionId": "opsi-soal-musyawarah-memilih-ketua-ke-2",
+            "text": "pohon beringin"
+          }
+        ],
+        "correctResponse": "opsi-soal-musyawarah-memilih-ketua-ke-0"
       }
     ],
     "passingScore": 75

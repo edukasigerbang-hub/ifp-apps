@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pelepah-pisang-pada-pelajaran-ke",
+        "prompt": "Pelepah pisang pada pelajaran kerajinan dipakai sebagai alat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pelepah-pisang-pada-pelajar-1",
+            "text": "potong"
+          },
+          {
+            "optionId": "opsi-soal-pelepah-pisang-pada-pelajar-2",
+            "text": "gambar"
+          },
+          {
+            "optionId": "opsi-soal-pelepah-pisang-pada-pelajar-0",
+            "text": "cetak"
+          }
+        ],
+        "correctResponse": "opsi-soal-pelepah-pisang-pada-pelajar-0"
+      },
+      {
+        "questionId": "soal-biji-jagung-yang-ditempelkan-rap",
+        "prompt": "Biji jagung yang ditempelkan rapat dan rapi menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-biji-jagung-yang-ditempelka-0",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-biji-jagung-yang-ditempelka-1",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-biji-jagung-yang-ditempelka-2",
+            "text": "bingkai hiasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-biji-jagung-yang-ditempelka-0"
+      },
+      {
+        "questionId": "soal-tanah-liat-dapat-dibentuk-menjad",
+        "prompt": "Tanah liat dapat dibentuk menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanah-liat-dapat-dibentuk-m-1",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-tanah-liat-dapat-dibentuk-m-0",
+            "text": "patung sederhana"
+          },
+          {
+            "optionId": "opsi-soal-tanah-liat-dapat-dibentuk-m-2",
+            "text": "mozaik"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanah-liat-dapat-dibentuk-m-0"
+      },
+      {
+        "questionId": "soal-ranting-yang-kering-dan-aman-dap",
+        "prompt": "Ranting yang kering dan aman dapat dirangkai menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-ranting-yang-kering-dan-ama-1",
+            "text": "tanah liat"
+          },
+          {
+            "optionId": "opsi-soal-ranting-yang-kering-dan-ama-2",
+            "text": "biji jagung"
+          },
+          {
+            "optionId": "opsi-soal-ranting-yang-kering-dan-ama-0",
+            "text": "bingkai hiasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-ranting-yang-kering-dan-ama-0"
       }
     ],
     "passingScore": 75

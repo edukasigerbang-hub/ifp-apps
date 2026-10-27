@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Contoh aturan di rumah adalah",
         "right": "Merapikan tempat tidur"
+      },
+      {
+        "pairId": "pasangan-contoh-aturan-yang-wajib-ditaati",
+        "left": "Contoh aturan yang wajib ditaati sebelum masuk kelas",
+        "right": "memakai seragam"
+      },
+      {
+        "pairId": "pasangan-jika-semua-siswa-menaati-aturan",
+        "left": "Jika semua siswa menaati aturan, kerja kelompok berjalan ...",
+        "right": "lancar"
       }
     ]
   },

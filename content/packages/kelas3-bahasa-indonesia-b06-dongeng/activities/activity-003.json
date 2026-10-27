@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Dongeng adalah cerita",
         "right": "Khayalan turun-temurun"
+      },
+      {
+        "pairId": "pasangan-waktu-dan-tempat-terjadinya-peri",
+        "left": "Waktu dan tempat terjadinya peristiwa dalam dongeng",
+        "right": "latar cerita"
+      },
+      {
+        "pairId": "pasangan-perbuatan-baik-yang-kita-tiru-da",
+        "left": "Perbuatan baik yang kita tiru dari sebuah dongeng",
+        "right": "pesan cerita"
       }
     ]
   },

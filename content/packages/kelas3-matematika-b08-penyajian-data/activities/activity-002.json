@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-hitung"
+      },
+      {
+        "questionId": "soal-banyak-bola-merah-8-biru-5-kunin",
+        "prompt": "Banyak bola: merah 8, biru 5, kuning 9. Warna bola terbanyak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-8-biru-5-1",
+            "text": "merah"
+          },
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-8-biru-5-2",
+            "text": "biru"
+          },
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-8-biru-5-0",
+            "text": "kuning"
+          }
+        ],
+        "correctResponse": "opsi-soal-banyak-bola-merah-8-biru-5-0"
+      },
+      {
+        "questionId": "soal-tinggi-andi-128-cm-dan-tinggi-bu",
+        "prompt": "Tinggi Andi 128 cm dan tinggi Budi 132 cm. Selisih tinggi mereka ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tinggi-andi-128-cm-dan-ting-0",
+            "text": "4 cm"
+          },
+          {
+            "optionId": "opsi-soal-tinggi-andi-128-cm-dan-ting-1",
+            "text": "2 cm"
+          },
+          {
+            "optionId": "opsi-soal-tinggi-andi-128-cm-dan-ting-2",
+            "text": "6 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-tinggi-andi-128-cm-dan-ting-0"
       }
     ],
     "passingScore": 75

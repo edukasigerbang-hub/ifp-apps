@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-percaya"
+      },
+      {
+        "questionId": "soal-sikap-kita-saat-guru-menjelaskan",
+        "prompt": "Sikap kita saat guru menjelaskan pelajaran di kelas adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-kita-saat-guru-menjel-1",
+            "text": "mengobrol"
+          },
+          {
+            "optionId": "opsi-soal-sikap-kita-saat-guru-menjel-2",
+            "text": "tidur"
+          },
+          {
+            "optionId": "opsi-soal-sikap-kita-saat-guru-menjel-0",
+            "text": "mendengar"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-kita-saat-guru-menjel-0"
+      },
+      {
+        "questionId": "soal-selain-jujur-dan-sabar-sifat-ter",
+        "prompt": "Selain jujur dan sabar, sifat terpuji yang kita teladani dari kisah teladan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-0",
+            "text": "peduli"
+          },
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-1",
+            "text": "sombong"
+          },
+          {
+            "optionId": "opsi-soal-selain-jujur-dan-sabar-sifa-2",
+            "text": "egois"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-jujur-dan-sabar-sifa-0"
       }
     ],
     "passingScore": 75

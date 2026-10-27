@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Yang dilakukan bila pendapat berbeda",
         "right": "Menghargai dan mencari kesepakatan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-membicarakan-masalah-ke",
+        "left": "Kegiatan membicarakan masalah kelas secara bersama-sama",
+        "right": "musyawarah"
+      },
+      {
+        "pairId": "pasangan-hasil-kesepakatan-musyawarah-waj",
+        "left": "Hasil kesepakatan musyawarah wajib dijalankan dengan ...",
+        "right": "tanggung jawab"
+      },
+      {
+        "pairId": "pasangan-saat-pendapat-kita-tidak-dipilih",
+        "left": "Saat pendapat kita tidak dipilih dalam musyawarah, sikap kita ...",
+        "right": "menerima dengan lapang dada"
       }
     ]
   },

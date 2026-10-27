@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Balok ribuan, ratusan, puluhan, dan satuan",
         "right": "Kolom nilai tempat"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-tersusun-dari-3-ri",
+        "left": "Bilangan yang tersusun dari 3 ribu, 5 ratus, dan 2 puluh",
+        "right": "3.520"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-tepat-berada-setel",
+        "left": "Bilangan yang tepat berada setelah 4.999",
+        "right": "5.000"
       }
     ]
   },

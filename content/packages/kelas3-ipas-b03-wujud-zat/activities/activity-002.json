@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-mengembun"
+      },
+      {
+        "questionId": "soal-es-batu-yang-dikeluarkan-dari-fr",
+        "prompt": "Es batu yang dikeluarkan dari freezer lama-kelamaan berubah menjadi air. Perubahan wujud itu disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-es-batu-yang-dikeluarkan-da-1",
+            "text": "membeku"
+          },
+          {
+            "optionId": "opsi-soal-es-batu-yang-dikeluarkan-da-2",
+            "text": "menguap"
+          },
+          {
+            "optionId": "opsi-soal-es-batu-yang-dikeluarkan-da-0",
+            "text": "mencair"
+          }
+        ],
+        "correctResponse": "opsi-soal-es-batu-yang-dikeluarkan-da-0"
+      },
+      {
+        "questionId": "soal-air-dalam-panci-yang-direbus-ter",
+        "prompt": "Air dalam panci yang direbus terus-menerus berkurang karena berubah menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-air-dalam-panci-yang-direbu-0",
+            "text": "uap"
+          },
+          {
+            "optionId": "opsi-soal-air-dalam-panci-yang-direbu-1",
+            "text": "es"
+          },
+          {
+            "optionId": "opsi-soal-air-dalam-panci-yang-direbu-2",
+            "text": "awan"
+          }
+        ],
+        "correctResponse": "opsi-soal-air-dalam-panci-yang-direbu-0"
       }
     ],
     "passingScore": 75

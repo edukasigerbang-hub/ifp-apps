@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-jaket"
+      },
+      {
+        "questionId": "soal-pada-musim-kemarau-sebagian-besa",
+        "prompt": "Pada musim kemarau, sebagian besar daerah di Indonesia mengalami ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-musim-kemarau-sebagian-1",
+            "text": "hujan terus-menerus"
+          },
+          {
+            "optionId": "opsi-soal-pada-musim-kemarau-sebagian-0",
+            "text": "hujan jarang turun"
+          },
+          {
+            "optionId": "opsi-soal-pada-musim-kemarau-sebagian-2",
+            "text": "salju tebal"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-musim-kemarau-sebagian-0"
+      },
+      {
+        "questionId": "soal-awan-hitam-berkumpul-dan-angin-b",
+        "prompt": "Awan hitam berkumpul dan angin bertiup kencang. Kita sebaiknya bersiap karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-awan-hitam-berkumpul-dan-an-1",
+            "text": "salju akan turun"
+          },
+          {
+            "optionId": "opsi-soal-awan-hitam-berkumpul-dan-an-2",
+            "text": "kemarau panjang dimulai"
+          },
+          {
+            "optionId": "opsi-soal-awan-hitam-berkumpul-dan-an-0",
+            "text": "hujan akan turun"
+          }
+        ],
+        "correctResponse": "opsi-soal-awan-hitam-berkumpul-dan-an-0"
       }
     ],
     "passingScore": 75

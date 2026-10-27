@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Alasan kerja sama penting",
         "right": "Agar permainan berjalan lancar"
+      },
+      {
+        "pairId": "pasangan-jenis-gerak-yang-memakai-bola-at",
+        "left": "Jenis gerak yang memakai bola atau alat",
+        "right": "Manipulatif"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-memegang-bola-pa",
+        "left": "Langkah setelah memegang bola pada permainan lempar tangkap",
+        "right": "Melempar ke teman"
+      },
+      {
+        "pairId": "pasangan-sikap-yang-perlu-dijaga-saat-mel",
+        "left": "Sikap yang perlu dijaga saat melempar tangkap bersama teman",
+        "right": "Kerja sama"
       }
     ]
   },

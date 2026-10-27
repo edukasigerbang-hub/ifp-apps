@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sikap-saat-melihat-teman-berbeda",
+        "prompt": "Sikap saat melihat teman berbeda suku dan agama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-saat-melihat-teman-be-1",
+            "text": "membeda-bedakan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-melihat-teman-be-0",
+            "text": "menghargai"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-melihat-teman-be-2",
+            "text": "mengejek"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-saat-melihat-teman-be-0"
+      },
+      {
+        "questionId": "soal-sikap-menerima-perbedaan-antar-t",
+        "prompt": "Sikap menerima perbedaan antar teman di sekolah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-an-1",
+            "text": "permusuhan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-an-2",
+            "text": "kesombongan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-an-0",
+            "text": "toleransi"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-menerima-perbedaan-an-0"
+      },
+      {
+        "questionId": "soal-manfaat-keberagaman-siswa-di-sek",
+        "prompt": "Manfaat keberagaman siswa di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-manfaat-keberagaman-siswa-d-0",
+            "text": "mempererat persaudaraan"
+          },
+          {
+            "optionId": "opsi-soal-manfaat-keberagaman-siswa-d-1",
+            "text": "menimbulkan perkelahian"
+          },
+          {
+            "optionId": "opsi-soal-manfaat-keberagaman-siswa-d-2",
+            "text": "memecah persahabatan"
+          }
+        ],
+        "correctResponse": "opsi-soal-manfaat-keberagaman-siswa-d-0"
+      },
+      {
+        "questionId": "soal-pekerjaan-membersihkan-kelas-aka",
+        "prompt": "Pekerjaan membersihkan kelas akan lebih cepat selesai jika dilakukan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pekerjaan-membersihkan-kela-1",
+            "text": "saling bersaing"
+          },
+          {
+            "optionId": "opsi-soal-pekerjaan-membersihkan-kela-0",
+            "text": "kerja sama"
+          },
+          {
+            "optionId": "opsi-soal-pekerjaan-membersihkan-kela-2",
+            "text": "mementingkan diri sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-pekerjaan-membersihkan-kela-0"
       }
     ],
     "passingScore": 75

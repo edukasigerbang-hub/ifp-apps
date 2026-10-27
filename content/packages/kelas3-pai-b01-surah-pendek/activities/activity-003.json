@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-surah-yang-menjadi-pembuka-al-qu",
+        "prompt": "Surah yang menjadi pembuka Al-Qur'an adalah Surah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-surah-yang-menjadi-pembuka-1",
+            "text": "Surah An-Nas"
+          },
+          {
+            "optionId": "opsi-soal-surah-yang-menjadi-pembuka-0",
+            "text": "Al-Fatihah"
+          },
+          {
+            "optionId": "opsi-soal-surah-yang-menjadi-pembuka-2",
+            "text": "Surah Al-Ikhlas"
+          }
+        ],
+        "correctResponse": "opsi-soal-surah-yang-menjadi-pembuka-0"
+      },
+      {
+        "questionId": "soal-membaca-al-qur-an-dengan-pelan-d",
+        "prompt": "Membaca Al-Qur'an dengan pelan dan jelas berarti kita membaca dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-dengan-pe-1",
+            "text": "adab membaca"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-dengan-pe-2",
+            "text": "hafalan surah"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-dengan-pe-0",
+            "text": "tartil"
+          }
+        ],
+        "correctResponse": "opsi-soal-membaca-al-qur-an-dengan-pe-0"
+      },
+      {
+        "questionId": "soal-satu-bab-atau-bagian-dalam-al-qu",
+        "prompt": "Satu bab atau bagian dalam Al-Qur'an disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-satu-bab-atau-bagian-dalam-0",
+            "text": "surah"
+          },
+          {
+            "optionId": "opsi-soal-satu-bab-atau-bagian-dalam-1",
+            "text": "ayat"
+          },
+          {
+            "optionId": "opsi-soal-satu-bab-atau-bagian-dalam-2",
+            "text": "kalimat"
+          }
+        ],
+        "correctResponse": "opsi-soal-satu-bab-atau-bagian-dalam-0"
+      },
+      {
+        "questionId": "soal-saat-membaca-al-qur-an-kita-bers",
+        "prompt": "Saat membaca Al-Qur'an kita bersikap sopan dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-membaca-al-qur-an-kita-1",
+            "text": "berteriak keras"
+          },
+          {
+            "optionId": "opsi-soal-saat-membaca-al-qur-an-kita-0",
+            "text": "tenang"
+          },
+          {
+            "optionId": "opsi-soal-saat-membaca-al-qur-an-kita-2",
+            "text": "sambil bermain"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-membaca-al-qur-an-kita-0"
       }
     ],
     "passingScore": 75

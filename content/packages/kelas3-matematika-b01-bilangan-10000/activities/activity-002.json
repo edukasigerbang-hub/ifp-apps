@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-lebih"
+      },
+      {
+        "questionId": "soal-bilangan-6-008-dibaca",
+        "prompt": "Bilangan 6.008 dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bilangan-6-008-dibaca-1",
+            "text": "enam ribu nol delapan"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-6-008-dibaca-0",
+            "text": "enam ribu delapan"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-6-008-dibaca-2",
+            "text": "enam ribu delapan puluh"
+          }
+        ],
+        "correctResponse": "opsi-soal-bilangan-6-008-dibaca-0"
+      },
+      {
+        "questionId": "soal-pada-bilangan-5-432-angka-yang-m",
+        "prompt": "Pada bilangan 5.432, angka yang menempati tempat ratusan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-bilangan-5-432-angka-y-1",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-soal-pada-bilangan-5-432-angka-y-2",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-pada-bilangan-5-432-angka-y-0",
+            "text": "4"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-bilangan-5-432-angka-y-0"
       }
     ],
     "passingScore": 75

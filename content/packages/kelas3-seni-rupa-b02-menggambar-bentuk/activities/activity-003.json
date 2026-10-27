@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Lingkaran, persegi, dan segitiga yang disusun jadi rumah",
         "right": "Menggambar bentuk"
+      },
+      {
+        "pairId": "pasangan-langkah-sebelum-mewarnai-pada-ur",
+        "left": "Langkah sebelum mewarnai pada urutan menggambar",
+        "right": "Menambahkan detail"
+      },
+      {
+        "pairId": "pasangan-bentuk-dasar-yang-bersudut-tiga",
+        "left": "Bentuk dasar yang bersudut tiga pada gambar rumah",
+        "right": "Segitiga"
       }
     ]
   },

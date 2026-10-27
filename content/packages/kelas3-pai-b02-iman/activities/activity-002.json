@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-jujur"
+      },
+      {
+        "questionId": "soal-sifat-allah-yang-disebut-ar-rahm",
+        "prompt": "Sifat Allah yang disebut Ar-Rahman berarti Allah Maha ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-allah-yang-disebut-ar-1",
+            "text": "Maha Tinggi"
+          },
+          {
+            "optionId": "opsi-soal-sifat-allah-yang-disebut-ar-2",
+            "text": "Maha Kuasa"
+          },
+          {
+            "optionId": "opsi-soal-sifat-allah-yang-disebut-ar-0",
+            "text": "Pengasih"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-allah-yang-disebut-ar-0"
+      },
+      {
+        "questionId": "soal-iman-berarti-percaya-dan-kepada",
+        "prompt": "Iman berarti percaya dan ... kepada Allah.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-iman-berarti-percaya-dan-ke-0",
+            "text": "yakin"
+          },
+          {
+            "optionId": "opsi-soal-iman-berarti-percaya-dan-ke-1",
+            "text": "ragu"
+          },
+          {
+            "optionId": "opsi-soal-iman-berarti-percaya-dan-ke-2",
+            "text": "duga"
+          }
+        ],
+        "correctResponse": "opsi-soal-iman-berarti-percaya-dan-ke-0"
       }
     ],
     "passingScore": 75

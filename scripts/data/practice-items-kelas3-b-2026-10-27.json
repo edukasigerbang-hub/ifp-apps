@@ -1,0 +1,279 @@
+{
+  "_comment": "T-092 kelompok kelas 3 bagian B (IPAS + Pendidikan Pancasila). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing dari digest-kelas3.txt, bukan template. Target per paket mengikuti needs-kelas3-b.json (total 36 soal, 22 pasangan). Diterapkan skrip oleh LEAD.",
+  "packages": {
+    "kelas3-ipas-b01-makhluk-hidup": {
+      "quiz": [
+        {
+          "prompt": "Tanaman kecil di kebun semakin lama semakin tinggi. Hal itu menunjukkan ciri makhluk hidup yaitu ...",
+          "answer": "tumbuh",
+          "distractors": ["bernapas", "peka terhadap rangsang", "berkembang biak"]
+        },
+        {
+          "prompt": "Saat disentuh, daun pohon putri malu langsung ...",
+          "answer": "mengatup",
+          "distractors": ["berguguran", "mekar"]
+        },
+        {
+          "prompt": "Kemampuan makhluk hidup untuk menghasilkan keturunan disebut ...",
+          "answer": "berkembang biak",
+          "distractors": ["bernapas", "bergerak"]
+        },
+        {
+          "prompt": "Tempat tinggal makhluk hidup, misalnya kolam bagi ikan, disebut ...",
+          "answer": "tempat hidup",
+          "distractors": ["makanan", "tempat bermain"]
+        }
+      ]
+    },
+    "kelas3-ipas-b02-daur-hidup": {
+      "matching": [
+        { "left": "Anak katak yang hidup dan berenang di air", "right": "berudu" },
+        { "left": "Tahap akhir daur hidup kupu-kupu yang dapat terbang", "right": "kupu-kupu" }
+      ]
+    },
+    "kelas3-ipas-b03-wujud-zat": {
+      "quiz": [
+        {
+          "prompt": "Es batu yang dikeluarkan dari freezer lama-kelamaan berubah menjadi air. Perubahan wujud itu disebut ...",
+          "answer": "mencair",
+          "distractors": ["membeku", "menguap"]
+        },
+        {
+          "prompt": "Air dalam panci yang direbus terus-menerus berkurang karena berubah menjadi ...",
+          "answer": "uap",
+          "distractors": ["es", "awan"]
+        }
+      ],
+      "matching": [
+        { "left": "Perubahan wujud uap air menjadi titik-titik air pada gelas dingin", "right": "mengembun" },
+        { "left": "Wujud zat yang bentuk dan volumenya tetap", "right": "padat" }
+      ]
+    },
+    "kelas3-ipas-b04-gaya-gerak": {
+      "quiz": [
+        {
+          "prompt": "Bola yang menggelinding di lantai lama-kelamaan melambat lalu berhenti. Hal itu terjadi karena adanya ...",
+          "answer": "gaya gesek",
+          "distractors": ["tarikan", "gaya pegas"]
+        },
+        {
+          "prompt": "Benda yang dilempar ke atas selalu jatuh kembali ke tanah karena ...",
+          "answer": "gaya gravitasi",
+          "distractors": ["gaya gesek", "gaya pegas"]
+        },
+        {
+          "prompt": "Karet ketapel kembali ke bentuk semula setelah ditarik. Gaya yang bekerja adalah ...",
+          "answer": "gaya pegas",
+          "distractors": ["gaya magnet", "gaya gesek"]
+        },
+        {
+          "prompt": "Adonan roti berubah bentuk saat ditekan tangan. Contoh itu menunjukkan gaya dapat mengubah ...",
+          "answer": "bentuk benda",
+          "distractors": ["warna benda", "bau benda"]
+        }
+      ]
+    },
+    "kelas3-ipas-b05-cuaca-musim": {
+      "quiz": [
+        {
+          "prompt": "Pada musim kemarau, sebagian besar daerah di Indonesia mengalami ...",
+          "answer": "hujan jarang turun",
+          "distractors": ["hujan terus-menerus", "salju tebal"]
+        },
+        {
+          "prompt": "Awan hitam berkumpul dan angin bertiup kencang. Kita sebaiknya bersiap karena ...",
+          "answer": "hujan akan turun",
+          "distractors": ["salju akan turun", "kemarau panjang dimulai"]
+        }
+      ],
+      "matching": [
+        { "left": "Pakaian yang tepat dipakai saat pergi di tengah hujan", "right": "jas hujan" },
+        { "left": "Cuaca yang terjadi saat matahari bersinar sepanjang hari", "right": "cerah" }
+      ]
+    },
+    "kelas3-ipas-b06-keragaman-budaya": {
+      "quiz": [
+        {
+          "prompt": "Rumah adat, pakaian adat, dan tarian daerah adalah contoh ...",
+          "answer": "budaya daerah",
+          "distractors": ["sumber daya alam daerah", "pekerjaan penduduk daerah"]
+        },
+        {
+          "prompt": "Saat teman menampilkan tarian dari daerah lain, sikap kita sebaiknya ...",
+          "answer": "menghargai",
+          "distractors": ["menertawakan", "mengejek"]
+        },
+        {
+          "prompt": "Cara ikut melestarikan budaya daerah adalah ...",
+          "answer": "mau mempelajarinya",
+          "distractors": ["melarangnya", "melupakannya"]
+        },
+        {
+          "prompt": "Budaya tiap daerah berbeda karena setiap daerah memiliki ...",
+          "answer": "kebiasaan dan lingkungan yang berbeda",
+          "distractors": ["aturan pemerintah yang sama", "fasilitas yang sama persis"]
+        }
+      ]
+    },
+    "kelas3-ipas-b07-lingkungan-pelestarian": {
+      "matching": [
+        { "left": "Kegiatan yang membuat lingkungan sekolah menjadi hijau dan teduh", "right": "menanam pohon" },
+        { "left": "Akibat jika sampah dibuang ke sungai saat musim hujan", "right": "banjir" },
+        { "left": "Hasil yang dirasakan jika kelas dibersihkan bersama setiap hari", "right": "belajar menjadi nyaman" }
+      ]
+    },
+    "kelas3-ipas-b08-ekonomi": {
+      "quiz": [
+        {
+          "prompt": "Kegiatan mengantar barang dari produsen sampai ke tangan pembeli disebut ...",
+          "answer": "distribusi",
+          "distractors": ["produksi", "konsumsi"]
+        },
+        {
+          "prompt": "Padi yang kita makan merupakan hasil kerja ...",
+          "answer": "petani",
+          "distractors": ["pedagang", "pegawai"]
+        },
+        {
+          "prompt": "Orang yang menggunakan barang atau jasa disebut ...",
+          "answer": "konsumen",
+          "distractors": ["produsen", "penjual"]
+        },
+        {
+          "prompt": "Bentuk menghargai kerja penjual saat kita membeli makanan di kantin adalah ...",
+          "answer": "berkata terima kasih",
+          "distractors": ["memarahi karena lama", "pergi tanpa membayar"]
+        }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b01-pancasila": {
+      "quiz": [
+        {
+          "prompt": "Jumlah sila dalam Pancasila adalah ...",
+          "answer": "lima",
+          "distractors": ["empat", "enam"]
+        },
+        {
+          "prompt": "Simbol sila pertama Pancasila adalah ...",
+          "answer": "bintang emas",
+          "distractors": ["rantai", "kepala banteng"]
+        },
+        {
+          "prompt": "Sila ketiga Pancasila dilambangkan dengan gambar ...",
+          "answer": "pohon beringin",
+          "distractors": ["kepala banteng", "rantai"]
+        },
+        {
+          "prompt": "Musyawarah memilih ketua kelas merupakan pengamalan sila yang dilambangkan oleh ...",
+          "answer": "kepala banteng",
+          "distractors": ["padi dan kapas", "pohon beringin"]
+        }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b02-aturan": {
+      "quiz": [
+        {
+          "prompt": "Siti selalu merapikan tempat tidurnya setiap pagi. Kegiatan itu termasuk ...",
+          "answer": "aturan di rumah",
+          "distractors": ["aturan di sekolah", "permainan Siti"]
+        },
+        {
+          "prompt": "Aturan yang berlaku ketika bertemu guru di sekolah pada pagi hari adalah ...",
+          "answer": "berkata salam dengan sopan",
+          "distractors": ["berlari mendahului guru", "memotong pembicaraan guru"]
+        }
+      ],
+      "matching": [
+        { "left": "Contoh aturan yang wajib ditaati sebelum masuk kelas", "right": "memakai seragam" },
+        { "left": "Jika semua siswa menaati aturan, kerja kelompok berjalan ...", "right": "lancar" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b03-hak-kewajiban": {
+      "quiz": [
+        {
+          "prompt": "Sesuatu yang kita terima setelah menjalankan kewajiban disebut ...",
+          "answer": "hak",
+          "distractors": ["kewajiban", "larangan"]
+        },
+        {
+          "prompt": "Berikut yang termasuk hak anak di rumah adalah ...",
+          "answer": "mendapat makanan",
+          "distractors": ["membantu orang tua", "menjaga kebersihan rumah"]
+        },
+        {
+          "prompt": "Menjaga kebersihan rumah merupakan kewajiban dari ...",
+          "answer": "semua anggota keluarga",
+          "distractors": ["ayah saja", "ibu saja"]
+        },
+        {
+          "prompt": "Contoh kewajiban siswa di sekolah adalah ...",
+          "answer": "belajar dengan tekun",
+          "distractors": ["bermain sepanjang hari", "menerima hadiah"]
+        }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b04-musyawarah": {
+      "matching": [
+        { "left": "Kegiatan membicarakan masalah kelas secara bersama-sama", "right": "musyawarah" },
+        { "left": "Hasil kesepakatan musyawarah wajib dijalankan dengan ...", "right": "tanggung jawab" },
+        { "left": "Saat pendapat kita tidak dipilih dalam musyawarah, sikap kita ...", "right": "menerima dengan lapang dada" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b05-keberagaman": {
+      "quiz": [
+        {
+          "prompt": "Sikap saat melihat teman berbeda suku dan agama adalah ...",
+          "answer": "menghargai",
+          "distractors": ["membeda-bedakan", "mengejek"]
+        },
+        {
+          "prompt": "Sikap menerima perbedaan antar teman di sekolah disebut ...",
+          "answer": "toleransi",
+          "distractors": ["permusuhan", "kesombongan"]
+        },
+        {
+          "prompt": "Manfaat keberagaman siswa di sekolah adalah ...",
+          "answer": "mempererat persaudaraan",
+          "distractors": ["menimbulkan perkelahian", "memecah persahabatan"]
+        },
+        {
+          "prompt": "Pekerjaan membersihkan kelas akan lebih cepat selesai jika dilakukan dengan ...",
+          "answer": "kerja sama",
+          "distractors": ["saling bersaing", "mementingkan diri sendiri"]
+        }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b06-nkri": {
+      "quiz": [
+        {
+          "prompt": "Sikap yang benar saat bendera Merah Putih dikibarkan adalah ...",
+          "answer": "berdiri tegak",
+          "distractors": ["berlari-lari", "mengobrol dengan teman"]
+        },
+        {
+          "prompt": "Perilaku yang menunjukkan cinta tanah air di lingkungan sekolah adalah ...",
+          "answer": "menjaga persatuan antar siswa",
+          "distractors": ["berkelahi dengan teman", "mengejek daerah sendiri"]
+        }
+      ],
+      "matching": [
+        { "left": "Sikap menjaga bendera dan lambang negara menunjukkan perilaku", "right": "cinta tanah air" },
+        { "left": "Nama negara tempat kita tinggal dan berbahasa persatuan", "right": "Republik Indonesia" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b07-gotong-royong": {
+      "matching": [
+        { "left": "Langkah pertama sebelum bekerja bersama dalam kegiatan gotong royong", "right": "membagi tugas" },
+        { "left": "Setelah pekerjaan gotong royong selesai, semua alat harus ...", "right": "dirapikan kembali" },
+        { "left": "Pekerjaan yang berat saat dikerjakan bersama-sama akan terasa ...", "right": "lebih ringan" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "matching": [
+        { "left": "Hal pertama yang dilakukan sebelum menyusun rencana proyek kelas", "right": "memilih masalah" },
+        { "left": "Kegiatan setelah tugas proyek dibagi kepada anggota kelompok", "right": "melaksanakan proyek" },
+        { "left": "Manfaat mengevaluasi hasil proyek kewargaan", "right": "memperbaiki kegiatan berikutnya" }
+      ]
+    }
+  }
+}

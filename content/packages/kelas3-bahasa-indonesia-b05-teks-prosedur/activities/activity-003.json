@@ -21,6 +21,21 @@
         "pairId": "pasangan-3",
         "left": "Kata yang biasa dipakai",
         "right": "Kata perintah seperti siapkan, masukkan, siram"
+      },
+      {
+        "pairId": "pasangan-kata-siapkan-masukkan-dan-siram",
+        "left": "Kata 'siapkan', 'masukkan', dan 'siram' termasuk jenis kata",
+        "right": "perintah"
+      },
+      {
+        "pairId": "pasangan-biji-yang-sudah-ditanam-lebih-da",
+        "left": "Biji yang sudah ditanam lebih dahulu diletakkan di tempat yang",
+        "right": "terang"
+      },
+      {
+        "pairId": "pasangan-langkah-kegiatan-yang-ditulis-be",
+        "left": "Langkah kegiatan yang ditulis berurutan dari awal sampai akhir menjadi teks",
+        "right": "prosedur"
       }
     ]
   },

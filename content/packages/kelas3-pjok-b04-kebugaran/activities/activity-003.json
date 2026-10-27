@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-tubuh-menjadi-bugar-bila-kita-ol",
+        "prompt": "Tubuh menjadi bugar bila kita olahraga ..., makan bergizi, dan cukup istirahat.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-bila-ki-1",
+            "text": "sekali seminggu"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-bila-ki-0",
+            "text": "teratur"
+          },
+          {
+            "optionId": "opsi-soal-tubuh-menjadi-bugar-bila-ki-2",
+            "text": "hanya saat hari Sabtu"
+          }
+        ],
+        "correctResponse": "opsi-soal-tubuh-menjadi-bugar-bila-ki-0"
+      },
+      {
+        "questionId": "soal-mencuci-tangan-pakai-sabun-dilak",
+        "prompt": "Mencuci tangan pakai sabun dilakukan sebelum makan dan setelah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mencuci-tangan-pakai-sabun-1",
+            "text": "mandi"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-pakai-sabun-2",
+            "text": "tidur"
+          },
+          {
+            "optionId": "opsi-soal-mencuci-tangan-pakai-sabun-0",
+            "text": "bermain"
+          }
+        ],
+        "correctResponse": "opsi-soal-mencuci-tangan-pakai-sabun-0"
+      },
+      {
+        "questionId": "soal-habis-berolahraga-tenaga-cepat-p",
+        "prompt": "Habis berolahraga, tenaga cepat pulih dengan cara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-habis-berolahraga-tenaga-ce-0",
+            "text": "istirahat"
+          },
+          {
+            "optionId": "opsi-soal-habis-berolahraga-tenaga-ce-1",
+            "text": "begadang sampai larut"
+          },
+          {
+            "optionId": "opsi-soal-habis-berolahraga-tenaga-ce-2",
+            "text": "tidak makan sama sekali"
+          }
+        ],
+        "correctResponse": "opsi-soal-habis-berolahraga-tenaga-ce-0"
+      },
+      {
+        "questionId": "soal-supaya-tidak-dehidrasi-sehabis-b",
+        "prompt": "Supaya tidak dehidrasi sehabis berlatih, minuman paling baik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-supaya-tidak-dehidrasi-seha-1",
+            "text": "soda"
+          },
+          {
+            "optionId": "opsi-soal-supaya-tidak-dehidrasi-seha-0",
+            "text": "air putih"
+          },
+          {
+            "optionId": "opsi-soal-supaya-tidak-dehidrasi-seha-2",
+            "text": "sirop berwarna"
+          }
+        ],
+        "correctResponse": "opsi-soal-supaya-tidak-dehidrasi-seha-0"
       }
     ],
     "passingScore": 75

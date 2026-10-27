@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-rumah-adat-pakaian-adat-dan-tari",
+        "prompt": "Rumah adat, pakaian adat, dan tarian daerah adalah contoh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rumah-adat-pakaian-adat-dan-1",
+            "text": "sumber daya alam daerah"
+          },
+          {
+            "optionId": "opsi-soal-rumah-adat-pakaian-adat-dan-2",
+            "text": "pekerjaan penduduk daerah"
+          },
+          {
+            "optionId": "opsi-soal-rumah-adat-pakaian-adat-dan-0",
+            "text": "budaya daerah"
+          }
+        ],
+        "correctResponse": "opsi-soal-rumah-adat-pakaian-adat-dan-0"
+      },
+      {
+        "questionId": "soal-saat-teman-menampilkan-tarian-da",
+        "prompt": "Saat teman menampilkan tarian dari daerah lain, sikap kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-teman-menampilkan-tari-0",
+            "text": "menghargai"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-menampilkan-tari-1",
+            "text": "menertawakan"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-menampilkan-tari-2",
+            "text": "mengejek"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-teman-menampilkan-tari-0"
+      },
+      {
+        "questionId": "soal-cara-ikut-melestarikan-budaya-da",
+        "prompt": "Cara ikut melestarikan budaya daerah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cara-ikut-melestarikan-buda-1",
+            "text": "melarangnya"
+          },
+          {
+            "optionId": "opsi-soal-cara-ikut-melestarikan-buda-0",
+            "text": "mau mempelajarinya"
+          },
+          {
+            "optionId": "opsi-soal-cara-ikut-melestarikan-buda-2",
+            "text": "melupakannya"
+          }
+        ],
+        "correctResponse": "opsi-soal-cara-ikut-melestarikan-buda-0"
+      },
+      {
+        "questionId": "soal-budaya-tiap-daerah-berbeda-karen",
+        "prompt": "Budaya tiap daerah berbeda karena setiap daerah memiliki ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-budaya-tiap-daerah-berbeda-1",
+            "text": "aturan pemerintah yang sama"
+          },
+          {
+            "optionId": "opsi-soal-budaya-tiap-daerah-berbeda-2",
+            "text": "fasilitas yang sama persis"
+          },
+          {
+            "optionId": "opsi-soal-budaya-tiap-daerah-berbeda-0",
+            "text": "kebiasaan dan lingkungan yang berbeda"
+          }
+        ],
+        "correctResponse": "opsi-soal-budaya-tiap-daerah-berbeda-0"
       }
     ],
     "passingScore": 75

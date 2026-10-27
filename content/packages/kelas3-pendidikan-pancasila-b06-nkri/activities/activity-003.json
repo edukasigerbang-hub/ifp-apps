@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Bahasa persatuan Indonesia adalah ...",
         "right": "Bahasa Indonesia"
+      },
+      {
+        "pairId": "pasangan-sikap-menjaga-bendera-dan-lamban",
+        "left": "Sikap menjaga bendera dan lambang negara menunjukkan perilaku",
+        "right": "cinta tanah air"
+      },
+      {
+        "pairId": "pasangan-nama-negara-tempat-kita-tinggal",
+        "left": "Nama negara tempat kita tinggal dan berbahasa persatuan",
+        "right": "Republik Indonesia"
       }
     ]
   },

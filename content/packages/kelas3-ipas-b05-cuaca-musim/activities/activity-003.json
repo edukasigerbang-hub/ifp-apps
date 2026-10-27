@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Cuaca cerah ditandai dengan",
         "right": "Langit terang dan matahari bersinar"
+      },
+      {
+        "pairId": "pasangan-pakaian-yang-tepat-dipakai-saat",
+        "left": "Pakaian yang tepat dipakai saat pergi di tengah hujan",
+        "right": "jas hujan"
+      },
+      {
+        "pairId": "pasangan-cuaca-yang-terjadi-saat-matahari",
+        "left": "Cuaca yang terjadi saat matahari bersinar sepanjang hari",
+        "right": "cerah"
       }
     ]
   },

@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-dua-jam-sama-dengan",
+        "prompt": "Dua jam sama dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-jam-sama-dengan-1",
+            "text": "100 menit"
+          },
+          {
+            "optionId": "opsi-soal-dua-jam-sama-dengan-2",
+            "text": "90 menit"
+          },
+          {
+            "optionId": "opsi-soal-dua-jam-sama-dengan-0",
+            "text": "120 menit"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-jam-sama-dengan-0"
+      },
+      {
+        "questionId": "soal-panjang-tali-1-m-40-cm-sama-deng",
+        "prompt": "Panjang tali 1 m 40 cm sama dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-panjang-tali-1-m-40-cm-sama-0",
+            "text": "140 cm"
+          },
+          {
+            "optionId": "opsi-soal-panjang-tali-1-m-40-cm-sama-1",
+            "text": "40 cm"
+          },
+          {
+            "optionId": "opsi-soal-panjang-tali-1-m-40-cm-sama-2",
+            "text": "1.040 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-panjang-tali-1-m-40-cm-sama-0"
+      },
+      {
+        "questionId": "soal-2-kilogram-500-gram-sama-dengan",
+        "prompt": "2 kilogram + 500 gram sama dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-2-kilogram-500-gram-sama-de-1",
+            "text": "2.050 gram"
+          },
+          {
+            "optionId": "opsi-soal-2-kilogram-500-gram-sama-de-0",
+            "text": "2.500 gram"
+          },
+          {
+            "optionId": "opsi-soal-2-kilogram-500-gram-sama-de-2",
+            "text": "1.500 gram"
+          }
+        ],
+        "correctResponse": "opsi-soal-2-kilogram-500-gram-sama-de-0"
+      },
+      {
+        "questionId": "soal-ani-belajar-dari-pukul-07-00-sel",
+        "prompt": "Ani belajar dari pukul 07.00 selama 1 jam 30 menit. Ia selesai pukul ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-ani-belajar-dari-pukul-07-0-1",
+            "text": "08.00"
+          },
+          {
+            "optionId": "opsi-soal-ani-belajar-dari-pukul-07-0-2",
+            "text": "09.30"
+          },
+          {
+            "optionId": "opsi-soal-ani-belajar-dari-pukul-07-0-0",
+            "text": "08.30"
+          }
+        ],
+        "correctResponse": "opsi-soal-ani-belajar-dari-pukul-07-0-0"
       }
     ],
     "passingScore": 75

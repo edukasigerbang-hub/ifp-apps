@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Berwudu dan mengerjakan gerakan salat",
         "right": "Salat"
+      },
+      {
+        "pairId": "pasangan-gerakan-pembuka-saat-baru-memula",
+        "left": "Gerakan pembuka saat baru memulai salat",
+        "right": "Takbiratul ihram"
+      },
+      {
+        "pairId": "pasangan-gerakan-terakhir-yang-menutup-ra",
+        "left": "Gerakan terakhir yang menutup rangkaian salat",
+        "right": "Salam"
       }
     ]
   },

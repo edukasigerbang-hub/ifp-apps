@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-ambil"
+      },
+      {
+        "questionId": "soal-bagian-cerita-yang-menyatakan-te",
+        "prompt": "Bagian cerita yang menyatakan tempat dan waktu kejadian disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-cerita-yang-menyatak-0",
+            "text": "latar"
+          },
+          {
+            "optionId": "opsi-soal-bagian-cerita-yang-menyatak-1",
+            "text": "tokoh"
+          },
+          {
+            "optionId": "opsi-soal-bagian-cerita-yang-menyatak-2",
+            "text": "amanat"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-cerita-yang-menyatak-0"
+      },
+      {
+        "questionId": "soal-cerita-kancil-yang-cerdik-termas",
+        "prompt": "Cerita Kancil yang cerdik termasuk jenis cerita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cerita-kancil-yang-cerdik-t-1",
+            "text": "berita"
+          },
+          {
+            "optionId": "opsi-soal-cerita-kancil-yang-cerdik-t-0",
+            "text": "dongeng"
+          },
+          {
+            "optionId": "opsi-soal-cerita-kancil-yang-cerdik-t-2",
+            "text": "resep"
+          }
+        ],
+        "correctResponse": "opsi-soal-cerita-kancil-yang-cerdik-t-0"
       }
     ],
     "passingScore": 75

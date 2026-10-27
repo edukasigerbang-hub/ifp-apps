@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Contoh gerak non-lokomotor adalah",
         "right": "Menekuk lutut"
+      },
+      {
+        "pairId": "pasangan-gerak-badan-memutar-poros-tanpa",
+        "left": "Gerak badan memutar poros tanpa berpindah tempat",
+        "right": "Memutar badan"
+      },
+      {
+        "pairId": "pasangan-sikap-tubuh-ketika-berlatih-berd",
+        "left": "Sikap tubuh ketika berlatih berdiri satu kaki",
+        "right": "Keseimbangan"
       }
     ]
   },

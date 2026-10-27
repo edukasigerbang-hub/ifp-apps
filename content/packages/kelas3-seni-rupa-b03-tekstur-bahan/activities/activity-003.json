@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Batu, kain, daun, dan kapas yang diraba",
         "right": "Tekstur bahan"
+      },
+      {
+        "pairId": "pasangan-kesan-yang-terasa-saat-kita-mera",
+        "left": "Kesan yang terasa saat kita meraba permukaan batu",
+        "right": "Kasar"
+      },
+      {
+        "pairId": "pasangan-cara-mengoleskan-lem-agar-bahan",
+        "left": "Cara mengoleskan lem agar bahan menempel rapi",
+        "right": "Tipis"
       }
     ]
   },

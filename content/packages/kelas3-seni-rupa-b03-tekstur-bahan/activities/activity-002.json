@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-lem"
+      },
+      {
+        "questionId": "soal-bahan-yang-permukaannya-tidak-ra",
+        "prompt": "Bahan yang permukaannya tidak rata saat diraba disebut bertekstur ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-yang-permukaannya-tid-1",
+            "text": "halus"
+          },
+          {
+            "optionId": "opsi-soal-bahan-yang-permukaannya-tid-2",
+            "text": "lembek"
+          },
+          {
+            "optionId": "opsi-soal-bahan-yang-permukaannya-tid-0",
+            "text": "kasar"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-yang-permukaannya-tid-0"
+      },
+      {
+        "questionId": "soal-setelah-lem-dioleskan-tipis-baha",
+        "prompt": "Setelah lem dioleskan tipis, bahan tempel ditekan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-lem-dioleskan-tipis-0",
+            "text": "perlahan"
+          },
+          {
+            "optionId": "opsi-soal-setelah-lem-dioleskan-tipis-1",
+            "text": "kasar"
+          },
+          {
+            "optionId": "opsi-soal-setelah-lem-dioleskan-tipis-2",
+            "text": "terburu-buru"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-lem-dioleskan-tipis-0"
       }
     ],
     "passingScore": 75

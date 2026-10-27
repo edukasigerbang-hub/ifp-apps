@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-tulisan-yang-menggambarkan-sebua",
+        "prompt": "Tulisan yang menggambarkan sebuah objek dengan jelas disebut teks ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tulisan-yang-menggambarkan-1",
+            "text": "prosedur"
+          },
+          {
+            "optionId": "opsi-soal-tulisan-yang-menggambarkan-2",
+            "text": "berita"
+          },
+          {
+            "optionId": "opsi-soal-tulisan-yang-menggambarkan-0",
+            "text": "deskripsi"
+          }
+        ],
+        "correctResponse": "opsi-soal-tulisan-yang-menggambarkan-0"
+      },
+      {
+        "questionId": "soal-kata-harum-saat-menggambarkan-bu",
+        "prompt": "Kata 'harum' saat menggambarkan bunga diperoleh melalui indra ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-harum-saat-menggambark-0",
+            "text": "penciuman"
+          },
+          {
+            "optionId": "opsi-soal-kata-harum-saat-menggambark-1",
+            "text": "pendengaran"
+          },
+          {
+            "optionId": "opsi-soal-kata-harum-saat-menggambark-2",
+            "text": "perabaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-harum-saat-menggambark-0"
+      },
+      {
+        "questionId": "soal-kata-merdu-pada-deskripsi-menunj",
+        "prompt": "Kata 'merdu' pada deskripsi menunjukkan bunyi yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-merdu-pada-deskripsi-m-1",
+            "text": "sedap dilihat"
+          },
+          {
+            "optionId": "opsi-soal-kata-merdu-pada-deskripsi-m-0",
+            "text": "enak didengar"
+          },
+          {
+            "optionId": "opsi-soal-kata-merdu-pada-deskripsi-m-2",
+            "text": "kasar diraba"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-merdu-pada-deskripsi-m-0"
+      },
+      {
+        "questionId": "soal-menulis-deskripsi-sebaiknya-dimu",
+        "prompt": "Menulis deskripsi sebaiknya dimulai dengan menyebutkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menulis-deskripsi-sebaiknya-1",
+            "text": "kesan"
+          },
+          {
+            "optionId": "opsi-soal-menulis-deskripsi-sebaiknya-2",
+            "text": "judul"
+          },
+          {
+            "optionId": "opsi-soal-menulis-deskripsi-sebaiknya-0",
+            "text": "objek"
+          }
+        ],
+        "correctResponse": "opsi-soal-menulis-deskripsi-sebaiknya-0"
       }
     ],
     "passingScore": 75

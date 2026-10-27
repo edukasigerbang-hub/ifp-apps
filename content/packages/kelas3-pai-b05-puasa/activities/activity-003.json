@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Hikmah puasa adalah",
         "right": "Melatih sabar"
+      },
+      {
+        "pairId": "pasangan-waktu-makan-dan-minum-sebelum-te",
+        "left": "Waktu makan dan minum sebelum terbit fajar",
+        "right": "Sahur"
+      },
+      {
+        "pairId": "pasangan-orang-yang-makan-dan-minum-denga",
+        "left": "Orang yang makan dan minum dengan sengaja saat puasa",
+        "right": "Batalkan puasanya"
       }
     ]
   },

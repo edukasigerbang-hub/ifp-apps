@@ -105,6 +105,46 @@
           }
         ],
         "correctResponse": "opsi-ingat"
+      },
+      {
+        "questionId": "soal-siti-selalu-merapikan-tempat-tid",
+        "prompt": "Siti selalu merapikan tempat tidurnya setiap pagi. Kegiatan itu termasuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-siti-selalu-merapikan-tempa-1",
+            "text": "aturan di sekolah"
+          },
+          {
+            "optionId": "opsi-soal-siti-selalu-merapikan-tempa-2",
+            "text": "permainan Siti"
+          },
+          {
+            "optionId": "opsi-soal-siti-selalu-merapikan-tempa-0",
+            "text": "aturan di rumah"
+          }
+        ],
+        "correctResponse": "opsi-soal-siti-selalu-merapikan-tempa-0"
+      },
+      {
+        "questionId": "soal-aturan-yang-berlaku-ketika-berte",
+        "prompt": "Aturan yang berlaku ketika bertemu guru di sekolah pada pagi hari adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-aturan-yang-berlaku-ketika-0",
+            "text": "berkata salam dengan sopan"
+          },
+          {
+            "optionId": "opsi-soal-aturan-yang-berlaku-ketika-1",
+            "text": "berlari mendahului guru"
+          },
+          {
+            "optionId": "opsi-soal-aturan-yang-berlaku-ketika-2",
+            "text": "memotong pembicaraan guru"
+          }
+        ],
+        "correctResponse": "opsi-soal-aturan-yang-berlaku-ketika-0"
       }
     ],
     "passingScore": 75

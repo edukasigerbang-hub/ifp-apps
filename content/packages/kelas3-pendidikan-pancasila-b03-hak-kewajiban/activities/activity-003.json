@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sesuatu-yang-kita-terima-setelah",
+        "prompt": "Sesuatu yang kita terima setelah menjalankan kewajiban disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sesuatu-yang-kita-terima-se-1",
+            "text": "kewajiban"
+          },
+          {
+            "optionId": "opsi-soal-sesuatu-yang-kita-terima-se-2",
+            "text": "larangan"
+          },
+          {
+            "optionId": "opsi-soal-sesuatu-yang-kita-terima-se-0",
+            "text": "hak"
+          }
+        ],
+        "correctResponse": "opsi-soal-sesuatu-yang-kita-terima-se-0"
+      },
+      {
+        "questionId": "soal-berikut-yang-termasuk-hak-anak-d",
+        "prompt": "Berikut yang termasuk hak anak di rumah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-berikut-yang-termasuk-hak-a-0",
+            "text": "mendapat makanan"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-termasuk-hak-a-1",
+            "text": "membantu orang tua"
+          },
+          {
+            "optionId": "opsi-soal-berikut-yang-termasuk-hak-a-2",
+            "text": "menjaga kebersihan rumah"
+          }
+        ],
+        "correctResponse": "opsi-soal-berikut-yang-termasuk-hak-a-0"
+      },
+      {
+        "questionId": "soal-menjaga-kebersihan-rumah-merupak",
+        "prompt": "Menjaga kebersihan rumah merupakan kewajiban dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menjaga-kebersihan-rumah-me-1",
+            "text": "ayah saja"
+          },
+          {
+            "optionId": "opsi-soal-menjaga-kebersihan-rumah-me-0",
+            "text": "semua anggota keluarga"
+          },
+          {
+            "optionId": "opsi-soal-menjaga-kebersihan-rumah-me-2",
+            "text": "ibu saja"
+          }
+        ],
+        "correctResponse": "opsi-soal-menjaga-kebersihan-rumah-me-0"
+      },
+      {
+        "questionId": "soal-contoh-kewajiban-siswa-di-sekola",
+        "prompt": "Contoh kewajiban siswa di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-contoh-kewajiban-siswa-di-s-1",
+            "text": "bermain sepanjang hari"
+          },
+          {
+            "optionId": "opsi-soal-contoh-kewajiban-siswa-di-s-2",
+            "text": "menerima hadiah"
+          },
+          {
+            "optionId": "opsi-soal-contoh-kewajiban-siswa-di-s-0",
+            "text": "belajar dengan tekun"
+          }
+        ],
+        "correctResponse": "opsi-soal-contoh-kewajiban-siswa-di-s-0"
       }
     ],
     "passingScore": 75

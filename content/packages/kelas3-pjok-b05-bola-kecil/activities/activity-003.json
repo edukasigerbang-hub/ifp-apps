@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Bola tenis, kok, dan bet tenis meja",
         "right": "Permainan bola kecil"
+      },
+      {
+        "pairId": "pasangan-salah-satu-contoh-permainan-yang",
+        "left": "Salah satu contoh permainan yang menggunakan bola kecil",
+        "right": "Bulu tangkis"
+      },
+      {
+        "pairId": "pasangan-permainan-yang-alat-pemukulnya-b",
+        "left": "Permainan yang alat pemukulnya bernama bet",
+        "right": "Tenis meja"
       }
     ]
   },

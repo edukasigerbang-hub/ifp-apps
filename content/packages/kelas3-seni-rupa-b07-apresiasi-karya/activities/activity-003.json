@@ -26,6 +26,16 @@
         "pairId": "pasangan-4",
         "left": "Langkah pertama mengapresiasi karya adalah",
         "right": "Mengamati dengan teliti"
+      },
+      {
+        "pairId": "pasangan-unsur-karya-yang-dapat-diamati-s",
+        "left": "Unsur karya yang dapat diamati selain garis dan bentuk",
+        "right": "Warna"
+      },
+      {
+        "pairId": "pasangan-cara-menanggapi-karya-teman-yang",
+        "left": "Cara menanggapi karya teman yang menerima alasan",
+        "right": "Sopan"
       }
     ]
   },

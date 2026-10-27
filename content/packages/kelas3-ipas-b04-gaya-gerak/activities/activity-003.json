@@ -49,6 +49,86 @@
           }
         ],
         "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bola-yang-menggelinding-di-lanta",
+        "prompt": "Bola yang menggelinding di lantai lama-kelamaan melambat lalu berhenti. Hal itu terjadi karena adanya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bola-yang-menggelinding-di-1",
+            "text": "tarikan"
+          },
+          {
+            "optionId": "opsi-soal-bola-yang-menggelinding-di-2",
+            "text": "gaya pegas"
+          },
+          {
+            "optionId": "opsi-soal-bola-yang-menggelinding-di-0",
+            "text": "gaya gesek"
+          }
+        ],
+        "correctResponse": "opsi-soal-bola-yang-menggelinding-di-0"
+      },
+      {
+        "questionId": "soal-benda-yang-dilempar-ke-atas-sela",
+        "prompt": "Benda yang dilempar ke atas selalu jatuh kembali ke tanah karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-benda-yang-dilempar-ke-atas-0",
+            "text": "gaya gravitasi"
+          },
+          {
+            "optionId": "opsi-soal-benda-yang-dilempar-ke-atas-1",
+            "text": "gaya gesek"
+          },
+          {
+            "optionId": "opsi-soal-benda-yang-dilempar-ke-atas-2",
+            "text": "gaya pegas"
+          }
+        ],
+        "correctResponse": "opsi-soal-benda-yang-dilempar-ke-atas-0"
+      },
+      {
+        "questionId": "soal-karet-ketapel-kembali-ke-bentuk",
+        "prompt": "Karet ketapel kembali ke bentuk semula setelah ditarik. Gaya yang bekerja adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-karet-ketapel-kembali-ke-be-1",
+            "text": "gaya magnet"
+          },
+          {
+            "optionId": "opsi-soal-karet-ketapel-kembali-ke-be-0",
+            "text": "gaya pegas"
+          },
+          {
+            "optionId": "opsi-soal-karet-ketapel-kembali-ke-be-2",
+            "text": "gaya gesek"
+          }
+        ],
+        "correctResponse": "opsi-soal-karet-ketapel-kembali-ke-be-0"
+      },
+      {
+        "questionId": "soal-adonan-roti-berubah-bentuk-saat",
+        "prompt": "Adonan roti berubah bentuk saat ditekan tangan. Contoh itu menunjukkan gaya dapat mengubah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-adonan-roti-berubah-bentuk-1",
+            "text": "warna benda"
+          },
+          {
+            "optionId": "opsi-soal-adonan-roti-berubah-bentuk-2",
+            "text": "bau benda"
+          },
+          {
+            "optionId": "opsi-soal-adonan-roti-berubah-bentuk-0",
+            "text": "bentuk benda"
+          }
+        ],
+        "correctResponse": "opsi-soal-adonan-roti-berubah-bentuk-0"
       }
     ],
     "passingScore": 75
