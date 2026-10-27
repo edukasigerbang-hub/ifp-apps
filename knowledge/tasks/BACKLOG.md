@@ -69,12 +69,12 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 
 **Sudah dijalankan 2026-10-27:** audit baca-penuh atas 49 paket bermateri tertipis (11 paket kelas 1–2, 16 paket kelas 3–4, 22 paket kelas 5–6; 283 soal + 283 pasangan diperiksa). Hasil: **21 item cacat di 17 paket** dibetulkan (8 soal kuis: pengecoh mustahil, soal ambigu, fakta di luar materi; 13 pasangan: jawaban duplikat/sinonim atau salah pasang). Pengganti memakai fakta yang ada di materi; jumlah item/optionId/posisi kunci tidak berubah. Alat `scripts/apply-item-patches.mjs` (dry-run default), bukti `scripts/data/item-patches-kelas{12,34,56}-2026-10-27.json`, commit `983bd09`. Audit tidak menemukan jawaban kuis yang bertentangan dengan materi atau salah hitung pada 12 soal matematika yang diperiksa manual.
 
-**Review lanjutan 2026-10-27 atas 10 paket di daftar ini** — [REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md](../content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md). 141 item dibaca penuh (58 soal kuis, 58 pasangan, 25 langkah urutan). Tidak ada jawaban salah atau salah hitung. Putusan: 1 **perlu perbaikan** (`kelas4-ipas-b01-makhluk-hidup`), 1 perlu perbaikan kecil (`kelas6-pjok-b03-atletik`), 7 layak dengan catatan, 1 layak (`kelas6-pai-b07-sejarah-islam`). Temuan yang perlu tindakan:
+**Review lanjutan 2026-10-27 atas 10 paket di daftar ini** — [REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md](../content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md). 141 item dibaca penuh (58 soal kuis, 58 pasangan, 25 langkah urutan). Tidak ada jawaban salah atau salah hitung. Putusan: 1 **perlu perbaikan** (`kelas4-ipas-b01-makhluk-hidup`, F-01 tersisa), 1 **sudah diperbaiki** (`kelas6-pjok-b03-atletik`, F-04), 7 layak dengan catatan, 1 layak (`kelas6-pai-b07-sejarah-islam`). Temuan:
 
-- **F-01** `kelas4-ipas-b01-makhluk-hidup`: ilustrasi tidak memuat katak/capung, tetapi eksplorasi, altText, 2 pasangan, dan 1 soal menyebut keduanya.
-- **F-02** Jawaban singkat dinilai persis satu string (`src/content/quiz.ts:33`) — 4 paket / 24 soal; mis. "Sebutkan satu ciri makhluk hidup" hanya menerima `bernapas`, padahal "bergerak"/"tumbuh" juga benar menurut materi. Akar masalah ada di mesin penilai, bukan hanya teks.
-- **F-03** "Benda tak hidup pada gambar" (`kelas4-ipas-b01`) punya dua jawaban sah: batu dan air.
-- **F-04** `kelas6-pjok-b03-atletik`: langkah urutan ke-5 "Merapikan posisi" adalah pengisi untuk memenuhi ambang 5 langkah.
+- **F-01** `kelas4-ipas-b01-makhluk-hidup`: ilustrasi tidak memuat katak/capung, tetapi eksplorasi, altText, 2 pasangan, dan 1 soal menyebut keduanya. **BELUM DIPERBAIKI** — butuh keputusan PO: ubah teks menyesuaikan gambar (tanpa aset baru) atau buat ulang ilustrasi via Flow.
+- **F-02** Jawaban singkat dinilai persis satu string (`src/content/quiz.ts:33`) — 4 paket / 24 soal; mis. "Sebutkan satu ciri makhluk hidup" hanya menerima `bernapas`, padahal "bergerak"/"tumbuh" juga benar menurut materi. Akar masalah ada di mesin penilai, bukan hanya teks. **BELUM DIPERBAIKI** — menunggu keputusan PO (terima daftar jawaban vs ubah 4 soal terbuka jadi pilihan ganda).
+- ~~**F-03** "Benda tak hidup pada gambar" (`kelas4-ipas-b01`) punya dua jawaban sah: batu dan air.~~ **DIPERBAIKI 2026-10-27** — prompt menjadi "Benda tak hidup yang ada di tepi kolam pada gambar adalah ..." (kunci tetap `batu`).
+- ~~**F-04** `kelas6-pjok-b03-atletik`: langkah urutan ke-5 "Merapikan posisi" adalah pengisi untuk memenuhi ambang 5 langkah.~~ **DIPERBAIKI 2026-10-27** — item ke-5 menjadi "Keluar dari bak lompat"; reveal eksplorasi dan pasangan `Urutan lompat jauh` diselaraskan. Jumlah item/opsi/kunci tidak berubah.
 
 Sisa 7 paket tidak memerlukan perubahan wajib; catatan per paket (istilah "selisih" di kelas 2, soal yang bertumpu pengetahuan umum, pengecoh lemah) ada di laporan §3.
 
@@ -82,7 +82,7 @@ Sisa 7 paket tidak memerlukan perubahan wajib; catatan per paket (istilah "selis
 - `kelas2-matematika-b08-data` — materi tidak memuat angka/tabel; soal bergantung pada diagram batang yang hanya ada di kuis.
 - `kelas6-bahasa-indonesia-b02-eksposisi` — materi ≈10 kata isi; kuis menanyakan isi argumen dan sikap objektif.
 - `kelas3-pendidikan-pancasila-b06-nkri` — 3 langkah fakta; soal "bahasa persatuan" dan pasangan ke-4 bertumpu pada pengetahuan umum NKRI.
-- `kelas4-ipas-b01-makhluk-hidup` — kuis jawaban singkat; soal "benda tak hidup pada gambar" berpotensi ambigu dengan "air".
+- `kelas4-ipas-b01-makhluk-hidup` — kuis jawaban singkat (F-02) dan ilustrasi tanpa katak/capung (F-01) masih terbuka.
 - `kelas2-pai-b05-puasa`, `kelas3-pjok-b06-senam-dasar`, `kelas4-seni-rupa-b08-pameran-kelas`, `kelas5-pjok-b06-senam-lantai`, `kelas6-pai-b07-sejarah-islam`, `kelas6-pjok-b03-atletik` — beberapa pengecoh/pasangan bertumpu pada pengetahuan umum di luar teks paket.
 - Catatan reviewer: sejumlah kuis memakai 4 opsi dengan pengecoh lemah (mis. PAI "Hari libur/Hari ujian"). Format 4 opsi sah menurut aturan; pemangkasan menjadi 3 opsi butuh penulisan ulang manual, belum dikerjakan.
 

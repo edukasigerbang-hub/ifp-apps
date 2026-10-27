@@ -13,16 +13,19 @@ Tidak ada `reviewStatus` yang diubah. Semua paket tetap `draft`. Tanda tangan gu
 | `kelas2-matematika-b08-data` | 5 | 5 | — | LAYAK DENGAN CATATAN |
 | `kelas6-bahasa-indonesia-b02-eksposisi` | 6 | 6 | — | LAYAK DENGAN CATATAN |
 | `kelas3-pendidikan-pancasila-b06-nkri` | 6 | 6 | — | LAYAK DENGAN CATATAN |
-| `kelas4-ipas-b01-makhluk-hidup` | 6 | 6 | — | **PERLU PERBAIKAN** |
+| `kelas4-ipas-b01-makhluk-hidup` | 6 | 6 | — | **PERLU PERBAIKAN** (F-01 tersisa; F-03 sudah diperbaiki) |
 | `kelas2-pai-b05-puasa` | 5 | 5 | — | LAYAK DENGAN CATATAN |
 | `kelas3-pjok-b06-senam-dasar` | 6 | 6 | 5 | LAYAK DENGAN CATATAN |
 | `kelas4-seni-rupa-b08-pameran-kelas` | 6 | 6 | 5 | LAYAK |
 | `kelas5-pjok-b06-senam-lantai` | 6 | 6 | 5 | LAYAK DENGAN CATATAN |
 | `kelas6-pai-b07-sejarah-islam` | 6 | 6 | 5 | LAYAK |
-| `kelas6-pjok-b03-atletik` | 6 | 6 | 5 | **PERLU PERBAIKAN KECIL** |
+| `kelas6-pjok-b03-atletik` | 6 | 6 | 5 | LAYAK (setelah perbaikan F-04)
 
 Tidak ditemukan jawaban salah, salah hitung, atau fakta keliru pada 58 soal kuis. Urutan pada 4 dari 5 aktivitas urutan
 sesuai prosedur (guling depan, menyiapkan pameran, latihan senam lantai, peristiwa awal Islam).
+
+**Perbaikan diterapkan 2026-10-27:** F-03 dan F-04 (lihat §2). Analisis ulang: 336/336 paket lolos validator,
+gerbang volume aktivitas lolos, `npm test` 105/105. F-01 dan F-02 **belum** dikerjakan — menunggu keputusan PO.
 
 ## 2. Temuan terverifikasi
 
@@ -59,18 +62,23 @@ Skema sudah mengizinkan `correctResponse` berupa array (12 nilai), tetapi mesin 
 Usul: (a) terima daftar jawaban untuk soal teks + normalisasi angka/kata; atau (b) ubah empat prompt terbuka
 ("sebutkan satu ...") menjadi pilihan ganda. (a) memperbaiki akar, (b) hanya menutupi empat soal.
 
-### F-03 — Soal "benda tak hidup" punya dua jawaban sah (Sedang) — `kelas4-ipas-b01-makhluk-hidup`
+### F-03 — Soal "benda tak hidup" punya dua jawaban sah (Sedang) — `kelas4-ipas-b01-makhluk-hidup` — **DIPERBAIKI 2026-10-27**
 
 "Benda tak hidup pada gambar adalah ..." dikunci `batu`. Gambar juga menampilkan **air**, yang sama-sama benda tak hidup.
-Siswa yang menjawab "air" benar menurut gambar tetapi dihukum. Usul: ubah prompt menjadi
-"Benda tak hidup yang keras dan padat pada gambar adalah ..." atau terima kedua jawaban lewat F-02.
+Siswa yang menjawab "air" benar menurut gambar tetapi dihukum.
 
-### F-04 — Langkah urutan fiktif (Rendah) — `kelas6-pjok-b03-atletik`
+Perbaikan yang diterapkan: prompt menjadi **"Benda tak hidup yang ada di tepi kolam pada gambar adalah ..."** (kunci tetap `batu`).
+Wording ini berbeda dari usul di draf pertama ("keras dan padat") karena gambar juga memuat pensil, buku, tiang bendera, dan
+bangunan — semuanya keras dan padat, sehingga masih ambigu. "Di tepi kolam" hanya menunjuk batu.
+
+### F-04 — Langkah urutan fiktif (Rendah) — `kelas6-pjok-b03-atletik` — **DIPERBAIKI 2026-10-27**
 
 `ordering-atletik-kelas6` berisi lima item dengan item ke-5 **"Merapikan posisi"**. Lompat jauh punya empat tahap
 (awalan, tolakan, melayang, mendarat); item kelima ditambahkan untuk memenuhi ambang 5 langkah.
-Usul: ganti item ke-5 menjadi tahap nyata, mis. "Keluar dari bak lompat", atau ubah aktivitas menjadi urutan lari cepat
-(Bersiap di garis start → Aba-aba "siap" → Aba-aba "ya" → Berlari → Melewati garis finis) yang juga didukung materi.
+
+Perbaikan yang diterapkan: item ke-5 menjadi **"Keluar dari bak lompat"** (`itemId` `langkah-keluar-bak`), yaitu langkah nyata
+setelah mendarat. Agar materi tidak bertentangan dengan aktivitas, reveal langkah eksplorasi "Apa urutan lompat jauh?"
+dan pasangan `Urutan lompat jauh` diperbarui memuat langkah yang sama. Jumlah item, jumlah pasangan, dan posisi kunci lain tidak berubah.
 
 ### F-05 — Petunjuk mencocokkan menyalin teks soal (Rendah, 27 paket)
 
@@ -132,6 +140,8 @@ menimpa bukti bertanggal). Definisi yang dipakai:
 Validator dan uji konten tetap dapat dijalankan tanpa efek samping:
 
 ```bash
-npm run content:validate   # 336/336 VALID
-npm test                   # validator + fixture + katalog
+npm run content:validate   # hanya paket demo (demo-pecahan-kelas3) — bukan seluruh korpus
+npm test                   # vitest + fixture + katalog (336 entri)
 ```
+
+Validasi seluruh 336 paket memakai `validatePackageDirectory` per direktori (skrip sekali-pakai, tidak di-commit).
