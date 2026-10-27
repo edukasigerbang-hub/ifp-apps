@@ -32,7 +32,7 @@ Jangan mengerjakan semua fase dalam satu prompt besar; tiap fase punya acceptanc
 | OD-6 | Nama publisher resmi + identifier aplikasi final | Signing, store, update continuity | **PROPOSED** — [brief identitas rilis & signing](../decisions/PROPOSAL-OD-6-release-identity.md) |
 | OD-7 | API schema, auth/authorization, error contract lengkap | Backend, sync, admin | **PARTIAL** — Supabase + Cloudflare dipilih; OpenAPI v1, Worker enrollment/sync, skema RLS ([ADR-0027](../decisions/ADR-0027-device-auth-openapi.md), [ADR-0028](../decisions/ADR-0028-supabase-cloudflare.md)); lisensi di Worker, RBAC admin, signing konten belum |
 | OD-8 | Standar "konten lengkap" per mapel/unit | Gerbang rilis konten | OPEN |
-| OD-9 | Apakah **88 paket tanpa aktivitas kuis** perlu diberi kuis? | Bentuk latihan, beban guru, target "5–10 soal" per paket | OPEN — temuan T-092 (2026-10-27): 244 paket eksplorasi+mencocokkan+pilihan ganda · **88 paket eksplorasi+mencocokkan+mengurutkan** · 4 paket eksplorasi+mencocokkan+jawaban singkat. Target 5–10 item sudah terpenuhi untuk setiap aktivitas dinilai yang ada; paket tanpa kuis umumnya keterampilan menulis/bercerita/seni/PJOK/PAI praktik. Butuh keputusan PO + Curriculum Lead, bukan kerja mekanis |
+| OD-9 | Apakah **88 paket tanpa aktivitas kuis** perlu diberi kuis? | Bentuk latihan, beban guru, target "5–10 soal" per paket | **SELESAI 2026-10-27 (diputuskan PO: "lakukan perbaikan")** — 88 paket mendapat aktivitas `kuis-penguatan` (499 soal: 5 soal kelas 1–2, 6 soal kelas 3–6) via `scripts/add-quiz-activity.mjs`; `activityIds` + `assessmentRefs` ikut diperbarui; tiap paket kini 4 aktivitas. Bukti: validator 336/336 VALID, volume gate lolos, R5 cermin 0/bias posisi 0/kunci-terpanjang 0, kedalaman minimum 10 item, katalog 88 entri `activityCount: 4`. Commit `d9c4ac9` |
 
 ## Gap terverifikasi
 
@@ -63,14 +63,16 @@ DV-01…DV-20 belum dijalankan. Lihat [DEVICE_VALIDATION.md](../../DEVICE_VALIDA
 - Remote GitHub aktif (`origin`); CI berjalan di remote sejak 2026-10-24 (run `40040384407` PASS).
 - Branch protection `main`: wajib PR + required checks `Web + server tests`, `Rust tests` (strict), admin terikat.
 
-## Review guru tertunda — item latihan T-092 (2026-10-27)
+## Review guru tertunda — item latihan T-092/T-093 (diperbarui 2026-10-27)
 
-695 soal kuis + 361 pasangan ditulis agen dari materi paket lalu dipasang otomatis. Semua lolos validator, volume gate, dan detektor R5, tetapi **belum dinilai manusia**; `reviewStatus` tetap `draft`. Paket berikut materi sumbernya tipis sehingga item sebagian berupa parafrase jauh atau diturunkan dari langkah urutan/eksplorasi — prioritaskan saat review guru:
+**Sudah dijalankan 2026-10-27:** audit baca-penuh atas 49 paket bermateri tertipis (11 paket kelas 1–2, 16 paket kelas 3–4, 22 paket kelas 5–6; 283 soal + 283 pasangan diperiksa). Hasil: **21 item cacat di 17 paket** dibetulkan (8 soal kuis: pengecoh mustahil, soal ambigu, fakta di luar materi; 13 pasangan: jawaban duplikat/sinonim atau salah pasang). Pengganti memakai fakta yang ada di materi; jumlah item/optionId/posisi kunci tidak berubah. Alat `scripts/apply-item-patches.mjs` (dry-run default), bukti `scripts/data/item-patches-kelas{12,34,56}-2026-10-27.json`, commit `983bd09`. Audit tidak menemukan jawaban kuis yang bertentangan dengan materi atau salah hitung pada 12 soal matematika yang diperiksa manual.
 
-- **Kelas 1–2:** `kelas2-bahasa-indonesia` b02, b04, b06, b07 · `kelas2-matematika` b08 · `kelas2-pai` b04, b05, b07
-- **Kelas 3:** `kelas3-pendidikan-pancasila` b06, b08 · `kelas3-ipas` b07 · `kelas3-pai` b04 · `kelas3-pjok` b06 · `kelas3-seni-rupa` b05
-- **Kelas 4:** `kelas4-ipas` b01, b05, b07 · `kelas4-pendidikan-pancasila` b08 · `kelas4-pai` b04, b07 · `kelas4-pjok` b06 · `kelas4-seni-rupa` b05, b08
-- **Kelas 5:** `kelas5-bahasa-indonesia` b02, b04, b07, b08 · `kelas5-matematika` b03 (ejaan "FPB/KPK" sesuai kurikulum)
-- **Kelas 6:** `kelas6-bahasa-indonesia` b01, b02, b03, b07 · `kelas6-matematika` b05 (alas tabung = lingkaran disimpulkan), b07 (peluang mata genap 3/6 tidak dinyatakan) · `kelas6-ipas` b02 (3 fakta inti, variasi sudut pandang), b04, b05 · `kelas6-pai` b02 (materi paling tipis) · `kelas6-pjok` b03, b05 (pasangan bersifat peralatan/keselamatan) · `kelas6-seni-rupa` b02, b04, b06, b08 · `kelas6-pendidikan-pancasila` b07 (pasangan disimpulkan dari langkah ordering)
+**Masih perlu penilaian guru** (bukan cacat terverifikasi, tetapi materi sumbernya tipis sehingga paling berisiko):
+- `kelas2-matematika-b08-data` — materi tidak memuat angka/tabel; soal bergantung pada diagram batang yang hanya ada di kuis.
+- `kelas6-bahasa-indonesia-b02-eksposisi` — materi ≈10 kata isi; kuis menanyakan isi argumen dan sikap objektif.
+- `kelas3-pendidikan-pancasila-b06-nkri` — 3 langkah fakta; soal "bahasa persatuan" dan pasangan ke-4 bertumpu pada pengetahuan umum NKRI.
+- `kelas4-ipas-b01-makhluk-hidup` — kuis jawaban singkat; soal "benda tak hidup pada gambar" berpotensi ambigu dengan "air".
+- `kelas2-pai-b05-puasa`, `kelas3-pjok-b06-senam-dasar`, `kelas4-seni-rupa-b08-pameran-kelas`, `kelas5-pjok-b06-senam-lantai`, `kelas6-pai-b07-sejarah-islam`, `kelas6-pjok-b03-atletik` — beberapa pengecoh/pasangan bertumpu pada pengetahuan umum di luar teks paket.
+- Catatan reviewer: sejumlah kuis memakai 4 opsi dengan pengecoh lemah (mis. PAI "Hari libur/Hari ujian"). Format 4 opsi sah menurut aturan; pemangkasan menjadi 3 opsi butuh penulisan ulang manual, belum dikerjakan.
 
-Catatan: daftar ini **bukan** penilaian kualitas; ia hanya menandai paket yang materinya paling sedikit sehingga item baru lebih berisiko melenceng dari tujuan pembelajaran.
+Semua item tetap `reviewStatus: draft`. Audit ini menurunkan risiko, bukan menggantikan penilaian guru.

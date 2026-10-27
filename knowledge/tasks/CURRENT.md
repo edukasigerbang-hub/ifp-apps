@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan: bias posisi kunci 91→0 paket dan 908 pasangan matching yang menyalin eksplorasi→0 (T-091)**; **volume latihan kelas 1–6 dinaikkan ke 5–10 item per aktivitas dinilai (T-092: +695 soal kuis, +361 pasangan)**; **Player dipadatkan + mode layar penuh (T-093: panel aktivitas 601→1225 px pada 1280)**; a11y 17/17 PASS, E2E smoke/activities/journey/mode-switch/player-fullscreen PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan (T-091)**; **volume latihan kelas 1–6 dinaikkan ke 5–10 item per aktivitas dinilai (T-092: +695 soal kuis, +361 pasangan)**; **Player dipadatkan + mode layar penuh (T-093)**; **setiap paket kini punya kuis (T-094/OD-9: +499 soal pada 88 paket)**; **21 item pada 17 paket bermateri tipis dibetulkan (T-095)**; a11y 17/17 PASS, E2E smoke/activities/journey/mode-switch/player-fullscreen PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -132,6 +132,16 @@
 
 | Check | Hasil |
 |---|---|
+| Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
+| Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
+| Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
+| R5 pasca T-094/T-095 | **PASS** — cermin 0, bias posisi 0 paket (578/559/578/163), kunci-terpanjang 0 paket |
+| Kedalaman pasca T-094 | **PASS** — minimum 5 langkah / 3 aktivitas / 10 item, 0 paket di bawah ambang |
+| Audit materi item (T-095) | **SELESAI** — 49 paket bermateri tipis dibaca penuh (283 soal + 283 pasangan); 21 item cacat di 17 paket dibetulkan; 0 jawaban bertentangan/salah hitung pada 12 soal matematika yang dicek manual |
+| `npm test` / `npm run build` (T-094/T-095) | **PASS** — 105/105 + fixture 4/4 + catalog 336/336; `tsc` + Vite PASS |
+| `npm run a11y` (T-094) | **PASS** — 17/17 (0 error, 7 warning reflow/target sentuh) |
+| E2E (T-094) | **PASS** — player-fullscreen 6/6, learning-journey 11/11, activities 14/14 (satu percobaan kena timeout simpan pertama yang sudah tercatat sebagai flake, lalu PASS tanpa perubahan kode) |
+| `cargo test` (T-094/T-095) | **NOT RUN** — tanpa perubahan Rust |
 | Volume latihan kelas 1–2 (T-092) | **PASS** — kuis 5 soal/paket (min 5, maks 5), mencocokkan 5 pasangan (min 5, maks 6); 112 paket |
 | Volume latihan kelas 3–6 (T-092) | **PASS** — kuis 6 soal (min 6, maks 6), mencocokkan 6 pasangan (min 6, maks 7) pada 224 paket; `check-practice-volume.mjs`: "Semua aktivitas dinilai berada dalam rentang target" |
 | Kedalaman pasca T-092 | **PASS** — minimum aktual 5 langkah / 3 aktivitas / **10 item** (sebelumnya 8); 0 paket di bawah ambang |
@@ -748,3 +758,32 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 **Batas (jujur):** layar penuh adalah mode di dalam jendela aplikasi, **bukan** fullscreen OS. Ruang kosong yang tersisa di layar penuh berasal dari gambar eksplorasi yang mempertahankan rasio aspek (di-center), bukan dari layout. Mode layar penuh diuji pada mode admin (sidebar) — mekanisme penyembunyian chrome sama untuk mode belajar (rail ikon), tetapi klik UI pada mode belajar belum diuji dengan layar penuh.
 
 **Sisa:** keputusan D-UX-2/4/5/6 · utang shell `main` vs dokumen sebagai scroller (BACKLOG) · review visual guru/PO.
+
+### Handoff Kuis untuk 88 Paket + Perbaikan Item (2026-10-27, T-094 + T-095)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: "lakukan perbaikan" atas dua hal yang sebelumnya sengaja tidak diputuskan sendiri — OD-9 (88 paket tanpa aktivitas kuis) dan item latihan yang masih `draft` karena materinya tipis.
+
+**T-094 — kuis untuk 88 paket (commit `d9c4ac9`).**
+- Sebaran: kelas 1 15 · kelas 2 14 · kelas 3 16 · kelas 4 12 · kelas 5 15 · kelas 6 16 paket.
+- Tiap paket mendapat berkas `activities/activity-00N.json` bertipe multiple-choice, `activityId` = `kuis-penguatan`, 5 soal (kelas 1–2) atau 6 soal (kelas 3–6), 3 opsi per soal; lesson diperbarui (`activityIds` + `assessmentRefs`), sehingga tombol "Lanjut berlatih" pada eksplorasi kini menuju kuis.
+- **499 soal baru** ditulis 6 agen penulis dari materi paket masing-masing (referensi/tujuan/eksplorasi/mencocokkan/mengurutkan), bukan dari digest ringkas.
+- Alat baru `scripts/add-quiz-activity.mjs` (dry-run default, `--apply`, idempoten: paket yang sudah punya `kuis-penguatan` dilewati; menolak soal <3 atau >4 opsi, opsi duplikat, prompt berulang). Diuji kering + diterapkan pada 1 paket percobaan, divalidasi, lalu dikembalikan sebelum pemakaian massal.
+- Posisi kunci disebar ulang dengan `scripts/spread-answer-positions.mjs` (deterministik): 578/559/578/163 (indeks 0/1/2/3).
+
+**T-095 — perbaikan item bermateri tipis (commit `983bd09`).**
+- 49 paket bermateri tertipis (daftar dari T-092) diaudit baca-penuh oleh 3 agen reviewer: 283 soal + 283 pasangan diperiksa terhadap materi paketnya.
+- Hasil: **21 item cacat di 17 paket** — 8 soal kuis (5 pengecoh mustahil, 3 ambigu, 2 fakta di luar materi yang tumpang tindih) dan 13 pasangan (jawaban duplikat/sinonim 10, salah pasang 3).
+- Semua pengganti memakai fakta yang ada di materi; jumlah item, `optionId`, dan posisi kunci tidak berubah. Satu usulan reviewer yang memperkenalkan pengecoh ambigu ("bel berbunyi" untuk "dengarkan sampai …") diganti sebelum diterapkan.
+- Alat baru `scripts/apply-item-patches.mjs` (dry-run default, menolak id tak dikenal/opsi duplikat/`correctResponse` asing), data patch di `scripts/data/item-patches-kelas{12,34,56}-2026-10-27.json`.
+- Reviewer menemukan **0** jawaban kuis bertentangan dengan materi dan **0** salah hitung pada 12 soal matematika yang diperiksa manual.
+
+**Verifikasi aktual (HEAD `983bd09`):** validator **336/336 VALID** (0 issue) · volume gate "Semua aktivitas dinilai berada dalam rentang target" (tiap kelas 56 aktivitas kuis) · R5 cermin **0** / bias posisi **0** / kunci-terpanjang **0** · kedalaman minimum **10 item**, 0 paket di bawah ambang · katalog **88 entri `activityCount: 4`** · `npm test` **105/105** + fixture 4/4 + catalog 336/336 · `npm run build` PASS · `npm run a11y` **17/17** · E2E player-fullscreen 6/6, learning-journey 11/11, activities 14/14 (satu percobaan kena timeout simpan pertama — flake yang sudah tercatat di BACKLOG — lalu PASS pada percobaan berikutnya tanpa perubahan kode) · `cargo test` tidak dijalankan (tanpa perubahan Rust).
+
+**Batas (jujur):**
+1. 499 + 695 soal tetap **belum dinilai guru**; `reviewStatus` tetap `draft`. Audit ini menurunkan risiko faktual, bukan menggantikan penilaian pedagogis.
+2. Sejumlah kuis memakai 4 opsi dengan pengecoh lemah (mis. PAI "Hari libur/Hari ujian"); 4 opsi sah menurut aturan, pemangkasan ke 3 opsi butuh penulisan manual — belum dikerjakan.
+3. Daftar sisa paket yang perlu perhatian guru ada di BACKLOG bagian "Review guru tertunda".
+4. E2E tidak menelusuri 499 soal baru satu per satu; verifikasi isi lewat audit baca-penuh 49 paket + skrip korpus.
+5. Tab aktivitas kini bisa berjumlah 4 per paket; tata letak memakai `flex-wrap` sehingga baris tab bisa menjadi dua baris di layar sempit — belum ada tangkapan visual khusus untuk kasus 4 tab.
+
+**Sisa:** review guru atas item baru · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.

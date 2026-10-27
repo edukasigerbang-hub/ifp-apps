@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "abc1be6",
+  "commit": "983bd09",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 31,
+  "context_version": 32,
   "skill_registry_version": 0,
-  "current_task": "Review guru atas 695 soal + 361 pasangan baru (T-092) dan keputusan OD-9 soal 88 paket tanpa aktivitas kuis; review manusia R1–R6/R8–R9/R12 atas 336 paket",
-  "last_task": "T-092 volume latihan kelas 1–6 (695 soal kuis + 361 pasangan) + T-093 Player padat dengan mode layar penuh",
+  "current_task": "Review guru atas 1.194 soal kuis + 361 pasangan baru; keputusan desain D-UX-2/4/5/6; keputusan Curriculum Lead IPAS Fase A (OD-1)",
+  "last_task": "T-094 kuis untuk 88 paket tanpa kuis (OD-9, +499 soal) + T-095 perbaikan 21 item cacat pada 17 paket bermateri tipis",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-27T20:36:20+07:00",
-  "last_validation": "T-092+T-093 (2026-10-27, HEAD abc1be6/e56149f): validator 336/336 VALID (0 issue, 336 warning draft) · volume gate 'Semua aktivitas dinilai berada dalam rentang target' (kelas 1–2 kuis 5/5 pasangan 5–6; kelas 3–6 kuis 6/6 pasangan 6–7) · kedalaman minimum 5 langkah/3 aktivitas/10 item, 0 paket di bawah ambang · R5 cermin 0 / bias posisi 0 paket (413/393/410/163) / kunci-terpanjang 0 paket (sebelumnya 10) · npm test 105/105 (15 berkas) + fixture 4/4 + catalog 336/336 · npm run build PASS · npm run a11y 17/17 (0 error, 7 warning) · E2E player-fullscreen 6/6, activities 14/14, learning-journey 11/11, smoke 8/8, mode-switch 6/6 · cargo test tidak dijalankan (tanpa perubahan Rust). Pengukuran T-093: panel aktivitas 601→1225 px (1280) dan 689→969 px (1024) saat layar penuh. BELUM: 88 paket (26%) tanpa aktivitas kuis (OD-9, keputusan PO+Curriculum Lead) · item baru belum dinilai guru, reviewStatus tetap draft · mode layar penuh belum diuji pada mode belajar lewat klik UI · D-UX-2/4/5/6 · scripts/pedagogical-prereview.mjs dan review-content.ts menulis ke path bertanggal tetap sehingga tidak dijalankan ulang.",
+  "last_updated": "2026-10-27T21:31:40+07:00",
+  "last_validation": "T-094+T-095 (2026-10-27, HEAD 983bd09): setiap paket kini punya aktivitas kuis — 88 paket baru (kelas 1-2: 5 soal, kelas 3-6: 6 soal) = 499 soal via scripts/add-quiz-activity.mjs; lesson.activityIds + assessmentRefs diperbarui. Audit baca-penuh 49 paket bermateri tipis (283 soal + 283 pasangan) menemukan 21 item cacat di 17 paket (8 soal: pengecoh mustahil/ambigu/fakta luar materi; 13 pasangan: duplikat-sinonim/salah pasang) dan semuanya dibetulkan via scripts/apply-item-patches.mjs tanpa mengubah jumlah item/optionId/posisi kunci. Verifikasi aktual: validator 336/336 VALID (0 issue, 336 warning draft) · volume gate 'Semua aktivitas dinilai berada dalam rentang target' (tiap kelas 56 aktivitas kuis) · R5 cermin 0 / bias posisi 0 (578/559/578/163) / kunci-terpanjang 0 · kedalaman minimum 5 langkah/3 aktivitas/10 item, 0 paket di bawah ambang · katalog 88 entri activityCount 4 · npm test 105/105 + fixture 4/4 + catalog 336/336 · npm run build PASS · npm run a11y 17/17 (0 error, 7 warning) · E2E player-fullscreen 6/6, learning-journey 11/11, activities 14/14 (satu percobaan kena timeout simpan pertama yang sudah tercatat sebagai flake, PASS pada ulangan tanpa perubahan kode) · cargo test tidak dijalankan (tanpa perubahan Rust). BELUM: semua item tetap draft (belum dinilai guru) · sejumlah kuis 4 opsi dengan pengecoh lemah · sisa paket prioritas review di BACKLOG · tab aktivitas kini bisa 4 per paket (baris tab bisa terlipat di layar sempit, belum ada tangkapan visual khusus).",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Coba mode layar penuh di app desktop (tombol 'Layar penuh' pada Player; Escape untuk keluar) dan baca 2–3 paket latihan kelas 6 untuk menilai kewajaran soal baru (reviewer manusia, bukan agent). Berikutnya: keputusan OD-9 (88 paket tanpa kuis) + review guru daftar paket bermateri tipis di BACKLOG; reviewer manusia R1-R6/R8-R9/R12 memakai knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; keputusan Curriculum Lead soal IPAS di Fase A (OD-1); verifikasi CP/ATP per bab. Utang: tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts perlu diparameterkan agar laporan bisa dibangun ulang tanpa menimpa bukti. Keputusan desain yang memblokir sisa UX: D-UX-2, D-UX-4, D-UX-5, D-UX-6. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Coba di app desktop: buka beberapa paket yang sebelumnya tanpa kuis (mis. kelas1-bahasa-indonesia-b03-menyimak-cerita) dan paket kelas 6, jalankan kuis baru; nilai kewajaran soal dan pengecoh (reviewer manusia, bukan agent). Berikutnya: review guru atas daftar prioritas di BACKLOG; keputusan D-UX-2/4/5/6; reviewer manusia R1-R6/R8-R9/R12 memakai knowledge/release/REVIEW_WORKSHEET_2026-10-25.md; keputusan Curriculum Lead IPAS Fase A (OD-1); verifikasi CP/ATP per bab. Utang alat: parameterkan tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
