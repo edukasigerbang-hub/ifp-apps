@@ -12,21 +12,21 @@
       {
         "prompt": "Apa ciri lingkungan bersih?",
         "assetPath": "assets/lingkungan-bersih-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu menyapu lantai kelas dan Bima mengelap meja; dua tempat sampah hijau dan biru tanpa label di sudut ruangan.",
         "reveal": "Sampah ada di tempatnya, lantai bersih, dan udara segar.",
         "hint": "Lihat sekelilingmu."
       },
       {
         "prompt": "Apa akibat lingkungan kotor?",
         "assetPath": "assets/lingkungan-bersih-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu menyapu lantai kelas dan Bima mengelap meja; dua tempat sampah hijau dan biru tanpa label di sudut ruangan.",
         "reveal": "Banyak lalat dan nyamuk, bau tidak sedap, dan mudah sakit.",
         "hint": "Sampah menumpuk berbahaya."
       },
       {
         "prompt": "Bagaimana menjaga lingkungan bersama?",
         "assetPath": "assets/lingkungan-bersih-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu menyapu lantai kelas dan Bima mengelap meja; dua tempat sampah hijau dan biru tanpa label di sudut ruangan.",
         "reveal": "Kerja bakti, membuang sampah pada tempatnya, dan menanam pohon.",
         "hint": "Lingkungan dijaga bersama-sama."
       },
@@ -35,14 +35,14 @@
         "reveal": "Menjaga kebersihan lingkungan rumah dan sekolah agar tetap sehat.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/lingkungan-bersih-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu menyapu lantai kelas dan Bima mengelap meja; dua tempat sampah hijau dan biru tanpa label di sudut ruangan."
       },
       {
         "prompt": "Apa yang kamu lakukan jika melihat sampah di halaman?",
         "reveal": "Memungutnya dan membuangnya ke tempat sampah.",
         "hint": "Mulai dari diri sendiri.",
         "assetPath": "assets/lingkungan-bersih-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu menyapu lantai kelas dan Bima mengelap meja; dua tempat sampah hijau dan biru tanpa label di sudut ruangan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu menyapu lantai kelas dan Bima mengelap meja; dua tempat sampah hijau dan biru tanpa label di sudut ruangan."
   }
 }

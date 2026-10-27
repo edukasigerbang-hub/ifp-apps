@@ -12,21 +12,21 @@
       {
         "prompt": "Ruang apa saja yang ada di rumahmu?",
         "assetPath": "assets/lingkungan-rumah-sekolah.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu menyapu daun di halaman rumah dan Bima menyiram bunga; gedung sekolah dengan bendera terlihat di belakang.",
         "reveal": "Kamar tidur, dapur, kamar mandi, dan ruang tamu.",
         "hint": "Ingat denah rumahmu."
       },
       {
         "prompt": "Tempat apa saja yang ada di sekolah?",
         "assetPath": "assets/lingkungan-rumah-sekolah.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu menyapu daun di halaman rumah dan Bima menyiram bunga; gedung sekolah dengan bendera terlihat di belakang.",
         "reveal": "Kelas, perpustakaan, kantin, dan halaman.",
         "hint": "Ingat sekolahmu."
       },
       {
         "prompt": "Bagaimana menjaga lingkungan tetap bersih?",
         "assetPath": "assets/lingkungan-rumah-sekolah.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu menyapu daun di halaman rumah dan Bima menyiram bunga; gedung sekolah dengan bendera terlihat di belakang.",
         "reveal": "Membuang sampah di tempat sampah dan menyapu lantai.",
         "hint": "Jangan membiarkan sampah berserakan."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal ruangan di rumah dan sekolah serta menjaga kebersihannya.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/lingkungan-rumah-sekolah.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu menyapu daun di halaman rumah dan Bima menyiram bunga; gedung sekolah dengan bendera terlihat di belakang."
       },
       {
         "prompt": "Di mana kamu membaca buku di sekolah?",
         "reveal": "Di perpustakaan atau di kelas.",
         "hint": "Ada rak buku di sana.",
         "assetPath": "assets/lingkungan-rumah-sekolah.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu menyapu daun di halaman rumah dan Bima menyiram bunga; gedung sekolah dengan bendera terlihat di belakang."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu menyapu daun di halaman rumah dan Bima menyiram bunga; gedung sekolah dengan bendera terlihat di belakang."
   }
 }

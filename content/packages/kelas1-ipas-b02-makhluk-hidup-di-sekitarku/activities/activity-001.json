@@ -12,21 +12,21 @@
       {
         "prompt": "Makhluk hidup apa yang kamu lihat di rumah?",
         "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan.",
         "reveal": "Kucing, ayam, burung, pohon, dan rumput.",
         "hint": "Cari yang bisa bergerak atau tumbuh."
       },
       {
         "prompt": "Apa bedanya makhluk hidup dan benda tak hidup?",
         "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan.",
         "reveal": "Makhluk hidup bernapas, tumbuh, dan butuh makanan. Batu tidak.",
         "hint": "Bandingkan kucing dengan batu."
       },
       {
         "prompt": "Apa kebutuhan makhluk hidup?",
         "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan.",
         "reveal": "Air, makanan, udara, dan tempat hidup.",
         "hint": "Semua makhluk hidup butuh air."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal makhluk hidup dan benda tak hidup di rumah dan di sekolah.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan."
       },
       {
         "prompt": "Sebutkan satu benda tak hidup di kelasmu.",
         "reveal": "Meja, kursi, atau papan tulis. Benda tak hidup tidak bernapas.",
         "hint": "Benda tak hidup tidak tumbuh.",
         "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan."
   }
 }

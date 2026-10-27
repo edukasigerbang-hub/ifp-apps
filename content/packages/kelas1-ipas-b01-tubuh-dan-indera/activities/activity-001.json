@@ -12,21 +12,21 @@
       {
         "prompt": "Bagian tubuh apa saja yang kamu punya?",
         "assetPath": "assets/tubuh-dan-indera.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas.",
         "reveal": "Kepala, badan, tangan, dan kaki.",
         "hint": "Lihat tubuhmu dari atas ke bawah."
       },
       {
         "prompt": "Indera apa yang ada di wajahmu?",
         "assetPath": "assets/tubuh-dan-indera.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas.",
         "reveal": "Mata untuk melihat, hidung untuk mencium, telinga untuk mendengar, dan lidah untuk merasakan.",
         "hint": "Kulit juga indera peraba."
       },
       {
         "prompt": "Bagaimana cara menjaga tubuh tetap sehat?",
         "assetPath": "assets/tubuh-dan-indera.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas.",
         "reveal": "Mandi setiap hari, mencuci tangan dengan sabun, menyikat gigi, dan makan makanan bergizi.",
         "hint": "Lakukan setiap hari, bukan hanya kadang-kadang."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal bagian tubuh dan lima indera beserta kegunaannya dalam kegiatan sehari-hari.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/tubuh-dan-indera.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas."
       },
       {
         "prompt": "Indera apa yang kamu pakai saat mendengar bel sekolah?",
         "reveal": "Telinga. Telinga adalah indera pendengar.",
         "hint": "Ada di kedua sisi kepalamu.",
         "assetPath": "assets/tubuh-dan-indera.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas."
   }
 }

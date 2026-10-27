@@ -12,21 +12,21 @@
       {
         "prompt": "Cuaca apa saja yang sering kamu lihat?",
         "assetPath": "assets/cuaca-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima melihat keluar jendela kelas: matahari, hujan, dan pelangi di halaman sekolah; Bima memegang payung biru.",
         "reveal": "Cerah, berawan, dan hujan.",
         "hint": "Lihat langit dan awan."
       },
       {
         "prompt": "Apa tanda cuaca akan hujan?",
         "assetPath": "assets/cuaca-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima melihat keluar jendela kelas: matahari, hujan, dan pelangi di halaman sekolah; Bima memegang payung biru.",
         "reveal": "Awan gelap, angin bertiup, dan udara terasa dingin.",
         "hint": "Langit berwarna gelap."
       },
       {
         "prompt": "Apa yang dibawa saat hujan?",
         "assetPath": "assets/cuaca-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima melihat keluar jendela kelas: matahari, hujan, dan pelangi di halaman sekolah; Bima memegang payung biru.",
         "reveal": "Payung atau jas hujan, dan pakaian yang hangat.",
         "hint": "Supaya tubuh tetap kering."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenali cuaca cerah, berawan, dan hujan serta cara menyesuaikan diri.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/cuaca-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima melihat keluar jendela kelas: matahari, hujan, dan pelangi di halaman sekolah; Bima memegang payung biru."
       },
       {
         "prompt": "Cuaca hari ini bagaimana? Sebutkan tanda yang kamu lihat.",
         "reveal": "Jawaban sesuai pengamatan, misalnya cerah karena matahari bersinar.",
         "hint": "Lihat keluar jendela.",
         "assetPath": "assets/cuaca-di-sekitarku.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima melihat keluar jendela kelas: matahari, hujan, dan pelangi di halaman sekolah; Bima memegang payung biru."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu dan Bima melihat keluar jendela kelas: matahari, hujan, dan pelangi di halaman sekolah; Bima memegang payung biru."
   }
 }

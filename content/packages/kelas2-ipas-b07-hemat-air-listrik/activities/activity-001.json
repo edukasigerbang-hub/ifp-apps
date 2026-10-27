@@ -12,21 +12,21 @@
       {
         "prompt": "Untuk apa kita memakai air?",
         "assetPath": "assets/hemat-air-listrik.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Bima menutup keran wastafel dan Ayu mematikan sakelar lampu di koridor sekolah.",
         "reveal": "Untuk minum, mandi, mencuci, dan memasak.",
         "hint": "Air bersih harus dijaga."
       },
       {
         "prompt": "Untuk apa kita memakai listrik?",
         "assetPath": "assets/hemat-air-listrik.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Bima menutup keran wastafel dan Ayu mematikan sakelar lampu di koridor sekolah.",
         "reveal": "Untuk menyalakan lampu, kipas angin, dan televisi.",
         "hint": "Listrik membantu pekerjaan."
       },
       {
         "prompt": "Bagaimana menghemat air dan listrik?",
         "assetPath": "assets/hemat-air-listrik.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Bima menutup keran wastafel dan Ayu mematikan sakelar lampu di koridor sekolah.",
         "reveal": "Tutup keran setelah dipakai, matikan lampu saat siang, dan cabut pengisi daya setelah selesai.",
         "hint": "Matikan yang tidak dipakai."
       },
@@ -35,14 +35,14 @@
         "reveal": "Membiasakan menghemat air dan listrik di rumah dan di sekolah.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/hemat-air-listrik.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Bima menutup keran wastafel dan Ayu mematikan sakelar lampu di koridor sekolah."
       },
       {
         "prompt": "Sebutkan satu cara menghemat listrik di kelasmu.",
         "reveal": "Mematikan lampu dan kipas angin saat jam pelajaran selesai.",
         "hint": "Jangan biarkan alat menyala tanpa dipakai.",
         "assetPath": "assets/hemat-air-listrik.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Bima menutup keran wastafel dan Ayu mematikan sakelar lampu di koridor sekolah."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Bima menutup keran wastafel dan Ayu mematikan sakelar lampu di koridor sekolah."
   }
 }

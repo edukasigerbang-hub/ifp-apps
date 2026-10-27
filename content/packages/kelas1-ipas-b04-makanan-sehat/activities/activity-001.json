@@ -12,21 +12,21 @@
       {
         "prompt": "Makanan apa yang sehat untuk tubuh?",
         "assetPath": "assets/makanan-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima makan bersama di meja: nasi, sayur, buah, dan segelas susu; Bima memegang sendok dengan tangan kanan.",
         "reveal": "Sayur, buah, nasi, telur, dan ikan.",
         "hint": "Pilih makanan yang tidak berminyak."
       },
       {
         "prompt": "Minuman apa yang paling baik?",
         "assetPath": "assets/makanan-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima makan bersama di meja: nasi, sayur, buah, dan segelas susu; Bima memegang sendok dengan tangan kanan.",
         "reveal": "Air putih. Air putih membuat tubuh tetap segar.",
         "hint": "Minuman manis sebaiknya jarang diminum."
       },
       {
         "prompt": "Apa akibat terlalu banyak makan makanan manis?",
         "assetPath": "assets/makanan-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima makan bersama di meja: nasi, sayur, buah, dan segelas susu; Bima memegang sendok dengan tangan kanan.",
         "reveal": "Gigi bisa berlubang dan tubuh menjadi tidak sehat.",
         "hint": "Gula berlebih tidak baik untuk gigi."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal makanan dan minuman sehat serta membiasakan pilihan yang aman.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/makanan-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima makan bersama di meja: nasi, sayur, buah, dan segelas susu; Bima memegang sendok dengan tangan kanan."
       },
       {
         "prompt": "Sebutkan buah yang kamu suka.",
         "reveal": "Misalnya pisang, pepaya, atau jeruk. Buah baik untuk tubuh.",
         "hint": "Buah berwarna cerah biasanya banyak vitamin.",
         "assetPath": "assets/makanan-sehat.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima makan bersama di meja: nasi, sayur, buah, dan segelas susu; Bima memegang sendok dengan tangan kanan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu dan Bima makan bersama di meja: nasi, sayur, buah, dan segelas susu; Bima memegang sendok dengan tangan kanan."
   }
 }

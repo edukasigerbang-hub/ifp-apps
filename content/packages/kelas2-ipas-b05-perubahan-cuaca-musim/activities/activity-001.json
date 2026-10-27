@@ -12,21 +12,21 @@
       {
         "prompt": "Apa dua musim di Indonesia?",
         "assetPath": "assets/perubahan-cuaca-musim.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D halaman sekolah terbagi dua: sisi terang bermatahari dan sisi hujan; Ayu dan Bima berdiri di tengahnya, masing-masing memegang payung.",
         "reveal": "Musim hujan dan musim kemarau.",
         "hint": "Perhatikan curah hujan."
       },
       {
         "prompt": "Apa ciri musim hujan?",
         "assetPath": "assets/perubahan-cuaca-musim.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D halaman sekolah terbagi dua: sisi terang bermatahari dan sisi hujan; Ayu dan Bima berdiri di tengahnya, masing-masing memegang payung.",
         "reveal": "Sering turun hujan, udara lembap, dan banyak genangan air.",
         "hint": "Bawa payung ke sekolah."
       },
       {
         "prompt": "Apa ciri musim kemarau?",
         "assetPath": "assets/perubahan-cuaca-musim.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D halaman sekolah terbagi dua: sisi terang bermatahari dan sisi hujan; Ayu dan Bima berdiri di tengahnya, masing-masing memegang payung.",
         "reveal": "Jarang turun hujan, udara panas, dan tanah menjadi kering.",
         "hint": "Hemat air saat kemarau."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal perubahan cuaca serta musim hujan dan kemarau di Indonesia.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/perubahan-cuaca-musim.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D halaman sekolah terbagi dua: sisi terang bermatahari dan sisi hujan; Ayu dan Bima berdiri di tengahnya, masing-masing memegang payung."
       },
       {
         "prompt": "Kegiatan apa yang cocok saat musim hujan?",
         "reveal": "Misalnya membaca buku di rumah atau memakai jas hujan ke sekolah.",
         "hint": "Pilih kegiatan yang tetap aman.",
         "assetPath": "assets/perubahan-cuaca-musim.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D halaman sekolah terbagi dua: sisi terang bermatahari dan sisi hujan; Ayu dan Bima berdiri di tengahnya, masing-masing memegang payung."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D halaman sekolah terbagi dua: sisi terang bermatahari dan sisi hujan; Ayu dan Bima berdiri di tengahnya, masing-masing memegang payung."
   }
 }

@@ -12,21 +12,21 @@
       {
         "prompt": "Sumber daya alam apa yang ada di sekitar?",
         "assetPath": "assets/sumber-daya-alam.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima memandang sawah bertingkat, sungai jernih, dan turbin angin di bukit; petani bekerja di kejauhan.",
         "reveal": "Air, tanah, tumbuhan, hewan, dan sinar matahari.",
         "hint": "Semua berasal dari alam."
       },
       {
         "prompt": "Mana yang dapat diperbarui?",
         "assetPath": "assets/sumber-daya-alam.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima memandang sawah bertingkat, sungai jernih, dan turbin angin di bukit; petani bekerja di kejauhan.",
         "reveal": "Tumbuhan, hewan, air, dan sinar matahari dapat diperbarui.",
         "hint": "Bisa tumbuh atau tersedia kembali."
       },
       {
         "prompt": "Bagaimana menghemat sumber daya alam?",
         "assetPath": "assets/sumber-daya-alam.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu dan Bima memandang sawah bertingkat, sungai jernih, dan turbin angin di bukit; petani bekerja di kejauhan.",
         "reveal": "Hemat air, tidak menebang pohon sembarangan, dan membuang sampah pada tempatnya.",
         "hint": "Gunakan secukupnya."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal sumber daya alam di sekitar dan cara memakainya dengan bijak.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/sumber-daya-alam.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima memandang sawah bertingkat, sungai jernih, dan turbin angin di bukit; petani bekerja di kejauhan."
       },
       {
         "prompt": "Sebutkan satu sumber daya alam di sekolahmu.",
         "reveal": "Air di keran, pohon di halaman, atau sinar matahari.",
         "hint": "Lihat di sekitar halaman.",
         "assetPath": "assets/sumber-daya-alam.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu dan Bima memandang sawah bertingkat, sungai jernih, dan turbin angin di bukit; petani bekerja di kejauhan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu dan Bima memandang sawah bertingkat, sungai jernih, dan turbin angin di bukit; petani bekerja di kejauhan."
   }
 }

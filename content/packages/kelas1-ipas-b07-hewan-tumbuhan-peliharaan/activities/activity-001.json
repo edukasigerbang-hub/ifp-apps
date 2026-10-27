@@ -12,21 +12,21 @@
       {
         "prompt": "Hewan apa yang biasa dipelihara di rumah?",
         "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku.",
         "reveal": "Kucing, ayam, burung, dan ikan.",
         "hint": "Hewan di sekitar rumahmu."
       },
       {
         "prompt": "Tumbuhan apa yang bisa dipelihara?",
         "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku.",
         "reveal": "Tanaman hias, cabai, dan bunga.",
         "hint": "Tumbuhan butuh air dan cahaya."
       },
       {
         "prompt": "Apa kebutuhan hewan peliharaan?",
         "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye.",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku.",
         "reveal": "Makanan, air minum, dan tempat hidup yang bersih.",
         "hint": "Beri makan setiap hari."
       },
@@ -35,14 +35,14 @@
         "reveal": "Mengenal hewan dan tumbuhan peliharaan serta cara merawatnya.",
         "hint": "Baca kembali ringkasan pelajaran.",
         "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku."
       },
       {
         "prompt": "Apa yang terjadi jika tanaman tidak disiram?",
         "reveal": "Tanaman menjadi layu karena kekurangan air.",
         "hint": "Daunnya akan menggulung.",
         "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
-        "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Ilustrasi 3D tanaman muda berakar, model relief bumi, bola dunia, dan gelas kimia berisi cairan oranye."
+    "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku."
   }
 }
