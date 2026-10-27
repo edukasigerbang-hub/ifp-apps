@@ -1,12 +1,13 @@
 import { createHash } from "node:crypto";
-import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { validatePackageDirectory } from "./lib/validatePackageDirectory";
+import { ensureWritable, parseReviewArgs } from "./lib/reviewOutput.mjs";
 
 const packagesRoot = path.resolve("content/packages");
-const outDir = path.resolve("knowledge/content");
-const outJson = path.join(outDir, "review-flags-2026-10-26.json");
-const outMd = path.join(outDir, "REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md");
+const { date, outDir, force } = parseReviewArgs(process.argv.slice(2));
+const outJson = path.join(outDir, `review-flags-${date}.json`);
+const outMd = path.join(outDir, `REVIEW_REPORT_${date}_ALL_DRAFTS.md`);
 
 const subjectLabels: Record<string, string> = {
   matematika: "Matematika",
@@ -449,10 +450,10 @@ const idList = (list: PackageRecord[], limit = 20) =>
         .join(", ");
 
 const lines: string[] = [];
-lines.push("# Review Teknis Semua Paket Draft — 2026-10-26");
+lines.push(`# Review Teknis Semua Paket Draft — ${date}`);
 lines.push("");
-lines.push("**Status:** `TEKNIS-AUDIT` — **bukan approval pedagogis dan bukan sign-off OD-1**. Seluruh angka di bawah berasal dari eksekusi aktual pada 320 paket per 2026-10-26.");
-lines.push("**Pemicu:** lanjutan T-005b (review konten) setelah migrasi WebP dan pengayaan kedalaman 320 paket.");
+lines.push(`**Status:** \`TEKNIS-AUDIT\` — **bukan approval pedagogis dan bukan sign-off OD-1**. Seluruh angka di bawah berasal dari eksekusi aktual pada ${summary.total} paket per ${date}.`);
+lines.push("**Pemicu:** lanjutan T-005b (review konten) setelah migrasi WebP dan pengayaan kedalaman paket.");
 lines.push("**Cakupan:** seluruh paket di `content/packages/`.");
 lines.push("**Batas:** R1–R6, R8–R9, dan R12 memerlukan penilaian manusia; laporan ini hanya menyajikan bukti teknis yang dapat diperiksa ulang.");
 lines.push("");
@@ -484,7 +485,7 @@ lines.push(`| Klaim “Kurikulum Merdeka” di \`src/\` + CATALOG (R12) | ${summ
 lines.push("");
 lines.push("## Rubrik R1–R12 — status yang dapat dibuktikan agent");
 lines.push("");
-lines.push("| # | Kriteria | Status teknis 2026-10-26 | Bukti / catatan |");
+lines.push(`| # | Kriteria | Status teknis ${date} | Bukti / catatan |`);
 lines.push("|---|---|---|---|");
 lines.push(`| R1 | Tujuan terukur & sesuai kelas | PETUNJUK TEKNIS: ${summary.objectivesPartial} paket perlu cek | ${summary.objectivesPartial === 0 ? "Semua tujuan punya kata kunci yang muncul di aktivitas (heuristik kata kunci, bukan penilaian pedagogis)." : `Heuristik kata kunci: ${summary.objectivesPartial} paket dengan tujuan tercakup sebagian/nol.`} |`);
 lines.push("| R2 | Isi faktual benar | **HUMAN REQUIRED** | Perlu guru mapel; agent tidak menilai kebenaran konsep. |");
@@ -593,10 +594,10 @@ lines.push("");
 lines.push("- Laporan ini **tidak menaikkan** `reviewStatus` (semua paket tetap `draft`) dan **tidak menggantikan** review manusia.");
 lines.push("- Heuristik R1/R3 hanyalah penunjuk otomatis; keputusan pedagogis tetap milik reviewer.");
 lines.push("- R9 bersandar pada dokumentasi internal (semua aset dibuat via Google Flow); tidak ada lisensi pihak ketiga yang terdeteksi.");
-lines.push("- Data mentah per paket: [`review-flags-2026-10-26.json`](review-flags-2026-10-26.json).");
+lines.push(`- Data mentah per paket: [\`review-flags-${date}.json\`](review-flags-${date}.json).`);
 lines.push("");
 
-mkdirSync(outDir, { recursive: true });
+ensureWritable([outMd, outJson], { force });
 writeFileSync(outMd, `${lines.join("\n")}\n`);
 writeFileSync(
   outJson,

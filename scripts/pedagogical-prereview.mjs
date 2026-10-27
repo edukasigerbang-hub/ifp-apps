@@ -4,15 +4,17 @@
  * Skrip ini TIDAK memberi PASS/FAIL, tidak menaikkan reviewStatus, dan tidak
  * menggantikan penilaian R1–R6, R8–R9, R12 oleh reviewer manusia.
  */
-import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { detectExplorationCopies } from "./lib/mirrorPairs.mjs";
+import { ensureWritable, parseReviewArgs } from "./lib/reviewOutput.mjs";
 
 const packagesRoot = path.resolve("content/packages");
-const outDir = path.resolve("knowledge/content");
-const outMd = path.join(outDir, "PEDAGOGICAL_PREREVIEW_2026-10-26.md");
-const outSample = path.join(outDir, "PEDAGOGICAL_SAMPLE_2026-10-26.md");
-const outJson = path.join(outDir, "prereview-evidence-2026-10-26.json");
-const outCsv = path.join(outDir, "prereview-flags-2026-10-26.csv");
+const { date, outDir, force } = parseReviewArgs(process.argv.slice(2));
+const outMd = path.join(outDir, `PEDAGOGICAL_PREREVIEW_${date}.md`);
+const outSample = path.join(outDir, `PEDAGOGICAL_SAMPLE_${date}.md`);
+const outJson = path.join(outDir, `prereview-evidence-${date}.json`);
+const outCsv = path.join(outDir, `prereview-flags-${date}.csv`);
 
 const subjectLabels = {
   matematika: "Matematika",
@@ -402,6 +404,7 @@ for (const dirName of dirs) {
     matchingPairList.length === 0
       ? null
       : Number((mirroredPairs.length / matchingPairList.length).toFixed(2));
+  const explorationCopies = detectExplorationCopies(activities);
 
   const feedbackPolicies = activities.map((activity) => ({
     activityId: activity.activityId,
@@ -507,6 +510,8 @@ for (const dirName of dirs) {
       matchingPairs: matchingPairList.length,
       mirroredPairs: mirroredPairs.length,
       matchingMirrorShare,
+      explorationCopies: explorationCopies.length,
+      explorationCopyDetails: explorationCopies,
       positionBias,
       detail: assessmentItems.map((item, index) => ({
         ...item,
@@ -593,12 +598,12 @@ const priority = [...records]
   .sort((a, b) => b.score - a.score || a.record.packageId.localeCompare(b.record.packageId));
 
 const md = [];
-md.push("# Pra-Review Pedagogis Agent — 2026-10-26");
+md.push("# Pra-Review Pedagogis Agent — " + date);
 md.push("");
 md.push("**Status:** `PRA-REVIEW AGENT — BUKAN APPROVAL`. Laporan ini mengumpulkan bukti untuk reviewer manusia; **tidak ada PASS/FAIL**, **tidak ada** perubahan `reviewStatus`, dan **bukan** pengganti penilaian R1–R6, R8–R9, R12.");
-md.push("**Cakupan:** 320 paket draft (`content/packages/`).");
+md.push(`**Cakupan:** ${total} paket draft (\`content/packages/\`).`);
 md.push("**Rubrik:** [REVIEW_RUBRIC.md](REVIEW_RUBRIC.md) · **Lembar kerja:** [REVIEW_WORKSHEET_2026-10-25.md](../release/REVIEW_WORKSHEET_2026-10-25.md)");
-md.push("**Berkas pendamping:** [sampel baca stratifikasi](PEDAGOGICAL_SAMPLE_2026-10-26.md) · [bukti per paket (JSON)](prereview-evidence-2026-10-26.json) · [flag per paket (CSV)](prereview-flags-2026-10-26.csv)");
+md.push(`**Berkas pendamping:** [sampel baca stratifikasi](PEDAGOGICAL_SAMPLE_${date}.md) · [bukti per paket (JSON)](prereview-evidence-${date}.json) · [flag per paket (CSV)](prereview-flags-${date}.csv)`);
 md.push("");
 md.push("## Batas peran");
 md.push("");
@@ -651,10 +656,11 @@ if (flagCount("R1") === 0) {
 md.push("");
 md.push("## R2 — Bahan baca akurasi faktual");
 md.push("");
-md.push("Agent tidak menilai kebenaran konsep. Bahan baca lengkap ada di [sampel baca](PEDAGOGICAL_SAMPLE_2026-10-26.md); setiap jawaban eksplorasi, kunci soal, pasangan matching, dan urutan ordering ditampilkan apa adanya untuk ahli mapel.");
+md.push(`Agent tidak menilai kebenaran konsep. Bahan baca lengkap ada di [sampel baca](PEDAGOGICAL_SAMPLE_${date}.md); setiap jawaban eksplorasi, kunci soal, pasangan matching, dan urutan ordering ditampilkan apa adanya untuk ahli mapel.`);
 md.push("");
-md.push(`- Total klaim di seluruh 320 paket: **${records.reduce((sum, record) => sum + record.r2.claims, 0)}** (${records.reduce((sum, record) => sum + record.r2.reveals, 0)} jawaban eksplorasi · ${records.reduce((sum, record) => sum + record.r2.questions, 0)} soal · ${records.reduce((sum, record) => sum + record.r2.pairs, 0)} pasangan · ${records.reduce((sum, record) => sum + record.r2.orderingItems, 0)} item urutan); sampel baca memuat sebagian untuk pembacaan ahli.`);
-md.push(`- Seluruh paket memiliki minimal 3 aktivitas dan 8 item asesmen (standar kedalaman 320/320).`);
+md.push(`- Total klaim di seluruh ${total} paket: **${records.reduce((sum, record) => sum + record.r2.claims, 0)}** (${records.reduce((sum, record) => sum + record.r2.reveals, 0)} jawaban eksplorasi · ${records.reduce((sum, record) => sum + record.r2.questions, 0)} soal · ${records.reduce((sum, record) => sum + record.r2.pairs, 0)} pasangan · ${records.reduce((sum, record) => sum + record.r2.orderingItems, 0)} item urutan); sampel baca memuat sebagian untuk pembacaan ahli.`);
+const depthOk = records.filter((record) => record.load.activities >= 3 && record.assessment.items >= 8).length;
+md.push(`- Paket dengan minimal 3 aktivitas dan 8 item asesmen: **${depthOk}/${total}**.`);
 md.push("");
 md.push("## R3 — Bahasa sesuai usia");
 md.push("");
@@ -682,7 +688,7 @@ md.push(`- Rentang estimasi seluruh paket: ${Math.min(...records.map((record) =>
 md.push("");
 md.push("## R5 — Asesmen ↔ tujuan");
 md.push("");
-md.push("Metode: (a) setiap item dipetakan ke tujuan dengan kata bermakna; (b) pasangan matching dibandingkan **persis** dengan langkah eksplorasi (prompt + reveal); (c) bias kunci bila ≥3 soal pilihan. Pencocokan kata dapat menghasilkan positif palsu karena sinonim; duplikasi persis dan bias kunci bersifat deterministik. Flag R5 hanya memakai sinyal deterministik (duplikasi penuh atau bias 100%).");
+md.push("Metode: (a) setiap item dipetakan ke tujuan dengan kata bermakna; (b) pasangan matching dibandingkan **persis** dengan langkah eksplorasi (prompt + reveal); (c) bias kunci bila ≥3 soal pilihan; (d) salinan semantik: sisi kanan sama dengan reveal dan sisi kiri ≥0,70 mirip prompt (min-overlap) — metrik informasi, **bukan** flag. Pencocokan kata dapat menghasilkan positif palsu karena sinonim; duplikasi persis dan bias kunci bersifat deterministik. Flag R5 hanya memakai sinyal deterministik (duplikasi penuh atau bias 100%).");
 md.push("");
 const unmappedTotal = records.reduce((sum, record) => sum + record.assessment.unmappedItems.length, 0);
 md.push(`- Item tak terpetakan (kata kunci): **${unmappedTotal}** dari ${records.reduce((sum, record) => sum + record.assessment.items, 0)} — bahan periksa, bukan vonis.`);
@@ -690,6 +696,9 @@ md.push(`- Tujuan tanpa item asesmen (kata kunci): **${records.reduce((sum, reco
 const fullMirror = records.filter((record) => record.assessment.matchingPairs > 0 && record.assessment.mirroredPairs === record.assessment.matchingPairs);
 const partialMirror = records.filter((record) => record.assessment.mirroredPairs > 0 && record.assessment.mirroredPairs < record.assessment.matchingPairs);
 md.push(`- **Matching identik penuh dengan eksplorasi: ${fullMirror.length} paket**; duplikasi sebagian: ${partialMirror.length} paket. Ini berarti aktivitas matching mengulang jawaban eksplorasi, bukan asesmen mandiri.`);
+const copyTotal = records.reduce((sum, record) => sum + record.assessment.explorationCopies, 0);
+const copyPackages = records.filter((record) => record.assessment.explorationCopies > 0).length;
+md.push(`- **Salinan semantik (detektor longgar, min-overlap ≥ 0,70): ${copyTotal} pasangan di ${copyPackages} paket.** Metrik informasi, bukan flag R5 — lihat F-06 di [laporan review 10 paket](REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md) dan [daftar pasangan untuk seleksi guru](F06_MIRROR_PAIRS_2026-10-28.csv).`);
 const positionFlags = records.filter((record) => record.assessment.positionBias.questions >= 3 && (record.assessment.positionBias.modalShare === 1 || record.assessment.positionBias.longestCorrectRatio === 1));
 md.push(`- Bias posisi/panjang kunci: **${positionFlags.length}** paket (${records.filter((record) => record.assessment.positionBias.questions >= 3 && record.assessment.positionBias.modalShare === 1).length} semua kunci di posisi sama; ${records.filter((record) => record.assessment.positionBias.questions >= 3 && record.assessment.positionBias.longestCorrectRatio === 1).length} kunci selalu opsi terpanjang).`);
 md.push("");
@@ -735,7 +744,7 @@ md.push("Metode: keberadaan file aset di disk, URL eksternal di JSON paket, juml
 md.push("");
 md.push(`- File aset hilang: **${records.reduce((sum, record) => sum + record.r9.missingAssetFiles.length, 0)}**.`);
 md.push(`- Paket dengan URL eksternal di JSON: **${records.filter((record) => record.r9.externalUrls).length}**.`);
-md.push(`- Total aset paket: **${records.reduce((sum, record) => sum + record.r9.assets, 0)}** (320 paket).`);
+md.push(`- Total aset paket: **${records.reduce((sum, record) => sum + record.r9.assets, 0)}** (${total} paket).`);
 md.push("");
 md.push("## R12 — Klaim kurikulum & label PAI");
 md.push("");
@@ -768,12 +777,13 @@ priority.slice(0, 30).forEach((entry, index) => {
 md.push("");
 md.push("## Sampel baca stratifikasi");
 md.push("");
-md.push(`Satu paket per sel kelas × mapel (${sample.length} paket) didump lengkap di [PEDAGOGICAL_SAMPLE_2026-10-26.md](PEDAGOGICAL_SAMPLE_2026-10-26.md) — tujuan, langkah, kunci, pasangan, urutan, dan kebijakan umpan balik.`);
+md.push(`Satu paket per sel kelas × mapel (${sample.length} paket) didump lengkap di [PEDAGOGICAL_SAMPLE_${date}.md](PEDAGOGICAL_SAMPLE_${date}.md) — tujuan, langkah, kunci, pasangan, urutan, dan kebijakan umpan balik.`);
 md.push("");
 md.push("## Yang tidak dilakukan agent");
 md.push("");
 md.push("- Tidak menulis PASS/FAIL pada R1–R6, R8–R9, R12.");
-md.push("- Tidak mengubah `reviewStatus` (tetap `draft` 320/320).");
+const draftCount = records.filter((record) => record.reviewStatus === "draft").length;
+md.push(`- Tidak mengubah \`reviewStatus\` (tetap \`draft\` ${draftCount}/${total}).`);
 md.push("- Tidak mengisi nama/tanda tangan reviewer.");
 md.push("- Tidak mengklaim materi “sudah direview”.");
 md.push("");
@@ -786,11 +796,11 @@ md.push("4. `reviewStatus: approved` hanya setelah seluruh R1–R12 LULUS dan fo
 md.push("");
 
 const sampleMd = [];
-sampleMd.push("# Sampel Baca Pedagogis — 2026-10-26");
+sampleMd.push("# Sampel Baca Pedagogis — " + date);
 sampleMd.push("");
 sampleMd.push("**Status:** `PRA-REVIEW AGENT — BUKAN APPROVAL`. Satu paket per sel kelas × mapel, dipilih deterministik (median urutan `packageId`). Seluruh teks ditampilkan apa adanya untuk dibaca reviewer manusia.");
 sampleMd.push("");
-sampleMd.push("Gunakan bersama [PEDAGOGICAL_PREREVIEW_2026-10-26.md](PEDAGOGICAL_PREREVIEW_2026-10-26.md). Catatan flag di akhir tiap paket berasal dari heuristik otomatis, bukan penilaian pedagogis.");
+sampleMd.push(`Gunakan bersama [PEDAGOGICAL_PREREVIEW_${date}.md](PEDAGOGICAL_PREREVIEW_${date}.md). Catatan flag di akhir tiap paket berasal dari heuristik otomatis, bukan penilaian pedagogis.`);
 sampleMd.push("");
 for (const { record } of sample) {
   sampleMd.push(`## Kelas ${record.grade} · ${record.subjectLabel} — \`${record.packageId}\``);
@@ -882,6 +892,8 @@ const csvHeader = [
   "matchingPairs",
   "mirroredPairs",
   "matchingMirrorShare",
+  "explorationCopies",
+  "explorationCopyShare",
   "positionModalShare",
   "longestCorrectRatio",
   "hintCoverage",
@@ -911,6 +923,10 @@ const csvRows = records.map((record) =>
     record.assessment.matchingPairs,
     record.assessment.mirroredPairs,
     record.assessment.matchingMirrorShare ?? "",
+    record.assessment.explorationCopies,
+    record.assessment.matchingPairs === 0
+      ? ""
+      : Number((record.assessment.explorationCopies / record.assessment.matchingPairs).toFixed(2)),
     record.assessment.positionBias.modalShare ?? "",
     record.assessment.positionBias.longestCorrectRatio ?? "",
     record.feedback.hintCoverage ?? "",
@@ -924,7 +940,7 @@ const csvRows = records.map((record) =>
     .join(",")
 );
 
-mkdirSync(outDir, { recursive: true });
+ensureWritable([outMd, outSample, outJson, outCsv], { force });
 writeFileSync(outMd, `${md.join("\n")}\n`);
 writeFileSync(outSample, `${sampleMd.join("\n")}\n`);
 writeFileSync(
@@ -948,7 +964,8 @@ writeFileSync(
         r8: flagCount("R8"),
         r9: flagCount("R9"),
         r12Files: curriculumClaims.length,
-        paiLabelMissingFiles: paiLabelFiles
+        paiLabelMissingFiles: paiLabelFiles,
+        explorationCopies: { pairs: copyTotal, packages: copyPackages }
       },
       curriculumClaims,
       records
@@ -970,6 +987,7 @@ console.log(
       r8: flagCount("R8"),
       r9: flagCount("R9"),
       r12Files: curriculumClaims.length,
+      explorationCopies: { pairs: copyTotal, packages: copyPackages },
       sample: sample.length,
       report: outMd
     },

@@ -153,6 +153,9 @@
 | E2E setelah F-05 (T-099) | **NOT RUN** — perubahan hanya teks `left`/`right` pada aktivitas matching; tidak ada perubahan kode/UI. Skenario `activities` memakai paket fixture sendiri, jadi tidak merender paket yang disunting |
 | Keputusan F-06 (T-100) | **DIPUTUSKAN — utang desain, tanpa penulisan ulang massal** — diukur ulang: **309 pasangan / 160 paket** dari 1.963 (84 pasangan tumpang tindih 100% kata prompt, 40 paket memuat ≥3 pasangan; angka historis 311/159). Aturan authoring batch berikutnya: sisi kiri **<70%** kata prompt eksplorasi dan tanpa kata kunci jawaban. Daftar seleksi guru: [F06_MIRROR_PAIRS_2026-10-28.csv](../content/F06_MIRROR_PAIRS_2026-10-28.csv) (309 baris, 7 kolom) |
 | Verifikasi F-06 (T-100) | **PASS (lingkup dokumen)** — CSV dihitung dari `.tmp-assets/r5-focused.json`: 309 baris data + header, 160 `packageId` unik; tidak ada berkas konten/kode yang diubah, jadi validator/`npm test`/build **tidak dijalankan ulang** (angka terakhir tetap 336/336 VALID, 110/110, PASS pada T-099) |
+| Parameterisasi tanggal & penjaga bukti (T-101) | **PASS** — `scripts/lib/reviewOutput.mjs`: `--date YYYY-MM-DD` (default hari ini), `--out-dir`, `--force`; tanpa `--force` skrip menolak menimpa berkas bertanggal yang sudah ada (diuji: exit 1 + daftar berkas; `--force` exit 0) |
+| Detektor longgar F-06 di skrip baku (T-101) | **PASS** — `scripts/lib/mirrorPairs.mjs` menghasilkan **309 pasangan/160 paket** yang identik dengan CSV F-06 (kunci `packageId + aktivitas + pairId + wordOverlap`, 0 selisih); laporan pratayang menampilkan metrik informasi R5 (**bukan** flag); CSV menambah kolom `explorationCopies` + `explorationCopyShare` |
+| Verifikasi alat T-101 | **PASS** — pratinjau ditulis ke `.tmp-assets/` tanpa menyentuh bukti `2026-10-26`: pratayang pedagogis 336 paket, laporan teknis 336 paket; `npm test` 110/110 + fixture 4/4 + katalog 336/336; `npm run build` PASS; `npx tsc --noEmit` exit 0 |
 | Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
 | Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
 | Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
@@ -901,6 +904,24 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 
 **Sisa:** seleksi guru atas **309 pasangan F-06** (daftar CSV) · tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05 · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
 
+### Handoff Alat QA — Tanggal Terparameterkan + Detektor F-06 di Skrip Baku (2026-10-28, T-101)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: "lanjutkan" setelah keputusan F-06.
+
+**Masalah:** `scripts/pedagogical-prereview.mjs` dan `scripts/review-content.ts` menulis ke nama bertanggal tetap `2026-10-26`, sehingga menjalankannya kembali akan menimpa bukti historis — alat tidak bisa dipakai untuk memverifikasi perbaikan setelah tanggal itu. Detektor F-06 (longgar) hanya hidup di skrip sekali-pakai, sementara detektor R5 baku tetap memakai kesamaan ketat dan melaporkan 0.
+
+**Yang diubah (kode saja, tidak ada konten yang disentuh):**
+- `scripts/lib/reviewOutput.mjs` — `parseReviewArgs` (`--date YYYY-MM-DD` tervalidasi, default tanggal lokal hari ini; `--out-dir`; `--force`; argumen tak dikenal ditolak), `localDateStamp`, `ensureWritable` (menolak menimpa berkas yang sudah ada kecuali `--force`, sekaligus membuat direktori keluaran).
+- `scripts/lib/mirrorPairs.mjs` — `detectExplorationCopies`: `right` = `reveal` (NFKC, huruf kecil, tanda baca → spasi) dan `min(|L∩P|/|L|, |L∩P|/|P|) ≥ 0,70` terhadap `prompt` langkah yang sama; token = kata ≥3 karakter setelah tanda baca tepi dibuang, memakai langkah pertama yang reveal-nya cocok. Aturan token disamakan dengan pengukuran T-100 agar angkanya identik.
+- `pedagogical-prereview.mjs` — semua nama berkas/judul/tautan memakai `--date`; paket draft dihitung dinamis (bukan "320"); metrik `explorationCopies` masuk JSON + CSV dan tampil sebagai **metrik informasi** di bagian R5 (bukan flag, karena flag R5 sengaja hanya sinyal deterministik).
+- `review-content.ts` — tanggal pada judul/status/tautan + `--out-dir`/`--force` memakai lib yang sama; angka paket diambil dari `summary.total`.
+
+**Bukti reproduksi:** `node scripts/pedagogical-prereview.mjs --out-dir .tmp-assets/prereview-check --date 2026-10-28` → 336 paket, `explorationCopies {pairs: 309, packages: 160}`; 309 baris JSON (`packageId + aktivitas + pairId + wordOverlap`) **identik** dengan `F06_MIRROR_PAIRS_2026-10-28.csv` (0 hilang, 0 tambahan). `npx tsx scripts/review-content.ts --out-dir .tmp-assets/review-check --date 2026-10-28` → 336 paket, VALID 336/336.
+
+**Verifikasi:** penjagaan timpa diuji pada kedua skrip (tanpa `--force` exit 1 dengan daftar berkas; `--force` exit 0) · `npm test` 110/110 + fixture 4/4 + katalog 336/336 · `npm run build` PASS · `npx tsc --noEmit` exit 0. a11y/E2E/`cargo test` **tidak dijalankan** (tanpa perubahan UI/Rust); bukti historis `2026-10-26` tidak ditulis ulang.
+
+**Sisa:** `scripts/analyze-content-quality.mjs` masih memakai path bertanggal tetap `QUALITY_GAP_2026-10-25.*` (snapshot sekali pakai, sengaja tidak diubah di tugas ini) · seleksi + tanda tangan guru atas 309 pasangan F-06 · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.
+
 ### Handoff Keputusan F-06 — Utang Desain + Aturan Authoring (2026-10-28, T-100)
 
 **Status:** diputuskan + didokumentasikan. Permintaan PO: "lanjut" setelah F-05. Pilihan arah dari PO: **"Aturan + seleksi guru"** — **bukan** penulisan ulang massal 309 pasangan.
@@ -918,4 +939,4 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 
 **Verifikasi:** CSV 309 baris data + header, 160 `packageId` unik. Tidak ada berkas konten/kode yang berubah, jadi validator, `npm test`, build, a11y, E2E, dan `cargo test` **tidak dijalankan ulang**; angka terakhir tetap dari T-099 (336/336 VALID, 110/110, build PASS).
 
-**Sisa:** detektor R5 baku (`scripts/pedagogical-prereview.mjs`) masih memakai kesamaan ketat sehingga melaporkan 0 untuk kelas ini — mempromosikan detektor longgar ke skrip baku (dengan tanggal sebagai parameter) masih utang alat · seleksi + tanda tangan guru · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.
+**Sisa:** ~~detektor R5 baku masih memakai kesamaan ketat sehingga melaporkan 0 untuk kelas ini — mempromosikan detektor longgar ke skrip baku masih utang alat~~ **DITUTUP 2026-10-28 (T-101)**: detektor longgar ada di `scripts/lib/mirrorPairs.mjs` dan dipakai skrip baku · seleksi + tanda tangan guru · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.
