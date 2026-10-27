@@ -41,11 +41,11 @@
           },
           {
             "optionId": "opsi-kuis-2-2",
-            "text": "Berlari"
+            "text": "Bersisir rambut"
           },
           {
             "optionId": "opsi-kuis-2-3",
-            "text": "Berbaring"
+            "text": "Memakai wangi-wangian"
           }
         ],
         "correctResponse": "opsi-kuis-2-1"

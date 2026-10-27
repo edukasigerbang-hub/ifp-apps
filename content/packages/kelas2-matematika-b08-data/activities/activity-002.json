@@ -60,16 +60,16 @@
       },
       {
         "questionId": "soal-diagram",
-        "prompt": "Diagram batang menunjukkan ...",
+        "prompt": "Batang yang tinggi dan pendek pada diagram batang menunjukkan ...",
         "responseType": "single-choice",
         "options": [
           {
             "optionId": "opsi-warna",
-            "text": "Warna"
+            "text": "Warna batang"
           },
           {
             "optionId": "opsi-berat",
-            "text": "Berat"
+            "text": "Judul diagram"
           },
           {
             "optionId": "opsi-banding",
@@ -77,31 +77,31 @@
           },
           {
             "optionId": "opsi-ukuran",
-            "text": "Ukuran kertas"
+            "text": "Ukuran kertas gambar"
           }
         ],
         "correctResponse": "opsi-banding"
       },
       {
         "questionId": "soal-kumpul",
-        "prompt": "Data dikumpulkan dengan ...",
+        "prompt": "Data terbanyak pada diagram batang ditunjukkan oleh batang yang ...",
         "responseType": "single-choice",
         "options": [
           {
             "optionId": "opsi-tebak",
-            "text": "Menebak"
+            "text": "paling pendek"
           },
           {
             "optionId": "opsi-lupa",
-            "text": "Melupakan"
+            "text": "paling lebar"
           },
           {
             "optionId": "opsi-gambar",
-            "text": "Menggambar bebas"
+            "text": "paling gelap"
           },
           {
             "optionId": "opsi-hitung",
-            "text": "Menghitung dan mencatat"
+            "text": "paling tinggi"
           }
         ],
         "correctResponse": "opsi-hitung"

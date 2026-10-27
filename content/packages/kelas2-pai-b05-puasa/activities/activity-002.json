@@ -36,24 +36,24 @@
       },
       {
         "questionId": "soal-sahur",
-        "prompt": "Makan sebelum fajar disebut ...",
+        "prompt": "Saat berpuasa, kita menahan ... sejak terbit fajar sampai magrib.",
         "responseType": "single-choice",
         "options": [
           {
             "optionId": "opsi-sahur",
-            "text": "Sahur"
+            "text": "Makan dan minum"
           },
           {
             "optionId": "opsi-buka",
-            "text": "Berbuka"
+            "text": "Bermain dan tidur"
           },
           {
             "optionId": "opsi-iftar",
-            "text": "Iftar"
+            "text": "Bercerita dan bernyanyi"
           },
           {
             "optionId": "opsi-tarawih",
-            "text": "Tarawih"
+            "text": "Membaca dan menulis"
           }
         ],
         "correctResponse": "opsi-sahur"

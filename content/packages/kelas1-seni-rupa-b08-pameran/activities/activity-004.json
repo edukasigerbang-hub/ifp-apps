@@ -81,11 +81,11 @@
           },
           {
             "optionId": "opsi-kuis-4-2",
-            "text": "menyembunyikan"
+            "text": "menyimpan"
           },
           {
             "optionId": "opsi-kuis-4-3",
-            "text": "menghapus"
+            "text": "memindahkan"
           }
         ],
         "correctResponse": "opsi-kuis-4-1"
@@ -97,7 +97,7 @@
         "options": [
           {
             "optionId": "opsi-kuis-5-2",
-            "text": "dibuang semua"
+            "text": "dihitung"
           },
           {
             "optionId": "opsi-kuis-5-1",
@@ -105,7 +105,7 @@
           },
           {
             "optionId": "opsi-kuis-5-3",
-            "text": "dijual murah"
+            "text": "dipinjamkan"
           }
         ],
         "correctResponse": "opsi-kuis-5-1"

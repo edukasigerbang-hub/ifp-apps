@@ -1,0 +1,49 @@
+{
+  "packages": {
+    "kelas6-bahasa-indonesia-b02-eksposisi": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-4",
+          "left": "Bahasa yang harus dihindari dalam teks eksposisi",
+          "right": "Bahasa gaul"
+        }
+      ]
+    },
+    "kelas6-pai-b02-iman-hari-akhir": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-4",
+          "left": "Sikap yang harus dijauhi orang beriman",
+          "right": "Perbuatan buruk"
+        },
+        {
+          "pairId": "pasangan-yang-mengetahui-waktu-datangnya",
+          "left": "Peristiwa yang terjadi pada hari akhir",
+          "right": "Makhluk dibangkitkan"
+        }
+      ]
+    },
+    "kelas6-pjok-b05-senam": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-4",
+          "left": "Gerakan penutup latihan senam",
+          "right": "Pendinginan"
+        }
+      ]
+    },
+    "kelas6-seni-rupa-b08-pameran": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-rapi",
+          "left": "Karya yang dipajang pada pameran kelas",
+          "right": "Karya siswa"
+        }
+      ]
+    }
+  }
+}
