@@ -127,7 +127,7 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** empat temuan review 10 paket sudah diterapkan (T-097: F-03/F-04; T-098: F-01/F-02) dan utang kosmetik F-05 sudah dibereskan (T-099: 39 pasangan di 27 paket). Sisa pekerjaan konten: **tanda tangan guru manusia** atas daftar di BACKLOG — termasuk memastikan daftar varian jawaban teks (F-02) memadai dan menyetujui pilihan "teks menyesuaikan gambar" untuk IPAS kelas 4 (F-01); **F-06** (311 pasangan di 159 paket yang masih dapat dijawab dengan menyalin reveal eksplorasi) butuh penulisan ulang item, bukan perbaikan kosmetik. Lalu review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092/T-096/T-097/T-098/T-099. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** empat temuan review 10 paket sudah diterapkan (T-097: F-03/F-04; T-098: F-01/F-02) dan utang kosmetik F-05 sudah dibereskan (T-099: 39 pasangan di 27 paket). Sisa pekerjaan konten: **tanda tangan guru manusia** atas daftar di BACKLOG — termasuk memastikan daftar varian jawaban teks (F-02) memadai dan menyetujui pilihan "teks menyesuaikan gambar" untuk IPAS kelas 4 (F-01); **F-06** diputuskan 2026-10-28 (T-100) sebagai utang desain — aturan authoring untuk batch berikutnya sudah ditetapkan dan guru memilih pasangan yang perlu ditulis ulang dari daftar 309 pasangan / 160 paket, tanpa penulisan ulang massal. Lalu review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092/T-096/T-097/T-098/T-099. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
@@ -151,6 +151,8 @@
 | Pasangan berelipsis (F-05, T-099) | **DITERAPKAN** — 37 pasangan di 27 paket: `left` berelipsis → frasa petunjuk; 2 pasangan duplikat jawaban dibetulkan (`kelas1-seni-rupa-b05`: "Merah, kuning, dan biru" ×2; `kelas6-matematika-b03`: "4 : 3" ×2). Total **39 pasangan**; jumlah pasangan tetap **1.963**; tidak ada `pairId` ditambah/dihapus |
 | Verifikasi F-05 (T-099) | **PASS** — detektor elipsis ulang **0/1.963**; duplikat kiri/kanan **0** pada 27 paket terdampak; validator **336/336 VALID** (0 issue, 336 warning draft); volume gate "Semua aktivitas dinilai berada dalam rentang target"; `npm test` **110/110** (15 berkas) + fixture 4/4 + katalog 336/336; `npm run build` **PASS** |
 | E2E setelah F-05 (T-099) | **NOT RUN** — perubahan hanya teks `left`/`right` pada aktivitas matching; tidak ada perubahan kode/UI. Skenario `activities` memakai paket fixture sendiri, jadi tidak merender paket yang disunting |
+| Keputusan F-06 (T-100) | **DIPUTUSKAN — utang desain, tanpa penulisan ulang massal** — diukur ulang: **309 pasangan / 160 paket** dari 1.963 (84 pasangan tumpang tindih 100% kata prompt, 40 paket memuat ≥3 pasangan; angka historis 311/159). Aturan authoring batch berikutnya: sisi kiri **<70%** kata prompt eksplorasi dan tanpa kata kunci jawaban. Daftar seleksi guru: [F06_MIRROR_PAIRS_2026-10-28.csv](../content/F06_MIRROR_PAIRS_2026-10-28.csv) (309 baris, 7 kolom) |
+| Verifikasi F-06 (T-100) | **PASS (lingkup dokumen)** — CSV dihitung dari `.tmp-assets/r5-focused.json`: 309 baris data + header, 160 `packageId` unik; tidak ada berkas konten/kode yang diubah, jadi validator/`npm test`/build **tidak dijalankan ulang** (angka terakhir tetap 336/336 VALID, 110/110, PASS pada T-099) |
 | Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
 | Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
 | Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
@@ -827,8 +829,8 @@ Ini review **agent**, bukan tanda tangan guru; `reviewStatus` seluruh paket teta
 - F-04 `kelas6-pjok-b03-atletik`: langkah urutan ke-5 "Merapikan posisi" adalah pengisi untuk memenuhi ambang 5 langkah.
 
 **Temuan struktural (bukan cacat jawaban):**
-- F-05 37 pasangan di 27 paket memakai teks soal sebagai sisi kiri, elipsis ikut tertinggal.
-- F-06 311/1.963 pasangan (15,8%) di 159 paket masih dapat dicocokkan dengan menyalin jawaban yang sudah tertulis di layar eksplorasi; detektor R5 lama melaporkan 0 karena mensyaratkan prompt identik.
+- F-05 37 pasangan di 27 paket memakai teks soal sebagai sisi kiri, elipsis ikut tertinggal — **DIPERBAIKI 2026-10-28 (T-099)**, total 39 pasangan.
+- F-06 311/1.963 pasangan (15,8%) di 159 paket masih dapat dicocokkan dengan menyalin jawaban yang sudah tertulis di layar eksplorasi; detektor R5 lama melaporkan 0 karena mensyaratkan prompt identik — **DIPUTUSKAN 2026-10-28 (T-100): utang desain + aturan authoring + seleksi guru**; diukur ulang 309 pasangan / 160 paket.
 - F-07 utang "10 paket kunci selalu opsi terpanjang" **ditutup**: 0 paket dengan terpanjang-unik; 6 paket hanya seri panjang pada opsi angka (matematika).
 
 **Verifikasi aktual:** validator **336/336 VALID**, 0 issue, 336 warning (draft) — dijalankan ulang setelah review, konten tidak berubah ·
@@ -897,4 +899,23 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 
 **Tidak dijalankan:** a11y, E2E, dan `cargo test` — perubahan hanya teks data matching, tanpa perubahan kode/UI/Rust. Skenario `activities` juga memakai paket fixture sendiri sehingga tidak akan merender 27 paket yang disunting.
 
-**Sisa:** F-06 (311 pasangan / 159 paket yang masih dapat dijawab dengan menyalin reveal eksplorasi) · tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05 ini · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
+**Sisa:** seleksi guru atas **309 pasangan F-06** (daftar CSV) · tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05 · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
+
+### Handoff Keputusan F-06 — Utang Desain + Aturan Authoring (2026-10-28, T-100)
+
+**Status:** diputuskan + didokumentasikan. Permintaan PO: "lanjut" setelah F-05. Pilihan arah dari PO: **"Aturan + seleksi guru"** — **bukan** penulisan ulang massal 309 pasangan.
+
+**Masalah:** 309 pasangan (dari 1.963) di 160 paket masih dapat dicocokkan dengan menyalin jawaban yang sudah tertulis di layar eksplorasi: `right` sama dengan `reveal` langkah dan sisi kiri ≥70% kata `prompt` langkah itu. Laporan awal mencatat 311/159; pengukuran ulang dengan definisi yang sama (normalisasi huruf/tanda baca, token ≥3 huruf, `min` tumpang tindih dua arah) menghasilkan **309/160** — selisih kecil, tidak ditelusuri penyebabnya satu per satu.
+
+**Kenapa tidak ditulis ulang:** pasangan ini adalah keluaran transform T-091b (soal → frasa petunjuk). Parafrase mekanis berikutnya hanya menurunkan angka detektor tanpa menambah tuntutan pemahaman — risiko yang sudah dinyatakan saat T-091b. Petunjuk mana yang benar-benar membingungkan adalah penilaian guru.
+
+**Yang ditetapkan:**
+- **Aturan authoring (mengikat, batch konten berikutnya):** (1) sisi kiri berupa petunjuk, tumpang tindih kata terhadap `prompt` eksplorasi **<70%**; (2) sisi kiri tidak memuat kata kunci jawaban atau sinonim dekatnya; (3) sisi kanan boleh sama dengan `reveal`, yang dilarang adalah kombinasi itu dengan sisi kiri ≥70%; (4) tiap batch diverifikasi dengan definisi §5 laporan, target 0 hit baru.
+- **Daftar seleksi guru:** `knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv` — 309 baris (`packageId, activity, pairId, left, right, explorationPrompt, wordOverlap`), diurutkan per paket. Guru cukup menandai pasangan yang perlu ditulis ulang, bukan menilai ulang 1.963 pasangan.
+- **Angka pendukung:** 84 pasangan bertumpang tindih **100%** kata prompt (salinan paling telanjang); 40 paket memuat ≥3 pasangan.
+
+**Bukti & alat:** pengukuran memakai skrip sekali-pakai `.tmp-assets/r5-focused.json` (semantik detektor laporan §5); CSV diturunkan dari berkas itu. Laporan [REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md](../content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md) §F-06 + §5 ditambah blok keputusan dan anotasi pengukuran ulang; BACKLOG mencatat keputusan + aturan + butir seleksi guru.
+
+**Verifikasi:** CSV 309 baris data + header, 160 `packageId` unik. Tidak ada berkas konten/kode yang berubah, jadi validator, `npm test`, build, a11y, E2E, dan `cargo test` **tidak dijalankan ulang**; angka terakhir tetap dari T-099 (336/336 VALID, 110/110, build PASS).
+
+**Sisa:** detektor R5 baku (`scripts/pedagogical-prereview.mjs`) masih memakai kesamaan ketat sehingga melaporkan 0 untuk kelas ini — mempromosikan detektor longgar ke skrip baku (dengan tanggal sebagai parameter) masih utang alat · seleksi + tanda tangan guru · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.

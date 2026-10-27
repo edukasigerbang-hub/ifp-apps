@@ -123,6 +123,28 @@ Ini bukan jawaban salah, melainkan beban kognitif rendah: aktivitas mencocokkan 
 Tidak diusulkan penulisan ulang massal; cukup aturan untuk batch berikutnya: sisi kiri pasangan harus berupa petunjuk
 yang tidak memuat kata kunci jawaban.
 
+**KEPUTUSAN 2026-10-28 (T-100) — diterima sebagai utang desain, tanpa penulisan ulang massal.**
+
+Diukur ulang pada korpus 1.963 pasangan memakai definisi §5: **309 pasangan di 160 paket** (angka historis 311/159;
+selisih kemungkinan berasal dari normalisasi detektor dan 39 pasangan yang berubah bentuk di F-05 — tidak diuji terpisah). Rinciannya: **84 pasangan**
+mencapai tumpang tindih 100% kata prompt (salinan paling telanjang), **40 paket** memuat ≥3 pasangan.
+Daftar per pasangan: [F06_MIRROR_PAIRS_2026-10-28.csv](F06_MIRROR_PAIRS_2026-10-28.csv).
+
+Aturan authoring yang mengikat untuk batch konten berikutnya:
+
+1. Sisi kiri berupa petunjuk yang menuntut pemahaman, bukan salinan prompt eksplorasi — tumpang tindih kata dengan
+   `prompt` langkah eksplorasi **< 70%** menurut definisi §5.
+2. Sisi kiri tidak memuat kata kunci jawaban (`right`) atau sinonim dekatnya.
+3. Sisi kanan boleh sama dengan `reveal`; yang dilarang adalah kombinasi `right == reveal` **dan** sisi kiri ≥70% kata prompt.
+4. Setiap batch baru diverifikasi dengan definisi §5; target **0 hit baru**.
+
+Alasan tidak menulis ulang 309 pasangan sekarang: bentuk yang ada adalah keluaran transform T-091b (soal → frasa
+petunjuk), jadi parafrase mekanis berikutnya hanya menurunkan angka detektor tanpa menambah tuntutan pemahaman —
+persis risiko yang sudah dicatat di T-091b. Memilih petunjuk mana yang membingungkan adalah penilaian guru, bukan
+aturan bahasa. Karena itu seleksi diserahkan ke guru lewat CSV di atas; `reviewStatus` tetap `draft`.
+Detektor baku (`scripts/pedagogical-prereview.mjs` R5) masih memakai kesamaan ketat sehingga melaporkan **0** untuk
+kelas ini; definisi longgar baru hidup di §5 dan skrip sekali-pakai — mempromosikannya ke skrip baku tetap utang alat.
+
 ### F-07 — Utang "kunci selalu opsi terpanjang" ternyata positif palsu (Info)
 
 Diukur ulang pada 336 paket hari ini: **0 paket** dengan kunci selalu opsi **terpanjang-unik**.
@@ -160,7 +182,9 @@ menimpa bukti bertanggal). Definisi yang dipakai:
 - **F-05**: pasangan `matching` dengan `left` berakhir `...` → 37 pasangan / 27 paket (sebelum perbaikan 2026-10-28; kini **0**).
 - **F-06**: pasangan `matching` yang memenuhi dua syarat sekaligus: `right` sama persis (setelah normalisasi
   huruf kecil + buang tanda baca) dengan `reveal` salah satu langkah eksplorasi, **dan** ≥ 70% kata pada `left`
-  muncul di `prompt` langkah yang sama → 311 pasangan / 159 paket dari 1.963 pasangan.
+  muncul di `prompt` langkah yang sama → 311 pasangan / 159 paket dari 1.963 pasangan. Diukur ulang 2026-10-28
+  (T-100) dengan `min(|L∩P|/|L|, |L∩P|/|P|)` dan token ≥3 huruf tanpa stopword: **309 pasangan / 160 paket**;
+  angka inilah yang dipakai pada aturan authoring dan CSV.
 - **F-07**: soal pilihan ganda dengan ≥ 2 opsi, dihitung per paket: kunci selalu **lebih panjang** dari semua opsi
   lain (unik) → 0 paket; kunci selalu **≥** semua opsi lain (termasuk seri) → 6 paket, semuanya matematika.
 

@@ -1,0 +1,310 @@
+packageId,activity,pairId,left,right,explorationPrompt,wordOverlap
+kelas1-bahasa-indonesia-b02-membaca-kata,activity-003.json,pasangan-3,Banyak suku kata pada kata buku,Dua,Berapa suku kata pada kata buku?,0.80
+kelas1-bahasa-indonesia-b03-menyimak-cerita,activity-003.json,pasangan-3,Yang diceritakan kembali,Isi cerita,Apa yang diceritakan kembali?,0.75
+kelas1-bahasa-indonesia-b04-menulis-kata,activity-003.json,pasangan-2,Yang ditulis pertama,Huruf,Apa yang ditulis pertama?,0.75
+kelas1-bahasa-indonesia-b04-menulis-kata,activity-003.json,pasangan-3,Yang ditulis setelah suku kata,Kata,Apa yang ditulis setelah suku kata?,0.83
+kelas1-bahasa-indonesia-b05-membaca-kalimat,activity-003.json,pasangan-2,Kalimat berita diakhiri,Titik,Kalimat berita diakhiri ...,1.00
+kelas1-bahasa-indonesia-b05-membaca-kalimat,activity-003.json,pasangan-3,Kalimat tanya diakhiri,Tanda tanya,Kalimat tanya diakhiri ...,1.00
+kelas1-bahasa-indonesia-b06-menulis-kalimat,activity-003.json,pasangan-1,Kalimat dimulai dengan huruf,Kapital,Kalimat dimulai dengan huruf ...,1.00
+kelas1-bahasa-indonesia-b06-menulis-kalimat,activity-003.json,pasangan-2,Di akhir kalimat berita ada,Titik,Di akhir kalimat berita ada ...,1.00
+kelas1-bahasa-indonesia-b07-bercerita,activity-003.json,pasangan-1,Suara saat bercerita,Jelas dan cukup keras,Bagaimana suara saat bercerita?,0.75
+kelas1-matematika-b01-bilangan-1-10,activity-003.json,pasangan-2,Angka untuk tujuh adalah,7,Angka untuk tujuh adalah ...,1.00
+kelas1-matematika-b01-bilangan-1-10,activity-003.json,pasangan-3,"Yang lebih banyak, 5 atau 3",5,"Mana yang lebih banyak, 5 atau 3?",0.80
+kelas1-matematika-b04-pengukuran,activity-003.json,pasangan-1,Alat ukur panjang sederhana adalah,Jengkal,Alat ukur panjang sederhana adalah ...,1.00
+kelas1-matematika-b04-pengukuran,activity-003.json,pasangan-2,Alat ukur berat adalah,Timbangan,Alat ukur berat adalah ...,1.00
+kelas1-matematika-b04-pengukuran,activity-003.json,pasangan-3,Alat penunjuk waktu adalah,Jam,Alat penunjuk waktu adalah ...,1.00
+kelas1-matematika-b08-pola-bilangan,activity-003.json,pasangan-1,"Pola 1, 2, 3, ... berlanjut dengan",4,"Pola 1, 2, 3, ... berlanjut dengan ...",1.00
+kelas1-matematika-b08-pola-bilangan,activity-003.json,pasangan-2,"Pola 2, 4, 6, ... berlanjut dengan",8,"Pola 2, 4, 6, ... berlanjut dengan ...",1.00
+kelas1-matematika-b08-pola-bilangan,activity-003.json,pasangan-3,"Pola 5, 10, 15, ... berlanjut dengan",20,"Pola 5, 10, 15, ... berlanjut dengan ...",1.00
+kelas1-pai-b04-belajar-salat,activity-003.json,pasangan-1,Yang dilakukan sebelum salat,Berwudu,Apa yang dilakukan sebelum salat?,0.80
+kelas1-pai-b04-belajar-salat,activity-003.json,pasangan-2,Gerakan pertama salat,Takbiratul ihram,Apa gerakan pertama salat?,0.75
+kelas1-pai-b06-mengenal-malaikat,activity-003.json,pasangan-1,Banyak jumlah malaikat yang wajib diketahui,Sepuluh,Berapa jumlah malaikat yang wajib diketahui?,0.83
+kelas1-pai-b06-mengenal-malaikat,activity-003.json,pasangan-2,Tugas malaikat Jibril,Menyampaikan wahyu,Apa tugas malaikat Jibril?,0.75
+kelas1-pai-b06-mengenal-malaikat,activity-003.json,pasangan-4,Beriman kepada malaikat termasuk rukun iman ke,Dua,Beriman kepada malaikat termasuk rukun iman ke ...,1.00
+kelas1-pai-b07-kisah-nabi,activity-003.json,pasangan-1,Tempat Nabi Muhammad lahir,Makkah,Di mana Nabi Muhammad lahir?,0.75
+kelas1-pai-b07-kisah-nabi,activity-003.json,pasangan-2,Nama Nabi terakhir,Muhammad,Siapa nama Nabi terakhir?,0.75
+kelas1-pai-b07-kisah-nabi,activity-003.json,pasangan-3,Sifat Nabi yang diteladani,Jujur,Apa sifat Nabi yang diteladani?,0.80
+kelas1-pai-b08-adab,activity-003.json,pasangan-1,Adab kepada orang tua,Menghormati,Bagaimana adab kepada orang tua?,0.80
+kelas1-pai-b08-adab,activity-003.json,pasangan-2,Adab kepada guru,Sopan,Bagaimana adab kepada guru?,0.75
+kelas1-pai-b08-adab,activity-003.json,pasangan-3,Adab kepada teman,Baik dan tidak bertengkar,Bagaimana adab kepada teman?,0.75
+kelas1-pai-b08-adab,activity-003.json,pasangan-4,Sikap kepada teman adalah,Baik dan membantu,Sikap kepada teman adalah ...,1.00
+kelas1-pendidikan-pancasila-b02-aturan-rumah,activity-003.json,pasangan-1,Contoh aturan di rumah,Merapikan tempat tidur,Apa contoh aturan di rumah?,0.75
+kelas1-pendidikan-pancasila-b02-aturan-rumah,activity-003.json,pasangan-3,Yang dilakukan sebelum pergi,Meminta izin orang tua,Apa yang dilakukan sebelum pergi?,0.80
+kelas1-pendidikan-pancasila-b02-aturan-rumah,activity-003.json,pasangan-4,Manfaat aturan adalah,Rumah tertib,Manfaat aturan adalah ...,1.00
+kelas1-pendidikan-pancasila-b04-kebersamaan,activity-003.json,pasangan-2,Contoh kebersamaan di sekolah,Belajar dan bermain bersama,Contoh kebersamaan di sekolah?,1.00
+kelas1-pendidikan-pancasila-b06-aturan-sekolah,activity-003.json,pasangan-1,Contoh aturan di sekolah,Datang tepat waktu,Apa contoh aturan di sekolah?,0.75
+kelas1-pendidikan-pancasila-b06-aturan-sekolah,activity-003.json,pasangan-3,Yang dilakukan saat jam pelajaran,Mendengarkan guru,Apa yang dilakukan saat jam pelajaran?,0.83
+kelas1-pendidikan-pancasila-b06-aturan-sekolah,activity-003.json,pasangan-4,Manfaat aturan di sekolah adalah,Belajar nyaman,Manfaat aturan di sekolah adalah ...,1.00
+kelas1-pendidikan-pancasila-b07-tolong-menolong,activity-003.json,pasangan-2,Contoh menolong di sekolah,Membantu teman jatuh,Contoh menolong di sekolah?,1.00
+kelas1-pendidikan-pancasila-b08-proyek-kelas,activity-003.json,pasangan-3,Yang dilakukan setelah selesai,Melaporkan hasil,Apa yang dilakukan setelah selesai?,0.80
+kelas1-pjok-b02-melompat,activity-003.json,pasangan-1,Melompat menggunakan,Kaki,Melompat menggunakan ...,1.00
+kelas1-pjok-b02-melompat,activity-003.json,pasangan-3,Yang dilakukan sebelum melompat,Pemanasan,Apa yang dilakukan sebelum melompat?,0.80
+kelas1-pjok-b02-melompat,activity-003.json,pasangan-4,"Agar aman, melompat di",Ruang yang lapang,"Agar aman, melompat di ...",1.00
+kelas1-pjok-b03-keseimbangan,activity-003.json,pasangan-1,Berdiri satu kaki,Angkat satu kaki,Bagaimana berdiri satu kaki?,0.75
+kelas1-pjok-b03-keseimbangan,activity-003.json,pasangan-2,Yang membantu keseimbangan,Merentangkan tangan,Apa yang membantu keseimbangan?,0.75
+kelas1-pjok-b05-permainan-sederhana,activity-003.json,pasangan-3,Sikap setelah bermain,Bersalaman,Bagaimana sikap setelah bermain?,0.75
+kelas1-pjok-b06-senam-ringan,activity-003.json,pasangan-1,Gerak senam ringan,Peregangan dan gerak kepala,Apa gerak senam ringan?,0.75
+kelas1-pjok-b06-senam-ringan,activity-003.json,pasangan-3,Bernapas saat senam,Tarik napas perlahan,Bagaimana bernapas saat senam?,0.75
+kelas1-seni-rupa-b02-menggambar-bebas,activity-003.json,pasangan-1,Alat yang dipakai,"Pensil, krayon, dan kertas",Alat apa yang dipakai?,0.75
+kelas1-seni-rupa-b03-tekstur,activity-003.json,pasangan-1,Bahan yang kasar adalah,Batu,Bahan yang kasar adalah ...,1.00
+kelas1-seni-rupa-b03-tekstur,activity-003.json,pasangan-2,Bahan yang halus adalah,Kapas,Bahan yang halus adalah ...,1.00
+kelas1-seni-rupa-b04-kolase,activity-003.json,pasangan-2,Bahan yang dipakai,Daun kering dan kertas,Bahan apa yang dipakai?,0.75
+kelas1-seni-rupa-b05-mewarnai-bentuk,activity-003.json,pasangan-3,Yang dilakukan setelah mewarnai,Merapikan alat,Apa yang dilakukan setelah mewarnai?,0.80
+kelas1-seni-rupa-b07-apresiasi,activity-003.json,pasangan-1,Yang terlihat pada karya,Warna dan bentuk,Apa yang terlihat pada karya?,0.80
+kelas1-seni-rupa-b07-apresiasi,activity-003.json,pasangan-2,Menanggapi karya teman,Sopan,Bagaimana menanggapi karya teman?,0.75
+kelas1-seni-rupa-b08-pameran,activity-003.json,pasangan-3,Yang dilakukan penjaga,Menjelaskan karya,Apa yang dilakukan penjaga?,0.75
+kelas2-bahasa-indonesia-b02-menulis-kalimat,activity-003.json,pasangan-1,Kalimat dimulai dengan huruf,Kapital,Kalimat dimulai dengan huruf ...,1.00
+kelas2-bahasa-indonesia-b02-menulis-kalimat,activity-003.json,pasangan-2,Akhir kalimat berita,Titik,Akhir kalimat berita ...,1.00
+kelas2-bahasa-indonesia-b02-menulis-kalimat,activity-003.json,pasangan-3,Antar kata diberi,Jarak,Antar kata diberi ...,1.00
+kelas2-bahasa-indonesia-b04-menyimak-cerita,activity-003.json,pasangan-3,Yang diceritakan kembali,Isi cerita,Apa yang diceritakan kembali?,0.75
+kelas2-bahasa-indonesia-b05-membaca-pemahaman,activity-003.json,pasangan-5,Jawaban pertanyaan dicari di,Bacaan,Jawaban pertanyaan dicari di ...,1.00
+kelas2-bahasa-indonesia-b06-menulis-paragraf,activity-003.json,pasangan-2,Banyak kalimat dalam paragraf,Dua sampai tiga,Berapa kalimat dalam paragraf?,0.75
+kelas2-bahasa-indonesia-b07-bercerita,activity-003.json,pasangan-1,Suara saat bercerita,Jelas dan cukup keras,Bagaimana suara saat bercerita?,0.75
+kelas2-matematika-b01-bilangan-1-100,activity-003.json,pasangan-1,Bilangan setelah 39 adalah,40,Bilangan setelah 39 adalah ...,1.00
+kelas2-matematika-b01-bilangan-1-100,activity-003.json,pasangan-2,Angka 47 terdiri dari,4 puluhan dan 7 satuan,Angka 47 terdiri dari ...,1.00
+kelas2-matematika-b01-bilangan-1-100,activity-003.json,pasangan-3,"Yang lebih besar, 58 atau 85",85,"Mana yang lebih besar, 58 atau 85?",0.80
+kelas2-matematika-b04-pengukuran,activity-003.json,pasangan-1,Alat ukur panjang adalah,Penggaris atau meteran,Alat ukur panjang adalah ...,1.00
+kelas2-matematika-b04-pengukuran,activity-003.json,pasangan-2,Alat ukur berat adalah,Timbangan,Alat ukur berat adalah ...,1.00
+kelas2-matematika-b04-pengukuran,activity-003.json,pasangan-3,"Yang lebih panjang, meja atau pensil",Meja,"Mana yang lebih panjang, meja atau pensil?",0.86
+kelas2-matematika-b04-pengukuran,activity-003.json,pasangan-4,Satuan panjang adalah,cm,Satuan panjang adalah ...,1.00
+kelas2-matematika-b08-data,activity-003.json,pasangan-1,Isi tabel data,Keterangan dan jumlah,Apa isi tabel data?,0.75
+kelas2-matematika-b08-data,activity-003.json,pasangan-3,Mencari data terbanyak,Lihat batang tertinggi,Bagaimana mencari data terbanyak?,0.75
+kelas2-matematika-b08-data,activity-003.json,pasangan-5,Diagram batang menunjukkan,Perbandingan data,Diagram batang menunjukkan ...,1.00
+kelas2-pai-b04-salat,activity-003.json,pasangan-1,Banyak salat wajib sehari,Lima waktu,Berapa salat wajib sehari?,0.75
+kelas2-pai-b04-salat,activity-003.json,pasangan-2,Yang dilakukan sebelum salat,Berwudu,Apa yang dilakukan sebelum salat?,0.80
+kelas2-pai-b08-adab,activity-003.json,pasangan-1,Adab kepada orang tua,Menghormati,Bagaimana adab kepada orang tua?,0.80
+kelas2-pai-b08-adab,activity-003.json,pasangan-2,Adab kepada guru,Sopan,Bagaimana adab kepada guru?,0.75
+kelas2-pai-b08-adab,activity-003.json,pasangan-3,Adab kepada teman,Baik dan tidak bertengkar,Bagaimana adab kepada teman?,0.75
+kelas2-pai-b08-adab,activity-003.json,pasangan-4,Sikap kepada teman adalah,Baik dan membantu,Sikap kepada teman adalah ...,1.00
+kelas2-pendidikan-pancasila-b02-aturan-sekolah,activity-003.json,pasangan-1,Contoh aturan sekolah,Datang tepat waktu,Apa contoh aturan sekolah?,0.75
+kelas2-pendidikan-pancasila-b02-aturan-sekolah,activity-003.json,pasangan-3,Akibat melanggar aturan,Kegiatan terganggu,Apa akibat melanggar aturan?,0.75
+kelas2-pendidikan-pancasila-b04-musyawarah,activity-003.json,pasangan-3,Yang dilakukan setelah sepakat,Melaksanakan keputusan,Apa yang dilakukan setelah sepakat?,0.80
+kelas2-pendidikan-pancasila-b07-gotong-royong,activity-003.json,pasangan-2,Contoh di sekolah,Kerja bakti kelas,Contoh di sekolah?,1.00
+kelas2-pjok-b02-non-lokomotor,activity-003.json,pasangan-4,Gerak non-lokomotor dilakukan,Di tempat,Gerak non-lokomotor dilakukan ...,1.00
+kelas2-pjok-b03-manipulatif,activity-003.json,pasangan-3,Alasan kerja sama penting,Agar permainan lancar,Mengapa kerja sama penting?,0.75
+kelas2-pjok-b05-bola-kecil,activity-003.json,pasangan-1,Permainan yang terlihat,"Tenis, bulu tangkis, tenis meja",Permainan apa yang terlihat?,0.75
+kelas2-pjok-b05-bola-kecil,activity-003.json,pasangan-2,Alat bulu tangkis,Raket dan kok,Apa alat bulu tangkis?,0.75
+kelas2-pjok-b06-senam,activity-003.json,pasangan-1,Gerak senam ringan,Peregangan dan gerak kepala,Apa gerak senam ringan?,0.75
+kelas2-seni-rupa-b03-tekstur-bahan,activity-003.json,pasangan-1,Bahan kasar adalah,Batu,Bahan kasar adalah ...,1.00
+kelas2-seni-rupa-b03-tekstur-bahan,activity-003.json,pasangan-2,Bahan halus adalah,Kapas,Bahan halus adalah ...,1.00
+kelas2-seni-rupa-b03-tekstur-bahan,activity-003.json,pasangan-3,Perekat yang aman,Lem,Apa perekat yang aman?,0.75
+kelas2-seni-rupa-b04-kolase,activity-003.json,pasangan-2,Bahan yang dipakai,Daun kering dan kertas,Bahan apa yang dipakai?,0.75
+kelas2-seni-rupa-b07-apresiasi,activity-003.json,pasangan-1,Yang terlihat pada karya,Warna dan bentuk,Apa yang terlihat pada karya?,0.80
+kelas2-seni-rupa-b07-apresiasi,activity-003.json,pasangan-2,Menanggapi karya teman,Sopan,Bagaimana menanggapi karya teman?,0.75
+kelas3-bahasa-indonesia-b02-kalimat-efektif,activity-003.json,pasangan-1,Ciri kalimat efektif,"Singkat, jelas, dan tidak berulang",Apa ciri kalimat efektif?,0.75
+kelas3-bahasa-indonesia-b02-kalimat-efektif,activity-003.json,pasangan-2,Alasan kosakata baru perlu dicari artinya,Agar kalimat mudah dipahami,Mengapa kosakata baru perlu dicari artinya?,0.83
+kelas3-bahasa-indonesia-b02-kalimat-efektif,activity-003.json,pasangan-3,Memperbaiki kalimat berulang,Hapus kata yang tidak perlu,Bagaimana memperbaiki kalimat berulang?,0.75
+kelas3-bahasa-indonesia-b02-kalimat-efektif,activity-003.json,pasangan-4,Kalimat efektif adalah,Siti membaca buku di perpustakaan,Kalimat efektif adalah ...,1.00
+kelas3-bahasa-indonesia-b03-ide-pokok,activity-003.json,pasangan-2,Menyimak cerita dengan baik,Dengarkan dengan tenang dan catat peristiwa penting,Bagaimana menyimak cerita dengan baik?,0.80
+kelas3-bahasa-indonesia-b03-ide-pokok,activity-003.json,pasangan-3,Alasan urutan peristiwa penting,Agar cerita mudah dipahami,Mengapa urutan peristiwa penting?,0.75
+kelas3-bahasa-indonesia-b04-menulis-paragraf,activity-003.json,pasangan-1,Bagian pertama paragraf,Kalimat topik,Apa bagian pertama paragraf?,0.75
+kelas3-bahasa-indonesia-b04-menulis-paragraf,activity-003.json,pasangan-2,Kalimat pendukung bekerja,Menjelaskan kalimat topik,Bagaimana kalimat pendukung bekerja?,0.75
+kelas3-bahasa-indonesia-b04-menulis-paragraf,activity-003.json,pasangan-3,Yang perlu diperiksa setelah menulis,"Huruf kapital, tanda baca, dan ejaan",Apa yang perlu diperiksa setelah menulis?,0.83
+kelas3-bahasa-indonesia-b05-teks-prosedur,activity-003.json,pasangan-1,Tujuan teks prosedur,Memberi petunjuk melakukan sesuatu,Apa tujuan teks prosedur?,0.75
+kelas3-bahasa-indonesia-b05-teks-prosedur,activity-003.json,pasangan-2,Urutan langkah ditulis,Berurutan dari awal sampai akhir,Bagaimana urutan langkah ditulis?,0.75
+kelas3-bahasa-indonesia-b05-teks-prosedur,activity-003.json,pasangan-3,Kata yang biasa dipakai,"Kata perintah seperti siapkan, masukkan, siram",Kata apa yang biasa dipakai?,0.80
+kelas3-bahasa-indonesia-b06-dongeng,activity-003.json,pasangan-2,Tokoh dalam dongeng,Pelaku dalam cerita,Siapa tokoh dalam dongeng?,0.75
+kelas3-bahasa-indonesia-b06-dongeng,activity-003.json,pasangan-4,Dongeng adalah cerita,Khayalan turun-temurun,Dongeng adalah cerita ...,1.00
+kelas3-bahasa-indonesia-b07-wawancara,activity-003.json,pasangan-2,Pertanyaan yang baik,"Singkat, jelas, dan mudah dijawab",Bagaimana pertanyaan yang baik?,0.75
+kelas3-bahasa-indonesia-b07-wawancara,activity-003.json,pasangan-3,Yang dilakukan saat wawancara,Bersikap sopan dan mencatat jawaban,Apa yang dilakukan saat wawancara?,0.80
+kelas3-ipas-b02-daur-hidup,activity-003.json,pasangan-1,Tahap pertama daur hidup kupu-kupu,Telur,Apa tahap pertama daur hidup kupu-kupu?,0.83
+kelas3-ipas-b03-wujud-zat,activity-003.json,pasangan-2,Sifat zat cair,"Bentuk mengikuti wadah, volume tetap",Apa sifat zat cair?,0.75
+kelas3-ipas-b03-wujud-zat,activity-003.json,pasangan-3,Contoh perubahan wujud,"Es mencair, air menguap, uap mengembun",Apa contoh perubahan wujud?,0.75
+kelas3-ipas-b05-cuaca-musim,activity-003.json,pasangan-2,Tanda cuaca hujan,Awan gelap dan titik air turun,Apa tanda cuaca hujan?,0.75
+kelas3-ipas-b05-cuaca-musim,activity-003.json,pasangan-4,Cuaca cerah ditandai dengan,Langit terang dan matahari bersinar,Cuaca cerah ditandai dengan ...,1.00
+kelas3-ipas-b07-lingkungan-pelestarian,activity-003.json,pasangan-1,Alasan lingkungan harus bersih,Agar sehat dan nyaman,Mengapa lingkungan harus bersih?,0.75
+kelas3-ipas-b07-lingkungan-pelestarian,activity-003.json,pasangan-2,Penyebab lingkungan kotor,Sampah dibuang sembarangan dan penebangan pohon,Apa penyebab lingkungan kotor?,0.75
+kelas3-matematika-b01-bilangan-10000,activity-003.json,pasangan-1,Banyak kubus pada gambar,3.452 (tiga ribu empat ratus lima puluh dua),Berapa banyak kubus pada gambar?,0.80
+kelas3-matematika-b01-bilangan-10000,activity-003.json,pasangan-2,Nilai tempat angka 5 pada 3.452,"Puluhan, nilainya 50",Apa nilai tempat angka 5 pada 3.452?,0.83
+kelas3-matematika-b01-bilangan-10000,activity-003.json,pasangan-3,Membandingkan dua bilangan,Bandingkan angka paling kiri lebih dahulu,Bagaimana membandingkan dua bilangan?,0.75
+kelas3-matematika-b02-penjumlahan-pengurangan,activity-003.json,pasangan-1,Banyak hasil 2.450 + 1.275,3.725,Berapa hasil 2.450 + 1.275?,0.75
+kelas3-matematika-b02-penjumlahan-pengurangan,activity-003.json,pasangan-3,Waktu kita meminjam saat mengurangi,Saat angka atas lebih kecil dari angka bawah,Kapan kita meminjam saat mengurangi?,0.80
+kelas3-matematika-b06-keliling-luas,activity-003.json,pasangan-2,Menghitung luas persegi panjang,Panjang × lebar,Bagaimana menghitung luas persegi panjang?,0.80
+kelas3-matematika-b08-penyajian-data,activity-003.json,pasangan-1,Isi tabel data,Keterangan dan jumlah,Apa isi tabel data?,0.75
+kelas3-matematika-b08-penyajian-data,activity-003.json,pasangan-2,Yang ditunjukkan diagram batang,Banyak data pada setiap kelompok,Apa yang ditunjukkan diagram batang?,0.80
+kelas3-matematika-b08-penyajian-data,activity-003.json,pasangan-3,Mencari data terbanyak,Lihat batang tertinggi,Bagaimana mencari data terbanyak?,0.75
+kelas3-pai-b02-iman,activity-003.json,pasangan-2,Sifat Allah yang Maha Pengasih,Ar-Rahman,Apa sifat Allah yang Maha Pengasih?,0.83
+kelas3-pai-b02-iman,activity-003.json,pasangan-3,Wujud iman sehari-hari,"Rajin salat, jujur, dan berbuat baik",Bagaimana wujud iman sehari-hari?,0.75
+kelas3-pai-b04-salat,activity-003.json,pasangan-1,Banyak kali salat wajib dalam sehari,Lima waktu,Berapa kali salat wajib dalam sehari?,0.83
+kelas3-pai-b04-salat,activity-003.json,pasangan-2,Yang dilakukan sebelum salat,Berwudu dan menutup aurat,Apa yang dilakukan sebelum salat?,0.80
+kelas3-pai-b04-salat,activity-003.json,pasangan-3,Urutan gerakan salat,"Berdiri, takbir, rukuk, sujud, duduk, lalu salam",Bagaimana urutan gerakan salat?,0.75
+kelas3-pai-b05-puasa,activity-003.json,pasangan-4,Hikmah puasa adalah,Melatih sabar,Hikmah puasa adalah ...,1.00
+kelas3-pai-b07-sejarah-islam,activity-003.json,pasangan-1,Tempat Nabi Muhammad lahir,Makkah,Di mana Nabi Muhammad lahir?,0.75
+kelas3-pai-b07-sejarah-islam,activity-003.json,pasangan-2,Tempat wahyu pertama diterima,Gua Hira,Di mana wahyu pertama diterima?,0.75
+kelas3-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-1,Adab kepada orang tua,Menghormati dan membantu,Bagaimana adab kepada orang tua?,0.80
+kelas3-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-2,Adab kepada guru,Sopan dan mendengarkan,Bagaimana adab kepada guru?,0.75
+kelas3-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-3,Sifat yang diteladani,"Jujur, sabar, dan peduli",Sifat apa yang diteladani?,0.75
+kelas3-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-4,Manfaat berkata jujur adalah,Dipercaya orang lain,Manfaat berkata jujur adalah ...,1.00
+kelas3-pendidikan-pancasila-b02-aturan,activity-003.json,pasangan-3,Akibat melanggar aturan,Kegiatan terganggu dan orang lain dirugikan,Apa akibat melanggar aturan?,0.75
+kelas3-pendidikan-pancasila-b02-aturan,activity-003.json,pasangan-4,Contoh aturan di rumah adalah,Merapikan tempat tidur,Contoh aturan di rumah adalah ...,1.00
+kelas3-pendidikan-pancasila-b04-musyawarah,activity-003.json,pasangan-3,Yang dilakukan bila pendapat berbeda,Menghargai dan mencari kesepakatan,Apa yang dilakukan bila pendapat berbeda?,0.83
+kelas3-pendidikan-pancasila-b07-gotong-royong,activity-003.json,pasangan-2,Contoh gotong royong di sekolah,Membersihkan kelas dan menata kursi,Contoh gotong royong di sekolah?,1.00
+kelas3-pendidikan-pancasila-b07-gotong-royong,activity-003.json,pasangan-3,Manfaat gotong royong,Pekerjaan cepat selesai dan mempererat persaudaraan,Apa manfaat gotong royong?,0.75
+kelas3-pendidikan-pancasila-b08-proyek-kewargaan,activity-003.json,pasangan-1,Masalah yang ingin diselesaikan,Masalah di sekitar sekolah,Apa masalah yang ingin diselesaikan?,0.80
+kelas3-pendidikan-pancasila-b08-proyek-kewargaan,activity-003.json,pasangan-3,Yang dilakukan setelah proyek,Melaporkan hasil dan evaluasi,Apa yang dilakukan setelah proyek?,0.80
+kelas3-pjok-b02-gerak-non-lokomotor,activity-003.json,pasangan-2,Gerak yang melatih keseimbangan,Berdiri satu kaki,Gerak apa yang melatih keseimbangan?,0.80
+kelas3-pjok-b02-gerak-non-lokomotor,activity-003.json,pasangan-4,Contoh gerak non-lokomotor adalah,Menekuk lutut,Contoh gerak non-lokomotor adalah ...,1.00
+kelas3-pjok-b03-gerak-manipulatif,activity-003.json,pasangan-3,Alasan kerja sama penting,Agar permainan berjalan lancar,Mengapa kerja sama penting?,0.75
+kelas3-pjok-b05-bola-kecil,activity-003.json,pasangan-1,Permainan yang terlihat,"Tenis, bulu tangkis, dan tenis meja",Permainan apa yang terlihat?,0.75
+kelas3-pjok-b05-bola-kecil,activity-003.json,pasangan-2,Alat bulu tangkis,Raket dan kok,Apa alat bulu tangkis?,0.75
+kelas3-pjok-b06-senam-dasar,activity-003.json,pasangan-3,Yang disiapkan agar aman,Matras dan pendamping,Apa yang disiapkan agar aman?,0.80
+kelas3-seni-rupa-b02-menggambar-bentuk,activity-003.json,pasangan-2,Bentuk yang menjadi atap rumah,Segitiga,Bentuk apa yang menjadi atap rumah?,0.83
+kelas3-seni-rupa-b02-menggambar-bentuk,activity-003.json,pasangan-3,Langkah pertama menggambar,Menyiapkan alat dan membuat sketsa tipis,Apa langkah pertama menggambar?,0.75
+kelas3-seni-rupa-b03-tekstur-bahan,activity-003.json,pasangan-1,Bahan yang bertekstur kasar,Batu dan daun kering,Bahan mana yang bertekstur kasar?,0.80
+kelas3-seni-rupa-b03-tekstur-bahan,activity-003.json,pasangan-2,Bahan yang bertekstur halus,Kapas dan kain,Bahan mana yang bertekstur halus?,0.80
+kelas3-seni-rupa-b04-kolase,activity-003.json,pasangan-2,Bahan alam yang dapat dipakai,"Daun kering, biji, ranting, dan pelepah",Bahan alam apa yang dapat dipakai?,0.83
+kelas3-seni-rupa-b05-seni-cetak,activity-003.json,pasangan-2,Bahan yang dapat dijadikan cap,"Kentang, pelepah pisang, atau tutup botol",Bahan apa yang dapat dijadikan cap?,0.83
+kelas3-seni-rupa-b07-apresiasi-karya,activity-003.json,pasangan-2,Unsur yang dapat diamati,"Garis, warna, dan bentuk",Unsur apa yang dapat diamati?,0.80
+kelas3-seni-rupa-b07-apresiasi-karya,activity-003.json,pasangan-4,Langkah pertama mengapresiasi karya adalah,Mengamati dengan teliti,Langkah pertama mengapresiasi karya adalah ...,1.00
+kelas4-bahasa-indonesia-b02-kalimat-efektif,activity-003.json,pasangan-1,Saja benda yang ada di sudut baca,"Ada rak buku, buku, meja, kursi, jendela, dan tanaman",Apa saja benda yang ada di sudut baca?,0.86
+kelas4-bahasa-indonesia-b02-kalimat-efektif,activity-003.json,pasangan-4,Ciri kalimat efektif adalah,"Jelas, singkat, dan sesuai kaidah",Ciri kalimat efektif adalah ...,1.00
+kelas4-bahasa-indonesia-b04-menulis-deskripsi,activity-003.json,pasangan-2,Daftar tiga ciri kucing yang bisa kamu deskripsikan,"Contoh: warna bulu oranye, tubuh kecil, dan mata bulat",Sebutkan tiga ciri kucing yang bisa kamu deskripsikan.,0.88
+kelas4-bahasa-indonesia-b04-menulis-deskripsi,activity-003.json,pasangan-4,Langkah pertama menulis teks deskripsi adalah,Menentukan objek yang dideskripsikan,Langkah pertama menulis teks deskripsi adalah ...,1.00
+kelas4-bahasa-indonesia-b05-teks-prosedur,activity-003.json,pasangan-2,Alasan langkah harus berurutan,Agar kegiatan berhasil dan mudah diikuti orang lain,Mengapa langkah harus berurutan?,0.75
+kelas4-bahasa-indonesia-b08-apresiasi-sastra,activity-003.json,pasangan-2,Yang bisa dinikmati dari sebuah puisi,"Rima, pilihan kata, irama, dan amanat",Apa yang bisa dinikmati dari sebuah puisi?,0.86
+kelas4-bahasa-indonesia-b08-apresiasi-sastra,activity-003.json,pasangan-3,Cara memberi apresiasi yang baik,Menyebutkan hal menarik dan alasannya dengan sopan,Bagaimana cara memberi apresiasi yang baik?,0.83
+kelas4-bahasa-indonesia-b08-apresiasi-sastra,activity-003.json,pasangan-4,Apresiasi yang baik terhadap karya teman adalah,menyebutkan hal menarik beserta alasannya,Apresiasi yang baik terhadap karya teman adalah ...,1.00
+kelas4-matematika-b02-faktor-kelipatan,activity-003.json,pasangan-2,Faktor yang ada di kedua lingkaran (daerah oranye),"1, 2, 3, dan 6 adalah faktor persekutuan 12 dan 18",Faktor apa yang ada di kedua lingkaran (daerah oranye)?,0.88
+kelas4-matematika-b02-faktor-kelipatan,activity-003.json,pasangan-3,Banyak faktor persekutuan terbesar (FPB) dari 12 dan 18,FPB 12 dan 18 adalah 6,Berapa faktor persekutuan terbesar (FPB) dari 12 dan 18?,0.86
+kelas4-matematika-b02-faktor-kelipatan,activity-003.json,pasangan-4,Bilangan berikut yang BUKAN faktor 12 adalah,5,Bilangan berikut yang BUKAN faktor 12 adalah ...,1.00
+kelas4-matematika-b03-pecahan,activity-003.json,pasangan-4,Bentuk paling sederhana dari 4/8 adalah,1/2,Bentuk paling sederhana dari 4/8 adalah ...,1.00
+kelas4-matematika-b04-pengukuran,activity-003.json,pasangan-1,Alat yang digunakan untuk mengukur panjang pensil,"Penggaris, dengan satuan sentimeter (cm)",Alat apa yang digunakan untuk mengukur panjang pensil?,0.88
+kelas4-matematika-b04-pengukuran,activity-003.json,pasangan-2,Alat yang digunakan untuk mengukur berat buah,"Timbangan, dengan satuan gram (g) atau kilogram (kg)",Alat apa yang digunakan untuk mengukur berat buah?,0.88
+kelas4-matematika-b04-pengukuran,activity-003.json,pasangan-4,Alat yang tepat untuk mengukur berat badan adalah,timbangan,Alat yang tepat untuk mengukur berat badan adalah ...,1.00
+kelas4-matematika-b05-bangun-datar,activity-003.json,pasangan-1,Daftar bangun datar yang terlihat pada gambar,"Persegi, persegi panjang, segitiga, dan lingkaran",Sebutkan bangun datar yang terlihat pada gambar.,0.86
+kelas4-matematika-b05-bangun-datar,activity-003.json,pasangan-3,Cara menghitung keliling persegi panjang,Keliling = 2 × (panjang + lebar),Bagaimana cara menghitung keliling persegi panjang?,0.83
+kelas4-matematika-b06-garis-sudut,activity-003.json,pasangan-2,Sudut yang besarnya 90°,"Sudut siku-siku, ditandai dengan kotak kecil",Sudut apa yang besarnya 90°?,0.80
+kelas4-matematika-b06-garis-sudut,activity-003.json,pasangan-5,Alat yang digunakan untuk mengukur besar sudut adalah,busur derajat,Alat yang digunakan untuk mengukur besar sudut adalah ...,1.00
+kelas4-matematika-b07-waktu-volume-data,activity-003.json,pasangan-2,Banyak volume air pada gelas ukur,"Sekitar 600 mL, terbaca dari garis skala",Berapa volume air pada gelas ukur?,0.83
+kelas4-matematika-b08-pemecahan-masalah,activity-003.json,pasangan-2,Operasi yang digunakan untuk menghitung total,Perkalian: 3 × 5.000 = 15.000,Operasi apa yang digunakan untuk menghitung total?,0.86
+kelas4-pai-b04-shalat,activity-003.json,pasangan-2,Daftar lima shalat wajib,"Subuh, Dzuhur, Ashar, Maghrib, dan Isya",Sebutkan lima shalat wajib.,0.75
+kelas4-pai-b05-puasa,activity-003.json,pasangan-2,Waktu berbuka puasa,Saat matahari terbenam (magrib),Kapan waktu berbuka puasa?,0.75
+kelas4-pai-b05-puasa,activity-003.json,pasangan-4,Hikmah puasa yang benar adalah,Melatih sabar dan disiplin,Hikmah puasa yang benar adalah ...,1.00
+kelas4-pai-b05-puasa,activity-003.json,pasangan-5,Puasa dimulai pada waktu,Terbit fajar,Puasa dimulai pada waktu ...,1.00
+kelas4-pai-b07-sejarah-islam,activity-003.json,pasangan-2,Tempat Nabi menerima wahyu pertama,Gua Hira,Di mana Nabi menerima wahyu pertama?,0.80
+kelas4-pai-b07-sejarah-islam,activity-003.json,pasangan-3,Alasan Nabi hijrah ke Madinah,Untuk menyebarkan Islam dan melindungi umat,Mengapa Nabi hijrah ke Madinah?,0.75
+kelas4-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-1,Adab kepada orang tua,"Menghormati, mendengarkan, dan membantu",Bagaimana adab kepada orang tua?,0.80
+kelas4-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-2,Adab kepada guru dan teman,"Sopan, jujur, sabar, dan saling membantu",Bagaimana adab kepada guru dan teman?,0.83
+kelas4-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-3,Sifat yang diteladani dari kisah Nabi dan sahabat,"Jujur, amanah, sabar, dan dermawan",Sifat apa yang diteladani dari kisah Nabi dan sahabat?,0.89
+kelas4-pai-b08-adab-kisah-teladan,activity-003.json,pasangan-4,Sifat Nabi Muhammad yang patut diteladani adalah,Jujur dan amanah,Sifat Nabi Muhammad yang patut diteladani adalah ...,1.00
+kelas4-pendidikan-pancasila-b04-musyawarah,activity-003.json,pasangan-3,Alasan keputusan musyawarah harus dilaksanakan bersama,Agar keputusan adil dan menjadi tanggung jawab bersama,Mengapa keputusan musyawarah harus dilaksanakan bersama?,0.83
+kelas4-pendidikan-pancasila-b08-proyek-kewargaan,activity-003.json,pasangan-3,Manfaat proyek kewargaan,"Menumbuhkan kepedulian, tanggung jawab, dan kerja sama",Apa manfaat proyek kewargaan?,0.75
+kelas4-pjok-b05-bola-kecil,activity-003.json,pasangan-1,Daftar permainan bola kecil pada gambar,"Tenis, bulu tangkis, dan tenis meja",Sebutkan permainan bola kecil pada gambar.,0.83
+kelas4-pjok-b05-bola-kecil,activity-003.json,pasangan-2,Alat utama dalam bulu tangkis,Raket dan kok,Apa alat utama dalam bulu tangkis?,0.83
+kelas4-pjok-b05-bola-kecil,activity-003.json,pasangan-3,Alasan aturan dan keselamatan penting,Agar permainan adil dan tidak ada yang cedera,Mengapa aturan dan keselamatan penting?,0.80
+kelas4-pjok-b06-senam-dasar,activity-003.json,pasangan-1,Alasan pemanasan penting sebelum senam,Mencegah cedera dan menyiapkan otot,Mengapa pemanasan penting sebelum senam?,0.80
+kelas4-pjok-b06-senam-dasar,activity-003.json,pasangan-3,Yang harus disiapkan agar aman,"Matras, ruang cukup, dan pendamping",Apa yang harus disiapkan agar aman?,0.83
+kelas4-seni-rupa-b02-menggambar-bentuk,activity-003.json,pasangan-1,Bentuk dasar yang kamu lihat,"Kubus, bola, dan tabung",Bentuk dasar apa saja yang kamu lihat?,0.71
+kelas4-seni-rupa-b04-kolase,activity-003.json,pasangan-3,Yang membuat kolase terlihat menarik,"Susunan warna, bentuk, dan ukuran yang seimbang",Apa yang membuat kolase terlihat menarik?,0.83
+kelas4-seni-rupa-b04-kolase,activity-003.json,pasangan-4,Langkah pertama membuat kolase adalah,menyiapkan bahan dan merancang,Langkah pertama membuat kolase adalah ...,1.00
+kelas4-seni-rupa-b05-seni-cetak,activity-003.json,pasangan-2,Bahan yang dapat dijadikan alat cetak,"Kentang, pelepah pisang, tutup botol, atau wortel",Bahan apa yang dapat dijadikan alat cetak?,0.86
+kelas4-seni-rupa-b07-apresiasi-karya,activity-003.json,pasangan-1,Tujuan apresiasi karya seni,"Mengamati, menilai, dan menghargai karya",Apa tujuan apresiasi karya seni?,0.80
+kelas4-seni-rupa-b07-apresiasi-karya,activity-003.json,pasangan-2,Unsur yang dapat diamati,"Garis, warna, bentuk, tekstur, dan tema",Unsur apa yang dapat diamati?,0.80
+kelas4-seni-rupa-b07-apresiasi-karya,activity-003.json,pasangan-3,Memberi tanggapan yang baik,"Sopan, beralasan, dan memberi saran yang membangun",Bagaimana memberi tanggapan yang baik?,0.80
+kelas4-seni-rupa-b07-apresiasi-karya,activity-003.json,pasangan-4,Langkah pertama dalam mengapresiasi karya seni adalah,Mengamati karya dengan teliti,Langkah pertama dalam mengapresiasi karya seni adalah ...,1.00
+kelas4-seni-rupa-b08-pameran-kelas,activity-003.json,pasangan-1,Yang dipamerkan di kelas,"Karya seni siswa, seperti gambar dan karya tiga dimensi",Apa yang dipamerkan di kelas?,0.75
+kelas4-seni-rupa-b08-pameran-kelas,activity-003.json,pasangan-2,Karya ditata agar menarik,"Karya dikelompokkan, diberi label, dan tidak berdesakan",Bagaimana karya ditata agar menarik?,0.80
+kelas5-bahasa-indonesia-b02-teks-narasi,activity-003.json,pasangan-1,Ciri teks narasi,Menceritakan peristiwa dengan tokoh dan alur,Apa ciri teks narasi?,0.75
+kelas5-bahasa-indonesia-b03-ide-pokok,activity-003.json,pasangan-2,Tempat letak kalimat utama,"Sering di awal paragraf, bisa juga di akhir",Di mana letak kalimat utama?,0.75
+kelas5-bahasa-indonesia-b03-ide-pokok,activity-003.json,pasangan-4,Ide pokok adalah,Gagasan utama paragraf,Ide pokok adalah ...,1.00
+kelas5-bahasa-indonesia-b04-laporan,activity-003.json,pasangan-2,Ciri bahasa laporan,"Baku, jelas, dan tidak berlebihan",Apa ciri bahasa laporan?,0.75
+kelas5-bahasa-indonesia-b04-laporan,activity-003.json,pasangan-3,Yang perlu diperiksa,"Ejaan, tanda baca, dan kelengkapan isi",Apa yang perlu diperiksa?,0.75
+kelas5-bahasa-indonesia-b05-eksposisi,activity-003.json,pasangan-1,Tujuan teks eksposisi,Menjelaskan informasi secara objektif,Apa tujuan teks eksposisi?,0.75
+kelas5-bahasa-indonesia-b05-eksposisi,activity-003.json,pasangan-3,Bahasa yang dipakai,Baku dan jelas,Bahasa apa yang dipakai?,0.75
+kelas5-bahasa-indonesia-b05-eksposisi,activity-003.json,pasangan-4,Struktur teks eksposisi adalah,"Tesis, argumen, penegasan",Struktur teks eksposisi adalah ...,1.00
+kelas5-bahasa-indonesia-b07-wawancara-presentasi,activity-003.json,pasangan-1,Pertanyaan yang baik,"Singkat, jelas, dan relevan",Bagaimana pertanyaan yang baik?,0.75
+kelas5-bahasa-indonesia-b07-wawancara-presentasi,activity-003.json,pasangan-2,Yang dilakukan saat wawancara,Sopan dan mencatat jawaban,Apa yang dilakukan saat wawancara?,0.80
+kelas5-bahasa-indonesia-b07-wawancara-presentasi,activity-003.json,pasangan-3,Yang disiapkan untuk presentasi,Urutan materi dan suara jelas,Apa yang disiapkan untuk presentasi?,0.80
+kelas5-bahasa-indonesia-b08-menulis-cerita,activity-003.json,pasangan-1,Yang ditentukan pertama,Tema cerita,Apa yang ditentukan pertama?,0.75
+kelas5-ipas-b06-siklus-air,activity-003.json,pasangan-1,Tahap pertama siklus air,Penguapan air dari laut atau darat,Apa tahap pertama siklus air?,0.80
+kelas5-ipas-b06-siklus-air,activity-003.json,pasangan-3,Air kembali ke laut,Melalui hujan dan aliran sungai,Bagaimana air kembali ke laut?,0.75
+kelas5-ipas-b07-energi-listrik,activity-003.json,pasangan-1,Sumber energi listrik,"Air, angin, matahari, dan bahan bakar",Apa sumber energi listrik?,0.75
+kelas5-ipas-b07-energi-listrik,activity-003.json,pasangan-2,Perubahan energi pada lampu,Listrik menjadi cahaya,Apa perubahan energi pada lampu?,0.80
+kelas5-matematika-b01-bilangan-1000000,activity-003.json,pasangan-1,Bilangan 452.316 dibaca,Empat ratus lima puluh dua ribu tiga ratus enam belas,Bilangan 452.316 dibaca ...,1.00
+kelas5-matematika-b01-bilangan-1000000,activity-003.json,pasangan-2,Nilai tempat angka 5 pada 452.316,"Puluh ribuan, nilainya 50.000",Apa nilai tempat angka 5 pada 452.316?,0.83
+kelas5-matematika-b01-bilangan-1000000,activity-003.json,pasangan-3,Membandingkan dua bilangan,Bandingkan angka paling kiri lebih dahulu,Bagaimana membandingkan dua bilangan?,0.75
+kelas5-matematika-b06-volume-luas-permukaan,activity-003.json,pasangan-1,Menghitung volume balok,Panjang × lebar × tinggi,Bagaimana menghitung volume balok?,0.75
+kelas5-matematika-b08-pemecahan-masalah,activity-003.json,pasangan-4,Langkah pertama menyelesaikan soal cerita adalah,Memahami soal,Langkah pertama menyelesaikan soal cerita adalah ...,1.00
+kelas5-matematika-b08-pemecahan-masalah,activity-003.json,pasangan-5,Cara memeriksa jawaban adalah,Menghitung ulang,Cara memeriksa jawaban adalah ...,1.00
+kelas5-pai-b04-salat-ibadah,activity-003.json,pasangan-1,Banyak salat wajib dalam sehari,Lima waktu,Berapa salat wajib dalam sehari?,0.80
+kelas5-pai-b04-salat-ibadah,activity-003.json,pasangan-2,Yang dilakukan sebelum salat,Berwudu dan menutup aurat,Apa yang dilakukan sebelum salat?,0.80
+kelas5-pai-b05-puasa,activity-003.json,pasangan-2,Hal yang membatalkan,Makan dan minum dengan sengaja,Apa hal yang membatalkan?,0.75
+kelas5-pai-b05-puasa,activity-003.json,pasangan-4,Hal yang membatalkan puasa adalah,Makan dengan sengaja,Hal yang membatalkan puasa adalah ...,1.00
+kelas5-pai-b05-puasa,activity-003.json,pasangan-5,Hikmah puasa adalah,Melatih sabar,Hikmah puasa adalah ...,1.00
+kelas5-pai-b07-sejarah-islam,activity-003.json,pasangan-1,Tempat Nabi Muhammad lahir,Makkah,Di mana Nabi Muhammad lahir?,0.75
+kelas5-pai-b07-sejarah-islam,activity-003.json,pasangan-2,Tempat wahyu pertama diterima,Gua Hira,Di mana wahyu pertama diterima?,0.75
+kelas5-pai-b08-adab,activity-003.json,pasangan-1,Adab kepada orang tua,Menghormati dan membantu,Bagaimana adab kepada orang tua?,0.80
+kelas5-pai-b08-adab,activity-003.json,pasangan-2,Adab kepada guru,Sopan dan mendengarkan,Bagaimana adab kepada guru?,0.75
+kelas5-pai-b08-adab,activity-003.json,pasangan-3,Sifat yang diteladani,"Jujur, sabar, dan peduli",Sifat apa yang diteladani?,0.75
+kelas5-pai-b08-adab,activity-003.json,pasangan-4,Manfaat berkata jujur adalah,Dipercaya orang lain,Manfaat berkata jujur adalah ...,1.00
+kelas5-pendidikan-pancasila-b01-sejarah-pancasila,activity-003.json,pasangan-1,Badan yang dibentuk untuk menyiapkan kemerdekaan,BPUPKI,Badan apa yang dibentuk untuk menyiapkan kemerdekaan?,0.86
+kelas5-pendidikan-pancasila-b03-hak-kewajiban,activity-003.json,pasangan-1,Contoh hak warga,Mendapat pendidikan dan pelayanan kesehatan,Apa contoh hak warga?,0.75
+kelas5-pendidikan-pancasila-b03-hak-kewajiban,activity-003.json,pasangan-4,Contoh kewajiban di sekolah adalah,Mematuhi aturan,Contoh kewajiban di sekolah adalah ...,1.00
+kelas5-pendidikan-pancasila-b06-nkri-otonomi,activity-003.json,pasangan-2,Semboyan bangsa Indonesia,Bhinneka Tunggal Ika,Apa semboyan bangsa Indonesia?,0.75
+kelas5-pendidikan-pancasila-b06-nkri-otonomi,activity-003.json,pasangan-4,Otonomi daerah berarti,Daerah mengatur urusannya sendiri,Otonomi daerah berarti ...,1.00
+kelas5-pendidikan-pancasila-b07-gotong-royong,activity-003.json,pasangan-2,Contoh gotong royong di sekolah,Kerja bakti dan menata kelas,Contoh gotong royong di sekolah?,1.00
+kelas5-pendidikan-pancasila-b08-proyek-kewargaan,activity-003.json,pasangan-1,Masalah yang dipilih,Masalah di sekitar sekolah,Apa masalah yang dipilih?,0.75
+kelas5-pendidikan-pancasila-b08-proyek-kewargaan,activity-003.json,pasangan-3,Yang dilakukan setelah proyek,Melaporkan hasil dan evaluasi,Apa yang dilakukan setelah proyek?,0.80
+kelas5-pjok-b01-bola-besar,activity-003.json,pasangan-1,Permainan bola besar yang terlihat,"Sepak bola, bola basket, dan bola voli",Permainan bola besar apa yang terlihat?,0.83
+kelas5-pjok-b01-bola-besar,activity-003.json,pasangan-2,Teknik dasar sepak bola,"Menendang, mengoper, dan menggiring bola",Apa teknik dasar sepak bola?,0.80
+kelas5-pjok-b01-bola-besar,activity-003.json,pasangan-3,Alasan kerja sama penting,Agar tim dapat mencetak skor dan bermain adil,Mengapa kerja sama penting?,0.75
+kelas5-pjok-b02-bola-kecil,activity-003.json,pasangan-1,Permainan yang terlihat,"Tenis, bulu tangkis, dan tenis meja",Permainan apa yang terlihat?,0.75
+kelas5-pjok-b02-bola-kecil,activity-003.json,pasangan-2,Teknik dasar bulu tangkis,Memegang raket dan memukul kok,Apa teknik dasar bulu tangkis?,0.80
+kelas5-pjok-b05-bola-besar-lanjutan,activity-003.json,pasangan-1,Teknik lanjutan sepak bola,"Passing, dribbling, dan shooting",Apa teknik lanjutan sepak bola?,0.80
+kelas5-pjok-b05-bola-besar-lanjutan,activity-003.json,pasangan-2,Teknik lanjutan bola basket,"Dribble, passing, dan shooting",Apa teknik lanjutan bola basket?,0.80
+kelas5-pjok-b05-bola-besar-lanjutan,activity-003.json,pasangan-3,Alasan kerja sama penting,Agar tim mencetak skor,Mengapa kerja sama penting?,0.75
+kelas5-pjok-b05-bola-besar-lanjutan,activity-003.json,pasangan-4,"Agar tim menang, pemain harus",Bekerja sama,"Agar tim menang, pemain harus ...",1.00
+kelas5-pjok-b06-senam-lantai,activity-003.json,pasangan-1,Gerak senam lantai,"Guling depan, guling belakang, dan keseimbangan",Apa gerak senam lantai?,0.75
+kelas5-pjok-b06-senam-lantai,activity-003.json,pasangan-3,Yang harus disiapkan,Matras dan pendamping,Apa yang harus disiapkan?,0.75
+kelas5-seni-rupa-b02-perspektif,activity-003.json,pasangan-3,Alasan benda dekat tampak besar,Karena jaraknya dekat dengan pengamat,Mengapa benda dekat tampak besar?,0.80
+kelas5-seni-rupa-b04-karya-campuran,activity-003.json,pasangan-2,Bahan yang dapat dipakai,"Kertas, kain, daun, dan cat",Bahan apa yang dapat dipakai?,0.80
+kelas5-seni-rupa-b05-seni-cetak,activity-003.json,pasangan-2,Bahan alat cetak,"Kentang, pelepah pisang, atau tutup botol",Apa bahan alat cetak?,0.75
+kelas5-seni-rupa-b07-apresiasi,activity-003.json,pasangan-2,Unsur yang diamati,"Garis, warna, bentuk, dan tekstur",Unsur apa yang diamati?,0.75
+kelas5-seni-rupa-b07-apresiasi,activity-003.json,pasangan-3,Tanggapan yang baik,"Sopan, beralasan, dan membangun",Bagaimana tanggapan yang baik?,0.75
+kelas5-seni-rupa-b07-apresiasi,activity-003.json,pasangan-4,Langkah pertama mengapresiasi karya adalah,Mengamati dengan teliti,Langkah pertama mengapresiasi karya adalah ...,1.00
+kelas6-bahasa-indonesia-b01-laporan,activity-003.json,pasangan-2,Bahasa yang dipakai,Baku dan objektif,Bahasa apa yang dipakai?,0.75
+kelas6-bahasa-indonesia-b02-eksposisi,activity-003.json,pasangan-3,Bahasa yang dipakai,Baku dan jelas,Bahasa apa yang dipakai?,0.75
+kelas6-bahasa-indonesia-b05-prosedur,activity-003.json,pasangan-3,Kata yang dipakai,Kata perintah,Kata apa yang dipakai?,0.75
+kelas6-bahasa-indonesia-b06-diskusi,activity-003.json,pasangan-1,Tujuan teks diskusi,Membahas masalah dari dua sisi,Apa tujuan teks diskusi?,0.75
+kelas6-bahasa-indonesia-b06-diskusi,activity-003.json,pasangan-4,Teks diskusi membahas masalah dari,Dua sisi,Teks diskusi membahas masalah dari ...,1.00
+kelas6-bahasa-indonesia-b07-wawancara,activity-003.json,pasangan-1,Pertanyaan yang baik,"Singkat, jelas, dan relevan",Apa pertanyaan yang baik?,0.75
+kelas6-bahasa-indonesia-b07-wawancara,activity-003.json,pasangan-2,Sikap saat wawancara,Sopan dan mencatat jawaban,Bagaimana sikap saat wawancara?,0.75
+kelas6-bahasa-indonesia-b07-wawancara,activity-003.json,pasangan-3,Yang disiapkan untuk presentasi,Urutan materi dan suara jelas,Apa yang disiapkan untuk presentasi?,0.80
+kelas6-ipas-b01-perkembangbiakan,activity-003.json,pasangan-1,Kupu-kupu berkembang biak,Bertelur,Bagaimana kupu-kupu berkembang biak?,0.75
+kelas6-ipas-b01-perkembangbiakan,activity-003.json,pasangan-2,Tahapan setelah ulat,"Kepompong, lalu kupu-kupu",Apa tahapan setelah ulat?,0.75
+kelas6-ipas-b01-perkembangbiakan,activity-003.json,pasangan-3,Tumbuhan berkembang biak,"Dengan biji, tunas, atau cangkok",Bagaimana tumbuhan berkembang biak?,0.75
+kelas6-ipas-b07-teknologi-ramah-lingkungan,activity-003.json,pasangan-4,Cara menghemat energi adalah,Mematikan lampu saat tidak dipakai,Cara menghemat energi adalah ...,1.00
+kelas6-ipas-b08-pelestarian,activity-003.json,pasangan-1,Alasan lingkungan harus dilestarikan,Agar tetap sehat dan tersedia,Mengapa lingkungan harus dilestarikan?,0.75
+kelas6-matematika-b01-bilangan-bulat,activity-003.json,pasangan-2,"Yang lebih kecil, -3 atau 2",-3,"Mana yang lebih kecil, -3 atau 2?",0.80
+kelas6-matematika-b03-rasio-proporsi,activity-003.json,pasangan-1,Rasio 4 benda merah dan 3 benda biru,4 : 3,Apa rasio 4 benda merah dan 3 benda biru?,0.83
+kelas6-matematika-b03-rasio-proporsi,activity-003.json,pasangan-3,Rasio 6 : 9 disederhanakan menjadi,2 : 3,Rasio 6 : 9 disederhanakan menjadi ...,1.00
+kelas6-matematika-b06-statistika,activity-003.json,pasangan-4,"Mean dari 70, 80, 90 adalah",80,"Mean dari 70, 80, 90 adalah ...",1.00
+kelas6-matematika-b08-pemecahan-masalah,activity-003.json,pasangan-4,Langkah pertama menyelesaikan soal cerita adalah,Memahami soal,Langkah pertama menyelesaikan soal cerita adalah ...,1.00
+kelas6-pai-b02-iman-hari-akhir,activity-003.json,pasangan-2,Tanda hari akhir,Terompet sangkakala ditiup,Apa tanda hari akhir?,0.75
+kelas6-pai-b04-salat,activity-003.json,pasangan-1,Banyak salat wajib sehari,Lima waktu,Berapa salat wajib sehari?,0.75
+kelas6-pai-b04-salat,activity-003.json,pasangan-2,Yang dilakukan sebelum salat,Berwudu dan menutup aurat,Apa yang dilakukan sebelum salat?,0.80
+kelas6-pai-b05-puasa,activity-003.json,pasangan-4,Hal yang membatalkan puasa adalah,Makan dengan sengaja,Hal yang membatalkan puasa adalah ...,1.00
+kelas6-pai-b05-puasa,activity-003.json,pasangan-5,Hikmah puasa adalah,Melatih sabar,Hikmah puasa adalah ...,1.00
+kelas6-pai-b07-sejarah-islam,activity-003.json,pasangan-2,Tempat wahyu pertama diterima,Gua Hira,Di mana wahyu pertama diterima?,0.75
+kelas6-pai-b08-adab,activity-003.json,pasangan-1,Adab kepada orang tua,Menghormati dan membantu,Bagaimana adab kepada orang tua?,0.80
+kelas6-pai-b08-adab,activity-003.json,pasangan-2,Adab kepada guru,Sopan dan mendengarkan,Bagaimana adab kepada guru?,0.75
+kelas6-pai-b08-adab,activity-003.json,pasangan-3,Sifat yang diteladani,"Jujur, sabar, dan peduli",Sifat apa yang diteladani?,0.75
+kelas6-pai-b08-adab,activity-003.json,pasangan-4,Sifat Nabi Muhammad yang diteladani adalah,Jujur dan amanah,Sifat Nabi Muhammad yang diteladani adalah ...,1.00
+kelas6-pendidikan-pancasila-b02-hak-kewajiban,activity-003.json,pasangan-1,Contoh hak warga,Pendidikan dan pelayanan kesehatan,Apa contoh hak warga?,0.75
+kelas6-pendidikan-pancasila-b02-hak-kewajiban,activity-003.json,pasangan-4,Hak dan kewajiban harus,Dilaksanakan seimbang,Hak dan kewajiban harus ...,1.00
+kelas6-pendidikan-pancasila-b05-nkri-globalisasi,activity-003.json,pasangan-3,Menjaga jati diri,Mencintai budaya dan produk dalam negeri,Bagaimana menjaga jati diri?,0.75
+kelas6-pendidikan-pancasila-b05-nkri-globalisasi,activity-003.json,pasangan-4,Cara menjaga jati diri bangsa adalah,Mencintai budaya sendiri,Cara menjaga jati diri bangsa adalah ...,1.00
+kelas6-pendidikan-pancasila-b07-proyek-kewargaan,activity-003.json,pasangan-1,Masalah yang dipilih,Masalah di lingkungan sekitar,Apa masalah yang dipilih?,0.75
+kelas6-pjok-b01-bola-besar,activity-003.json,pasangan-1,Teknik dasar sepak bola,"Menendang, mengoper, menggiring",Apa teknik dasar sepak bola?,0.80
+kelas6-pjok-b01-bola-besar,activity-003.json,pasangan-2,Teknik dasar bola basket,"Dribble, passing, shooting",Apa teknik dasar bola basket?,0.80
+kelas6-pjok-b01-bola-besar,activity-003.json,pasangan-3,Alasan kerja sama penting,Agar tim mencetak skor,Mengapa kerja sama penting?,0.75
+kelas6-pjok-b01-bola-besar,activity-003.json,pasangan-4,"Agar tim menang, pemain harus",Bekerja sama,"Agar tim menang, pemain harus ...",1.00
+kelas6-pjok-b03-atletik,activity-003.json,pasangan-2,Urutan lompat jauh,"Awalan, tolakan, melayang, mendarat, keluar dari bak lompat",Apa urutan lompat jauh?,0.75
+kelas6-pjok-b05-senam,activity-003.json,pasangan-1,Gerak senam lantai,"Guling depan, belakang, keseimbangan",Apa gerak senam lantai?,0.75
+kelas6-pjok-b08-permainan-tradisional,activity-003.json,pasangan-1,Permainan tradisional yang kamu tahu,"Gobak sodor, engklek, dan kasti",Permainan tradisional apa yang kamu tahu?,0.83
+kelas6-pjok-b08-permainan-tradisional,activity-003.json,pasangan-5,Contoh permainan tradisional adalah,Gobak sodor,Contoh permainan tradisional adalah ...,1.00
+kelas6-seni-rupa-b02-ilustrasi,activity-003.json,pasangan-3,Yang ditambahkan terakhir,Warna dan detail,Apa yang ditambahkan terakhir?,0.75
+kelas6-seni-rupa-b03-warna-teknik,activity-003.json,pasangan-2,Hasil merah + biru,Ungu,Apa hasil merah + biru?,0.75
+kelas6-seni-rupa-b03-warna-teknik,activity-003.json,pasangan-4,Teknik mewarnai dengan cat air disebut,Teknik basah,Teknik mewarnai dengan cat air disebut ...,1.00
+kelas6-seni-rupa-b05-seni-cetak,activity-003.json,pasangan-2,Bahan alat cetak,"Kentang, pelepah, atau tutup botol",Apa bahan alat cetak?,0.75
+kelas6-seni-rupa-b07-apresiasi,activity-003.json,pasangan-5,Kritik yang baik bersifat,Membangun,Kritik yang baik bersifat ...,1.00
