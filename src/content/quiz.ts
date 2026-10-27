@@ -17,6 +17,20 @@ function sameSet(left: string[], right: string[]): boolean {
   return a.length === b.length && a.every((value, index) => value === b[index]);
 }
 
+/**
+ * Menyamakan jawaban bebas sebelum dibandingkan: huruf besar/kecil, tanda baca,
+ * dan spasi berlebih diabaikan sehingga "Batu." dan "  batu  " sama-sama diterima.
+ * Garis miring dan tanda hubung dipertahankan agar "1/4" tidak menjadi "1 4".
+ */
+function normalizeFreeText(value: string): string {
+  return value
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[.,;:!?"'“”‘’()[\]{}]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function isAnswerCorrect(
   question: QuizQuestion,
   answer: QuizAnswerValue | undefined
@@ -28,10 +42,15 @@ export function isAnswerCorrect(
     return Array.isArray(correct) && Array.isArray(answer) && sameSet(answer, correct);
   }
 
-  if (typeof correct !== "string" || typeof answer !== "string") return false;
   if (question.responseType === "text") {
-    return answer.trim().toLowerCase() === correct.trim().toLowerCase();
+    if (typeof answer !== "string") return false;
+    const accepted = Array.isArray(correct) ? correct : typeof correct === "string" ? [correct] : [];
+    const normalized = normalizeFreeText(answer);
+    if (!normalized) return false;
+    return accepted.some((value) => normalizeFreeText(value) === normalized);
   }
+
+  if (typeof correct !== "string" || typeof answer !== "string") return false;
   return answer === correct;
 }
 

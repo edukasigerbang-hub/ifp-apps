@@ -14,31 +14,31 @@
         "questionId": "soal-1",
         "prompt": "Sebutkan satu kata penglihatan pada gambar.",
         "responseType": "text",
-        "correctResponse": "hijau"
+        "correctResponse": ["hijau", "merah", "biru"]
       },
       {
         "questionId": "soal-2",
         "prompt": "Sebutkan satu kata pendengaran pada gambar.",
         "responseType": "text",
-        "correctResponse": "kicau burung"
+        "correctResponse": ["kicau burung", "gemericik air", "berkicau", "suara burung"]
       },
       {
         "questionId": "soal-3",
         "prompt": "Objek yang dideskripsikan adalah ...",
         "responseType": "text",
-        "correctResponse": "taman kota"
+        "correctResponse": ["taman kota", "taman"]
       },
       {
         "questionId": "soal-4",
         "prompt": "Kalimat yang berisi ide utama disebut ...",
         "responseType": "text",
-        "correctResponse": "kalimat topik"
+        "correctResponse": ["kalimat topik", "kalimat utama"]
       },
       {
         "questionId": "soal-tempat-duduk-pengunjung-yang-ada",
         "prompt": "Tempat duduk pengunjung yang ada pada deskripsi taman kota adalah ...",
         "responseType": "text",
-        "correctResponse": "bangku"
+        "correctResponse": ["bangku", "kursi"]
       },
       {
         "questionId": "soal-hewan-pada-deskripsi-taman-kota",

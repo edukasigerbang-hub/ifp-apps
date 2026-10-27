@@ -14,13 +14,13 @@
         "questionId": "soal-1",
         "prompt": "Tuliskan nilai tempat angka 2 pada 12.345.",
         "responseType": "text",
-        "correctResponse": "ribuan"
+        "correctResponse": ["ribuan", "ribu"]
       },
       {
         "questionId": "soal-2",
         "prompt": "Berapa nilai angka 5 pada 12.345?",
         "responseType": "text",
-        "correctResponse": "5"
+        "correctResponse": ["5", "lima"]
       },
       {
         "questionId": "soal-3",
@@ -32,19 +32,19 @@
         "questionId": "soal-4",
         "prompt": "Berapa nilai angka 4 pada 12.345?",
         "responseType": "text",
-        "correctResponse": "40"
+        "correctResponse": ["40", "empat puluh"]
       },
       {
         "questionId": "soal-pada-bilangan-24-518-angka-5-men",
         "prompt": "Pada bilangan 24.518, angka 5 menempati nilai tempat ...",
         "responseType": "text",
-        "correctResponse": "ratusan"
+        "correctResponse": ["ratusan", "ratus"]
       },
       {
         "questionId": "soal-pada-bilangan-36-702-angka-yang",
         "prompt": "Pada bilangan 36.702, angka yang menempati tempat satuan adalah ...",
         "responseType": "text",
-        "correctResponse": "2"
+        "correctResponse": ["2", "dua"]
       }
     ],
     "passingScore": 75

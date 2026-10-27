@@ -26,13 +26,13 @@
         "questionId": "soal-3",
         "prompt": "Musyawarah termasuk sila ke ...",
         "responseType": "text",
-        "correctResponse": "4"
+        "correctResponse": ["4", "empat", "keempat"]
       },
       {
         "questionId": "soal-4",
         "prompt": "Padi dan kapas melambangkan sila ke ...",
         "responseType": "text",
-        "correctResponse": "5"
+        "correctResponse": ["5", "lima", "kelima"]
       },
       {
         "questionId": "soal-sila-ketiga-pancasila-dilambangk",
