@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "e9d5bd8",
+  "commit": "7dccf60",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 38,
+  "context_version": 39,
   "skill_registry_version": 0,
   "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A",
-  "last_task": "T-100 keputusan F-06: 309 pasangan / 160 paket diterima sebagai utang desain (tanpa penulisan ulang massal); aturan authoring sisi kiri <70% kata prompt & tanpa kata kunci jawaban + CSV seleksi guru; tidak ada berkas konten/kode diubah",
+  "last_task": "T-101 parameterisasi tanggal alat review + promosi detektor F-06 ke skrip baku (scripts/lib/reviewOutput.mjs, scripts/lib/mirrorPairs.mjs); 309 pasangan/160 paket direproduksi identik dengan CSV F-06",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T05:36:00+07:00",
-  "last_validation": "T-100 (2026-10-28, HEAD e9d5bd8): keputusan F-06 dari review T-096, diambil atas pilihan PO \"Aturan + seleksi guru\" — bukan penulisan ulang massal. Pengukuran ulang memakai definisi laporan §5 (right ternormalisasi == reveal dan min(|L∩P|/|L|,|L∩P|/|P|) >= 0,7, token >=3 huruf tanpa stopword): 309 pasangan di 160 paket dari 1.963 (angka historis laporan 311/159; selisih tidak ditelusuri satu per satu). 84 pasangan tumpang tindih 100% kata prompt; 40 paket memuat >=3 pasangan. Aturan authoring untuk batch berikutnya: sisi kiri berupa petunjuk dengan tumpang tindih kata terhadap prompt eksplorasi <70% dan tanpa kata kunci jawaban (right) atau sinonim dekat; sisi kanan boleh sama dengan reveal kecuali kombinasinya dengan sisi kiri >=70%; tiap batch diverifikasi dengan definisi §5, target 0 hit baru. Keluaran: knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv (309 baris data + header, kolom packageId/activity/pairId/left/right/explorationPrompt/wordOverlap, 160 packageId unik; dihitung dari .tmp-assets/r5-focused.json). Dokumen disinkronkan: laporan review §F-06 (blok KEPUTUSAN 2026-10-28) + anotasi §5, BACKLOG (utang F-06 + butir seleksi guru), CURRENT (2 baris verifikasi + handoff T-100 + temuan struktural), context.md, logs/2026-10-28.md. Verifikasi: CSV 310 baris, 7 kolom per baris, 0 baris cacat. TIDAK dijalankan ulang: validator, npm test, npm run build, a11y, E2E, cargo test — tidak ada berkas konten/kode yang berubah; angka terakhir tetap dari T-099 (336/336 VALID, 110/110, build PASS). BELUM: detektor R5 baku (scripts/pedagogical-prereview.mjs) masih memakai kesamaan ketat sehingga melaporkan 0 untuk kelas ini — promosi detektor longgar + parameter tanggal masih utang alat; seleksi guru belum dilakukan; reviewStatus tetap draft.",
+  "last_updated": "2026-10-28T06:10:00+07:00",
+  "last_validation": "T-101 (2026-10-28, HEAD 0680828 + perubahan kode belum di-commit): menutup utang alat. scripts/lib/reviewOutput.mjs memberi --date YYYY-MM-DD (default hari ini), --out-dir, --force, dan menolak menimpa bukti bertanggal (diuji exit 1 tanpa --force, exit 0 dengan --force pada kedua skrip). scripts/lib/mirrorPairs.mjs memuat detektor F-06 longgar (right ternormalisasi = reveal; min(|L∩P|/|L|,|L∩P|/|P|) >= 0,70 terhadap prompt langkah pertama yang reveal-nya cocok; token = kata dengan tanda baca tepi dibuang, panjang >= 3) dan dipakai pedagogical-prereview.mjs sebagai metrik informasi R5 + kolom CSV explorationCopies/explorationCopyShare (bukan flag). Judul/nama berkas/tautan/hitungan paket kini dinamis. Verifikasi aktual: pratinjau di .tmp-assets/prereview-check = 336 paket dengan 309 pasangan/160 paket, 309 kunci (packageId+aktivitas+pairId+wordOverlap) identik dengan knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv (0 selisih); .tmp-assets/review-check = 336 paket VALID 336/336; npm test 110/110 (15 berkas) + fixture 4/4 + catalog 336/336; npm run build PASS; npx tsc --noEmit exit 0. Bukti historis 2026-10-26 tidak ditulis ulang; validator korpus, a11y, E2E, dan cargo test tidak dijalankan ulang (tanpa perubahan konten/UI/Rust). Catatan: scripts/analyze-content-quality.mjs masih path bertanggal tetap; entri log T-100 mengoreksi deskripsi aturan token.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Guru menyeleksi pasangan F-06 yang perlu ditulis ulang dari knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv (309 pasangan / 160 paket); agent tidak menulis ulang massal. Aturan authoring sudah mengikat batch berikutnya. Lalu tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05 + seleksi F-06, dan persetujuan pendekatan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Utang alat: parameterkan tanggal pada scripts/pedagogical-prereview.mjs dan scripts/review-content.ts, lalu promosikan detektor R5 longgar ke skrip baku. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Sisa alat kecil: parameterkan scripts/analyze-content-quality.mjs (QUALITY_GAP_2026-10-25.* masih path tetap). Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
