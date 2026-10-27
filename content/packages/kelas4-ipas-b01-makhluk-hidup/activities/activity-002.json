@@ -9,8 +9,8 @@
     "pairs": [
       {
         "pairId": "pasangan-1",
-        "left": "Katak",
-        "right": "Bernapas dengan kulit dan paru-paru"
+        "left": "Siput",
+        "right": "Merayap di atas batu"
       },
       {
         "pairId": "pasangan-2",
@@ -19,8 +19,8 @@
       },
       {
         "pairId": "pasangan-3",
-        "left": "Capung",
-        "right": "Bernapas dengan trakea"
+        "left": "Kupu-kupu",
+        "right": "Terbang menghisap madu bunga"
       },
       {
         "pairId": "pasangan-4",
@@ -52,6 +52,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air."
+    "altText": "Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."
   }
 }

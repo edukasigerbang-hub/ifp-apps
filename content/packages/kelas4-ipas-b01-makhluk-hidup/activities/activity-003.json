@@ -14,7 +14,7 @@
         "questionId": "soal-1",
         "prompt": "Sebutkan satu ciri makhluk hidup.",
         "responseType": "text",
-        "correctResponse": "bernapas"
+        "correctResponse": ["bernapas", "bergerak", "tumbuh", "berkembang biak"]
       },
       {
         "questionId": "soal-2",
@@ -32,11 +32,11 @@
         "questionId": "soal-4",
         "prompt": "Peran tumbuhan adalah menghasilkan ...",
         "responseType": "text",
-        "correctResponse": "oksigen"
+        "correctResponse": ["oksigen", "makanan"]
       },
       {
-        "questionId": "soal-capung-bernapas-dengan",
-        "prompt": "Capung bernapas dengan ...",
+        "questionId": "soal-kupu-kupu-bernapas-dengan",
+        "prompt": "Kupu-kupu bernapas dengan ...",
         "responseType": "text",
         "correctResponse": "trakea"
       },
@@ -63,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kolam dengan katak, ikan, capung, teratai, batu, dan air."
+    "altText": "Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."
   }
 }
