@@ -156,6 +156,9 @@
 | Parameterisasi tanggal & penjaga bukti (T-101) | **PASS** — `scripts/lib/reviewOutput.mjs`: `--date YYYY-MM-DD` (default hari ini), `--out-dir`, `--force`; tanpa `--force` skrip menolak menimpa berkas bertanggal yang sudah ada (diuji: exit 1 + daftar berkas; `--force` exit 0) |
 | Detektor longgar F-06 di skrip baku (T-101) | **PASS** — `scripts/lib/mirrorPairs.mjs` menghasilkan **309 pasangan/160 paket** yang identik dengan CSV F-06 (kunci `packageId + aktivitas + pairId + wordOverlap`, 0 selisih); laporan pratayang menampilkan metrik informasi R5 (**bukan** flag); CSV menambah kolom `explorationCopies` + `explorationCopyShare` |
 | Verifikasi alat T-101 | **PASS** — pratinjau ditulis ke `.tmp-assets/` tanpa menyentuh bukti `2026-10-26`: pratayang pedagogis 336 paket, laporan teknis 336 paket; `npm test` 110/110 + fixture 4/4 + katalog 336/336; `npm run build` PASS; `npx tsc --noEmit` exit 0 |
+| `analyze-content-quality` bertanggal (T-102) | **PASS** — skrip memakai `parseReviewArgs`/`ensureWritable` yang sama: `--date`/`--out-dir`/`--force`, keluaran `QUALITY_GAP_<tanggal>.md` + `quality-gap-<tanggal>.json`; tanpa `--force` exit 1 dengan daftar berkas, `--force` exit 0 |
+| Angka analisis gap hari ini (T-102) | **PASS (informasi, bukan approval)** — dijalankan pada 336 paket: G1/G2/G3/G5/G6/G7/G8/G9/G11/G12 semuanya 336/336, G4 (tujuan tercakup penuh) 295/336, G10 (sudah direview manusia) 0/336, duplikasi persis 0 grup, aktivitas identik 0 grup, 336 hash aset unik. Satu paket menampilkan opsi berbeda **hanya kapitalisasi** (`kelas1-bahasa-indonesia-b05-membaca-kalimat`, soal "Kalimat yang benar") — dicatat sebagai catatan, bukan duplikat |
+| Koreksi detektor G11 (T-102) | **PASS** — detektor lama membandingkan opsi tanpa membedakan kapitalisasi sehingga menandai paket yang justru menguji kapitalisasi; laporan 2026-10-25 mencatat 319/320, seharusnya 320/320. Kini duplikat = teks **persis** per soal, kapitalisasi-saja dilaporkan terpisah; hasil 336/336 (0 duplikat) |
 | Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
 | Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
 | Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
@@ -920,7 +923,24 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 
 **Verifikasi:** penjagaan timpa diuji pada kedua skrip (tanpa `--force` exit 1 dengan daftar berkas; `--force` exit 0) · `npm test` 110/110 + fixture 4/4 + katalog 336/336 · `npm run build` PASS · `npx tsc --noEmit` exit 0. a11y/E2E/`cargo test` **tidak dijalankan** (tanpa perubahan UI/Rust); bukti historis `2026-10-26` tidak ditulis ulang.
 
-**Sisa:** `scripts/analyze-content-quality.mjs` masih memakai path bertanggal tetap `QUALITY_GAP_2026-10-25.*` (snapshot sekali pakai, sengaja tidak diubah di tugas ini) · seleksi + tanda tangan guru atas 309 pasangan F-06 · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.
+**Sisa:** ~~`scripts/analyze-content-quality.mjs` masih memakai path bertanggal tetap `QUALITY_GAP_2026-10-25.*`~~ **DITUTUP 2026-10-28 (T-102)** · seleksi + tanda tangan guru atas 309 pasangan F-06 · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.
+
+### Handoff Alat QA — Analisis Gap Kualitas Bertanggal (2026-10-28, T-102)
+
+**Status:** selesai dan terverifikasi. Permintaan PO: "lanjutkan" setelah T-101.
+
+**Masalah:** `scripts/analyze-content-quality.mjs` (npm `content:quality-gap`) masih menulis ke `QUALITY_GAP_2026-10-25.*` dan memuat kalimat mati yang tidak lagi benar ("pembacaan 320 paket", "semua paket 3 langkah/2 aktivitas/4–6 item"). Menjalankannya hari ini akan menimpa bukti 2026-10-25 sekaligus mencetak klaim palsu.
+
+**Yang diubah:**
+- Path keluaran memakai lib bersama: `--date YYYY-MM-DD` (default hari ini), `--out-dir`, `--force`; `ensureWritable` menolak menimpa berkas bertanggal.
+- Kalimat mati diganti nilai terhitung: judul + status memakai `date`/`total`; klaim kedalaman menjadi "Paket yang memenuhi G1–G3 … `${depthCompliant}/${total}`"; JSON menambah `generatedAt`; skrip mencetak path laporan.
+- **Koreksi detektor G11:** `optionDuplicates` dulu membandingkan opsi **tanpa** membedakan kapitalisasi per soal sehingga menandai `kelas1-bahasa-indonesia-b05-membaca-kalimat` sebagai duplikat — padahal soal itu justru menguji kapitalisasi ("budi bermain bola" vs "Budi bermain bola."). Kini duplikat = teks **persis**; opsi yang hanya berbeda kapitalisasi dilaporkan terpisah sebagai catatan, bukan kegagalan.
+
+**Verifikasi:** `node scripts/analyze-content-quality.mjs --out-dir .tmp-assets/quality-check --date 2026-10-28` → 336 paket (`report` + `gap` tercetak) · menjalankan ulang tanpa `--force` → **exit 1** dengan daftar `QUALITY_GAP_2026-10-28.md` + `quality-gap-2026-10-28.json`; `--force` → exit 0 · `npm test` 110/110 (15 berkas) + fixture 4/4 + katalog 336/336. Bukti historis `QUALITY_GAP_2026-10-25.*` tidak tersentuh; a11y/E2E/`cargo test`/build tidak dijalankan (hanya skrip `.mjs` yang berubah, di luar `tsconfig` `src` dan suite).
+
+**Temuan sampingan dari eksekusi (informasi, bukan approval):** G1/G2/G3/G5/G6/G7/G8/G9/G11/G12 = 336/336; G4 (tujuan tercakup penuh) 295/336 (41 sebagian, 0 nol); G10 (sudah direview manusia) 0/336 karena semua paket `draft`; duplikasi persis 0 grup; aktivitas identik 0 grup; 336 hash aset unik. Satu catatan kapitalisasi: `kelas1-bahasa-indonesia-b05-membaca-kalimat`. **Konsekuensi:** angka G11 pada laporan 2026-10-25 (319/320) adalah positif palsu; laporan itu tidak ditulis ulang karena merupakan bukti historis.
+
+**Sisa:** seleksi + tanda tangan guru (309 F-06 · 550 hasil aturan · 119 override · 39 F-05 · F-01/F-02) · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08. `reviewStatus` tetap `draft`.
 
 ### Handoff Keputusan F-06 — Utang Desain + Aturan Authoring (2026-10-28, T-100)
 

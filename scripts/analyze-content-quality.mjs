@@ -1,10 +1,12 @@
 import { createHash } from "node:crypto";
-import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { ensureWritable, parseReviewArgs } from "./lib/reviewOutput.mjs";
 
 const packagesRoot = path.resolve("content/packages");
-const outDir = path.resolve("knowledge/content");
-mkdirSync(outDir, { recursive: true });
+const { date, outDir, force } = parseReviewArgs(process.argv.slice(2));
+const outMd = path.join(outDir, `QUALITY_GAP_${date}.md`);
+const outJson = path.join(outDir, `quality-gap-${date}.json`);
 
 const subjectLabels = {
   matematika: "Matematika",
@@ -170,12 +172,15 @@ for (const dirName of readdirSync(packagesRoot, { withFileTypes: true })
     return [...words].some((word) => activityText.includes(word));
   }).length;
 
-  const optionDuplicates = activities.some((activity) =>
-    (activity.assessmentConfig?.questions ?? []).some((question) => {
-      const textsOfOptions = (question.options ?? []).map((option) => option.text.trim().toLowerCase());
-      return new Set(textsOfOptions).size !== textsOfOptions.length;
-    })
+  const optionSets = activities.flatMap((activity) =>
+    (activity.assessmentConfig?.questions ?? []).map((question) =>
+      (question.options ?? []).map((option) => option.text.trim())
+    )
   );
+  const hasRepeat = (values) => new Set(values).size !== values.length;
+  const optionDuplicates = optionSets.some((texts) => hasRepeat(texts));
+  const optionCaseOnly =
+    !optionDuplicates && optionSets.some((texts) => hasRepeat(texts.map((text) => text.toLowerCase())));
 
   records.push({
     packageId: manifest.packageId,
@@ -204,7 +209,8 @@ for (const dirName of readdirSync(packagesRoot, { withFileTypes: true })
     reviewStatus: lesson.reviewStatus,
     fingerprint,
     activityFingerprint,
-    optionDuplicates
+    optionDuplicates,
+    optionCaseOnly
   });
 }
 
@@ -245,6 +251,7 @@ const reusedAssets = [...assetGroups.entries()].filter(([, ids]) => ids.length >
 
 const uniqueAssetCount = assetGroups.size;
 const optionDuplicatePackages = records.filter((record) => record.optionDuplicates).map((record) => record.packageId);
+const optionCaseOnlyPackages = records.filter((record) => record.optionCaseOnly).map((record) => record.packageId);
 const partialCoveragePackages = records
   .filter((record) => record.coveredObjectives > 0 && record.coveredObjectives < record.objectives)
   .map((record) => record.packageId);
@@ -302,7 +309,7 @@ const criteria = [
   },
   {
     id: "G11",
-    label: "Tidak ada opsi jawaban duplikat",
+    label: "Tidak ada opsi jawaban duplikat (teks persis)",
     met: pass((r) => !r.optionDuplicates)
   },
   {
@@ -364,9 +371,9 @@ const coverage = {
 };
 
 const lines = [];
-lines.push("# Analisis Gap Kualitas Konten — 2026-10-25");
+lines.push(`# Analisis Gap Kualitas Konten — ${date}`);
 lines.push("");
-lines.push("**Status:** `ANALISIS` — bukan approval. Angka dihasilkan dari pembacaan 320 paket aktual.");
+lines.push(`**Status:** \`ANALISIS\` — bukan approval. Angka dihasilkan dari pembacaan ${total} paket aktual per ${date}.`);
 lines.push("**Standar acuan:** kedalaman, asesmen, keselarasan, bahasa, diferensiasi, aksesibilitas.");
 lines.push("");
 lines.push("## Ringkasan");
@@ -381,8 +388,10 @@ lines.push(`- Aset unik: **${uniqueAssetCount}** hash untuk ${total} paket`);
 lines.push("");
 lines.push("## Temuan khusus");
 lines.push("");
-lines.push(`- Semua paket memiliki **3 langkah eksplorasi, 2 aktivitas, dan 4–6 item asesmen** — belum ada satu pun yang memenuhi G1–G3.`);
+const depthCompliant = pass((r) => r.steps >= 5 && r.activities >= 3 && r.assessmentItems >= 8);
+lines.push(`- Paket yang memenuhi G1–G3 (≥5 langkah eksplorasi, ≥3 aktivitas, ≥8 item asesmen): **${depthCompliant}/${total}**.`);
 lines.push(`- Opsi jawaban duplikat: ${optionDuplicatePackages.length === 0 ? "tidak ada" : optionDuplicatePackages.map((id) => `\`${id}\``).join(", ")}.`);
+lines.push(`- Opsi yang hanya berbeda kapitalisasi (bukan duplikat — pastikan perbedaan itu memang yang diuji): ${optionCaseOnlyPackages.length === 0 ? "tidak ada" : optionCaseOnlyPackages.map((id) => `\`${id}\``).join(", ")}.`);
 lines.push(`- Tujuan tercakup sebagian: **${partialCoveragePackages.length} paket**${partialCoveragePackages.length > 0 ? ` — contoh: ${partialCoveragePackages.slice(0, 6).map((id) => `\`${id}\``).join(", ")}` : ""}.`);
 lines.push(`- Duplikasi penuh: **${duplicates.length} grup** (${duplicatePackages} paket); aktivitas identik: **${activityDuplicates.length} grup** (${activityDuplicatePackages} paket).`);
 lines.push("");
@@ -480,10 +489,12 @@ lines.push("5. **Bahasa & aset** — sesuaikan panjang kalimat per kelas; kurang
 lines.push("6. **Review manusia** — R1–R12 setelah perbaikan; `curriculumRefs` menunggu D6.");
 lines.push("");
 
-writeFileSync(path.join(outDir, "QUALITY_GAP_2026-10-25.md"), lines.join("\n"));
+ensureWritable([outMd, outJson], { force });
+writeFileSync(outMd, lines.join("\n"));
 writeFileSync(
-  path.join(outDir, "quality-gap-2026-10-25.json"),
+  outJson,
   `${JSON.stringify({
+    generatedAt: new Date().toISOString(),
     criteria,
     coverage,
     records,
@@ -492,6 +503,7 @@ writeFileSync(
   }, null, 2)}\n`
 );
 
+console.log(`report: ${outMd}`);
 console.log(
   `gap: ${total} paket; duplikat penuh ${duplicatePackages}; aktivitas identik ${activityDuplicatePackages}; coverage penuh ${coverage.fullCoverage}; G1 ${criteria[0].met}, G3 ${criteria[2].met}, G12 ${criteria[11].met}`
 );
