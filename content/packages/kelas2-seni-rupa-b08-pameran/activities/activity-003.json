@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang dipamerkan?",
-        "right": "Karya siswa."
+        "pairId": "pasangan-1",
+        "left": "Yang dipamerkan",
+        "right": "Karya siswa"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana menata karya?",
-        "right": "Rapi dan mudah dilihat."
+        "pairId": "pasangan-2",
+        "left": "Menata karya",
+        "right": "Rapi dan mudah dilihat"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa tugas penjaga?",
-        "right": "Menjelaskan karya."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Pameran Kelas?",
-        "right": "Memilih karya → Menata karya → Memberi nama → Menjaga pameran → Merapikan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
-        "right": "Menata dan memamerkan karya kelas."
+        "pairId": "pasangan-3",
+        "left": "Tugas penjaga",
+        "right": "Menjelaskan karya"
       }
     ]
   },

@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang dilakukan anak pada panel kiri?",
-        "right": "Mewawancarai guru dengan mikrofon dan mencatat jawaban."
+        "pairId": "pasangan-1",
+        "left": "Menanya narasumber sambil mencatat",
+        "right": "Wawancara"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa yang dilakukan anak pada panel kanan?",
-        "right": "Mempresentasikan hasil di depan kelas dengan diagram."
+        "pairId": "pasangan-2",
+        "left": "Menyampaikan hasil di depan kelas",
+        "right": "Presentasi"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa pertanyaan perlu disiapkan sebelum wawancara?",
-        "right": "Agar wawancara terarah, tidak berulang, dan informasi lengkap."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Wawancara dan Presentasi?",
-        "right": "Menentukan topik → Menyusun pertanyaan → Melakukan wawancara → Mencatat jawaban → Menyajikan hasil"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Wawancara dan Presentasi?",
-        "right": "Menyusun pertanyaan wawancara, mencatat jawaban, dan menyajikan hasil dengan percaya diri."
+        "pairId": "pasangan-3",
+        "left": "Alasan daftar pertanyaan disusun sebelum wawancara",
+        "right": "Wawancara terarah"
       }
     ]
   },

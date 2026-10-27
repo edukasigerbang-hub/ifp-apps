@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu kolase?",
-        "right": "Karya dari bahan yang ditempel."
+        "pairId": "pasangan-1",
+        "left": "Kolase",
+        "right": "Karya dari bahan yang ditempel"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bahan apa yang dipakai?",
-        "right": "Daun kering dan kertas."
+        "pairId": "pasangan-2",
+        "left": "Bahan yang dipakai",
+        "right": "Daun kering dan kertas"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menempel?",
-        "right": "Oles lem lalu tempel."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Kolase Sederhana?",
-        "right": "Membuat kolase sederhana dari bahan sekitar."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Kolase Sederhana?",
-        "right": "Menyiapkan bahan → Menyusun pola → Mengoles lem → Menempel bahan → Merapikan karya"
+        "pairId": "pasangan-3",
+        "left": "Menempel",
+        "right": "Oles lem lalu tempel"
       }
     ]
   },

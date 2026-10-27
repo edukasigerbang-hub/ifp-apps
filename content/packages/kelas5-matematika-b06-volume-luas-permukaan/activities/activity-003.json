@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bagaimana menghitung volume balok?",
-        "right": "Panjang × lebar × tinggi."
+        "pairId": "pasangan-1",
+        "left": "Menghitung volume balok",
+        "right": "Panjang × lebar × tinggi"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa satuan volume?",
-        "right": "Sentimeter kubik (cm³)."
+        "pairId": "pasangan-2",
+        "left": "Satuan volume",
+        "right": "Sentimeter kubik (cm³)"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa itu luas permukaan?",
-        "right": "Jumlah luas semua sisi bangun."
+        "pairId": "pasangan-3",
+        "left": "Luas permukaan",
+        "right": "Jumlah luas semua sisi bangun"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Volume dan Luas Permukaan?",
-        "right": "Menghitung volume dan luas permukaan bangun ruang sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Balok yang tersusun dari kubus satuan."
+        "pairId": "pasangan-4",
+        "left": "Balok tersusun dari kubus satuan",
+        "right": "Volume"
       }
     ]
   },

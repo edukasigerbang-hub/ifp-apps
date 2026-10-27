@@ -3,32 +3,32 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Berapa jumlah malaikat yang wajib diketahui?",
-        "right": "Sepuluh."
+        "pairId": "pasangan-1",
+        "left": "Banyak jumlah malaikat yang wajib diketahui",
+        "right": "Sepuluh"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa tugas malaikat Jibril?",
-        "right": "Menyampaikan wahyu."
+        "pairId": "pasangan-2",
+        "left": "Tugas malaikat Jibril",
+        "right": "Menyampaikan wahyu"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa sifat malaikat?",
-        "right": "Tidak makan dan tidak tidur."
+        "pairId": "pasangan-3",
+        "left": "Sifat malaikat",
+        "right": "Tidak makan dan tidak tidur"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Beriman kepada malaikat termasuk rukun iman ke ...",
+        "pairId": "pasangan-4",
+        "left": "Beriman kepada malaikat termasuk rukun iman ke",
         "right": "Dua"
       },
       {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-5",
         "left": "Jumlah malaikat yang wajib diketahui adalah ...",
         "right": "10"
       }

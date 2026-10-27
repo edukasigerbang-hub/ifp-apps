@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa tahap pertama daur hidup kupu-kupu?",
-        "right": "Telur."
+        "pairId": "pasangan-1",
+        "left": "Tahap pertama daur hidup kupu-kupu",
+        "right": "Telur"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Setelah ulat, menjadi apa?",
-        "right": "Kepompong, lalu kupu-kupu."
+        "pairId": "pasangan-2",
+        "left": "Tahap antara ulat dan kupu-kupu",
+        "right": "Kepompong"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apakah semua hewan punya daur hidup sama?",
-        "right": "Tidak; katak mengalami tahap berudu, ayam menetas dari telur."
+        "pairId": "pasangan-3",
+        "left": "Contoh daur hidup yang berbeda antar hewan",
+        "right": "Katak berudu, ayam dari telur"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Daur Hidup Makhluk Hidup?",
-        "right": "Mengenal tahapan daur hidup hewan dan mengurutkannya dengan benar."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu."
+        "pairId": "pasangan-4",
+        "left": "Urutan telur, ulat, kepompong, kupu-kupu",
+        "right": "Daur hidup kupu-kupu"
       }
     ]
   },

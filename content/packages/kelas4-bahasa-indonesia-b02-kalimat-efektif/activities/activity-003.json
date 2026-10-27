@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa saja benda yang ada di sudut baca?",
-        "right": "Ada rak buku, buku, meja, kursi, jendela, dan tanaman."
+        "pairId": "pasangan-1",
+        "left": "Saja benda yang ada di sudut baca",
+        "right": "Ada rak buku, buku, meja, kursi, jendela, dan tanaman"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bandingkan: 'Buku-buku itu sangat banyak sekali.' dan 'Buku-buku itu banyak.' Mana yang lebih efektif?",
-        "right": "Kalimat kedua lebih efektif karena tidak mengulang makna 'banyak'."
+        "pairId": "pasangan-2",
+        "left": "Kalimat yang tidak mengulang makna kata",
+        "right": "Kalimat efektif"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Buat satu kalimat efektif tentang sudut baca.",
-        "right": "Contoh: Sudut baca kelas kami rapi dan nyaman."
+        "pairId": "pasangan-3",
+        "left": "Contoh kalimat efektif tentang sudut baca",
+        "right": "Sudut baca kelas kami nyaman"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Kalimat Efektif dan Kosakata Baru?",
-        "right": "Mengenali ciri kalimat efektif, memilih kata baku, dan memperbaiki kalimat agar jelas serta tidak mubazir."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Ciri kalimat efektif adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Ciri kalimat efektif adalah",
         "right": "Jelas, singkat, dan sesuai kaidah"
       }
     ]

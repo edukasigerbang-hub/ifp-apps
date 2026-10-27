@@ -3,33 +3,33 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu apresiasi?",
-        "right": "Menghargai karya."
+        "pairId": "pasangan-1",
+        "left": "Apresiasi",
+        "right": "Menghargai karya"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa itu kritik?",
-        "right": "Tanggapan beralasan."
+        "pairId": "pasangan-2",
+        "left": "Kritik",
+        "right": "Tanggapan beralasan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menyampaikannya?",
-        "right": "Sopan dan jelas."
+        "pairId": "pasangan-3",
+        "left": "Menyampaikannya",
+        "right": "Sopan dan jelas"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Karya seni dipajang dan pengunjung mengamati."
+        "pairId": "pasangan-4",
+        "left": "Karya dipajang dan dilihat pengunjung",
+        "right": "Pameran seni"
       },
       {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Kritik yang baik bersifat ...",
+        "pairId": "pasangan-5",
+        "left": "Kritik yang baik bersifat",
         "right": "Membangun"
       }
     ]

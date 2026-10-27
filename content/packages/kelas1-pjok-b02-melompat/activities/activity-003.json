@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Melompat menggunakan ...",
-        "right": "Kaki."
+        "pairId": "pasangan-1",
+        "left": "Melompat menggunakan",
+        "right": "Kaki"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana mendarat?",
-        "right": "Lutut ditekuk sedikit."
+        "pairId": "pasangan-2",
+        "left": "Mendarat",
+        "right": "Lutut ditekuk sedikit"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan sebelum melompat?",
-        "right": "Pemanasan."
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan sebelum melompat",
+        "right": "Pemanasan"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Gerak Melompat?",
-        "right": "Mempraktikkan gerak melompat dengan aman."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Agar aman, melompat di ...",
+        "pairId": "pasangan-4",
+        "left": "Agar aman, melompat di",
         "right": "Ruang yang lapang"
       }
     ]

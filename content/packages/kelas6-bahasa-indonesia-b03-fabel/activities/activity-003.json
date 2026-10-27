@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu fabel?",
-        "right": "Cerita hewan yang berperilaku seperti manusia."
+        "pairId": "pasangan-1",
+        "left": "Fabel",
+        "right": "Cerita hewan yang berperilaku seperti manusia"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Siapa tokoh fabel?",
-        "right": "Hewan."
+        "pairId": "pasangan-2",
+        "left": "Tokoh fabel",
+        "right": "Hewan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa pesan fabel?",
-        "right": "Nasihat dari cerita."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Teks Narasi dan Fabel?",
-        "right": "Menentukan tokoh hewan → Menentukan latar → Menyusun konflik → Menyusun penyelesaian → Menulis pesan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Teks Narasi dan Fabel?",
-        "right": "Mengenal fabel dan menyusun cerita narasi."
+        "pairId": "pasangan-3",
+        "left": "Pesan fabel",
+        "right": "Nasihat dari cerita"
       }
     ]
   },

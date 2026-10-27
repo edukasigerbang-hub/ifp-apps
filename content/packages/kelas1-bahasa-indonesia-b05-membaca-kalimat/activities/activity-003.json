@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Baca kalimat Siti membaca buku.",
-        "right": "Siti membaca buku."
+        "pairId": "pasangan-1",
+        "left": "Kalimat yang dibaca: Siti membaca buku",
+        "right": "Siti membaca buku"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Kalimat berita diakhiri ...",
-        "right": "Titik."
+        "pairId": "pasangan-2",
+        "left": "Kalimat berita diakhiri",
+        "right": "Titik"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Kalimat tanya diakhiri ...",
-        "right": "Tanda tanya."
+        "pairId": "pasangan-3",
+        "left": "Kalimat tanya diakhiri",
+        "right": "Tanda tanya"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak membaca kalimat sederhana di sudut baca."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Membaca Kalimat Sederhana?",
-        "right": "Membaca kalimat sederhana dengan lafal dan intonasi yang tepat."
+        "pairId": "pasangan-4",
+        "left": "Kegiatan membaca kalimat pendek di sudut baca",
+        "right": "Membaca kalimat"
       }
     ]
   },

@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa gerak senam ringan?",
-        "right": "Peregangan dan gerak kepala."
+        "pairId": "pasangan-1",
+        "left": "Gerak senam ringan",
+        "right": "Peregangan dan gerak kepala"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Mengapa pemanasan penting?",
-        "right": "Mencegah cedera."
+        "pairId": "pasangan-2",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana bernapas?",
-        "right": "Tarik napas perlahan."
+        "pairId": "pasangan-3",
+        "left": "Bernapas",
+        "right": "Tarik napas perlahan"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Senam Ringan?",
-        "right": "Pemanasan → Gerak kepala → Gerak tangan → Gerak kaki → Pendinginan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak melakukan senam ringan dan peregangan."
+        "pairId": "pasangan-4",
+        "left": "Gerakan ringan dan peregangan tubuh",
+        "right": "Senam ringan"
       }
     ]
   },

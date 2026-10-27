@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu musyawarah?",
-        "right": "Membicarakan masalah bersama."
+        "pairId": "pasangan-1",
+        "left": "Musyawarah",
+        "right": "Membicarakan masalah bersama"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana menyampaikan pendapat?",
-        "right": "Sopan dan tidak memotong."
+        "pairId": "pasangan-2",
+        "left": "Menyampaikan pendapat",
+        "right": "Sopan dan tidak memotong"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan setelah sepakat?",
-        "right": "Melaksanakan keputusan."
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah sepakat",
+        "right": "Melaksanakan keputusan"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Kebersamaan dan Musyawarah?",
-        "right": "Menyampaikan masalah → Memberi pendapat → Berdiskusi → Mengambil kesepakatan → Melaksanakan keputusan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Siswa bermusyawarah bersama guru."
+        "pairId": "pasangan-4",
+        "left": "Siswa berdiskusi bersama guru",
+        "right": "Musyawarah"
       }
     ]
   },

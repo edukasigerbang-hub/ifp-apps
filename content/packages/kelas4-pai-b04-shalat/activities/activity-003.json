@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang kamu lihat pada gambar?",
-        "right": "Sajadah, masjid, lentera, dan jam."
+        "pairId": "pasangan-1",
+        "left": "Sajadah, masjid, lentera, dan jam",
+        "right": "Waktu salat"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Sebutkan lima shalat wajib.",
-        "right": "Subuh, Dzuhur, Ashar, Maghrib, dan Isya."
+        "pairId": "pasangan-2",
+        "left": "Daftar lima shalat wajib",
+        "right": "Subuh, Dzuhur, Ashar, Maghrib, dan Isya"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa shalat penting?",
-        "right": "Shalat adalah kewajiban, mendekatkan diri kepada Allah, dan melatih disiplin."
+        "pairId": "pasangan-3",
+        "left": "Alasan shalat wajib dikerjakan",
+        "right": "Kewajiban dan disiplin"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Shalat?",
-        "right": "Mengenal shalat wajib, urutan waktunya, dan pentingnya disiplin menjalankan shalat."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+        "pairId": "pasangan-4",
+        "left": "Sajadah, masjid, dan jam waktu shalat",
+        "right": "Ilustrasi waktu shalat"
       }
     ]
   },

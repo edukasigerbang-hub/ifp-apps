@@ -3,32 +3,32 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu puasa?",
-        "right": "Menahan makan dan minum."
+        "pairId": "pasangan-1",
+        "left": "Puasa",
+        "right": "Menahan makan dan minum"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Kapan berbuka?",
-        "right": "Saat magrib."
+        "pairId": "pasangan-2",
+        "left": "Waktu berbuka",
+        "right": "Saat magrib"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa hikmahnya?",
-        "right": "Melatih sabar."
+        "pairId": "pasangan-3",
+        "left": "Hikmahnya",
+        "right": "Melatih sabar"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Suasana berbuka puasa dengan kurma dan air."
+        "pairId": "pasangan-4",
+        "left": "Kurma dan air saat berbuka",
+        "right": "Berbuka puasa"
       },
       {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-5",
         "left": "Puasa dimulai saat ...",
         "right": "Terbit fajar"
       }

@@ -3,32 +3,32 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu hari akhir?",
-        "right": "Hari berakhirnya kehidupan dunia."
+        "pairId": "pasangan-1",
+        "left": "Hari akhir",
+        "right": "Hari berakhirnya kehidupan dunia"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa tanda hari akhir?",
-        "right": "Terompet sangkakala ditiup."
+        "pairId": "pasangan-2",
+        "left": "Tanda hari akhir",
+        "right": "Terompet sangkakala ditiup"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana perilaku beriman?",
-        "right": "Rajin beribadah dan berbuat baik."
+        "pairId": "pasangan-3",
+        "left": "Perilaku beriman",
+        "right": "Rajin beribadah dan berbuat baik"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Perilaku beriman kepada hari akhir adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Perilaku beriman kepada hari akhir adalah",
         "right": "Rajin berbuat baik"
       },
       {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-5",
         "left": "Waktu hari akhir ...",
         "right": "Hanya Allah yang tahu"
       }

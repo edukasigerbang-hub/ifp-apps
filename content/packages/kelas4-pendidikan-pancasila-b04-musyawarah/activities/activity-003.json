@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang dilakukan siswa pada gambar?",
-        "right": "Mereka duduk melingkar untuk bermusyawarah."
+        "pairId": "pasangan-1",
+        "left": "Siswa duduk melingkar berdiskusi",
+        "right": "Musyawarah"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Siapa yang sedang menyampaikan pendapat?",
-        "right": "Siswa yang memiliki balon bicara sedang menyampaikan pendapat."
+        "pairId": "pasangan-2",
+        "left": "Tokoh gambar dengan balon bicara",
+        "right": "Siswa berpendapat"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa keputusan musyawarah harus dilaksanakan bersama?",
-        "right": "Agar keputusan adil dan menjadi tanggung jawab bersama."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Musyawarah untuk Mufakat?",
-        "right": "Memahami langkah musyawarah, menghargai pendapat, dan melaksanakan keputusan bersama."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Musyawarah untuk Mufakat?",
-        "right": "Menyampaikan pendapat → Mendengarkan pendapat orang lain → Mencatat usulan → Menyimpulkan atau memilih keputusan → Melaksanakan keputusan bersama"
+        "pairId": "pasangan-3",
+        "left": "Alasan keputusan musyawarah harus dilaksanakan bersama",
+        "right": "Agar keputusan adil dan menjadi tanggung jawab bersama"
       }
     ]
   },

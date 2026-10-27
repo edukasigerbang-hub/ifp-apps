@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa arti NKRI?",
-        "right": "Negara Kesatuan Republik Indonesia."
+        "pairId": "pasangan-1",
+        "left": "Arti NKRI",
+        "right": "Negara Kesatuan Republik Indonesia"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa bendera Indonesia?",
-        "right": "Merah Putih."
+        "pairId": "pasangan-2",
+        "left": "Bendera Indonesia",
+        "right": "Merah Putih"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa lambang negara?",
-        "right": "Garuda Pancasila."
+        "pairId": "pasangan-3",
+        "left": "Lambang negara",
+        "right": "Garuda Pancasila"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang NKRI dan Simbol Negara?",
-        "right": "Mengenal NKRI dan simbol negara."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Upacara bendera dan simbol negara."
+        "pairId": "pasangan-4",
+        "left": "Upacara bendera dan simbol negara",
+        "right": "NKRI"
       }
     ]
   },

@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Di mana Nabi Muhammad lahir?",
-        "right": "Makkah."
+        "pairId": "pasangan-1",
+        "left": "Tempat Nabi Muhammad lahir",
+        "right": "Makkah"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Di mana wahyu pertama diterima?",
-        "right": "Gua Hira."
+        "pairId": "pasangan-2",
+        "left": "Tempat wahyu pertama diterima",
+        "right": "Gua Hira"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa Nabi hijrah?",
-        "right": "Untuk melindungi umat dan menyebarkan Islam."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Sejarah Islam?",
-        "right": "Mengenal peristiwa penting awal Islam secara berurutan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Sejarah Islam?",
-        "right": "Nabi Muhammad lahir di Makkah → Menerima wahyu di Gua Hira → Berdakwah di Makkah → Hijrah ke Madinah → Membangun Masjid Nabawi"
+        "pairId": "pasangan-3",
+        "left": "Alasan Nabi hijrah",
+        "right": "Untuk melindungi umat dan menyebarkan Islam"
       }
     ]
   },

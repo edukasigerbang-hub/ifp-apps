@@ -3,32 +3,27 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Alat ukur panjang sederhana adalah ...",
-        "right": "Jengkal."
+        "pairId": "pasangan-1",
+        "left": "Alat ukur panjang sederhana adalah",
+        "right": "Jengkal"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Alat ukur berat adalah ...",
-        "right": "Timbangan."
+        "pairId": "pasangan-2",
+        "left": "Alat ukur berat adalah",
+        "right": "Timbangan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Alat penunjuk waktu adalah ...",
-        "right": "Jam."
+        "pairId": "pasangan-3",
+        "left": "Alat penunjuk waktu adalah",
+        "right": "Jam"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Pengukuran Sederhana?",
-        "right": "Mengukur panjang, berat, dan waktu dengan cara sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-4",
         "left": "Benda yang lebih panjang adalah ...",
         "right": "Meja"
       }

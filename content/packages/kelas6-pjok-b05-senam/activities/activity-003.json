@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa gerak senam lantai?",
-        "right": "Guling depan, belakang, keseimbangan."
+        "pairId": "pasangan-1",
+        "left": "Gerak senam lantai",
+        "right": "Guling depan, belakang, keseimbangan"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Mengapa pemanasan penting?",
-        "right": "Mencegah cedera."
+        "pairId": "pasangan-2",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang disiapkan?",
-        "right": "Matras dan pendamping."
+        "pairId": "pasangan-3",
+        "left": "Yang disiapkan",
+        "right": "Matras dan pendamping"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Senam Lantai?",
-        "right": "Pemanasan → Guling depan → Guling belakang → Keseimbangan → Pendinginan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak melakukan guling depan dan keseimbangan."
+        "pairId": "pasangan-4",
+        "left": "Guling depan dan keseimbangan tubuh",
+        "right": "Senam"
       }
     ]
   },

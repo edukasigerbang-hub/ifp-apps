@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Sebutkan permainan bola kecil pada gambar.",
-        "right": "Tenis, bulu tangkis, dan tenis meja."
+        "pairId": "pasangan-1",
+        "left": "Daftar permainan bola kecil pada gambar",
+        "right": "Tenis, bulu tangkis, dan tenis meja"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa alat utama dalam bulu tangkis?",
-        "right": "Raket dan kok."
+        "pairId": "pasangan-2",
+        "left": "Alat utama dalam bulu tangkis",
+        "right": "Raket dan kok"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa aturan dan keselamatan penting?",
-        "right": "Agar permainan adil dan tidak ada yang cedera."
+        "pairId": "pasangan-3",
+        "left": "Alasan aturan dan keselamatan penting",
+        "right": "Agar permainan adil dan tidak ada yang cedera"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Permainan Bola Kecil?",
-        "right": "Mengenal permainan bola kecil serta teknik dasar dan aturannya."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
+        "pairId": "pasangan-4",
+        "left": "Bola tenis, kok, dan bola pingpong",
+        "right": "Permainan bola kecil"
       }
     ]
   },

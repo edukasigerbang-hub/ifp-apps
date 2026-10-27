@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa faktor dari 12?",
-        "right": "1, 2, 3, 4, 6, dan 12."
+        "pairId": "pasangan-1",
+        "left": "Faktor dari 12",
+        "right": "1, 2, 3, 4, 6, dan 12"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa kelipatan 4?",
-        "right": "4, 8, 12, 16, ..."
+        "pairId": "pasangan-2",
+        "left": "Kelipatan 4",
+        "right": "4, 8, 12, 16, .."
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Berapa KPK 4 dan 6?",
-        "right": "12."
+        "pairId": "pasangan-3",
+        "left": "Banyak KPK 4 dan 6",
+        "right": "12"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Faktor, Kelipatan, KPK, dan FPB?",
-        "right": "Menentukan faktor, kelipatan, KPK, dan FPB dua bilangan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Diagram Venn faktor dan kelipatan dua bilangan."
+        "pairId": "pasangan-4",
+        "left": "Diagram dua lingkaran yang beririsan",
+        "right": "Diagram Venn"
       }
     ]
   },

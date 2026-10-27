@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa teknik dasar sepak bola?",
-        "right": "Menendang, mengoper, menggiring."
+        "pairId": "pasangan-1",
+        "left": "Teknik dasar sepak bola",
+        "right": "Menendang, mengoper, menggiring"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa teknik dasar bola basket?",
-        "right": "Dribble, passing, shooting."
+        "pairId": "pasangan-2",
+        "left": "Teknik dasar bola basket",
+        "right": "Dribble, passing, shooting"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa kerja sama penting?",
-        "right": "Agar tim mencetak skor."
+        "pairId": "pasangan-3",
+        "left": "Alasan kerja sama penting",
+        "right": "Agar tim mencetak skor"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Agar tim menang, pemain harus ...",
+        "pairId": "pasangan-4",
+        "left": "Agar tim menang, pemain harus",
         "right": "Bekerja sama"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar?",
-        "right": "Mempraktikkan teknik dan kerja sama permainan bola besar."
       }
     ]
   },

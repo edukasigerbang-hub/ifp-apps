@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa proyek kelas?",
-        "right": "Kegiatan bersama di kelas."
+        "pairId": "pasangan-1",
+        "left": "Proyek kelas",
+        "right": "Kegiatan bersama di kelas"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana membagi tugas?",
-        "right": "Adil untuk semua."
+        "pairId": "pasangan-2",
+        "left": "Membagi tugas",
+        "right": "Adil untuk semua"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan setelah selesai?",
-        "right": "Melaporkan hasil."
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah selesai",
+        "right": "Melaporkan hasil"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Proyek Kelas?",
-        "right": "Memilih kegiatan → Membagi tugas → Bekerja bersama → Menyelesaikan pekerjaan → Melaporkan hasil"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Siswa bekerja sama melaksanakan proyek kelas."
+        "pairId": "pasangan-4",
+        "left": "Siswa bergotong royong menjalankan proyek",
+        "right": "Proyek kelas"
       }
     ]
   },

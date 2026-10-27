@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang terlihat pada karya?",
-        "right": "Warna dan bentuk."
+        "pairId": "pasangan-1",
+        "left": "Yang terlihat pada karya",
+        "right": "Warna dan bentuk"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana menanggapi karya teman?",
-        "right": "Sopan."
+        "pairId": "pasangan-2",
+        "left": "Menanggapi karya teman",
+        "right": "Sopan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa manfaat apresiasi?",
-        "right": "Belajar menghargai."
+        "pairId": "pasangan-3",
+        "left": "Manfaat apresiasi",
+        "right": "Belajar menghargai"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Apresiasi Karya?",
-        "right": "Mengamati dan menghargai karya seni."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Karya seni dipajang dan anak mengamati."
+        "pairId": "pasangan-4",
+        "left": "Karya dipajang untuk diamati",
+        "right": "Apresiasi seni"
       }
     ]
   },

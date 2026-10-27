@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Wujud zat apa saja pada gambar?",
-        "right": "Padat, cair, dan gas."
+        "pairId": "pasangan-1",
+        "left": "Es, air, dan uap",
+        "right": "Tiga wujud zat"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa sifat zat cair?",
-        "right": "Bentuk mengikuti wadah, volume tetap."
+        "pairId": "pasangan-2",
+        "left": "Sifat zat cair",
+        "right": "Bentuk mengikuti wadah, volume tetap"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa contoh perubahan wujud?",
-        "right": "Es mencair, air menguap, uap mengembun."
+        "pairId": "pasangan-3",
+        "left": "Contoh perubahan wujud",
+        "right": "Es mencair, air menguap, uap mengembun"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Wujud Zat dan Perubahannya?",
-        "right": "Mengenal wujud padat, cair, dan gas serta contoh perubahannya."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
+        "pairId": "pasangan-4",
+        "left": "Benda yang bentuknya tetap, air dalam wadah, uap di udara",
+        "right": "Padat, cair, gas"
       }
     ]
   },

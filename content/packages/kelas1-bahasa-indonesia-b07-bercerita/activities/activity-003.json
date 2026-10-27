@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bagaimana suara saat bercerita?",
-        "right": "Jelas dan cukup keras."
+        "pairId": "pasangan-1",
+        "left": "Suara saat bercerita",
+        "right": "Jelas dan cukup keras"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana urutan cerita?",
-        "right": "Awal, tengah, akhir."
+        "pairId": "pasangan-2",
+        "left": "Urutan cerita",
+        "right": "Awal, tengah, akhir"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana sikap bercerita?",
-        "right": "Percaya diri."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Bercerita?",
-        "right": "Memilih cerita → Menceritakan awal → Menceritakan tengah → Menceritakan akhir → Mengucapkan terima kasih"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Bercerita?",
-        "right": "Bercerita dengan suara jelas dan urut."
+        "pairId": "pasangan-3",
+        "left": "Sikap bercerita",
+        "right": "Percaya diri"
       }
     ]
   },

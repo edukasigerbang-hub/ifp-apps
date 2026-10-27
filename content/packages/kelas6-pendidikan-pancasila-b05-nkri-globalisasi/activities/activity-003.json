@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu globalisasi?",
-        "right": "Keterhubungan antarnegara."
+        "pairId": "pasangan-1",
+        "left": "Globalisasi",
+        "right": "Keterhubungan antarnegara"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa dampak positifnya?",
-        "right": "Ilmu dan teknologi berkembang."
+        "pairId": "pasangan-2",
+        "left": "Dampak positifnya",
+        "right": "Ilmu dan teknologi berkembang"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menjaga jati diri?",
-        "right": "Mencintai budaya dan produk dalam negeri."
+        "pairId": "pasangan-3",
+        "left": "Menjaga jati diri",
+        "right": "Mencintai budaya dan produk dalam negeri"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang NKRI dan Globalisasi?",
-        "right": "Menghadapi globalisasi dengan tetap menjaga jati diri bangsa."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Cara menjaga jati diri bangsa adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Cara menjaga jati diri bangsa adalah",
         "right": "Mencintai budaya sendiri"
       }
     ]

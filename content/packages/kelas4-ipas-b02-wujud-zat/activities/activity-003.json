@@ -3,34 +3,34 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Panel pertama menunjukkan es batu. Apa wujud zatnya?",
-        "right": "Es batu berwujud padat."
+        "pairId": "pasangan-1",
+        "left": "Wujud es batu dan batu",
+        "right": "Padat"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa yang terjadi pada es batu jika dibiarkan di ruangan hangat?",
-        "right": "Es batu mencair menjadi air yang berwujud cair."
+        "pairId": "pasangan-2",
+        "left": "Es batu berubah menjadi air",
+        "right": "Mencair"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang terjadi pada air jika dipanaskan terus-menerus?",
-        "right": "Air menguap menjadi uap air yang berwujud gas."
+        "pairId": "pasangan-3",
+        "left": "Air berubah menjadi uap",
+        "right": "Menguap"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Wujud Zat dan Perubahannya?",
-        "right": "Es batu (padat) → Mencair menjadi air → Air (cair) → Menguap menjadi uap air (gas)"
+        "pairId": "pasangan-4",
+        "left": "Perubahan wujud dari gas menjadi cair",
+        "right": "Mengembun"
       },
       {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Wujud Zat dan Perubahannya?",
-        "right": "Mengenali wujud padat, cair, dan gas serta perubahan wujud yang terjadi karena pemanasan atau pendinginan."
+        "pairId": "pasangan-5",
+        "left": "Wujud zat yang bentuk dan volumenya tetap",
+        "right": "Benda padat"
       }
     ]
   },

@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang dilakukan guru dan siswa pada gambar?",
-        "right": "Guru membacakan cerita dan siswa menyimak dengan saksama."
+        "pairId": "pasangan-1",
+        "left": "Kegiatan mendengarkan cerita yang dibacakan",
+        "right": "Menyimak"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bacalah: 'Setiap pagi, siswa kelas 4 menyapu kelas. Mereka juga merapikan meja dan menyiram tanaman. Kelas menjadi bersih dan nyaman.' Apa ide pokoknya?",
-        "right": "Ide pokoknya: siswa kelas 4 bekerja sama menjaga kebersihan kelas."
+        "pairId": "pasangan-2",
+        "left": "Gagasan utama paragraf tentang kebersihan kelas",
+        "right": "Menjaga kebersihan kelas"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Sebutkan satu detail pendukung dari paragraf tadi.",
-        "right": "Contoh detail: menyapu kelas, merapikan meja, atau menyiram tanaman."
+        "pairId": "pasangan-3",
+        "left": "Kalimat yang menjelaskan ide pokok",
+        "right": "Detail pendukung"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Menyimak dan Menentukan Ide Pokok?",
-        "right": "Menyimak informasi, menemukan ide pokok, dan membedakannya dari detail pendukung."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Manakah yang merupakan detail pendukung dari bacaan tersebut?",
+        "pairId": "pasangan-4",
+        "left": "Contoh kegiatan pagi di kelas yang mendukung ide pokok",
         "right": "Menyapu kelas"
       }
     ]

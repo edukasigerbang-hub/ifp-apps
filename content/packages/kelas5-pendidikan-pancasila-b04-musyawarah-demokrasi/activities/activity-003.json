@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu musyawarah?",
-        "right": "Membicarakan masalah bersama untuk kesepakatan."
+        "pairId": "pasangan-1",
+        "left": "Musyawarah",
+        "right": "Membicarakan masalah bersama untuk kesepakatan"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa nilai demokrasi?",
-        "right": "Kebebasan berpendapat dan menghargai perbedaan."
+        "pairId": "pasangan-2",
+        "left": "Nilai demokrasi",
+        "right": "Kebebasan berpendapat dan menghargai perbedaan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menyampaikan pendapat?",
-        "right": "Sopan dan tidak memotong."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Musyawarah dan Demokrasi?",
-        "right": "Menyampaikan masalah → Memberi pendapat → Berdiskusi → Mengambil kesepakatan → Melaksanakan keputusan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Musyawarah dan Demokrasi?",
-        "right": "Menerapkan musyawarah dan nilai demokrasi di kelas."
+        "pairId": "pasangan-3",
+        "left": "Menyampaikan pendapat",
+        "right": "Sopan dan tidak memotong"
       }
     ]
   },

@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu musyawarah?",
-        "right": "Membicarakan masalah bersama untuk mencapai kesepakatan."
+        "pairId": "pasangan-1",
+        "left": "Musyawarah",
+        "right": "Membicarakan masalah bersama untuk mencapai kesepakatan"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana menyampaikan pendapat?",
-        "right": "Sopan, singkat, dan tidak memotong."
+        "pairId": "pasangan-2",
+        "left": "Menyampaikan pendapat",
+        "right": "Sopan, singkat, dan tidak memotong"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan bila pendapat berbeda?",
-        "right": "Menghargai dan mencari kesepakatan."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Musyawarah di Kelas?",
-        "right": "Mengenal musyawarah, tata caranya, dan sikap menghargai pendapat."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Musyawarah di Kelas?",
-        "right": "Menyampaikan masalah → Memberi kesempatan berpendapat → Mendiskusikan pilihan → Memilih kesepakatan → Melaksanakan hasil musyawarah"
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan bila pendapat berbeda",
+        "right": "Menghargai dan mencari kesepakatan"
       }
     ]
   },

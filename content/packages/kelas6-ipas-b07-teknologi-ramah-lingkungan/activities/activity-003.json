@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu panel surya?",
-        "right": "Alat pengubah energi matahari menjadi listrik."
+        "pairId": "pasangan-1",
+        "left": "Panel surya",
+        "right": "Alat pengubah energi matahari menjadi listrik"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa itu kincir angin?",
-        "right": "Pembangkit listrik tenaga angin."
+        "pairId": "pasangan-2",
+        "left": "Kincir angin",
+        "right": "Pembangkit listrik tenaga angin"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa itu daur ulang?",
-        "right": "Mengolah sampah menjadi barang baru."
+        "pairId": "pasangan-3",
+        "left": "Daur ulang",
+        "right": "Mengolah sampah menjadi barang baru"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Teknologi Ramah Lingkungan?",
-        "right": "Mengenal teknologi yang tidak merusak lingkungan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Cara menghemat energi adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Cara menghemat energi adalah",
         "right": "Mematikan lampu saat tidak dipakai"
       }
     ]

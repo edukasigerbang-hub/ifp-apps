@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Batang pertama dibagi menjadi berapa bagian sama besar? Berapa bagian yang berwarna?",
-        "right": "Ada 2 bagian sama besar dan 1 bagian berwarna, sehingga bagian berwarna adalah 1/2."
+        "pairId": "pasangan-1",
+        "left": "Batang dibagi 2 bagian, 1 bagian berwarna",
+        "right": "Pecahan 1/2"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Batang kedua dibagi menjadi 4 bagian dan 2 bagian berwarna. Pecahan apa yang ditunjukkan?",
-        "right": "2 dari 4 bagian berwarna, jadi pecahannya 2/4. Nilai 2/4 sama dengan 1/2."
+        "pairId": "pasangan-2",
+        "left": "Batang dibagi 4 bagian, 2 bagian berwarna",
+        "right": "Pecahan 2/4"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Batang ketiga dibagi menjadi 8 bagian dan 4 bagian berwarna. Apakah nilainya sama dengan 1/2?",
-        "right": "4 dari 8 bagian berwarna, jadi 4/8. Nilainya juga sama dengan 1/2. Jadi 1/2 = 2/4 = 4/8."
+        "pairId": "pasangan-3",
+        "left": "Batang dibagi 8 bagian, 4 bagian berwarna",
+        "right": "Pecahan 4/8"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Pecahan Senilai dan Membandingkan Pecahan?",
-        "right": "Mengenal pecahan senilai melalui gambar, membandingkan pecahan sederhana, dan menentukan bentuk paling sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bentuk paling sederhana dari 4/8 adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Bentuk paling sederhana dari 4/8 adalah",
         "right": "1/2"
       }
     ]

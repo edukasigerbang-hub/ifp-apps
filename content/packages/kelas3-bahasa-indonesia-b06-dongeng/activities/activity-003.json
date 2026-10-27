@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu dongeng?",
-        "right": "Cerita khayalan yang diwariskan turun-temurun."
+        "pairId": "pasangan-1",
+        "left": "Dongeng",
+        "right": "Cerita khayalan yang diwariskan turun-temurun"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Siapa tokoh dalam dongeng?",
-        "right": "Pelaku dalam cerita."
+        "pairId": "pasangan-2",
+        "left": "Tokoh dalam dongeng",
+        "right": "Pelaku dalam cerita"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa pesan cerita?",
-        "right": "Nasihat atau pelajaran dari cerita."
+        "pairId": "pasangan-3",
+        "left": "Pesan cerita",
+        "right": "Nasihat atau pelajaran dari cerita"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Dongeng dan Pesan Cerita?",
-        "right": "Mengenal dongeng, tokohnya, dan pesan yang terkandung di dalamnya."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Dongeng adalah cerita ...",
+        "pairId": "pasangan-4",
+        "left": "Dongeng adalah cerita",
         "right": "Khayalan turun-temurun"
       }
     ]

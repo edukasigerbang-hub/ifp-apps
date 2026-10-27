@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa arti iman?",
-        "right": "Percaya dan yakin kepada Allah."
+        "pairId": "pasangan-1",
+        "left": "Arti iman",
+        "right": "Percaya dan yakin kepada Allah"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa sifat Allah yang Maha Pengasih?",
-        "right": "Ar-Rahman."
+        "pairId": "pasangan-2",
+        "left": "Sifat Allah yang Maha Pengasih",
+        "right": "Ar-Rahman"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana wujud iman sehari-hari?",
-        "right": "Rajin salat, jujur, dan berbuat baik."
+        "pairId": "pasangan-3",
+        "left": "Wujud iman sehari-hari",
+        "right": "Rajin salat, jujur, dan berbuat baik"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Iman kepada Allah?",
-        "right": "Memahami arti iman dan mewujudkannya dalam perilaku sehari-hari."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak berdoa dan berbuat baik sebagai wujud iman."
+        "pairId": "pasangan-4",
+        "left": "Berdoa dan berbuat baik sebagai bukti iman",
+        "right": "Wujud iman"
       }
     ]
   },

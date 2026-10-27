@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa contoh hak warga?",
-        "right": "Mendapat pendidikan dan pelayanan kesehatan."
+        "pairId": "pasangan-1",
+        "left": "Contoh hak warga",
+        "right": "Mendapat pendidikan dan pelayanan kesehatan"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa contoh kewajiban?",
-        "right": "Menjaga kebersihan dan mematuhi aturan."
+        "pairId": "pasangan-2",
+        "left": "Contoh kewajiban",
+        "right": "Menjaga kebersihan dan mematuhi aturan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa harus seimbang?",
-        "right": "Agar kehidupan tertib dan adil."
+        "pairId": "pasangan-3",
+        "left": "Alasan harus seimbang",
+        "right": "Agar kehidupan tertib dan adil"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban Warga Negara?",
-        "right": "Membedakan hak dan kewajiban serta melaksanakannya dengan seimbang."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Contoh kewajiban di sekolah adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Contoh kewajiban di sekolah adalah",
         "right": "Mematuhi aturan"
       }
     ]

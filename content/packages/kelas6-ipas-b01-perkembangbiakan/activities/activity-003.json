@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bagaimana kupu-kupu berkembang biak?",
-        "right": "Bertelur."
+        "pairId": "pasangan-1",
+        "left": "Kupu-kupu berkembang biak",
+        "right": "Bertelur"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa tahapan setelah ulat?",
-        "right": "Kepompong, lalu kupu-kupu."
+        "pairId": "pasangan-2",
+        "left": "Tahapan setelah ulat",
+        "right": "Kepompong, lalu kupu-kupu"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana tumbuhan berkembang biak?",
-        "right": "Dengan biji, tunas, atau cangkok."
+        "pairId": "pasangan-3",
+        "left": "Tumbuhan berkembang biak",
+        "right": "Dengan biji, tunas, atau cangkok"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Perkembangbiakan Makhluk Hidup?",
-        "right": "Mengenal cara perkembangbiakan hewan dan tumbuhan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+        "pairId": "pasangan-4",
+        "left": "Telur, ulat, kepompong, kupu-kupu",
+        "right": "Metamorfosis"
       }
     ]
   },

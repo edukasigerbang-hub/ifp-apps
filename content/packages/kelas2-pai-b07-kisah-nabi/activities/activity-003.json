@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Di mana Nabi lahir?",
-        "right": "Makkah."
+        "pairId": "pasangan-1",
+        "left": "Tempat Nabi lahir",
+        "right": "Makkah"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Siapa Nabi terakhir?",
-        "right": "Muhammad."
+        "pairId": "pasangan-2",
+        "left": "Nabi terakhir",
+        "right": "Muhammad"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa sifat Nabi?",
-        "right": "Jujur."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Kisah Nabi?",
-        "right": "Mengenal kisah Nabi Muhammad sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Kisah Nabi?",
-        "right": "Nabi lahir di Makkah → Nabi kecil belajar → Menerima wahyu → Berdakwah → Menjadi teladan"
+        "pairId": "pasangan-3",
+        "left": "Sifat Nabi",
+        "right": "Jujur"
       }
     ]
   },

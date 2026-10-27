@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bahan mana yang bertekstur kasar?",
-        "right": "Batu dan daun kering."
+        "pairId": "pasangan-1",
+        "left": "Bahan yang bertekstur kasar",
+        "right": "Batu dan daun kering"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bahan mana yang bertekstur halus?",
-        "right": "Kapas dan kain."
+        "pairId": "pasangan-2",
+        "left": "Bahan yang bertekstur halus",
+        "right": "Kapas dan kain"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menempelkan bahan?",
-        "right": "Oleskan lem tipis lalu tekan pelan."
+        "pairId": "pasangan-3",
+        "left": "Menempelkan bahan",
+        "right": "Oleskan lem tipis lalu tekan pelan"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Tekstur dan Bahan?",
-        "right": "Mengenal tekstur kasar dan halus serta memilih bahan untuk karya."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas."
+        "pairId": "pasangan-4",
+        "left": "Batu, kain, daun, dan kapas yang diraba",
+        "right": "Tekstur bahan"
       }
     ]
   },

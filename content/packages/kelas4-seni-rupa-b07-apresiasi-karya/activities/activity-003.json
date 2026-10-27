@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa tujuan apresiasi karya seni?",
-        "right": "Mengamati, menilai, dan menghargai karya."
+        "pairId": "pasangan-1",
+        "left": "Tujuan apresiasi karya seni",
+        "right": "Mengamati, menilai, dan menghargai karya"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Unsur apa yang dapat diamati?",
-        "right": "Garis, warna, bentuk, tekstur, dan tema."
+        "pairId": "pasangan-2",
+        "left": "Unsur yang dapat diamati",
+        "right": "Garis, warna, bentuk, tekstur, dan tema"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana memberi tanggapan yang baik?",
-        "right": "Sopan, beralasan, dan memberi saran yang membangun."
+        "pairId": "pasangan-3",
+        "left": "Memberi tanggapan yang baik",
+        "right": "Sopan, beralasan, dan memberi saran yang membangun"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Mengapresiasi Karya Seni?",
-        "right": "Mengamati karya seni, menyebutkan unsur yang terlihat, dan memberi tanggapan sopan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Langkah pertama dalam mengapresiasi karya seni adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama dalam mengapresiasi karya seni adalah",
         "right": "Mengamati karya dengan teliti"
       }
     ]

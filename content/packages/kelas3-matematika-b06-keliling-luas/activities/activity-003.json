@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu keliling?",
-        "right": "Jumlah panjang semua sisi."
+        "pairId": "pasangan-1",
+        "left": "Keliling",
+        "right": "Jumlah panjang semua sisi"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana menghitung luas persegi panjang?",
-        "right": "Panjang × lebar."
+        "pairId": "pasangan-2",
+        "left": "Menghitung luas persegi panjang",
+        "right": "Panjang × lebar"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa satuan luas?",
-        "right": "Sentimeter persegi (cm²)."
+        "pairId": "pasangan-3",
+        "left": "Satuan luas",
+        "right": "Sentimeter persegi (cm²)"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Keliling dan Luas Sederhana?",
-        "right": "Menghitung keliling dan luas persegi serta persegi panjang."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+        "pairId": "pasangan-4",
+        "left": "Bangun datar pada kotak satuan dengan tepi berwarna",
+        "right": "Keliling dan luas"
       }
     ]
   },

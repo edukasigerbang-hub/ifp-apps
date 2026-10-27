@@ -3,32 +3,27 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bilangan setelah 39 adalah ...",
-        "right": "40."
+        "pairId": "pasangan-1",
+        "left": "Bilangan setelah 39 adalah",
+        "right": "40"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Angka 47 terdiri dari ...",
-        "right": "4 puluhan dan 7 satuan."
+        "pairId": "pasangan-2",
+        "left": "Angka 47 terdiri dari",
+        "right": "4 puluhan dan 7 satuan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mana yang lebih besar, 58 atau 85?",
-        "right": "85."
+        "pairId": "pasangan-3",
+        "left": "Yang lebih besar, 58 atau 85",
+        "right": "85"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Bilangan 1–100?",
-        "right": "Membilang, mengenal nilai tempat, dan membandingkan bilangan 1–100."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-4",
         "left": "Bilangan 100 dibaca ...",
         "right": "Seratus"
       }

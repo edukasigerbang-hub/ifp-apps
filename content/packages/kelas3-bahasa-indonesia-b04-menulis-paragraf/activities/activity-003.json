@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa bagian pertama paragraf?",
-        "right": "Kalimat topik."
+        "pairId": "pasangan-1",
+        "left": "Bagian pertama paragraf",
+        "right": "Kalimat topik"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana kalimat pendukung bekerja?",
-        "right": "Menjelaskan kalimat topik."
+        "pairId": "pasangan-2",
+        "left": "Kalimat pendukung bekerja",
+        "right": "Menjelaskan kalimat topik"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang perlu diperiksa setelah menulis?",
-        "right": "Huruf kapital, tanda baca, dan ejaan."
+        "pairId": "pasangan-3",
+        "left": "Yang perlu diperiksa setelah menulis",
+        "right": "Huruf kapital, tanda baca, dan ejaan"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Menulis Paragraf Sederhana?",
-        "right": "Menyusun kalimat topik dan kalimat pendukung menjadi paragraf sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+        "pairId": "pasangan-4",
+        "left": "Dua bagian yang ditulis anak pada gambar",
+        "right": "Topik dan kalimat pendukung"
       }
     ]
   },

@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa teknik lanjutan sepak bola?",
-        "right": "Passing, dribbling, dan shooting."
+        "pairId": "pasangan-1",
+        "left": "Teknik lanjutan sepak bola",
+        "right": "Passing, dribbling, dan shooting"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa teknik lanjutan bola basket?",
-        "right": "Dribble, passing, dan shooting."
+        "pairId": "pasangan-2",
+        "left": "Teknik lanjutan bola basket",
+        "right": "Dribble, passing, dan shooting"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa kerja sama penting?",
-        "right": "Agar tim mencetak skor."
+        "pairId": "pasangan-3",
+        "left": "Alasan kerja sama penting",
+        "right": "Agar tim mencetak skor"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar Lanjutan?",
-        "right": "Mempraktikkan teknik lanjutan permainan bola besar."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Agar tim menang, pemain harus ...",
+        "pairId": "pasangan-4",
+        "left": "Agar tim menang, pemain harus",
         "right": "Bekerja sama"
       }
     ]

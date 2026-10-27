@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa contoh aturan di rumah?",
-        "right": "Merapikan tempat tidur."
+        "pairId": "pasangan-1",
+        "left": "Contoh aturan di rumah",
+        "right": "Merapikan tempat tidur"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Mengapa aturan penting?",
-        "right": "Agar rumah tertib dan nyaman."
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan penting",
+        "right": "Agar rumah tertib dan nyaman"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan sebelum pergi?",
-        "right": "Meminta izin orang tua."
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan sebelum pergi",
+        "right": "Meminta izin orang tua"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Manfaat aturan adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Manfaat aturan adalah",
         "right": "Rumah tertib"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Aturan di Rumah?",
-        "right": "Mengenal dan melaksanakan aturan di rumah."
       }
     ]
   },

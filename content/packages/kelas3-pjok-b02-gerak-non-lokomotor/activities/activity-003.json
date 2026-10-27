@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu gerak non-lokomotor?",
-        "right": "Gerak yang dilakukan di tempat."
+        "pairId": "pasangan-1",
+        "left": "Gerak non-lokomotor",
+        "right": "Gerak yang dilakukan di tempat"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Gerak apa yang melatih keseimbangan?",
-        "right": "Berdiri satu kaki."
+        "pairId": "pasangan-2",
+        "left": "Gerak yang melatih keseimbangan",
+        "right": "Berdiri satu kaki"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa pemanasan penting?",
-        "right": "Mencegah cedera otot."
+        "pairId": "pasangan-3",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera otot"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Gerak Non-Lokomotor?",
-        "right": "Mempraktikkan gerak di tempat: menekuk, memutar, mengayun, dan menyeimbangkan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Contoh gerak non-lokomotor adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Contoh gerak non-lokomotor adalah",
         "right": "Menekuk lutut"
       }
     ]

@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa tujuan prosedur?",
-        "right": "Memberi petunjuk melakukan sesuatu."
+        "pairId": "pasangan-1",
+        "left": "Tujuan prosedur",
+        "right": "Memberi petunjuk melakukan sesuatu"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana urutan langkah?",
-        "right": "Berurutan dari awal sampai akhir."
+        "pairId": "pasangan-2",
+        "left": "Urutan langkah",
+        "right": "Berurutan dari awal sampai akhir"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Kata apa yang dipakai?",
-        "right": "Kata perintah."
+        "pairId": "pasangan-3",
+        "left": "Kata yang dipakai",
+        "right": "Kata perintah"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Teks Prosedur?",
-        "right": "Menyusun teks prosedur dengan langkah berurutan."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Langkah menanam biji dalam pot."
+        "pairId": "pasangan-4",
+        "left": "Menanam biji dalam pot secara berurutan",
+        "right": "Teks prosedur"
       }
     ]
   },

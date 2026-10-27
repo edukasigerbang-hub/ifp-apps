@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Mengapa lingkungan harus bersih?",
-        "right": "Agar sehat dan nyaman."
+        "pairId": "pasangan-1",
+        "left": "Alasan lingkungan harus bersih",
+        "right": "Agar sehat dan nyaman"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa penyebab lingkungan kotor?",
-        "right": "Sampah dibuang sembarangan dan penebangan pohon."
+        "pairId": "pasangan-2",
+        "left": "Penyebab lingkungan kotor",
+        "right": "Sampah dibuang sembarangan dan penebangan pohon"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menjaga lingkungan?",
-        "right": "Membuang sampah pada tempatnya dan menanam pohon."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Lingkungan dan Pelestariannya?",
-        "right": "Menyiapkan alat kebersihan → Membersihkan kelas → Memilah sampah → Membuang sampah → Mencuci tangan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Lingkungan dan Pelestariannya?",
-        "right": "Menjaga lingkungan bersih dan melestarikannya di sekitar kita."
+        "pairId": "pasangan-3",
+        "left": "Menjaga lingkungan",
+        "right": "Membuang sampah pada tempatnya dan menanam pohon"
       }
     ]
   },

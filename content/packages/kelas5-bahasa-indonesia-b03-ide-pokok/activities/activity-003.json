@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu ide pokok?",
-        "right": "Gagasan utama sebuah paragraf."
+        "pairId": "pasangan-1",
+        "left": "Ide pokok",
+        "right": "Gagasan utama sebuah paragraf"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Di mana letak kalimat utama?",
-        "right": "Sering di awal paragraf, bisa juga di akhir."
+        "pairId": "pasangan-2",
+        "left": "Tempat letak kalimat utama",
+        "right": "Sering di awal paragraf, bisa juga di akhir"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menemukannya?",
-        "right": "Baca seluruh paragraf lalu tentukan intinya."
+        "pairId": "pasangan-3",
+        "left": "Menemukannya",
+        "right": "Baca seluruh paragraf lalu tentukan intinya"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Ide Pokok dan Kalimat Utama?",
-        "right": "Menemukan ide pokok dan kalimat utama dalam paragraf."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Ide pokok adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Ide pokok adalah",
         "right": "Gagasan utama paragraf"
       }
     ]

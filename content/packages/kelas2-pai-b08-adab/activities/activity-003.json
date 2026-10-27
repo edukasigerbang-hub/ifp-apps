@@ -3,42 +3,37 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bagaimana adab kepada orang tua?",
-        "right": "Menghormati."
+        "pairId": "pasangan-1",
+        "left": "Adab kepada orang tua",
+        "right": "Menghormati"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana adab kepada guru?",
-        "right": "Sopan."
+        "pairId": "pasangan-2",
+        "left": "Adab kepada guru",
+        "right": "Sopan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana adab kepada teman?",
-        "right": "Baik dan tidak bertengkar."
+        "pairId": "pasangan-3",
+        "left": "Adab kepada teman",
+        "right": "Baik dan tidak bertengkar"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Adab Sehari-hari?",
-        "right": "Membiasakan adab baik setiap hari."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Sikap kepada teman adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Sikap kepada teman adalah",
         "right": "Baik dan membantu"
       },
       {
-        "pairId": "pasangan-kelas2-6",
+        "pairId": "pasangan-5",
         "left": "Bertamu",
         "right": "Mengucapkan salam dan menunggu izin"
       },
       {
-        "pairId": "pasangan-kelas2-7",
+        "pairId": "pasangan-6",
         "left": "Di tempat umum",
         "right": "Menjaga suara dan kebersihan"
       }

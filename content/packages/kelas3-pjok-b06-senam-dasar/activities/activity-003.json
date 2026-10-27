@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Mengapa pemanasan penting?",
-        "right": "Mencegah cedera."
+        "pairId": "pasangan-1",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa gerak senam pada gambar?",
-        "right": "Guling depan, peregangan, dan keseimbangan."
+        "pairId": "pasangan-2",
+        "left": "Guling depan, peregangan, dan keseimbangan",
+        "right": "Gerak senam"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang disiapkan agar aman?",
-        "right": "Matras dan pendamping."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Senam Dasar?",
-        "right": "Melakukan pemanasan → Jongkok dengan dagu menempel dada → Meletakkan tengkuk di matras → Berguling ke depan → Berdiri tegak"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Senam Dasar?",
-        "right": "Mempraktikkan gerak senam dasar dengan aman."
+        "pairId": "pasangan-3",
+        "left": "Yang disiapkan agar aman",
+        "right": "Matras dan pendamping"
       }
     ]
   },

@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu mean?",
-        "right": "Jumlah data dibagi banyak data."
+        "pairId": "pasangan-1",
+        "left": "Mean",
+        "right": "Jumlah data dibagi banyak data"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa itu median?",
-        "right": "Nilai tengah setelah data diurutkan."
+        "pairId": "pasangan-2",
+        "left": "Median",
+        "right": "Nilai tengah setelah data diurutkan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa itu modus?",
-        "right": "Data yang paling sering muncul."
+        "pairId": "pasangan-3",
+        "left": "Modus",
+        "right": "Data yang paling sering muncul"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Statistika?",
-        "right": "Menghitung mean, median, dan modus dari data."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Mean dari 70, 80, 90 adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Mean dari 70, 80, 90 adalah",
         "right": "80"
       }
     ]

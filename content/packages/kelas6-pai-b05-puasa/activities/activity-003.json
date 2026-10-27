@@ -3,33 +3,33 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu puasa?",
-        "right": "Menahan makan dan minum sejak fajar hingga magrib."
+        "pairId": "pasangan-1",
+        "left": "Puasa",
+        "right": "Menahan makan dan minum sejak fajar hingga magrib"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa yang membatalkan?",
-        "right": "Makan dan minum dengan sengaja."
+        "pairId": "pasangan-2",
+        "left": "Yang membatalkan",
+        "right": "Makan dan minum dengan sengaja"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa hikmahnya?",
-        "right": "Melatih sabar dan disiplin."
+        "pairId": "pasangan-3",
+        "left": "Hikmahnya",
+        "right": "Melatih sabar dan disiplin"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Hal yang membatalkan puasa adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Hal yang membatalkan puasa adalah",
         "right": "Makan dengan sengaja"
       },
       {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Hikmah puasa adalah ...",
+        "pairId": "pasangan-5",
+        "left": "Hikmah puasa adalah",
         "right": "Melatih sabar"
       }
     ]

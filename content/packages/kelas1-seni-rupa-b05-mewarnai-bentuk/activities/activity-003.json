@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Warna apa yang dipakai?",
-        "right": "Merah, kuning, dan biru."
+        "pairId": "pasangan-1",
+        "left": "Warna yang dipakai",
+        "right": "Merah, kuning, dan biru"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana mewarnai rapi?",
-        "right": "Jangan keluar garis."
+        "pairId": "pasangan-2",
+        "left": "Mewarnai rapi",
+        "right": "Jangan keluar garis"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan setelah mewarnai?",
-        "right": "Merapikan alat."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Mewarnai Bentuk?",
-        "right": "Menyiapkan alat → Memilih warna → Mewarnai bentuk → Merapikan alat → Mencuci tangan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Mewarnai Bentuk?",
-        "right": "Mewarnai bentuk dengan rapi dan warna yang sesuai."
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah mewarnai",
+        "right": "Merapikan alat"
       }
     ]
   },

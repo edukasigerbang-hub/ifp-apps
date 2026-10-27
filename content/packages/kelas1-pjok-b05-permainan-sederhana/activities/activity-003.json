@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Mengapa aturan penting?",
-        "right": "Agar permainan adil."
+        "pairId": "pasangan-1",
+        "left": "Alasan aturan penting",
+        "right": "Agar permainan adil"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana bermain bersama?",
-        "right": "Bergiliran dan bekerja sama."
+        "pairId": "pasangan-2",
+        "left": "Bermain bersama",
+        "right": "Bergiliran dan bekerja sama"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana sikap setelah bermain?",
-        "right": "Bersalaman."
+        "pairId": "pasangan-3",
+        "left": "Sikap setelah bermain",
+        "right": "Bersalaman"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Permainan Sederhana?",
-        "right": "Bermain permainan sederhana dengan aturan dan kerja sama."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak bermain permainan sederhana di lapangan."
+        "pairId": "pasangan-4",
+        "left": "Anak bermain di lapangan terbuka",
+        "right": "Permainan sederhana"
       }
     ]
   },

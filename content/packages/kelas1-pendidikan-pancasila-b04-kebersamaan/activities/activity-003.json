@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu kebersamaan?",
-        "right": "Melakukan sesuatu bersama-sama."
+        "pairId": "pasangan-1",
+        "left": "Kebersamaan",
+        "right": "Melakukan sesuatu bersama-sama"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Contoh kebersamaan di sekolah?",
-        "right": "Belajar dan bermain bersama."
+        "pairId": "pasangan-2",
+        "left": "Contoh kebersamaan di sekolah",
+        "right": "Belajar dan bermain bersama"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menjaga kebersamaan?",
-        "right": "Tidak bertengkar."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Kebersamaan di Sekolah?",
-        "right": "Datang ke sekolah → Belajar bersama → Bermain bersama → Membantu teman → Pulang dengan rapi"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Kebersamaan di Sekolah?",
-        "right": "Menjaga kebersamaan di sekolah."
+        "pairId": "pasangan-3",
+        "left": "Menjaga kebersamaan",
+        "right": "Tidak bertengkar"
       }
     ]
   },

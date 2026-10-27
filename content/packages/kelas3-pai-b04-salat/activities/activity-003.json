@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Berapa kali salat wajib dalam sehari?",
-        "right": "Lima waktu."
+        "pairId": "pasangan-1",
+        "left": "Banyak kali salat wajib dalam sehari",
+        "right": "Lima waktu"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa yang dilakukan sebelum salat?",
-        "right": "Berwudu dan menutup aurat."
+        "pairId": "pasangan-2",
+        "left": "Yang dilakukan sebelum salat",
+        "right": "Berwudu dan menutup aurat"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana urutan gerakan salat?",
-        "right": "Berdiri, takbir, rukuk, sujud, duduk, lalu salam."
+        "pairId": "pasangan-3",
+        "left": "Urutan gerakan salat",
+        "right": "Berdiri, takbir, rukuk, sujud, duduk, lalu salam"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Salat?",
-        "right": "Mengenal kewajiban salat, waktu salat, dan urutan gerakannya."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak berwudu dan melaksanakan gerakan salat."
+        "pairId": "pasangan-4",
+        "left": "Berwudu dan mengerjakan gerakan salat",
+        "right": "Salat"
       }
     ]
   },

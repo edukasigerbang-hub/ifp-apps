@@ -3,33 +3,33 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Permainan tradisional apa yang kamu tahu?",
-        "right": "Gobak sodor, engklek, dan kasti."
+        "pairId": "pasangan-1",
+        "left": "Permainan tradisional yang kamu tahu",
+        "right": "Gobak sodor, engklek, dan kasti"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Mengapa aturan penting?",
-        "right": "Agar permainan adil."
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan penting",
+        "right": "Agar permainan adil"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa manfaatnya?",
-        "right": "Melatih gerak, kerja sama, dan sportivitas."
+        "pairId": "pasangan-3",
+        "left": "Manfaatnya",
+        "right": "Melatih gerak, kerja sama, dan sportivitas"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Anak bermain permainan tradisional di lapangan."
+        "pairId": "pasangan-4",
+        "left": "Permainan lapangan warisan budaya",
+        "right": "Permainan tradisional"
       },
       {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Contoh permainan tradisional adalah ...",
+        "pairId": "pasangan-5",
+        "left": "Contoh permainan tradisional adalah",
         "right": "Gobak sodor"
       }
     ]

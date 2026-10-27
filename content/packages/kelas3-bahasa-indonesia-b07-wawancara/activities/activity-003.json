@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Siapa yang diwawancarai?",
-        "right": "Narasumber."
+        "pairId": "pasangan-1",
+        "left": "Yang diwawancarai",
+        "right": "Narasumber"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana pertanyaan yang baik?",
-        "right": "Singkat, jelas, dan mudah dijawab."
+        "pairId": "pasangan-2",
+        "left": "Pertanyaan yang baik",
+        "right": "Singkat, jelas, dan mudah dijawab"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan saat wawancara?",
-        "right": "Bersikap sopan dan mencatat jawaban."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Wawancara Sederhana?",
-        "right": "Menentukan narasumber → Menyusun pertanyaan → Meminta izin dan memperkenalkan diri → Bertanya dan mencatat jawaban → Mengucapkan terima kasih"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Wawancara Sederhana?",
-        "right": "Menyusun pertanyaan dan melakukan wawancara sederhana dengan sopan."
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan saat wawancara",
+        "right": "Bersikap sopan dan mencatat jawaban"
       }
     ]
   },

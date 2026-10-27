@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa masalah yang dipilih?",
-        "right": "Masalah di lingkungan sekitar."
+        "pairId": "pasangan-1",
+        "left": "Masalah yang dipilih",
+        "right": "Masalah di lingkungan sekitar"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana merencanakan?",
-        "right": "Tentukan tujuan, tugas, dan waktu."
+        "pairId": "pasangan-2",
+        "left": "Merencanakan",
+        "right": "Tentukan tujuan, tugas, dan waktu"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang dilakukan setelahnya?",
-        "right": "Melaporkan dan mengevaluasi."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
-        "right": "Memilih masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan hasil"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Proyek Kewargaan?",
-        "right": "Merancang dan melaksanakan proyek kewargaan."
+        "pairId": "pasangan-3",
+        "left": "Kegiatan setelah proyek kewargaan selesai",
+        "right": "Melapor dan mengevaluasi"
       }
     ]
   },

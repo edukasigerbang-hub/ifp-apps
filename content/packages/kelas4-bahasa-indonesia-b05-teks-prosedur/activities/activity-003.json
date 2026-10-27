@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang dilakukan anak pada gambar?",
-        "right": "Menanam biji: menyiapkan pot, menanam biji, lalu menyiram."
+        "pairId": "pasangan-1",
+        "left": "Menyiapkan pot, menanam biji, lalu menyiram",
+        "right": "Langkah menanam"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Mengapa langkah harus berurutan?",
-        "right": "Agar kegiatan berhasil dan mudah diikuti orang lain."
+        "pairId": "pasangan-2",
+        "left": "Alasan langkah harus berurutan",
+        "right": "Agar kegiatan berhasil dan mudah diikuti orang lain"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Sebutkan ciri teks prosedur.",
-        "right": "Berisi langkah berurutan, kata perintah, serta alat dan bahan."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Memahami dan Menulis Teks Prosedur?",
-        "right": "Mengenali ciri teks prosedur, mengurutkan langkah, dan menulis prosedur sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Memahami dan Menulis Teks Prosedur?",
-        "right": "Menyiapkan pot dan tanah → Menanam biji → Menyiram biji → Meletakkan di tempat terang → Merawat tanaman"
+        "pairId": "pasangan-3",
+        "left": "Teks berisi langkah berurutan dan kata perintah",
+        "right": "Teks prosedur"
       }
     ]
   },

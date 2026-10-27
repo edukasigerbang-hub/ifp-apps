@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu ilustrasi?",
-        "right": "Gambar untuk menjelaskan cerita."
+        "pairId": "pasangan-1",
+        "left": "Ilustrasi",
+        "right": "Gambar untuk menjelaskan cerita"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa langkah pertama?",
-        "right": "Menentukan tema."
+        "pairId": "pasangan-2",
+        "left": "Langkah pertama",
+        "right": "Menentukan tema"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa langkah terakhir?",
-        "right": "Mewarnai."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Menggambar Ilustrasi Sederhana?",
-        "right": "Menentukan tema → Membuat sketsa → Menebalkan garis → Mewarnai → Merapikan karya"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Menggambar Ilustrasi Sederhana?",
-        "right": "Membuat ilustrasi sederhana dari bentuk dasar."
+        "pairId": "pasangan-3",
+        "left": "Langkah terakhir",
+        "right": "Mewarnai"
       }
     ]
   },

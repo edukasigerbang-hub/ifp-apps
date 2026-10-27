@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu puasa?",
-        "right": "Menahan makan dan minum sejak fajar hingga magrib."
+        "pairId": "pasangan-1",
+        "left": "Puasa",
+        "right": "Menahan makan dan minum sejak fajar hingga magrib"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Kapan berbuka?",
-        "right": "Saat magrib."
+        "pairId": "pasangan-2",
+        "left": "Waktu berbuka",
+        "right": "Saat magrib"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa hikmah puasa?",
-        "right": "Melatih sabar dan disiplin."
+        "pairId": "pasangan-3",
+        "left": "Hikmah puasa",
+        "right": "Melatih sabar dan disiplin"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Hikmah puasa adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Hikmah puasa adalah",
         "right": "Melatih sabar"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Puasa?",
-        "right": "Mengenal puasa, waktunya, dan hikmahnya."
       }
     ]
   },

@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu seni cetak?",
-        "right": "Membuat gambar berulang dengan alat cetak."
+        "pairId": "pasangan-1",
+        "left": "Seni cetak",
+        "right": "Membuat gambar berulang dengan alat cetak"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bahan apa yang dapat dijadikan cap?",
-        "right": "Kentang, pelepah pisang, atau tutup botol."
+        "pairId": "pasangan-2",
+        "left": "Bahan yang dapat dijadikan cap",
+        "right": "Kentang, pelepah pisang, atau tutup botol"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana cara mencetak?",
-        "right": "Oleskan cat, tekan ke kertas, lalu angkat perlahan."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Seni Cetak Sederhana?",
-        "right": "Membuat alat cetak sederhana dan mencetak pola berulang."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Seni Cetak Sederhana?",
-        "right": "Menyiapkan alat dan bahan → Memotong pelepah hingga rata → Mencelupkan pelepah ke cat → Menekan pelepah pada kertas → Mengangkat pelepah perlahan"
+        "pairId": "pasangan-3",
+        "left": "Cara mencetak",
+        "right": "Oleskan cat, tekan ke kertas, lalu angkat perlahan"
       }
     ]
   },

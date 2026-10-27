@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu gotong royong?",
-        "right": "Bekerja bersama."
+        "pairId": "pasangan-1",
+        "left": "Gotong royong",
+        "right": "Bekerja bersama"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Contoh di sekolah?",
-        "right": "Kerja bakti kelas."
+        "pairId": "pasangan-2",
+        "left": "Contoh di sekolah",
+        "right": "Kerja bakti kelas"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa manfaatnya?",
-        "right": "Pekerjaan cepat selesai."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Gotong Royong?",
-        "right": "Menentukan kegiatan → Membagi tugas → Bekerja bersama → Menyelesaikan pekerjaan → Merapikan alat"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Gotong Royong?",
-        "right": "Menerapkan gotong royong di sekolah dan rumah."
+        "pairId": "pasangan-3",
+        "left": "Manfaatnya",
+        "right": "Pekerjaan cepat selesai"
       }
     ]
   },

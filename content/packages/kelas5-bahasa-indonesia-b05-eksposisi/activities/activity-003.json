@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa tujuan teks eksposisi?",
-        "right": "Menjelaskan informasi secara objektif."
+        "pairId": "pasangan-1",
+        "left": "Tujuan teks eksposisi",
+        "right": "Menjelaskan informasi secara objektif"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa strukturnya?",
-        "right": "Tesis, argumen, dan penegasan."
+        "pairId": "pasangan-2",
+        "left": "Strukturnya",
+        "right": "Tesis, argumen, dan penegasan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bahasa apa yang dipakai?",
-        "right": "Baku dan jelas."
+        "pairId": "pasangan-3",
+        "left": "Bahasa yang dipakai",
+        "right": "Baku dan jelas"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Struktur teks eksposisi adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Struktur teks eksposisi adalah",
         "right": "Tesis, argumen, penegasan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Teks Eksposisi?",
-        "right": "Mengenal teks eksposisi dan strukturnya."
       }
     ]
   },

@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Berapa hasil 2.450 + 1.275?",
-        "right": "3.725."
+        "pairId": "pasangan-1",
+        "left": "Banyak hasil 2.450 + 1.275",
+        "right": "3.725"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Kapan kita menyimpan?",
-        "right": "Saat jumlah satu tempat lebih dari 9."
+        "pairId": "pasangan-2",
+        "left": "Waktu kita menyimpan",
+        "right": "Saat jumlah satu tempat lebih dari 9"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Kapan kita meminjam saat mengurangi?",
-        "right": "Saat angka atas lebih kecil dari angka bawah."
+        "pairId": "pasangan-3",
+        "left": "Waktu kita meminjam saat mengurangi",
+        "right": "Saat angka atas lebih kecil dari angka bawah"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan?",
-        "right": "Menjumlahkan dan mengurangkan bilangan sampai 10.000 dengan teknik menyimpan dan meminjam."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+        "pairId": "pasangan-4",
+        "left": "Lompatan maju dan mundur pada garis bilangan",
+        "right": "Penjumlahan dan pengurangan"
       }
     ]
   },

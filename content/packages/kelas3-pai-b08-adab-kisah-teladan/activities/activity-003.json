@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bagaimana adab kepada orang tua?",
-        "right": "Menghormati dan membantu."
+        "pairId": "pasangan-1",
+        "left": "Adab kepada orang tua",
+        "right": "Menghormati dan membantu"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana adab kepada guru?",
-        "right": "Sopan dan mendengarkan."
+        "pairId": "pasangan-2",
+        "left": "Adab kepada guru",
+        "right": "Sopan dan mendengarkan"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Sifat apa yang diteladani?",
-        "right": "Jujur, sabar, dan peduli."
+        "pairId": "pasangan-3",
+        "left": "Sifat yang diteladani",
+        "right": "Jujur, sabar, dan peduli"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Manfaat berkata jujur adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Manfaat berkata jujur adalah",
         "right": "Dipercaya orang lain"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Adab dan Kisah Teladan?",
-        "right": "Menerapkan adab baik dan meneladani kisah Nabi serta sahabat."
       }
     ]
   },

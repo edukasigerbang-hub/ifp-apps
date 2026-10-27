@@ -3,33 +3,28 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa arti NKRI?",
-        "right": "Negara Kesatuan Republik Indonesia."
+        "pairId": "pasangan-1",
+        "left": "Arti NKRI",
+        "right": "Negara Kesatuan Republik Indonesia"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa semboyan bangsa Indonesia?",
-        "right": "Bhinneka Tunggal Ika."
+        "pairId": "pasangan-2",
+        "left": "Semboyan bangsa Indonesia",
+        "right": "Bhinneka Tunggal Ika"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa itu otonomi daerah?",
-        "right": "Kewenangan daerah mengatur urusannya sendiri."
+        "pairId": "pasangan-3",
+        "left": "Otonomi daerah",
+        "right": "Kewenangan daerah mengatur urusannya sendiri"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang NKRI dan Otonomi Daerah?",
-        "right": "Mengenal NKRI, semboyan bangsa, dan otonomi daerah."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Otonomi daerah berarti ...",
+        "pairId": "pasangan-4",
+        "left": "Otonomi daerah berarti",
         "right": "Daerah mengatur urusannya sendiri"
       }
     ]

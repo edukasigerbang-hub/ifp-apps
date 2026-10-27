@@ -3,32 +3,27 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa contoh aturan sekolah?",
-        "right": "Datang tepat waktu."
+        "pairId": "pasangan-1",
+        "left": "Contoh aturan sekolah",
+        "right": "Datang tepat waktu"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Mengapa aturan penting?",
-        "right": "Agar belajar nyaman."
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan penting",
+        "right": "Agar belajar nyaman"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa akibat melanggar aturan?",
-        "right": "Kegiatan terganggu."
+        "pairId": "pasangan-3",
+        "left": "Akibat melanggar aturan",
+        "right": "Kegiatan terganggu"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Aturan di Sekolah?",
-        "right": "Mengenal dan melaksanakan aturan di sekolah."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-4",
         "left": "Manfaat aturan adalah ...",
         "right": "Belajar nyaman"
       }

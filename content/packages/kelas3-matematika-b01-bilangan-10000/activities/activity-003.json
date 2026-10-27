@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Berapa banyak kubus pada gambar?",
-        "right": "3.452 (tiga ribu empat ratus lima puluh dua)."
+        "pairId": "pasangan-1",
+        "left": "Banyak kubus pada gambar",
+        "right": "3.452 (tiga ribu empat ratus lima puluh dua)"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa nilai tempat angka 5 pada 3.452?",
-        "right": "Puluhan, nilainya 50."
+        "pairId": "pasangan-2",
+        "left": "Nilai tempat angka 5 pada 3.452",
+        "right": "Puluhan, nilainya 50"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana membandingkan dua bilangan?",
-        "right": "Bandingkan angka paling kiri lebih dahulu."
+        "pairId": "pasangan-3",
+        "left": "Membandingkan dua bilangan",
+        "right": "Bandingkan angka paling kiri lebih dahulu"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Bilangan sampai 10.000?",
-        "right": "Membaca, menulis, dan membandingkan bilangan sampai 10.000 melalui nilai tempat."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+        "pairId": "pasangan-4",
+        "left": "Balok ribuan, ratusan, puluhan, dan satuan",
+        "right": "Kolom nilai tempat"
       }
     ]
   },

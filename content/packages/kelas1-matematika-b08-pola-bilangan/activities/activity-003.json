@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Pola 1, 2, 3, ... berlanjut dengan ...",
-        "right": "4."
+        "pairId": "pasangan-1",
+        "left": "Pola 1, 2, 3, ... berlanjut dengan",
+        "right": "4"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Pola 2, 4, 6, ... berlanjut dengan ...",
-        "right": "8."
+        "pairId": "pasangan-2",
+        "left": "Pola 2, 4, 6, ... berlanjut dengan",
+        "right": "8"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Pola 5, 10, 15, ... berlanjut dengan ...",
-        "right": "20."
+        "pairId": "pasangan-3",
+        "left": "Pola 5, 10, 15, ... berlanjut dengan",
+        "right": "20"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Pola Bilangan?",
-        "right": "Mengenal dan melanjutkan pola bilangan sederhana."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Pola warna dan bilangan yang berulang."
+        "pairId": "pasangan-4",
+        "left": "Warna dan bilangan yang terus berulang",
+        "right": "Pola bilangan"
       }
     ]
   },

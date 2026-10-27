@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa sudut siku-siku?",
-        "right": "Sudut yang besarnya 90 derajat."
+        "pairId": "pasangan-1",
+        "left": "Sudut siku-siku",
+        "right": "Sudut yang besarnya 90 derajat"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa sudut lancip?",
-        "right": "Sudut kurang dari 90 derajat."
+        "pairId": "pasangan-2",
+        "left": "Sudut lancip",
+        "right": "Sudut kurang dari 90 derajat"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa sudut tumpul?",
-        "right": "Sudut lebih dari 90 derajat."
+        "pairId": "pasangan-3",
+        "left": "Sudut tumpul",
+        "right": "Sudut lebih dari 90 derajat"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Pengukuran Sudut dan Bangun Datar?",
-        "right": "Mengukur sudut dan mengenal sifat bangun datar."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Sudut lancip, siku, dan tumpul pada bangun datar."
+        "pairId": "pasangan-4",
+        "left": "Sudut kurang, tepat, dan lebih dari 90°",
+        "right": "Jenis sudut"
       }
     ]
   },

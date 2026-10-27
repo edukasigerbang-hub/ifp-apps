@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Mengapa lingkungan harus dilestarikan?",
-        "right": "Agar tetap sehat dan tersedia."
+        "pairId": "pasangan-1",
+        "left": "Alasan lingkungan harus dilestarikan",
+        "right": "Agar tetap sehat dan tersedia"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana melestarikan air?",
-        "right": "Hemat air dan jaga sumbernya."
+        "pairId": "pasangan-2",
+        "left": "Melestarikan air",
+        "right": "Hemat air dan jaga sumbernya"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana melestarikan hutan?",
-        "right": "Menanam dan tidak menebang sembarangan."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Pelestarian Lingkungan?",
-        "right": "Menanam pohon → Memilah sampah → Menghemat air → Menghemat listrik → Menjaga hutan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Pelestarian Lingkungan?",
-        "right": "Menjaga lingkungan melalui tindakan nyata."
+        "pairId": "pasangan-3",
+        "left": "Melestarikan hutan",
+        "right": "Menanam dan tidak menebang sembarangan"
       }
     ]
   },

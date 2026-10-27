@@ -3,32 +3,27 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa rasio 4 benda merah dan 3 benda biru?",
-        "right": "4 : 3."
+        "pairId": "pasangan-1",
+        "left": "Rasio 4 benda merah dan 3 benda biru",
+        "right": "4 : 3"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa itu proporsi?",
-        "right": "Dua rasio yang senilai."
+        "pairId": "pasangan-2",
+        "left": "Proporsi",
+        "right": "Dua rasio yang senilai"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa hal penting yang kamu pelajari tentang Rasio dan Proporsi?",
-        "right": "Menulis, menyederhanakan, dan menerapkan rasio."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Rasio 6 : 9 disederhanakan menjadi ...",
+        "pairId": "pasangan-3",
+        "left": "Rasio 6 : 9 disederhanakan menjadi",
         "right": "2 : 3"
       },
       {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-4",
         "left": "Pasangan yang senilai dengan 3 : 4 adalah ...",
         "right": "9 : 12"
       }

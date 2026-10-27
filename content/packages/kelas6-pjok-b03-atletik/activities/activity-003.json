@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bagaimana start jongkok?",
-        "right": "Kaki menolak kuat, pandangan ke depan."
+        "pairId": "pasangan-1",
+        "left": "Start jongkok",
+        "right": "Kaki menolak kuat, pandangan ke depan"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa urutan lompat jauh?",
-        "right": "Awalan, tolakan, melayang, mendarat."
+        "pairId": "pasangan-2",
+        "left": "Urutan lompat jauh",
+        "right": "Awalan, tolakan, melayang, mendarat"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa itu sportivitas?",
-        "right": "Menghargai lawan dan aturan."
+        "pairId": "pasangan-3",
+        "left": "Sportivitas",
+        "right": "Menghargai lawan dan aturan"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Lintasan lari, bak lompat, dan pita finis."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Atletik?",
-        "right": "Mempraktikkan nomor atletik dengan teknik dan sportivitas."
+        "pairId": "pasangan-4",
+        "left": "Lintasan lari, bak lompat, dan pita finis",
+        "right": "Atletik"
       }
     ]
   },

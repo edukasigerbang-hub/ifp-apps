@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Ada berapa apel?",
-        "right": "Tujuh."
+        "pairId": "pasangan-1",
+        "left": "Banyak apel",
+        "right": "Tujuh"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Angka untuk tujuh adalah ...",
-        "right": "7."
+        "pairId": "pasangan-2",
+        "left": "Angka untuk tujuh adalah",
+        "right": "7"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mana yang lebih banyak, 5 atau 3?",
-        "right": "5."
+        "pairId": "pasangan-3",
+        "left": "Yang lebih banyak, 5 atau 3",
+        "right": "5"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Bilangan 1–10?",
-        "right": "Membilang, mengenal lambang, dan mengurutkan bilangan 1–10."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Kerangka sepuluh berisi tujuh buah apel."
+        "pairId": "pasangan-4",
+        "left": "Gambar sepuluh kotak yang diisi apel",
+        "right": "Kerangka sepuluh"
       }
     ]
   },

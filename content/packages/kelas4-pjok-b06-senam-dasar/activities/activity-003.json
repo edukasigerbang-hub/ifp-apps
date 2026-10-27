@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Mengapa pemanasan penting sebelum senam?",
-        "right": "Mencegah cedera dan menyiapkan otot."
+        "pairId": "pasangan-1",
+        "left": "Alasan pemanasan penting sebelum senam",
+        "right": "Mencegah cedera dan menyiapkan otot"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa gerak dasar senam pada gambar?",
-        "right": "Guling depan, peregangan, dan keseimbangan."
+        "pairId": "pasangan-2",
+        "left": "Tiga gerakan dasar di atas matras",
+        "right": "Gerak dasar senam"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang harus disiapkan agar aman?",
-        "right": "Matras, ruang cukup, dan pendamping."
+        "pairId": "pasangan-3",
+        "left": "Yang harus disiapkan agar aman",
+        "right": "Matras, ruang cukup, dan pendamping"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Senam Dasar?",
-        "right": "Melakukan pemanasan → Jongkok dengan dagu menempel dada → Meletakkan tengkuk di matras → Berguling ke depan → Berdiri tegak dan mengangkat kedua tangan"
+        "pairId": "pasangan-4",
+        "left": "Guling depan, peregangan, dan keseimbangan",
+        "right": "Senam dasar"
       }
     ]
   },

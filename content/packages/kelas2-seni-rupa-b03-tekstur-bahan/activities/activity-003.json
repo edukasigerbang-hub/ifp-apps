@@ -3,32 +3,32 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bahan kasar adalah ...",
-        "right": "Batu."
+        "pairId": "pasangan-1",
+        "left": "Bahan kasar adalah",
+        "right": "Batu"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bahan halus adalah ...",
-        "right": "Kapas."
+        "pairId": "pasangan-2",
+        "left": "Bahan halus adalah",
+        "right": "Kapas"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa perekat yang aman?",
-        "right": "Lem."
+        "pairId": "pasangan-3",
+        "left": "Perekat yang aman",
+        "right": "Lem"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Bahan bertekstur kasar dan halus."
+        "pairId": "pasangan-4",
+        "left": "Permukaan bahan yang kasar dan halus",
+        "right": "Tekstur"
       },
       {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-5",
         "left": "Tekstur adalah ...",
         "right": "Kesan permukaan"
       }

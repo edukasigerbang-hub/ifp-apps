@@ -3,32 +3,32 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa tujuan teks diskusi?",
-        "right": "Membahas masalah dari dua sisi."
+        "pairId": "pasangan-1",
+        "left": "Tujuan teks diskusi",
+        "right": "Membahas masalah dari dua sisi"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa itu argumen?",
-        "right": "Alasan yang mendukung pendapat."
+        "pairId": "pasangan-2",
+        "left": "Argumen",
+        "right": "Alasan yang mendukung pendapat"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menyimpulkan?",
-        "right": "Menimbang argumen."
+        "pairId": "pasangan-3",
+        "left": "Menyimpulkan",
+        "right": "Menimbang argumen"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Teks diskusi membahas masalah dari ...",
+        "pairId": "pasangan-4",
+        "left": "Teks diskusi membahas masalah dari",
         "right": "Dua sisi"
       },
       {
-        "pairId": "pasangan-penguatan-5",
+        "pairId": "pasangan-5",
         "left": "Saat teman berbeda pendapat, kita ...",
         "right": "Menghargai pendapatnya"
       }

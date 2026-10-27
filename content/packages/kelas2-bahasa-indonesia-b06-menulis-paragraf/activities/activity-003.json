@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa ide pokok?",
-        "right": "Gagasan utama."
+        "pairId": "pasangan-1",
+        "left": "Ide pokok",
+        "right": "Gagasan utama"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Berapa kalimat dalam paragraf?",
-        "right": "Dua sampai tiga."
+        "pairId": "pasangan-2",
+        "left": "Banyak kalimat dalam paragraf",
+        "right": "Dua sampai tiga"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Apa yang diperiksa?",
-        "right": "Ejaan dan tanda baca."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Menulis Paragraf Sederhana?",
-        "right": "Menentukan ide pokok → Menulis kalimat → Menyusun paragraf → Memberi tanda baca → Memeriksa tulisan"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Menulis Paragraf Sederhana?",
-        "right": "Menulis paragraf dua sampai tiga kalimat."
+        "pairId": "pasangan-3",
+        "left": "Yang diperiksa",
+        "right": "Ejaan dan tanda baca"
       }
     ]
   },

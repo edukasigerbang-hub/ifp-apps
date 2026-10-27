@@ -3,34 +3,24 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa itu gotong royong?",
-        "right": "Bekerja bersama untuk kepentingan bersama."
+        "pairId": "pasangan-1",
+        "left": "Gotong royong",
+        "right": "Bekerja bersama untuk kepentingan bersama"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Apa manfaat musyawarah?",
-        "right": "Mencapai keputusan bersama."
+        "pairId": "pasangan-2",
+        "left": "Manfaat musyawarah",
+        "right": "Mencapai keputusan bersama"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana menerapkannya?",
-        "right": "Berbagi tugas dan bermusyawarah."
-      },
-      {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Bagaimana urutan yang benar untuk Gotong Royong dan Musyawarah?",
-        "right": "Menentukan kegiatan → Bermusyawarah → Membagi tugas → Bekerja bersama → Melaporkan hasil"
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa hal penting yang kamu pelajari tentang Gotong Royong dan Musyawarah?",
-        "right": "Menerapkan gotong royong dan musyawarah."
+        "pairId": "pasangan-3",
+        "left": "Menerapkannya",
+        "right": "Berbagi tugas dan bermusyawarah"
       }
     ]
   },

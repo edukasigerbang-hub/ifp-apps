@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Badan apa yang dibentuk untuk menyiapkan kemerdekaan?",
-        "right": "BPUPKI."
+        "pairId": "pasangan-1",
+        "left": "Badan yang dibentuk untuk menyiapkan kemerdekaan",
+        "right": "BPUPKI"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Siapa yang mengusulkan dasar negara?",
-        "right": "Para tokoh, antara lain Mr. Mohammad Yamin, Mr. Soepomo, dan Ir. Soekarno."
+        "pairId": "pasangan-2",
+        "left": "Tokoh yang mengusulkan dasar negara",
+        "right": "Yamin, Soepomo, Soekarno"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Kapan Pancasila disahkan?",
-        "right": "18 Agustus 1945 oleh PPKI."
+        "pairId": "pasangan-3",
+        "left": "Waktu Pancasila disahkan",
+        "right": "18 Agustus 1945 oleh PPKI"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Sejarah Perumusan Pancasila?",
-        "right": "Mengenal proses perumusan dan pengesahan Pancasila."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
+        "pairId": "pasangan-4",
+        "left": "Meja, dokumen, dan bendera pada sidang",
+        "right": "Sidang Pancasila"
       }
     ]
   },

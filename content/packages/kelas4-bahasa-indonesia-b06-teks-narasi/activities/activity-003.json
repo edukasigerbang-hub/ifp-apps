@@ -3,34 +3,34 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa yang terjadi pada panel pertama?",
-        "right": "Seorang anak melihat kucing di dekatnya (bagian orientasi)."
+        "pairId": "pasangan-1",
+        "left": "Bagian cerita yang memperkenalkan tokoh dan latar",
+        "right": "Orientasi"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Masalah apa yang muncul pada panel kedua?",
-        "right": "Hujan turun dan kucing berada di bawah pohon (komplikasi)."
+        "pairId": "pasangan-2",
+        "left": "Bagian cerita tempat masalah muncul",
+        "right": "Komplikasi"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Bagaimana masalah diselesaikan pada panel ketiga?",
-        "right": "Anak menolong kucing dengan payung (resolusi)."
+        "pairId": "pasangan-3",
+        "left": "Bagian cerita tempat masalah selesai",
+        "right": "Resolusi"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Memahami dan Menulis Teks Narasi?",
-        "right": "Mengenali struktur teks narasi, tokoh, dan latar, lalu menyusun cerita sederhana."
+        "pairId": "pasangan-4",
+        "left": "Tokoh, tempat, dan waktu dalam cerita",
+        "right": "Latar"
       },
       {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Bagaimana urutan yang benar untuk Memahami dan Menulis Teks Narasi?",
-        "right": "Orientasi: pengenalan tokoh dan latar → Komplikasi: munculnya masalah → Resolusi: penyelesaian masalah"
+        "pairId": "pasangan-5",
+        "left": "Urutan peristiwa dari awal sampai akhir",
+        "right": "Alur"
       }
     ]
   },

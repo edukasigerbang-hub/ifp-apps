@@ -3,33 +3,33 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Apa langkah pertama?",
-        "right": "Memahami apa yang diketahui dan ditanya."
+        "pairId": "pasangan-1",
+        "left": "Langkah pertama",
+        "right": "Memahami apa yang diketahui dan ditanya"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Bagaimana memilih operasi?",
-        "right": "Sesuaikan dengan kata kunci soal."
+        "pairId": "pasangan-2",
+        "left": "Memilih operasi",
+        "right": "Sesuaikan dengan kata kunci soal"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa harus memeriksa?",
-        "right": "Agar jawaban benar."
+        "pairId": "pasangan-3",
+        "left": "Alasan harus memeriksa",
+        "right": "Agar jawaban benar"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama menyelesaikan soal cerita adalah",
         "right": "Memahami soal"
       },
       {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Cara memeriksa jawaban adalah ...",
+        "pairId": "pasangan-5",
+        "left": "Cara memeriksa jawaban adalah",
         "right": "Menghitung ulang"
       }
     ]

@@ -3,34 +3,29 @@
   "type": "matching",
   "schemaVersion": "1.0.0",
   "title": "Latihan Mencocokkan",
-  "instructions": "Pasangkan setiap pertanyaan dengan jawaban yang tepat.",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
   "assets": [],
   "interactionConfig": {
     "pairs": [
       {
-        "pairId": "pasangan-penguatan-1",
-        "left": "Bentuk dasar apa saja yang kamu lihat?",
-        "right": "Kubus, bola, dan tabung."
+        "pairId": "pasangan-1",
+        "left": "Bentuk dasar yang kamu lihat",
+        "right": "Kubus, bola, dan tabung"
       },
       {
-        "pairId": "pasangan-penguatan-2",
-        "left": "Dari arah mana cahaya datang?",
-        "right": "Cahaya datang dari kiri atas; sisi kiri lebih terang dan bayangan jatuh ke kanan."
+        "pairId": "pasangan-2",
+        "left": "Arah yang membuat sisi kiri gambar lebih terang",
+        "right": "Cahaya dari kiri atas"
       },
       {
-        "pairId": "pasangan-penguatan-3",
-        "left": "Mengapa bayangan perlu digambar?",
-        "right": "Bayangan memberi kesan tiga dimensi dan membuat gambar lebih hidup."
+        "pairId": "pasangan-3",
+        "left": "Alasan bayangan ditambahkan pada gambar",
+        "right": "Kesan tiga dimensi"
       },
       {
-        "pairId": "pasangan-penguatan-4",
-        "left": "Apa hal penting yang kamu pelajari tentang Menggambar Bentuk Sederhana?",
-        "right": "Mengamati bentuk dasar, menggambar dengan proporsi, dan memberi gelap-terang agar terkesan tiga dimensi."
-      },
-      {
-        "pairId": "pasangan-penguatan-5",
-        "left": "Apa yang kamu amati pada gambar?",
-        "right": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
+        "pairId": "pasangan-4",
+        "left": "Kubus, bola, dan tabung di atas meja",
+        "right": "Bangun ruang"
       }
     ]
   },
