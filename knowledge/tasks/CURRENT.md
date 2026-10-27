@@ -2,7 +2,7 @@
 
 **Sesi:** SESSION-2026-10-24-1
 **Autonomy:** L1 (BALANCED)
-**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan (T-091)**; **volume latihan kelas 1–6 dinaikkan ke 5–10 item per aktivitas dinilai (T-092: +695 soal kuis, +361 pasangan)**; **Player dipadatkan + mode layar penuh (T-093)**; **setiap paket kini punya kuis (T-094/OD-9: +499 soal pada 88 paket)**; **21 item pada 17 paket bermateri tipis dibetulkan (T-095)**; a11y 17/17 PASS, E2E smoke/activities/journey/mode-switch/player-fullscreen PASS; sisa prasyarat: review manusia
+**Status:** WIP — OD-1 disetujui PO + Curriculum Lead (via sesi); kedalaman, duplikasi, dan `curriculumRefs` 320/320 selesai; pra-review agent R1–R6/R8–R9/R12 selesai (bukan approval); P0 UX 5/6 selesai (metadata internal tertahan D-UX-4); UX-03 (fokus kartu hasil) selesai; mode belajar/admin selesai (T-077); sakelar ikon, thumbnail materi, pemilih kelas collapsible (T-078); **foto profil lokal + ilustrasi Beranda (T-079)**; **16 paket IPAS kelas 1–2 dengan cover unik per topik (T-089/T-090)**; **temuan deterministik R5 dibereskan (T-091)**; **volume latihan kelas 1–6 dinaikkan ke 5–10 item per aktivitas dinilai (T-092: +695 soal kuis, +361 pasangan)**; **Player dipadatkan + mode layar penuh (T-093)**; **setiap paket kini punya kuis (T-094/OD-9: +499 soal pada 88 paket)**; **21 item pada 17 paket bermateri tipis dibetulkan (T-095)**; **10 paket prioritas ditinjau agent — 141 item, 2 paket butuh perbaikan, 4 cacat terverifikasi (T-096)**; a11y 17/17 PASS, E2E smoke/activities/journey/mode-switch/player-fullscreen PASS; sisa prasyarat: review manusia
 
 ## Selesai sesi ini
 
@@ -127,11 +127,17 @@
 **T-013 Katalog multi-paket — DONE.**
 **Fase H License core — DONE (online service referensi juga).**
 
-**Berikutnya:** review guru atas item latihan baru T-092 (daftar paket bermateri tipis di BACKLOG) + keputusan menambah kuis ke 88 paket yang belum punya aktivitas kuis; review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091: 0 paket bias posisi kunci, 0 pasangan matching yang menyalin eksplorasi) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
+**Berikutnya:** review agent atas 10 paket prioritas selesai 2026-10-27 (T-096) — sisa pekerjaan konten: terapkan F-01/F-03/F-04 (ilustrasi vs materi IPAS kelas 4, dua jawaban sah "benda tak hidup", langkah urutan fiktif atletik) dan putuskan F-02 (mesin penilai jawaban singkat menerima daftar jawaban, atau empat prompt terbuka diubah menjadi pilihan ganda). Setelah itu tanda tangan guru manusia atas daftar di BACKLOG. Lalu review manusia R1–R6/R8–R9/R12 untuk 320 paket (bahan pra-review agent tersedia di [PEDAGOGICAL_PREREVIEW_2026-10-26.md](../content/PEDAGOGICAL_PREREVIEW_2026-10-26.md)) + verifikasi CP/ATP per bab; lalu opsi D3 (Bahasa Inggris), D5 (mulok), Koding & KA. Sinyal R5 mekanis sudah dibersihkan 2026-10-27 (T-091: 0 paket bias posisi kunci, 0 pasangan matching yang menyalin eksplorasi) dan volume latihan kelas 1–6 sudah 5–10 item per aktivitas dinilai (T-092) — laporan pra-review 2026-10-26 tetap sebagai bukti historis, angka terbaru ada di handoff T-091/T-092/T-096. Blocker rilis: [RELEASE_BLOCKERS_2026-10-24.md](../api/RELEASE_BLOCKERS_2026-10-24.md) — 8 item, belum ada yang selesai. Register gap: [TEST_GAPS.md](../testing/TEST_GAPS.md).
 ## Verifikasi sesi ini
 
 | Check | Hasil |
 |---|---|
+| Review 10 paket prioritas (T-096) | **SELESAI (agent, bukan guru)** — 141 item dibaca penuh: 58 soal kuis, 58 pasangan, 25 langkah urutan. Putusan: 1 **perlu perbaikan**, 1 perlu perbaikan kecil, 7 layak dengan catatan, 1 layak. 0 jawaban salah / 0 salah hitung. Laporan: [REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md](../content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md) |
+| Jawaban singkat (T-096) | **CACAT TERVERIFIKASI** — `src/content/quiz.ts:33` membandingkan satu string persis (tanpa sinonim/varian angka-kata); 4 paket / 24 soal; 4 prompt terbuka ("Sebutkan satu ...") hanya menerima satu kata kunci, jawaban benar lain dihukum |
+| Ilustrasi vs materi (T-096) | **CACAT TERVERIFIKASI** — `kelas4-ipas-b01-makhluk-hidup`: ilustrasi tidak memuat katak/capung, tetapi eksplorasi, `altText`, 2 pasangan, dan 1 soal menyebut keduanya |
+| Kunci opsi terpanjang (T-096) | **0 paket** dengan kunci selalu terpanjang-**unik**; 6 paket hanya seri panjang (matematika, opsi angka/urutan) → utang BACKLOG ditutup sebagai positif palsu |
+| Pasangan menyalin eksplorasi (T-096) | **TERUKUR** — 311/1.963 pasangan (15,8%) di 159 paket: sisi kanan identik `reveal` + sisi kiri ≥70% kata prompt eksplorasi; 28/58 pada 10 paket prioritas |
+| Validator konten (T-096) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft) — konten tidak diubah oleh review |
 | Cakupan kuis per paket (T-094/OD-9) | **PASS** — 336/336 paket punya aktivitas kuis; 88 paket baru (kelas 1–2: 5 soal, kelas 3–6: 6 soal) = 499 soal; katalog memuat 88 entri `activityCount: 4` |
 | Volume latihan per kelas (T-094) | **PASS** — tiap kelas 56 aktivitas kuis; "Semua aktivitas dinilai berada dalam rentang target" |
 | Validator konten (T-094/T-095) | **PASS** — 336/336 VALID, 0 issue, 336 warning (draft per paket) |
@@ -788,3 +794,31 @@ Mulai dari [CATALOG.md](../content/CATALOG.md) dan [CURRICULUM_PROPOSAL.md](../c
 5. Tab aktivitas kini bisa berjumlah 4 per paket; tata letak memakai `flex-wrap` sehingga baris tab bisa menjadi dua baris di layar sempit — belum ada tangkapan visual khusus untuk kasus 4 tab.
 
 **Sisa:** review guru atas item baru · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
+
+### Handoff Review 10 Paket Prioritas (2026-10-27, T-096)
+
+**Status:** selesai (read-only). Permintaan PO: "review guru pada daftar prioritas di BACKLOG.md".
+Ini review **agent**, bukan tanda tangan guru; `reviewStatus` seluruh paket tetap `draft`, tidak ada berkas konten yang diubah.
+
+**Metode.** Sepuluh paket dari daftar "Masih perlu penilaian guru" dibaca penuh: berkas lesson + semua aktivitas + aset gambar.
+141 item dinilai satu per satu (58 soal kuis, 58 pasangan mencocokkan, 25 langkah urutan). Setiap item dinilai terhadap materi paketnya
+(eksplorasi + gambar), bukan terhadap pengetahuan umum saja.
+
+**Putusan.** 1 perlu perbaikan (`kelas4-ipas-b01-makhluk-hidup`) · 1 perlu perbaikan kecil (`kelas6-pjok-b03-atletik`) ·
+7 layak dengan catatan · 1 layak tanpa catatan (`kelas6-pai-b07-sejarah-islam`). Tidak ada jawaban salah atau salah hitung.
+
+**Temuan yang butuh tindakan:**
+- F-01 `kelas4-ipas-b01-makhluk-hidup`: ilustrasi tidak memuat katak/capung, tetapi eksplorasi langkah 1, `altText` aset, 2 pasangan, dan 1 soal menyebut keduanya. Dua jalur perbaikan (teks menyesuaikan gambar / gambar dibuat ulang) ada di laporan.
+- F-02 jawaban singkat dinilai persis satu string (`src/content/quiz.ts:33`) — 4 paket / 24 soal. Empat prompt terbuka hanya menerima satu kata kunci; jawaban benar lain dihukum. Perbaikan akar: mesin penilai menerima daftar jawaban + normalisasi angka/kata.
+- F-03 "Benda tak hidup pada gambar" punya dua jawaban sah (batu dan air).
+- F-04 `kelas6-pjok-b03-atletik`: langkah urutan ke-5 "Merapikan posisi" adalah pengisi untuk memenuhi ambang 5 langkah.
+
+**Temuan struktural (bukan cacat jawaban):**
+- F-05 37 pasangan di 27 paket memakai teks soal sebagai sisi kiri, elipsis ikut tertinggal.
+- F-06 311/1.963 pasangan (15,8%) di 159 paket masih dapat dicocokkan dengan menyalin jawaban yang sudah tertulis di layar eksplorasi; detektor R5 lama melaporkan 0 karena mensyaratkan prompt identik.
+- F-07 utang "10 paket kunci selalu opsi terpanjang" **ditutup**: 0 paket dengan terpanjang-unik; 6 paket hanya seri panjang pada opsi angka (matematika).
+
+**Verifikasi aktual:** validator **336/336 VALID**, 0 issue, 336 warning (draft) — dijalankan ulang setelah review, konten tidak berubah ·
+tidak ada test/build lain yang dijalankan karena tidak ada perubahan kode maupun konten · `cargo test` tidak dijalankan.
+
+**Sisa:** keputusan PO atas F-01…F-04 · tanda tangan guru manusia · D-UX-2/4/5/6 · reviewer manusia R1–R6/R8–R9/R12 · OD-1 IPAS Fase A · blocker rilis B-01…B-08.
