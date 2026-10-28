@@ -136,6 +136,7 @@ Respons `200`:
       "sizeBytes": 1834921,
       "bundleSha256": "<64 heksadesimal>",
       "downloadUrl": "https://<storage>/<path>?token=<pre-signed>",
+      "coverUrl": "https://<storage>/<cover>?token=<pre-signed>",
       "signature": { "keyId": "content-2026-1", "algorithm": "ed25519", "value": "<base64url>" },
       "material": { "...": "isi material.json kanonik, lengkap" }
     }
@@ -146,6 +147,7 @@ Respons `200`:
 
 - `material` disalin utuh ke katalog supaya aplikasi bisa menampilkan kartu **dan** memverifikasi tanda tangan sebelum mengunduh.
 - `downloadUrl` adalah **URL pre-signed Supabase Storage berumur 10 menit** yang dibuat Worker per permintaan; jangan disimpan (OD-12).
+- `coverUrl` **opsional** — URL pre-signed untuk berkas `material.cover` di dalam bundel, dengan aturan umur dan larangan penyimpanan yang sama seperti `downloadUrl`. Dipakai hanya untuk **thumbnail** kartu katalog: cover **tidak** diverifikasi tanda tangan (sama seperti `title`/`summary`), tidak masuk cache SQLite, dan kegagalannya tidak menggagalkan daftar. Server lama tanpa `coverUrl` tetap sah; aplikasi memakai placeholder. Implementasi penyaji: `scripts/mock-catalog-server.mjs` (`/covers/<nama>?token=`, 2026-10-28).
 - Header: `ETag` (hash isi), `Cache-Control: public, max-age=300`. `If-None-Match` yang cocok → `304` tanpa body.
 - Galat memakai bentuk yang sama dengan Worker yang ada: `{ "error": { "code", "message" } }`.
 - Katalog bersifat baca-publik (tidak memuat PII) dengan rate limit per IP **60/menit**. Bila nanti katalog perlu dibatasi ke perangkat terdaftar, tambahkan bearer token perangkat seperti `/v1/sync/events` — belum diputuskan.
