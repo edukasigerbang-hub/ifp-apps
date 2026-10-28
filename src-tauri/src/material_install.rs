@@ -553,6 +553,7 @@ mod tests {
     use crate::db::test_connection;
     use ed25519_dalek::{Signer, SigningKey};
     use std::io::Write;
+    use std::path::PathBuf;
 
     fn signing_key() -> SigningKey {
         SigningKey::from_bytes(&[9u8; 32])

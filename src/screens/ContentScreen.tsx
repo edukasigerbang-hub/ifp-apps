@@ -20,6 +20,11 @@ import {
   type MaterialView
 } from "../data/materialRepository";
 import { MaterialViewer } from "../components/material/MaterialViewer";
+import {
+  listPinnedMaterials,
+  pinnedErrorMessage,
+  setPinnedMaterial
+} from "../data/pinnedRepository";
 import { resolvePackageDigest } from "../data/reviewDigest";
 import {
   exportReviewsCsv,
@@ -65,6 +70,10 @@ export function ContentScreen() {
   const [materialMessage, setMaterialMessage] = useState<string | null>(null);
   const [installedMaterials, setInstalledMaterials] = useState<InstalledMaterial[]>([]);
   const [openingMaterialId, setOpeningMaterialId] = useState<string | null>(null);
+  const [pinnedMaterialIds, setPinnedMaterialIds] = useState<string[]>([]);
+  const [pinBusyId, setPinBusyId] = useState<string | null>(null);
+  const [pinMessage, setPinMessage] = useState<string | null>(null);
+  const [pinError, setPinError] = useState<string | null>(null);
   const desktop = canPersistLocally();
 
   async function refresh() {
@@ -86,11 +95,13 @@ export function ContentScreen() {
           getActiveProfile(),
           listInstalledMaterials()
         ]);
+        const pins = profile ? await listPinnedMaterials(profile.id) : [];
         if (!cancelled) {
           setPackages(records);
           setReviews(reviewRecords);
           setActiveProfile(profile);
           setInstalledMaterials(materials);
+          setPinnedMaterialIds(pins.map((item) => item.materialId));
         }
       } catch (caught) {
         if (!cancelled) setError(caught instanceof Error ? caught.message : "Daftar paket tidak dapat dibaca.");
@@ -237,6 +248,35 @@ export function ContentScreen() {
       setMaterialError(typed?.message ?? "Materi terpasang tidak dapat dibuka.");
     } finally {
       setOpeningMaterialId(null);
+    }
+  }
+
+  async function handleTogglePin(record: InstalledMaterial) {
+    if (!activeProfile) {
+      setPinError("Pilih profil aktif dulu di Beranda sebelum menyematkan materi.");
+      return;
+    }
+    setPinError(null);
+    setPinMessage(null);
+    const pinned = pinnedMaterialIds.includes(record.materialId);
+    setPinBusyId(record.materialId);
+    try {
+      await setPinnedMaterial({
+        profileId: activeProfile.id,
+        materialId: record.materialId,
+        pinned: !pinned
+      });
+      const next = await listPinnedMaterials(activeProfile.id);
+      setPinnedMaterialIds(next.map((item) => item.materialId));
+      setPinMessage(
+        pinned
+          ? `“${record.title}” dilepas dari Beranda.`
+          : `“${record.title}” disematkan ke Beranda.`
+      );
+    } catch (caught) {
+      setPinError(pinnedErrorMessage(caught));
+    } finally {
+      setPinBusyId(null);
     }
   }
 
@@ -389,36 +429,70 @@ export function ContentScreen() {
             <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
               Materi terpasang
             </h3>
+            <p className="mt-2 text-sm text-muted">
+              Sematkan maksimal 24 materi per profil. Batas ini dipakai bersama dengan paket yang disematkan.
+            </p>
+            <p aria-live="polite" className="mt-2 text-sm text-muted">
+              {pinMessage ?? ""}
+            </p>
+            {pinError && (
+              <p className="mt-2 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
+                {pinError}
+              </p>
+            )}
             {installedMaterials.length === 0 ? (
               <p className="mt-2 text-sm text-muted">
                 Belum ada bundel materi terpasang di perangkat ini.
               </p>
             ) : (
               <ul className="mt-2 divide-y divide-ink/10">
-                {installedMaterials.map((record) => (
-                  <li
-                    key={`${record.materialId}@${record.version}`}
-                    className="flex flex-wrap items-center justify-between gap-3 py-3"
-                  >
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-medium">{record.title}</p>
-                      <p className="text-xs text-muted">
-                        v{record.version} · kelas {record.gradeLevels.join(", ")} ·{" "}
-                        {record.estimatedMinutes} menit · {Math.round(record.sizeBytes / 1024)} KB ·{" "}
-                        {record.reviewStatus}
-                      </p>
-                    </div>
-                    <button
-                      type="button"
-                      data-material-installed-open={record.materialId}
-                      onClick={() => void handleOpenInstalled(record.materialId)}
-                      disabled={openingMaterialId !== null}
-                      className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                {installedMaterials.map((record) => {
+                  const pinned = pinnedMaterialIds.includes(record.materialId);
+                  return (
+                    <li
+                      key={`${record.materialId}@${record.version}`}
+                      className="flex flex-wrap items-center justify-between gap-3 py-3"
                     >
-                      {openingMaterialId === record.materialId ? "Membuka…" : "Buka materi"}
-                    </button>
-                  </li>
-                ))}
+                      <div className="min-w-0">
+                        <p className="truncate text-sm font-medium">{record.title}</p>
+                        <p className="text-xs text-muted">
+                          v{record.version} · kelas {record.gradeLevels.join(", ")} ·{" "}
+                          {record.estimatedMinutes} menit · {Math.round(record.sizeBytes / 1024)} KB ·{" "}
+                          {record.reviewStatus}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          data-material-pin={record.materialId}
+                          aria-pressed={pinned}
+                          onClick={() => void handleTogglePin(record)}
+                          disabled={pinBusyId !== null}
+                          className={`min-h-11 rounded-control border px-4 text-sm font-medium disabled:opacity-40 ${
+                            pinned
+                              ? "border-primary/40 bg-primary/10 text-primary"
+                              : "border-ink/15 hover:bg-paper"
+                          }`}
+                        >
+                          {pinBusyId === record.materialId
+                            ? "Menyimpan…"
+                            : pinned
+                              ? "Disematkan"
+                              : "Sematkan"}
+                        </button>
+                        <button
+                          type="button"
+                          data-material-installed-open={record.materialId}
+                          onClick={() => void handleOpenInstalled(record.materialId)}
+                          disabled={openingMaterialId !== null}
+                          className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                        >
+                          {openingMaterialId === record.materialId ? "Membuka…" : "Buka materi"}
+                        </button>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </div>

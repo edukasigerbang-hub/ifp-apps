@@ -10,11 +10,21 @@ import { loadCatalog } from "../content/loadCatalog";
 import { subjectLabel } from "../content/subjectLabel";
 import { canPersistLocally, getLearningSummary, type LearningSummary } from "../data/learningRepository";
 import {
+  listInstalledMaterials,
+  openInstalledMaterial,
+  type InstalledMaterial,
+  type MaterialView
+} from "../data/materialRepository";
+import { MaterialViewer } from "../components/material/MaterialViewer";
+import {
   listPinnedLessons,
+  listPinnedMaterials,
   pinnedErrorMessage,
   pinnedKey,
   setPinnedLesson,
-  type PinnedLesson
+  setPinnedMaterial,
+  type PinnedLesson,
+  type PinnedMaterial
 } from "../data/pinnedRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
 import { HOME_TAB_KEY, readUiState, writeUiState } from "../data/uiStateRepository";
@@ -35,6 +45,10 @@ const homeSectionLabels: Record<HomeSection, string> = {
   explore: "Jelajahi materi"
 };
 
+type PinnedCard =
+  | { kind: "lesson"; pinnedAt: string; entry: CatalogLessonEntry }
+  | { kind: "material"; pinnedAt: string; material: InstalledMaterial };
+
 function formatScore(score: number | null): string {
   return score === null ? "—" : String(Math.round(score));
 }
@@ -44,6 +58,10 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   const [summary, setSummary] = useState<LearningSummary | null>(null);
   const [entries, setEntries] = useState<CatalogLessonEntry[]>([]);
   const [pins, setPins] = useState<PinnedLesson[]>([]);
+  const [materialPins, setMaterialPins] = useState<PinnedMaterial[]>([]);
+  const [installedMaterials, setInstalledMaterials] = useState<InstalledMaterial[]>([]);
+  const [material, setMaterial] = useState<MaterialView | null>(null);
+  const [materialBusyId, setMaterialBusyId] = useState<string | null>(null);
   const [pinsLoaded, setPinsLoaded] = useState(() => !canPersistLocally());
   const [pinNotice, setPinNotice] = useState("");
   const [pinError, setPinError] = useState<string | null>(null);
@@ -54,6 +72,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     () => !canPersistLocally()
   );
   const sectionChosenRef = useRef(false);
+  const pinnedCount = pins.length + materialPins.length;
 
   useEffect(() => {
     let cancelled = false;
@@ -99,6 +118,20 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         const items = await listPinnedLessons(active.id);
         if (!cancelled) {
           setPins(items);
+        }
+        try {
+          const [materialItems, installed] = await Promise.all([
+            listPinnedMaterials(active.id),
+            listInstalledMaterials()
+          ]);
+          if (!cancelled) {
+            setMaterialPins(materialItems);
+            setInstalledMaterials(installed);
+          }
+        } catch (caught) {
+          if (!cancelled) {
+            setPinError(pinnedErrorMessage(caught));
+          }
         }
       } catch (caught) {
         if (!cancelled) {
@@ -147,22 +180,31 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   useEffect(() => {
     if (!pinsLoaded || !savedSectionLoaded || sectionChosenRef.current) return;
     const saved =
-      savedSection && (savedSection !== "pinned" || pins.length > 0)
-        ? savedSection
-        : null;
-    setActiveSection(saved ?? (pins.length === 0 ? "available" : "pinned"));
-  }, [pins.length, pinsLoaded, savedSection, savedSectionLoaded]);
+      savedSection && (savedSection !== "pinned" || pinnedCount > 0) ? savedSection : null;
+    setActiveSection(saved ?? (pinnedCount === 0 ? "available" : "pinned"));
+  }, [pinnedCount, pinsLoaded, savedSection, savedSectionLoaded]);
 
   const recent = summary?.recent[0];
   const resumeEntry = recent
     ? entries.find((entry) => entry.lessonId === recent.lessonId)
-    : undefined;  const pinnedEntries = useMemo(() => {
+    : undefined;
+  const pinnedCards = useMemo<PinnedCard[]>(() => {
     const byKey = new Map(entries.map((entry) => [pinnedKey(entry), entry]));
-    return pins.flatMap((pin) => {
+    const installedById = new Map(
+      installedMaterials.map((record) => [record.materialId, record])
+    );
+    const lessonCards = pins.flatMap((pin): PinnedCard[] => {
       const entry = byKey.get(pinnedKey(pin));
-      return entry ? [entry] : [];
+      return entry ? [{ kind: "lesson", pinnedAt: pin.pinnedAt, entry }] : [];
     });
-  }, [entries, pins]);
+    const materialCards = materialPins.flatMap((pin): PinnedCard[] => {
+      const record = installedById.get(pin.materialId);
+      return record ? [{ kind: "material", pinnedAt: pin.pinnedAt, material: record }] : [];
+    });
+    return [...lessonCards, ...materialCards].sort((a, b) =>
+      b.pinnedAt.localeCompare(a.pinnedAt)
+    );
+  }, [entries, installedMaterials, materialPins, pins]);
   const heroEntry = useMemo(
     () =>
       entries.find(
@@ -222,12 +264,45 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       });
       const remaining = pins.filter((pin) => pinnedKey(pin) !== pinnedKey(entry));
       setPins(remaining);
-      if (remaining.length === 0) {
+      if (remaining.length === 0 && materialPins.length === 0) {
         selectSection("available");
       }
       setPinNotice(`${entry.lessonTitle} dilepas dari Beranda.`);
     } catch (caught) {
       setPinError(pinnedErrorMessage(caught));
+    }
+  }
+
+  async function unpinMaterial(record: InstalledMaterial) {
+    if (!profile) return;
+    setPinError(null);
+    try {
+      await setPinnedMaterial({
+        profileId: profile.id,
+        materialId: record.materialId,
+        pinned: false
+      });
+      const remaining = materialPins.filter((pin) => pin.materialId !== record.materialId);
+      setMaterialPins(remaining);
+      if (pins.length === 0 && remaining.length === 0) {
+        selectSection("available");
+      }
+      setPinNotice(`${record.title} dilepas dari Beranda.`);
+    } catch (caught) {
+      setPinError(pinnedErrorMessage(caught));
+    }
+  }
+
+  async function openPinnedMaterial(materialId: string) {
+    setPinError(null);
+    setMaterialBusyId(materialId);
+    try {
+      setMaterial(await openInstalledMaterial(materialId));
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setPinError(typed?.message ?? "Materi tidak dapat dibuka.");
+    } finally {
+      setMaterialBusyId(null);
     }
   }
 
@@ -411,7 +486,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       >
         {homeSectionIds.map((id) => {
           const selected = activeSection === id;
-          const count = id === "pinned" && pinsLoaded ? pinnedEntries.length : null;
+          const count = id === "pinned" && pinsLoaded ? pinnedCards.length : null;
           return (
             <button
               key={id}
@@ -454,9 +529,9 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <p className="text-sm text-muted">
             Pilihanmu sendiri, tersimpan per profil dan selalu tampil lebih dulu (maksimal 24
-            materi).
+            materi; paket dan materi HTML5 digabung).
           </p>
-          {pinnedEntries.length > 0 && (
+          {pinnedCards.length > 0 && (
             <button
               type="button"
               onClick={() => onNavigate("curriculum")}
@@ -483,7 +558,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           </p>
         ) : !pinsLoaded ? (
           <p className="mt-3 text-sm text-muted">Memuat sematan…</p>
-        ) : pinnedEntries.length === 0 ? (
+        ) : pinnedCards.length === 0 ? (
           <div
             data-pinned-empty
             className="mt-3 rounded-card border border-dashed border-ink/20 bg-surface p-5"
@@ -491,7 +566,8 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
             <p className="text-sm leading-relaxed text-muted">
               Belum ada materi yang disematkan. Buka Jelajah Materi, lalu tekan{" "}
               <strong className="font-semibold text-ink">Sematkan</strong> pada materi yang ingin
-              selalu tampil di sini.
+              selalu tampil di sini. Materi HTML5 terpasang juga bisa disematkan dari{" "}
+              <strong className="font-semibold text-ink">Konten &amp; Pembaruan</strong>.
             </p>
             <button
               type="button"
@@ -503,47 +579,93 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           </div>
         ) : (
           <ul className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {pinnedEntries.map((entry) => (
-              <li
-                key={`${entry.packageId}@${entry.version}:${entry.lessonId}`}
-                data-pinned-card
-                className="flex flex-col overflow-hidden rounded-card border border-teal/30 bg-surface"
-              >
-                <LessonThumbnail
-                  entry={entry}
-                  className="aspect-[16/9] w-full border-b border-ink/10"
-                />
-                <div className="flex flex-1 flex-col justify-between p-4">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                      Kelas {entry.gradeLevels.join(", ")} ·{" "}
-                      {entry.subjects.map(subjectLabel).join(", ")}
-                    </p>
-                    <p data-pinned-title className="mt-1.5 text-base font-semibold">
-                      {entry.lessonTitle}
-                    </p>
-                    <p className="mt-1 text-xs text-muted">{entry.packageTitle}</p>
+            {pinnedCards.map((card) =>
+              card.kind === "lesson" ? (
+                <li
+                  key={`${card.entry.packageId}@${card.entry.version}:${card.entry.lessonId}`}
+                  data-pinned-card
+                  className="flex flex-col overflow-hidden rounded-card border border-teal/30 bg-surface"
+                >
+                  <LessonThumbnail
+                    entry={card.entry}
+                    className="aspect-[16/9] w-full border-b border-ink/10"
+                  />
+                  <div className="flex flex-1 flex-col justify-between p-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                        Kelas {card.entry.gradeLevels.join(", ")} ·{" "}
+                        {card.entry.subjects.map(subjectLabel).join(", ")}
+                      </p>
+                      <p data-pinned-title className="mt-1.5 text-base font-semibold">
+                        {card.entry.lessonTitle}
+                      </p>
+                      <p className="mt-1 text-xs text-muted">{card.entry.packageTitle}</p>
+                    </div>
+                    <div className="mt-3 flex flex-wrap items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => openEntry(card.entry)}
+                        className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+                      >
+                        Buka
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => unpin(card.entry)}
+                        aria-label={`Lepas sematan ${card.entry.lessonTitle}`}
+                        className="min-h-11 rounded-control border border-ink/15 bg-surface px-4 text-sm font-medium text-muted hover:border-primary/40 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                      >
+                        Lepas
+                      </button>
+                    </div>
                   </div>
-                  <div className="mt-3 flex flex-wrap items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => openEntry(entry)}
-                      className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
-                    >
-                      Buka
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => unpin(entry)}
-                      aria-label={`Lepas sematan ${entry.lessonTitle}`}
-                      className="min-h-11 rounded-control border border-ink/15 bg-surface px-4 text-sm font-medium text-muted hover:border-primary/40 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
-                    >
-                      Lepas
-                    </button>
+                </li>
+              ) : (
+                <li
+                  key={`material:${card.material.materialId}`}
+                  data-pinned-card
+                  data-pinned-material={card.material.materialId}
+                  className="flex flex-col overflow-hidden rounded-card border border-primary/30 bg-surface"
+                >
+                  <div className="flex aspect-[16/9] w-full items-center justify-center border-b border-ink/10 bg-gradient-to-br from-primary/10 via-surface to-teal/10">
+                    <span className="rounded-full border border-primary/30 bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-primary">
+                      Materi HTML5
+                    </span>
                   </div>
-                </div>
-              </li>
-            ))}
+                  <div className="flex flex-1 flex-col justify-between p-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                        Kelas {card.material.gradeLevels.join(", ")} ·{" "}
+                        {card.material.estimatedMinutes} menit
+                      </p>
+                      <p data-pinned-title className="mt-1.5 text-base font-semibold">
+                        {card.material.title}
+                      </p>
+                      <p className="mt-1 text-xs text-muted">v{card.material.version}</p>
+                    </div>
+                    <div className="mt-3 flex flex-wrap items-center gap-2">
+                      <button
+                        type="button"
+                        data-pinned-material-open={card.material.materialId}
+                        onClick={() => void openPinnedMaterial(card.material.materialId)}
+                        disabled={materialBusyId !== null}
+                        className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-40"
+                      >
+                        {materialBusyId === card.material.materialId ? "Membuka…" : "Buka"}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => void unpinMaterial(card.material)}
+                        aria-label={`Lepas sematan ${card.material.title}`}
+                        className="min-h-11 rounded-control border border-ink/15 bg-surface px-4 text-sm font-medium text-muted hover:border-primary/40 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                      >
+                        Lepas
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              )
+            )}
           </ul>
         )}
 
@@ -643,6 +765,10 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           </button>
         </div>
       </section>
+
+      {material && (
+        <MaterialViewer material={material} onClose={() => setMaterial(null)} />
+      )}
 
     </div>
   );

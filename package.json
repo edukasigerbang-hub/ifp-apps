@@ -47,7 +47,8 @@
     "material:pack": "node scripts/material-pack.mjs",
     "e2e:pinned": "node scripts/e2e/run.mjs pinned-materials",
     "e2e:material": "node scripts/e2e/run.mjs material-viewer",
-    "e2e:material-import": "node scripts/e2e/run.mjs material-import"
+    "e2e:material-import": "node scripts/e2e/run.mjs material-import",
+    "e2e:material-pin": "node scripts/e2e/run.mjs material-pin"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",

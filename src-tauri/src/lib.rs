@@ -105,6 +105,8 @@ pub fn run() {
       review::review_export_csv,
       pins::pinned_list,
       pins::pinned_set,
+      pins::pinned_material_list,
+      pins::pinned_material_set,
       ui_state::ui_state_get,
       ui_state::ui_state_set,
       ui_state::ui_state_clear,
