@@ -10,6 +10,14 @@ import {
 import { gradeCoverUrl, subjectCoverUrl } from "../content/coverArt";
 import { loadCatalog } from "../content/loadCatalog";
 import { subjectLabel } from "../content/subjectLabel";
+import { canPersistLocally } from "../data/learningRepository";
+import {
+  listPinnedLessons,
+  pinnedErrorMessage,
+  pinnedKey,
+  setPinnedLesson
+} from "../data/pinnedRepository";
+import { getActiveProfile } from "../data/profileRepository";
 import type { ScreenId } from "../navigation";
 import { clearCatalogFilter, getCatalogFilter } from "../state/catalogFilter";
 import { setPlaybackSelection } from "../state/playbackSelection";
@@ -49,6 +57,11 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
   const [subjectsOpen, setSubjectsOpen] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [profileId, setProfileId] = useState<string | null>(null);
+  const [pinned, setPinned] = useState<Set<string>>(() => new Set());
+  const [pinBusy, setPinBusy] = useState<string | null>(null);
+  const [pinNotice, setPinNotice] = useState("");
+  const [pinError, setPinError] = useState<string | null>(null);
   const appliedRequestRef = useRef(false);
 
   // Permintaan filter dari Beranda diterapkan sekali per kunjungan; penjaga ref
@@ -99,6 +112,68 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
       cancelled = true;
     };
   }, []);
+
+  // Status sematan dimuat sekali per kunjungan; katalog dan sematan dipisah
+  // supaya kegagalan salah satunya tidak mengosongkan yang lain.
+  useEffect(() => {
+    if (!canPersistLocally()) {
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const active = await getActiveProfile();
+        const items = await listPinnedLessons(active.id);
+        if (!cancelled) {
+          setProfileId(active.id);
+          setPinned(new Set(items.map((item) => pinnedKey(item))));
+        }
+      } catch (caught) {
+        if (!cancelled) {
+          setPinError(pinnedErrorMessage(caught));
+        }
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  async function togglePin(entry: CatalogLessonEntry) {
+    if (!profileId) {
+      return;
+    }
+    const key = pinnedKey(entry);
+    const next = !pinned.has(key);
+    setPinBusy(key);
+    setPinError(null);
+    try {
+      await setPinnedLesson({
+        profileId,
+        packageId: entry.packageId,
+        lessonId: entry.lessonId,
+        pinned: next
+      });
+      setPinned((current) => {
+        const copy = new Set(current);
+        if (next) {
+          copy.add(key);
+        } else {
+          copy.delete(key);
+        }
+        return copy;
+      });
+      setPinNotice(
+        next
+          ? `${entry.lessonTitle} disematkan ke Beranda.`
+          : `${entry.lessonTitle} dilepas dari Beranda.`
+      );
+    } catch (caught) {
+      setPinError(pinnedErrorMessage(caught));
+    } finally {
+      setPinBusy(null);
+    }
+  }
 
   const facets = useMemo(() => catalogFacets(entries), [entries]);
   const gradeCovers = useMemo(() => {
@@ -151,6 +226,12 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
       {error && (
         <p className="mt-4 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm">
           {error}
+        </p>
+      )}
+
+      {pinError && (
+        <p className="mt-4 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm">
+          {pinError}
         </p>
       )}
 
@@ -387,6 +468,10 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
         </p>
       </section>
 
+      <p aria-live="polite" className="sr-only">
+        {pinNotice}
+      </p>
+
       {!loading && visible.length === 0 ? (
         <div
           data-catalog-empty
@@ -450,13 +535,46 @@ export function CurriculumScreen({ onNavigate }: CurriculumScreenProps) {
                     {entry.source === "managed" ? "Paket impor" : "Paket bawaan build"}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => openLesson(entry)}
-                  className="mt-4 min-h-11 self-start rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
-                >
-                  Buka materi
-                </button>
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => openLesson(entry)}
+                    className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+                  >
+                    Buka materi
+                  </button>
+                  {profileId && (
+                    <button
+                      type="button"
+                      data-pin-toggle
+                      onClick={() => togglePin(entry)}
+                      aria-pressed={pinned.has(pinnedKey(entry))}
+                      aria-label={
+                        pinned.has(pinnedKey(entry))
+                          ? `Lepas sematan ${entry.lessonTitle}`
+                          : `Sematkan ${entry.lessonTitle}`
+                      }
+                      disabled={pinBusy === pinnedKey(entry)}
+                      className={`inline-flex min-h-11 items-center gap-2 rounded-control border px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:cursor-not-allowed disabled:opacity-50 ${
+                        pinned.has(pinnedKey(entry))
+                          ? "border-teal/50 bg-teal/10 text-ink"
+                          : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+                      }`}
+                    >
+                      <svg
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        fill={pinned.has(pinnedKey(entry)) ? "currentColor" : "none"}
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        className="h-4 w-4"
+                      >
+                        <path d="M7 4h10v16l-5-3.4L7 20z" strokeLinejoin="round" />
+                      </svg>
+                      {pinned.has(pinnedKey(entry)) ? "Disematkan" : "Sematkan"}
+                    </button>
+                  )}
+                </div>
               </div>
             </li>
           ))}

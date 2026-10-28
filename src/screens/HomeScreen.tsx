@@ -9,6 +9,13 @@ import { subjectCoverUrl } from "../content/coverArt";
 import { loadCatalog } from "../content/loadCatalog";
 import { subjectLabel } from "../content/subjectLabel";
 import { canPersistLocally, getLearningSummary, type LearningSummary } from "../data/learningRepository";
+import {
+  listPinnedLessons,
+  pinnedErrorMessage,
+  pinnedKey,
+  setPinnedLesson,
+  type PinnedLesson
+} from "../data/pinnedRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
 import type { ScreenId } from "../navigation";
 import { setCatalogFilter } from "../state/catalogFilter";
@@ -26,6 +33,10 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [summary, setSummary] = useState<LearningSummary | null>(null);
   const [entries, setEntries] = useState<CatalogLessonEntry[]>([]);
+  const [pins, setPins] = useState<PinnedLesson[]>([]);
+  const [pinsLoaded, setPinsLoaded] = useState(() => !canPersistLocally());
+  const [pinNotice, setPinNotice] = useState("");
+  const [pinError, setPinError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -59,10 +70,46 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     };
   }, []);
 
+  // Sematan dibaca terpisah dari katalog: kegagalan salah satunya tidak
+  // mengosongkan seksi lainnya di Beranda.
+  useEffect(() => {
+    if (!canPersistLocally()) {
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const active = await getActiveProfile();
+        const items = await listPinnedLessons(active.id);
+        if (!cancelled) {
+          setPins(items);
+        }
+      } catch (caught) {
+        if (!cancelled) {
+          setPinError(pinnedErrorMessage(caught));
+        }
+      } finally {
+        if (!cancelled) {
+          setPinsLoaded(true);
+        }
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const recent = summary?.recent[0];
   const resumeEntry = recent
     ? entries.find((entry) => entry.lessonId === recent.lessonId)
     : undefined;
+  const pinnedEntries = useMemo(() => {
+    const byKey = new Map(entries.map((entry) => [pinnedKey(entry), entry]));
+    return pins.flatMap((pin) => {
+      const entry = byKey.get(pinnedKey(pin));
+      return entry ? [entry] : [];
+    });
+  }, [entries, pins]);
   const heroEntry = useMemo(
     () =>
       entries.find(
@@ -91,19 +138,40 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     if (fallback) subjectCovers.set(subject, fallback);
   }
 
-  function resume() {
-    if (!resumeEntry) return;
+  function openEntry(entry: CatalogLessonEntry) {
     setPlaybackSelection({
-      packageId: resumeEntry.packageId,
-      version: resumeEntry.version,
-      lessonId: resumeEntry.lessonId
+      packageId: entry.packageId,
+      version: entry.version,
+      lessonId: entry.lessonId
     });
     onNavigate("player");
+  }
+
+  function resume() {
+    if (!resumeEntry) return;
+    openEntry(resumeEntry);
   }
 
   function openSubject(subject: string) {
     setCatalogFilter({ subject });
     onNavigate("curriculum");
+  }
+
+  async function unpin(entry: CatalogLessonEntry) {
+    if (!profile) return;
+    setPinError(null);
+    try {
+      await setPinnedLesson({
+        profileId: profile.id,
+        packageId: entry.packageId,
+        lessonId: entry.lessonId,
+        pinned: false
+      });
+      setPins((current) => current.filter((pin) => pinnedKey(pin) !== pinnedKey(entry)));
+      setPinNotice(`${entry.lessonTitle} dilepas dari Beranda.`);
+    } catch (caught) {
+      setPinError(pinnedErrorMessage(caught));
+    }
   }
 
   return (
@@ -139,41 +207,108 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         </p>
       )}
 
-      <section className="mt-6">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-          Ringkasan belajar
-        </h2>
-        {!canPersistLocally() ? (
-          <p className="mt-3 rounded-card border border-warning/40 bg-warning/10 p-5 text-sm">
-            Pratinjau browser tidak menyimpan hasil belajar. Jalankan aplikasi desktop
-            untuk melihat ringkasan.
+      <section className="mt-6" data-pinned-section>
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+              Materi disematkan
+            </h2>
+            <p className="mt-1 text-sm text-muted">
+              Pilihanmu sendiri, selalu tampil paling atas di Beranda (maksimal 24 materi).
+            </p>
+          </div>
+          {pinnedEntries.length > 0 && (
+            <button
+              type="button"
+              onClick={() => onNavigate("curriculum")}
+              className="min-h-11 rounded-control border border-ink/15 bg-surface px-4 text-sm font-medium hover:bg-paper"
+            >
+              Kelola sematan
+            </button>
+          )}
+        </div>
+
+        {pinError && (
+          <p className="mt-3 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm">
+            {pinError}
           </p>
-        ) : summary ? (
-          <dl className="mt-3 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Sesi
-              </dt>
-              <dd className="mt-1 text-2xl font-semibold">{summary.sessions}</dd>
-            </div>
-            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Percobaan
-              </dt>
-              <dd className="mt-1 text-2xl font-semibold">{summary.attempts}</dd>
-            </div>
-            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Rata-rata
-              </dt>
-              <dd className="mt-1 text-2xl font-semibold">
-                {formatScore(summary.averageScore)}
-              </dd>
-            </div>
-          </dl>
-        ) : (
-          <p className="mt-3 text-sm text-muted">Memuat ringkasan…</p>
         )}
+
+        {!canPersistLocally() ? (
+          <p
+            data-pinned-empty
+            className="mt-3 rounded-card border border-warning/40 bg-warning/10 p-5 text-sm"
+          >
+            Pratinjau browser tidak menyimpan sematan. Jalankan aplikasi desktop untuk memakai
+            fitur ini.
+          </p>
+        ) : !pinsLoaded ? (
+          <p className="mt-3 text-sm text-muted">Memuat sematan…</p>
+        ) : pinnedEntries.length === 0 ? (
+          <div
+            data-pinned-empty
+            className="mt-3 rounded-card border border-dashed border-ink/20 bg-surface p-5"
+          >
+            <p className="text-sm leading-relaxed text-muted">
+              Belum ada materi yang disematkan. Buka Jelajah Materi, lalu tekan{" "}
+              <strong className="font-semibold text-ink">Sematkan</strong> pada materi yang ingin
+              selalu tampil di sini.
+            </p>
+            <button
+              type="button"
+              onClick={() => onNavigate("curriculum")}
+              className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+            >
+              Jelajahi materi
+            </button>
+          </div>
+        ) : (
+          <ul className="mt-3 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {pinnedEntries.map((entry) => (
+              <li
+                key={`${entry.packageId}@${entry.version}:${entry.lessonId}`}
+                data-pinned-card
+                className="flex flex-col overflow-hidden rounded-card border border-teal/30 bg-surface"
+              >
+                <LessonThumbnail
+                  entry={entry}
+                  className="aspect-[16/9] w-full border-b border-ink/10"
+                />
+                <div className="flex flex-1 flex-col justify-between p-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                      Kelas {entry.gradeLevels.join(", ")} ·{" "}
+                      {entry.subjects.map(subjectLabel).join(", ")}
+                    </p>
+                    <h3 className="mt-1.5 text-base font-semibold">{entry.lessonTitle}</h3>
+                    <p className="mt-1 text-xs text-muted">{entry.packageTitle}</p>
+                  </div>
+                  <div className="mt-3 flex flex-wrap items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => openEntry(entry)}
+                      className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+                    >
+                      Buka
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => unpin(entry)}
+                      aria-label={`Lepas sematan ${entry.lessonTitle}`}
+                      className="min-h-11 rounded-control border border-ink/15 bg-surface px-4 text-sm font-medium text-muted hover:border-primary/40 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                    >
+                      Lepas
+                    </button>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <p aria-live="polite" className="sr-only">
+          {pinNotice}
+        </p>
       </section>
 
       {resumeEntry && (
@@ -194,7 +329,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
               <button
                 type="button"
                 onClick={resume}
-                className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90"
+                className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90"
               >
                 Lanjutkan
               </button>
@@ -204,18 +339,9 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       )}
 
       <section className="mt-6">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-            Materi tersedia
-          </h2>
-          <button
-            type="button"
-            onClick={() => onNavigate("curriculum")}
-            className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
-          >
-            Jelajah semua materi
-          </button>
-        </div>
+        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+          Materi tersedia
+        </h2>
 
         {entries.length === 0 ? (
           <p className="mt-3 rounded-card border border-ink/10 bg-surface p-5 text-sm text-muted">
@@ -268,6 +394,67 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
               );
             })}
           </ul>
+        )}
+      </section>
+
+      <section
+        data-explore-section
+        className="mt-6 overflow-hidden rounded-card border border-primary/20 bg-gradient-to-br from-primary/5 via-surface to-teal/5"
+      >
+        <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:justify-between md:p-6">
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+              Jelajahi materi
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
+              Cari materi lain berdasarkan kelas dan mata pelajaran, lalu sematkan yang sering
+              dipakai agar selalu ada di Beranda.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => onNavigate("curriculum")}
+            className="min-h-11 self-start rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 md:self-auto"
+          >
+            Buka Jelajah Materi
+          </button>
+        </div>
+      </section>
+
+      <section className="mt-6">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+          Ringkasan belajar
+        </h2>
+        {!canPersistLocally() ? (
+          <p className="mt-3 rounded-card border border-warning/40 bg-warning/10 p-5 text-sm">
+            Pratinjau browser tidak menyimpan hasil belajar. Jalankan aplikasi desktop
+            untuk melihat ringkasan.
+          </p>
+        ) : summary ? (
+          <dl className="mt-3 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
+              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                Sesi
+              </dt>
+              <dd className="mt-1 text-2xl font-semibold">{summary.sessions}</dd>
+            </div>
+            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
+              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                Percobaan
+              </dt>
+              <dd className="mt-1 text-2xl font-semibold">{summary.attempts}</dd>
+            </div>
+            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
+              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                Rata-rata
+              </dt>
+              <dd className="mt-1 text-2xl font-semibold">
+                {formatScore(summary.averageScore)}
+              </dd>
+            </div>
+          </dl>
+        ) : (
+          <p className="mt-3 text-sm text-muted">Memuat ringkasan…</p>
         )}
       </section>
 

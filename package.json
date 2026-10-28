@@ -43,7 +43,8 @@
     "server:test": "vitest run server/src",
     "server:typecheck": "tsc -p tsconfig.server.json",
     "worker:typecheck": "tsc -p workers/api/tsconfig.json",
-    "license:tool": "node scripts/license-issuer.mjs"
+    "license:tool": "node scripts/license-issuer.mjs",
+    "e2e:pinned": "node scripts/e2e/run.mjs pinned-materials"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",

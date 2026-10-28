@@ -6,6 +6,7 @@ mod diagnostics;
 mod error;
 mod learning;
 mod license;
+mod pins;
 mod preferences;
 mod profile;
 mod results;
@@ -86,6 +87,8 @@ pub fn run() {
       review::review_list,
       review::review_record,
       review::review_export_csv,
+      pins::pinned_list,
+      pins::pinned_set,
       preferences::preferences_get,
       preferences::preferences_set
     ])
