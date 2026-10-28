@@ -3,6 +3,8 @@
 **Status:** TEMPLATE — **belum ada materi yang direview manusia**.
 Rubrik ini dipakai reviewer manusia (guru/curriculum lead), bukan oleh agent. Agent tidak boleh menandai `approved`.
 
+**Versi rubrik: 1** — setiap putusan yang dicatat menyimpan versi ini. Naikkan versi bila kriteria berubah agar putusan lama tidak tampak memakai rubrik terbaru.
+
 **Bahan pra-review agent (2026-10-26):** [laporan](PEDAGOGICAL_PREREVIEW_2026-10-26.md) · [sampel baca 40 paket](PEDAGOGICAL_SAMPLE_2026-10-26.md) · [CSV flag](prereview-flags-2026-10-26.csv) · [JSON bukti](prereview-evidence-2026-10-26.json) — keluaran agent yang hanya mengumpulkan bukti; **bukan review, bukan approval**, dan status kriteria tetap NOT REVIEWED sampai reviewer manusia menilai.
 
 ## Peran reviewer
@@ -36,7 +38,24 @@ Rubrik ini dipakai reviewer manusia (guru/curriculum lead), bukan oleh agent. Ag
 - Semua R1–R12 **LULUS** → `reviewStatus: approved` boleh disetel oleh reviewer manusia.
 - Satu saja `REVISI` → `reviewStatus` tetap `draft`/`reviewed`; materi tidak boleh dirilis.
 - Reviewer tidak boleh mereview materi yang ia susun sendiri (pemisahan peran).
-- Perubahan isi setelah approval membatalkan approval (review ulang).
+- Perubahan isi setelah approval membatalkan approval (review ulang) — **diperiksa mekanis** sejak 2026-10-28 (lihat di bawah).
+
+## Ikatan bukti putusan (sejak 2026-10-28)
+
+Putusan yang dicatat aplikasi menyimpan **sidik jari isi** (`content_sha256`, SHA-256 JSON kanonik paket hasil validasi) dan **versi rubrik**. Mengubah isi paket setelah approval karena itu membuat putusan lama tidak lagi cocok.
+
+```bash
+# 1) Ekspor audit dari layar Konten & Pembaruan, simpan ke folder ini:
+#    knowledge/content/review-attestations/<tanggal>.csv
+# 2) Periksa setiap putusan approved terhadap isi paket sekarang:
+npm run content:review-binding
+# 3) Ambil sampel deterministik untuk diperiksa ulang manusia:
+npm run content:review-sample -- --n 5 [--seed 2026-10-28] [--out laporan.md]
+```
+
+`content:review-binding` gagal bila: approved tanpa sidik jari sah, paket tidak dikenal, isi paket tidak tervalidasi, isi berubah setelah disetujui, atau ada paket non-`draft` tanpa putusan terikat. `content:review-sample` mencetak reviewer/tanggal/catatan, status sidik jari, berkas yang harus dibaca, dan checklist R1–R12; exit 1 bila ada yang menyimpang.
+
+**Batas:** sidik jari dihitung klien dan identitas reviewer berasal dari profil lokal, jadi mekanisme ini membuktikan **keterikatan ke isi**, bukan keaslian identitas. Tanda tangan kriptografis atas putusan belum ada.
 
 ## Format catatan review
 
