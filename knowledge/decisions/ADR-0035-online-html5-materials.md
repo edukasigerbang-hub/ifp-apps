@@ -38,8 +38,8 @@
 2. Prototipe penampil dengan **satu bundel contoh lokal** (tanpa server) untuk menguji isolasi, fullscreen, Esc, dan a11y kontainer. — selesai 2026-10-28 (T-114): iframe sandbox + protokol `ifp-content` + penampil modal; E2E `material-viewer` 8/8
 3. Katalog + pengunduh + verifikasi tanda tangan.
    - 3a. **Pemasang bundel lokal** (ZIP + sidecar `.sig`) — selesai 2026-10-28 (T-115): manifest ketat §4, verifikasi Ed25519 per `keyId`, hash per berkas, staging → rename atomik, tabel `material_install`, daftar/buka di layar Konten, alat `scripts/material-pack.mjs`, E2E `material-import` 12/12.
-   - 3b. **Katalog + unduhan dari server** (Worker `/v1/materials`, URL pre-signed, verifikasi `bundleSha256`) — belum; menunggu HTTP client (persetujuan dependensi terpisah) dan endpoint platform.
-4. Progres baca, semat, dan pembersihan cache. — belum; `material_progress` dan LRU belum diimplementasikan.
+   - 3b. **Katalog + unduhan dari server** (Worker `/v1/materials`, URL pre-signed, verifikasi `bundleSha256`) — **sisi aplikasi selesai 2026-10-28 (T-117)** dengan `reqwest` 0.13.5 (persetujuan G5 user): `material_catalog.rs` (ETag + cache SQLite `0012`, URL pre-signed tanpa simpan, tanda tangan diverifikasi sebelum unduh, `bundleSha256` diperiksa sebelum pasang), bagian “Jelajah materi daring” di layar Konten, server referensi `scripts/mock-catalog-server.mjs`, E2E `material-catalog` 8/8. **Sisi platform belum**: endpoint `/v1/materials` di Worker, penandatanganan saat publish, bucket Supabase Storage. Sematan materi juga sudah ada (T-116).
+4. Progres baca, semat, dan pembersihan cache. — semat **selesai** (T-116); `material_progress` dan LRU **belum**.
 
 ## Keputusan yang dikonfirmasi (2026-10-28)
 

@@ -1,6 +1,6 @@
 # Kontrak Bundel Materi HTML5 v1 (draf)
 
-**Status:** DRAF — OD-10…OD-14 dikunci 2026-10-28; penampil prototipe (T-114), pemasang ZIP bertanda tangan (T-115), dan sematan materi di Beranda (T-116) sudah ada di aplikasi, tetapi katalog/unduhan dari server belum · **Tanggal:** 2026-10-28 · **schemaVersion:** `1.0.0`
+**Status:** DRAF — OD-10…OD-14 dikunci 2026-10-28; penampil prototipe (T-114), pemasang ZIP bertanda tangan (T-115), sematan materi di Beranda (T-116), dan **klien katalog + unduhan** (T-117) sudah ada di aplikasi. Klien diuji terhadap **server referensi lokal** (`scripts/mock-catalog-server.mjs`), bukan Worker produksi — §6 belum punya implementasi platform · **Tanggal:** 2026-10-28 · **schemaVersion:** `1.0.0`
 **Terkait:** [ADR-0035](../decisions/ADR-0035-online-html5-materials.md) · [Kontrak paket konten v1](SCHEMA.md) · [Kontrak sinkronisasi v1](../api/SYNC_CONTRACT.md)
 
 Dokumen ini menetapkan apa yang **harus dihasilkan platform** (editor + server Gerbang Edukasi) dan apa yang **harus diterima aplikasi desktop**. Tidak mengatur UI editor.
@@ -151,6 +151,8 @@ Respons `200`:
 - Katalog bersifat baca-publik (tidak memuat PII) dengan rate limit per IP **60/menit**. Bila nanti katalog perlu dibatasi ke perangkat terdaftar, tambahkan bearer token perangkat seperti `/v1/sync/events` — belum diputuskan.
 
 ## 7. Urutan unduhan & verifikasi (mengikat aplikasi)
+
+> **Catatan implementasi 2026-10-28 (T-117):** klien menambahkan **gerbang awal** sebelum langkah 1 — tanda tangan pada item katalog (§6 `signature` + `material`) diverifikasi lebih dulu, lalu `materialId`/`version` dicocokkan dengan permintaan. Tujuannya agar katalog palsu tidak menghabiskan kuota unduhan. Seluruh langkah 1–7 di bawah **tetap dijalankan** atas byte ZIP yang diunduh, termasuk verifikasi tanda tangan manifest di dalam ZIP.
 
 1. `GET` `downloadUrl`; tolak bila status ≠ 200 atau `Content-Length` ≠ `sizeBytes`.
 2. Hitung SHA-256 atas byte ZIP; harus sama dengan `bundleSha256` dari katalog.
