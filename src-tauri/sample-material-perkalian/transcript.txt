@@ -1,0 +1,23 @@
+PERKALIAN SEBAGAI PENJUMLAHAN BERULANG
+Materi contoh prototipe materi HTML5 — Kelas 2, Matematika.
+
+Transkrip ini memuat seluruh isi materi. Materi ini belum diterbitkan;
+bundelnya hanya dipakai untuk menguji penampil dan katalog di aplikasi desktop.
+
+BAGIAN 1 — KELOMPOK JERUK
+Di kebun ada keranjang-keranjang jeruk. Setiap keranjang berisi 4 jeruk.
+Satu keranjang ditulis 4. Dua keranjang berarti 4 + 4. Tiga keranjang berarti
+4 + 4 + 4.
+
+BAGIAN 2 — MENGHITUNG CEPAT
+Menjumlah angka yang sama berulang-ulang bisa disingkat dengan perkalian.
+3 × 4 dibaca "tiga kali empat", artinya 4 + 4 + 4. Hasilnya 12 jeruk.
+Jadi 3 × 4 = 4 + 4 + 4 = 12.
+
+BAGIAN 3 — LATIHAN
+Soal: berapa hasil 2 × 3?
+Dua kali tiga berarti 3 + 3. Hasilnya 6. Jawaban yang benar adalah 6.
+
+RINGKASAN
+Perkalian adalah cara singkat menulis penjumlahan bilangan yang sama.
+Banyak kelompok dikali isi tiap kelompok menghasilkan jumlah seluruhnya.

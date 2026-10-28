@@ -29,7 +29,7 @@ const MEDIA_TYPES = {
   txt: "text/plain"
 };
 
-function canonical(value) {
+export function canonical(value) {
   if (Array.isArray(value)) {
     return `[${value.map(canonical).join(",")}]`;
   }
