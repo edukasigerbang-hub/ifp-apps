@@ -1,0 +1,20 @@
+Naskah materi (transkrip)
+
+Materi ini adalah kerangka dari Studio Materi. Ganti seluruh teks di bawah
+dengan naskah Anda sendiri. Aplikasi membacakan teks ini bila pembaca layar
+aktif, dan penyimpanan cadangan memakai berkas ini sebagai isi teks materi.
+
+Langkah 1
+Amati gambar atau keterangan pada langkah ini.
+
+Langkah 2
+Tambahkan penjelasan Anda sendiri di tempat ini.
+
+Langkah 3
+Ucapkan kesimpulan dengan kalimat sendiri.
+
+Penutup
+Materi dianggap selesai ketika murid menekan tombol "Tandai selesai".
+Catatan untuk penulis: materi wajib dapat dinavigasi dengan papan ketik,
+tidak memuat sumber daya dari jaringan, dan memiliki total ukuran bundel
+paling besar 50 MB.

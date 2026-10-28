@@ -9,7 +9,7 @@ import {
 
 describe("mode aplikasi", () => {
   it("mode admin memakai seluruh navigasi", () => {
-    expect(navigationItemsForMode("admin")).toHaveLength(8);
+    expect(navigationItemsForMode("admin")).toHaveLength(9);
   });
 
   it("mode belajar memuat empat tujuan belajar tanpa Player dan panel kelola", () => {
@@ -26,9 +26,11 @@ describe("mode aplikasi", () => {
     expect(isScreenAllowedInMode("belajar", "home")).toBe(true);
     expect(isScreenAllowedInMode("belajar", "player")).toBe(true);
     expect(isScreenAllowedInMode("belajar", "content")).toBe(false);
+    expect(isScreenAllowedInMode("belajar", "studio")).toBe(false);
     expect(isScreenAllowedInMode("belajar", "license")).toBe(false);
     expect(isScreenAllowedInMode("belajar", "settings")).toBe(false);
     expect(isScreenAllowedInMode("admin", "settings")).toBe(true);
+    expect(isScreenAllowedInMode("admin", "studio")).toBe(true);
   });
 
   it("hanya menerima nilai mode yang dikenal", () => {

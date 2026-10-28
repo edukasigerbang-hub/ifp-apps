@@ -7,6 +7,7 @@ mod error;
 mod learning;
 mod license;
 mod material;
+mod material_author;
 mod material_catalog;
 mod material_install;
 mod material_manifest;
@@ -121,6 +122,18 @@ pub fn run() {
       material_catalog::material_catalog_list,
       material_catalog::material_catalog_install,
       material_catalog::material_catalog_cover,
+      material_author::material_draft_templates,
+      material_author::material_draft_create,
+      material_author::material_draft_list,
+      material_author::material_draft_read,
+      material_author::material_draft_file_write,
+      material_author::material_draft_asset_add,
+      material_author::material_draft_file_delete,
+      material_author::material_draft_manifest_set,
+      material_author::material_draft_check,
+      material_author::material_draft_open,
+      material_author::material_draft_export,
+      material_author::material_draft_delete,
       preferences::preferences_get,
       preferences::preferences_set
     ])

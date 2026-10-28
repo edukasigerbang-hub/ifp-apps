@@ -376,6 +376,23 @@ pub fn install_from_bytes(
 
     let mut listed: HashSet<&str> = HashSet::new();
     let mut total_bytes: u64 = 0;
+
+    // Draft Studio menempati folder yang sama dengan bundel terpasang
+    // (materials/<id>/<version>/), jadi instalasi tidak boleh menimbunnya.
+    let draft_exists: Option<i64> = connection
+        .query_row(
+            "SELECT 1 FROM material_draft WHERE material_id = ?1 AND version = ?2",
+            params![manifest.material_id, manifest.version],
+            |row| row.get(0),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+    if draft_exists.is_some() {
+        return Err(AppError::material_invalid(
+            "Versi ini sedang dipakai draft di Studio Materi. Hapus draft lebih dulu atau terbitkan versi lain.",
+        ));
+    }
+
     for file in &manifest.files {
         if !listed.insert(file.path.as_str()) {
             return Err(AppError::material_invalid("Manifest memuat path berkas duplikat."));

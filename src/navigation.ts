@@ -5,6 +5,7 @@ export type ScreenId =
   | "player"
   | "results"
   | "content"
+  | "studio"
   | "license"
   | "settings";
 
@@ -66,6 +67,13 @@ export const navigationItems: NavItem[] = [
     label: "Konten & Pembaruan",
     description: "Mengelola paket konten lokal dan pembaruan.",
     planned: ["Daftar paket dan versi", "Impor paket lokal", "Validasi, aktivasi, dan rollback"],
+    group: "kelola"
+  },
+  {
+    id: "studio",
+    label: "Studio Materi",
+    description: "Menyusun materi HTML5 lokal yang lolos kontrak bundel aplikasi.",
+    planned: ["Kerangka draft siap pakai", "Editor berkas dan aset cover", "Pemeriksaan, pratinjau, dan ekspor"],
     group: "kelola"
   },
   {

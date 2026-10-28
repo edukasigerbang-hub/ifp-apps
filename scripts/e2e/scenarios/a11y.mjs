@@ -269,6 +269,10 @@ const SCREENS = [
   },
   { label: "Hasil Belajar", wait: `document.body.textContent.includes("Aktivitas terbaru")` },
   { label: "Konten & Pembaruan", wait: `document.body.textContent.includes("Paket terpasang")` },
+  {
+    label: "Studio Materi",
+    wait: `document.querySelector("main h1")?.textContent.includes("Studio Materi")`
+  },
   { label: "Lisensi Perangkat", wait: `document.body.textContent.includes("Status lisensi")` },
   { label: "Pengaturan", wait: `document.body.textContent.includes("Profil")` }
 ];

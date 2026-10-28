@@ -84,6 +84,10 @@ const MIGRATIONS: &[Migration] = &[
         version: 12,
         sql: include_str!("migrations/0012_material_catalog_cache.sql"),
     },
+    Migration {
+        version: 13,
+        sql: include_str!("migrations/0013_material_draft.sql"),
+    },
 ];
 
 pub(crate) fn migration_count() -> i64 {

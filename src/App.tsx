@@ -20,6 +20,7 @@ import { LicenseScreen } from "./screens/LicenseScreen";
 import { ResultsScreen } from "./screens/ResultsScreen";
 import { ScreenPlaceholder } from "./screens/ScreenPlaceholder";
 import { SettingsScreen } from "./screens/SettingsScreen";
+import { StudioScreen } from "./screens/StudioScreen";
 import {
   buildPlayerHash,
   getPlaybackSelection,
@@ -142,6 +143,8 @@ export default function App() {
         <SettingsScreen />
       ) : activeScreen === "content" ? (
         <ContentScreen />
+      ) : activeScreen === "studio" ? (
+        <StudioScreen />
       ) : activeScreen === "license" ? (
         <LicenseScreen />
       ) : (

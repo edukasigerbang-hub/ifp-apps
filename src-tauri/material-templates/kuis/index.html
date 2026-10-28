@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kuis Baru</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main id="material" class="material">
+      <header class="head">
+        <p class="eyebrow">Materi Studio · Kelas 3 · IPAS</p>
+        <h1>Kuis Baru</h1>
+        <p class="lede">Ganti pertanyaan dan pilihan di bawah. Angka jawaban benar tersimpan di tiap soal.</p>
+      </header>
+
+      <section class="panel" aria-live="polite">
+        <p class="quiz-counter" id="counter">Soal 1 dari 3</p>
+        <p class="quiz-question" id="question">Air laut berubah menjadi awan melalui proses apa?</p>
+        <div class="quiz-options" id="options" role="group" aria-label="Pilihan jawaban"></div>
+        <p class="status" id="feedback">Pilih satu jawaban, lalu tekan Periksa.</p>
+      </section>
+
+      <div class="controls">
+        <button type="button" id="check" class="primary">Periksa</button>
+        <button type="button" id="next">Soal berikutnya</button>
+        <button type="button" id="exit" class="ghost">Keluar</button>
+      </div>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

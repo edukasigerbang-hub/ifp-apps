@@ -51,6 +51,7 @@
     "e2e:material-import": "node scripts/e2e/run.mjs material-import",
     "e2e:material-pin": "node scripts/e2e/run.mjs material-pin",
     "e2e:material-catalog": "node scripts/e2e/run.mjs material-catalog",
+    "e2e:studio": "node scripts/e2e/run.mjs material-studio",
     "catalog:dev": "node scripts/dev-catalog.mjs"
   },
   "dependencies": {
