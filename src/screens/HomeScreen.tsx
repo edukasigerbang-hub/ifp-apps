@@ -260,100 +260,106 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       >
         <div
           data-resume-column
-          className="flex flex-col rounded-card border border-teal/30 bg-teal/5 p-5"
+          className="flex flex-col rounded-card border border-teal/30 bg-teal/5 p-4"
         >
-          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
             Lanjutkan belajar
           </h2>
           {resumeEntry ? (
-            <div data-resume-entry className="flex flex-1 flex-col">
+            <div data-resume-entry className="mt-2 flex items-center gap-3">
               <LessonThumbnail
                 entry={resumeEntry}
-                className="mt-3 aspect-[16/9] w-full rounded-control"
+                className="h-14 w-14 shrink-0 rounded-control"
               />
-              <p className="mt-3 text-base font-semibold leading-snug">{resumeEntry.lessonTitle}</p>
-              <p className="mt-1 text-xs text-muted">
-                {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
-              </p>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-sm font-semibold">{resumeEntry.lessonTitle}</p>
+                <p className="mt-0.5 truncate text-xs text-muted">
+                  {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
+                </p>
+              </div>
               <button
                 type="button"
                 onClick={resume}
-                className="mt-auto min-h-11 self-start rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+                className="min-h-11 shrink-0 rounded-control bg-primary px-4 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
               >
                 Lanjutkan
               </button>
             </div>
           ) : (
-            <p data-resume-empty className="mt-3 text-sm leading-relaxed text-muted">
-              Belum ada materi yang sedang dipelajari. Pilih materi pada bagian di bawah untuk
-              mulai.
+            <p data-resume-empty className="mt-2 text-sm leading-snug text-muted">
+              Belum ada materi yang sedang dipelajari. Pilih materi di bawah.
             </p>
           )}
         </div>
 
-        <div data-summary-column className="flex flex-col rounded-card border border-ink/10 bg-surface p-5">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+        <div data-summary-column className="flex flex-col rounded-card border border-ink/10 bg-surface p-4">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
             Ringkasan belajar
           </h2>
           {!canPersistLocally() ? (
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              Pratinjau browser tidak menyimpan hasil belajar. Jalankan aplikasi desktop untuk
-              melihat ringkasan.
+            <p className="mt-2 text-xs leading-snug text-muted">
+              Pratinjau browser tidak menyimpan hasil belajar.
             </p>
           ) : summary ? (
-            <dl className="mt-3 grid grid-cols-3 content-start gap-2">
-              <div className="rounded-control border border-ink/10 bg-paper px-3 py-3">
-                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">Sesi</dt>
-                <dd className="mt-1 text-xl font-semibold">{summary.sessions}</dd>
+            <dl className="mt-2 flex items-end gap-6">
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  Sesi
+                </dt>
+                <dd className="mt-1 text-2xl font-semibold leading-none">{summary.sessions}</dd>
               </div>
-              <div className="rounded-control border border-ink/10 bg-paper px-3 py-3">
+              <div>
                 <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
                   Percobaan
                 </dt>
-                <dd className="mt-1 text-xl font-semibold">{summary.attempts}</dd>
+                <dd className="mt-1 text-2xl font-semibold leading-none">{summary.attempts}</dd>
               </div>
-              <div className="rounded-control border border-ink/10 bg-paper px-3 py-3">
+              <div>
                 <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
                   Rata-rata
                 </dt>
-                <dd className="mt-1 text-xl font-semibold">{formatScore(summary.averageScore)}</dd>
+                <dd className="mt-1 text-2xl font-semibold leading-none">
+                  {formatScore(summary.averageScore)}
+                </dd>
               </div>
             </dl>
           ) : (
-            <p className="mt-3 text-sm text-muted">Memuat ringkasan…</p>
+            <p className="mt-2 text-sm text-muted">Memuat ringkasan…</p>
           )}
         </div>
 
-        <div data-recent-column className="flex flex-col rounded-card border border-ink/10 bg-surface p-5">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-            Aktivitas terbaru
-          </h2>
-          {summary && summary.recent.length > 0 ? (
-            <>
-              <ul className="mt-3 space-y-2">
-                {summary.recent.slice(0, 3).map((attempt, index) => (
-                  <li
-                    key={`${attempt.lessonId}-${attempt.activityId}-${index}`}
-                    className="flex flex-wrap items-center justify-between gap-2 rounded-control border border-ink/10 bg-paper px-3 py-2.5 text-sm"
-                  >
-                    <span className="min-w-0 text-muted">
-                      {entries.find((entry) => entry.lessonId === attempt.lessonId)?.lessonTitle ??
-                        attempt.lessonId}
-                    </span>
-                    <span className="font-semibold">Skor {Math.round(attempt.score)}</span>
-                  </li>
-                ))}
-              </ul>
+        <div data-recent-column className="flex flex-col rounded-card border border-ink/10 bg-surface p-4">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+              Aktivitas terbaru
+            </h2>
+            {summary && summary.recent.length > 0 && (
               <button
                 type="button"
                 onClick={() => onNavigate("results")}
-                className="mt-auto min-h-11 self-start rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                className="min-h-11 shrink-0 rounded-control px-3 text-xs font-medium text-primary hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
               >
                 Lihat semua hasil
               </button>
-            </>
+            )}
+          </div>
+          {summary && summary.recent.length > 0 ? (
+            <ul className="mt-1 space-y-1 text-xs">
+              {summary.recent.slice(0, 3).map((attempt, index) => (
+                <li
+                  key={`${attempt.lessonId}-${attempt.activityId}-${index}`}
+                  className="flex items-center justify-between gap-3 leading-4"
+                >
+                  <span className="min-w-0 truncate text-muted">
+                    {entries.find((entry) => entry.lessonId === attempt.lessonId)?.lessonTitle ??
+                      attempt.lessonId}
+                  </span>
+                  <span className="shrink-0 font-semibold">Skor {Math.round(attempt.score)}</span>
+                </li>
+              ))}
+            </ul>
           ) : (
-            <p className="mt-3 text-sm text-muted">Belum ada aktivitas yang dinilai.</p>
+            <p className="mt-2 text-xs text-muted">Belum ada aktivitas yang dinilai.</p>
           )}
         </div>
       </section>

@@ -204,6 +204,10 @@ export async function run({ page, artifactDir, log }) {
       return {
         status: "ok",
         count: columns.length,
+        height: Math.round(box.height),
+        tallestColumn: Math.round(
+          Math.max(...columns.map((column) => column.getBoundingClientRect().height))
+        ),
         labels: columns.map((column) => column.querySelector("h2")?.textContent.trim() ?? null),
         tops: columns.map((column) => Math.round(column.getBoundingClientRect().top)),
         sameRow: columns.every(
@@ -224,6 +228,10 @@ export async function run({ page, artifactDir, log }) {
     `Ringkasan Beranda harus 3 kolom sejajar (${JSON.stringify(overview)}).`
   );
   assert(
+    overview.height <= 150,
+    `Ringkasan Beranda harus ringkas (≤150 px), tingginya ${overview.height} px.`
+  );
+  assert(
     JSON.stringify(overview.labels) ===
       JSON.stringify(["Lanjutkan belajar", "Ringkasan belajar", "Aktivitas terbaru"]),
     `Urutan kolom ringkasan salah: ${JSON.stringify(overview.labels)}.`
@@ -241,7 +249,7 @@ export async function run({ page, artifactDir, log }) {
     `Ringkasan kosong harus menampilkan 3 angka dan kolom aktivitas kosong (${JSON.stringify(overview)}).`
   );
   log(
-    `Tiga kolom ringkasan (${overview.labels.join(" → ")}) tampil sejajar di bawah sapaan dengan keadaan kosong yang jelas.`
+    `Tiga kolom ringkasan (${overview.labels.join(" → ")}) tampil sejajar di bawah sapaan, tinggi ${overview.height} px, dengan keadaan kosong yang jelas.`
   );
 
   // Regresi T-086: kartu mapel harus membuka katalog yang sudah terfilter mapel itu.
@@ -695,6 +703,14 @@ export async function run({ page, artifactDir, log }) {
   await page.evaluate(
     `(() => { (document.scrollingElement ?? document.documentElement).scrollTop = 0; })()`
   );
+  const filledHeight = await page.evaluate(
+    `Math.round(document.querySelector("[data-home-overview]")?.getBoundingClientRect().height ?? 0)`
+  );
+  assert(
+    filledHeight > 0 && filledHeight <= 150,
+    `Ringkasan Beranda harus tetap ringkas saat terisi (≤150 px), tingginya ${filledHeight} px.`
+  );
+  log(`Ringkasan tetap ringkas saat terisi: ${filledHeight} px.`);
   await new Promise((resolve) => setTimeout(resolve, 400));
   await page.screenshot(path.join(artifactDir, "beranda-tiga-kolom.png"));
   await clickButton(page, "Lanjutkan");
