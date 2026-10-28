@@ -115,10 +115,12 @@ pub fn run() {
       material_install::material_install_bundle,
       material_install::material_list_installed,
       material_install::material_open_installed,
+      material_install::material_installed_cover,
       material_catalog::material_catalog_config_get,
       material_catalog::material_catalog_config_set,
       material_catalog::material_catalog_list,
       material_catalog::material_catalog_install,
+      material_catalog::material_catalog_cover,
       preferences::preferences_get,
       preferences::preferences_set
     ])

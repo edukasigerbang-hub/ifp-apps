@@ -57,6 +57,14 @@ export async function setup({ artifactDir }) {
   });
   const signature = JSON.parse(await readFile(packed.signature, "utf8"));
 
+  // Cover disajikan terpisah dari ZIP (URL pre-signed) agar kartu katalog bisa
+  // menampilkan gambar sebelum bundel dipasang.
+  const coverName = `${packed.materialId}.png`;
+  await cp(
+    path.join(sourceDir, MANIFEST.cover),
+    path.join(artifactDir, "covers", coverName)
+  );
+
   const baseItem = {
     materialId: packed.materialId,
     version: packed.version,
@@ -65,6 +73,7 @@ export async function setup({ artifactDir }) {
     sizeBytes: packed.bytes,
     bundleSha256: packed.bundleSha256,
     bundleFile: path.basename(packed.bundle),
+    coverFile: coverName,
     signature,
     material: packed.manifest
   };
@@ -97,6 +106,7 @@ export async function setup({ artifactDir }) {
   const server = await startMockCatalogServer({
     catalogFile,
     bundleDir: path.dirname(packed.bundle),
+    coverDir: path.join(artifactDir, "covers"),
     token: "e2e-token",
     quiet: true
   });
@@ -238,6 +248,29 @@ export async function run({ page, artifactDir, setup: fixture, log }) {
   );
   log("Daftar katalog memuat materi reviewed dan menyembunyikan draf.");
 
+  // Cover item katalog diunduh Rust lewat URL pre-signed dan tampil sebagai data URL.
+  await page.waitFor(
+    `(() => {
+      const image = document.querySelector('[data-catalog-item="${fixture.materialId}"] img[data-material-cover]');
+      return !!image && image.src.startsWith("data:image/") && image.naturalWidth > 0;
+    })()`,
+    { label: "cover katalog tampil", timeoutMs: 30_000 }
+  );
+  const catalogCover = await page.evaluate(`
+    (() => {
+      const image = document.querySelector('[data-catalog-item="${fixture.materialId}"] img[data-material-cover]');
+      return { prefix: image.src.slice(0, 21), width: image.naturalWidth, height: image.naturalHeight };
+    })()
+  `);
+  assert(
+    catalogCover.prefix.startsWith("data:image/png;base64"),
+    `Cover katalog bukan data URL PNG: ${catalogCover.prefix}`
+  );
+  assert(catalogCover.width > 0, "Cover katalog tidak punya lebar alami.");
+  log(
+    `Cover katalog tampil sebagai data URL (${catalogCover.width}×${catalogCover.height}).`
+  );
+
   // Filter kelas 1 kosong, lalu kembali ke semua kelas.
   await fillValue(page, "[data-catalog-grade]", "1", "change");
   await clickSelector(page, "[data-catalog-refresh]");
@@ -268,6 +301,16 @@ export async function run({ page, artifactDir, setup: fixture, log }) {
     `Materi daring terpasang dari katalog: ${installed.value[0].title} ` +
       `v${installed.value[0].version} (${Math.round(installed.value[0].sizeBytes / 1024)} KB).`
   );
+
+  // Baris "Materi terpasang" memakai cover dari bundel di disk.
+  await page.waitFor(
+    `(() => {
+      const image = document.querySelector('[data-material-installed] img[data-material-cover]');
+      return !!image && image.src.startsWith("data:image/") && image.naturalWidth > 0;
+    })()`,
+    { label: "cover materi terpasang tampil", timeoutMs: 30_000 }
+  );
+  log("Cover materi terpasang dibaca dari bundel lokal.");
 
   // Katalog dimatikan: daftar harus jatuh ke cache lokal dengan penanda stale.
   await fixture.close();

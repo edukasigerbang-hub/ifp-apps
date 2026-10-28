@@ -2,6 +2,7 @@ use crate::error::AppError;
 use crate::material_manifest::{
     self, is_material_id, media_type_for, Accessibility, MaterialManifest,
 };
+use base64::Engine as _;
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::fs;
@@ -14,6 +15,8 @@ pub const SAMPLE_VERSION: &str = "1.0.0";
 
 const SEED_VERSION: u32 = 4;
 const MAX_FILE_BYTES: u64 = 50 * 1024 * 1024;
+/// Thumbnail cover dikirim ke UI sebagai data URL; batasnya jauh di bawah aset materi.
+pub(crate) const MAX_COVER_BYTES: u64 = 2 * 1024 * 1024;
 
 // Berlaku hanya untuk dokumen materi. `connect-src 'none'` menegakkan syarat
 // self-contained dari kontrak bundel; sumber eksplisit dipakai karena iframe
@@ -247,6 +250,47 @@ pub fn material_open_sample(state: State<'_, MaterialState>) -> Result<MaterialV
     open_material(&state.root, &directory, SAMPLE_MATERIAL_ID, SAMPLE_VERSION)
 }
 
+/// Tipe gambar ditentukan dari magic bytes, bukan ekstensi atau `Content-Type`:
+/// byte-nya yang dipakai renderer, jadi itulah yang harus cocok.
+pub(crate) fn sniff_image(bytes: &[u8]) -> Option<&'static str> {
+    if bytes.len() >= 12 && &bytes[0..4] == b"RIFF" && &bytes[8..12] == b"WEBP" {
+        return Some("image/webp");
+    }
+    if bytes.starts_with(&[0x89, b'P', b'N', b'G', 0x0d, 0x0a, 0x1a, 0x0a]) {
+        return Some("image/png");
+    }
+    if bytes.starts_with(&[0xff, 0xd8, 0xff]) {
+        return Some("image/jpeg");
+    }
+    None
+}
+
+pub(crate) fn image_data_url(bytes: &[u8]) -> Option<String> {
+    let media_type = sniff_image(bytes)?;
+    Some(format!(
+        "data:{media_type};base64,{}",
+        base64::engine::general_purpose::STANDARD.encode(bytes)
+    ))
+}
+
+/// Cover bundel sebagai data URL untuk thumbnail di UI. Tidak memakai protokol
+/// `ifp-content://` supaya `img-src` tidak perlu diperlebar; batas ukuran dan
+/// containment tetap diperiksa.
+pub(crate) fn cover_data_url(root: &Path, directory: &Path) -> Option<String> {
+    let manifest: MaterialManifest =
+        serde_json::from_slice(&fs::read(directory.join("material.json")).ok()?).ok()?;
+    let canonical_root = fs::canonicalize(root).ok()?;
+    let canonical = fs::canonicalize(directory.join(&manifest.cover)).ok()?;
+    if !canonical.starts_with(&canonical_root) {
+        return None;
+    }
+    let metadata = fs::metadata(&canonical).ok()?;
+    if !metadata.is_file() || metadata.len() > MAX_COVER_BYTES {
+        return None;
+    }
+    image_data_url(&fs::read(canonical).ok()?)
+}
+
 fn percent_decode(input: &str) -> Option<String> {
     let bytes = input.as_bytes();
     let mut output = Vec::with_capacity(bytes.len());
@@ -402,6 +446,38 @@ mod tests {
         assert_eq!(view.completion_min_dwell_seconds, 2);
         assert!(view.transcript.contains("SIKLUS AIR"));
         assert!(view.accessibility.keyboard_navigable);
+
+        let _ = fs::remove_dir_all(&root);
+    }
+
+    #[test]
+    fn sniffs_image_headers_and_builds_data_url() {
+        let cover = SAMPLE_FILES
+            .iter()
+            .find(|file| file.path.ends_with("cover.png"))
+            .expect("cover");
+        assert_eq!(sniff_image(cover.bytes), Some("image/png"));
+        assert_eq!(sniff_image(b"RIFF\x00\x00\x00\x00WEBPVP8 "), Some("image/webp"));
+        assert_eq!(sniff_image(&[0xff, 0xd8, 0xff, 0xe0]), Some("image/jpeg"));
+        assert_eq!(sniff_image(b"GIF89a"), None);
+        assert_eq!(sniff_image(b"<html></html>"), None);
+
+        let url = image_data_url(cover.bytes).expect("data url");
+        assert!(url.starts_with("data:image/png;base64,"));
+    }
+
+    #[test]
+    fn reads_cover_of_seeded_bundle_as_data_url() {
+        let root = temp_root("cover");
+        let directory = ensure_sample_material(&root).expect("seed");
+        let url = cover_data_url(&root, &directory).expect("cover");
+        assert!(url.starts_with("data:image/png;base64,"));
+        assert!(url.len() > 1024);
+
+        // Folder tanpa manifest tidak menghasilkan cover, bukan panik.
+        let missing = root.join("tidak-ada");
+        fs::create_dir_all(&missing).expect("dir");
+        assert!(cover_data_url(&root, &missing).is_none());
 
         let _ = fs::remove_dir_all(&root);
     }

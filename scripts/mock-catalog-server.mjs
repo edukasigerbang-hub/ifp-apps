@@ -106,21 +106,38 @@ function compareItems(left, right) {
   return String(left.materialId).localeCompare(String(right.materialId));
 }
 
+const IMAGE_TYPES = {
+  webp: "image/webp",
+  png: "image/png",
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg"
+};
+
 function withDownloadUrl(item, origin, token) {
-  if (!item.bundleFile) {
-    return item;
-  }
-  const { bundleFile, ...rest } = item;
-  const name = path.basename(bundleFile);
+  const { bundleFile, coverFile, ...rest } = item;
+  const bundleName = bundleFile ? path.basename(bundleFile) : null;
+  const coverName = coverFile ? path.basename(coverFile) : null;
   return {
     ...rest,
-    downloadUrl: `${origin}/bundles/${encodeURIComponent(name)}?token=${encodeURIComponent(token)}`
+    ...(bundleName
+      ? {
+          downloadUrl: `${origin}/bundles/${encodeURIComponent(bundleName)}?token=${encodeURIComponent(token)}`
+        }
+      : {}),
+    // Cover bersifat kosmetik (§6 kontrak v1): URL pre-signed dengan aturan yang
+    // sama seperti downloadUrl dan tidak pernah disimpan klien.
+    ...(coverName
+      ? {
+          coverUrl: `${origin}/covers/${encodeURIComponent(coverName)}?token=${encodeURIComponent(token)}`
+        }
+      : {})
   };
 }
 
 export async function startMockCatalogServer({
   catalogFile,
   bundleDir,
+  coverDir,
   token = "dev-token",
   port = 0,
   host = "127.0.0.1",
@@ -131,6 +148,7 @@ export async function startMockCatalogServer({
   }
   const resolvedCatalog = path.resolve(catalogFile);
   const resolvedBundleDir = path.resolve(bundleDir ?? path.dirname(resolvedCatalog));
+  const resolvedCoverDir = path.resolve(coverDir ?? resolvedBundleDir);
 
   function readCatalog() {
     return JSON.parse(readFileSync(resolvedCatalog, "utf8"));
@@ -224,6 +242,41 @@ export async function startMockCatalogServer({
     response.end(bytes);
   }
 
+  function serveCover(request, response) {
+    const url = new URL(request.url, "http://placeholder");
+    const name = decodeURIComponent(url.pathname.slice("/covers/".length));
+    if (!name || name !== path.basename(name) || name === "." || name === "..") {
+      sendError(response, 404, "COVER_NOT_FOUND", "Cover tidak ditemukan.");
+      return;
+    }
+    if (url.searchParams.get("token") !== token) {
+      sendError(response, 403, "COVER_FORBIDDEN", "Token unduhan tidak sah.");
+      return;
+    }
+
+    const absolute = path.join(resolvedCoverDir, name);
+    if (!existsSync(absolute) || !statSync(absolute).isFile()) {
+      sendError(response, 404, "COVER_NOT_FOUND", "Cover tidak ditemukan.");
+      return;
+    }
+    const type = IMAGE_TYPES[path.extname(name).slice(1).toLowerCase()];
+    if (!type) {
+      sendError(response, 404, "COVER_NOT_FOUND", "Cover tidak ditemukan.");
+      return;
+    }
+
+    const bytes = readFileSync(absolute);
+    if (!quiet) {
+      console.log(`cover ${name} (${bytes.length} byte)`);
+    }
+    response.writeHead(200, {
+      "content-type": type,
+      "content-length": bytes.length,
+      "cache-control": "no-store"
+    });
+    response.end(bytes);
+  }
+
   let origin = "";
 
   const server = createServer((request, response) => {
@@ -248,6 +301,10 @@ export async function startMockCatalogServer({
       }
       if (request.url.startsWith("/bundles/")) {
         serveBundle(request, response);
+        return;
+      }
+      if (request.url.startsWith("/covers/")) {
+        serveCover(request, response);
         return;
       }
       sendError(response, 404, "NOT_FOUND", "Rute tidak dikenal.");
@@ -288,6 +345,7 @@ async function cli() {
   const handle = await startMockCatalogServer({
     catalogFile,
     bundleDir: process.env.MOCK_BUNDLE_DIR ?? path.dirname(path.resolve(catalogFile)),
+    coverDir: process.env.MOCK_COVER_DIR ?? process.env.MOCK_BUNDLE_DIR ?? path.dirname(path.resolve(catalogFile)),
     token: process.env.MOCK_BUNDLE_TOKEN ?? "dev-token",
     port: Number(process.env.MOCK_CATALOG_PORT ?? 8789)
   });

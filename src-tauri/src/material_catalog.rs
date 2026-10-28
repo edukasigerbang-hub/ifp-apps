@@ -11,7 +11,7 @@ use crate::app_meta;
 use crate::db::DbState;
 use crate::error::AppError;
 use crate::license::canonical_value;
-use crate::material::MaterialState;
+use crate::material::{image_data_url, MaterialState};
 use crate::material_install::{
     self, BundleSignature, ExpectedBundle, InstallResult, MaterialKeyring,
 };
@@ -29,6 +29,7 @@ use tauri::State;
 const BASE_URL_KEY: &str = "material_catalog_base_url";
 const CACHE_KEY_PREFIX: &str = "catalog:";
 const MAX_CATALOG_BYTES: usize = 2 * 1024 * 1024;
+const MAX_COVER_BYTES: usize = 2 * 1024 * 1024;
 const DEFAULT_LIMIT: u8 = 50;
 const MAX_LIMIT: u8 = 100;
 const MAX_CURSOR_LENGTH: usize = 256;
@@ -178,6 +179,10 @@ struct RawItem {
     size_bytes: u64,
     bundle_sha256: String,
     download_url: String,
+    /// URL pre-signed cover (opsional, §6 kontrak v1). Katalog lama tanpa field ini
+    /// tetap sah; UI lalu memakai placeholder.
+    #[serde(default)]
+    cover_url: Option<String>,
     signature: BundleSignature,
     material: Value,
 }
@@ -293,13 +298,15 @@ fn write_cache(
     Ok(())
 }
 
-/// `downloadUrl` adalah URL pre-signed berumur pendek dan tidak boleh disimpan (OD-12).
+/// `downloadUrl` dan `coverUrl` adalah URL pre-signed berumur pendek dan tidak
+/// boleh disimpan (OD-12).
 fn page_without_download_url(page: &RawPage) -> Value {
     let mut value = serde_json::to_value(page).unwrap_or(Value::Null);
     if let Some(items) = value.get_mut("items").and_then(Value::as_array_mut) {
         for item in items {
             if let Some(object) = item.as_object_mut() {
                 object.insert("downloadUrl".to_string(), Value::String(String::new()));
+                object.insert("coverUrl".to_string(), Value::Null);
             }
         }
     }
@@ -614,6 +621,68 @@ pub fn install_from_catalog(
     )
 }
 
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct CatalogCoverInput {
+    pub material_id: String,
+    pub version: String,
+    #[serde(default)]
+    pub query: CatalogQuery,
+}
+
+/// Cover item katalog sebagai data URL. Cover bersifat kosmetik: katalog tanpa
+/// `coverUrl`, HTTP gagal, byte bukan gambar, atau ukuran melebihi batas
+/// menghasilkan `None` supaya daftar tetap tampil.
+pub fn cover_from_catalog(
+    connection: &Connection,
+    input: &CatalogCoverInput,
+) -> Result<Option<String>, AppError> {
+    if !is_material_id(&input.material_id) || !material_manifest::is_semver(&input.version) {
+        return Ok(None);
+    }
+    let base = configured_base(connection)?;
+    let page = match fetch_page(&base, &input.query, None) {
+        Ok(FetchOutcome::Page(page, _)) => page,
+        Ok(FetchOutcome::NotModified) => return Ok(None),
+        Err(_) => return Ok(None),
+    };
+    let item = page
+        .items
+        .into_iter()
+        .find(|item| item.material_id == input.material_id && item.version == input.version);
+    let Some(item) = item else {
+        return Ok(None);
+    };
+    let Some(url) = item.cover_url else {
+        return Ok(None);
+    };
+    Ok(download_cover(&url))
+}
+
+fn download_cover(url: &str) -> Option<String> {
+    let validated = validate_download_url(url).ok()?;
+    let response = client().ok()?.get(&validated).send().ok()?;
+    if response.status().as_u16() != 200 {
+        return None;
+    }
+    let bytes = read_capped(
+        response,
+        MAX_COVER_BYTES,
+        AppError::material_fetch_failed("Cover materi terlalu besar."),
+    )
+    .ok()?;
+    image_data_url(&bytes)
+}
+
+#[tauri::command]
+pub fn material_catalog_cover(
+    db: State<'_, DbState>,
+    input: CatalogCoverInput,
+) -> Result<Option<String>, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    cover_from_catalog(&connection, &input)
+}
+
 #[tauri::command]
 pub fn material_catalog_config_get(db: State<'_, DbState>) -> Result<CatalogConfig, AppError> {
     let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
@@ -874,11 +943,98 @@ mod tests {
     }
 
     #[test]
+    fn returns_cover_data_url_from_catalog_item() {
+        const COVER: &[u8] = b"RIFF\x00\x00\x00\x00WEBPVP8 ";
+        let doc = catalog_doc("1.0.0", None);
+        let server = serve_with(|port| {
+            let mut value = doc.value.clone();
+            value["items"][0]["coverUrl"] = json!(format!(
+                "http://127.0.0.1:{port}/covers/materi.webp?token=uji"
+            ));
+            vec![
+                (
+                    "/v1/materials".to_string(),
+                    200,
+                    serde_json::to_vec(&value).expect("json"),
+                ),
+                ("/covers/materi.webp".to_string(), 200, COVER.to_vec()),
+            ]
+        });
+        let connection = test_connection();
+        point_catalog_at(&connection, server.port);
+
+        let data_url = cover_from_catalog(
+            &connection,
+            &CatalogCoverInput {
+                material_id: MATERIAL_ID.to_string(),
+                version: "1.0.0".to_string(),
+                query: CatalogQuery::default(),
+            },
+        )
+        .expect("cover")
+        .expect("ada cover");
+        assert!(data_url.starts_with("data:image/webp;base64,"));
+    }
+
+    #[test]
+    fn skips_cover_when_item_has_none_or_bytes_are_not_images() {
+        const NOT_IMAGE: &[u8] = b"<html>bukan gambar</html>";
+        let doc = catalog_doc("1.0.0", None);
+        let server = serve_with(|port| {
+            let mut junk = doc.value.clone();
+            junk["items"][0]["coverUrl"] = json!(format!(
+                "http://127.0.0.1:{port}/covers/rusak.webp?token=uji"
+            ));
+            vec![
+                (
+                    "/v1/materials".to_string(),
+                    200,
+                    serde_json::to_vec(&junk).expect("json"),
+                ),
+                ("/covers/rusak.webp".to_string(), 200, NOT_IMAGE.to_vec()),
+            ]
+        });
+        let connection = test_connection();
+        point_catalog_at(&connection, server.port);
+
+        // Byte bukan gambar → data URL tidak dibuat (thumbnail memakai placeholder).
+        let input = CatalogCoverInput {
+            material_id: MATERIAL_ID.to_string(),
+            version: "1.0.0".to_string(),
+            query: CatalogQuery::default(),
+        };
+        assert!(cover_from_catalog(&connection, &input)
+            .expect("cover")
+            .is_none());
+
+        // Item tanpa `coverUrl` (katalog lama) juga menghasilkan None.
+        let page: Value = json!({
+            "schemaVersion": "1.0.0",
+            "generatedAt": "2026-10-28T06:00:00.000Z",
+            "items": [{
+                "materialId": MATERIAL_ID,
+                "version": "1.0.0",
+                "publishedAt": "2026-10-28T05:00:00.000Z",
+                "updatedAt": "2026-10-28T05:00:00.000Z",
+                "sizeBytes": 1,
+                "bundleSha256": "0",
+                "downloadUrl": "",
+                "signature": { "keyId": "uji", "algorithm": "ed25519", "value": "AA" },
+                "material": {},
+            }],
+            "nextCursor": null,
+        });
+        let parsed: RawPage = serde_json::from_value(page).expect("tanpa coverUrl tetap sah");
+        assert!(parsed.items[0].cover_url.is_none());
+    }
+
+    #[test]
     fn cache_never_keeps_presigned_url() {
         let connection = test_connection();
         let doc = catalog_doc("1.0.0", None);
         let mut value = doc.value.clone();
         value["items"][0]["downloadUrl"] = json!("https://storage.example/berkas?token=rahasia");
+        value["items"][0]["coverUrl"] = json!("https://storage.example/cover.webp?token=rahasia");
         let page: RawPage = serde_json::from_value(value).expect("page");
 
         write_cache(&connection, "catalog:uji", Some("\"etag-1\""), &page).expect("write");
@@ -890,6 +1046,7 @@ mod tests {
         let stored: RawPage = serde_json::from_str(&cached.body).expect("parse cache");
         assert_eq!(stored.items.len(), 1);
         assert!(stored.items[0].download_url.is_empty());
+        assert!(stored.items[0].cover_url.is_none());
     }
 
     #[test]

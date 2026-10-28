@@ -608,6 +608,33 @@ pub fn material_open_installed(
     open_installed(&connection, &material.root, &material_id)
 }
 
+/// Cover bundel terpasang sebagai data URL; `None` bila materi tidak terpasang,
+/// cover tidak ada, atau berkasnya bukan gambar yang didukung.
+#[tauri::command]
+pub fn material_installed_cover(
+    db: State<'_, DbState>,
+    material: State<'_, MaterialState>,
+    material_id: String,
+) -> Result<Option<String>, AppError> {
+    if !is_material_id(&material_id) {
+        return Ok(None);
+    }
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    let version: Option<String> = connection
+        .query_row(
+            "SELECT version FROM material_install WHERE material_id = ?1 AND state = 'active'",
+            [&material_id],
+            |row| row.get(0),
+        )
+        .optional()
+        .map_err(AppError::read)?;
+    let Some(version) = version else {
+        return Ok(None);
+    };
+    let directory = material.root.join(&material_id).join(version);
+    Ok(material::cover_data_url(&material.root, &directory))
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

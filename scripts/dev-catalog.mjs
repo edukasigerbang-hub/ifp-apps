@@ -7,7 +7,7 @@
 // Kunci dev di .tmp-catalog/ TIDAK BOLEH di-commit (.gitignore: `.tmp-*`).
 import { createHash, createPublicKey, verify } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
-import { cp, mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, cp, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { canonical, generateContentKeys, packBundle } from "./material-pack.mjs";
@@ -128,6 +128,14 @@ async function buildItem(entry, { privatePem, publicKey }) {
     throw new Error(`Tanda tangan ${materialId} tidak sah terhadap kunci ${KEY_ID}.`);
   }
 
+  // Cover disajikan terpisah dari ZIP (URL pre-signed) supaya kartu katalog bisa
+  // menampilkan gambar sebelum bundel dipasang.
+  const coverName = `${materialId}${path.extname(packed.manifest.cover)}`;
+  await copyFile(
+    path.join(stageDir, packed.manifest.cover),
+    path.join(OUT_DIR, "covers", coverName)
+  );
+
   return {
     materialId: packed.materialId,
     version: packed.version,
@@ -136,6 +144,7 @@ async function buildItem(entry, { privatePem, publicKey }) {
     sizeBytes: packed.bytes,
     bundleSha256: packed.bundleSha256,
     bundleFile: path.basename(packed.bundle),
+    coverFile: coverName,
     signature,
     material: packed.manifest,
     files: packed.files
@@ -148,6 +157,7 @@ async function main() {
   const publicKey = publicKeyObject(privatePem);
 
   await mkdir(path.join(OUT_DIR, "bundles"), { recursive: true });
+  await mkdir(path.join(OUT_DIR, "covers"), { recursive: true });
   await mkdir(path.join(OUT_DIR, "material-src"), { recursive: true });
 
   const built = [];
@@ -190,6 +200,7 @@ async function main() {
   const server = await startMockCatalogServer({
     catalogFile,
     bundleDir: path.join(OUT_DIR, "bundles"),
+    coverDir: path.join(OUT_DIR, "covers"),
     token: "dev-token",
     port: Number(process.env.MOCK_CATALOG_PORT ?? 8789)
   });

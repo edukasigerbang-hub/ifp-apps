@@ -150,6 +150,26 @@ export async function openInstalledMaterial(materialId: string): Promise<Materia
   return invoke<MaterialView>("material_open_installed", { materialId });
 }
 
+/** Cover bundel terpasang sebagai data URL; null bila tidak ada. */
+export async function getInstalledCover(materialId: string): Promise<string | null> {
+  return invoke<string | null>("material_installed_cover", { materialId });
+}
+
+/** Cover item katalog (URL pre-signed diunduh Rust) sebagai data URL. */
+export async function getCatalogCover(input: {
+  materialId: string;
+  version: string;
+  query?: CatalogQuery;
+}): Promise<string | null> {
+  return invoke<string | null>("material_catalog_cover", {
+    input: {
+      materialId: input.materialId,
+      version: input.version,
+      query: catalogQueryInput(input.query ?? {})
+    }
+  });
+}
+
 export function materialEntryUrl(material: MaterialView): string {
   // `convertFileSrc` meng-encode seluruh path menjadi satu segmen ("a%2Fb"),
   // sehingga URL relatif di dalam materi (assets/app.js) tidak akan menemukan

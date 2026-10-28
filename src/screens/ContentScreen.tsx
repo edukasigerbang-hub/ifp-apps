@@ -28,6 +28,7 @@ import {
 } from "../data/materialRepository";
 import { subjectKeys, subjectLabel } from "../content/subjectLabel";
 import { MaterialViewer } from "../components/material/MaterialViewer";
+import { MaterialCover } from "../components/material/MaterialCover";
 import {
   listPinnedMaterials,
   pinnedErrorMessage,
@@ -561,13 +562,20 @@ export function ContentScreen() {
                       key={`${record.materialId}@${record.version}`}
                       className="flex flex-wrap items-center justify-between gap-3 py-3"
                     >
-                      <div className="min-w-0">
-                        <p className="truncate text-sm font-medium">{record.title}</p>
-                        <p className="text-xs text-muted">
-                          v{record.version} · kelas {record.gradeLevels.join(", ")} ·{" "}
-                          {record.estimatedMinutes} menit · {Math.round(record.sizeBytes / 1024)} KB ·{" "}
-                          {record.reviewStatus}
-                        </p>
+                      <div className="flex min-w-0 items-center gap-3">
+                        <MaterialCover
+                          source={{ kind: "installed", materialId: record.materialId }}
+                          fallbackLabel={subjectLabel(record.subjects[0] ?? "")}
+                          className="h-16 w-24 shrink-0"
+                        />
+                        <div className="min-w-0">
+                          <p className="truncate text-sm font-medium">{record.title}</p>
+                          <p className="text-xs text-muted">
+                            v{record.version} · kelas {record.gradeLevels.join(", ")} ·{" "}
+                            {record.estimatedMinutes} menit · {Math.round(record.sizeBytes / 1024)} KB ·{" "}
+                            {record.reviewStatus}
+                          </p>
+                        </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <button
@@ -734,18 +742,30 @@ export function ContentScreen() {
                         data-catalog-item={item.materialId}
                         className="flex flex-wrap items-center justify-between gap-3 py-3"
                       >
-                        <div className="min-w-0">
-                          <p className="truncate text-sm font-medium">{item.title}</p>
-                          <p className="text-xs text-muted">
-                            v{item.version} · kelas {item.gradeLevels.join(", ")} ·{" "}
-                            {item.subjects.map(subjectLabel).join(", ")} · {item.estimatedMinutes} menit ·{" "}
-                            {Math.round(item.sizeBytes / 1024)} KB · {item.reviewStatus}
-                          </p>
-                          {item.installedVersion && !installed && (
+                        <div className="flex min-w-0 items-center gap-3">
+                          <MaterialCover
+                            source={{
+                              kind: "catalog",
+                              materialId: item.materialId,
+                              version: item.version,
+                              query: catalogFilters()
+                            }}
+                            fallbackLabel={subjectLabel(item.subjects[0] ?? "")}
+                            className="h-16 w-24 shrink-0"
+                          />
+                          <div className="min-w-0">
+                            <p className="truncate text-sm font-medium">{item.title}</p>
                             <p className="text-xs text-muted">
-                              Versi {item.installedVersion} sudah terpasang di perangkat ini.
+                              v{item.version} · kelas {item.gradeLevels.join(", ")} ·{" "}
+                              {item.subjects.map(subjectLabel).join(", ")} · {item.estimatedMinutes} menit ·{" "}
+                              {Math.round(item.sizeBytes / 1024)} KB · {item.reviewStatus}
                             </p>
-                          )}
+                            {item.installedVersion && !installed && (
+                              <p className="text-xs text-muted">
+                                Versi {item.installedVersion} sudah terpasang di perangkat ini.
+                              </p>
+                            )}
+                          </div>
                         </div>
                         <button
                           type="button"
