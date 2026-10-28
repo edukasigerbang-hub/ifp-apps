@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "524ddff",
+  "commit": "2497958",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 45,
+  "context_version": 46,
   "skill_registry_version": 0,
   "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A (bukti putusan L2+L4 tersedia sejak T-104)",
-  "last_task": "T-107 tiga bagian Beranda (sematan/tersedia/jelajah) menjadi satu kontrol tab dengan default Materi disematkan dan fallback Materi tersedia bila sematan kosong + E2E pinned-materials 11/11",
+  "last_task": "T-108 Lanjutkan belajar / Ringkasan belajar / Aktivitas terbaru menjadi tiga kolom sejajar tepat di bawah sapaan Beranda (di atas segmented control materi) + blok lama dihapus + E2E home-catalog 28/28 dengan 5 asersi tata letak baru",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T09:49:23+07:00",
-  "last_validation": "T-107 (2026-10-28, HEAD 9a3f94c + perubahan belum di-commit): HomeScreen kini memakai satu role=tablist berlabel 'Bagian Beranda' dengan tiga role=tab (Materi disematkan, Materi tersedia, Jelajahi materi) — aria-selected, aria-controls ke home-panel-<id>, roving tabIndex, navigasi panah kiri/kanan + Home/End yang ikut memindahkan fokus; tiga role=tabpanel selalu ada di DOM dan disembunyikan lewat atribut hidden agar aria-controls tidak menggantung. Default mengikuti data: ada sematan -> tab Materi disematkan, kosong -> Materi tersedia (sectionChosenRef mencegah efek default menimpa pilihan manual); melepas sematan terakhir memindahkan tampilan ke Materi tersedia. Judul seksi yang menduplikasi label tab diganti petunjuk singkat; judul kartu sematan h3 -> paragraf data-pinned-title agar hierarki heading tidak melompat; tombol empty state menjadi Buka Jelajah Materi; seksi Lanjutkan belajar dipindah ke bawah blok tab. Verifikasi aktual: npm test 120/120 (16 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS; npm run build exit 0; E2E pinned-materials 11/11 (naik dari 8: 6 asersi tab + 2 asersi default + 1 fallback + 2 keyboard); regresi home-catalog 28/28, learning-journey 14/14, activities 14/14; npm run a11y 17/17 (0 error, 7 warning, Beranda 20 interaktif/2 heading/65 kontras); cargo test tidak dijalankan (tanpa perubahan Rust). Screenshot diperiksa: beranda-tab-tersedia.png, beranda-disematkan.png, beranda-tanpa-sematan.png. Batas: pilihan tab tidak diingat antar kunjungan, tanpa animasi, teks panel tersembunyi masih terbaca textContent uji.",
+  "last_updated": "2026-10-28T10:12:00+07:00",
+  "last_validation": "T-108 (2026-10-28, HEAD 2497958): HomeScreen menaruh <section data-home-overview> bergrid lg:grid-cols-3 tepat setelah hero dan sebelum tablist materi; kolom data-resume-column (thumbnail 16:9 + judul + paket/kelas + tombol Lanjutkan), data-summary-column (tiga angka Sesi/Percobaan/Rata-rata memakai content-start agar tidak melar), data-recent-column (maks 3 aktivitas + Lihat semua hasil di dasar kolom). Ketiga kolom selalu dirender dengan keadaan kosong (data-resume-empty, pesan pratinjau browser, 'Belum ada aktivitas yang dinilai.') agar grid tidak bergeser antar profil; tombol memakai mt-auto agar rata bawah; tiga seksi lama di bawah tab dihapus agar tidak ada judul ganda. Verifikasi aktual: npx tsc --noEmit bersih; npm test 120/120 (16 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS; npm run build exit 0; E2E home-catalog 28/28 dua eksekusi (asersi 3 kolom sejajar via selisih top < 2px, urutan label Lanjutkan belajar/Ringkasan belajar/Aktivitas terbaru, blok di bawah hero & di atas tablist, keadaan kosong tanpa data-resume-entry + 3 angka + kolom aktivitas kosong, lalu data-resume-entry terisi setelah kuis dan Lanjutkan membuka Player); regresi pinned-materials 11/11, learning-journey 14/14, activities 14/14; npm run a11y 17/17 (0 error, 7 warning, Beranda 20 interaktif/4 heading/69 kontras); cargo test tidak dijalankan (tanpa perubahan Rust). Screenshot beranda-tiga-kolom.png diperiksa. Batas: area atas lebih tinggi (kartu mapel di bawah lipatan 1600x900), hanya diuji lg (>=1024px), kolom Ringkasan/Aktivitas menyisakan ruang kosong.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Agent-actionable: (opsional, hanya bila PO meminta) mengingat pilihan tab Beranda antar kunjungan, komponen Button bersama, penataan urutan sematan + semat dari layar Player/Hasil, dan diagnosis timeout tulis-pertama E2E; lapisan L3 (tanda tangan Ed25519 atas putusan review) BELUM dikerjakan — kerjakan hanya bila PO meminta. Human/PO-gated: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12 (alur bukti: ekspor audit -> knowledge/content/review-attestations/ -> npm run content:review-binding -> npm run content:review-sample -- --n 5); keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Agent-actionable: (opsional, hanya bila PO meminta) mengingat pilihan tab Beranda antar kunjungan, komponen Button bersama, penataan urutan sematan + semat dari layar Player/Hasil, pratinjau tiga kolom pada 320 px, dan diagnosis timeout tulis-pertama E2E; lapisan L3 (tanda tangan Ed25519 atas putusan review) BELUM dikerjakan — kerjakan hanya bila PO meminta. Human/PO-gated: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12 (alur bukti: ekspor audit -> knowledge/content/review-attestations/ -> npm run content:review-binding -> npm run content:review-sample -- --n 5); keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
