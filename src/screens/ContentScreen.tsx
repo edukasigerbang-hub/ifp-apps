@@ -10,6 +10,7 @@ import {
   type PackageRecord
 } from "../data/contentRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
+import { resolvePackageDigest } from "../data/reviewDigest";
 import {
   exportReviewsCsv,
   listReviews,
@@ -130,17 +131,19 @@ export function ContentScreen() {
     }
     setReviewBusy(true);
     try {
+      const contentSha256 = await resolvePackageDigest(selected);
       const review = await recordReview({
         packageId: selected.packageId,
         packageVersion: selected.version,
         decision: reviewDecision,
-        notes: reviewNotes.trim() ? reviewNotes.trim() : null
+        notes: reviewNotes.trim() ? reviewNotes.trim() : null,
+        contentSha256
       });
       setReviews(await listReviews());
       setReviewNotes("");
       setReviewMessage(
         `Review ${review.decision === "approved" ? "setuju" : "tolak"} tercatat untuk ` +
-          `${review.packageId} v${review.packageVersion}.`
+          `${review.packageId} v${review.packageVersion} (isi ${contentSha256.slice(0, 8)}).`
       );
     } catch (caught) {
       const typed = caught as { message?: string };

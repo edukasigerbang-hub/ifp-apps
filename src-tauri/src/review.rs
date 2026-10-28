@@ -9,6 +9,10 @@ use tauri::State;
 
 const MAX_NOTES: usize = 1000;
 
+// Versi rubrik yang dipakai saat keputusan dicatat. Naikkan saat rubrik berubah
+// supaya putusan lama tidak tampak seolah memakai rubrik terbaru.
+pub const RUBRIC_VERSION: &str = "1";
+
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ReviewView {
@@ -19,6 +23,8 @@ pub struct ReviewView {
     pub decision: String,
     pub notes: Option<String>,
     pub created_at: String,
+    pub content_sha256: Option<String>,
+    pub rubric_version: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -28,6 +34,7 @@ pub struct RecordReviewInput {
     pub package_version: String,
     pub decision: String,
     pub notes: Option<String>,
+    pub content_sha256: String,
 }
 
 fn validate_version(value: &str) -> Result<(), AppError> {
@@ -47,7 +54,7 @@ fn find_review(connection: &Connection, id: &str) -> Result<Option<ReviewView>, 
     connection
         .query_row(
             "SELECT r.id, r.package_id, r.package_version, p.display_name, r.decision,
-                    r.notes, r.created_at
+                    r.notes, r.created_at, r.content_sha256, r.rubric_version
              FROM content_reviews r
              JOIN profiles p ON p.id = r.reviewer_profile_id
              WHERE r.id = ?1",
@@ -61,6 +68,8 @@ fn find_review(connection: &Connection, id: &str) -> Result<Option<ReviewView>, 
                     decision: row.get(4)?,
                     notes: row.get(5)?,
                     created_at: row.get(6)?,
+                    content_sha256: row.get(7)?,
+                    rubric_version: row.get(8)?,
                 })
             },
         )
@@ -76,7 +85,7 @@ pub fn list_reviews(
     let mut statement = connection
         .prepare(
             "SELECT r.id, r.package_id, r.package_version, p.display_name, r.decision,
-                    r.notes, r.created_at
+                    r.notes, r.created_at, r.content_sha256, r.rubric_version
              FROM content_reviews r
              JOIN profiles p ON p.id = r.reviewer_profile_id
              WHERE (?1 IS NULL OR r.package_id = ?1)
@@ -96,6 +105,8 @@ pub fn list_reviews(
                 decision: row.get(4)?,
                 notes: row.get(5)?,
                 created_at: row.get(6)?,
+                content_sha256: row.get(7)?,
+                rubric_version: row.get(8)?,
             })
         })
         .map_err(AppError::read)?
@@ -127,6 +138,13 @@ pub fn record_review(
         return Err(AppError::review_forbidden());
     }
 
+    let content_sha256 = input.content_sha256.trim().to_ascii_lowercase();
+    if content_sha256.len() != 64 || !content_sha256.chars().all(|c| c.is_ascii_hexdigit()) {
+        return Err(AppError::validation(
+            "Sidik jari isi paket harus 64 karakter heksadesimal.",
+        ));
+    }
+
     let exists: Option<i64> = connection
         .query_row(
             "SELECT 1 FROM content_packages WHERE package_id = ?1 AND version = ?2",
@@ -143,15 +161,18 @@ pub fn record_review(
     connection
         .execute(
             "INSERT INTO content_reviews
-               (id, package_id, package_version, reviewer_profile_id, decision, notes, created_at)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, strftime('%Y-%m-%dT%H:%M:%fZ','now'))",
+               (id, package_id, package_version, reviewer_profile_id, decision, notes,
+                content_sha256, rubric_version, created_at)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, strftime('%Y-%m-%dT%H:%M:%fZ','now'))",
             params![
                 id,
                 input.package_id,
                 input.package_version,
                 active.id,
                 input.decision,
-                notes
+                notes,
+                content_sha256,
+                RUBRIC_VERSION
             ],
         )
         .map_err(AppError::write)?;
@@ -178,12 +199,16 @@ pub fn export_reviews_csv(
 
     let reviews = list_reviews(connection, None, None)?;
     let mut output = String::from("\u{FEFF}");
-    output.push_str("package_id,package_version,decision,reviewer,notes,created_at\r\n");
+    output.push_str(
+        "package_id,package_version,content_sha256,rubric_version,decision,reviewer,notes,created_at\r\n",
+    );
     for review in &reviews {
         output.push_str(&format!(
-            "{},{},{},{},{},{}\r\n",
+            "{},{},{},{},{},{},{},{}\r\n",
             crate::results::csv_field(&review.package_id),
             crate::results::csv_field(&review.package_version),
+            crate::results::csv_field(review.content_sha256.as_deref().unwrap_or("")),
+            crate::results::csv_field(review.rubric_version.as_deref().unwrap_or("")),
             crate::results::csv_field(&review.decision),
             crate::results::csv_field(&review.reviewer_name),
             crate::results::csv_field(review.notes.as_deref().unwrap_or("")),
@@ -266,12 +291,15 @@ mod tests {
         profile.id
     }
 
+    const DIGEST: &str = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
+
     fn input(decision: &str) -> RecordReviewInput {
         RecordReviewInput {
             package_id: "pkg-uji".to_string(),
             package_version: "1.0.0".to_string(),
             decision: decision.to_string(),
             notes: Some("  Sudah sesuai  ".to_string()),
+            content_sha256: DIGEST.to_string(),
         }
     }
 
@@ -285,6 +313,8 @@ mod tests {
         assert_eq!(review.decision, "approved");
         assert_eq!(review.reviewer_name, "Bu Guru");
         assert_eq!(review.notes.as_deref(), Some("Sudah sesuai"));
+        assert_eq!(review.content_sha256.as_deref(), Some(DIGEST));
+        assert_eq!(review.rubric_version.as_deref(), Some(RUBRIC_VERSION));
 
         let all = list_reviews(&connection, Some("pkg-uji"), None).expect("list");
         assert_eq!(all.len(), 1);
@@ -324,6 +354,40 @@ mod tests {
     }
 
     #[test]
+    fn rejects_review_without_matching_digest_shape() {
+        let connection = test_connection();
+        seed_package(&connection);
+        teacher(&connection);
+
+        let mut empty = input("approved");
+        empty.content_sha256 = "  ".to_string();
+        let error = record_review(&connection, &empty).expect_err("digest kosong");
+        assert_eq!(error.code, "VALIDATION_FAILED");
+
+        let mut short = input("approved");
+        short.content_sha256 = "abc123".to_string();
+        assert!(record_review(&connection, &short).is_err());
+
+        let mut not_hex = input("approved");
+        not_hex.content_sha256 = "z".repeat(64);
+        assert!(record_review(&connection, &not_hex).is_err());
+
+        assert_eq!(list_reviews(&connection, None, None).expect("list").len(), 0);
+    }
+
+    #[test]
+    fn normalizes_digest_to_lowercase() {
+        let connection = test_connection();
+        seed_package(&connection);
+        teacher(&connection);
+
+        let mut upper = input("approved");
+        upper.content_sha256 = DIGEST.to_ascii_uppercase();
+        let review = record_review(&connection, &upper).expect("review");
+        assert_eq!(review.content_sha256.as_deref(), Some(DIGEST));
+    }
+
+    #[test]
     fn lists_reviews_newest_first() {
         let connection = test_connection();
         seed_package(&connection);
@@ -356,7 +420,10 @@ mod tests {
 
         let content = std::fs::read_to_string(&path).expect("read");
         assert!(content.starts_with('\u{FEFF}'));
-        assert!(content.contains("package_id,package_version,decision,reviewer,notes,created_at\r\n"));
+        assert!(content.contains(
+            "package_id,package_version,content_sha256,rubric_version,decision,reviewer,notes,created_at\r\n"
+        ));
+        assert!(content.contains(DIGEST));
         assert!(content.contains("'=SUM(A1)"));
         assert!(content.contains("Bu Guru"));
 

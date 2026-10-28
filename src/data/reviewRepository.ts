@@ -11,6 +11,8 @@ export interface ContentReview {
   decision: ReviewDecision;
   notes: string | null;
   createdAt: string;
+  contentSha256: string | null;
+  rubricVersion: string | null;
 }
 
 export async function listReviews(
@@ -28,6 +30,7 @@ export interface RecordReviewInput {
   packageVersion: string;
   decision: ReviewDecision;
   notes: string | null;
+  contentSha256: string;
 }
 
 export async function recordReview(input: RecordReviewInput): Promise<ContentReview> {

@@ -99,7 +99,15 @@ export async function run({ page, artifactDir, log }) {
     reviews.value[0].notes === "Skema dan aset sudah diperiksa.",
     `Catatan review: ${reviews.value[0].notes}`
   );
-  log("Audit review tersimpan dengan nama reviewer dan catatan.");
+  assert(
+    /^[0-9a-f]{64}$/.test(reviews.value[0].contentSha256 ?? ""),
+    `Sidik jari isi paket tidak sah: ${reviews.value[0].contentSha256}`
+  );
+  assert(
+    reviews.value[0].rubricVersion === "1",
+    `Versi rubrik: ${reviews.value[0].rubricVersion}`
+  );
+  log("Audit review tersimpan dengan nama reviewer, catatan, dan sidik jari isi paket.");
 
   const exportPath = path.join(artifactDir, "review-audit.csv");
   const exported = await invoke(page, "review_export_csv", { destination: exportPath });
@@ -108,6 +116,13 @@ export async function run({ page, artifactDir, log }) {
   const csv = await readFile(exportPath, "utf8");
   assert(csv.startsWith("\uFEFF"), "CSV tidak diawali BOM.");
   assert(csv.includes("\r\n"), "CSV tidak memakai CRLF.");
+  assert(
+    csv.includes(
+      "package_id,package_version,content_sha256,rubric_version,decision,reviewer,notes,created_at"
+    ),
+    "Header CSV belum memuat kolom ikatan review."
+  );
+  assert(csv.includes(reviews.value[0].contentSha256), "Sidik jari isi paket tidak ada di CSV.");
   assert(csv.includes("Bu Guru") && csv.includes("approved"), "Isi CSV tidak lengkap.");
   assert(
     csv.includes("Skema dan aset sudah diperiksa."),
@@ -139,7 +154,8 @@ export async function run({ page, artifactDir, log }) {
       packageId: imported.value.packageId,
       packageVersion: imported.value.version,
       decision: "approved",
-      notes: null
+      notes: null,
+      contentSha256: "0".repeat(64)
     }
   });
   assert(!forbidden.ok, "Siswa seharusnya tidak dapat mencatat review.");
