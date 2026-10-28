@@ -1,8 +1,11 @@
 use crate::error::AppError;
+use crate::material_manifest::{
+    self, is_material_id, media_type_for, Accessibility, MaterialManifest,
+};
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::fs;
-use std::path::{Component, Path, PathBuf};
+use std::path::{Path, PathBuf};
 use tauri::http::{header, Request, Response, StatusCode};
 use tauri::State;
 
@@ -59,43 +62,6 @@ const SAMPLE_FILES: &[SampleFile] = &[
 #[serde(rename_all = "camelCase")]
 struct SeedMarker {
     seed_version: u32,
-}
-
-#[derive(Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct MaterialManifest {
-    schema_version: String,
-    material_id: String,
-    version: String,
-    title: String,
-    summary: String,
-    locale: String,
-    grade_levels: Vec<u32>,
-    subjects: Vec<String>,
-    estimated_minutes: u32,
-    entry: String,
-    transcript_path: String,
-    completion: Completion,
-    accessibility: Accessibility,
-    review_status: String,
-    min_app_version: String,
-}
-
-#[derive(Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct Completion {
-    mode: String,
-    #[serde(default)]
-    min_dwell_seconds: Option<u32>,
-}
-
-#[derive(Deserialize, Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct Accessibility {
-    has_audio: bool,
-    keyboard_navigable: bool,
-    supports_reduced_motion: bool,
-    contrast_checked: bool,
 }
 
 #[derive(Serialize)]
@@ -219,17 +185,6 @@ pub fn ensure_sample_material(root: &Path) -> Result<PathBuf, AppError> {
     Ok(target)
 }
 
-fn is_valid_material_id(value: &str) -> bool {
-    let mut characters = value.chars();
-    let Some(first) = characters.next() else {
-        return false;
-    };
-    value.len() >= 3
-        && value.len() <= 64
-        && first.is_ascii_lowercase()
-        && characters.all(|character| character.is_ascii_lowercase() || character.is_ascii_digit() || character == '-')
-}
-
 fn is_valid_version(value: &str) -> bool {
     !value.is_empty()
         && value.len() <= 64
@@ -238,24 +193,7 @@ fn is_valid_version(value: &str) -> bool {
             .all(|character| character.is_ascii_alphanumeric() || matches!(character, '.' | '-' | '+'))
 }
 
-fn validate_relative_path(value: &str) -> Result<(), AppError> {
-    if value.is_empty() || value.len() > 512 || value.contains('\\') {
-        return Err(AppError::material_invalid("Path materi tidak valid."));
-    }
-    let path = Path::new(value);
-    if path.is_absolute() {
-        return Err(AppError::material_invalid("Path absolut tidak diizinkan di materi."));
-    }
-    for component in path.components() {
-        match component {
-            Component::Normal(_) => {}
-            _ => return Err(AppError::material_invalid("Path traversal tidak diizinkan di materi.")),
-        }
-    }
-    Ok(())
-}
-
-fn open_material(
+pub(crate) fn open_material(
     root: &Path,
     directory: &Path,
     material_id: &str,
@@ -269,11 +207,7 @@ fn open_material(
     if manifest.material_id != material_id || manifest.version != version {
         return Err(AppError::material_invalid("Manifest materi tidak cocok dengan folder terpasang."));
     }
-    if !manifest.schema_version.starts_with("1.") {
-        return Err(AppError::material_invalid("Versi skema materi tidak didukung."));
-    }
-    validate_relative_path(&manifest.entry)?;
-    validate_relative_path(&manifest.transcript_path)?;
+    material_manifest::validate(&manifest, env!("CARGO_PKG_VERSION"))?;
 
     let transcript_path = directory.join(&manifest.transcript_path);
     let canonical_root = fs::canonicalize(root)
@@ -349,34 +283,10 @@ fn safe_segments(path: &str) -> Option<Vec<String>> {
     if segments.len() < 3 {
         return None;
     }
-    if !is_valid_material_id(&segments[0]) || !is_valid_version(&segments[1]) {
+    if !is_material_id(&segments[0]) || !is_valid_version(&segments[1]) {
         return None;
     }
     Some(segments)
-}
-
-fn media_type_for(path: &Path) -> Option<&'static str> {
-    let extension = path.extension()?.to_str()?.to_ascii_lowercase();
-    match extension.as_str() {
-        "html" => Some("text/html; charset=utf-8"),
-        "js" | "mjs" => Some("text/javascript; charset=utf-8"),
-        "css" => Some("text/css; charset=utf-8"),
-        "json" => Some("application/json; charset=utf-8"),
-        "webp" => Some("image/webp"),
-        "png" => Some("image/png"),
-        "jpg" | "jpeg" => Some("image/jpeg"),
-        "gif" => Some("image/gif"),
-        "svg" => Some("image/svg+xml"),
-        "mp3" => Some("audio/mpeg"),
-        "m4a" => Some("audio/mp4"),
-        "ogg" => Some("audio/ogg"),
-        "wav" => Some("audio/wav"),
-        "woff2" => Some("font/woff2"),
-        "ttf" => Some("font/ttf"),
-        "vtt" => Some("text/vtt; charset=utf-8"),
-        "txt" => Some("text/plain; charset=utf-8"),
-        _ => None,
-    }
 }
 
 fn resolve_request(root: &Path, request_path: &str) -> Result<PathBuf, StatusCode> {

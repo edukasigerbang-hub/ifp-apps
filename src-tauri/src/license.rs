@@ -139,7 +139,9 @@ impl LicenseState {
     }
 }
 
-fn canonical_value(value: &Value) -> String {
+/// JSON kanonik bergaya RFC 8785 untuk payload berisi bilangan bulat.
+/// Dipakai verifikasi lisensi dan verifikasi manifest materi.
+pub(crate) fn canonical_value(value: &Value) -> String {
     match value {
         Value::Object(map) => {
             let mut keys: Vec<&String> = map.keys().collect();

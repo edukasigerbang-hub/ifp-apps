@@ -44,8 +44,10 @@
     "server:typecheck": "tsc -p tsconfig.server.json",
     "worker:typecheck": "tsc -p workers/api/tsconfig.json",
     "license:tool": "node scripts/license-issuer.mjs",
+    "material:pack": "node scripts/material-pack.mjs",
     "e2e:pinned": "node scripts/e2e/run.mjs pinned-materials",
-    "e2e:material": "node scripts/e2e/run.mjs material-viewer"
+    "e2e:material": "node scripts/e2e/run.mjs material-viewer",
+    "e2e:material-import": "node scripts/e2e/run.mjs material-import"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",

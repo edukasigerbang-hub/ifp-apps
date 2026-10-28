@@ -7,6 +7,8 @@ mod error;
 mod learning;
 mod license;
 mod material;
+mod material_install;
+mod material_manifest;
 mod pins;
 mod preferences;
 mod profile;
@@ -53,6 +55,7 @@ pub fn run() {
         std::io::Error::other(format!("{}: {}", error.code, error.message))
       })?;
       app.manage(material::MaterialState { root: material_root });
+      app.manage(material_install::MaterialKeyring::from_env());
 
       Ok(())
     })
@@ -106,6 +109,9 @@ pub fn run() {
       ui_state::ui_state_set,
       ui_state::ui_state_clear,
       material::material_open_sample,
+      material_install::material_install_bundle,
+      material_install::material_list_installed,
+      material_install::material_open_installed,
       preferences::preferences_get,
       preferences::preferences_set
     ])

@@ -10,7 +10,15 @@ import {
   type PackageRecord
 } from "../data/contentRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
-import { openSampleMaterial, type MaterialView } from "../data/materialRepository";
+import {
+  installMaterialBundle,
+  listInstalledMaterials,
+  openInstalledMaterial,
+  openSampleMaterial,
+  pickMaterialBundle,
+  type InstalledMaterial,
+  type MaterialView
+} from "../data/materialRepository";
 import { MaterialViewer } from "../components/material/MaterialViewer";
 import { resolvePackageDigest } from "../data/reviewDigest";
 import {
@@ -54,6 +62,9 @@ export function ContentScreen() {
   const [material, setMaterial] = useState<MaterialView | null>(null);
   const [materialBusy, setMaterialBusy] = useState(false);
   const [materialError, setMaterialError] = useState<string | null>(null);
+  const [materialMessage, setMaterialMessage] = useState<string | null>(null);
+  const [installedMaterials, setInstalledMaterials] = useState<InstalledMaterial[]>([]);
+  const [openingMaterialId, setOpeningMaterialId] = useState<string | null>(null);
   const desktop = canPersistLocally();
 
   async function refresh() {
@@ -69,15 +80,17 @@ export function ContentScreen() {
     let cancelled = false;
     (async () => {
       try {
-        const [records, reviewRecords, profile] = await Promise.all([
+        const [records, reviewRecords, profile, materials] = await Promise.all([
           listPackages(),
           listReviews(),
-          getActiveProfile()
+          getActiveProfile(),
+          listInstalledMaterials()
         ]);
         if (!cancelled) {
           setPackages(records);
           setReviews(reviewRecords);
           setActiveProfile(profile);
+          setInstalledMaterials(materials);
         }
       } catch (caught) {
         if (!cancelled) setError(caught instanceof Error ? caught.message : "Daftar paket tidak dapat dibaca.");
@@ -192,6 +205,41 @@ export function ContentScreen() {
     }
   }
 
+  async function handleInstallMaterial() {
+    setMaterialError(null);
+    setMaterialMessage(null);
+    try {
+      const bundlePath = await pickMaterialBundle();
+      if (!bundlePath) return;
+      setMaterialBusy(true);
+      const result = await installMaterialBundle(bundlePath);
+      setMaterialMessage(
+        `Materi “${result.title}” v${result.version} terpasang (${result.files} berkas, ${Math.round(
+          result.bytes / 1024
+        )} KB).${result.previousVersion ? ` Versi sebelumnya: ${result.previousVersion}.` : ""}`
+      );
+      setInstalledMaterials(await listInstalledMaterials());
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setMaterialError(typed?.message ?? "Bundel materi gagal dipasang.");
+    } finally {
+      setMaterialBusy(false);
+    }
+  }
+
+  async function handleOpenInstalled(materialId: string) {
+    setMaterialError(null);
+    setOpeningMaterialId(materialId);
+    try {
+      setMaterial(await openInstalledMaterial(materialId));
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setMaterialError(typed?.message ?? "Materi terpasang tidak dapat dibuka.");
+    } finally {
+      setOpeningMaterialId(null);
+    }
+  }
+
   const canReview = activeProfile?.profileType === "teacher";
 
   const hasPrevious = (record: PackageRecord) =>
@@ -293,29 +341,87 @@ export function ContentScreen() {
             Materi HTML5 (prototipe)
           </h2>
           {desktop && (
-            <button
-              type="button"
-              data-material-open
-              onClick={() => void handleOpenMaterial()}
-              disabled={materialBusy}
-              className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              {materialBusy ? "Membuka…" : "Buka contoh materi HTML5"}
-            </button>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                data-material-import
+                onClick={() => void handleInstallMaterial()}
+                disabled={materialBusy}
+                className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                {materialBusy ? "Memproses…" : "Impor bundel materi…"}
+              </button>
+              <button
+                type="button"
+                data-material-open
+                onClick={() => void handleOpenMaterial()}
+                disabled={materialBusy}
+                className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Buka contoh materi HTML5
+              </button>
+            </div>
           )}
         </div>
         <p className="mt-3 text-sm text-muted">
-          Prototipe penampil memakai satu bundel contoh lokal di folder aplikasi, bukan unduhan dari server.
+          Impor bundel <code>.zip</code> beserta berkas tanda tangan <code>.sig</code> di folder yang sama.
+          Aplikasi memverifikasi tanda tangan Ed25519 manifest, hash setiap berkas, dan ukuran bundel sebelum
+          mengaktifkan versi baru. Prototipe penampil juga menyediakan satu bundel contoh lokal.
+        </p>
+        <p className="mt-2 text-sm text-muted">
           Isi materi berjalan di iframe tersandbox tanpa akses ke aplikasi, IPC, maupun jaringan. Penanda
           &ldquo;selesai&rdquo; belum masuk Hasil Belajar (OD-14).
         </p>
         {!desktop && (
           <p className="mt-3 text-sm text-muted">Materi hanya dapat dibuka di aplikasi desktop.</p>
         )}
+        <p aria-live="polite" className="mt-3 text-sm text-muted">
+          {materialMessage ?? ""}
+        </p>
         {materialError && (
           <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
             {materialError}
           </p>
+        )}
+
+        {desktop && (
+          <div data-material-installed className="mt-4">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+              Materi terpasang
+            </h3>
+            {installedMaterials.length === 0 ? (
+              <p className="mt-2 text-sm text-muted">
+                Belum ada bundel materi terpasang di perangkat ini.
+              </p>
+            ) : (
+              <ul className="mt-2 divide-y divide-ink/10">
+                {installedMaterials.map((record) => (
+                  <li
+                    key={`${record.materialId}@${record.version}`}
+                    className="flex flex-wrap items-center justify-between gap-3 py-3"
+                  >
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-medium">{record.title}</p>
+                      <p className="text-xs text-muted">
+                        v{record.version} · kelas {record.gradeLevels.join(", ")} ·{" "}
+                        {record.estimatedMinutes} menit · {Math.round(record.sizeBytes / 1024)} KB ·{" "}
+                        {record.reviewStatus}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      data-material-installed-open={record.materialId}
+                      onClick={() => void handleOpenInstalled(record.materialId)}
+                      disabled={openingMaterialId !== null}
+                      className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                    >
+                      {openingMaterialId === record.materialId ? "Membuka…" : "Buka materi"}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         )}
       </section>
 
