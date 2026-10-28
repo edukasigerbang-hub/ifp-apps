@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memilah Fakta dan Opini</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main id="material" class="material">
+      <header class="head">
+        <p class="eyebrow">Materi contoh · Kelas 4 · Bahasa Indonesia</p>
+        <h1>Memilah Fakta dan Opini</h1>
+        <p class="lede">
+          Fakta bisa diperiksa kebenarannya. Opini berisi pendapat orang dan bisa berbeda
+          bagi setiap pembaca.
+        </p>
+      </header>
+
+      <section class="card" id="card" aria-labelledby="card-title">
+        <div class="card-head">
+          <h2 id="card-title">Pernyataan <span id="counter">1</span> dari <span id="total">6</span></h2>
+          <p class="hint" id="hint">Pilih apakah pernyataan ini fakta atau opini.</p>
+        </div>
+
+        <p class="statement" id="statement" tabindex="-1"></p>
+
+        <div class="choices" id="choices" role="group" aria-labelledby="statement">
+          <button type="button" data-kind="fakta">Fakta</button>
+          <button type="button" data-kind="opini">Opini</button>
+        </div>
+
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+
+        <div class="controls">
+          <button type="button" id="next" class="primary" hidden>Lanjut</button>
+        </div>
+      </section>
+
+      <section class="summary" id="summary" hidden aria-labelledby="summary-title">
+        <h2 id="summary-title" tabindex="-1">Hasil latihan</h2>
+        <p class="score" id="score"></p>
+        <p class="hint" id="summary-note"></p>
+        <div class="controls">
+          <button type="button" id="restart">Ulangi</button>
+        </div>
+      </section>
+
+      <div class="controls footer">
+        <button type="button" id="complete" class="primary" disabled>Tandai selesai</button>
+        <button type="button" id="exit">Keluar dari materi</button>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite">
+        Baca pernyataan lalu pilih “Fakta” atau “Opini”.
+      </p>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

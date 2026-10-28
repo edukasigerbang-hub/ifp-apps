@@ -20,6 +20,10 @@ const SECRET_DIR = path.join(OUT_DIR, "keys");
 
 const MATERIALS = [
   {
+    source: "src-tauri/sample-material-fakta-opini",
+    publishedAt: "2026-10-28T03:00:00.000Z"
+  },
+  {
     source: "src-tauri/sample-material-perkalian",
     publishedAt: "2026-10-28T02:00:00.000Z"
   },
