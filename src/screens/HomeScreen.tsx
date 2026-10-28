@@ -253,6 +253,111 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         </p>
       )}
 
+      <section
+        data-home-overview
+        aria-label="Ringkasan belajar di perangkat ini"
+        className="mt-6 grid gap-4 lg:grid-cols-3"
+      >
+        <div
+          data-resume-column
+          className="flex flex-col rounded-card border border-teal/30 bg-teal/5 p-5"
+        >
+          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            Lanjutkan belajar
+          </h2>
+          {resumeEntry ? (
+            <div data-resume-entry className="flex flex-1 flex-col">
+              <LessonThumbnail
+                entry={resumeEntry}
+                className="mt-3 aspect-[16/9] w-full rounded-control"
+              />
+              <p className="mt-3 text-base font-semibold leading-snug">{resumeEntry.lessonTitle}</p>
+              <p className="mt-1 text-xs text-muted">
+                {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
+              </p>
+              <button
+                type="button"
+                onClick={resume}
+                className="mt-auto min-h-11 self-start rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+              >
+                Lanjutkan
+              </button>
+            </div>
+          ) : (
+            <p data-resume-empty className="mt-3 text-sm leading-relaxed text-muted">
+              Belum ada materi yang sedang dipelajari. Pilih materi pada bagian di bawah untuk
+              mulai.
+            </p>
+          )}
+        </div>
+
+        <div data-summary-column className="flex flex-col rounded-card border border-ink/10 bg-surface p-5">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            Ringkasan belajar
+          </h2>
+          {!canPersistLocally() ? (
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              Pratinjau browser tidak menyimpan hasil belajar. Jalankan aplikasi desktop untuk
+              melihat ringkasan.
+            </p>
+          ) : summary ? (
+            <dl className="mt-3 grid grid-cols-3 content-start gap-2">
+              <div className="rounded-control border border-ink/10 bg-paper px-3 py-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">Sesi</dt>
+                <dd className="mt-1 text-xl font-semibold">{summary.sessions}</dd>
+              </div>
+              <div className="rounded-control border border-ink/10 bg-paper px-3 py-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  Percobaan
+                </dt>
+                <dd className="mt-1 text-xl font-semibold">{summary.attempts}</dd>
+              </div>
+              <div className="rounded-control border border-ink/10 bg-paper px-3 py-3">
+                <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  Rata-rata
+                </dt>
+                <dd className="mt-1 text-xl font-semibold">{formatScore(summary.averageScore)}</dd>
+              </div>
+            </dl>
+          ) : (
+            <p className="mt-3 text-sm text-muted">Memuat ringkasan…</p>
+          )}
+        </div>
+
+        <div data-recent-column className="flex flex-col rounded-card border border-ink/10 bg-surface p-5">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            Aktivitas terbaru
+          </h2>
+          {summary && summary.recent.length > 0 ? (
+            <>
+              <ul className="mt-3 space-y-2">
+                {summary.recent.slice(0, 3).map((attempt, index) => (
+                  <li
+                    key={`${attempt.lessonId}-${attempt.activityId}-${index}`}
+                    className="flex flex-wrap items-center justify-between gap-2 rounded-control border border-ink/10 bg-paper px-3 py-2.5 text-sm"
+                  >
+                    <span className="min-w-0 text-muted">
+                      {entries.find((entry) => entry.lessonId === attempt.lessonId)?.lessonTitle ??
+                        attempt.lessonId}
+                    </span>
+                    <span className="font-semibold">Skor {Math.round(attempt.score)}</span>
+                  </li>
+                ))}
+              </ul>
+              <button
+                type="button"
+                onClick={() => onNavigate("results")}
+                className="mt-auto min-h-11 self-start rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+              >
+                Lihat semua hasil
+              </button>
+            </>
+          ) : (
+            <p className="mt-3 text-sm text-muted">Belum ada aktivitas yang dinilai.</p>
+          )}
+        </div>
+      </section>
+
       <div
         role="tablist"
         aria-label="Bagian Beranda"
@@ -494,100 +599,6 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         </div>
       </section>
 
-      {resumeEntry && (
-        <section className="mt-6 overflow-hidden rounded-card border border-teal/30 bg-teal/5">
-          <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:p-6">
-            <LessonThumbnail
-              entry={resumeEntry}
-              className="aspect-[16/9] w-full rounded-control md:w-56 md:shrink-0"
-            />
-            <div className="min-w-0">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-                Lanjutkan belajar
-              </h2>
-              <p className="mt-2 text-lg font-semibold">{resumeEntry.lessonTitle}</p>
-              <p className="mt-1 text-sm text-muted">
-                {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
-              </p>
-              <button
-                type="button"
-                onClick={resume}
-                className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90"
-              >
-                Lanjutkan
-              </button>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="mt-6">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-          Ringkasan belajar
-        </h2>
-        {!canPersistLocally() ? (
-          <p className="mt-3 rounded-card border border-warning/40 bg-warning/10 p-5 text-sm">
-            Pratinjau browser tidak menyimpan hasil belajar. Jalankan aplikasi desktop
-            untuk melihat ringkasan.
-          </p>
-        ) : summary ? (
-          <dl className="mt-3 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Sesi
-              </dt>
-              <dd className="mt-1 text-2xl font-semibold">{summary.sessions}</dd>
-            </div>
-            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Percobaan
-              </dt>
-              <dd className="mt-1 text-2xl font-semibold">{summary.attempts}</dd>
-            </div>
-            <div className="rounded-card border border-ink/10 bg-surface px-5 py-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Rata-rata
-              </dt>
-              <dd className="mt-1 text-2xl font-semibold">
-                {formatScore(summary.averageScore)}
-              </dd>
-            </div>
-          </dl>
-        ) : (
-          <p className="mt-3 text-sm text-muted">Memuat ringkasan…</p>
-        )}
-      </section>
-
-      {summary && summary.attempts > 0 && (
-        <section className="mt-6">
-          <div className="flex flex-wrap items-end justify-between gap-3">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-              Aktivitas terbaru
-            </h2>
-            <button
-              type="button"
-              onClick={() => onNavigate("results")}
-              className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
-            >
-              Lihat semua hasil
-            </button>
-          </div>
-          <ul className="mt-3 space-y-2">
-            {summary.recent.slice(0, 3).map((attempt, index) => (
-              <li
-                key={`${attempt.lessonId}-${attempt.activityId}-${index}`}
-                className="flex flex-wrap items-center justify-between gap-2 rounded-control border border-ink/10 bg-surface px-4 py-3 text-sm"
-              >
-                <span className="text-muted">
-                  {entries.find((entry) => entry.lessonId === attempt.lessonId)?.lessonTitle ??
-                    attempt.lessonId}
-                </span>
-                <span className="font-semibold">Skor {Math.round(attempt.score)}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
     </div>
   );
 }

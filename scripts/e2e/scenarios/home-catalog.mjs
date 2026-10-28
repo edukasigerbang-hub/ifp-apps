@@ -184,12 +184,65 @@ export async function run({ page, artifactDir, log }) {
   `);
   assert(imported.ok, `Impor pilot fixture gagal: ${JSON.stringify(imported.error)}`);
   log("Pilot fixture diimpor untuk menguji katalog bawaan + impor.");
-  const resumeVisible = await page.evaluate(`
-    [...document.querySelectorAll("h2")]
-      .some((heading) => heading.textContent.trim() === "Lanjutkan belajar")
+  await page.waitFor(
+    `(() => {
+      const section = document.querySelector("[data-home-overview]");
+      return Boolean(section && section.querySelectorAll("[data-summary-column] dd").length === 3);
+    })()`,
+    { label: "tiga kolom ringkasan Beranda" }
+  );
+  const overview = await page.evaluate(`
+    (() => {
+      const section = document.querySelector("[data-home-overview]");
+      if (!section) return { status: "missing" };
+      const columns = [...section.children];
+      const hero = document.querySelector("[data-learning-illustration]")?.closest("section");
+      const tablist = document.querySelector('[role="tablist"][aria-label="Bagian Beranda"]');
+      const box = section.getBoundingClientRect();
+      const resumeColumn = section.querySelector("[data-resume-column]");
+      const recentColumn = section.querySelector("[data-recent-column]");
+      return {
+        status: "ok",
+        count: columns.length,
+        labels: columns.map((column) => column.querySelector("h2")?.textContent.trim() ?? null),
+        tops: columns.map((column) => Math.round(column.getBoundingClientRect().top)),
+        sameRow: columns.every(
+          (column) => Math.abs(column.getBoundingClientRect().top - box.top) < 2
+        ),
+        belowHero: hero ? box.top >= hero.getBoundingClientRect().bottom - 1 : false,
+        aboveTabs: tablist ? box.top < tablist.getBoundingClientRect().top : false,
+        hasResumeEntry: Boolean(section.querySelector("[data-resume-entry]")),
+        hasResumeEmpty: Boolean(resumeColumn?.querySelector("[data-resume-empty]")),
+        summaryTiles: section.querySelectorAll("[data-summary-column] dd").length,
+        recentEmpty: Boolean(recentColumn?.textContent.includes("Belum ada aktivitas yang dinilai"))
+      };
+    })()
   `);
-  assert(!resumeVisible, "Beranda tanpa riwayat tidak boleh menampilkan kartu lanjutkan.");
-  log("Beranda: sapaan, ringkasan, dan kartu mata pelajaran tampil.");
+  assert(overview.status === "ok", "Kolom ringkasan Beranda tidak ditemukan.");
+  assert(
+    overview.count === 3 && overview.sameRow,
+    `Ringkasan Beranda harus 3 kolom sejajar (${JSON.stringify(overview)}).`
+  );
+  assert(
+    JSON.stringify(overview.labels) ===
+      JSON.stringify(["Lanjutkan belajar", "Ringkasan belajar", "Aktivitas terbaru"]),
+    `Urutan kolom ringkasan salah: ${JSON.stringify(overview.labels)}.`
+  );
+  assert(
+    overview.belowHero && overview.aboveTabs,
+    `Kolom ringkasan harus di bawah sapaan dan di atas tab materi (${JSON.stringify(overview)}).`
+  );
+  assert(
+    !overview.hasResumeEntry && overview.hasResumeEmpty,
+    "Beranda tanpa riwayat harus menampilkan ajakan memilih materi, bukan kartu lanjutkan."
+  );
+  assert(
+    overview.summaryTiles === 3 && overview.recentEmpty,
+    `Ringkasan kosong harus menampilkan 3 angka dan kolom aktivitas kosong (${JSON.stringify(overview)}).`
+  );
+  log(
+    `Tiga kolom ringkasan (${overview.labels.join(" → ")}) tampil sejajar di bawah sapaan dengan keadaan kosong yang jelas.`
+  );
 
   // Regresi T-086: kartu mapel harus membuka katalog yang sudah terfilter mapel itu.
   const subjectClick = await page.evaluate(`
@@ -626,18 +679,29 @@ export async function run({ page, artifactDir, log }) {
     label: "kembali ke Beranda"
   });
   await page.waitFor(
-    `[...document.querySelectorAll("h2")].some((heading) => heading.textContent.trim() === "Lanjutkan belajar")`,
-    { label: "kartu lanjutkan belajar" }
+    `(() => {
+      const entry = document.querySelector("[data-resume-entry]");
+      return Boolean(entry && entry.textContent.includes("Mengenal Pecahan 1/2, 1/3, dan 1/4"));
+    })()`,
+    { label: "kolom lanjutkan belajar terisi" }
   );
   await page.waitFor(
-    `document.body.textContent.includes("Mengenal Pecahan 1/2, 1/3, dan 1/4")`,
-    { label: "judul lesson pada kartu lanjutkan" }
+    `(() => {
+      const column = document.querySelector("[data-recent-column]");
+      return Boolean(column && !column.textContent.includes("Belum ada aktivitas yang dinilai"));
+    })()`,
+    { label: "kolom aktivitas terbaru terisi" }
   );
+  await page.evaluate(
+    `(() => { (document.scrollingElement ?? document.documentElement).scrollTop = 0; })()`
+  );
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  await page.screenshot(path.join(artifactDir, "beranda-tiga-kolom.png"));
   await clickButton(page, "Lanjutkan");
   await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
     label: "Player dibuka dari kartu lanjutkan"
   });
-  log("Kartu “Lanjutkan belajar” muncul dan membuka lesson terakhir.");
+  log("Kolom “Lanjutkan belajar” terisi setelah kuis dan membuka lesson terakhir.");
 
   await page.screenshot(path.join(artifactDir, "home-catalog.png"));
   log("Screenshot Beranda/katalog tersimpan.");
