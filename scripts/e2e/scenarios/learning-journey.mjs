@@ -65,6 +65,84 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Langkah 1 dari 4")`, {
     label: "eksplorasi langkah 1"
   });
+
+  const controls = await page.evaluate(`
+    (() => {
+      const progress = document.querySelector('[aria-label="Progres eksplorasi"]');
+      const scope = progress?.parentElement?.parentElement;
+      if (!scope) return { missing: "lingkup eksplorasi" };
+      const buttons = [...scope.querySelectorAll("button")];
+      const byLabel = (label) => buttons.find((b) => b.textContent.trim() === label);
+      const hint = byLabel("Lihat petunjuk");
+      const reveal = byLabel("Tampilkan penjelasan");
+      const next = byLabel("Lanjut");
+      const prev = byLabel("Sebelumnya");
+      if (!hint || !reveal || !next || !prev) {
+        return { missing: "salah satu tombol eksplorasi" };
+      }
+      const primary = (button) => button.className.includes("bg-primary");
+      const footer = next.parentElement;
+      return {
+        hintGroupedWithReveal: hint.parentElement === reveal.parentElement,
+        supportSecondary: !primary(hint) && !primary(reveal),
+        navSecondary: !primary(prev),
+        primaryCount: buttons.filter(primary).length,
+        footerShared: footer === prev.parentElement,
+        footerSeparated: getComputedStyle(footer).borderTopWidth !== "0px",
+        footerHoldsSupportButtons: footer.contains(hint) || footer.contains(reveal),
+        prevDisabled: prev.disabled,
+        hintControls: hint.getAttribute("aria-controls"),
+        revealControls: reveal.getAttribute("aria-controls")
+      };
+    })()
+  `);
+  assert(!controls.missing, `Kontrol eksplorasi tidak lengkap: ${controls.missing}.`);
+  assert(controls.hintGroupedWithReveal, "Tombol petunjuk & penjelasan tidak berada dalam satu baris.");
+  assert(controls.supportSecondary, "Tombol petunjuk/penjelasan masih memakai gaya primer.");
+  assert(controls.navSecondary, "Tombol Sebelumnya masih memakai gaya primer.");
+  assert(controls.primaryCount === 1, `Tombol primer pada langkah eksplorasi ${controls.primaryCount}, harus 1.`);
+  assert(controls.footerShared, "Sebelumnya dan Lanjut tidak berada dalam satu baris navigasi.");
+  assert(controls.footerSeparated, "Baris navigasi eksplorasi tidak dipisahkan garis atas.");
+  assert(!controls.footerHoldsSupportButtons, "Baris navigasi bercampur dengan tombol petunjuk/penjelasan.");
+  assert(controls.prevDisabled, "Tombol Sebelumnya aktif pada langkah pertama.");
+  log("Kontrol eksplorasi: 1 primer, petunjuk/penjelasan sekunder satu baris, navigasi terpisah.");
+
+  await clickButton(page, "Lihat petunjuk");
+  const hintState = await page.evaluate(`
+    (() => {
+      const button = [...document.querySelectorAll("button")]
+        .find((b) => b.textContent.trim() === "Sembunyikan petunjuk");
+      const id = ${JSON.stringify(controls.hintControls)};
+      return {
+        expanded: button?.getAttribute("aria-expanded") === "true",
+        panel: Boolean(id && document.getElementById(id)),
+        label: button?.textContent.trim() ?? null
+      };
+    })()
+  `);
+  assert(hintState.expanded, "Tombol petunjuk tidak menandai aria-expanded=true.");
+  assert(hintState.panel, `Panel petunjuk dengan id "${controls.hintControls}" tidak ditemukan.`);
+  log("Petunjuk terbuka dan terhubung lewat aria-controls.");
+
+  await clickButton(page, "Tampilkan penjelasan");
+  await page.waitFor(
+    `(() => {
+      const id = ${JSON.stringify(controls.revealControls)};
+      return Boolean(id && document.getElementById(id));
+    })()`,
+    { label: "panel penjelasan eksplorasi" }
+  );
+  await page.evaluate(`
+    (() => {
+      const button = [...document.querySelectorAll("button")]
+        .find((b) => b.textContent.trim() === "Sembunyikan penjelasan");
+      button?.scrollIntoView({ block: "center" });
+      return Boolean(button);
+    })()
+  `);
+  await page.screenshot(path.join(artifactDir, "exploration-buttons.png"));
+  log("Screenshot kontrol eksplorasi tersimpan.");
+
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
