@@ -1,6 +1,6 @@
 # ADR-0035 — Materi Daring HTML5 di Luar Paket Konten
 
-**Status:** Accepted (defaults via sesi 2026-10-28) — belum ada kode · **Tanggal:** 2026-10-28
+**Status:** Accepted (defaults via sesi 2026-10-28) — penampil + pemasang ZIP bertanda tangan sudah ada; katalog/unduhan server belum · **Tanggal:** 2026-10-28
 **Terkait:** [Kontrak bundel materi v1](../content/MATERIAL_BUNDLE_CONTRACT.md) · [ADR-0003](ADR-0003-content-package-contract.md) · [CONTENT_SCHEMA v1](../content/SCHEMA.md) · [IMPLEMENTATION_CONTRACT.md §3](../../IMPLEMENTATION_CONTRACT.md)
 
 ## Konteks
@@ -37,7 +37,9 @@
 1. Kontrak dibekukan (dokumen ini + `MATERIAL_BUNDLE_CONTRACT.md`). — selesai 2026-10-28
 2. Prototipe penampil dengan **satu bundel contoh lokal** (tanpa server) untuk menguji isolasi, fullscreen, Esc, dan a11y kontainer. — selesai 2026-10-28 (T-114): iframe sandbox + protokol `ifp-content` + penampil modal; E2E `material-viewer` 8/8
 3. Katalog + pengunduh + verifikasi tanda tangan.
-4. Progres baca, semat, dan pembersihan cache.
+   - 3a. **Pemasang bundel lokal** (ZIP + sidecar `.sig`) — selesai 2026-10-28 (T-115): manifest ketat §4, verifikasi Ed25519 per `keyId`, hash per berkas, staging → rename atomik, tabel `material_install`, daftar/buka di layar Konten, alat `scripts/material-pack.mjs`, E2E `material-import` 12/12.
+   - 3b. **Katalog + unduhan dari server** (Worker `/v1/materials`, URL pre-signed, verifikasi `bundleSha256`) — belum; menunggu HTTP client (persetujuan dependensi terpisah) dan endpoint platform.
+4. Progres baca, semat, dan pembersihan cache. — belum; `material_progress` dan LRU belum diimplementasikan.
 
 ## Keputusan yang dikonfirmasi (2026-10-28)
 

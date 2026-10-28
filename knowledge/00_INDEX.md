@@ -115,7 +115,7 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0032](decisions/ADR-0032-admin-api-token-provisional.md) | Token admin provisial untuk transfer/deaktivasi lisensi | Accepted (provisional) |
 | [ADR-0033](decisions/ADR-0033-curriculum-refs-d6-provisional.md) | Format & pengisian awal `curriculumRefs` (D6 provisional) | Accepted (provisional) |
 | [ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) | OD-1 D1–D8: persetujuan Product Owner + Curriculum Lead | Accepted via sesi 2026-10-26; CP/ATP per bab belum diverifikasi |
-| [ADR-0035](decisions/ADR-0035-online-html5-materials.md) | Materi daring HTML5: jenis konten `material`, katalog + unduh-sekali, tanda tangan Ed25519, render di iframe sandbox | **Accepted 2026-10-28** — OD-10…14 dikunci; prototipe penampil lokal T-114 selesai (E2E 8/8) |
+| [ADR-0035](decisions/ADR-0035-online-html5-materials.md) | Materi daring HTML5: jenis konten `material`, katalog + unduh-sekali, tanda tangan Ed25519, render di iframe sandbox | **Accepted 2026-10-28** — OD-10…14 dikunci; penampil prototipe lokal T-114 (E2E 8/8) + pemasang ZIP bertanda tangan T-115 (tahap 3a, E2E 12/12); katalog/unduhan server belum |
 | [ADR-0028](decisions/ADR-0028-supabase-cloudflare.md) | Stack backend: Supabase + Cloudflare | Accepted (increment 2) |
 | [ADR-0029](decisions/ADR-0029-ifp-devices-isolation.md) | Isolasi perangkat IFP dengan `ifp_devices` (project dipakai bersama Fanakon) | Accepted |
 | [ADR-0030](decisions/ADR-0030-worker-license-signing.md) | Penerbitan lisensi Ed25519 di Worker (kunci provisional `prod-1`) | Accepted (provisional) |
