@@ -156,11 +156,20 @@ export async function run({ page, artifactDir, log }) {
   log("Eksplorasi 4 langkah selesai.");
 
   await clickButton(page, "Lanjut berlatih");
-  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+  await page.waitFor(`document.body.textContent.includes("Soal 1 dari 4")`, {
     label: "kuis tampil"
   });
 
-  for (const optionId of ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"]) {
+  const quizOptions = ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"];
+  for (const [index, optionId] of quizOptions.entries()) {
+    await page.waitFor(
+      `document.body.textContent.includes("Soal ${index + 1} dari ${quizOptions.length}")`,
+      { label: `soal kuis ${index + 1}` }
+    );
+    const perPage = await page.evaluate(
+      `document.querySelectorAll("#activity-panel fieldset").length`
+    );
+    assert(perPage === 1, `Soal ${index + 1} dirender ${perPage} halaman, harus 1 soal per halaman.`);
     const chosen = await page.evaluate(`
       (() => {
         const input = document.querySelector('input[value="${optionId}"]');
@@ -170,10 +179,13 @@ export async function run({ page, artifactDir, log }) {
       })()
     `);
     assert(chosen, `Opsi ${optionId} tidak dapat dipilih.`);
+    if (index < quizOptions.length - 1) {
+      await clickButton(page, "Lanjut");
+    }
   }
-  log("4 jawaban kuis dipilih.");
+  log("4 soal kuis dijawab satu per satu.");
 
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor kuis"
   });

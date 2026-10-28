@@ -123,34 +123,69 @@ export async function run({ page, artifactDir, log }) {
     })()
   `);
   assert(quiz.status === "clicked", "Tab Kuis Penguatan tidak dapat diklik.");
-  await page.waitFor(`document.querySelectorAll("#activity-panel input[type='radio']").length >= 5`, {
+  await page.waitFor(`Boolean(document.querySelector("[data-quiz-progress]"))`, {
     label: "soal kuis baru",
   });
 
-  const answered = await page.evaluate(`
+  const quizTotal = await page.evaluate(`
     (() => {
-      const fieldsets = [...document.querySelectorAll("#activity-panel fieldset")];
-      let picked = 0;
-      for (const fieldset of fieldsets) {
-        const input = [...fieldset.querySelectorAll("input[type='radio']")].find((entry) => !entry.disabled);
-        if (!input) continue;
-        (input.closest("label") ?? input).click();
-        picked += 1;
-      }
-      const submit = [...document.querySelectorAll("#activity-panel button")].find(
-        (button) => button.textContent.trim() === "Periksa jawaban"
-      );
-      return { questions: fieldsets.length, picked, submitEnabled: submit ? !submit.disabled : false };
+      const text = document.querySelector("[data-quiz-progress]")?.textContent ?? "";
+      const match = text.match(/Soal\\s+1\\s+dari\\s+(\\d+)/);
+      return match ? Number(match[1]) : null;
     })()
   `);
-  assert(answered.questions >= 5, `Kuis baru hanya punya ${answered.questions} soal.`);
-  assert(answered.picked === answered.questions, "Tidak semua soal dapat dijawab.");
-  assert(answered.submitEnabled, "Tombol Periksa jawaban tetap nonaktif setelah semua soal dijawab.");
+  assert(quizTotal !== null && quizTotal >= 5, `Kuis baru hanya punya ${quizTotal} soal.`);
+  log(`Kuis baru: ${quizTotal} soal, dirender satu soal per halaman.`);
 
-  await page.screenshot(path.join(artifactDir, "quiz-baru-terjawab.png"));
-  log(`Kuis baru: ${answered.questions} soal dirender, semua dapat dijawab, tombol periksa aktif.`);
+  for (let index = 1; index <= quizTotal; index += 1) {
+    await page.waitFor(
+      `document.body.textContent.includes("Soal ${index} dari ${quizTotal}")`,
+      { label: `soal kuis ${index}` },
+    );
+    const step = await page.evaluate(`
+      (() => {
+        const panel = document.querySelector("#activity-panel");
+        const inputs = [...panel.querySelectorAll("input[type='radio'], input[type='checkbox']")];
+        const input = inputs.find((entry) => !entry.disabled);
+        if (input) (input.closest("label") ?? input).click();
+        const next = [...panel.querySelectorAll("button")].find((button) =>
+          ["Lanjut", "Lihat hasil"].includes(button.textContent.trim())
+        );
+        return {
+          fieldsets: panel.querySelectorAll("fieldset").length,
+          answered: inputs.some((entry) => entry.checked),
+          nextLabel: next?.textContent.trim() ?? null,
+          nextEnabled: next ? !next.disabled : false
+        };
+      })()
+    `);
+    assert(step.fieldsets === 1, `Soal ${index}: ${step.fieldsets} soal dirender, harus 1 per halaman.`);
+    assert(step.answered, `Soal ${index} tidak dapat dijawab.`);
+    assert(
+      step.nextEnabled,
+      `Tombol "${step.nextLabel}" nonaktif pada soal ${index} setelah dijawab.`
+    );
+    if (index === 1) {
+      await page.screenshot(path.join(artifactDir, "quiz-baru-soal-1.png"));
+    }
+    if (index < quizTotal) {
+      assert(
+        step.nextLabel === "Lanjut",
+        `Soal ${index} memakai tombol "${step.nextLabel}", harus "Lanjut".`
+      );
+      await clickButton(page, "Lanjut");
+    } else {
+      assert(
+        step.nextLabel === "Lihat hasil",
+        `Soal terakhir memakai tombol "${step.nextLabel}", harus "Lihat hasil".`
+      );
+    }
+  }
 
-  await clickButton(page, "Periksa jawaban");
+  await page.screenshot(path.join(artifactDir, "quiz-baru-soal-terakhir.png"));
+  log(`Kuis baru: ${quizTotal} soal dijawab berurutan, tombol terakhir "Lihat hasil".`);
+
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor")`, { label: "hasil kuis" });
   const scored = await page.evaluate(`
     (() => {

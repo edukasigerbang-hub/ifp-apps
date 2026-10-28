@@ -358,13 +358,11 @@ export async function run({ page, artifactDir, log }) {
       `Kolom samping tidak menempel (position: ${layout.asidePosition}).`
     );
     assert(
-      layout.gridHeight > layout.asideHeight + 80,
-      `Kolom samping tidak memiliki ruang menempel (grid ${layout.gridHeight}px vs kartu ${layout.asideHeight}px).`
-    );
-    assert(
       layout.panelWidth / layout.gridWidth > 0.55,
       `Panel aktivitas hanya ${layout.panelWidth}px dari ${layout.gridWidth}px — kolom utama terlalu sempit.`
     );
+    // Kuis satu-soal-per-halaman lebih pendek dari kartu samping, jadi ruang menempel
+    // diuji secara oportunistik lewat blok `sticky` di bawah saat halaman benar-benar bergulir.
     log(
       `Layout Player dua kolom pada ${layout.viewport}px: panel ${layout.panelWidth}px, samping ${layout.asideWidth}px (tinggi ${layout.asideHeight}px dalam grid ${layout.gridHeight}px, position ${layout.asidePosition}).`
     );
@@ -402,12 +400,43 @@ export async function run({ page, artifactDir, log }) {
   );
 
   await clickButton(page, "Benar atau Salah");
-  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+  await page.waitFor(`document.body.textContent.includes("Soal 1 dari 2")`, {
     label: "kuis benar-salah"
   });
+  const sequence = await page.evaluate(`
+    (() => {
+      const panel = document.querySelector("#activity-panel");
+      const progress = panel?.querySelector("[data-quiz-progress]")?.textContent.trim() ?? "";
+      const next = [...(panel?.querySelectorAll("button") ?? [])].find(
+        (button) => button.textContent.trim() === "Lanjut"
+      );
+      return {
+        fieldsets: panel?.querySelectorAll("fieldset").length ?? 0,
+        progress,
+        nextLabel: next?.textContent.trim() ?? null,
+        nextDisabled: next ? next.disabled : null
+      };
+    })()
+  `);
+  assert(
+    sequence.fieldsets === 1,
+    `Kuis merender ${sequence.fieldsets} soal sekaligus, harus 1 soal per halaman.`
+  );
+  assert(
+    sequence.progress === "Soal 1 dari 2",
+    `Penanda kemajuan "${sequence.progress}", harus "Soal 1 dari 2".`
+  );
+  assert(sequence.nextLabel === "Lanjut", `Tombol soal pertama "${sequence.nextLabel}", harus "Lanjut".`);
+  assert(sequence.nextDisabled === true, "Tombol Lanjut aktif sebelum soal pertama dijawab.");
+  log("Kuis tampil satu soal per halaman dengan tombol Lanjut terkunci sebelum dijawab.");
+
   assert(await chooseRadio(page, "bs-setengah", "true"), "Radio benar-salah 1 gagal.");
+  await clickButton(page, "Lanjut");
+  await page.waitFor(`document.body.textContent.includes("1/4 lebih besar daripada 1/2")`, {
+    label: "soal benar-salah 2"
+  });
   assert(await chooseRadio(page, "bs-seperempat", "false"), "Radio benar-salah 2 gagal.");
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor benar-salah"
   });
@@ -454,6 +483,11 @@ export async function run({ page, artifactDir, log }) {
     await fillByLabel(page, "Tuliskan nama pecahan 1/2.", "Setengah"),
     "Input jawaban singkat 1 gagal."
   );
+  await clickButton(page, "Lanjut");
+  await page.waitFor(
+    `document.body.textContent.includes("Tuliskan pecahan untuk satu bagian dari empat bagian.")`,
+    { label: "soal jawaban singkat 2" }
+  );
   assert(
     await fillByLabel(
       page,
@@ -462,7 +496,7 @@ export async function run({ page, artifactDir, log }) {
     ),
     "Input jawaban singkat 2 gagal."
   );
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor jawaban singkat"
   });
@@ -472,19 +506,47 @@ export async function run({ page, artifactDir, log }) {
   });
   log("Aktivitas jawaban singkat dinilai 100 (normalisasi huruf) dan tersimpan.");
 
+  await clickButton(page, "Ulangi kuis");
+  const reset = await page.evaluate(`
+    (() => {
+      const panel = document.querySelector("#activity-panel");
+      const progress = panel?.querySelector("[data-quiz-progress]")?.textContent.trim() ?? "";
+      const checked = panel?.querySelectorAll("input:checked").length ?? 0;
+      const next = [...(panel?.querySelectorAll("button") ?? [])].find(
+        (button) => button.textContent.trim() === "Lanjut"
+      );
+      return { progress, checked, nextDisabled: next ? next.disabled : null };
+    })()
+  `);
+  assert(
+    reset.progress === "Soal 1 dari 2",
+    `Ulangi kuis kembali ke "${reset.progress}", harus "Soal 1 dari 2".`
+  );
+  assert(reset.checked === 0, `Ulangi kuis menyisakan ${reset.checked} jawaban terpilih.`);
+  assert(reset.nextDisabled === true, "Tombol Lanjut aktif setelah Ulangi kuis.");
+  log("Ulangi kuis mengosongkan jawaban dan kembali ke soal pertama.");
+
   await clickButton(page, "Pilihan Ganda (Pilih Semua)");
   await page.waitFor(`document.body.textContent.includes("Pilih semua pecahan yang senilai dengan 1/2")`, {
     label: "kuis multi-jawaban"
   });
   for (const [name, value] of [
     ["mg-setengah", "opsi-2-4"],
-    ["mg-setengah", "opsi-3-6"],
+    ["mg-setengah", "opsi-3-6"]
+  ]) {
+    assert(await chooseCheckbox(page, name, value), `Checkbox ${name}/${value} gagal.`);
+  }
+  await clickButton(page, "Lanjut");
+  await page.waitFor(`document.body.textContent.includes("Pilih semua pecahan yang senilai dengan 1/4")`, {
+    label: "soal multi-jawaban 2"
+  });
+  for (const [name, value] of [
     ["mg-seperempat", "opsi-1-4"],
     ["mg-seperempat", "opsi-2-8"]
   ]) {
     assert(await chooseCheckbox(page, name, value), `Checkbox ${name}/${value} gagal.`);
   }
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor multi-jawaban"
   });

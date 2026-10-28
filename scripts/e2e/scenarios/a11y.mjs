@@ -607,7 +607,7 @@ export async function run({ page, artifactDir, log }) {
   });
   // Player membuka paket bawaan pertama (Kelas 1 Bahasa Indonesia) — pakai kuis aktualnya.
   await clickLabel(page, "Kuis Penguatan");
-  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+  await page.waitFor(`Boolean(document.querySelector("[data-quiz-progress]"))`, {
     label: "kuis tampil"
   });
   // Kunci jawaban soal kuis paket bawaan pertama (kelas1-bahasa-indonesia-b01).
@@ -619,16 +619,37 @@ export async function run({ page, artifactDir, log }) {
     "opsi-soal-huruf-b-c-d-termasuk-huruf-0",
     "opsi-soal-kegiatan-mendengarkan-cerit-0"
   ];
-  const questionCount = await page.evaluate(
-    `(() => [...document.querySelectorAll("legend")]
-      .filter((legend) => /^Soal /.test(legend.textContent.trim())).length)()`
-  );
+  const questionCount = await page.evaluate(`
+    (() => {
+      const text = document.querySelector("[data-quiz-progress]")?.textContent ?? "";
+      const match = text.match(/Soal\\s+1\\s+dari\\s+(\\d+)/);
+      return match ? Number(match[1]) : null;
+    })()
+  `);
   if (questionCount !== quizKeys.length) {
     throw new Error(
       `Kuis paket pertama memuat ${questionCount} soal, skrip mengunci ${quizKeys.length} kunci — perbarui daftar quizKeys.`
     );
   }
-  for (const optionId of quizKeys) {
+  const stepAudit = await page.evaluate(`(${auditInPage.toString()})()`);
+  const stepIssues = stepAudit.issues.filter((issue) => issue.severity === "error");
+  const stepWarnings = stepAudit.issues.filter((issue) => issue.severity === "warning");
+  errorCount += stepIssues.length;
+  warningCount += stepWarnings.length;
+  report.screens.push({
+    screen: "Player (soal kuis)",
+    stats: stepAudit.stats,
+    issues: stepAudit.issues
+  });
+  log(
+    `State soal kuis (satu per halaman): ${stepIssues.length} error, ${stepWarnings.length} warning.`
+  );
+  await page.screenshot(path.join(artifactDir, "a11y-quiz-step.png"));
+  for (const [index, optionId] of quizKeys.entries()) {
+    await page.waitFor(
+      `document.body.textContent.includes("Soal ${index + 1} dari ${questionCount}")`,
+      { label: `soal audit ${index + 1}` }
+    );
     const chosen = await page.evaluate(`
       (() => {
         const input = document.querySelector('input[value="${optionId}"]');
@@ -640,8 +661,11 @@ export async function run({ page, artifactDir, log }) {
     if (!chosen) {
       throw new Error(`Opsi ${optionId} tidak dapat dipilih saat audit.`);
     }
+    if (index < quizKeys.length - 1) {
+      await clickLabel(page, "Lanjut");
+    }
   }
-  await clickLabel(page, "Periksa jawaban");
+  await clickLabel(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor hasil kuis"
   });
