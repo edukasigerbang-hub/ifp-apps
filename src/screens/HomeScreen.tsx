@@ -16,6 +16,7 @@ import {
   type MaterialView
 } from "../data/materialRepository";
 import { MaterialViewer } from "../components/material/MaterialViewer";
+import { MaterialCover } from "../components/material/MaterialCover";
 import {
   listPinnedLessons,
   listPinnedMaterials,
@@ -627,8 +628,13 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
                   data-pinned-material={card.material.materialId}
                   className="flex flex-col overflow-hidden rounded-card border border-primary/30 bg-surface"
                 >
-                  <div className="flex aspect-[16/9] w-full items-center justify-center border-b border-ink/10 bg-gradient-to-br from-primary/10 via-surface to-teal/10">
-                    <span className="rounded-full border border-primary/30 bg-surface px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-primary">
+                  <div className="relative border-b border-ink/10">
+                    <MaterialCover
+                      source={{ kind: "installed", materialId: card.material.materialId }}
+                      fallbackLabel={subjectLabel(card.material.subjects[0] ?? "")}
+                      className="aspect-[16/9] w-full"
+                    />
+                    <span className="pointer-events-none absolute left-3 top-3 rounded-full border border-primary/30 bg-surface/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-primary shadow-sm">
                       Materi HTML5
                     </span>
                   </div>

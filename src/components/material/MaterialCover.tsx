@@ -65,7 +65,7 @@ export function MaterialCover({ source, fallbackLabel, className = "" }: Materia
   const initials = fallbackLabel.slice(0, 2);
 
   return (
-    <div className={`overflow-hidden rounded-control bg-teal/10 ${className}`}>
+    <div className={`overflow-hidden bg-teal/10 ${className}`}>
       {url && !failed ? (
         <img
           data-material-cover

@@ -73,6 +73,10 @@ const materialCardState = `(() => {
     title,
     text: card?.textContent ?? "",
     hasEmpty: Boolean(document.querySelector("[data-pinned-empty]")),
+    cover: (() => {
+      const image = card?.querySelector("img[data-material-cover]");
+      return image ? { prefix: image.src.slice(0, 21), width: image.naturalWidth } : null;
+    })(),
     openVisible: Boolean(
       card?.querySelector('[data-pinned-material-open="${MATERIAL_ID}"]')?.offsetParent
     )
@@ -154,6 +158,14 @@ export async function run({ page, artifactDir, setup, log }) {
   );
   log("Setelah muat ulang Beranda membuka tab Materi disematkan berisi kartu materi HTML5.");
 
+  // Cover bundel terpasang dibaca Rust dari disk lalu tampil sebagai data URL.
+  await page.waitFor(
+    `(() => {
+      const image = document.querySelector('[data-pinned-material="${MATERIAL_ID}"] img[data-material-cover]');
+      return !!image && image.src.startsWith("data:image/") && image.naturalWidth > 0;
+    })()`,
+    { label: "cover kartu sematan Beranda", timeoutMs: 30_000 }
+  );
   const card = await page.evaluate(materialCardState);
   assert(card.count === 1, `Tab sematan harus berisi 1 kartu, ditemukan ${card.count}.`);
   assert(
@@ -164,7 +176,13 @@ export async function run({ page, artifactDir, setup, log }) {
   assert(card.text.includes("5 menit"), "Kartu materi harus menampilkan estimasi menit.");
   assert(card.openVisible, "Tombol buka kartu materi tidak terlihat.");
   assert(!card.hasEmpty, "Empty state sematan masih tampil padahal ada sematan.");
-  log("Kartu sematan materi menampilkan label Materi HTML5, judul, kelas/menit, dan tombol Buka.");
+  assert(
+    card.cover !== null &&
+      card.cover.prefix.startsWith("data:image/png;base64") &&
+      card.cover.width > 0,
+    `Kartu sematan harus memakai cover bundel: ${JSON.stringify(card.cover)}`
+  );
+  log(`Kartu sematan materi memakai cover bundel (${card.cover.width} px) dan label Materi HTML5.`);
   await page.screenshot(path.join(artifactDir, "beranda-sematkan-materi.png"));
   log("Screenshot tab Materi disematkan berisi materi HTML5 tersimpan.");
 

@@ -566,7 +566,7 @@ export function ContentScreen() {
                         <MaterialCover
                           source={{ kind: "installed", materialId: record.materialId }}
                           fallbackLabel={subjectLabel(record.subjects[0] ?? "")}
-                          className="h-16 w-24 shrink-0"
+                          className="h-16 w-24 shrink-0 rounded-control"
                         />
                         <div className="min-w-0">
                           <p className="truncate text-sm font-medium">{record.title}</p>
@@ -751,7 +751,7 @@ export function ContentScreen() {
                               query: catalogFilters()
                             }}
                             fallbackLabel={subjectLabel(item.subjects[0] ?? "")}
-                            className="h-16 w-24 shrink-0"
+                            className="h-16 w-24 shrink-0 rounded-control"
                           />
                           <div className="min-w-0">
                             <p className="truncate text-sm font-medium">{item.title}</p>
