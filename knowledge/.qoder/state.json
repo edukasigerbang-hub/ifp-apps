@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "79314ea",
+  "commit": "524ddff",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 43,
+  "context_version": 44,
   "skill_registry_version": 0,
   "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A (bukti putusan L2+L4 tersedia sejak T-104)",
-  "last_task": "T-105 hierarki tombol aktivitas eksplorasi (satu aksi primer per langkah, dukungan sekunder sebaris, navigasi di footer bergaris) + 9 asersi E2E tata letak",
+  "last_task": "T-106 sematan materi per profil (migrasi 0008 + pinned_list/pinned_set, tombol Sematkan/Disematkan di katalog) + Beranda default Materi disematkan → Materi tersedia → Jelajahi materi + E2E pinned-materials 8/8",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T09:10:00+07:00",
-  "last_validation": "T-105 (2026-10-28, HEAD 524ddff + perubahan belum di-commit): ExplorationActivity kini memakai satu aksi primer per langkah — petunjuk + penjelasan menjadi satu baris tombol sekunder (status tertekan border-primary/40 bg-primary/5, aria-controls ke id panel dinamis exploration-hint-<activityId>/exploration-reveal-<activityId>), navigasi pindah ke footer border-t berisi Sebelumnya (sekunder, nonaktif di langkah 1) di kiri dan Lanjut/Selesai (primer, px-6) di kanan; panel selesai disamakan (Ulangi eksplorasi sekunder, Lanjut berlatih primer); semua tombol eksplorasi memakai focus-visible ring. Verifikasi aktual: npm test 120/120 (16 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS; npm run build exit 0; E2E learning-journey 14/14 (naik dari 11: 9 asersi tata letak + 2 aria-controls + artefak exploration-buttons.png yang diperiksa); regresi activities 14/14 dan player-deeplink 7/7; npm run a11y 17/17 (0 error, 7 warning) pada percobaan pertama; cargo test tidak dijalankan (tanpa perubahan Rust). Catatan: percobaan E2E pertama gagal karena argumen page.screenshot({path}) (helper menerima string) — kesalahan skrip uji, bukan aplikasi. Batas: belum ada komponen Button bersama, uji visual 320 px khusus footer belum ada.",
+  "last_updated": "2026-10-28T10:20:00+07:00",
+  "last_validation": "T-106 (2026-10-28, HEAD 524ddff + perubahan belum di-commit): sematan materi disimpan per profil di SQLite (migrasi 0008_pinned_lessons: PK profile_id+package_id+lesson_id, FK profiles ON DELETE CASCADE, indeks profile_id+pinned_at DESC; pins.rs MAX_PINNED=24, id 1-120 karakter, PROFILE_NOT_FOUND untuk profil tak dikenal, semat ulang idempoten; perintah pinned_list/pinned_set). UI: tombol Sematkan/Disematkan (aria-pressed) di kartu Jelajah Materi; Beranda default hero -> Materi disematkan (Buka+Lepas, Kelola sematan, empty state) -> Materi tersedia -> Jelajahi materi -> Lanjutkan belajar -> Ringkasan -> Aktivitas terbaru; sematan dimuat terpisah dari katalog. Verifikasi aktual: npm test 120/120 (16 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS; cargo test 77/77 (6 test pins:: baru); npm run build exit 0; E2E pinned-materials 8/8 dua eksekusi berturut-turut; regresi home-catalog 28/28, learning-journey 14/14, activities 14/14 (satu kegagalan flake simpan benar-salah sebelum ulang); npm run a11y 17/17 (0 error, 7 warning); screenshot beranda-disematkan.png dan katalog-sematkan.png diperiksa. Catatan: dua kegagalan skrip uji pertama adalah race di skrip (katalog/profil belum siap), bukan aplikasi. Batas: semat hanya dari katalog, urutan pinned_at DESC tanpa penataan manual, batas 24 konstanta, tombol muncul setelah profil termuat, tidak disinkronkan ke server.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Agent-actionable: verifikasi ulang a11y pada mesin bersih / tambahkan atribut status penyimpanan agar kegagalan banner dapat dilacak (utang E2E di BACKLOG); lapisan L3 (tanda tangan Ed25519 atas putusan review) BELUM dikerjakan — kerjakan hanya bila PO meminta. Human/PO-gated: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12 (alur bukti: ekspor audit -> knowledge/content/review-attestations/ -> npm run content:review-binding -> npm run content:review-sample -- --n 5); keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Agent-actionable: (opsional, hanya bila PO meminta) penataan urutan sematan + semat dari layar Player/Hasil, dan diagnosis timeout tulis-pertama E2E; lapisan L3 (tanda tangan Ed25519 atas putusan review) BELUM dikerjakan — kerjakan hanya bila PO meminta. Human/PO-gated: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12 (alur bukti: ekspor audit -> knowledge/content/review-attestations/ -> npm run content:review-binding -> npm run content:review-sample -- --n 5); keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
