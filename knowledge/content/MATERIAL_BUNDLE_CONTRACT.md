@@ -230,11 +230,14 @@ Amplop: `{ "ifp": 1, "type": "<jenis>", … }`.
 
 Tidak ada lagi yang memblokir kontrak ini: OD-10…OD-14 dikonfirmasi PO pada 2026-10-28 dan dicatat di [ADR-0035](../decisions/ADR-0035-online-html5-materials.md#keputusan-yang-dikonfirmasi-2026-10-28).
 
-Yang **sudah** ada di aplikasi (per 2026-10-28):
+Yang **sudah** ada di aplikasi (per 2026-10-29):
 
 - Penampil prototipe dengan bundel contoh lokal (T-114): iframe tersandbox, protokol `ifp-content`, Esc/transkrip, E2E `material-viewer`.
 - Pemasang bundel dari **ZIP lokal + sidecar `.sig`** (T-115): manifest ketat §4, tanda tangan Ed25519 dengan `keyId` persis, hash per berkas, pemindaian self-contained, staging lalu rename atomik, tabel `material_install`, daftar + buka materi di layar Konten, E2E `material-import` 12/12.
 - Sematan materi terpasang ke Beranda (T-116): tabel `pinned_materials`, batas 24 sematan dipakai bersama paket, kartu `Materi HTML5` di tab "Materi disematkan" dengan `Buka`/`Lepas`, E2E `material-pin` 12/12.
 - Alat dev `scripts/material-pack.mjs` (`keygen`, `pack`) yang menghasilkan ZIP STORED + `.sig` untuk membuat bundel uji.
+- Jalur server → perangkat **di sisi aplikasi** (T-117): `GET /v1/materials` lewat `material_catalog.rs` (ETag + cache SQLite `material_catalog_cache`, alamat dari `app_meta`/`IFP_CATALOG_URL`), tanda tangan item diverifikasi sebelum unduh, `bundleSha256` diperiksa sebelum byte masuk pemasang, UI "Jelajah materi daring" di layar Konten. Servernya masih **referensi lokal** (`scripts/mock-catalog-server.mjs`) — Worker produksi belum.
+- Cover bundel sebagai thumbnail (T-120/T-121): `coverUrl` opsional di item katalog, `material_installed_cover`/`material_catalog_cover` mengembalikan data URL (magic bytes, ≤ 2 MB), dipakai di baris katalog, daftar materi terpasang, dan kartu sematan Beranda.
+- **Studio Materi** (T-122) — langkah 1 §11 kini punya antarmuka: kerangka (`eksplorasi`, `kuis`) → editor berkas → pemeriksaan mandiri §4/§10 → pratinjau lewat penampil → ekspor folder sumber + ZIP **tanpa `.sig`**. Penandatanganan (langkah 4 §11) tetap di luar aplikasi lewat `scripts/material-pack.mjs` supaya kunci privat tidak pernah masuk app; hasil ekspor terbukti dapat ditandatangani dan dipasang (E2E `material-studio`).
 
-Yang **belum ada** (pekerjaan, bukan keputusan terbuka): kode Worker `/v1/materials`, penandatanganan saat publish, unduhan dari server + verifikasi `bundleSha256`, `material_progress` (sinyal `complete` belum dipersistensikan), dan pengusiran LRU. Jalur dari server ke perangkat belum ada; pemasangan saat ini selalu dari berkas lokal yang dipilih pengguna.
+Yang **belum ada** (pekerjaan, bukan keputusan terbuka): kode Worker `/v1/materials` produksi, penandatanganan saat publish di server, bucket Supabase Storage + tabel katalog, penyimpanan `bundleSha256` di `material_install`, `material_progress` (sinyal `complete` belum dipersistensikan), dan pengusiran LRU. Alur §11 langkah 2–3 (validator publish + penetapan `reviewStatus` oleh reviewer) juga belum otomatis: pemeriksaan Studio bersifat mandiri dan `reviewStatus` draft hanya bisa diubah pengarang lewat tab Metadata, bukan tanda tangan reviewer.
