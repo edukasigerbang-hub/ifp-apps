@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { CoverArt } from "../components/content/CoverArt";
 import { LessonThumbnail } from "../components/content/LessonThumbnail";
 import { LearningIllustration } from "../components/home/LearningIllustration";
@@ -25,6 +25,15 @@ interface HomeScreenProps {
   onNavigate: (screen: ScreenId) => void;
 }
 
+const homeSectionIds = ["pinned", "available", "explore"] as const;
+type HomeSection = (typeof homeSectionIds)[number];
+
+const homeSectionLabels: Record<HomeSection, string> = {
+  pinned: "Materi disematkan",
+  available: "Materi tersedia",
+  explore: "Jelajahi materi"
+};
+
 function formatScore(score: number | null): string {
   return score === null ? "—" : String(Math.round(score));
 }
@@ -38,6 +47,8 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   const [pinNotice, setPinNotice] = useState("");
   const [pinError, setPinError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<HomeSection>("pinned");
+  const sectionChosenRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -99,11 +110,17 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     };
   }, []);
 
+  // Tanpa sematan, Beranda terbuka di "Materi tersedia"; begitu ada sematan,
+  // "Materi disematkan" jadi tab awal. Pilihan manual pengguna tidak ditimpa.
+  useEffect(() => {
+    if (!pinsLoaded || sectionChosenRef.current) return;
+    setActiveSection(pins.length === 0 ? "available" : "pinned");
+  }, [pins.length, pinsLoaded]);
+
   const recent = summary?.recent[0];
   const resumeEntry = recent
     ? entries.find((entry) => entry.lessonId === recent.lessonId)
-    : undefined;
-  const pinnedEntries = useMemo(() => {
+    : undefined;  const pinnedEntries = useMemo(() => {
     const byKey = new Map(entries.map((entry) => [pinnedKey(entry), entry]));
     return pins.flatMap((pin) => {
       const entry = byKey.get(pinnedKey(pin));
@@ -167,11 +184,40 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         lessonId: entry.lessonId,
         pinned: false
       });
-      setPins((current) => current.filter((pin) => pinnedKey(pin) !== pinnedKey(entry)));
+      const remaining = pins.filter((pin) => pinnedKey(pin) !== pinnedKey(entry));
+      setPins(remaining);
+      if (remaining.length === 0) {
+        setActiveSection("available");
+      }
       setPinNotice(`${entry.lessonTitle} dilepas dari Beranda.`);
     } catch (caught) {
       setPinError(pinnedErrorMessage(caught));
     }
+  }
+
+  function selectSection(id: HomeSection, focusTab = false) {
+    sectionChosenRef.current = true;
+    setActiveSection(id);
+    if (focusTab) {
+      document.getElementById(`home-tab-${id}`)?.focus();
+    }
+  }
+
+  function onTabKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    const current = homeSectionIds.indexOf(activeSection);
+    let next: HomeSection | undefined;
+    if (event.key === "ArrowRight") {
+      next = homeSectionIds[(current + 1) % homeSectionIds.length];
+    } else if (event.key === "ArrowLeft") {
+      next = homeSectionIds[(current - 1 + homeSectionIds.length) % homeSectionIds.length];
+    } else if (event.key === "Home") {
+      next = homeSectionIds[0];
+    } else if (event.key === "End") {
+      next = homeSectionIds[homeSectionIds.length - 1];
+    }
+    if (!next) return;
+    event.preventDefault();
+    selectSection(next, true);
   }
 
   return (
@@ -207,16 +253,59 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         </p>
       )}
 
-      <section className="mt-6" data-pinned-section>
+      <div
+        role="tablist"
+        aria-label="Bagian Beranda"
+        onKeyDown={onTabKeyDown}
+        className="mt-6 flex flex-col gap-1 rounded-card border border-ink/10 bg-surface p-1.5 sm:flex-row"
+      >
+        {homeSectionIds.map((id) => {
+          const selected = activeSection === id;
+          const count = id === "pinned" && pinsLoaded ? pinnedEntries.length : null;
+          return (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              id={`home-tab-${id}`}
+              aria-selected={selected}
+              aria-controls={`home-panel-${id}`}
+              tabIndex={selected ? 0 : -1}
+              data-home-tab={id}
+              onClick={() => selectSection(id)}
+              className={`flex min-h-11 flex-1 items-center justify-center gap-2 rounded-control px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 ${
+                selected ? "bg-primary text-white" : "text-muted hover:bg-paper hover:text-ink"
+              }`}
+            >
+              {homeSectionLabels[id]}
+              {count !== null && (
+                <span
+                  aria-hidden="true"
+                  className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
+                    selected ? "bg-white/20 text-white" : "bg-ink/5 text-muted"
+                  }`}
+                >
+                  {count}
+                </span>
+              )}
+            </button>
+          );
+        })}
+      </div>
+
+      <section
+        role="tabpanel"
+        id="home-panel-pinned"
+        aria-labelledby="home-tab-pinned"
+        hidden={activeSection !== "pinned"}
+        data-pinned-section
+        className="mt-4 rounded-card"
+      >
         <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-              Materi disematkan
-            </h2>
-            <p className="mt-1 text-sm text-muted">
-              Pilihanmu sendiri, selalu tampil paling atas di Beranda (maksimal 24 materi).
-            </p>
-          </div>
+          <p className="text-sm text-muted">
+            Pilihanmu sendiri, tersimpan per profil dan selalu tampil lebih dulu (maksimal 24
+            materi).
+          </p>
           {pinnedEntries.length > 0 && (
             <button
               type="button"
@@ -259,7 +348,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
               onClick={() => onNavigate("curriculum")}
               className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
             >
-              Jelajahi materi
+              Buka Jelajah Materi
             </button>
           </div>
         ) : (
@@ -280,7 +369,9 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
                       Kelas {entry.gradeLevels.join(", ")} ·{" "}
                       {entry.subjects.map(subjectLabel).join(", ")}
                     </p>
-                    <h3 className="mt-1.5 text-base font-semibold">{entry.lessonTitle}</h3>
+                    <p data-pinned-title className="mt-1.5 text-base font-semibold">
+                      {entry.lessonTitle}
+                    </p>
                     <p className="mt-1 text-xs text-muted">{entry.packageTitle}</p>
                   </div>
                   <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -311,37 +402,17 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
         </p>
       </section>
 
-      {resumeEntry && (
-        <section className="mt-6 overflow-hidden rounded-card border border-teal/30 bg-teal/5">
-          <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:p-6">
-            <LessonThumbnail
-              entry={resumeEntry}
-              className="aspect-[16/9] w-full rounded-control md:w-56 md:shrink-0"
-            />
-            <div className="min-w-0">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-                Lanjutkan belajar
-              </h2>
-              <p className="mt-2 text-lg font-semibold">{resumeEntry.lessonTitle}</p>
-              <p className="mt-1 text-sm text-muted">
-                {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
-              </p>
-              <button
-                type="button"
-                onClick={resume}
-                className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90"
-              >
-                Lanjutkan
-              </button>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="mt-6">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-          Materi tersedia
-        </h2>
+      <section
+        role="tabpanel"
+        id="home-panel-available"
+        aria-labelledby="home-tab-available"
+        hidden={activeSection !== "available"}
+        data-available-section
+        className="mt-4 rounded-card"
+      >
+        <p className="text-sm text-muted">
+          Pilih mata pelajaran untuk melihat materinya, atau sematkan materi yang sering dipakai.
+        </p>
 
         {entries.length === 0 ? (
           <p className="mt-3 rounded-card border border-ink/10 bg-surface p-5 text-sm text-muted">
@@ -398,17 +469,19 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       </section>
 
       <section
+        role="tabpanel"
+        id="home-panel-explore"
+        aria-labelledby="home-tab-explore"
+        hidden={activeSection !== "explore"}
         data-explore-section
-        className="mt-6 overflow-hidden rounded-card border border-primary/20 bg-gradient-to-br from-primary/5 via-surface to-teal/5"
+        className="mt-4 overflow-hidden rounded-card border border-primary/20 bg-gradient-to-br from-primary/5 via-surface to-teal/5"
       >
         <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:justify-between md:p-6">
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-              Jelajahi materi
-            </h2>
+            <p className="text-base font-semibold">Cari materi lain di Jelajah Materi</p>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-              Cari materi lain berdasarkan kelas dan mata pelajaran, lalu sematkan yang sering
-              dipakai agar selalu ada di Beranda.
+              Saring berdasarkan kelas dan mata pelajaran, lalu tekan Sematkan pada materi yang
+              sering dipakai agar selalu ada di Beranda.
             </p>
           </div>
           <button
@@ -420,6 +493,33 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           </button>
         </div>
       </section>
+
+      {resumeEntry && (
+        <section className="mt-6 overflow-hidden rounded-card border border-teal/30 bg-teal/5">
+          <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:p-6">
+            <LessonThumbnail
+              entry={resumeEntry}
+              className="aspect-[16/9] w-full rounded-control md:w-56 md:shrink-0"
+            />
+            <div className="min-w-0">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+                Lanjutkan belajar
+              </h2>
+              <p className="mt-2 text-lg font-semibold">{resumeEntry.lessonTitle}</p>
+              <p className="mt-1 text-sm text-muted">
+                {resumeEntry.packageTitle} · Kelas {resumeEntry.gradeLevels.join(", ")}
+              </p>
+              <button
+                type="button"
+                onClick={resume}
+                className="mt-4 min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:bg-primary/90"
+              >
+                Lanjutkan
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="mt-6">
         <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">

@@ -37,26 +37,56 @@ function fillSearch(value) {
   `;
 }
 
-const pinnedLayout = `(() => {
-  const pinned = document.querySelector("[data-pinned-section]");
-  const subjectCard = document.querySelector("[data-subject-card]");
-  const available = subjectCard ? subjectCard.closest("section") : null;
-  const explore = document.querySelector("[data-explore-section]");
-  const top = (node) =>
-    node ? node.getBoundingClientRect().top + window.scrollY : -1;
+const homeTabs = `(() => {
+  const tabs = [...document.querySelectorAll("[data-home-tab]")];
   return {
-    hasPinned: Boolean(pinned),
-    hasAvailable: Boolean(available),
-    hasExplore: Boolean(explore),
-    ordered:
-      Boolean(pinned && available && explore) &&
-      top(pinned) < top(available) &&
-      top(available) < top(explore),
-    headings: [...document.querySelectorAll("main h2")].map((heading) =>
-      heading.textContent.trim()
-    )
+    count: tabs.length,
+    labels: tabs.map((tab) => tab.textContent.trim()),
+    selected: tabs
+      .filter((tab) => tab.getAttribute("aria-selected") === "true")
+      .map((tab) => tab.dataset.homeTab),
+    tabIndexes: tabs.map((tab) => tab.tabIndex),
+    panelsResolve: tabs.every((tab) => {
+      const panel = document.getElementById(tab.getAttribute("aria-controls") ?? "");
+      return Boolean(panel) && panel.getAttribute("role") === "tabpanel";
+    }),
+    visiblePanels: ["pinned", "available", "explore"].filter((id) => {
+      const panel = document.getElementById("home-panel-" + id);
+      return Boolean(panel) && !panel.hidden && panel.getBoundingClientRect().height > 1;
+    })
   };
 })()`;
+
+const homePanels = `(() => {
+  const panel = (id) => document.getElementById("home-panel-" + id);
+  return {
+    pinnedHidden: panel("pinned")?.hidden,
+    availableHidden: panel("available")?.hidden,
+    exploreHidden: panel("explore")?.hidden,
+    pinnedCards: document.querySelectorAll("[data-pinned-card]").length,
+    subjectCards: document.querySelectorAll("[data-subject-card]").length,
+    pinnedEmpty:
+      panel("pinned")?.querySelector("[data-pinned-empty]")?.textContent.trim() ?? null
+  };
+})()`;
+
+const selectTab = (id) => `(() => {
+  const tab = document.querySelector('[data-home-tab="${id}"]');
+  if (!tab) return "missing";
+  tab.click();
+  return "clicked";
+})()`;
+
+async function pressKey(page, key, code) {
+  const params = {
+    key,
+    code: key,
+    windowsVirtualKeyCode: code,
+    nativeVirtualKeyCode: code
+  };
+  await page.send("Input.dispatchKeyEvent", { type: "keyDown", ...params });
+  await page.send("Input.dispatchKeyEvent", { type: "keyUp", ...params });
+}
 
 const zakatPinToggle = `(() => {
   const button = [...document.querySelectorAll("[data-pin-toggle]")].find(
@@ -84,7 +114,7 @@ const homePinnedState = `(() => {
   const card = document.querySelector("[data-pinned-card]");
   return {
     count: document.querySelectorAll("[data-pinned-card]").length,
-    title: card?.querySelector("h3")?.textContent.trim() ?? null,
+    title: card?.querySelector("[data-pinned-title]")?.textContent.trim() ?? null,
     thumbnailReady: [...document.querySelectorAll("[data-pinned-card] img[data-lesson-thumb]")]
       .every((img) => img.complete && img.naturalWidth > 0),
     hasEmpty: Boolean(document.querySelector("[data-pinned-empty]")),
@@ -109,26 +139,90 @@ export async function run({ page, artifactDir, log }) {
   await waitForHome(page, "sapaan Beranda");
 
   await page.waitFor(
-    `document.querySelector("[data-pinned-empty]")?.textContent.includes("Belum ada materi yang disematkan") &&
+    `document.querySelector('[data-home-tab="available"]')?.getAttribute("aria-selected") === "true" &&
+     document.getElementById("home-panel-pinned")?.hidden === true &&
      document.querySelector("[data-subject-card]") !== null`,
-    { label: "keadaan awal tanpa sematan" }
+    { label: "keadaan awal tanpa sematan (tab Materi tersedia)" }
   );
 
-  const initial = await page.evaluate(pinnedLayout);
-  assert(initial.hasPinned, "Seksi Materi disematkan tidak ada di Beranda.");
-  assert(initial.hasAvailable, "Seksi Materi tersedia tidak ada di Beranda.");
-  assert(initial.hasExplore, "Seksi Jelajahi materi tidak ada di Beranda.");
-  for (const heading of ["Materi disematkan", "Materi tersedia", "Jelajahi materi"]) {
-    assert(
-      initial.headings.includes(heading),
-      `Judul seksi "${heading}" tidak ditemukan (${initial.headings.join(" | ")}).`
-    );
-  }
+  const initialTabs = await page.evaluate(homeTabs);
+  assert(initialTabs.count === 3, `Beranda harus punya 3 tab, ditemukan ${initialTabs.count}.`);
   assert(
-    initial.ordered,
-    "Urutan Beranda harus Materi disematkan → Materi tersedia → Jelajahi materi."
+    initialTabs.labels[0].startsWith("Materi disematkan") &&
+      initialTabs.labels[1] === "Materi tersedia" &&
+      initialTabs.labels[2] === "Jelajahi materi",
+    `Label tab tidak sesuai: ${initialTabs.labels.join(" | ")}.`
   );
-  log("Beranda tampil dengan urutan Materi disematkan → Materi tersedia → Jelajahi materi.");
+  assert(
+    initialTabs.panelsResolve,
+    "Setiap tab harus menunjuk panel tabpanel yang ada di DOM."
+  );
+  assert(
+    initialTabs.selected.length === 1 && initialTabs.selected[0] === "available",
+    `Tanpa sematan, tab aktif harus "Materi tersedia" (aktif: ${
+      initialTabs.selected.join(", ") || "tidak ada"
+    }).`
+  );
+  assert(
+    initialTabs.tabIndexes.filter((value) => value === 0).length === 1 &&
+      initialTabs.tabIndexes[1] === 0,
+    `Hanya tab aktif yang boleh masuk urutan Tab (${initialTabs.tabIndexes.join(", ")}).`
+  );
+  assert(
+    initialTabs.visiblePanels.length === 1 && initialTabs.visiblePanels[0] === "available",
+    `Tanpa sematan hanya panel Materi tersedia yang tampil (${initialTabs.visiblePanels.join(", ")}).`
+  );
+  log("Tanpa sematan, Beranda membuka tab Materi tersedia (tab lain tersembunyi).");
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  await page.screenshot(path.join(artifactDir, "beranda-tab-tersedia.png"));
+
+  const initialPanels = await page.evaluate(homePanels);
+  assert(initialPanels.pinnedHidden, "Panel Materi disematkan harus tersembunyi di awal.");
+  assert(
+    initialPanels.pinnedEmpty?.includes("Belum ada materi yang disematkan"),
+    `Panel sematan harus punya empty state jelas (${initialPanels.pinnedEmpty ?? "kosong"}).`
+  );
+  assert(initialPanels.subjectCards > 0, "Panel Materi tersedia harus berisi kartu mapel.");
+  log("Panel Materi disematkan menyimpan empty state; kartu mapel ada di panel tersedia.");
+
+  assert(
+    (await page.evaluate(selectTab("pinned"))) === "clicked",
+    "Tab Materi disematkan tidak dapat diklik."
+  );
+  await page.waitFor(
+    `document.getElementById("home-panel-pinned")?.hidden === false &&
+     document.getElementById("home-panel-available")?.hidden === true`,
+    { label: "panel sematan setelah tab Materi disematkan dipilih" }
+  );
+  const pinnedTabPanels = await page.evaluate(homePanels);
+  assert(
+    !pinnedTabPanels.pinnedHidden &&
+      pinnedTabPanels.availableHidden &&
+      pinnedTabPanels.pinnedEmpty?.includes("Belum ada materi yang disematkan"),
+    `Tab Materi disematkan harus menampilkan empty state saja (${JSON.stringify(pinnedTabPanels)}).`
+  );
+  log("Tab Materi disematkan menampilkan empty state beserta ajakan membuka Jelajah Materi.");
+
+  await page.evaluate(`document.getElementById("home-tab-pinned")?.focus()`);
+  await pressKey(page, "ArrowRight", 39);
+  await page.waitFor(
+    `document.querySelector('[data-home-tab="available"]')?.getAttribute("aria-selected") === "true" &&
+     document.activeElement?.id === "home-tab-available"`,
+    { label: "tab berpindah dengan panah kanan" }
+  );
+  await pressKey(page, "End", 35);
+  await page.waitFor(
+    `document.querySelector('[data-home-tab="explore"]')?.getAttribute("aria-selected") === "true" &&
+     document.activeElement?.id === "home-tab-explore"`,
+    { label: "tab terakhir dengan tombol End" }
+  );
+  await pressKey(page, "Home", 36);
+  await page.waitFor(
+    `document.querySelector('[data-home-tab="pinned"]')?.getAttribute("aria-selected") === "true" &&
+     document.activeElement?.id === "home-tab-pinned"`,
+    { label: "tab pertama dengan tombol Home" }
+  );
+  log("Navigasi tab dengan panah kanan, End, dan Home mengikuti pola tablist.");
 
   const pinCount = await page.evaluate(`
     window.__TAURI_INTERNALS__
@@ -139,7 +233,7 @@ export async function run({ page, artifactDir, log }) {
   `);
   assert(pinCount === 0, `Sematan awal harus kosong, ditemukan ${pinCount}.`);
 
-  await clickButton(page, "Jelajahi materi");
+  await clickButton(page, "Buka Jelajah Materi");
   await page.waitFor(
     `document.querySelector("main h1")?.textContent.includes("Jelajah Materi")`,
     { label: "katalog dari empty state Beranda" }
@@ -184,9 +278,12 @@ export async function run({ page, artifactDir, log }) {
 
   await clickButton(page, "Beranda");
   await waitForHome(page, "Beranda setelah menyematkan");
-  await page.waitFor(`document.querySelector("[data-pinned-card]") !== null`, {
-    label: "kartu sematan di Beranda"
-  });
+  await page.waitFor(
+    `document.querySelector("[data-pinned-card]") !== null &&
+     document.querySelector('[data-home-tab="pinned"]')?.getAttribute("aria-selected") === "true" &&
+     document.getElementById("home-panel-pinned")?.hidden === false`,
+    { label: "kartu sematan di Beranda" }
+  );
   const pinnedHome = await page.evaluate(homePinnedState);
   assert(pinnedHome.count === 1, `Beranda harus menampilkan 1 sematan, ditemukan ${pinnedHome.count}.`);
   assert(
@@ -196,7 +293,17 @@ export async function run({ page, artifactDir, log }) {
   assert(pinnedHome.thumbnailReady, "Thumbnail kartu sematan belum termuat.");
   assert(!pinnedHome.hasEmpty, "Empty state sematan masih tampil padahal ada sematan.");
   assert(pinnedHome.hasManage, "Tombol Kelola sematan tidak muncul saat ada sematan.");
-  log("Materi yang disematkan muncul di Beranda dengan thumbnail dan tombol Kelola sematan.");
+  const pinnedTabState = await page.evaluate(homeTabs);
+  assert(
+    pinnedTabState.selected.length === 1 &&
+      pinnedTabState.selected[0] === "pinned" &&
+      pinnedTabState.visiblePanels.length === 1 &&
+      pinnedTabState.visiblePanels[0] === "pinned",
+    `Dengan sematan, tab awal harus "Materi disematkan" (${JSON.stringify(pinnedTabState.selected)}).`
+  );
+  log(
+    "Materi yang disematkan otomatis jadi tab awal Beranda, lengkap dengan thumbnail dan Kelola sematan."
+  );
   await page.screenshot(path.join(artifactDir, "beranda-disematkan.png"));
 
   await page.send("Page.reload");
@@ -205,9 +312,11 @@ export async function run({ page, artifactDir, log }) {
     { label: "bridge Tauri setelah muat ulang" }
   );
   await waitForHome(page, "Beranda setelah muat ulang");
-  await page.waitFor(`document.querySelector("[data-pinned-card] h3")?.textContent.includes("Zakat dan Infak")`, {
-    label: "sematan bertahan setelah muat ulang"
-  });
+  await page.waitFor(
+    `document.querySelector("[data-pinned-title]")?.textContent.includes("Zakat dan Infak") &&
+     document.getElementById("home-panel-pinned")?.hidden === false`,
+    { label: "sematan bertahan setelah muat ulang" }
+  );
   const persisted = await page.evaluate(`
     window.__TAURI_INTERNALS__.invoke("profile_get_active").then((active) =>
       window.__TAURI_INTERNALS__.invoke("pinned_list", { profileId: active.id })
@@ -258,11 +367,17 @@ export async function run({ page, artifactDir, log }) {
   `);
   assert(unpin === "clicked", `Tombol Lepas tidak dapat diklik (${unpin}).`);
   await page.waitFor(
-    `document.querySelector("[data-pinned-empty]") !== null &&
-     document.querySelector("[data-pinned-card]") === null`,
-    { label: "empty state setelah melepas sematan" }
+    `document.querySelector("[data-pinned-card]") === null &&
+     document.querySelector('[data-home-tab="available"]')?.getAttribute("aria-selected") === "true" &&
+     document.getElementById("home-panel-available")?.hidden === false`,
+    { label: "kembali ke tab Materi tersedia setelah sematan habis" }
   );
-  log("Tombol Lepas di Beranda mengembalikan seksi ke empty state.");
+  const afterUnpinPanels = await page.evaluate(homePanels);
+  assert(
+    afterUnpinPanels.pinnedHidden && !afterUnpinPanels.availableHidden,
+    `Setelah sematan habis, panel Materi tersedia harus tampil (${JSON.stringify(afterUnpinPanels)}).`
+  );
+  log("Lepas sematan terakhir: Beranda pindah otomatis ke tab Materi tersedia.");
 
   await page.send("Page.reload");
   await page.waitFor(
@@ -271,9 +386,16 @@ export async function run({ page, artifactDir, log }) {
   );
   await waitForHome(page, "Beranda setelah melepas sematan");
   await page.waitFor(
-    `document.querySelector("[data-pinned-empty]") !== null &&
-     document.querySelector("[data-pinned-card]") === null`,
+    `document.querySelector('[data-home-tab="available"]')?.getAttribute("aria-selected") === "true" &&
+     document.getElementById("home-panel-pinned")?.hidden === true &&
+     document.querySelector("[data-pinned-card]") === null &&
+     document.querySelector("[data-subject-card]") !== null`,
     { label: "sematan tetap kosong setelah muat ulang" }
+  );
+  const afterUnpinEmpty = await page.evaluate(homePanels);
+  assert(
+    afterUnpinEmpty.pinnedEmpty?.includes("Belum ada materi yang disematkan"),
+    "Empty state sematan harus tetap tersedia di panel Materi disematkan."
   );
   const afterUnpin = await page.evaluate(`
     window.__TAURI_INTERNALS__.invoke("profile_get_active").then((active) =>
