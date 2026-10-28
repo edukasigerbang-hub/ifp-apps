@@ -6,6 +6,7 @@ mod diagnostics;
 mod error;
 mod learning;
 mod license;
+mod material;
 mod pins;
 mod preferences;
 mod profile;
@@ -21,6 +22,10 @@ use tauri::Manager;
 pub fn run() {
   tauri::Builder::default()
     .plugin(tauri_plugin_dialog::init())
+    .register_uri_scheme_protocol("ifp-content", |ctx, request| {
+      let state = ctx.app_handle().state::<material::MaterialState>();
+      material::handle_request(&state.root, &request)
+    })
     .setup(|app| {
       if cfg!(debug_assertions) {
         app.handle().plugin(
@@ -41,6 +46,13 @@ pub fn run() {
       app.manage(db::DbState(std::sync::Mutex::new(connection)));
       app.manage(content::ContentState { root: content_root });
       app.manage(license::LicenseState::from_env());
+
+      let material_root = data_dir.join("materials");
+      std::fs::create_dir_all(&material_root)?;
+      material::ensure_sample_material(&material_root).map_err(|error| {
+        std::io::Error::other(format!("{}: {}", error.code, error.message))
+      })?;
+      app.manage(material::MaterialState { root: material_root });
 
       Ok(())
     })
@@ -93,6 +105,7 @@ pub fn run() {
       ui_state::ui_state_get,
       ui_state::ui_state_set,
       ui_state::ui_state_clear,
+      material::material_open_sample,
       preferences::preferences_get,
       preferences::preferences_set
     ])

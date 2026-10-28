@@ -140,6 +140,14 @@ impl AppError {
         )
     }
 
+    pub fn material_not_found(message: &str) -> Self {
+        Self::new("MATERIAL_NOT_FOUND", message)
+    }
+
+    pub fn material_invalid(message: &str) -> Self {
+        Self::new("MATERIAL_INVALID", message)
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")

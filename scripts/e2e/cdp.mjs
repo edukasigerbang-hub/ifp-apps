@@ -43,11 +43,15 @@ export async function connect(webSocketUrl) {
     pending.clear();
   });
 
-  function send(method, params = {}) {
+  function send(method, params = {}, sessionId) {
     return new Promise((resolve, reject) => {
       const id = ++nextId;
       pending.set(id, { resolve, reject });
-      socket.send(JSON.stringify({ id, method, params }));
+      const message = { id, method, params };
+      if (sessionId) {
+        message.sessionId = sessionId;
+      }
+      socket.send(JSON.stringify(message));
     });
   }
 

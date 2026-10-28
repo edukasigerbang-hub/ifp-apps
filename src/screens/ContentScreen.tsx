@@ -10,6 +10,8 @@ import {
   type PackageRecord
 } from "../data/contentRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
+import { openSampleMaterial, type MaterialView } from "../data/materialRepository";
+import { MaterialViewer } from "../components/material/MaterialViewer";
 import { resolvePackageDigest } from "../data/reviewDigest";
 import {
   exportReviewsCsv,
@@ -49,6 +51,9 @@ export function ContentScreen() {
   const [reviewMessage, setReviewMessage] = useState<string | null>(null);
   const [reviewError, setReviewError] = useState<string | null>(null);
   const [reviewExportBusy, setReviewExportBusy] = useState(false);
+  const [material, setMaterial] = useState<MaterialView | null>(null);
+  const [materialBusy, setMaterialBusy] = useState(false);
+  const [materialError, setMaterialError] = useState<string | null>(null);
   const desktop = canPersistLocally();
 
   async function refresh() {
@@ -174,6 +179,19 @@ export function ContentScreen() {
     }
   }
 
+  async function handleOpenMaterial() {
+    setMaterialError(null);
+    setMaterialBusy(true);
+    try {
+      setMaterial(await openSampleMaterial());
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setMaterialError(typed?.message ?? "Materi contoh tidak dapat dibuka.");
+    } finally {
+      setMaterialBusy(false);
+    }
+  }
+
   const canReview = activeProfile?.profileType === "teacher";
 
   const hasPrevious = (record: PackageRecord) =>
@@ -267,6 +285,38 @@ export function ContentScreen() {
           Validasi native mencakup manifest, path, batas ukuran, dan SHA-256 aset. Player memakai paket impor aktif
           (managed-first); rollback mengembalikan versi sebelumnya.
         </p>
+      </section>
+
+      <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            Materi HTML5 (prototipe)
+          </h2>
+          {desktop && (
+            <button
+              type="button"
+              data-material-open
+              onClick={() => void handleOpenMaterial()}
+              disabled={materialBusy}
+              className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {materialBusy ? "Membuka…" : "Buka contoh materi HTML5"}
+            </button>
+          )}
+        </div>
+        <p className="mt-3 text-sm text-muted">
+          Prototipe penampil memakai satu bundel contoh lokal di folder aplikasi, bukan unduhan dari server.
+          Isi materi berjalan di iframe tersandbox tanpa akses ke aplikasi, IPC, maupun jaringan. Penanda
+          &ldquo;selesai&rdquo; belum masuk Hasil Belajar (OD-14).
+        </p>
+        {!desktop && (
+          <p className="mt-3 text-sm text-muted">Materi hanya dapat dibuka di aplikasi desktop.</p>
+        )}
+        {materialError && (
+          <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
+            {materialError}
+          </p>
+        )}
       </section>
 
       <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
@@ -381,6 +431,8 @@ export function ContentScreen() {
           </ul>
         )}
       </section>
+
+      {material && <MaterialViewer material={material} onClose={() => setMaterial(null)} />}
     </div>
   );
 }
