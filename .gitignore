@@ -8,6 +8,7 @@ src-tauri/target/
 # Local test data
 .tmp-data/
 .tmp-*/
+.tmp-*.log
 server/data/
 
 # Runtime snapshot artifacts (rollback only, not knowledge)
