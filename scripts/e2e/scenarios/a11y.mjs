@@ -645,10 +645,33 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor hasil kuis"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "penyimpanan hasil kuis",
-    timeoutMs: 30_000
-  });
+  const saveStartedAt = Date.now();
+  // Batas 30 dtk dipertahankan, tetapi teks banner dicatat tiap perubahan: tanpa
+  // riwayat ini "timeout" tidak membedakan simpan lambat, simpan gagal, dan banner
+  // yang tertimpa status lain.
+  const bannerHistory = [];
+  let saved = false;
+  while (Date.now() - saveStartedAt < 30_000) {
+    const banner = await page.evaluate(`
+      (() => {
+        const node = document.querySelector('[aria-live="polite"]');
+        return (node?.textContent ?? "").replace(/\\s+/g, " ").trim();
+      })()
+    `);
+    if (bannerHistory.at(-1)?.text !== banner) {
+      bannerHistory.push({ ms: Date.now() - saveStartedAt, text: banner.slice(0, 160) });
+    }
+    if (banner.includes("Tersimpan lokal")) {
+      saved = true;
+      break;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 150));
+  }
+  if (!saved) {
+    throw new Error(
+      `Timeout menunggu penyimpanan hasil kuis — riwayat banner: ${JSON.stringify(bannerHistory)}`
+    );
+  }
   const quizAudit = await page.evaluate(`(${auditInPage.toString()})()`);
   const quizErrors = quizAudit.issues.filter((issue) => issue.severity === "error");
   const quizWarnings = quizAudit.issues.filter((issue) => issue.severity === "warning");

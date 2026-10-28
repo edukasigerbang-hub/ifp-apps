@@ -20,8 +20,19 @@ import { LicenseScreen } from "./screens/LicenseScreen";
 import { ResultsScreen } from "./screens/ResultsScreen";
 import { ScreenPlaceholder } from "./screens/ScreenPlaceholder";
 import { SettingsScreen } from "./screens/SettingsScreen";
+import {
+  buildPlayerHash,
+  getPlaybackSelection,
+  parsePlayerHash,
+  setPlaybackSelection,
+} from "./state/playbackSelection";
 
 function initialScreen(): ScreenId {
+  const deepLink = parsePlayerHash(window.location.hash);
+  if (deepLink) {
+    setPlaybackSelection(deepLink);
+    return "player";
+  }
   const hash = window.location.hash.replace(/^#\/?/, "");
   return isScreenId(hash) ? hash : "home";
 }
@@ -69,7 +80,12 @@ export default function App() {
     if (next !== "player") {
       setPlayerFullscreen(false);
     }
-    window.history.replaceState(null, "", `#${next}`);
+    const selection = getPlaybackSelection();
+    window.history.replaceState(
+      null,
+      "",
+      next === "player" && selection ? buildPlayerHash(selection) : `#${next}`,
+    );
   }
 
   function applyMode(mode: AppMode) {

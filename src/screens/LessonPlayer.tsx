@@ -9,7 +9,7 @@ import { gradeCoverUrl, subjectCoverUrl } from "../content/coverArt";
 import { loadContentPackages, type LoadedContentPackage } from "../content/loadPackages";
 import { subjectLabel } from "../content/subjectLabel";
 import type { ScreenId } from "../navigation";
-import { getPlaybackSelection } from "../state/playbackSelection";
+import { getPlaybackSelection, buildPlayerHash, setPlaybackSelection } from "../state/playbackSelection";
 import { listManagedPackages, loadManagedPackage } from "../content/loadManagedPackage";
 import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
 import type { Activity } from "../content/schema/activity";
@@ -159,6 +159,24 @@ export function LessonPlayer({
       releaseObjectUrls();
     };
   }, []);
+
+  // Hash harus menunjuk materi yang benar-benar tampil: deep link ke paket tak
+  // dikenal jatuh ke paket pertama, permintaan tanpa lesson menampilkan lesson
+  // pertama, dan pergantian paket di dalam Player tidak boleh meninggalkan URL lama.
+  useEffect(() => {
+    if (state.status !== "ready") {
+      return;
+    }
+    const packageId = state.contentPackage.data.manifest.packageId;
+    const lessonId =
+      state.lessonId ?? state.contentPackage.data.lessons[0]?.lessonId ?? undefined;
+    const current = getPlaybackSelection();
+    if (current?.packageId === packageId && (current.lessonId ?? undefined) === lessonId) {
+      return;
+    }
+    setPlaybackSelection({ packageId, lessonId });
+    window.history.replaceState(null, "", buildPlayerHash({ packageId, lessonId }));
+  }, [state]);
 
   async function selectPackage(summary: ActivePackageSummary) {
     if (state.status !== "ready" || state.source !== "managed") {
