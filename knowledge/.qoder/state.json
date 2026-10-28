@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "eaf2067",
+  "commit": "79314ea",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 40,
+  "context_version": 41,
   "skill_registry_version": 0,
   "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A",
-  "last_task": "T-102 analisis gap kualitas bertanggal (--date/--out-dir/--force via scripts/lib/reviewOutput.mjs) + koreksi detektor G11 (duplikat = teks persis; kapitalisasi-saja jadi catatan)",
+  "last_task": "T-103 deep link Player (#player/<packageId>[/<lessonId>]) + diagnostik E2E (event CDP, konsol halaman, riwayat banner simpan)",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T07:05:00+07:00",
-  "last_validation": "T-102 (2026-10-28, HEAD 223349c + perubahan skrip belum di-commit): scripts/analyze-content-quality.mjs kini memakai parseReviewArgs/ensureWritable (--date YYYY-MM-DD default hari ini, --out-dir, --force) dan menulis QUALITY_GAP_<tanggal>.md + quality-gap-<tanggal>.json; kalimat mati (320 paket, 3 langkah/2 aktivitas) diganti angka terhitung; JSON menambah generatedAt. Detektor G11 dikoreksi: duplikat = teks persis per soal (sebelumnya case-insensitive sehingga menandai paket yang menguji kapitalisasi), kapitalisasi-saja dilaporkan terpisah. Verifikasi aktual: run ke .tmp-assets/quality-check --date 2026-10-28 exit 0 (336 paket); run ulang tanpa --force exit 1 menolak menimpa 2 berkas; --force exit 0; npm test 110/110 (15 berkas) + fixture 4/4 + katalog 336/336. Bukti historis QUALITY_GAP_2026-10-25.* tidak tersentuh; angka G11 319/320 di laporan itu dinyatakan positif palsu tanpa menulis ulang laporan. build/a11y/E2E/cargo test tidak dijalankan (hanya .mjs di luar tsconfig src dan suite). Angka 2026-10-28: G1/G2/G3/G5/G6/G7/G8/G9/G11/G12 336/336, G4 295/336, G10 0/336, 0 grup duplikasi, 336 hash aset unik.",
+  "last_updated": "2026-10-28T07:36:00+07:00",
+  "last_validation": "T-103 (2026-10-28, HEAD 223349c + perubahan belum di-commit): hash Player kini #player/<packageId>[/<lessonId>] via buildPlayerHash/parsePlayerHash (menolak layar lain, segmen ekstra, id kosong, decode rusak); initialScreen() memulihkan seleksi dari hash; navigate() menulis deep link untuk Player; LessonPlayer menyelaraskan hash dengan materi yang tampil (tanpa lesson -> lesson pertama, paket tak dikenal -> paket pertama, hash ditulis ulang dan stabil). Verifikasi aktual: npm test 114/114 (15 berkas) + fixture 4/4 + katalog 336/336; npm run build exit 0; E2E player-deeplink 7/7 (dijalankan ulang setelah perubahan harness CDP); regresi home-catalog 28/28, learning-journey 11/11; npm run a11y 17/17 (0 error, 7 warning) DUA kali berturut-turut SETELAH 4 percobaan gagal (3x timeout 'Tersimpan lokal' dengan banner tetap 'Penyimpanan lokal siap' tanpa exception dan tanpa 'Menyimpan hasil belajar' -> simpan tidak pernah dimulai; 1x halaman blank setelah Beranda->Jelajah). Akar masalah a11y belum terbukti; dugaan (BELUM diverifikasi) effect sesi [contentPackage, lesson.lessonId] berjalan ulang menimpa status banner atau beban mesin; tidak ada kode T-103 yang menyentuh jalur simpan. cargo test tidak dijalankan (tanpa perubahan Rust).",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Verifikasi ulang a11y pada mesin bersih / tambahkan atribut status penyimpanan agar kegagalan banner dapat dilacak (utang E2E di BACKLOG). Setelah itu: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
