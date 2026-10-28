@@ -45,10 +45,12 @@
     "worker:typecheck": "tsc -p workers/api/tsconfig.json",
     "license:tool": "node scripts/license-issuer.mjs",
     "material:pack": "node scripts/material-pack.mjs",
+    "catalog:mock": "node scripts/mock-catalog-server.mjs",
     "e2e:pinned": "node scripts/e2e/run.mjs pinned-materials",
     "e2e:material": "node scripts/e2e/run.mjs material-viewer",
     "e2e:material-import": "node scripts/e2e/run.mjs material-import",
-    "e2e:material-pin": "node scripts/e2e/run.mjs material-pin"
+    "e2e:material-pin": "node scripts/e2e/run.mjs material-pin",
+    "e2e:material-catalog": "node scripts/e2e/run.mjs material-catalog"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",

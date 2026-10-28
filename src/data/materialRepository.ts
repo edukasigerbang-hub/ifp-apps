@@ -51,6 +51,77 @@ export interface MaterialInstallResult {
   bytes: number;
 }
 
+export interface CatalogItem {
+  materialId: string;
+  version: string;
+  title: string;
+  summary: string;
+  gradeLevels: number[];
+  subjects: string[];
+  topics: string[];
+  estimatedMinutes: number;
+  reviewStatus: string;
+  sizeBytes: number;
+  publishedAt: string;
+  updatedAt: string;
+  installedVersion: string | null;
+}
+
+export interface CatalogPage {
+  schemaVersion: string;
+  generatedAt: string;
+  items: CatalogItem[];
+  nextCursor: string | null;
+  /** true bila daftar berasal dari cache lokal karena katalog tidak terjangkau. */
+  stale: boolean;
+  cachedAt: string | null;
+}
+
+export interface MaterialCatalogConfig {
+  baseUrl: string | null;
+  source: string;
+}
+
+export interface CatalogQuery {
+  grade?: number | null;
+  subject?: string | null;
+  cursor?: string | null;
+  limit?: number | null;
+}
+
+// Rust `CatalogQuery` adalah Option di semua field; kirim eksplisit supaya
+// `null` (tanpa filter) tidak bergantung pada perilaku serde untuk field hilang.
+function catalogQueryInput(query: CatalogQuery) {
+  return {
+    grade: query.grade ?? null,
+    subject: query.subject ?? null,
+    cursor: query.cursor ?? null,
+    limit: query.limit ?? null
+  };
+}
+
+export async function getCatalogConfig(): Promise<MaterialCatalogConfig> {
+  return invoke<MaterialCatalogConfig>("material_catalog_config_get");
+}
+
+export async function setCatalogConfig(baseUrl: string): Promise<MaterialCatalogConfig> {
+  return invoke<MaterialCatalogConfig>("material_catalog_config_set", { input: { baseUrl } });
+}
+
+export async function listMaterialCatalog(query: CatalogQuery = {}): Promise<CatalogPage> {
+  return invoke<CatalogPage>("material_catalog_list", { input: catalogQueryInput(query) });
+}
+
+export async function installMaterialFromCatalog(
+  materialId: string,
+  version: string,
+  query: CatalogQuery = {}
+): Promise<MaterialInstallResult> {
+  return invoke<MaterialInstallResult>("material_catalog_install", {
+    input: { materialId, version, query: catalogQueryInput(query) }
+  });
+}
+
 export async function openSampleMaterial(): Promise<MaterialView> {
   return invoke<MaterialView>("material_open_sample");
 }

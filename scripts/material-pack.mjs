@@ -219,7 +219,8 @@ export function packBundle({ sourceDir, outPath, privateKeyPem, keyId = "content
     version: manifest.version,
     files: files.length,
     bytes: archive.length,
-    bundleSha256: sha256(archive)
+    bundleSha256: sha256(archive),
+    manifest
   };
 }
 

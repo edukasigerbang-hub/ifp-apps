@@ -8,6 +8,8 @@ const subjectLabels: Record<string, string> = {
   "seni-rupa": "Seni Rupa"
 };
 
+export const subjectKeys = Object.keys(subjectLabels);
+
 export function subjectLabel(subject: string): string {
   const key = subject.trim().toLowerCase();
   const known = subjectLabels[key];

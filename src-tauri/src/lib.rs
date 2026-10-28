@@ -7,6 +7,7 @@ mod error;
 mod learning;
 mod license;
 mod material;
+mod material_catalog;
 mod material_install;
 mod material_manifest;
 mod pins;
@@ -114,6 +115,10 @@ pub fn run() {
       material_install::material_install_bundle,
       material_install::material_list_installed,
       material_install::material_open_installed,
+      material_catalog::material_catalog_config_get,
+      material_catalog::material_catalog_config_set,
+      material_catalog::material_catalog_list,
+      material_catalog::material_catalog_install,
       preferences::preferences_get,
       preferences::preferences_set
     ])

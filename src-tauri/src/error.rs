@@ -175,6 +175,10 @@ impl AppError {
         )
     }
 
+    pub fn material_fetch_failed(message: &str) -> Self {
+        Self::new("MATERIAL_FETCH_FAILED", message)
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")

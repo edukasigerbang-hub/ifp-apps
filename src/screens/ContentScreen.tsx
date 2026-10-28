@@ -11,14 +11,22 @@ import {
 } from "../data/contentRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
 import {
+  getCatalogConfig,
   installMaterialBundle,
+  installMaterialFromCatalog,
   listInstalledMaterials,
+  listMaterialCatalog,
   openInstalledMaterial,
   openSampleMaterial,
   pickMaterialBundle,
+  setCatalogConfig as saveCatalogConfig,
+  type CatalogItem,
+  type CatalogPage,
   type InstalledMaterial,
+  type MaterialCatalogConfig,
   type MaterialView
 } from "../data/materialRepository";
+import { subjectKeys, subjectLabel } from "../content/subjectLabel";
 import { MaterialViewer } from "../components/material/MaterialViewer";
 import {
   listPinnedMaterials,
@@ -74,6 +82,18 @@ export function ContentScreen() {
   const [pinBusyId, setPinBusyId] = useState<string | null>(null);
   const [pinMessage, setPinMessage] = useState<string | null>(null);
   const [pinError, setPinError] = useState<string | null>(null);
+  const [catalogConfig, setCatalogConfig] = useState<MaterialCatalogConfig | null>(null);
+  // null = belum disunting; memakai nilai tersimpan. Mencegah hasil muat awal
+  // menimpa teks yang sudah diketik pengguna.
+  const [catalogUrlDraft, setCatalogUrlDraft] = useState<string | null>(null);
+  const [catalogUrlBusy, setCatalogUrlBusy] = useState(false);
+  const [catalogGrade, setCatalogGrade] = useState("");
+  const [catalogSubject, setCatalogSubject] = useState("");
+  const [catalogPage, setCatalogPage] = useState<CatalogPage | null>(null);
+  const [catalogBusy, setCatalogBusy] = useState(false);
+  const [catalogInstallingId, setCatalogInstallingId] = useState<string | null>(null);
+  const [catalogMessage, setCatalogMessage] = useState<string | null>(null);
+  const [catalogError, setCatalogError] = useState<string | null>(null);
   const desktop = canPersistLocally();
 
   async function refresh() {
@@ -89,11 +109,12 @@ export function ContentScreen() {
     let cancelled = false;
     (async () => {
       try {
-        const [records, reviewRecords, profile, materials] = await Promise.all([
+        const [records, reviewRecords, profile, materials, catalog] = await Promise.all([
           listPackages(),
           listReviews(),
           getActiveProfile(),
-          listInstalledMaterials()
+          listInstalledMaterials(),
+          getCatalogConfig()
         ]);
         const pins = profile ? await listPinnedMaterials(profile.id) : [];
         if (!cancelled) {
@@ -101,6 +122,7 @@ export function ContentScreen() {
           setReviews(reviewRecords);
           setActiveProfile(profile);
           setInstalledMaterials(materials);
+          setCatalogConfig(catalog);
           setPinnedMaterialIds(pins.map((item) => item.materialId));
         }
       } catch (caught) {
@@ -281,6 +303,92 @@ export function ContentScreen() {
   }
 
   const canReview = activeProfile?.profileType === "teacher";
+
+  function catalogFilters() {
+    return {
+      grade: catalogGrade ? Number(catalogGrade) : null,
+      subject: catalogSubject || null
+    };
+  }
+
+  const catalogUrlValue = catalogUrlDraft ?? catalogConfig?.baseUrl ?? "";
+
+  async function handleSaveCatalogUrl() {
+    setCatalogError(null);
+    setCatalogMessage(null);
+    setCatalogUrlBusy(true);
+    try {
+      const config = await saveCatalogConfig(catalogUrlValue.trim());
+      setCatalogConfig(config);
+      setCatalogUrlDraft(null);
+      setCatalogMessage(
+        config.baseUrl ? `Alamat katalog disimpan: ${config.baseUrl}` : "Alamat katalog dikosongkan."
+      );
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setCatalogError(typed?.message ?? "Alamat katalog tidak dapat disimpan.");
+    } finally {
+      setCatalogUrlBusy(false);
+    }
+  }
+
+  async function handleLoadCatalog() {
+    setCatalogError(null);
+    setCatalogMessage(null);
+    setCatalogBusy(true);
+    try {
+      const page = await listMaterialCatalog({ ...catalogFilters(), limit: 50 });
+      setCatalogPage(page);
+      setCatalogMessage(
+        page.items.length === 0
+          ? "Tidak ada materi untuk filter ini."
+          : `${page.items.length} materi daring ditemukan.`
+      );
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setCatalogPage(null);
+      setCatalogError(typed?.message ?? "Katalog daring tidak dapat dimuat.");
+    } finally {
+      setCatalogBusy(false);
+    }
+  }
+
+  async function handleInstallFromCatalog(item: CatalogItem) {
+    setCatalogError(null);
+    setCatalogMessage(null);
+    setCatalogInstallingId(item.materialId);
+    try {
+      const result = await installMaterialFromCatalog(item.materialId, item.version, {
+        ...catalogFilters(),
+        limit: 50
+      });
+      setMaterialMessage(
+        `Materi “${result.title}” v${result.version} terpasang dari katalog (${result.files} berkas, ` +
+          `${Math.round(result.bytes / 1024)} KB).${
+            result.previousVersion ? ` Versi sebelumnya: ${result.previousVersion}.` : ""
+          }`
+      );
+      setInstalledMaterials(await listInstalledMaterials());
+      setCatalogPage((current) =>
+        current
+          ? {
+              ...current,
+              items: current.items.map((candidate) =>
+                candidate.materialId === item.materialId
+                  ? { ...candidate, installedVersion: result.version }
+                  : candidate
+              )
+            }
+          : current
+      );
+      setCatalogMessage(`“${result.title}” v${result.version} terpasang.`);
+    } catch (caught) {
+      const typed = caught as { message?: string };
+      setCatalogError(typed?.message ?? "Materi daring gagal dipasang.");
+    } finally {
+      setCatalogInstallingId(null);
+    }
+  }
 
   const hasPrevious = (record: PackageRecord) =>
     record.activatedAt !== null &&
@@ -496,6 +604,170 @@ export function ContentScreen() {
               </ul>
             )}
           </div>
+        )}
+      </section>
+
+      <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            Jelajah materi daring (prototipe)
+          </h2>
+          {desktop && (
+            <button
+              type="button"
+              data-catalog-refresh
+              onClick={() => void handleLoadCatalog()}
+              disabled={catalogBusy || !catalogConfig?.baseUrl}
+              className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {catalogBusy ? "Memuat…" : catalogPage ? "Muat ulang katalog" : "Muat katalog"}
+            </button>
+          )}
+        </div>
+        <p className="mt-3 text-sm text-muted">
+          Katalog menyajikan materi HTML5 yang sudah ditinjau di platform. Aplikasi memeriksa tanda tangan
+          manifest sebelum mengunduh, lalu mencocokkan SHA-256 bundel dan hash setiap berkas. Tautan unduhan
+          pre-signed tidak pernah disimpan.
+        </p>
+
+        {!desktop ? (
+          <p className="mt-3 text-sm text-muted">Jelajah materi daring hanya tersedia di aplikasi desktop.</p>
+        ) : (
+          <>
+            <div className="mt-4 flex flex-wrap items-end gap-3">
+              <label className="min-w-64 flex-1 text-sm">
+                Alamat katalog
+                <input
+                  data-catalog-url
+                  type="url"
+                  value={catalogUrlValue}
+                  onChange={(event) => setCatalogUrlDraft(event.target.value)}
+                  disabled={catalogUrlBusy}
+                  placeholder="https://katalog.gerbang.contoh"
+                  className="mt-1 block min-h-11 w-full rounded-control border border-ink/15 px-3 text-sm"
+                />
+              </label>
+              <button
+                type="button"
+                data-catalog-save-url
+                onClick={() => void handleSaveCatalogUrl()}
+                disabled={catalogUrlBusy}
+                className="min-h-11 rounded-control border border-ink/15 px-5 text-sm font-medium hover:bg-paper disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                {catalogUrlBusy ? "Menyimpan…" : "Simpan alamat"}
+              </button>
+            </div>
+            <p data-catalog-config className="mt-2 text-xs text-muted">
+              {catalogConfig?.baseUrl
+                ? `Aktif: ${catalogConfig.baseUrl} (${
+                    catalogConfig.source === "env" ? "variabel lingkungan" : "pengaturan perangkat"
+                  })`
+                : "Belum dikonfigurasi. Alamat wajib https; http hanya diterima untuk localhost saat pengembangan."}
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-end gap-3">
+              <label className="text-sm">
+                Kelas
+                <select
+                  data-catalog-grade
+                  value={catalogGrade}
+                  onChange={(event) => setCatalogGrade(event.target.value)}
+                  disabled={catalogBusy}
+                  className="mt-1 block min-h-11 rounded-control border border-ink/15 px-3 text-sm"
+                >
+                  <option value="">Semua kelas</option>
+                  {[1, 2, 3, 4, 5, 6].map((grade) => (
+                    <option key={grade} value={grade}>
+                      Kelas {grade}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="text-sm">
+                Mapel
+                <select
+                  data-catalog-subject
+                  value={catalogSubject}
+                  onChange={(event) => setCatalogSubject(event.target.value)}
+                  disabled={catalogBusy}
+                  className="mt-1 block min-h-11 rounded-control border border-ink/15 px-3 text-sm"
+                >
+                  <option value="">Semua mapel</option>
+                  {subjectKeys.map((subject) => (
+                    <option key={subject} value={subject}>
+                      {subjectLabel(subject)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <p aria-live="polite" className="mt-3 text-sm text-muted">
+              {catalogMessage ?? ""}
+            </p>
+            {catalogError && (
+              <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
+                {catalogError}
+              </p>
+            )}
+
+            {catalogPage?.stale && (
+              <p
+                data-catalog-stale
+                className="mt-3 rounded-control border border-warning/40 bg-warning/10 px-4 py-3 text-sm"
+              >
+                Katalog tidak terjangkau. Menampilkan cache lokal
+                {catalogPage.cachedAt ? ` dari ${formatDate(catalogPage.cachedAt)}` : ""}.
+              </p>
+            )}
+
+            {catalogPage !== null &&
+              (catalogPage.items.length === 0 ? (
+                <p className="mt-3 text-sm text-muted">Tidak ada materi pada filter ini.</p>
+              ) : (
+                <ul className="mt-3 divide-y divide-ink/10">
+                  {catalogPage.items.map((item) => {
+                    const installed = item.installedVersion === item.version;
+                    return (
+                      <li
+                        key={`${item.materialId}@${item.version}`}
+                        data-catalog-item={item.materialId}
+                        className="flex flex-wrap items-center justify-between gap-3 py-3"
+                      >
+                        <div className="min-w-0">
+                          <p className="truncate text-sm font-medium">{item.title}</p>
+                          <p className="text-xs text-muted">
+                            v{item.version} · kelas {item.gradeLevels.join(", ")} ·{" "}
+                            {item.subjects.map(subjectLabel).join(", ")} · {item.estimatedMinutes} menit ·{" "}
+                            {Math.round(item.sizeBytes / 1024)} KB · {item.reviewStatus}
+                          </p>
+                          {item.installedVersion && !installed && (
+                            <p className="text-xs text-muted">
+                              Versi {item.installedVersion} sudah terpasang di perangkat ini.
+                            </p>
+                          )}
+                        </div>
+                        <button
+                          type="button"
+                          data-catalog-install={item.materialId}
+                          onClick={() => void handleInstallFromCatalog(item)}
+                          disabled={catalogInstallingId !== null || installed}
+                          className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:cursor-not-allowed disabled:opacity-40"
+                        >
+                          {installed
+                            ? "Terpasang"
+                            : catalogInstallingId === item.materialId
+                              ? "Memasang…"
+                              : item.installedVersion
+                                ? `Pasang v${item.version}`
+                                : "Pasang"}
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ))}
+          </>
         )}
       </section>
 

@@ -69,7 +69,12 @@ try {
     const detail = details?.exception?.description ?? details?.text ?? "exception";
     recordConsole(`[exception] ${String(detail).replace(/\s+/g, " ").slice(0, 800)}`);
   });
-  await page.waitFor("document.readyState === 'complete'", { label: "dokumen siap" });
+  // Vite mengubah modul sesuai permintaan; setelah proses dev server baru,
+  // muatan pertama bisa lambat sehingga `readyState` butuh waktu lebih lama.
+  await page.waitFor("document.readyState === 'complete'", {
+    label: "dokumen siap",
+    timeoutMs: 60_000
+  });
   await page.waitFor(`document.body.textContent.includes("Jelajah Materi")`, {
     label: "shell aplikasi",
     timeoutMs: 30_000

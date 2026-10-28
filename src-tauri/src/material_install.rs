@@ -14,8 +14,8 @@ use rusqlite::{params, Connection, OptionalExtension};
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::collections::{HashMap, HashSet};
-use std::fs::{self, File};
-use std::io::Read;
+use std::fs;
+use std::io::{Cursor, Read};
 use std::path::Path;
 use tauri::State;
 use zip::ZipArchive;
@@ -73,13 +73,20 @@ impl MaterialKeyring {
     }
 }
 
-/// Berkas `.sig` di samping bundel: `{ keyId, algorithm, value }` (kontrak §5).
-#[derive(Deserialize)]
+/// Tanda tangan bundel (kontrak §5): dari sidecar `.sig` atau dari item katalog.
+#[derive(Debug, Clone, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
-struct SignatureFile {
-    key_id: String,
-    algorithm: String,
-    value: String,
+pub struct BundleSignature {
+    pub key_id: String,
+    pub algorithm: String,
+    pub value: String,
+}
+
+/// Harapan dari katalog: bundel yang diunduh harus berisi materi dan digest ZIP ini.
+pub struct ExpectedBundle<'a> {
+    pub material_id: &'a str,
+    pub version: &'a str,
+    pub bundle_sha256: &'a str,
 }
 
 #[derive(Debug, Deserialize)]
@@ -121,10 +128,19 @@ fn hex_digest(data: &[u8]) -> String {
         .collect()
 }
 
-fn read_archive(path: &Path) -> Result<HashMap<String, Vec<u8>>, AppError> {
-    let file = File::open(path).map_err(|_| AppError::material_invalid("Bundel tidak dapat dibuka."))?;
-    let mut archive =
-        ZipArchive::new(file).map_err(|_| AppError::material_invalid("Bundel ZIP tidak valid."))?;
+fn read_signature_file(path: &Path) -> Result<BundleSignature, AppError> {
+    let raw = fs::read(path).map_err(|_| {
+        AppError::material_signature_invalid(
+            "Berkas tanda tangan (.sig) tidak ditemukan di samping bundel.",
+        )
+    })?;
+    serde_json::from_slice(&raw)
+        .map_err(|_| AppError::material_signature_invalid("Berkas tanda tangan tidak valid."))
+}
+
+fn read_archive(bytes: &[u8]) -> Result<HashMap<String, Vec<u8>>, AppError> {
+    let mut archive = ZipArchive::new(Cursor::new(bytes))
+        .map_err(|_| AppError::material_invalid("Bundel ZIP tidak valid."))?;
     if archive.len() > MAX_ENTRIES {
         return Err(AppError::material_invalid("Bundel memuat terlalu banyak entri."));
     }
@@ -187,22 +203,17 @@ struct LoadedSignature {
     signature: Signature,
 }
 
-fn load_signature(bundle: &Path, keyring: &MaterialKeyring) -> Result<LoadedSignature, AppError> {
+fn load_signature(
+    signature: &BundleSignature,
+    keyring: &MaterialKeyring,
+) -> Result<LoadedSignature, AppError> {
     if keyring.keys.is_empty() {
         return Err(AppError::material_signature_invalid(
             "Kunci publik materi belum dikonfigurasi.",
         ));
     }
 
-    let signature_path = bundle.with_extension("sig");
-    let raw = fs::read(&signature_path).map_err(|_| {
-        AppError::material_signature_invalid(
-            "Berkas tanda tangan (.sig) tidak ditemukan di samping bundel.",
-        )
-    })?;
-    let file: SignatureFile = serde_json::from_slice(&raw)
-        .map_err(|_| AppError::material_signature_invalid("Berkas tanda tangan tidak valid."))?;
-    if file.algorithm != "ed25519" {
+    if signature.algorithm != "ed25519" {
         return Err(AppError::material_signature_invalid(
             "Algoritma tanda tangan tidak didukung.",
         ));
@@ -210,13 +221,13 @@ fn load_signature(bundle: &Path, keyring: &MaterialKeyring) -> Result<LoadedSign
     let key = keyring
         .keys
         .iter()
-        .find(|key| key.key_id == file.key_id)
+        .find(|key| key.key_id == signature.key_id)
         .cloned()
         .ok_or_else(|| AppError::material_signature_invalid("keyId materi tidak dikenal."))?;
 
     let bytes = URL_SAFE_NO_PAD
-        .decode(&file.value)
-        .or_else(|_| URL_SAFE.decode(&file.value))
+        .decode(&signature.value)
+        .or_else(|_| URL_SAFE.decode(&signature.value))
         .map_err(|_| AppError::material_signature_invalid("Nilai tanda tangan tidak dapat dibaca."))?;
     let signature = Signature::from_slice(&bytes)
         .map_err(|_| AppError::material_signature_invalid("Panjang tanda tangan tidak valid."))?;
@@ -241,6 +252,17 @@ fn verify_manifest(
 
     serde_json::from_slice(manifest_bytes)
         .map_err(|_| AppError::material_schema_unsupported("material.json tidak sesuai skema v1."))
+}
+
+/// Verifikasi tanda tangan atas byte manifest kanonik dengan `keyId` persis.
+/// Dipakai jalur katalog untuk menolak item sebelum bundel diunduh.
+pub fn verify_signed_manifest(
+    signature: &BundleSignature,
+    keyring: &MaterialKeyring,
+    canonical_manifest: &[u8],
+) -> Result<MaterialManifest, AppError> {
+    let loaded = load_signature(signature, keyring)?;
+    verify_manifest(&loaded, canonical_manifest)
 }
 
 fn activate(
@@ -304,14 +326,53 @@ pub fn install_bundle(
         return Err(AppError::material_too_large());
     }
 
-    let signature = load_signature(bundle_path, keyring)?;
-    let entries = read_archive(bundle_path)?;
+    let signature = read_signature_file(&bundle_path.with_extension("sig"))?;
+    let bytes = fs::read(bundle_path)
+        .map_err(|_| AppError::material_invalid("Bundel tidak dapat dibaca."))?;
+    install_from_bytes(connection, root, keyring, &bytes, &signature, app_version, None)
+}
+
+/// Pemasangan dari byte ZIP (jalur lokal maupun unduhan katalog). `expected`
+/// memaksa isi bundel sama dengan item katalog yang diminta (kontrak §7).
+pub fn install_from_bytes(
+    connection: &mut Connection,
+    root: &Path,
+    keyring: &MaterialKeyring,
+    zip_bytes: &[u8],
+    signature: &BundleSignature,
+    app_version: &str,
+    expected: Option<ExpectedBundle<'_>>,
+) -> Result<InstallResult, AppError> {
+    if zip_bytes.len() as u64 > MAX_BUNDLE_BYTES {
+        return Err(AppError::material_too_large());
+    }
+    if let Some(expected) = &expected {
+        if !is_material_id(expected.material_id)
+            || !material_manifest::is_semver(expected.version)
+            || expected.bundle_sha256.len() != 64
+        {
+            return Err(AppError::material_invalid("Item katalog tidak valid."));
+        }
+        if hex_digest(zip_bytes) != expected.bundle_sha256.to_ascii_lowercase() {
+            return Err(AppError::material_hash_mismatch(
+                "SHA-256 bundel unduhan tidak cocok dengan katalog.",
+            ));
+        }
+    }
+
+    let signature = load_signature(signature, keyring)?;
+    let entries = read_archive(zip_bytes)?;
     let manifest_bytes = entries
         .get(MANIFEST_NAME)
         .ok_or_else(|| AppError::material_invalid("Bundel tidak memuat material.json."))?
         .clone();
     let manifest = verify_manifest(&signature, &manifest_bytes)?;
     material_manifest::validate(&manifest, app_version)?;
+    if let Some(expected) = &expected {
+        if manifest.material_id != expected.material_id || manifest.version != expected.version {
+            return Err(AppError::material_invalid("Isi bundel tidak sama dengan item katalog."));
+        }
+    }
 
     let mut listed: HashSet<&str> = HashSet::new();
     let mut total_bytes: u64 = 0;
@@ -552,6 +613,7 @@ mod tests {
     use super::*;
     use crate::db::test_connection;
     use ed25519_dalek::{Signer, SigningKey};
+    use std::fs::File;
     use std::io::Write;
     use std::path::PathBuf;
 
@@ -898,5 +960,115 @@ mod tests {
         assert_eq!(duplicate.code, "MATERIAL_INVALID");
 
         let _ = fs::remove_dir_all(&root);
+    }
+}
+
+/// Fixture bundel bertanda tangan untuk modul lain (katalog) tanpa memakai
+/// berkas di disk. Hanya tersedia saat test.
+#[cfg(test)]
+pub(crate) mod test_factory {
+    use super::*;
+    use ed25519_dalek::{Signer, SigningKey};
+
+    pub(crate) const MATERIAL_ID: &str = "materi-uji-1";
+
+    pub(crate) fn keyring() -> MaterialKeyring {
+        MaterialKeyring {
+            keys: vec![MaterialKey {
+                key_id: "content-dev-1".to_string(),
+                public_key: SigningKey::from_bytes(&[9u8; 32]).verifying_key(),
+            }],
+        }
+    }
+
+    pub(crate) fn files() -> Vec<(&'static str, Vec<u8>)> {
+        vec![
+            (
+                "index.html",
+                b"<!doctype html><html><body><p>Siklus air.</p></body></html>".to_vec(),
+            ),
+            ("assets/cover.png", b"\x89PNG\r\n\x1a\ncontoh".to_vec()),
+            ("transcript.txt", b"Transkrip contoh siklus air.\n".to_vec()),
+        ]
+    }
+
+    pub(crate) fn manifest(version: &str, files: &[(&'static str, Vec<u8>)]) -> serde_json::Value {
+        let entries: Vec<serde_json::Value> = files
+            .iter()
+            .map(|(path, bytes)| {
+                serde_json::json!({
+                    "path": path,
+                    "mediaType": material_manifest::bare_media_type(path),
+                    "bytes": bytes.len(),
+                    "sha256": hex_digest(bytes),
+                })
+            })
+            .collect();
+
+        serde_json::json!({
+            "schemaVersion": "1.0.0",
+            "materialId": MATERIAL_ID,
+            "version": version,
+            "title": "Materi Uji",
+            "summary": "Bundel uji untuk penginstal materi.",
+            "locale": "id-ID",
+            "gradeLevels": [3],
+            "subjects": ["ipas"],
+            "topics": ["Siklus air"],
+            "estimatedMinutes": 5,
+            "entry": "index.html",
+            "cover": "assets/cover.png",
+            "transcriptPath": "transcript.txt",
+            "accessibility": {
+                "hasAudio": false,
+                "keyboardNavigable": true,
+                "supportsReducedMotion": true,
+                "contrastChecked": true,
+            },
+            "completion": { "mode": "signal", "minDwellSeconds": 0 },
+            "minAppVersion": "0.1.0",
+            "publisher": { "name": "Gerbang Edukasi" },
+            "reviewStatus": "reviewed",
+            "files": entries,
+        })
+    }
+
+    pub(crate) fn zip_bytes(
+        manifest: &serde_json::Value,
+        files: &[(&'static str, Vec<u8>)],
+    ) -> Vec<u8> {
+        use std::io::Write;
+
+        let mut buffer = Cursor::new(Vec::new());
+        {
+            let mut writer = zip::ZipWriter::new(&mut buffer);
+            let options = zip::write::SimpleFileOptions::default();
+            writer
+                .start_file("material.json", options)
+                .expect("start manifest");
+            writer
+                .write_all(canonical_value(manifest).as_bytes())
+                .expect("write manifest");
+            for (name, bytes) in files {
+                writer.start_file(*name, options).expect("start file");
+                writer.write_all(bytes).expect("write file");
+            }
+            writer.finish().expect("finish zip");
+        }
+        buffer.into_inner()
+    }
+
+    pub(crate) fn signature_of(manifest: &serde_json::Value) -> BundleSignature {
+        let key = SigningKey::from_bytes(&[9u8; 32]);
+        let signature = key.sign(canonical_value(manifest).as_bytes());
+        BundleSignature {
+            key_id: "content-dev-1".to_string(),
+            algorithm: "ed25519".to_string(),
+            value: URL_SAFE_NO_PAD.encode(signature.to_bytes()),
+        }
+    }
+
+    pub(crate) fn hex(bytes: &[u8]) -> String {
+        hex_digest(bytes)
     }
 }
