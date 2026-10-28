@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "6fd01bb",
+  "commit": "0a5e328",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 59,
+  "context_version": 60,
   "skill_registry_version": 0,
   "current_task": "Materi daring HTML5 tahap 3b sisi platform (ADR-0035): endpoint `/v1/materials` di Worker + penandatanganan saat publish + bucket Supabase Storage + tabel katalog + simpan `bundleSha256` di `material_install` (sisi aplikasi selesai T-117 terhadap server referensi lokal); lalu tahap 4 `material_progress` + LRU 2 GB; seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A (bukti putusan L2+L4 tersedia sejak T-104)",
-  "last_task": "T-120 cover bundel di UI katalog: katalog daring boleh membawa coverUrl opsional (pre-signed 10 menit, thumbnail saja, tidak diverifikasi tanda tangan, tidak di-cache); Rust mengubah cover jadi data URL (magic bytes WebP/PNG/JPEG, batas 2 MB) lewat material_catalog_cover (unduh + read_capped) dan material_installed_cover (versi aktif material_install), kegagalan selalu Ok(None) sehingga daftar tidak rusak; komponen MaterialCover (cache modul per kind:id@version, img 96x64, fallback dua huruf mapel) dipakai baris 'Jelajah materi daring' dan 'Materi terpasang'; server referensi mendapat /covers/<nama>?token= dan dev-catalog menyalin cover ke .tmp-catalog/covers; kontrak bagian 6 diperbarui; E2E material-catalog 10/10",
+  "last_task": "T-121 kartu sematan materi Beranda kini memakai cover bundel (MaterialCover sumber installed, rasio 16:9, selebar kartu) dengan label Materi HTML5 sebagai lencana di sudut kiri atas; radius dipindah dari MaterialCover ke pemanggil (ContentScreen dua pemakaian diberi rounded-control, kartu Beranda memakai rounded-card + overflow-hidden milik li); E2E material-pin menambah asersi cover (img[data-material-cover] data:image/png;base64, naturalWidth > 0)",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-29T02:38:54+07:00",
-  "last_validation": "T-120 (pekerjaan 2026-10-28 malam, sinkron 2026-10-29 02:38): cover bundel kini tampil di UI katalog. npx tsc --noEmit bersih; npm run build exit 0 (9,60 dtk); cargo test --lib 116/116 (4 test cover baru; dijalankan ulang 2026-10-29 02:36 sebelum commit); npm test 124/124 (17 berkas) + fixture 4/4 + katalog 336/336 + binding PASS; npm run a11y 18/18 (0 error, 7 warning); E2E material-catalog 10/10 (+2 asersi cover: img[data-material-cover] data:image/png;base64, dengan naturalWidth > 0 di kartu katalog, dan cover di baris [data-material-installed] setelah pemasangan), material-import 12/12, smoke 8/8. Screenshot .tmp-e2e/2026-10-28T14-24-09-266Z/katalog-daring.png diperiksa (thumbnail di kedua baris, lencana cache lokal, tombol Terpasang nonaktif). Batas jujur: (1) cover katalog TIDAK diverifikasi tanda tangan - kosmetik, status sama dengan judul/ringkasan; (2) coverUrl hanya ada di server referensi lokal, belum ada endpoint/bucket produksi; (3) kartu sematan Beranda dan header penampil masih gradien; (4) cache cover tingkat modul tanpa LRU, hilang saat renderer dimuat ulang, data URL membengkak +/-33%; (5) hanya WebP/PNG/JPEG <= 2 MB.",
+  "last_updated": "2026-10-29T03:12:24+07:00",
+  "last_validation": "T-121 (2026-10-29): gradien kartu sematan diganti cover bundel terpasang. npx tsc --noEmit bersih; npx vite build exit 0 (9,46 dtk); npm test 124/124 (17 berkas) + fixture 4/4 + katalog 336/336 + binding PASS; npm run a11y 18/18 (0 error, 7 warning); E2E material-pin 12/12 (cover 640 px, PNG data URL), material-catalog 10/10, home-catalog 29/29, pinned-materials 16/16, smoke 8/8; screenshot beranda-sematkan-materi.png diperiksa. Tidak ada perubahan Rust sehingga cargo test tidak dijalankan ulang (terakhir 116/116 pada T-120). Batas: header penampil materi masih gradien; cover tetap kosmetik/tanpa tanda tangan; verifikasi visual hanya pada WebView 360 px; aplikasi demo (PID 161816) dan Vite dev server (PID 9824) dihentikan untuk E2E lalu dinyalakan kembali.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "T-120 selesai: cover bundel tampil sebagai thumbnail di baris katalog daring dan daftar materi terpasang (data URL dari Rust, CSP tidak dilonggarkan). Berikutnya agent-actionable: (a) cover yang sama di kartu sematan Beranda dan header penampil (masih gradien); (b) sisi platform tahap 3b - endpoint /v1/materials di Worker + penandatanganan saat publish + bucket Supabase Storage + tabel katalog + coverUrl produksi (pre-signed); (c) simpan bundleSha256 di material_install; (d) tahap 4 material_progress + LRU 2 GB (termasuk batas cache cover); (e) jalur pasang ulang/repair versi sama; (f) materi contoh keempat+ cukup satu entri di MATERIALS dev-catalog.mjs; (g) ilustrasi khusus topik untuk materi ketiga lewat Flow saat panel Browser terlihat (tiga prompt sudah ditolak klasifikasi kebijakan, penyebab belum terbukti). Utang kecil: semat dari dalam penampil, urutan sematan yang bisa diatur, komponen Button bersama, pratinjau tiga kolom & soal panjang pada 320 px. Lapisan L3 (tanda tangan Ed25519 atas putusan review) belum dikerjakan. Human/PO-gated: seleksi guru atas 309 pasangan F-06 + tanda tangan guru atas 550 pasangan + 119 override + 39 perubahan F-05, persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "T-121 selesai: kartu sematan materi Beranda memakai cover bundel (16:9 + lencana Materi HTML5), radius dipindah ke pemanggil, E2E material-pin 12/12. Berikutnya agent-actionable: (a) cover bundel di header MaterialViewer (sisa gradien terakhir di jalur materi); (b) sisi platform tahap 3b - endpoint /v1/materials di Worker + penandatanganan saat publish + bucket Supabase Storage + tabel katalog; (c) simpan bundleSha256 di material_install; (d) tahap 4 material_progress + LRU 2 GB; (e) jalur pasang ulang/repair versi sama; (f) LRU/batas ukuran cache cover di renderer. Utang kecil: semat dari dalam penampil, urutan sematan yang bisa diatur, komponen Button bersama, pratinjau tiga kolom & soal panjang pada 320 px. Lapisan L3 (tanda tangan Ed25519 atas putusan review) belum dikerjakan. Human/PO-gated: seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru atas 550 pasangan + 119 override + 39 perubahan F-05, persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
