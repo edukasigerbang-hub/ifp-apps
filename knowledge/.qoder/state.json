@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 41,
+  "context_version": 42,
   "skill_registry_version": 0,
-  "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A",
-  "last_task": "T-103 deep link Player (#player/<packageId>[/<lessonId>]) + diagnostik E2E (event CDP, konsol halaman, riwayat banner simpan)",
+  "current_task": "Seleksi guru atas 309 pasangan F-06 (CSV) + tanda tangan guru manusia; D-UX-2/4/5/6; OD-1 IPAS Fase A (bukti putusan L2+L4 tersedia sejak T-104)",
+  "last_task": "T-104 ikatan putusan review ke sidik jari isi (migrasi 0007 + digest kanonik) + sampler audit deterministik",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-10-28T07:36:00+07:00",
-  "last_validation": "T-103 (2026-10-28, HEAD 223349c + perubahan belum di-commit): hash Player kini #player/<packageId>[/<lessonId>] via buildPlayerHash/parsePlayerHash (menolak layar lain, segmen ekstra, id kosong, decode rusak); initialScreen() memulihkan seleksi dari hash; navigate() menulis deep link untuk Player; LessonPlayer menyelaraskan hash dengan materi yang tampil (tanpa lesson -> lesson pertama, paket tak dikenal -> paket pertama, hash ditulis ulang dan stabil). Verifikasi aktual: npm test 114/114 (15 berkas) + fixture 4/4 + katalog 336/336; npm run build exit 0; E2E player-deeplink 7/7 (dijalankan ulang setelah perubahan harness CDP); regresi home-catalog 28/28, learning-journey 11/11; npm run a11y 17/17 (0 error, 7 warning) DUA kali berturut-turut SETELAH 4 percobaan gagal (3x timeout 'Tersimpan lokal' dengan banner tetap 'Penyimpanan lokal siap' tanpa exception dan tanpa 'Menyimpan hasil belajar' -> simpan tidak pernah dimulai; 1x halaman blank setelah Beranda->Jelajah). Akar masalah a11y belum terbukti; dugaan (BELUM diverifikasi) effect sesi [contentPackage, lesson.lessonId] berjalan ulang menimpa status banner atau beban mesin; tidak ada kode T-103 yang menyentuh jalur simpan. cargo test tidak dijalankan (tanpa perubahan Rust).",
+  "last_updated": "2026-10-28T01:29:00+07:00",
+  "last_validation": "T-104 (2026-10-28, perubahan belum di-commit di atas HEAD 524ddff): putusan review terikat ke isi — migrasi 0007_content_review_binding menambah content_reviews.content_sha256 + rubric_version (baris lama NULL, tidak sah untuk isi sekarang); review_record menolak digest bukan 64 heksadesimal SETELAH cek peran guru (siswa tetap REVIEW_FORBIDDEN), menormalkan huruf kecil, menyimpan RUBRIC_VERSION '1'; ekspor CSV menambah content_sha256,rubric_version. Digest = SHA-256 JSON kanonik paket HASIL VALIDASI (kunci diurut, reviewStatus/releaseState/signature dibuang, lesson/aktivitas diurut per id) karena schema Zod menambah default. Alat: npm run content:review-binding (ikut npm test) menolak approved tanpa digest sah / digest != isi sekarang / paket non-draft tanpa bukti; npm run content:review-sample sampling deterministik sha256('<benih>|<packageId>@<version>'). Verifikasi aktual: npm test 120/120 (16 berkas) + fixture 4/4 + katalog 336/336 + binding PASS (0 attestation); cargo test 71/71 (8 test review, 3 baru); npm run build exit 0; E2E content-review 9/9 (percobaan pertama gagal karena kompilasi Rust 2m47s melewati batas tunggu harness, bukan kegagalan aplikasi); uji manual CSV sintetis: binding exit 1 saat digest tidak cocok, sampler menandai baris menyimpang. Batas: belum tamper-proof (digest dihitung klien, identitas reviewer nama profil lokal, attestation CSV tanpa segel; tanda tangan Ed25519 belum ada).",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "Verifikasi ulang a11y pada mesin bersih / tambahkan atribut status penyimpanan agar kegagalan banner dapat dilacak (utang E2E di BACKLOG). Setelah itu: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru manusia atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02. Setelah itu: review manusia R1-R6/R8-R9/R12; keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
+  "next_step": "Agent-actionable: verifikasi ulang a11y pada mesin bersih / tambahkan atribut status penyimpanan agar kegagalan banner dapat dilacak (utang E2E di BACKLOG); lapisan L3 (tanda tangan Ed25519 atas putusan review) BELUM dikerjakan — kerjakan hanya bila PO meminta. Human/PO-gated: seleksi guru atas 309 pasangan F-06 (knowledge/content/F06_MIRROR_PAIRS_2026-10-28.csv) + tanda tangan guru atas 550 pasangan hasil aturan + 119 override + 39 perubahan F-05, dan persetujuan F-01/F-02; reviewer manusia R1-R6/R8-R9/R12 (alur bukti: ekspor audit -> knowledge/content/review-attestations/ -> npm run content:review-binding -> npm run content:review-sample -- --n 5); keputusan D-UX-2/4/5/6; verifikasi CP/ATP per bab; OD-1 IPAS Fase A. Gate rilis: B-07 -> B-02 -> B-03. reviewStatus tetap draft"
 }
