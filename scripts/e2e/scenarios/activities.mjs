@@ -249,6 +249,29 @@ async function fillByLabel(page, ariaLabel, value) {
   `);
 }
 
+async function waitForSaved(page, label) {
+  const deadline = Date.now() + 30_000;
+  let banner = "";
+  let trail = "";
+  while (Date.now() < deadline) {
+    trail = await page.evaluate(`
+      (() => ({
+        banner: document.querySelector("[data-player-storage]")?.textContent.trim() ?? "",
+        panel: Boolean(document.querySelector("#activity-panel")),
+        heading: document.querySelector("main h1")?.textContent.trim() ?? "",
+        hash: window.location.hash
+      }))()
+    `);
+    banner = trail.banner;
+    if (banner.includes("Tersimpan lokal")) return;
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
+  assert(
+    false,
+    `Penyimpanan tidak selesai (${label}); banner "${banner}", panel ${trail.panel}, heading "${trail.heading}", hash "${trail.hash}".`
+  );
+}
+
 async function chooseRadio(page, name, value) {
   return page.evaluate(`
     (() => {
@@ -440,10 +463,7 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor benar-salah"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan benar-salah",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan benar-salah");
   await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
     label: "fokus kartu hasil benar-salah"
   });
@@ -496,14 +516,62 @@ export async function run({ page, artifactDir, log }) {
     ),
     "Input jawaban singkat 2 gagal."
   );
+
+  // Posisi soal harus bertahan setelah aplikasi dimuat ulang.
+  await page.send("Page.reload");
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri setelah muat ulang" }
+  );
+  await page.waitFor(
+    `[...document.querySelectorAll("button")].some(
+      (button) => button.textContent.trim() === "Player Pembelajaran"
+    )`,
+    { label: "navigasi utama setelah muat ulang", timeoutMs: 30_000 }
+  );
+  await clickButton(page, "Player Pembelajaran");
+  await page.waitFor(
+    `document.body.textContent.includes("Aktivitas Baru (E2E)") &&
+     document.body.textContent.includes("Paket impor v0.3.0")`,
+    { label: "lesson aktivitas baru setelah muat ulang" }
+  );
+  await clickButton(page, "Jawaban Singkat");
+  await page.waitFor(`document.body.textContent.includes("Soal 2 dari 2")`, {
+    label: "posisi soal kuis dipulihkan"
+  });
+  await clickButton(page, "Sebelumnya");
+  await page.waitFor(`document.body.textContent.includes("Tuliskan nama pecahan 1/2")`, {
+    label: "soal 1 setelah mundur"
+  });
+  const restoredAnswer = await page.evaluate(
+    `document.querySelector('input[aria-label="Tuliskan nama pecahan 1/2."]')?.value ?? null`
+  );
+  assert(
+    restoredAnswer === "Setengah",
+    `Jawaban soal 1 setelah muat ulang "${restoredAnswer}", harus "Setengah".`
+  );
+  log("Posisi soal dan jawaban kuis jawaban singkat dipulihkan setelah muat ulang.");
+  await clickButton(page, "Lanjut");
+  await page.waitFor(
+    `document.body.textContent.includes("Tuliskan pecahan untuk satu bagian dari empat bagian.")`,
+    { label: "soal jawaban singkat 2 setelah dipulihkan" }
+  );
+  // Jawaban soal 2 diketik tepat sebelum muat ulang, jadi masih dalam jeda
+  // penyimpanan; soal 2 diisi ulang seperti pengguna yang melanjutkan.
+  assert(
+    await fillByLabel(
+      page,
+      "Tuliskan pecahan untuk satu bagian dari empat bagian.",
+      "1/4"
+    ),
+    "Input jawaban singkat 2 setelah muat ulang gagal."
+  );
+
   await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor jawaban singkat"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan jawaban singkat",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan jawaban singkat");
   log("Aktivitas jawaban singkat dinilai 100 (normalisasi huruf) dan tersimpan.");
 
   await clickButton(page, "Ulangi kuis");
@@ -550,10 +618,7 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor multi-jawaban"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan multi-jawaban",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan multi-jawaban");
   log("Aktivitas pilihan ganda multi-jawaban dinilai 100 dan tersimpan.");
 
   await clickButton(page, "Mencocokkan Pecahan");
@@ -571,10 +636,7 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor mencocokkan"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan mencocokkan",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan mencocokkan");
   await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
     label: "fokus kartu hasil mencocokkan"
   });
@@ -590,10 +652,7 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor mengurutkan"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan mengurutkan",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan mengurutkan");
   await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
     label: "fokus kartu hasil mengurutkan"
   });

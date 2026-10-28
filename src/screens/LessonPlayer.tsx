@@ -313,6 +313,7 @@ function LessonView({
   const [scores, setScores] = useState<Record<string, number>>({});
   const [lastScore, setLastScore] = useState<number | null>(null);
   const [visited, setVisited] = useState<string[]>([]);
+  const [profileId, setProfileId] = useState<string | null>(null);
   const [storage, setStorage] = useState<StorageState>({
     status: "starting",
     message: "Menyiapkan penyimpanan lokal...",
@@ -340,6 +341,7 @@ function LessonView({
           lessonId: lesson.lessonId,
         });
         if (!cancelled) {
+          setProfileId(profileId);
           setSessionId(session.sessionId);
           setStorage({
             status: "ready",
@@ -663,6 +665,7 @@ function LessonView({
 
           <div className={`mt-2 flex flex-wrap items-center gap-2 ${fullscreen ? "justify-end" : ""}`}>
             <p
+              data-player-storage
               aria-live="polite"
               hidden={fullscreen && !storageAlert}
               className={`min-w-0 flex-1 rounded-control border px-3 py-1.5 text-xs ${storageClasses[storage.status]}`}
@@ -704,6 +707,16 @@ function LessonView({
             <QuizActivity
               key={activeActivity.activityId}
               activity={activeActivity}
+              resumeTarget={
+                profileId
+                  ? {
+                      profileId,
+                      packageId: contentPackage.data.manifest.packageId,
+                      lessonId: lesson.lessonId,
+                      activityId: activeActivity.activityId
+                    }
+                  : undefined
+              }
               onGraded={(outcome) => void handleGraded(activeActivity.activityId, outcome)}
             />
           ) : activeActivity.type === "matching" ? (

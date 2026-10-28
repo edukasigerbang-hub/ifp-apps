@@ -68,6 +68,10 @@ const MIGRATIONS: &[Migration] = &[
         version: 8,
         sql: include_str!("migrations/0008_pinned_lessons.sql"),
     },
+    Migration {
+        version: 9,
+        sql: include_str!("migrations/0009_profile_ui_state.sql"),
+    },
 ];
 
 pub(crate) fn migration_count() -> i64 {

@@ -408,4 +408,37 @@ export async function run({ page, artifactDir, log }) {
   );
   log("Pelepasan sematan tersimpan permanen (pinned_list kosong setelah muat ulang).");
   await page.screenshot(path.join(artifactDir, "beranda-tanpa-sematan.png"));
+
+  const exploreTab = await page.evaluate(selectTab("explore"));
+  assert(exploreTab === "clicked", `Tab Jelajahi materi tidak dapat diklik (${exploreTab}).`);
+  await page.waitFor(
+    `document.querySelector('[data-home-tab="explore"]')?.getAttribute("aria-selected") === "true" &&
+     document.getElementById("home-panel-explore")?.hidden === false`,
+    { label: "panel Jelajahi materi" }
+  );
+  await page.waitFor(
+    `window.__TAURI_INTERNALS__.invoke("profile_get_active").then((active) =>
+      window.__TAURI_INTERNALS__.invoke("ui_state_get", { profileId: active.id, key: "home-tab" })
+    ).then((value) => value === "explore")`,
+    { label: "tab Beranda tersimpan" }
+  );
+  log("Tab Jelajahi materi tersimpan sebagai keadaan antarmuka profil.");
+
+  await page.send("Page.reload");
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri setelah muat ulang ketiga" }
+  );
+  await waitForHome(page, "Beranda setelah memilih tab Jelajahi");
+  await page.waitFor(
+    `document.querySelector('[data-home-tab="explore"]')?.getAttribute("aria-selected") === "true" &&
+     document.getElementById("home-panel-explore")?.hidden === false`,
+    { label: "tab Jelajahi terbuka kembali" }
+  );
+  const restoredTabs = await page.evaluate(homeTabs);
+  assert(
+    restoredTabs.selected.length === 1 && restoredTabs.selected[0] === "explore",
+    `Setelah muat ulang tab harus "explore", ditemukan ${JSON.stringify(restoredTabs.selected)}.`
+  );
+  log("Tab Beranda terakhir terbuka lagi setelah muat ulang (tersimpan per profil).");
 }

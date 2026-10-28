@@ -1,10 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { isAnswerCorrect, scoreQuiz, type QuizAnswerValue } from "../../content/quiz";
+import {
+  parseQuizResume,
+  sameQuizResumeIdentity,
+  serializeQuizResume,
+  type QuizResumeIdentity
+} from "../../content/quizResume";
 import type { Activity } from "../../content/schema/activity";
+import { canPersistLocally } from "../../data/learningRepository";
+import {
+  clearUiState,
+  QUIZ_RESUME_KEY,
+  readUiState,
+  writeUiState
+} from "../../data/uiStateRepository";
+
+export interface QuizResumeTarget extends QuizResumeIdentity {
+  profileId: string;
+}
 
 interface QuizActivityProps {
   activity: Activity;
   onGraded?: (outcome: QuizGradedOutcome) => void;
+  resumeTarget?: QuizResumeTarget;
 }
 
 export interface QuizGradedAnswer {
@@ -26,15 +44,24 @@ interface QuizResult {
   total: number;
 }
 
-export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
+export function QuizActivity({ activity, onGraded, resumeTarget }: QuizActivityProps) {
   const questions = activity.assessmentConfig?.questions ?? [];
   const passingScore = activity.assessmentConfig?.passingScore ?? 70;
   const [answers, setAnswers] = useState<Record<string, QuizAnswerValue>>({});
   const [questionIndex, setQuestionIndex] = useState(0);
   const [result, setResult] = useState<QuizResult | null>(null);
+  const [resumeLoaded, setResumeLoaded] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
   const questionRef = useRef<HTMLDivElement>(null);
   const focusQuestionRef = useRef(false);
+  const resumeIdentity = resumeTarget
+    ? [
+        resumeTarget.profileId,
+        resumeTarget.packageId,
+        resumeTarget.lessonId,
+        resumeTarget.activityId
+      ].join("|")
+    : null;
 
   useEffect(() => {
     if (result) {
@@ -47,6 +74,67 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
     questionRef.current?.scrollIntoView({ block: "nearest" });
     questionRef.current?.focus();
   }, [questionIndex, result]);
+
+  // Posisi soal dipulihkan sekali per kuis; jawaban yang sudah diketik pengguna
+  // tidak ditimpa bila pembacaan selesai belakangan.
+  useEffect(() => {
+    if (!resumeTarget || !canPersistLocally() || questions.length === 0) {
+      setResumeLoaded(true);
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const raw = await readUiState(resumeTarget.profileId, QUIZ_RESUME_KEY);
+        const saved = parseQuizResume(
+          raw,
+          questions.map((entry) => entry.questionId)
+        );
+        if (!cancelled && saved && sameQuizResumeIdentity(saved, resumeTarget)) {
+          setAnswers((current) => (Object.keys(current).length === 0 ? saved.answers : current));
+          setQuestionIndex((current) => (current === 0 ? saved.questionIndex : current));
+        }
+      } catch {
+        // Posisi tersimpan bersifat tambahan: gagal baca tidak memblokir kuis.
+      } finally {
+        if (!cancelled) setResumeLoaded(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [resumeIdentity, questions.length]);
+
+  function persistProgress(nextIndex: number) {
+    if (!resumeTarget || !resumeLoaded || !canPersistLocally()) return;
+    const index = Math.max(0, Math.min(nextIndex, questions.length - 1));
+    void writeUiState(
+      resumeTarget.profileId,
+      QUIZ_RESUME_KEY,
+      serializeQuizResume({
+        packageId: resumeTarget.packageId,
+        lessonId: resumeTarget.lessonId,
+        activityId: resumeTarget.activityId,
+        questionIndex: index,
+        answers
+      })
+    ).catch(() => undefined);
+  }
+
+  function clearProgress() {
+    if (!resumeTarget || !canPersistLocally()) return;
+    void clearUiState(resumeTarget.profileId, QUIZ_RESUME_KEY).catch(() => undefined);
+  }
+
+  // Perubahan jawaban disimpan dengan jeda pendek supaya mengetik tidak
+  // menulis ke SQLite setiap ketukan.
+  useEffect(() => {
+    if (!resumeTarget || !resumeLoaded || !canPersistLocally() || result) return;
+    const timer = window.setTimeout(() => persistProgress(questionIndex), 300);
+    return () => window.clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answers, questionIndex, result, resumeLoaded, resumeIdentity]);
 
   if (questions.length === 0) {
     return <p className="text-sm text-muted">Kuis ini belum memiliki soal.</p>;
@@ -87,10 +175,12 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
 
   function goTo(nextIndex: number) {
     focusQuestionRef.current = true;
+    persistProgress(nextIndex);
     setQuestionIndex(nextIndex);
   }
 
   function submit() {
+    clearProgress();
     const outcome = scoreQuiz(questions, answers, passingScore);
     setResult({
       score: outcome.score,
@@ -135,6 +225,7 @@ export function QuizActivity({ activity, onGraded }: QuizActivityProps) {
   }
 
   function retry() {
+    clearProgress();
     setAnswers({});
     setResult(null);
     focusQuestionRef.current = true;

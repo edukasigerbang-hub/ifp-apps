@@ -12,6 +12,7 @@ mod profile;
 mod results;
 mod review;
 mod sync;
+mod ui_state;
 mod validation;
 
 use tauri::Manager;
@@ -89,6 +90,9 @@ pub fn run() {
       review::review_export_csv,
       pins::pinned_list,
       pins::pinned_set,
+      ui_state::ui_state_get,
+      ui_state::ui_state_set,
+      ui_state::ui_state_clear,
       preferences::preferences_get,
       preferences::preferences_set
     ])

@@ -17,6 +17,7 @@ import {
   type PinnedLesson
 } from "../data/pinnedRepository";
 import { getActiveProfile, type Profile } from "../data/profileRepository";
+import { HOME_TAB_KEY, readUiState, writeUiState } from "../data/uiStateRepository";
 import type { ScreenId } from "../navigation";
 import { setCatalogFilter } from "../state/catalogFilter";
 import { setPlaybackSelection } from "../state/playbackSelection";
@@ -48,6 +49,10 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   const [pinError, setPinError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<HomeSection>("pinned");
+  const [savedSection, setSavedSection] = useState<HomeSection | null>(null);
+  const [savedSectionLoaded, setSavedSectionLoaded] = useState(
+    () => !canPersistLocally()
+  );
   const sectionChosenRef = useRef(false);
 
   useEffect(() => {
@@ -110,12 +115,43 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
     };
   }, []);
 
-  // Tanpa sematan, Beranda terbuka di "Materi tersedia"; begitu ada sematan,
-  // "Materi disematkan" jadi tab awal. Pilihan manual pengguna tidak ditimpa.
+  // Tab terakhir dibaca terpisah: tab tersimpan bersifat tambahan, kegagalan
+  // membacanya tidak boleh menahan Beranda.
   useEffect(() => {
-    if (!pinsLoaded || sectionChosenRef.current) return;
-    setActiveSection(pins.length === 0 ? "available" : "pinned");
-  }, [pins.length, pinsLoaded]);
+    if (!canPersistLocally()) {
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const active = await getActiveProfile();
+        const raw = await readUiState(active.id, HOME_TAB_KEY);
+        if (!cancelled && raw && (homeSectionIds as readonly string[]).includes(raw)) {
+          setSavedSection(raw as HomeSection);
+        }
+      } catch {
+        // Abaikan: Beranda tetap memakai tab bawaan.
+      } finally {
+        if (!cancelled) {
+          setSavedSectionLoaded(true);
+        }
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Tab awal: tab tersimpan menang bila masih sah; "Materi disematkan" hanya
+  // dipakai saat memang ada sematan. Pilihan manual pengguna tidak ditimpa.
+  useEffect(() => {
+    if (!pinsLoaded || !savedSectionLoaded || sectionChosenRef.current) return;
+    const saved =
+      savedSection && (savedSection !== "pinned" || pins.length > 0)
+        ? savedSection
+        : null;
+    setActiveSection(saved ?? (pins.length === 0 ? "available" : "pinned"));
+  }, [pins.length, pinsLoaded, savedSection, savedSectionLoaded]);
 
   const recent = summary?.recent[0];
   const resumeEntry = recent
@@ -187,7 +223,7 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
       const remaining = pins.filter((pin) => pinnedKey(pin) !== pinnedKey(entry));
       setPins(remaining);
       if (remaining.length === 0) {
-        setActiveSection("available");
+        selectSection("available");
       }
       setPinNotice(`${entry.lessonTitle} dilepas dari Beranda.`);
     } catch (caught) {
@@ -198,6 +234,9 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
   function selectSection(id: HomeSection, focusTab = false) {
     sectionChosenRef.current = true;
     setActiveSection(id);
+    if (profile && canPersistLocally()) {
+      void writeUiState(profile.id, HOME_TAB_KEY, id).catch(() => undefined);
+    }
     if (focusTab) {
       document.getElementById(`home-tab-${id}`)?.focus();
     }
