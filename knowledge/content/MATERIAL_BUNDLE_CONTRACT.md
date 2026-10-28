@@ -1,6 +1,6 @@
 # Kontrak Bundel Materi HTML5 v1 (draf)
 
-**Status:** DRAF — OD-10…OD-14 dikunci 2026-10-28; penampil prototipe (T-114) dan pemasang ZIP bertanda tangan (T-115) sudah ada di aplikasi, tetapi katalog/unduhan dari server belum · **Tanggal:** 2026-10-28 · **schemaVersion:** `1.0.0`
+**Status:** DRAF — OD-10…OD-14 dikunci 2026-10-28; penampil prototipe (T-114), pemasang ZIP bertanda tangan (T-115), dan sematan materi di Beranda (T-116) sudah ada di aplikasi, tetapi katalog/unduhan dari server belum · **Tanggal:** 2026-10-28 · **schemaVersion:** `1.0.0`
 **Terkait:** [ADR-0035](../decisions/ADR-0035-online-html5-materials.md) · [Kontrak paket konten v1](SCHEMA.md) · [Kontrak sinkronisasi v1](../api/SYNC_CONTRACT.md)
 
 Dokumen ini menetapkan apa yang **harus dihasilkan platform** (editor + server Gerbang Edukasi) dan apa yang **harus diterima aplikasi desktop**. Tidak mengatur UI editor.
@@ -230,6 +230,7 @@ Yang **sudah** ada di aplikasi (per 2026-10-28):
 
 - Penampil prototipe dengan bundel contoh lokal (T-114): iframe tersandbox, protokol `ifp-content`, Esc/transkrip, E2E `material-viewer`.
 - Pemasang bundel dari **ZIP lokal + sidecar `.sig`** (T-115): manifest ketat §4, tanda tangan Ed25519 dengan `keyId` persis, hash per berkas, pemindaian self-contained, staging lalu rename atomik, tabel `material_install`, daftar + buka materi di layar Konten, E2E `material-import` 12/12.
+- Sematan materi terpasang ke Beranda (T-116): tabel `pinned_materials`, batas 24 sematan dipakai bersama paket, kartu `Materi HTML5` di tab "Materi disematkan" dengan `Buka`/`Lepas`, E2E `material-pin` 12/12.
 - Alat dev `scripts/material-pack.mjs` (`keygen`, `pack`) yang menghasilkan ZIP STORED + `.sig` untuk membuat bundel uji.
 
 Yang **belum ada** (pekerjaan, bukan keputusan terbuka): kode Worker `/v1/materials`, penandatanganan saat publish, unduhan dari server + verifikasi `bundleSha256`, `material_progress` (sinyal `complete` belum dipersistensikan), dan pengusiran LRU. Jalur dari server ke perangkat belum ada; pemasangan saat ini selalu dari berkas lokal yang dipilih pengguna.
