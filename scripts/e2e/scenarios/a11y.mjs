@@ -678,7 +678,7 @@ export async function run({ page, artifactDir, log }) {
   while (Date.now() - saveStartedAt < 30_000) {
     const banner = await page.evaluate(`
       (() => {
-        const node = document.querySelector('[aria-live="polite"]');
+        const node = document.querySelector("[data-player-storage]");
         return (node?.textContent ?? "").replace(/\\s+/g, " ").trim();
       })()
     `);

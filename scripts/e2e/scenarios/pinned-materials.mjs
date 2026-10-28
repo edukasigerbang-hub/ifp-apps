@@ -441,4 +441,138 @@ export async function run({ page, artifactDir, log }) {
     `Setelah muat ulang tab harus "explore", ditemukan ${JSON.stringify(restoredTabs.selected)}.`
   );
   log("Tab Beranda terakhir terbuka lagi setelah muat ulang (tersimpan per profil).");
+
+  await page.evaluate(`window.location.hash = "#player/kelas2-pai-b06-zakat/zakat"`);
+  await page.send("Page.reload");
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri setelah membuka Player" }
+  );
+  await page.waitFor(
+    `(() => {
+      const heading = document.querySelector("main h1")?.textContent.trim() ?? "";
+      const button = document.querySelector("main [data-pin-toggle]");
+      return heading.includes("Zakat dan Infak") && Boolean(button) &&
+        !button.disabled && button.getAttribute("aria-pressed") === "false";
+    })()`,
+    { label: "tombol Sematkan di header Player", timeoutMs: 30_000 }
+  );
+  const playerToggle = await page.evaluate(`(() => {
+    const button = document.querySelector("main [data-pin-toggle]");
+    if (!button) return { result: "missing" };
+    const state = {
+      label: button.getAttribute("aria-label"),
+      pressed: button.getAttribute("aria-pressed"),
+      text: button.textContent.trim()
+    };
+    if (button.disabled) return { ...state, result: "disabled" };
+    button.click();
+    return { ...state, result: "clicked" };
+  })()`);
+  assert(
+    playerToggle.result === "clicked",
+    `Tombol sematkan di Player tidak dapat diklik (${playerToggle.result}).`
+  );
+  assert(
+    playerToggle.label === "Sematkan Zakat dan Infak" &&
+      playerToggle.pressed === "false" &&
+      playerToggle.text === "Sematkan",
+    `Keadaan awal tombol sematkan Player tidak sesuai (${JSON.stringify(playerToggle)}).`
+  );
+  await page.waitFor(
+    `(() => {
+      const button = document.querySelector("main [data-pin-toggle]");
+      const status = document.querySelector("[data-player-pin-status]");
+      return button?.getAttribute("aria-pressed") === "true" &&
+        button.getAttribute("aria-label") === "Lepas sematan Zakat dan Infak" &&
+        button.textContent.trim() === "Disematkan" &&
+        (status?.textContent ?? "").includes("disematkan ke Beranda");
+    })()`,
+    { label: "status Disematkan di header Player" }
+  );
+  const pinnedFromPlayer = await page.evaluate(`
+    window.__TAURI_INTERNALS__
+      .invoke("profile_get_active")
+      .then((active) => window.__TAURI_INTERNALS__.invoke("pinned_list", { profileId: active.id }))
+  `);
+  assert(
+    Array.isArray(pinnedFromPlayer) &&
+      pinnedFromPlayer.length === 1 &&
+      pinnedFromPlayer[0].packageId === "kelas2-pai-b06-zakat" &&
+      pinnedFromPlayer[0].lessonId === "zakat",
+    `Sematan dari Player tidak tersimpan sebagaimana mestinya: ${JSON.stringify(pinnedFromPlayer)}.`
+  );
+  log("Tombol Sematkan di header Player menyimpan sematan ke SQLite profil aktif.");
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  await page.screenshot(path.join(artifactDir, "player-sematkan.png"));
+
+  await clickButton(page, "Beranda");
+  await waitForHome(page, "Beranda setelah menyematkan dari Player");
+  assert(
+    (await page.evaluate(selectTab("pinned"))) === "clicked",
+    "Tab Materi disematkan tidak dapat diklik setelah semat dari Player."
+  );
+  await page.waitFor(
+    `document.querySelector("[data-pinned-card]") !== null &&
+     document.getElementById("home-panel-pinned")?.hidden === false`,
+    { label: "kartu sematan hasil semat dari Player" }
+  );
+  const cardFromPlayer = await page.evaluate(
+    `document.querySelector("[data-pinned-title]")?.textContent.trim() ?? null`
+  );
+  assert(
+    cardFromPlayer === "Zakat dan Infak",
+    `Kartu sematan dari Player menampilkan "${cardFromPlayer}", seharusnya "Zakat dan Infak".`
+  );
+  log("Materi yang disematkan dari Player muncul di tab Materi disematkan Beranda.");
+
+  const openPinned = await page.evaluate(`(() => {
+    const card = document.querySelector("[data-pinned-card]");
+    const button = card && [...card.querySelectorAll("button")].find(
+      (node) => node.textContent.trim() === "Buka"
+    );
+    if (!button) return "missing";
+    button.click();
+    return "clicked";
+  })()`);
+  assert(openPinned === "clicked", `Tombol Buka pada kartu sematan gagal (${openPinned}).`);
+  await page.waitFor(
+    `(() => {
+      const heading = document.querySelector("main h1")?.textContent.trim() ?? "";
+      const button = document.querySelector("main [data-pin-toggle]");
+      return heading.includes("Zakat dan Infak") && Boolean(button) &&
+        button.getAttribute("aria-pressed") === "true";
+    })()`,
+    { label: "status Disematkan terbaca lagi saat materi dibuka dari Beranda" }
+  );
+  const unpinFromPlayer = await page.evaluate(`(() => {
+    const button = document.querySelector("main [data-pin-toggle]");
+    if (!button || button.disabled) return "unavailable";
+    button.click();
+    return "clicked";
+  })()`);
+  assert(
+    unpinFromPlayer === "clicked",
+    `Tombol Lepas sematan di Player tidak dapat diklik (${unpinFromPlayer}).`
+  );
+  await page.waitFor(
+    `(() => {
+      const button = document.querySelector("main [data-pin-toggle]");
+      const status = document.querySelector("[data-player-pin-status]");
+      return button?.getAttribute("aria-pressed") === "false" &&
+        button.getAttribute("aria-label") === "Sematkan Zakat dan Infak" &&
+        (status?.textContent ?? "").includes("dilepas dari Beranda");
+    })()`,
+    { label: "status lepas sematan di header Player" }
+  );
+  const afterPlayerUnpin = await page.evaluate(`
+    window.__TAURI_INTERNALS__
+      .invoke("profile_get_active")
+      .then((active) => window.__TAURI_INTERNALS__.invoke("pinned_list", { profileId: active.id }))
+  `);
+  assert(
+    Array.isArray(afterPlayerUnpin) && afterPlayerUnpin.length === 0,
+    `Sematan harus kosong setelah dilepas dari Player: ${JSON.stringify(afterPlayerUnpin)}.`
+  );
+  log("Lepas sematan dari header Player menghapus sematan di SQLite profil aktif.");
 }

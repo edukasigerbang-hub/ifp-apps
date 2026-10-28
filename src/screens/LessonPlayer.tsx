@@ -15,6 +15,12 @@ import { notifyOutboxChanged } from "../hooks/useSyncScheduler";
 import type { Activity } from "../content/schema/activity";
 import type { ActivePackageSummary } from "../data/contentRepository";
 import {
+  listPinnedLessons,
+  pinnedErrorMessage,
+  pinnedKey,
+  setPinnedLesson,
+} from "../data/pinnedRepository";
+import {
   canPersistLocally,
   ensureLocalProfile,
   getOrStartSession,
@@ -318,6 +324,15 @@ function LessonView({
     status: "starting",
     message: "Menyiapkan penyimpanan lokal...",
   });
+  const [pinned, setPinned] = useState(false);
+  const [pinBusy, setPinBusy] = useState(false);
+  const [pinNotice, setPinNotice] = useState("");
+  const [pinError, setPinError] = useState<string | null>(null);
+  const sessionReadyRef = useRef<Promise<string> | null>(null);
+  const lessonPinKey = pinnedKey({
+    packageId: contentPackage.data.manifest.packageId,
+    lessonId: lesson.lessonId,
+  });
 
   useEffect(() => {
     if (!canPersistLocally()) {
@@ -330,7 +345,7 @@ function LessonView({
     }
 
     let cancelled = false;
-    (async () => {
+    const ready = (async () => {
       try {
         const profileId = await ensureLocalProfile();
         const session = await getOrStartSession({
@@ -348,6 +363,7 @@ function LessonView({
             message: "Penyimpanan lokal siap. Hasil belum disinkronkan ke server.",
           });
         }
+        return session.sessionId;
       } catch (error) {
         if (!cancelled) {
           setStorage({
@@ -355,13 +371,67 @@ function LessonView({
             message: error instanceof Error ? error.message : "Penyimpanan lokal tidak tersedia.",
           });
         }
+        throw error;
       }
     })();
+    sessionReadyRef.current = ready;
+    void ready.catch(() => undefined);
 
     return () => {
       cancelled = true;
     };
   }, [contentPackage, lesson.lessonId]);
+
+  // Status sematan dibaca terpisah dari penyimpanan hasil: kegagalan baca hanya
+  // menyembunyikan tombol, tidak boleh menghalangi belajar.
+  useEffect(() => {
+    if (!profileId) {
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const items = await listPinnedLessons(profileId);
+        if (!cancelled) {
+          setPinned(items.some((item) => pinnedKey(item) === lessonPinKey));
+        }
+      } catch (caught) {
+        if (!cancelled) {
+          setPinError(pinnedErrorMessage(caught));
+        }
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [profileId, lessonPinKey]);
+
+  async function togglePin() {
+    if (!profileId || pinBusy) {
+      return;
+    }
+    const next = !pinned;
+    setPinBusy(true);
+    setPinError(null);
+    try {
+      await setPinnedLesson({
+        profileId,
+        packageId: contentPackage.data.manifest.packageId,
+        lessonId: lesson.lessonId,
+        pinned: next,
+      });
+      setPinned(next);
+      setPinNotice(
+        next
+          ? `${lesson.title} disematkan ke Beranda.`
+          : `${lesson.title} dilepas dari Beranda.`,
+      );
+    } catch (caught) {
+      setPinError(pinnedErrorMessage(caught));
+    } finally {
+      setPinBusy(false);
+    }
+  }
 
   const activeActivity =
     activities.find((activity) => activity.activityId === activeActivityId) ?? activities[0];
@@ -443,22 +513,21 @@ function LessonView({
     if (!canPersistLocally()) {
       return;
     }
-    if (!sessionId) {
-      setStorage({
-        status: "error",
-        message: "Sesi belajar belum siap; hasil belum disimpan.",
-      });
-      return;
-    }
 
     setStorage({ status: "saving", message: "Menyimpan hasil belajar..." });
     try {
+      // Kuis bisa selesai sebelum tulis DB pertama selesai; tunggu sesi yang sedang
+      // disiapkan alih-alih membuang hasil dengan "sesi belum siap".
+      const activeSessionId = sessionId ?? (await sessionReadyRef.current);
+      if (!activeSessionId) {
+        throw new Error("Sesi belajar belum siap; hasil belum disimpan.");
+      }
       const attempt = await saveAttempt({
         attemptId: crypto.randomUUID(),
         progressId: crypto.randomUUID(),
         outboxId: crypto.randomUUID(),
         eventId: crypto.randomUUID(),
-        sessionId,
+        sessionId: activeSessionId,
         activityId,
         score: outcome.score,
         occurredAt: new Date().toISOString(),
@@ -523,6 +592,43 @@ function LessonView({
 
             <h1 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
+
+            {canPersistLocally() && (
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  data-pin-toggle
+                  onClick={() => void togglePin()}
+                  aria-pressed={pinned}
+                  aria-label={pinned ? `Lepas sematan ${lesson.title}` : `Sematkan ${lesson.title}`}
+                  disabled={!profileId || pinBusy}
+                  className={`inline-flex min-h-11 items-center gap-2 rounded-control border px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:cursor-not-allowed disabled:opacity-50 ${
+                    pinned
+                      ? "border-teal/50 bg-teal/10 text-ink"
+                      : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+                  }`}
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill={pinned ? "currentColor" : "none"}
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    className="h-4 w-4"
+                  >
+                    <path d="M7 4h10v16l-5-3.4L7 20z" strokeLinejoin="round" />
+                  </svg>
+                  {pinned ? "Disematkan" : "Sematkan"}
+                </button>
+                <p
+                  data-player-pin-status
+                  aria-live="polite"
+                  className={`min-w-0 text-xs ${pinError ? "text-danger-strong" : "text-muted"}`}
+                >
+                  {pinError ?? pinNotice}
+                </p>
+              </div>
+            )}
           </div>
 
           <div data-player-cover className="w-full shrink-0 md:w-64 lg:w-72 xl:w-80">
