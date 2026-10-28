@@ -1,6 +1,6 @@
 # ADR-0035 — Materi Daring HTML5 di Luar Paket Konten
 
-**Status:** Proposed — belum ada kode; menunggu persetujuan PO · **Tanggal:** 2026-10-28
+**Status:** Accepted (defaults via sesi 2026-10-28) — belum ada kode · **Tanggal:** 2026-10-28
 **Terkait:** [Kontrak bundel materi v1](../content/MATERIAL_BUNDLE_CONTRACT.md) · [ADR-0003](ADR-0003-content-package-contract.md) · [CONTENT_SCHEMA v1](../content/SCHEMA.md) · [IMPLEMENTATION_CONTRACT.md §3](../../IMPLEMENTATION_CONTRACT.md)
 
 ## Konteks
@@ -8,7 +8,7 @@
 - PO meminta materi yang dibuat di platform (editor/content creator berbasis HTML5 animation) disimpan di server Gerbang Edukasi dan muncul di **Jelajah Materi** aplikasi desktop setelah dipublikasikan. Editor halaman di mu-komik yang dibuka PO hanya **acuan tampilan**, bukan integrasi.
 - Aplikasi kini offline-first: konten berupa paket JSON yang divalidasi Zod ([SCHEMA.md](../content/SCHEMA.md)), dimuat lewat Content Manager (staging → aktivasi atomik → rollback). CSP aplikasi saat ini `default-src 'self'; script-src 'self'` (`src-tauri/tauri.conf.json`), jadi skrip dari luar memang tidak bisa dijalankan di shell utama.
 - Kontrak paket v1 **secara sengaja** menolak `script/entry/eval/exec/...` di `interactionConfig`, dan `IMPLEMENTATION_CONTRACT.md` §3 melarang menambahkan *arbitrary code execution* dari paket konten tanpa persetujuan eksplisit.
-- Materi HTML5 berarti menjalankan kode pihak ketiga di dalam aplikasi. Ini keputusan batas keamanan, bukan sekadar fitur UI — karena itu ADR ini **Proposed**, bukan Accepted.
+- Materi HTML5 berarti menjalankan kode pihak ketiga di dalam aplikasi. Ini keputusan batas keamanan, bukan sekadar fitur UI — karena itu ADR ini semula **Proposed**, dan `IMPLEMENTATION_CONTRACT.md` §3 mensyaratkan persetujuan eksplisit. PO memberi persetujuan pada **2026-10-28** ("setujui usulan OD lalu lanjut prototipe") untuk menjalankan materi bertanda tangan Gerbang Edukasi di dalam iframe tersandbox seperti di bawah.
 
 ## Keputusan
 
@@ -28,23 +28,23 @@
 - Dua jalur konten: paket terstruktur (berskor, mengisi Hasil Belajar) dan materi HTML5 (tanpa skor). Jelajah Materi perlu membedakan keduanya secara visual.
 - Permukaan keamanan bertambah: WebView2 menjalankan kode pihak ketiga. Mitigasi berlapis — tanda tangan, hash, sandbox opaque-origin, tanpa akses IPC Tauri, `frame-src` sempit, larangan jaringan dari bundel, batas ukuran. Risiko yang **tidak** bisa dihilangkan: kerentanan renderer terhadap konten berbahaya; karena itu hanya bundel bertanda tangan Gerbang Edukasi yang diterima.
 - Perubahan yang dibutuhkan: CSP `frame-src`, protokol kustom di Rust (`ifp-content://`), perintah unduh + verifikasi, tabel state materi, layar/overlay penampil, entri Jelajah Materi, skenario E2E + a11y baru.
-- Ukuran bundel (usul batas 50 MB) menuntut kebijakan cache/penghapusan dan unduhan yang bisa dibatalkan.
+- Batas **50 MB per bundel** dan anggaran cache **2 GB per perangkat** (LRU) menuntut unduhan yang bisa dibatalkan dan penanda sisa ruang di UI.
 - Offline tetap terjaga **setelah** unduhan; katalog offline menampilkan cache terakhir dengan penanda kedaluwarsa.
 - Paket konten v1 tidak berubah: larangan skrip di `interactionConfig` tetap berlaku.
 
-## Urutan implementasi yang diusulkan (belum dikerjakan)
+## Urutan implementasi
 
-1. Kontrak dibekukan (dokumen ini + `MATERIAL_BUNDLE_CONTRACT.md`).
-2. Prototipe penampil dengan **satu bundel contoh lokal** (tanpa server) untuk menguji isolasi, fullscreen, Esc, dan a11y kontainer.
+1. Kontrak dibekukan (dokumen ini + `MATERIAL_BUNDLE_CONTRACT.md`). — selesai 2026-10-28
+2. Prototipe penampil dengan **satu bundel contoh lokal** (tanpa server) untuk menguji isolasi, fullscreen, Esc, dan a11y kontainer. — selesai 2026-10-28 (T-114): iframe sandbox + protokol `ifp-content` + penampil modal; E2E `material-viewer` 8/8
 3. Katalog + pengunduh + verifikasi tanda tangan.
 4. Progres baca, semat, dan pembersihan cache.
 
-## Keputusan terbuka
+## Keputusan yang dikonfirmasi (2026-10-28)
 
-| ID | Pertanyaan |
-|---|---|
-| OD-10 | Apakah materi boleh tayang saat `reviewStatus = draft`, atau katalog publik hanya `approved` seperti paket? |
-| OD-11 | Penitipan kunci penandatangan konten: siapa memegang private key, bagaimana rotasi, apakah perlu KMS? |
-| OD-12 | Penyimpanan bundel: Supabase Storage atau R2; URL unduhan pre-signed atau proxy Worker? |
-| OD-13 | Batas ukuran bundel dan anggaran cache per perangkat (usulan: 50 MB/bundel, 2 GB total, LRU)? |
-| OD-14 | Apakah "selesai dibaca" muncul di Ringkasan belajar / Hasil Belajar, atau tetap tersembunyi? |
+| ID | Pertanyaan | Keputusan |
+|---|---|---|
+| OD-10 | Materi tayang saat `draft`? | Katalog publik hanya memuat `reviewStatus` `reviewed` atau `approved`. Materi `draft` terlihat **hanya** di mode admin aplikasi. Endpoint katalog tidak pernah mengembalikan `draft` tanpa otorisasi admin. |
+| OD-11 | Penitipan private key konten | Private key Ed25519 disimpan sebagai **secret Worker** (`CONTENT_SIGNING_KEY`), tidak pernah masuk repo maupun bundel. Rotasi memakai `keyId` baru; aplikasi membawa daftar kunci publik dan rilis aplikasi mendahului pemakaian kunci baru. KMS **tidak** dipakai untuk v1; ditinjau ulang bila jumlah penandatangan > 1. |
+| OD-12 | Penyimpanan & URL unduhan | Bundel disimpan di **Supabase Storage** (bucket privat) dan diunduh lewat **URL pre-signed berumur 10 menit** yang dibuat Worker saat katalog diminta. Worker tidak mem-proxy isi bundel. |
+| OD-13 | Batas ukuran & cache | **50 MB** per bundel; anggaran cache **2 GB** per perangkat; pengusiran **LRU** berdasarkan `last_opened_at`, materi yang sedang dibuka atau disematkan tidak diusir. Melebihi batas bundel → `MATERIAL_TOO_LARGE`. |
+| OD-14 | "Selesai dibaca" di Hasil Belajar | **Tidak** ditampilkan di Ringkasan belajar / Hasil Belajar untuk sekarang. Sinyal `complete` hanya disimpan di `material_progress` dan boleh tampil sebagai penanda kecil di kartu materi. Dibuka kembali bila PO meminta. |

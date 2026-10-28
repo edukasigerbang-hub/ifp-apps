@@ -1,6 +1,6 @@
 # Kontrak Bundel Materi HTML5 v1 (draf)
 
-**Status:** DRAF — belum ada implementasi · **Tanggal:** 2026-10-28 · **schemaVersion usulan:** `1.0.0`
+**Status:** DRAF — OD-10…OD-14 dikunci 2026-10-28; prototipe penampil lokal sudah ada (T-114), tetapi katalog/unduhan/tanda tangan belum · **Tanggal:** 2026-10-28 · **schemaVersion:** `1.0.0`
 **Terkait:** [ADR-0035](../decisions/ADR-0035-online-html5-materials.md) · [Kontrak paket konten v1](SCHEMA.md) · [Kontrak sinkronisasi v1](../api/SYNC_CONTRACT.md)
 
 Dokumen ini menetapkan apa yang **harus dihasilkan platform** (editor + server Gerbang Edukasi) dan apa yang **harus diterima aplikasi desktop**. Tidak mengatur UI editor.
@@ -36,7 +36,7 @@ Aturan yang ditegakkan saat publish **dan** saat unduh:
 
 - Path relatif, case-sensitive, tanpa `..`, tanpa path absolut, tanpa symlink. Nama duplikat tanpa peduli huruf besar/kecil ditolak (bentrok di Windows).
 - Tipe berkas diizinkan: `html`, `js`, `mjs`, `css`, `json`, `webp`, `png`, `jpg`, `jpeg`, `gif`, `svg`, `mp3`, `m4a`, `ogg`, `wav`, `woff2`, `ttf`, `vtt`, `txt`. Tipe lain ditolak.
-- Ukuran total ≤ **50 MB** (usulan, lihat OD-13).
+- Ukuran total ≤ **50 MB**.
 - **Self-contained**: tidak ada `http://`, `https://`, atau `//` absolut di HTML/JS/CSS untuk sumber daya; tidak ada `fetch`/XHR/WebSocket ke origin luar; tidak ada `window.open`, navigasi top-level, atau form ke luar. Pemeriksaan bersifat pola + tinjauan manusia; ini bukan sandbox.
 - Font dan gambar ikut bundel. Tidak ada CDN.
 
@@ -119,6 +119,7 @@ GET /v1/materials?grade=3&subject=ipas&cursor=<opaque>&limit=50
 
 - `limit` 1–100 (default 50); `grade` 1–6; `subject` slug; parameter tak dikenal → `400 INVALID_QUERY`.
 - Urutan: `publishedAt` menurun, stabil terhadap `materialId`.
+- Hanya `reviewStatus` `reviewed` dan `approved` yang dikembalikan (OD-10). `draft` tidak pernah tayang di katalog publik; pratinjau draf hanya lewat endpoint admin yang belum dirancang.
 
 Respons `200`:
 
@@ -144,10 +145,10 @@ Respons `200`:
 ```
 
 - `material` disalin utuh ke katalog supaya aplikasi bisa menampilkan kartu **dan** memverifikasi tanda tangan sebelum mengunduh.
-- `downloadUrl` berlaku singkat (usul 10 menit) dan boleh berubah tiap permintaan; jangan disimpan.
+- `downloadUrl` adalah **URL pre-signed Supabase Storage berumur 10 menit** yang dibuat Worker per permintaan; jangan disimpan (OD-12).
 - Header: `ETag` (hash isi), `Cache-Control: public, max-age=300`. `If-None-Match` yang cocok → `304` tanpa body.
 - Galat memakai bentuk yang sama dengan Worker yang ada: `{ "error": { "code", "message" } }`.
-- **Usulan:** katalog bersifat baca-publik (bukan PII) dengan rate limit per IP (60/menit). Bila PO ingin katalog hanya untuk perangkat terdaftar, tambahkan bearer token perangkat seperti `/v1/sync/events` — belum diputuskan.
+- Katalog bersifat baca-publik (tidak memuat PII) dengan rate limit per IP **60/menit**. Bila nanti katalog perlu dibatasi ke perangkat terdaftar, tambahkan bearer token perangkat seperti `/v1/sync/events` — belum diputuskan.
 
 ## 7. Urutan unduhan & verifikasi (mengikat aplikasi)
 
@@ -159,7 +160,7 @@ Respons `200`:
 6. Periksa path (§3) dan tipe berkas; tolak ZIP dengan symlink, entri direktori aneh, atau path duplikat case-insensitive.
 7. Semua lulus → pindahkan dari staging ke folder versi lalu aktifkan. Gagal di langkah mana pun → hapus staging, pertahankan versi aktif sebelumnya, laporkan kode galat.
 
-Kode galat aplikasi (usulan):
+Kode galat aplikasi:
 
 | Kode | Arti |
 |---|---|
@@ -171,12 +172,12 @@ Kode galat aplikasi (usulan):
 | `MATERIAL_TOO_LARGE` | Melebihi batas ukuran bundel |
 | `MATERIAL_INCOMPATIBLE_APP` | `minAppVersion` lebih baru dari aplikasi |
 
-## 8. Penyimpanan lokal & aktivasi (usulan rancangan)
+## 8. Penyimpanan lokal & aktivasi
 
 - Berkas: `<app_data>/materials/<materialId>/<version>/…`; staging di `<app_data>/materials/.staging/<uuid>/`.
 - Satu versi aktif per `materialId`. Versi lama disimpan sampai batas cache; rollback = aktifkan versi yang sudah ada di disk (tanpa unduh).
-- State di SQLite (usulan): `material_install(material_id, version, sha256, size_bytes, state ∈ {staged, active, superseded}, installed_at, last_opened_at)` dengan PK gabungan; `material_progress(profile_id, material_id, progress, completed_at, updated_at)`.
-- Pembersihan: LRU berdasarkan `last_opened_at` ketika total melewati anggaran (usul 2 GB); materi yang sedang dibuka atau disematkan tidak dihapus.
+- State di SQLite: `material_install(material_id, version, sha256, size_bytes, state ∈ {staged, active, superseded}, installed_at, last_opened_at)` dengan PK gabungan; `material_progress(profile_id, material_id, progress, completed_at, updated_at)`.
+- Pembersihan: LRU berdasarkan `last_opened_at` ketika total melewati anggaran **2 GB**; materi yang sedang dibuka atau disematkan tidak dihapus (OD-13).
 
 ## 9. Jembatan `postMessage`
 
@@ -193,6 +194,7 @@ Amplop: `{ "ifp": 1, "type": "<jenis>", … }`.
 - Induk **wajib** memeriksa `event.source === iframe.contentWindow`; pesan dari jendela lain diabaikan.
 - Pesan yang bentuknya tidak valid atau `type` tak dikenal diabaikan tanpa efek.
 - `complete` diabaikan bila `minDwellSeconds` belum terpenuhi.
+- `complete` hanya menulis `material_progress`; **tidak** membuat attempt atau entri Hasil Belajar (OD-14).
 - Dilarang mengirim PII (nama profil, ID perangkat, token) ke iframe.
 
 ## 10. Persyaratan aksesibilitas (mengikat publish)
@@ -209,7 +211,7 @@ Amplop: `{ "ifp": 1, "type": "<jenis>", … }`.
 
 1. Editor menghasilkan bundel + `material.json`; simpan sebagai draf.
 2. Validator publish memeriksa: skema, self-contained, path/tipe, ukuran, transkrip, `captionsPath` bila ada audio, dan `files` lengkap.
-3. Reviewer menetapkan `reviewStatus` (kebijakan tayang: lihat OD-10).
+3. Reviewer menetapkan `reviewStatus`; hanya `reviewed`/`approved` yang masuk katalog publik, `draft` tinggal di admin (OD-10).
 4. Server menandatangani `material.json` kanonik, menghitung `bundleSha256`, menyimpan bundel **immutable** per versi.
 5. Baris katalog ditulis/diperbarui; `updatedAt` berubah bila metadata berubah.
 6. **Versi yang sama tidak boleh terbit ulang dengan hash berbeda** — naikkan `version`.
@@ -222,4 +224,6 @@ Amplop: `{ "ifp": 1, "type": "<jenis>", … }`.
 
 ## 13. Keputusan terbuka
 
-OD-10 (kebijakan tayang `draft`), OD-11 (penitipan kunci), OD-12 (penyimpanan & URL unduhan), OD-13 (batas ukuran/cache), OD-14 ("selesai dibaca" di Hasil Belajar) — rincian di [ADR-0035](../decisions/ADR-0035-online-html5-materials.md#keputusan-terbuka).
+Tidak ada lagi yang memblokir kontrak ini: OD-10…OD-14 dikonfirmasi PO pada 2026-10-28 dan dicatat di [ADR-0035](../decisions/ADR-0035-online-html5-materials.md#keputusan-yang-dikonfirmasi-2026-10-28).
+
+Yang **belum ada** (bukan keputusan terbuka, melainkan pekerjaan): kode Worker `/v1/materials`, penandatanganan saat publish, unduhan + verifikasi ZIP, dan tabel SQLite `material_install`/`material_progress`. Yang **sudah** ada hanya penampil prototipe dengan satu bundel contoh lokal (T-114) — belum ada jalur dari server ke perangkat.
