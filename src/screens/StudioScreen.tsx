@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { MaterialViewer } from "../components/material/MaterialViewer";
 import { DraftAssetPanel } from "../components/studio/DraftAssetPanel";
 import { DraftCheckPanel } from "../components/studio/DraftCheckPanel";
@@ -72,6 +72,10 @@ export function StudioScreen() {
   const [codeDirty, setCodeDirty] = useState(false);
   const [preview, setPreview] = useState<MaterialView | null>(null);
   const [form, setForm] = useState(emptyForm);
+  const [creating, setCreating] = useState(false);
+  const createTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const createDialogRef = useRef<HTMLDivElement | null>(null);
+  const materialIdRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (!desktop) {
@@ -106,6 +110,57 @@ export function StudioScreen() {
     setDrafts(await listStudioDrafts());
   }
 
+  function openCreate() {
+    setError(null);
+    setMessage(null);
+    setCreating(true);
+  }
+
+  function closeCreate() {
+    if (busy !== null) return;
+    setCreating(false);
+    createTriggerRef.current?.focus();
+  }
+
+  useEffect(() => {
+    if (creating) materialIdRef.current?.focus();
+  }, [creating]);
+
+  // Dialog "Buat materi": Escape menutup, dan Tab berputar di dalam dialog
+  // supaya fokus tidak bocor ke halaman di belakang.
+  useEffect(() => {
+    if (!creating) return;
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        if (busy !== null) return;
+        setCreating(false);
+        createTriggerRef.current?.focus();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const root = createDialogRef.current;
+      if (!root) return;
+      const focusable = Array.from(
+        root.querySelectorAll<HTMLElement>(
+          "button, input, select, textarea, [href], [tabindex]:not([tabindex='-1'])"
+        )
+      ).filter((element) => !element.hasAttribute("disabled"));
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [creating, busy]);
+
   async function handleCreate() {
     setError(null);
     setMessage(null);
@@ -121,6 +176,7 @@ export function StudioScreen() {
         estimatedMinutes: Number(form.estimatedMinutes),
         summary: form.summary.trim() || null
       });
+      setCreating(false);
       setContent(created);
       setReport(null);
       setTab("metadata");
@@ -348,148 +404,32 @@ export function StudioScreen() {
                   {message}
                 </p>
               )}
-              {error && (
+              {error && !creating && (
                 <p className={errorClass} role="alert">
                   {error}
                 </p>
               )}
 
               <section className="rounded-card border border-ink/10 bg-surface p-5 md:p-6">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-                  Draft baru
-                </h2>
-                <div className="mt-4 grid gap-4 md:grid-cols-3">
-                  <label className="block text-sm">
-                    materialId (slug, mis. daur-uji-coba)
-                    <input
-                      data-studio-new-id
-                      type="text"
-                      value={form.materialId}
-                      onChange={(event) =>
-                        setForm({ ...form, materialId: event.target.value.toLowerCase() })
-                      }
-                      disabled={busy !== null}
-                      className={controlClass}
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Versi (SemVer)
-                    <input
-                      type="text"
-                      value={form.version}
-                      onChange={(event) => setForm({ ...form, version: event.target.value })}
-                      disabled={busy !== null}
-                      className={controlClass}
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Judul
-                    <input
-                      data-studio-new-title
-                      type="text"
-                      value={form.title}
-                      onChange={(event) => setForm({ ...form, title: event.target.value })}
-                      disabled={busy !== null}
-                      className={controlClass}
-                    />
-                  </label>
-                  <label className="block text-sm">
-                    Kerangka
-                    <select
-                      data-studio-template
-                      value={form.templateId}
-                      onChange={(event) => setForm({ ...form, templateId: event.target.value })}
-                      disabled={busy !== null}
-                      className={controlClass}
-                    >
-                      {templates.map((template) => (
-                        <option key={template.id} value={template.id}>
-                          {template.label}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  <label className="block text-sm">
-                    Mata pelajaran
-                    <select
-                      value={form.subject}
-                      onChange={(event) => setForm({ ...form, subject: event.target.value })}
-                      disabled={busy !== null}
-                      className={controlClass}
-                    >
-                      {subjectKeys.map((key) => (
-                        <option key={key} value={key}>
-                          {subjectLabel(key)}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  <div className="grid grid-cols-2 gap-4">
-                    <label className="block text-sm">
-                      Kelas
-                      <select
-                        value={form.grade}
-                        onChange={(event) => setForm({ ...form, grade: event.target.value })}
-                        disabled={busy !== null}
-                        className={controlClass}
-                      >
-                        {[1, 2, 3, 4, 5, 6].map((grade) => (
-                          <option key={grade} value={grade}>
-                            Kelas {grade}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                    <label className="block text-sm">
-                      Menit
-                      <input
-                        type="number"
-                        min={1}
-                        max={60}
-                        value={form.estimatedMinutes}
-                        onChange={(event) =>
-                          setForm({ ...form, estimatedMinutes: event.target.value })
-                        }
-                        disabled={busy !== null}
-                        className={controlClass}
-                      />
-                    </label>
-                  </div>
-                </div>
-                <label className="mt-4 block text-sm">
-                  Ringkasan singkat (opsional)
-                  <textarea
-                    rows={2}
-                    value={form.summary}
-                    onChange={(event) => setForm({ ...form, summary: event.target.value })}
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+                    Draft materi
+                  </h2>
+                  <button
+                    type="button"
+                    data-studio-create-open
+                    ref={createTriggerRef}
+                    onClick={openCreate}
                     disabled={busy !== null}
-                    className={controlClass}
-                  />
-                </label>
-                <button
-                  type="button"
-                  data-studio-create
-                  onClick={() => void handleCreate()}
-                  disabled={
-                    busy !== null ||
-                    form.materialId.trim().length < 3 ||
-                    form.title.trim().length < 3 ||
-                    form.version.trim().length === 0
-                  }
-                  className={`${primaryButtonClass} mt-4`}
-                >
-                  {busy === "Membuat draft…" ? "Membuat…" : "Buat draft dari kerangka"}
-                </button>
-              </section>
-
-              <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
-                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
-                  Draft materi
-                </h2>
+                    className={`${primaryButtonClass} px-4`}
+                  >
+                    <span aria-hidden="true">+</span> Buat materi
+                  </button>
+                </div>
                 {loading && <p className="mt-3 text-sm text-muted">Memuat draft…</p>}
                 {!loading && drafts.length === 0 && (
                   <p className="mt-3 text-sm text-muted">
-                    Belum ada draft di perangkat ini. Buat draft dari kerangka di atas.
+                    Belum ada draft di perangkat ini. Tekan “Buat materi” untuk memulai dari kerangka.
                   </p>
                 )}
                 {drafts.length > 0 && (
@@ -549,6 +489,187 @@ export function StudioScreen() {
             </>
           )}
         </>
+      )}
+
+      {creating && (
+        <div
+          data-studio-create-dialog
+          className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/40 p-4 md:items-center"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) closeCreate();
+          }}
+        >
+          <div
+            ref={createDialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="studio-create-heading"
+            className="w-full max-w-3xl rounded-card border border-ink/10 bg-surface p-5 shadow-xl md:p-6"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <h2 id="studio-create-heading" className="text-lg font-semibold">
+                  Buat materi
+                </h2>
+                <p className="mt-1 text-sm text-muted">
+                  Kerangka menulis folder draft baru beserta manifest dan berkas awal.
+                </p>
+              </div>
+              <button
+                type="button"
+                data-studio-create-close
+                onClick={closeCreate}
+                disabled={busy !== null}
+                aria-label="Tutup form buat materi"
+                className={`${secondaryButtonClass} min-h-11 w-11 shrink-0 px-0 text-lg`}
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-3">
+              <label className="block text-sm">
+                materialId (slug, mis. daur-uji-coba)
+                <input
+                  data-studio-new-id
+                  ref={materialIdRef}
+                  type="text"
+                  value={form.materialId}
+                  onChange={(event) =>
+                    setForm({ ...form, materialId: event.target.value.toLowerCase() })
+                  }
+                  disabled={busy !== null}
+                  className={controlClass}
+                />
+              </label>
+              <label className="block text-sm">
+                Versi (SemVer)
+                <input
+                  type="text"
+                  value={form.version}
+                  onChange={(event) => setForm({ ...form, version: event.target.value })}
+                  disabled={busy !== null}
+                  className={controlClass}
+                />
+              </label>
+              <label className="block text-sm">
+                Judul
+                <input
+                  data-studio-new-title
+                  type="text"
+                  value={form.title}
+                  onChange={(event) => setForm({ ...form, title: event.target.value })}
+                  disabled={busy !== null}
+                  className={controlClass}
+                />
+              </label>
+              <label className="block text-sm">
+                Kerangka
+                <select
+                  data-studio-template
+                  value={form.templateId}
+                  onChange={(event) => setForm({ ...form, templateId: event.target.value })}
+                  disabled={busy !== null}
+                  className={controlClass}
+                >
+                  {templates.map((template) => (
+                    <option key={template.id} value={template.id}>
+                      {template.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="block text-sm">
+                Mata pelajaran
+                <select
+                  value={form.subject}
+                  onChange={(event) => setForm({ ...form, subject: event.target.value })}
+                  disabled={busy !== null}
+                  className={controlClass}
+                >
+                  {subjectKeys.map((key) => (
+                    <option key={key} value={key}>
+                      {subjectLabel(key)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <div className="grid grid-cols-2 gap-4">
+                <label className="block text-sm">
+                  Kelas
+                  <select
+                    value={form.grade}
+                    onChange={(event) => setForm({ ...form, grade: event.target.value })}
+                    disabled={busy !== null}
+                    className={controlClass}
+                  >
+                    {[1, 2, 3, 4, 5, 6].map((grade) => (
+                      <option key={grade} value={grade}>
+                        Kelas {grade}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="block text-sm">
+                  Menit
+                  <input
+                    type="number"
+                    min={1}
+                    max={60}
+                    value={form.estimatedMinutes}
+                    onChange={(event) =>
+                      setForm({ ...form, estimatedMinutes: event.target.value })
+                    }
+                    disabled={busy !== null}
+                    className={controlClass}
+                  />
+                </label>
+              </div>
+            </div>
+            <label className="mt-4 block text-sm">
+              Ringkasan singkat (opsional)
+              <textarea
+                rows={2}
+                value={form.summary}
+                onChange={(event) => setForm({ ...form, summary: event.target.value })}
+                disabled={busy !== null}
+                className={controlClass}
+              />
+            </label>
+
+            {error && (
+              <p className={`${errorClass} mt-4`} role="alert">
+                {error}
+              </p>
+            )}
+
+            <div className="mt-5 flex flex-wrap justify-end gap-2">
+              <button
+                type="button"
+                data-studio-create-cancel
+                onClick={closeCreate}
+                disabled={busy !== null}
+                className={secondaryButtonClass}
+              >
+                Batal
+              </button>
+              <button
+                type="button"
+                data-studio-create
+                onClick={() => void handleCreate()}
+                disabled={
+                  busy !== null ||
+                  form.materialId.trim().length < 3 ||
+                  form.title.trim().length < 3 ||
+                  form.version.trim().length === 0
+                }
+                className={primaryButtonClass}
+              >
+                {busy === "Membuat draft…" ? "Membuat…" : "Buat draft dari kerangka"}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {preview && <MaterialViewer material={preview} onClose={() => setPreview(null)} />}

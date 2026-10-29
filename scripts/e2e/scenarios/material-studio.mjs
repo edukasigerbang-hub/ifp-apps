@@ -156,13 +156,42 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await page.waitFor(`document.querySelector("main h1")?.textContent.includes("Studio Materi")`, {
     label: "layar Studio Materi"
   });
-  await page.waitFor(`document.querySelector("[data-studio-create]") !== null`, {
-    label: "form draft baru"
+  await page.waitFor(`document.querySelector("[data-studio-create-open]") !== null`, {
+    label: "tombol buat materi"
   });
-  log("Navigasi admin memuat layar Studio Materi.");
+  const inlineFormHidden = await page.evaluate(
+    `document.querySelector("[data-studio-create]") === null && document.querySelector("[data-studio-create-dialog]") === null`
+  );
+  assert(
+    inlineFormHidden,
+    "Form buat materi tidak boleh tampil sebelum tombol Buat materi diklik."
+  );
+  log("Navigasi admin memuat layar Studio Materi tanpa form pembuatan.");
+  await page.screenshot(path.join(artifactDir, "studio-daftar-tombol.png"));
 
-  // Daftar kerangka dimuat lewat invoke asynchronously; form muncul lebih dulu,
-  // jadi opsi <select> harus ditunggu sebelum dihitung.
+  const emptyDrafts = await invoke(page, "material_draft_list");
+  assert(emptyDrafts.ok && emptyDrafts.value.length === 0, "Data uji harus mulai tanpa draft.");
+
+  await clickHook(page, "[data-studio-create-open]");
+  await page.waitFor(`document.querySelector("[data-studio-create-dialog]") !== null`, {
+    label: "dialog buat materi"
+  });
+  await clickHook(page, "[data-studio-create-cancel]");
+  await page.waitFor(`document.querySelector("[data-studio-create-dialog]") === null`, {
+    label: "dialog tertutup setelah Batal"
+  });
+  const stillHidden = await page.evaluate(
+    `document.querySelector("[data-studio-create]") === null`
+  );
+  assert(stillHidden, "Membatalkan dialog tidak boleh memunculkan form di halaman.");
+  log("Tombol Buat materi membuka dialog form dan Batal menutupnya tanpa membuat draft.");
+
+  await clickHook(page, "[data-studio-create-open]");
+  await page.waitFor(`document.querySelector("[data-studio-create-dialog]") !== null`, {
+    label: "dialog buat materi dibuka lagi"
+  });
+  // Daftar kerangka dimuat lewat invoke asynchronously; opsi <select> di dalam
+  // dialog harus ditunggu sebelum dihitung.
   await page.waitFor(`document.querySelectorAll("[data-studio-template] option").length >= 2`, {
     label: "kerangka terdaftar dari Rust",
     timeoutMs: 20_000
@@ -172,9 +201,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
   );
   assert(templateCount >= 2, `Kerangka draft hanya ${templateCount}, harus ≥ 2.`);
   log(`Kerangka terdaftar dari Rust: ${templateCount} pilihan.`);
-
-  const emptyDrafts = await invoke(page, "material_draft_list");
-  assert(emptyDrafts.ok && emptyDrafts.value.length === 0, "Data uji harus mulai tanpa draft.");
+  await page.screenshot(path.join(artifactDir, "studio-buat-materi.png"));
 
   await typeInto(page, "[data-studio-new-id]", MATERIAL_ID);
   await typeInto(page, "[data-studio-new-title]", TITLE);
@@ -186,7 +213,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
     label: "halaman editor draft"
   });
   const formHidden = await page.evaluate(
-    `document.querySelector("[data-studio-create]") === null && document.querySelector("[data-studio-open]") === null`
+    `document.querySelector("[data-studio-create]") === null && document.querySelector("[data-studio-create-dialog]") === null && document.querySelector("[data-studio-open]") === null`
   );
   assert(formHidden, "Halaman editor tidak boleh menampilkan form dan daftar draft.");
   await page.screenshot(path.join(artifactDir, "studio-halaman-editor.png"));
@@ -196,6 +223,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await page.waitFor(`document.querySelector('[data-studio-open="${MATERIAL_ID}"]') !== null`, {
     label: "draft tampil di daftar setelah kembali"
   });
+  await page.screenshot(path.join(artifactDir, "studio-daftar-draft.png"));
   await clickHook(page, `[data-studio-open="${MATERIAL_ID}"]`);
   await page.waitFor(`document.querySelector("[data-studio-editor-card]") !== null`, {
     label: "editor dibuka dari daftar draft"
@@ -694,9 +722,13 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await page.waitFor(`document.querySelector("[data-studio-editor-card]") === null`, {
     label: "kembali ke daftar draft setelah hapus"
   });
-  await page.waitFor(`document.querySelector("[data-studio-create]") !== null`, {
-    label: "form draft baru tampil lagi setelah hapus"
+  await page.waitFor(`document.querySelector("[data-studio-create-open]") !== null`, {
+    label: "tombol Buat materi tampil lagi setelah hapus"
   });
+  assert(
+    (await page.evaluate(`document.querySelector("[data-studio-create-dialog]") === null`)) === true,
+    "Dialog pembuatan materi masih terbuka setelah draft dihapus."
+  );
   const afterDelete = await invoke(page, "material_draft_list");
   assert(
     afterDelete.ok && afterDelete.value.length === 0,
@@ -750,7 +782,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
   });
 
   await clickButton(page, "Studio Materi");
-  await page.waitFor(`document.querySelector("[data-studio-create]") !== null`, {
+  await page.waitFor(`document.querySelector("[data-studio-create-open]") !== null`, {
     label: "Studio terbuka kembali"
   });
   await page.screenshot(path.join(artifactDir, "studio-final.png"));
