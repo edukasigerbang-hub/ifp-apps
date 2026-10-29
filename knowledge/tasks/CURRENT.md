@@ -1664,3 +1664,37 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 5. Tanpa `Content-Encoding`/kompresi untuk payload katalog; baliknya kecil (< 100 item) tapi belum diukur terhadap batas respons Worker.
 
 **Sisa:** jalankan 0004 + buat bucket + `wrangler secret put` + deploy + bakar publik key ke build · `material_progress` + LRU 2 GB (tahap 4) · `bundleSha256` di `material_install` · alur `reviewStatus` reviewer · uji `material-catalog` E2E terhadap Worker yang sudah ter-deploy.
+
+### Editor Blok HTML5 — Tab “Susun” di Studio Materi (2026-10-29, T-124)
+
+**Status:** Studio sekarang punya editor visual di samping editor kode. Tab **Susun** menyusun materi dari langkah dan blok — teks (paragraf, catatan, kutipan, daftar poin), gambar, efek visual, dan efek suara — lalu menulis ulang `index.html`, `assets/style.css`, dan `assets/app.js` secara deterministik. Naskahnya sendiri disimpan di dalam `index.html` sebagai blok `<script type="application/json" id="ifp-scene">`, jadi bundel tetap satu berkas mandiri dan isinya masih terbaca oleh tab Kode.
+
+**Yang diubah:**
+- [sceneModel.ts](../../src/components/studio/sceneModel.ts) (baru) — tipe `Scene`/`SceneStep`/`TextBlock`/`ImageBlock`, batas 20 langkah · 12 blok/langkah · 1.200 karakter teks, `parseScene` toleran untuk naskah rusak, `sceneIssues` yang memeriksa judul, teks kosong, gambar hilang dari draft, teks alternatif wajib, dan alamat web di dalam teks.
+- [sceneRender.ts](../../src/components/studio/sceneRender.ts) (baru) — `renderIndexHtml`, `renderStyle`, `renderRuntime`, `renderPreviewDocument`, `extractSceneDocument`. Markup langkah dirender statis (bukan dari JS) supaya isi terbaca meski skrip gagal; runtime hanya mengatur langkah aktif, efek, dan suara. Runtime memakai protokol `ifp` yang sama dengan kerangka bawaan (`ready`/`progress`/`complete`/`request-exit`, menjawab `config`), menghormati `reducedMotion`, dan menambahkan navigasi panah/Home/End.
+- [DraftScenePanel.tsx](../../src/components/studio/DraftScenePanel.tsx) (baru) — judul halaman, tema (cerah/tenang/petualangan), daftar langkah (tambah/duplikat/naik/turun/hapus), editor blok (pindah/hapus), pemilih gambar dari aset draft atau unggah berkas, pratinjau susunan di iframe, dan tombol **Terapkan ke materi** yang terkunci sampai naskah valid dan kotak “saya mengerti” dicentang.
+- [StudioScreen.tsx](../../src/screens/StudioScreen.tsx) — tab `scene` “Susun” sebagai tab pertama.
+- [DraftCodePanel.tsx](../../src/components/studio/DraftCodePanel.tsx) — **perbaikan bug**: buffer editor tidak lagi menyimpan isi lama setelah panel lain menulis berkas yang sama. Sebelumnya, menekan Simpan di tab Kode setelah tab Susun menulis ulang `index.html` mengembalikan isi lama tanpa peringatan (ditemukan lewat E2E, bukan lewat tinjauan kode). Buffer hanya disegarkan bila belum ada suntingan lokal.
+- [sceneRender.test.ts](../../src/components/studio/sceneRender.test.ts) (baru, 10 test) — tulis-baca naskah tanpa kehilangan isi, teks `</script>` tidak memutus blok JSON, tiga berkas bebas `http(s)://`/`fetch(`/`window.open`/WebSocket, atribut gambar + alt, pratinjau memakai CSS sebaris, runtime memuat protokol `ifp`, dan validasi naskah.
+- [material-studio.mjs](../../scripts/e2e/scenarios/material-studio.mjs) — langkah E2E baru: tab Susun → buat naskah → isi dua langkah → tambah blok gambar + teks alternatif → terapkan → periksa `index.html` di disk (2 `<article class="step">`, `data-effect="konfeti"`, `data-sound="bel"`, `src`/`alt` gambar, tanpa rujukan luar) → tangkapan layar `studio-susun.png`; ditambah asersi bahwa tab Kode memuat ulang isi baru (regresi bug di atas).
+
+**Keputusan desain:**
+1. **Naskah tinggal di dalam `index.html`, bukan berkas JSON terpisah** — CSP materi memakai `connect-src 'none'`, jadi `fetch` berkas JSON akan diblokir; blok JSON inert di HTML bisa dibaca ulang tanpa jaringan dan tanpa menambah tipe berkas yang boleh disunting Rust.
+2. **Efek suara disintesis WebAudio, bukan berkas audio** — tidak ada CDN, tidak ada aset biner, dan `accessibility.hasAudio` tetap `false` sehingga kewajiban `captionsPath` tidak dipicu oleh bunyi penanda antarmuka. Audio narasi tetap lewat tab Aset + tab Kode.
+3. **Markup statis, bukan dirender runtime** — pembaca layar dan mode tanpa skrip tetap mendapat isi; runtime hanya menyalakan efek.
+4. **Kotak persetujuan sebelum menimpa** — tab Susun menulis tiga berkas milik kerangka; penimpaan harus disengaja. Panel juga memvalidasi sebelum menulis sehingga berkas tidak pernah setengah jadi karena satu blok kosong.
+5. **Tanpa dependensi baru** — tidak ada library editor, animasi memakai CSS keyframes, suara memakai `AudioContext` bawaan.
+
+**Verifikasi aktual:** `npx tsc --noEmit` bersih (EXIT 0) · `npm test` **152/152** (19 berkas; 10 test baru) + fixture 4/4 + katalog 336/336 + binding PASS · `npx vite build` EXIT 0 (20,45 dtk) · E2E `material-studio` **PASS 24 pemeriksaan** (sebelumnya 23) termasuk langkah Susun dan regresi buffer Kode · `npm run a11y` **19/19** (0 error; 8 warning lama target sentuh breadcrumb) · tangkapan layar: `studio-susun.png` (panel), `studio-preview.png` (materi hasil susunan tampil di penampil: judul, langkah 1/2, progres 50%, tombol).
+
+**Cacat ditemukan & diperbaiki saat verifikasi:** E2E gagal dua kali sebelum hijau. (a) Tombol Terapkan terkunci karena kotak persetujuan belum dicentang — perilaku disengaja, skenario yang kurang; (b) **bug produk**: pratinjau menampilkan isi kerangka lama karena tab Kode menyimpan buffer basi lalu menimpanya saat disimpan. Diperbaiki dengan penyegaran buffer berbasis baseline + ref, plus asersi E2E agar tidak kembali.
+
+**Batasan jujur:**
+1. Belum ada blok audio berbasis berkas: audio narasi harus lewat tab Aset + tab Kode, dan pembaca tidak bisa memilih berkas suara dari panel Susun.
+2. Belum ada undo/redo, drag-and-drop, atau penyuntingan gaya per blok (warna, ukuran, tata letak) — hanya gaya teks bawaan dan tiga tema.
+3. Naskah hanya hidup selama blok JSON di `index.html` masih ada; menulis ulang `index.html` dari luar (mis. di tab Kode menghapus blok itu) menghilangkan naskah, dan panel akan menawarkan mulai dari nol.
+4. Pratinjau susunan menampilkan gambar sebagai kotak placeholder (path ikut ditulis); pratinjau sebenarnya tetap lewat tombol Pratinjau materi.
+5. Efek suara butuh satu gerakan pengguna lebih dulu (kebijakan autoplay browser), jadi suara langkah pertama biasanya belum terdengar.
+6. Batas keras tanpa mekanisme pecah: 20 langkah, 12 blok/langkah, 1.200 karakter per blok teks.
+
+**Sisa:** blok audio berkas + `captionsPath` otomatis · undo/redo · gaya per blok · galeri efek tambahan · blok kuis interaktif · ekspor pratinjau gambar nyata.
