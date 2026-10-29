@@ -110,7 +110,8 @@ function stepHtml(
   step: SceneStep,
   index: number,
   preview: boolean,
-  assets: Record<string, string>
+  assets: Record<string, string>,
+  activeIndex = 0
 ): string {
   const blocks = step.blocks
     .map((block) => {
@@ -119,7 +120,7 @@ function stepHtml(
       return audioBlockHtml(block, preview);
     })
     .join("\n");
-  const active = index === 0 ? ' data-active="true"' : "";
+  const active = index === activeIndex ? ' data-active="true"' : "";
   return `      <article class="step" data-step="${index}" data-effect="${step.effect}" data-sound="${step.sound}"${active} aria-label="${escapeHtml(
     step.title
   )}">
@@ -129,7 +130,12 @@ ${blocks}
       </article>`;
 }
 
-function documentShell(scene: Scene, inner: string, preview: boolean): string {
+function documentShell(
+  scene: Scene,
+  inner: string,
+  preview: boolean,
+  activeIndex = 0
+): string {
   const headline = scene.subtitle.trim()
     ? `\n      <p class="lede">${escapeHtml(scene.subtitle)}</p>`
     : "";
@@ -146,7 +152,7 @@ ${
 }
   </head>
   <body>
-    <main id="material" class="material theme-${scene.theme}" data-stage="0" data-sound="${scene.steps[0]?.sound ?? "tak-ada"}">
+    <main id="material" class="material theme-${scene.theme}" data-stage="${activeIndex}" data-sound="${scene.steps[activeIndex]?.sound ?? "tak-ada"}">
       <header class="head">
         <p class="eyebrow">Materi Studio</p>
         <h1>${escapeHtml(scene.title)}</h1>${headline}
@@ -164,12 +170,12 @@ ${inner}
       </div>
 
       <p class="status" id="status" role="status" aria-live="polite">
-        Langkah 1 dari ${scene.steps.length}.
+        Langkah ${activeIndex + 1} dari ${scene.steps.length}.
       </p>
     </main>
 ${
   preview
-    ? `    <script>\n${renderRuntime()}\n    </script>`
+    ? `    <script>\n${renderRuntime(activeIndex)}\n    </script>`
     : `    <script type="application/json" id="${SCENE_ELEMENT_ID}">${escapeJsonForHtml(scene)}</script>
     <script src="assets/app.js"></script>`
 }
@@ -186,11 +192,17 @@ export function renderIndexHtml(scene: Scene): string {
 
 /**
  * Dokumen pratinjau di dalam iframe. `assets` memetakan path gambar ke data URL
- * supaya pratinjau menampilkan gambar asli dari draft.
+ * supaya pratinjau menampilkan gambar asli dari draft. `activeIndex` membuat
+ * pratinjau langsung terbuka pada langkah yang sedang disunting.
  */
-export function renderPreviewDocument(scene: Scene, assets: Record<string, string> = {}): string {
-  const steps = scene.steps.map((step, index) => stepHtml(step, index, true, assets)).join("\n");
-  return documentShell(scene, steps, true);
+export function renderPreviewDocument(
+  scene: Scene,
+  assets: Record<string, string> = {},
+  activeIndex = 0
+): string {
+  const start = Math.min(Math.max(0, Math.trunc(activeIndex)), Math.max(0, scene.steps.length - 1));
+  const steps = scene.steps.map((step, index) => stepHtml(step, index, true, assets, start)).join("\n");
+  return documentShell(scene, steps, true, start);
 }
 
 /** Teks alternatif berkas suara (kontrak §4 mewajibkan captionsPath bila hasAudio). */
@@ -290,7 +302,8 @@ button:disabled{opacity:.45;cursor:default}
 }
 
 /** Runtime iframe: protokol `ifp` yang sama dengan kerangka bawaan aplikasi. */
-export function renderRuntime(): string {
+export function renderRuntime(startIndex = 0): string {
+  const start = Math.max(0, Math.trunc(startIndex));
   return `(function () {
   "use strict";
 
@@ -302,7 +315,7 @@ export function renderRuntime(): string {
   var completeButton = document.getElementById("complete");
   var exitButton = document.getElementById("exit");
 
-  var index = 0;
+  var index = ${start};
   var completed = false;
   var configured = false;
   var reduced = false;
@@ -541,7 +554,7 @@ export function renderRuntime(): string {
     }
   });
 
-  show(0);
+  show(${start});
   startAnnouncing();
 })();
 `;

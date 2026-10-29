@@ -170,6 +170,17 @@ describe("naskah visual", () => {
     expect(preview).toContain('src="data:image/webp;base64,AAAA"');
     expect(preview).not.toContain('<div class="figure-placeholder"');
   });
+
+  it("pratinjau terbuka pada langkah yang sedang disunting", () => {
+    const preview = renderPreviewDocument(sampleScene(), {}, 1);
+    expect(preview).toContain('data-stage="1"');
+    expect(preview).toContain('data-sound="whoosh"');
+    expect(preview).toContain("Langkah 2 dari 2.");
+    expect(preview).toContain("show(1);");
+    expect(preview).not.toContain("var index = 0;");
+    expect(renderIndexHtml(sampleScene())).toContain('data-stage="0"');
+    expect(renderRuntime()).toContain("var index = 0;");
+  });
 });
 
 describe("validasi naskah", () => {

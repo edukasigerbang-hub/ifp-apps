@@ -111,10 +111,16 @@ export function DraftScenePanel({
   const [outlineOpen, setOutlineOpen] = useState<Set<string>>(new Set());
   const [collapsedBlocks, setCollapsedBlocks] = useState<Set<string>>(new Set());
   const [ack, setAck] = useState(false);
-  const [preview, setPreview] = useState<string | null>(null);
+  // `step` menyimpan langkah yang sedang ditampilkan pratinjau supaya isinya
+  // selalu sesuai pilihan di sidebar.
+  const [preview, setPreview] = useState<{ html: string; step: number } | null>(null);
   const [uploading, setUploading] = useState(false);
   const [thumbs, setThumbs] = useState<Record<string, string>>({});
+  const [thumbsReady, setThumbsReady] = useState(false);
   const [thumbError, setThumbError] = useState<string | null>(null);
+  // Pratinjau tengah dibiarkan tampil (ditandai usang) selama menyunting:
+  // memuat ulang iframe tiap ketikan membuat pratinjau berkedip.
+  const [previewStale, setPreviewStale] = useState(false);
 
   // Terapkan menulis ulang index.html sehingga naskah tersimpan ikut berubah;
   // pilihan langkah hanya direset saat pindah draft, bukan sesudah Terapkan.
@@ -128,6 +134,7 @@ export function DraftScenePanel({
     setOutlineOpen(new Set());
     setCollapsedBlocks(new Set());
     setPreview(null);
+    setPreviewStale(false);
     setAck(false);
   }, [stored, draftId]);
 
@@ -195,6 +202,7 @@ export function DraftScenePanel({
   useEffect(() => {
     const key = draftKeyOf(content);
     let cancelled = false;
+    setThumbsReady(false);
     (async () => {
       const loaded: Array<[string, string]> = [];
       let failed = 0;
@@ -209,6 +217,7 @@ export function DraftScenePanel({
       if (cancelled) return;
       setThumbs((current) => ({ ...current, ...Object.fromEntries(loaded) }));
       setThumbError(failed > 0 ? `${failed} gambar tidak dapat dibaca untuk galeri.` : null);
+      setThumbsReady(true);
     })();
     return () => {
       cancelled = true;
@@ -216,6 +225,21 @@ export function DraftScenePanel({
     // Kunci string menyegarkan galeri saat aset draft berubah.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [thumbKey]);
+
+  // Pratinjau muncul sendiri setelah gambar draft termuat, dan ikut pindah saat
+  // langkah lain dipilih. Setelah menyunting, isinya dibiarkan usang sampai
+  // pengguna menekan Muat ulang agar iframe tidak berkedip tiap ketikan.
+  useEffect(() => {
+    if (!scene || !thumbsReady) return;
+    if (preview === null) {
+      setPreview({ html: renderPreviewDocument(scene, thumbs, activeStep), step: activeStep });
+      return;
+    }
+    if (!previewStale && preview.step !== activeStep) {
+      setPreview({ html: renderPreviewDocument(scene, thumbs, activeStep), step: activeStep });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scene, thumbs, thumbsReady, preview, previewStale, activeStep]);
 
   const issues = scene ? sceneIssues(scene, assets) : [];
   const hasStoredScene = stored !== null;
@@ -247,7 +271,7 @@ export function DraftScenePanel({
       if (next === state.present) return state;
       return { past: [...state.past, state.present].slice(-60), present: next, future: [] };
     });
-    setPreview(null);
+    setPreviewStale(true);
   }
 
   function undo() {
@@ -260,7 +284,7 @@ export function DraftScenePanel({
         future: [state.present, ...state.future]
       };
     });
-    setPreview(null);
+    setPreviewStale(true);
   }
 
   function redo() {
@@ -273,7 +297,7 @@ export function DraftScenePanel({
         future: state.future.slice(1)
       };
     });
-    setPreview(null);
+    setPreviewStale(true);
   }
 
   function updateStep(index: number, change: (step: SceneStep) => SceneStep) {
@@ -418,7 +442,8 @@ export function DraftScenePanel({
 
   function handlePreview() {
     if (!scene) return;
-    setPreview(renderPreviewDocument(scene, thumbs));
+    setPreview({ html: renderPreviewDocument(scene, thumbs, activeStep), step: activeStep });
+    setPreviewStale(false);
   }
 
   const step = scene?.steps[activeStep] ?? null;
@@ -451,7 +476,10 @@ export function DraftScenePanel({
 
       {scene && (
         <>
-          <div className="flex flex-wrap items-center gap-2">
+          <div
+            data-scene-toolbar
+            className="flex flex-wrap items-center gap-2 rounded-control border border-ink/10 bg-paper px-2 py-2"
+          >
             <button
               type="button"
               data-scene-undo
@@ -470,65 +498,54 @@ export function DraftScenePanel({
             >
               ↷ Ulangi
             </button>
-            <span className="text-xs text-muted">
-              {history.past.length} langkah riwayat
+            <span className="text-xs text-muted">{history.past.length} langkah riwayat</span>
+            <span className="ml-auto flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                data-scene-preview
+                onClick={handlePreview}
+                disabled={pending}
+                className={`${secondaryButtonClass} px-3 text-sm`}
+              >
+                Pratinjau
+              </button>
+              <button
+                type="button"
+                data-scene-apply
+                onClick={() => void handleApply()}
+                disabled={!canApply}
+                className={`${primaryButtonClass} px-4`}
+              >
+                {uploading || busy === "Menerapkan susunan…" ? "Menerapkan…" : "Terapkan ke materi"}
+              </button>
             </span>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-[2fr_1fr]">
-            <label className="block text-sm">
-              Judul halaman
-              <input
-                type="text"
-                maxLength={120}
-                value={scene.title}
-                onFocus={beginEdit}
-                onChange={(event) =>
-                  setHistory((state) =>
-                    state.present
-                      ? { ...state, present: { ...state.present, title: event.target.value } }
-                      : state
-                  )
-                }
-                className={controlClass}
-              />
-            </label>
-            <label className="block text-sm">
-              Tema warna
-              <select
-                value={scene.theme}
-                onChange={(event) =>
-                  commit((current) => ({ ...current, theme: event.target.value as SceneTheme }))
-                }
-                className={controlClass}
-              >
-                {SCENE_THEMES.map((theme) => (
-                  <option key={theme} value={theme}>
-                    {THEME_LABELS[theme]}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <label className="block text-sm">
-            Kalimat pembuka (opsional)
+          {issues.length > 0 && (
+            <ul className={errorClass} role="alert">
+              {issues.slice(0, 8).map((issue) => (
+                <li key={issue}>{issue}</li>
+              ))}
+              {issues.length > 8 && <li>…dan {issues.length - 8} masalah lain.</li>}
+            </ul>
+          )}
+
+          <label className="flex items-start gap-2 rounded-control border border-ink/10 bg-paper px-3 py-2 text-sm">
             <input
-              type="text"
-              maxLength={200}
-              value={scene.subtitle}
-              onFocus={beginEdit}
-              onChange={(event) =>
-                setHistory((state) =>
-                  state.present
-                    ? { ...state, present: { ...state.present, subtitle: event.target.value } }
-                    : state
-                )
-              }
-              className={controlClass}
+              type="checkbox"
+              data-scene-ack
+              checked={ack}
+              onChange={(event) => setAck(event.target.checked)}
+              className="mt-1 h-5 w-5"
             />
+            <span>
+              {hasStoredScene
+                ? "Saya mengerti susunan ini menulis ulang index.html, assets/style.css, dan assets/app.js."
+                : "Saya mengerti index.html bawaan kerangka akan ditimpa oleh susunan ini."}
+            </span>
           </label>
 
-          <div className="grid gap-3 lg:grid-cols-[minmax(14rem,18rem)_minmax(0,1fr)]">
+          <div className="grid gap-3 lg:grid-cols-[minmax(12rem,15rem)_minmax(0,1fr)] xl:grid-cols-[minmax(12rem,15rem)_minmax(0,1fr)_minmax(15rem,19rem)]">
             <aside
               data-scene-steps
               className="rounded-control border border-ink/10 bg-paper p-3 lg:sticky lg:top-4 lg:self-start"
@@ -557,7 +574,7 @@ export function DraftScenePanel({
                   + Langkah
                 </button>
               </div>
-              <p className="mt-1 text-xs text-muted">Pilih langkah untuk menyunting di panel kanan.</p>
+              <p className="mt-1 text-xs text-muted">Pilih langkah untuk menyunting di panel tengah.</p>
               <ol className="mt-2 space-y-1">
                 {scene.steps.map((item, index) => {
                   const selected = index === activeStep;
@@ -628,7 +645,7 @@ export function DraftScenePanel({
               id="scene-step-body"
               data-scene-step-body
               data-step={activeStep}
-              className="rounded-control border border-ink/10 p-3"
+              className="space-y-3 rounded-control border border-ink/10 p-3"
             >
               {step ? (
                 <>
@@ -636,123 +653,51 @@ export function DraftScenePanel({
                     <h3 className="text-sm font-semibold">
                       Langkah {activeStep + 1} dari {scene.steps.length}
                     </h3>
-                    <div className="flex flex-wrap gap-1">
-                      <button
-                        type="button"
-                        onClick={() => duplicateStep(activeStep)}
-                        disabled={pending || scene.steps.length >= MAX_STEPS}
-                        className={`${secondaryButtonClass} px-3 text-sm`}
-                      >
-                        Duplikat
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => moveStep(activeStep, -1)}
-                        disabled={pending || activeStep === 0}
-                        className={`${secondaryButtonClass} px-3 text-sm`}
-                        aria-label="Naikkan langkah"
-                      >
-                        ↑
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => moveStep(activeStep, 1)}
-                        disabled={pending || activeStep >= scene.steps.length - 1}
-                        className={`${secondaryButtonClass} px-3 text-sm`}
-                        aria-label="Turunkan langkah"
-                      >
-                        ↓
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          if (!scene || scene.steps.length <= 1) return;
-                          commit((current) => ({
-                            ...current,
-                            steps: current.steps.filter((_, position) => position !== activeStep)
-                          }));
-                          setActiveStep(Math.max(0, activeStep - 1));
-                        }}
-                        disabled={pending || scene.steps.length <= 1}
-                        className={`${secondaryButtonClass} px-3 text-sm`}
-                      >
-                        Hapus langkah
-                      </button>
-                    </div>
+                    <span className="text-xs text-muted">
+                      {step.blocks.length}/{MAX_BLOCKS_PER_STEP} blok
+                    </span>
                   </div>
 
-                  <div className="mt-3 grid gap-3 md:grid-cols-[2fr_1fr_1fr]">
-                <label className="block text-sm">
-                  Judul langkah
-                  <input
-                    type="text"
-                    maxLength={120}
-                    data-scene-step-title
-                    value={step.title}
-                    onFocus={beginEdit}
-                    onChange={(event) =>
-                      setHistory((state) =>
-                        state.present
-                          ? {
-                              ...state,
-                              present: {
-                                ...state.present,
-                                steps: state.present.steps.map((item, position) =>
-                                  position === activeStep
-                                    ? { ...item, title: event.target.value }
-                                    : item
-                                )
-                              }
-                            }
-                          : state
-                      )
-                    }
-                    className={controlClass}
-                  />
-                </label>
-                <label className="block text-sm">
-                  Efek visual (vfx)
-                  <select
-                    data-scene-effect
-                    value={step.effect}
-                    onChange={(event) =>
-                      updateStep(activeStep, (current) => ({
-                        ...current,
-                        effect: event.target.value as SceneEffect
-                      }))
-                    }
-                    className={controlClass}
+                  <div
+                    data-scene-preview-card
+                    className="rounded-control border border-ink/10 bg-paper p-2"
                   >
-                    {SCENE_EFFECTS.map((effect) => (
-                      <option key={effect} value={effect}>
-                        {EFFECT_LABELS[effect]}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="block text-sm">
-                  Efek suara (sndfx)
-                  <select
-                    data-scene-sound
-                    value={step.sound}
-                    onChange={(event) =>
-                      updateStep(activeStep, (current) => ({
-                        ...current,
-                        sound: event.target.value as SceneSound
-                      }))
-                    }
-                    className={controlClass}
-                  >
-                    {SCENE_SOUNDS.map((sound) => (
-                      <option key={sound} value={sound}>
-                        {SOUND_LABELS[sound]}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                        Pratinjau naskah
+                      </h4>
+                      <button
+                        type="button"
+                        data-scene-preview-refresh
+                        onClick={handlePreview}
+                        disabled={pending}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                      >
+                        Muat ulang
+                      </button>
+                    </div>
+                    {preview ? (
+                      <>
+                        <iframe
+                          title="Pratinjau susunan"
+                          sandbox="allow-scripts"
+                          srcDoc={preview.html}
+                          className="mt-2 h-[320px] w-full rounded-control border border-ink/10 bg-white"
+                        />
+                        <p className="mt-2 text-xs text-muted">
+                          {previewStale
+                            ? `Naskah berubah setelah pratinjau langkah ${preview.step + 1} dibuat — tekan Muat ulang.`
+                            : `Pratinjau langkah ${preview.step + 1}; gambar memakai aset asli draft, audio tampil sebagai pemutar kosong karena dipanggil lewat protokol materi.`}
+                        </p>
+                      </>
+                    ) : (
+                      <p className="mt-2 text-xs text-muted">
+                        Pratinjau muncul otomatis setelah aset draft dimuat, atau tekan Muat ulang.
+                      </p>
+                    )}
+                  </div>
 
-              <ul className="mt-3 space-y-3">
+                  <ul className="mt-3 space-y-3">
                 {step.blocks.map((block, position) => (
                   <li key={block.id} className="rounded-control border border-ink/10 bg-paper p-3">
                     <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1259,6 +1204,196 @@ export function DraftScenePanel({
                 <p className="text-sm text-muted">Pilih atau tambahkan langkah untuk mulai menyusun.</p>
               )}
             </section>
+
+            <aside
+              data-scene-props
+              className="rounded-control border border-ink/10 bg-paper p-3 lg:col-span-2 xl:col-span-1 xl:sticky xl:top-4 xl:self-start"
+            >
+              <h3 className="text-sm font-semibold">Properti</h3>
+              {step ? (
+                <>
+                  <p className="mt-1 text-xs text-muted">
+                    Langkah {activeStep + 1} dari {scene.steps.length}
+                  </p>
+                  <div className="mt-3 space-y-2">
+                    <label className="block text-sm">
+                      Judul langkah
+                      <input
+                        type="text"
+                        maxLength={120}
+                        data-scene-step-title
+                        value={step.title}
+                        onFocus={beginEdit}
+                        onChange={(event) =>
+                          setHistory((state) =>
+                            state.present
+                              ? {
+                                  ...state,
+                                  present: {
+                                    ...state.present,
+                                    steps: state.present.steps.map((item, position) =>
+                                      position === activeStep
+                                        ? { ...item, title: event.target.value }
+                                        : item
+                                    )
+                                  }
+                                }
+                              : state
+                          )
+                        }
+                        className={controlClass}
+                      />
+                    </label>
+                    <label className="block text-sm">
+                      Efek visual (vfx)
+                      <select
+                        data-scene-effect
+                        value={step.effect}
+                        onChange={(event) =>
+                          updateStep(activeStep, (current) => ({
+                            ...current,
+                            effect: event.target.value as SceneEffect
+                          }))
+                        }
+                        className={controlClass}
+                      >
+                        {SCENE_EFFECTS.map((effect) => (
+                          <option key={effect} value={effect}>
+                            {EFFECT_LABELS[effect]}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                    <label className="block text-sm">
+                      Efek suara (sndfx)
+                      <select
+                        data-scene-sound
+                        value={step.sound}
+                        onChange={(event) =>
+                          updateStep(activeStep, (current) => ({
+                            ...current,
+                            sound: event.target.value as SceneSound
+                          }))
+                        }
+                        className={controlClass}
+                      >
+                        {SCENE_SOUNDS.map((sound) => (
+                          <option key={sound} value={sound}>
+                            {SOUND_LABELS[sound]}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-1">
+                    <button
+                      type="button"
+                      onClick={() => duplicateStep(activeStep)}
+                      disabled={pending || scene.steps.length >= MAX_STEPS}
+                      className={`${secondaryButtonClass} px-2 text-xs`}
+                    >
+                      Duplikat
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => moveStep(activeStep, -1)}
+                      disabled={pending || activeStep === 0}
+                      className={`${secondaryButtonClass} px-2 text-xs`}
+                      aria-label="Naikkan langkah"
+                    >
+                      ↑
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => moveStep(activeStep, 1)}
+                      disabled={pending || activeStep >= scene.steps.length - 1}
+                      className={`${secondaryButtonClass} px-2 text-xs`}
+                      aria-label="Turunkan langkah"
+                    >
+                      ↓
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (!scene || scene.steps.length <= 1) return;
+                        commit((current) => ({
+                          ...current,
+                          steps: current.steps.filter((_, position) => position !== activeStep)
+                        }));
+                        setActiveStep(Math.max(0, activeStep - 1));
+                      }}
+                      disabled={pending || scene.steps.length <= 1}
+                      className={`${secondaryButtonClass} px-2 text-xs`}
+                    >
+                      Hapus langkah
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <p className="mt-2 text-sm text-muted">
+                  Tambahkan langkah untuk menyunting propertinya.
+                </p>
+              )}
+
+              <hr className="my-3 border-ink/10" />
+              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                Halaman
+              </h4>
+              <div className="mt-2 space-y-2">
+                <label className="block text-sm">
+                  Judul halaman
+                  <input
+                    type="text"
+                    maxLength={120}
+                    value={scene.title}
+                    onFocus={beginEdit}
+                    onChange={(event) => {
+                      setPreviewStale(true);
+                      setHistory((state) =>
+                        state.present
+                          ? { ...state, present: { ...state.present, title: event.target.value } }
+                          : state
+                      );
+                    }}
+                    className={controlClass}
+                  />
+                </label>
+                <label className="block text-sm">
+                  Tema warna
+                  <select
+                    value={scene.theme}
+                    onChange={(event) =>
+                      commit((current) => ({ ...current, theme: event.target.value as SceneTheme }))
+                    }
+                    className={controlClass}
+                  >
+                    {SCENE_THEMES.map((theme) => (
+                      <option key={theme} value={theme}>
+                        {THEME_LABELS[theme]}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="block text-sm">
+                  Kalimat pembuka (opsional)
+                  <input
+                    type="text"
+                    maxLength={200}
+                    value={scene.subtitle}
+                    onFocus={beginEdit}
+                    onChange={(event) => {
+                      setPreviewStale(true);
+                      setHistory((state) =>
+                        state.present
+                          ? { ...state, present: { ...state.present, subtitle: event.target.value } }
+                          : state
+                      );
+                    }}
+                    className={controlClass}
+                  />
+                </label>
+              </div>
+            </aside>
           </div>
 
           <p className="text-xs text-muted">
@@ -1266,66 +1401,6 @@ export function DraftScenePanel({
             audio di draft; saat naskah memuat suara, Terapkan juga menulis {CAPTIONS_PATH} dan
             menyalakan <code>hasAudio</code> di manifest.
           </p>
-
-          {issues.length > 0 && (
-            <ul className={errorClass} role="alert">
-              {issues.slice(0, 8).map((issue) => (
-                <li key={issue}>{issue}</li>
-              ))}
-              {issues.length > 8 && <li>…dan {issues.length - 8} masalah lain.</li>}
-            </ul>
-          )}
-
-          <label className="flex items-start gap-2 text-sm">
-            <input
-              type="checkbox"
-              data-scene-ack
-              checked={ack}
-              onChange={(event) => setAck(event.target.checked)}
-              className="mt-1 h-5 w-5"
-            />
-            <span>
-              {hasStoredScene
-                ? "Saya mengerti susunan ini menulis ulang index.html, assets/style.css, dan assets/app.js."
-                : "Saya mengerti index.html bawaan kerangka akan ditimpa oleh susunan ini."}
-            </span>
-          </label>
-
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              data-scene-apply
-              onClick={() => void handleApply()}
-              disabled={!canApply}
-              className={primaryButtonClass}
-            >
-              {uploading || busy === "Menerapkan susunan…" ? "Menerapkan…" : "Terapkan ke materi"}
-            </button>
-            <button
-              type="button"
-              data-scene-preview
-              onClick={handlePreview}
-              disabled={pending}
-              className={secondaryButtonClass}
-            >
-              Pratinjau susunan
-            </button>
-          </div>
-
-          {preview && (
-            <div className="rounded-control border border-ink/10 p-2">
-              <iframe
-                title="Pratinjau susunan"
-                sandbox="allow-scripts"
-                srcDoc={preview}
-                className="h-[520px] w-full rounded-control border border-ink/10 bg-white"
-              />
-              <p className="mt-2 text-xs text-muted">
-                Pratinjau memakai gambar asli draft. Berkas audio hanya tampil sebagai pemutar
-                kosong karena dipanggil lewat protokol materi.
-              </p>
-            </div>
-          )}
         </>
       )}
     </div>

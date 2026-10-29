@@ -183,12 +183,24 @@ export async function run({ page, artifactDir, setup: context, log }) {
   });
   await clickHook(page, "[data-studio-create]");
   await page.waitFor(`document.querySelector("[data-studio-editor-card]") !== null`, {
-    label: "kartu editor draft"
+    label: "halaman editor draft"
   });
+  const formHidden = await page.evaluate(
+    `document.querySelector("[data-studio-create]") === null && document.querySelector("[data-studio-open]") === null`
+  );
+  assert(formHidden, "Halaman editor tidak boleh menampilkan form dan daftar draft.");
+  await page.screenshot(path.join(artifactDir, "studio-halaman-editor.png"));
+
+  // Tombol kembali harus membuka daftar draft lagi, dan draft dibuka dari daftar.
+  await clickHook(page, "[data-studio-back]");
   await page.waitFor(`document.querySelector('[data-studio-open="${MATERIAL_ID}"]') !== null`, {
-    label: "draft tampil di daftar"
+    label: "draft tampil di daftar setelah kembali"
   });
-  log("Draft dibuat dari kerangka dan muncul di daftar Studio.");
+  await clickHook(page, `[data-studio-open="${MATERIAL_ID}"]`);
+  await page.waitFor(`document.querySelector("[data-studio-editor-card]") !== null`, {
+    label: "editor dibuka dari daftar draft"
+  });
+  log("Draft dibuat dari kerangka, editor terbuka di halamannya sendiri, dan dapat dibuka lagi dari daftar.");
 
   const created = await invoke(page, "material_draft_read", {
     input: { materialId: MATERIAL_ID, version: VERSION }
@@ -265,7 +277,43 @@ export async function run({ page, artifactDir, setup: context, log }) {
     label: "berkas audio terpilih"
   });
 
-  // Sidebar langkah: memilih langkah menukar panel kanan, dan ringkasan blok
+  // Tata letak Susun: toolbar aksi di atas, langkah di kiri, penyunting blok +
+  // pratinjau di tengah, dan properti langkah/halaman di kanan.
+  await page.waitFor(`document.querySelector("[data-scene-preview-card] iframe") !== null`, {
+    label: "pratinjau naskah muncul otomatis",
+    timeoutMs: 20_000
+  });
+  const regions = await page.evaluate(`
+    (() => {
+      const selectors = [
+        "[data-scene-toolbar]",
+        "[data-scene-steps]",
+        "[data-scene-step-body]",
+        "[data-scene-props]"
+      ];
+      return selectors.filter((selector) => document.querySelector(selector) !== null).length;
+    })()
+  `);
+  assert(regions === 4, `Susun hanya memuat ${regions}/4 panel penyunting.`);
+  if ((await page.evaluate("window.innerWidth")) >= 1280) {
+    const layout = await page.evaluate(`
+      (() => {
+        const box = (selector) => document.querySelector(selector).getBoundingClientRect();
+        const toolbar = box("[data-scene-toolbar]");
+        const steps = box("[data-scene-steps]");
+        const body = box("[data-scene-step-body]");
+        const props = box("[data-scene-props]");
+        if (toolbar.bottom > steps.top + 1) return "toolbar tidak di atas";
+        if (steps.right > body.left + 1) return "langkah tidak di kiri penyunting";
+        if (body.right > props.left + 1) return "properti tidak di kanan penyunting";
+        return "ok";
+      })()
+    `);
+    assert(layout === "ok", `Tata letak Susun tidak sesuai: ${layout}`);
+  }
+  log("Susun menaruh toolbar di atas, langkah di kiri, penyunting + pratinjau di tengah, properti di kanan.");
+
+  // Sidebar langkah: memilih langkah menukar panel tengah, dan ringkasan blok
   // tiap langkah dapat dibuka/tutup sendiri.
   const outlineClosed = await page.evaluate(
     `document.querySelector("[data-scene-step-toggle='1']")?.getAttribute("data-scene-step-outline") ?? null`
@@ -291,7 +339,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await clickHook(page, "[data-scene-step='0']");
   await page.waitFor(
     `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") === "0"`,
-    { label: "panel kanan pindah ke langkah 1" }
+    { label: "penyunting pindah ke langkah 1" }
   );
   const firstStepText = await page.evaluate(`document.querySelector("[data-scene-text]").value`);
   assert(
@@ -313,9 +361,28 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await clickHook(page, "[data-scene-step='1']");
   await page.waitFor(
     `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") === "1"`,
-    { label: "panel kanan kembali ke langkah 2" }
+    { label: "penyunting kembali ke langkah 2" }
   );
-  log("Sidebar memilih langkah, panel kanan berganti isi, ringkasan dan blok bisa dilipat.");
+  log("Sidebar memilih langkah, penyunting tengah berganti isi, ringkasan dan blok bisa dilipat.");
+
+  // Pratinjau tengah menampilkan langkah yang sedang disunting, bukan selalu
+  // langkah pertama. Isi yang sudah usang dimuat ulang lewat tombol.
+  await clickHook(page, "[data-scene-step='0']");
+  await page.waitFor(
+    `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") === "0"`,
+    { label: "penyunting pindah ke langkah 1 untuk pratinjau" }
+  );
+  await clickHook(page, "[data-scene-preview-refresh]");
+  await page.waitFor(
+    `document.querySelector("[data-scene-preview-card] iframe")?.srcdoc.includes('data-stage="0"') === true`,
+    { label: "pratinjau memuat langkah 1", timeoutMs: 20_000 }
+  );
+  await clickHook(page, "[data-scene-step='1']");
+  await page.waitFor(
+    `document.querySelector("[data-scene-preview-card] iframe")?.srcdoc.includes('data-stage="1"') === true`,
+    { label: "pratinjau ikut pindah ke langkah 2", timeoutMs: 20_000 }
+  );
+  log("Pratinjau tengah mengikuti langkah yang dipilih.");
 
   // Urungkan mengembalikan perubahan struktural terakhir (langkah ketiga).
   const stepsBefore = await page.evaluate(
@@ -348,7 +415,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
   );
   assert(
     stepAfterApply === "1",
-    `Setelah Terapkan panel kanan pindah ke langkah ${stepAfterApply}, seharusnya tetap di langkah 2.`
+    `Setelah Terapkan penyunting pindah ke langkah ${stepAfterApply}, seharusnya tetap di langkah 2.`
   );
   const sceneState = await invoke(page, "material_draft_read", {
     input: { materialId: MATERIAL_ID, version: VERSION }
@@ -625,14 +692,17 @@ export async function run({ page, artifactDir, setup: context, log }) {
   });
   await clickHook(page, "[data-studio-delete]");
   await page.waitFor(`document.querySelector("[data-studio-editor-card]") === null`, {
-    label: "editor ditutup setelah hapus"
+    label: "kembali ke daftar draft setelah hapus"
+  });
+  await page.waitFor(`document.querySelector("[data-studio-create]") !== null`, {
+    label: "form draft baru tampil lagi setelah hapus"
   });
   const afterDelete = await invoke(page, "material_draft_list");
   assert(
     afterDelete.ok && afterDelete.value.length === 0,
     "Draft masih terdaftar setelah dihapus dari UI."
   );
-  log(`Draft ${DRAFT_KEY} dihapus lewat konfirmasi ketik.`);
+  log(`Draft ${DRAFT_KEY} dihapus lewat konfirmasi ketik dan halaman kembali ke daftar.`);
 
   const installed = await invoke(page, "material_install_bundle", {
     input: { bundlePath: signed.bundle }
