@@ -4,3 +4,7 @@ SUPABASE_SERVICE_ROLE_KEY="service-role-key"
 DEVICE_TOKEN_SECRET="ganti-dengan-acak"
 ENROLLMENT_CODE_PEPPER="ganti-dengan-acak"
 CORS_ORIGIN="http://localhost:1420"
+
+# Materi HTML5 (lihat workers/api/README.md). Isi keyId + bucket lewat wrangler.toml [vars].
+# Uji lokal: node scripts/material-pack.mjs keygen --dir .tmp-catalog/keys --key-id content-dev-1
+CONTENT_SIGNING_KEY="pkcs8-base64-kunci-konten"

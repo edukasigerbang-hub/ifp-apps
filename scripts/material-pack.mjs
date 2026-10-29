@@ -175,10 +175,10 @@ export function generateContentKeys(directory, keyId = "content-dev-1") {
 }
 
 /**
- * Membuat `<outPath>` + `<outPath tanpa .zip>.sig`.
- * `transformManifest` hanya dipakai untuk membuat fixture negatif (mis. hash salah).
+ * Membangun ZIP + manifest final tanpa menandatangani.
+ * Sisi penerbit yang memakai Worker memakai ini; kunci privat tetap di Worker.
  */
-export function packBundle({ sourceDir, outPath, privateKeyPem, keyId = "content-dev-1", transformManifest }) {
+export function buildBundle({ sourceDir, transformManifest }) {
   const manifest = JSON.parse(readFileSync(path.join(sourceDir, "material.json"), "utf8"));
   const files = collectSource(sourceDir);
   manifest.files = files.map(({ path: filePath, bytes, sha256: digest, mediaType }) => ({
@@ -193,12 +193,28 @@ export function packBundle({ sourceDir, outPath, privateKeyPem, keyId = "content
   }
 
   const manifestBytes = Buffer.from(canonical(manifest), "utf8");
-  const signature = sign(null, manifestBytes, privateKeyPem);
-
   const archive = zipStored([
     { path: "material.json", data: manifestBytes },
     ...files.map((file) => ({ path: file.path, data: file.data }))
   ]);
+
+  return {
+    manifest,
+    manifestBytes,
+    archive,
+    bundleSha256: sha256(archive),
+    fileCount: files.length
+  };
+}
+
+/**
+ * Membuat `<outPath>` + `<outPath tanpa .zip>.sig`.
+ * `transformManifest` hanya dipakai untuk membuat fixture negatif (mis. hash salah).
+ */
+export function packBundle({ sourceDir, outPath, privateKeyPem, keyId = "content-dev-1", transformManifest }) {
+  const { manifest, manifestBytes, archive, bundleSha256, fileCount } = buildBundle({ sourceDir, transformManifest });
+  const signature = sign(null, manifestBytes, privateKeyPem);
+
   mkdirSync(path.dirname(outPath), { recursive: true });
   writeFileSync(outPath, archive);
 
@@ -217,9 +233,9 @@ export function packBundle({ sourceDir, outPath, privateKeyPem, keyId = "content
     signature: signaturePath,
     materialId: manifest.materialId,
     version: manifest.version,
-    files: files.length,
+    files: fileCount,
     bytes: archive.length,
-    bundleSha256: sha256(archive),
+    bundleSha256,
     manifest
   };
 }

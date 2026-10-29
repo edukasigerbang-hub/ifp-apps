@@ -3,6 +3,12 @@ import { hashEnrollmentCode, signDeviceToken, verifyDeviceToken } from "./auth";
 import { failure, json, readJson } from "./http";
 import { handleActivation, handleRefresh, handleVerify, type LicenseEnv } from "./license";
 import { handleDeactivate, handleTransfer } from "./licenseAdmin";
+import {
+  handleMaterialPublish,
+  handleMaterials,
+  handleMaterialUnpublish,
+  type MaterialsEnv
+} from "./materials";
 import { rest, rpc, SupabaseError } from "./supabase";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -26,7 +32,7 @@ const batchSchema = z.strictObject({
   events: z.array(eventSchema).min(1).max(100)
 });
 
-export interface Env extends LicenseEnv {
+export interface Env extends LicenseEnv, MaterialsEnv {
   DEVICE_TOKEN_SECRET: string;
   ENROLLMENT_CODE_PEPPER: string;
   ADMIN_API_TOKEN?: string;
@@ -189,6 +195,22 @@ export default {
 
       if (request.method === "POST" && url.pathname === "/v1/activations/deactivate") {
         return await handleDeactivate(request, env, corsOrigin);
+      }
+
+      if (request.method === "GET" && url.pathname === "/v1/materials") {
+        return await handleMaterials(request, env, corsOrigin);
+      }
+
+      if (request.method === "POST" && url.pathname === "/v1/materials/publish") {
+        return await handleMaterialPublish(request, env, corsOrigin);
+      }
+
+      if (request.method === "POST" && url.pathname === "/v1/materials/unpublish") {
+        return await handleMaterialUnpublish(request, env, corsOrigin);
+      }
+
+      if (url.pathname.startsWith("/v1/materials")) {
+        return failure(404, "NOT_FOUND", "Endpoint materi tidak ditemukan.", corsOrigin);
       }
 
       if (url.pathname.startsWith("/v1/activations") || url.pathname.startsWith("/v1/licenses")) {

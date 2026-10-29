@@ -45,6 +45,7 @@
     "worker:typecheck": "tsc -p workers/api/tsconfig.json",
     "license:tool": "node scripts/license-issuer.mjs",
     "material:pack": "node scripts/material-pack.mjs",
+    "material:publish": "node scripts/material-publish.mjs",
     "catalog:mock": "node scripts/mock-catalog-server.mjs",
     "e2e:pinned": "node scripts/e2e/run.mjs pinned-materials",
     "e2e:material": "node scripts/e2e/run.mjs material-viewer",
