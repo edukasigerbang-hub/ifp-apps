@@ -1729,3 +1729,34 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 3. Undo tidak mencakup unggahan aset (berkas langsung ditulis) dan tidak bertahan setelah naskah diterapkan atau draft dibuka ulang.
 4. Efek audio blok tetap butuh gestur pengguna; pratinjau susunan menampilkan pemutar tanpa sumber karena aset hanya bisa diakses lewat protokol materi.
 5. Belum ada drag-and-drop, penyuntingan gaya per kata, atau pemotongan audio.
+
+### Contoh Materi dari Workflow Susun (2026-10-29, T-126)
+
+**Status:** satu bundel contoh nyata dibangun **dengan penulis yang sama** yang dipakai tab Susun, bukan ditulis tangan: `src-tauri/sample-material-mengenal-huruf` — “Mengenal Huruf Vokal” (kelas 1, bahasa-indonesia), 3 langkah, 7 berkas konten, bundel 241.901 B (sha256 `172e67cecda0…`). Contoh ini terdaftar di katalog demo (4 item) dan dibuktikan lolos pemasang Rust.
+
+**Isi contoh:**
+- Langkah 1 “Lima huruf vokal” — teks paragraf + daftar poin (A/I/U/E/O), efek `kilau`, suara `bel`.
+- Langkah 2 “Dengar lalu tirukan” — catatan, gambar `assets/cover.webp` (ilustrasi Ayu & Bima yang sudah ada di `content/packages/kelas1-bahasa-indonesia-b01-huruf-suku-kata`, dipakai ulang, bukan dibuat baru) dengan tata letak kanan, dan blok audio `assets/nada-contoh.wav` (nada 440 Hz 1 detik, label “Contoh nada”, caption menyatakan itu bukan narasi) yang memicu `assets/captions.vtt` + `hasAudio`.
+- Langkah 3 “Sebutkan namamu” — teks tebal ukuran besar rata tengah, efek `konfeti`, suara `tepuk`.
+- `index.html` memuat naskah `id="ifp-scene"`, jadi contoh ini bisa dibuka di tab Susun dan disunting seperti draft biasa.
+
+**Yang diubah:**
+- [src-tauri/sample-material-mengenal-huruf/](../../src-tauri/sample-material-mengenal-huruf) (baru) — `material.json` (files kosong, diisi saat pack seperti sampel lain), `index.html`, `assets/style.css`, `assets/app.js`, `assets/captions.vtt`, `assets/nada-contoh.wav`, `assets/cover.webp`, `transcript.txt`. Berkas HTML/CSS/JS/VTT dihasilkan `renderSceneFiles()`; pembangunnya skrip sekali-pakai di `.tmp-studio/` (gitignored), bukan tool baru di repo.
+- [dev-catalog.mjs](../../scripts/dev-catalog.mjs) — contoh didaftarkan sebagai entri terbaru (2026-10-29T06:00Z) sehingga katalog demo berisi 4 item.
+- [material-scene-sample.mjs](../../scripts/e2e/scenarios/material-scene-sample.mjs) (baru) + `npm run e2e:scene-sample` — skenario permanen: menandatangani contoh dengan kunci sementara, memasang lewat `material_install_bundle` (**gerbang ketat**: manifest §4, Ed25519, hash per berkas), memastikan muncul di layar Konten dengan cover, lalu membuka penampil dan menunggu `ready` + progres ≥ 30 (langkah 1 dari 3).
+
+**Keputusan desain:**
+1. **Dibangun dari renderer asli, bukan dikarang terpisah** — supaya contoh selalu sama dengan keluaran tab Susun; bila renderer berubah, contoh bisa dibangun ulang dengan skrip yang sama.
+2. **Memakai ulang ilustrasi yang sudah ada** untuk cover dan gambar langkah, bukan membuat aset baru (tidak ada generasi gambar di sesi ini).
+3. **Audio contoh diberi label jujur** (“Contoh nada… bukan narasi pelajaran”) agar pipeline audio + captions tetap teruji tanpa menyamar sebagai narasi.
+4. **`reviewStatus: "reviewed"` mengikuti konvensi bundel demo lain** (fakta-opini, perkalian, siklus-air) supaya muncul di katalog lokal; ini status fixture demo, **bukan** putusan review pedagogis dan tidak menyentuh draft pengguna (`mengenal-huruf` tetap `draft`).
+
+**Verifikasi aktual:** `npm run catalog:dev` menulis 4 item (`mengenal-huruf-vokal` 7 berkas · 241.901 B · sha256 `172e67cecda0…`); `GET /v1/materials` di `http://127.0.0.1:8789` mengembalikan 4 item dengan `coverUrl` + `downloadUrl` untuk contoh baru · `npm run e2e:scene-sample` **PASS 4 pemeriksaan** (tanda tangan 7 berkas, pemasang Rust menerima, layar Konten menampilkan cover, penampil `siap` + progres ≥ 30) · `npm test` **156/156** + fixture 4/4 + katalog 336/336 + binding PASS · `npx vite build` EXIT 0 (19,29 dtk) · tangkapan layar `contoh-susun.png` diperiksa: judul, subjudul, daftar poin, “Langkah 1 dari 3”, progres ±33%.
+
+**Batasan jujur:**
+1. Nada contoh bukan narasi pelajaran; kalau materi ini dipakai untuk mengajar, audio perlu diganti rekaman guru dan caption disesuaikan (cue masih perkiraan 10 detik).
+2. `reviewStatus` demo `reviewed` seperti sampel lain — jangan dipakai sebagai bukti review manusia.
+3. Contoh ini hanya ada di katalog **lokal**; penerbitan daring menunggu deploy T-123.
+4. Bundel contoh tidak diuji terhadap katalog Worker (belum ter-deploy) maupun Android.
+
+**Sisa:** ganti nada contoh dengan narasi nyata + cue waktu sebenarnya · tambah contoh kedua yang memakai tema `petualangan` · uji contoh terhadap Worker setelah deploy.
