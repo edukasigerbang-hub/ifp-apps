@@ -74,7 +74,7 @@
 | Konteks aktif (L0) | [`.qoder/context.md`](.qoder/context.md) |
 | State mesin | [`.qoder/state.json`](.qoder/state.json) |
 | Status index kode | [`.qoder/index/index-state.json`](.qoder/index/index-state.json) |
-| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) · [`logs/2026-10-25.md`](logs/2026-10-25.md) · [`logs/2026-10-26.md`](logs/2026-10-26.md) · [`logs/2026-10-27.md`](logs/2026-10-27.md) · [`logs/2026-10-28.md`](logs/2026-10-28.md) · [`logs/2026-10-29.md`](logs/2026-10-29.md) |
+| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) · [`logs/2026-10-25.md`](logs/2026-10-25.md) · [`logs/2026-10-26.md`](logs/2026-10-26.md) · [`logs/2026-10-27.md`](logs/2026-10-27.md) · [`logs/2026-10-28.md`](logs/2026-10-28.md) · [`logs/2026-10-29.md`](logs/2026-10-29.md) · [`logs/2026-10-30.md`](logs/2026-10-30.md) |
 
 ## Modul
 
