@@ -1732,7 +1732,7 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 
 ### Contoh Materi dari Workflow Susun (2026-10-29, T-126)
 
-**Status:** satu bundel contoh nyata dibangun **dengan penulis yang sama** yang dipakai tab Susun, bukan ditulis tangan: `src-tauri/sample-material-mengenal-huruf` — “Mengenal Huruf Vokal” (kelas 1, bahasa-indonesia), 3 langkah, 7 berkas konten, bundel 241.901 B (sha256 `172e67cecda0…`). Contoh ini terdaftar di katalog demo (4 item) dan dibuktikan lolos pemasang Rust.
+**Status:** satu bundel contoh nyata dibangun **dengan penulis yang sama** yang dipakai tab Susun, bukan ditulis tangan: `src-tauri/sample-material-mengenal-huruf` — “Mengenal Huruf Vokal” (kelas 1, bahasa-indonesia), 3 langkah, 7 berkas konten, 241.898 B. Statusnya **`draft`** dan isinya lengkap; tidak lagi dipalsukan menjadi `reviewed`. Karena katalog publik menolak draft (OD-10), contoh ini **tidak** didaftarkan di katalog demo; ia disemai sebagai **draft Studio** `contoh-huruf-vokal` v1.0.0 di perangkat sehingga bisa dibuka di tab Susun dan dipratinjau seperti draft biasa.
 
 **Isi contoh:**
 - Langkah 1 “Lima huruf vokal” — teks paragraf + daftar poin (A/I/U/E/O), efek `kilau`, suara `bel`.
@@ -1741,22 +1741,23 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 - `index.html` memuat naskah `id="ifp-scene"`, jadi contoh ini bisa dibuka di tab Susun dan disunting seperti draft biasa.
 
 **Yang diubah:**
-- [src-tauri/sample-material-mengenal-huruf/](../../src-tauri/sample-material-mengenal-huruf) (baru) — `material.json` (files kosong, diisi saat pack seperti sampel lain), `index.html`, `assets/style.css`, `assets/app.js`, `assets/captions.vtt`, `assets/nada-contoh.wav`, `assets/cover.webp`, `transcript.txt`. Berkas HTML/CSS/JS/VTT dihasilkan `renderSceneFiles()`; pembangunnya skrip sekali-pakai di `.tmp-studio/` (gitignored), bukan tool baru di repo.
-- [dev-catalog.mjs](../../scripts/dev-catalog.mjs) — contoh didaftarkan sebagai entri terbaru (2026-10-29T06:00Z) sehingga katalog demo berisi 4 item.
+- [src-tauri/sample-material-mengenal-huruf/](../../src-tauri/sample-material-mengenal-huruf) (baru) — `material.json` (`reviewStatus: draft`, files kosong seperti sampel lain), `index.html`, `assets/style.css`, `assets/app.js`, `assets/captions.vtt`, `assets/nada-contoh.wav`, `assets/cover.webp`, `transcript.txt`. Berkas HTML/CSS/JS/VTT dihasilkan `renderSceneFiles()`; pembangunnya skrip sekali-pakai di `.tmp-studio/` (gitignored), bukan tool baru di repo.
+- [dev-catalog.mjs](../../scripts/dev-catalog.mjs) — **tidak** didaftarkan: katalog publik menyaring `draft` (OD-10), jadi katalog demo tetap 3 item dan tidak ada draft yang menyamar sebagai materi terbit.
+- **Draft Studio di perangkat:** `contoh-huruf-vokal` v1.0.0 disemai ke `%APPDATA%\id.gerbangedukasi.ifp\materials\contoh-huruf-vokal\1.0.0` + baris `material_draft` (DB dicadangkan dulu ke `.tmp-studio/backup-seed-*`). Berkas sama dengan contoh repo, hanya `materialId`/`version`/`reviewStatus` disesuaikan dan `files[]` diisi dari disk; materi terpasang lain tidak disentuh.
 - [material-scene-sample.mjs](../../scripts/e2e/scenarios/material-scene-sample.mjs) (baru) + `npm run e2e:scene-sample` — skenario permanen: menandatangani contoh dengan kunci sementara, memasang lewat `material_install_bundle` (**gerbang ketat**: manifest §4, Ed25519, hash per berkas), memastikan muncul di layar Konten dengan cover, lalu membuka penampil dan menunggu `ready` + progres ≥ 30 (langkah 1 dari 3).
 
 **Keputusan desain:**
 1. **Dibangun dari renderer asli, bukan dikarang terpisah** — supaya contoh selalu sama dengan keluaran tab Susun; bila renderer berubah, contoh bisa dibangun ulang dengan skrip yang sama.
 2. **Memakai ulang ilustrasi yang sudah ada** untuk cover dan gambar langkah, bukan membuat aset baru (tidak ada generasi gambar di sesi ini).
 3. **Audio contoh diberi label jujur** (“Contoh nada… bukan narasi pelajaran”) agar pipeline audio + captions tetap teruji tanpa menyamar sebagai narasi.
-4. **`reviewStatus: "reviewed"` mengikuti konvensi bundel demo lain** (fakta-opini, perkalian, siklus-air) supaya muncul di katalog lokal; ini status fixture demo, **bukan** putusan review pedagogis dan tidak menyentuh draft pengguna (`mengenal-huruf` tetap `draft`).
+4. **Status tetap `draft` sesuai permintaan pengguna** — contoh lengkap tetapi belum direview; konsekuensinya ia tidak muncul di katalog publik, jadi jalur melihatnya adalah draft Studio (atau memasang bundelnya sendiri). Tidak ada `reviewStatus` yang dinaikkan demi tampil di katalog.
 
-**Verifikasi aktual:** `npm run catalog:dev` menulis 4 item (`mengenal-huruf-vokal` 7 berkas · 241.901 B · sha256 `172e67cecda0…`); `GET /v1/materials` di `http://127.0.0.1:8789` mengembalikan 4 item dengan `coverUrl` + `downloadUrl` untuk contoh baru · `npm run e2e:scene-sample` **PASS 4 pemeriksaan** (tanda tangan 7 berkas, pemasang Rust menerima, layar Konten menampilkan cover, penampil `siap` + progres ≥ 30) · `npm test` **156/156** + fixture 4/4 + katalog 336/336 + binding PASS · `npx vite build` EXIT 0 (19,29 dtk) · tangkapan layar `contoh-susun.png` diperiksa: judul, subjudul, daftar poin, “Langkah 1 dari 3”, progres ±33%.
+**Verifikasi aktual:** `npm run catalog:dev` menulis **3 item** (contoh draft sengaja tidak ikut) · `npm run e2e:scene-sample` **PASS 4 pemeriksaan** (tanda tangan 7 berkas 241.898 B, pemasang Rust menerima bundel draft, layar Konten menampilkan cover, penampil `siap` + progres ≥ 30) · pemeriksaan draft tersemai lewat aplikasi nyata + CDP (`.tmp-studio/verify-seeded-draft.mjs`): `material_draft_list` memuat `contoh-huruf-vokal`, `material_draft_read` 8 berkas dengan `reviewStatus: draft` + `hasAudio: true`, `material_draft_open` mengembalikan `contoh-huruf-vokal/1.0.0/index.html`, dan tab Susun memuat naskah (screenshot `studio-draft-contoh.png`) · `npm test` **156/156** + fixture 4/4 + katalog 336/336 + binding PASS · `npx vite build` EXIT 0.
 
 **Batasan jujur:**
 1. Nada contoh bukan narasi pelajaran; kalau materi ini dipakai untuk mengajar, audio perlu diganti rekaman guru dan caption disesuaikan (cue masih perkiraan 10 detik).
-2. `reviewStatus` demo `reviewed` seperti sampel lain — jangan dipakai sebagai bukti review manusia.
-3. Contoh ini hanya ada di katalog **lokal**; penerbitan daring menunggu deploy T-123.
-4. Bundel contoh tidak diuji terhadap katalog Worker (belum ter-deploy) maupun Android.
+2. Karena `draft`, contoh **tidak muncul** di katalog/jelajah materi daring; ia hanya ada di Studio pada perangkat ini dan di repo. Materi `mengenal-huruf-vokal` yang dulu terpasang dari katalog tetap ada di perangkat sebagai salinan lama.
+3. Contoh ini tidak diuji terhadap katalog Worker (belum ter-deploy) maupun Android.
+4. Draft tersemai dibuat langsung di folder perangkat + baris DB (bukan lewat `material_draft_create`), jadi bila kode membuat draft berubah, skrip semai perlu disesuaikan.
 
 **Sisa:** ganti nada contoh dengan narasi nyata + cue waktu sebenarnya · tambah contoh kedua yang memakai tema `petualangan` · uji contoh terhadap Worker setelah deploy.
