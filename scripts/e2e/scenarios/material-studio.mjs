@@ -305,12 +305,28 @@ export async function run({ page, artifactDir, setup: context, log }) {
     label: "berkas audio terpilih"
   });
 
-  // Tata letak Susun: toolbar aksi di atas, langkah di kiri, penyunting blok +
-  // pratinjau di tengah, dan properti langkah/halaman di kanan.
+  // Tata letak Susun: toolbar aksi di atas, langkah di kiri, panel tengah
+  // (tab Editor/Pratinjau), dan properti langkah/halaman di kanan.
   await page.waitFor(`document.querySelector("[data-scene-preview-card] iframe") !== null`, {
     label: "pratinjau naskah muncul otomatis",
     timeoutMs: 20_000
   });
+  const bodyTabs = await page.evaluate(`
+    (() => {
+      const editorTab = document.querySelector("[data-scene-body-tab='editor']");
+      const previewTab = document.querySelector("[data-scene-body-tab='preview']");
+      const editorPanel = document.querySelector("[data-scene-editor-panel]");
+      const previewPanel = document.querySelector("[data-scene-preview-panel]");
+      if (!editorTab || !previewTab || !editorPanel || !previewPanel) return "tab tidak lengkap";
+      if (editorTab.getAttribute("aria-selected") !== "true") return "Editor bukan tab awal";
+      if (previewTab.getAttribute("aria-selected") !== "false") return "Pratinjau ikut terpilih";
+      if (editorPanel.hidden) return "panel editor tersembunyi";
+      if (!previewPanel.hidden) return "panel pratinjau ikut tampil";
+      return "ok";
+    })()
+  `);
+  assert(bodyTabs === "ok", `Tab Editor/Pratinjau tidak sesuai: ${bodyTabs}`);
+  log("Panel tengah memakai dua tab dan Editor aktif secara awal.");
   const regions = await page.evaluate(`
     (() => {
       const selectors = [
@@ -339,7 +355,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
     `);
     assert(layout === "ok", `Tata letak Susun tidak sesuai: ${layout}`);
   }
-  log("Susun menaruh toolbar di atas, langkah di kiri, penyunting + pratinjau di tengah, properti di kanan.");
+  log("Susun menaruh toolbar di atas, langkah di kiri, panel bertab di tengah, properti di kanan.");
 
   // Sidebar langkah: memilih langkah menukar panel tengah, dan ringkasan blok
   // tiap langkah dapat dibuka/tutup sendiri.
@@ -393,24 +409,43 @@ export async function run({ page, artifactDir, setup: context, log }) {
   );
   log("Sidebar memilih langkah, penyunting tengah berganti isi, ringkasan dan blok bisa dilipat.");
 
-  // Pratinjau tengah menampilkan langkah yang sedang disunting, bukan selalu
+  // Tab Pratinjau menampilkan langkah yang sedang disunting, bukan selalu
   // langkah pertama. Isi yang sudah usang dimuat ulang lewat tombol.
   await clickHook(page, "[data-scene-step='0']");
   await page.waitFor(
     `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") === "0"`,
     { label: "penyunting pindah ke langkah 1 untuk pratinjau" }
   );
+  await clickHook(page, "[data-scene-body-tab='preview']");
+  await page.waitFor(
+    `document.querySelector("[data-scene-preview-panel]")?.hidden === false`,
+    { label: "tab Pratinjau terbuka" }
+  );
+  const editorHidden = await page.evaluate(
+    `document.querySelector("[data-scene-editor-panel]")?.hidden === true`
+  );
+  assert(editorHidden, "Panel editor tetap tampil saat tab Pratinjau dibuka.");
   await clickHook(page, "[data-scene-preview-refresh]");
   await page.waitFor(
     `document.querySelector("[data-scene-preview-card] iframe")?.srcdoc.includes('data-stage="0"') === true`,
     { label: "pratinjau memuat langkah 1", timeoutMs: 20_000 }
   );
+  await page.screenshot(path.join(artifactDir, "studio-susun-preview.png"));
   await clickHook(page, "[data-scene-step='1']");
   await page.waitFor(
     `document.querySelector("[data-scene-preview-card] iframe")?.srcdoc.includes('data-stage="1"') === true`,
     { label: "pratinjau ikut pindah ke langkah 2", timeoutMs: 20_000 }
   );
-  log("Pratinjau tengah mengikuti langkah yang dipilih.");
+  await clickHook(page, "[data-scene-body-tab='editor']");
+  await page.waitFor(
+    `document.querySelector("[data-scene-editor-panel]")?.hidden === false`,
+    { label: "tab Editor terbuka lagi" }
+  );
+  const previewHidden = await page.evaluate(
+    `document.querySelector("[data-scene-preview-panel]")?.hidden === true`
+  );
+  assert(previewHidden, "Panel pratinjau tetap tampil setelah kembali ke tab Editor.");
+  log("Tab Pratinjau mengikuti langkah yang dipilih dan tab Editor bisa dibuka lagi.");
 
   // Urungkan mengembalikan perubahan struktural terakhir (langkah ketiga).
   const stepsBefore = await page.evaluate(

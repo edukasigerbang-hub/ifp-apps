@@ -121,6 +121,9 @@ export function DraftScenePanel({
   // Pratinjau tengah dibiarkan tampil (ditandai usang) selama menyunting:
   // memuat ulang iframe tiap ketikan membuat pratinjau berkedip.
   const [previewStale, setPreviewStale] = useState(false);
+  // Panel tengah punya dua tab; penyunting blok adalah tampilan awal supaya
+  // pratinjau tidak memakan ruang kerja saat menulis.
+  const [bodyTab, setBodyTab] = useState<"editor" | "preview">("editor");
 
   // Terapkan menulis ulang index.html sehingga naskah tersimpan ikut berubah;
   // pilihan langkah hanya direset saat pindah draft, bukan sesudah Terapkan.
@@ -444,6 +447,7 @@ export function DraftScenePanel({
     if (!scene) return;
     setPreview({ html: renderPreviewDocument(scene, thumbs, activeStep), step: activeStep });
     setPreviewStale(false);
+    setBodyTab("preview");
   }
 
   const step = scene?.steps[activeStep] ?? null;
@@ -659,44 +663,44 @@ export function DraftScenePanel({
                   </div>
 
                   <div
-                    data-scene-preview-card
-                    className="rounded-control border border-ink/10 bg-paper p-2"
+                    data-scene-body-tabs
+                    role="tablist"
+                    aria-label="Editor dan pratinjau langkah"
+                    className="flex flex-wrap gap-2 border-b border-ink/10 pb-2"
                   >
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                        Pratinjau naskah
-                      </h4>
+                    {(
+                      [
+                        { id: "editor", label: "Editor" },
+                        { id: "preview", label: "Pratinjau" }
+                      ] as const
+                    ).map((entry) => (
                       <button
+                        key={entry.id}
                         type="button"
-                        data-scene-preview-refresh
-                        onClick={handlePreview}
-                        disabled={pending}
-                        className={`${secondaryButtonClass} px-2 text-xs`}
+                        role="tab"
+                        id={`scene-body-tab-${entry.id}`}
+                        data-scene-body-tab={entry.id}
+                        aria-selected={bodyTab === entry.id}
+                        aria-controls={`scene-body-panel-${entry.id}`}
+                        onClick={() => setBodyTab(entry.id)}
+                        className={`min-h-11 rounded-control px-4 text-sm font-medium ${
+                          bodyTab === entry.id
+                            ? "bg-primary/10 text-primary"
+                            : "border border-ink/15 bg-surface hover:bg-paper"
+                        }`}
                       >
-                        Muat ulang
+                        {entry.label}
                       </button>
-                    </div>
-                    {preview ? (
-                      <>
-                        <iframe
-                          title="Pratinjau susunan"
-                          sandbox="allow-scripts"
-                          srcDoc={preview.html}
-                          className="mt-2 h-[320px] w-full rounded-control border border-ink/10 bg-white"
-                        />
-                        <p className="mt-2 text-xs text-muted">
-                          {previewStale
-                            ? `Naskah berubah setelah pratinjau langkah ${preview.step + 1} dibuat — tekan Muat ulang.`
-                            : `Pratinjau langkah ${preview.step + 1}; gambar memakai aset asli draft, audio tampil sebagai pemutar kosong karena dipanggil lewat protokol materi.`}
-                        </p>
-                      </>
-                    ) : (
-                      <p className="mt-2 text-xs text-muted">
-                        Pratinjau muncul otomatis setelah aset draft dimuat, atau tekan Muat ulang.
-                      </p>
-                    )}
+                    ))}
                   </div>
 
+                  <div
+                    id="scene-body-panel-editor"
+                    role="tabpanel"
+                    aria-labelledby="scene-body-tab-editor"
+                    data-scene-editor-panel
+                    hidden={bodyTab !== "editor"}
+                  >
                   <ul className="mt-3 space-y-3">
                 {step.blocks.map((block, position) => (
                   <li key={block.id} className="rounded-control border border-ink/10 bg-paper p-3">
@@ -1199,6 +1203,54 @@ export function DraftScenePanel({
                   + Suara
                 </button>
               </div>
+                  </div>
+
+                  <div
+                    id="scene-body-panel-preview"
+                    role="tabpanel"
+                    aria-labelledby="scene-body-tab-preview"
+                    data-scene-preview-panel
+                    hidden={bodyTab !== "preview"}
+                  >
+                    <div
+                      data-scene-preview-card
+                      className="mt-3 rounded-control border border-ink/10 bg-paper p-2"
+                    >
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                          Pratinjau naskah
+                        </h4>
+                        <button
+                          type="button"
+                          data-scene-preview-refresh
+                          onClick={() => handlePreview()}
+                          disabled={pending}
+                          className={`${secondaryButtonClass} px-2 text-xs`}
+                        >
+                          Muat ulang
+                        </button>
+                      </div>
+                      {preview ? (
+                        <>
+                          <iframe
+                            title="Pratinjau susunan"
+                            sandbox="allow-scripts"
+                            srcDoc={preview.html}
+                            className="mt-2 h-[420px] w-full rounded-control border border-ink/10 bg-white"
+                          />
+                          <p className="mt-2 text-xs text-muted">
+                            {previewStale
+                              ? `Naskah berubah setelah pratinjau langkah ${preview.step + 1} dibuat — tekan Muat ulang.`
+                              : `Pratinjau langkah ${preview.step + 1}; gambar memakai aset asli draft, audio tampil sebagai pemutar kosong karena dipanggil lewat protokol materi.`}
+                          </p>
+                        </>
+                      ) : (
+                        <p className="mt-2 text-xs text-muted">
+                          Pratinjau muncul otomatis setelah aset draft dimuat, atau tekan Muat ulang.
+                        </p>
+                      )}
+                    </div>
+                  </div>
                 </>
               ) : (
                 <p className="text-sm text-muted">Pilih atau tambahkan langkah untuk mulai menyusun.</p>
