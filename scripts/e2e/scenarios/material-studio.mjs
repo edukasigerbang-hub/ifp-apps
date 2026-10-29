@@ -265,6 +265,58 @@ export async function run({ page, artifactDir, setup: context, log }) {
     label: "berkas audio terpilih"
   });
 
+  // Sidebar langkah: memilih langkah menukar panel kanan, dan ringkasan blok
+  // tiap langkah dapat dibuka/tutup sendiri.
+  const outlineClosed = await page.evaluate(
+    `document.querySelector("[data-scene-step-toggle='1']")?.getAttribute("data-scene-step-outline") ?? null`
+  );
+  assert(outlineClosed === "false", `Ringkasan langkah 2 harus mulai tertutup (${outlineClosed}).`);
+  await clickHook(page, "[data-scene-step-toggle='1']");
+  await page.waitFor(`document.querySelector("[data-scene-step-outline-list='1']") !== null`, {
+    label: "ringkasan langkah 2 terbuka"
+  });
+  const outlineRows = await page.evaluate(
+    `document.querySelectorAll("[data-scene-step-outline-list='1'] li").length`
+  );
+  assert(outlineRows === 3, `Ringkasan langkah 2 memuat ${outlineRows} baris, harus 3.`);
+  await page.evaluate(
+    `document.querySelector("[data-scene-steps]")?.scrollIntoView({ block: "center" })`
+  );
+  await page.screenshot(path.join(artifactDir, "studio-langkah-sidebar.png"));
+  await clickHook(page, "[data-scene-step-toggle='1']");
+  await page.waitFor(`document.querySelector("[data-scene-step-outline-list='1']") === null`, {
+    label: "ringkasan langkah 2 tertutup"
+  });
+
+  await clickHook(page, "[data-scene-step='0']");
+  await page.waitFor(
+    `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") === "0"`,
+    { label: "panel kanan pindah ke langkah 1" }
+  );
+  const firstStepText = await page.evaluate(`document.querySelector("[data-scene-text]").value`);
+  assert(
+    firstStepText === "Matahari memanaskan air laut.",
+    `Panel kanan menampilkan teks langkah lain: ${firstStepText}`
+  );
+  const activeStepMark = await page.evaluate(
+    `document.querySelector("[data-scene-step='0']")?.getAttribute("data-scene-step-active")`
+  );
+  assert(activeStepMark === "true", "Langkah 1 tidak ditandai aktif di sidebar.");
+  await clickHook(page, "[data-scene-block-toggle]");
+  await page.waitFor(`document.querySelector("[data-scene-block-body]") === null`, {
+    label: "blok teks terlipat"
+  });
+  await clickHook(page, "[data-scene-block-toggle]");
+  await page.waitFor(`document.querySelector("[data-scene-block-body]") !== null`, {
+    label: "blok teks terbuka kembali"
+  });
+  await clickHook(page, "[data-scene-step='1']");
+  await page.waitFor(
+    `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") === "1"`,
+    { label: "panel kanan kembali ke langkah 2" }
+  );
+  log("Sidebar memilih langkah, panel kanan berganti isi, ringkasan dan blok bisa dilipat.");
+
   // Urungkan mengembalikan perubahan struktural terakhir (langkah ketiga).
   const stepsBefore = await page.evaluate(
     `document.querySelectorAll("[data-scene-step]").length`
@@ -291,6 +343,13 @@ export async function run({ page, artifactDir, setup: context, log }) {
     label: "susunan diterapkan",
     timeoutMs: 20_000
   });
+  const stepAfterApply = await page.evaluate(
+    `document.querySelector("[data-scene-step-body]")?.getAttribute("data-step") ?? null`
+  );
+  assert(
+    stepAfterApply === "1",
+    `Setelah Terapkan panel kanan pindah ke langkah ${stepAfterApply}, seharusnya tetap di langkah 2.`
+  );
   const sceneState = await invoke(page, "material_draft_read", {
     input: { materialId: MATERIAL_ID, version: VERSION }
   });

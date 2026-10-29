@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   addStudioAsset,
   messageOf,
@@ -107,20 +107,76 @@ export function DraftScenePanel({
 
   const [history, setHistory] = useState<History>({ past: [], present: stored, future: [] });
   const [activeStep, setActiveStep] = useState(0);
+  // Sidebar langkah: ringkasan blok tiap langkah dapat dibuka/tutup sendiri.
+  const [outlineOpen, setOutlineOpen] = useState<Set<string>>(new Set());
+  const [collapsedBlocks, setCollapsedBlocks] = useState<Set<string>>(new Set());
   const [ack, setAck] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
   const [thumbs, setThumbs] = useState<Record<string, string>>({});
   const [thumbError, setThumbError] = useState<string | null>(null);
 
+  // Terapkan menulis ulang index.html sehingga naskah tersimpan ikut berubah;
+  // pilihan langkah hanya direset saat pindah draft, bukan sesudah Terapkan.
+  const draftId = `${content.draft.materialId}@${content.draft.version}`;
+  const draftRef = useRef(draftId);
+
   useEffect(() => {
     setHistory({ past: [], present: stored, future: [] });
-    setActiveStep(0);
+    setActiveStep((current) => (draftRef.current === draftId ? current : 0));
+    draftRef.current = draftId;
+    setOutlineOpen(new Set());
+    setCollapsedBlocks(new Set());
     setPreview(null);
     setAck(false);
-  }, [stored]);
+  }, [stored, draftId]);
 
   const scene = history.present;
+
+  // Langkah terpilih bisa hilang setelah urungkan atau hapus langkah.
+  useEffect(() => {
+    if (!scene) return;
+    setActiveStep((current) => Math.min(current, scene.steps.length - 1));
+  }, [scene]);
+
+  function toggleOutline(id: string) {
+    setOutlineOpen((current) => {
+      const next = new Set(current);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  }
+
+  function toggleBlock(id: string) {
+    setCollapsedBlocks((current) => {
+      const next = new Set(current);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  }
+
+  function blockSummary(block: SceneBlock): string {
+    if (block.kind === "teks") {
+      const text = block.text.trim().replace(/\s+/g, " ").slice(0, 40);
+      return text.length > 0 ? text : "(teks kosong)";
+    }
+    if (block.kind === "gambar") {
+      return block.path.split("/").pop() || "(belum dipilih)";
+    }
+    return block.label || "(tanpa label)";
+  }
+
+  function blockKindLabel(block: SceneBlock): string {
+    return block.kind === "teks" ? "Teks" : block.kind === "gambar" ? "Gambar" : "Suara";
+  }
 
   const assets = useMemo(
     () => content.files.filter((file) => !file.editable).map((file) => file.path),
@@ -472,12 +528,15 @@ export function DraftScenePanel({
             />
           </label>
 
-          <div className="rounded-control border border-ink/10 bg-paper p-3">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <h3 className="text-sm font-semibold">
-                Langkah ({scene.steps.length}/{MAX_STEPS})
-              </h3>
-              <div className="flex flex-wrap gap-2">
+          <div className="grid gap-3 lg:grid-cols-[minmax(14rem,18rem)_minmax(0,1fr)]">
+            <aside
+              data-scene-steps
+              className="rounded-control border border-ink/10 bg-paper p-3 lg:sticky lg:top-4 lg:self-start"
+            >
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-sm font-semibold">
+                  Langkah ({scene.steps.length}/{MAX_STEPS})
+                </h3>
                 <button
                   type="button"
                   data-scene-add-step
@@ -497,79 +556,137 @@ export function DraftScenePanel({
                 >
                   + Langkah
                 </button>
-                <button
-                  type="button"
-                  onClick={() => duplicateStep(activeStep)}
-                  disabled={pending || !step || scene.steps.length >= MAX_STEPS}
-                  className={`${secondaryButtonClass} px-3 text-sm`}
-                >
-                  Duplikat
-                </button>
-                <button
-                  type="button"
-                  onClick={() => moveStep(activeStep, -1)}
-                  disabled={pending || activeStep === 0}
-                  className={`${secondaryButtonClass} px-3 text-sm`}
-                  aria-label="Naikkan langkah"
-                >
-                  ↑
-                </button>
-                <button
-                  type="button"
-                  onClick={() => moveStep(activeStep, 1)}
-                  disabled={pending || activeStep >= scene.steps.length - 1}
-                  className={`${secondaryButtonClass} px-3 text-sm`}
-                  aria-label="Turunkan langkah"
-                >
-                  ↓
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (!scene || scene.steps.length <= 1) return;
-                    commit((current) => ({
-                      ...current,
-                      steps: current.steps.filter((_, position) => position !== activeStep)
-                    }));
-                    setActiveStep(Math.max(0, activeStep - 1));
-                  }}
-                  disabled={pending || scene.steps.length <= 1}
-                  className={`${secondaryButtonClass} px-3 text-sm`}
-                >
-                  Hapus langkah
-                </button>
               </div>
-            </div>
-            <ol className="mt-3 flex flex-wrap gap-2">
-              {scene.steps.map((item, index) => (
-                <li key={item.id}>
-                  <button
-                    type="button"
-                    data-scene-step={index}
-                    aria-current={index === activeStep ? "step" : undefined}
-                    onClick={() => setActiveStep(index)}
-                    className={`min-h-11 rounded-control border px-3 text-sm ${
-                      index === activeStep
-                        ? "border-primary bg-primary/10 text-primary"
-                        : "border-ink/15"
-                    }`}
-                  >
-                    {index + 1}. {item.title || "Tanpa judul"}
-                  </button>
-                </li>
-              ))}
-            </ol>
-          </div>
+              <p className="mt-1 text-xs text-muted">Pilih langkah untuk menyunting di panel kanan.</p>
+              <ol className="mt-2 space-y-1">
+                {scene.steps.map((item, index) => {
+                  const selected = index === activeStep;
+                  const outline = outlineOpen.has(item.id);
+                  return (
+                    <li
+                      key={item.id}
+                      data-scene-step-item={index}
+                      className={
+                        selected
+                          ? "rounded-control border border-primary/40 bg-primary/5"
+                          : "rounded-control border border-ink/10"
+                      }
+                    >
+                      <div className="flex items-stretch">
+                        <button
+                          type="button"
+                          data-scene-step-toggle={index}
+                          data-scene-step-outline={outline ? "true" : "false"}
+                          aria-expanded={outline}
+                          aria-controls={`scene-step-outline-${index}`}
+                          aria-label={`${outline ? "Tutup" : "Buka"} ringkasan langkah ${index + 1}`}
+                          onClick={() => toggleOutline(item.id)}
+                          className="min-h-11 w-8 shrink-0 text-sm text-muted"
+                        >
+                          <span aria-hidden="true">{outline ? "▾" : "▸"}</span>
+                        </button>
+                        <button
+                          type="button"
+                          data-scene-step={index}
+                          data-scene-step-active={selected ? "true" : "false"}
+                          aria-current={selected ? "step" : undefined}
+                          onClick={() => setActiveStep(index)}
+                          className="flex min-h-11 flex-1 flex-col justify-center py-1 pr-2 text-left text-sm"
+                        >
+                          <span className={selected ? "font-semibold" : "font-medium"}>
+                            {index + 1}. {item.title || "Tanpa judul"}
+                          </span>
+                          <span className="text-xs text-muted">
+                            {item.blocks.length} blok · {EFFECT_LABELS[item.effect]}
+                          </span>
+                        </button>
+                      </div>
+                      {outline && (
+                        <ul
+                          id={`scene-step-outline-${index}`}
+                          data-scene-step-outline-list={index}
+                          className="space-y-0.5 border-t border-ink/10 px-3 py-2 text-xs text-muted"
+                        >
+                          {item.blocks.length === 0 ? (
+                            <li>Belum ada blok.</li>
+                          ) : (
+                            item.blocks.map((block, position) => (
+                              <li key={block.id} className="truncate">
+                                {position + 1}. {blockKindLabel(block)} · {blockSummary(block)}
+                              </li>
+                            ))
+                          )}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
+              </ol>
+            </aside>
 
-          {step && (
-            <div className="rounded-control border border-ink/10 p-3">
-              <div className="grid gap-3 md:grid-cols-[2fr_1fr_1fr]">
+            <section
+              id="scene-step-body"
+              data-scene-step-body
+              data-step={activeStep}
+              className="rounded-control border border-ink/10 p-3"
+            >
+              {step ? (
+                <>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h3 className="text-sm font-semibold">
+                      Langkah {activeStep + 1} dari {scene.steps.length}
+                    </h3>
+                    <div className="flex flex-wrap gap-1">
+                      <button
+                        type="button"
+                        onClick={() => duplicateStep(activeStep)}
+                        disabled={pending || scene.steps.length >= MAX_STEPS}
+                        className={`${secondaryButtonClass} px-3 text-sm`}
+                      >
+                        Duplikat
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => moveStep(activeStep, -1)}
+                        disabled={pending || activeStep === 0}
+                        className={`${secondaryButtonClass} px-3 text-sm`}
+                        aria-label="Naikkan langkah"
+                      >
+                        ↑
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => moveStep(activeStep, 1)}
+                        disabled={pending || activeStep >= scene.steps.length - 1}
+                        className={`${secondaryButtonClass} px-3 text-sm`}
+                        aria-label="Turunkan langkah"
+                      >
+                        ↓
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!scene || scene.steps.length <= 1) return;
+                          commit((current) => ({
+                            ...current,
+                            steps: current.steps.filter((_, position) => position !== activeStep)
+                          }));
+                          setActiveStep(Math.max(0, activeStep - 1));
+                        }}
+                        disabled={pending || scene.steps.length <= 1}
+                        className={`${secondaryButtonClass} px-3 text-sm`}
+                      >
+                        Hapus langkah
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="mt-3 grid gap-3 md:grid-cols-[2fr_1fr_1fr]">
                 <label className="block text-sm">
                   Judul langkah
                   <input
                     type="text"
                     maxLength={120}
-
                     data-scene-step-title
                     value={step.title}
                     onFocus={beginEdit}
@@ -639,10 +756,17 @@ export function DraftScenePanel({
                 {step.blocks.map((block, position) => (
                   <li key={block.id} className="rounded-control border border-ink/10 bg-paper p-3">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                        {position + 1}.{" "}
-                        {block.kind === "teks" ? "Teks" : block.kind === "gambar" ? "Gambar" : "Suara"}
-                      </p>
+                      <button
+                        type="button"
+                        data-scene-block-toggle={block.id}
+                        aria-expanded={!collapsedBlocks.has(block.id)}
+                        aria-controls={`scene-block-body-${block.id}`}
+                        onClick={() => toggleBlock(block.id)}
+                        className="flex min-h-11 items-center gap-2 text-left text-xs font-semibold uppercase tracking-[0.1em] text-muted"
+                      >
+                        <span aria-hidden="true">{collapsedBlocks.has(block.id) ? "▸" : "▾"}</span>
+                        {position + 1}. {blockKindLabel(block)} · {blockSummary(block)}
+                      </button>
                       <div className="flex flex-wrap gap-1">
                         <button
                           type="button"
@@ -708,6 +832,9 @@ export function DraftScenePanel({
                         </button>
                       </div>
                     </div>
+
+                    {!collapsedBlocks.has(block.id) && (
+                    <div id={`scene-block-body-${block.id}`} data-scene-block-body={block.id}>
 
                     {block.kind === "teks" && (
                       <div className="mt-2 space-y-2">
@@ -874,7 +1001,6 @@ export function DraftScenePanel({
                             Tata letak
                             <select
                               data-scene-layout
-
                               value={block.layout}
                               onChange={(event) =>
                                 updateBlock(activeStep, block.id, (current) =>
@@ -969,7 +1095,6 @@ export function DraftScenePanel({
                           <input
                             type="file"
                             accept="image/webp,image/png,image/jpeg"
-
                             data-scene-image-file
                             onChange={(event) => {
                               const file = event.target.files?.[0];
@@ -1049,7 +1174,6 @@ export function DraftScenePanel({
                           <input
                             type="file"
                             accept="audio/mpeg,audio/mp4,audio/ogg,audio/wav"
-
                             data-scene-audio-file
                             onChange={(event) => {
                               const file = event.target.files?.[0];
@@ -1095,6 +1219,8 @@ export function DraftScenePanel({
                         Suara
                       </button>
                     </div>
+                    </div>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -1128,8 +1254,12 @@ export function DraftScenePanel({
                   + Suara
                 </button>
               </div>
-            </div>
-          )}
+                </>
+              ) : (
+                <p className="text-sm text-muted">Pilih atau tambahkan langkah untuk mulai menyusun.</p>
+              )}
+            </section>
+          </div>
 
           <p className="text-xs text-muted">
             Efek suara langkah dibuat langsung oleh perangkat (WebAudio). Blok Suara memakai berkas
