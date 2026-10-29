@@ -53,6 +53,7 @@
     "e2e:material-pin": "node scripts/e2e/run.mjs material-pin",
     "e2e:material-catalog": "node scripts/e2e/run.mjs material-catalog",
     "e2e:studio": "node scripts/e2e/run.mjs material-studio",
+    "e2e:scene-sample": "node scripts/e2e/run.mjs material-scene-sample",
     "catalog:dev": "node scripts/dev-catalog.mjs"
   },
   "dependencies": {

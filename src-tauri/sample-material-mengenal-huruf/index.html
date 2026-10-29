@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mengenal Huruf Vokal</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main id="material" class="material theme-cerah" data-stage="0" data-sound="bel">
+      <header class="head">
+        <p class="eyebrow">Materi Studio</p>
+        <h1>Mengenal Huruf Vokal</h1>
+      <p class="lede">A, I, U, E, O — lima huruf yang membuka suara.</p>
+      </header>
+
+      <section class="stage" id="stage" aria-live="polite">
+      <article class="step" data-step="0" data-effect="kilau" data-sound="bel" data-active="true" aria-label="Lima huruf vokal">
+        <h2 class="step-title">Lima huruf vokal</h2>
+        <p class="block text text-paragraf tone-bawaan size-sedang align-kiri">Setiap kata dibentuk oleh huruf. Lima di antaranya disebut huruf vokal.</p>
+        <ul class="block text text-poin tone-bawaan size-sedang align-kiri">
+          <li>A seperti pada kata ayam</li>
+          <li>I seperti pada kata ikan</li>
+          <li>U seperti pada kata ular</li>
+          <li>E seperti pada kata ember</li>
+          <li>O seperti pada kata obor</li>
+        </ul>
+        <div class="fx" aria-hidden="true"></div>
+      </article>
+      <article class="step" data-step="1" data-effect="tak-ada" data-sound="klik" aria-label="Dengar lalu tirukan">
+        <h2 class="step-title">Dengar lalu tirukan</h2>
+        <aside class="block text text-catatan tone-bawaan size-sedang align-kiri" role="note">Dengarkan nada contoh, lalu tirukan bunyi A, I, U, E, O dengan suara nyaring.</aside>
+        <figure class="block figure figure-kanan">
+          <img src="assets/cover.webp" alt="Ayu dan Bima membaca kartu huruf vokal" loading="lazy" />
+          <figcaption>Kartu huruf di meja belajar</figcaption>
+        </figure>
+        <div class="block audio">
+          <p class="audio-label">Suara: Contoh nada</p>
+          <audio controls preload="metadata" src="assets/nada-contoh.wav"></audio>
+          <p class="audio-caption">Nada contoh untuk menguji pemutar audio; bukan narasi pelajaran.</p>
+        </div>
+        <div class="fx" aria-hidden="true"></div>
+      </article>
+      <article class="step" data-step="2" data-effect="konfeti" data-sound="tepuk" aria-label="Sebutkan namamu">
+        <h2 class="step-title">Sebutkan namamu</h2>
+        <p class="block text text-paragraf tone-bawaan size-besar align-tengah is-bold">Sebutkan nama depanmu. Huruf vokal apa saja yang kamu dengar?</p>
+        <div class="fx" aria-hidden="true"></div>
+      </article>
+      </section>
+
+      <div class="controls">
+        <button type="button" id="previous" class="ghost">Sebelumnya</button>
+        <button type="button" id="next">Berikutnya</button>
+        <button type="button" id="complete" class="primary">Tandai selesai</button>
+        <button type="button" id="exit" class="ghost">Keluar</button>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite">
+        Langkah 1 dari 3.
+      </p>
+    </main>
+    <script type="application/json" id="ifp-scene">{"schemaVersion":1,"theme":"cerah","title":"Mengenal Huruf Vokal","subtitle":"A, I, U, E, O — lima huruf yang membuka suara.","steps":[{"id":"langkah-zmm8bo","title":"Lima huruf vokal","effect":"kilau","sound":"bel","blocks":[{"id":"teks-cqforw","kind":"teks","style":"paragraf","text":"Setiap kata dibentuk oleh huruf. Lima di antaranya disebut huruf vokal.","bold":false,"italic":false,"tone":"bawaan","size":"sedang","align":"kiri"},{"id":"teks-kcbnpb","kind":"teks","style":"poin","text":"A seperti pada kata ayam\nI seperti pada kata ikan\nU seperti pada kata ular\nE seperti pada kata ember\nO seperti pada kata obor","bold":false,"italic":false,"tone":"bawaan","size":"sedang","align":"kiri"}]},{"id":"langkah-bqd03h","title":"Dengar lalu tirukan","effect":"tak-ada","sound":"klik","blocks":[{"id":"teks-07q7qn","kind":"teks","style":"catatan","text":"Dengarkan nada contoh, lalu tirukan bunyi A, I, U, E, O dengan suara nyaring.","bold":false,"italic":false,"tone":"bawaan","size":"sedang","align":"kiri"},{"id":"gambar-9yi4vc","kind":"gambar","path":"assets/cover.webp","alt":"Ayu dan Bima membaca kartu huruf vokal","caption":"Kartu huruf di meja belajar","layout":"kanan"},{"id":"suara-73zlh7","kind":"suara","path":"assets/nada-contoh.wav","label":"Contoh nada","caption":"Nada contoh untuk menguji pemutar audio; bukan narasi pelajaran."}]},{"id":"langkah-een0bn","title":"Sebutkan namamu","effect":"konfeti","sound":"tepuk","blocks":[{"id":"teks-tu045w","kind":"teks","style":"paragraf","text":"Sebutkan nama depanmu. Huruf vokal apa saja yang kamu dengar?","bold":true,"italic":false,"tone":"bawaan","size":"besar","align":"tengah"}]}]}</script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
