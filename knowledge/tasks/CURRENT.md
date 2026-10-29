@@ -1697,4 +1697,35 @@ Setiap pengganti diambil dari langkah eksplorasi, petunjuk, urutan langkah, atau
 5. Efek suara butuh satu gerakan pengguna lebih dulu (kebijakan autoplay browser), jadi suara langkah pertama biasanya belum terdengar.
 6. Batas keras tanpa mekanisme pecah: 20 langkah, 12 blok/langkah, 1.200 karakter per blok teks.
 
-**Sisa:** blok audio berkas + `captionsPath` otomatis · undo/redo · gaya per blok · galeri efek tambahan · blok kuis interaktif · ekspor pratinjau gambar nyata.
+**Sisa:** blok audio berkas + `captionsPath` otomatis · undo/redo · gaya per blok · galeri efek tambahan · blok kuis interaktif · ekspor pratinjau gambar nyata. **Keempat yang pertama ditutup T-125 (di bawah).**
+
+### Editor Susun Diperluas — Gambar Asli, Urungkan, Audio, Gaya (2026-10-29, T-125)
+
+**Status:** menutup empat batasan T-124 yang dipilih pengguna: galeri + pratinjau gambar asli, undo/redo + sisip/duplikat blok, blok audio berkas dengan `captionsPath` otomatis, dan gaya teks/tata letak.
+
+**Yang diubah:**
+- [material_author.rs](../../src-tauri/src/material_author.rs) — perintah baru `material_draft_asset_read` (`ReadDraftAssetInput` → `DraftAssetView`): hanya gambar WebP/PNG/JPG, jenis ditentukan dari magic bytes (`sniff_image`), batas 8 MB, containment `canonicalize` terhadap root materi, path traversal ditolak lewat `validate_relative_path`. Terdaftar di [lib.rs](../../src-tauri/src/lib.rs). Unit test baru `reads_draft_image_as_data_url_and_rejects_others` (data URL sah, isi bukan gambar ditolak `VALIDATION_FAILED`, traversal ditolak `MATERIAL_INVALID`).
+- [materialStudioRepository.ts](../../src/data/materialStudioRepository.ts) — `readStudioAsset` + tipe `StudioDraftAsset`.
+- [sceneModel.ts](../../src/components/studio/sceneModel.ts) — `AudioBlock` (`kind: "suara"`, `path`, `label`, `caption`), gaya teks (`bold`, `italic`, `tone`, `size`, `align`), tata letak gambar (`penuh|kiri|kanan`), label-label baru, `CAPTIONS_PATH`, `sceneAudioBlocks`, `sceneImages`; validasi naskah ikut memeriksa berkas suara, label, dan alamat web di caption/label.
+- [sceneRender.ts](../../src/components/studio/sceneRender.ts) — markup audio (`<audio controls>` + label + caption), kelas gaya teks dan float gambar, `renderCaptions()` (VTT: satu cue 10 detik per klip + NOTE bahwa waktunya perkiraan), `renderPreviewDocument(scene, assets)` yang menyisipkan data URL gambar asli, `renderSceneFiles()` mengembalikan `captions`.
+- [DraftScenePanel.tsx](../../src/components/studio/DraftScenePanel.tsx) — galeri thumbnail aset draft (maks 24, dimuat lewat `material_draft_asset_read`), unggah gambar **dan** audio lewat input berkas, riwayat undo/redo (satu langkah per sesi ketik lewat `onFocus`, 60 langkah), sisip blok di posisi mana pun, duplikat blok/langkah, kontrol gaya teks (B/I, warna, ukuran, perataan), tata letak gambar, dan **Terapkan** kini juga menulis `assets/captions.vtt` + menyetel `accessibility.hasAudio`/`captionsPath` dari naskah.
+- [material-studio.mjs](../../scripts/e2e/scenarios/material-studio.mjs) — E2E menambah: galeri memuat `data:image/`, unggah PNG + WAV lewat `DOM.setFileInputFiles`, undo struktural (langkah ketiga lalu diurungkan), dan asersi `captions.vtt` + `hasAudio` + `captionsPath`; jumlah berkas terpasang naik dari 5 ke 8.
+- [sceneRender.test.ts](../../src/components/studio/sceneRender.test.ts) — 4 test baru (kelas gaya + tata letak, audio + captions, tanpa audio → tanpa captions, pratinjau memakai data URL).
+
+**Keputusan desain:**
+1. **Gambar dibaca sebagai data URL lewat perintah Rust baru**, bukan `ifp-content://` — panel berjalan di luar WebView materi dan hanya protokol materi yang memegang sandbox; data URL juga dipakai langsung di `srcdoc` pratinjau.
+2. **Magic bytes, bukan ekstensi** — berkas bernama `.png` yang isinya bukan gambar ditolak; ini pola yang sama dengan cover materi.
+3. **Captions dibuat dari naskah, dengan waktu perkiraan yang dinyatakan terang-terangan** — kontrak §4 mewajibkan `captionsPath` begitu `hasAudio` menyala; panel mengisi keduanya otomatis dan menulis NOTE di VTT bahwa cue 10 detik per klip adalah perkiraan.
+4. **Undo per sesi ketik** — riwayat didorong saat kontrol difokuskan (bukan tiap ketukan), jadi Ctrl+Z/Urungkan mengembalikan satu sesi sunting, bukan satu huruf.
+5. **Terapkan tetap satu pintu** — semua perubahan (termasuk manifest) hanya menulis saat Terapkan; unggahan aset tetap langsung ke draft karena itu penambahan berkas, bukan penulisan ulang materi.
+
+**Verifikasi aktual:** `cargo test material_author` **7/7** (EXIT 0) · `npx tsc --noEmit` bersih · `npm test` **156/156** (19 berkas; 14 test scene) + fixture 4/4 + katalog 336/336 + binding PASS · `npx vite build` EXIT 0 (19,19 dtk) · E2E `material-studio` **PASS 25 pemeriksaan** (sebelumnya 24) · `npm run a11y` **19/19** (0 error, 8 warning lama) · tangkapan layar `studio-susun.png` diperiksa: panel menampilkan Urungkan/Ulangi, langkah, kontrol gaya, dan pesan “assets/captions.vtt dibuat”.
+
+**Cacat ditemukan & diperbaiki:** unit test Rust pertama gagal karena `invalid()` memetakan ke `VALIDATION_FAILED`, bukan `MATERIAL_INVALID` — asersi yang salah, bukan kode produk (traversal memang `MATERIAL_INVALID` lewat `validate_relative_path`).
+
+**Batasan jujur:**
+1. Waktu cue captions adalah perkiraan 10 detik per klip; durasi sebenarnya tidak dibaca dari berkas audio.
+2. Galeri memuat maksimal 24 gambar pertama dan seluruhnya sebagai data URL — draft dengan puluhan gambar besar memperlambat panel.
+3. Undo tidak mencakup unggahan aset (berkas langsung ditulis) dan tidak bertahan setelah naskah diterapkan atau draft dibuka ulang.
+4. Efek audio blok tetap butuh gestur pengguna; pratinjau susunan menampilkan pemutar tanpa sumber karena aset hanya bisa diakses lewat protokol materi.
+5. Belum ada drag-and-drop, penyuntingan gaya per kata, atau pemotongan audio.
