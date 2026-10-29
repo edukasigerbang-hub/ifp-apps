@@ -95,6 +95,20 @@ async function readEditorValue(page) {
   return page.evaluate(`document.querySelector("[data-studio-editor]")?.value ?? null`);
 }
 
+async function selectOption(page, selector, value) {
+  const result = await page.evaluate(`
+    (() => {
+      const element = document.querySelector(${JSON.stringify(selector)});
+      if (!element) return "missing";
+      Object.getOwnPropertyDescriptor(window.HTMLSelectElement.prototype, "value")
+        .set.call(element, ${JSON.stringify(value)});
+      element.dispatchEvent(new Event("change", { bubbles: true }));
+      return "selected";
+    })()
+  `);
+  assert(result === "selected", `Select ${selector} tidak ditemukan (${result}).`);
+}
+
 async function alertText(page) {
   return page.evaluate(`document.querySelector("[role='alert']")?.textContent ?? ""`);
 }
@@ -168,6 +182,69 @@ export async function run({ page, artifactDir, setup: context, log }) {
   );
   log("Draft terpisah dari daftar materi terpasang.");
 
+  // Tab Susun: editor blok (teks, gambar, efek, efek suara) menulis ulang
+  // index.html + assets/style.css + assets/app.js dari naskah.
+  await clickHook(page, "[data-studio-tab='scene']");
+  await page.waitFor(`document.querySelector("[data-scene-start]") !== null`, {
+    label: "tab Susun pada kerangka tanpa naskah"
+  });
+  await clickHook(page, "[data-scene-start]");
+  await page.waitFor(`document.querySelector("[data-scene-text]") !== null`, {
+    label: "blok teks pertama"
+  });
+  await typeInto(page, "[data-scene-text]", "Matahari memanaskan air laut.");
+  await clickHook(page, "[data-scene-add-step]");
+  await page.waitFor(`document.querySelector("[data-scene-step='1']") !== null`, {
+    label: "langkah kedua"
+  });
+  await typeInto(page, "[data-scene-text]", "Uap naik, dingin, lalu turun sebagai hujan.");
+  await selectOption(page, "[data-scene-effect]", "konfeti");
+  await selectOption(page, "[data-scene-sound]", "bel");
+  await clickHook(page, "[data-scene-add-block='gambar']");
+  await page.waitFor(`document.querySelector("[data-scene-image]") !== null`, {
+    label: "blok gambar"
+  });
+  await selectOption(page, "[data-scene-image]", "assets/cover.png");
+  await typeInto(page, "[data-scene-alt]", "Langit dengan awan dan hujan");
+  await clickHook(page, "[data-scene-ack]");
+  await page.waitFor(`document.querySelector("[data-scene-apply]").disabled === false`, {
+    label: "tombol terapkan aktif setelah naskah lengkap"
+  });
+  await clickHook(page, "[data-scene-apply]");
+  await page.waitFor(`document.body.textContent.includes("Susunan diterapkan")`, {
+    label: "susunan diterapkan",
+    timeoutMs: 20_000
+  });
+  const sceneState = await invoke(page, "material_draft_read", {
+    input: { materialId: MATERIAL_ID, version: VERSION }
+  });
+  const sceneEntry = sceneState.value.files.find((file) => file.path === "index.html");
+  assert(sceneEntry.content.includes('id="ifp-scene"'), "index.html tidak memuat naskah.");
+  assert(
+    (sceneEntry.content.match(/<article class="step"/g) ?? []).length === 2,
+    "index.html hasil susunan tidak memuat dua langkah."
+  );
+  assert(
+    sceneEntry.content.includes('data-effect="konfeti"') &&
+      sceneEntry.content.includes('data-sound="bel"'),
+    "Efek atau efek suara tidak masuk ke index.html."
+  );
+  assert(
+    sceneEntry.content.includes('src="assets/cover.png"') &&
+      sceneEntry.content.includes('alt="Langit dengan awan dan hujan"'),
+    "Blok gambar tidak lengkap di index.html."
+  );
+  assert(
+    !sceneEntry.content.includes("https://") && !sceneEntry.content.includes("http://"),
+    "Hasil susunan tidak boleh memuat rujukan eksternal."
+  );
+  log("Tab Susun menulis dua langkah, blok gambar, efek konfeti, dan efek suara bel.");
+  await page.evaluate(
+    `document.querySelector("[data-studio-editor-card]")?.scrollIntoView({ block: "start" })`
+  );
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  await page.screenshot(path.join(artifactDir, "studio-susun.png"));
+
   await clickHook(page, "[data-studio-tab='code']");
   await page.waitFor(`document.querySelector("[data-studio-editor]") !== null`, {
     label: "editor kode"
@@ -178,6 +255,10 @@ export async function run({ page, artifactDir, setup: context, log }) {
   );
   assert(selectedFile === "index.html", `Berkas awal terpilih ${selectedFile}, harus index.html.`);
   assert(original.includes("<!doctype html>"), "Editor tidak memuat index.html kerangka.");
+  assert(
+    original.includes('id="ifp-scene"'),
+    "Editor kode masih memuat isi lama setelah tab Susun menulis ulang index.html."
+  );
 
   await typeInto(page, "[data-studio-editor]", `${original}\n<script src="https://luar.example/m.js"></script>\n`);
   await page.waitFor(`document.querySelector("[data-studio-save-file]").disabled === false`, {

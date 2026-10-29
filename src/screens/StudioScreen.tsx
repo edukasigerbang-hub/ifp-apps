@@ -5,6 +5,7 @@ import { DraftCheckPanel } from "../components/studio/DraftCheckPanel";
 import { DraftCodePanel } from "../components/studio/DraftCodePanel";
 import { DraftExportPanel } from "../components/studio/DraftExportPanel";
 import { DraftMetaPanel } from "../components/studio/DraftMetaPanel";
+import { DraftScenePanel } from "../components/studio/DraftScenePanel";
 import { PageHeader } from "../components/ui/PageHeader";
 import { StatusBadge } from "../components/ui/StatusBadge";
 import { subjectKeys, subjectLabel } from "../content/subjectLabel";
@@ -31,6 +32,7 @@ import {
 } from "../components/studio/ui";
 
 const tabs = [
+  { id: "scene", label: "Susun" },
   { id: "metadata", label: "Metadata" },
   { id: "code", label: "Kode" },
   { id: "assets", label: "Aset & Cover" },
@@ -474,6 +476,7 @@ export function StudioScreen() {
                   aria-labelledby={`studio-tab-${entry.id}`}
                   hidden={tab !== entry.id}
                 >
+                  {entry.id === "scene" && <DraftScenePanel content={content} {...panelProps} />}
                   {entry.id === "metadata" && (
                     <DraftMetaPanel content={content} {...panelProps} />
                   )}

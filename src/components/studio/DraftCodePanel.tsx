@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   deleteStudioFile,
   messageOf,
@@ -52,6 +52,21 @@ export function DraftCodePanel({
   const current = files.find((file) => file.path === path) ?? null;
   const baseline = isNew ? "" : (current?.content ?? "");
   const dirty = buffer !== baseline;
+  const lastBaseline = useRef(baseline);
+
+  useEffect(() => {
+    if (isNew || lastBaseline.current === baseline) {
+      return;
+    }
+    // Berkas berubah dari luar panel ini (mis. tab Susun menulis ulang
+    // index.html). Buffer hanya disegarkan bila belum ada suntingan lokal,
+    // supaya pekerjaan pengguna tidak hilang diam-diam.
+    const clean = buffer === lastBaseline.current;
+    lastBaseline.current = baseline;
+    if (clean) {
+      setBuffer(baseline);
+    }
+  }, [baseline, buffer, isNew]);
 
   useEffect(() => {
     onDirtyChange(dirty);
