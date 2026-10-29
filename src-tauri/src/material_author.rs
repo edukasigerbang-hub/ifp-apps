@@ -2,8 +2,8 @@ use crate::db::DbState;
 use crate::error::AppError;
 use crate::material::{self, MaterialState, MaterialView};
 use crate::material_manifest::{
-    self, MAX_BUNDLE_BYTES, bare_media_type, ensure_self_contained, is_material_id, is_semver,
-    is_text_source, validate_relative_path,
+    self, MAX_BUNDLE_BYTES, bare_media_type, ensure_self_contained, is_image, is_material_id,
+    is_semver, is_text_source, validate_relative_path,
 };
 use base64::Engine as _;
 use rusqlite::{Connection, OptionalExtension, params};
@@ -143,6 +143,23 @@ pub struct AddDraftAssetInput {
     pub path: String,
     /// Base64 telanjang atau data URL (`data:image/png;base64,...`).
     pub data: String,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct ReadDraftAssetInput {
+    pub material_id: String,
+    pub version: String,
+    pub path: String,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct DraftAssetView {
+    pub path: String,
+    pub media_type: String,
+    pub data_url: String,
+    pub bytes: u64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -685,6 +702,50 @@ pub fn add_draft_asset(
     build_draft_content(info, &directory)
 }
 
+/// Membaca aset gambar draft sebagai data URL untuk galeri dan pratinjau di
+/// editor. Jenis gambar ditentukan dari magic bytes, bukan ekstensi.
+pub fn read_draft_asset(
+    connection: &Connection,
+    root: &Path,
+    input: &ReadDraftAssetInput,
+) -> Result<DraftAssetView, AppError> {
+    ensure_draft(connection, root, &input.material_id, &input.version)?;
+    validate_relative_path(&input.path)?;
+    if input.path == MANIFEST_FILE || !is_image(&input.path) {
+        return Err(invalid(
+            "Hanya gambar WebP, PNG, atau JPG draft yang dapat dipratinjau.",
+        ));
+    }
+
+    let directory = draft_dir(root, &input.material_id, &input.version);
+    let canonical_root = fs::canonicalize(root).map_err(|_| io_error("Folder materi"))?;
+    let canonical = fs::canonicalize(directory.join(&input.path))
+        .map_err(|_| invalid("Gambar tidak ditemukan di draft."))?;
+    if !canonical.starts_with(&canonical_root) {
+        return Err(invalid("Path gambar keluar dari folder materi."));
+    }
+    let metadata = fs::metadata(&canonical).map_err(|_| io_error("Gambar draft"))?;
+    if !metadata.is_file() {
+        return Err(invalid("Gambar draft bukan berkas."));
+    }
+    if metadata.len() > MAX_ASSET_BYTES as u64 {
+        return Err(invalid("Gambar draft melebihi 8 MB."));
+    }
+
+    let bytes = fs::read(&canonical).map_err(|_| io_error("Gambar draft"))?;
+    let media_type = material::sniff_image(&bytes)
+        .ok_or_else(|| invalid("Berkas itu bukan gambar WebP, PNG, atau JPG."))?;
+    Ok(DraftAssetView {
+        path: input.path.clone(),
+        media_type: media_type.to_string(),
+        data_url: format!(
+            "data:{media_type};base64,{}",
+            base64::engine::general_purpose::STANDARD.encode(&bytes)
+        ),
+        bytes: bytes.len() as u64,
+    })
+}
+
 pub fn delete_draft_file(
     connection: &mut Connection,
     root: &Path,
@@ -1028,6 +1089,16 @@ pub fn material_draft_asset_add(
 ) -> Result<DraftContent, AppError> {
     let mut connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
     add_draft_asset(&mut connection, &material.root, &input)
+}
+
+#[tauri::command]
+pub fn material_draft_asset_read(
+    db: State<'_, DbState>,
+    material: State<'_, MaterialState>,
+    input: ReadDraftAssetInput,
+) -> Result<DraftAssetView, AppError> {
+    let connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    read_draft_asset(&connection, &material.root, &input)
 }
 
 #[tauri::command]
@@ -1501,5 +1572,72 @@ mod tests {
 
         let _ = fs::remove_dir_all(&root);
         let _ = fs::remove_dir_all(&target);
+    }
+
+    #[test]
+    fn reads_draft_image_as_data_url_and_rejects_others() {
+        let mut connection = test_connection();
+        let root = temp_root("asset-read");
+        create_draft(
+            &mut connection,
+            &root,
+            &input("galeri-gambar", "1.0.0", "eksplorasi"),
+        )
+        .expect("draft");
+        let directory = draft_dir(&root, "galeri-gambar", "1.0.0");
+        let png = fs::read(directory.join("assets/cover.png")).expect("cover kerangka");
+        add_draft_asset(
+            &mut connection,
+            &root,
+            &AddDraftAssetInput {
+                material_id: "galeri-gambar".to_string(),
+                version: "1.0.0".to_string(),
+                path: "assets/galeri.png".to_string(),
+                data: base64::engine::general_purpose::STANDARD.encode(&png),
+            },
+        )
+        .expect("aset ditambahkan");
+
+        let view = read_draft_asset(
+            &connection,
+            &root,
+            &ReadDraftAssetInput {
+                material_id: "galeri-gambar".to_string(),
+                version: "1.0.0".to_string(),
+                path: "assets/galeri.png".to_string(),
+            },
+        )
+        .expect("gambar terbaca");
+        assert_eq!(view.media_type, "image/png");
+        assert!(view.data_url.starts_with("data:image/png;base64,"));
+        assert_eq!(view.bytes, png.len() as u64);
+
+        // Ekstensi gambar tapi isi bukan gambar: ditolak.
+        fs::write(directory.join("assets/palsu.png"), b"bukan gambar").expect("tulis");
+        let fake = read_draft_asset(
+            &connection,
+            &root,
+            &ReadDraftAssetInput {
+                material_id: "galeri-gambar".to_string(),
+                version: "1.0.0".to_string(),
+                path: "assets/palsu.png".to_string(),
+            },
+        )
+        .expect_err("isi bukan gambar ditolak");
+        assert_eq!(fake.code, "VALIDATION_FAILED");
+
+        let traversal = read_draft_asset(
+            &connection,
+            &root,
+            &ReadDraftAssetInput {
+                material_id: "galeri-gambar".to_string(),
+                version: "1.0.0".to_string(),
+                path: "../ifp.db".to_string(),
+            },
+        )
+        .expect_err("path traversal ditolak");
+        assert_eq!(traversal.code, "MATERIAL_INVALID");
+
+        let _ = fs::remove_dir_all(&root);
     }
 }

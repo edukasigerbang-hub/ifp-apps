@@ -1,16 +1,20 @@
 import { describe, expect, it } from "vitest";
 import {
+  CAPTIONS_PATH,
+  createAudioBlock,
   createImageBlock,
   createScene,
   createStep,
   createTextBlock,
   parseScene,
+  sceneAudioBlocks,
   sceneIssues,
   splitPoints,
   type Scene
 } from "./sceneModel";
 import {
   extractSceneDocument,
+  renderCaptions,
   renderIndexHtml,
   renderPreviewDocument,
   renderRuntime,
@@ -100,7 +104,7 @@ describe("naskah visual", () => {
     const preview = renderPreviewDocument(sampleScene());
     expect(preview).toContain("<style>");
     expect(preview).not.toContain('rel="stylesheet"');
-    expect(preview).toContain("figure-placeholder");
+    expect(preview).toContain('<div class="figure-placeholder"');
     expect(preview).toContain("assets/naik.webp");
   });
 
@@ -110,6 +114,61 @@ describe("naskah visual", () => {
       expect(runtime).toContain(token);
     }
     expect(renderStyle()).toContain("prefers-reduced-motion");
+  });
+
+  it("gaya teks dan tata letak masuk ke kelas markup", () => {
+    const scene = createScene("Gaya Teks", "");
+    scene.steps[0].blocks = [
+      {
+        ...createTextBlock("paragraf", "Penting"),
+        bold: true,
+        italic: true,
+        tone: "aksen",
+        size: "besar",
+        align: "tengah"
+      },
+      { ...createImageBlock("assets/naik.webp"), alt: "Awan", layout: "kiri" }
+    ];
+    const html = renderIndexHtml(scene);
+    expect(html).toContain("tone-aksen size-besar align-tengah is-bold is-italic");
+    expect(html).toContain("figure-kiri");
+    expect(renderStyle()).toContain(".align-tengah");
+    expect(renderStyle()).toContain(".figure-kiri");
+  });
+
+  it("blok suara dirender dan captions dibuat otomatis", () => {
+    const scene = createScene("Materi Suara", "");
+    scene.steps[0].blocks = [
+      createTextBlock("paragraf", "Dengarkan narasi."),
+      { ...createAudioBlock("assets/narasi.mp3"), label: "Narasi pembuka", caption: "Air menguap" }
+    ];
+    const html = renderIndexHtml(scene);
+    expect(html).toContain("<audio controls");
+    expect(html).toContain('src="assets/narasi.mp3"');
+
+    const captions = renderCaptions(scene);
+    expect(captions).not.toBeNull();
+    expect(captions?.startsWith("WEBVTT")).toBe(true);
+    expect(captions).toContain("00:00.000 --> 00:10.000");
+    expect(captions).toContain("Narasi pembuka — Air menguap");
+    expect(sceneAudioBlocks(scene)).toHaveLength(1);
+
+    const files = renderSceneFiles(scene);
+    expect(files.captions).toBe(captions);
+    expect(CAPTIONS_PATH).toBe("assets/captions.vtt");
+  });
+
+  it("tanpa blok suara tidak ada captions", () => {
+    expect(renderCaptions(sampleScene())).toBeNull();
+    expect(renderSceneFiles(sampleScene()).captions).toBeNull();
+  });
+
+  it("pratinjau memakai gambar asli bila data URL tersedia", () => {
+    const preview = renderPreviewDocument(sampleScene(), {
+      "assets/naik.webp": "data:image/webp;base64,AAAA"
+    });
+    expect(preview).toContain('src="data:image/webp;base64,AAAA"');
+    expect(preview).not.toContain('<div class="figure-placeholder"');
   });
 });
 

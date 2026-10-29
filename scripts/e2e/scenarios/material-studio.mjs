@@ -1,4 +1,4 @@
-import { mkdir, readFile, stat } from "node:fs/promises";
+import { copyFile, mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { generateContentKeys, packBundle } from "../../material-pack.mjs";
 
@@ -19,9 +19,34 @@ export async function setup({ artifactDir }) {
   await mkdir(exportDir, { recursive: true });
   const keysDir = path.join(artifactDir, "keys");
   const { privatePem, keys } = generateContentKeys(keysDir, KEY_ID);
+
+  // Fixture unggahan: WAV 8-bit mono 8 kHz (800 sampel) dan PNG placeholder bawaan.
+  const wavPath = path.join(artifactDir, "nada.wav");
+  const samples = 800;
+  const wav = Buffer.alloc(44 + samples, 128);
+  wav.write("RIFF", 0);
+  wav.writeUInt32LE(36 + samples, 4);
+  wav.write("WAVE", 8);
+  wav.write("fmt ", 12);
+  wav.writeUInt32LE(16, 16);
+  wav.writeUInt16LE(1, 20);
+  wav.writeUInt16LE(1, 22);
+  wav.writeUInt32LE(8000, 24);
+  wav.writeUInt32LE(8000, 28);
+  wav.writeUInt16LE(1, 32);
+  wav.writeUInt16LE(8, 34);
+  wav.write("data", 36);
+  wav.writeUInt32LE(samples, 40);
+  await writeFile(wavPath, wav);
+  const pngPath = path.join(artifactDir, "ilustrasi.png");
+  await copyFile(path.resolve(import.meta.dirname, "../../../src-tauri/material-templates/cover-placeholder.png"), pngPath);
+
   return {
     exportDir,
     privatePem,
+    keys,
+    wavPath,
+    pngPath,
     env: { IFP_CONTENT_KEYS: JSON.stringify(keys) }
   };
 }
@@ -95,8 +120,7 @@ async function readEditorValue(page) {
   return page.evaluate(`document.querySelector("[data-studio-editor]")?.value ?? null`);
 }
 
-async function selectOption(page, selector, value) {
-  const result = await page.evaluate(`
+async function selectOption(page, selector, value) {  const result = await page.evaluate(`
     (() => {
       const element = document.querySelector(${JSON.stringify(selector)});
       if (!element) return "missing";
@@ -107,6 +131,17 @@ async function selectOption(page, selector, value) {
     })()
   `);
   assert(result === "selected", `Select ${selector} tidak ditemukan (${result}).`);
+}
+
+// Mengisi <input type="file"> lewat CDP; dialog pemilih berkas sistem tidak bisa diklik.
+async function setFileInput(page, selector, filePath) {
+  const { root } = await page.send("DOM.getDocument", { depth: -1 });
+  const { nodeId } = await page.send("DOM.querySelector", {
+    nodeId: root.nodeId,
+    selector
+  });
+  assert(Boolean(nodeId), `Input berkas ${selector} tidak ditemukan.`);
+  await page.send("DOM.setFileInputFiles", { nodeId, files: [filePath] });
 }
 
 async function alertText(page) {
@@ -204,8 +239,49 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await page.waitFor(`document.querySelector("[data-scene-image]") !== null`, {
     label: "blok gambar"
   });
-  await selectOption(page, "[data-scene-image]", "assets/cover.png");
+  await page.waitFor(
+    `[...document.querySelectorAll("[data-scene-thumb] img")].some((img) => img.src.startsWith("data:image/"))`,
+    { label: "galeri aset memuat gambar asli", timeoutMs: 20_000 }
+  );
+  await setFileInput(page, "[data-scene-image-file]", context.pngPath);
+  await page.waitFor(
+    `document.body.textContent.includes("Gambar assets/ilustrasi.png ditambahkan")`,
+    { label: "gambar terunggah", timeoutMs: 20_000 }
+  );
+  await selectOption(page, "[data-scene-layout]", "kiri");
   await typeInto(page, "[data-scene-alt]", "Langit dengan awan dan hujan");
+
+  await clickHook(page, "[data-scene-add-block='suara']");
+  await page.waitFor(`document.querySelector("[data-scene-audio]") !== null`, {
+    label: "blok suara"
+  });
+  await typeInto(page, "[data-scene-audio-label]", "Narasi siklus air");
+  await setFileInput(page, "[data-scene-audio-file]", context.wavPath);
+  await page.waitFor(`document.body.textContent.includes("Audio assets/nada.wav ditambahkan")`, {
+    label: "audio terunggah",
+    timeoutMs: 20_000
+  });
+  await page.waitFor(`document.querySelector("[data-scene-audio]").value === "assets/nada.wav"`, {
+    label: "berkas audio terpilih"
+  });
+
+  // Urungkan mengembalikan perubahan struktural terakhir (langkah ketiga).
+  const stepsBefore = await page.evaluate(
+    `document.querySelectorAll("[data-scene-step]").length`
+  );
+  await clickHook(page, "[data-scene-add-step]");
+  await page.waitFor(
+    `document.querySelectorAll("[data-scene-step]").length === ${stepsBefore + 1}`,
+    { label: "langkah ketiga" }
+  );
+  await clickHook(page, "[data-scene-undo]");
+  await page.waitFor(
+    `document.querySelectorAll("[data-scene-step]").length === ${stepsBefore}`,
+    { label: "urungkan langkah" }
+  );
+  await clickHook(page, "[data-scene-step='1']");
+  log("Urungkan mengembalikan jumlah langkah setelah perubahan struktural.");
+
   await clickHook(page, "[data-scene-ack]");
   await page.waitFor(`document.querySelector("[data-scene-apply]").disabled === false`, {
     label: "tombol terapkan aktif setelah naskah lengkap"
@@ -230,15 +306,38 @@ export async function run({ page, artifactDir, setup: context, log }) {
     "Efek atau efek suara tidak masuk ke index.html."
   );
   assert(
-    sceneEntry.content.includes('src="assets/cover.png"') &&
-      sceneEntry.content.includes('alt="Langit dengan awan dan hujan"'),
-    "Blok gambar tidak lengkap di index.html."
+    sceneEntry.content.includes('src="assets/ilustrasi.png"') &&
+      sceneEntry.content.includes('alt="Langit dengan awan dan hujan"') &&
+      sceneEntry.content.includes("figure-kiri"),
+    "Blok gambar atau tata letaknya tidak masuk ke index.html."
+  );
+  assert(
+    sceneEntry.content.includes("<audio controls") &&
+      sceneEntry.content.includes('src="assets/nada.wav"'),
+    "Blok suara tidak masuk ke index.html."
   );
   assert(
     !sceneEntry.content.includes("https://") && !sceneEntry.content.includes("http://"),
     "Hasil susunan tidak boleh memuat rujukan eksternal."
   );
-  log("Tab Susun menulis dua langkah, blok gambar, efek konfeti, dan efek suara bel.");
+  const sceneManifest = sceneState.value.manifest;
+  assert(
+    sceneManifest.accessibility.hasAudio === true,
+    "hasAudio tidak dinyalakan padahal naskah memuat blok suara."
+  );
+  assert(
+    sceneManifest.captionsPath === "assets/captions.vtt",
+    `captionsPath ${sceneManifest.captionsPath} tidak sesuai kontrak §4.`
+  );
+  const captionsFile = sceneState.value.files.find((file) => file.path === "assets/captions.vtt");
+  assert(
+    captionsFile?.content?.startsWith("WEBVTT") &&
+      captionsFile.content.includes("Narasi siklus air"),
+    "captions.vtt tidak dibuat dari blok suara."
+  );
+  log(
+    "Tab Susun menulis dua langkah, gambar unggahan, audio + captions.vtt, efek konfeti, dan efek suara bel."
+  );
   await page.evaluate(
     `document.querySelector("[data-studio-editor-card]")?.scrollIntoView({ block: "start" })`
   );
@@ -482,9 +581,10 @@ export async function run({ page, artifactDir, setup: context, log }) {
   assert(installed.ok, `Bundel hasil Studio tidak dapat dipasang: ${JSON.stringify(installed.error)}`);
   assert(installed.value.materialId === MATERIAL_ID, "materialId hasil instalasi berbeda.");
   assert(installed.value.version === VERSION, "versi hasil instalasi berbeda.");
-  // Kerangka menulis 6 berkas termasuk material.json; cover png placeholder digantikan
-  // cover katalog (webp) di tengah skenario, jadi bundel berakhir dengan 5 berkas konten.
-  assert(installed.value.files === 5, `Berkas terpasang ${installed.value.files}, harus 5.`);
+  // Konten akhir: index.html, assets/app.js, assets/style.css, cover katalog (webp),
+  // transcript.txt, ilustrasi.png, nada.wav, dan captions.vtt — cover.png kerangka
+  // dihapus saat cover diganti, material.json tidak dihitung.
+  assert(installed.value.files === 8, `Berkas terpasang ${installed.value.files}, harus 8.`);
   const installedList = await invoke(page, "material_list_installed");
   assert(
     installedList.ok && installedList.value.some((item) => item.materialId === MATERIAL_ID),

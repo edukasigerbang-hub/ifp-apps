@@ -21,11 +21,28 @@ export type SceneSound = (typeof SCENE_SOUNDS)[number];
 export const TEXT_STYLES = ["paragraf", "catatan", "kutipan", "poin"] as const;
 export type TextStyle = (typeof TEXT_STYLES)[number];
 
+export const TEXT_TONES = ["bawaan", "aksen", "lembut"] as const;
+export type TextTone = (typeof TEXT_TONES)[number];
+
+export const TEXT_SIZES = ["kecil", "sedang", "besar"] as const;
+export type TextSize = (typeof TEXT_SIZES)[number];
+
+export const TEXT_ALIGNS = ["kiri", "tengah", "kanan"] as const;
+export type TextAlign = (typeof TEXT_ALIGNS)[number];
+
+export const IMAGE_LAYOUTS = ["penuh", "kiri", "kanan"] as const;
+export type ImageLayout = (typeof IMAGE_LAYOUTS)[number];
+
 export interface TextBlock {
   id: string;
   kind: "teks";
   style: TextStyle;
   text: string;
+  bold: boolean;
+  italic: boolean;
+  tone: TextTone;
+  size: TextSize;
+  align: TextAlign;
 }
 
 export interface ImageBlock {
@@ -34,9 +51,18 @@ export interface ImageBlock {
   path: string;
   alt: string;
   caption: string;
+  layout: ImageLayout;
 }
 
-export type SceneBlock = TextBlock | ImageBlock;
+export interface AudioBlock {
+  id: string;
+  kind: "suara";
+  path: string;
+  label: string;
+  caption: string;
+}
+
+export type SceneBlock = TextBlock | ImageBlock | AudioBlock;
 
 export interface SceneStep {
   id: string;
@@ -83,16 +109,69 @@ export const TEXT_STYLE_LABELS: Record<TextStyle, string> = {
   poin: "Daftar poin"
 };
 
+export const TONE_LABELS: Record<TextTone, string> = {
+  bawaan: "Teks utama",
+  aksen: "Warna aksen",
+  lembut: "Abu lembut"
+};
+
+export const SIZE_LABELS: Record<TextSize, string> = {
+  kecil: "Kecil",
+  sedang: "Sedang",
+  besar: "Besar"
+};
+
+export const ALIGN_LABELS: Record<TextAlign, string> = {
+  kiri: "Kiri",
+  tengah: "Tengah",
+  kanan: "Kanan"
+};
+
+export const LAYOUT_LABELS: Record<ImageLayout, string> = {
+  penuh: "Selebar halaman",
+  kiri: "Kiri teks",
+  kanan: "Kanan teks"
+};
+
+export const CAPTIONS_PATH = "assets/captions.vtt";
+
 export function createId(prefix: string): string {
   return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
 export function createTextBlock(style: TextStyle = "paragraf", text = ""): TextBlock {
-  return { id: createId("teks"), kind: "teks", style, text };
+  return {
+    id: createId("teks"),
+    kind: "teks",
+    style,
+    text,
+    bold: false,
+    italic: false,
+    tone: "bawaan",
+    size: "sedang",
+    align: "kiri"
+  };
 }
 
 export function createImageBlock(path = ""): ImageBlock {
-  return { id: createId("gambar"), kind: "gambar", path, alt: "", caption: "" };
+  return {
+    id: createId("gambar"),
+    kind: "gambar",
+    path,
+    alt: "",
+    caption: "",
+    layout: "penuh"
+  };
+}
+
+export function createAudioBlock(path = ""): AudioBlock {
+  return {
+    id: createId("suara"),
+    kind: "suara",
+    path,
+    label: "Narasi",
+    caption: ""
+  };
 }
 
 export function createStep(index: number): SceneStep {
@@ -138,7 +217,12 @@ function parseBlock(value: unknown): SceneBlock | null {
       id: text(record.id) || createId("teks"),
       kind: "teks",
       style: choice(TEXT_STYLES, record.style, "paragraf"),
-      text: text(record.text).slice(0, MAX_TEXT_LENGTH)
+      text: text(record.text).slice(0, MAX_TEXT_LENGTH),
+      bold: record.bold === true,
+      italic: record.italic === true,
+      tone: choice(TEXT_TONES, record.tone, "bawaan"),
+      size: choice(TEXT_SIZES, record.size, "sedang"),
+      align: choice(TEXT_ALIGNS, record.align, "kiri")
     };
   }
   if (kind === "gambar") {
@@ -147,7 +231,17 @@ function parseBlock(value: unknown): SceneBlock | null {
       kind: "gambar",
       path: text(record.path),
       alt: text(record.alt),
-      caption: text(record.caption)
+      caption: text(record.caption),
+      layout: choice(IMAGE_LAYOUTS, record.layout, "penuh")
+    };
+  }
+  if (kind === "suara") {
+    return {
+      id: text(record.id) || createId("suara"),
+      kind: "suara",
+      path: text(record.path),
+      label: text(record.label, "Narasi").slice(0, 120),
+      caption: text(record.caption).slice(0, 300)
     };
   }
   return null;
@@ -225,7 +319,7 @@ export function sceneIssues(scene: Scene, assetPaths: readonly string[]): string
         if (block.style === "poin" && splitPoints(block.text).length > 8) {
           issues.push(`${where}: daftar poin maksimal 8 baris.`);
         }
-      } else {
+      } else if (block.kind === "gambar") {
         if (!block.path) {
           issues.push(`${where}: belum ada gambar dipilih.`);
         } else if (!assetPaths.includes(block.path)) {
@@ -234,9 +328,20 @@ export function sceneIssues(scene: Scene, assetPaths: readonly string[]): string
         if (block.alt.trim().length === 0) {
           issues.push(`${where}: teks alternatif gambar wajib diisi.`);
         }
+      } else {
+        if (!block.path) {
+          issues.push(`${where}: belum ada berkas suara dipilih.`);
+        } else if (!assetPaths.includes(block.path)) {
+          issues.push(`${where}: berkas suara ${block.path} tidak ada di draft.`);
+        }
+        if (block.label.trim().length === 0) {
+          issues.push(`${where}: label suara wajib diisi.`);
+        }
       }
-      if (block.kind === "teks" && /https?:\/\//i.test(block.text)) {
-        issues.push(`${where}: teks memuat alamat web; bundel harus mandiri.`);
+      const searchable =
+        block.kind === "teks" ? block.text : `${block.caption} ${block.kind === "suara" ? block.label : ""}`;
+      if (/https?:\/\//i.test(searchable)) {
+        issues.push(`${where}: memuat alamat web; bundel harus mandiri.`);
       }
     });
   });
@@ -245,4 +350,19 @@ export function sceneIssues(scene: Scene, assetPaths: readonly string[]): string
 
 export function nextStepTitle(steps: readonly SceneStep[]): string {
   return `Langkah ${steps.length + 1}`;
+}
+
+export function sceneAudioBlocks(scene: Scene): AudioBlock[] {
+  return scene.steps
+    .flatMap((step) => step.blocks)
+    .filter((block): block is AudioBlock => block.kind === "suara" && block.path.length > 0);
+}
+
+export function sceneImages(scene: Scene): string[] {
+  const paths = scene.steps
+    .flatMap((step) => step.blocks)
+    .filter((block): block is ImageBlock => block.kind === "gambar")
+    .map((block) => block.path)
+    .filter((path) => path.length > 0);
+  return [...new Set(paths)];
 }

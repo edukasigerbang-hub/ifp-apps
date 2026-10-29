@@ -35,8 +35,14 @@ export interface StudioDraftContent {
   totalBytes: number;
 }
 
-export interface StudioDraftReport {
-  ok: boolean;
+export interface StudioDraftAsset {
+  path: string;
+  mediaType: string;
+  dataUrl: string;
+  bytes: number;
+}
+
+export interface StudioDraftReport {  ok: boolean;
   errors: string[];
   warnings: string[];
   fileCount: number;
@@ -127,6 +133,15 @@ export async function addStudioAsset(
 ): Promise<StudioDraftContent> {
   return invoke<StudioDraftContent>("material_draft_asset_add", {
     input: { ...draftKeyInput(key), path, data }
+  });
+}
+
+export async function readStudioAsset(
+  key: StudioDraftKey,
+  path: string
+): Promise<StudioDraftAsset> {
+  return invoke<StudioDraftAsset>("material_draft_asset_read", {
+    input: { ...draftKeyInput(key), path }
   });
 }
 

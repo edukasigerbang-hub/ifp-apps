@@ -45,7 +45,17 @@ export function extractSceneDocument(html: string): unknown {
 }
 
 function textBlockHtml(block: TextBlock): string {
-  const className = `block text text-${block.style}`;
+  const classes = [
+    "block",
+    "text",
+    `text-${block.style}`,
+    `tone-${block.tone}`,
+    `size-${block.size}`,
+    `align-${block.align}`,
+    block.bold ? "is-bold" : "",
+    block.italic ? "is-italic" : ""
+  ].filter(Boolean);
+  const className = classes.join(" ");
   if (block.style === "poin") {
     const items = splitPoints(block.text)
       .map((line) => `          <li>${escapeHtml(line)}</li>`)
@@ -61,25 +71,53 @@ function textBlockHtml(block: TextBlock): string {
   return `        <p class="${className}">${escapeHtml(block.text)}</p>`;
 }
 
-function imageBlockHtml(block: { path: string; alt: string; caption: string }, preview: boolean): string {
-  if (preview) {
-    return `        <figure class="block figure figure-preview"><div class="figure-placeholder">${escapeHtml(
-      block.path || "gambar belum dipilih"
-    )}</div><figcaption>${escapeHtml(block.caption || block.alt)}</figcaption></figure>`;
-  }
+function imageBlockHtml(
+  block: { path: string; alt: string; caption: string; layout: string },
+  preview: boolean,
+  assets: Record<string, string>
+): string {
+  const className = `block figure figure-${block.layout}`;
   const caption = block.caption.trim()
     ? `\n          <figcaption>${escapeHtml(block.caption)}</figcaption>`
     : "";
-  return `        <figure class="block figure">
+  if (preview) {
+    const source = assets[block.path];
+    const image = source
+      ? `<img src="${escapeHtml(source)}" alt="${escapeHtml(block.alt)}" />`
+      : `<div class="figure-placeholder">${escapeHtml(block.path || "gambar belum dipilih")}</div>`;
+    return `        <figure class="${className}">${image}${caption}\n        </figure>`;
+  }
+  return `        <figure class="${className}">
           <img src="${escapeHtml(block.path)}" alt="${escapeHtml(block.alt)}" loading="lazy" />${caption}
         </figure>`;
 }
 
-function stepHtml(step: SceneStep, index: number, preview: boolean): string {
+function audioBlockHtml(
+  block: { path: string; label: string; caption: string },
+  preview: boolean
+): string {
+  const source = preview ? "" : ` src="${escapeHtml(block.path)}"`;
+  const caption = block.caption.trim()
+    ? `\n          <p class="audio-caption">${escapeHtml(block.caption)}</p>`
+    : "";
+  return `        <div class="block audio">
+          <p class="audio-label">Suara: ${escapeHtml(block.label)}</p>
+          <audio controls preload="metadata"${source}></audio>${caption}
+        </div>`;
+}
+
+function stepHtml(
+  step: SceneStep,
+  index: number,
+  preview: boolean,
+  assets: Record<string, string>
+): string {
   const blocks = step.blocks
-    .map((block) =>
-      block.kind === "teks" ? textBlockHtml(block) : imageBlockHtml(block, preview)
-    )
+    .map((block) => {
+      if (block.kind === "teks") return textBlockHtml(block);
+      if (block.kind === "gambar") return imageBlockHtml(block, preview, assets);
+      return audioBlockHtml(block, preview);
+    })
     .join("\n");
   const active = index === 0 ? ' data-active="true"' : "";
   return `      <article class="step" data-step="${index}" data-effect="${step.effect}" data-sound="${step.sound}"${active} aria-label="${escapeHtml(
@@ -142,14 +180,45 @@ ${
 
 /** index.html final yang ditulis ke draft; memuat naskah untuk disunting lagi. */
 export function renderIndexHtml(scene: Scene): string {
-  const steps = scene.steps.map((step, index) => stepHtml(step, index, false)).join("\n");
+  const steps = scene.steps.map((step, index) => stepHtml(step, index, false, {})).join("\n");
   return documentShell(scene, steps, false);
 }
 
-/** Dokumen pratinjau di dalam iframe: CSS/JS sebaris, gambar berupa placeholder. */
-export function renderPreviewDocument(scene: Scene): string {
-  const steps = scene.steps.map((step, index) => stepHtml(step, index, true)).join("\n");
+/**
+ * Dokumen pratinjau di dalam iframe. `assets` memetakan path gambar ke data URL
+ * supaya pratinjau menampilkan gambar asli dari draft.
+ */
+export function renderPreviewDocument(scene: Scene, assets: Record<string, string> = {}): string {
+  const steps = scene.steps.map((step, index) => stepHtml(step, index, true, assets)).join("\n");
   return documentShell(scene, steps, true);
+}
+
+/** Teks alternatif berkas suara (kontrak §4 mewajibkan captionsPath bila hasAudio). */
+export function renderCaptions(scene: Scene): string | null {
+  const clips = scene.steps
+    .flatMap((step) => step.blocks)
+    .filter((block) => block.kind === "suara" && block.path.length > 0);
+  if (clips.length === 0) {
+    return null;
+  }
+  const stamp = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const rest = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${rest.toFixed(3).padStart(6, "0")}`;
+  };
+  const lines = [
+    "WEBVTT",
+    "",
+    "NOTE Teks alternatif blok suara, dibuat dari naskah Susun.",
+    "NOTE Waktu perkiraan 10 detik per klip; sesuaikan bila durasi sebenarnya berbeda.",
+    ""
+  ];
+  clips.forEach((clip, index) => {
+    const label = clip.kind === "suara" ? clip.label.trim() || "Suara" : "Suara";
+    const caption = clip.kind === "suara" && clip.caption.trim() ? ` — ${clip.caption.trim()}` : "";
+    lines.push(`${stamp(index * 10)} --> ${stamp(index * 10 + 10)}`, `${label}${caption}`, "");
+  });
+  return lines.join("\n");
 }
 
 const THEME_CSS = `.theme-cerah{--bg:#fffdf8;--ink:#12313a;--accent:#0f766e;--soft:#e8f4f0;--line:#cfe3dd}
@@ -176,6 +245,23 @@ h1{margin:0 0 10px;font-size:clamp(24px,4vw,36px);line-height:1.2}
 .text-kutipan{margin:0 0 14px;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:18px}
 .text-poin{margin:0 0 14px;padding-left:22px}
 .text-poin li{margin:4px 0}
+.tone-aksen{color:var(--accent)}
+.tone-lembut{color:#55707a}
+.size-kecil{font-size:15px}
+.size-besar{font-size:20px}
+.align-tengah{text-align:center}
+.align-kanan{text-align:right}
+.is-bold{font-weight:700}
+.is-italic{font-style:italic}
+.figure-kiri,.figure-kanan{margin:0 0 16px}
+@media (min-width:600px){
+.figure-kiri{float:left;width:46%;margin:0 18px 12px 0}
+.figure-kanan{float:right;width:46%;margin:0 0 12px 18px}
+}
+.audio{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--soft)}
+.audio-label{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--accent)}
+.audio audio{width:100%}
+.audio-caption{margin:8px 0 0;font-size:13px;color:#55707a}
 .figure{margin:0 0 16px}
 .figure img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
 .figure figcaption{margin-top:6px;font-size:13px;color:#55707a}
@@ -471,12 +557,14 @@ export function renderSceneFiles(scene: Scene): {
   entry: string;
   style: string;
   runtime: string;
+  captions: string | null;
   summary: string;
 } {
   return {
     entry: renderIndexHtml(scene),
     style: renderStyle(),
     runtime: renderRuntime(),
+    captions: renderCaptions(scene),
     summary: `${scene.steps.length} langkah · tema ${scene.theme} · ${scene.steps
       .map((step) => EFFECT_LABELS[step.effect])
       .filter((label) => label !== "Tanpa efek")
