@@ -13,7 +13,10 @@ use tauri::State;
 pub const SAMPLE_MATERIAL_ID: &str = "contoh-siklus-air";
 pub const SAMPLE_VERSION: &str = "1.0.0";
 
-const SEED_VERSION: u32 = 4;
+// Naik ke 5 karena `sample-material/assets/style.css` mendapat media query pelebar
+// kolom (ADR-0037): tanpa kenaikan versi, bundel contoh yang sudah tersimpan di
+// perangkat tidak pernah ditulis ulang dan tetap berkolom 760 px.
+const SEED_VERSION: u32 = 5;
 const MAX_FILE_BYTES: u64 = 50 * 1024 * 1024;
 /// Thumbnail cover dikirim ke UI sebagai data URL; batasnya jauh di bawah aset materi.
 pub(crate) const MAX_COVER_BYTES: u64 = 2 * 1024 * 1024;
@@ -553,5 +556,40 @@ mod tests {
             !directive("script-src").contains("https:"),
             "skrip pihak ketiga tidak boleh diizinkan: {csp}"
         );
+    }
+
+    /// Kolom konten diatur oleh CSS di dalam bundel, bukan oleh shell (ADR-0037),
+    /// jadi setiap sumber bundel yang kita terbitkan sendiri wajib membawa
+    /// breakpoint pelebar. Kalau salah satu hilang, materi tampil 760–820 px
+    /// di dalam bingkai lansekap yang sudah lebar.
+    #[test]
+    fn bundled_styles_carry_the_wide_column_breakpoints() {
+        const SOURCES: &[(&str, &str)] = &[
+            ("material-templates/style.css", "max-width"),
+            ("sample-material/assets/style.css", "width"),
+            ("sample-material-mengenal-huruf/assets/style.css", "max-width"),
+            ("sample-material-perkalian/assets/style.css", "width"),
+            ("sample-material-fakta-opini/assets/style.css", "width"),
+        ];
+        let manifest_dir = Path::new(env!("CARGO_MANIFEST_DIR"));
+
+        for (relative, property) in SOURCES {
+            let css = fs::read_to_string(manifest_dir.join(relative))
+                .unwrap_or_else(|_| panic!("gagal membaca {relative}"));
+            // Sekitar kurung kurawal juga dihapus supaya berkas yang ditulis satu
+            // baris (hasil Susun) dan yang ditulis bertingkat (kerangka) setara.
+            let compact: String = css.chars().filter(|c| !c.is_whitespace()).collect();
+
+            for (breakpoint, cap) in [("1000px", "1180px"), ("1400px", "1400px")] {
+                assert!(
+                    compact.contains(&format!("@media(min-width:{breakpoint})")),
+                    "{relative} kehilangan breakpoint {breakpoint}"
+                );
+                assert!(
+                    compact.contains(&format!(".material{{{property}:min({cap},")),
+                    "{relative}: .material di {breakpoint} tidak melebar ke min({cap}, …)"
+                );
+            }
+        }
     }
 }

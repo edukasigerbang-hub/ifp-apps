@@ -227,3 +227,15 @@ button[data-state="wrong"] {
     transition: none !important;
   }
 }
+
+@media (min-width: 1000px) {
+  .material {
+    width: min(1180px, 92%);
+  }
+}
+
+@media (min-width: 1400px) {
+  .material {
+    width: min(1400px, 94%);
+  }
+}

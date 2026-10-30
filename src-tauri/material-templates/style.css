@@ -160,6 +160,18 @@ button:focus-visible {
   font-size: 15px;
 }
 
+@media (min-width: 1000px) {
+  .material {
+    max-width: min(1180px, 92%);
+  }
+}
+
+@media (min-width: 1400px) {
+  .material {
+    max-width: min(1400px, 94%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .steps li {
     transition: none;

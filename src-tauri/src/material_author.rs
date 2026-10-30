@@ -1357,6 +1357,30 @@ mod tests {
         let _ = fs::remove_dir_all(&root);
     }
 
+    /// Lebar kolom konten dikuasai CSS di dalam bundel, bukan oleh shell
+    /// (ADR-0037). Kerangka yang dipakai Studio untuk draft baru harus membawa
+    /// breakpoint pelebar; kalau tidak, draft tampil sempit walau penampil
+    /// sudah dipilih mode Lansekap atau Layar penuh.
+    #[test]
+    fn new_draft_kerangka_carries_the_wide_column_breakpoints() {
+        let mut connection = test_connection();
+        let root = temp_root("wide-column");
+        create_draft(&mut connection, &root, &input("kolom-lebar", "1.0.0", "eksplorasi"))
+            .expect("draft created");
+
+        let css = fs::read_to_string(
+            draft_dir(&root, "kolom-lebar", "1.0.0")
+                .join("assets")
+                .join("style.css"),
+        )
+        .expect("style.css draft");
+
+        for breakpoint in ["@media (min-width: 1000px)", "@media (min-width: 1400px)"] {
+            assert!(css.contains(breakpoint), "kerangka kehilangan {breakpoint}");
+        }
+        let _ = fs::remove_dir_all(&root);
+    }
+
     #[test]
     fn refuses_to_shadow_installed_material() {
         let mut connection = test_connection();
