@@ -1,7 +1,7 @@
 # ADR-0035 — Materi Daring HTML5 di Luar Paket Konten
 
 **Status:** Accepted (defaults via sesi 2026-10-28) — penampil + pemasang ZIP bertanda tangan sudah ada; katalog/unduhan server belum · **Tanggal:** 2026-10-28
-**Terkait:** [Kontrak bundel materi v1](../content/MATERIAL_BUNDLE_CONTRACT.md) · [ADR-0003](ADR-0003-content-package-contract.md) · [CONTENT_SCHEMA v1](../content/SCHEMA.md) · [IMPLEMENTATION_CONTRACT.md §3](../../IMPLEMENTATION_CONTRACT.md)
+**Terkait:** [Kontrak bundel materi v1](../content/MATERIAL_BUNDLE_CONTRACT.md) · [ADR-0003](ADR-0003-content-package-contract.md) · [CONTENT_SCHEMA v1](../content/SCHEMA.md) · [IMPLEMENTATION_CONTRACT.md §3](../../IMPLEMENTATION_CONTRACT.md) · [ADR-0036](ADR-0036-declared-online-media.md) (**mengubah butir 3, 5, dan batas aset §3 kontrak** — media video/sematan daring yang dinyatakan naskah diizinkan; sandbox pemutar diperluas)
 
 ## Konteks
 

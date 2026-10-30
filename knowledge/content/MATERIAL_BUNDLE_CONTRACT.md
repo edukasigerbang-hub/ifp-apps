@@ -35,9 +35,11 @@ captions.vtt           # opsional, wajib bila accessibility.hasAudio = true
 Aturan yang ditegakkan saat publish **dan** saat unduh:
 
 - Path relatif, case-sensitive, tanpa `..`, tanpa path absolut, tanpa symlink. Nama duplikat tanpa peduli huruf besar/kecil ditolak (bentrok di Windows).
-- Tipe berkas diizinkan: `html`, `js`, `mjs`, `css`, `json`, `webp`, `png`, `jpg`, `jpeg`, `gif`, `svg`, `mp3`, `m4a`, `ogg`, `wav`, `woff2`, `ttf`, `vtt`, `txt`. Tipe lain ditolak.
-- Ukuran total ≤ **50 MB**.
-- **Self-contained**: tidak ada `http://`, `https://`, atau `//` absolut di HTML/JS/CSS untuk sumber daya; tidak ada `fetch`/XHR/WebSocket ke origin luar; tidak ada `window.open`, navigasi top-level, atau form ke luar. Pemeriksaan bersifat pola + tinjauan manusia; ini bukan sandbox.
+- Tipe berkas diizinkan: `html`, `js`, `mjs`, `css`, `json`, `webp`, `png`, `jpg`, `jpeg`, `gif`, `svg`, `mp3`, `m4a`, `ogg`, `wav`, `mp4`, `webm`, `woff2`, `ttf`, `vtt`, `txt`. Tipe lain ditolak.
+- Ukuran total ≤ **50 MB**. Satu berkas gambar/suara ≤ **8 MB**; satu berkas video (`mp4`/`webm`) ≤ **25 MB**.
+- **Self-contained, kecuali media daring yang dinyatakan naskah** ([ADR-0036](../decisions/ADR-0036-declared-online-media.md)): tidak ada `http://`, `https://`, atau `//` absolut di HTML/JS/CSS untuk sumber daya; tidak ada `fetch`/XHR/WebSocket ke origin luar; tidak ada `window.open`, navigasi top-level, atau form ke luar. **Satu-satunya pengecualian** adalah alamat https yang dideklarasikan blok naskah `ifp-scene` di `index.html` — blok `video` dengan `source` `youtube`/`daring` dan blok `semat`. Validator memotong segmen naskah, memuat JSON-nya, memvalidasi bentuk alamat (https wajib; host YouTube untuk `youtube`; judul wajib), lalu menetralkan alamat itu sebelum pemindaian pola. Alamat di luar daftar tersebut, termasuk di dalam blok teks/gambar/suara, berkas JS/CSS, atau HTML lain, tetap ditolak.
+- Karena pengecualian ini, materi **tidak dijamin** dapat dipakai penuh tanpa koneksi: blok video YouTube/daring dan sematan menampilkan pemberitahuan saat jaringan tidak tersedia. Video dengan `source: "lokal"` (berkas ikut bundel) tetap berputar offline.
+- Pemeriksaan bersifat pola + tinjauan manusia; ini bukan sandbox. Host daring yang dinyatakan penulis masuk bahan review manusia.
 - Font dan gambar ikut bundel. Tidak ada CDN.
 
 ## 4. `material.json`
