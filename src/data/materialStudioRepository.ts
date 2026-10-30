@@ -16,6 +16,7 @@ export interface StudioDraft {
   createdAt: string;
   updatedAt: string;
   cover: string | null;
+  reviewStatus: string;
 }
 
 export interface StudioDraftFile {
@@ -165,6 +166,21 @@ export async function setStudioManifest(
 
 export async function checkStudioDraft(key: StudioDraftKey): Promise<StudioDraftReport> {
   return invoke<StudioDraftReport>("material_draft_check", { input: draftKeyInput(key) });
+}
+
+/** `manifest.material.json` adalah sumber kanonik status review. */
+export function draftReviewStatus(content: StudioDraftContent): string {
+  const value = content.manifest.reviewStatus;
+  return typeof value === "string" && value ? value : "draft";
+}
+
+/**
+ * "Tandai siap pakai": pemeriksaan kontrak berjalan lebih dulu di sisi Rust dan
+ * hanya bila lulus, status review draft naik `draft` → `reviewed`. Materi tetap
+ * lokal — terbit daring masih lewat Ekspor lalu tanda tangan di luar aplikasi.
+ */
+export async function markStudioDraftReady(key: StudioDraftKey): Promise<StudioDraftContent> {
+  return invoke<StudioDraftContent>("material_draft_mark_ready", { input: draftKeyInput(key) });
 }
 
 export async function previewStudioDraft(key: StudioDraftKey): Promise<MaterialView> {

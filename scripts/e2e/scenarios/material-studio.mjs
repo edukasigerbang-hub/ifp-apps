@@ -368,15 +368,23 @@ export async function run({ page, artifactDir, setup: context, log }) {
         const steps = box("[data-scene-steps]");
         const body = box("[data-scene-step-body]");
         const props = box("[data-scene-props]");
+        const addBar = box("[data-scene-add-block-bar]");
+        const stepTitle = box("[data-scene-step-title]");
         if (toolbar.bottom > steps.top + 1) return "toolbar tidak di atas";
         if (steps.right > body.left + 1) return "langkah tidak di kiri penyunting";
-        if (body.right > props.left + 1) return "properti tidak di kanan penyunting";
+        if (body.right > props.left + 1) return "parameter tidak di kanan penyunting";
+        if (addBar.left < props.left - 1 || addBar.right > props.right + 1) {
+          return "tambah blok di luar panel parameter";
+        }
+        if (addBar.bottom > stepTitle.top + 1) return "tambah blok tidak di atas judul langkah";
         return "ok";
       })()
     `);
     assert(layout === "ok", `Tata letak Susun tidak sesuai: ${layout}`);
   }
-  log("Susun menaruh toolbar di atas, langkah di kiri, panel bertab di tengah, properti di kanan.");
+  log(
+    "Susun menaruh toolbar di atas, langkah di kiri, panel bertab di tengah, dan parameter — lengkap dengan tambah blok — di kanan."
+  );
 
   // Sidebar langkah: memilih langkah menukar panel tengah, dan ringkasan blok
   // tiap langkah dapat dibuka/tutup sendiri.
@@ -819,6 +827,61 @@ export async function run({ page, artifactDir, setup: context, log }) {
     label: "peringatan blok video/sematan daring"
   });
   log("Pemeriksaan mandiri lolos dan tetap menagih review manusia.");
+
+  // "Tandai siap pakai": satu klik menaikkan status review draft, tetapi hanya
+  // setelah pemeriksaan kontrak di sisi Rust lulus.
+  const beforeReady = await page.evaluate(`
+    (() => {
+      const badge = document.querySelector("[data-studio-review-badge]");
+      return {
+        button: document.querySelector("[data-studio-mark-ready]")?.textContent?.trim() ?? null,
+        badge: badge?.getAttribute("data-studio-review-badge") ?? null
+      };
+    })()
+  `);
+  assert(
+    beforeReady.button === "Tandai siap pakai",
+    `Tombol siap pakai tidak siap diklik (${JSON.stringify(beforeReady)}).`
+  );
+  assert(beforeReady.badge === "draft", `Lencana awal harus draft (${beforeReady.badge}).`);
+  await clickHook(page, "[data-studio-mark-ready]");
+  await page.waitFor(`document.body.textContent.includes("ditandai siap pakai")`, {
+    label: "pesan siap pakai muncul"
+  });
+  await page.waitFor(
+    `document.querySelector("[data-studio-review-badge]")?.getAttribute("data-studio-review-badge") === "reviewed"`,
+    { label: "lencana berubah menjadi siap pakai" }
+  );
+  const readyDraft = await invoke(page, "material_draft_read", {
+    input: { materialId: MATERIAL_ID, version: VERSION }
+  });
+  assert(readyDraft.ok, "Draft pasca-tandai siap pakai tidak terbaca.");
+  assert(
+    readyDraft.value.manifest.reviewStatus === "reviewed",
+    `Manifest masih berstatus ${readyDraft.value.manifest.reviewStatus}.`
+  );
+  const buttonGone = await page.evaluate(
+    `document.querySelector("[data-studio-mark-ready]") === null`
+  );
+  assert(buttonGone, "Tombol siap pakai masih tampil setelah status naik.");
+  const readyList = await invoke(page, "material_draft_list");
+  const listed = readyList.value.find((item) => item.materialId === MATERIAL_ID);
+  assert(
+    listed?.reviewStatus === "reviewed",
+    `Daftar draft masih menandai ${listed?.reviewStatus ?? "tidak ada"}.`
+  );
+  await clickHook(page, "[data-studio-back]");
+  await page.waitFor(`document.querySelector("[data-studio-review-badge='reviewed']") !== null`, {
+    label: "lencana siap pakai tampil di daftar draft"
+  });
+  await page.screenshot(path.join(artifactDir, "studio-siap-pakai.png"));
+  await clickHook(page, `[data-studio-open="${MATERIAL_ID}"]`);
+  await page.waitFor(`document.querySelector("[data-studio-editor-card]") !== null`, {
+    label: "editor dibuka lagi dari daftar"
+  });
+  log(
+    "Tandai siap pakai menaikkan status review draft menjadi reviewed — lencana ikut berubah di editor dan daftar draft — tanpa menyentuh ekspor."
+  );
 
   await clickHook(page, "[data-studio-preview]");
   await page.waitFor(`document.querySelector("[data-material-viewer]") !== null`, {

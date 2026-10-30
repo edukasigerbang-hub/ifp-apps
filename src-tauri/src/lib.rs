@@ -131,6 +131,7 @@ pub fn run() {
       material_author::material_draft_asset_read,
       material_author::material_draft_file_delete,
       material_author::material_draft_manifest_set,
+      material_author::material_draft_mark_ready,
       material_author::material_draft_check,
       material_author::material_draft_open,
       material_author::material_draft_export,

@@ -72,6 +72,7 @@ pub struct DraftInfo {
     pub created_at: String,
     pub updated_at: String,
     pub cover: Option<String>,
+    pub review_status: String,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -303,8 +304,10 @@ fn draft_row_to_info(root: &Path, row: &rusqlite::Row<'_>) -> rusqlite::Result<D
     let template_id: String = row.get(3)?;
     let created_at: String = row.get(4)?;
     let updated_at: String = row.get(5)?;
-    let cover = material::cover_data_url(root, &draft_dir(root, &material_id, &version));
+    let directory = draft_dir(root, &material_id, &version);
+    let cover = material::cover_data_url(root, &directory);
     Ok(DraftInfo {
+        review_status: manifest_review_status(&directory),
         material_id,
         version,
         title,
@@ -313,6 +316,21 @@ fn draft_row_to_info(root: &Path, row: &rusqlite::Row<'_>) -> rusqlite::Result<D
         updated_at,
         cover,
     })
+}
+
+/// Status review hidup di `material.json`, bukan di tabel `material_draft` yang
+/// hanya menjadi indeks folder. Manifest yang tidak terbaca dianggap masih draft.
+fn manifest_review_status(directory: &Path) -> String {
+    fs::read(directory.join(MANIFEST_FILE))
+        .ok()
+        .and_then(|bytes| serde_json::from_slice::<Value>(&bytes).ok())
+        .and_then(|manifest| {
+            manifest
+                .get("reviewStatus")
+                .and_then(Value::as_str)
+                .map(str::to_owned)
+        })
+        .unwrap_or_else(|| "draft".to_string())
 }
 
 const DRAFT_SELECT: &str = "SELECT material_id, version, title, template_id, created_at, updated_at \
@@ -813,6 +831,48 @@ pub fn set_draft_manifest(
     build_draft_content(info, &directory)
 }
 
+/// "Tandai siap pakai" pada kartu draft di Studio: pemeriksaan kontrak berjalan
+/// lebih dulu dan hanya bila lulus, status review naik dari `draft` ke
+/// `reviewed` atas keputusan penyusun. Ini bukan tanda tangan bundel dan bukan
+/// publikasi katalog — materi tetap lokal.
+pub fn mark_draft_ready(
+    connection: &mut Connection,
+    root: &Path,
+    material_id: &str,
+    version: &str,
+) -> Result<DraftContent, AppError> {
+    let report = check_draft(connection, root, material_id, version)?;
+    if !report.ok {
+        return Err(invalid(&format!(
+            "Materi belum siap pakai: {}",
+            if report.errors.is_empty() {
+                "Pemeriksaan kontrak gagal.".to_string()
+            } else {
+                report.errors.join(" · ")
+            }
+        )));
+    }
+
+    let directory = draft_dir(root, material_id, version);
+    let status = manifest_review_status(&directory);
+    if status != "draft" {
+        let info = ensure_draft(connection, root, material_id, version)?;
+        return build_draft_content(info, &directory);
+    }
+
+    let mut manifest = read_manifest_value(&directory)?;
+    manifest["reviewStatus"] = json!("reviewed");
+    set_draft_manifest(
+        connection,
+        root,
+        &SetDraftManifestInput {
+            material_id: material_id.to_string(),
+            version: version.to_string(),
+            manifest,
+        },
+    )
+}
+
 fn directory_total_bytes(directory: &Path) -> Result<u64, AppError> {
     let mut names = Vec::new();
     list_paths(directory, "", &mut names)?;
@@ -1136,6 +1196,21 @@ pub fn material_draft_manifest_set(
 }
 
 #[tauri::command]
+pub fn material_draft_mark_ready(
+    db: State<'_, DbState>,
+    material: State<'_, MaterialState>,
+    input: DraftKey,
+) -> Result<DraftContent, AppError> {
+    let mut connection = db.0.lock().map_err(|_| AppError::state_unavailable())?;
+    mark_draft_ready(
+        &mut connection,
+        &material.root,
+        &input.material_id,
+        &input.version,
+    )
+}
+
+#[tauri::command]
 pub fn material_draft_check(
     db: State<'_, DbState>,
     material: State<'_, MaterialState>,
@@ -1395,6 +1470,52 @@ mod tests {
         .expect_err("draft tidak boleh menimpa materi terpasang");
         assert_eq!(error.code, "VALIDATION_FAILED");
         assert!(!draft_dir(&root, "contoh-air", "1.0.0").exists());
+        let _ = fs::remove_dir_all(&root);
+    }
+
+    /// Tombol "Tandai siap pakai" hanya boleh menaikkan status setelah
+    /// pemeriksaan kontrak lulus, dan tidak boleh menurunkannya lagi.
+    #[test]
+    fn mark_ready_requires_a_passing_check_and_is_idempotent() {
+        let mut connection = test_connection();
+        let root = temp_root("mark-ready");
+        let content = create_draft(
+            &mut connection,
+            &root,
+            &input("siap-pakai", "1.0.0", "eksplorasi"),
+        )
+        .expect("draft created");
+        assert_eq!(content.draft.review_status, "draft");
+
+        let directory = draft_dir(&root, "siap-pakai", "1.0.0");
+        let cover = directory.join("assets").join("cover.png");
+        let original_cover = fs::read(&cover).expect("baca cover");
+        fs::remove_file(&cover).expect("hapus cover");
+        let refusal = mark_draft_ready(&mut connection, &root, "siap-pakai", "1.0.0")
+            .expect_err("draft rusak harus ditolak");
+        assert!(
+            refusal.message.contains("belum siap pakai"),
+            "pesan penolakan: {}",
+            refusal.message
+        );
+        assert_eq!(
+            list_drafts(&connection, &root).expect("list")[0].review_status,
+            "draft"
+        );
+
+        fs::write(&cover, &original_cover).expect("pulihkan cover");
+        let ready = mark_draft_ready(&mut connection, &root, "siap-pakai", "1.0.0")
+            .expect("tandai siap pakai");
+        assert_eq!(ready.draft.review_status, "reviewed");
+        assert_eq!(ready.manifest["reviewStatus"], json!("reviewed"));
+        assert_eq!(
+            list_drafts(&connection, &root).expect("list")[0].review_status,
+            "reviewed"
+        );
+
+        let again = mark_draft_ready(&mut connection, &root, "siap-pakai", "1.0.0")
+            .expect("ditekan ulang tetap lolos");
+        assert_eq!(again.draft.review_status, "reviewed");
         let _ = fs::remove_dir_all(&root);
     }
 

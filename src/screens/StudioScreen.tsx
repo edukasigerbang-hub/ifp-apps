@@ -12,8 +12,10 @@ import { canPersistLocally } from "../data/learningRepository";
 import type { MaterialView } from "../data/materialRepository";
 import {
   createStudioDraft,
+  draftReviewStatus,
   listStudioDrafts,
   listStudioTemplates,
+  markStudioDraftReady,
   messageOf,
   previewStudioDraft,
   readStudioDraft,
@@ -56,6 +58,26 @@ const emptyForm = {
 function scrollToTop() {
   window.scrollTo({ top: 0 });
   document.getElementById("main-content")?.scrollTo({ top: 0 });
+}
+
+const READY_LABELS: Record<string, string> = {
+  reviewed: "Siap pakai",
+  approved: "Disetujui"
+};
+
+/** Lencana status review draft; sumber kanoniknya `material.json`. */
+function ReviewBadge({ status }: { status: string }) {
+  const ready = status !== "draft";
+  return (
+    <span
+      data-studio-review-badge={status}
+      className={`shrink-0 rounded-full border px-2 py-0.5 text-xs font-semibold ${
+        ready ? "border-teal/30 bg-teal/10 text-teal-strong" : "border-ink/15 bg-surface text-muted"
+      }`}
+    >
+      {ready ? (READY_LABELS[status] ?? "Siap pakai") : "Draft"}
+    </span>
+  );
 }
 
 export function StudioScreen() {
@@ -250,6 +272,31 @@ export function StudioScreen() {
     }
   }
 
+  async function handleMarkReady() {
+    if (!content) return;
+    setError(null);
+    setMessage(null);
+    setBusy("Memeriksa kesiapan materi…");
+    try {
+      const next = await markStudioDraftReady({
+        materialId: content.draft.materialId,
+        version: content.draft.version
+      });
+      setContent(next);
+      await refreshDrafts();
+      const status = draftReviewStatus(next);
+      setMessage(
+        status === "reviewed"
+          ? `Materi "${next.draft.title}" ditandai siap pakai (status review: reviewed). Menyusul: Ekspor, tanda tangan penerbit di luar aplikasi, lalu pasang atau terbitkan di katalog.`
+          : `Status review materi ini tetap "${status}" — hanya draft yang naik menjadi siap pakai.`
+      );
+    } catch (caught) {
+      setError(messageOf(caught, "Materi belum siap dipakai."));
+    } finally {
+      setBusy(null);
+    }
+  }
+
   async function handleDeleted() {
     const id = content ? studioDraftId(content.draft) : "";
     setContent(null);
@@ -290,22 +337,38 @@ export function StudioScreen() {
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
                   Studio Materi
                 </p>
-                <h1 className="truncate text-xl font-semibold">{content.draft.title}</h1>
+                <div className="flex min-w-0 flex-wrap items-center gap-2">
+                  <h1 className="truncate text-xl font-semibold">{content.draft.title}</h1>
+                  <ReviewBadge status={draftReviewStatus(content)} />
+                </div>
                 <p className="mt-1 truncate text-xs text-muted">
                   {studioDraftId(content.draft)} · {content.files.length} berkas ·{" "}
                   {Math.round(content.totalBytes / 1024)} KB
                 </p>
               </div>
             </div>
-            <button
-              type="button"
-              data-studio-preview
-              onClick={() => void handlePreview()}
-              disabled={busy !== null || codeDirty}
-              className={primaryButtonClass}
-            >
-              {busy === "Membuka pratinjau…" ? "Membuka…" : "Pratinjau materi"}
-            </button>
+            <div className="flex flex-wrap items-center gap-2">
+              {draftReviewStatus(content) === "draft" && (
+                <button
+                  type="button"
+                  data-studio-mark-ready
+                  onClick={() => void handleMarkReady()}
+                  disabled={busy !== null || codeDirty}
+                  className={secondaryButtonClass}
+                >
+                  {busy === "Memeriksa kesiapan materi…" ? "Memeriksa…" : "Tandai siap pakai"}
+                </button>
+              )}
+              <button
+                type="button"
+                data-studio-preview
+                onClick={() => void handlePreview()}
+                disabled={busy !== null || codeDirty}
+                className={primaryButtonClass}
+              >
+                {busy === "Membuka pratinjau…" ? "Membuka…" : "Pratinjau materi"}
+              </button>
+            </div>
           </div>
 
           <div
@@ -456,7 +519,10 @@ export function StudioScreen() {
                             </div>
                           )}
                           <div className="min-w-0">
-                            <p className="truncate text-sm font-medium">{draft.title}</p>
+                            <div className="flex min-w-0 flex-wrap items-center gap-2">
+                              <p className="truncate text-sm font-medium">{draft.title}</p>
+                              <ReviewBadge status={draft.reviewStatus} />
+                            </div>
                             <p className="text-xs text-muted">
                               {studioDraftId(draft)} · kerangka {draft.templateId} ·{" "}
                               {new Date(draft.updatedAt).toLocaleString("id-ID", {
@@ -484,7 +550,11 @@ export function StudioScreen() {
               <p className="mt-4 text-xs text-muted">
                 Draft disimpan di folder materi perangkat sehingga pratinjau memakai penampil yang
                 sama dengan materi terpasang. Draft tidak muncul sebagai materi terpasang dan tidak
-                dapat ditimpa oleh impor bundel dengan id serta versi yang sama.
+                dapat ditimpa oleh impor bundel dengan id serta versi yang sama. Lencana{" "}
+                <span className="font-medium text-ink">Siap pakai</span> muncul setelah{" "}
+                <span className="font-medium text-ink">Tandai siap pakai</span> di kepala editor
+                lulus memeriksa kontrak materi; menerbitkan materi daring tetap lewat Ekspor lalu
+                tanda tangan penerbit di luar aplikasi.
               </p>
             </>
           )}

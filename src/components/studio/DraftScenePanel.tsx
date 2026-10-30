@@ -76,6 +76,13 @@ const IMAGE_EXTENSIONS = new Set(["webp", "png", "jpg", "jpeg"]);
 const AUDIO_EXTENSIONS = new Set(["mp3", "m4a", "ogg", "wav"]);
 const VIDEO_EXTENSIONS = new Set(["mp4", "webm"]);
 const MAX_THUMBS = 24;
+const ADD_BLOCK_KINDS = [
+  { kind: "teks", label: "+ Teks" },
+  { kind: "gambar", label: "+ Gambar" },
+  { kind: "suara", label: "+ Suara" },
+  { kind: "video", label: "+ Video" },
+  { kind: "semat", label: "+ Semat" }
+] as const;
 
 function extensionOf(name: string): string {
   return name.slice(name.lastIndexOf(".") + 1).toLowerCase();
@@ -1491,54 +1498,6 @@ export function DraftScenePanel({
                   </li>
                 ))}
               </ul>
-
-              <div className="mt-3 flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  data-scene-add-block="teks"
-                  onClick={() => addBlock("teks")}
-                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
-                  className={`${secondaryButtonClass} text-sm`}
-                >
-                  + Teks
-                </button>
-                <button
-                  type="button"
-                  data-scene-add-block="gambar"
-                  onClick={() => addBlock("gambar")}
-                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
-                  className={`${secondaryButtonClass} text-sm`}
-                >
-                  + Gambar
-                </button>
-                <button
-                  type="button"
-                  data-scene-add-block="suara"
-                  onClick={() => addBlock("suara")}
-                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
-                  className={`${secondaryButtonClass} text-sm`}
-                >
-                  + Suara
-                </button>
-                <button
-                  type="button"
-                  data-scene-add-block="video"
-                  onClick={() => addBlock("video")}
-                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
-                  className={`${secondaryButtonClass} text-sm`}
-                >
-                  + Video
-                </button>
-                <button
-                  type="button"
-                  data-scene-add-block="semat"
-                  onClick={() => addBlock("semat")}
-                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
-                  className={`${secondaryButtonClass} text-sm`}
-                >
-                  + Semat
-                </button>
-              </div>
                   </div>
 
                   <div
@@ -1595,192 +1554,225 @@ export function DraftScenePanel({
 
             <aside
               data-scene-props
-              className="rounded-control border border-ink/10 bg-paper p-3 lg:col-span-2 xl:col-span-1 xl:sticky xl:top-4 xl:self-start"
+              className="rounded-control border border-ink/10 bg-paper p-3 lg:col-span-2 xl:col-span-1 xl:sticky xl:top-4 xl:max-h-[calc(100vh-8rem)] xl:self-start xl:overflow-y-auto"
             >
-              <h3 className="text-sm font-semibold">Properti</h3>
-              {step ? (
-                <>
-                  <p className="mt-1 text-xs text-muted">
-                    Langkah {activeStep + 1} dari {scene.steps.length}
-                  </p>
-                  <div className="mt-3 space-y-2">
-                    <label className="block text-sm">
-                      Judul langkah
-                      <input
-                        type="text"
-                        maxLength={120}
-                        data-scene-step-title
-                        value={step.title}
-                        onFocus={beginEdit}
-                        onChange={(event) =>
-                          setHistory((state) =>
-                            state.present
-                              ? {
-                                  ...state,
-                                  present: {
-                                    ...state.present,
-                                    steps: state.present.steps.map((item, position) =>
-                                      position === activeStep
-                                        ? { ...item, title: event.target.value }
-                                        : item
-                                    )
-                                  }
-                                }
-                              : state
-                          )
-                        }
-                        className={controlClass}
-                      />
-                    </label>
-                    <label className="block text-sm">
-                      Efek visual (vfx)
-                      <select
-                        data-scene-effect
-                        value={step.effect}
-                        onChange={(event) =>
-                          updateStep(activeStep, (current) => ({
-                            ...current,
-                            effect: event.target.value as SceneEffect
-                          }))
-                        }
-                        className={controlClass}
-                      >
-                        {SCENE_EFFECTS.map((effect) => (
-                          <option key={effect} value={effect}>
-                            {EFFECT_LABELS[effect]}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                    <label className="block text-sm">
-                      Efek suara (sndfx)
-                      <select
-                        data-scene-sound
-                        value={step.sound}
-                        onChange={(event) =>
-                          updateStep(activeStep, (current) => ({
-                            ...current,
-                            sound: event.target.value as SceneSound
-                          }))
-                        }
-                        className={controlClass}
-                      >
-                        {SCENE_SOUNDS.map((sound) => (
-                          <option key={sound} value={sound}>
-                            {SOUND_LABELS[sound]}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  </div>
-                  <div className="mt-3 flex flex-wrap gap-1">
-                    <button
-                      type="button"
-                      onClick={() => duplicateStep(activeStep)}
-                      disabled={pending || scene.steps.length >= MAX_STEPS}
-                      className={`${secondaryButtonClass} px-2 text-xs`}
-                    >
-                      Duplikat
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveStep(activeStep, -1)}
-                      disabled={pending || activeStep === 0}
-                      className={`${secondaryButtonClass} px-2 text-xs`}
-                      aria-label="Naikkan langkah"
-                    >
-                      ↑
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveStep(activeStep, 1)}
-                      disabled={pending || activeStep >= scene.steps.length - 1}
-                      className={`${secondaryButtonClass} px-2 text-xs`}
-                      aria-label="Turunkan langkah"
-                    >
-                      ↓
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (!scene || scene.steps.length <= 1) return;
-                        commit((current) => ({
-                          ...current,
-                          steps: current.steps.filter((_, position) => position !== activeStep)
-                        }));
-                        setActiveStep(Math.max(0, activeStep - 1));
-                      }}
-                      disabled={pending || scene.steps.length <= 1}
-                      className={`${secondaryButtonClass} px-2 text-xs`}
-                    >
-                      Hapus langkah
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <p className="mt-2 text-sm text-muted">
-                  Tambahkan langkah untuk menyunting propertinya.
-                </p>
-              )}
+              <h3 className="text-sm font-semibold">Parameter</h3>
 
-              <hr className="my-3 border-ink/10" />
-              <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                Halaman
-              </h4>
-              <div className="mt-2 space-y-2">
-                <label className="block text-sm">
-                  Judul halaman
-                  <input
-                    type="text"
-                    maxLength={120}
-                    value={scene.title}
-                    onFocus={beginEdit}
-                    onChange={(event) => {
-                      setPreviewStale(true);
-                      setHistory((state) =>
-                        state.present
-                          ? { ...state, present: { ...state.present, title: event.target.value } }
-                          : state
-                      );
-                    }}
-                    className={controlClass}
-                  />
-                </label>
-                <label className="block text-sm">
-                  Tema warna
-                  <select
-                    value={scene.theme}
-                    onChange={(event) =>
-                      commit((current) => ({ ...current, theme: event.target.value as SceneTheme }))
-                    }
-                    className={controlClass}
-                  >
-                    {SCENE_THEMES.map((theme) => (
-                      <option key={theme} value={theme}>
-                        {THEME_LABELS[theme]}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="block text-sm">
-                  Kalimat pembuka (opsional)
-                  <input
-                    type="text"
-                    maxLength={200}
-                    value={scene.subtitle}
-                    onFocus={beginEdit}
-                    onChange={(event) => {
-                      setPreviewStale(true);
-                      setHistory((state) =>
-                        state.present
-                          ? { ...state, present: { ...state.present, subtitle: event.target.value } }
-                          : state
-                      );
-                    }}
-                    className={controlClass}
-                  />
-                </label>
-              </div>
+              <section className="mt-3">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  Tambah blok
+                </h4>
+                <div data-scene-add-block-bar className="mt-2 grid grid-cols-2 gap-1.5">
+                  {ADD_BLOCK_KINDS.map((kind) => (
+                    <button
+                      key={kind.kind}
+                      type="button"
+                      data-scene-add-block={kind.kind}
+                      onClick={() => addBlock(kind.kind)}
+                      disabled={pending || !step || step.blocks.length >= MAX_BLOCKS_PER_STEP}
+                      className={`${secondaryButtonClass} px-2 text-xs`}
+                    >
+                      {kind.label}
+                    </button>
+                  ))}
+                </div>
+                <p className="mt-2 text-xs text-muted">
+                  {step
+                    ? `Blok baru masuk di akhir langkah ${activeStep + 1}; batas ${MAX_BLOCKS_PER_STEP} blok per langkah.`
+                    : "Tambahkan langkah lebih dulu untuk menyisipkan blok."}
+                </p>
+              </section>
+
+              <section className="mt-3 border-t border-ink/10 pt-3">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  Langkah
+                </h4>
+                {step ? (
+                  <>
+                    <p className="mt-1 text-xs text-muted">
+                      Langkah {activeStep + 1} dari {scene.steps.length}
+                    </p>
+                    <div className="mt-2 space-y-2">
+                      <label className="block text-sm">
+                        Judul langkah
+                        <input
+                          type="text"
+                          maxLength={120}
+                          data-scene-step-title
+                          value={step.title}
+                          onFocus={beginEdit}
+                          onChange={(event) => {
+                            setPreviewStale(true);
+                            setHistory((state) =>
+                              state.present
+                                ? {
+                                    ...state,
+                                    present: {
+                                      ...state.present,
+                                      steps: state.present.steps.map((item, position) =>
+                                        position === activeStep
+                                          ? { ...item, title: event.target.value }
+                                          : item
+                                      )
+                                    }
+                                  }
+                                : state
+                            );
+                          }}
+                          className={controlClass}
+                        />
+                      </label>
+                      <label className="block text-sm">
+                        Efek visual (vfx)
+                        <select
+                          data-scene-effect
+                          value={step.effect}
+                          onChange={(event) =>
+                            updateStep(activeStep, (current) => ({
+                              ...current,
+                              effect: event.target.value as SceneEffect
+                            }))
+                          }
+                          className={controlClass}
+                        >
+                          {SCENE_EFFECTS.map((effect) => (
+                            <option key={effect} value={effect}>
+                              {EFFECT_LABELS[effect]}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      <label className="block text-sm">
+                        Efek suara (sndfx)
+                        <select
+                          data-scene-sound
+                          value={step.sound}
+                          onChange={(event) =>
+                            updateStep(activeStep, (current) => ({
+                              ...current,
+                              sound: event.target.value as SceneSound
+                            }))
+                          }
+                          className={controlClass}
+                        >
+                          {SCENE_SOUNDS.map((sound) => (
+                            <option key={sound} value={sound}>
+                              {SOUND_LABELS[sound]}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-1">
+                      <button
+                        type="button"
+                        onClick={() => duplicateStep(activeStep)}
+                        disabled={pending || scene.steps.length >= MAX_STEPS}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                      >
+                        Duplikat
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => moveStep(activeStep, -1)}
+                        disabled={pending || activeStep === 0}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                        aria-label="Naikkan langkah"
+                      >
+                        ↑
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => moveStep(activeStep, 1)}
+                        disabled={pending || activeStep >= scene.steps.length - 1}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                        aria-label="Turunkan langkah"
+                      >
+                        ↓
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!scene || scene.steps.length <= 1) return;
+                          commit((current) => ({
+                            ...current,
+                            steps: current.steps.filter((_, position) => position !== activeStep)
+                          }));
+                          setActiveStep(Math.max(0, activeStep - 1));
+                        }}
+                        disabled={pending || scene.steps.length <= 1}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                      >
+                        Hapus langkah
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <p className="mt-2 text-sm text-muted">
+                    Tambahkan langkah untuk menyunting parameternya.
+                  </p>
+                )}
+              </section>
+
+              <section className="mt-3 border-t border-ink/10 pt-3">
+                <h4 className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  Halaman
+                </h4>
+                <div className="mt-2 space-y-2">
+                  <label className="block text-sm">
+                    Judul halaman
+                    <input
+                      type="text"
+                      maxLength={120}
+                      value={scene.title}
+                      onFocus={beginEdit}
+                      onChange={(event) => {
+                        setPreviewStale(true);
+                        setHistory((state) =>
+                          state.present
+                            ? { ...state, present: { ...state.present, title: event.target.value } }
+                            : state
+                        );
+                      }}
+                      className={controlClass}
+                    />
+                  </label>
+                  <label className="block text-sm">
+                    Tema warna
+                    <select
+                      value={scene.theme}
+                      onChange={(event) =>
+                        commit((current) => ({ ...current, theme: event.target.value as SceneTheme }))
+                      }
+                      className={controlClass}
+                    >
+                      {SCENE_THEMES.map((theme) => (
+                        <option key={theme} value={theme}>
+                          {THEME_LABELS[theme]}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="block text-sm">
+                    Kalimat pembuka (opsional)
+                    <input
+                      type="text"
+                      maxLength={200}
+                      value={scene.subtitle}
+                      onFocus={beginEdit}
+                      onChange={(event) => {
+                        setPreviewStale(true);
+                        setHistory((state) =>
+                          state.present
+                            ? { ...state, present: { ...state.present, subtitle: event.target.value } }
+                            : state
+                        );
+                      }}
+                      className={controlClass}
+                    />
+                  </label>
+                </div>
+              </section>
             </aside>
           </div>
 
