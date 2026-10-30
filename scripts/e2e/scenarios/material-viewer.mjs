@@ -112,6 +112,8 @@ export async function run({ page, artifactDir, log }) {
       return {
         src: frame.getAttribute("src"),
         sandbox: frame.getAttribute("sandbox"),
+        referrerPolicy: frame.getAttribute("referrerpolicy"),
+        allow: frame.getAttribute("allow"),
         crossOrigin,
         dialogRole: document.querySelector("[data-material-viewer]")?.getAttribute("role"),
         modal: document.querySelector("[data-material-viewer]")?.getAttribute("aria-modal")
@@ -126,6 +128,16 @@ export async function run({ page, artifactDir, log }) {
   assert(
     frame.sandbox === "allow-scripts allow-forms allow-same-origin allow-popups",
     `sandbox iframe harus "allow-scripts allow-forms allow-same-origin allow-popups" (didapat: ${frame.sandbox}).`
+  );
+  // Pemutar pihak ketiga di dalam materi butuh Referer (YouTube menolak tanpa itu,
+  // Error 153) dan butuh izin layar penuh diwarisi dari rantai frame.
+  assert(
+    frame.referrerPolicy === "origin",
+    `referrerpolicy iframe materi harus "origin" (didapat: ${frame.referrerPolicy}).`
+  );
+  assert(
+    frame.allow === "fullscreen; autoplay; encrypted-media; picture-in-picture",
+    `allow iframe materi harus mendelegasikan izin pemutar (didapat: ${frame.allow}).`
   );
   assert(
     frame.crossOrigin,

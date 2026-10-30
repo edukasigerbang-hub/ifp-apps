@@ -198,14 +198,24 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
           {/* `allow-same-origin` dibutuhkan pemutar YouTube dan sematan https:
               tanpa itu frame bersarang mendapat asal opaque dan menolak diputar.
               Materi dilayani protokol ifp-content (beda asal dengan aplikasi),
-              jadi frame tetap tidak bisa menyentuh dokumen induk. */}
+              jadi frame tetap tidak bisa menyentuh dokumen induk.
+
+              `referrerPolicy="origin"` bukan pilihan gaya: YouTube menolak memutar
+              embed tanpa header Referer (Error 153), dan kebijakan referrer diwarisi
+              frame cucu — `no-referrer` di sini membungkam `strict-origin-when-cross-origin`
+              pada iframe YouTube di dalam materi. Yang dikirim hanya asal materi
+              (http://ifp-content.localhost), bukan nama berkas atau parameter.
+
+              `allow` mendelegasikan izin ke chain frame; tanpa ini tombol layar penuh
+              dan picture-in-picture pemutar di langkah berikutnya ditolak kebijakan izin. */}
           <iframe
             ref={frameRef}
             data-material-frame
             title={`Materi: ${material.title}`}
             src={materialEntryUrl(material)}
             sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
-            referrerPolicy="no-referrer"
+            referrerPolicy="origin"
+            allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
             onLoad={() => {
               // Pesan `ready` awal bisa hilang selama pemuatan iframe lintas-proses;
               // `hello` memicu materi mengumumkan ulang dirinya.

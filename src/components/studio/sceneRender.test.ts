@@ -214,7 +214,11 @@ describe("blok video dan sematan", () => {
     expect(html).toContain("https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0");
     expect(html).toContain('title="Pembuka"');
     expect(html).toContain('data-offline-note hidden');
-    expect(html).toContain('sandbox="allow-scripts allow-same-origin');
+    // YouTube menolak putar tanpa Referer (Error 153): iframe tidak boleh memakai no-referrer.
+    expect(html).toContain('referrerpolicy="strict-origin-when-cross-origin"');
+    expect(html).toContain('allow="encrypted-media; picture-in-picture; fullscreen"');
+    expect(html).toContain('sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"');
+    expect(html).not.toContain('referrerpolicy="no-referrer"');
 
     const parsed = parseScene(extractSceneDocument(html));
     expect(parsed?.steps[0].blocks[0]).toMatchObject({

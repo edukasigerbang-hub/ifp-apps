@@ -21,7 +21,14 @@ pub(crate) const MAX_COVER_BYTES: u64 = 2 * 1024 * 1024;
 // Berlaku hanya untuk dokumen materi. `connect-src 'none'` menegakkan syarat
 // self-contained dari kontrak bundel; sumber eksplisit dipakai karena iframe
 // sandbox ber-origin opaque sehingga `'self'` saja tidak dapat diandalkan.
-const MATERIAL_CSP: &str = "default-src 'none'; script-src 'self' ifp-content: http://ifp-content.localhost; style-src 'self' ifp-content: http://ifp-content.localhost; img-src 'self' data: ifp-content: http://ifp-content.localhost; media-src 'self' ifp-content: http://ifp-content.localhost; font-src 'self' ifp-content: http://ifp-content.localhost; connect-src 'none'; form-action 'none'; base-uri 'none'";
+//
+// `frame-src https:` dan `media-src … https:` adalah pengecualian terdeklarasi
+// dari ADR-0036: blok video (sumber `daring`) dan sematan https dipilih penulis
+// dan bebas beralamat. Keduanya hanya bisa bekerja kalau dokumen materi diizinkan
+// membingkai/mengambil alamat itu — tanpa ini YouTube dan sematan diblokir CSP
+// sebelum ada permintaan jaringan, dan yang terlihat hanyalah bingkai hitam.
+// `connect-src` tetap `'none'`: naskah materi tidak boleh memanggil API apa pun.
+const MATERIAL_CSP: &str = "default-src 'none'; script-src 'self' ifp-content: http://ifp-content.localhost; style-src 'self' ifp-content: http://ifp-content.localhost; img-src 'self' data: ifp-content: http://ifp-content.localhost; media-src 'self' ifp-content: http://ifp-content.localhost https:; font-src 'self' ifp-content: http://ifp-content.localhost; frame-src https: ifp-content:; connect-src 'none'; form-action 'none'; base-uri 'none'";
 
 pub struct MaterialState {
     pub root: PathBuf,
@@ -510,5 +517,41 @@ mod tests {
         fs::write(root.join("contoh-siklus-air/1.0.0/notes.bin"), b"x").expect("write bin");
         let wrong_type = handle_request(&root, &request("/contoh-siklus-air/1.0.0/notes.bin"));
         assert_eq!(wrong_type.status(), StatusCode::UNSUPPORTED_MEDIA_TYPE);
+    }
+
+    /// Blok video daring dan sematan https (ADR-0036) hanya bisa berputar kalau
+    /// dokumen materi diizinkan membingkainya. Kalau directive ini hilang,
+    /// pemutar diblokir sebelum ada permintaan jaringan dan gejalanya berupa
+    /// bingkai kosong tanpa pesan.
+    #[test]
+    fn material_csp_permits_declared_online_media() {
+        let root = temp_root("csp");
+        ensure_sample_material(&root).expect("seed");
+        let entry = handle_request(&root, &request("/contoh-siklus-air/1.0.0/index.html"));
+        let csp = entry.headers()["Content-Security-Policy"]
+            .to_str()
+            .expect("utf-8 csp")
+            .to_string();
+
+        let directive = |name: &str| -> String {
+            csp.split(';')
+                .map(str::trim)
+                .find(|part| part.starts_with(&format!("{name} ")))
+                .unwrap_or("")
+                .to_string()
+        };
+        assert!(
+            directive("frame-src").contains("https:"),
+            "frame-src harus mengizinkan https supaya iframe YouTube dan sematan tampil: {csp}"
+        );
+        assert!(
+            directive("media-src").contains("https:"),
+            "media-src harus mengizinkan https supaya blok video daring berputar: {csp}"
+        );
+        assert_eq!(directive("connect-src"), "connect-src 'none'");
+        assert!(
+            !directive("script-src").contains("https:"),
+            "skrip pihak ketiga tidak boleh diizinkan: {csp}"
+        );
     }
 }
