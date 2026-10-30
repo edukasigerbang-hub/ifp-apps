@@ -23,6 +23,8 @@ const MEDIA_TYPES = {
   m4a: "audio/mp4",
   ogg: "audio/ogg",
   wav: "audio/wav",
+  mp4: "video/mp4",
+  webm: "video/webm",
   woff2: "font/woff2",
   ttf: "font/ttf",
   vtt: "text/vtt",

@@ -29,6 +29,8 @@ const MEDIA_TYPES: Record<string, string> = {
   m4a: "audio/mp4",
   ogg: "audio/ogg",
   wav: "audio/wav",
+  mp4: "video/mp4",
+  webm: "video/webm",
   woff2: "font/woff2",
   ttf: "font/ttf"
 };

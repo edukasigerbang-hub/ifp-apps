@@ -1,14 +1,20 @@
 // Penulis berkas bundel untuk tab "Susun": index.html, assets/style.css, dan
 // assets/app.js dihasilkan ulang secara deterministik dari naskah (sceneModel).
-// Keluaran harus lolos pemindaian mandiri Rust: tanpa http(s)://, fetch(,
-// window.open, atau WebSocket, dan tanpa CDN.
+// Keluaran harus lolos pemindaian mandiri Rust: tanpa fetch(, window.open, atau
+// WebSocket, dan tanpa CDN. Satu-satunya alamat https yang boleh muncul adalah
+// sumber blok video/sematan yang dideklarasikan di naskah; Rust memeriksanya
+// per blok, bukan sekadar mencari pola.
 import {
   EFFECT_LABELS,
   SCENE_ELEMENT_ID,
+  isHttpsUrl,
   splitPoints,
+  youtubeId,
+  type EmbedBlock,
   type Scene,
   type SceneStep,
-  type TextBlock
+  type TextBlock,
+  type VideoBlock
 } from "./sceneModel";
 
 const ESCAPES: Record<string, string> = {
@@ -106,6 +112,92 @@ function audioBlockHtml(
         </div>`;
 }
 
+function videoCaption(block: { caption: string }): string {
+  return block.caption.trim()
+    ? `\n          <p class="media-caption">${escapeHtml(block.caption)}</p>`
+    : "";
+}
+
+function mediaPlaceholder(note: string): string {
+  return `\n            <div class="video-placeholder"><p>${escapeHtml(note)}</p></div>`;
+}
+
+function videoBlockHtml(block: VideoBlock, preview: boolean): string {
+  const label = escapeHtml(block.title.trim() || "Video");
+  const caption = videoCaption(block);
+  const head = '        <div class="block video">';
+
+  if (block.source === "youtube") {
+    const id = youtubeId(block.url);
+    if (!id) {
+      return `${head}
+          <div class="video-frame">${mediaPlaceholder("Tautan YouTube belum sah.")}</div>${caption}
+        </div>`;
+    }
+    if (preview) {
+      return `${head}
+          <div class="video-frame">${mediaPlaceholder(`YouTube ${id} — diputar di materi terpasang.`)}</div>${caption}
+        </div>`;
+    }
+    return `${head}
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/${escapeHtml(id)}?rel=0" title="${label}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"></iframe>
+          </div>
+          <p class="offline-note" data-offline-note hidden>Butuh koneksi internet untuk memutar video ini.</p>${caption}
+        </div>`;
+  }
+
+  if (block.source === "daring" && !isHttpsUrl(block.url)) {
+    return `${head}
+          <div class="video-frame">${mediaPlaceholder("Alamat video daring harus https://.")}</div>${caption}
+        </div>`;
+  }
+
+  if (preview) {
+    const note =
+      block.source === "lokal"
+        ? `Video lokal ${block.path || "belum dipilih"} — diputar di materi terpasang.`
+        : `Video daring ${block.url} — diputar di materi terpasang.`;
+    return `${head}
+          <div class="video-frame">${mediaPlaceholder(note)}</div>${caption}
+        </div>`;
+  }
+
+  const source = block.source === "lokal" ? block.path : block.url;
+  const remote = block.source === "daring" ? " data-online" : "";
+  const note =
+    block.source === "daring"
+      ? `\n          <p class="offline-note" data-offline-note hidden>Butuh koneksi internet untuk memutar video ini.</p>`
+      : "";
+  return `${head}
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline aria-label="${label}"${remote} src="${escapeHtml(source)}"></video>
+          </div>${note}${caption}
+        </div>`;
+}
+
+function embedBlockHtml(block: EmbedBlock, preview: boolean): string {
+  const label = escapeHtml(block.title.trim() || "Sematan");
+  const caption = videoCaption(block);
+  if (preview) {
+    let host = block.url;
+    try {
+      host = new URL(block.url).host;
+    } catch {
+      host = block.url || "belum diisi";
+    }
+    return `        <div class="block embed">
+          <div class="embed-frame">${mediaPlaceholder(`Sematan ${host} — tampil di materi terpasang.`)}</div>${caption}
+        </div>`;
+  }
+  return `        <div class="block embed">
+          <div class="embed-frame">
+            <iframe src="${escapeHtml(block.url)}" title="${label}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+          </div>
+          <p class="offline-note" data-offline-note hidden>Halaman sematan butuh koneksi internet.</p>${caption}
+        </div>`;
+}
+
 function stepHtml(
   step: SceneStep,
   index: number,
@@ -117,7 +209,9 @@ function stepHtml(
     .map((block) => {
       if (block.kind === "teks") return textBlockHtml(block);
       if (block.kind === "gambar") return imageBlockHtml(block, preview, assets);
-      return audioBlockHtml(block, preview);
+      if (block.kind === "suara") return audioBlockHtml(block, preview);
+      if (block.kind === "video") return videoBlockHtml(block, preview);
+      return embedBlockHtml(block, preview);
     })
     .join("\n");
   const active = index === activeIndex ? ' data-active="true"' : "";
@@ -274,6 +368,18 @@ h1{margin:0 0 10px;font-size:clamp(24px,4vw,36px);line-height:1.2}
 .audio-label{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--accent)}
 .audio audio{width:100%}
 .audio-caption{margin:8px 0 0;font-size:13px;color:#55707a}
+.video,.embed{margin:0 0 16px}
+.video-frame{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0b1f25}
+.video-frame iframe,.video-frame video{display:block;width:100%;height:100%;border:0}
+.video-frame video{object-fit:contain;background:#000}
+.video-frame iframe{position:absolute;inset:0}
+.embed-frame{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.embed-frame iframe{display:block;width:100%;height:min(70vh,520px);border:0}
+.video-placeholder{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:180px;padding:16px;border:2px dashed var(--line);border-radius:14px;background:var(--soft);color:#55707a;font-size:13px;text-align:center}
+.video-placeholder p{margin:0}
+.media-caption{margin:6px 0 0;font-size:13px;color:#55707a}
+.offline-note{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:#fef3c7;color:#7c2d12;font-size:13px}
+.offline-note[hidden]{display:none}
 .figure{margin:0 0 16px}
 .figure img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
 .figure figcaption{margin-top:6px;font-size:13px;color:#55707a}
@@ -522,6 +628,39 @@ export function renderRuntime(startIndex = 0): string {
   }
   window.addEventListener("pointerdown", unlock);
   window.addEventListener("keydown", unlock);
+
+  // Video/sematan daring butuh koneksi. Beri tahu pembaca saat perangkat
+  // offline atau saat pemutar gagal memuat, jangan biarkan kotak kosong.
+  function updateConnection() {
+    var offline = navigator.onLine === false;
+    stage.classList.toggle("is-offline", offline);
+    var notes = document.querySelectorAll(".offline-note");
+    for (var i = 0; i < notes.length; i += 1) {
+      notes[i].hidden = !offline;
+      if (offline) {
+        notes[i].textContent = "Butuh koneksi internet untuk memutar video ini.";
+      }
+    }
+  }
+
+  function watchRemoteMedia() {
+    var players = document.querySelectorAll("video[data-online]");
+    for (var i = 0; i < players.length; i += 1) {
+      players[i].addEventListener("error", function (event) {
+        var player = event.currentTarget;
+        var block = player && player.closest ? player.closest(".video") : null;
+        var note = block ? block.querySelector(".offline-note") : null;
+        if (note) {
+          note.hidden = false;
+          note.textContent = "Video tidak dapat dimuat. Periksa koneksi internet.";
+        }
+      });
+    }
+    window.addEventListener("online", updateConnection);
+    window.addEventListener("offline", updateConnection);
+    updateConnection();
+  }
+  watchRemoteMedia();
 
   previousButton.addEventListener("click", function () {
     show(index - 1);

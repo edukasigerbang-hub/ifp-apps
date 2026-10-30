@@ -40,6 +40,14 @@ export async function setup({ artifactDir }) {
   await writeFile(wavPath, wav);
   const pngPath = path.join(artifactDir, "ilustrasi.png");
   await copyFile(path.resolve(import.meta.dirname, "../../../src-tauri/material-templates/cover-placeholder.png"), pngPath);
+  // Fixture video lokal: hanya header ISO-BMFF. Platform tidak membuka isi
+  // video, jadi cukup berkas kecil dengan ekstensi .mp4 yang diizinkan kontrak.
+  const mp4Path = path.join(artifactDir, "pembuka.mp4");
+  const mp4 = Buffer.alloc(64, 0);
+  mp4.writeUInt32BE(24, 0);
+  mp4.write("ftyp", 4);
+  mp4.write("isom", 8);
+  await writeFile(mp4Path, mp4);
 
   return {
     exportDir,
@@ -47,6 +55,7 @@ export async function setup({ artifactDir }) {
     keys,
     wavPath,
     pngPath,
+    mp4Path,
     env: { IFP_CONTENT_KEYS: JSON.stringify(keys) }
   };
 }
@@ -120,7 +129,8 @@ async function readEditorValue(page) {
   return page.evaluate(`document.querySelector("[data-studio-editor]")?.value ?? null`);
 }
 
-async function selectOption(page, selector, value) {  const result = await page.evaluate(`
+async function selectOption(page, selector, value) {
+  const result = await page.evaluate(`
     (() => {
       const element = document.querySelector(${JSON.stringify(selector)});
       if (!element) return "missing";
@@ -146,6 +156,17 @@ async function setFileInput(page, selector, filePath) {
 
 async function alertText(page) {
   return page.evaluate(`document.querySelector("[role='alert']")?.textContent ?? ""`);
+}
+
+// Satu langkah dapat memuat beberapa blok sejenis (dua blok video), sedangkan
+// hook editor blok tidak bernomor. Id badan blok acak, jadi pembaca mengambilnya
+// dari DOM lalu memakai selector `[data-scene-block-body="<id>"] [data-…]`.
+async function blockScope(page, index) {
+  const id = await page.evaluate(
+    `document.querySelectorAll("[data-scene-block-body]")[${index}]?.getAttribute("data-scene-block-body") ?? null`
+  );
+  assert(id !== null, `Badan blok ke-${index + 1} tidak ditemukan di DOM.`);
+  return `[data-scene-block-body="${id}"]`;
 }
 
 export async function run({ page, artifactDir, setup: context, log }) {
@@ -464,6 +485,110 @@ export async function run({ page, artifactDir, setup: context, log }) {
   await clickHook(page, "[data-scene-step='1']");
   log("Urungkan mengembalikan jumlah langkah setelah perubahan struktural.");
 
+  // Blok media daring: YouTube, berkas video daring, video lokal, sematan HTML.
+  // Empat blok ini menambah badan blok ke-4..7 pada langkah 2, jadi setiap
+  // input discope lewat id badan blok (hook blok tidak bernomor).
+  const YOUTUBE_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  const REMOTE_VIDEO = "https://contoh.sch.id/video/pembuka.mp4";
+  const EMBED_URL = "https://www.geogebra.org/m/abcdefgh";
+
+  await clickHook(page, "[data-scene-add-block='video']");
+  await page.waitFor(`document.querySelectorAll("[data-scene-video-source]").length === 1`, {
+    label: "blok video pertama (YouTube)"
+  });
+  const youtubeScope = await blockScope(page, 3);
+  await typeInto(page, `${youtubeScope} [data-scene-video-title]`, "Animasi siklus air");
+  await typeInto(page, `${youtubeScope} [data-scene-video-url]`, "https://contoh.test/bukan-youtube");
+  await page.waitFor(
+    `document.querySelector("[role='alert']")?.textContent.includes("tautan YouTube belum sah") === true`,
+    { label: "daftar masalah menandai tautan YouTube" }
+  );
+  await typeInto(page, `${youtubeScope} [data-scene-video-url]`, YOUTUBE_URL);
+
+  await clickHook(page, "[data-scene-add-block='video']");
+  await page.waitFor(`document.querySelectorAll("[data-scene-video-source]").length === 2`, {
+    label: "blok video kedua"
+  });
+  const daringScope = await blockScope(page, 4);
+  await selectOption(page, `${daringScope} [data-scene-video-source]`, "daring");
+  await page.waitFor(
+    `document.querySelector(${JSON.stringify(`${daringScope} [data-scene-video-url]`)}) !== null`,
+    { label: "kolom alamat video daring" }
+  );
+  await typeInto(page, `${daringScope} [data-scene-video-title]`, "Perekaman hujan buatan");
+  await typeInto(page, `${daringScope} [data-scene-video-url]`, "http://contoh.sch.id/video.mp4");
+  await page.waitFor(
+    `document.querySelector("[role='alert']")?.textContent.includes("harus alamat https://") === true`,
+    { label: "daftar masalah menolak video http" }
+  );
+  await typeInto(page, `${daringScope} [data-scene-video-url]`, REMOTE_VIDEO);
+
+  await clickHook(page, "[data-scene-add-block='video']");
+  await page.waitFor(`document.querySelectorAll("[data-scene-video-source]").length === 3`, {
+    label: "blok video ketiga"
+  });
+  const lokalScope = await blockScope(page, 5);
+  await selectOption(page, `${lokalScope} [data-scene-video-source]`, "lokal");
+  await page.waitFor(
+    `document.querySelector(${JSON.stringify(`${lokalScope} [data-scene-video-file]`)}) !== null`,
+    { label: "kolom unggah video lokal" }
+  );
+  await setFileInput(page, `${lokalScope} [data-scene-video-file]`, context.mp4Path);
+  await page.waitFor(`document.body.textContent.includes("Video assets/pembuka.mp4 ditambahkan")`, {
+    label: "video lokal terunggah",
+    timeoutMs: 20_000
+  });
+  await page.waitFor(
+    `document.querySelector(${JSON.stringify(`${lokalScope} [data-scene-video]`)})?.value === "assets/pembuka.mp4"`,
+    { label: "berkas video lokal terpilih di blok" }
+  );
+  const lokalTitle = await page.evaluate(
+    `document.querySelector(${JSON.stringify(`${lokalScope} [data-scene-video-title]`)})?.value ?? ""`
+  );
+  assert(
+    lokalTitle.trim().length > 0,
+    `Judul video lokal tidak terisi otomatis dari nama berkas: "${lokalTitle}"`
+  );
+
+  await clickHook(page, "[data-scene-add-block='semat']");
+  await page.waitFor(`document.querySelectorAll("[data-scene-embed-url]").length === 1`, {
+    label: "blok sematan"
+  });
+  const embedScope = await blockScope(page, 6);
+  await typeInto(page, `${embedScope} [data-scene-embed-title]`, "Simulasi tuas");
+  await typeInto(page, `${embedScope} [data-scene-embed-url]`, "http://www.geogebra.org/m/abcdefgh");
+  await page.waitFor(
+    `document.querySelector("[role='alert']")?.textContent.includes("alamat sematan harus diawali https://") === true`,
+    { label: "daftar masalah menolak sematan http" }
+  );
+  await typeInto(page, `${embedScope} [data-scene-embed-url]`, EMBED_URL);
+
+  await page.waitFor(`document.querySelector("[data-scene-internet-note]") !== null`, {
+    label: "pemberitahuan materi butuh internet"
+  });
+  log("Editor menolak tautan tak sah dan menandai naskah yang butuh koneksi internet.");
+
+  // Pratinjau hanya menampilkan penanda, bukan pemutar daring.
+  await clickHook(page, "[data-scene-body-tab='preview']");
+  await clickHook(page, "[data-scene-preview-refresh]");
+  await page.waitFor(
+    `document.querySelector("[data-scene-preview-card] iframe")?.srcdoc.includes("diputar di materi terpasang") === true`,
+    { label: "penanda video di pratinjau", timeoutMs: 20_000 }
+  );
+  const previewMedia = await page.evaluate(`
+    document.querySelector("[data-scene-preview-card] iframe")?.srcdoc ?? ""
+  `);
+  assert(
+    !previewMedia.includes("youtube-nocookie.com/embed") && !previewMedia.includes("<video"),
+    "Pratinjau Susun memuat pemutar daring, padahal seharusnya hanya penanda."
+  );
+  assert(
+    previewMedia.includes("Sematan www.geogebra.org"),
+    "Pratinjau Susun tidak menandai blok sematan."
+  );
+  await page.screenshot(path.join(artifactDir, "studio-susun-preview-video.png"));
+  await clickHook(page, "[data-scene-body-tab='editor']");
+
   await clickHook(page, "[data-scene-ack]");
   await page.waitFor(`document.querySelector("[data-scene-apply]").disabled === false`, {
     label: "tombol terapkan aktif setelah naskah lengkap"
@@ -506,8 +631,53 @@ export async function run({ page, artifactDir, setup: context, log }) {
     "Blok suara tidak masuk ke index.html."
   );
   assert(
-    !sceneEntry.content.includes("https://") && !sceneEntry.content.includes("http://"),
-    "Hasil susunan tidak boleh memuat rujukan eksternal."
+    sceneEntry.content.includes(
+      'src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0"'
+    ) && sceneEntry.content.includes('title="Animasi siklus air"'),
+    "Pemutar YouTube tanpa cookie tidak masuk ke index.html."
+  );
+  assert(
+    sceneEntry.content.includes('data-online') &&
+      sceneEntry.content.includes(`src="${REMOTE_VIDEO}"`),
+    "Video daring tidak masuk ke index.html lewat elemen video bertanda data-online."
+  );
+  assert(
+    sceneEntry.content.includes('src="assets/pembuka.mp4"'),
+    "Video lokal tidak masuk ke index.html."
+  );
+  assert(
+    sceneEntry.content.includes(`<iframe src="${EMBED_URL}"`) &&
+      sceneEntry.content.includes("Halaman sematan butuh koneksi internet."),
+    "Sematan HTML daring atau pemberitahuannya tidak masuk ke index.html."
+  );
+  assert(
+    sceneEntry.content.includes("Butuh koneksi internet untuk memutar video ini."),
+    "Pemberitahuan offline tidak ikut tertulis ke index.html."
+  );
+  const runtimeFile = sceneState.value.files.find((file) => file.path === "assets/app.js");
+  assert(
+    runtimeFile.content.includes('window.addEventListener("offline"') &&
+      runtimeFile.content.includes('window.addEventListener("online"'),
+    "Runtime materi tidak memasang penyimak koneksi."
+  );
+  // Rujukan eksternal hanya boleh datang dari alamat yang dideklarasikan naskah.
+  const externalRefs = [...sceneEntry.content.matchAll(/(?:src|href)="(https?:\/\/[^"]+)"/g)].map(
+    (match) => new URL(match[1]).host
+  );
+  const allowedHosts = new Set([
+    "www.youtube-nocookie.com",
+    "contoh.sch.id",
+    "www.geogebra.org"
+  ]);
+  assert(
+    externalRefs.length > 0 && externalRefs.every((host) => allowedHosts.has(host)),
+    `Rujukan eksternal di luar daftar naskah: ${externalRefs.join(", ") || "tidak ada"}.`
+  );
+  assert(
+    sceneState.value.manifest.files.some(
+      (file) => file.path === "assets/pembuka.mp4" && file.mediaType === "video/mp4"
+    ),
+    "Berkas video lokal tidak terdaftar di manifest dengan mediaType video/mp4."
   );
   const sceneManifest = sceneState.value.manifest;
   assert(
@@ -525,7 +695,7 @@ export async function run({ page, artifactDir, setup: context, log }) {
     "captions.vtt tidak dibuat dari blok suara."
   );
   log(
-    "Tab Susun menulis dua langkah, gambar unggahan, audio + captions.vtt, efek konfeti, dan efek suara bel."
+    "Tab Susun menulis dua langkah, gambar unggahan, audio + captions.vtt, video YouTube/daring/lokal, sematan, efek konfeti, dan efek suara bel."
   );
   await page.evaluate(
     `document.querySelector("[data-studio-editor-card]")?.scrollIntoView({ block: "start" })`
@@ -644,6 +814,9 @@ export async function run({ page, artifactDir, setup: context, log }) {
   });
   await page.waitFor(`document.body.textContent.includes("Status review masih")`, {
     label: "peringatan status review"
+  });
+  await page.waitFor(`document.body.textContent.includes("blok video/sematan daring")`, {
+    label: "peringatan blok video/sematan daring"
   });
   log("Pemeriksaan mandiri lolos dan tetap menagih review manusia.");
 
@@ -778,9 +951,11 @@ export async function run({ page, artifactDir, setup: context, log }) {
   assert(installed.value.materialId === MATERIAL_ID, "materialId hasil instalasi berbeda.");
   assert(installed.value.version === VERSION, "versi hasil instalasi berbeda.");
   // Konten akhir: index.html, assets/app.js, assets/style.css, cover katalog (webp),
-  // transcript.txt, ilustrasi.png, nada.wav, dan captions.vtt — cover.png kerangka
-  // dihapus saat cover diganti, material.json tidak dihitung.
-  assert(installed.value.files === 8, `Berkas terpasang ${installed.value.files}, harus 8.`);
+  // transcript.txt, ilustrasi.png, nada.wav, pembuka.mp4, dan captions.vtt — cover.png
+  // kerangka dihapus saat cover diganti, material.json tidak dihitung.
+  // Instalasi ini juga membuktikan validator scene menerima URLvideo/sematan yang
+  // dideklarasikan naskah saat pemasangan, bukan hanya saat menulis draft.
+  assert(installed.value.files === 9, `Berkas terpasang ${installed.value.files}, harus 9.`);
   const installedList = await invoke(page, "material_list_installed");
   assert(
     installedList.ok && installedList.value.some((item) => item.materialId === MATERIAL_ID),

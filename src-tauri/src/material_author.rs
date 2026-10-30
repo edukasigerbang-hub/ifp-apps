@@ -2,8 +2,9 @@ use crate::db::DbState;
 use crate::error::AppError;
 use crate::material::{self, MaterialState, MaterialView};
 use crate::material_manifest::{
-    self, MAX_BUNDLE_BYTES, bare_media_type, ensure_self_contained, is_image, is_material_id,
-    is_semver, is_text_source, validate_relative_path,
+    self, MAX_BUNDLE_BYTES, MAX_VIDEO_BYTES, bare_media_type, ensure_self_contained, is_image,
+    is_material_id, is_semver, is_text_source, is_video, scene_remote_urls,
+    validate_relative_path,
 };
 use base64::Engine as _;
 use rusqlite::{Connection, OptionalExtension, params};
@@ -687,7 +688,11 @@ pub fn add_draft_asset(
     if decoded.is_empty() {
         return Err(invalid("Aset tidak boleh kosong."));
     }
-    if decoded.len() > MAX_ASSET_BYTES {
+    if is_video(&input.path) {
+        if decoded.len() as u64 > MAX_VIDEO_BYTES {
+            return Err(invalid("Satu video materi maksimal 25 MB."));
+        }
+    } else if decoded.len() > MAX_ASSET_BYTES {
         return Err(invalid("Satu aset materi maksimal 8 MB."));
     }
 
@@ -886,6 +891,15 @@ pub fn check_draft(
                         errors.push(error.message);
                     }
                 }
+            }
+        }
+        if let Ok(html) = fs::read_to_string(directory.join(&parsed.entry)) {
+            let remote = scene_remote_urls(&html);
+            if !remote.is_empty() {
+                warnings.push(format!(
+                    "Materi memuat {} blok video/sematan daring; tanpa koneksi internet blok itu menampilkan pemberitahuan, bukan isinya.",
+                    remote.len()
+                ));
             }
         }
         if parsed.review_status != "approved" {

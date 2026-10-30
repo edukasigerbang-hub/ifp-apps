@@ -195,12 +195,16 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
         </div>
 
         <div className="relative flex min-h-0 flex-1">
+          {/* `allow-same-origin` dibutuhkan pemutar YouTube dan sematan https:
+              tanpa itu frame bersarang mendapat asal opaque dan menolak diputar.
+              Materi dilayani protokol ifp-content (beda asal dengan aplikasi),
+              jadi frame tetap tidak bisa menyentuh dokumen induk. */}
           <iframe
             ref={frameRef}
             data-material-frame
             title={`Materi: ${material.title}`}
             src={materialEntryUrl(material)}
-            sandbox="allow-scripts allow-forms"
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
             referrerPolicy="no-referrer"
             onLoad={() => {
               // Pesan `ready` awal bisa hilang selama pemuatan iframe lintas-proses;

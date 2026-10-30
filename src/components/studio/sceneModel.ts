@@ -33,6 +33,19 @@ export type TextAlign = (typeof TEXT_ALIGNS)[number];
 export const IMAGE_LAYOUTS = ["penuh", "kiri", "kanan"] as const;
 export type ImageLayout = (typeof IMAGE_LAYOUTS)[number];
 
+// Sumber blok video: YouTube (iframe pemutar), berkas daring (video https
+// langsung), atau berkas lokal yang ikut di dalam bundel sehingga tetap bisa
+// diputar tanpa koneksi.
+export const VIDEO_SOURCES = ["youtube", "daring", "lokal"] as const;
+export type VideoSource = (typeof VIDEO_SOURCES)[number];
+
+export const MAX_URL_LENGTH = 500;
+
+/** Batas satu berkas video lokal; gambar/suara tetap 8 MB (kontrak §3). */
+export const MAX_LOCAL_VIDEO_BYTES = 25 * 1024 * 1024;
+
+const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
+
 export interface TextBlock {
   id: string;
   kind: "teks";
@@ -62,7 +75,28 @@ export interface AudioBlock {
   caption: string;
 }
 
-export type SceneBlock = TextBlock | ImageBlock | AudioBlock;
+export interface VideoBlock {
+  id: string;
+  kind: "video";
+  source: VideoSource;
+  /** Alamat YouTube atau berkas video https; kosong untuk sumber lokal. */
+  url: string;
+  /** Berkas video di draft; hanya dipakai untuk sumber lokal. */
+  path: string;
+  title: string;
+  caption: string;
+}
+
+export interface EmbedBlock {
+  id: string;
+  kind: "semat";
+  /** Halaman https yang dimuat di dalam iframe. */
+  url: string;
+  title: string;
+  caption: string;
+}
+
+export type SceneBlock = TextBlock | ImageBlock | AudioBlock | VideoBlock | EmbedBlock;
 
 export interface SceneStep {
   id: string;
@@ -133,6 +167,12 @@ export const LAYOUT_LABELS: Record<ImageLayout, string> = {
   kanan: "Kanan teks"
 };
 
+export const VIDEO_SOURCE_LABELS: Record<VideoSource, string> = {
+  youtube: "YouTube",
+  daring: "Berkas video daring",
+  lokal: "Berkas video lokal"
+};
+
 export const CAPTIONS_PATH = "assets/captions.vtt";
 
 export function createId(prefix: string): string {
@@ -170,6 +210,28 @@ export function createAudioBlock(path = ""): AudioBlock {
     kind: "suara",
     path,
     label: "Narasi",
+    caption: ""
+  };
+}
+
+export function createVideoBlock(source: VideoSource = "youtube", path = ""): VideoBlock {
+  return {
+    id: createId("video"),
+    kind: "video",
+    source,
+    url: "",
+    path,
+    title: "",
+    caption: ""
+  };
+}
+
+export function createEmbedBlock(url = ""): EmbedBlock {
+  return {
+    id: createId("semat"),
+    kind: "semat",
+    url,
+    title: "",
     caption: ""
   };
 }
@@ -244,6 +306,26 @@ function parseBlock(value: unknown): SceneBlock | null {
       caption: text(record.caption).slice(0, 300)
     };
   }
+  if (kind === "video") {
+    return {
+      id: text(record.id) || createId("video"),
+      kind: "video",
+      source: choice(VIDEO_SOURCES, record.source, "youtube"),
+      url: text(record.url).slice(0, MAX_URL_LENGTH),
+      path: text(record.path),
+      title: text(record.title).slice(0, MAX_TITLE_LENGTH),
+      caption: text(record.caption).slice(0, 300)
+    };
+  }
+  if (kind === "semat") {
+    return {
+      id: text(record.id) || createId("semat"),
+      kind: "semat",
+      url: text(record.url).slice(0, MAX_URL_LENGTH),
+      title: text(record.title).slice(0, MAX_TITLE_LENGTH),
+      caption: text(record.caption).slice(0, 300)
+    };
+  }
   return null;
 }
 
@@ -289,6 +371,55 @@ export function splitPoints(value: string): string[] {
     .filter((line) => line.length > 0);
 }
 
+function parseUrl(value: string): URL | null {
+  try {
+    return new URL(value.trim());
+  } catch {
+    return null;
+  }
+}
+
+export function isHttpsUrl(value: string): boolean {
+  return parseUrl(value)?.protocol === "https:";
+}
+
+/**
+ * ID video YouTube dari tautan tonton, youtu.be, shorts, live, atau embed.
+ * `null` bila tautannya bukan YouTube atau ID-nya tidak sah.
+ */
+export function youtubeId(value: string): string | null {
+  const parsed = parseUrl(value);
+  if (!parsed || parsed.protocol !== "https:") return null;
+  const host = parsed.hostname.toLowerCase().replace(/^(www\.|m\.)/, "");
+  const segments = parsed.pathname.split("/").filter(Boolean);
+  if (host === "youtu.be") {
+    const id = segments[0] ?? "";
+    return YOUTUBE_ID.test(id) ? id : null;
+  }
+  if (host !== "youtube.com" && host !== "youtube-nocookie.com") return null;
+  if (segments[0] === "watch") {
+    const id = parsed.searchParams.get("v") ?? "";
+    return YOUTUBE_ID.test(id) ? id : null;
+  }
+  if (["embed", "shorts", "live", "v"].includes(segments[0] ?? "")) {
+    const id = segments[1] ?? "";
+    return YOUTUBE_ID.test(id) ? id : null;
+  }
+  return null;
+}
+
+/** Blok yang tidak bisa tampil tanpa koneksi internet. */
+export function blockNeedsInternet(block: SceneBlock): boolean {
+  if (block.kind === "video") {
+    return block.source !== "lokal" && block.url.trim().length > 0;
+  }
+  return block.kind === "semat" && block.url.trim().length > 0;
+}
+
+export function sceneNeedsInternet(scene: Scene): boolean {
+  return scene.steps.some((step) => step.blocks.some(blockNeedsInternet));
+}
+
 /**
  * Pesan yang dapat ditindaklanjuti sebelum "Terapkan" menulis berkas.
  * `assetPaths` adalah daftar path di draft, untuk memastikan gambar ada.
@@ -319,6 +450,9 @@ export function sceneIssues(scene: Scene, assetPaths: readonly string[]): string
         if (block.style === "poin" && splitPoints(block.text).length > 8) {
           issues.push(`${where}: daftar poin maksimal 8 baris.`);
         }
+        if (/https?:\/\//i.test(block.text)) {
+          issues.push(`${where}: memuat alamat web; bundel harus mandiri.`);
+        }
       } else if (block.kind === "gambar") {
         if (!block.path) {
           issues.push(`${where}: belum ada gambar dipilih.`);
@@ -328,7 +462,10 @@ export function sceneIssues(scene: Scene, assetPaths: readonly string[]): string
         if (block.alt.trim().length === 0) {
           issues.push(`${where}: teks alternatif gambar wajib diisi.`);
         }
-      } else {
+        if (/https?:\/\//i.test(block.caption)) {
+          issues.push(`${where}: caption memuat alamat web; bundel harus mandiri.`);
+        }
+      } else if (block.kind === "suara") {
         if (!block.path) {
           issues.push(`${where}: belum ada berkas suara dipilih.`);
         } else if (!assetPaths.includes(block.path)) {
@@ -337,11 +474,33 @@ export function sceneIssues(scene: Scene, assetPaths: readonly string[]): string
         if (block.label.trim().length === 0) {
           issues.push(`${where}: label suara wajib diisi.`);
         }
-      }
-      const searchable =
-        block.kind === "teks" ? block.text : `${block.caption} ${block.kind === "suara" ? block.label : ""}`;
-      if (/https?:\/\//i.test(searchable)) {
-        issues.push(`${where}: memuat alamat web; bundel harus mandiri.`);
+        if (/https?:\/\//i.test(`${block.caption} ${block.label}`)) {
+          issues.push(`${where}: caption memuat alamat web; bundel harus mandiri.`);
+        }
+      } else if (block.kind === "video") {
+        if (block.source === "lokal") {
+          if (!block.path) {
+            issues.push(`${where}: belum ada berkas video dipilih.`);
+          } else if (!assetPaths.includes(block.path)) {
+            issues.push(`${where}: berkas video ${block.path} tidak ada di draft.`);
+          }
+        } else if (block.source === "youtube") {
+          if (youtubeId(block.url) === null) {
+            issues.push(`${where}: tautan YouTube belum sah.`);
+          }
+        } else if (!isHttpsUrl(block.url)) {
+          issues.push(`${where}: berkas video daring harus alamat https://.`);
+        }
+        if (block.title.trim().length === 0) {
+          issues.push(`${where}: judul video wajib diisi (dibacakan pembaca layar).`);
+        }
+      } else {
+        if (!isHttpsUrl(block.url)) {
+          issues.push(`${where}: alamat sematan harus diawali https://.`);
+        }
+        if (block.title.trim().length === 0) {
+          issues.push(`${where}: judul sematan wajib diisi (dibacakan pembaca layar).`);
+        }
       }
     });
   });

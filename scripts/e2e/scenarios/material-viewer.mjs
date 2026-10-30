@@ -124,10 +124,13 @@ export async function run({ page, artifactDir, log }) {
     `iframe harus memakai protokol ifp-content (src: ${frame.src}).`
   );
   assert(
-    frame.sandbox === "allow-scripts allow-forms",
-    `sandbox iframe harus "allow-scripts allow-forms" (didapat: ${frame.sandbox}).`
+    frame.sandbox === "allow-scripts allow-forms allow-same-origin allow-popups",
+    `sandbox iframe harus "allow-scripts allow-forms allow-same-origin allow-popups" (didapat: ${frame.sandbox}).`
   );
-  assert(frame.crossOrigin, "Dokumen iframe harus ber-origin opaque (tidak dapat dibaca induk).");
+  assert(
+    frame.crossOrigin,
+    "Dokumen materi harus tetap tidak terbaca induk (asal ifp-content berbeda dari asal aplikasi)."
+  );
   assert(frame.dialogRole === "dialog" && frame.modal === "true", "Penampil harus dialog modal.");
   log(`iframe tersandbox: ${frame.src}`);
 

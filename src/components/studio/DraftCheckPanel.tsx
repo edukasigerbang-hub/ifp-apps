@@ -55,7 +55,8 @@ export function DraftCheckPanel({
       {!report && (
         <p className="text-sm text-muted">
           Pemeriksaan menguji kontrak bundel v1: manifest, hash tiap berkas terhadap isi folder,
-          berkas wajib, dan rujukan eksternal.
+          berkas wajib, dan rujukan eksternal. Hanya alamat video YouTube, video daring, dan sematan
+          yang dinyatakan di tab Susun yang diizinkan; alamat lain membuat bundel ditolak.
         </p>
       )}
 

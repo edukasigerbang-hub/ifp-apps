@@ -2,15 +2,21 @@ import { describe, expect, it } from "vitest";
 import {
   CAPTIONS_PATH,
   createAudioBlock,
+  createEmbedBlock,
   createImageBlock,
   createScene,
   createStep,
   createTextBlock,
+  createVideoBlock,
   parseScene,
   sceneAudioBlocks,
   sceneIssues,
+  sceneNeedsInternet,
   splitPoints,
-  type Scene
+  youtubeId,
+  type EmbedBlock,
+  type Scene,
+  type VideoBlock
 } from "./sceneModel";
 import {
   extractSceneDocument,
@@ -180,6 +186,136 @@ describe("naskah visual", () => {
     expect(preview).not.toContain("var index = 0;");
     expect(renderIndexHtml(sampleScene())).toContain('data-stage="0"');
     expect(renderRuntime()).toContain("var index = 0;");
+  });
+});
+
+describe("blok video dan sematan", () => {
+  const YOUTUBE = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+  function videoScene(block: VideoBlock | EmbedBlock): Scene {
+    const scene = createScene("Materi Video", "");
+    scene.steps[0].blocks = [block];
+    return scene;
+  }
+
+  it("mengenali ID dari tautan YouTube yang lazim", () => {
+    expect(youtubeId(YOUTUBE)).toBe("dQw4w9WgXcQ");
+    expect(youtubeId("https://youtu.be/dQw4w9WgXcQ?t=12")).toBe("dQw4w9WgXcQ");
+    expect(youtubeId("https://www.youtube.com/shorts/dQw4w9WgXcQ")).toBe("dQw4w9WgXcQ");
+    expect(youtubeId("https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ")).toBe("dQw4w9WgXcQ");
+    expect(youtubeId("https://contoh.test/watch?v=dQw4w9WgXcQ")).toBeNull();
+    expect(youtubeId("http://youtu.be/dQw4w9WgXcQ")).toBeNull();
+    expect(youtubeId("https://youtu.be/pendek")).toBeNull();
+  });
+
+  it("menulis pemutar YouTube tanpa cookie plus pemberitahuan offline", () => {
+    const scene = videoScene({ ...createVideoBlock("youtube"), url: YOUTUBE, title: "Pembuka" });
+    const html = renderIndexHtml(scene);
+    expect(html).toContain("https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0");
+    expect(html).toContain('title="Pembuka"');
+    expect(html).toContain('data-offline-note hidden');
+    expect(html).toContain('sandbox="allow-scripts allow-same-origin');
+
+    const parsed = parseScene(extractSceneDocument(html));
+    expect(parsed?.steps[0].blocks[0]).toMatchObject({
+      kind: "video",
+      source: "youtube",
+      url: YOUTUBE,
+      title: "Pembuka"
+    });
+  });
+
+  it("memutar berkas daring lewat elemen video dan lokal lewat path draft", () => {
+    const remote = videoScene({
+      ...createVideoBlock("daring"),
+      url: "https://contoh.sch.id/video/pembuka.mp4",
+      title: "Pembuka"
+    });
+    const remoteHtml = renderIndexHtml(remote);
+    expect(remoteHtml).toContain('<video controls');
+    expect(remoteHtml).toContain('data-online');
+    expect(remoteHtml).toContain('src="https://contoh.sch.id/video/pembuka.mp4"');
+
+    const local = videoScene({ ...createVideoBlock("lokal", "assets/pembuka.mp4"), title: "Pembuka" });
+    const localHtml = renderIndexHtml(local);
+    expect(localHtml).toContain('src="assets/pembuka.mp4"');
+    expect(localHtml).not.toContain("data-online");
+    expect(localHtml).not.toContain("offline-note");
+  });
+
+  it("pratinjau memakai penanda, bukan pemutar daring", () => {
+    const youtube = renderPreviewDocument(
+      videoScene({ ...createVideoBlock("youtube"), url: YOUTUBE, title: "Pembuka" })
+    );
+    expect(youtube).toContain("diputar di materi terpasang");
+    expect(youtube).not.toContain("youtube-nocookie.com/embed");
+
+    const local = renderPreviewDocument(
+      videoScene({ ...createVideoBlock("lokal", "assets/pembuka.mp4"), title: "Pembuka" })
+    );
+    expect(local).toContain("assets/pembuka.mp4");
+    expect(local).not.toContain("<video");
+  });
+
+  it("menulis sematan https di iframe bersandbox", () => {
+    const scene = videoScene({ ...createEmbedBlock("https://www.geogebra.org/m/xyz"), title: "GeoGebra" });
+    const html = renderIndexHtml(scene);
+    expect(html).toContain('<iframe src="https://www.geogebra.org/m/xyz"');
+    expect(html).toContain("allow-scripts allow-same-origin allow-forms allow-popups");
+    expect(html).toContain('title="GeoGebra"');
+
+    const preview = renderPreviewDocument(scene);
+    expect(preview).toContain("Sematan www.geogebra.org");
+    expect(preview).not.toContain('src="https://www.geogebra.org');
+  });
+
+  it("runtime menanggapi kejadian online/offline", () => {
+    const runtime = renderRuntime();
+    expect(runtime).toContain('window.addEventListener("offline"');
+    expect(runtime).toContain('window.addEventListener("online"');
+    expect(runtime).toContain("Video tidak dapat dimuat");
+    expect(renderStyle()).toContain(".offline-note");
+  });
+
+  it("menandai sumber yang tidak sah sebelum Terapkan", () => {
+    const invalidYoutube = videoScene({ ...createVideoBlock("youtube"), url: "https://contoh.test", title: "X" });
+    expect(sceneIssues(invalidYoutube, []).join(" ")).toContain("tautan YouTube belum sah");
+
+    const httpVideo = videoScene({
+      ...createVideoBlock("daring"),
+      url: "http://contoh.sch.id/v.mp4",
+      title: "X"
+    });
+    expect(sceneIssues(httpVideo, []).join(" ")).toContain("https://");
+
+    const missingLocal = videoScene({ ...createVideoBlock("lokal", "assets/hilang.mp4"), title: "X" });
+    expect(sceneIssues(missingLocal, []).join(" ")).toContain("tidak ada di draft");
+
+    const untitled = videoScene({ ...createVideoBlock("youtube"), url: YOUTUBE, title: "  " });
+    expect(sceneIssues(untitled, []).join(" ")).toContain("judul video wajib");
+
+    const badEmbed = videoScene({ ...createEmbedBlock("http://contoh.test"), title: "X" });
+    expect(sceneIssues(badEmbed, []).join(" ")).toContain("sematan harus diawali https://");
+
+    const ok = videoScene({
+      ...createVideoBlock("lokal", "assets/pembuka.mp4"),
+      title: "Pembuka",
+      caption: "Anak membaca bersama."
+    });
+    expect(sceneIssues(ok, ["assets/pembuka.mp4"])).toEqual([]);
+  });
+
+  it("tahu kapan materi butuh internet", () => {
+    expect(sceneNeedsInternet(sampleScene())).toBe(false);
+    expect(
+      sceneNeedsInternet(videoScene({ ...createVideoBlock("lokal", "assets/v.mp4"), title: "Lokal" }))
+    ).toBe(false);
+    expect(sceneNeedsInternet(videoScene({ ...createVideoBlock("youtube"), url: YOUTUBE, title: "YT" }))).toBe(
+      true
+    );
+    expect(
+      sceneNeedsInternet(videoScene({ ...createEmbedBlock("https://contoh.test/x"), title: "Semat" }))
+    ).toBe(true);
   });
 });
 

@@ -13,6 +13,7 @@ import {
   EFFECT_LABELS,
   LAYOUT_LABELS,
   MAX_BLOCKS_PER_STEP,
+  MAX_LOCAL_VIDEO_BYTES,
   MAX_STEPS,
   SCENE_EFFECTS,
   SCENE_SOUNDS,
@@ -27,15 +28,21 @@ import {
   THEME_LABELS,
   TONE_LABELS,
   IMAGE_LAYOUTS,
+  VIDEO_SOURCES,
+  VIDEO_SOURCE_LABELS,
   createAudioBlock,
+  createEmbedBlock,
   createId,
   createImageBlock,
   createScene,
   createStep,
   createTextBlock,
+  createVideoBlock,
   nextStepTitle,
   parseScene,
   sceneIssues,
+  sceneNeedsInternet,
+  youtubeId,
   type ImageLayout,
   type Scene,
   type SceneBlock,
@@ -46,7 +53,8 @@ import {
   type TextAlign,
   type TextSize,
   type TextStyle,
-  type TextTone
+  type TextTone,
+  type VideoSource
 } from "./sceneModel";
 import {
   SCENE_FILES,
@@ -66,10 +74,27 @@ import {
 
 const IMAGE_EXTENSIONS = new Set(["webp", "png", "jpg", "jpeg"]);
 const AUDIO_EXTENSIONS = new Set(["mp3", "m4a", "ogg", "wav"]);
+const VIDEO_EXTENSIONS = new Set(["mp4", "webm"]);
 const MAX_THUMBS = 24;
 
 function extensionOf(name: string): string {
   return name.slice(name.lastIndexOf(".") + 1).toLowerCase();
+}
+
+function titleFromFile(name: string): string {
+  return name
+    .replace(/\.[^.]+$/, "")
+    .replace(/[-_]+/g, " ")
+    .trim()
+    .slice(0, 120);
+}
+
+function urlHost(value: string): string {
+  try {
+    return new URL(value).host;
+  } catch {
+    return value;
+  }
 }
 
 function assetPathFor(name: string, fallback: string): string {
@@ -181,11 +206,21 @@ export function DraftScenePanel({
     if (block.kind === "gambar") {
       return block.path.split("/").pop() || "(belum dipilih)";
     }
-    return block.label || "(tanpa label)";
+    if (block.kind === "suara") {
+      return block.label || "(tanpa label)";
+    }
+    if (block.kind === "video") {
+      if (block.source === "lokal") return block.path.split("/").pop() || "(belum dipilih)";
+      return block.title || (block.url ? urlHost(block.url) : "(belum diisi)");
+    }
+    return block.title || (block.url ? urlHost(block.url) : "(belum diisi)");
   }
 
   function blockKindLabel(block: SceneBlock): string {
-    return block.kind === "teks" ? "Teks" : block.kind === "gambar" ? "Gambar" : "Suara";
+    if (block.kind === "teks") return "Teks";
+    if (block.kind === "gambar") return "Gambar";
+    if (block.kind === "suara") return "Suara";
+    return block.kind === "video" ? "Video" : "Sematan";
   }
 
   const assets = useMemo(
@@ -198,6 +233,10 @@ export function DraftScenePanel({
   );
   const audioAssets = useMemo(
     () => assets.filter((path) => AUDIO_EXTENSIONS.has(extensionOf(path))),
+    [assets]
+  );
+  const videoAssets = useMemo(
+    () => assets.filter((path) => VIDEO_EXTENSIONS.has(extensionOf(path))),
     [assets]
   );
   const thumbKey = `${content.draft.materialId}@${content.draft.version}:${imageAssets.join("|")}`;
@@ -245,6 +284,7 @@ export function DraftScenePanel({
   }, [scene, thumbs, thumbsReady, preview, previewStale, activeStep]);
 
   const issues = scene ? sceneIssues(scene, assets) : [];
+  const needsInternet = scene !== null && sceneNeedsInternet(scene);
   const hasStoredScene = stored !== null;
   const pending = busy !== null || uploading;
   const canApply = scene !== null && issues.length === 0 && !pending && ack;
@@ -366,7 +406,12 @@ export function DraftScenePanel({
     setActiveStep(index + 1);
   }
 
-  function addBlock(kind: "teks" | "gambar" | "suara") {
+  function newVideoBlock(): SceneBlock {
+    const local = videoAssets[0];
+    return createVideoBlock(local ? "lokal" : "youtube", local ?? "");
+  }
+
+  function addBlock(kind: "teks" | "gambar" | "suara" | "video" | "semat") {
     updateStep(activeStep, (step) => {
       if (step.blocks.length >= MAX_BLOCKS_PER_STEP) return step;
       const block =
@@ -374,32 +419,50 @@ export function DraftScenePanel({
           ? createTextBlock()
           : kind === "gambar"
             ? createImageBlock(imageAssets[0] ?? "")
-            : createAudioBlock(audioAssets[0] ?? "");
+            : kind === "suara"
+              ? createAudioBlock(audioAssets[0] ?? "")
+              : kind === "video"
+                ? newVideoBlock()
+                : createEmbedBlock();
       return { ...step, blocks: [...step.blocks, block] };
     });
   }
 
   async function handleAssetUpload(
-    kind: "gambar" | "suara",
+    kind: "gambar" | "suara" | "video",
     file: File,
     stepIndex: number,
     blockId: string
   ) {
+    if (kind === "video" && file.size > MAX_LOCAL_VIDEO_BYTES) {
+      onError(
+        `Video ${file.name} ${(file.size / 1024 / 1024).toFixed(1)} MB melebihi batas 25 MB per video.`
+      );
+      return;
+    }
+    const busyLabel =
+      kind === "gambar" ? "Mengunggah gambar…" : kind === "suara" ? "Mengunggah audio…" : "Mengunggah video…";
+    const fallback = kind === "gambar" ? "gambar.png" : kind === "suara" ? "audio.mp3" : "video.mp4";
     setUploading(true);
     onError(null);
-    onBusy(kind === "gambar" ? "Mengunggah gambar…" : "Mengunggah audio…");
+    onBusy(busyLabel);
     try {
       const data = await readStudioCoverFile(file);
-      const path = assetPathFor(file.name, kind === "gambar" ? "gambar.png" : "audio.mp3");
+      const path = assetPathFor(file.name, fallback);
       const next = await addStudioAsset(draftKeyOf(content), path, data);
       onApplied(next);
-      updateBlock(stepIndex, blockId, (block) =>
-        block.kind === kind ? { ...block, path } : block
-      );
+      updateBlock(stepIndex, blockId, (block) => {
+        if (block.kind !== kind) return block;
+        if (block.kind === "video") {
+          return { ...block, source: "lokal", path, title: block.title.trim() || titleFromFile(file.name) };
+        }
+        return { ...block, path };
+      });
       if (kind === "gambar") {
         setThumbs((current) => ({ ...current, [path]: data }));
       }
-      onMessage(`${kind === "gambar" ? "Gambar" : "Audio"} ${path} ditambahkan ke draft.`);
+      const noun = kind === "gambar" ? "Gambar" : kind === "suara" ? "Audio" : "Video";
+      onMessage(`${noun} ${path} ditambahkan ke draft.`);
     } catch (caught) {
       onError(messageOf(caught, "Aset gagal ditambahkan."));
     } finally {
@@ -532,6 +595,16 @@ export function DraftScenePanel({
               ))}
               {issues.length > 8 && <li>…dan {issues.length - 8} masalah lain.</li>}
             </ul>
+          )}
+
+          {needsInternet && (
+            <p
+              data-scene-internet-note
+              className="rounded-control border border-warning/40 bg-warning/10 px-3 py-2 text-sm"
+            >
+              Naskah ini memuat video atau sematan daring. Materi tetap dapat dipasang, tetapi tanpa
+              koneksi internet blok tersebut menampilkan pemberitahuan, bukan isinya.
+            </p>
           )}
 
           <label className="flex items-start gap-2 rounded-control border border-ink/10 bg-paper px-3 py-2 text-sm">
@@ -1136,6 +1209,233 @@ export function DraftScenePanel({
                       </div>
                     )}
 
+                    {block.kind === "video" && (
+                      <div className="mt-2 space-y-2">
+                        <div className="grid gap-2 md:grid-cols-2">
+                          <label className="block text-sm">
+                            Sumber video
+                            <select
+                              data-scene-video-source
+                              value={block.source}
+                              onChange={(event) =>
+                                updateBlock(activeStep, block.id, (current) =>
+                                  current.kind === "video"
+                                    ? { ...current, source: event.target.value as VideoSource }
+                                    : current
+                                )
+                              }
+                              className={controlClass}
+                            >
+                              {VIDEO_SOURCES.map((source) => (
+                                <option key={source} value={source}>
+                                  {VIDEO_SOURCE_LABELS[source]}
+                                </option>
+                              ))}
+                            </select>
+                          </label>
+                          <label className="block text-sm">
+                            Judul video (wajib)
+                            <input
+                              type="text"
+                              data-scene-video-title
+                              maxLength={120}
+                              value={block.title}
+                              onFocus={beginEdit}
+                              onChange={(event) =>
+                                updateBlock(activeStep, block.id, (current) =>
+                                  current.kind === "video"
+                                    ? { ...current, title: event.target.value }
+                                    : current
+                                )
+                              }
+                              className={controlClass}
+                            />
+                          </label>
+                        </div>
+
+                        {block.source === "youtube" && (
+                          <label className="block text-sm">
+                            Tautan YouTube
+                            <input
+                              type="url"
+                              data-scene-video-url
+                              maxLength={500}
+                              placeholder="https://www.youtube.com/watch?v=…"
+                              value={block.url}
+                              onFocus={beginEdit}
+                              onChange={(event) =>
+                                updateBlock(activeStep, block.id, (current) =>
+                                  current.kind === "video"
+                                    ? { ...current, url: event.target.value }
+                                    : current
+                                )
+                              }
+                              className={controlClass}
+                            />
+                            {block.url.trim() !== "" && youtubeId(block.url) === null && (
+                              <span className="mt-1 block text-xs text-danger-strong">
+                                Tautan belum dikenali sebagai video YouTube.
+                              </span>
+                            )}
+                            <span className="mt-1 block text-xs text-muted">
+                              Diputar lewat pemutar youtube-nocookie; butuh koneksi internet.
+                            </span>
+                          </label>
+                        )}
+
+                        {block.source === "daring" && (
+                          <label className="block text-sm">
+                            Alamat berkas video (https)
+                            <input
+                              type="url"
+                              data-scene-video-url
+                              maxLength={500}
+                              placeholder="https://contoh.sch.id/video/pembuka.mp4"
+                              value={block.url}
+                              onFocus={beginEdit}
+                              onChange={(event) =>
+                                updateBlock(activeStep, block.id, (current) =>
+                                  current.kind === "video"
+                                    ? { ...current, url: event.target.value }
+                                    : current
+                                )
+                              }
+                              className={controlClass}
+                            />
+                            <span className="mt-1 block text-xs text-muted">
+                              Video diputar langsung dari alamat itu. Saat tidak ada koneksi, materi
+                              menampilkan pemberitahuan alih-alih pemutar kosong.
+                            </span>
+                          </label>
+                        )}
+
+                        {block.source === "lokal" && (
+                          <div className="grid gap-2 md:grid-cols-2">
+                            <label className="block text-sm">
+                              Berkas video di draft
+                              <select
+                                data-scene-video
+                                value={block.path}
+                                onChange={(event) =>
+                                  updateBlock(activeStep, block.id, (current) =>
+                                    current.kind === "video"
+                                      ? { ...current, path: event.target.value }
+                                      : current
+                                  )
+                                }
+                                className={controlClass}
+                              >
+                                <option value="">Pilih video…</option>
+                                {videoAssets.map((path) => (
+                                  <option key={path} value={path}>
+                                    {path}
+                                  </option>
+                                ))}
+                              </select>
+                            </label>
+                            <label className="block text-sm">
+                              Unggah video (mp4, webm; maks 25 MB)
+                              <input
+                                type="file"
+                                accept="video/mp4,video/webm"
+                                data-scene-video-file
+                                onChange={(event) => {
+                                  const file = event.target.files?.[0];
+                                  if (file) void handleAssetUpload("video", file, activeStep, block.id);
+                                  event.target.value = "";
+                                }}
+                                disabled={pending}
+                                className="mt-1 block w-full text-xs"
+                              />
+                            </label>
+                          </div>
+                        )}
+
+                        <label className="block text-sm">
+                          Keterangan (opsional)
+                          <input
+                            type="text"
+                            maxLength={300}
+                            value={block.caption}
+                            onFocus={beginEdit}
+                            onChange={(event) =>
+                              updateBlock(activeStep, block.id, (current) =>
+                                current.kind === "video"
+                                  ? { ...current, caption: event.target.value }
+                                  : current
+                              )
+                            }
+                            className={controlClass}
+                          />
+                        </label>
+                      </div>
+                    )}
+
+                    {block.kind === "semat" && (
+                      <div className="mt-2 space-y-2">
+                        <div className="grid gap-2 md:grid-cols-2">
+                          <label className="block text-sm">
+                            Judul sematan (wajib)
+                            <input
+                              type="text"
+                              data-scene-embed-title
+                              maxLength={120}
+                              value={block.title}
+                              onFocus={beginEdit}
+                              onChange={(event) =>
+                                updateBlock(activeStep, block.id, (current) =>
+                                  current.kind === "semat"
+                                    ? { ...current, title: event.target.value }
+                                    : current
+                                )
+                              }
+                              className={controlClass}
+                            />
+                          </label>
+                          <label className="block text-sm">
+                            Keterangan (opsional)
+                            <input
+                              type="text"
+                              maxLength={300}
+                              value={block.caption}
+                              onFocus={beginEdit}
+                              onChange={(event) =>
+                                updateBlock(activeStep, block.id, (current) =>
+                                  current.kind === "semat"
+                                    ? { ...current, caption: event.target.value }
+                                    : current
+                                )
+                              }
+                              className={controlClass}
+                            />
+                          </label>
+                        </div>
+                        <label className="block text-sm">
+                          Alamat halaman HTML (https)
+                          <input
+                            type="url"
+                            data-scene-embed-url
+                            maxLength={500}
+                            placeholder="https://www.geogebra.org/m/…"
+                            value={block.url}
+                            onFocus={beginEdit}
+                            onChange={(event) =>
+                              updateBlock(activeStep, block.id, (current) =>
+                                current.kind === "semat"
+                                  ? { ...current, url: event.target.value }
+                                  : current
+                              )
+                            }
+                            className={controlClass}
+                          />
+                          <span className="mt-1 block text-xs text-muted">
+                            Halaman dimuat di iframe bersandbox (skrip boleh, tanpa akses ke aplikasi);
+                            butuh koneksi internet.
+                          </span>
+                        </label>
+                      </div>
+                    )}
+
                     <div className="mt-2 flex flex-wrap gap-1">
                       <span className="self-center text-xs text-muted">Sisip di bawah:</span>
                       <button
@@ -1166,6 +1466,24 @@ export function DraftScenePanel({
                         className={`${secondaryButtonClass} px-2 text-xs`}
                       >
                         Suara
+                      </button>
+                      <button
+                        type="button"
+                        data-scene-insert-after="video"
+                        onClick={() => insertBlock(activeStep, position, newVideoBlock())}
+                        disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                      >
+                        Video
+                      </button>
+                      <button
+                        type="button"
+                        data-scene-insert-after="semat"
+                        onClick={() => insertBlock(activeStep, position, createEmbedBlock())}
+                        disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
+                        className={`${secondaryButtonClass} px-2 text-xs`}
+                      >
+                        Semat
                       </button>
                     </div>
                     </div>
@@ -1201,6 +1519,24 @@ export function DraftScenePanel({
                   className={`${secondaryButtonClass} text-sm`}
                 >
                   + Suara
+                </button>
+                <button
+                  type="button"
+                  data-scene-add-block="video"
+                  onClick={() => addBlock("video")}
+                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
+                  className={`${secondaryButtonClass} text-sm`}
+                >
+                  + Video
+                </button>
+                <button
+                  type="button"
+                  data-scene-add-block="semat"
+                  onClick={() => addBlock("semat")}
+                  disabled={pending || step.blocks.length >= MAX_BLOCKS_PER_STEP}
+                  className={`${secondaryButtonClass} text-sm`}
+                >
+                  + Semat
                 </button>
               </div>
                   </div>
@@ -1241,7 +1577,7 @@ export function DraftScenePanel({
                           <p className="mt-2 text-xs text-muted">
                             {previewStale
                               ? `Naskah berubah setelah pratinjau langkah ${preview.step + 1} dibuat — tekan Muat ulang.`
-                              : `Pratinjau langkah ${preview.step + 1}; gambar memakai aset asli draft, audio tampil sebagai pemutar kosong karena dipanggil lewat protokol materi.`}
+                              : `Pratinjau langkah ${preview.step + 1}; gambar memakai aset asli draft. Audio, video, dan sematan tampil sebagai penanda di sini — video daring, YouTube, dan sematan baru diputar di materi terpasang.`}
                           </p>
                         </>
                       ) : (

@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import worker, { type Env } from "./index";
+import { checkManifest } from "./materialManifest";
 import { canonicalJson, readZipEntries } from "./materials";
 
 const TEST_PRIVATE_KEY =
@@ -521,5 +522,32 @@ describe("pembaca ZIP", () => {
 
   it("menolak berkas yang bukan ZIP", () => {
     expect(() => readZipEntries(new Uint8Array([1, 2, 3, 4]))).toThrow(/bukan ZIP/);
+  });
+});
+
+describe("manifest menerima berkas video", () => {
+  function videoManifest(path: string, mediaType: string) {
+    return {
+      ...manifest,
+      files: [
+        ...manifest.files,
+        { path, mediaType, bytes: 1_048_576, sha256: hexHash(path) }
+      ]
+    };
+  }
+
+  it("mp4 dan webm diizinkan dengan mediaType yang cocok", () => {
+    expect(checkManifest(videoManifest("assets/pembuka.mp4", "video/mp4"))).toEqual([]);
+    expect(checkManifest(videoManifest("assets/pembuka.webm", "video/webm"))).toEqual([]);
+  });
+
+  it("menolak mediaType yang tidak cocok dengan ekstensi", () => {
+    const issues = checkManifest(videoManifest("assets/pembuka.mp4", "application/octet-stream"));
+    expect(issues.map((issue) => issue.message).join(" ")).toContain("video/mp4");
+  });
+
+  it("menolak ekstensi video yang tidak diizinkan", () => {
+    const issues = checkManifest(videoManifest("assets/pembuka.avi", "video/avi"));
+    expect(issues.map((issue) => issue.message).join(" ")).toContain("tidak diizinkan");
   });
 });

@@ -1,10 +1,13 @@
 use crate::error::AppError;
 use serde::{Deserialize, Serialize};
+use serde_json::Value;
 use std::path::Path;
 
 /// Batas ukuran satu bundel materi (kontrak bundel v1 §3).
 pub const MAX_BUNDLE_BYTES: u64 = 50 * 1024 * 1024;
 pub const ENTRY_PATH: &str = "index.html";
+/// Batas satu berkas video; gambar/suara tetap 8 MB di lapisan author.
+pub const MAX_VIDEO_BYTES: u64 = 25 * 1024 * 1024;
 
 /// (ekstensi, tipe MIME telanjang untuk manifest, tipe MIME yang disajikan)
 const MEDIA_TYPES: &[(&str, &str, &str)] = &[
@@ -23,6 +26,8 @@ const MEDIA_TYPES: &[(&str, &str, &str)] = &[
     ("m4a", "audio/mp4", "audio/mp4"),
     ("ogg", "audio/ogg", "audio/ogg"),
     ("wav", "audio/wav", "audio/wav"),
+    ("mp4", "video/mp4", "video/mp4"),
+    ("webm", "video/webm", "video/webm"),
     ("woff2", "font/woff2", "font/woff2"),
     ("ttf", "font/ttf", "font/ttf"),
     ("vtt", "text/vtt", "text/vtt; charset=utf-8"),
@@ -145,6 +150,10 @@ pub fn is_image(path: &str) -> bool {
         extension_of(path).as_deref(),
         Some("webp" | "png" | "jpg" | "jpeg")
     )
+}
+
+pub fn is_video(path: &str) -> bool {
+    matches!(extension_of(path).as_deref(), Some("mp4" | "webm"))
 }
 
 pub fn validate_relative_path(value: &str) -> Result<(), AppError> {
@@ -388,14 +397,346 @@ pub fn validate(manifest: &MaterialManifest, app_version: &str) -> Result<(), Ap
     Ok(())
 }
 
-/// Menolak sumber daya jaringan di HTML/JS/CSS. Pemeriksaan pola + tinjauan
+const SCENE_SCRIPT_OPEN: &str = "<script type=\"application/json\" id=\"ifp-scene\">";
+const SCENE_SCRIPT_CLOSE: &str = "</script>";
+
+fn has_external(value: &str) -> Option<&'static str> {
+    EXTERNAL_PATTERNS
+        .iter()
+        .find(|pattern| value.contains(*pattern))
+        .copied()
+}
+
+/// Blok naskah `ifp-scene`: (awal skrip, akhir sesudah `</script>`, isi JSON).
+fn scene_segment(html: &str) -> Option<(usize, usize, &str)> {
+    let start = html.find(SCENE_SCRIPT_OPEN)?;
+    let body_start = start + SCENE_SCRIPT_OPEN.len();
+    let body_end = body_start + html[body_start..].find(SCENE_SCRIPT_CLOSE)?;
+    Some((start, body_end + SCENE_SCRIPT_CLOSE.len(), &html[body_start..body_end]))
+}
+
+fn is_https_url(value: &str) -> bool {
+    let trimmed = value.trim();
+    trimmed
+        .to_ascii_lowercase()
+        .strip_prefix("https://")
+        .is_some_and(|rest| !rest.is_empty())
+        && !trimmed.chars().any(|character| character.is_whitespace() || character.is_control())
+}
+
+fn is_youtube_url(value: &str) -> bool {
+    let lower = value.trim().to_ascii_lowercase();
+    let Some(rest) = lower.strip_prefix("https://") else {
+        return false;
+    };
+    let host = rest.split('/').next().unwrap_or("");
+    let host = host.split(':').next().unwrap_or("");
+    matches!(
+        host,
+        "youtube.com"
+            | "www.youtube.com"
+            | "m.youtube.com"
+            | "youtu.be"
+            | "www.youtu.be"
+            | "youtube-nocookie.com"
+            | "www.youtube-nocookie.com"
+    )
+}
+
+fn block_text<'a>(block: &'a Value, key: &str) -> &'a str {
+    block.get(key).and_then(Value::as_str).unwrap_or("")
+}
+
+fn block_array<'a>(value: &'a Value, key: &str) -> &'a [Value] {
+    value.get(key).and_then(Value::as_array).map(Vec::as_slice).unwrap_or(&[])
+}
+
+/// ID video dari tautan YouTube: bentuk `watch?v=`, `youtu.be/<id>`, atau
+/// segmen pertama `embed|shorts|live|v`. Host harus YouTube; `None` bila bentuk
+/// atau ID-nya tidak sah (sebelas karakter `A-Za-z0-9-_`).
+fn youtube_video_id(url: &str) -> Option<&str> {
+    let rest = url.trim().strip_prefix("https://")?;
+    let (host, path) = match rest.split_once('/') {
+        Some(split) => split,
+        None => (rest, ""),
+    };
+    let host = host
+        .to_ascii_lowercase()
+        .trim_start_matches("www.")
+        .trim_start_matches("m.")
+        .to_string();
+    if !matches!(host.as_str(), "youtube.com" | "youtu.be" | "youtube-nocookie.com") {
+        return None;
+    }
+    let (path_only, query) = match path.split_once('?') {
+        Some(split) => (split.0, Some(split.1)),
+        None => (path, None),
+    };
+    let segments: Vec<&str> = path_only
+        .split('/')
+        .filter(|segment| !segment.is_empty())
+        .collect();
+    let candidate = if host == "youtu.be" {
+        segments.first().copied()?
+    } else {
+        match segments.first().copied() {
+            Some("watch") => query?
+                .split('&')
+                .find_map(|pair| pair.strip_prefix("v="))?,
+            Some("embed") | Some("shorts") | Some("live") | Some("v") => {
+                segments.get(1).copied()?
+            }
+            _ => return None,
+        }
+    };
+    let id = candidate.split('#').next().unwrap_or(candidate);
+    (id.len() == 11
+        && id
+            .chars()
+            .all(|character| character.is_ascii_alphanumeric() || "-_".contains(character)))
+    .then_some(id)
+}
+
+/// Alamat pemutar yang dirender dari blok video YouTube. Bundel menyimpan tautan
+/// yang dideklarasikan penulis, sementara `index.html` memuat embed nocookie-nya,
+/// jadi alamat turunan itu ikut dinetralkan sebelum pemindaian rujukan eksternal.
+fn scene_embed_urls(scene: &Value) -> Vec<String> {
+    block_array(scene, "steps")
+        .iter()
+        .flat_map(|step| block_array(step, "blocks"))
+        .filter(|block| {
+            block_text(block, "kind") == "video" && block_text(block, "source") == "youtube"
+        })
+        .filter_map(|block| youtube_video_id(block_text(block, "url")))
+        .map(|id| format!("https://www.youtube-nocookie.com/embed/{id}"))
+        .collect()
+}
+
+/// Memeriksa blok video/sematan di naskah dan mengumpulkan URL https yang
+/// dideklarasikan penulis. Blok teks/gambar/suara tetap dilarang memuat alamat.
+fn scene_urls(scene: &Value) -> Result<Vec<String>, String> {
+    let mut urls = Vec::new();
+    for (step_index, step) in block_array(scene, "steps").iter().enumerate() {
+        for (block_index, block) in block_array(step, "blocks").iter().enumerate() {
+            let where_ = format!("Langkah {} blok {}", step_index + 1, block_index + 1);
+            let title = block_text(block, "title").trim();
+            match block_text(block, "kind") {
+                "video" => {
+                    let url = block_text(block, "url").trim();
+                    match block_text(block, "source") {
+                        "lokal" => {}
+                        "youtube" => {
+                            if !is_https_url(url) || !is_youtube_url(url) {
+                                return Err(format!(
+                                    "{where_}: tautan YouTube harus alamat https://youtube.com atau https://youtu.be."
+                                ));
+                            }
+                            urls.push(url.to_string());
+                        }
+                        "daring" => {
+                            if !is_https_url(url) {
+                                return Err(format!(
+                                    "{where_}: berkas video daring harus alamat https://."
+                                ));
+                            }
+                            urls.push(url.to_string());
+                        }
+                        _ => return Err(format!("{where_}: sumber video tidak dikenal.")),
+                    }
+                    if title.is_empty() {
+                        return Err(format!("{where_}: judul video wajib diisi."));
+                    }
+                }
+                "semat" => {
+                    let url = block_text(block, "url").trim();
+                    if !is_https_url(url) {
+                        return Err(format!("{where_}: alamat sematan harus https://."));
+                    }
+                    if title.is_empty() {
+                        return Err(format!("{where_}: judul sematan wajib diisi."));
+                    }
+                    urls.push(url.to_string());
+                }
+                kind => {
+                    for key in ["text", "caption", "alt", "label"] {
+                        if has_external(&block_text(block, key).to_ascii_lowercase()).is_some() {
+                            return Err(format!(
+                                "{where_}: {key} memuat alamat web; blok {kind} harus mandiri."
+                            ));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    Ok(urls)
+}
+
+/// URL daring yang dideklarasikan blok video/sematan di index.html.
+pub fn scene_remote_urls(html: &str) -> Vec<String> {
+    scene_segment(html)
+        .and_then(|(_, _, body)| serde_json::from_str::<Value>(body).ok())
+        .and_then(|scene| scene_urls(&scene).ok())
+        .unwrap_or_default()
+}
+
+fn escape_attr(value: &str) -> String {
+    value
+        .replace('&', "&amp;")
+        .replace('"', "&quot;")
+        .replace('\'', "&#39;")
+        .replace('<', "&lt;")
+        .replace('>', "&gt;")
+}
+
+/// Menolak sumber daya jaringan di HTML/JS/CSS, kecuali URL yang dideklarasikan
+/// blok video/sematan pada naskah `ifp-scene`. Pemeriksaan pola + tinjauan
 /// manusia sesuai kontrak; bukan pengganti sandbox iframe/CSP.
 pub fn ensure_self_contained(path: &str, bytes: &[u8]) -> Result<(), AppError> {
-    let text = String::from_utf8_lossy(bytes).to_ascii_lowercase();
-    if let Some(pattern) = EXTERNAL_PATTERNS.iter().find(|pattern| text.contains(*pattern)) {
+    let source = String::from_utf8_lossy(bytes);
+    let mut rest = source.to_string();
+    let mut allowed: Vec<String> = Vec::new();
+
+    if extension_of(path).as_deref() == Some("html") {
+        if let Some((start, end, body)) = scene_segment(&source) {
+            let scene: Value = serde_json::from_str(body).map_err(|_| {
+                AppError::material_not_self_contained(&format!(
+                    "Berkas {path}: blok naskah ifp-scene bukan JSON yang sah."
+                ))
+            })?;
+            allowed = scene_urls(&scene).map_err(|message| {
+                AppError::material_not_self_contained(&format!("Berkas {path}: {message}"))
+            })?;
+            allowed.extend(scene_embed_urls(&scene));
+            rest = format!("{}{}", &source[..start], &source[end..]);
+        }
+    }
+
+    let mut lowered = rest.to_ascii_lowercase();
+    for url in &allowed {
+        let plain = url.to_ascii_lowercase();
+        lowered = lowered.replace(&plain, "about:blank");
+        let escaped = escape_attr(url).to_ascii_lowercase();
+        if escaped != plain {
+            lowered = lowered.replace(&escaped, "about:blank");
+        }
+    }
+    if let Some(pattern) = has_external(&lowered) {
         return Err(AppError::material_not_self_contained(&format!(
-            "Berkas {path} memuat rujukan eksternal ({pattern})."
+            "Berkas {path} memuat rujukan eksternal ({pattern}) di luar blok video/sematan."
         )));
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn scene_html(blocks: &str) -> String {
+        format!(
+            "<!doctype html><html><body><script type=\"application/json\" id=\"ifp-scene\">{{\"schemaVersion\":1,\"steps\":[{{\"blocks\":[{blocks}]}}]}}</script><script src=\"assets/app.js\"></script></body></html>"
+        )
+    }
+
+    #[test]
+    fn video_media_types_allowed() {
+        assert_eq!(bare_media_type("assets/video.mp4"), Some("video/mp4"));
+        assert_eq!(bare_media_type("assets/video.webm"), Some("video/webm"));
+        assert!(is_video("assets/video.mp4"));
+        assert!(!is_video("assets/gambar.webp"));
+    }
+
+    #[test]
+    fn declared_remote_blocks_are_allowed() {
+        let html = scene_html(
+            r#"{"kind":"video","source":"youtube","url":"https://www.youtube.com/watch?v=abcDEF12345","title":"Pembuka"},{"kind":"semat","url":"https://www.geogebra.org/m/xyz","title":"GeoGebra"}"#,
+        );
+        assert!(ensure_self_contained("index.html", html.as_bytes()).is_ok());
+        assert_eq!(scene_remote_urls(&html).len(), 2);
+    }
+
+    /// `index.html` hasil susunan memuat alamat pemutar turunan, bukan tautan
+    /// yang dideklarasikan penulis, jadi keduanya harus dikenali.
+    #[test]
+    fn rendered_youtube_embed_is_allowed() {
+        let embed = "<iframe src=\"https://www.youtube-nocookie.com/embed/abcDEF12345?rel=0\"></iframe>";
+        let html = scene_html(
+            r#"{"kind":"video","source":"youtube","url":"https://www.youtube.com/watch?v=abcDEF12345","title":"Pembuka"}"#,
+        )
+        .replace("</body>", &format!("{embed}</body>"));
+        assert!(ensure_self_contained("index.html", html.as_bytes()).is_ok());
+
+        let asing = html.replace("abcDEF12345?rel=0", "ZYXWVUTSRQP?rel=0");
+        assert!(
+            ensure_self_contained("index.html", asing.as_bytes()).is_err(),
+            "Embed YouTube dengan id di luar naskah tidak boleh ikut lolos."
+        );
+    }
+
+    #[test]
+    fn youtube_video_id_accepts_link_shapes() {
+        for url in [
+            "https://www.youtube.com/watch?v=abcDEF12345",
+            "https://youtu.be/abcDEF12345",
+            "https://m.youtube.com/watch?v=abcDEF12345&list=PL1",
+            "https://www.youtube.com/embed/abcDEF12345",
+            "https://www.youtube.com/shorts/abcDEF12345",
+        ] {
+            assert_eq!(
+                youtube_video_id(url),
+                Some("abcDEF12345"),
+                "ID tidak terbaca dari {url}"
+            );
+        }
+        assert_eq!(youtube_video_id("https://www.youtube.com/watch?v=pendek"), None);
+        assert_eq!(youtube_video_id("https://contoh.test/watch?v=abcDEF12345"), None);
+    }
+
+    #[test]
+    fn escaped_url_in_markup_is_allowed() {
+        let html = scene_html(
+            r#"{"kind":"semat","url":"https://www.geogebra.org/m/a?b=1&c=2","title":"GeoGebra"}"#,
+        )
+        .replace(
+            "</body>",
+            "<iframe src=\"https://www.geogebra.org/m/a?b=1&amp;c=2\"></iframe></body>",
+        );
+        assert!(ensure_self_contained("index.html", html.as_bytes()).is_ok());
+    }
+
+    #[test]
+    fn undeclared_external_reference_is_rejected() {
+        let text = scene_html(r#"{"kind":"teks","text":"lihat https://contoh.test"}"#);
+        assert!(ensure_self_contained("index.html", text.as_bytes()).is_err());
+
+        let script = scene_html(
+            r#"{"kind":"video","source":"youtube","url":"https://www.youtube.com/watch?v=abcDEF12345","title":"Pembuka"}"#,
+        )
+        .replace("assets/app.js", "https://cdn.contoh.test/app.js");
+        assert!(ensure_self_contained("index.html", script.as_bytes()).is_err());
+    }
+
+    #[test]
+    fn unsafe_scene_urls_are_rejected() {
+        for url in [
+            "http://youtu.be/abcDEF12345",
+            "https://contoh.test/video.mp4",
+            "javascript:alert(1)",
+        ] {
+            let html = scene_html(&format!(
+                r#"{{"kind":"video","source":"youtube","url":"{url}","title":"Pembuka"}}"#
+            ));
+            assert!(
+                ensure_self_contained("index.html", html.as_bytes()).is_err(),
+                "URL harus ditolak: {url}"
+            );
+        }
+    }
+
+    #[test]
+    fn remote_blocks_need_title() {
+        let html = scene_html(r#"{"kind":"semat","url":"https://www.geogebra.org/m/xyz","title":""}"#);
+        assert!(ensure_self_contained("index.html", html.as_bytes()).is_err());
+    }
 }
