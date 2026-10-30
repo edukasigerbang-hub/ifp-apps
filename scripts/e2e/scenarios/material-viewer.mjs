@@ -75,6 +75,62 @@ async function pressEscape(page) {
   await page.send("Input.dispatchKeyEvent", { type: "keyUp", ...key });
 }
 
+async function setViewport(page, width, height) {
+  await page.send("Emulation.setDeviceMetricsOverride", {
+    width,
+    height,
+    deviceScaleFactor: 1,
+    mobile: false
+  });
+  await page.waitFor(`window.innerWidth === ${width}`, { label: `viewport ${width}px` });
+}
+
+async function measureViewer(page) {
+  return page.evaluate(`
+    (() => {
+      const dialog = document.querySelector("[data-material-viewer]");
+      const frame = document.querySelector("[data-material-frame]");
+      const transcript = document.querySelector("[data-material-transcript]");
+      const box = (element) => {
+        const rect = element?.getBoundingClientRect();
+        return rect ? { left: Math.round(rect.left), width: Math.round(rect.width) } : null;
+      };
+      return {
+        mode: dialog?.getAttribute("data-material-view-mode") ?? null,
+        dialog: box(dialog),
+        frame: box(frame),
+        transcript: box(transcript),
+        transcriptPositioned: transcript ? getComputedStyle(transcript).position : null,
+        kicker: [...(dialog?.querySelectorAll("header p") ?? [])]
+          .map((node) => node.textContent)
+          .some((text) => text.includes("Materi HTML5")),
+        contentWidth: document.documentElement.clientWidth,
+        overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      };
+    })()
+  `);
+}
+
+const MODE_ORDER = ["kartu", "lansekap", "layar-penuh"];
+
+async function setViewerMode(page, wanted) {
+  for (let step = 0; step < MODE_ORDER.length; step += 1) {
+    const current = await page.evaluate(
+      `document.querySelector("[data-material-viewer]")?.getAttribute("data-material-view-mode")`
+    );
+    if (current === wanted) {
+      return;
+    }
+    const expected = MODE_ORDER[(MODE_ORDER.indexOf(current) + 1) % MODE_ORDER.length];
+    await clickSelector(page, "[data-material-view-mode-toggle]");
+    await page.waitFor(
+      `document.querySelector("[data-material-viewer]")?.getAttribute("data-material-view-mode") === ${JSON.stringify(expected)}`,
+      { label: `mode ${expected}` }
+    );
+  }
+  throw new Error(`Mode "${wanted}" tidak tercapai lewat tombol tampilan.`);
+}
+
 export async function run({ page, artifactDir, log }) {
   await page.waitFor(`typeof window.__TAURI_INTERNALS__?.invoke === "function"`, {
     label: "bridge Tauri"
@@ -170,6 +226,65 @@ export async function run({ page, artifactDir, log }) {
     label: "panel transkrip tertutup"
   });
 
+  await setViewport(page, 1600, 900);
+  await setViewerMode(page, "kartu");
+  const kartu = await measureViewer(page);
+  assert(
+    kartu.dialog.width >= 900 && kartu.dialog.width <= 1030,
+    `Mode kartu harus tetap kartu ±1024 px (didapat ${kartu.dialog.width}).`
+  );
+  assert(kartu.kicker, "Mode kartu menampilkan keterangan materi.");
+
+  await setViewerMode(page, "lansekap");
+  const lansekap = await measureViewer(page);
+  assert(
+    lansekap.dialog.width > kartu.dialog.width + 300,
+    `Lansekap harus mengisi jendela, bukan berhenti di 1024 px (${kartu.dialog.width} → ${lansekap.dialog.width}).`
+  );
+  assert(!lansekap.overflow, "Lansekap: overflow horizontal terdeteksi.");
+
+  await setViewerMode(page, "layar-penuh");
+  const penuh = await measureViewer(page);
+  assert(
+    penuh.frame.width >= lansekap.frame.width,
+    `Layar penuh tidak boleh lebih sempit dari lansekap (${lansekap.frame.width} → ${penuh.frame.width}).`
+  );
+  // `position:fixed; inset:0` membentang sebatas viewport di luar bilah gulir klasik,
+  // jadi pembandingnya clientWidth, bukan innerWidth.
+  assert(
+    penuh.dialog.width >= penuh.contentWidth - 2,
+    `Layar penuh harus memenuhi lebar konten jendela (${penuh.dialog.width} dari ${penuh.contentWidth}).`
+  );
+  assert(!penuh.kicker, "Layar penuh menyembunyikan keterangan dan metadata materi.");
+  log(
+    `Tiga mode terukur: pemutar ${kartu.frame.width}px (kartu) → ${lansekap.frame.width}px (lansekap) → ${penuh.frame.width}px (layar penuh).`
+  );
+
+  await setViewerMode(page, "lansekap");
+  await clickSelector(page, "[data-material-transcript-toggle]");
+  await page.waitFor(`document.querySelector("[data-material-transcript]") !== null`, {
+    label: "transkrip dampingan"
+  });
+  const sideBySide = await measureViewer(page);
+  assert(
+    sideBySide.transcriptPositioned !== "absolute",
+    "Di mode lebar transkrip harus mendampingi, bukan menutupi pemutar."
+  );
+  assert(
+    sideBySide.transcript.width + sideBySide.frame.width <= sideBySide.dialog.width + 2 &&
+      sideBySide.transcript.left >= sideBySide.frame.left + sideBySide.frame.width - 2,
+    `Transkrip tidak diletakkan di samping pemutar (frame ${sideBySide.frame.left}+${sideBySide.frame.width}, transkrip ${sideBySide.transcript.left}).`
+  );
+  log(`Transkrip mendampingi pemutar di mode lansekap: ${sideBySide.transcript.width}px.`);
+  await clickSelector(page, "[data-material-transcript-toggle]");
+  await page.waitFor(`document.querySelector("[data-material-transcript]") === null`, {
+    label: "transkrip tertutup kembali"
+  });
+
+  // Sengaja ditutup pada mode kartu: di jendela 1600 px tanpa preferensi tersimpan
+  // penampil akan jatuh ke lansekap, jadi buka-ulang membuktikan preferennya dibaca.
+  await setViewerMode(page, "kartu");
+
   await page.screenshot(path.join(artifactDir, "material-viewer.png"));
 
   await pressEscape(page);
@@ -182,6 +297,12 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.querySelector("[data-material-status='siap']") !== null`, {
     label: "materi siap (kedua)"
   });
+  const restored = await measureViewer(page);
+  assert(
+    restored.mode === "kartu",
+    `Mode tampilan harus diingat per profil setelah penampil dibuka ulang (didapat: ${restored.mode}).`
+  );
+  log("Mode tampilan diingat per profil lewat state ui perangkat.");
   // `completion.minDwellSeconds` = 2, jadi induk baru menerima `complete`
   // setelah materi dibuka lebih dari dua detik. Langkah ketiga (progres 100%)
   // baru tercapai pada 3,2 detik sehingga dwell pasti terpenuhi.
@@ -217,4 +338,5 @@ export async function run({ page, artifactDir, log }) {
     `({ viewer: document.querySelector("[data-material-viewer]") === null, frames: document.querySelectorAll("iframe").length })`
   );
   assert(closed.viewer && closed.frames === 0, "iframe harus dilepas setelah penampil ditutup.");
+  await page.send("Emulation.clearDeviceMetricsOverride");
 }

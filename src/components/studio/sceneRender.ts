@@ -404,6 +404,14 @@ button:disabled{opacity:.45;cursor:default}
 .step,.fx-piece,.fx-letter{animation:none!important}
 .fx::after{display:none}
 }
+@media (min-width:1000px){
+.material{max-width:min(1180px,92%)}
+.step p,.step li{max-width:78ch}
+.embed-frame iframe{height:min(72vh,640px)}
+}
+@media (min-width:1400px){
+.material{max-width:min(1400px,94%)}
+}
 @media (max-width:520px){.material{padding:20px 14px 36px}.step{padding:16px}}`;
 }
 

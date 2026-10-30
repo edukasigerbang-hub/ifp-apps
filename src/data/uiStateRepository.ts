@@ -2,6 +2,7 @@ import { invoke } from "@tauri-apps/api/core";
 
 export const HOME_TAB_KEY = "home-tab";
 export const QUIZ_RESUME_KEY = "quiz-resume";
+export const MATERIAL_VIEW_MODE_KEY = "material-view-mode";
 
 export function readUiState(profileId: string, key: string): Promise<string | null> {
   return invoke<string | null>("ui_state_get", { profileId, key });

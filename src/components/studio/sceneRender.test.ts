@@ -281,6 +281,16 @@ describe("blok video dan sematan", () => {
     expect(renderStyle()).toContain(".offline-note");
   });
 
+  it("kolom konten ikut melebar di bingkai lanskap", () => {
+    const style = renderStyle();
+    expect(style).toContain("@media (min-width:1000px)");
+    expect(style).toContain(".material{max-width:min(1180px,92%)}");
+    expect(style).toContain(".step p,.step li{max-width:78ch}");
+    expect(style).toContain("@media (min-width:1400px)");
+    expect(style).toContain(".material{max-width:min(1400px,94%)}");
+    expect(style).toContain(".material{max-width:820px");
+  });
+
   it("menandai sumber yang tidak sah sebelum Terapkan", () => {
     const invalidYoutube = videoScene({ ...createVideoBlock("youtube"), url: "https://contoh.test", title: "X" });
     expect(sceneIssues(invalidYoutube, []).join(" ")).toContain("tautan YouTube belum sah");

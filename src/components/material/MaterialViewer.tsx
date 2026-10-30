@@ -1,5 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 import { materialEntryUrl, type MaterialView } from "../../data/materialRepository";
+import { getActiveProfile } from "../../data/profileRepository";
+import { canPersistLocally } from "../../data/learningRepository";
+import { MATERIAL_VIEW_MODE_KEY, readUiState, writeUiState } from "../../data/uiStateRepository";
 
 interface MaterialViewerProps {
   material: MaterialView;
@@ -8,6 +12,17 @@ interface MaterialViewerProps {
 
 type ViewerStatus = "memuat" | "siap" | "selesai" | "galat";
 
+type ViewMode = "kartu" | "lansekap" | "layar-penuh";
+
+const VIEW_MODE_ORDER: ViewMode[] = ["kartu", "lansekap", "layar-penuh"];
+
+const VIEW_MODE_LABEL: Record<ViewMode, string> = {
+  kartu: "Kartu",
+  lansekap: "Lansekap",
+  "layar-penuh": "Layar penuh"
+};
+
+const WIDE_VIEWPORT_PX = 1280;
 const READY_TIMEOUT_MS = 12_000;
 
 interface BridgeMessage {
@@ -23,13 +38,22 @@ function readProgress(value: unknown): number | null {
   return Math.min(1, Math.max(0, value));
 }
 
+function nextViewMode(mode: ViewMode): ViewMode {
+  const index = VIEW_MODE_ORDER.indexOf(mode);
+  return VIEW_MODE_ORDER[(index + 1) % VIEW_MODE_ORDER.length];
+}
+
 export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
   const frameRef = useRef<HTMLIFrameElement | null>(null);
   const dialogRef = useRef<HTMLDivElement | null>(null);
+  const profileIdRef = useRef<string | null>(null);
   const openedAtRef = useRef(Date.now());
   const [status, setStatus] = useState<ViewerStatus>("memuat");
   const [progress, setProgress] = useState(0);
   const [transcriptOpen, setTranscriptOpen] = useState(false);
+  const [mode, setMode] = useState<ViewMode>(() =>
+    typeof window !== "undefined" && window.innerWidth >= WIDE_VIEWPORT_PX ? "lansekap" : "kartu"
+  );
 
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
@@ -37,6 +61,55 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
     return () => {
       previous?.focus?.();
     };
+  }, []);
+
+  useEffect(() => {
+    if (!canPersistLocally()) {
+      return;
+    }
+    let cancelled = false;
+    void (async () => {
+      try {
+        const profile = await getActiveProfile();
+        const stored = await readUiState(profile.id, MATERIAL_VIEW_MODE_KEY);
+        if (cancelled) {
+          return;
+        }
+        profileIdRef.current = profile.id;
+        if (stored === "kartu" || stored === "lansekap" || stored === "layar-penuh") {
+          setMode(stored);
+        }
+      } catch {
+        // Tanpa profil aktif (mis. pratinjau Studio) mode cukup warisan dari viewport.
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Layar penuh memakai API jendela Tauri, bukan Fullscreen API DOM:
+  // preseden T-093 menolak Fullscreen API karena WebView2 tidak konsisten.
+  useEffect(() => {
+    if (!canPersistLocally()) {
+      return;
+    }
+    const appWindow = getCurrentWindow();
+    const fullscreen = mode === "layar-penuh";
+    void appWindow.setFullscreen(fullscreen).catch(() => undefined);
+    return () => {
+      if (fullscreen) {
+        void appWindow.setFullscreen(false).catch(() => undefined);
+      }
+    };
+  }, [mode]);
+
+  const applyMode = useCallback((next: ViewMode) => {
+    setMode(next);
+    const profileId = profileIdRef.current;
+    if (profileId) {
+      void writeUiState(profileId, MATERIAL_VIEW_MODE_KEY, next).catch(() => undefined);
+    }
   }, []);
 
   useEffect(() => {
@@ -109,11 +182,15 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
         setTranscriptOpen(false);
         return;
       }
+      if (mode === "layar-penuh") {
+        applyMode("lansekap");
+        return;
+      }
       onClose();
     }
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose, transcriptOpen]);
+  }, [applyMode, mode, onClose, transcriptOpen]);
 
   const percentage = Math.round(progress * 100);
   const statusLabel =
@@ -124,9 +201,15 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
         : status === "selesai"
           ? "Materi ditandai selesai."
           : "Materi siap.";
+  const wide = mode !== "kartu";
+  const immersive = mode === "layar-penuh";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-3 md:p-6">
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-ink/60 ${
+        immersive ? "" : wide ? "p-2" : "p-3 md:p-6"
+      }`}
+    >
       <div
         ref={dialogRef}
         role="dialog"
@@ -134,22 +217,45 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
         aria-labelledby="material-viewer-title"
         tabIndex={-1}
         data-material-viewer
-        className="flex h-full w-full max-w-5xl flex-col overflow-hidden rounded-card border border-ink/10 bg-surface shadow-xl outline-none"
+        data-material-view-mode={mode}
+        className={`flex h-full w-full flex-col overflow-hidden bg-surface shadow-xl outline-none ${
+          immersive ? "" : "rounded-card border border-ink/10"
+        } ${mode === "kartu" ? "max-w-5xl" : "max-w-none"}`}
       >
-        <header className="flex flex-wrap items-start justify-between gap-3 border-b border-ink/10 p-4 md:p-5">
+        <header
+          className={`flex flex-wrap items-start justify-between gap-3 border-b border-ink/10 ${
+            immersive ? "p-2 md:p-3" : "p-4 md:p-5"
+          }`}
+        >
           <div className="min-w-0">
-            <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">
-              Materi HTML5 · prototipe
-            </p>
-            <h2 id="material-viewer-title" className="mt-1 truncate text-lg font-semibold">
+            {!immersive && (
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-muted">
+                Materi HTML5 · prototipe
+              </p>
+            )}
+            <h2
+              id="material-viewer-title"
+              className={immersive ? "truncate text-base font-semibold" : "mt-1 truncate text-lg font-semibold"}
+            >
               {material.title}
             </h2>
-            <p className="mt-1 text-xs text-muted">
-              Kelas {material.gradeLevels.join(", ")} · {material.subjects.join(", ")} · ±
-              {material.estimatedMinutes} menit · v{material.version}
-            </p>
+            {!immersive && (
+              <p className="mt-1 text-xs text-muted">
+                Kelas {material.gradeLevels.join(", ")} · {material.subjects.join(", ")} · ±
+                {material.estimatedMinutes} menit · v{material.version}
+              </p>
+            )}
           </div>
           <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              data-material-view-mode-toggle
+              onClick={() => applyMode(nextViewMode(mode))}
+              title="Ganti lebar penampil: kartu, lansekap, lalu layar penuh"
+              className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper"
+            >
+              Tampilan: {VIEW_MODE_LABEL[mode]}
+            </button>
             <button
               type="button"
               data-material-transcript-toggle
@@ -170,7 +276,11 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
           </div>
         </header>
 
-        <div className="flex flex-wrap items-center gap-3 border-b border-ink/10 px-4 py-2 md:px-5">
+        <div
+          className={`flex flex-wrap items-center gap-3 border-b border-ink/10 ${
+            immersive ? "px-3 py-1" : "px-4 py-2 md:px-5"
+          }`}
+        >
           <div
             role="progressbar"
             aria-label="Kemajuan materi"
@@ -185,59 +295,59 @@ export function MaterialViewer({ material, onClose }: MaterialViewerProps) {
               style={{ width: `${percentage}%` }}
             />
           </div>
-          <p
-            data-material-status={status}
-            aria-live="polite"
-            className="text-xs text-muted"
-          >
+          <p data-material-status={status} aria-live="polite" className="text-xs text-muted">
             {statusLabel}
           </p>
         </div>
 
         <div className="relative flex min-h-0 flex-1">
-          {/* `allow-same-origin` dibutuhkan pemutar YouTube dan sematan https:
-              tanpa itu frame bersarang mendapat asal opaque dan menolak diputar.
-              Materi dilayani protokol ifp-content (beda asal dengan aplikasi),
-              jadi frame tetap tidak bisa menyentuh dokumen induk.
+          <div className="relative min-w-0 flex-1">
+            {/* `allow-same-origin` dibutuhkan pemutar YouTube dan sematan https:
+                tanpa itu frame bersarang mendapat asal opaque dan menolak diputar.
+                Materi dilayani protokol ifp-content (beda asal dengan aplikasi),
+                jadi frame tetap tidak bisa menyentuh dokumen induk.
 
-              `referrerPolicy="origin"` bukan pilihan gaya: YouTube menolak memutar
-              embed tanpa header Referer (Error 153), dan kebijakan referrer diwarisi
-              frame cucu — `no-referrer` di sini membungkam `strict-origin-when-cross-origin`
-              pada iframe YouTube di dalam materi. Yang dikirim hanya asal materi
-              (http://ifp-content.localhost), bukan nama berkas atau parameter.
+                `referrerPolicy="origin"` bukan pilihan gaya: YouTube menolak memutar
+                embed tanpa header Referer (Error 153), dan kebijakan referrer diwarisi
+                frame cucu — `no-referrer` di sini membungkam `strict-origin-when-cross-origin`
+                pada iframe YouTube di dalam materi. Yang dikirim hanya asal materi
+                (http://ifp-content.localhost), bukan nama berkas atau parameter.
 
-              `allow` mendelegasikan izin ke chain frame; tanpa ini tombol layar penuh
-              dan picture-in-picture pemutar di langkah berikutnya ditolak kebijakan izin. */}
-          <iframe
-            ref={frameRef}
-            data-material-frame
-            title={`Materi: ${material.title}`}
-            src={materialEntryUrl(material)}
-            sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
-            referrerPolicy="origin"
-            allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
-            onLoad={() => {
-              // Pesan `ready` awal bisa hilang selama pemuatan iframe lintas-proses;
-              // `hello` memicu materi mengumumkan ulang dirinya.
-              frameRef.current?.contentWindow?.postMessage({ ifp: 1, type: "hello" }, "*");
-            }}
-            className="h-full w-full border-0 bg-paper"
-          />
-          {status === "memuat" && (
-            <p className="pointer-events-none absolute inset-0 flex items-center justify-center bg-paper/80 text-sm text-muted">
-              Memuat materi…
-            </p>
-          )}
-          {status === "galat" && (
-            <p className="absolute inset-0 flex items-center justify-center bg-paper/95 p-6 text-center text-sm text-danger-strong">
-              Materi tidak merespons. Tutup penampil lalu coba lagi.
-            </p>
-          )}
+                `allow` mendelegasikan izin ke chain frame; tanpa ini tombol layar penuh
+                dan picture-in-picture pemutar di langkah berikutnya ditolak kebijakan izin. */}
+            <iframe
+              ref={frameRef}
+              data-material-frame
+              title={`Materi: ${material.title}`}
+              src={materialEntryUrl(material)}
+              sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+              referrerPolicy="origin"
+              allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+              onLoad={() => {
+                // Pesan `ready` awal bisa hilang selama pemuatan iframe lintas-proses;
+                // `hello` memicu materi mengumumkan ulang dirinya.
+                frameRef.current?.contentWindow?.postMessage({ ifp: 1, type: "hello" }, "*");
+              }}
+              className="h-full w-full border-0 bg-paper"
+            />
+            {status === "memuat" && (
+              <p className="pointer-events-none absolute inset-0 flex items-center justify-center bg-paper/80 text-sm text-muted">
+                Memuat materi…
+              </p>
+            )}
+            {status === "galat" && (
+              <p className="absolute inset-0 flex items-center justify-center bg-paper/95 p-6 text-center text-sm text-danger-strong">
+                Materi tidak merespons. Tutup penampil lalu coba lagi.
+              </p>
+            )}
+          </div>
           {transcriptOpen && (
             <aside
               data-material-transcript
               aria-label="Transkrip materi"
-              className="absolute inset-y-0 right-0 w-full max-w-sm overflow-y-auto border-l border-ink/10 bg-surface p-4 shadow-lg md:p-5"
+              className={`overflow-y-auto border-l border-ink/10 bg-surface p-4 shadow-lg md:p-5 ${
+                wide ? "w-[26rem] max-w-[45%] shrink-0" : "absolute inset-y-0 right-0 w-full max-w-sm"
+              }`}
             >
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-sm font-semibold">Transkrip</h3>
