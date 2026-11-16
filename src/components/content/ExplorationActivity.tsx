@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Activity } from "../../content/schema/activity";
 import { sharedStepAsset } from "./explorationIllustration";
 
@@ -8,6 +8,11 @@ interface ExplorationStep {
   altText?: string;
   reveal?: string;
   hint?: string;
+}
+
+interface ExplorationExplanation {
+  title?: string;
+  paragraphs: string[];
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -26,6 +31,24 @@ function readSteps(activity: Activity): ExplorationStep[] {
     reveal: typeof step.reveal === "string" ? step.reveal : undefined,
     hint: typeof step.hint === "string" ? step.hint : undefined,
   }));
+}
+
+function readExplanation(activity: Activity): ExplorationExplanation | null {
+  const raw = activity.interactionConfig.explanation;
+  if (!isRecord(raw) || !Array.isArray(raw.paragraphs)) {
+    return null;
+  }
+  const paragraphs = raw.paragraphs
+    .filter((entry): entry is string => typeof entry === "string" && entry.trim().length > 0)
+    .map((entry) => entry.trim());
+  if (paragraphs.length === 0) {
+    return null;
+  }
+  return {
+    title:
+      typeof raw.title === "string" && raw.title.trim().length > 0 ? raw.title.trim() : undefined,
+    paragraphs,
+  };
 }
 
 interface ExplorationActivityProps {
@@ -72,6 +95,24 @@ function RevealIcon() {
   );
 }
 
+function SummaryIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+    >
+      <path d="M6 3.5h8l4 4v13H6z" />
+      <path d="M14 3.5v4h4M9 12h6M9 16h6" />
+    </svg>
+  );
+}
+
 function ChevronIcon({ open }: { open: boolean }) {
   return (
     <svg
@@ -96,13 +137,80 @@ export function ExplorationActivity({
   expanded = false,
 }: ExplorationActivityProps) {
   const steps = readSteps(activity);
+  const explanation = readExplanation(activity);
   const [index, setIndex] = useState(0);
   const [showHint, setShowHint] = useState(false);
   const [showReveal, setShowReveal] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [view, setView] = useState<"steps" | "explanation">("steps");
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (view === "explanation") {
+      headingRef.current?.focus();
+    }
+  }, [view]);
 
   if (steps.length === 0) {
     return <p className="text-sm text-muted">Aktivitas ini belum memiliki langkah yang dapat ditampilkan.</p>;
+  }
+
+  function openExplanation() {
+    setView("explanation");
+  }
+
+  function closeExplanation() {
+    setView("steps");
+    requestAnimationFrame(() => triggerRef.current?.focus());
+  }
+
+  if (view === "explanation" && explanation) {
+    const explanationTitleId = `exploration-explanation-title-${activity.activityId}`;
+    return (
+      <section
+        data-exploration-explanation
+        aria-labelledby={explanationTitleId}
+        className="flex w-full flex-col"
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+          Pembahasan lengkap
+        </p>
+        <h2
+          id={explanationTitleId}
+          ref={headingRef}
+          tabIndex={-1}
+          className="mt-1 text-lg font-semibold leading-snug tracking-tight focus:outline-none md:text-xl"
+        >
+          {explanation.title ?? "Pembahasan lengkap"}
+        </h2>
+        <div className="mt-3 max-h-[clamp(160px,38vh,460px)] max-w-[70ch] space-y-2.5 overflow-y-auto pr-1">
+          {explanation.paragraphs.map((paragraph, paragraphIndex) => (
+            <p key={paragraphIndex} className="text-sm leading-relaxed md:text-[15px]">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 pt-4">
+          <button
+            type="button"
+            onClick={closeExplanation}
+            className="min-h-11 rounded-control border border-ink/15 bg-surface px-5 text-sm font-medium hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+          >
+            Kembali ke langkah
+          </button>
+          {finished && onFinish && (
+            <button
+              type="button"
+              onClick={onFinish}
+              className="min-h-11 rounded-control bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+            >
+              Lanjut berlatih
+            </button>
+          )}
+        </div>
+      </section>
+    );
   }
 
   const step = steps[index];
@@ -139,6 +247,17 @@ export function ExplorationActivity({
           >
             Ulangi eksplorasi
           </button>
+          {explanation && (
+            <button
+              ref={triggerRef}
+              type="button"
+              data-exploration-explanation-open
+              onClick={openExplanation}
+              className="min-h-11 rounded-control border border-teal/40 bg-white px-5 text-sm font-medium text-teal-strong hover:bg-teal/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+            >
+              Baca pembahasan lengkap
+            </button>
+          )}
           {onFinish && (
             <button
               type="button"
@@ -250,6 +369,20 @@ export function ExplorationActivity({
                 </button>
               )}
             </div>
+          )}
+
+          {explanation && (
+            <button
+              ref={triggerRef}
+              type="button"
+              data-exploration-explanation-open
+              onClick={openExplanation}
+              className="mt-3 flex min-h-11 w-full items-center gap-2 rounded-control border border-dashed border-teal/40 bg-white px-3 text-left text-sm font-medium text-teal-strong hover:bg-teal/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+            >
+              <SummaryIcon />
+              Pembahasan lengkap
+              <span aria-hidden="true" className="ml-auto text-xs font-normal text-muted">Baca</span>
+            </button>
           )}
 
           {(showHint || showReveal) && (

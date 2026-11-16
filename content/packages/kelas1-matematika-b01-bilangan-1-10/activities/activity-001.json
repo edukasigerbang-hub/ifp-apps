@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bilangan-1-10-5.png",
         "altText": "Kerangka sepuluh berisi tujuh titik merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Membilang, menulis lambang, dan mengurutkan 1–10",
+      "paragraphs": [
+        "Membilang adalah menyebut bilangan satu per satu sambil menunjuk bendanya: satu, dua, tiga, dan seterusnya. Setiap benda dihitung tepat satu kali. Bilangan terakhir yang disebut adalah banyaknya benda.",
+        "Kerangka sepuluh membantu menghitung dengan rapi. Pada gambar pertama ada tujuh titik merah, jadi banyaknya tujuh. Tujuh ditulis dengan lambang 7. Tiga kotak yang masih kosong menunjukkan bahwa tujuh belum memenuhi sepuluh.",
+        "Untuk membandingkan dua kelompok, pasangkan anggotanya satu lawan satu. Pada kelompok lima titik dan kelompok tiga titik, dua titik dari kelompok lima tidak mendapat pasangan. Itulah sebabnya 5 lebih banyak daripada 3.",
+        "Bilangan 1–10 dapat diurutkan pada garis bilangan: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Semakin ke kanan letaknya, semakin besar bilangannya. Sebaliknya, semakin ke kiri, semakin kecil.",
+        "Contoh: bandingkan kelompok 4 kelereng dengan kelompok 5 kelereng. Setelah dipasangkan, satu kelereng pada kelompok lima tidak punya pasangan, sehingga 5 lebih besar daripada 4. Urutannya: 4 lalu 5."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"
