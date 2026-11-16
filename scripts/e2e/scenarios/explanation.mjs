@@ -139,7 +139,7 @@ export async function run({ page, artifactDir, log }) {
     opened.bodyWidth >= opened.sectionWidth - 2,
     `Isi pembahasan ${opened.bodyWidth}px tidak memenuhi lebar bagian ${opened.sectionWidth}px.`
   );
-  const expectedColumns = opened.sectionWidth >= 860 ? 2 : 1;
+  const expectedColumns = opened.sectionWidth >= 760 ? 2 : 1;
   assert(
     opened.columnCount === expectedColumns,
     `Kolom teks = ${opened.columnCount}, seharusnya ${expectedColumns} pada panel ${opened.sectionWidth}px.`

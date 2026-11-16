@@ -206,7 +206,7 @@ export function ExplorationActivity({
           <div
             className={`grid gap-y-2.5 ${
               rightParagraphs.length > 0
-                ? "@min-[860px]:grid-cols-2 @min-[860px]:gap-x-10"
+                ? "@min-[760px]:grid-cols-2 @min-[760px]:gap-x-10"
                 : ""
             }`}
           >
