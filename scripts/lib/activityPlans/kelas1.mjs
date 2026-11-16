@@ -46,10 +46,10 @@ export const PLAN = [
   {
     packageDir: "kelas1-matematika-b01-bilangan-1-10",
     base: "aktivitas-bilangan-1-10",
-    summaryAlt: "Lima ilustrasi bilangan 1–10: kerangka sepuluh berisi tujuh apel, baris tujuh apel, perbandingan lima dan tiga titik, tiga kartu rangkuman, dan kerangka sepuluh dengan kelompok lima serta tiga titik.",
+    summaryAlt: "Lima ilustrasi bilangan 1–10: kerangka sepuluh berisi tujuh titik merah, baris tujuh apel, perbandingan lima dan tiga titik, tiga kartu rangkuman, dan kerangka sepuluh dengan kelompok lima serta tiga titik.",
     steps: [
       {
-        alt: "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong.",
+        alt: "Kerangka sepuluh berisi tujuh titik merah dan tiga kotak kosong.",
         draw(c) {
           tenFrame(c, 235, 237, 7, colors.red);
         }
@@ -63,7 +63,7 @@ export const PLAN = [
         }
       },
       {
-        alt: "Panel kiri berisi lima titik teal bertanda centang, panel kanan tiga titik biru.",
+        alt: "Panel kiri berisi lima titik teal dengan garis penanda, panel kanan tiga titik biru.",
         draw(c) {
           comparePanels(
             c,
@@ -77,7 +77,7 @@ export const PLAN = [
         }
       },
       {
-        alt: "Tiga kartu rangkuman: kerangka sepuluh berisi tujuh apel, lima titik berjajar, dan garis bilangan bertanda.",
+        alt: "Tiga kartu rangkuman: kerangka sepuluh berisi tujuh titik merah, lima titik berjajar, dan garis bilangan bertanda.",
         draw(c) {
           summaryTrio(c, [
             (h, cx, cy) => miniFrame(h, cx, cy, 7, colors.red),
@@ -87,7 +87,7 @@ export const PLAN = [
         }
       },
       {
-        alt: "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
+        alt: "Kerangka sepuluh berisi tujuh titik merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
         draw(c) {
           tenFrame(c, 60, 120, 7, colors.red);
           strokeLine(c, 60, 340, 700, 340, 3, colors.muted);
