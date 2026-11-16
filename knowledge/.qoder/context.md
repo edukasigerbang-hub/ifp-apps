@@ -4,7 +4,7 @@
 
 ## Kondisi terverifikasi
 
-- Git `main`, HEAD `3677f89` (docs T-142); T-142 ter-commit (`b041cc3` feat, `3677f89` docs); T-141 ter-commit (`d6b7ac5` feat, `63451fa` docs, `75690c6` state, `f45f79d` test E2E, `529c273` docs E2E); T-140 ter-commit (`32a225f` feat, `c4a9af1` docs, `0852d19` state); T-139 ter-commit (`fb29f88` feat, `ccd5cbe` docs, `4ee180a` state) + koreksi alt `ec83b61` + galeri `83d99c9`/`1604af3`/`d65111d`.
+- Git `main`, HEAD `3545247` (docs T-143); T-143 ter-commit (`4b9b69c` feat, `3545247` docs); T-142 ter-commit (`b041cc3` feat, `3677f89` docs); T-141 ter-commit (`d6b7ac5` feat, `63451fa` docs, `75690c6` state, `f45f79d` test E2E, `529c273` docs E2E); T-140 ter-commit (`32a225f` feat, `c4a9af1` docs, `0852d19` state); T-139 ter-commit (`fb29f88` feat, `ccd5cbe` docs, `4ee180a` state) + koreksi alt `ec83b61` + galeri `83d99c9`/`1604af3`/`d65111d`.
 - App shell Tauri 2 + React 19 + TS + Vite + Tailwind; SQLite native; sync client + backend referensi.
 - Konten: **336 paket draft** — 320 inti Kelas 1–6 (Fase A 96 + Fase B/C 224) + **16 IPAS kelas 1–2** (T-089, di luar matriks Fase A). Aset: 320 hash unik untuk paket inti; 16 paket IPAS kini punya **ilustrasi unik per topik** (T-090, 16 hash berbeda, Ayu & Bima).
 - Review teknis 2026-10-26 (pasca-T-070/T-071): **320/320 VALID**; alt/feedbackPolicy 320/320; kedalaman **320/320**; **0 duplikasi**; R10 `curriculumRefs` **320/320** (fase A/B/C, versi 2024).
