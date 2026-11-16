@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Activity } from "../../content/schema/activity";
+import { sharedStepAsset } from "./explorationIllustration";
 
 interface ExplorationStep {
   prompt: string;
@@ -45,7 +46,9 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
   }
 
   const step = steps[index];
-  const assetUrl = step.assetPath ? assets[step.assetPath] : undefined;
+  const sharedAssetPath = sharedStepAsset(steps);
+  const sharedAssetUrl = sharedAssetPath ? assets[sharedAssetPath] : undefined;
+  const stepAssetUrl = sharedAssetPath ? undefined : step.assetPath ? assets[step.assetPath] : undefined;
   const isLast = index === steps.length - 1;
   const hintId = `exploration-hint-${activity.activityId}`;
   const revealId = `exploration-reveal-${activity.activityId}`;
@@ -111,9 +114,19 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
         </div>
       </div>
 
-      {assetUrl && (
+      {sharedAssetUrl && (
         <img
-          src={assetUrl}
+          data-exploration-illustration="shared"
+          src={sharedAssetUrl}
+          alt={steps[0].altText ?? activity.accessibilityMetadata?.altText ?? "Ilustrasi aktivitas"}
+          className="mx-auto mt-5 block max-h-[60vh] w-auto max-w-full rounded-card border border-ink/10 bg-surface"
+        />
+      )}
+
+      {stepAssetUrl && (
+        <img
+          data-exploration-illustration="step"
+          src={stepAssetUrl}
           alt={step.altText ?? activity.accessibilityMetadata?.altText ?? "Ilustrasi aktivitas"}
           className="mx-auto mt-5 block max-h-[60vh] w-auto max-w-full rounded-card border border-ink/10 bg-surface"
         />
