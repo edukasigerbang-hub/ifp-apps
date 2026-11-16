@@ -59,6 +59,10 @@ const MEASURE = `(() => {
   const body = section
     ? [...section.querySelectorAll("div")].find((node) => node.className.includes("overflow-y-auto"))
     : null;
+  const grid = body?.querySelector("div") ?? null;
+  const columnLefts = grid
+    ? [...grid.children].map((node) => Math.round(node.getBoundingClientRect().left))
+    : [];
   const stage = document.querySelector("[data-exploration-stage]");
   return {
     open: Boolean(section),
@@ -69,9 +73,12 @@ const MEASURE = `(() => {
     headingFocused: document.activeElement === heading,
     paragraphCount: body ? body.querySelectorAll("p").length : 0,
     firstParagraph: body?.querySelector("p")?.textContent.trim().slice(0, 60) ?? null,
+    sectionWidth: section ? Math.round(section.getBoundingClientRect().width) : 0,
     bodyWidth: body ? Math.round(body.getBoundingClientRect().width) : 0,
     bodyHeight: body ? Math.round(body.getBoundingClientRect().height) : 0,
     bodyScrollHeight: body?.scrollHeight ?? 0,
+    columnCount: new Set(columnLefts).size,
+    viewportWidth: window.innerWidth,
     overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
     triggerCount: document.querySelectorAll("[data-exploration-explanation-open]").length
   };
@@ -128,10 +135,19 @@ export async function run({ page, artifactDir, log }) {
   assert(opened.paragraphCount === 5, `Jumlah paragraf = ${opened.paragraphCount}, seharusnya 5.`);
   assert(!opened.stageVisible, "Panggung langkah masih terlihat saat pembahasan dibuka.");
   assert(!opened.overflowX, "Pembahasan menimbulkan overflow horizontal.");
-  assert(opened.bodyWidth > 0 && opened.bodyWidth <= 720, `Kolom baca ${opened.bodyWidth}px melewati batas 70ch.`);
+  assert(
+    opened.bodyWidth >= opened.sectionWidth - 2,
+    `Isi pembahasan ${opened.bodyWidth}px tidak memenuhi lebar bagian ${opened.sectionWidth}px.`
+  );
+  const expectedColumns = opened.sectionWidth >= 860 ? 2 : 1;
+  assert(
+    opened.columnCount === expectedColumns,
+    `Kolom teks = ${opened.columnCount}, seharusnya ${expectedColumns} pada panel ${opened.sectionWidth}px.`
+  );
   log(
-    `Pembahasan terbuka: ${opened.paragraphCount} paragraf, kolom ${opened.bodyWidth}px, ` +
-      `tinggi ${opened.bodyHeight}/${opened.bodyScrollHeight}px, fokus di judul.`
+    `Pembahasan terbuka: ${opened.paragraphCount} paragraf dalam ${opened.columnCount} kolom, ` +
+      `lebar ${opened.bodyWidth}/${opened.sectionWidth}px, tinggi ${opened.bodyHeight}/${opened.bodyScrollHeight}px, ` +
+      "fokus di judul."
   );
   await page.screenshot(path.join(artifactDir, "pembahasan-terbuka.png"));
 

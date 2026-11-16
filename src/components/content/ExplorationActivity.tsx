@@ -51,6 +51,23 @@ function readExplanation(activity: Activity): ExplorationExplanation | null {
   };
 }
 
+function splitParagraphs(paragraphs: string[]): [string[], string[]] {
+  if (paragraphs.length < 2) {
+    return [paragraphs, []];
+  }
+  const total = paragraphs.reduce((sum, paragraph) => sum + paragraph.length, 0);
+  let running = 0;
+  let splitAt = 1;
+  for (let index = 0; index < paragraphs.length - 1; index += 1) {
+    running += paragraphs[index].length;
+    splitAt = index + 1;
+    if (running >= total / 2) {
+      break;
+    }
+  }
+  return [paragraphs.slice(0, splitAt), paragraphs.slice(splitAt)];
+}
+
 interface ExplorationActivityProps {
   activity: Activity;
   assets: Record<string, string>;
@@ -167,11 +184,12 @@ export function ExplorationActivity({
 
   if (view === "explanation" && explanation) {
     const explanationTitleId = `exploration-explanation-title-${activity.activityId}`;
+    const [leftParagraphs, rightParagraphs] = splitParagraphs(explanation.paragraphs);
     return (
       <section
         data-exploration-explanation
         aria-labelledby={explanationTitleId}
-        className="flex w-full flex-col"
+        className="@container flex w-full flex-col"
       >
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
           Pembahasan lengkap
@@ -184,12 +202,31 @@ export function ExplorationActivity({
         >
           {explanation.title ?? "Pembahasan lengkap"}
         </h2>
-        <div className="mt-3 max-h-[clamp(160px,38vh,460px)] max-w-[70ch] space-y-2.5 overflow-y-auto pr-1">
-          {explanation.paragraphs.map((paragraph, paragraphIndex) => (
-            <p key={paragraphIndex} className="text-sm leading-relaxed md:text-[15px]">
-              {paragraph}
-            </p>
-          ))}
+        <div className="mt-3 max-h-[clamp(160px,44vh,520px)] overflow-y-auto pr-1">
+          <div
+            className={`grid gap-y-2.5 ${
+              rightParagraphs.length > 0
+                ? "@min-[860px]:grid-cols-2 @min-[860px]:gap-x-10"
+                : ""
+            }`}
+          >
+            <div className="space-y-2.5">
+              {leftParagraphs.map((paragraph, paragraphIndex) => (
+                <p key={paragraphIndex} className="text-sm leading-relaxed md:text-[15px]">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            {rightParagraphs.length > 0 && (
+              <div className="space-y-2.5">
+                {rightParagraphs.map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex} className="text-sm leading-relaxed md:text-[15px]">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 pt-4">
           <button
