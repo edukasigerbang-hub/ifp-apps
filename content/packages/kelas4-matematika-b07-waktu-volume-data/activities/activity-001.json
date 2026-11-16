@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-waktu-volume-data-5.png",
         "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Membaca jam, volume, dan diagram",
+      "paragraphs": [
+        "Waktu, volume, dan data dibaca dengan alat yang berbeda: jam untuk waktu, gelas ukur untuk volume, dan diagram untuk data.",
+        "Pada jam, jarum pendek menunjukkan jam dan jarum panjang menunjukkan menit. Jarum panjang pada angka 6 berarti 30 menit, sehingga jam pada gambar menunjukkan pukul 07.30.",
+        "Volume cairan dibaca pada garis skala yang sejajar dengan permukaan air. Pada gelas ukur berskala 100 mL, permukaan di garis keenam berarti volumenya 600 mL.",
+        "Konversi yang perlu diingat: 1 jam = 60 menit, 1 menit = 60 detik, dan 1 liter = 1.000 mL. Selang waktu dihitung dengan mengurangkan waktu akhir dan waktu awal.",
+        "Contoh: dari pukul 07.30 sampai 09.15 selang waktunya 1 jam 45 menit, dan 1,5 liter sama dengan 1.500 mL. Pada diagram batang, batang tertinggi menunjukkan kelompok dengan data terbanyak."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

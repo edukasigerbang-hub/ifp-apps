@@ -7,7 +7,7 @@ function assert(condition, message) {
 }
 
 const PACKAGE_HASH = "#player/kelas1-matematika-b01-bilangan-1-10/bilangan-1-10";
-const COMPARISON_HASH = "#player/kelas4-matematika-b01-bilangan-cacah/bilangan-cacah-besar";
+const COMPARISON_HASH = "#player/kelas1-ipas-b01-tubuh-dan-indera/tubuh-dan-indera";
 
 async function bootAt(page, origin, tag, hash, label) {
   await page.send("Page.navigate", { url: `${origin}/?e2e=${tag}${hash}` });
@@ -200,7 +200,7 @@ export async function run({ page, artifactDir, log }) {
 
   const comparisonTitle = await bootAt(page, origin, "tanpa-pembahasan", COMPARISON_HASH, "paket pembanding");
   assert(
-    comparisonTitle === "Bilangan Cacah Besar",
+    comparisonTitle === "Tubuhku dan Inderaku",
     `Paket pembanding menampilkan "${comparisonTitle}".`
   );
   await page.waitFor(`document.body.textContent.includes("Langkah 1 dari 5")`, {

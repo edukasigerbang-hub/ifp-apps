@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-peluang-5.png",
         "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Ruang sampel dan peluang sederhana",
+      "paragraphs": [
+        "Ruang sampel adalah himpunan semua hasil yang mungkin. Peluang suatu kejadian = banyaknya hasil yang diharapkan dibagi banyaknya seluruh hasil yang mungkin.",
+        "Dadu memiliki enam hasil yang mungkin, yaitu 1, 2, 3, 4, 5, dan 6. Peluang muncul angka 3 adalah 1/6 karena hanya satu hasil yang diharapkan dari enam hasil.",
+        "Koin memiliki dua hasil, yaitu angka dan gambar, sehingga peluang muncul angka adalah 1/2.",
+        "Nilai peluang berada antara 0 dan 1. Peluang 0 berarti kejadian tidak mungkin terjadi, peluang 1 berarti pasti terjadi. Semakin besar peluang, semakin mungkin kejadian itu terjadi.",
+        "Contoh: pada dadu, peluang muncul angka genap adalah 3/6 = 1/2 karena hasilnya 2, 4, dan 6. Peluang muncul angka lebih dari 4 adalah 2/6 = 1/3. Membandingkan peluang dilakukan dengan membandingkan pecahannya."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

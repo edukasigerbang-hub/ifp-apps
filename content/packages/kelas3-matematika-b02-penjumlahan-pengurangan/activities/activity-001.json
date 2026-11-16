@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-penjumlahan-pengurangan-5.png",
         "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Teknik menyimpan dan meminjam",
+      "paragraphs": [
+        "Penjumlahan dan pengurangan bilangan besar dikerjakan dari satuan ke kiri: satuan, puluhan, ratusan, lalu ribuan.",
+        "Untuk 2.450 + 1.275: satuan 0 + 5 = 5; puluhan 5 + 7 = 12, tulis 2 dan simpan 1; ratusan 4 + 2 + 1 = 7; ribuan 2 + 1 = 3. Hasilnya 3.725.",
+        "Menyimpan dilakukan saat jumlah pada satu tempat lebih dari 9, karena sepuluh satuan sama dengan satu puluhan. Sepuluh satuan digabung menjadi satu batang puluhan seperti pada gambar.",
+        "Meminjam dilakukan saat angka atas lebih kecil daripada angka bawah. Satu puluhan diuraikan menjadi sepuluh satuan agar pengurangan dapat dikerjakan.",
+        "Contoh: 5.002 − 1.468. Karena 2 tidak cukup dikurangi 8, meminjam dilakukan dari ratusan melalui ribuan. Hasilnya 3.534. Periksa dengan menjumlahkan kembali: 3.534 + 1.468 = 5.002."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

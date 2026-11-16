@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pemecahan-masalah-5.png",
         "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Empat langkah menyelesaikan soal cerita",
+      "paragraphs": [
+        "Soal cerita diselesaikan dengan urutan tetap: pahami yang diketahui dan yang ditanya, pilih operasi, hitung, lalu periksa jawaban.",
+        "Pada soal Ani, yang diketahui adalah 3 buku dengan harga Rp5.000 per buku, sedangkan yang ditanya adalah total belanja dan kembalian dari uang Rp20.000.",
+        "Karena harga yang sama diulang tiga kali, operasi yang tepat adalah perkalian: 3 × 5.000 = 15.000.",
+        "Kembalian dihitung dengan pengurangan: 20.000 − 15.000 = 5.000. Periksa dengan menjumlahkan kembali: 15.000 + 5.000 = 20.000.",
+        "Contoh lain: 4 pensil seharga Rp2.500 per pensil dibayar dengan Rp20.000. Total 4 × 2.500 = 10.000 dan kembalian 20.000 − 10.000 = 10.000. Tuliskan jawaban beserta satuannya, yaitu rupiah."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

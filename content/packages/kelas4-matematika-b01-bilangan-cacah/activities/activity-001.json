@@ -48,7 +48,17 @@
         "reveal": "12.345 < 12.354 < 12.435.",
         "hint": "Bandingkan angka pada nilai tempat yang sama."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Nilai tempat sampai puluh ribuan",
+      "paragraphs": [
+        "Bilangan cacah besar dibaca dari nilai tempat terbesar ke terkecil. Sampai lima angka, nilai tempatnya adalah puluh ribuan, ribuan, ratusan, puluhan, dan satuan.",
+        "Bilangan 12.345 terdiri atas 1 puluh ribuan = 10.000, 2 ribuan = 2.000, 3 ratusan = 300, 4 puluhan = 40, dan 5 satuan = 5. Jumlahnya 10.000 + 2.000 + 300 + 40 + 5.",
+        "Angka 3 menempati ratusan sehingga nilainya 300, sedangkan angka 4 menempati puluhan sehingga nilainya 40. Posisi menentukan nilai angka, bukan besar angkanya.",
+        "Membandingkan dimulai dari nilai tempat terbesar. Bilangan 12.345 dan 12.354 sama pada puluh ribuan, ribuan, dan ratusan; pada puluhan 4 lebih kecil daripada 5, sehingga 12.354 lebih besar.",
+        "Mengurutkan 12.345, 12.354, dan 12.435 menghasilkan 12.345 < 12.354 < 12.435. Contoh lain: 9.876 < 10.002 karena 10.002 memiliki lima angka sedangkan 9.876 hanya empat angka."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

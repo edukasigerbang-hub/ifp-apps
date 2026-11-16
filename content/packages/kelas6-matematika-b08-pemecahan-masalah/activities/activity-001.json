@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pemecahan-masalah-kelas6-5.png",
         "altText": "Empat langkah penyelesaian berjajar dengan panah maju, satu panah kembali ke langkah pertama, dan tanda centang di langkah terakhir."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Strategi dan pemeriksaan dalam soal cerita",
+      "paragraphs": [
+        "Soal cerita yang lebih rumit diselesaikan dengan urutan tetap: memahami, merencanakan, menghitung, lalu memeriksa.",
+        "Memahami berarti menandai informasi yang diketahui dan yang ditanya, termasuk satuannya. Banyak kesalahan terjadi karena informasi terlewat, bukan karena perhitungannya salah.",
+        "Strategi dapat berupa membuat model seperti gambar atau tabel, mencari pola, bekerja mundur dari jawaban, atau memecah soal menjadi bagian yang lebih kecil.",
+        "Memeriksa dilakukan dengan menghitung ulang memakai cara lain atau menguji apakah hasilnya masuk akal. Tanda centang pada langkah terakhir berarti jawaban sudah diperiksa.",
+        "Contoh: kolam berisi 2.400 liter dan dialirkan 40 liter per menit. Waktu yang diperlukan 2.400 : 40 = 60 menit atau 1 jam. Periksa dengan 60 × 40 = 2.400, sehingga jawabannya konsisten."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

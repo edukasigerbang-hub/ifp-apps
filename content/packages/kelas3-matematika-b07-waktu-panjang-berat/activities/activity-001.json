@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-waktu-panjang-berat-5.png",
         "altText": "Jam, penggaris panjang dengan seratus pembagian, dan timbangan dua lengan dengan beban satu kilogram."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Mengubah satuan waktu, panjang, dan berat",
+      "paragraphs": [
+        "Setiap besaran memiliki satuan, dan satuan besar dapat diubah menjadi satuan kecil dengan mengalikan. Mengubah satuan tidak mengubah besar bendanya, hanya cara menuliskannya.",
+        "Waktu: 1 jam = 60 menit, 1 menit = 60 detik, dan 1 hari = 24 jam. Jadi 2 jam = 120 menit, sedangkan 90 menit = 1 jam 30 menit.",
+        "Panjang: 1 m = 100 cm dan 1 km = 1.000 m. Penggaris pada gambar memiliki seratus pembagian kecil yang masing-masing panjangnya 1 cm.",
+        "Berat: 1 kg = 1.000 g. Timbangan dengan beban 1 kg setara dengan 1.000 g.",
+        "Contoh: 2 m 35 cm = 235 cm, 3 kg 250 g = 3.250 g, dan 1 jam 15 menit = 75 menit. Selalu tuliskan satuannya agar hasil tidak salah dibaca."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

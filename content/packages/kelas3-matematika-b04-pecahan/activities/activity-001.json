@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pecahan-5.png",
         "altText": "Lingkaran terbagi dua dengan satu bagian diwarnai, batang terbagi tiga dengan satu bagian, dan batang terbagi empat dengan tiga bagian. Baris bawah: lingkaran terbagi empat dengan satu bagian dan batang terbagi dua dengan satu bagian."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Pecahan sebagai bagian dari keseluruhan",
+      "paragraphs": [
+        "Pecahan menyatakan bagian dari satu keseluruhan yang dibagi sama besar. Penyebut adalah angka bawah, yaitu jumlah semua bagian. Pembilang adalah angka atas, yaitu bagian yang diambil.",
+        "Pecahan 1/2 berarti benda dibagi dua sama besar dan satu bagian diambil. Bagian harus benar-benar sama besar; dua bagian yang tidak sama besar bukan setengah.",
+        "Pecahan 1/3 berarti satu dari tiga bagian sama besar. Bila tiga bagian diwarnai dari empat bagian, pecahannya 3/4, bukan 1/4.",
+        "Semakin banyak bagian, semakin kecil tiap bagiannya. Karena itu 1/2 lebih besar daripada 1/4, sebab seperempat hanya sebesar setengah dari setengah.",
+        "Contoh: kue dipotong delapan sama besar lalu tiga potong diambil berarti 3/8. Bandingkan 3/4 dengan 3/8: pembilangnya sama, penyebut lebih kecil berarti bagiannya lebih besar, jadi 3/4 > 3/8."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bangun-datar-kelas2-5.png",
         "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Bangun datar dan ciri sisinya",
+      "paragraphs": [
+        "Bangun datar dikenali dari sisinya, yaitu banyaknya sisi dan panjang sisinya. Sudut adalah tempat dua sisi bertemu.",
+        "Lingkaran tidak memiliki sisi lurus dan tidak memiliki sudut karena tepinya melengkung penuh. Persegi memiliki empat sisi sama panjang dan empat sudut siku-siku.",
+        "Persegi panjang juga memiliki empat sisi dan empat sudut siku-siku, tetapi hanya sisi yang berhadapan yang sama panjang. Segitiga memiliki tiga sisi dan tiga sudut.",
+        "Tanda garis kecil pada sisi persegi di gambar berarti sisi-sisi itu sama panjang. Dengan tanda tersebut, kita tidak perlu mengukur untuk mengetahui bahwa keempat sisinya sama.",
+        "Contoh di sekitar: ubin lantai berbentuk persegi, pintu berbentuk persegi panjang, jam dinding berbentuk lingkaran, dan rambu berbentuk segitiga. Bangun yang sama dapat berukuran berbeda; yang membedakan adalah cirinya, bukan ukurannya."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

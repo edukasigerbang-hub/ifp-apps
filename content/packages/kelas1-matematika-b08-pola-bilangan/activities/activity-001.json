@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pola-bilangan-5.png",
         "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Menemukan aturan pada pola bilangan",
+      "paragraphs": [
+        "Pola bilangan adalah urutan bilangan dengan aturan tetap. Untuk melanjutkan pola, cari dahulu beda antara bilangan yang berdekatan.",
+        "Pada pola 1, 2, 3, setiap bilangan bertambah 1. Bilangan berikutnya adalah 4, lalu 5.",
+        "Pada pola 2, 4, 6, setiap bilangan bertambah 2. Bilangan berikutnya adalah 8. Pola ini sama dengan hasil perkalian 2: 2, 4, 6, 8, dan seterusnya.",
+        "Pada pola 5, 10, 15, setiap bilangan bertambah 5. Bilangan berikutnya adalah 20. Pola ini sama dengan hasil perkalian 5.",
+        "Menara titik pada gambar menunjukkan pola bertambah satu: 1, 2, 3, 4 titik. Contoh lain, pola 10, 20, 30 bertambah 10 sehingga berikutnya 40. Periksa beda pada dua atau tiga pasangan berdekatan agar aturannya pasti."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

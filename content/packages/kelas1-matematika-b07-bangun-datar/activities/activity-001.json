@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bangun-datar-5.png",
         "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Ciri bangun datar di sekitar kita",
+      "paragraphs": [
+        "Bangun datar adalah bentuk rata yang dapat digambar pada kertas. Kita mengenalnya dari jumlah sisi dan bentuk sudutnya.",
+        "Lingkaran berbentuk bulat penuh, tanpa sisi lurus dan tanpa sudut. Contohnya uang logam, roda, dan jam dinding.",
+        "Persegi memiliki empat sisi sama panjang dan empat sudut. Segitiga memiliki tiga sisi dan tiga sudut. Keduanya mudah ditemukan di sekitar rumah dan sekolah.",
+        "Persegi panjang juga memiliki empat sisi, tetapi hanya sisi yang berhadapan yang sama panjang, seperti pintu dan buku.",
+        "Contoh di sekitar kita: jendela berbentuk persegi atau persegi panjang, atap rumah berbentuk segitiga, dan tutup botol berbentuk lingkaran. Menyebut jumlah sisi dan sudut membantu membedakan bangun yang bentuknya mirip."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

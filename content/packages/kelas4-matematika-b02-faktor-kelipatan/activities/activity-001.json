@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-faktor-kelipatan-5.png",
         "altText": "Garis dua belas titik dengan busur pasangan faktor; titik kelima dicoret merah karena bukan faktor dua belas."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Faktor, kelipatan, FPB, dan KPK",
+      "paragraphs": [
+        "Faktor suatu bilangan adalah bilangan yang membaginya tanpa sisa. Kelipatan adalah hasil mengalikan bilangan itu dengan bilangan cacah.",
+        "Faktor 12 adalah 1, 2, 3, 4, 6, dan 12, yang berpasangan sebagai 1 × 12, 2 × 6, dan 3 × 4. Karena tidak ada bilangan cacah yang dikalikan 5 menghasilkan 12, bilangan 5 bukan faktor 12.",
+        "Faktor persekutuan adalah faktor yang dimiliki dua bilangan. Pada diagram Venn, faktor 12 di lingkaran kiri, faktor 18 di lingkaran kanan, dan daerah irisan berisi 1, 2, 3, serta 6. Yang terbesar adalah 6, yaitu FPB.",
+        "Kelipatan persekutuan adalah kelipatan yang sama pada dua bilangan, dan yang terkecil disebut KPK. Kelipatan 4: 4, 8, 12, 16, dan seterusnya. Kelipatan 6: 6, 12, 18, dan seterusnya. KPK-nya 12.",
+        "Contoh penerapan: 12 kue dan 18 permen dibagi rata ke dalam kantong terbanyak. FPB 12 dan 18 adalah 6, jadi ada 6 kantong berisi 2 kue dan 3 permen. Dua lampu menyala tiap 4 dan 6 detik akan menyala bersama setiap KPK, yaitu 12 detik."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

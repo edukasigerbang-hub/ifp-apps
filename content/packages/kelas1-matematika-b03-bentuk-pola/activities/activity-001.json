@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bentuk-pola-5.png",
         "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Mengenal bentuk datar dan pola berulang",
+      "paragraphs": [
+        "Bentuk datar adalah bangun rata yang dapat digambar di atas kertas. Setiap bentuk dikenali dari sisinya: ada yang sisinya lurus, ada yang tepinya melengkung.",
+        "Lingkaran berbentuk bulat penuh, tidak memiliki sisi lurus, dan tidak memiliki sudut. Persegi memiliki empat sisi yang sama panjang dan empat sudut, seperti sisi dadu atau ubin lantai.",
+        "Pola adalah susunan yang berulang dengan aturan tetap. Pada pola merah, kuning, merah, warna berulang setiap dua langkah, jadi warna berikutnya kuning, lalu merah lagi.",
+        "Untuk melanjutkan pola, temukan dahulu bagian yang berulang, yaitu satu putaran pola. Setelah itu ulangi urutan tersebut. Pada pita lingkaran, persegi, lingkaran, putarannya adalah lingkaran lalu persegi.",
+        "Contoh: pola segitiga, lingkaran, segitiga, lingkaran, dan seterusnya. Dua bentuk berikutnya adalah segitiga dan lingkaran karena putaran polanya hanya terdiri atas dua bentuk."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

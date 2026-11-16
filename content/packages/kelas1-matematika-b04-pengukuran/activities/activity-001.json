@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pengukuran-sederhana-5.png",
         "altText": "Meja dengan panjang diukur memakai garis jengkal dan tangan di dekatnya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Mengukur panjang, berat, dan waktu",
+      "paragraphs": [
+        "Mengukur berarti membandingkan sesuatu dengan alat ukur. Panjang, berat, dan waktu adalah tiga hal yang diukur dengan alat yang berbeda dan satuan yang berbeda.",
+        "Jengkal adalah jarak dari ujung ibu jari ke ujung kelingking saat tangan dibuka lebar. Jengkal dipakai untuk mengukur panjang benda di sekitar, misalnya meja atau tali.",
+        "Berat benda diukur dengan timbangan. Timbangan menunjukkan benda mana yang lebih berat; semakin besar angka yang ditunjuk, semakin berat benda itu.",
+        "Waktu diukur dengan jam. Jam menunjukkan pukul berapa sekarang, dan kita juga mengenal satuan waktu seperti pagi, siang, malam, jam, dan menit.",
+        "Contoh: panjang meja 4 jengkal dan panjang pensil 1 jengkal, sehingga meja lebih panjang. Namun jengkal setiap orang berbeda panjang, jadi untuk hasil yang sama semua orang memakai penggaris dengan satuan sentimeter."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

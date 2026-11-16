@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-lingkaran-5.png",
         "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Unsur lingkaran, keliling, dan luas",
+      "paragraphs": [
+        "Lingkaran memiliki satu titik pusat, jari-jari berupa jarak dari pusat ke tepi, dan diameter berupa garis melalui pusat yang menghubungkan dua titik pada tepi.",
+        "Diameter sama dengan 2 × jari-jari, sehingga jari-jari = diameter : 2. Jika jari-jarinya 7 cm, diameternya 14 cm.",
+        "Keliling lingkaran = 2 × π × r atau π × d, dengan π mendekati 22/7 atau 3,14. Untuk jari-jari 7 cm, kelilingnya 2 × 22/7 × 7 = 44 cm.",
+        "Luas lingkaran = π × r × r. Untuk jari-jari 7 cm, luasnya 22/7 × 49 = 154 cm². Satuan luas selalu berupa satuan panjang pangkat dua.",
+        "Contoh: roda berdiameter 28 cm memiliki keliling 22/7 × 28 = 88 cm. Jika roda berputar 10 kali, jarak yang ditempuh 10 × 88 = 880 cm."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

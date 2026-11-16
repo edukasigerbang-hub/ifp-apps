@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5-5.png",
         "altText": "Empat langkah berjajar dengan panah maju dan satu panah melengkung kembali ke langkah pertama."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Langkah teratur dalam soal cerita",
+      "paragraphs": [
+        "Soal cerita berisi informasi penting yang bercampur dengan kalimat biasa. Langkah pertama selalu memahami apa yang diketahui dan apa yang ditanya.",
+        "Setelah itu pilih operasi yang sesuai. Kata jumlah seluruhnya menandakan penjumlahan atau perkalian, kata selisih menandakan pengurangan, dan kata dibagi rata menandakan pembagian.",
+        "Susun model sederhana sebelum menghitung, misalnya menuliskan yang diketahui dalam bentuk kalimat matematika, agar operasi yang dipakai menjadi jelas.",
+        "Setelah menghitung, periksa jawaban dengan cara lain: hitung ulang atau gunakan operasi kebalikan. Pengurangan dapat diperiksa dengan penjumlahan, dan pembagian dengan perkalian.",
+        "Contoh: 5 kotak berisi 12 pensil, lalu 8 pensil diambil. Totalnya 5 × 12 = 60 dan sisanya 60 − 8 = 52. Periksa dengan 52 + 8 = 60 dan 60 : 5 = 12."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

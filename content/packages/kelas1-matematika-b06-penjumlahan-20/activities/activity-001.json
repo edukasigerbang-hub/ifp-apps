@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-penjumlahan-20-5.png",
         "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Berhitung sampai 20 dengan pola sepuluh",
+      "paragraphs": [
+        "Penjumlahan dan pengurangan sampai 20 paling mudah dikerjakan dengan pola sepuluh. Kita melanjutkan hitungan dari bilangan yang sudah ada, tidak perlu memulai dari satu.",
+        "Untuk 12 + 5, mulai dari 12 lalu maju 5 langkah: 13, 14, 15, 16, 17. Hasilnya 17. Angka sepuluh pada 12 tetap, hanya satuannya yang bertambah.",
+        "Untuk 18 − 4, mulai dari 18 lalu mundur 4 langkah: 17, 16, 15, 14. Hasilnya 14. Yang berkurang adalah satuannya, sedangkan puluhannya tetap.",
+        "10 + 10 = 20 karena dua kelompok sepuluh digabung menjadi dua puluh. Ini sama dengan 2 × 10, yaitu dasar perkalian yang akan dipelajari nanti.",
+        "Contoh: 14 + 3 dihitung 15, 16, 17 sehingga hasilnya 17. Lalu 16 − 5 dihitung 15, 14, 13, 12, 11 sehingga hasilnya 11. Periksa pengurangan dengan penjumlahan: 11 + 5 = 16."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

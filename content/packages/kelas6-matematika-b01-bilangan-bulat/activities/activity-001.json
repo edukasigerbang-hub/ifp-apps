@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bilangan-bulat-5.png",
         "altText": "Tiga kartu rangkuman: garis bilangan bertitik, neraca pembanding, dan tiga langkah berjajar."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Bilangan bulat pada garis bilangan",
+      "paragraphs": [
+        "Bilangan bulat terdiri atas bilangan positif, nol, dan bilangan negatif. Semua bilangan bulat dapat diletakkan pada garis bilangan.",
+        "Pada garis bilangan, semakin ke kanan nilainya semakin besar dan semakin ke kiri semakin kecil. Karena itu -3 lebih kecil daripada 2, walaupun angka 3 lebih besar daripada 2; tanda negatif membalik arah perbandingan.",
+        "Perhitungan -5 + 3 berarti mulai dari -5 lalu bergerak tiga langkah ke kanan, sehingga berakhir di -2. Menambah bilangan positif berarti bergerak ke kanan, menambah bilangan negatif berarti bergerak ke kiri.",
+        "Mengurangi bilangan bulat sama dengan menambah lawannya, sehingga 4 − (−2) = 4 + 2 = 6. Sifat ini memudahkan pengurangan yang melibatkan bilangan negatif.",
+        "Contoh: -7 + 10 = 3, 5 − 8 = -3, dan -4 − 3 = -7. Urutan dari yang terkecil adalah -7, -4, -3, 0, 3, dan 5."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

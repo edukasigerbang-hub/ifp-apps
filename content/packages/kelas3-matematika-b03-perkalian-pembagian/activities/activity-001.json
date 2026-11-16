@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-perkalian-pembagian-5.png",
         "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Perkalian, tabel perkalian, dan pembagian",
+      "paragraphs": [
+        "Perkalian adalah penjumlahan berulang. Tulisan 4 × 3 berarti empat kelompok berisi tiga, yaitu 3 + 3 + 3 + 3 = 12.",
+        "Susunan empat kolom dan tiga baris dapat dibaca dua arah: empat kelompok berisi tiga atau tiga kelompok berisi empat. Jadi 4 × 3 = 3 × 4 = 12, dan sifat ini memudahkan menghafal tabel perkalian.",
+        "Tabel perkalian 2 sampai 9 sebaiknya dihafal karena sering dipakai. Kelipatan 2 selalu genap, kelipatan 5 berakhiran 0 atau 5, dan kelipatan 10 selalu berakhiran 0.",
+        "Pembagian adalah kebalikan perkalian. 12 : 3 = 4 karena 3 × 4 = 12. Membagi berarti menyusun benda menjadi kelompok sama banyak: dua belas bintang menjadi tiga lingkaran berisi empat bintang.",
+        "Contoh: 7 × 8 = 56, maka 56 : 7 = 8 dan 56 : 8 = 7. Jika 45 permen dibagi rata kepada 9 anak, setiap anak mendapat 45 : 9 = 5 permen."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"
