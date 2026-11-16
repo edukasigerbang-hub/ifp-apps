@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 149442,
       "sha256": "bae1975467ec4c9ea41ba1025b9f7c893706d5ce52f4307255af68001fc1bee2"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-senilai.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5328,
+      "sha256": "2cf7e701e2dcc8c5a3281b668d4f08b026d9f594141cdfc7b2a94c86a5cafe1e"
     }
   ],
   "dependencies": [],

@@ -5,28 +5,28 @@
   "title": "Mengamati Nilai Tempat",
   "instructions": "Amati balok pada setiap kolom, lalu diskusikan bilangan yang ditunjukkan.",
   "assets": [
-    "assets/nilai-tempat-10000.webp"
+    "assets/aktivitas-bilangan-10000.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa banyak kubus pada gambar?",
-        "assetPath": "assets/nilai-tempat-10000.webp",
-        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan.",
+        "assetPath": "assets/aktivitas-bilangan-10000.png",
+        "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "3.452 (tiga ribu empat ratus lima puluh dua).",
         "hint": "Hitung ribuan, ratusan, puluhan, lalu satuan."
       },
       {
         "prompt": "Apa nilai tempat angka 5 pada 3.452?",
-        "assetPath": "assets/nilai-tempat-10000.webp",
-        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan.",
+        "assetPath": "assets/aktivitas-bilangan-10000.png",
+        "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "Puluhan, nilainya 50.",
         "hint": "Urutan dari kiri: ribuan, ratusan, puluhan, satuan."
       },
       {
         "prompt": "Bagaimana membandingkan dua bilangan?",
-        "assetPath": "assets/nilai-tempat-10000.webp",
-        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan.",
+        "assetPath": "assets/aktivitas-bilangan-10000.png",
+        "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "Bandingkan angka paling kiri lebih dahulu.",
         "hint": "Jika sama, lanjut ke angka berikutnya."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan sampai 10.000?",
         "reveal": "Membaca, menulis, dan membandingkan bilangan sampai 10.000 melalui nilai tempat.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/nilai-tempat-10000.webp",
-        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+        "assetPath": "assets/aktivitas-bilangan-10000.png",
+        "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan.",
+        "reveal": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/nilai-tempat-10000.webp",
-        "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+        "assetPath": "assets/aktivitas-bilangan-10000.png",
+        "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+    "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan."
   }
 }

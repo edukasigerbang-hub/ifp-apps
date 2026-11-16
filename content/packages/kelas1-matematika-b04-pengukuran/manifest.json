@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 175668,
       "sha256": "fafca6d37af0c0a2529225c85ea0d88a89c58d5215d26effc2e3300ad1987462"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8399,
+      "sha256": "e831888ea5a2eacb235d297ecfd0a8031d4bfd14b62efba7187af9e1acb47af8"
     }
   ],
   "dependencies": [],

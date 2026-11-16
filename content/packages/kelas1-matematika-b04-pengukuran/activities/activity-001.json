@@ -5,28 +5,28 @@
   "title": "Mengamati Alat Ukur",
   "instructions": "Amati gambar, lalu diskusikan alat ukurnya.",
   "assets": [
-    "assets/pengukuran-kelas1.webp"
+    "assets/aktivitas-pengukuran-sederhana.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Alat ukur panjang sederhana adalah ...",
-        "assetPath": "assets/pengukuran-kelas1.webp",
-        "altText": "Jam, penggaris, dan timbangan sederhana.",
+        "assetPath": "assets/aktivitas-pengukuran-sederhana.png",
+        "altText": "Empat alat ukur: penggaris dengan pensil di atasnya, timbangan dua lengan dengan apel di satu lengan, jam dinding, dan gelas ukur.",
         "reveal": "Jengkal.",
         "hint": "Dari ibu jari ke jari kelingking."
       },
       {
         "prompt": "Alat ukur berat adalah ...",
-        "assetPath": "assets/pengukuran-kelas1.webp",
-        "altText": "Jam, penggaris, dan timbangan sederhana.",
+        "assetPath": "assets/aktivitas-pengukuran-sederhana.png",
+        "altText": "Empat alat ukur: penggaris dengan pensil di atasnya, timbangan dua lengan dengan apel di satu lengan, jam dinding, dan gelas ukur.",
         "reveal": "Timbangan.",
         "hint": "Untuk mengetahui berat."
       },
       {
         "prompt": "Alat penunjuk waktu adalah ...",
-        "assetPath": "assets/pengukuran-kelas1.webp",
-        "altText": "Jam, penggaris, dan timbangan sederhana.",
+        "assetPath": "assets/aktivitas-pengukuran-sederhana.png",
+        "altText": "Empat alat ukur: penggaris dengan pensil di atasnya, timbangan dua lengan dengan apel di satu lengan, jam dinding, dan gelas ukur.",
         "reveal": "Jam.",
         "hint": "Menunjukkan pukul berapa."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Pengukuran Sederhana?",
         "reveal": "Mengukur panjang, berat, dan waktu dengan cara sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/pengukuran-kelas1.webp",
-        "altText": "Jam, penggaris, dan timbangan sederhana."
+        "assetPath": "assets/aktivitas-pengukuran-sederhana.png",
+        "altText": "Empat alat ukur: penggaris dengan pensil di atasnya, timbangan dua lengan dengan apel di satu lengan, jam dinding, dan gelas ukur."
       },
       {
         "prompt": "Panjang meja dapat diukur dengan ...",
         "reveal": "Jengkal",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/pengukuran-kelas1.webp",
-        "altText": "Jam, penggaris, dan timbangan sederhana."
+        "assetPath": "assets/aktivitas-pengukuran-sederhana.png",
+        "altText": "Empat alat ukur: penggaris dengan pensil di atasnya, timbangan dua lengan dengan apel di satu lengan, jam dinding, dan gelas ukur."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Jam, penggaris, dan timbangan sederhana."
+    "altText": "Empat alat ukur: penggaris dengan pensil di atasnya, timbangan dua lengan dengan apel di satu lengan, jam dinding, dan gelas ukur."
   }
 }

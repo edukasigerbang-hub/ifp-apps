@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 152258,
       "sha256": "01bdf19ee9fee6a787796f43553374a4ca9ae9bed26debcd1b67e9ad5018a936"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5393,
+      "sha256": "7d120481a9dd90322552bfa7f5b7eacc693d313580fb4c281a0e93ad6fdc16ec"
     }
   ],
   "dependencies": [],

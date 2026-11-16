@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 93990,
       "sha256": "d3ee871eb8bdea1d0da9b6e2e6e8d3f55ccf6a3a3fce52245d15c54729e783e4"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7427,
+      "sha256": "94e523f5df995dad628aaa63f0663a5de73a3b33ec80b4185c1563fe8e010927"
     }
   ],
   "dependencies": [],

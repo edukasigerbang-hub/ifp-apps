@@ -5,28 +5,28 @@
   "title": "Mengamati Alat Ukur",
   "instructions": "Amati gambar, lalu diskusikan alat dan satuannya.",
   "assets": [
-    "assets/pengukuran-kelas2.webp"
+    "assets/aktivitas-pengukuran.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Alat ukur panjang adalah ...",
-        "assetPath": "assets/pengukuran-kelas2.webp",
-        "altText": "Penggaris, meteran, dan timbangan sederhana.",
+        "assetPath": "assets/aktivitas-pengukuran.png",
+        "altText": "Panel atas membandingkan dua batang panjang berbeda; panel bawah menunjukkan penggaris, pensil, dan timbangan dengan apel.",
         "reveal": "Penggaris atau meteran.",
         "hint": "Satuan cm dan m."
       },
       {
         "prompt": "Alat ukur berat adalah ...",
-        "assetPath": "assets/pengukuran-kelas2.webp",
-        "altText": "Penggaris, meteran, dan timbangan sederhana.",
+        "assetPath": "assets/aktivitas-pengukuran.png",
+        "altText": "Panel atas membandingkan dua batang panjang berbeda; panel bawah menunjukkan penggaris, pensil, dan timbangan dengan apel.",
         "reveal": "Timbangan.",
         "hint": "Satuan gram dan kg."
       },
       {
         "prompt": "Mana yang lebih panjang, meja atau pensil?",
-        "assetPath": "assets/pengukuran-kelas2.webp",
-        "altText": "Penggaris, meteran, dan timbangan sederhana.",
+        "assetPath": "assets/aktivitas-pengukuran.png",
+        "altText": "Panel atas membandingkan dua batang panjang berbeda; panel bawah menunjukkan penggaris, pensil, dan timbangan dengan apel.",
         "reveal": "Meja.",
         "hint": "Bandingkan ukurannya."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Pengukuran Panjang dan Berat?",
         "reveal": "Mengukur panjang dan berat dengan alat sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/pengukuran-kelas2.webp",
-        "altText": "Penggaris, meteran, dan timbangan sederhana."
+        "assetPath": "assets/aktivitas-pengukuran.png",
+        "altText": "Panel atas membandingkan dua batang panjang berbeda; panel bawah menunjukkan penggaris, pensil, dan timbangan dengan apel."
       },
       {
         "prompt": "Satuan panjang adalah ...",
         "reveal": "cm",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/pengukuran-kelas2.webp",
-        "altText": "Penggaris, meteran, dan timbangan sederhana."
+        "assetPath": "assets/aktivitas-pengukuran.png",
+        "altText": "Panel atas membandingkan dua batang panjang berbeda; panel bawah menunjukkan penggaris, pensil, dan timbangan dengan apel."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Penggaris, meteran, dan timbangan sederhana."
+    "altText": "Panel atas membandingkan dua batang panjang berbeda; panel bawah menunjukkan penggaris, pensil, dan timbangan dengan apel."
   }
 }

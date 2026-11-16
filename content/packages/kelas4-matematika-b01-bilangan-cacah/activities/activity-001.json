@@ -5,42 +5,42 @@
   "title": "Eksplorasi Terbimbing",
   "instructions": "Amati gambar, lalu ikuti lima langkah eksplorasi.",
   "assets": [
-    "assets/pasar-nilai-tempat.webp"
+    "assets/aktivitas-bilangan-cacah.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa bilangan yang ditunjukkan balok?",
-        "assetPath": "assets/pasar-nilai-tempat.webp",
-        "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah.png",
+        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "12.345, sebuah bilangan cacah besar.",
         "hint": "Hitung setiap nilai tempat."
       },
       {
         "prompt": "Apa nilai tempat angka 3 pada 12.345?",
-        "assetPath": "assets/pasar-nilai-tempat.webp",
-        "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah.png",
+        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "Ratusan; nilainya 300.",
         "hint": "Urutan: puluh ribuan, ribuan, ratusan, puluhan, satuan."
       },
       {
         "prompt": "Apa nilai tempat angka 4 pada 12.345?",
-        "assetPath": "assets/pasar-nilai-tempat.webp",
-        "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah.png",
+        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "Puluhan; nilainya 40.",
         "hint": "Lihat posisi dari kanan."
       },
       {
         "prompt": "Bagaimana membandingkan 12.345 dan 12.354?",
-        "assetPath": "assets/pasar-nilai-tempat.webp",
-        "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah.png",
+        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "12.354 lebih besar; bandingkan dari kiri.",
         "hint": "Angka ribuan sama, lanjut ke ratusan."
       },
       {
         "prompt": "Bagaimana mengurutkan 12.345, 12.354, dan 12.435?",
-        "assetPath": "assets/pasar-nilai-tempat.webp",
-        "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah.png",
+        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
         "reveal": "12.345 < 12.354 < 12.435.",
         "hint": "Bandingkan angka pada nilai tempat yang sama."
       }
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan."
+    "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan."
   }
 }

@@ -5,28 +5,28 @@
   "title": "Mengamati Pola",
   "instructions": "Amati gambar, lalu lanjutkan polanya.",
   "assets": [
-    "assets/pola-bilangan.webp"
+    "assets/aktivitas-pola-bilangan.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Pola 1, 2, 3, ... berlanjut dengan ...",
-        "assetPath": "assets/pola-bilangan.webp",
-        "altText": "Pola warna dan bilangan yang berulang.",
+        "assetPath": "assets/aktivitas-pola-bilangan.png",
+        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
         "reveal": "4.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Pola 2, 4, 6, ... berlanjut dengan ...",
-        "assetPath": "assets/pola-bilangan.webp",
-        "altText": "Pola warna dan bilangan yang berulang.",
+        "assetPath": "assets/aktivitas-pola-bilangan.png",
+        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
         "reveal": "8.",
         "hint": "Tambahkan dua."
       },
       {
         "prompt": "Pola 5, 10, 15, ... berlanjut dengan ...",
-        "assetPath": "assets/pola-bilangan.webp",
-        "altText": "Pola warna dan bilangan yang berulang.",
+        "assetPath": "assets/aktivitas-pola-bilangan.png",
+        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
         "reveal": "20.",
         "hint": "Tambahkan lima."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Pola Bilangan?",
         "reveal": "Mengenal dan melanjutkan pola bilangan sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/pola-bilangan.webp",
-        "altText": "Pola warna dan bilangan yang berulang."
+        "assetPath": "assets/aktivitas-pola-bilangan.png",
+        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Pola warna dan bilangan yang berulang.",
+        "reveal": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/pola-bilangan.webp",
-        "altText": "Pola warna dan bilangan yang berulang."
+        "assetPath": "assets/aktivitas-pola-bilangan.png",
+        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Pola warna dan bilangan yang berulang."
+    "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
   }
 }

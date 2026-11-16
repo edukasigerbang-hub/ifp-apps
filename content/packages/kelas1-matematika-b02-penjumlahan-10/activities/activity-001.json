@@ -5,28 +5,28 @@
   "title": "Menghitung Bersama",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/penjumlahan-10.webp"
+    "assets/aktivitas-penjumlahan-10.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 2 + 3?",
-        "assetPath": "assets/penjumlahan-10.webp",
-        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "assetPath": "assets/aktivitas-penjumlahan-10.png",
+        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
         "reveal": "5.",
         "hint": "Hitung 2 lalu tambah 3."
       },
       {
         "prompt": "Berapa 5 − 2?",
-        "assetPath": "assets/penjumlahan-10.webp",
-        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "assetPath": "assets/aktivitas-penjumlahan-10.png",
+        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
         "reveal": "3.",
         "hint": "Ambil 2 dari 5."
       },
       {
         "prompt": "Bagaimana menghitung dengan jari?",
-        "assetPath": "assets/penjumlahan-10.webp",
-        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "assetPath": "assets/aktivitas-penjumlahan-10.png",
+        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
         "reveal": "Buka jari sesuai bilangan.",
         "hint": "Hitung satu per satu."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 10?",
         "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 10.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/penjumlahan-10.webp",
-        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+        "assetPath": "assets/aktivitas-penjumlahan-10.png",
+        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Garis bilangan dan dua kelompok benda untuk penjumlahan.",
+        "reveal": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/penjumlahan-10.webp",
-        "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+        "assetPath": "assets/aktivitas-penjumlahan-10.png",
+        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+    "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
   }
 }

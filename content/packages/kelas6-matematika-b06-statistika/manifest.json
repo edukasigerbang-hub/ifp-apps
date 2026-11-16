@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 150974,
       "sha256": "b6c536d2ad1757ce7496a555a7b829cfd6f4c601335813381d40012a0c2289c1"
+    },
+    {
+      "path": "assets/aktivitas-statistika.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6812,
+      "sha256": "dd17aed4413f4188dbad28b52131ffebfbc1b2357c01522d0f1acbca0285e9ad"
     }
   ],
   "dependencies": [],

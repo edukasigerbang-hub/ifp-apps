@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 151986,
       "sha256": "06253c3f7ae563cd85f7c3943060e19efc1cfc7146c43663580dec6b8a68b999"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-cacah.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8977,
+      "sha256": "693ed355b301e9cc89a9fe9dae0ccb687a81f614ef43f4b298d90927cc8eb185"
     }
   ],
   "dependencies": [],

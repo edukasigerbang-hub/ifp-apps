@@ -5,44 +5,44 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan datanya.",
   "assets": [
-    "assets/data-kelas2.webp"
+    "assets/aktivitas-data.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa isi tabel data?",
-        "assetPath": "assets/data-kelas2.webp",
-        "altText": "Diagram batang dan tabel data sederhana.",
+        "assetPath": "assets/aktivitas-data.png",
+        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
         "reveal": "Keterangan dan jumlah.",
         "hint": "Baca angkanya."
       },
       {
         "prompt": "Apa yang ditunjukkan diagram batang?",
-        "assetPath": "assets/data-kelas2.webp",
-        "altText": "Diagram batang dan tabel data sederhana.",
+        "assetPath": "assets/aktivitas-data.png",
+        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
         "reveal": "Banyak data.",
         "hint": "Bandingkan tinggi batang."
       },
       {
         "prompt": "Bagaimana mencari data terbanyak?",
-        "assetPath": "assets/data-kelas2.webp",
-        "altText": "Diagram batang dan tabel data sederhana.",
+        "assetPath": "assets/aktivitas-data.png",
+        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
         "reveal": "Lihat batang tertinggi.",
         "hint": "Baca angkanya."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/data-kelas2.webp",
-        "altText": "Diagram batang dan tabel data sederhana."
+        "assetPath": "assets/aktivitas-data.png",
+        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak."
       },
       {
         "prompt": "Diagram batang menunjukkan ...",
         "reveal": "Perbandingan data",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/data-kelas2.webp",
-        "altText": "Diagram batang dan tabel data sederhana."
+        "assetPath": "assets/aktivitas-data.png",
+        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Diagram batang dan tabel data sederhana."
+    "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak."
   }
 }

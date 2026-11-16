@@ -5,44 +5,44 @@
   "title": "Mengamati Garis dan Sudut",
   "instructions": "Amati gambar, lalu diskusikan hubungan garis dan jenis sudut.",
   "assets": [
-    "assets/garis-sudut.webp"
+    "assets/aktivitas-garis-sudut.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Garis mana yang sejajar pada gambar?",
-        "assetPath": "assets/garis-sudut.webp",
-        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
+        "assetPath": "assets/aktivitas-garis-sudut.png",
+        "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah.",
         "reveal": "Dua garis mendatar yang tidak berpotongan disebut sejajar.",
         "hint": "Perhatikan dua garis yang arahnya sama."
       },
       {
         "prompt": "Sudut apa yang besarnya 90°?",
-        "assetPath": "assets/garis-sudut.webp",
-        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
+        "assetPath": "assets/aktivitas-garis-sudut.png",
+        "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah.",
         "reveal": "Sudut siku-siku, ditandai dengan kotak kecil.",
         "hint": "Perhatikan tanda persegi pada pertemuan garis."
       },
       {
         "prompt": "Apa perbedaan sudut lancip dan tumpul?",
-        "assetPath": "assets/garis-sudut.webp",
-        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
+        "assetPath": "assets/aktivitas-garis-sudut.png",
+        "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah.",
         "reveal": "Sudut lancip kurang dari 90°, sudut tumpul lebih dari 90°.",
         "hint": "Bandingkan dengan sudut siku-siku."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul.",
+        "reveal": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/garis-sudut.webp",
-        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
+        "assetPath": "assets/aktivitas-garis-sudut.png",
+        "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah."
       },
       {
         "prompt": "Alat yang digunakan untuk mengukur besar sudut adalah ...",
         "reveal": "busur derajat",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/garis-sudut.webp",
-        "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
+        "assetPath": "assets/aktivitas-garis-sudut.png",
+        "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
+    "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah."
   }
 }

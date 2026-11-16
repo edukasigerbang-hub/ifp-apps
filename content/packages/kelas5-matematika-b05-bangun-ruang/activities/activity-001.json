@@ -5,28 +5,28 @@
   "title": "Mengamati Bangun Ruang",
   "instructions": "Amati gambar, lalu diskusikan ciri setiap bangun ruang.",
   "assets": [
-    "assets/bangun-ruang-kelas5.webp"
+    "assets/aktivitas-bangun-ruang.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bangun ruang apa yang terlihat?",
-        "assetPath": "assets/bangun-ruang-kelas5.webp",
-        "altText": "Kubus, balok, tabung, dan kerucut.",
-        "reveal": "Kubus, balok, tabung, dan kerucut.",
+        "assetPath": "assets/aktivitas-bangun-ruang.png",
+        "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
+        "reveal": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
         "hint": "Amati bentuknya."
       },
       {
         "prompt": "Apa ciri kubus?",
-        "assetPath": "assets/bangun-ruang-kelas5.webp",
-        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "assetPath": "assets/aktivitas-bangun-ruang.png",
+        "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
         "reveal": "Enam sisi sama besar dan dua belas rusuk.",
         "hint": "Semua sisi persegi."
       },
       {
         "prompt": "Apa contoh benda berbentuk tabung?",
-        "assetPath": "assets/bangun-ruang-kelas5.webp",
-        "altText": "Kubus, balok, tabung, dan kerucut.",
+        "assetPath": "assets/aktivitas-bangun-ruang.png",
+        "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
         "reveal": "Kaleng dan gelas.",
         "hint": "Memiliki sisi lingkaran."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Ruang?",
         "reveal": "Mengenal bangun ruang dan ciri sisi, rusuk, serta titik sudutnya.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bangun-ruang-kelas5.webp",
-        "altText": "Kubus, balok, tabung, dan kerucut."
+        "assetPath": "assets/aktivitas-bangun-ruang.png",
+        "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Kubus, balok, tabung, dan kerucut.",
+        "reveal": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/bangun-ruang-kelas5.webp",
-        "altText": "Kubus, balok, tabung, dan kerucut."
+        "assetPath": "assets/aktivitas-bangun-ruang.png",
+        "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kubus, balok, tabung, dan kerucut."
+    "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi."
   }
 }

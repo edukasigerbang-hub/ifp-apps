@@ -5,28 +5,28 @@
   "title": "Mengamati Unsur Lingkaran",
   "instructions": "Amati gambar, lalu diskusikan jari-jari, diameter, dan pusat.",
   "assets": [
-    "assets/lingkaran.webp"
+    "assets/aktivitas-lingkaran.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu jari-jari?",
-        "assetPath": "assets/lingkaran.webp",
-        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat.",
+        "assetPath": "assets/aktivitas-lingkaran.png",
+        "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat.",
         "reveal": "Jarak pusat ke tepi lingkaran.",
         "hint": "Setengah diameter."
       },
       {
         "prompt": "Apa hubungan diameter dan jari-jari?",
-        "assetPath": "assets/lingkaran.webp",
-        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat.",
+        "assetPath": "assets/aktivitas-lingkaran.png",
+        "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat.",
         "reveal": "Diameter = 2 × jari-jari.",
         "hint": "Jari-jari = diameter : 2."
       },
       {
         "prompt": "Apa rumus keliling lingkaran?",
-        "assetPath": "assets/lingkaran.webp",
-        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat.",
+        "assetPath": "assets/aktivitas-lingkaran.png",
+        "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat.",
         "reveal": "2 × π × r.",
         "hint": "π ≈ 3,14."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Lingkaran?",
         "reveal": "Mengenal unsur lingkaran serta menghitung keliling dan luas.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/lingkaran.webp",
-        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+        "assetPath": "assets/aktivitas-lingkaran.png",
+        "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Lingkaran dengan jari-jari, diameter, dan pusat.",
+        "reveal": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/lingkaran.webp",
-        "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+        "assetPath": "assets/aktivitas-lingkaran.png",
+        "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+    "altText": "Lingkaran dengan titik pusat, satu garis jari-jari berwarna teal dari pusat ke tepi, dan satu garis diameter berwarna biru menembus pusat."
   }
 }

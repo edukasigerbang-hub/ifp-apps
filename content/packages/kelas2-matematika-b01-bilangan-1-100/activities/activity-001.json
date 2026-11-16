@@ -5,28 +5,28 @@
   "title": "Mengamati Bagan Seratus",
   "instructions": "Amati bagan, lalu hitung bersama-sama.",
   "assets": [
-    "assets/bilangan-1-100.webp"
+    "assets/aktivitas-bilangan-1-100.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bilangan setelah 39 adalah ...",
-        "assetPath": "assets/bilangan-1-100.webp",
-        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak.",
+        "assetPath": "assets/aktivitas-bilangan-1-100.png",
+        "altText": "Panel kiri: empat batang puluhan dan tujuh satuan dalam tabel nilai tempat. Panel kanan: batang pendek di atas dan batang panjang di bawah, dengan tanda perbandingan di antara keduanya.",
         "reveal": "40.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Angka 47 terdiri dari ...",
-        "assetPath": "assets/bilangan-1-100.webp",
-        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak.",
+        "assetPath": "assets/aktivitas-bilangan-1-100.png",
+        "altText": "Panel kiri: empat batang puluhan dan tujuh satuan dalam tabel nilai tempat. Panel kanan: batang pendek di atas dan batang panjang di bawah, dengan tanda perbandingan di antara keduanya.",
         "reveal": "4 puluhan dan 7 satuan.",
         "hint": "Lihat nilai tempat."
       },
       {
         "prompt": "Mana yang lebih besar, 58 atau 85?",
-        "assetPath": "assets/bilangan-1-100.webp",
-        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak.",
+        "assetPath": "assets/aktivitas-bilangan-1-100.png",
+        "altText": "Panel kiri: empat batang puluhan dan tujuh satuan dalam tabel nilai tempat. Panel kanan: batang pendek di atas dan batang panjang di bawah, dengan tanda perbandingan di antara keduanya.",
         "reveal": "85.",
         "hint": "Bandingkan puluhannya."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 1–100?",
         "reveal": "Membilang, mengenal nilai tempat, dan membandingkan bilangan 1–100.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bilangan-1-100.webp",
-        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+        "assetPath": "assets/aktivitas-bilangan-1-100.png",
+        "altText": "Panel kiri: empat batang puluhan dan tujuh satuan dalam tabel nilai tempat. Panel kanan: batang pendek di atas dan batang panjang di bawah, dengan tanda perbandingan di antara keduanya."
       },
       {
         "prompt": "Bilangan yang lebih besar adalah ...",
         "reveal": "85",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/bilangan-1-100.webp",
-        "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+        "assetPath": "assets/aktivitas-bilangan-1-100.png",
+        "altText": "Panel kiri: empat batang puluhan dan tujuh satuan dalam tabel nilai tempat. Panel kanan: batang pendek di atas dan batang panjang di bawah, dengan tanda perbandingan di antara keduanya."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+    "altText": "Panel kiri: empat batang puluhan dan tujuh satuan dalam tabel nilai tempat. Panel kanan: batang pendek di atas dan batang panjang di bawah, dengan tanda perbandingan di antara keduanya."
   }
 }

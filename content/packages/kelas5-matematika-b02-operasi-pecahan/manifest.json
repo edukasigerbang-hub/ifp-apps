@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 140658,
       "sha256": "76bfc30fce07b570f52a4a4e80e231958b9232a0e9ac778d9216327d38a74eaa"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5460,
+      "sha256": "3296d510ed3764f613735ac74ac4119c56caadc0154858d526f42c1e394b69ce"
     }
   ],
   "dependencies": [],

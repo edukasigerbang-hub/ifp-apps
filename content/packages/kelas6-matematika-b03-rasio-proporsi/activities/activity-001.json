@@ -5,28 +5,28 @@
   "title": "Mengamati Perbandingan",
   "instructions": "Amati batang dan kelompok benda, lalu diskusikan rasionya.",
   "assets": [
-    "assets/rasio.webp"
+    "assets/aktivitas-rasio-proporsi.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa rasio 4 benda merah dan 3 benda biru?",
-        "assetPath": "assets/rasio.webp",
-        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
+        "assetPath": "assets/aktivitas-rasio-proporsi.png",
+        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga.",
         "reveal": "4 : 3.",
         "hint": "Tulis sesuai urutan."
       },
       {
         "prompt": "Bagaimana menyederhanakan 8 : 6?",
-        "assetPath": "assets/rasio.webp",
-        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
+        "assetPath": "assets/aktivitas-rasio-proporsi.png",
+        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga.",
         "reveal": "4 : 3.",
         "hint": "Bagi dengan faktor yang sama."
       },
       {
         "prompt": "Apa itu proporsi?",
-        "assetPath": "assets/rasio.webp",
-        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3.",
+        "assetPath": "assets/aktivitas-rasio-proporsi.png",
+        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga.",
         "reveal": "Dua rasio yang senilai.",
         "hint": "3 : 4 = 9 : 12."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Rasio dan Proporsi?",
         "reveal": "Menulis, menyederhanakan, dan menerapkan rasio.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/rasio.webp",
-        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+        "assetPath": "assets/aktivitas-rasio-proporsi.png",
+        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga."
       },
       {
         "prompt": "Rasio 6 : 9 disederhanakan menjadi ...",
         "reveal": "2 : 3",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/rasio.webp",
-        "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+        "assetPath": "assets/aktivitas-rasio-proporsi.png",
+        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+    "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga."
   }
 }

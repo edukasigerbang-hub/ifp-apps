@@ -5,28 +5,28 @@
   "title": "Menghitung Sampai 20",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/penjumlahan-20.webp"
+    "assets/aktivitas-penjumlahan-20.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 12 + 5?",
-        "assetPath": "assets/penjumlahan-20.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "assetPath": "assets/aktivitas-penjumlahan-20.png",
+        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
         "reveal": "17.",
         "hint": "Hitung dari 12, maju 5."
       },
       {
         "prompt": "Berapa 18 − 4?",
-        "assetPath": "assets/penjumlahan-20.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "assetPath": "assets/aktivitas-penjumlahan-20.png",
+        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
         "reveal": "14.",
         "hint": "Hitung mundur 4."
       },
       {
         "prompt": "Berapa 10 + 10?",
-        "assetPath": "assets/penjumlahan-20.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "assetPath": "assets/aktivitas-penjumlahan-20.png",
+        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
         "reveal": "20.",
         "hint": "Dua kelompok sepuluh."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 20?",
         "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 20.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/penjumlahan-20.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+        "assetPath": "assets/aktivitas-penjumlahan-20.png",
+        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Garis bilangan dan kelompok benda untuk hitungan sampai 20.",
+        "reveal": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/penjumlahan-20.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+        "assetPath": "assets/aktivitas-penjumlahan-20.png",
+        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+    "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
   }
 }

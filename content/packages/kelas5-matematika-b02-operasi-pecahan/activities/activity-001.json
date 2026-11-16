@@ -5,28 +5,28 @@
   "title": "Mengamati Bagian Pecahan",
   "instructions": "Amati batang pecahan, lalu diskusikan penjumlahan dan pengurangannya.",
   "assets": [
-    "assets/operasi-pecahan.webp"
+    "assets/aktivitas-operasi-pecahan.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa hasil 1/4 + 2/4?",
-        "assetPath": "assets/operasi-pecahan.webp",
-        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "assetPath": "assets/aktivitas-operasi-pecahan.png",
+        "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat.",
         "reveal": "3/4.",
         "hint": "Penyebut sama, jumlahkan pembilang."
       },
       {
         "prompt": "Berapa hasil 3/4 − 1/4?",
-        "assetPath": "assets/operasi-pecahan.webp",
-        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "assetPath": "assets/aktivitas-operasi-pecahan.png",
+        "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat.",
         "reveal": "2/4 atau 1/2.",
         "hint": "Kurangi pembilang."
       },
       {
         "prompt": "Apakah penyebut ikut dijumlahkan?",
-        "assetPath": "assets/operasi-pecahan.webp",
-        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "assetPath": "assets/aktivitas-operasi-pecahan.png",
+        "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat.",
         "reveal": "Tidak, penyebut tetap.",
         "hint": "Hanya pembilang yang dihitung."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Operasi Hitung Pecahan?",
         "reveal": "Menjumlahkan dan mengurangkan pecahan berpenyebut sama.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/operasi-pecahan.webp",
-        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+        "assetPath": "assets/aktivitas-operasi-pecahan.png",
+        "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian.",
+        "reveal": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/operasi-pecahan.webp",
-        "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+        "assetPath": "assets/aktivitas-operasi-pecahan.png",
+        "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+    "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat."
   }
 }

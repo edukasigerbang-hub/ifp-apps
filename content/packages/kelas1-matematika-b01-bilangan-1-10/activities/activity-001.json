@@ -5,28 +5,28 @@
   "title": "Menghitung Apel",
   "instructions": "Amati gambar, lalu hitung apel bersama-sama.",
   "assets": [
-    "assets/bilangan-1-10.webp"
+    "assets/aktivitas-bilangan-1-10.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Ada berapa apel?",
-        "assetPath": "assets/bilangan-1-10.webp",
-        "altText": "Kerangka sepuluh berisi tujuh buah apel.",
+        "assetPath": "assets/aktivitas-bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
         "reveal": "Tujuh.",
         "hint": "Hitung satu per satu."
       },
       {
         "prompt": "Angka untuk tujuh adalah ...",
-        "assetPath": "assets/bilangan-1-10.webp",
-        "altText": "Kerangka sepuluh berisi tujuh buah apel.",
+        "assetPath": "assets/aktivitas-bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
         "reveal": "7.",
         "hint": "Tujuh ditulis 7."
       },
       {
         "prompt": "Mana yang lebih banyak, 5 atau 3?",
-        "assetPath": "assets/bilangan-1-10.webp",
-        "altText": "Kerangka sepuluh berisi tujuh buah apel.",
+        "assetPath": "assets/aktivitas-bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
         "reveal": "5.",
         "hint": "Bandingkan jumlahnya."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 1–10?",
         "reveal": "Membilang, mengenal lambang, dan mengurutkan bilangan 1–10.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bilangan-1-10.webp",
-        "altText": "Kerangka sepuluh berisi tujuh buah apel."
+        "assetPath": "assets/aktivitas-bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Kerangka sepuluh berisi tujuh buah apel.",
+        "reveal": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/bilangan-1-10.webp",
-        "altText": "Kerangka sepuluh berisi tujuh buah apel."
+        "assetPath": "assets/aktivitas-bilangan-1-10.png",
+        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kerangka sepuluh berisi tujuh buah apel."
+    "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
   }
 }

@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 71652,
       "sha256": "1bfe0a069c99e901040660a5d9aa421b9badb14d9277cbc6f9d925a0cc820349"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-pembagian.png",
+      "mediaType": "image/png",
+      "sizeBytes": 11694,
+      "sha256": "4a5009716b159fff1d3a2ccf2a60a4476e61a1bb866a9a108130adb37701f4ef"
     }
   ],
   "dependencies": [],

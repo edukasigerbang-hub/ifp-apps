@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 121650,
       "sha256": "f2302437db9c55747ea44faf24f61bf5e155678581173e07b224146ad79f20d8"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-desimal.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6384,
+      "sha256": "ff8c89b44549a2ec728af9d761790f8dd1fb9b9754d5f167799aeae29f737cf2"
     }
   ],
   "dependencies": [],

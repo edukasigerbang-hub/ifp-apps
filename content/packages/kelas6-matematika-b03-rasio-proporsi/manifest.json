@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 110572,
       "sha256": "63da46a86cdbf9a21539e0c402c8f58205fc4fedcf50617d8dd60cea2cc28157"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4859,
+      "sha256": "c9f0f1173a31c9a90833ca0782c9ebe4301531c2132d63f90f317c193b96c543"
     }
   ],
   "dependencies": [],

@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 161078,
       "sha256": "98a3c8c750e1591f3fe597fd165dbc29dfe218205a20a9ef63b6ea02cafb487d"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10063,
+      "sha256": "3dbfa1df2fdc0e04f39afe80675bc29a520984f7570a4ae56a0a356524327764"
     }
   ],
   "dependencies": [],

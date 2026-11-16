@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 152894,
       "sha256": "8d3dee7018dbe2706c66760c799ec3f99914cafa8ed0f4640a17d6d53772ddf2"
+    },
+    {
+      "path": "assets/aktivitas-peluang.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10664,
+      "sha256": "0fcf7996758a458384d16c62a4fcd62712d1239a5e05330004fb6aaacf2228d1"
     }
   ],
   "dependencies": [],

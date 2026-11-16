@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 94888,
       "sha256": "acbdf4301d2aef2ab1ae967c2f4d3d45c38c5a99b84d52c951c12251328db122"
+    },
+    {
+      "path": "assets/aktivitas-waktu-panjang-berat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7786,
+      "sha256": "02423a2e018cb6abfc3963d74721c2698d47fae166b8e5c32f0a2c97ba15f9dc"
     }
   ],
   "dependencies": [],

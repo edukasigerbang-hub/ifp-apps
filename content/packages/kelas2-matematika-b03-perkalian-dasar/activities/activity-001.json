@@ -5,44 +5,44 @@
   "title": "Mengamati Kelompok Benda",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/perkalian-dasar.webp"
+    "assets/aktivitas-perkalian-dasar.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 2 × 3?",
-        "assetPath": "assets/perkalian-dasar.webp",
-        "altText": "Kelompok benda untuk memahami perkalian.",
+        "assetPath": "assets/aktivitas-perkalian-dasar.png",
+        "altText": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom.",
         "reveal": "6.",
         "hint": "2 kelompok berisi 3."
       },
       {
         "prompt": "Berapa 4 × 2?",
-        "assetPath": "assets/perkalian-dasar.webp",
-        "altText": "Kelompok benda untuk memahami perkalian.",
+        "assetPath": "assets/aktivitas-perkalian-dasar.png",
+        "altText": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom.",
         "reveal": "8.",
         "hint": "4 kelompok berisi 2."
       },
       {
         "prompt": "Apa arti 3 × 5?",
-        "assetPath": "assets/perkalian-dasar.webp",
-        "altText": "Kelompok benda untuk memahami perkalian.",
+        "assetPath": "assets/aktivitas-perkalian-dasar.png",
+        "altText": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom.",
         "reveal": "3 kelompok berisi 5.",
         "hint": "Jumlahnya 15."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Kelompok benda untuk memahami perkalian.",
+        "reveal": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/perkalian-dasar.webp",
-        "altText": "Kelompok benda untuk memahami perkalian."
+        "assetPath": "assets/aktivitas-perkalian-dasar.png",
+        "altText": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom."
       },
       {
         "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian Dasar (2–5)?",
         "reveal": "Memahami perkalian sebagai penjumlahan berulang.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/perkalian-dasar.webp",
-        "altText": "Kelompok benda untuk memahami perkalian."
+        "assetPath": "assets/aktivitas-perkalian-dasar.png",
+        "altText": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kelompok benda untuk memahami perkalian."
+    "altText": "Dua susunan titik: dua baris berisi tiga titik dan empat baris berisi dua titik, masing-masing ditandai kurung baris dan kolom."
   }
 }

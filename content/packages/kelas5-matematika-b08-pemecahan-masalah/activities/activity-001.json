@@ -5,28 +5,28 @@
   "title": "Menyelesaikan Soal Cerita",
   "instructions": "Amati gambar, lalu diskusikan langkah menyelesaikan soal.",
   "assets": [
-    "assets/pemecahan-masalah-kelas5.webp"
+    "assets/aktivitas-pemecahan-masalah-kelas5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa langkah pertama?",
-        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
-        "altText": "Anak menyelesaikan soal cerita matematika.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
+        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah.",
         "reveal": "Memahami apa yang diketahui dan ditanya.",
         "hint": "Tandai angka penting."
       },
       {
         "prompt": "Bagaimana memilih operasi?",
-        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
-        "altText": "Anak menyelesaikan soal cerita matematika.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
+        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah.",
         "reveal": "Sesuaikan dengan kata kunci soal.",
         "hint": "Jumlah, selisih, atau bagi."
       },
       {
         "prompt": "Mengapa harus memeriksa?",
-        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
-        "altText": "Anak menyelesaikan soal cerita matematika.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
+        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah.",
         "reveal": "Agar jawaban benar.",
         "hint": "Hitung ulang dengan cara lain."
       },
@@ -34,15 +34,15 @@
         "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
         "reveal": "Memahami soal",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
-        "altText": "Anak menyelesaikan soal cerita matematika."
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
+        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah."
       },
       {
         "prompt": "Cara memeriksa jawaban adalah ...",
         "reveal": "Menghitung ulang",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/pemecahan-masalah-kelas5.webp",
-        "altText": "Anak menyelesaikan soal cerita matematika."
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
+        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Anak menyelesaikan soal cerita matematika."
+    "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah."
   }
 }

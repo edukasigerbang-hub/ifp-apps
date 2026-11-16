@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 101438,
       "sha256": "1a23c712384dcab796433a603b99c8b71e16150e282d0a19461862f1f6d712bb"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-10000.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8628,
+      "sha256": "6b410c1348f8bf279dc2dac5f7663b29e3d4f6e5d39b6fff78b673c060ec094b"
     }
   ],
   "dependencies": [],

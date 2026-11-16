@@ -14,6 +14,8 @@
     "content:prereview": "node scripts/pedagogical-prereview.mjs",
     "content:quality-gap": "node scripts/analyze-content-quality.mjs",
     "content:asset-plan": "node scripts/generate-asset-plan.mjs",
+    "content:assets": "node scripts/generate-activity-illustrations.mjs",
+    "content:assets:wire": "node scripts/wire-activity-illustrations.mjs",
     "content:review-binding": "tsx scripts/check-review-binding.ts",
     "content:review-sample": "tsx scripts/sample-approved-reviews.ts",
     "preview": "vite preview",

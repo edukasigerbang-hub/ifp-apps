@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 92554,
       "sha256": "bf52679636f09389f35a244d5e58a6d8ec324d8f90c00f49d150b9145cd3e1e1"
+    },
+    {
+      "path": "assets/aktivitas-pecahan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8744,
+      "sha256": "80a861e627f1559c7fa7ac0939722cd9857418105b42942c1761e51766986584"
     }
   ],
   "dependencies": [],

@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 111110,
       "sha256": "8e96b168724de808b923522ebba875ffb5f6668c8250ff280a89e2304bbd240e"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-pengurangan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5269,
+      "sha256": "0ccc35c828a71f96085c62cee02ad750d9cbb28b502d5c5f645c3bbfe11fe80a"
     }
   ],
   "dependencies": [],

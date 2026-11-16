@@ -5,28 +5,28 @@
   "title": "Mengamati Roda dan Dadu",
   "instructions": "Amati gambar, lalu diskusikan kemungkinan hasilnya.",
   "assets": [
-    "assets/peluang.webp"
+    "assets/aktivitas-peluang.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa hasil yang mungkin pada dadu?",
-        "assetPath": "assets/peluang.webp",
-        "altText": "Roda putar empat warna dan dadu.",
+        "assetPath": "assets/aktivitas-peluang.png",
+        "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin.",
         "reveal": "6 hasil.",
         "hint": "Angka 1 sampai 6."
       },
       {
         "prompt": "Apa peluang muncul angka 3?",
-        "assetPath": "assets/peluang.webp",
-        "altText": "Roda putar empat warna dan dadu.",
+        "assetPath": "assets/aktivitas-peluang.png",
+        "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin.",
         "reveal": "1/6.",
         "hint": "Satu hasil dari enam."
       },
       {
         "prompt": "Berapa hasil yang mungkin pada mata uang?",
-        "assetPath": "assets/peluang.webp",
-        "altText": "Roda putar empat warna dan dadu.",
+        "assetPath": "assets/aktivitas-peluang.png",
+        "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin.",
         "reveal": "2 hasil.",
         "hint": "Angka dan gambar."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Peluang Sederhana?",
         "reveal": "Mengenal ruang sampel dan menghitung peluang sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/peluang.webp",
-        "altText": "Roda putar empat warna dan dadu."
+        "assetPath": "assets/aktivitas-peluang.png",
+        "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Roda putar empat warna dan dadu.",
+        "reveal": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/peluang.webp",
-        "altText": "Roda putar empat warna dan dadu."
+        "assetPath": "assets/aktivitas-peluang.png",
+        "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Roda putar empat warna dan dadu."
+    "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin."
   }
 }

@@ -5,28 +5,28 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati empat bangun datar pada gambar, lalu diskusikan sifatnya.",
   "assets": [
-    "assets/bangun-datar.webp"
+    "assets/aktivitas-bangun-datar-kelas4.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Sebutkan bangun datar yang terlihat pada gambar.",
-        "assetPath": "assets/bangun-datar.webp",
-        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
+        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
         "reveal": "Persegi, persegi panjang, segitiga, dan lingkaran.",
         "hint": "Perhatikan jumlah sisi dan bentuknya."
       },
       {
         "prompt": "Bangun mana yang memiliki empat sisi sama panjang?",
-        "assetPath": "assets/bangun-datar.webp",
-        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
+        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
         "reveal": "Persegi memiliki empat sisi sama panjang dan empat sudut siku-siku.",
         "hint": "Bandingkan sisi-sisi pada persegi."
       },
       {
         "prompt": "Bagaimana cara menghitung keliling persegi panjang?",
-        "assetPath": "assets/bangun-datar.webp",
-        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
+        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
         "reveal": "Keliling = 2 × (panjang + lebar).",
         "hint": "Jumlahkan semua sisi."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Sifat, Keliling, dan Luas Bangun Datar?",
         "reveal": "Mengenali sifat bangun datar serta menghitung keliling dan luas persegi dan persegi panjang.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bangun-datar.webp",
-        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
+        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah.",
+        "reveal": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/bangun-datar.webp",
-        "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
+        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+    "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
   }
 }

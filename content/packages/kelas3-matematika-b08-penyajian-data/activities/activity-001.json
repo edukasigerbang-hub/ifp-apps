@@ -5,28 +5,28 @@
   "title": "Membaca Data",
   "instructions": "Amati gambar, lalu diskusikan cara membaca tabel dan diagram.",
   "assets": [
-    "assets/penyajian-data-kelas3.webp"
+    "assets/aktivitas-penyajian-data.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa isi tabel data?",
-        "assetPath": "assets/penyajian-data-kelas3.webp",
-        "altText": "Diagram batang dan tabel data sederhana.",
+        "assetPath": "assets/aktivitas-penyajian-data.png",
+        "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris.",
         "reveal": "Keterangan dan jumlah.",
         "hint": "Baca judul dan angkanya."
       },
       {
         "prompt": "Apa yang ditunjukkan diagram batang?",
-        "assetPath": "assets/penyajian-data-kelas3.webp",
-        "altText": "Diagram batang dan tabel data sederhana.",
+        "assetPath": "assets/aktivitas-penyajian-data.png",
+        "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris.",
         "reveal": "Banyak data pada setiap kelompok.",
         "hint": "Bandingkan tinggi batang."
       },
       {
         "prompt": "Bagaimana mencari data terbanyak?",
-        "assetPath": "assets/penyajian-data-kelas3.webp",
-        "altText": "Diagram batang dan tabel data sederhana.",
+        "assetPath": "assets/aktivitas-penyajian-data.png",
+        "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris.",
         "reveal": "Lihat batang tertinggi.",
         "hint": "Baca angka pada sumbu."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penyajian Data Sederhana?",
         "reveal": "Membaca dan menyajikan data dalam tabel serta diagram batang.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/penyajian-data-kelas3.webp",
-        "altText": "Diagram batang dan tabel data sederhana."
+        "assetPath": "assets/aktivitas-penyajian-data.png",
+        "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Diagram batang dan tabel data sederhana.",
+        "reveal": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/penyajian-data-kelas3.webp",
-        "altText": "Diagram batang dan tabel data sederhana."
+        "assetPath": "assets/aktivitas-penyajian-data.png",
+        "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Diagram batang dan tabel data sederhana."
+    "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris."
   }
 }

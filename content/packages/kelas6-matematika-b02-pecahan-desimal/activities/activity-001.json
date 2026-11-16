@@ -5,28 +5,28 @@
   "title": "Mengamati Pecahan dan Desimal",
   "instructions": "Amati batang pecahan, lalu diskusikan nilai desimalnya.",
   "assets": [
-    "assets/pecahan-desimal.webp"
+    "assets/aktivitas-pecahan-desimal.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa nilai desimal 1/2?",
-        "assetPath": "assets/pecahan-desimal.webp",
-        "altText": "Batang pecahan dan nilai desimal yang setara.",
+        "assetPath": "assets/aktivitas-pecahan-desimal.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai.",
         "reveal": "0,5.",
         "hint": "Bagi 1 dengan 2."
       },
       {
         "prompt": "Berapa nilai pecahan 0,25?",
-        "assetPath": "assets/pecahan-desimal.webp",
-        "altText": "Batang pecahan dan nilai desimal yang setara.",
+        "assetPath": "assets/aktivitas-pecahan-desimal.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai.",
         "reveal": "1/4.",
         "hint": "25 per seratus disederhanakan."
       },
       {
         "prompt": "Bagaimana menjumlahkan desimal?",
-        "assetPath": "assets/pecahan-desimal.webp",
-        "altText": "Batang pecahan dan nilai desimal yang setara.",
+        "assetPath": "assets/aktivitas-pecahan-desimal.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai.",
         "reveal": "Sejajarkan tanda koma.",
         "hint": "Jumlahkan per nilai tempat."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Operasi Pecahan dan Desimal?",
         "reveal": "Mengubah dan menghitung pecahan serta desimal.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/pecahan-desimal.webp",
-        "altText": "Batang pecahan dan nilai desimal yang setara."
+        "assetPath": "assets/aktivitas-pecahan-desimal.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Batang pecahan dan nilai desimal yang setara.",
+        "reveal": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/pecahan-desimal.webp",
-        "altText": "Batang pecahan dan nilai desimal yang setara."
+        "assetPath": "assets/aktivitas-pecahan-desimal.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Batang pecahan dan nilai desimal yang setara."
+    "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai."
   }
 }

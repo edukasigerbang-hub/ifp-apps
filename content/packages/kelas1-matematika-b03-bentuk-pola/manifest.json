@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 101978,
       "sha256": "476b4a7485c56b4ef24c361e3ad7c34e1faef2de8e963792efec3c82efd389d2"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7250,
+      "sha256": "01403229816f14f56a8de202ba91c0d8fdc71149790df95019e6add9c2c2c59b"
     }
   ],
   "dependencies": [],

@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 142348,
       "sha256": "4e0caa52e2aa07b07b6966caaa525c47f0845fed533763d558113130fcfd0fae"
+    },
+    {
+      "path": "assets/aktivitas-volume-luas-permukaan.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6072,
+      "sha256": "43d9237d9c42911aaefd1a4a54f0aef244c24502a7c1e23dd0365e1d7e0d6ae6"
     }
   ],
   "dependencies": [],

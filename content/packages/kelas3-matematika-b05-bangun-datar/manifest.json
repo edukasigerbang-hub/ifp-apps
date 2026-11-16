@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 103860,
       "sha256": "c6b71edb4bf50f4412df2cf5b1d4950dd1e7cb18a7108671ae7856e986ff2fb4"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-ciri.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6954,
+      "sha256": "b7d3d304bb9db359e1499860827b7d213ea77a2856be7d7acb461836fadbca8a"
     }
   ],
   "dependencies": [],

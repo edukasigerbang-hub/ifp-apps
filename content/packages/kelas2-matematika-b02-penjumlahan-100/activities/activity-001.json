@@ -5,28 +5,28 @@
   "title": "Menghitung sampai 100",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/penjumlahan-100.webp"
+    "assets/aktivitas-penjumlahan-100.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 45 + 32?",
-        "assetPath": "assets/penjumlahan-100.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
+        "assetPath": "assets/aktivitas-penjumlahan-100.png",
+        "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan.",
         "reveal": "77.",
         "hint": "Jumlahkan puluhan lalu satuan."
       },
       {
         "prompt": "Berapa 80 − 25?",
-        "assetPath": "assets/penjumlahan-100.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
+        "assetPath": "assets/aktivitas-penjumlahan-100.png",
+        "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan.",
         "reveal": "55.",
         "hint": "Kurangi puluhan lalu satuan."
       },
       {
         "prompt": "Berapa 50 + 50?",
-        "assetPath": "assets/penjumlahan-100.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
+        "assetPath": "assets/aktivitas-penjumlahan-100.png",
+        "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan.",
         "reveal": "100.",
         "hint": "Dua kelompok lima puluh."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 100?",
         "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 100.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/penjumlahan-100.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+        "assetPath": "assets/aktivitas-penjumlahan-100.png",
+        "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Garis bilangan dan kelompok benda untuk hitungan sampai 100.",
+        "reveal": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/penjumlahan-100.webp",
-        "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+        "assetPath": "assets/aktivitas-penjumlahan-100.png",
+        "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+    "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan."
   }
 }

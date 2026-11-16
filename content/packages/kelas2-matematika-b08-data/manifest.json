@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 181026,
       "sha256": "d2d5c775e95779f59d84d5dc795f4946209b37a10865d276c01dd3b47f0c01ec"
+    },
+    {
+      "path": "assets/aktivitas-data.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6663,
+      "sha256": "43e79da3e890f528887365559e32ef80f583194fa812bd63f1e0d6a65488a2ba"
     }
   ],
   "dependencies": [],

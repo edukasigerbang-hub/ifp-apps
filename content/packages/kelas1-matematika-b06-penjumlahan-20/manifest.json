@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 155842,
       "sha256": "dd988e57b914a4a9b320f48344b1fc9d3e9acbfddd4f3ba67bda25ba2fb444d2"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-20.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7308,
+      "sha256": "cfb83f2a68726c7957684fc3a95d93852384419cf3e023477870c5c074997562"
     }
   ],
   "dependencies": [],

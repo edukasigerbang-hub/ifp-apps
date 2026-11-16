@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 151492,
       "sha256": "a880f304f0f590bbda3ad073b247c9bb3428498cea4e8945a49b5c15364b9071"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8586,
+      "sha256": "2716858f33c25a43c546664a9cfb625435455f1813ce70d83eaf7f4dcee6d650"
     }
   ],
   "dependencies": [],

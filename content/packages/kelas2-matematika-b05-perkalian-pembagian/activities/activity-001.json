@@ -5,28 +5,28 @@
   "title": "Mengamati Kelompok Benda",
   "instructions": "Amati gambar, lalu diskusikan perkalian dan pembagian.",
   "assets": [
-    "assets/perkalian-pembagian-kelas2.webp"
+    "assets/aktivitas-perkalian-pembagian.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 2 × 3?",
-        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
-        "altText": "Kelompok benda untuk perkalian dan pembagian.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
+        "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik.",
         "reveal": "6.",
         "hint": "Dua kelompok berisi tiga."
       },
       {
         "prompt": "Berapa 6 : 2?",
-        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
-        "altText": "Kelompok benda untuk perkalian dan pembagian.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
+        "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik.",
         "reveal": "3.",
         "hint": "Bagi menjadi dua kelompok."
       },
       {
         "prompt": "Bagaimana hubungannya?",
-        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
-        "altText": "Kelompok benda untuk perkalian dan pembagian.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
+        "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik.",
         "reveal": "Pembagian kebalikan perkalian.",
         "hint": "2 × 3 = 6, 6 : 2 = 3."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian dan Pembagian?",
         "reveal": "Menghubungkan perkalian dan pembagian.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
-        "altText": "Kelompok benda untuk perkalian dan pembagian."
+        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
+        "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Kelompok benda untuk perkalian dan pembagian.",
+        "reveal": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/perkalian-pembagian-kelas2.webp",
-        "altText": "Kelompok benda untuk perkalian dan pembagian."
+        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
+        "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kelompok benda untuk perkalian dan pembagian."
+    "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik."
   }
 }

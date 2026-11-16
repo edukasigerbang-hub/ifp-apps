@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 137940,
       "sha256": "3fc54f5b3539a1cddcf0f350d76b1d628854c80ce67ec3c7290f4463be45fe9e"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6275,
+      "sha256": "d605e1f55ae6cd1b9cb3bbc98779f23a9ffaeb02919a0990248a9aa1655e52f4"
     }
   ],
   "dependencies": [],

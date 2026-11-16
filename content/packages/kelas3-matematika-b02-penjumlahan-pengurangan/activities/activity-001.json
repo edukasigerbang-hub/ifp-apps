@@ -5,28 +5,28 @@
   "title": "Mengamati Lompatan Bilangan",
   "instructions": "Amati garis bilangan dan kelompok benda, lalu diskusikan cara berhitungnya.",
   "assets": [
-    "assets/penjumlahan-pengurangan.webp"
+    "assets/aktivitas-penjumlahan-pengurangan.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa hasil 2.450 + 1.275?",
-        "assetPath": "assets/penjumlahan-pengurangan.webp",
-        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan.png",
+        "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan.",
         "reveal": "3.725.",
         "hint": "Jumlahkan satuan dahulu, simpan jika lebih dari 9."
       },
       {
         "prompt": "Kapan kita menyimpan?",
-        "assetPath": "assets/penjumlahan-pengurangan.webp",
-        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan.png",
+        "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan.",
         "reveal": "Saat jumlah satu tempat lebih dari 9.",
         "hint": "Contoh: 8 + 5 = 13, tulis 3 simpan 1."
       },
       {
         "prompt": "Kapan kita meminjam saat mengurangi?",
-        "assetPath": "assets/penjumlahan-pengurangan.webp",
-        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan.png",
+        "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan.",
         "reveal": "Saat angka atas lebih kecil dari angka bawah.",
         "hint": "Pinjam 1 dari tempat di sebelah kiri."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan?",
         "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 10.000 dengan teknik menyimpan dan meminjam.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/penjumlahan-pengurangan.webp",
-        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan.png",
+        "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan.",
+        "reveal": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/penjumlahan-pengurangan.webp",
-        "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan.png",
+        "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+    "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan."
   }
 }

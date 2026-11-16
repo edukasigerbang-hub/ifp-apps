@@ -5,28 +5,28 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati gambar, lalu sebutkan bangunnya.",
   "assets": [
-    "assets/bangun-datar-kelas1.webp"
+    "assets/aktivitas-bangun-datar.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bentuk bulat disebut ...",
-        "assetPath": "assets/bangun-datar-kelas1.webp",
-        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
+        "assetPath": "assets/aktivitas-bangun-datar.png",
+        "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda.",
         "reveal": "Lingkaran.",
         "hint": "Seperti bola."
       },
       {
         "prompt": "Bentuk dengan 4 sisi sama disebut ...",
-        "assetPath": "assets/bangun-datar-kelas1.webp",
-        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
+        "assetPath": "assets/aktivitas-bangun-datar.png",
+        "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda.",
         "reveal": "Persegi.",
         "hint": "Seperti jendela."
       },
       {
         "prompt": "Bentuk dengan 3 sisi disebut ...",
-        "assetPath": "assets/bangun-datar-kelas1.webp",
-        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
+        "assetPath": "assets/aktivitas-bangun-datar.png",
+        "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda.",
         "reveal": "Segitiga.",
         "hint": "Seperti atap."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Datar Sederhana?",
         "reveal": "Mengenal bangun datar di sekitar.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bangun-datar-kelas1.webp",
-        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga."
+        "assetPath": "assets/aktivitas-bangun-datar.png",
+        "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga.",
+        "reveal": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/bangun-datar-kelas1.webp",
-        "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga."
+        "assetPath": "assets/aktivitas-bangun-datar.png",
+        "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga."
+    "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda."
   }
 }

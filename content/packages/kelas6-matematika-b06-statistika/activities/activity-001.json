@@ -5,28 +5,28 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan mean, median, dan modus.",
   "assets": [
-    "assets/statistika.webp"
+    "assets/aktivitas-statistika.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu mean?",
-        "assetPath": "assets/statistika.webp",
-        "altText": "Diagram batang dan tabel data.",
+        "assetPath": "assets/aktivitas-statistika.png",
+        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah.",
         "reveal": "Jumlah data dibagi banyak data.",
         "hint": "Rata-rata."
       },
       {
         "prompt": "Apa itu median?",
-        "assetPath": "assets/statistika.webp",
-        "altText": "Diagram batang dan tabel data.",
+        "assetPath": "assets/aktivitas-statistika.png",
+        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah.",
         "reveal": "Nilai tengah setelah data diurutkan.",
         "hint": "Bagi dua jika genap."
       },
       {
         "prompt": "Apa itu modus?",
-        "assetPath": "assets/statistika.webp",
-        "altText": "Diagram batang dan tabel data.",
+        "assetPath": "assets/aktivitas-statistika.png",
+        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah.",
         "reveal": "Data yang paling sering muncul.",
         "hint": "Bisa lebih dari satu."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Statistika?",
         "reveal": "Menghitung mean, median, dan modus dari data.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/statistika.webp",
-        "altText": "Diagram batang dan tabel data."
+        "assetPath": "assets/aktivitas-statistika.png",
+        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah."
       },
       {
         "prompt": "Mean dari 70, 80, 90 adalah ...",
         "reveal": "80",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/statistika.webp",
-        "altText": "Diagram batang dan tabel data."
+        "assetPath": "assets/aktivitas-statistika.png",
+        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Diagram batang dan tabel data."
+    "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah."
   }
 }

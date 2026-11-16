@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 148270,
       "sha256": "c8769953c3902f0415cd4541c8c00c9466d180a23f9c7fc47afddf90f72f15f4"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-dasar.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5575,
+      "sha256": "f982122c10aea438a11ae9e0537cff82503fac62aa5e1bce28e8886d401d583c"
     }
   ],
   "dependencies": [],

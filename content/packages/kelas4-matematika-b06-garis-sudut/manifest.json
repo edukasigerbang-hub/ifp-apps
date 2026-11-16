@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 168000,
       "sha256": "a8efc110dcc94402a4c41c6d9a3e1616e282a3a80f77eaf5c590242abf73e6f3"
+    },
+    {
+      "path": "assets/aktivitas-garis-sudut.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5419,
+      "sha256": "bc1c8c553e030bdbf337401c74f2069edafbb8343b65db229f165602e6efd7ab"
     }
   ],
   "dependencies": [],

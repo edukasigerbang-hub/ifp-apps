@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 147620,
       "sha256": "b5394c9e10dddbc0097d1a8baa012ef1e6ee13b4913339d9834af5cf481fd2c5"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas6.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6953,
+      "sha256": "139a502a5726dd0dbca398af0a372c6cc6c5d0848be1f38e55a8ab766fd6545d"
     }
   ],
   "dependencies": [],

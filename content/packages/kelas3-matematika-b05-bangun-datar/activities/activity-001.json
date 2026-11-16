@@ -5,28 +5,28 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati gambar, lalu diskusikan sisi dan sudut setiap bangun.",
   "assets": [
-    "assets/bangun-datar-kelas3.webp"
+    "assets/aktivitas-bangun-datar-ciri.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bangun datar apa saja yang terlihat?",
-        "assetPath": "assets/bangun-datar-kelas3.webp",
-        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri.png",
+        "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari.",
         "reveal": "Persegi, persegi panjang, segitiga, dan lingkaran.",
         "hint": "Amati bentuknya."
       },
       {
         "prompt": "Apa ciri persegi?",
-        "assetPath": "assets/bangun-datar-kelas3.webp",
-        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri.png",
+        "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari.",
         "reveal": "Empat sisi sama panjang dan empat sudut.",
         "hint": "Ukur sisinya."
       },
       {
         "prompt": "Apa beda persegi dan persegi panjang?",
-        "assetPath": "assets/bangun-datar-kelas3.webp",
-        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri.png",
+        "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari.",
         "reveal": "Persegi semua sisi sama; persegi panjang memiliki dua pasang sisi sama.",
         "hint": "Bandingkan sisinya."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Datar dan Cirinya?",
         "reveal": "Mengenal bangun datar serta ciri sisi dan sudutnya.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bangun-datar-kelas3.webp",
-        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
+        "assetPath": "assets/aktivitas-bangun-datar-ciri.png",
+        "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran.",
+        "reveal": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/bangun-datar-kelas3.webp",
-        "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
+        "assetPath": "assets/aktivitas-bangun-datar-ciri.png",
+        "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
+    "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari."
   }
 }

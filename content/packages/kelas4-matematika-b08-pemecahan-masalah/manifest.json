@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 146408,
       "sha256": "24fd8cebb4eb4494c04fe52fda1d07f10b451469037fc3602d1abbaef7ec5911"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8647,
+      "sha256": "47405c26bf1e7326592e7977d34beb5b44ae06e97484f56f199e18c0a6251289"
     }
   ],
   "dependencies": [],

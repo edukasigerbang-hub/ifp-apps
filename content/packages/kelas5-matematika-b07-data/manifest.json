@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 116496,
       "sha256": "3183c7f7174f7efd7eb09ff4f8d7599086080ff3291b23c3fcb1325ec33bfb75"
+    },
+    {
+      "path": "assets/aktivitas-data-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6994,
+      "sha256": "42352287c34ba16250cc9f44763948ba48217fc1aadf3ff90546083fecb7a4d4"
     }
   ],
   "dependencies": [],

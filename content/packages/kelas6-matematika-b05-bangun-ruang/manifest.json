@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 139666,
       "sha256": "1a43c1ca902eb1d22866fbff5174bc3ae8d8789799982c1b408bf79d5736d9b6"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-kelas6.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8613,
+      "sha256": "8db8e7205c0dc842e97cc79a9c67e843e7a89359ad76ccf0124ed27fa7ed01cd"
     }
   ],
   "dependencies": [],

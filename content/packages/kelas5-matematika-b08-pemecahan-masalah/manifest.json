@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 145140,
       "sha256": "f4b369fda65fd3ac18d0470682acd2ece0e745892c8de1d06f75067873d8e389"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6970,
+      "sha256": "da54f4c52050b7234b6944b4e293435026b29a4c3871eaef1f8a97b74ef02edb"
     }
   ],
   "dependencies": [],

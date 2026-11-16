@@ -5,28 +5,28 @@
   "title": "Mengamati Kubus Satuan",
   "instructions": "Amati susunan kubus, lalu diskusikan cara menghitung volume.",
   "assets": [
-    "assets/volume-kelas5.webp"
+    "assets/aktivitas-volume-luas-permukaan.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bagaimana menghitung volume balok?",
-        "assetPath": "assets/volume-kelas5.webp",
-        "altText": "Balok yang tersusun dari kubus satuan.",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan.png",
+        "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T.",
         "reveal": "Panjang × lebar × tinggi.",
         "hint": "Hitung kubus satuan."
       },
       {
         "prompt": "Apa satuan volume?",
-        "assetPath": "assets/volume-kelas5.webp",
-        "altText": "Balok yang tersusun dari kubus satuan.",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan.png",
+        "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T.",
         "reveal": "Sentimeter kubik (cm³).",
         "hint": "Karena mengalikan tiga panjang."
       },
       {
         "prompt": "Apa itu luas permukaan?",
-        "assetPath": "assets/volume-kelas5.webp",
-        "altText": "Balok yang tersusun dari kubus satuan.",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan.png",
+        "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T.",
         "reveal": "Jumlah luas semua sisi bangun.",
         "hint": "Bayangkan membuka kotak."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Volume dan Luas Permukaan?",
         "reveal": "Menghitung volume dan luas permukaan bangun ruang sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/volume-kelas5.webp",
-        "altText": "Balok yang tersusun dari kubus satuan."
+        "assetPath": "assets/aktivitas-volume-luas-permukaan.png",
+        "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Balok yang tersusun dari kubus satuan.",
+        "reveal": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/volume-kelas5.webp",
-        "altText": "Balok yang tersusun dari kubus satuan."
+        "assetPath": "assets/aktivitas-volume-luas-permukaan.png",
+        "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Balok yang tersusun dari kubus satuan."
+    "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T."
   }
 }

@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 168192,
       "sha256": "65010498c02609366f4bf3f8aaee5ecf1ce7f9bfb542261ff11341fdf93006f1"
+    },
+    {
+      "path": "assets/aktivitas-lingkaran.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7611,
+      "sha256": "7b5e2f6bb79d098277db35eb9f3b6baa13f840529e261716ff71d6d02e06d86a"
     }
   ],
   "dependencies": [],

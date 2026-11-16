@@ -5,28 +5,28 @@
   "title": "Menghitung Benda",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/bilangan-11-20.webp"
+    "assets/aktivitas-bilangan-11-20.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bilangan setelah 15 adalah ...",
-        "assetPath": "assets/bilangan-11-20.webp",
-        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
+        "assetPath": "assets/aktivitas-bilangan-11-20.png",
+        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
         "reveal": "16.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Bilangan sebelum 20 adalah ...",
-        "assetPath": "assets/bilangan-11-20.webp",
-        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
+        "assetPath": "assets/aktivitas-bilangan-11-20.png",
+        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
         "reveal": "19.",
         "hint": "Kurangi satu."
       },
       {
         "prompt": "Angka 17 dibaca ...",
-        "assetPath": "assets/bilangan-11-20.webp",
-        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
+        "assetPath": "assets/aktivitas-bilangan-11-20.png",
+        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
         "reveal": "Tujuh belas.",
         "hint": "Baca lambangnya."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 11–20?",
         "reveal": "Membilang, mengenal lambang, dan mengurutkan bilangan 11–20.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/bilangan-11-20.webp",
-        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+        "assetPath": "assets/aktivitas-bilangan-11-20.png",
+        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Kerangka sepuluh dan penanda untuk membilang 11–20.",
+        "reveal": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/bilangan-11-20.webp",
-        "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+        "assetPath": "assets/aktivitas-bilangan-11-20.png",
+        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+    "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
   }
 }

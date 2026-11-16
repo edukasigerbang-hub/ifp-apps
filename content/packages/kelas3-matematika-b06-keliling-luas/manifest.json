@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 86498,
       "sha256": "3ee6a950802ec1a96e70a7d459519f892f56eff4eaf3a71ecf475200286a22ee"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6138,
+      "sha256": "8fc068bffe1e0e5142b9065eb7b992504ccc4f1b897a828ce305f0be1f7cc808"
     }
   ],
   "dependencies": [],

@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 164610,
       "sha256": "df35bb99415028f159cefc9908c74306df905ed1aca4c645af0f46ca5ac7fc9d"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6275,
+      "sha256": "17da298c03bc20467513a7c5f046960342b9e19b59c72ed13b25f716936110ca"
     }
   ],
   "dependencies": [],

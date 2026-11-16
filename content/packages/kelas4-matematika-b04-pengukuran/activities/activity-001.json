@@ -5,28 +5,28 @@
   "title": "Mengamati Alat Ukur",
   "instructions": "Amati dua panel gambar: penggaris dengan pensil dan timbangan dengan buah.",
   "assets": [
-    "assets/pengukuran-panjang-berat.webp"
+    "assets/aktivitas-pengukuran-panjang-berat.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Alat apa yang digunakan untuk mengukur panjang pensil?",
-        "assetPath": "assets/pengukuran-panjang-berat.webp",
-        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
+        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian.",
         "reveal": "Penggaris, dengan satuan sentimeter (cm).",
         "hint": "Perhatikan garis-garis angka pada penggaris."
       },
       {
         "prompt": "Alat apa yang digunakan untuk mengukur berat buah?",
-        "assetPath": "assets/pengukuran-panjang-berat.webp",
-        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
+        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian.",
         "reveal": "Timbangan, dengan satuan gram (g) atau kilogram (kg).",
         "hint": "Perhatikan buah di atas timbangan."
       },
       {
         "prompt": "1 meter sama dengan berapa sentimeter?",
-        "assetPath": "assets/pengukuran-panjang-berat.webp",
-        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan.",
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
+        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian.",
         "reveal": "1 meter = 100 sentimeter.",
         "hint": "Kata 'senti' berarti seperseratus."
       },
@@ -34,15 +34,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Mengukur Panjang dan Berat?",
         "reveal": "Menggunakan alat ukur panjang dan berat, memahami satuan cm/m dan g/kg, serta menyelesaikan masalah sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/pengukuran-panjang-berat.webp",
-        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
+        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian."
       },
       {
         "prompt": "Alat yang tepat untuk mengukur berat badan adalah ...",
         "reveal": "timbangan",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/pengukuran-panjang-berat.webp",
-        "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
+        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian."
       }
     ]
   },
@@ -59,6 +59,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+    "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian."
   }
 }

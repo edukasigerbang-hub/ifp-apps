@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 119934,
       "sha256": "5736480be9872d6cc8a9b255d20384723758c2545342b3b225a6a04389903074"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6171,
+      "sha256": "3a9f816ea1a98900e0471d0237e093f31bb8e5b9437d02220fac960fd1ff7177"
     }
   ],
   "dependencies": [],

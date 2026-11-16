@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 165874,
       "sha256": "abb70ebe29dff3abb809e9a0e5981763b1a3984b5e0ab91c456fcb6c780b69a2"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6406,
+      "sha256": "9482d28bdf5b58bf55d4b6d6e43553aa3f325aa54c991019ed20818085cb205a"
     }
   ],
   "dependencies": [],

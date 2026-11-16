@@ -24,6 +24,12 @@
       "mediaType": "image/webp",
       "sizeBytes": 168170,
       "sha256": "aa541ccaf4a78cca5c270ab33da608fa273d1e01d5de34ea2505a78c8822b075"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5791,
+      "sha256": "1b0886608af6367da43848152e29971d5c6c6a86ca860de033bf15467f71ab19"
     }
   ],
   "dependencies": [],
