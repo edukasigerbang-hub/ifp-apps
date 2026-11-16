@@ -1,0 +1,74 @@
+{
+  "packages": {
+    "kelas3-pendidikan-pancasila-b06-nkri": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-nama-negara-tempat-kita-tinggal",
+          "left": "Arti singkatan RI",
+          "right": "Republik Indonesia"
+        }
+      ]
+    },
+    "kelas3-seni-rupa-b02-menggambar-bentuk": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-bentuk-dasar-yang-bersudut-tiga",
+          "left": "Bentuk dasar yang tidak memiliki sudut",
+          "right": "Lingkaran"
+        }
+      ]
+    },
+    "kelas4-ipas-b05-siklus-air": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-1",
+          "left": "Sumber panas yang menggerakkan siklus air",
+          "right": "Matahari"
+        }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-1",
+          "left": "Kegiatan yang terlihat pada gambar proyek",
+          "right": "Membuat poster dan menanam tanaman"
+        }
+      ]
+    },
+    "kelas4-pai-b04-shalat": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-1",
+          "left": "Alas yang dipakai saat shalat",
+          "right": "Sajadah"
+        }
+      ]
+    },
+    "kelas4-pjok-b06-senam-dasar": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-4",
+          "left": "Posisi tubuh saat berlatih keseimbangan",
+          "right": "Berdiri dengan satu kaki"
+        }
+      ]
+    },
+    "kelas4-seni-rupa-b05-seni-cetak": {
+      "quiz": [],
+      "matching": [
+        {
+          "pairId": "pasangan-3",
+          "left": "Oles cat, tekan ke kertas, angkat perlahan",
+          "right": "Cara mencetak"
+        }
+      ]
+    }
+  }
+}

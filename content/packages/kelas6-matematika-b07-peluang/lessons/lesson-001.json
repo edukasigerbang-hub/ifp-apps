@@ -1,0 +1,28 @@
+{
+  "lessonId": "peluang",
+  "packageId": "kelas6-matematika-b07-peluang",
+  "title": "Peluang Sederhana",
+  "summary": "Mengenal ruang sampel dan menghitung peluang sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan ruang sampel.",
+    "Menghitung peluang.",
+    "Membandingkan peluang."
+  ],
+  "activityIds": [
+    "eksplorasi-peluang",
+    "matching-peluang",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/peluang.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Roda putar empat warna dan dadu."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

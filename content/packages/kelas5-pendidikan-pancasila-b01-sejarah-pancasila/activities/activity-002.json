@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-sejarah-pancasila",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Perumusan Pancasila",
+  "instructions": "Susun peristiwa perumusan Pancasila.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-bpupki",
+        "text": "BPUPKI dibentuk"
+      },
+      {
+        "itemId": "langkah-sidang",
+        "text": "Sidang BPUPKI membahas dasar negara"
+      },
+      {
+        "itemId": "langkah-sembilan",
+        "text": "Panitia Sembilan menyusun Piagam Jakarta"
+      },
+      {
+        "itemId": "langkah-ppki",
+        "text": "PPKI mengesahkan Pancasila"
+      },
+      {
+        "itemId": "langkah-dasar",
+        "text": "Pancasila menjadi dasar negara"
+      }
+    ],
+    "correctOrder": [
+      "langkah-bpupki",
+      "langkah-sidang",
+      "langkah-sembilan",
+      "langkah-ppki",
+      "langkah-dasar"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
+  }
+}

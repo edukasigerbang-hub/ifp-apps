@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-bahasa-indonesia-b03-menyimak-cerita",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menyimak Cerita — Bahasa Indonesia Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menyimak-cerita.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 195126,
+      "sha256": "257f0628cce32e018215c0eb6ef19b3b1b1bbb1608867c9518000271e6b7ab69"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

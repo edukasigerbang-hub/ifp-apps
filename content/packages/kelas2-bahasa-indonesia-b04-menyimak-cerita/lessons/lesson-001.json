@@ -1,0 +1,29 @@
+{
+  "lessonId": "menyimak-cerita-kelas2",
+  "packageId": "kelas2-bahasa-indonesia-b04-menyimak-cerita",
+  "title": "Menyimak Cerita",
+  "summary": "Menyimak cerita dan menceritakannya kembali.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyimak dengan tenang.",
+    "Menyebutkan tokoh.",
+    "Menceritakan kembali."
+  ],
+  "activityIds": [
+    "eksplorasi-menyimak-cerita-kelas2",
+    "ordering-menyimak-cerita-kelas2",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/menyimak-cerita-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita yang dibacakan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

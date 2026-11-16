@@ -1,6 +1,6 @@
 # Database Schema — Lokal (SQLite)
 
-**Status:** IMPLEMENTED (Fase E + I + F + H) · **Migrasi:** `0001_init`, `0002_sync`, `0003_content_activation`, `0004_license` · **Sejak:** 2026-10-23
+**Status:** IMPLEMENTED (Fase E + I + F + H) · **Migrasi:** `0001_init`, `0002_sync`, `0003_content_activation`, `0004_license`, `0005_content_reviews`, `0006_profile_avatars` · **Sejak:** 2026-10-23
 **Lokasi runtime:** `app_data_dir()/ifp.db` (WAL). Untuk pengujian: env `IFP_DATA_DIR`.
 
 ## Migrasi
@@ -48,6 +48,9 @@ Satu baris (`id=1`): `license_json`, `license_id`, `license_type`, `product_id`,
 
 ### `content_reviews` (migrasi 0005)
 Ledger audit review konten lokal: `id` PK, `package_id`, `package_version`, `reviewer_profile_id` (FK `profiles`), `decision` (`approved|rejected`), `notes`, `created_at`. Append-only; nama reviewer diambil lewat join `profiles`. Hanya profil bertipe `teacher` yang boleh menulis (ditegakkan native). Paket dengan review tidak mengubah `reviewStatus` manifest.
+
+### `profile_avatars` (migrasi 0006)
+`profile_id` PK (FK `profiles` ON DELETE CASCADE), `mime_type` (`image/png|image/jpeg|image/webp`), `bytes` BLOB, `updated_at`. Satu foto per profil; ditulis dengan UPSERT. Batas 1,5 MB dan tipe ditentukan dari magic bytes di native (`PROFILE_AVATAR_INVALID`/`PROFILE_AVATAR_TOO_LARGE`). Ikut dalam backup DB karena berada di berkas SQLite yang sama.
 
 ### Index
 `learning_sessions(profile_id, started_at)` · `activity_attempts(session_id)` · `assessment_responses(attempt_id)` · `progress_snapshots(profile_id, lesson_id)` · `sync_outbox(state, next_attempt_at)` · `sync_outbox(state, next_attempt_at, created_at)` · `content_reviews(package_id, package_version, created_at)`. Indeks `content_reviews` ditambahkan di migrasi 0005.

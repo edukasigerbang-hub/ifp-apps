@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Suara saat bercerita",
+        "right": "Jelas dan cukup keras"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Urutan cerita",
+        "right": "Awal, tengah, akhir"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sikap bercerita",
+        "right": "Percaya diri"
+      },
+      {
+        "pairId": "pasangan-hal-pertama-yang-dilakukan-sebel",
+        "left": "Hal pertama yang dilakukan sebelum bercerita",
+        "right": "memilih cerita"
+      },
+      {
+        "pairId": "pasangan-ucapan-setelah-selesai-bercerita",
+        "left": "Ucapan setelah selesai bercerita di depan kelas",
+        "right": "terima kasih"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bercerita di depan kelas."
+  }
+}

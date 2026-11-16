@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pjok-b02-gerak-manipulatif",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gerak Manipulatif dengan Bola — PJOK Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/gerak-manipulatif.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 195302,
+      "sha256": "11e495d5a3f3c7764298bd69e99bfff68ff57e05044770f48e1fc931232ca1c5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

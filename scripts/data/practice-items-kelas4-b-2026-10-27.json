@@ -1,0 +1,282 @@
+{
+  "_comment": "T-092 kelompok kelas 4 bagian B (IPAS + Pendidikan Pancasila). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing dari digest-kelas4.txt, bukan template. Target per paket mengikuti needs-kelas4-b.json (total 36 soal, 17 pasangan). Paket b01 IPAS dan b01 Pancasila memakai kuis jawaban singkat: answer berupa satu kata/frasa pendek untuk pencocokan teks persis. Diterapkan skrip oleh LEAD.",
+  "packages": {
+    "kelas4-ipas-b01-makhluk-hidup": {
+      "quiz": [
+        {
+          "prompt": "Capung bernapas dengan ...",
+          "answer": "trakea",
+          "distractors": ["insang", "paru-paru"]
+        },
+        {
+          "prompt": "Selain oksigen, tumbuhan juga menghasilkan ... untuk makhluk hidup lain.",
+          "answer": "makanan",
+          "distractors": ["insang", "batu"]
+        }
+      ]
+    },
+    "kelas4-ipas-b02-wujud-zat": {
+      "matching": [
+        { "left": "Air yang kita minum termasuk zat berwujud", "right": "cair" }
+      ]
+    },
+    "kelas4-ipas-b03-gaya-gerak": {
+      "quiz": [
+        {
+          "prompt": "Saat memindahkan lemari dengan cara ditarik, gaya yang bekerja adalah ...",
+          "answer": "gaya tarik",
+          "distractors": ["gaya dorong", "gaya magnet"]
+        },
+        {
+          "prompt": "Buku yang didorong di atas meja lama-kelamaan berhenti karena pengaruh ...",
+          "answer": "gaya gesek",
+          "distractors": ["gaya gravitasi", "gaya magnet"]
+        },
+        {
+          "prompt": "Bola yang ditendang melambung tinggi akhirnya turun kembali ke tanah karena ...",
+          "answer": "gaya gravitasi",
+          "distractors": ["gaya dorong", "gaya gesek"]
+        }
+      ],
+      "matching": [
+        { "left": "Arah tarikan gaya gravitasi bumi terhadap semua benda", "right": "ke bawah" }
+      ]
+    },
+    "kelas4-ipas-b04-energi": {
+      "quiz": [
+        {
+          "prompt": "Sumber energi utama yang membantu tanaman membuat makanan adalah ...",
+          "answer": "matahari",
+          "distractors": ["energi listrik", "energi bunyi"]
+        },
+        {
+          "prompt": "Lampu yang menyala menunjukkan perubahan energi listrik menjadi energi ...",
+          "answer": "cahaya",
+          "distractors": ["gerak", "bunyi"]
+        },
+        {
+          "prompt": "Saat anak berlari, energi dari makanan berubah menjadi energi ...",
+          "answer": "gerak",
+          "distractors": ["cahaya", "panas"]
+        }
+      ],
+      "matching": [
+        { "left": "Perubahan energi yang terjadi pada lampu saat menyala", "right": "energi listrik menjadi energi cahaya" }
+      ]
+    },
+    "kelas4-ipas-b05-siklus-air": {
+      "matching": [
+        { "left": "Nama proses air laut berubah menjadi uap air karena panas matahari", "right": "evaporasi" },
+        { "left": "Tahap siklus air yang terjadi tepat setelah pengembunan uap air", "right": "pembentukan awan" },
+        { "left": "Sebab awan dapat menjatuhkan titik-titik air menjadi hujan", "right": "awan sudah jenuh air" }
+      ]
+    },
+    "kelas4-ipas-b06-keragaman-budaya": {
+      "quiz": [
+        {
+          "prompt": "Rumah Gadang adalah rumah adat dari daerah ...",
+          "answer": "Sumatera Barat",
+          "distractors": ["Sumatera Utara", "Aceh"]
+        },
+        {
+          "prompt": "Tari Saman berasal dari daerah ...",
+          "answer": "Aceh",
+          "distractors": ["Bali", "Jawa"]
+        },
+        {
+          "prompt": "Kain tradisional yang berasal dari Sumatera Utara adalah ...",
+          "answer": "ulos",
+          "distractors": ["batik", "songket"]
+        },
+        {
+          "prompt": "Semua budaya daerah di Indonesia sebaiknya kita ...",
+          "answer": "hargai",
+          "distractors": ["lestarikan", "lupakan"]
+        }
+      ]
+    },
+    "kelas4-ipas-b07-sejarah-kerajaan": {
+      "quiz": [
+        {
+          "prompt": "Batu bertulis yang mencatat peristiwa sejarah disebut ...",
+          "answer": "prasasti",
+          "distractors": ["candi", "kapal"]
+        },
+        {
+          "prompt": "Kerajaan maritim yang terletak di Sumatera adalah ...",
+          "answer": "Sriwijaya",
+          "distractors": ["Majapahit", "Kutai"]
+        },
+        {
+          "prompt": "Kerajaan Hindu tertua di Kalimantan adalah ...",
+          "answer": "Kutai",
+          "distractors": ["Tarumanegara", "Mataram Kuno"]
+        }
+      ],
+      "matching": [
+        { "left": "Bukti aktivitas pelayaran dan perdagangan pada masa kerajaan", "right": "kapal layar" }
+      ]
+    },
+    "kelas4-ipas-b08-ekonomi-pelestarian": {
+      "quiz": [
+        {
+          "prompt": "Petani menanam padi dan nelayan menangkap ikan. Keduanya menjalankan kegiatan ...",
+          "answer": "produksi",
+          "distractors": ["distribusi", "konsumsi"]
+        },
+        {
+          "prompt": "Orang yang menggunakan barang hasil produksi disebut ...",
+          "answer": "konsumen",
+          "distractors": ["produsen", "pedagang"]
+        },
+        {
+          "prompt": "Menanam pohon penting karena pohon menjaga udara, tanah, dan air serta mencegah ...",
+          "answer": "erosi",
+          "distractors": ["polusi", "kekeringan"]
+        }
+      ],
+      "matching": [
+        { "left": "Konsumen menjalankan kegiatan ... terhadap barang", "right": "konsumsi" }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b01-pancasila": {
+      "quiz": [
+        {
+          "prompt": "Sila ketiga Pancasila dilambangkan dengan pohon ...",
+          "answer": "beringin",
+          "distractors": ["bintang", "rantai"]
+        },
+        {
+          "prompt": "Sila keempat Pancasila dilambangkan dengan gambar kepala ...",
+          "answer": "banteng",
+          "distractors": ["rantai", "bintang"]
+        }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b02-norma-aturan": {
+      "quiz": [
+        {
+          "prompt": "Kita percaya Tuhan dan beribadah dengan teratur. Perilaku itu termasuk norma ...",
+          "answer": "agama",
+          "distractors": ["kesopanan", "hukum"]
+        },
+        {
+          "prompt": "Aturan dibuat agar kegiatan bersama berjalan ...",
+          "answer": "tertib",
+          "distractors": ["kacau", "semrawut"]
+        },
+        {
+          "prompt": "Saat melewati orang yang lebih tua, sebaiknya kita berkata ...",
+          "answer": "permisi",
+          "distractors": ["terima kasih", "maaf ya"]
+        }
+      ],
+      "matching": [
+        { "left": "Tujuan siswa mengantre dengan tertib di depan kelas", "right": "kegiatan berjalan tertib, adil, dan aman" }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b03-hak-kewajiban": {
+      "quiz": [
+        {
+          "prompt": "Sesuatu yang seharusnya kita terima disebut ...",
+          "answer": "hak",
+          "distractors": ["kewajiban", "aturan"]
+        },
+        {
+          "prompt": "Mengerjakan tugas dari guru merupakan ... siswa di sekolah.",
+          "answer": "kewajiban",
+          "distractors": ["hak", "pilihan"]
+        },
+        {
+          "prompt": "Mendapat pembelajaran di sekolah merupakan ... setiap siswa.",
+          "answer": "hak",
+          "distractors": ["kewajiban", "tugas"]
+        },
+        {
+          "prompt": "Agar hidup tertib dan adil, hak dan kewajiban harus dijalankan secara ...",
+          "answer": "seimbang",
+          "distractors": ["berat sebelah", "terburu-buru"]
+        }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b04-musyawarah": {
+      "matching": [
+        { "left": "Langkah musyawarah setelah mencatat usulan", "right": "menyimpulkan atau memilih keputusan" },
+        { "left": "Kegiatan terakhir musyawarah setelah keputusan disepakati", "right": "melaksanakan keputusan bersama" },
+        { "left": "Sikap saat pendapat teman berbeda dari pendapat kita", "right": "mendengarkan dan menghargai" }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b05-bhinneka": {
+      "quiz": [
+        {
+          "prompt": "Sikap yang tepat terhadap teman yang berbeda suku adalah ...",
+          "answer": "menghargai",
+          "distractors": ["membeda-bedakan", "mengejek"]
+        },
+        {
+          "prompt": "Keberagaman suku dan budaya di Indonesia seharusnya ...",
+          "answer": "memperkuat persatuan",
+          "distractors": ["memecah belah bangsa", "menimbulkan pertengkaran"]
+        },
+        {
+          "prompt": "Saat teman dari daerah lain bercerita, kita sebaiknya ...",
+          "answer": "mendengarkannya",
+          "distractors": ["menertawakannya", "memotong ucapannya"]
+        }
+      ],
+      "matching": [
+        { "left": "Makna semboyan Bhinneka Tunggal Ika", "right": "berbeda-beda tetapi tetap satu" }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b06-nkri": {
+      "quiz": [
+        {
+          "prompt": "Dasar negara Indonesia adalah ...",
+          "answer": "Pancasila",
+          "distractors": ["UUD 1945", "Bhinneka Tunggal Ika"]
+        },
+        {
+          "prompt": "Bhinneka Tunggal Ika digunakan bangsa Indonesia sebagai ...",
+          "answer": "semboyan",
+          "distractors": ["dasar negara", "undang-undang"]
+        },
+        {
+          "prompt": "Saat mengikuti upacara bendera, sikap siswa sebaiknya ...",
+          "answer": "tertib",
+          "distractors": ["ramai", "bergerombol"]
+        }
+      ],
+      "matching": [
+        { "left": "Sikap yang dilatih siswa melalui upacara bendera di sekolah", "right": "menghormati lambang negara dan menjaga persatuan" }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b07-gotong-royong": {
+      "quiz": [
+        {
+          "prompt": "Pekerjaan yang berat akan terasa ... bila dikerjakan dengan gotong royong.",
+          "answer": "lebih ringan",
+          "distractors": ["lebih berat", "terlambat selesai"]
+        },
+        {
+          "prompt": "Berikut yang termasuk contoh gotong royong di sekolah adalah ...",
+          "answer": "piket kelas",
+          "distractors": ["belajar sendiri di rumah", "berlari di lapangan"]
+        },
+        {
+          "prompt": "Selain pekerjaan cepat selesai, gotong royong juga mempererat ...",
+          "answer": "persatuan",
+          "distractors": ["perselisihan", "permusuhan"]
+        }
+      ],
+      "matching": [
+        { "left": "Contoh kegiatan gotong royong yang terjadwal di kelas", "right": "piket kelas" }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "matching": [
+        { "left": "Kegiatan proyek setelah rencana disusun dan tugas dibagi", "right": "melaksanakan proyek" },
+        { "left": "Langkah terakhir proyek kewargaan setelah kegiatan selesai", "right": "melaporkan dan mengevaluasi hasil" }
+      ]
+    }
+  }
+}

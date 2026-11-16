@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pjok-b08-kesehatan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kesehatan dan Kebersihan Diri — PJOK Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kebersihan-diri.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 160280,
+      "sha256": "5ae4e8d05a4102a7acaa989c42e89d0952ebc32b5f93e8441f1d441b4bed73ac"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

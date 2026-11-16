@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-bahasa-indonesia-b01-teks-deskripsi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Deskripsi Sederhana — Bahasa Indonesia Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/taman-sekolah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 65794,
+      "sha256": "c0f653c29ff421b4117d4954f492c97233123a0b5b2caf9600045be3c90c45dd"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

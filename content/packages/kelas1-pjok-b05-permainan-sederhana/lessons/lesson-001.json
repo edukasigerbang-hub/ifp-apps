@@ -1,0 +1,28 @@
+{
+  "lessonId": "permainan-sederhana",
+  "packageId": "kelas1-pjok-b05-permainan-sederhana",
+  "title": "Permainan Sederhana",
+  "summary": "Bermain permainan sederhana dengan aturan dan kerja sama.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal aturan permainan.",
+    "Bermain dengan kerja sama.",
+    "Menjaga sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-permainan-sederhana",
+    "kuis-permainan-sederhana",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-permainan-sederhana"
+  ],
+  "assetRefs": [
+    "assets/permainan-sederhana.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan sederhana di lapangan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

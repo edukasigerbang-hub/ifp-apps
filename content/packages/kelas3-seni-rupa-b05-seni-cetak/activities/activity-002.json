@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-seni-cetak",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Mencetak",
+  "instructions": "Susun langkah mencetak dengan pelepah pisang.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-siap",
+        "text": "Menyiapkan alat dan bahan"
+      },
+      {
+        "itemId": "langkah-potong",
+        "text": "Memotong pelepah hingga rata"
+      },
+      {
+        "itemId": "langkah-celup",
+        "text": "Mencelupkan pelepah ke cat"
+      },
+      {
+        "itemId": "langkah-tekan",
+        "text": "Menekan pelepah pada kertas"
+      },
+      {
+        "itemId": "langkah-angkat",
+        "text": "Mengangkat pelepah perlahan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-siap",
+      "langkah-potong",
+      "langkah-celup",
+      "langkah-tekan",
+      "langkah-angkat"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun."
+  }
+}

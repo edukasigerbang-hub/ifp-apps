@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-teknologi-ramah-lingkungan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Teknologi Ramah Lingkungan",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-surya",
+        "prompt": "Panel surya mengubah energi matahari menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bunyi",
+            "text": "Bunyi"
+          },
+          {
+            "optionId": "opsi-listrik",
+            "text": "Listrik"
+          },
+          {
+            "optionId": "opsi-panas",
+            "text": "Panas saja"
+          },
+          {
+            "optionId": "opsi-gerak",
+            "text": "Gerak"
+          }
+        ],
+        "correctResponse": "opsi-listrik"
+      },
+      {
+        "questionId": "soal-angin",
+        "prompt": "Kincir angin menghasilkan listrik dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-batu",
+            "text": "Batu bara"
+          },
+          {
+            "optionId": "opsi-bensin",
+            "text": "Bensin"
+          },
+          {
+            "optionId": "opsi-angin",
+            "text": "Angin"
+          },
+          {
+            "optionId": "opsi-diesel",
+            "text": "Diesel"
+          }
+        ],
+        "correctResponse": "opsi-angin"
+      },
+      {
+        "questionId": "soal-daur",
+        "prompt": "Daur ulang bertujuan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tambah",
+            "text": "Menambah sampah"
+          },
+          {
+            "optionId": "opsi-bakar",
+            "text": "Membakar sampah"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang sampah"
+          },
+          {
+            "optionId": "opsi-sampah",
+            "text": "Mengurangi sampah"
+          }
+        ],
+        "correctResponse": "opsi-sampah"
+      },
+      {
+        "questionId": "soal-hemat",
+        "prompt": "Cara menghemat energi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mati",
+            "text": "Mematikan lampu saat tidak dipakai"
+          },
+          {
+            "optionId": "opsi-nyala",
+            "text": "Menyalakan semua lampu"
+          },
+          {
+            "optionId": "opsi-buka",
+            "text": "Membuka kulkas lama"
+          },
+          {
+            "optionId": "opsi-charge",
+            "text": "Mengisi daya terus"
+          }
+        ],
+        "correctResponse": "opsi-mati"
+      },
+      {
+        "questionId": "soal-mengolah-sampah-plastik-bekas-me",
+        "prompt": "Mengolah sampah plastik bekas menjadi pot termasuk kegiatan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mengolah-sampah-plastik-bek-0",
+            "text": "Daur ulang"
+          },
+          {
+            "optionId": "opsi-soal-mengolah-sampah-plastik-bek-1",
+            "text": "Pembakaran"
+          },
+          {
+            "optionId": "opsi-soal-mengolah-sampah-plastik-bek-2",
+            "text": "Penimbunan"
+          }
+        ],
+        "correctResponse": "opsi-soal-mengolah-sampah-plastik-bek-0"
+      },
+      {
+        "questionId": "soal-alat-di-atap-rumah-yang-menangka",
+        "prompt": "Alat di atap rumah yang menangkap energi matahari adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alat-di-atap-rumah-yang-men-1",
+            "text": "Kincir angin"
+          },
+          {
+            "optionId": "opsi-soal-alat-di-atap-rumah-yang-men-0",
+            "text": "Panel surya"
+          },
+          {
+            "optionId": "opsi-soal-alat-di-atap-rumah-yang-men-2",
+            "text": "Baterai"
+          }
+        ],
+        "correctResponse": "opsi-soal-alat-di-atap-rumah-yang-men-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Panel surya, kincir angin, dan daur ulang."
+  }
+}

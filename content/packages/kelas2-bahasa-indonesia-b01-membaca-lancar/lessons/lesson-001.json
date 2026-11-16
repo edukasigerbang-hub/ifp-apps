@@ -1,0 +1,28 @@
+{
+  "lessonId": "membaca-lancar",
+  "packageId": "kelas2-bahasa-indonesia-b01-membaca-lancar",
+  "title": "Membaca Lancar",
+  "summary": "Membaca kalimat dengan lancar dan intonasi yang tepat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca kalimat dengan lancar.",
+    "Menggunakan intonasi.",
+    "Memahami isi bacaan."
+  ],
+  "activityIds": [
+    "eksplorasi-membaca-lancar",
+    "kuis-membaca-lancar",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-membaca-lancar"
+  ],
+  "assetRefs": [
+    "assets/membaca-lancar.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dengan lancar di sudut baca."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

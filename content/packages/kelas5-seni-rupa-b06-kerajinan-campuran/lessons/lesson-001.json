@@ -1,0 +1,28 @@
+{
+  "lessonId": "kerajinan-campuran",
+  "packageId": "kelas5-seni-rupa-b06-kerajinan-campuran",
+  "title": "Kerajinan Bahan Campuran",
+  "summary": "Membuat kerajinan dari campuran bahan alam dan buatan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bahan campuran.",
+    "Memilih bahan yang sesuai.",
+    "Membuat kerajinan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-kerajinan-campuran",
+    "matching-kerajinan-campuran",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kerajinan-campuran.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerajinan dari daun, ranting, kain, dan biji."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

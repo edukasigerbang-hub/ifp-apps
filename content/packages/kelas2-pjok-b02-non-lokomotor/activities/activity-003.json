@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gerak non-lokomotor",
+        "right": "Gerak di tempat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menjaga keseimbangan",
+        "right": "Berdiri satu kaki"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Gerak non-lokomotor dilakukan",
+        "right": "Di tempat"
+      },
+      {
+        "pairId": "pasangan-gerak-menekuk-lutut-tanpa-berpin",
+        "left": "Gerak menekuk lutut tanpa berpindah tempat",
+        "right": "Gerak non-lokomotor"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
+  }
+}

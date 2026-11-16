@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-ipas-b04-energi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Energi dan Perubahannya — IPAS Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/energi-perubahan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177202,
+      "sha256": "bf51a7df85ed54c5136986f1ad85d97b0690938714514ee76a428127a831dfbb"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

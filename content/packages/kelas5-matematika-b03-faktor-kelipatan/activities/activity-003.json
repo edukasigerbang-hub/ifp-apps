@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Faktor dari 12",
+        "right": "1, 2, 3, 4, 6, dan 12"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kelipatan 4",
+        "right": "4, 8, 12, 16, .."
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Banyak KPK 4 dan 6",
+        "right": "12"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Diagram dua lingkaran yang beririsan",
+        "right": "Diagram Venn"
+      },
+      {
+        "pairId": "pasangan-singkatan-dari-faktor-persekutua",
+        "left": "Singkatan dari faktor persekutuan terbesar",
+        "right": "FPB"
+      },
+      {
+        "pairId": "pasangan-singkatan-dari-kelipatan-perseku",
+        "left": "Singkatan dari Kelipatan Persekutuan Terkecil",
+        "right": "KPK"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram Venn faktor dan kelipatan dua bilangan."
+  }
+}

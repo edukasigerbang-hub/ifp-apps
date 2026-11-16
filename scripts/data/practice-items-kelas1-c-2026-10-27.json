@@ -1,0 +1,113 @@
+{
+  "_comment": "T-092a kelompok 3 (kelas 1: PJOK dan Seni Rupa). Item ditulis tangan per paket; target kuis 5 soal dan mencocokkan minimal 5 pasangan.",
+  "packages": {
+    "kelas1-pjok-b01-jalan-lari": {
+      "quiz": [
+        { "prompt": "Berjalan dilakukan dengan gerakan ...", "answer": "pelan", "distractors": ["cepat", "sangat tinggi", "terbalik"] },
+        { "prompt": "Saat berjalan, posisi tangan ...", "answer": "mengayun", "distractors": ["kaku", "dipegang teman", "di atas kepala terus-menerus"] },
+        { "prompt": "Agar tidak menabrak teman, kita berjalan di ...", "answer": "ruang yang aman", "distractors": ["tempat sempit", "dekat kaca", "tangga"] }
+      ]
+    },
+    "kelas1-pjok-b02-melompat": {
+      "quiz": [
+        { "prompt": "Melompat di lantai yang licin dapat menyebabkan ...", "answer": "terjatuh", "distractors": ["lompat lebih tinggi", "lompat lebih cepat", "jadi lebih kuat"] }
+      ],
+      "matching": [
+        { "left": "Alasan mendarat dengan lutut ditekuk", "right": "Agar kaki tidak sakit" }
+      ]
+    },
+    "kelas1-pjok-b03-keseimbangan": {
+      "matching": [
+        { "left": "Yang dilakukan setelah menghitung sampai lima", "right": "Mengganti kaki" }
+      ]
+    },
+    "kelas1-pjok-b04-kebersihan": {
+      "quiz": [
+        { "prompt": "Mandi dilakukan dua kali, yaitu pada ...", "answer": "pagi dan sore", "distractors": ["seminggu sekali", "hanya saat libur", "tengah malam"] },
+        { "prompt": "Sikat gigi dilakukan pada ...", "answer": "pagi dan sebelum tidur", "distractors": ["siang dan sore", "sebulan sekali", "hanya saat libur"] },
+        { "prompt": "Kuku yang panjang sebaiknya ...", "answer": "dipotong", "distractors": ["dibiarkan", "dilukis", "dibasahi"] }
+      ]
+    },
+    "kelas1-pjok-b05-permainan-sederhana": {
+      "quiz": [
+        { "prompt": "Saat teman jatuh ketika bermain, kita ...", "answer": "membantu", "distractors": ["menertawakan", "memarahi", "membiarkan"] }
+      ],
+      "matching": [
+        { "left": "Syarat agar permainan berjalan adil", "right": "Aturan ditaati" }
+      ]
+    },
+    "kelas1-pjok-b06-senam-ringan": {
+      "matching": [
+        { "left": "Gerakan terakhir senam ringan", "right": "Pendinginan" }
+      ]
+    },
+    "kelas1-pjok-b07-kebugaran": {
+      "quiz": [
+        { "prompt": "Tubuh menjadi bugar karena kita ...", "answer": "berolahraga", "distractors": ["begadang", "malas bergerak", "makan permen"] },
+        { "prompt": "Setelah berolahraga, tenaga dipulihkan dengan ...", "answer": "istirahat", "distractors": ["marah", "bertengkar", "begadang"] },
+        { "prompt": "Makanan yang bergizi untuk tubuh adalah ...", "answer": "sayur, buah, dan lauk", "distractors": ["permen dan soda", "keripik saja", "gula"] }
+      ]
+    },
+    "kelas1-pjok-b08-kesehatan-kebersihan": {
+      "quiz": [
+        { "prompt": "Kuman mudah masuk ke tubuh lewat tangan yang ...", "answer": "kotor", "distractors": ["bersih", "sudah disabuni", "segar"] },
+        { "prompt": "Tidur yang cukup membuat tubuh menjadi ...", "answer": "segar", "distractors": ["lemas", "sakit", "marah"] },
+        { "prompt": "Sebelum makan, tangan dicuci dengan ...", "answer": "air dan sabun", "distractors": ["minyak", "soda", "air keruh"] }
+      ]
+    },
+    "kelas1-seni-rupa-b01-garis-warna": {
+      "quiz": [
+        { "prompt": "Garis yang berkelok-kelok disebut garis ...", "answer": "zigzag", "distractors": ["lurus", "tipis", "putus"] },
+        { "prompt": "Warna primer adalah merah, kuning, dan ...", "answer": "biru", "distractors": ["hijau", "ungu", "cokelat"] },
+        { "prompt": "Garis lurus cocok dipakai untuk menggambar ...", "answer": "tepi meja", "distractors": ["gelembung sabun", "roda berputar", "awan bergerak"] }
+      ]
+    },
+    "kelas1-seni-rupa-b02-menggambar-bebas": {
+      "matching": [
+        { "left": "Alat untuk mewarnai gambar", "right": "Krayon" },
+        { "left": "Yang dilakukan setelah mewarnai", "right": "Merapikan alat" }
+      ]
+    },
+    "kelas1-seni-rupa-b03-tekstur": {
+      "quiz": [
+        { "prompt": "Kain dan kapas bila diraba terasa ...", "answer": "halus", "distractors": ["kasar", "tajam", "berat"] }
+      ],
+      "matching": [
+        { "left": "Kesan saat meraba permukaan benda", "right": "Tekstur" }
+      ]
+    },
+    "kelas1-seni-rupa-b04-kolase": {
+      "matching": [
+        { "left": "Bahan alam yang biasa ditempel untuk kolase", "right": "Daun kering" },
+        { "left": "Alat untuk merekatkan bahan kolase", "right": "Lem" }
+      ]
+    },
+    "kelas1-seni-rupa-b05-mewarnai-bentuk": {
+      "matching": [
+        { "left": "Warna primer untuk mewarnai", "right": "Merah, kuning, dan biru" },
+        { "left": "Setelah mewarnai, tangan kita ...", "right": "Dicuci" }
+      ]
+    },
+    "kelas1-seni-rupa-b06-kerajinan-bahan-alam": {
+      "quiz": [
+        { "prompt": "Biji-bijian yang ditempel rapi menjadi karya ...", "answer": "mozaik", "distractors": ["anyaman", "lukisan", "patung es"] },
+        { "prompt": "Bambu dapat dibuat menjadi ...", "answer": "anyaman", "distractors": ["kertas", "cat", "kain"] },
+        { "prompt": "Bahan alam untuk kerajinan dipilih yang ...", "answer": "bersih dan aman", "distractors": ["tajam dan kotor", "basah dan berdebu", "halus dan mahal"] }
+      ]
+    },
+    "kelas1-seni-rupa-b07-apresiasi": {
+      "quiz": [
+        { "prompt": "Saat gambar teman belum bagus, kita sebaiknya ...", "answer": "memberi semangat", "distractors": ["menertawakan", "merusak", "mengambil"] }
+      ],
+      "matching": [
+        { "left": "Langkah pertama mengapresiasi karya", "right": "Mengamati" }
+      ]
+    },
+    "kelas1-seni-rupa-b08-pameran": {
+      "matching": [
+        { "left": "Kegiatan sebelum menata karya di pameran", "right": "Memilih karya" },
+        { "left": "Yang dilakukan setelah pameran selesai", "right": "Merapikan" }
+      ]
+    }
+  }
+}

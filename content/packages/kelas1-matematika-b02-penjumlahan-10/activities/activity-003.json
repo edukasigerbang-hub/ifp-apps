@@ -1,0 +1,144 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"2 + 3\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"4 + 1\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "2"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-3-4",
+        "prompt": "3 + 4 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-3-4-0",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-soal-3-4-1",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-soal-3-4-2",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-3-4-3",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-soal-3-4-0"
+      },
+      {
+        "questionId": "soal-9-5",
+        "prompt": "9 - 5 = ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-9-5-1",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-9-5-0",
+            "text": "4"
+          },
+          {
+            "optionId": "opsi-soal-9-5-2",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-soal-9-5-3",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-soal-9-5-0"
+      },
+      {
+        "questionId": "soal-lambang-bilangan-untuk-delapan-a",
+        "prompt": "Lambang bilangan untuk 'delapan' adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dela-1",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dela-2",
+            "text": "9"
+          },
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dela-0",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dela-3",
+            "text": "18"
+          }
+        ],
+        "correctResponse": "opsi-soal-lambang-bilangan-untuk-dela-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+  }
+}

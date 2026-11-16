@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-cuaca-musim",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Cuaca dan Musim",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-cerah",
+        "prompt": "Cuaca cerah ditandai dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-terang",
+            "text": "Langit terang dan matahari bersinar"
+          },
+          {
+            "optionId": "opsi-gelap",
+            "text": "Awan gelap"
+          },
+          {
+            "optionId": "opsi-hujan",
+            "text": "Hujan deras"
+          },
+          {
+            "optionId": "opsi-angin",
+            "text": "Angin kencang"
+          }
+        ],
+        "correctResponse": "opsi-terang"
+      },
+      {
+        "questionId": "soal-hujan",
+        "prompt": "Saat hujan, sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-jemur",
+            "text": "Menjemur pakaian"
+          },
+          {
+            "optionId": "opsi-payung",
+            "text": "Membawa payung"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur di lapangan"
+          },
+          {
+            "optionId": "opsi-buka",
+            "text": "Membuka jendela lebar"
+          }
+        ],
+        "correctResponse": "opsi-payung"
+      },
+      {
+        "questionId": "soal-musim",
+        "prompt": "Indonesia memiliki musim ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-salju",
+            "text": "Salju dan panas"
+          },
+          {
+            "optionId": "opsi-gugur",
+            "text": "Gugur dan semi"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Hujan dan kemarau"
+          },
+          {
+            "optionId": "opsi-dingin",
+            "text": "Dingin dan salju"
+          }
+        ],
+        "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-dingin",
+        "prompt": "Pakaian yang sesuai saat cuaca dingin adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kaus",
+            "text": "Kaus tipis"
+          },
+          {
+            "optionId": "opsi-sandal",
+            "text": "Sandal"
+          },
+          {
+            "optionId": "opsi-topi",
+            "text": "Topi pantai"
+          },
+          {
+            "optionId": "opsi-jaket",
+            "text": "Jaket"
+          }
+        ],
+        "correctResponse": "opsi-jaket"
+      },
+      {
+        "questionId": "soal-pada-musim-kemarau-sebagian-besa",
+        "prompt": "Pada musim kemarau, sebagian besar daerah di Indonesia mengalami ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-musim-kemarau-sebagian-1",
+            "text": "hujan terus-menerus"
+          },
+          {
+            "optionId": "opsi-soal-pada-musim-kemarau-sebagian-0",
+            "text": "hujan jarang turun"
+          },
+          {
+            "optionId": "opsi-soal-pada-musim-kemarau-sebagian-2",
+            "text": "salju tebal"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-musim-kemarau-sebagian-0"
+      },
+      {
+        "questionId": "soal-awan-hitam-berkumpul-dan-angin-b",
+        "prompt": "Awan hitam berkumpul dan angin bertiup kencang. Kita sebaiknya bersiap karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-awan-hitam-berkumpul-dan-an-1",
+            "text": "salju akan turun"
+          },
+          {
+            "optionId": "opsi-soal-awan-hitam-berkumpul-dan-an-2",
+            "text": "kemarau panjang dimulai"
+          },
+          {
+            "optionId": "opsi-soal-awan-hitam-berkumpul-dan-an-0",
+            "text": "hujan akan turun"
+          }
+        ],
+        "correctResponse": "opsi-soal-awan-hitam-berkumpul-dan-an-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."
+  }
+}

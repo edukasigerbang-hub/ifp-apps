@@ -1,0 +1,28 @@
+{
+  "lessonId": "kolase",
+  "packageId": "kelas4-seni-rupa-b04-kolase",
+  "title": "Membuat Kolase",
+  "summary": "Mengenal kolase, menyiapkan bahan, dan menyusun potongan bentuk menjadi karya yang menarik.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian kolase.",
+    "Menyiapkan bahan dan alat untuk membuat kolase.",
+    "Menyusun kolase sederhana dengan komposisi yang rapi."
+  ],
+  "activityIds": [
+    "eksplorasi-kolase",
+    "kuis-kolase",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-kolase"
+  ],
+  "assetRefs": [
+    "assets/kolase.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

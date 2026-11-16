@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kosakata-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Kata",
+  "instructions": "Amati gambar, lalu diskusikan kata yang mirip dan berlawanan.",
+  "assets": [
+    "assets/kosakata-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa sinonim kata senang?",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata.",
+        "reveal": "Gembira.",
+        "hint": "Artinya mirip."
+      },
+      {
+        "prompt": "Apa antonim kata besar?",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata.",
+        "reveal": "Kecil.",
+        "hint": "Artinya berlawanan."
+      },
+      {
+        "prompt": "Apa antonim kata cepat?",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata.",
+        "reveal": "Lambat.",
+        "hint": "Berlawanan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kosakata, Sinonim, dan Antonim?",
+        "reveal": "Mengenal sinonim dan antonim kata.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca buku untuk menambah kosakata.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kosakata-kelas2.webp",
+        "altText": "Anak membaca buku untuk menambah kosakata."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku untuk menambah kosakata."
+  }
+}

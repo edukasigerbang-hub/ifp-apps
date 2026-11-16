@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menyimak-cerita",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menyimak Cerita",
+  "instructions": "Susun langkah menyimak cerita.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-duduk",
+        "text": "Duduk tenang"
+      },
+      {
+        "itemId": "langkah-dengar",
+        "text": "Mendengarkan cerita"
+      },
+      {
+        "itemId": "langkah-tokoh",
+        "text": "Menyebutkan tokoh"
+      },
+      {
+        "itemId": "langkah-cerita",
+        "text": "Menceritakan kembali"
+      },
+      {
+        "itemId": "langkah-pesan",
+        "text": "Menyimpulkan pesan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-duduk",
+      "langkah-dengar",
+      "langkah-tokoh",
+      "langkah-cerita",
+      "langkah-pesan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak menyimak cerita yang dibacakan."
+  }
+}

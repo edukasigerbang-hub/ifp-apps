@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-waktu-uang",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Jam dan Uang",
+  "instructions": "Amati gambar, lalu diskusikan waktu dan nilai uang.",
+  "assets": [
+    "assets/aktivitas-waktu-uang-1.png",
+    "assets/aktivitas-waktu-uang-2.png",
+    "assets/aktivitas-waktu-uang-3.png",
+    "assets/aktivitas-waktu-uang-4.png",
+    "assets/aktivitas-waktu-uang-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa menit dalam 1 jam?",
+        "assetPath": "assets/aktivitas-waktu-uang-1.png",
+        "altText": "Jam dinding dengan enam puluh tanda menit di sekelilingnya dan satu lingkaran penuh ditandai teal.",
+        "reveal": "60 menit.",
+        "hint": "Lihat jam."
+      },
+      {
+        "prompt": "Berapa jam dalam 1 hari?",
+        "assetPath": "assets/aktivitas-waktu-uang-2.png",
+        "altText": "Bumi dengan sisi siang dan malam, dikelilingi dua puluh empat titik sebagai jam dalam sehari.",
+        "reveal": "24 jam.",
+        "hint": "Sehari semalam."
+      },
+      {
+        "prompt": "Apa mata uang Indonesia?",
+        "assetPath": "assets/aktivitas-waktu-uang-3.png",
+        "altText": "Uang kertas di tengah, satu koin emas besar, dan satu koin kecil.",
+        "reveal": "Rupiah.",
+        "hint": "Ditulis Rp."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Waktu dan Uang?",
+        "reveal": "Membaca waktu dan mengenal nilai uang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-waktu-uang-4.png",
+        "altText": "Tiga kartu rangkuman: jam, uang kertas dengan koin, dan bumi siang malam."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Jam dinding, dua koin, dan satu lembar uang kertas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-waktu-uang-5.png",
+        "altText": "Jam dinding, dua koin, dan satu lembar uang kertas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi waktu dan uang: jam dengan enam puluh tanda menit, bumi siang malam dikelilingi dua puluh empat titik, uang kertas dan koin, tiga kartu rangkuman, serta jam, koin, dan uang."
+  }
+}

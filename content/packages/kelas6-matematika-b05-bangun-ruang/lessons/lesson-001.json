@@ -1,0 +1,28 @@
+{
+  "lessonId": "bangun-ruang-kelas6",
+  "packageId": "kelas6-matematika-b05-bangun-ruang",
+  "title": "Bangun Ruang",
+  "summary": "Mengenal bangun ruang dan menghitung volume serta luas permukaan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan ciri bangun ruang.",
+    "Menghitung volume.",
+    "Menghitung luas permukaan."
+  ],
+  "activityIds": [
+    "eksplorasi-bangun-ruang-kelas6",
+    "matching-bangun-ruang-kelas6",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/bangun-ruang-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

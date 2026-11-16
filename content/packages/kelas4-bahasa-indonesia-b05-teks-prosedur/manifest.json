@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-bahasa-indonesia-b05-teks-prosedur",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Prosedur — Bahasa Indonesia Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menanam-biji.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 157168,
+      "sha256": "d480383ad65f116218b20697f036859b44f78dc36547c9808f6af4ff6bbd7c0a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

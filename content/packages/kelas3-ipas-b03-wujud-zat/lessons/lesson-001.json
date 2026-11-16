@@ -1,0 +1,28 @@
+{
+  "lessonId": "wujud-zat",
+  "packageId": "kelas3-ipas-b03-wujud-zat",
+  "title": "Wujud Zat dan Perubahannya",
+  "summary": "Mengenal wujud padat, cair, dan gas serta contoh perubahannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan tiga wujud zat.",
+    "Menjelaskan sifat setiap wujud zat.",
+    "Memberi contoh perubahan wujud."
+  ],
+  "activityIds": [
+    "eksplorasi-wujud-zat",
+    "kuis-wujud-zat",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-wujud-zat"
+  ],
+  "assetRefs": [
+    "assets/wujud-zat-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

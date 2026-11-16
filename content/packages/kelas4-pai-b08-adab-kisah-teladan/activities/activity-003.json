@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Adab kepada orang tua",
+        "right": "Menghormati, mendengarkan, dan membantu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Adab kepada guru dan teman",
+        "right": "Sopan, jujur, sabar, dan saling membantu"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sifat yang diteladani dari kisah Nabi dan sahabat",
+        "right": "Jujur, amanah, sabar, dan dermawan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sifat Nabi Muhammad yang patut diteladani adalah",
+        "right": "Jujur dan amanah"
+      },
+      {
+        "pairId": "pasangan-adab-kepada-teman-yang-sedang-ke",
+        "left": "Adab kepada teman yang sedang kesulitan mengerjakan tugas",
+        "right": "Membantu dengan sabar"
+      },
+      {
+        "pairId": "pasangan-bukti-perilaku-amanah-ketika-men",
+        "left": "Bukti perilaku amanah ketika menerima titipan",
+        "right": "Dikembalikan dengan utuh"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua, berbagi makanan, dan membantu teman."
+  }
+}

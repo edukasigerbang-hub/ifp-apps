@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alasan aturan penting",
+        "right": "Agar permainan adil"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bermain bersama",
+        "right": "Bergiliran dan bekerja sama"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sikap setelah bermain",
+        "right": "Bersalaman"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Anak bermain di lapangan terbuka",
+        "right": "Permainan sederhana"
+      },
+      {
+        "pairId": "pasangan-syarat-agar-permainan-berjalan-a",
+        "left": "Syarat agar permainan berjalan adil",
+        "right": "Aturan ditaati"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan sederhana di lapangan."
+  }
+}

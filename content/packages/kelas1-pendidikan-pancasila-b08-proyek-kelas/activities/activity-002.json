@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-proyek-kelas",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Proyek Kelas",
+  "instructions": "Susun langkah proyek kelas.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-kegiatan",
+        "text": "Memilih kegiatan"
+      },
+      {
+        "itemId": "langkah-tugas",
+        "text": "Membagi tugas"
+      },
+      {
+        "itemId": "langkah-kerja",
+        "text": "Bekerja bersama"
+      },
+      {
+        "itemId": "langkah-selesai",
+        "text": "Menyelesaikan pekerjaan"
+      },
+      {
+        "itemId": "langkah-laporan",
+        "text": "Melaporkan hasil"
+      }
+    ],
+    "correctOrder": [
+      "langkah-kegiatan",
+      "langkah-tugas",
+      "langkah-kerja",
+      "langkah-selesai",
+      "langkah-laporan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+  }
+}

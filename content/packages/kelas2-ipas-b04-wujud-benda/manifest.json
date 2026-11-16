@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-ipas-b04-wujud-benda",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Wujud Benda Padat dan Cair — IPAS Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/wujud-benda.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 133684,
+      "sha256": "ac047df4c476ccdf650fd95d037c8f133a281ab812bed5b1c19fa02974bb5283"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-senam-dasar",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Guling Depan",
+  "instructions": "Susun langkah guling depan.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pemanasan",
+        "text": "Melakukan pemanasan"
+      },
+      {
+        "itemId": "langkah-jongkok",
+        "text": "Jongkok dengan dagu menempel dada"
+      },
+      {
+        "itemId": "langkah-tengkuk",
+        "text": "Meletakkan tengkuk di matras"
+      },
+      {
+        "itemId": "langkah-guling",
+        "text": "Berguling ke depan"
+      },
+      {
+        "itemId": "langkah-berdiri",
+        "text": "Berdiri tegak"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pemanasan",
+      "langkah-jongkok",
+      "langkah-tengkuk",
+      "langkah-guling",
+      "langkah-berdiri"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+  }
+}

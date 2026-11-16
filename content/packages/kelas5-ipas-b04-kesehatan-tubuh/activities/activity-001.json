@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kesehatan-tubuh",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan cara mencegah penyakit.",
+  "assets": [
+    "assets/kesehatan-tubuh.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana mencegah penyakit menular?",
+        "assetPath": "assets/kesehatan-tubuh.webp",
+        "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh.",
+        "reveal": "Cuci tangan, pakai masker, dan jaga kebersihan.",
+        "hint": "Hindari berbagi alat makan."
+      },
+      {
+        "prompt": "Mengapa makan bergizi penting?",
+        "assetPath": "assets/kesehatan-tubuh.webp",
+        "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh.",
+        "reveal": "Menjaga daya tahan tubuh.",
+        "hint": "Pilih makanan seimbang."
+      },
+      {
+        "prompt": "Apa manfaat olahraga?",
+        "assetPath": "assets/kesehatan-tubuh.webp",
+        "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh.",
+        "reveal": "Membuat tubuh kuat dan bugar.",
+        "hint": "Lakukan rutin."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kesehatan Tubuh dan Pencegahan Penyakit?",
+        "reveal": "Menjaga kesehatan tubuh dan mencegah penyakit menular.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kesehatan-tubuh.webp",
+        "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kesehatan-tubuh.webp",
+        "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
+  }
+}

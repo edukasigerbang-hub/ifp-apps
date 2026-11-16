@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-atletik-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Nomor Atletik",
+  "instructions": "Amati gambar, lalu diskusikan teknik setiap nomor.",
+  "assets": [
+    "assets/atletik-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Nomor atletik apa yang terlihat?",
+        "assetPath": "assets/atletik-kelas5.webp",
+        "altText": "Lintasan lari, bak lompat pasir, dan pita finis.",
+        "reveal": "Lari, lompat jauh, dan lempar.",
+        "hint": "Amati lintasan dan bak pasir."
+      },
+      {
+        "prompt": "Bagaimana sikap start jongkok?",
+        "assetPath": "assets/atletik-kelas5.webp",
+        "altText": "Lintasan lari, bak lompat pasir, dan pita finis.",
+        "reveal": "Kaki menolak kuat dan pandangan ke depan.",
+        "hint": "Siap berlari."
+      },
+      {
+        "prompt": "Apa urutan lompat jauh?",
+        "assetPath": "assets/atletik-kelas5.webp",
+        "altText": "Lintasan lari, bak lompat pasir, dan pita finis.",
+        "reveal": "Awalan, tolakan, melayang, mendarat.",
+        "hint": "Tolak dengan satu kaki."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Atletik Dasar?",
+        "reveal": "Mempraktikkan nomor atletik dasar dengan teknik dan sportivitas.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/atletik-kelas5.webp",
+        "altText": "Lintasan lari, bak lompat pasir, dan pita finis."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lintasan lari, bak lompat pasir, dan pita finis.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/atletik-kelas5.webp",
+        "altText": "Lintasan lari, bak lompat pasir, dan pita finis."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat pasir, dan pita finis."
+  }
+}

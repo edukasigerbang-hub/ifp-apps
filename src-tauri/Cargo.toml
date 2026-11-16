@@ -30,3 +30,7 @@ tauri-plugin-dialog = "2.8.3"
 ed25519-dalek = "3.0.0"
 base64 = "0.23.1"
 chrono = { version = "0.4.45", features = ["serde"] }
+zip = { version = "9.1.3", default-features = false, features = ["deflate"] }
+# Klien HTTP katalog materi (tahap 3b ADR-0035). `native-tls` memakai schannel di
+# Windows sehingga tidak butuh pustaka TLS tambahan saat build.
+reqwest = { version = "0.13.5", default-features = false, features = ["blocking", "native-tls", "http2", "charset", "system-proxy"] }

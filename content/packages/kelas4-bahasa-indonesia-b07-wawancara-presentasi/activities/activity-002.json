@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-wawancara",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Kegiatan Wawancara",
+  "instructions": "Susun langkah wawancara dan presentasi dalam urutan yang benar.",
+  "assets": [
+    "assets/wawancara-presentasi.webp"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-topik",
+        "text": "Menentukan topik"
+      },
+      {
+        "itemId": "item-pertanyaan",
+        "text": "Menyusun pertanyaan"
+      },
+      {
+        "itemId": "item-wawancara",
+        "text": "Melakukan wawancara"
+      },
+      {
+        "itemId": "item-catat",
+        "text": "Mencatat jawaban"
+      },
+      {
+        "itemId": "item-sajikan",
+        "text": "Menyajikan hasil"
+      }
+    ],
+    "correctOrder": [
+      "item-topik",
+      "item-pertanyaan",
+      "item-wawancara",
+      "item-catat",
+      "item-sajikan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas."
+  }
+}

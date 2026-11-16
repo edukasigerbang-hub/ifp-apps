@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak jumlah malaikat yang wajib diketahui",
+        "right": "Sepuluh"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tugas malaikat Jibril",
+        "right": "Menyampaikan wahyu"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sifat malaikat",
+        "right": "Tidak makan dan tidak tidur"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Beriman kepada malaikat termasuk rukun iman ke",
+        "right": "Dua"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Sikap malaikat terhadap Allah",
+        "right": "Selalu taat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada malaikat."
+  }
+}

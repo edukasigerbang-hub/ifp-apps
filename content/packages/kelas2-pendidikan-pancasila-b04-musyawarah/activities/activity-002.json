@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-musyawarah-kelas2",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Musyawarah",
+  "instructions": "Susun tata cara musyawarah.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-masalah",
+        "text": "Menyampaikan masalah"
+      },
+      {
+        "itemId": "langkah-pendapat",
+        "text": "Memberi pendapat"
+      },
+      {
+        "itemId": "langkah-diskusi",
+        "text": "Berdiskusi"
+      },
+      {
+        "itemId": "langkah-sepakat",
+        "text": "Mengambil kesepakatan"
+      },
+      {
+        "itemId": "langkah-laksana",
+        "text": "Melaksanakan keputusan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-masalah",
+      "langkah-pendapat",
+      "langkah-diskusi",
+      "langkah-sepakat",
+      "langkah-laksana"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah bersama guru."
+  }
+}

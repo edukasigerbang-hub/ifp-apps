@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-seni-rupa-b02-menggambar-bentuk",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menggambar Bentuk Sederhana — Seni Rupa Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menggambar-bentuk.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 173584,
+      "sha256": "5e9cfb6d6051fabc5a0ef72d7d76645c5d99e3f22650e2dadb24f341881ce54e"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-bahasa-indonesia-b03-ide-pokok",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menyimak dan Ide Pokok — Bahasa Indonesia Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/mendengarkan-cerita.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 164688,
+      "sha256": "a0e36bd1291d2cc676b1743a70dcc73e466a9e713fb507581c3d44a36676b0e6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

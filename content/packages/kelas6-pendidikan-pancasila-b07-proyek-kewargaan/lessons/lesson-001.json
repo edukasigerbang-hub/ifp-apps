@@ -1,0 +1,29 @@
+{
+  "lessonId": "proyek-kewargaan-kelas6",
+  "packageId": "kelas6-pendidikan-pancasila-b07-proyek-kewargaan",
+  "title": "Proyek Kewargaan",
+  "summary": "Merancang dan melaksanakan proyek kewargaan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Merancang proyek.",
+    "Bekerja sama.",
+    "Melaporkan hasil."
+  ],
+  "activityIds": [
+    "eksplorasi-proyek-kewargaan-kelas6",
+    "ordering-proyek-kewargaan-kelas6",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/proyek-kewargaan-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

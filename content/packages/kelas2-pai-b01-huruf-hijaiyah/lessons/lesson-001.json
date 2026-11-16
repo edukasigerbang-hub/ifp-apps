@@ -1,0 +1,28 @@
+{
+  "lessonId": "huruf-hijaiyah-kelas2",
+  "packageId": "kelas2-pai-b01-huruf-hijaiyah",
+  "title": "Huruf Hijaiyah dan Harakat",
+  "summary": "Membaca huruf hijaiyah dengan harakat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal huruf hijaiyah.",
+    "Membaca harakat.",
+    "Menerapkan adab membaca."
+  ],
+  "activityIds": [
+    "eksplorasi-huruf-hijaiyah-kelas2",
+    "matching-huruf-hijaiyah-kelas2",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/huruf-hijaiyah-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah dan harakat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

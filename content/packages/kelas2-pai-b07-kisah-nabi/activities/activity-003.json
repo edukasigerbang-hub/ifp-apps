@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tempat Nabi lahir",
+        "right": "Makkah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Nabi terakhir",
+        "right": "Muhammad"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sifat Nabi",
+        "right": "Jujur"
+      },
+      {
+        "pairId": "pasangan-peristiwa-yang-terjadi-sebelum-n",
+        "left": "Peristiwa yang terjadi sebelum Nabi berdakwah",
+        "right": "Menerima wahyu"
+      },
+      {
+        "pairId": "pasangan-nabi-muhammad-dijadikan-contoh-h",
+        "left": "Sosok yang patut ditiru umat",
+        "right": "Teladan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "activityId": "kuis-bagian-tumbuhan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan: Bagian Tumbuhan dan Fungsinya",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-bagian-tumbuhan-1",
+        "prompt": "Bagian tumbuhan yang menyerap air adalah …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bagian-tumbuhan-1-1",
+            "text": "Daun"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-1-2",
+            "text": "Akar"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-1-3",
+            "text": "Bunga"
+          }
+        ],
+        "correctResponse": "opsi-bagian-tumbuhan-1-2"
+      },
+      {
+        "questionId": "soal-bagian-tumbuhan-2",
+        "prompt": "Daun berwarna hijau berfungsi untuk …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-2",
+            "text": "Menarik air"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-3",
+            "text": "Menyimpan batu"
+          },
+          {
+            "optionId": "opsi-bagian-tumbuhan-2-1",
+            "text": "Membuat makanan"
+          }
+        ],
+        "correctResponse": "opsi-bagian-tumbuhan-2-1"
+      },
+      {
+        "questionId": "soal-sayur-bayam-yang-kita-makan-bera",
+        "prompt": "Sayur bayam yang kita makan berasal dari bagian tumbuhan, yaitu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sayur-bayam-yang-kita-makan-1",
+            "text": "akar"
+          },
+          {
+            "optionId": "opsi-soal-sayur-bayam-yang-kita-makan-2",
+            "text": "batang"
+          },
+          {
+            "optionId": "opsi-soal-sayur-bayam-yang-kita-makan-0",
+            "text": "daun"
+          },
+          {
+            "optionId": "opsi-soal-sayur-bayam-yang-kita-makan-3",
+            "text": "bunga"
+          }
+        ],
+        "correctResponse": "opsi-soal-sayur-bayam-yang-kita-makan-0"
+      },
+      {
+        "questionId": "soal-bunga-pada-tumbuhan-lama-kelamaa",
+        "prompt": "Bunga pada tumbuhan lama-kelamaan akan berkembang menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bunga-pada-tumbuhan-lama-ke-1",
+            "text": "daun"
+          },
+          {
+            "optionId": "opsi-soal-bunga-pada-tumbuhan-lama-ke-2",
+            "text": "akar"
+          },
+          {
+            "optionId": "opsi-soal-bunga-pada-tumbuhan-lama-ke-3",
+            "text": "batang"
+          },
+          {
+            "optionId": "opsi-soal-bunga-pada-tumbuhan-lama-ke-0",
+            "text": "buah"
+          }
+        ],
+        "correctResponse": "opsi-soal-bunga-pada-tumbuhan-lama-ke-0"
+      },
+      {
+        "questionId": "soal-akar-batang-daun-bunga-dan-buah",
+        "prompt": "Akar, batang, daun, bunga, dan buah adalah ... bagian utama tumbuhan.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-akar-batang-daun-bunga-dan-0",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-soal-akar-batang-daun-bunga-dan-1",
+            "text": "tiga"
+          },
+          {
+            "optionId": "opsi-soal-akar-batang-daun-bunga-dan-2",
+            "text": "empat"
+          },
+          {
+            "optionId": "opsi-soal-akar-batang-daun-bunga-dan-3",
+            "text": "tujuh"
+          }
+        ],
+        "correctResponse": "opsi-soal-akar-batang-daun-bunga-dan-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas kuis pilihan ganda berjudul \"Kuis Penguatan: Bagian Tumbuhan dan Fungsinya\": Pilih jawaban yang paling tepat."
+  }
+}

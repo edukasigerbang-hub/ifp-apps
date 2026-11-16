@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kebersihan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kebiasaan Bersih",
+  "instructions": "Pasangkan setiap kebiasaan dengan manfaatnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-mandi",
+        "left": "Mandi",
+        "right": "Membersihkan tubuh"
+      },
+      {
+        "pairId": "pasangan-sikat",
+        "left": "Sikat gigi",
+        "right": "Menjaga gigi"
+      },
+      {
+        "pairId": "pasangan-cuci",
+        "left": "Cuci tangan",
+        "right": "Mencegah kuman"
+      },
+      {
+        "pairId": "pasangan-potong",
+        "left": "Potong kuku",
+        "right": "Menjaga kebersihan"
+      },
+      {
+        "pairId": "pasangan-istirahat",
+        "left": "Istirahat",
+        "right": "Memulihkan tenaga"
+      },
+      {
+        "pairId": "pasangan-air",
+        "left": "Air bersih",
+        "right": "Menjaga kesehatan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mandi, sikat gigi, dan mencuci tangan."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "gerak-manipulatif",
+  "packageId": "kelas4-pjok-b02-gerak-manipulatif",
+  "title": "Gerak Manipulatif dengan Bola",
+  "summary": "Mempraktikkan melempar, menangkap, menendang, dan menggiring bola dengan koordinasi dan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan gerak melempar dan menangkap bola.",
+    "Mempraktikkan gerak menendang dan menggiring bola.",
+    "Menerapkan koordinasi dan keselamatan saat bermain bola."
+  ],
+  "activityIds": [
+    "eksplorasi-gerak-manipulatif",
+    "matching-gerak-manipulatif",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gerak-manipulatif.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

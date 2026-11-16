@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gradasi",
+        "right": "Perubahan warna bertahap"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Mewarnai rapi",
+        "right": "Jangan keluar garis"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang diperiksa",
+        "right": "Kerapian warna"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Warna berubah dari gelap ke terang",
+        "right": "Gradasi"
+      },
+      {
+        "pairId": "pasangan-perubahan-warna-yang-dilakukan-s",
+        "left": "Perubahan warna yang dilakukan sedikit demi sedikit",
+        "right": "Gradasi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh gradasi warna dari gelap ke terang."
+  }
+}

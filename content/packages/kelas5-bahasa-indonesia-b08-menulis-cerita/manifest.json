@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-bahasa-indonesia-b08-menulis-cerita",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menulis Cerita — Bahasa Indonesia Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menulis-cerita-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 148372,
+      "sha256": "19cae96eb3b3236dfb1ee7d987d69db23a3d066cb47b4b3d163a34d8b8cadb34"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

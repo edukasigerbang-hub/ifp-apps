@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Masalah yang dipilih",
+        "right": "Masalah di lingkungan sekitar"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Merencanakan",
+        "right": "Tentukan tujuan, tugas, dan waktu"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kegiatan setelah proyek kewargaan selesai",
+        "right": "Melapor dan mengevaluasi"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-menyusun",
+        "left": "Langkah pertama sebelum menyusun rencana proyek",
+        "right": "Memilih masalah"
+      },
+      {
+        "pairId": "pasangan-pembagian-pekerjaan-kepada-setia",
+        "left": "Pembagian pekerjaan kepada setiap anggota kelompok",
+        "right": "Membagi tugas"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menjalankan-rencana-yan",
+        "left": "Kegiatan menjalankan rencana yang sudah disusun",
+        "right": "Melaksanakan proyek"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+  }
+}

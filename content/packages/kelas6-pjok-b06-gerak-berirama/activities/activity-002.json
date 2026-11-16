@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-gerak-berirama",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur Gerak Berirama",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-gerak",
+        "left": "Gerak",
+        "right": "Perubahan posisi tubuh"
+      },
+      {
+        "pairId": "pasangan-irama",
+        "left": "Irama",
+        "right": "Hitungan atau musik"
+      },
+      {
+        "pairId": "pasangan-kompak",
+        "left": "Kekompakan",
+        "right": "Gerak serasi"
+      },
+      {
+        "pairId": "pasangan-lentur",
+        "left": "Keluwesan",
+        "right": "Gerak tidak kaku"
+      },
+      {
+        "pairId": "pasangan-hitungan",
+        "left": "Hitungan",
+        "right": "Panduan gerak"
+      },
+      {
+        "pairId": "pasangan-latihan",
+        "left": "Latihan",
+        "right": "Agar terampil"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan gerak berirama mengikuti irama."
+  }
+}

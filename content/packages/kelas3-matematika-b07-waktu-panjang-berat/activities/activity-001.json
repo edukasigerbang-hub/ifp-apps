@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-ukuran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Ukur",
+  "instructions": "Amati gambar, lalu diskusikan satuan pada alat ukur.",
+  "assets": [
+    "assets/aktivitas-waktu-panjang-berat-1.png",
+    "assets/aktivitas-waktu-panjang-berat-2.png",
+    "assets/aktivitas-waktu-panjang-berat-3.png",
+    "assets/aktivitas-waktu-panjang-berat-4.png",
+    "assets/aktivitas-waktu-panjang-berat-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa menit dalam 1 jam?",
+        "assetPath": "assets/aktivitas-waktu-panjang-berat-1.png",
+        "altText": "Jam besar dengan enam puluh garis menit di tepi lingkaran; lima garis pertama disorot oranye.",
+        "reveal": "60 menit.",
+        "hint": "Lihat angka pada jam."
+      },
+      {
+        "prompt": "Berapa sentimeter dalam 1 meter?",
+        "assetPath": "assets/aktivitas-waktu-panjang-berat-2.png",
+        "altText": "Penggaris panjang dengan seratus pembagian kecil; sepuluh pembagian pertama ditandai kotak oranye.",
+        "reveal": "100 cm.",
+        "hint": "Lihat penggaris."
+      },
+      {
+        "prompt": "Berapa gram dalam 1 kilogram?",
+        "assetPath": "assets/aktivitas-waktu-panjang-berat-3.png",
+        "altText": "Timbangan dua lengan: beban satu kilogram di lengan kiri dan empat apel di lengan kanan.",
+        "reveal": "1.000 gram.",
+        "hint": "Lihat timbangan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Waktu, Panjang, dan Berat?",
+        "reveal": "Mengenal dan mengubah satuan waktu, panjang, serta berat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-waktu-panjang-berat-4.png",
+        "altText": "Tiga kartu rangkuman: jam dinding, penggaris berskala, dan timbangan dua lengan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Jam, penggaris panjang dengan seratus pembagian, dan timbangan dua lengan dengan beban satu kilogram.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-waktu-panjang-berat-5.png",
+        "altText": "Jam, penggaris panjang dengan seratus pembagian, dan timbangan dua lengan dengan beban satu kilogram."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi waktu panjang berat: jam dengan enam puluh garis menit, penggaris seratus pembagian, timbangan satu kilogram dan apel, tiga kartu rangkuman, dan gabungan jam penggaris serta timbangan."
+  }
+}

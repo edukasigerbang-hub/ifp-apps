@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alat dan bahan untuk membuat kolase",
+        "right": "Kertas warna, lem, gunting"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kertas dirobek lalu ditempel dengan lem",
+        "right": "Kolase"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang membuat kolase terlihat menarik",
+        "right": "Susunan warna, bentuk, dan ukuran yang seimbang"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama membuat kolase adalah",
+        "right": "menyiapkan bahan dan merancang"
+      },
+      {
+        "pairId": "pasangan-cara-membentuk-potongan-kertas-w",
+        "left": "Cara membentuk potongan kertas warna sebelum ditempel",
+        "right": "Dipotong atau dirobek"
+      },
+      {
+        "pairId": "pasangan-bidang-dasar-tempat-bahan-kolase",
+        "left": "Bidang dasar tempat bahan kolase ditempelkan",
+        "right": "Bidang tempel"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Ide pokok",
+        "right": "Gagasan utama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Banyak kalimat dalam paragraf",
+        "right": "Dua sampai tiga"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang diperiksa",
+        "right": "Ejaan dan tanda baca"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-saat-menulis-par",
+        "left": "Langkah pertama saat menulis paragraf",
+        "right": "menentukan ide pokok"
+      },
+      {
+        "pairId": "pasangan-setelah-kalimat-tersusun-kita-me",
+        "left": "Setelah kalimat tersusun, kita memberi",
+        "right": "tanda baca"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf sederhana di buku."
+  }
+}

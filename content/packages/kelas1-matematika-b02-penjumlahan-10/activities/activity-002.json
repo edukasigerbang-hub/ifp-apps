@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penjumlahan-10",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Hitungan",
+  "instructions": "Pasangkan setiap hitungan dengan hasilnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-2-3",
+        "left": "2 + 3",
+        "right": "5"
+      },
+      {
+        "pairId": "pasangan-4-1",
+        "left": "4 + 1",
+        "right": "5"
+      },
+      {
+        "pairId": "pasangan-5-2",
+        "left": "5 − 2",
+        "right": "3"
+      },
+      {
+        "pairId": "pasangan-6-4",
+        "left": "6 − 4",
+        "right": "2"
+      },
+      {
+        "pairId": "pasangan-tambah",
+        "left": "Tanda +",
+        "right": "Tambah"
+      },
+      {
+        "pairId": "pasangan-kurang",
+        "left": "Tanda −",
+        "right": "Kurang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan dua kelompok benda untuk penjumlahan."
+  }
+}

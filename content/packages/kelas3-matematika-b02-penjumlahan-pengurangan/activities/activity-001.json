@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-penjumlahan-pengurangan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Lompatan Bilangan",
+  "instructions": "Amati garis bilangan dan kelompok benda, lalu diskusikan cara berhitungnya.",
+  "assets": [
+    "assets/aktivitas-penjumlahan-pengurangan-1.png",
+    "assets/aktivitas-penjumlahan-pengurangan-2.png",
+    "assets/aktivitas-penjumlahan-pengurangan-3.png",
+    "assets/aktivitas-penjumlahan-pengurangan-4.png",
+    "assets/aktivitas-penjumlahan-pengurangan-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa hasil 2.450 + 1.275?",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan-1.png",
+        "altText": "Dua kelompok balok nilai tempat: kiri dua ratusan empat puluhan lima satuan, kanan seratus dua puluhan tujuh satuan, dipisahkan tanda tambah.",
+        "reveal": "3.725.",
+        "hint": "Jumlahkan satuan dahulu, simpan jika lebih dari 9."
+      },
+      {
+        "prompt": "Kapan kita menyimpan?",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan-2.png",
+        "altText": "Sepuluh satuan tersusun dua baris, panah melengkung menuju satu batang puluhan di sebelah kanan.",
+        "reveal": "Saat jumlah satu tempat lebih dari 9.",
+        "hint": "Contoh: 8 + 5 = 13, tulis 3 simpan 1."
+      },
+      {
+        "prompt": "Kapan kita meminjam saat mengurangi?",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan-3.png",
+        "altText": "Satu batang puluhan di kiri, panah melengkung menuju sepuluh satuan yang tersusun dua baris di kanan.",
+        "reveal": "Saat angka atas lebih kecil dari angka bawah.",
+        "hint": "Pinjam 1 dari tempat di sebelah kiri."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan?",
+        "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 10.000 dengan teknik menyimpan dan meminjam.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan-4.png",
+        "altText": "Tiga kartu rangkuman: menara tiga kubus, titik-titik dengan tiga titik dicoret, dan dua ubin tanda tambah serta kurang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-penjumlahan-pengurangan-5.png",
+        "altText": "Sepuluh satuan digabung menjadi satu batang puluhan, dan satu batang puluhan diuraikan kembali menjadi sepuluh satuan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi penjumlahan dan pengurangan: dua kelompok balok nilai tempat, sepuluh satuan digabung menjadi satu batang, satu batang diuraikan menjadi sepuluh satuan, tiga kartu rangkuman, dan kedua proses digabung dalam satu gambar."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Hari akhir",
+        "right": "Hari berakhirnya kehidupan dunia"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tanda hari akhir",
+        "right": "Terompet sangkakala ditiup"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Perilaku beriman",
+        "right": "Rajin beribadah dan berbuat baik"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sikap yang harus dijauhi orang beriman",
+        "right": "Perbuatan buruk"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Yang mengetahui waktu datangnya hari akhir",
+        "right": "Hanya Allah yang tahu"
+      },
+      {
+        "pairId": "pasangan-yang-mengetahui-waktu-datangnya",
+        "left": "Peristiwa yang terjadi pada hari akhir",
+        "right": "Makhluk dibangkitkan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman."
+  }
+}

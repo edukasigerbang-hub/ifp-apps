@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Orang yang memberikan informasi saat wawancara disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Pewawancara"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Pendengar"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Narasumber"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Pertanyaan wawancara sebaiknya disusun secara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Singkat"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Panjang"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Berbelit"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Sikap yang tepat saat mewawancarai narasumber adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Acuh"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Sopan"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Tergesa-gesa"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Saat narasumber menjawab, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Memotong ucapan"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Mengalihkan topik"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Mencatat jawaban"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Sebelum presentasi, hal yang perlu disiapkan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Urutan materi"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Pengeras suara"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Daftar hadir"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Kegiatan penutup setelah mencatat jawaban narasumber adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "Menyusun pertanyaan"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "Presentasi"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "Mencari narasumber"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mewawancarai narasumber dan mempresentasikan hasil."
+  }
+}

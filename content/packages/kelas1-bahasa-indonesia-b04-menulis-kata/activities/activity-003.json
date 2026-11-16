@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Memegang pensil",
+        "right": "Dengan tiga jari"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang ditulis pertama",
+        "right": "Huruf"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang ditulis setelah suku kata",
+        "right": "Kata"
+      },
+      {
+        "pairId": "pasangan-alat-tulis-yang-dipegang-dengan",
+        "left": "Alat tulis yang dipegang dengan tiga jari",
+        "right": "Pensil"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-menulis-k",
+        "left": "Yang dilakukan setelah menulis kata",
+        "right": "Memeriksa tulisan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis huruf dan kata di buku."
+  }
+}

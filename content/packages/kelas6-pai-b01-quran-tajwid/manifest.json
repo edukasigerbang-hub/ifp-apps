@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pai-b01-quran-tajwid",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Al-Qur'an dan Tajwid — PAI Kelas 6 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/quran-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 198482,
+      "sha256": "10d29a6e008a6d3eff26051e9b1b776b055c042c8db1d0661dcf44f81f749f2b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { GradedOutcome } from "../../content/graded";
 import { readOrdering, scoreOrdering } from "../../content/interactions";
 import type { Activity } from "../../content/schema/activity";
@@ -11,11 +11,16 @@ interface OrderingActivityProps {
 export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) {
   const { items, correctOrder } = useMemo(() => readOrdering(activity), [activity]);
   const threshold =
-    activity.completionPolicy.type === "score-threshold"
-      ? activity.completionPolicy.threshold ?? 70
-      : 70;
+    activity.completionPolicy.type === "score-threshold" ? (activity.completionPolicy.threshold ?? 70) : 70;
   const [order, setOrder] = useState<string[]>(() => items.map((item) => item.itemId));
   const [result, setResult] = useState<{ score: number; passed: boolean } | null>(null);
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!result) return;
+    resultRef.current?.scrollIntoView({ block: "nearest" });
+    resultRef.current?.focus();
+  }, [result]);
 
   if (items.length === 0) {
     return <p className="text-sm text-muted">Aktivitas ini belum memiliki item.</p>;
@@ -47,7 +52,7 @@ export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) 
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-5xl">
       <p className="text-sm text-muted">{activity.instructions}</p>
 
       <ol className="mt-5 space-y-2">
@@ -88,7 +93,7 @@ export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) 
               </div>
               {correct !== null && (
                 <span
-                  className={`text-sm font-medium ${correct ? "text-teal" : "text-danger"}`}
+                  className={`text-sm font-medium ${correct ? "text-teal-strong" : "text-danger-strong"}`}
                 >
                   {correct ? "Benar" : "Salah"}
                 </span>
@@ -101,7 +106,9 @@ export function OrderingActivity({ activity, onGraded }: OrderingActivityProps) 
       <div aria-live="polite" className="mt-6">
         {result && (
           <div
-            className={`rounded-card border p-5 ${
+            ref={resultRef}
+            tabIndex={-1}
+            className={`rounded-card border p-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
               result.passed ? "border-teal/30 bg-teal/5" : "border-warning/40 bg-warning/10"
             }`}
           >

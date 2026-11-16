@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Seni cetak",
+        "right": "Membuat gambar berulang dengan alat cetak"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan alat cetak",
+        "right": "Kentang, pelepah pisang, atau tutup botol"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Mencetak",
+        "right": "Oles cat, tekan, lalu angkat"
+      },
+      {
+        "pairId": "pasangan-langkah-sesudah-mengoles-cat-pad",
+        "left": "Langkah sesudah mengoles cat pada alat cetak",
+        "right": "Menekan pada kertas"
+      },
+      {
+        "pairId": "pasangan-cara-mengangkat-alat-cetak-dari",
+        "left": "Cara mengangkat alat cetak dari kertas",
+        "right": "Perlahan"
+      },
+      {
+        "pairId": "pasangan-barang-bekas-di-rumah-yang-dapat",
+        "left": "Barang bekas di rumah yang dapat dijadikan alat cetak",
+        "right": "Tutup botol"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Alat cetak, cat, dan kertas berisi cetakan pola."
+  }
+}

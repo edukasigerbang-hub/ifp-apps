@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-seni-rupa-b04-kolase",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kolase dari Bahan Alam — Seni Rupa Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kolase-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 114494,
+      "sha256": "f8c4c4c466c8c00725ad7a2fc8958790f9d457e57acc7493c20341ff486ed047"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

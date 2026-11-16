@@ -1,0 +1,28 @@
+{
+  "lessonId": "pemecahan-masalah-kelas6",
+  "packageId": "kelas6-matematika-b08-pemecahan-masalah",
+  "title": "Pemecahan Masalah",
+  "summary": "Menyelesaikan soal cerita dengan langkah sistematis.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memahami soal.",
+    "Memilih strategi.",
+    "Memeriksa jawaban."
+  ],
+  "activityIds": [
+    "eksplorasi-pemecahan-masalah-kelas6",
+    "kuis-pemecahan-masalah-kelas6",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-pemecahan-masalah-kelas6"
+  ],
+  "assetRefs": [
+    "assets/pemecahan-masalah-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

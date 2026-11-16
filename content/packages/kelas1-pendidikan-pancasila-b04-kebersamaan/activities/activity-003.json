@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kebersamaan",
+        "right": "Melakukan sesuatu bersama-sama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Contoh kebersamaan di sekolah",
+        "right": "Belajar dan bermain bersama"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menjaga kebersamaan",
+        "right": "Tidak bertengkar"
+      },
+      {
+        "pairId": "pasangan-kegiatan-bersama-sebelum-pulang",
+        "left": "Kegiatan bersama sebelum pulang",
+        "right": "Membantu teman"
+      },
+      {
+        "pairId": "pasangan-cara-pulang-dari-sekolah",
+        "left": "Cara pulang dari sekolah",
+        "right": "Dengan rapi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa belajar dan bermain bersama di sekolah."
+  }
+}

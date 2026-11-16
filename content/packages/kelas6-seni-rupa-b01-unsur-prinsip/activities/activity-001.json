@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-unsur-prinsip-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Unsur dan Prinsip",
+  "instructions": "Amati karya, lalu diskusikan unsur dan prinsipnya.",
+  "assets": [
+    "assets/unsur-prinsip-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Unsur apa yang terlihat?",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi.",
+        "reveal": "Garis, bentuk, warna, tekstur, ruang.",
+        "hint": "Amati bagian karya."
+      },
+      {
+        "prompt": "Apa itu keseimbangan?",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi.",
+        "reveal": "Susunan tidak berat sebelah.",
+        "hint": "Bandingkan sisi kiri dan kanan."
+      },
+      {
+        "prompt": "Bagaimana menciptakan kesatuan?",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi.",
+        "reveal": "Warna dan bentuk saling mendukung.",
+        "hint": "Jangan terlalu banyak gaya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Unsur dan Prinsip Seni?",
+        "reveal": "Menerapkan unsur dan prinsip seni dalam karya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Unsur garis, warna, bentuk, dan prinsip komposisi.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/unsur-prinsip-kelas6.webp",
+        "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+  }
+}

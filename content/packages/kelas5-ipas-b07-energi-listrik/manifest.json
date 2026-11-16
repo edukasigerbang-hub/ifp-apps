@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b07-energi-listrik",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Energi dan Listrik — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/energi-listrik.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 153698,
+      "sha256": "54216d6dd03cc12147f205da9bc4c422f0195765ae59c4205fa286f3fd3552a4"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

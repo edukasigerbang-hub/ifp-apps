@@ -1,0 +1,28 @@
+{
+  "lessonId": "rasio-proporsi",
+  "packageId": "kelas6-matematika-b03-rasio-proporsi",
+  "title": "Rasio dan Proporsi",
+  "summary": "Menulis, menyederhanakan, dan menerapkan rasio.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menulis rasio dua besaran.",
+    "Menyederhanakan rasio.",
+    "Menyelesaikan proporsi."
+  ],
+  "activityIds": [
+    "eksplorasi-rasio",
+    "kuis-rasio",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-rasio"
+  ],
+  "assetRefs": [
+    "assets/rasio.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua batang perbandingan dan kelompok benda 4 banding 3."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

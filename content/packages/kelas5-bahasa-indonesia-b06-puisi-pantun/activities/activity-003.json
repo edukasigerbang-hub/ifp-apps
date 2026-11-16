@@ -1,0 +1,160 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Puisi\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Sampiran dan isi"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Bahasa indah"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Bunyi akhir"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Pantun\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Bahasa indah"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Bunyi akhir"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Sampiran dan isi"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-baris-pertama-dan-kedua-pada-pan",
+        "prompt": "Baris pertama dan kedua pada pantun disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pad-1",
+            "text": "isi"
+          },
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pad-0",
+            "text": "sampiran"
+          },
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pad-2",
+            "text": "rima"
+          },
+          {
+            "optionId": "opsi-soal-baris-pertama-dan-kedua-pad-3",
+            "text": "bait"
+          }
+        ],
+        "correctResponse": "opsi-soal-baris-pertama-dan-kedua-pad-0"
+      },
+      {
+        "questionId": "soal-isi-atau-maksud-pantun-disampaik",
+        "prompt": "Isi atau maksud pantun disampaikan pada baris ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-isi-atau-maksud-pantun-disa-1",
+            "text": "pertama dan kedua"
+          },
+          {
+            "optionId": "opsi-soal-isi-atau-maksud-pantun-disa-0",
+            "text": "ketiga dan keempat"
+          },
+          {
+            "optionId": "opsi-soal-isi-atau-maksud-pantun-disa-2",
+            "text": "kedua dan ketiga"
+          }
+        ],
+        "correctResponse": "opsi-soal-isi-atau-maksud-pantun-disa-0"
+      },
+      {
+        "questionId": "soal-bunyi-yang-sama-pada-akhir-baris",
+        "prompt": "Bunyi yang sama pada akhir baris-baris pantun disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-pada-akhir-1",
+            "text": "bait"
+          },
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-pada-akhir-2",
+            "text": "sampiran"
+          },
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-pada-akhir-3",
+            "text": "isi"
+          },
+          {
+            "optionId": "opsi-soal-bunyi-yang-sama-pada-akhir-0",
+            "text": "rima"
+          }
+        ],
+        "correctResponse": "opsi-soal-bunyi-yang-sama-pada-akhir-0"
+      },
+      {
+        "questionId": "soal-bahasa-puisi-bersifat",
+        "prompt": "Bahasa puisi bersifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahasa-puisi-bersifat-0",
+            "text": "indah dan padat"
+          },
+          {
+            "optionId": "opsi-soal-bahasa-puisi-bersifat-1",
+            "text": "berbelit-belit"
+          },
+          {
+            "optionId": "opsi-soal-bahasa-puisi-bersifat-2",
+            "text": "kasar dan panjang"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahasa-puisi-bersifat-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca puisi dan pantun di kelas."
+  }
+}

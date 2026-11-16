@@ -1,0 +1,71 @@
+{
+  "activityId": "eksplorasi-kesehatan-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kesehatan-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kapan cuci tangan?",
+        "assetPath": "assets/kesehatan-kelas2.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Sebelum makan.",
+        "hint": "Setelah bermain."
+      },
+      {
+        "prompt": "Mengapa mandi?",
+        "assetPath": "assets/kesehatan-kelas2.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Agar tubuh bersih.",
+        "hint": "Mandi pagi dan sore."
+      },
+      {
+        "prompt": "Apa manfaat istirahat?",
+        "assetPath": "assets/kesehatan-kelas2.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Tenaga pulih.",
+        "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kesehatan dan Kebersihan?",
+        "reveal": "Menjaga kesehatan dan kebersihan setiap hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kesehatan-kelas2.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kesehatan-kelas2.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+      },
+      {
+        "prompt": "Mengapa mencuci tangan harus memakai sabun?",
+        "reveal": "Agar kuman hilang dan tubuh tetap sehat.",
+        "hint": "Gunakan air bersih dan sabun.",
+        "assetPath": "assets/kesehatan-kelas2.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+  }
+}

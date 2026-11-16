@@ -1,0 +1,28 @@
+{
+  "lessonId": "ekonomi",
+  "packageId": "kelas3-ipas-b08-ekonomi",
+  "title": "Kegiatan Ekonomi Sederhana",
+  "summary": "Mengenal kegiatan produksi, distribusi, dan konsumsi di sekitar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan kegiatan ekonomi.",
+    "Memberi contoh produksi, distribusi, dan konsumsi.",
+    "Menghargai pekerjaan orang lain."
+  ],
+  "activityIds": [
+    "eksplorasi-ekonomi",
+    "matching-ekonomi",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/ekonomi-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

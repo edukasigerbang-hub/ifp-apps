@@ -1,0 +1,28 @@
+{
+  "lessonId": "atletik-kelas2",
+  "packageId": "kelas2-pjok-b07-atletik",
+  "title": "Atletik Dasar",
+  "summary": "Mengenal lari dan lompat sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan lari.",
+    "Mempraktikkan lompat.",
+    "Menunjukkan sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-atletik-kelas2",
+    "matching-atletik-kelas2",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/atletik-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "hak-kewajiban-rumah",
+  "packageId": "kelas1-pendidikan-pancasila-b03-hak-kewajiban-rumah",
+  "title": "Hak dan Kewajiban di Rumah",
+  "summary": "Mengenal hak dan kewajiban anak di rumah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan hak di rumah.",
+    "Menyebutkan kewajiban di rumah.",
+    "Melaksanakan keduanya."
+  ],
+  "activityIds": [
+    "eksplorasi-hak-kewajiban-rumah",
+    "matching-hak-kewajiban-rumah",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/hak-kewajiban-rumah.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan membantu orang tua di rumah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

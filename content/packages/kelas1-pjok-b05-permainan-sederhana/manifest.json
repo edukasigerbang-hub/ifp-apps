@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pjok-b05-permainan-sederhana",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Permainan Sederhana — PJOK Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/permainan-sederhana.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 216266,
+      "sha256": "49499c6363e49e590fee733223967d77fe9c2b31201d741bc0937aea688a5eab"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

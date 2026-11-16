@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-siklus-hidup-sederhana",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Siklus Hidup",
+  "instructions": "Amati gambar, lalu diskusikan tahapan hidup makhluk hidup.",
+  "assets": [
+    "assets/siklus-hidup-sederhana.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana kupu-kupu lahir?",
+        "assetPath": "assets/siklus-hidup-sederhana.webp",
+        "altText": "Ilustrasi 3D daur hidup kupu-kupu: telur di daun, ulat, kepompong, dan kupu-kupu; Ayu dan Bima mengamati di taman.",
+        "reveal": "Dari telur, menjadi ulat, kepompong, lalu kupu-kupu.",
+        "hint": "Ada empat tahap."
+      },
+      {
+        "prompt": "Bagaimana ayam tumbuh?",
+        "assetPath": "assets/siklus-hidup-sederhana.webp",
+        "altText": "Ilustrasi 3D daur hidup kupu-kupu: telur di daun, ulat, kepompong, dan kupu-kupu; Ayu dan Bima mengamati di taman.",
+        "reveal": "Dari telur menetas menjadi anak ayam, lalu ayam dewasa.",
+        "hint": "Ayam menetas dari telur."
+      },
+      {
+        "prompt": "Bagaimana tanaman baru tumbuh?",
+        "assetPath": "assets/siklus-hidup-sederhana.webp",
+        "altText": "Ilustrasi 3D daur hidup kupu-kupu: telur di daun, ulat, kepompong, dan kupu-kupu; Ayu dan Bima mengamati di taman.",
+        "reveal": "Dari biji tumbuh tunas, tanaman muda, lalu tanaman berbunga.",
+        "hint": "Biji perlu air dan tanah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Siklus Hidup Sederhana?",
+        "reveal": "Mengenal tahapan hidup kupu-kupu, ayam, dan tanaman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/siklus-hidup-sederhana.webp",
+        "altText": "Ilustrasi 3D daur hidup kupu-kupu: telur di daun, ulat, kepompong, dan kupu-kupu; Ayu dan Bima mengamati di taman."
+      },
+      {
+        "prompt": "Mengapa makhluk hidup berkembang biak?",
+        "reveal": "Supaya jenisnya tidak habis dan tetap ada.",
+        "hint": "Anak hewan berasal dari induknya.",
+        "assetPath": "assets/siklus-hidup-sederhana.webp",
+        "altText": "Ilustrasi 3D daur hidup kupu-kupu: telur di daun, ulat, kepompong, dan kupu-kupu; Ayu dan Bima mengamati di taman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D daur hidup kupu-kupu: telur di daun, ulat, kepompong, dan kupu-kupu; Ayu dan Bima mengamati di taman."
+  }
+}

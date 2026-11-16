@@ -1,0 +1,28 @@
+{
+  "lessonId": "pemecahan-masalah",
+  "packageId": "kelas4-matematika-b08-pemecahan-masalah",
+  "title": "Pemecahan Masalah Matematika",
+  "summary": "Menyelesaikan soal cerita dengan memahami informasi, memilih operasi, menghitung, dan memeriksa jawaban.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengidentifikasi informasi penting pada soal cerita.",
+    "Memilih operasi hitung yang tepat.",
+    "Menyelesaikan dan memeriksa jawaban soal cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-pemecahan",
+    "kuis-pemecahan",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-pemecahan"
+  ],
+  "assetRefs": [
+    "assets/pemecahan-masalah.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

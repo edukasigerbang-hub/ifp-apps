@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-siklus-air",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Siklus Air",
+  "instructions": "Amati gambar, lalu diskusikan urutan siklus air.",
+  "assets": [
+    "assets/siklus-air-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tahap pertama siklus air?",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut.",
+        "reveal": "Penguapan air dari laut atau darat.",
+        "hint": "Karena panas matahari."
+      },
+      {
+        "prompt": "Apa itu pengembunan?",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut.",
+        "reveal": "Uap air berubah menjadi titik air.",
+        "hint": "Membentuk awan."
+      },
+      {
+        "prompt": "Bagaimana air kembali ke laut?",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut.",
+        "reveal": "Melalui hujan dan aliran sungai.",
+        "hint": "Siklus berulang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Siklus Air dan Cuaca?",
+        "reveal": "Memahami tahapan siklus air dan pengaruhnya terhadap cuaca.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Siklus Air dan Cuaca?",
+        "reveal": "Penguapan → Pengembunan → Hujan → Penyerapan air → Aliran kembali ke laut",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/siklus-air-kelas5.webp",
+        "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+  }
+}

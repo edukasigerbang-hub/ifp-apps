@@ -1,0 +1,548 @@
+{
+  "packages": {
+    "kelas6-bahasa-indonesia-b01-laporan": {
+      "questions": [
+        {
+          "prompt": "Laporan hasil pengamatan sebaiknya ditulis dengan bahasa ...",
+          "answer": "baku",
+          "distractors": ["santai", "berlebihan"]
+        },
+        {
+          "prompt": "Bagian laporan yang berisi rangkuman akhir pengamatan disebut ...",
+          "answer": "kesimpulan",
+          "distractors": ["tujuan", "kegiatan"]
+        },
+        {
+          "prompt": "Setelah mencatat kegiatan, penulis laporan kemudian ...",
+          "answer": "menyusun hasil",
+          "distractors": ["menulis kesimpulan", "memeriksa bahasa"]
+        },
+        {
+          "prompt": "Laporan yang memaparkan fakta apa adanya tanpa memihak bersifat ...",
+          "answer": "objektif",
+          "distractors": ["subjektif", "emosional"]
+        },
+        {
+          "prompt": "Agar isi laporan tidak melebar, penulis harus menetapkan ... lebih dahulu.",
+          "answer": "tujuan",
+          "distractors": ["kesimpulan", "hasil"]
+        },
+        {
+          "prompt": "Teks laporan disusun berdasarkan ...",
+          "answer": "hasil pengamatan",
+          "distractors": ["khayalan penulis", "pendapat pribadi"]
+        }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b03-fabel": {
+      "questions": [
+        {
+          "prompt": "Cerita yang tokohnya hewan dan berperilaku seperti manusia disebut ...",
+          "answer": "fabel",
+          "distractors": ["legenda", "pantun"]
+        },
+        {
+          "prompt": "Tokoh utama sebuah fabel umumnya berupa ...",
+          "answer": "hewan",
+          "distractors": ["manusia", "tumbuhan"]
+        },
+        {
+          "prompt": "Masalah dalam cerita fabel mulai muncul pada bagian ...",
+          "answer": "konflik",
+          "distractors": ["latar", "pesan"]
+        },
+        {
+          "prompt": "Konflik dalam fabel akhirnya diakhiri pada bagian ...",
+          "answer": "penyelesaian",
+          "distractors": ["konflik", "latar"]
+        },
+        {
+          "prompt": "Langkah terakhir ketika menyusun fabel adalah ...",
+          "answer": "menulis pesan",
+          "distractors": ["menyusun konflik", "menentukan tokoh hewan"]
+        },
+        {
+          "prompt": "Nasihat dalam fabel biasanya diletakkan pada ...",
+          "answer": "akhir cerita",
+          "distractors": ["awal cerita", "tengah cerita"]
+        }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b05-prosedur": {
+      "questions": [
+        {
+          "prompt": "Teks yang berisi petunjuk untuk melakukan sesuatu disebut teks ...",
+          "answer": "prosedur",
+          "distractors": ["laporan", "fabel"]
+        },
+        {
+          "prompt": "Kata seperti \"masukkan\" dan \"siramlah\" termasuk kata ...",
+          "answer": "perintah",
+          "distractors": ["tanya", "benda"]
+        },
+        {
+          "prompt": "Tujuan teks prosedur adalah ...",
+          "answer": "memberi petunjuk",
+          "distractors": ["menghibur pembaca", "menceritakan kisah"]
+        },
+        {
+          "prompt": "Setelah disiram, pot berisi biji sebaiknya diletakkan di ...",
+          "answer": "tempat terang",
+          "distractors": ["tempat gelap", "dalam lemari"]
+        },
+        {
+          "prompt": "Sebelum menanam biji, kita perlu menyiapkan ...",
+          "answer": "pot dan tanah",
+          "distractors": ["cat dan kuas", "gunting dan lem"]
+        },
+        {
+          "prompt": "Selain alat dan bahan, teks prosedur harus memuat ...",
+          "answer": "langkah",
+          "distractors": ["tokoh", "latar"]
+        }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b07-wawancara": {
+      "questions": [
+        {
+          "prompt": "Pihak yang menjawab pertanyaan saat wawancara disebut ...",
+          "answer": "narasumber",
+          "distractors": ["pewawancara", "pendengar"]
+        },
+        {
+          "prompt": "Pertanyaan wawancara yang baik bersifat singkat, jelas, dan ...",
+          "answer": "relevan",
+          "distractors": ["panjang", "rumit"]
+        },
+        {
+          "prompt": "Saat narasumber sedang menjawab, sebaiknya kita ...",
+          "answer": "mencatat jawaban",
+          "distractors": ["memotong ucapan", "mengalihkan topik"]
+        },
+        {
+          "prompt": "Sikap yang perlu ditunjukkan kepada narasumber adalah ...",
+          "answer": "sopan",
+          "distractors": ["sombong", "acuh"]
+        },
+        {
+          "prompt": "Langkah yang dilakukan tepat setelah narasumber ditentukan adalah ...",
+          "answer": "menyusun pertanyaan",
+          "distractors": ["mencatat jawaban", "mempresentasikan hasil"]
+        },
+        {
+          "prompt": "Agar pendengar memahami hasil wawancara, saat presentasi kita menjaga ...",
+          "answer": "suara jelas",
+          "distractors": ["suara pelan", "bicara cepat"]
+        }
+      ]
+    },
+    "kelas6-ipas-b01-perkembangbiakan": {
+      "questions": [
+        {
+          "prompt": "Cara kupu-kupu memperoleh keturunan adalah dengan ...",
+          "answer": "bertelur",
+          "distractors": ["melahirkan", "membelah diri"]
+        },
+        {
+          "prompt": "Tahap daur hidup kupu-kupu setelah ulat adalah ...",
+          "answer": "kepompong",
+          "distractors": ["telur", "kupu-kupu"]
+        },
+        {
+          "prompt": "Perubahan bentuk dari telur hingga menjadi kupu-kupu disebut ...",
+          "answer": "metamorfosis",
+          "distractors": ["fotosintesis", "penyerbukan"]
+        },
+        {
+          "prompt": "Tanaman padi berkembang biak dengan ...",
+          "answer": "biji",
+          "distractors": ["cangkok", "tunas"]
+        },
+        {
+          "prompt": "Daur hidup kupu-kupu diawali oleh ...",
+          "answer": "telur",
+          "distractors": ["ulat", "kepompong"]
+        },
+        {
+          "prompt": "Setelah menjadi kupu-kupu dewasa, hewan ini akan ...",
+          "answer": "bertelur lagi",
+          "distractors": ["berhenti tumbuh", "berubah menjadi ulat"]
+        }
+      ]
+    },
+    "kelas6-ipas-b06-bumi-tata-surya": {
+      "questions": [
+        {
+          "prompt": "Bumi berputar pada porosnya. Gerakan itu disebut ...",
+          "answer": "rotasi",
+          "distractors": ["revolusi", "gerhana"]
+        },
+        {
+          "prompt": "Satu kali rotasi bumi memerlukan waktu sekitar ...",
+          "answer": "24 jam",
+          "distractors": ["12 jam", "365 hari"]
+        },
+        {
+          "prompt": "Siang dan malam terjadi karena bumi ...",
+          "answer": "berotasi",
+          "distractors": ["berevolusi", "mengalami gerhana"]
+        },
+        {
+          "prompt": "Satu kali revolusi bumi berlangsung sekitar ...",
+          "answer": "365 hari",
+          "distractors": ["24 jam", "30 hari"]
+        },
+        {
+          "prompt": "Pergantian musim di bumi disebabkan oleh ...",
+          "answer": "revolusi bumi",
+          "distractors": ["rotasi bumi", "gerhana bulan"]
+        },
+        {
+          "prompt": "Matahari atau bulan dapat tampak gelap karena kedudukan benda langit. Peristiwa itu disebut ...",
+          "answer": "gerhana",
+          "distractors": ["rotasi", "musim"]
+        }
+      ]
+    },
+    "kelas6-ipas-b08-pelestarian": {
+      "questions": [
+        {
+          "prompt": "Tujuan melestarikan lingkungan adalah agar lingkungan tetap ...",
+          "answer": "sehat",
+          "distractors": ["gersang", "sepi"]
+        },
+        {
+          "prompt": "Sampah sebaiknya tidak dibuang ke sungai karena dapat ...",
+          "answer": "mencemari air",
+          "distractors": ["menambah ikan", "menjernihkan air"]
+        },
+        {
+          "prompt": "Menanam pohon dan tidak menebang sembarangan dapat mencegah ...",
+          "answer": "banjir",
+          "distractors": ["gempa", "kemarau"]
+        },
+        {
+          "prompt": "Saat meninggalkan ruangan, alat listrik sebaiknya ...",
+          "answer": "dimatikan",
+          "distractors": ["dibiarkan", "dinyalakan"]
+        },
+        {
+          "prompt": "Sampah rumah tangga sebaiknya dipisahkan menurut jenisnya. Kegiatan ini disebut ...",
+          "answer": "memilah sampah",
+          "distractors": ["menimbun sampah", "membakar sampah"]
+        },
+        {
+          "prompt": "Pelestarian lingkungan dilakukan juga untuk kepentingan ...",
+          "answer": "generasi berikutnya",
+          "distractors": ["generasi sebelumnya", "pabrik terdekat"]
+        }
+      ]
+    },
+    "kelas6-pai-b04-salat": {
+      "questions": [
+        {
+          "prompt": "Jumlah salat wajib dalam sehari ada ...",
+          "answer": "lima waktu",
+          "distractors": ["tiga waktu", "empat waktu"]
+        },
+        {
+          "prompt": "Bersuci yang dilakukan sebelum salat dinamakan ...",
+          "answer": "wudu",
+          "distractors": ["salat", "salam"]
+        },
+        {
+          "prompt": "Selain berwudu, hal yang harus dilakukan sebelum salat adalah ...",
+          "answer": "menutup aurat",
+          "distractors": ["berbicara", "berlari"]
+        },
+        {
+          "prompt": "Saat salat, badan dibungkukkan ke depan. Gerakan ini disebut ...",
+          "answer": "rukuk",
+          "distractors": ["sujud", "salam"]
+        },
+        {
+          "prompt": "Gerakan duduk dalam salat disebut duduk ...",
+          "answer": "tasyahud",
+          "distractors": ["sujud", "rukuk"]
+        },
+        {
+          "prompt": "Salat diakhiri dengan gerakan ...",
+          "answer": "salam",
+          "distractors": ["rukuk", "takbir"]
+        }
+      ]
+    },
+    "kelas6-pai-b07-sejarah-islam": {
+      "questions": [
+        {
+          "prompt": "Nabi Muhammad dilahirkan di kota ...",
+          "answer": "Makkah",
+          "distractors": ["Madinah", "Thaif"]
+        },
+        {
+          "prompt": "Wahyu pertama diterima Nabi di ...",
+          "answer": "Gua Hira",
+          "distractors": ["Gua Tsur", "Masjid Nabawi"]
+        },
+        {
+          "prompt": "Kota yang menjadi tujuan hijrah Nabi adalah ...",
+          "answer": "Madinah",
+          "distractors": ["Makkah", "Hira"]
+        },
+        {
+          "prompt": "Masjid yang dibangun Nabi setelah hijrah bernama Masjid ...",
+          "answer": "Nabawi",
+          "distractors": ["Hira", "Aqsa"]
+        },
+        {
+          "prompt": "Nabi hijrah dari Makkah dengan tujuan ...",
+          "answer": "melindungi umat",
+          "distractors": ["mencari harta", "berdagang"]
+        },
+        {
+          "prompt": "Ajaran Islam disampaikan kepada masyarakat melalui kegiatan yang disebut ...",
+          "answer": "dakwah",
+          "distractors": ["hijrah", "salat"]
+        }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b03-demokrasi": {
+      "questions": [
+        {
+          "prompt": "Pemerintahan yang berasal dari rakyat, oleh rakyat, dan untuk rakyat disebut ...",
+          "answer": "demokrasi",
+          "distractors": ["monarki", "otokrasi"]
+        },
+        {
+          "prompt": "Tahapan pemilu yang paling awal adalah ...",
+          "answer": "pendaftaran pemilih",
+          "distractors": ["penghitungan suara", "pelantikan"]
+        },
+        {
+          "prompt": "Setelah pemungutan suara, tahapan berikutnya adalah ...",
+          "answer": "penghitungan suara",
+          "distractors": ["pendaftaran pemilih", "kampanye"]
+        },
+        {
+          "prompt": "Pemilihan umum dilakukan untuk memilih ...",
+          "answer": "pemimpin",
+          "distractors": ["peraturan", "jadwal"]
+        },
+        {
+          "prompt": "Sikap yang tepat terhadap hasil pemilihan adalah ...",
+          "answer": "menerima keputusan bersama",
+          "distractors": ["memaksakan kehendak sendiri", "menolak hasil dengan marah"]
+        },
+        {
+          "prompt": "Sebelum pemungutan suara, para calon menyampaikan janji dan program. Kegiatan itu disebut ...",
+          "answer": "kampanye",
+          "distractors": ["pelantikan", "musyawarah"]
+        }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b06-gotong-royong": {
+      "questions": [
+        {
+          "prompt": "Bekerja bersama untuk kepentingan bersama disebut ...",
+          "answer": "gotong royong",
+          "distractors": ["musyawarah", "kompetisi"]
+        },
+        {
+          "prompt": "Gotong royong dilakukan tanpa mengharap ...",
+          "answer": "upah",
+          "distractors": ["hasil", "pujian"]
+        },
+        {
+          "prompt": "Musyawarah dilakukan untuk mencapai ...",
+          "answer": "keputusan bersama",
+          "distractors": ["keuntungan pribadi", "kemenangan kelompok"]
+        },
+        {
+          "prompt": "Saat teman berbeda pendapat dalam musyawarah, sikap kita adalah ...",
+          "answer": "menghargai pendapat",
+          "distractors": ["meninggalkan rapat", "memaksakan pendapat"]
+        },
+        {
+          "prompt": "Langkah yang dilakukan setelah tugas dibagi adalah ...",
+          "answer": "bekerja bersama",
+          "distractors": ["bermusyawarah", "melaporkan hasil"]
+        },
+        {
+          "prompt": "Di akhir kegiatan, kelompok menyampaikan hasil kerjanya. Kegiatan itu disebut ...",
+          "answer": "melaporkan hasil",
+          "distractors": ["membagi tugas", "menentukan kegiatan"]
+        }
+      ]
+    },
+    "kelas6-pendidikan-pancasila-b07-proyek-kewargaan": {
+      "questions": [
+        {
+          "prompt": "Langkah pertama dalam proyek kewargaan adalah ...",
+          "answer": "memilih masalah",
+          "distractors": ["menyusun rencana", "membagi tugas"]
+        },
+        {
+          "prompt": "Topik masalah untuk proyek kewargaan sebaiknya diambil dari ...",
+          "answer": "lingkungan sekitar",
+          "distractors": ["berita luar negeri", "buku pelajaran"]
+        },
+        {
+          "prompt": "Kegiatan menilai keberhasilan proyek setelah selesai disebut ...",
+          "answer": "evaluasi",
+          "distractors": ["presentasi", "kampanye"]
+        },
+        {
+          "prompt": "Setelah rencana selesai disusun, kelompok kemudian ...",
+          "answer": "melaksanakan proyek",
+          "distractors": ["menyusun rencana", "memilih masalah"]
+        },
+        {
+          "prompt": "Setelah proyek selesai, kelompok harus ...",
+          "answer": "melaporkan hasil",
+          "distractors": ["membagi tugas", "memilih masalah"]
+        },
+        {
+          "prompt": "Setiap anggota kelompok mendapat pekerjaan masing-masing. Kegiatan ini disebut ...",
+          "answer": "membagi tugas",
+          "distractors": ["bermusyawarah", "mengevaluasi"]
+        }
+      ]
+    },
+    "kelas6-pjok-b03-atletik": {
+      "questions": [
+        {
+          "prompt": "Saat start jongkok, pandangan diarahkan ke ...",
+          "answer": "depan",
+          "distractors": ["belakang", "bawah"]
+        },
+        {
+          "prompt": "Tahapan lompat jauh setelah awalan adalah ...",
+          "answer": "tolakan",
+          "distractors": ["mendarat", "melayang"]
+        },
+        {
+          "prompt": "Tolakan pada lompat jauh dilakukan dengan ...",
+          "answer": "satu kaki",
+          "distractors": ["dua kaki", "kedua tangan"]
+        },
+        {
+          "prompt": "Sikap menghargai lawan dan aturan dalam perlombaan disebut ...",
+          "answer": "sportivitas",
+          "distractors": ["kekompakan", "kebersamaan"]
+        },
+        {
+          "prompt": "Pelompat jauh mendarat di ...",
+          "answer": "bak lompat",
+          "distractors": ["lintasan lari", "pita finis"]
+        },
+        {
+          "prompt": "Tanda yang harus dilewati pelari di garis akhir adalah ...",
+          "answer": "pita finis",
+          "distractors": ["bak lompat", "garis start"]
+        }
+      ]
+    },
+    "kelas6-pjok-b05-senam": {
+      "questions": [
+        {
+          "prompt": "Senam lantai dilakukan di atas alas empuk yang bernama ...",
+          "answer": "matras",
+          "distractors": ["tikar", "karpet"]
+        },
+        {
+          "prompt": "Pemanasan sebelum senam bertujuan untuk ...",
+          "answer": "mencegah cedera",
+          "distractors": ["mempercepat waktu latihan", "mengurangi jumlah gerakan"]
+        },
+        {
+          "prompt": "Gerakan berguling ke depan disebut ...",
+          "answer": "guling depan",
+          "distractors": ["guling belakang", "keseimbangan"]
+        },
+        {
+          "prompt": "Saat berlatih senam, kita didampingi orang yang menjaga keselamatan. Orang itu disebut ...",
+          "answer": "pendamping",
+          "distractors": ["pelatih", "penonton"]
+        },
+        {
+          "prompt": "Saat berlatih senam di matras, sikap yang harus dihindari adalah ...",
+          "answer": "bercanda",
+          "distractors": ["berhati-hati", "memanaskan badan"]
+        },
+        {
+          "prompt": "Gerakan terakhir dalam latihan senam adalah ...",
+          "answer": "pendinginan",
+          "distractors": ["pemanasan", "guling depan"]
+        }
+      ]
+    },
+    "kelas6-seni-rupa-b02-ilustrasi": {
+      "questions": [
+        {
+          "prompt": "Gambar yang dibuat untuk menjelaskan isi cerita disebut ...",
+          "answer": "ilustrasi",
+          "distractors": ["poster", "kaligrafi"]
+        },
+        {
+          "prompt": "Langkah pertama membuat ilustrasi adalah ...",
+          "answer": "menentukan tema",
+          "distractors": ["mewarnai", "menebalkan garis"]
+        },
+        {
+          "prompt": "Gambar awal yang masih tipis dan belum diwarnai disebut ...",
+          "answer": "sketsa",
+          "distractors": ["lukisan", "kolase"]
+        },
+        {
+          "prompt": "Setelah sketsa selesai, langkah berikutnya adalah ...",
+          "answer": "menebalkan garis",
+          "distractors": ["menambahkan detail", "mewarnai"]
+        },
+        {
+          "prompt": "Pada tahap terakhir ilustrasi, kita menambahkan ...",
+          "answer": "detail",
+          "distractors": ["tema", "sketsa"]
+        },
+        {
+          "prompt": "Ilustrasi yang baik membantu pembaca untuk ...",
+          "answer": "memahami isi",
+          "distractors": ["menghafal angka", "menebak judul"]
+        }
+      ]
+    },
+    "kelas6-seni-rupa-b05-seni-cetak": {
+      "questions": [
+        {
+          "prompt": "Membuat gambar berulang dengan bantuan alat cetak disebut ...",
+          "answer": "seni cetak",
+          "distractors": ["seni lukis", "seni tari"]
+        },
+        {
+          "prompt": "Alat cetak yang dibuat dari umbi-umbian adalah ...",
+          "answer": "kentang",
+          "distractors": ["pelepah", "tutup botol"]
+        },
+        {
+          "prompt": "Pelepah dapat dijadikan alat cetak. Pelepah berasal dari pohon ...",
+          "answer": "pisang",
+          "distractors": ["mangga", "jambu"]
+        },
+        {
+          "prompt": "Cat sudah dioleskan pada alat cetak. Tindakan berikutnya adalah ...",
+          "answer": "menekan ke kertas",
+          "distractors": ["mengangkat perlahan", "membuat alat cetak"]
+        },
+        {
+          "prompt": "Cat yang dioleskan pada alat cetak sebaiknya ...",
+          "answer": "tipis",
+          "distractors": ["tebal", "kering"]
+        },
+        {
+          "prompt": "Langkah terakhir dalam mencetak adalah ...",
+          "answer": "mengangkat perlahan",
+          "distractors": ["menekan pada kertas", "mengoles cat"]
+        }
+      ]
+    }
+  }
+}

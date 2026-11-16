@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-bahasa-indonesia-b03-fabel",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Narasi dan Fabel — Bahasa Indonesia Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/fabel.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 216450,
+      "sha256": "ac03f71c4eb2e6394eb5b080bff167589f90b1bde444e7a7f5a9af77cc552360"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

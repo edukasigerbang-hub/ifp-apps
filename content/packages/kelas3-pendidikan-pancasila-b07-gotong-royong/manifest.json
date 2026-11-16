@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pendidikan-pancasila-b07-gotong-royong",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gotong Royong — Pendidikan Pancasila Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/gotong-royong-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169244,
+      "sha256": "71893f77603cc9e0fc654c68a6c22435bec09666934c25e9fe74aef918f3a734"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

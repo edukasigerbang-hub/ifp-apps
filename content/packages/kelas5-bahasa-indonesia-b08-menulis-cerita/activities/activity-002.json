@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menulis-cerita-kelas5",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menulis Cerita",
+  "instructions": "Susun langkah menulis cerita.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tema",
+        "text": "Menentukan tema"
+      },
+      {
+        "itemId": "langkah-kerangka",
+        "text": "Menyusun kerangka"
+      },
+      {
+        "itemId": "langkah-kembang",
+        "text": "Mengembangkan cerita"
+      },
+      {
+        "itemId": "langkah-periksa",
+        "text": "Memeriksa ejaan"
+      },
+      {
+        "itemId": "langkah-baca",
+        "text": "Membacakan cerita"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tema",
+      "langkah-kerangka",
+      "langkah-kembang",
+      "langkah-periksa",
+      "langkah-baca"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita di buku."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b08-pola-bilangan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pola Bilangan — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pola-bilangan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 152258,
+      "sha256": "01bdf19ee9fee6a787796f43553374a4ca9ae9bed26debcd1b67e9ad5018a936"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8340,
+      "sha256": "66dd75086d0cfd48c39b7bada0ac66fac2a7a2f414121afe8e8dd7f888c2422d"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8606,
+      "sha256": "6371c4d3bfd10256845d0a5c186969fb75d280f89372c2eb3db5677fb29b67b9"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 19873,
+      "sha256": "dcb6fd201b973a5f26b3c9e77e45f1ce288b55cae22ff15c21d92bbe0bc97c2b"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8011,
+      "sha256": "ed50b98b7107889a80f875b067eb8ede7f99900e123974e5a74758ffc1e9de9d"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5359,
+      "sha256": "0ca928ed07b61e94f1a08efdc05c242c5878b18db90e01b50871cc43dbc67b23"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

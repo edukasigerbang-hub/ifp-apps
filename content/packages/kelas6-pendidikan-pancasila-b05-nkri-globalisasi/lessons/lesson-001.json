@@ -1,0 +1,28 @@
+{
+  "lessonId": "nkri-globalisasi",
+  "packageId": "kelas6-pendidikan-pancasila-b05-nkri-globalisasi",
+  "title": "NKRI dan Globalisasi",
+  "summary": "Menghadapi globalisasi dengan tetap menjaga jati diri bangsa.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti globalisasi.",
+    "Menyebutkan dampaknya.",
+    "Menjaga jati diri bangsa."
+  ],
+  "activityIds": [
+    "eksplorasi-nkri-globalisasi",
+    "kuis-nkri-globalisasi",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-nkri-globalisasi"
+  ],
+  "assetRefs": [
+    "assets/nkri-globalisasi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol persatuan NKRI."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

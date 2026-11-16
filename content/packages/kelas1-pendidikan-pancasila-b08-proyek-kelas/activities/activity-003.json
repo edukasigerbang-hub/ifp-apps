@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Proyek kelas",
+        "right": "Kegiatan bersama di kelas"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Membagi tugas",
+        "right": "Adil untuk semua"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah selesai",
+        "right": "Melaporkan hasil"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Siswa bergotong royong menjalankan proyek",
+        "right": "Proyek kelas"
+      },
+      {
+        "pairId": "pasangan-kegiatan-pertama-dalam-proyek-ke",
+        "left": "Kegiatan pertama dalam proyek kelas",
+        "right": "Memilih kegiatan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-energi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Perubahan Energi",
+  "instructions": "Amati tiga panel gambar dan pikirkan energi apa yang bekerja serta berubah.",
+  "assets": [
+    "assets/energi-perubahan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa sumber energi utama bagi tanaman pada panel pertama?",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari.",
+        "reveal": "Cahaya matahari membantu tanaman membuat makanan.",
+        "hint": "Perhatikan matahari dan tanaman."
+      },
+      {
+        "prompt": "Pada panel kedua, energi apa yang berubah menjadi cahaya pada lampu?",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari.",
+        "reveal": "Energi listrik berubah menjadi energi cahaya.",
+        "hint": "Lampu memerlukan listrik."
+      },
+      {
+        "prompt": "Pada panel ketiga, energi dari makanan berubah menjadi apa saat anak berlari?",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari.",
+        "reveal": "Energi kimia dari makanan berubah menjadi energi gerak.",
+        "hint": "Tubuh memerlukan makanan untuk bergerak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Energi dan Perubahannya?",
+        "reveal": "Mengenali bentuk energi, perubahan energi di sekitar kita, dan cara menghemat energi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/energi-perubahan.webp",
+        "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
+  }
+}

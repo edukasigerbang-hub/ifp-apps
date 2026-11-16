@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pendidikan-pancasila-b01-pancasila-uud",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pancasila dan UUD 1945 — Pendidikan Pancasila Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pancasila-uud.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 226124,
+      "sha256": "a6919e6f22b6b5af9cb686bb67b384c9c2a8f6a83c9014b895d02793f78825e8"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

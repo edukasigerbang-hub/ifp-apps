@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-iman-rasul",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Sifat Rasul",
+  "instructions": "Amati gambar, lalu diskusikan arti rasul dan sifatnya.",
+  "assets": [
+    "assets/iman-rasul.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti rasul?",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
+        "reveal": "Utusan Allah yang menyampaikan wahyu.",
+        "hint": "Membawa petunjuk bagi manusia."
+      },
+      {
+        "prompt": "Berapa jumlah nabi dan rasul yang wajib diketahui?",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
+        "reveal": "25.",
+        "hint": "Disebut dalam Al-Qur'an."
+      },
+      {
+        "prompt": "Apa sifat wajib rasul?",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
+        "reveal": "Siddiq, amanah, tabligh, dan fatanah.",
+        "hint": "Jujur, dipercaya, menyampaikan, cerdas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Iman kepada Rasul?",
+        "reveal": "Memahami iman kepada rasul dan sifat-sifat yang wajib diteladani.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berdoa sebagai wujud iman kepada Allah dan rasul.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/iman-rasul.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
+  }
+}

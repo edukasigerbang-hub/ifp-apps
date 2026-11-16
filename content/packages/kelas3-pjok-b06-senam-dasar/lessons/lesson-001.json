@@ -1,0 +1,29 @@
+{
+  "lessonId": "senam-dasar",
+  "packageId": "kelas3-pjok-b06-senam-dasar",
+  "title": "Senam Dasar",
+  "summary": "Mempraktikkan gerak senam dasar dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak senam dasar.",
+    "Mempraktikkan guling depan dengan bantuan.",
+    "Menjaga keselamatan saat berlatih."
+  ],
+  "activityIds": [
+    "eksplorasi-senam-dasar",
+    "ordering-senam-dasar",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/senam-dasar-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

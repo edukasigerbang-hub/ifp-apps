@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-proyek",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Proyek Kewargaan",
+  "instructions": "Susun langkah proyek kewargaan dalam urutan yang benar.",
+  "assets": [
+    "assets/proyek-kewargaan.webp"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-masalah",
+        "text": "Menemukan masalah"
+      },
+      {
+        "itemId": "item-rencana",
+        "text": "Menyusun rencana"
+      },
+      {
+        "itemId": "item-tugas",
+        "text": "Membagi tugas"
+      },
+      {
+        "itemId": "item-laksana",
+        "text": "Melaksanakan proyek"
+      },
+      {
+        "itemId": "item-lapor",
+        "text": "Melaporkan dan mengevaluasi"
+      }
+    ],
+    "correctOrder": [
+      "item-masalah",
+      "item-rencana",
+      "item-tugas",
+      "item-laksana",
+      "item-lapor"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+  }
+}

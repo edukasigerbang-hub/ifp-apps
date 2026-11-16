@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-teks-deskripsi",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Teks deskripsi",
+        "right": "Menggambarkan objek"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kata indra",
+        "right": "Penglihatan, pendengaran, penciuman"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Penglihatan",
+        "right": "Hijau"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Pendengaran",
+        "right": "Gemericik air"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Penciuman",
+        "right": "Harum bunga"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Kalimat topik",
+        "right": "Ide utama"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung."
+  }
+}

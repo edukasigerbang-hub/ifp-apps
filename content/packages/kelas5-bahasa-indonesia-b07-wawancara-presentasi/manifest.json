@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-bahasa-indonesia-b07-wawancara-presentasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Wawancara dan Presentasi — Bahasa Indonesia Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/wawancara-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 188174,
+      "sha256": "031481e48eb380990af454bfe58e79cdbb73d6201569633f3fc57762653a346c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

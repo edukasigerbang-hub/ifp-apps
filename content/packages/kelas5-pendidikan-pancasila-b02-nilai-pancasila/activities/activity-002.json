@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-nilai-pancasila",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Sila dan Nilai",
+  "instructions": "Pasangkan setiap sila dengan contoh penerapannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-sila1",
+        "left": "Sila pertama",
+        "right": "Beribadah"
+      },
+      {
+        "pairId": "pasangan-sila2",
+        "left": "Sila kedua",
+        "right": "Menolong sesama"
+      },
+      {
+        "pairId": "pasangan-sila3",
+        "left": "Sila ketiga",
+        "right": "Menjaga persatuan"
+      },
+      {
+        "pairId": "pasangan-sila4",
+        "left": "Sila keempat",
+        "right": "Musyawarah"
+      },
+      {
+        "pairId": "pasangan-sila5",
+        "left": "Sila kelima",
+        "right": "Bersikap adil"
+      },
+      {
+        "pairId": "pasangan-dasar",
+        "left": "Pancasila",
+        "right": "Dasar negara"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila."
+  }
+}

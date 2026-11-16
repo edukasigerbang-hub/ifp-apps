@@ -1,0 +1,144 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Alif\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Huruf Arab"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Huruf pertama"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Arah baca"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Hijaiyah\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Huruf pertama"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Arah baca"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Huruf Arab"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-huruf-hijaiyah-yang-pertama-adal",
+        "prompt": "Huruf hijaiyah yang pertama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-0",
+            "text": "Alif"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-1",
+            "text": "Ba"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-2",
+            "text": "Jim"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-yang-pertama-3",
+            "text": "Mim"
+          }
+        ],
+        "correctResponse": "opsi-soal-huruf-hijaiyah-yang-pertama-0"
+      },
+      {
+        "questionId": "soal-huruf-hijaiyah-dibaca-dari-arah",
+        "prompt": "Huruf hijaiyah dibaca dari arah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-1",
+            "text": "kiri ke kanan"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-0",
+            "text": "kanan ke kiri"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-2",
+            "text": "atas ke bawah"
+          },
+          {
+            "optionId": "opsi-soal-huruf-hijaiyah-dibaca-dari-3",
+            "text": "bawah ke atas"
+          }
+        ],
+        "correctResponse": "opsi-soal-huruf-hijaiyah-dibaca-dari-0"
+      },
+      {
+        "questionId": "soal-adab-membaca-huruf-hijaiyah-adal",
+        "prompt": "Adab membaca huruf hijaiyah adalah dalam keadaan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-1",
+            "text": "kotor"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-2",
+            "text": "berteriak"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-0",
+            "text": "bersih dan sopan"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-huruf-hijaiyah-3",
+            "text": "berlari"
+          }
+        ],
+        "correctResponse": "opsi-soal-adab-membaca-huruf-hijaiyah-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah di sajadah."
+  }
+}

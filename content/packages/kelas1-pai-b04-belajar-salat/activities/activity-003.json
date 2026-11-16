@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang dilakukan sebelum salat",
+        "right": "Berwudu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Gerakan pertama salat",
+        "right": "Takbiratul ihram"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Gerakan terakhir",
+        "right": "Salam"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Anak belajar berwudu dan gerakan salat",
+        "right": "Belajar salat"
+      },
+      {
+        "pairId": "pasangan-arah-yang-dihadapi-saat-salat",
+        "left": "Arah yang dihadapi saat salat",
+        "right": "Kiblat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan belajar gerakan salat."
+  }
+}

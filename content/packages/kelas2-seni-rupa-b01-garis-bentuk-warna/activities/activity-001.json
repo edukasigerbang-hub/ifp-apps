@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-garis-bentuk-warna",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis, Bentuk, Warna",
+  "instructions": "Amati gambar, lalu sebutkan garis, bentuk, dan warna.",
+  "assets": [
+    "assets/garis-bentuk-warna.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa jenis garis?",
+        "assetPath": "assets/garis-bentuk-warna.webp",
+        "altText": "Contoh garis, bentuk, dan warna dalam karya seni.",
+        "reveal": "Lurus, lengkung, zigzag.",
+        "hint": "Amati bentuknya."
+      },
+      {
+        "prompt": "Apa bentuk dasar?",
+        "assetPath": "assets/garis-bentuk-warna.webp",
+        "altText": "Contoh garis, bentuk, dan warna dalam karya seni.",
+        "reveal": "Lingkaran, persegi, segitiga.",
+        "hint": "Bentuk sederhana."
+      },
+      {
+        "prompt": "Apa warna primer?",
+        "assetPath": "assets/garis-bentuk-warna.webp",
+        "altText": "Contoh garis, bentuk, dan warna dalam karya seni.",
+        "reveal": "Merah, kuning, biru.",
+        "hint": "Warna dasar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh garis, bentuk, dan warna dalam karya seni.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/garis-bentuk-warna.webp",
+        "altText": "Contoh garis, bentuk, dan warna dalam karya seni."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Garis, Bentuk, dan Warna?",
+        "reveal": "Mengenal garis, bentuk, dan warna untuk berkarya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/garis-bentuk-warna.webp",
+        "altText": "Contoh garis, bentuk, dan warna dalam karya seni."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis, bentuk, dan warna dalam karya seni."
+  }
+}

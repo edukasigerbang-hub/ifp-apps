@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Sumber energi listrik",
+        "right": "Air, angin, matahari, dan bahan bakar"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Perubahan energi pada lampu",
+        "right": "Listrik menjadi cahaya"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menghemat listrik",
+        "right": "Matikan alat yang tidak dipakai"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sumber listrik, lampu, dan alat elektronik",
+        "right": "Energi listrik"
+      },
+      {
+        "pairId": "pasangan-pembangkit-listrik-yang-memakai",
+        "left": "Pembangkit listrik yang memakai kekuatan air mengalir",
+        "right": "PLTA"
+      },
+      {
+        "pairId": "pasangan-mencabut-alat-listrik-yang-tidak",
+        "left": "Bahan yang dapat menghantarkan listrik",
+        "right": "Logam"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sumber energi listrik, lampu, dan alat elektronik."
+  }
+}

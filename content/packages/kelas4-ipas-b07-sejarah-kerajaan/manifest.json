@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-ipas-b07-sejarah-kerajaan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Sejarah Nusantara: Kerajaan — IPAS Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kerajaan-nusantara.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172344,
+      "sha256": "fda0e67c0cb57e08c60f9798ad2d065d039075866d04c663a208e2c74db8e127"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

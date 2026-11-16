@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pertumbuhan-manusia-hewan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Anak dan Bentuk Dewasanya",
+  "instructions": "Pasangkan setiap anak hewan atau tumbuhan dengan bentuk dewasanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-pertumbuhan-manusia-hewan-1",
+        "left": "Bayi",
+        "right": "Menjadi anak"
+      },
+      {
+        "pairId": "pasangan-pertumbuhan-manusia-hewan-2",
+        "left": "Anak kucing",
+        "right": "Menjadi kucing dewasa"
+      },
+      {
+        "pairId": "pasangan-pertumbuhan-manusia-hewan-3",
+        "left": "Anak ayam",
+        "right": "Menjadi ayam dewasa"
+      },
+      {
+        "pairId": "pasangan-pertumbuhan-manusia-hewan-4",
+        "left": "Pohon kecil",
+        "right": "Menjadi pohon besar"
+      },
+      {
+        "pairId": "pasangan-pertumbuhan-manusia-hewan-5",
+        "left": "Anak sapi",
+        "right": "Menjadi sapi dewasa"
+      },
+      {
+        "pairId": "pasangan-pertumbuhan-manusia-hewan-6",
+        "left": "Kepompong",
+        "right": "Menjadi kupu-kupu"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Anak dan Bentuk Dewasanya\": Pasangkan setiap anak hewan atau tumbuhan dengan bentuk dewasanya."
+  }
+}

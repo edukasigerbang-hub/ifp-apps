@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kebugaran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Latihan Kebugaran",
+  "instructions": "Amati empat panel latihan, lalu tentukan komponen kebugaran yang dilatih.",
+  "assets": [
+    "assets/kebugaran.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Gerakan apa pada panel pertama?",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "reveal": "Push-up melatih kekuatan otot.",
+        "hint": "Perhatikan tumpuan tubuh."
+      },
+      {
+        "prompt": "Gerakan apa pada panel kedua?",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "reveal": "Lari melatih daya tahan jantung dan paru-paru.",
+        "hint": "Gerakan dilakukan terus-menerus."
+      },
+      {
+        "prompt": "Mengapa kelenturan dan kecepatan juga penting?",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "reveal": "Kelenturan memudahkan gerak dan mengurangi cedera; kecepatan membantu aktivitas yang membutuhkan gerak cepat.",
+        "hint": "Hubungkan dengan kegiatan sehari-hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran Jasmani?",
+        "reveal": "Mengenali komponen kebugaran, mempraktikkan latihan sederhana, dan membiasakan hidup sehat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran.webp",
+        "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+  }
+}

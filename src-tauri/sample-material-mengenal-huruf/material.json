@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "materialId": "mengenal-huruf-vokal",
+  "version": "1.0.0",
+  "title": "Mengenal Huruf Vokal",
+  "summary": "Mengenal lima huruf vokal lewat contoh kata, kartu bergambar, dan nada contoh.",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "topics": [
+    "Huruf vokal"
+  ],
+  "estimatedMinutes": 4,
+  "entry": "index.html",
+  "cover": "assets/cover.webp",
+  "transcriptPath": "transcript.txt",
+  "captionsPath": "assets/captions.vtt",
+  "accessibility": {
+    "hasAudio": true,
+    "keyboardNavigable": true,
+    "supportsReducedMotion": true,
+    "contrastChecked": true
+  },
+  "completion": {
+    "mode": "signal",
+    "minDwellSeconds": 2
+  },
+  "minAppVersion": "0.1.0",
+  "publisher": {
+    "name": "Gerbang Edukasi"
+  },
+  "reviewStatus": "draft",
+  "files": []
+}

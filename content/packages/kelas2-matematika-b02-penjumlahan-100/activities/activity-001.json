@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-penjumlahan-100",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menghitung sampai 100",
+  "instructions": "Amati gambar, lalu hitung bersama-sama.",
+  "assets": [
+    "assets/aktivitas-penjumlahan-100-1.png",
+    "assets/aktivitas-penjumlahan-100-2.png",
+    "assets/aktivitas-penjumlahan-100-3.png",
+    "assets/aktivitas-penjumlahan-100-4.png",
+    "assets/aktivitas-penjumlahan-100-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 45 + 32?",
+        "assetPath": "assets/aktivitas-penjumlahan-100-1.png",
+        "altText": "Empat batang puluhan dan lima satuan ditambah tiga batang puluhan dan dua satuan, panah menuju tujuh batang puluhan dan tujuh satuan.",
+        "reveal": "77.",
+        "hint": "Jumlahkan puluhan lalu satuan."
+      },
+      {
+        "prompt": "Berapa 80 − 25?",
+        "assetPath": "assets/aktivitas-penjumlahan-100-2.png",
+        "altText": "Delapan batang puluhan dikurangi dua batang puluhan dan lima satuan yang ditandai kotak putus-putus, panah menuju lima puluhan lima satuan.",
+        "reveal": "55.",
+        "hint": "Kurangi puluhan lalu satuan."
+      },
+      {
+        "prompt": "Berapa 50 + 50?",
+        "assetPath": "assets/aktivitas-penjumlahan-100-3.png",
+        "altText": "Lima batang puluhan ditambah lima batang puluhan, panah menuju satu persegi ratusan.",
+        "reveal": "100.",
+        "hint": "Dua kelompok lima puluh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 100?",
+        "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 100.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-penjumlahan-100-4.png",
+        "altText": "Tiga kartu rangkuman: batang puluhan dengan satuan, ubin tambah dan kurang, serta petak seratus."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-penjumlahan-100-5.png",
+        "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi penjumlahan dan pengurangan sampai 100: empat puluhan lima satuan ditambah tiga puluhan dua satuan, delapan puluhan dikurangi dua puluhan lima satuan, lima puluhan ditambah lima puluhan menjadi seratus, tiga kartu rangkuman, dan hasil tujuh puluhan tujuh satuan."
+  }
+}

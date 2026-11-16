@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-matematika-b07-waktu-uang",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Waktu dan Uang — Matematika Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/waktu-uang.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 84118,
+      "sha256": "72a9fef8c70b2da470e2655f161c3d48f4bffb25c854637bef7c8e432cd39e66"
+    },
+    {
+      "path": "assets/aktivitas-waktu-uang-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 26109,
+      "sha256": "ddcf3fc66cea7992c9806a9b4243a7f92b01b2bf516bbb625be4a196b65b0130"
+    },
+    {
+      "path": "assets/aktivitas-waktu-uang-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 24915,
+      "sha256": "4a6de8d0450897442861cb501260342583b4d60c3c8554ca56cba75cebcd3ffe"
+    },
+    {
+      "path": "assets/aktivitas-waktu-uang-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 21367,
+      "sha256": "c81218b647de2a6ad5ee1bc5a5f83d92b4952406e7165c21b099752d5024e245"
+    },
+    {
+      "path": "assets/aktivitas-waktu-uang-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10792,
+      "sha256": "65e42799469ace1cc8dda2033ae96388dcbb8491666686bd514ddac5d208ef4e"
+    },
+    {
+      "path": "assets/aktivitas-waktu-uang-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9152,
+      "sha256": "dfabfdbf58593b17700cef0e1247799a4f726a535c2522fe50e0d37402aba72b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

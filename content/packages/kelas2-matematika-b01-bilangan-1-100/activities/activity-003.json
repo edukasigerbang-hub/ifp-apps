@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bilangan setelah 39 adalah",
+        "right": "40"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Angka 47 terdiri dari",
+        "right": "4 puluhan dan 7 satuan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang lebih besar, 58 atau 85",
+        "right": "85"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Nama bilangan 100",
+        "right": "Seratus"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-terletak-di-antara",
+        "left": "Bilangan yang terletak di antara 69 dan 71",
+        "right": "70"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Permainan yang terlihat",
+        "right": "Tenis, bulu tangkis, dan tenis meja"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Teknik dasar bulu tangkis",
+        "right": "Memegang raket dan memukul kok"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Bola tenis, kok, dan bet tenis meja",
+        "right": "Permainan bola kecil"
+      },
+      {
+        "pairId": "pasangan-alat-pemukul-yang-pipih-untuk-me",
+        "left": "Alat pemukul yang pipih untuk memantulkan bola pingpong",
+        "right": "Bet"
+      },
+      {
+        "pairId": "pasangan-sikap-kepada-lawan-saat-pertandi",
+        "left": "Sikap kepada lawan saat pertandingan selesai",
+        "right": "Bersalaman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja."
+  }
+}

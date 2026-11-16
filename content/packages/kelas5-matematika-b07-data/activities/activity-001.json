@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-data-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Data",
+  "instructions": "Amati diagram, lalu diskusikan cara membaca dan menyimpulkan data.",
+  "assets": [
+    "assets/aktivitas-data-kelas5-1.png",
+    "assets/aktivitas-data-kelas5-2.png",
+    "assets/aktivitas-data-kelas5-3.png",
+    "assets/aktivitas-data-kelas5-4.png",
+    "assets/aktivitas-data-kelas5-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang ditunjukkan diagram batang?",
+        "assetPath": "assets/aktivitas-data-kelas5-1.png",
+        "altText": "Diagram batang lima batang dengan tinggi berbeda di atas sumbu mendatar dan tegak.",
+        "reveal": "Banyak data setiap kelompok.",
+        "hint": "Bandingkan tinggi batang."
+      },
+      {
+        "prompt": "Bagaimana menghitung rata-rata?",
+        "assetPath": "assets/aktivitas-data-kelas5-2.png",
+        "altText": "Diagram batang lima batang dengan garis putus-putus merah mendatar pada tinggi rata-rata.",
+        "reveal": "Jumlah data dibagi banyak data.",
+        "hint": "Hitung total dahulu."
+      },
+      {
+        "prompt": "Apa kesimpulan dari data?",
+        "assetPath": "assets/aktivitas-data-kelas5-3.png",
+        "altText": "Diagram batang lima batang dengan batang tertinggi berwarna oranye dan kaca pembesar di dekatnya.",
+        "reveal": "Informasi yang dapat diambil.",
+        "hint": "Lihat nilai tertinggi dan terendah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penyajian dan Interpretasi Data?",
+        "reveal": "Membaca data dan menghitung rata-rata sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-data-kelas5-4.png",
+        "altText": "Tiga kartu rangkuman: diagram batang dengan garis rata-rata, tabel kecil, dan dua langkah berpanah dengan tanda centang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram batang lima batang dengan garis rata-rata mendatar putus-putus di atasnya.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-data-kelas5-5.png",
+        "altText": "Diagram batang lima batang dengan garis rata-rata mendatar putus-putus di atasnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi data kelas 5: diagram batang lima batang, diagram batang dengan garis rata-rata, batang tertinggi disorot, tiga kartu rangkuman, dan diagram batang dengan garis rata-rata."
+  }
+}

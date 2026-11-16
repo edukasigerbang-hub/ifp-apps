@@ -1,0 +1,28 @@
+{
+  "lessonId": "hak-kewajiban-siswa",
+  "packageId": "kelas2-pendidikan-pancasila-b03-hak-kewajiban-siswa",
+  "title": "Hak dan Kewajiban Siswa",
+  "summary": "Mengenal hak dan kewajiban sebagai siswa.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan hak siswa.",
+    "Menyebutkan kewajiban siswa.",
+    "Melaksanakan keduanya."
+  ],
+  "activityIds": [
+    "eksplorasi-hak-kewajiban-siswa",
+    "matching-hak-kewajiban-siswa",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/hak-kewajiban-siswa.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa belajar dan menjaga kebersihan kelas."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pai-b03-akhlak",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Akhlak Terpuji — PAI Kelas 2 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/akhlak-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 165238,
+      "sha256": "f7ccb85c21057d0a5c7ca763e44318bcfda457758bfd7e89f24564d42824af15"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

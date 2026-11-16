@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-melompat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Melompat",
+  "instructions": "Amati gambar, lalu tirukan gerak melompat.",
+  "assets": [
+    "assets/melompat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Melompat menggunakan ...",
+        "assetPath": "assets/melompat.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Kaki.",
+        "hint": "Tolakkan kaki."
+      },
+      {
+        "prompt": "Bagaimana mendarat?",
+        "assetPath": "assets/melompat.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Lutut ditekuk sedikit.",
+        "hint": "Mendarat pelan."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum melompat?",
+        "assetPath": "assets/melompat.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Pemanasan.",
+        "hint": "Agar tidak cedera."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Melompat?",
+        "reveal": "Mempraktikkan gerak melompat dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/melompat.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+      },
+      {
+        "prompt": "Agar aman, melompat di ...",
+        "reveal": "Ruang yang lapang",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/melompat.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  }
+}

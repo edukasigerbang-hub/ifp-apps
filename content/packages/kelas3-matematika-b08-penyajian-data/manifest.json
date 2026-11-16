@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b08-penyajian-data",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Penyajian Data Sederhana — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/penyajian-data-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 93990,
+      "sha256": "d3ee871eb8bdea1d0da9b6e2e6e8d3f55ccf6a3a3fce52245d15c54729e783e4"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6207,
+      "sha256": "affb8dd228a138816ac65522773cf4695dcf33a2a5965de0094a5d8c903cef8c"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6892,
+      "sha256": "74aa91ad4b435c4d52857308322e3abb1b7ab3289fa236b0ec98af7dc33e46f7"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7276,
+      "sha256": "63c320b6db525b6097c9806fdc773245b2eae336e50df2880fddc1911b2220a2"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7510,
+      "sha256": "6b9656db6e6af1d4a29ebc6ad177612cf954dc078724d35bf738c83e2971c997"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7427,
+      "sha256": "94e523f5df995dad628aaa63f0663a5de73a3b33ec80b4185c1563fe8e010927"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

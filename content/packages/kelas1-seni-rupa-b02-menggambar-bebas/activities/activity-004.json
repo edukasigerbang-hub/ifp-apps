@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Pensil, krayon, dan kertas adalah ... untuk menggambar.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "bahan"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "alat"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "hasil"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Gambar bebas boleh berupa rumah atau ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "angka"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "huruf"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "hewan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Warna pada gambar dibuat dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "krayon"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "gunting"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "lem"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Sesudah gambar selesai diwarnai, kita ... alat.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "membeli yang baru"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "merapikan"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "meminjam milik teman"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Sebelum menggambar, kita memilih ... lebih dulu.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "harga"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "jadwal"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "tema"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  }
+}

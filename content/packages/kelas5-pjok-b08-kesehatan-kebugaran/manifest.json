@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pjok-b08-kesehatan-kebugaran",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kesehatan dan Kebugaran — PJOK Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kesehatan-kebugaran.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169674,
+      "sha256": "446af25e46e2110d86b806117724eca42585a66ce30a0fa15cf9e72248e7ada2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

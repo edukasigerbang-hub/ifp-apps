@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-keberagaman-kelas5",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Keberagaman",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-suku",
+        "left": "Suku",
+        "right": "Kelompok masyarakat"
+      },
+      {
+        "pairId": "pasangan-agama",
+        "left": "Agama",
+        "right": "Keyakinan"
+      },
+      {
+        "pairId": "pasangan-budaya",
+        "left": "Budaya",
+        "right": "Kebiasaan daerah"
+      },
+      {
+        "pairId": "pasangan-toleransi",
+        "left": "Toleransi",
+        "right": "Menerima perbedaan"
+      },
+      {
+        "pairId": "pasangan-hargai",
+        "left": "Menghargai",
+        "right": "Sikap terhadap perbedaan"
+      },
+      {
+        "pairId": "pasangan-kerjasama",
+        "left": "Kerja sama",
+        "right": "Melakukan bersama"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  }
+}

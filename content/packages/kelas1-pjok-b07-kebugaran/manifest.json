@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pjok-b07-kebugaran",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kebugaran — PJOK Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kebugaran-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 228720,
+      "sha256": "6af334152c0ce344b4bbf6450c4bb51df6de1ee09d7468f2e3b1d8c5cfcf6aa7"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

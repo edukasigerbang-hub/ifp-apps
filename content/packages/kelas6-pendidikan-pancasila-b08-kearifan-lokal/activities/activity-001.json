@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kearifan-lokal",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kearifan Lokal",
+  "instructions": "Amati gambar, lalu diskusikan budaya dan nilai lokal.",
+  "assets": [
+    "assets/kearifan-lokal.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu kearifan lokal?",
+        "assetPath": "assets/kearifan-lokal.webp",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "reveal": "Nilai dan kebiasaan baik masyarakat setempat.",
+        "hint": "Diwariskan turun-temurun."
+      },
+      {
+        "prompt": "Apa contohnya?",
+        "assetPath": "assets/kearifan-lokal.webp",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "reveal": "Gotong royong, adat, dan budaya daerah.",
+        "hint": "Setiap daerah berbeda."
+      },
+      {
+        "prompt": "Bagaimana melestarikannya?",
+        "assetPath": "assets/kearifan-lokal.webp",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "reveal": "Mengenal, menghormati, dan mempraktikkan.",
+        "hint": "Tidak mengejek budaya lain."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kearifan Lokal?",
+        "reveal": "Mengenal dan melestarikan kearifan lokal.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kearifan-lokal.webp",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Rumah adat, pakaian adat, dan budaya daerah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kearifan-lokal.webp",
+        "altText": "Rumah adat, pakaian adat, dan budaya daerah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, dan budaya daerah."
+  }
+}

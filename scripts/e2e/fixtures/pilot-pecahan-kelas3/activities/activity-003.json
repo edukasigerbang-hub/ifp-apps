@@ -1,0 +1,23 @@
+{
+  "activityId": "aktivitas-memasangkan-pecahan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Pecahan dan Artinya",
+  "instructions": "Pasangkan setiap pecahan di kiri dengan arti yang tepat di kanan. Tekan Periksa pasangan setelah semua pasangan terisi.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      { "pairId": "pasangan-setengah", "left": "1/2", "right": "Satu bagian dari dua bagian sama besar" },
+      { "pairId": "pasangan-sepertiga", "left": "1/3", "right": "Satu bagian dari tiga bagian sama besar" },
+      { "pairId": "pasangan-seperempat", "left": "1/4", "right": "Satu bagian dari empat bagian sama besar" },
+      { "pairId": "pasangan-dua-per-tiga", "left": "2/3", "right": "Dua bagian dari tiga bagian sama besar" },
+      { "pairId": "pasangan-penyebut", "left": "Angka bawah pada pecahan", "right": "Jumlah semua bagian sama besar" }
+    ]
+  },
+  "completionPolicy": { "type": "view" },
+  "feedbackPolicy": { "mode": "immediate", "allowRetry": true, "showCorrectAnswer": true },
+  "runtimeCapabilities": ["touch", "keyboard"],
+  "accessibilityMetadata": {
+    "altText": "Lima pasangan pecahan dan artinya: 1/2 satu bagian dari dua bagian, 1/3 satu bagian dari tiga bagian, 1/4 satu bagian dari empat bagian, 2/3 dua bagian dari tiga bagian, dan angka bawah pecahan sebagai jumlah semua bagian sama besar."
+  }
+}

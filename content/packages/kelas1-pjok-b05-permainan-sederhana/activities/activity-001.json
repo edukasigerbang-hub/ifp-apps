@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-permainan-sederhana",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Permainan",
+  "instructions": "Amati gambar, lalu diskusikan aturan dan kerja samanya.",
+  "assets": [
+    "assets/permainan-sederhana.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Mengapa aturan penting?",
+        "assetPath": "assets/permainan-sederhana.webp",
+        "altText": "Anak bermain permainan sederhana di lapangan.",
+        "reveal": "Agar permainan adil.",
+        "hint": "Semua menaati."
+      },
+      {
+        "prompt": "Bagaimana bermain bersama?",
+        "assetPath": "assets/permainan-sederhana.webp",
+        "altText": "Anak bermain permainan sederhana di lapangan.",
+        "reveal": "Bergiliran dan bekerja sama.",
+        "hint": "Tidak berebut."
+      },
+      {
+        "prompt": "Bagaimana sikap setelah bermain?",
+        "assetPath": "assets/permainan-sederhana.webp",
+        "altText": "Anak bermain permainan sederhana di lapangan.",
+        "reveal": "Bersalaman.",
+        "hint": "Tidak marah bila kalah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Sederhana?",
+        "reveal": "Bermain permainan sederhana dengan aturan dan kerja sama.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/permainan-sederhana.webp",
+        "altText": "Anak bermain permainan sederhana di lapangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak bermain permainan sederhana di lapangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/permainan-sederhana.webp",
+        "altText": "Anak bermain permainan sederhana di lapangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan sederhana di lapangan."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-seni-cetak",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Seni Cetak",
+  "instructions": "Amati gambar, lalu diskusikan cara membuat dan mencetak pola.",
+  "assets": [
+    "assets/seni-cetak.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu seni cetak?",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun.",
+        "reveal": "Seni membuat gambar berulang dengan alat cetak.",
+        "hint": "Perhatikan pola daun yang berulang."
+      },
+      {
+        "prompt": "Bahan apa yang dapat dijadikan alat cetak?",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun.",
+        "reveal": "Kentang, pelepah pisang, tutup botol, atau wortel.",
+        "hint": "Bahan yang permukaannya bisa diukir atau dicelup."
+      },
+      {
+        "prompt": "Bagaimana cara mencetak?",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun.",
+        "reveal": "Oleskan cat pada alat cetak, tekan ke kertas, lalu angkat perlahan.",
+        "hint": "Cat harus rata, jangan terlalu banyak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Seni Cetak Sederhana?",
+        "reveal": "Membuat alat cetak dari bahan sederhana dan mencetak pola berulang dengan rapi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/seni-cetak.webp",
+        "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
+  }
+}

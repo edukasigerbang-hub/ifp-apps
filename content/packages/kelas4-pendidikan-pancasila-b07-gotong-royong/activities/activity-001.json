@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-gotong-royong",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gotong Royong",
+  "instructions": "Amati gambar warga bekerja bersama, lalu diskusikan manfaatnya.",
+  "assets": [
+    "assets/gotong-royong.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan warga pada gambar?",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong.",
+        "reveal": "Mereka bekerja bersama membersihkan lingkungan dan membawa barang.",
+        "hint": "Perhatikan kegiatan dan alat yang dibawa."
+      },
+      {
+        "prompt": "Mengapa mereka bekerja bersama?",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong.",
+        "reveal": "Pekerjaan lebih cepat selesai dan mempererat persatuan.",
+        "hint": "Bandingkan bekerja sendiri dan bersama."
+      },
+      {
+        "prompt": "Sebutkan contoh gotong royong di sekolah.",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong.",
+        "reveal": "Piket kelas, kerja bakti, dan membantu teman yang kesulitan.",
+        "hint": "Ingat kegiatan bersama di kelas."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gotong Royong?",
+        "reveal": "Memahami makna gotong royong, contohnya di rumah/sekolah/masyarakat, dan manfaatnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gotong-royong.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
+  }
+}

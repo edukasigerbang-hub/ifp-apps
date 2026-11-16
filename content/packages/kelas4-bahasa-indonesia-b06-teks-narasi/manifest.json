@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-bahasa-indonesia-b06-teks-narasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Narasi — Bahasa Indonesia Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/teks-narasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 153490,
+      "sha256": "ecbacc560eba8094f00adad87b077b3151ec6a74fd1e8db3665043eeb1e27c05"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

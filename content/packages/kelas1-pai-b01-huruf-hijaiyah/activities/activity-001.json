@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-huruf-hijaiyah",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Huruf Hijaiyah",
+  "instructions": "Amati gambar, lalu tirukan bacaan huruf hijaiyah.",
+  "assets": [
+    "assets/huruf-hijaiyah.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Huruf hijaiyah pertama adalah ...",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah.",
+        "reveal": "Alif.",
+        "hint": "Huruf Arab."
+      },
+      {
+        "prompt": "Arah membaca huruf Arab adalah ...",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah.",
+        "reveal": "Dari kanan ke kiri.",
+        "hint": "Berbeda dengan huruf Latin."
+      },
+      {
+        "prompt": "Adab membaca Al-Qur'an adalah ...",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah.",
+        "reveal": "Bersih dan sopan.",
+        "hint": "Mulai dengan ta'awuz."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca huruf hijaiyah di sajadah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mengenal Huruf Hijaiyah?",
+        "reveal": "Mengenal huruf hijaiyah dan cara membacanya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-hijaiyah.webp",
+        "altText": "Anak membaca huruf hijaiyah di sajadah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah di sajadah."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "apresiasi-sastra",
+  "packageId": "kelas4-bahasa-indonesia-b08-apresiasi-sastra",
+  "title": "Apresiasi Sastra",
+  "summary": "Mengenali unsur puisi dan cerita, menyampaikan tanggapan, serta menghargai karya sastra.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan unsur puisi dan cerita.",
+    "Menyampaikan tanggapan terhadap karya sastra.",
+    "Menunjukkan sikap menghargai karya orang lain."
+  ],
+  "activityIds": [
+    "eksplorasi-apresiasi",
+    "kuis-apresiasi",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-apresiasi"
+  ],
+  "assetRefs": [
+    "assets/apresiasi-sastra.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

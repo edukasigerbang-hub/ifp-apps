@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-apresiasi-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Karya",
+  "instructions": "Amati gambar, lalu diskusikan unsur dan tanggapan karya.",
+  "assets": [
+    "assets/apresiasi-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan apresiasi?",
+        "assetPath": "assets/apresiasi-kelas5.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati.",
+        "reveal": "Mengamati dan menghargai karya.",
+        "hint": "Bukan hanya menilai."
+      },
+      {
+        "prompt": "Unsur apa yang diamati?",
+        "assetPath": "assets/apresiasi-kelas5.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati.",
+        "reveal": "Garis, warna, bentuk, dan tekstur.",
+        "hint": "Lihat detail."
+      },
+      {
+        "prompt": "Bagaimana tanggapan yang baik?",
+        "assetPath": "assets/apresiasi-kelas5.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati.",
+        "reveal": "Sopan, beralasan, dan membangun.",
+        "hint": "Hindari mengejek."
+      },
+      {
+        "prompt": "Langkah pertama mengapresiasi karya adalah ...",
+        "reveal": "Mengamati dengan teliti",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/apresiasi-kelas5.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Karya seni dipajang dan pengunjung mengamati.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/apresiasi-kelas5.webp",
+        "altText": "Karya seni dipajang dan pengunjung mengamati."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan pengunjung mengamati."
+  }
+}

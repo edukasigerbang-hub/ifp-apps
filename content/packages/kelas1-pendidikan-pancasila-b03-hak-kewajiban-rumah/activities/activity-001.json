@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-hak-kewajiban-rumah",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kegiatan di Rumah",
+  "instructions": "Amati gambar, lalu diskusikan hak dan kewajiban.",
+  "assets": [
+    "assets/hak-kewajiban-rumah.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa hak anak di rumah?",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah.",
+        "reveal": "Mendapat kasih sayang.",
+        "hint": "Mendapat makanan."
+      },
+      {
+        "prompt": "Apa kewajiban anak?",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah.",
+        "reveal": "Membantu orang tua.",
+        "hint": "Belajar."
+      },
+      {
+        "prompt": "Mana yang didahulukan?",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah.",
+        "reveal": "Kewajiban dahulu.",
+        "hint": "Lalu menerima hak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban di Rumah?",
+        "reveal": "Mengenal hak dan kewajiban anak di rumah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak belajar dan membantu orang tua di rumah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/hak-kewajiban-rumah.webp",
+        "altText": "Anak belajar dan membantu orang tua di rumah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan membantu orang tua di rumah."
+  }
+}

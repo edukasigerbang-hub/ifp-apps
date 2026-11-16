@@ -1,0 +1,28 @@
+{
+  "lessonId": "menulis-deskripsi",
+  "packageId": "kelas4-bahasa-indonesia-b04-menulis-deskripsi",
+  "title": "Menulis Teks Deskripsi",
+  "summary": "Menyusun teks deskripsi dengan menentukan objek, mencatat ciri pengindraan, dan menutup dengan kesan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyusun kerangka teks deskripsi.",
+    "Menggunakan kata pengindraan untuk menggambarkan objek.",
+    "Menulis paragraf deskripsi yang runtut."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-deskripsi",
+    "kuis-menulis-deskripsi",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-menulis-deskripsi"
+  ],
+  "assetRefs": [
+    "assets/menulis-deskripsi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Mean",
+        "right": "Jumlah data dibagi banyak data"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Median",
+        "right": "Nilai tengah setelah data diurutkan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Modus",
+        "right": "Data yang paling sering muncul"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Mean dari 70, 80, 90 adalah",
+        "right": "80"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-menentuk",
+        "left": "Langkah pertama sebelum menentukan nilai tengah (median)",
+        "right": "Mengurutkan data"
+      },
+      {
+        "pairId": "pasangan-hasil-bagi-jumlah-data-dengan-ba",
+        "left": "Hasil bagi jumlah data dengan banyak data",
+        "right": "Mean"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  }
+}

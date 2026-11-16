@@ -1,0 +1,28 @@
+{
+  "lessonId": "nkri",
+  "packageId": "kelas3-pendidikan-pancasila-b06-nkri",
+  "title": "NKRI dan Simbol Negara",
+  "summary": "Mengenal NKRI dan simbol-simbol negara Indonesia.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti NKRI.",
+    "Menyebutkan simbol negara.",
+    "Menunjukkan cinta tanah air."
+  ],
+  "activityIds": [
+    "eksplorasi-nkri",
+    "kuis-nkri",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-nkri"
+  ],
+  "assetRefs": [
+    "assets/nkri-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dengan bendera Merah Putih dan lambang Garuda."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

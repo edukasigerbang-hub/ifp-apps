@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Bumi berputar pada porosnya. Gerakan itu disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "rotasi"
+          },
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "revolusi"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "gerhana"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Satu kali rotasi bumi memerlukan waktu sekitar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "12 jam"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "24 jam"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "365 hari"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Siang dan malam terjadi karena bumi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "berevolusi"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "mengalami gerhana"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "berotasi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Satu kali revolusi bumi berlangsung sekitar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "365 hari"
+          },
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "24 jam"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "30 hari"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Pergantian musim di bumi disebabkan oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "rotasi bumi"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "revolusi bumi"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "gerhana bulan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Matahari atau bulan dapat tampak gelap karena kedudukan benda langit. Peristiwa itu disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "rotasi"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "musim"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "gerhana"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet tata surya."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "kesehatan-kebugaran",
+  "packageId": "kelas5-pjok-b08-kesehatan-kebugaran",
+  "title": "Kesehatan dan Kebugaran",
+  "summary": "Menjaga kesehatan dan kebugaran dengan kebiasaan sehat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan kebiasaan sehat.",
+    "Menjelaskan manfaat kebugaran.",
+    "Menerapkan pola hidup sehat."
+  ],
+  "activityIds": [
+    "eksplorasi-kesehatan-kebugaran",
+    "matching-kesehatan-kebugaran",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kesehatan-kebugaran.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, berolahraga, dan beristirahat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "kalimat-efektif",
+  "packageId": "kelas4-bahasa-indonesia-b02-kalimat-efektif",
+  "title": "Kalimat Efektif dan Kosakata Baru",
+  "summary": "Mengenali ciri kalimat efektif, memilih kata baku, dan memperbaiki kalimat agar jelas serta tidak mubazir.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan ciri kalimat efektif.",
+    "Memilih kata baku dan kosakata yang tepat.",
+    "Memperbaiki kalimat tidak efektif menjadi lebih jelas."
+  ],
+  "activityIds": [
+    "eksplorasi-kalimat-efektif",
+    "kuis-kalimat-efektif",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-kalimat-efektif"
+  ],
+  "assetRefs": [
+    "assets/sudut-baca.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

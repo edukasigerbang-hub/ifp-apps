@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gerak senam lantai",
+        "right": "Guling depan, guling belakang, dan keseimbangan"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang harus disiapkan",
+        "right": "Matras dan pendamping"
+      },
+      {
+        "pairId": "pasangan-latihan-penutup-setelah-berlatih",
+        "left": "Latihan penutup setelah berlatih gerak keseimbangan",
+        "right": "Pendinginan"
+      },
+      {
+        "pairId": "pasangan-gerak-yang-dipelajari-sesudah-gu",
+        "left": "Gerak yang dipelajari sesudah guling depan",
+        "right": "Guling belakang"
+      },
+      {
+        "pairId": "pasangan-hal-yang-harus-dijaga-selama-ber",
+        "left": "Hal yang harus dijaga selama berlatih senam lantai",
+        "right": "Keselamatan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+  }
+}

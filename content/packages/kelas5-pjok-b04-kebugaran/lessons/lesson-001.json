@@ -1,0 +1,28 @@
+{
+  "lessonId": "kebugaran",
+  "packageId": "kelas5-pjok-b04-kebugaran",
+  "title": "Kebugaran Jasmani",
+  "summary": "Menjaga kebugaran jasmani melalui olahraga, gizi, dan istirahat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan komponen kebugaran.",
+    "Mempraktikkan latihan kebugaran.",
+    "Menjaga pola hidup sehat."
+  ],
+  "activityIds": [
+    "eksplorasi-kebugaran",
+    "matching-kebugaran-kelas5",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kebugaran-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

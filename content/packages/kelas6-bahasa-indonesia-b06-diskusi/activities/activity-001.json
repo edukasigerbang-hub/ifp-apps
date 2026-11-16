@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-diskusi-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Diskusi",
+  "instructions": "Amati gambar, lalu diskusikan cara menyampaikan pendapat.",
+  "assets": [
+    "assets/diskusi-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan teks diskusi?",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru.",
+        "reveal": "Membahas masalah dari dua sisi.",
+        "hint": "Ada pro dan kontra."
+      },
+      {
+        "prompt": "Apa itu argumen?",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru.",
+        "reveal": "Alasan yang mendukung pendapat.",
+        "hint": "Perlu bukti."
+      },
+      {
+        "prompt": "Bagaimana menyimpulkan?",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru.",
+        "reveal": "Menimbang argumen.",
+        "hint": "Ambil kesimpulan adil."
+      },
+      {
+        "prompt": "Teks diskusi membahas masalah dari ...",
+        "reveal": "Dua sisi",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru."
+      },
+      {
+        "prompt": "Argumen adalah ...",
+        "reveal": "Alasan yang mendukung pendapat",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/diskusi-kelas6.webp",
+        "altText": "Siswa berdiskusi dengan guru."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berdiskusi dengan guru."
+  }
+}

@@ -77,6 +77,55 @@ describe("jawaban singkat", () => {
     expect(isAnswerCorrect(question, "")).toBe(false);
     expect(isAnswerCorrect(question, "Setengah")).toBe(true);
   });
+
+  it("mengabaikan tanda baca dan spasi berlebih", () => {
+    expect(isAnswerCorrect(textQuestions[0], "  setengah.  ")).toBe(true);
+    expect(isAnswerCorrect(textQuestions[0], "SETENGAH!")).toBe(true);
+  });
+
+  it("menerima daftar jawaban yang sah", () => {
+    const question: QuizQuestion = {
+      questionId: "soal-ciri",
+      prompt: "Sebutkan satu ciri makhluk hidup.",
+      responseType: "text",
+      correctResponse: ["bernapas", "bergerak", "tumbuh", "berkembang biak"]
+    };
+    for (const answer of ["bernapas", "Bergerak", "tumbuh.", "berkembang  biak"]) {
+      expect(isAnswerCorrect(question, answer)).toBe(true);
+    }
+    expect(isAnswerCorrect(question, "berfotosintesis")).toBe(false);
+    expect(isAnswerCorrect(question, "")).toBe(false);
+  });
+
+  it("menerima varian angka dan kata yang terdaftar", () => {
+    const question: QuizQuestion = {
+      questionId: "soal-sila",
+      prompt: "Musyawarah termasuk sila ke ...",
+      responseType: "text",
+      correctResponse: ["4", "empat", "keempat"]
+    };
+    expect(isAnswerCorrect(question, "4")).toBe(true);
+    expect(isAnswerCorrect(question, "Empat")).toBe(true);
+    expect(isAnswerCorrect(question, "keempat.")).toBe(true);
+    expect(isAnswerCorrect(question, "lima")).toBe(false);
+  });
+
+  it("tidak memisahkan angka bertitik dari bentuk tanpa titik", () => {
+    const question: QuizQuestion = {
+      questionId: "soal-bilangan",
+      prompt: "Bilangan yang lebih besar: 12.354 atau 12.345?",
+      responseType: "text",
+      correctResponse: "12.354"
+    };
+    expect(isAnswerCorrect(question, "12.354")).toBe(true);
+    expect(isAnswerCorrect(question, "12354")).toBe(true);
+    expect(isAnswerCorrect(question, "12.345")).toBe(false);
+    expect(isAnswerCorrect(question, "12345")).toBe(false);
+  });
+
+  it("menolak jawaban non-teks untuk soal teks", () => {
+    expect(isAnswerCorrect(textQuestions[0], ["setengah"])).toBe(false);
+  });
 });
 
 describe("benar-salah", () => {

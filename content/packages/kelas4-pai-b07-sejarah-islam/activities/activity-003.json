@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kota kelahiran Nabi Muhammad",
+        "right": "Makkah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tempat Nabi menerima wahyu pertama",
+        "right": "Gua Hira"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan Nabi hijrah ke Madinah",
+        "right": "Untuk menyebarkan Islam dan melindungi umat"
+      },
+      {
+        "pairId": "pasangan-kegiatan-nabi-muhammad-setelah-m",
+        "left": "Kegiatan Nabi Muhammad setelah menerima wahyu pertama",
+        "right": "Berdakwah di Makkah"
+      },
+      {
+        "pairId": "pasangan-masjid-yang-dibangun-nabi-setela",
+        "left": "Masjid yang dibangun Nabi setelah sampai di kota tujuan hijrah",
+        "right": "Masjid Nabawi"
+      },
+      {
+        "pairId": "pasangan-kota-tujuan-hijrah-nabi-muhammad",
+        "left": "Kota tujuan hijrah Nabi Muhammad untuk menyebarkan Islam",
+        "right": "Madinah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sejarah Islam dengan Ka'bah, Gua Hira, dan masjid berkubah."
+  }
+}

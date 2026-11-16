@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Menanya narasumber sambil mencatat",
+        "right": "Wawancara"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menyampaikan hasil di depan kelas",
+        "right": "Presentasi"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan daftar pertanyaan disusun sebelum wawancara",
+        "right": "Wawancara terarah"
+      },
+      {
+        "pairId": "pasangan-orang-yang-ditanya-dan-menjawab",
+        "left": "Orang yang ditanya dan menjawab pertanyaan kita saat wawancara",
+        "right": "narasumber"
+      },
+      {
+        "pairId": "pasangan-hasil-wawancara-dipresentasikan",
+        "left": "Hasil wawancara dipresentasikan di depan kelas dengan bantuan",
+        "right": "diagram"
+      },
+      {
+        "pairId": "pasangan-kegiatan-pertama-sebelum-menyusu",
+        "left": "Kegiatan pertama sebelum menyusun pertanyaan wawancara",
+        "right": "menentukan topik"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak mewawancarai guru dengan mikrofon dan anak mempresentasikan hasil di depan kelas."
+  }
+}

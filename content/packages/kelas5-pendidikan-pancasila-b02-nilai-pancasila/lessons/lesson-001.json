@@ -1,0 +1,28 @@
+{
+  "lessonId": "nilai-pancasila",
+  "packageId": "kelas5-pendidikan-pancasila-b02-nilai-pancasila",
+  "title": "Nilai Pancasila dalam Kehidupan",
+  "summary": "Menerapkan nilai setiap sila Pancasila dalam kehidupan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan nilai setiap sila.",
+    "Memberi contoh penerapan nilai.",
+    "Membiasakan perilaku sesuai Pancasila."
+  ],
+  "activityIds": [
+    "eksplorasi-nilai-pancasila",
+    "matching-nilai-pancasila",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/nilai-pancasila.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

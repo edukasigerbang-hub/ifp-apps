@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-atletik-kelas6",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Lompat Jauh",
+  "instructions": "Susun tahapan lompat jauh.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-awalan",
+        "text": "Awalan"
+      },
+      {
+        "itemId": "langkah-tolakan",
+        "text": "Tolakan"
+      },
+      {
+        "itemId": "langkah-melayang",
+        "text": "Melayang"
+      },
+      {
+        "itemId": "langkah-mendarat",
+        "text": "Mendarat"
+      },
+      {
+        "itemId": "langkah-keluar-bak",
+        "text": "Keluar dari bak lompat"
+      }
+    ],
+    "correctOrder": [
+      "langkah-awalan",
+      "langkah-tolakan",
+      "langkah-melayang",
+      "langkah-mendarat",
+      "langkah-keluar-bak"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  }
+}

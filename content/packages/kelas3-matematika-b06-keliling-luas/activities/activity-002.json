@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-keliling-luas",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Keliling dan Luas",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-keliling-persegi",
+        "prompt": "Keliling persegi dengan sisi 5 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-10",
+            "text": "10 cm"
+          },
+          {
+            "optionId": "opsi-25",
+            "text": "25 cm"
+          },
+          {
+            "optionId": "opsi-20",
+            "text": "20 cm"
+          },
+          {
+            "optionId": "opsi-15",
+            "text": "15 cm"
+          }
+        ],
+        "correctResponse": "opsi-20"
+      },
+      {
+        "questionId": "soal-luas",
+        "prompt": "Luas persegi panjang 6 cm × 4 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-20",
+            "text": "20 cm²"
+          },
+          {
+            "optionId": "opsi-10",
+            "text": "10 cm²"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12 cm²"
+          },
+          {
+            "optionId": "opsi-24",
+            "text": "24 cm²"
+          }
+        ],
+        "correctResponse": "opsi-24"
+      },
+      {
+        "questionId": "soal-satuan",
+        "prompt": "Satuan luas yang tepat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cm2",
+            "text": "cm²"
+          },
+          {
+            "optionId": "opsi-cm",
+            "text": "cm"
+          },
+          {
+            "optionId": "opsi-kg",
+            "text": "kg"
+          },
+          {
+            "optionId": "opsi-jam",
+            "text": "jam"
+          }
+        ],
+        "correctResponse": "opsi-cm2"
+      },
+      {
+        "questionId": "soal-segitiga",
+        "prompt": "Keliling segitiga dengan sisi 3 cm, 4 cm, dan 5 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-10",
+            "text": "10 cm"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12 cm"
+          },
+          {
+            "optionId": "opsi-15",
+            "text": "15 cm"
+          },
+          {
+            "optionId": "opsi-20",
+            "text": "20 cm"
+          }
+        ],
+        "correctResponse": "opsi-12"
+      },
+      {
+        "questionId": "soal-keliling-persegi-dengan-sisi-8-c",
+        "prompt": "Keliling persegi dengan sisi 8 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-keliling-persegi-dengan-sis-0",
+            "text": "32 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-persegi-dengan-sis-1",
+            "text": "24 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-persegi-dengan-sis-2",
+            "text": "64 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-keliling-persegi-dengan-sis-0"
+      },
+      {
+        "questionId": "soal-luas-persegi-panjang-berukuran-9",
+        "prompt": "Luas persegi panjang berukuran 9 cm × 3 cm adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-luas-persegi-panjang-beruku-1",
+            "text": "24 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-persegi-panjang-beruku-0",
+            "text": "27 cm²"
+          },
+          {
+            "optionId": "opsi-soal-luas-persegi-panjang-beruku-2",
+            "text": "12 cm²"
+          }
+        ],
+        "correctResponse": "opsi-soal-luas-persegi-panjang-beruku-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-teks-deskripsi-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pantai",
+  "instructions": "Amati gambar pantai, lalu diskusikan kata pengindraan yang sesuai.",
+  "assets": [
+    "assets/teks-deskripsi-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa objek yang dideskripsikan?",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "reveal": "Pantai dengan laut, ombak, perahu, dan pohon kelapa.",
+        "hint": "Amati bagian-bagiannya."
+      },
+      {
+        "prompt": "Kata penglihatan apa yang digunakan?",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "reveal": "Biru, putih, dan hijau.",
+        "hint": "Sebutkan warna dan bentuk."
+      },
+      {
+        "prompt": "Kata pendengaran apa yang digunakan?",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "reveal": "Debur ombak dan angin.",
+        "hint": "Bayangkan suaranya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Deskripsi dan Pengindraan?",
+        "reveal": "Menulis teks deskripsi dengan kata pengindraan yang tepat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/teks-deskripsi-kelas5.webp",
+        "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pantai dengan laut biru, ombak, perahu, pohon kelapa, dan pasir."
+  }
+}

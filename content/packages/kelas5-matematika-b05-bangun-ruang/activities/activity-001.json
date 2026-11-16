@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-bangun-ruang",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bangun Ruang",
+  "instructions": "Amati gambar, lalu diskusikan ciri setiap bangun ruang.",
+  "assets": [
+    "assets/aktivitas-bangun-ruang-1.png",
+    "assets/aktivitas-bangun-ruang-2.png",
+    "assets/aktivitas-bangun-ruang-3.png",
+    "assets/aktivitas-bangun-ruang-4.png",
+    "assets/aktivitas-bangun-ruang-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bangun ruang apa yang terlihat?",
+        "assetPath": "assets/aktivitas-bangun-ruang-1.png",
+        "altText": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
+        "reveal": "Kubus, tabung, dan kerucut digambar tiga dimensi.",
+        "hint": "Amati bentuknya."
+      },
+      {
+        "prompt": "Apa ciri kubus?",
+        "assetPath": "assets/aktivitas-bangun-ruang-2.png",
+        "altText": "Kubus tiga dimensi dengan sisi depan disorot oranye dan rusuk bagian belakang digambar putus-putus.",
+        "reveal": "Enam sisi sama besar dan dua belas rusuk.",
+        "hint": "Semua sisi persegi."
+      },
+      {
+        "prompt": "Apa contoh benda berbentuk tabung?",
+        "assetPath": "assets/aktivitas-bangun-ruang-3.png",
+        "altText": "Tabung besar berbentuk kaleng dan gelas kaca berisi air, keduanya berdiri tiga dimensi.",
+        "reveal": "Kaleng dan gelas.",
+        "hint": "Memiliki sisi lingkaran."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Ruang?",
+        "reveal": "Mengenal bangun ruang dan ciri sisi, rusuk, serta titik sudutnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-bangun-ruang-4.png",
+        "altText": "Tiga kartu rangkuman: kubus, tabung, dan kerucut tiga dimensi."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kubus, tabung, dan kerucut tiga dimensi; titik sudut kubus, tepi tabung, dan puncak kerucut ditandai oranye.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-bangun-ruang-5.png",
+        "altText": "Kubus, tabung, dan kerucut tiga dimensi; titik sudut kubus, tepi tabung, dan puncak kerucut ditandai oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi bangun ruang: kubus tabung dan kerucut, kubus dengan rusuk tersembunyi, kaleng dan gelas berbentuk tabung, tiga kartu rangkuman, dan gabungan kubus tabung serta kerucut."
+  }
+}

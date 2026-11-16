@@ -1,0 +1,28 @@
+{
+  "lessonId": "pameran-kelas",
+  "packageId": "kelas3-seni-rupa-b08-pameran-kelas",
+  "title": "Pameran Kelas",
+  "summary": "Merencanakan dan menata pameran karya kelas sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Merencanakan pameran kelas.",
+    "Menata karya dengan rapi.",
+    "Menjelaskan karya kepada pengunjung."
+  ],
+  "activityIds": [
+    "eksplorasi-pameran",
+    "matching-pameran",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/pameran-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

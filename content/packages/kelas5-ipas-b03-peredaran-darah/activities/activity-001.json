@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-peredaran-darah",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Organ Peredaran Darah",
+  "instructions": "Amati diagram, lalu diskusikan fungsi setiap organ.",
+  "assets": [
+    "assets/peredaran-darah.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa organ utama peredaran darah?",
+        "assetPath": "assets/peredaran-darah.webp",
+        "altText": "Diagram jantung, paru-paru, dan pembuluh darah.",
+        "reveal": "Jantung.",
+        "hint": "Memompa darah ke seluruh tubuh."
+      },
+      {
+        "prompt": "Apa fungsi arteri?",
+        "assetPath": "assets/peredaran-darah.webp",
+        "altText": "Diagram jantung, paru-paru, dan pembuluh darah.",
+        "reveal": "Membawa darah dari jantung.",
+        "hint": "Pembuluh nadi."
+      },
+      {
+        "prompt": "Apa fungsi vena?",
+        "assetPath": "assets/peredaran-darah.webp",
+        "altText": "Diagram jantung, paru-paru, dan pembuluh darah.",
+        "reveal": "Membawa darah kembali ke jantung.",
+        "hint": "Pembuluh balik."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sistem Peredaran Darah?",
+        "reveal": "Mengenal organ peredaran darah dan fungsinya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/peredaran-darah.webp",
+        "altText": "Diagram jantung, paru-paru, dan pembuluh darah."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram jantung, paru-paru, dan pembuluh darah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/peredaran-darah.webp",
+        "altText": "Diagram jantung, paru-paru, dan pembuluh darah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram jantung, paru-paru, dan pembuluh darah."
+  }
+}

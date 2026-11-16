@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b04-pecahan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pecahan Sederhana — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pecahan-sederhana.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 92554,
+      "sha256": "bf52679636f09389f35a244d5e58a6d8ec324d8f90c00f49d150b9145cd3e1e1"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6612,
+      "sha256": "5e2f86e1a99b320bb425978ce1e112229dde4c08eb9c9f5d5d24c42bdd89fd84"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7004,
+      "sha256": "6edceee762dd674acf822e8fed0860c7b970a6c826770598194fd129c01d2125"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6581,
+      "sha256": "597d14869fd5f0fd058bc188661595c7442286f1f66771cf561afe1d21c5c737"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8792,
+      "sha256": "a45495dd4a92dad4f27d646570cd5625cf688b371bb786e776eba7ee024315ce"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8744,
+      "sha256": "80a861e627f1559c7fa7ac0939722cd9857418105b42942c1761e51766986584"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

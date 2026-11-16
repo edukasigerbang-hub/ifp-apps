@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Suku\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Keyakinan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Kebiasaan daerah"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kelompok masyarakat"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Agama\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Keyakinan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kelompok masyarakat"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Kebiasaan daerah"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sikap-saat-melihat-teman-berbeda",
+        "prompt": "Sikap saat melihat teman berbeda suku dan agama adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-saat-melihat-teman-be-1",
+            "text": "membeda-bedakan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-melihat-teman-be-0",
+            "text": "menghargai"
+          },
+          {
+            "optionId": "opsi-soal-sikap-saat-melihat-teman-be-2",
+            "text": "mengejek"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-saat-melihat-teman-be-0"
+      },
+      {
+        "questionId": "soal-sikap-menerima-perbedaan-antar-t",
+        "prompt": "Sikap menerima perbedaan antar teman di sekolah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-an-1",
+            "text": "permusuhan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-an-2",
+            "text": "kesombongan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-an-0",
+            "text": "toleransi"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-menerima-perbedaan-an-0"
+      },
+      {
+        "questionId": "soal-manfaat-keberagaman-siswa-di-sek",
+        "prompt": "Manfaat keberagaman siswa di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-manfaat-keberagaman-siswa-d-0",
+            "text": "mempererat persaudaraan"
+          },
+          {
+            "optionId": "opsi-soal-manfaat-keberagaman-siswa-d-1",
+            "text": "menimbulkan perkelahian"
+          },
+          {
+            "optionId": "opsi-soal-manfaat-keberagaman-siswa-d-2",
+            "text": "memecah persahabatan"
+          }
+        ],
+        "correctResponse": "opsi-soal-manfaat-keberagaman-siswa-d-0"
+      },
+      {
+        "questionId": "soal-pekerjaan-membersihkan-kelas-aka",
+        "prompt": "Pekerjaan membersihkan kelas akan lebih cepat selesai jika dilakukan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pekerjaan-membersihkan-kela-1",
+            "text": "saling bersaing"
+          },
+          {
+            "optionId": "opsi-soal-pekerjaan-membersihkan-kela-0",
+            "text": "kerja sama"
+          },
+          {
+            "optionId": "opsi-soal-pekerjaan-membersihkan-kela-2",
+            "text": "mementingkan diri sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-pekerjaan-membersihkan-kela-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  }
+}

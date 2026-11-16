@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-gerak-manipulatif",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Gerak dan Cara Melakukan",
+  "instructions": "Pasangkan setiap gerak manipulatif dengan cara melakukannya.",
+  "assets": [
+    "assets/gerak-manipulatif.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lempar",
+        "left": "Melempar",
+        "right": "Mengayunkan lengan ke depan"
+      },
+      {
+        "pairId": "pasangan-tangkap",
+        "left": "Menangkap",
+        "right": "Menjangkau bola dengan kedua tangan"
+      },
+      {
+        "pairId": "pasangan-tendang",
+        "left": "Menendang",
+        "right": "Mengayunkan kaki ke bola"
+      },
+      {
+        "pairId": "pasangan-giring",
+        "left": "Menggiring",
+        "right": "Memantulkan bola sambil berjalan"
+      },
+      {
+        "pairId": "pasangan-mantul",
+        "left": "Memantulkan",
+        "right": "Bola memantul ke lantai"
+      },
+      {
+        "pairId": "pasangan-henti",
+        "left": "Menghentikan bola",
+        "right": "Menahan bola dengan kaki"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel gerak manipulatif: melempar, menangkap, menendang, dan menggiring bola."
+  }
+}

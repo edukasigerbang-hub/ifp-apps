@@ -1,0 +1,28 @@
+{
+  "lessonId": "simbol-pancasila-kelas2",
+  "packageId": "kelas2-pendidikan-pancasila-b01-simbol-pancasila",
+  "title": "Simbol dan Makna Pancasila",
+  "summary": "Mengenal simbol dan makna sila Pancasila.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan simbol Pancasila.",
+    "Menjelaskan makna simbol.",
+    "Menerapkan sikap sesuai sila."
+  ],
+  "activityIds": [
+    "eksplorasi-simbol-pancasila-kelas2",
+    "matching-simbol-pancasila-kelas2",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/simbol-pancasila-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

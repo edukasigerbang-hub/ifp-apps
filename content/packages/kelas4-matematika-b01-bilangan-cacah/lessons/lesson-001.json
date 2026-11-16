@@ -1,0 +1,35 @@
+{
+  "lessonId": "bilangan-cacah-besar",
+  "packageId": "kelas4-matematika-b01-bilangan-cacah",
+  "title": "Bilangan Cacah Besar",
+  "summary": "Menentukan nilai tempat, membaca, menulis, membandingkan, dan mengurutkan bilangan cacah sampai 99.999.",
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "learningObjectives": [
+    "Menentukan nilai tempat sampai puluh ribuan.",
+    "Membaca dan menulis bilangan cacah besar.",
+    "Membandingkan dan mengurutkan bilangan.",
+    "Menyelesaikan soal cerita bilangan cacah."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-cacah",
+    "matching-bilangan-cacah",
+    "kuis-singkat-bilangan-cacah"
+  ],
+  "assessmentRefs": [
+    "kuis-singkat-bilangan-cacah"
+  ],
+  "assetRefs": [
+    "assets/pasar-nilai-tempat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-huruf-hijaiyah-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Huruf dan Harakat",
+  "instructions": "Amati gambar, lalu tirukan bacaannya.",
+  "assets": [
+    "assets/huruf-hijaiyah-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Huruf hijaiyah pertama adalah ...",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat.",
+        "reveal": "Alif.",
+        "hint": "Huruf Arab."
+      },
+      {
+        "prompt": "Harakat fathah dibaca ...",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat.",
+        "reveal": "a.",
+        "hint": "Di atas huruf."
+      },
+      {
+        "prompt": "Arah membaca huruf Arab ...",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat.",
+        "reveal": "Kanan ke kiri.",
+        "hint": "Berbeda dengan Latin."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca huruf hijaiyah dan harakat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Huruf Hijaiyah dan Harakat?",
+        "reveal": "Membaca huruf hijaiyah dengan harakat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-hijaiyah-kelas2.webp",
+        "altText": "Anak membaca huruf hijaiyah dan harakat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah dan harakat."
+  }
+}

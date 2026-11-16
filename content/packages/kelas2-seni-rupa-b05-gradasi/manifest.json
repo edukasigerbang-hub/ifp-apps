@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-seni-rupa-b05-gradasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Mewarnai dan Gradasi — Seni Rupa Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/gradasi-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169176,
+      "sha256": "0f3498be3d1db470f573dd5ef2b030dffbab9719fabeb164de0a8048e24dae38"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

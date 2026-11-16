@@ -1,0 +1,28 @@
+{
+  "lessonId": "perkalian-dasar",
+  "packageId": "kelas2-matematika-b03-perkalian-dasar",
+  "title": "Perkalian Dasar (2–5)",
+  "summary": "Memahami perkalian sebagai penjumlahan berulang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memahami arti perkalian.",
+    "Menghitung perkalian 2–5.",
+    "Menyelesaikan soal sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-perkalian-dasar",
+    "matching-perkalian-dasar",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/perkalian-dasar.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kelompok benda untuk memahami perkalian."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

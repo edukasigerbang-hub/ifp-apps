@@ -1,0 +1,28 @@
+{
+  "lessonId": "data-kelas5",
+  "packageId": "kelas5-matematika-b07-data",
+  "title": "Penyajian dan Interpretasi Data",
+  "summary": "Membaca data dan menghitung rata-rata sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca diagram dan tabel.",
+    "Menghitung rata-rata.",
+    "Menyimpulkan data."
+  ],
+  "activityIds": [
+    "eksplorasi-data-kelas5",
+    "matching-data-kelas5",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/data-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

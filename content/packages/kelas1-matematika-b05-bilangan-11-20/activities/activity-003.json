@@ -1,0 +1,144 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"11\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Dua belas"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Sebelas"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Lima belas"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"12\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Sebelas"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Lima belas"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Dua belas"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bilangan-15-dibaca",
+        "prompt": "Bilangan 15 dibaca ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bilangan-15-dibaca-1",
+            "text": "sepuluh"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-15-dibaca-2",
+            "text": "lima puluh"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-15-dibaca-0",
+            "text": "lima belas"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-15-dibaca-3",
+            "text": "sepuluh lima"
+          }
+        ],
+        "correctResponse": "opsi-soal-bilangan-15-dibaca-0"
+      },
+      {
+        "questionId": "soal-lambang-bilangan-untuk-dua-puluh",
+        "prompt": "Lambang bilangan untuk 'dua puluh' adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dua-1",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dua-2",
+            "text": "21"
+          },
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dua-3",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-lambang-bilangan-untuk-dua-0",
+            "text": "20"
+          }
+        ],
+        "correctResponse": "opsi-soal-lambang-bilangan-untuk-dua-0"
+      },
+      {
+        "questionId": "soal-bilangan-sebelum-15-adalah",
+        "prompt": "Bilangan sebelum 15 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bilangan-sebelum-15-adalah-0",
+            "text": "14"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-sebelum-15-adalah-1",
+            "text": "16"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-sebelum-15-adalah-2",
+            "text": "13"
+          },
+          {
+            "optionId": "opsi-soal-bilangan-sebelum-15-adalah-3",
+            "text": "10"
+          }
+        ],
+        "correctResponse": "opsi-soal-bilangan-sebelum-15-adalah-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+  }
+}

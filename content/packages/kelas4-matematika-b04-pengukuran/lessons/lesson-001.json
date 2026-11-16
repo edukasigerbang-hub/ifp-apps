@@ -1,0 +1,28 @@
+{
+  "lessonId": "pengukuran-panjang-berat",
+  "packageId": "kelas4-matematika-b04-pengukuran",
+  "title": "Mengukur Panjang dan Berat",
+  "summary": "Menggunakan alat ukur panjang dan berat, memahami satuan cm/m dan g/kg, serta menyelesaikan masalah sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memilih alat ukur yang tepat untuk panjang dan berat.",
+    "Mengonversi satuan panjang (cm–m) dan berat (g–kg).",
+    "Menyelesaikan masalah sederhana tentang pengukuran."
+  ],
+  "activityIds": [
+    "eksplorasi-pengukuran",
+    "kuis-pengukuran",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-pengukuran"
+  ],
+  "assetRefs": [
+    "assets/pengukuran-panjang-berat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

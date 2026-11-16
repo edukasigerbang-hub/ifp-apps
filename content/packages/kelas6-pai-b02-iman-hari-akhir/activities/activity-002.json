@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-iman-hari-akhir",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Iman kepada Hari Akhir",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-arti",
+        "prompt": "Hari akhir adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-akhir",
+            "text": "Hari berakhirnya kehidupan dunia"
+          },
+          {
+            "optionId": "opsi-libur",
+            "text": "Hari libur"
+          },
+          {
+            "optionId": "opsi-ujian",
+            "text": "Hari ujian"
+          },
+          {
+            "optionId": "opsi-panen",
+            "text": "Hari panen"
+          }
+        ],
+        "correctResponse": "opsi-akhir"
+      },
+      {
+        "questionId": "soal-tanda",
+        "prompt": "Tanda hari akhir adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hujan",
+            "text": "Hujan turun"
+          },
+          {
+            "optionId": "opsi-sangkakala",
+            "text": "Terompet sangkakala ditiup"
+          },
+          {
+            "optionId": "opsi-panas",
+            "text": "Cuaca panas"
+          },
+          {
+            "optionId": "opsi-angin",
+            "text": "Angin sepoi"
+          }
+        ],
+        "correctResponse": "opsi-sangkakala"
+      },
+      {
+        "questionId": "soal-perilaku",
+        "prompt": "Perilaku beriman kepada hari akhir adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bohong",
+            "text": "Berbohong"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Malas beribadah"
+          },
+          {
+            "optionId": "opsi-baik",
+            "text": "Rajin berbuat baik"
+          },
+          {
+            "optionId": "opsi-curang",
+            "text": "Berbuat curang"
+          }
+        ],
+        "correctResponse": "opsi-baik"
+      },
+      {
+        "questionId": "soal-waktu",
+        "prompt": "Waktu hari akhir ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tahun",
+            "text": "Diketahui tahun depan"
+          },
+          {
+            "optionId": "opsi-bulan",
+            "text": "Diketahui bulan depan"
+          },
+          {
+            "optionId": "opsi-hari",
+            "text": "Diketahui hari ini"
+          },
+          {
+            "optionId": "opsi-rahasia",
+            "text": "Hanya Allah yang tahu"
+          }
+        ],
+        "correctResponse": "opsi-rahasia"
+      },
+      {
+        "questionId": "soal-yang-ditiup-sebagai-tanda-datang",
+        "prompt": "Yang ditiup sebagai tanda datangnya hari akhir adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-yang-ditiup-sebagai-tanda-d-1",
+            "text": "Bedug masjid"
+          },
+          {
+            "optionId": "opsi-soal-yang-ditiup-sebagai-tanda-d-0",
+            "text": "Sangkakala"
+          },
+          {
+            "optionId": "opsi-soal-yang-ditiup-sebagai-tanda-d-2",
+            "text": "Gendang"
+          }
+        ],
+        "correctResponse": "opsi-soal-yang-ditiup-sebagai-tanda-d-0"
+      },
+      {
+        "questionId": "soal-pengetahuan-tentang-waktu-hari-a",
+        "prompt": "Pengetahuan tentang waktu hari akhir hanya dimiliki oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengetahuan-tentang-waktu-h-1",
+            "text": "Nabi"
+          },
+          {
+            "optionId": "opsi-soal-pengetahuan-tentang-waktu-h-2",
+            "text": "Malaikat"
+          },
+          {
+            "optionId": "opsi-soal-pengetahuan-tentang-waktu-h-0",
+            "text": "Allah"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengetahuan-tentang-waktu-h-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman."
+  }
+}

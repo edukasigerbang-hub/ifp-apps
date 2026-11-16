@@ -56,6 +56,38 @@ const MIGRATIONS: &[Migration] = &[
         version: 5,
         sql: include_str!("migrations/0005_content_reviews.sql"),
     },
+    Migration {
+        version: 6,
+        sql: include_str!("migrations/0006_profile_avatars.sql"),
+    },
+    Migration {
+        version: 7,
+        sql: include_str!("migrations/0007_content_review_binding.sql"),
+    },
+    Migration {
+        version: 8,
+        sql: include_str!("migrations/0008_pinned_lessons.sql"),
+    },
+    Migration {
+        version: 9,
+        sql: include_str!("migrations/0009_profile_ui_state.sql"),
+    },
+    Migration {
+        version: 10,
+        sql: include_str!("migrations/0010_material_install.sql"),
+    },
+    Migration {
+        version: 11,
+        sql: include_str!("migrations/0011_pinned_materials.sql"),
+    },
+    Migration {
+        version: 12,
+        sql: include_str!("migrations/0012_material_catalog_cache.sql"),
+    },
+    Migration {
+        version: 13,
+        sql: include_str!("migrations/0013_material_draft.sql"),
+    },
 ];
 
 pub(crate) fn migration_count() -> i64 {

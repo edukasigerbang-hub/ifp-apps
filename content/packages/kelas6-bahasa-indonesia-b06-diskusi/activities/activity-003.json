@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tujuan teks diskusi",
+        "right": "Membahas masalah dari dua sisi"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Argumen",
+        "right": "Alasan yang mendukung pendapat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menyimpulkan",
+        "right": "Menimbang argumen"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Teks diskusi membahas masalah dari",
+        "right": "Dua sisi"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Sikap saat teman berbeda pendapat",
+        "right": "Menghargai pendapatnya"
+      },
+      {
+        "pairId": "pasangan-hasil-akhir-yang-dibuat-setelah",
+        "left": "Hasil akhir yang dibuat setelah semua argumen ditimbang",
+        "right": "Kesimpulan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berdiskusi dengan guru."
+  }
+}

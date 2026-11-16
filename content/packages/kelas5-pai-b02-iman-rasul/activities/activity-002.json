@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-iman-rasul",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Sifat Rasul",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-rasul",
+        "left": "Rasul",
+        "right": "Utusan Allah"
+      },
+      {
+        "pairId": "pasangan-siddiq",
+        "left": "Siddiq",
+        "right": "Jujur"
+      },
+      {
+        "pairId": "pasangan-amanah",
+        "left": "Amanah",
+        "right": "Dapat dipercaya"
+      },
+      {
+        "pairId": "pasangan-tabligh",
+        "left": "Tabligh",
+        "right": "Menyampaikan wahyu"
+      },
+      {
+        "pairId": "pasangan-fatanah",
+        "left": "Fatanah",
+        "right": "Cerdas"
+      },
+      {
+        "pairId": "pasangan-iman",
+        "left": "Iman",
+        "right": "Percaya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada Allah dan rasul."
+  }
+}

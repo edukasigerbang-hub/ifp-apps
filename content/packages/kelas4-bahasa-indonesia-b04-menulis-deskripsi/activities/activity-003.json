@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Anak menulis di buku ditemani kucing",
+        "right": "Teks deskripsi"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Daftar tiga ciri kucing yang bisa kamu deskripsikan",
+        "right": "Contoh: warna bulu oranye, tubuh kecil, dan mata bulat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Bagian kerangka deskripsi: hal yang dibahas",
+        "right": "Objek"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama menulis teks deskripsi adalah",
+        "right": "Menentukan objek yang dideskripsikan"
+      },
+      {
+        "pairId": "pasangan-kesan-yang-dituliskan-pada-bagia",
+        "left": "Kesan yang dituliskan pada bagian akhir deskripsi kucing",
+        "right": "lucu dan menyenangkan"
+      },
+      {
+        "pairId": "pasangan-hewan-yang-menemani-anak-menulis",
+        "left": "Hewan yang menemani anak menulis di buku pada gambar",
+        "right": "kucing oranye"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis di buku di atas meja; ada kucing oranye dan jendela di sekitarnya."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "lessonId": "gotong-royong",
+  "packageId": "kelas3-pendidikan-pancasila-b07-gotong-royong",
+  "title": "Gotong Royong",
+  "summary": "Mengenal gotong royong dan menerapkannya di sekolah serta masyarakat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti gotong royong.",
+    "Memberi contoh gotong royong.",
+    "Menjelaskan manfaat gotong royong."
+  ],
+  "activityIds": [
+    "eksplorasi-gotong-royong",
+    "ordering-gotong-royong",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gotong-royong-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pai-b02-iman-hari-akhir",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Iman kepada Hari Akhir — PAI Kelas 6 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/iman-hari-akhir.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 147358,
+      "sha256": "c73e54abaef42f8bc7b7483bf984dd3281ceff2f8113ef0b28ddbc6112ded528"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

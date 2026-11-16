@@ -1,0 +1,28 @@
+{
+  "lessonId": "warna-teknik",
+  "packageId": "kelas6-seni-rupa-b03-warna-teknik",
+  "title": "Warna dan Teknik",
+  "summary": "Mengenal pencampuran warna dan teknik berkarya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal warna primer dan sekunder.",
+    "Mencampur warna.",
+    "Menerapkan teknik mewarnai."
+  ],
+  "activityIds": [
+    "eksplorasi-warna-teknik",
+    "kuis-warna-teknik",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-warna-teknik"
+  ],
+  "assetRefs": [
+    "assets/warna-teknik.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna dan tekstur dari berbagai teknik."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

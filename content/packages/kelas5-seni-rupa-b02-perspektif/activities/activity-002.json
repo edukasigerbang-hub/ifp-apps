@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-perspektif",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menggambar Perspektif",
+  "instructions": "Susun langkah menggambar perspektif.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-horizon",
+        "text": "Menentukan garis horizon"
+      },
+      {
+        "itemId": "langkah-titik",
+        "text": "Menentukan titik hilang"
+      },
+      {
+        "itemId": "langkah-bantu",
+        "text": "Menggambar garis bantu"
+      },
+      {
+        "itemId": "langkah-objek",
+        "text": "Menggambar objek"
+      },
+      {
+        "itemId": "langkah-detail",
+        "text": "Menambahkan detail"
+      }
+    ],
+    "correctOrder": [
+      "langkah-horizon",
+      "langkah-titik",
+      "langkah-bantu",
+      "langkah-objek",
+      "langkah-detail"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
+  }
+}

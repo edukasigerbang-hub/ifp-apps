@@ -1,0 +1,176 @@
+{
+  "activityId": "kuis-bilangan-bulat",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bilangan Bulat",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-banding",
+        "prompt": "Bilangan yang lebih kecil adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-neg3",
+            "text": "-3"
+          },
+          {
+            "optionId": "opsi-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-0",
+            "text": "0"
+          },
+          {
+            "optionId": "opsi-5",
+            "text": "5"
+          }
+        ],
+        "correctResponse": "opsi-neg3"
+      },
+      {
+        "questionId": "soal-tambah",
+        "prompt": "Hasil -5 + 3 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-8",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-neg2",
+            "text": "-2"
+          },
+          {
+            "optionId": "opsi-2p",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-neg8",
+            "text": "-8"
+          }
+        ],
+        "correctResponse": "opsi-neg2"
+      },
+      {
+        "questionId": "soal-kurang",
+        "prompt": "Hasil 4 − 7 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-11",
+            "text": "11"
+          },
+          {
+            "optionId": "opsi-neg3",
+            "text": "-3"
+          },
+          {
+            "optionId": "opsi-neg11",
+            "text": "-11"
+          }
+        ],
+        "correctResponse": "opsi-neg3"
+      },
+      {
+        "questionId": "soal-urut",
+        "prompt": "Urutan dari terkecil adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-a",
+            "text": "0, -2, 3, -5"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "3, 0, -2, -5"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "-2, -5, 0, 3"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "-5, -2, 0, 3"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-hasil-4-9-adalah",
+        "prompt": "Hasil -4 + 9 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-0",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-1",
+            "text": "-5"
+          },
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-2",
+            "text": "13"
+          },
+          {
+            "optionId": "opsi-soal-hasil-4-9-adalah-3",
+            "text": "-13"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-4-9-adalah-0"
+      },
+      {
+        "questionId": "soal-pada-garis-bilangan-bilangan-neg",
+        "prompt": "Pada garis bilangan, bilangan negatif terletak di sebelah ... nol.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-1",
+            "text": "Kanan"
+          },
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-0",
+            "text": "Kiri"
+          },
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-2",
+            "text": "Atas"
+          },
+          {
+            "optionId": "opsi-soal-pada-garis-bilangan-bilanga-3",
+            "text": "Bawah"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-garis-bilangan-bilanga-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+  }
+}

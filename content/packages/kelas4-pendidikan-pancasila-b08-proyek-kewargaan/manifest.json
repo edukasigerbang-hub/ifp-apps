@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pendidikan-pancasila-b08-proyek-kewargaan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Proyek Kewargaan — Pendidikan Pancasila Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/proyek-kewargaan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 217800,
+      "sha256": "0d544d75bc1acac3baa7ff46ccad3d2c9b95452e9d02e0295d27756155249aee"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

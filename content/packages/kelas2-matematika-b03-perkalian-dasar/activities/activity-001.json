@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-perkalian-dasar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kelompok Benda",
+  "instructions": "Amati gambar, lalu hitung bersama-sama.",
+  "assets": [
+    "assets/aktivitas-perkalian-dasar-1.png",
+    "assets/aktivitas-perkalian-dasar-2.png",
+    "assets/aktivitas-perkalian-dasar-3.png",
+    "assets/aktivitas-perkalian-dasar-4.png",
+    "assets/aktivitas-perkalian-dasar-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 2 × 3?",
+        "assetPath": "assets/aktivitas-perkalian-dasar-1.png",
+        "altText": "Susunan tiga kolom dua baris titik dengan kurung baris dan kolom, tanda sama dengan, lalu enam titik berjajar.",
+        "reveal": "6.",
+        "hint": "2 kelompok berisi 3."
+      },
+      {
+        "prompt": "Berapa 4 × 2?",
+        "assetPath": "assets/aktivitas-perkalian-dasar-2.png",
+        "altText": "Susunan dua kolom empat baris titik dengan kurung baris dan kolom, lalu delapan titik berjajar.",
+        "reveal": "8.",
+        "hint": "4 kelompok berisi 2."
+      },
+      {
+        "prompt": "Apa arti 3 × 5?",
+        "assetPath": "assets/aktivitas-perkalian-dasar-3.png",
+        "altText": "Tiga lingkaran berisi lima titik masing-masing, tersusun mendatar.",
+        "reveal": "3 kelompok berisi 5.",
+        "hint": "Jumlahnya 15."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Tiga kartu rangkuman: susunan tiga kali dua bintang, dua lingkaran berisi tiga titik, dan ubin kali serta bagi.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-perkalian-dasar-4.png",
+        "altText": "Tiga kartu rangkuman: susunan tiga kali dua bintang, dua lingkaran berisi tiga titik, dan ubin kali serta bagi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian Dasar (2–5)?",
+        "reveal": "Memahami perkalian sebagai penjumlahan berulang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-perkalian-dasar-5.png",
+        "altText": "Tiga kelompok berisi empat bintang dipisah tanda tambah, di bawahnya dua belas bintang berjajar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi perkalian dasar: susunan tiga kali dua titik dengan kurung, susunan dua kali empat titik, tiga lingkaran berisi lima titik, tiga kartu rangkuman, dan penjumlahan berulang tiga kelompok empat bintang."
+  }
+}

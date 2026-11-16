@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Bintang\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Kemanusiaan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Ketuhanan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Persatuan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Rantai\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Ketuhanan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Persatuan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Kemanusiaan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kepala-banteng-menjadi-simbol-si",
+        "prompt": "Kepala banteng menjadi simbol sila yang bermakna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kepala-banteng-menjadi-simb-0",
+            "text": "musyawarah"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-menjadi-simb-1",
+            "text": "persatuan"
+          },
+          {
+            "optionId": "opsi-soal-kepala-banteng-menjadi-simb-2",
+            "text": "keadilan sosial"
+          }
+        ],
+        "correctResponse": "opsi-soal-kepala-banteng-menjadi-simb-0"
+      },
+      {
+        "questionId": "soal-sila-yang-dilambangkan-padi-dan",
+        "prompt": "Sila yang dilambangkan padi dan kapas adalah sila ke-...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sila-yang-dilambangkan-padi-1",
+            "text": "dua"
+          },
+          {
+            "optionId": "opsi-soal-sila-yang-dilambangkan-padi-0",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-soal-sila-yang-dilambangkan-padi-2",
+            "text": "empat"
+          }
+        ],
+        "correctResponse": "opsi-soal-sila-yang-dilambangkan-padi-0"
+      },
+      {
+        "questionId": "soal-siswa-yang-beribadah-dengan-tena",
+        "prompt": "Siswa yang beribadah dengan tenang melaksanakan sila ke-...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-siswa-yang-beribadah-dengan-1",
+            "text": "kedua"
+          },
+          {
+            "optionId": "opsi-soal-siswa-yang-beribadah-dengan-2",
+            "text": "ketiga"
+          },
+          {
+            "optionId": "opsi-soal-siswa-yang-beribadah-dengan-0",
+            "text": "pertama"
+          }
+        ],
+        "correctResponse": "opsi-soal-siswa-yang-beribadah-dengan-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "lessonId": "daur-hidup",
+  "packageId": "kelas3-ipas-b02-daur-hidup",
+  "title": "Daur Hidup Makhluk Hidup",
+  "summary": "Mengenal tahapan daur hidup hewan dan mengurutkannya dengan benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan daur hidup hewan.",
+    "Mengurutkan tahapan daur hidup.",
+    "Menyebutkan contoh daur hidup hewan di sekitar."
+  ],
+  "activityIds": [
+    "eksplorasi-daur-hidup",
+    "ordering-daur-hidup",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/daur-hidup.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

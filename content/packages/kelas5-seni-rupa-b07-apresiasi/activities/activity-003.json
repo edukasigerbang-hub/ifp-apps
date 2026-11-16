@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tujuan apresiasi",
+        "right": "Mengamati dan menghargai karya"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Unsur yang diamati",
+        "right": "Garis, warna, bentuk, dan tekstur"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Tanggapan yang baik",
+        "right": "Sopan, beralasan, dan membangun"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama mengapresiasi karya adalah",
+        "right": "Mengamati dengan teliti"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Karya dipajang dan dilihat pengunjung",
+        "right": "Pameran seni"
+      },
+      {
+        "pairId": "pasangan-orang-yang-melihat-karya-pada-ke",
+        "left": "Orang yang melihat karya pada kegiatan apresiasi",
+        "right": "Pengunjung"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan pengunjung mengamati."
+  }
+}

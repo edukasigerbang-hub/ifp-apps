@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-bahasa-indonesia-b05-teks-prosedur",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Prosedur Sederhana — Bahasa Indonesia Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/teks-prosedur-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 88900,
+      "sha256": "399d0614ffa251f736a61910c11ecd13e24a35f0318a7b32c696e781ef27a82a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

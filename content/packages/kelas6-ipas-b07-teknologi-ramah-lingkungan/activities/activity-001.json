@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-teknologi-ramah-lingkungan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Teknologi Hijau",
+  "instructions": "Amati gambar, lalu diskusikan manfaat teknologinya.",
+  "assets": [
+    "assets/teknologi-ramah-lingkungan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu panel surya?",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang.",
+        "reveal": "Alat pengubah energi matahari menjadi listrik.",
+        "hint": "Energi terbarukan."
+      },
+      {
+        "prompt": "Apa itu kincir angin?",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang.",
+        "reveal": "Pembangkit listrik tenaga angin.",
+        "hint": "Tidak menghasilkan polusi."
+      },
+      {
+        "prompt": "Apa itu daur ulang?",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang.",
+        "reveal": "Mengolah sampah menjadi barang baru.",
+        "hint": "Mengurangi sampah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teknologi Ramah Lingkungan?",
+        "reveal": "Mengenal teknologi yang tidak merusak lingkungan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang."
+      },
+      {
+        "prompt": "Cara menghemat energi adalah ...",
+        "reveal": "Mematikan lampu saat tidak dipakai",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/teknologi-ramah-lingkungan.webp",
+        "altText": "Panel surya, kincir angin, dan daur ulang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Panel surya, kincir angin, dan daur ulang."
+  }
+}

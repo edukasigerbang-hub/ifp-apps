@@ -1,0 +1,412 @@
+{
+  "packages": {
+    "kelas4-bahasa-indonesia-b05-teks-prosedur": {
+      "questions": [
+        {
+          "prompt": "Teks yang berisi langkah berurutan dan memakai kata perintah disebut teks ...",
+          "answer": "prosedur",
+          "distractors": ["narasi", "deskripsi"]
+        },
+        {
+          "prompt": "Kata 'siramlah' pada teks prosedur termasuk jenis kata ...",
+          "answer": "perintah",
+          "distractors": ["benda", "tanya"]
+        },
+        {
+          "prompt": "Langkah yang dikerjakan tepat setelah biji ditanam adalah ...",
+          "answer": "menyiram biji",
+          "distractors": ["merawat tanaman", "meletakkan di tempat terang"]
+        },
+        {
+          "prompt": "Alasan langkah pada teks prosedur tidak boleh diacak adalah ...",
+          "answer": "agar mudah diikuti orang lain",
+          "distractors": ["agar teks terlihat lebih panjang", "agar bahasa terdengar indah"]
+        },
+        {
+          "prompt": "Agar tunas tumbuh, pot berisi biji diletakkan di tempat ...",
+          "answer": "terang",
+          "distractors": ["gelap", "tertutup"]
+        },
+        {
+          "prompt": "Ciri teks prosedur yang membedakannya dari cerita adalah ...",
+          "answer": "langkah berurutan",
+          "distractors": ["tokoh dan latar", "masalah dan penyelesaian"]
+        }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b06-teks-narasi": {
+      "questions": [
+        {
+          "prompt": "Bagian cerita yang memperkenalkan tokoh dan tempat disebut ...",
+          "answer": "orientasi",
+          "distractors": ["komplikasi", "resolusi"]
+        },
+        {
+          "prompt": "Saat kucing kehujanan di bawah pohon, cerita masuk bagian ...",
+          "answer": "komplikasi",
+          "distractors": ["orientasi cerita", "penutup cerita"]
+        },
+        {
+          "prompt": "Anak menolong kucing dengan payung. Bagian cerita itu disebut ...",
+          "answer": "resolusi",
+          "distractors": ["orientasi", "komplikasi"]
+        },
+        {
+          "prompt": "Keterangan tempat dan waktu terjadinya cerita disebut ...",
+          "answer": "latar",
+          "distractors": ["alur", "amanat"]
+        },
+        {
+          "prompt": "Jalan cerita dari peristiwa pertama sampai terakhir disebut ...",
+          "answer": "alur",
+          "distractors": ["latar", "tokoh"]
+        },
+        {
+          "prompt": "Bagian akhir cerita yang memuat pesan disebut ...",
+          "answer": "penutup",
+          "distractors": ["orientasi", "komplikasi"]
+        }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b07-wawancara-presentasi": {
+      "questions": [
+        {
+          "prompt": "Guru yang menjawab pertanyaan siswa dalam wawancara berperan sebagai ...",
+          "answer": "narasumber",
+          "distractors": ["panitia acara", "pengunjung kelas"]
+        },
+        {
+          "prompt": "Alat yang dipegang anak saat mewawancarai guru adalah ...",
+          "answer": "mikrofon",
+          "distractors": ["pengeras suara", "kamera"]
+        },
+        {
+          "prompt": "Daftar pertanyaan disusun sebelum wawancara agar wawancara ...",
+          "answer": "terarah",
+          "distractors": ["lebih lama", "lebih ramai"]
+        },
+        {
+          "prompt": "Kegiatan yang dilakukan setelah wawancara selesai adalah ...",
+          "answer": "mencatat jawaban",
+          "distractors": ["menyusun topik", "membuka presentasi"]
+        },
+        {
+          "prompt": "Agar mudah dipahami, hasil wawancara ditampilkan dalam bentuk ...",
+          "answer": "diagram",
+          "distractors": ["puisi", "naskah drama"]
+        },
+        {
+          "prompt": "Langkah terakhir dalam kegiatan wawancara dan presentasi adalah ...",
+          "answer": "menyajikan hasil",
+          "distractors": ["melakukan wawancara", "menyusun pertanyaan"]
+        }
+      ]
+    },
+    "kelas4-ipas-b02-wujud-zat": {
+      "questions": [
+        {
+          "prompt": "Es batu yang dibiarkan di ruangan hangat akan ...",
+          "answer": "mencair",
+          "distractors": ["menguap ke udara", "membeku kembali"]
+        },
+        {
+          "prompt": "Air yang dipanaskan terus-menerus akan berubah menjadi ...",
+          "answer": "uap air",
+          "distractors": ["kristal es", "titik embun"]
+        },
+        {
+          "prompt": "Uap air yang didinginkan berubah menjadi air. Perubahan itu disebut ...",
+          "answer": "mengembun",
+          "distractors": ["menguap kembali", "mencair"]
+        },
+        {
+          "prompt": "Batu dan es batu termasuk zat berwujud ...",
+          "answer": "padat",
+          "distractors": ["cair", "gas"]
+        },
+        {
+          "prompt": "Contoh zat cair pada pelajaran ini adalah ...",
+          "answer": "air",
+          "distractors": ["es batu", "uap air"]
+        },
+        {
+          "prompt": "Ketika es batu mencair, wujudnya berubah dari ...",
+          "answer": "padat menjadi cair",
+          "distractors": ["cair menjadi gas", "gas menjadi padat"]
+        }
+      ]
+    },
+    "kelas4-ipas-b05-siklus-air": {
+      "questions": [
+        {
+          "prompt": "Panas matahari membuat air laut naik ke udara sebagai ...",
+          "answer": "uap air",
+          "distractors": ["titik hujan", "embun beku"]
+        },
+        {
+          "prompt": "Uap air yang mendingin lalu berubah menjadi titik air. Proses itu disebut ...",
+          "answer": "kondensasi",
+          "distractors": ["evaporasi", "presipitasi"]
+        },
+        {
+          "prompt": "Titik-titik air yang berkumpul di langit membentuk ...",
+          "answer": "awan",
+          "distractors": ["sungai", "gunung"]
+        },
+        {
+          "prompt": "Awan melepaskan titik air menjadi hujan saat keadaannya sudah ...",
+          "answer": "jenuh air",
+          "distractors": ["penuh angin", "tipis sekali"]
+        },
+        {
+          "prompt": "Air hujan yang meresap dan mengalir akhirnya kembali ke laut atau ...",
+          "answer": "sungai",
+          "distractors": ["awan", "gunung"]
+        },
+        {
+          "prompt": "Tindakan yang menghemat air adalah ...",
+          "answer": "menutup keran",
+          "distractors": ["membuka keran lebar-lebar", "menyiram jalan setiap hari"]
+        }
+      ]
+    },
+    "kelas4-pai-b04-shalat": {
+      "questions": [
+        {
+          "prompt": "Shalat wajib paling pagi dalam sehari adalah ...",
+          "answer": "Subuh",
+          "distractors": ["Dzuhur", "Isya"]
+        },
+        {
+          "prompt": "Shalat wajib yang dikerjakan tepat setelah Dzuhur adalah ...",
+          "answer": "Ashar",
+          "distractors": ["Maghrib", "Subuh"]
+        },
+        {
+          "prompt": "Shalat wajib yang dikerjakan tepat sebelum Isya adalah ...",
+          "answer": "Maghrib",
+          "distractors": ["Ashar", "Subuh"]
+        },
+        {
+          "prompt": "Jumlah shalat wajib dalam sehari ada ...",
+          "answer": "lima",
+          "distractors": ["tiga", "empat"]
+        },
+        {
+          "prompt": "Mengerjakan shalat tepat waktu setiap hari melatih anak untuk ...",
+          "answer": "disiplin",
+          "distractors": ["cepat bosan", "suka menunda"]
+        },
+        {
+          "prompt": "Menurut pelajaran, shalat bagi setiap muslim adalah ...",
+          "answer": "kewajiban",
+          "distractors": ["pilihan", "kebiasaan"]
+        }
+      ]
+    },
+    "kelas4-pai-b07-sejarah-islam": {
+      "questions": [
+        {
+          "prompt": "Nabi Muhammad lahir di kota ...",
+          "answer": "Makkah",
+          "distractors": ["Madinah", "Jeddah"]
+        },
+        {
+          "prompt": "Nabi menerima wahyu pertama di ...",
+          "answer": "Gua Hira",
+          "distractors": ["Masjid Nabawi", "Gua Tsur"]
+        },
+        {
+          "prompt": "Nabi berpindah dari Makkah menuju kota ...",
+          "answer": "Madinah",
+          "distractors": ["Thaif", "Jeddah"]
+        },
+        {
+          "prompt": "Masjid yang dibangun Nabi setelah hijrah adalah ...",
+          "answer": "Masjid Nabawi",
+          "distractors": ["Masjidil Haram", "Masjid Al-Aqsa"]
+        },
+        {
+          "prompt": "Gunung tempat Gua Hira berada adalah ...",
+          "answer": "Jabal Nur",
+          "distractors": ["Jabal Uhud", "Jabal Rahmah"]
+        },
+        {
+          "prompt": "Hijrah Nabi ke Madinah terjadi pada tahun ...",
+          "answer": "622 M",
+          "distractors": ["571 M", "632 M"]
+        }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b04-musyawarah": {
+      "questions": [
+        {
+          "prompt": "Kegiatan berdiskusi untuk mencapai kesepakatan bersama disebut ...",
+          "answer": "musyawarah",
+          "distractors": ["perdebatan", "perlombaan"]
+        },
+        {
+          "prompt": "Langkah musyawarah setelah menyampaikan pendapat adalah ...",
+          "answer": "mendengarkan pendapat teman",
+          "distractors": ["melaksanakan keputusan", "membuat kesimpulan"]
+        },
+        {
+          "prompt": "Setelah usulan dicatat, musyawarah dilanjutkan dengan ...",
+          "answer": "memilih keputusan",
+          "distractors": ["memilih ketua kelas", "menyusun jadwal piket"]
+        },
+        {
+          "prompt": "Saat pendapat teman berbeda dengan pendapat kita, sikap kita adalah ...",
+          "answer": "menghargai",
+          "distractors": ["memotong pembicaraan", "meninggalkan ruangan"]
+        },
+        {
+          "prompt": "Agar keputusan terasa adil, keputusan musyawarah harus ...",
+          "answer": "dilaksanakan bersama",
+          "distractors": ["disimpan oleh ketua", "diubah sendiri"]
+        },
+        {
+          "prompt": "Tujuan musyawarah adalah mencapai ...",
+          "answer": "mufakat",
+          "distractors": ["kemenangan", "perpecahan"]
+        }
+      ]
+    },
+    "kelas4-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "questions": [
+        {
+          "prompt": "Kegiatan bersama untuk kepentingan warga disebut proyek ...",
+          "answer": "kewargaan",
+          "distractors": ["pribadi", "perlombaan"]
+        },
+        {
+          "prompt": "Proyek kewargaan dimulai dengan ...",
+          "answer": "menemukan masalah",
+          "distractors": ["menyusun laporan hasil", "membagi tugas kelompok"]
+        },
+        {
+          "prompt": "Setelah rencana disusun, langkah berikutnya adalah ...",
+          "answer": "membagi tugas",
+          "distractors": ["menyusun rencana baru", "menutup proyek"]
+        },
+        {
+          "prompt": "Kegiatan yang dilakukan setelah semua tugas dibagi adalah ...",
+          "answer": "melaksanakan proyek",
+          "distractors": ["menemukan masalah baru", "menyusun rencana ulang"]
+        },
+        {
+          "prompt": "Langkah terakhir proyek kewargaan adalah ...",
+          "answer": "melaporkan hasil",
+          "distractors": ["membagi tugas kelompok", "menanam tanaman hias"]
+        },
+        {
+          "prompt": "Pembagian tugas dalam kelompok membuat pekerjaan ...",
+          "answer": "cepat selesai",
+          "distractors": ["semakin lama", "tidak teratur"]
+        }
+      ]
+    },
+    "kelas4-pjok-b06-senam-dasar": {
+      "questions": [
+        {
+          "prompt": "Gerakan berguling ke depan di atas matras disebut ...",
+          "answer": "guling depan",
+          "distractors": ["guling belakang", "kayang"]
+        },
+        {
+          "prompt": "Sebelum senam, kita wajib melakukan ...",
+          "answer": "pemanasan",
+          "distractors": ["pendinginan", "peregangan berat"]
+        },
+        {
+          "prompt": "Pemanasan membuat otot siap dan mencegah ...",
+          "answer": "cedera",
+          "distractors": ["keringat", "lelah"]
+        },
+        {
+          "prompt": "Saat akan berguling, dagu ditekuk sampai menyentuh ...",
+          "answer": "dada",
+          "distractors": ["lutut", "matras"]
+        },
+        {
+          "prompt": "Alas yang dipakai untuk berguling adalah ...",
+          "answer": "matras",
+          "distractors": ["bangku", "karpet"]
+        },
+        {
+          "prompt": "Sikap akhir guling depan adalah ...",
+          "answer": "berdiri tegak",
+          "distractors": ["duduk bersila", "berbaring telentang"]
+        }
+      ]
+    },
+    "kelas4-seni-rupa-b05-seni-cetak": {
+      "questions": [
+        {
+          "prompt": "Gambar yang dibuat berulang dengan alat cetak termasuk karya seni ...",
+          "answer": "cetak",
+          "distractors": ["lukis", "kolase"]
+        },
+        {
+          "prompt": "Bahan alami yang dapat dijadikan alat cetak adalah ...",
+          "answer": "pelepah pisang",
+          "distractors": ["kapas putih", "benang wol warna"]
+        },
+        {
+          "prompt": "Selain kentang, sayuran yang bisa diukir untuk dicelup cat adalah ...",
+          "answer": "wortel",
+          "distractors": ["bayam", "kangkung"]
+        },
+        {
+          "prompt": "Agar cat menempel rata, permukaan pelepah harus ...",
+          "answer": "dipotong rata",
+          "distractors": ["dibiarkan bulat", "dilipat dua"]
+        },
+        {
+          "prompt": "Setelah pelepah dicelup ke cat, langkah berikutnya adalah ...",
+          "answer": "menekan pada kertas",
+          "distractors": ["menjemur kertas", "mengangkat pelepah"]
+        },
+        {
+          "prompt": "Setelah pelepah diangkat, kertas ... sampai kering",
+          "answer": "dijemur",
+          "distractors": ["dilipat", "dibasahi"]
+        }
+      ]
+    },
+    "kelas4-seni-rupa-b08-pameran-kelas": {
+      "questions": [
+        {
+          "prompt": "Kegiatan menunjukkan karya seni siswa kepada pengunjung disebut ...",
+          "answer": "pameran",
+          "distractors": ["lomba", "diskusi"]
+        },
+        {
+          "prompt": "Langkah pertama menyiapkan pameran kelas adalah ...",
+          "answer": "memilih karya",
+          "distractors": ["membuka pameran", "membuat label karya"]
+        },
+        {
+          "prompt": "Agar pengunjung mengenal karya, di dekatnya dipasang ...",
+          "answer": "label karya",
+          "distractors": ["papan skor", "daftar hadir"]
+        },
+        {
+          "prompt": "Agar tidak berdesakan, karya sebaiknya ...",
+          "answer": "diberi jarak",
+          "distractors": ["ditumpuk rapat", "disembunyikan"]
+        },
+        {
+          "prompt": "Selain gambar, pameran kelas juga menampilkan karya ...",
+          "answer": "tiga dimensi",
+          "distractors": ["dua dimensi", "seni musik"]
+        },
+        {
+          "prompt": "Pameran kelas membuat siswa lebih ...",
+          "answer": "percaya diri",
+          "distractors": ["takut tampil", "cepat bosan"]
+        }
+      ]
+    }
+  }
+}

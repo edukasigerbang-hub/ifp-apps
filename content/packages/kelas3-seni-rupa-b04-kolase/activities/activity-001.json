@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kolase",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kolase",
+  "instructions": "Amati gambar, lalu diskusikan bahan dan cara membuat kolase.",
+  "assets": [
+    "assets/kolase-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu kolase?",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas.",
+        "reveal": "Karya yang dibuat dengan menempel bahan pada bidang.",
+        "hint": "Bahan bisa daun, kertas, atau biji."
+      },
+      {
+        "prompt": "Bahan alam apa yang dapat dipakai?",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas.",
+        "reveal": "Daun kering, biji, ranting, dan pelepah.",
+        "hint": "Pilih bahan yang bersih dan kering."
+      },
+      {
+        "prompt": "Bagaimana menyusun kolase?",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas.",
+        "reveal": "Tata bahan membentuk pola, lalu tempel.",
+        "hint": "Mulai dari bentuk besar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kolase dari Bahan Alam?",
+        "reveal": "Membuat kolase sederhana dari bahan alam di sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Kolase dari Bahan Alam?",
+        "reveal": "Menyiapkan bahan → Menyusun pola → Mengoles lem → Menempel bahan → Menjemur karya",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/kolase-kelas3.webp",
+        "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+  }
+}

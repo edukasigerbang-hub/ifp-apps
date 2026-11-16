@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-sistem-pernapasan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Organ Pernapasan",
+  "instructions": "Amati diagram, lalu diskusikan alur udara dan pertukaran gas.",
+  "assets": [
+    "assets/sistem-pernapasan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa organ pernapasan utama?",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
+        "reveal": "Hidung, tenggorokan, dan paru-paru.",
+        "hint": "Udara masuk lewat hidung."
+      },
+      {
+        "prompt": "Di mana pertukaran gas terjadi?",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
+        "reveal": "Alveolus di paru-paru.",
+        "hint": "Oksigen masuk, karbon dioksida keluar."
+      },
+      {
+        "prompt": "Bagaimana menjaga kesehatan pernapasan?",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma.",
+        "reveal": "Hindari asap, rajin olahraga, dan pakai masker.",
+        "hint": "Pilih udara bersih."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Sistem Pernapasan Manusia?",
+        "reveal": "Mengenal organ pernapasan, pertukaran gas, dan cara menjaga kesehatannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram paru-paru manusia dengan trakea dan diafragma.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/sistem-pernapasan.webp",
+        "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+  }
+}

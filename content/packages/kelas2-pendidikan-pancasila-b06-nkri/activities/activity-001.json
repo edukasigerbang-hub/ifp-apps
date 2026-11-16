@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-nkri-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Simbol Negara",
+  "instructions": "Amati gambar, lalu diskusikan simbol negara.",
+  "assets": [
+    "assets/nkri-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti NKRI?",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara.",
+        "reveal": "Negara Kesatuan Republik Indonesia.",
+        "hint": "Satu negara."
+      },
+      {
+        "prompt": "Apa bendera Indonesia?",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara.",
+        "reveal": "Merah Putih.",
+        "hint": "Dikibarkan saat upacara."
+      },
+      {
+        "prompt": "Apa lambang negara?",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara.",
+        "reveal": "Garuda Pancasila.",
+        "hint": "Memuat simbol Pancasila."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang NKRI dan Simbol Negara?",
+        "reveal": "Mengenal NKRI dan simbol negara.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Upacara bendera dan simbol negara.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/nkri-kelas2.webp",
+        "altText": "Upacara bendera dan simbol negara."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol negara."
+  }
+}

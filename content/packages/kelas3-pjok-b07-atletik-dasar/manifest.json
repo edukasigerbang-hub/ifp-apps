@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pjok-b07-atletik-dasar",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Atletik Dasar — PJOK Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/atletik-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 90262,
+      "sha256": "f1e7beefe4ff1f178e6536d38b62d02f16ec7bd9a1800cc62a98c44e8f9d37ce"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

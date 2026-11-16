@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Langkah pertama",
+        "right": "Memahami yang diketahui dan ditanya"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Memilih strategi",
+        "right": "Pilih operasi atau rumus"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan memeriksa penting",
+        "right": "Agar jawaban benar"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama menyelesaikan soal cerita adalah",
+        "right": "Memahami soal"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Anak menyelesaikan soal cerita",
+        "right": "Pemecahan masalah"
+      },
+      {
+        "pairId": "pasangan-kelereng-15-diberikan-7-ke-teman",
+        "left": "Kelereng 15 diberikan 7 ke teman; sisanya dihitung dengan operasi",
+        "right": "Pengurangan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-bahasa-indonesia-b02-kalimat-efektif",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kalimat Efektif dan Kosakata — Bahasa Indonesia Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sudut-baca.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 166004,
+      "sha256": "73c7ed8c3e647d487602d870c4e846fcf0be96247ccb6670676ee54352540bb5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

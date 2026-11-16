@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pendidikan-pancasila-b07-proyek-kewargaan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Proyek Kewargaan — Pendidikan Pancasila Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/proyek-kewargaan-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 234816,
+      "sha256": "a83de64d70cb71e7616f98fba6fb938b88ee858edf63255b03b0cd8ad409e894"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

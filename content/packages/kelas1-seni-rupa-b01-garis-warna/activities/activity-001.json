@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-garis-warna",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis dan Warna",
+  "instructions": "Amati gambar, lalu tunjuk garis dan warnanya.",
+  "assets": [
+    "assets/garis-warna-kelas1.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Garis yang lurus disebut ...",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "reveal": "Garis lurus.",
+        "hint": "Seperti penggaris."
+      },
+      {
+        "prompt": "Garis yang melengkung disebut ...",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "reveal": "Garis lengkung.",
+        "hint": "Seperti pelangi."
+      },
+      {
+        "prompt": "Sebutkan warna primer.",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "reveal": "Merah, kuning, biru.",
+        "hint": "Warna dasar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh garis lurus, lengkung, zigzag, dan warna primer.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Garis dan Warna?",
+        "reveal": "Mengenal garis dan warna untuk menggambar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/garis-warna-kelas1.webp",
+        "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+  }
+}

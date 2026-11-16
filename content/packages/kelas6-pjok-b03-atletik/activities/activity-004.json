@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Saat start jongkok, pandangan diarahkan ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "belakang"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "depan"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "bawah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Tahapan lompat jauh setelah awalan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "mendarat"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "melayang"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "tolakan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Tolakan pada lompat jauh dilakukan dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "satu kaki"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "dua kaki"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "kedua tangan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Sikap menghargai lawan dan aturan dalam perlombaan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "kekompakan"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "sportivitas"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "kebersamaan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Pelompat jauh mendarat di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "lintasan lari"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "pita finis"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "bak lompat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Tanda yang harus dilewati pelari di garis akhir adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "pita finis"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "bak lompat"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "garis start"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  }
+}

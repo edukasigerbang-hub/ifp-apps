@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Isi tabel data",
+        "right": "Keterangan dan jumlah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang ditunjukkan diagram batang",
+        "right": "Banyak data pada setiap kelompok"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Mencari data terbanyak",
+        "right": "Lihat batang tertinggi"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Diagram batang dan tabel sederhana",
+        "right": "Penyajian data"
+      },
+      {
+        "pairId": "pasangan-banyak-buku-senin-5-selasa-7-rab",
+        "left": "Banyak buku: Senin 5, Selasa 7, Rabu 3. Jumlah seluruh buku",
+        "right": "15"
+      },
+      {
+        "pairId": "pasangan-setiap-kelompok-data-pada-diagra",
+        "left": "Setiap kelompok data pada diagram digambarkan sebagai",
+        "right": "batang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  }
+}

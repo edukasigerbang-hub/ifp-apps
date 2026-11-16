@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"1/2\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "0,25"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "0,75"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "0,5"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"1/4\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "0,25"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "0,5"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "0,75"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-nilai-desimal-dari-pecahan-3-5-a",
+        "prompt": "Nilai desimal dari pecahan 3/5 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nilai-desimal-dari-pecahan-0",
+            "text": "0,6"
+          },
+          {
+            "optionId": "opsi-soal-nilai-desimal-dari-pecahan-1",
+            "text": "0,3"
+          },
+          {
+            "optionId": "opsi-soal-nilai-desimal-dari-pecahan-2",
+            "text": "0,5"
+          },
+          {
+            "optionId": "opsi-soal-nilai-desimal-dari-pecahan-3",
+            "text": "0,35"
+          }
+        ],
+        "correctResponse": "opsi-soal-nilai-desimal-dari-pecahan-0"
+      },
+      {
+        "questionId": "soal-hasil-0-4-0-25-adalah",
+        "prompt": "Hasil 0,4 + 0,25 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-0-4-0-25-adalah-1",
+            "text": "0,29"
+          },
+          {
+            "optionId": "opsi-soal-hasil-0-4-0-25-adalah-0",
+            "text": "0,65"
+          },
+          {
+            "optionId": "opsi-soal-hasil-0-4-0-25-adalah-2",
+            "text": "0,75"
+          },
+          {
+            "optionId": "opsi-soal-hasil-0-4-0-25-adalah-3",
+            "text": "0,55"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-0-4-0-25-adalah-0"
+      },
+      {
+        "questionId": "soal-dari-pecahan-1-2-1-4-dan-1-5-pec",
+        "prompt": "Dari pecahan 1/2, 1/4, dan 1/5, pecahan yang nilainya paling besar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dari-pecahan-1-2-1-4-dan-1-1",
+            "text": "1/4"
+          },
+          {
+            "optionId": "opsi-soal-dari-pecahan-1-2-1-4-dan-1-2",
+            "text": "1/5"
+          },
+          {
+            "optionId": "opsi-soal-dari-pecahan-1-2-1-4-dan-1-0",
+            "text": "1/2"
+          },
+          {
+            "optionId": "opsi-soal-dari-pecahan-1-2-1-4-dan-1-3",
+            "text": "ketiganya sama"
+          }
+        ],
+        "correctResponse": "opsi-soal-dari-pecahan-1-2-1-4-dan-1-0"
+      },
+      {
+        "questionId": "soal-cara-menjumlahkan-bilangan-desim",
+        "prompt": "Cara menjumlahkan bilangan desimal yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cara-menjumlahkan-bilangan-1",
+            "text": "Menyejajarkan angka terakhir"
+          },
+          {
+            "optionId": "opsi-soal-cara-menjumlahkan-bilangan-2",
+            "text": "Menjumlahkan tanpa memperhatikan koma"
+          },
+          {
+            "optionId": "opsi-soal-cara-menjumlahkan-bilangan-3",
+            "text": "Membulatkan dulu semua angka"
+          },
+          {
+            "optionId": "opsi-soal-cara-menjumlahkan-bilangan-0",
+            "text": "Menyejajarkan tanda koma"
+          }
+        ],
+        "correctResponse": "opsi-soal-cara-menjumlahkan-bilangan-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan dan nilai desimal yang setara."
+  }
+}

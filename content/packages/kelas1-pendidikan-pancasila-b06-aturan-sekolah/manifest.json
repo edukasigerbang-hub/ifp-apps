@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pendidikan-pancasila-b06-aturan-sekolah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Aturan di Sekolah — Pendidikan Pancasila Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/aturan-sekolah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 146030,
+      "sha256": "4c9d0a5e0007582d28b7a89194ffc00e57ed2d896e4df1593cfd15aa6d72bdb6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

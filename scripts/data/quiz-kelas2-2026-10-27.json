@@ -1,0 +1,410 @@
+{
+  "packages": {
+    "kelas2-bahasa-indonesia-b02-menulis-kalimat": {
+      "questions": [
+        {
+          "prompt": "Kata-kata dalam kalimat dipisahkan dengan ...",
+          "answer": "Jarak",
+          "distractors": ["Garis bawah", "Tanda hubung"]
+        },
+        {
+          "prompt": "Kalimat berita diakhiri dengan tanda ...",
+          "answer": "Titik",
+          "distractors": ["Koma", "Kurung"]
+        },
+        {
+          "prompt": "Langkah pertama saat menulis kalimat adalah ...",
+          "answer": "Menentukan ide",
+          "distractors": ["Memeriksa tulisan", "Memberi tanda baca"]
+        },
+        {
+          "prompt": "Kalimat yang rapi diawali dengan huruf ...",
+          "answer": "Kapital",
+          "distractors": ["Kecil", "Miring"]
+        },
+        {
+          "prompt": "Tulisan yang sudah diberi tanda baca sebaiknya ...",
+          "answer": "Diperiksa",
+          "distractors": ["Dihapus semua", "Dilipat rapi"]
+        }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b04-menyimak-cerita": {
+      "questions": [
+        {
+          "prompt": "Saat teman bercerita, kita duduk dengan ...",
+          "answer": "Tenang",
+          "distractors": ["Ribut", "Berdiri"]
+        },
+        {
+          "prompt": "Hal yang perlu diingat dari cerita adalah tokoh dan ...",
+          "answer": "Peristiwa",
+          "distractors": ["Halaman", "Gambar"]
+        },
+        {
+          "prompt": "Nama pelaku yang muncul dalam cerita disebut ...",
+          "answer": "Tokoh",
+          "distractors": ["Penonton", "Penulis"]
+        },
+        {
+          "prompt": "Saat bercerita ulang, siswa menyampaikan ... cerita.",
+          "answer": "Isi",
+          "distractors": ["Judul", "Sampul"]
+        },
+        {
+          "prompt": "Kegiatan penutup setelah menyimak cerita adalah ...",
+          "answer": "Menyimpulkan pesan",
+          "distractors": ["Menghitung tokoh", "Menulis judul"]
+        }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b06-menulis-paragraf": {
+      "questions": [
+        {
+          "prompt": "Ide pokok dalam paragraf disebut juga ...",
+          "answer": "Gagasan utama",
+          "distractors": ["Kalimat penutup", "Tanda baca"]
+        },
+        {
+          "prompt": "Paragraf sederhana untuk kelas dua berisi ... kalimat.",
+          "answer": "Dua sampai tiga",
+          "distractors": ["Lima sampai enam", "Tujuh sampai delapan"]
+        },
+        {
+          "prompt": "Setelah paragraf ditulis, ejaan dan ... perlu diperiksa.",
+          "answer": "Tanda baca",
+          "distractors": ["Jumlah kata", "Warna huruf"]
+        },
+        {
+          "prompt": "Langkah pertama menyusun paragraf adalah ...",
+          "answer": "Menentukan ide pokok",
+          "distractors": ["Menulis kalimat", "Memberi tanda baca"]
+        },
+        {
+          "prompt": "Kalimat-kalimat dalam satu paragraf harus saling ...",
+          "answer": "Berhubungan",
+          "distractors": ["Berjauhan", "Berbeda"]
+        }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b07-bercerita": {
+      "questions": [
+        {
+          "prompt": "Saat bercerita, suara harus ... agar semua teman mendengar.",
+          "answer": "Jelas",
+          "distractors": ["Berbisik", "Pelan sekali"]
+        },
+        {
+          "prompt": "Cerita disampaikan dengan urutan ...",
+          "answer": "Awal, tengah, akhir",
+          "distractors": ["Akhir, awal, tengah", "Tengah, akhir, awal"]
+        },
+        {
+          "prompt": "Sikap yang membuat orang berani bercerita adalah ...",
+          "answer": "Percaya diri",
+          "distractors": ["Malu-malu", "Takut salah"]
+        },
+        {
+          "prompt": "Sebelum tampil, siswa harus ... cerita yang akan dibawakan.",
+          "answer": "Memilih",
+          "distractors": ["Melupakan", "Menghitung"]
+        },
+        {
+          "prompt": "Penutup saat bercerita di depan kelas adalah ucapan ...",
+          "answer": "Terima kasih",
+          "distractors": ["Selamat pagi semua", "Sampai jumpa lagi"]
+        }
+      ]
+    },
+    "kelas2-pai-b04-salat": {
+      "questions": [
+        {
+          "prompt": "Salat wajib dalam sehari berjumlah ...",
+          "answer": "Lima waktu",
+          "distractors": ["Empat waktu", "Tiga waktu"]
+        },
+        {
+          "prompt": "Membersihkan diri sebelum salat dilakukan dengan ...",
+          "answer": "Wudu",
+          "distractors": ["Berlari", "Berbaring"]
+        },
+        {
+          "prompt": "Salat ditutup dengan gerakan ...",
+          "answer": "Salam",
+          "distractors": ["Rukuk", "Sujud"]
+        },
+        {
+          "prompt": "Saat berdiri salat, kita menghadap ke arah ...",
+          "answer": "Kiblat",
+          "distractors": ["Jendela", "Pintu"]
+        },
+        {
+          "prompt": "Gerakan membungkuk dalam salat disebut ...",
+          "answer": "Rukuk",
+          "distractors": ["Sujud", "Salam"]
+        }
+      ]
+    },
+    "kelas2-pai-b07-kisah-nabi": {
+      "questions": [
+        {
+          "prompt": "Kota kelahiran Nabi Muhammad adalah ...",
+          "answer": "Makkah",
+          "distractors": ["Madinah", "Mesir"]
+        },
+        {
+          "prompt": "Nabi dan rasul yang terakhir adalah ...",
+          "answer": "Muhammad",
+          "distractors": ["Musa", "Isa"]
+        },
+        {
+          "prompt": "Nabi Muhammad dikenal ... sehingga dipercaya orang.",
+          "answer": "Jujur",
+          "distractors": ["Pintar", "Kuat"]
+        },
+        {
+          "prompt": "Sebelum mengajarkan agama kepada orang banyak, Nabi menerima ...",
+          "answer": "Wahyu",
+          "distractors": ["Hadiah", "Buku"]
+        },
+        {
+          "prompt": "Saat masih kecil, Nabi Muhammad ...",
+          "answer": "Belajar",
+          "distractors": ["Bermain bola", "Menjadi raja"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b04-musyawarah": {
+      "questions": [
+        {
+          "prompt": "Musyawarah berarti membicarakan masalah secara ...",
+          "answer": "Bersama",
+          "distractors": ["Sendiri", "Bergiliran"]
+        },
+        {
+          "prompt": "Saat teman berbicara, sebaiknya kita ...",
+          "answer": "Mendengarkan",
+          "distractors": ["Memotong pembicaraan", "Bermain sendiri"]
+        },
+        {
+          "prompt": "Sebelum berbicara dalam musyawarah, kita ...",
+          "answer": "Angkat tangan",
+          "distractors": ["Memotong teman", "Berbisik dengan teman"]
+        },
+        {
+          "prompt": "Hasil musyawarah yang disetujui bersama disebut ...",
+          "answer": "Kesepakatan",
+          "distractors": ["Perdebatan panjang", "Pertanyaan singkat"]
+        },
+        {
+          "prompt": "Keputusan hasil musyawarah dilaksanakan oleh ...",
+          "answer": "Semua siswa",
+          "distractors": ["Ketua kelas saja", "Satu siswa saja"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b07-gotong-royong": {
+      "questions": [
+        {
+          "prompt": "Gotong royong berarti bekerja ...",
+          "answer": "Bersama",
+          "distractors": ["Sendirian", "Bergiliran"]
+        },
+        {
+          "prompt": "Contoh gotong royong di sekolah adalah ...",
+          "answer": "Kerja bakti kelas",
+          "distractors": ["Belajar sendiri", "Bermain di rumah teman"]
+        },
+        {
+          "prompt": "Salah satu manfaat gotong royong adalah pekerjaan menjadi ...",
+          "answer": "Cepat selesai",
+          "distractors": ["Makin banyak", "Terus tertunda"]
+        },
+        {
+          "prompt": "Agar pekerjaan kerja bakti teratur, tugas perlu ...",
+          "answer": "Dibagi",
+          "distractors": ["Ditunda", "Dihitung ulang"]
+        },
+        {
+          "prompt": "Usai kerja bakti, alat kebersihan perlu ...",
+          "answer": "Dirapikan",
+          "distractors": ["Ditinggal", "Dibuang"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b08-proyek-kelas": {
+      "questions": [
+        {
+          "prompt": "Proyek kelas merupakan kegiatan yang dikerjakan secara ...",
+          "answer": "Bersama",
+          "distractors": ["Sendirian", "Cepat"]
+        },
+        {
+          "prompt": "Pembagian tugas dalam proyek kelas harus ...",
+          "answer": "Adil",
+          "distractors": ["Cepat", "Sulit"]
+        },
+        {
+          "prompt": "Setelah proyek selesai, siswa ...",
+          "answer": "Melaporkan hasil",
+          "distractors": ["Membagi tugas", "Memilih tema"]
+        },
+        {
+          "prompt": "Langkah pertama dalam proyek kelas adalah ...",
+          "answer": "Memilih kegiatan",
+          "distractors": ["Membagi tugas", "Menulis laporan"]
+        },
+        {
+          "prompt": "Tugas dibagi sesuai ... setiap siswa.",
+          "answer": "Kemampuan",
+          "distractors": ["Keinginan", "Uang"]
+        }
+      ]
+    },
+    "kelas2-pjok-b03-manipulatif": {
+      "questions": [
+        {
+          "prompt": "Gerak yang memakai bola atau alat disebut gerak ...",
+          "answer": "Manipulatif",
+          "distractors": ["Lokomotor", "Nonlokomotor"]
+        },
+        {
+          "prompt": "Agar bola tidak lepas, mata melihat ke ...",
+          "answer": "Bola",
+          "distractors": ["Teman", "Tanah"]
+        },
+        {
+          "prompt": "Menangkap bola sebaiknya memakai ...",
+          "answer": "Dua tangan",
+          "distractors": ["Satu kaki", "Kepala"]
+        },
+        {
+          "prompt": "Kerja sama saat lempar-tangkap membuat permainan ...",
+          "answer": "Lancar",
+          "distractors": ["Lambat", "Sulit sekali"]
+        },
+        {
+          "prompt": "Bola yang datang ke arah kita harus ...",
+          "answer": "Ditangkap",
+          "distractors": ["Ditendang", "Dipukul keras"]
+        }
+      ]
+    },
+    "kelas2-pjok-b06-senam": {
+      "questions": [
+        {
+          "prompt": "Senam ringan dilakukan dengan gerakan yang ...",
+          "answer": "Pelan",
+          "distractors": ["Cepat", "Sangat keras"]
+        },
+        {
+          "prompt": "Pemanasan dilakukan agar tubuh tidak ...",
+          "answer": "Cedera",
+          "distractors": ["Berkeringat", "Lelah"]
+        },
+        {
+          "prompt": "Saat senam, napas ditarik dengan cara ...",
+          "answer": "Perlahan",
+          "distractors": ["Sekuatnya", "Cepat-cepat"]
+        },
+        {
+          "prompt": "Sebelum bergerak, tubuh perlu ...",
+          "answer": "Pemanasan",
+          "distractors": ["Pendinginan", "Tidur siang"]
+        },
+        {
+          "prompt": "Gerakan terakhir dalam senam ringan adalah ...",
+          "answer": "Pendinginan",
+          "distractors": ["Pemanasan", "Gerak kaki"]
+        }
+      ]
+    },
+    "kelas2-seni-rupa-b02-ilustrasi": {
+      "questions": [
+        {
+          "prompt": "Ilustrasi adalah gambar yang dipakai untuk ...",
+          "answer": "Menjelaskan cerita",
+          "distractors": ["Menghias dinding", "Menutup buku"]
+        },
+        {
+          "prompt": "Sebelum membuat sketsa, kita menentukan ...",
+          "answer": "Tema",
+          "distractors": ["Warna", "Harga"]
+        },
+        {
+          "prompt": "Setelah sketsa selesai, garisnya ... agar jelas.",
+          "answer": "Ditebalkan",
+          "distractors": ["Dihapus semua", "Dipotong"]
+        },
+        {
+          "prompt": "Karya yang sudah berwarna kemudian ...",
+          "answer": "Dirapikan",
+          "distractors": ["Dibuang", "Dilipat"]
+        },
+        {
+          "prompt": "Langkah kedua setelah menentukan tema adalah ...",
+          "answer": "Membuat sketsa",
+          "distractors": ["Mewarnai gambar", "Merapikan karya"]
+        }
+      ]
+    },
+    "kelas2-seni-rupa-b04-kolase": {
+      "questions": [
+        {
+          "prompt": "Kolase dibuat dengan cara bahan ...",
+          "answer": "Ditempel",
+          "distractors": ["Dilipat", "Dijahit"]
+        },
+        {
+          "prompt": "Bahan yang biasa dipakai untuk kolase adalah ...",
+          "answer": "Daun kering",
+          "distractors": ["Air bersih", "Batu besar"]
+        },
+        {
+          "prompt": "Sebelum menempel bahan, kita mengoles ...",
+          "answer": "Lem",
+          "distractors": ["Cat air", "Air"]
+        },
+        {
+          "prompt": "Setelah bahan ditempel, kita ... pelan agar menempel.",
+          "answer": "Menekan",
+          "distractors": ["Menarik keras", "Melempar"]
+        },
+        {
+          "prompt": "Bahan kolase disusun menurut ... sebelum dilem.",
+          "answer": "Pola",
+          "distractors": ["Warna", "Harga"]
+        }
+      ]
+    },
+    "kelas2-seni-rupa-b08-pameran": {
+      "questions": [
+        {
+          "prompt": "Karya yang dipamerkan di kelas adalah karya ...",
+          "answer": "Siswa",
+          "distractors": ["Guru", "Penjaga"]
+        },
+        {
+          "prompt": "Karya ditata agar ... dan mudah dilihat.",
+          "answer": "Rapi",
+          "distractors": ["Tinggi", "Berat"]
+        },
+        {
+          "prompt": "Setiap karya dipasangi kertas berisi ... karya.",
+          "answer": "Nama",
+          "distractors": ["Harga", "Ukuran"]
+        },
+        {
+          "prompt": "Tugas penjaga pameran adalah ...",
+          "answer": "Menjelaskan karya",
+          "distractors": ["Menjual karya", "Membuat karya"]
+        },
+        {
+          "prompt": "Sebelum ditata di pameran, karya harus ... lebih dulu.",
+          "answer": "Dipilih",
+          "distractors": ["Dijual", "Dihitung dulu"]
+        }
+      ]
+    }
+  }
+}

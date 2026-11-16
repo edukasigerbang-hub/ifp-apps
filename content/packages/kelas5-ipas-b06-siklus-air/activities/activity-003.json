@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tahap pertama siklus air",
+        "right": "Penguapan air dari laut atau darat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Pengembunan",
+        "right": "Uap air berubah menjadi titik air"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Air kembali ke laut",
+        "right": "Melalui hujan dan aliran sungai"
+      },
+      {
+        "pairId": "pasangan-proses-air-di-laut-atau-darat-be",
+        "left": "Proses air di laut atau darat berubah menjadi uap",
+        "right": "Penguapan"
+      },
+      {
+        "pairId": "pasangan-uap-air-di-udara-berubah-menjadi",
+        "left": "Uap air di udara berubah menjadi titik-titik air",
+        "right": "Pengembunan"
+      },
+      {
+        "pairId": "pasangan-setelah-hujan-air-dari-darat-kem",
+        "left": "Tahap siklus air setelah hujan",
+        "right": "Penyerapan air"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: penguapan, pengembunan, hujan, dan aliran ke laut."
+  }
+}

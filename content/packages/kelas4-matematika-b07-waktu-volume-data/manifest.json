@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b07-waktu-volume-data",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Waktu, Volume, dan Penyajian Data — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/waktu-volume-data.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 138834,
+      "sha256": "116ecaf5d3e824684caa5a619c5f9182e23f857ce8d2cd42363af73c8a211529"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 23356,
+      "sha256": "0c91ce32f8f9c8dfe1f8819f6c81789ab52bb54653519c8f1ccd686602047e5c"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5582,
+      "sha256": "168ec2b6872c2b72e2c5cdf1aa07b32be9da1a91aaa3e77cd7ca4b7233787c2d"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7282,
+      "sha256": "0dc28c25cfd1455f50f1792e45b32ee05988d38929bbf5d43af7147a40a5eae4"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8936,
+      "sha256": "52ce042333f0a3629efc2a7cc86f3118a84794d2eede018b8402ef83aba22800"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8442,
+      "sha256": "0417f7186e03f6e3070e64321351c7c215c20fb762a525eae8cb7a27264a8b1b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

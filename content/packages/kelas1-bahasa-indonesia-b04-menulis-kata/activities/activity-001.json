@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menulis-kata",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Menulis",
+  "instructions": "Amati gambar, lalu tirukan menulis bersama.",
+  "assets": [
+    "assets/menulis-kata.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana memegang pensil?",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku.",
+        "reveal": "Dengan tiga jari.",
+        "hint": "Jangan terlalu kuat."
+      },
+      {
+        "prompt": "Apa yang ditulis pertama?",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku.",
+        "reveal": "Huruf.",
+        "hint": "Mulai dari huruf mudah."
+      },
+      {
+        "prompt": "Apa yang ditulis setelah suku kata?",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku.",
+        "reveal": "Kata.",
+        "hint": "Gabungkan suku kata."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Huruf dan Kata?",
+        "reveal": "Menulis huruf, suku kata, dan kata sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Huruf dan Kata?",
+        "reveal": "Memegang pensil → Menulis huruf → Menulis suku kata → Menulis kata → Memeriksa tulisan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-kata.webp",
+        "altText": "Anak menulis huruf dan kata di buku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis huruf dan kata di buku."
+  }
+}

@@ -10,7 +10,7 @@ Repo [`edukasigerbang-hub/web`](https://github.com/edukasigerbang-hub/web) (Next
 Karena itu:
 
 - Migrasi di repo ini diubah menjadi **aditif** `supabase/migrations/0002_app_backend.sql`; **tidak** membuat ulang `licenses`/`devices`.
-- Kunci perangkat memakai `public.devices.device_id` (text unik) yang sudah ada; `platform` wajib (`windows|android`).
+- Kunci perangkat memakai `public.devices.device_id` (text unik) yang sudah ada; `platform` wajib (`windows|android`). **Dikoreksi oleh [ADR-0029](ADR-0029-ifp-devices-isolation.md):** `devices` ternyata milik Fanakon; Gerbang memakai `ifp_devices`.
 - Kolom lisensi baru (`serial_hash`, `product_id`, `license_type`, `machine_id`, `key_id`, `activated_at`) ditambahkan via `ALTER TABLE ... ADD COLUMN IF NOT EXISTS` ke `licenses` milik web.
 - Tabel baru: `enrollment_codes`, `sync_events`, `license_audit`, `admin_roles`; RPC `consume_enrollment_code`.
 - Urutan deployment: jalankan `web/supabase/migrations/0001_init.sql` lalu `0002_app_backend.sql` pada project Supabase yang sama.
@@ -23,7 +23,7 @@ Karena itu:
 3. **Token perangkat** HMAC-SHA256 diterbitkan Worker (format sama dengan server referensi: `base64url(payload).base64url(signature)`, default 24 jam).
 4. **Kode enrollment** disimpan sebagai hash (`SHA-256(pepper:code)`); konsumsi atomik lewat fungsi Postgres `consume_enrollment_code` (`FOR UPDATE`).
 5. **RLS tanpa policy publik**; akses data hanya lewat service role. Bila admin memakai Supabase Auth, policy berbasis `admin_roles` ditambahkan pada increment berikutnya.
-6. **Endpoint lisensi di Worker** untuk sementara mengembalikan `501 LICENSE_ENDPOINT_NOT_IMPLEMENTED`; signing lisensi/konten di edge menunggu keputusan KMS/HSM.
+6. **Endpoint lisensi di Worker** untuk sementara mengembalikan `501 LICENSE_ENDPOINT_NOT_IMPLEMENTED`; signing lisensi/konten di edge menunggu keputusan KMS/HSM. **Diperbarui oleh [ADR-0030](ADR-0030-worker-license-signing.md):** `/v1/activations`, `/v1/licenses/refresh`, dan `/v1/licenses/verify` kini aktif dengan kunci Ed25519 provisional.
 7. **Situs marketing** dicatat di `productConfig.links.marketing`; belum ditautkan dari aplikasi (butuh plugin opener / keputusan navigasi).
 
 ## Konsekuensi

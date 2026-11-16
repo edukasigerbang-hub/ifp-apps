@@ -1,0 +1,35 @@
+{
+  "lessonId": "teks-deskripsi",
+  "packageId": "kelas4-bahasa-indonesia-b01-teks-deskripsi",
+  "title": "Mengenal dan Menulis Teks Deskripsi",
+  "summary": "Mengenali ciri objek, menggunakan kata indra, dan menyusun teks deskripsi tiga sampai empat kalimat.",
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "learningObjectives": [
+    "Menyebutkan ciri objek pada teks deskripsi.",
+    "Menggunakan kata indra dalam deskripsi.",
+    "Menyusun teks deskripsi tiga sampai empat kalimat.",
+    "Menentukan kalimat topik."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-deskripsi",
+    "matching-teks-deskripsi",
+    "kuis-singkat-teks-deskripsi"
+  ],
+  "assessmentRefs": [
+    "kuis-singkat-teks-deskripsi"
+  ],
+  "assetRefs": [
+    "assets/taman-kota.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

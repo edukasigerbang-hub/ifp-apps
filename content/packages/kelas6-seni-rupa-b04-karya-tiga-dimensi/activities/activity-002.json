@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-karya-tiga-dimensi",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bahan dan Teknik",
+  "instructions": "Pasangkan setiap bahan dengan teknik yang sesuai.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-tanah",
+        "left": "Tanah liat",
+        "right": "Membentuk"
+      },
+      {
+        "pairId": "pasangan-kardus",
+        "left": "Kardus",
+        "right": "Menyusun"
+      },
+      {
+        "pairId": "pasangan-bambu",
+        "left": "Bambu",
+        "right": "Menganyam"
+      },
+      {
+        "pairId": "pasangan-kertas",
+        "left": "Kertas",
+        "right": "Melipat"
+      },
+      {
+        "pairId": "pasangan-lem",
+        "left": "Lem",
+        "right": "Merekatkan"
+      },
+      {
+        "pairId": "pasangan-gunting",
+        "left": "Gunting",
+        "right": "Memotong"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut sebagai karya tiga dimensi."
+  }
+}

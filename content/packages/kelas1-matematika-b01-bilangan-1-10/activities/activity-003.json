@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak apel",
+        "right": "Tujuh"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Angka untuk tujuh adalah",
+        "right": "7"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang lebih banyak, 5 atau 3",
+        "right": "5"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Gambar sepuluh kotak yang diisi apel",
+        "right": "Kerangka sepuluh"
+      },
+      {
+        "pairId": "pasangan-banyak-jari-pada-satu-tangan",
+        "left": "Banyak jari pada satu tangan",
+        "right": "Lima"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerangka sepuluh berisi tujuh buah apel."
+  }
+}

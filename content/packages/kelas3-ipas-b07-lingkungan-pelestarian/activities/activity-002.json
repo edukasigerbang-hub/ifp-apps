@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-lingkungan",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menjaga Kebersihan Kelas",
+  "instructions": "Susun langkah menjaga kebersihan kelas.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-alat",
+        "text": "Menyiapkan alat kebersihan"
+      },
+      {
+        "itemId": "langkah-bersih",
+        "text": "Membersihkan kelas"
+      },
+      {
+        "itemId": "langkah-pilah",
+        "text": "Memilah sampah"
+      },
+      {
+        "itemId": "langkah-buang",
+        "text": "Membuang sampah"
+      },
+      {
+        "itemId": "langkah-cuci",
+        "text": "Mencuci tangan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-alat",
+      "langkah-bersih",
+      "langkah-pilah",
+      "langkah-buang",
+      "langkah-cuci"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah."
+  }
+}

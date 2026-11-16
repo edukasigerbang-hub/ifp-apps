@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-wujud-benda",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Benda dan Wujudnya",
+  "instructions": "Pasangkan setiap benda dengan wujudnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-wujud-benda-1",
+        "left": "Batu",
+        "right": "Benda padat"
+      },
+      {
+        "pairId": "pasangan-wujud-benda-2",
+        "left": "Buku",
+        "right": "Benda padat"
+      },
+      {
+        "pairId": "pasangan-wujud-benda-3",
+        "left": "Air",
+        "right": "Benda cair"
+      },
+      {
+        "pairId": "pasangan-wujud-benda-4",
+        "left": "Susu",
+        "right": "Benda cair"
+      },
+      {
+        "pairId": "pasangan-wujud-benda-5",
+        "left": "Meja",
+        "right": "Benda padat"
+      },
+      {
+        "pairId": "pasangan-wujud-benda-6",
+        "left": "Sirup",
+        "right": "Benda cair"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Benda dan Wujudnya\": Pasangkan setiap benda dengan wujudnya."
+  }
+}

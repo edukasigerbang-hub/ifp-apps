@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-norma-aturan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Norma dan Contoh",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/antrean-kelas.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-agama",
+        "left": "Norma agama",
+        "right": "Beribadah sesuai ajaran agama"
+      },
+      {
+        "pairId": "pasangan-kesusilaan",
+        "left": "Norma kesusilaan",
+        "right": "Jujur dan tidak berbohong"
+      },
+      {
+        "pairId": "pasangan-kesopanan",
+        "left": "Norma kesopanan",
+        "right": "Mengucapkan permisi saat lewat"
+      },
+      {
+        "pairId": "pasangan-hukum",
+        "left": "Norma hukum",
+        "right": "Mematuhi rambu lalu lintas"
+      },
+      {
+        "pairId": "pasangan-sekolah",
+        "left": "Aturan sekolah",
+        "right": "Datang tepat waktu"
+      },
+      {
+        "pairId": "pasangan-tujuan-siswa-mengantre-dengan-te",
+        "left": "Tujuan siswa mengantre dengan tertib di depan kelas",
+        "right": "kegiatan berjalan tertib, adil, dan aman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat siswa mengantre tertib di depan pintu kelas; papan aturan kosong di dinding."
+  }
+}

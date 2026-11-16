@@ -1,0 +1,29 @@
+{
+  "lessonId": "atletik-kelas6",
+  "packageId": "kelas6-pjok-b03-atletik",
+  "title": "Atletik",
+  "summary": "Mempraktikkan nomor atletik dengan teknik dan sportivitas.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan start.",
+    "Mempraktikkan lompat jauh.",
+    "Menunjukkan sportivitas."
+  ],
+  "activityIds": [
+    "eksplorasi-atletik-kelas6",
+    "ordering-atletik-kelas6",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/atletik-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

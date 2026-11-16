@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-matematika-b03-rasio-proporsi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Rasio dan Proporsi — Matematika Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/rasio.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 110572,
+      "sha256": "63da46a86cdbf9a21539e0c402c8f58205fc4fedcf50617d8dd60cea2cc28157"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 24007,
+      "sha256": "c8ba0cb0a6009caa9d414d4a0c0d3df9f85ccef24857634e498a89bc0477a06c"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7868,
+      "sha256": "1a1d82eb9af17be3ebb2ad9323717bbbba3c9221f774857b6a538e6166b6f316"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7922,
+      "sha256": "3acb3a36943b5c9482878bb8f57d7aac359404483d0e1892ff8bba75da039f7e"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6689,
+      "sha256": "f0d41f0d3aacd6ef9ae7c786c21d927f3d5b8a6467b65982f34ad19f7d90b94b"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7706,
+      "sha256": "5f5453dbb03426f20fbc3f97949b07a1c8b9d8d16605732b9a3e28080162ffd5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

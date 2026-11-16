@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Contoh aturan di rumah",
+        "right": "Merapikan tempat tidur"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan penting",
+        "right": "Agar rumah tertib dan nyaman"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan sebelum pergi",
+        "right": "Meminta izin orang tua"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Manfaat aturan adalah",
+        "right": "Rumah tertib"
+      },
+      {
+        "pairId": "pasangan-alasan-meminta-izin-sebelum-perg",
+        "left": "Alasan meminta izin sebelum pergi",
+        "right": "Agar orang tua tidak khawatir"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak merapikan tempat tidur dan membantu di rumah."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-ipas-b08-pelestarian",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pelestarian Lingkungan — IPAS Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pelestarian-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 273320,
+      "sha256": "4550552fa4912d04f62e0ea865c0918c4e3ae5ca8806c9f9f9d4fc1bf2af5f6f"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

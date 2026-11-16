@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-seni-rupa-b08-pameran",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pameran — Seni Rupa Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pameran-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 194926,
+      "sha256": "91382404e76d819d42677d693c481b8a882e961212d90325f496ed7009f48397"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

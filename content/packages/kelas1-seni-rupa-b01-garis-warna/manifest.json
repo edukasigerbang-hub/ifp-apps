@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-seni-rupa-b01-garis-warna",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Garis dan Warna — Seni Rupa Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/garis-warna-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168504,
+      "sha256": "a4dd699275eb97464e7db7709f022a99fa5e2467493a8631641293885903f7b1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

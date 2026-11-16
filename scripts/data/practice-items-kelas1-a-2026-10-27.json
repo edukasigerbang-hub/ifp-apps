@@ -1,0 +1,175 @@
+{
+  "_comment": "T-092a kelompok 1 (kelas 1: Bahasa Indonesia, IPAS, Matematika). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing, bukan dari template. Target: kuis 5 soal, mencocokkan minimal 5 pasangan. Diterapkan dengan node scripts/add-practice-items.mjs berkas-ini [--apply].",
+  "packages": {
+    "kelas1-bahasa-indonesia-b01-huruf-suku-kata": {
+      "quiz": [
+        { "prompt": "Huruf a, i, u, e, o disebut huruf ...", "answer": "vokal", "distractors": ["konsonan", "bilangan", "warna"] },
+        { "prompt": "Huruf b, c, d termasuk huruf ...", "answer": "konsonan", "distractors": ["vokal", "angka", "nama"] },
+        { "prompt": "Kegiatan mendengarkan cerita guru disebut ...", "answer": "menyimak", "distractors": ["bernyanyi", "menggambar", "berlari"] }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b02-membaca-kata": {
+      "quiz": [
+        { "prompt": "Kata 'mata' tersusun dari suku kata ...", "answer": "ma dan ta", "distractors": ["m dan ata", "ta dan ma", "mta"] }
+      ],
+      "matching": [
+        { "left": "Kata dari suku kata ka dan ta", "right": "kata" }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b03-menyimak-cerita": {
+      "matching": [
+        { "left": "Orang yang membacakan cerita di kelas", "right": "Guru" },
+        { "left": "Bagian cerita yang berisi pesan", "right": "Akhir cerita" }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b04-menulis-kata": {
+      "matching": [
+        { "left": "Alat tulis yang dipegang dengan tiga jari", "right": "Pensil" },
+        { "left": "Yang dilakukan setelah menulis kata", "right": "Memeriksa tulisan" }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b05-membaca-kalimat": {
+      "quiz": [
+        { "prompt": "Huruf pertama pada kalimat 'Siti membaca buku.' ditulis ...", "answer": "kapital", "distractors": ["kecil", "miring", "tipis"] }
+      ],
+      "matching": [
+        { "left": "Kegiatan melihat tulisan dan melafalkannya", "right": "Membaca" }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b06-menulis-kalimat": {
+      "matching": [
+        { "left": "Alasan antar kata diberi jarak", "right": "Supaya tulisan rapi" },
+        { "left": "Yang dilakukan setelah memberi tanda baca", "right": "Memeriksa tulisan" }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b07-bercerita": {
+      "matching": [
+        { "left": "Bagian cerita yang disampaikan pertama", "right": "Awal" },
+        { "left": "Ucapan setelah bercerita", "right": "Terima kasih" }
+      ]
+    },
+    "kelas1-bahasa-indonesia-b08-kosakata-baru": {
+      "quiz": [
+        { "prompt": "Kata 'gembira' artinya ...", "answer": "senang", "distractors": ["sedih", "marah", "ngantuk"] },
+        { "prompt": "Lawan kata 'cepat' adalah ...", "answer": "lambat", "distractors": ["tinggi", "besar", "panas"] },
+        { "prompt": "Meja dan kursi termasuk ...", "answer": "perabot", "distractors": ["hewan", "buah", "buku"] }
+      ]
+    },
+    "kelas1-ipas-b01-tubuh-dan-indera": {
+      "quiz": [
+        { "prompt": "Indera yang kita pakai untuk mencium bau adalah ...", "answer": "hidung", "distractors": ["mata", "lidah", "telinga"] },
+        { "prompt": "Rasa manis dan asin kita ketahui dengan ...", "answer": "lidah", "distractors": ["kulit", "hidung", "mata"] },
+        { "prompt": "Agar tubuh bersih dan segar, kita mandi setiap ...", "answer": "hari", "distractors": ["bulan", "tahun", "pekan"] }
+      ]
+    },
+    "kelas1-ipas-b02-makhluk-hidup-di-sekitarku": {
+      "quiz": [
+        { "prompt": "Yang termasuk benda tak hidup adalah ...", "answer": "batu", "distractors": ["kucing", "pohon", "rumput"] },
+        { "prompt": "Kucing, ayam, dan burung termasuk ...", "answer": "makhluk hidup", "distractors": ["benda tak hidup", "mainan", "makanan"] },
+        { "prompt": "Batu bukan makhluk hidup karena batu ...", "answer": "tidak bernapas", "distractors": ["berwarna abu-abu", "sangat keras", "berat"] }
+      ]
+    },
+    "kelas1-ipas-b03-merawat-tubuh": {
+      "quiz": [
+        { "prompt": "Alat untuk memotong kuku adalah ...", "answer": "gunting kuku", "distractors": ["sikat gigi", "sisir", "handuk"] },
+        { "prompt": "Setelah mandi, badan dikeringkan dengan ...", "answer": "handuk", "distractors": ["sisir", "sabun", "sampo"] },
+        { "prompt": "Kita menyikat gigi agar ...", "answer": "gigi bersih", "distractors": ["rambut panjang", "kuku pendek", "baju basah"] }
+      ]
+    },
+    "kelas1-ipas-b04-makanan-sehat": {
+      "quiz": [
+        { "prompt": "Makanan manis yang sebaiknya tidak dimakan terlalu sering adalah ...", "answer": "permen", "distractors": ["buah", "sayur", "nasi"] },
+        { "prompt": "Yang termasuk buah sehat adalah ...", "answer": "pisang", "distractors": ["permen", "keripik", "soda"] },
+        { "prompt": "Makan sayur dan buah membuat tubuh ...", "answer": "sehat", "distractors": ["sakit", "gigi berlubang", "kotor"] }
+      ]
+    },
+    "kelas1-ipas-b05-cuaca-di-sekitarku": {
+      "quiz": [
+        { "prompt": "Tanda cuaca akan hujan adalah ...", "answer": "awan gelap", "distractors": ["matahari terik", "langit biru", "pelangi"] },
+        { "prompt": "Saat cuaca panas, kita memakai ...", "answer": "kipas", "distractors": ["jaket tebal", "sikat gigi", "sarung tangan"] },
+        { "prompt": "Langit tertutup awan. Cuaca saat itu ...", "answer": "berawan", "distractors": ["cerah", "hujan", "berangin kencang sekali"] }
+      ]
+    },
+    "kelas1-ipas-b06-lingkungan-rumah-sekolah": {
+      "quiz": [
+        { "prompt": "Tempat membaca buku di sekolah adalah ...", "answer": "perpustakaan", "distractors": ["kantin", "dapur", "kamar mandi"] },
+        { "prompt": "Di dapur kita ...", "answer": "memasak", "distractors": ["tidur", "mandi", "bermain bola"] },
+        { "prompt": "Sapu dipakai untuk ...", "answer": "menyapu lantai", "distractors": ["menyiram ikan", "memasak nasi", "keramas"] }
+      ]
+    },
+    "kelas1-ipas-b07-hewan-tumbuhan-peliharaan": {
+      "quiz": [
+        { "prompt": "Hewan peliharaan setiap hari membutuhkan ...", "answer": "makanan dan air", "distractors": ["buku tulis", "listrik", "baju baru"] },
+        { "prompt": "Tanaman menjadi layu karena ...", "answer": "kurang air", "distractors": ["terlalu banyak tanah", "kelebihan makanan", "banyak teman"] },
+        { "prompt": "Burung peliharaan biasanya ditempatkan di ...", "answer": "kandang", "distractors": ["panci", "lemari", "sepatu"] }
+      ]
+    },
+    "kelas1-ipas-b08-keselamatan-diri": {
+      "quiz": [
+        { "prompt": "Benda di rumah yang bisa menyebabkan kebakaran adalah ...", "answer": "api kompor", "distractors": ["sendok", "buku", "handuk"] },
+        { "prompt": "Saat menyeberang jalan, kita berpegangan pada ...", "answer": "tangan orang dewasa", "distractors": ["layangan", "bola", "payung"] },
+        { "prompt": "Helm dipakai untuk melindungi ...", "answer": "kepala", "distractors": ["lutut", "jari kaki", "perut"] }
+      ]
+    },
+    "kelas1-matematika-b01-bilangan-1-10": {
+      "quiz": [
+        { "prompt": "Bilangan setelah 7 adalah ...", "answer": "8", "distractors": ["6", "5", "9"] }
+      ],
+      "matching": [
+        { "left": "Banyak jari pada satu tangan", "right": "Lima" }
+      ]
+    },
+    "kelas1-matematika-b02-penjumlahan-10": {
+      "quiz": [
+        { "prompt": "3 + 4 = ...", "answer": "7", "distractors": ["6", "8", "5"] },
+        { "prompt": "9 - 5 = ...", "answer": "4", "distractors": ["5", "3", "6"] },
+        { "prompt": "Lambang bilangan untuk 'delapan' adalah ...", "answer": "8", "distractors": ["7", "9", "18"] }
+      ]
+    },
+    "kelas1-matematika-b03-bentuk-pola": {
+      "quiz": [
+        { "prompt": "Bangun yang bentuknya bulat adalah ...", "answer": "lingkaran", "distractors": ["segitiga", "persegi", "kotak"] },
+        { "prompt": "Segitiga memiliki ... sisi.", "answer": "3", "distractors": ["4", "2", "5"] },
+        { "prompt": "Pola merah, kuning, merah, kuning, ... berlanjut dengan ...", "answer": "merah", "distractors": ["kuning", "hijau", "hitam"] }
+      ]
+    },
+    "kelas1-matematika-b04-pengukuran": {
+      "quiz": [
+        { "prompt": "Benda yang paling berat di antara berikut adalah ...", "answer": "kursi", "distractors": ["penghapus", "koin", "pensil"] }
+      ],
+      "matching": [
+        { "left": "Alat untuk mengukur panjang benda", "right": "Penggaris" }
+      ]
+    },
+    "kelas1-matematika-b05-bilangan-11-20": {
+      "quiz": [
+        { "prompt": "Bilangan 15 dibaca ...", "answer": "lima belas", "distractors": ["sepuluh", "lima puluh", "sepuluh lima"] },
+        { "prompt": "Lambang bilangan untuk 'dua puluh' adalah ...", "answer": "20", "distractors": ["12", "21", "2"] },
+        { "prompt": "Bilangan sebelum 15 adalah ...", "answer": "14", "distractors": ["16", "13", "10"] }
+      ]
+    },
+    "kelas1-matematika-b06-penjumlahan-20": {
+      "quiz": [
+        { "prompt": "14 + 5 = ...", "answer": "19", "distractors": ["18", "9", "20"] }
+      ],
+      "matching": [
+        { "left": "Hasil dari 15 tambah 5", "right": "20" }
+      ]
+    },
+    "kelas1-matematika-b07-bangun-datar": {
+      "quiz": [
+        { "prompt": "Bangun yang memiliki empat sisi sama panjang adalah ...", "answer": "persegi", "distractors": ["lingkaran", "segitiga", "persegi panjang"] },
+        { "prompt": "Permukaan uang logam berbentuk ...", "answer": "lingkaran", "distractors": ["persegi", "segitiga", "kotak"] },
+        { "prompt": "Sudut pada bangun datar adalah ...", "answer": "pertemuan dua sisi", "distractors": ["garis di tengah bangun", "warna bangun", "sisi yang lengkung"] }
+      ]
+    },
+    "kelas1-matematika-b08-pola-bilangan": {
+      "quiz": [
+        { "prompt": "Pola 3, 6, 9, ... berlanjut dengan ...", "answer": "12", "distractors": ["10", "11", "15"] }
+      ],
+      "matching": [
+        { "left": "Pola 4, 8, 12, ... berlanjut dengan", "right": "16" }
+      ]
+    }
+  }
+}

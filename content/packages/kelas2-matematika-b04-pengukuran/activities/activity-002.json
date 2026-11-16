@@ -1,0 +1,148 @@
+{
+  "activityId": "kuis-pengukuran-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Pengukuran",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-panjang",
+        "prompt": "Panjang buku diukur dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penggaris",
+            "text": "Penggaris"
+          },
+          {
+            "optionId": "opsi-timbangan",
+            "text": "Timbangan"
+          },
+          {
+            "optionId": "opsi-jam",
+            "text": "Jam"
+          },
+          {
+            "optionId": "opsi-gelas",
+            "text": "Gelas"
+          }
+        ],
+        "correctResponse": "opsi-penggaris"
+      },
+      {
+        "questionId": "soal-berat",
+        "prompt": "Berat beras diukur dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penggaris",
+            "text": "Penggaris"
+          },
+          {
+            "optionId": "opsi-timbangan",
+            "text": "Timbangan"
+          },
+          {
+            "optionId": "opsi-meteran",
+            "text": "Meteran"
+          },
+          {
+            "optionId": "opsi-jam",
+            "text": "Jam"
+          }
+        ],
+        "correctResponse": "opsi-timbangan"
+      },
+      {
+        "questionId": "soal-satuan",
+        "prompt": "Satuan panjang adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kg",
+            "text": "kg"
+          },
+          {
+            "optionId": "opsi-gram",
+            "text": "gram"
+          },
+          {
+            "optionId": "opsi-cm",
+            "text": "cm"
+          },
+          {
+            "optionId": "opsi-jam",
+            "text": "jam"
+          }
+        ],
+        "correctResponse": "opsi-cm"
+      },
+      {
+        "questionId": "soal-banding",
+        "prompt": "Benda yang lebih berat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pensil",
+            "text": "Pensil"
+          },
+          {
+            "optionId": "opsi-penghapus",
+            "text": "Penghapus"
+          },
+          {
+            "optionId": "opsi-kertas",
+            "text": "Kertas"
+          },
+          {
+            "optionId": "opsi-meja",
+            "text": "Meja"
+          }
+        ],
+        "correctResponse": "opsi-meja"
+      },
+      {
+        "questionId": "soal-meteran-merupakan-alat-untuk-men",
+        "prompt": "Meteran merupakan alat untuk mengukur ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-meteran-merupakan-alat-untu-1",
+            "text": "berat"
+          },
+          {
+            "optionId": "opsi-soal-meteran-merupakan-alat-untu-2",
+            "text": "waktu"
+          },
+          {
+            "optionId": "opsi-soal-meteran-merupakan-alat-untu-0",
+            "text": "panjang"
+          }
+        ],
+        "correctResponse": "opsi-soal-meteran-merupakan-alat-untu-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Penggaris, meteran, dan timbangan sederhana."
+  }
+}

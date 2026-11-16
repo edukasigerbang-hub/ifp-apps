@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-salat-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Ibadah Salat",
+  "instructions": "Amati gambar, lalu diskusikan waktu dan gerakan salat.",
+  "assets": [
+    "assets/salat-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa salat wajib sehari?",
+        "assetPath": "assets/salat-kelas6.webp",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Lima waktu.",
+        "hint": "Subuh, zuhur, asar, magrib, isya."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum salat?",
+        "assetPath": "assets/salat-kelas6.webp",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Berwudu dan menutup aurat.",
+        "hint": "Pastikan bersih."
+      },
+      {
+        "prompt": "Bagaimana urutan salat?",
+        "assetPath": "assets/salat-kelas6.webp",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Berdiri, takbir, rukuk, sujud, duduk, salam.",
+        "hint": "Tenang dan khusyuk."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Salat dan Ibadah?",
+        "reveal": "Berwudu → Berdiri menghadap kiblat → Takbiratul ihram → Rukuk dan sujud → Duduk tasyahud → Salam",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/salat-kelas6.webp",
+        "altText": "Anak berwudu dan melaksanakan salat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berwudu dan melaksanakan salat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/salat-kelas6.webp",
+        "altText": "Anak berwudu dan melaksanakan salat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  }
+}

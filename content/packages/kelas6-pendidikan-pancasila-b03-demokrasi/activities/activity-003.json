@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Demokrasi",
+        "right": "Pemerintahan dari rakyat, oleh rakyat, untuk rakyat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Pemilu",
+        "right": "Pemilihan umum untuk memilih pemimpin"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menghargai hasil",
+        "right": "Menerima keputusan bersama"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menyampaikan-janji-dan",
+        "left": "Kegiatan menyampaikan janji dan program sebelum pemungutan suara",
+        "right": "Kampanye"
+      },
+      {
+        "pairId": "pasangan-kegiatan-mencatat-warga-yang-ber",
+        "left": "Kegiatan mencatat warga yang berhak memilih",
+        "right": "Pendaftaran pemilih"
+      },
+      {
+        "pairId": "pasangan-pengambilan-sumpah-pemimpin-yang",
+        "left": "Pengambilan sumpah pemimpin yang menang dalam pemilu",
+        "right": "Pelantikan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  }
+}

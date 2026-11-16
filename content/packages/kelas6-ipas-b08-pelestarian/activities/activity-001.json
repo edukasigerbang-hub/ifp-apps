@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-pelestarian",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tindakan Pelestarian",
+  "instructions": "Amati gambar, lalu diskusikan cara melestarikan lingkungan.",
+  "assets": [
+    "assets/pelestarian-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Mengapa lingkungan harus dilestarikan?",
+        "assetPath": "assets/pelestarian-kelas6.webp",
+        "altText": "Kegiatan menanam pohon dan menjaga sumber air.",
+        "reveal": "Agar tetap sehat dan tersedia.",
+        "hint": "Untuk generasi berikutnya."
+      },
+      {
+        "prompt": "Bagaimana melestarikan air?",
+        "assetPath": "assets/pelestarian-kelas6.webp",
+        "altText": "Kegiatan menanam pohon dan menjaga sumber air.",
+        "reveal": "Hemat air dan jaga sumbernya.",
+        "hint": "Jangan mencemari."
+      },
+      {
+        "prompt": "Bagaimana melestarikan hutan?",
+        "assetPath": "assets/pelestarian-kelas6.webp",
+        "altText": "Kegiatan menanam pohon dan menjaga sumber air.",
+        "reveal": "Menanam dan tidak menebang sembarangan.",
+        "hint": "Mencegah banjir."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Pelestarian Lingkungan?",
+        "reveal": "Menanam pohon → Memilah sampah → Menghemat air → Menghemat listrik → Menjaga hutan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/pelestarian-kelas6.webp",
+        "altText": "Kegiatan menanam pohon dan menjaga sumber air."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pelestarian Lingkungan?",
+        "reveal": "Menjaga lingkungan melalui tindakan nyata.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pelestarian-kelas6.webp",
+        "altText": "Kegiatan menanam pohon dan menjaga sumber air."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menanam pohon dan menjaga sumber air."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pjok-b02-bola-kecil",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Permainan Bola Kecil — PJOK Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bola-kecil-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 256002,
+      "sha256": "2a073365fa7736970f080213f3246099db48ecec31f65034dfba6331059433da"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pendidikan-pancasila-b02-hak-kewajiban",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Hak dan Kewajiban Warga Negara — Pendidikan Pancasila Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/hak-kewajiban-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 239186,
+      "sha256": "a3c0df1c33f18a72fb05ff5c702dabb5d9143762c290f704f3271b8c8dc0504c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

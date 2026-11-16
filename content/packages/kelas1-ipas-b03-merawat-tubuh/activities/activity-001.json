@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-merawat-tubuh",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Kebersihan",
+  "instructions": "Amati gambar, lalu diskusikan alat kebersihan dan cara memakainya.",
+  "assets": [
+    "assets/merawat-tubuh.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Alat apa yang dipakai untuk menjaga kebersihan?",
+        "assetPath": "assets/merawat-tubuh.webp",
+        "altText": "Ilustrasi 3D Ayu menyikat gigi di wastafel dan Bima mencuci tangan dengan sabun di kamar mandi sekolah.",
+        "reveal": "Sabun, sikat gigi, sampo, handuk, dan gunting kuku.",
+        "hint": "Alat ini ada di kamar mandi."
+      },
+      {
+        "prompt": "Kapan kita harus mencuci tangan?",
+        "assetPath": "assets/merawat-tubuh.webp",
+        "altText": "Ilustrasi 3D Ayu menyikat gigi di wastafel dan Bima mencuci tangan dengan sabun di kamar mandi sekolah.",
+        "reveal": "Sebelum makan, setelah bermain, dan setelah dari toilet.",
+        "hint": "Pakai sabun dan air mengalir."
+      },
+      {
+        "prompt": "Mengapa kita harus mandi setiap hari?",
+        "assetPath": "assets/merawat-tubuh.webp",
+        "altText": "Ilustrasi 3D Ayu menyikat gigi di wastafel dan Bima mencuci tangan dengan sabun di kamar mandi sekolah.",
+        "reveal": "Agar tubuh bersih, segar, dan terbebas dari kuman.",
+        "hint": "Kuman mudah menempel setelah bermain."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Merawat Tubuh dan Kebersihan?",
+        "reveal": "Membiasakan merawat tubuh dan menjaga kebersihan diri setiap hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/merawat-tubuh.webp",
+        "altText": "Ilustrasi 3D Ayu menyikat gigi di wastafel dan Bima mencuci tangan dengan sabun di kamar mandi sekolah."
+      },
+      {
+        "prompt": "Apa yang kamu lakukan sebelum tidur?",
+        "reveal": "Menyikat gigi dan mencuci kaki supaya bersih.",
+        "hint": "Gigi disikat pagi dan malam.",
+        "assetPath": "assets/merawat-tubuh.webp",
+        "altText": "Ilustrasi 3D Ayu menyikat gigi di wastafel dan Bima mencuci tangan dengan sabun di kamar mandi sekolah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu menyikat gigi di wastafel dan Bima mencuci tangan dengan sabun di kamar mandi sekolah."
+  }
+}

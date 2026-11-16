@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pendidikan-pancasila-b04-keberagaman",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Keberagaman dan Persatuan — Pendidikan Pancasila Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/keberagaman-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 199474,
+      "sha256": "ccefc8334d51fcd5172858b37a585ffca56c723287957de2816912ef89042352"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

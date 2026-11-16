@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b06-volume-luas-permukaan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Volume dan Luas Permukaan — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/volume-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 142348,
+      "sha256": "4e0caa52e2aa07b07b6966caaa525c47f0845fed533763d558113130fcfd0fae"
+    },
+    {
+      "path": "assets/aktivitas-volume-luas-permukaan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 15178,
+      "sha256": "f50cd3a79ef3d8695f9ef945cd3d3ad779253c12dd2ec70373dd56f182eba417"
+    },
+    {
+      "path": "assets/aktivitas-volume-luas-permukaan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8613,
+      "sha256": "9ee13ade1cfdd8113849c247909b642d825cfe8dce703dd2b0f8d3935fa9f98d"
+    },
+    {
+      "path": "assets/aktivitas-volume-luas-permukaan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5850,
+      "sha256": "e748ac919ff736ff373f0d833727078e0cda29b5ce964c31810381f8f8190a80"
+    },
+    {
+      "path": "assets/aktivitas-volume-luas-permukaan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7436,
+      "sha256": "595c8ef077b58287086e1a53b8faffd1746d39f537d65665420670d5ca2339e8"
+    },
+    {
+      "path": "assets/aktivitas-volume-luas-permukaan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10043,
+      "sha256": "ba968600f71c282cdd9700972fa67e248608fc699e676b14cf33a9188daefb48"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

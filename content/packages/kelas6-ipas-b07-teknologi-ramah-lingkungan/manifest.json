@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-ipas-b07-teknologi-ramah-lingkungan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teknologi Ramah Lingkungan — IPAS Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/teknologi-ramah-lingkungan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 182132,
+      "sha256": "7c0333b86892c099c7989f5a47726456574db95e1f83cd74bcfe065facbff63b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

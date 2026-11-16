@@ -1,0 +1,29 @@
+{
+  "lessonId": "menggambar-bentuk",
+  "packageId": "kelas3-seni-rupa-b02-menggambar-bentuk",
+  "title": "Menggambar Bentuk Sederhana",
+  "summary": "Menggambar bentuk sederhana dari bentuk dasar lingkaran, persegi, dan segitiga.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bentuk dasar.",
+    "Menggambar bentuk dari bentuk dasar.",
+    "Menyusun bentuk menjadi gambar."
+  ],
+  "activityIds": [
+    "eksplorasi-menggambar-bentuk",
+    "ordering-menggambar-bentuk",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/menggambar-bentuk-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

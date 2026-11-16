@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Pensil dipegang dengan ... jari.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "dua"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "lima"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "tiga"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Kata disusun dari beberapa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "suku kata"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "tanda titik"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "huruf besar"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Alat tulis untuk menulis di buku adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "gunting"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "pensil"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "penggaris"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Setelah selesai menulis, kita ... tulisan.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "menghapus semua"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "melipat buku"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "memeriksa"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Menulis suku kata dilakukan sebelum menulis ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "kata"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "kalimat"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "huruf"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis huruf dan kata di buku."
+  }
+}

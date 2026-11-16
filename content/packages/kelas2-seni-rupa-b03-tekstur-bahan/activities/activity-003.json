@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bahan kasar adalah",
+        "right": "Batu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan halus adalah",
+        "right": "Kapas"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Perekat yang aman",
+        "right": "Lem"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Permukaan bahan yang kasar dan halus",
+        "right": "Tekstur"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Kesan yang diperoleh dari permukaan bahan",
+        "right": "Kesan permukaan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus."
+  }
+}

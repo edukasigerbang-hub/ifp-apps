@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-senam-ringan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Senam Ringan",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/senam-ringan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa gerak senam ringan?",
+        "assetPath": "assets/senam-ringan.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan.",
+        "reveal": "Peregangan dan gerak kepala.",
+        "hint": "Lakukan pelan."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/senam-ringan.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Sebelum senam."
+      },
+      {
+        "prompt": "Bagaimana bernapas saat senam?",
+        "assetPath": "assets/senam-ringan.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan.",
+        "reveal": "Tarik napas perlahan.",
+        "hint": "Jangan menahan."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Senam Ringan?",
+        "reveal": "Pemanasan → Gerak kepala → Gerak tangan → Gerak kaki → Pendinginan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/senam-ringan.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak melakukan senam ringan dan peregangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/senam-ringan.webp",
+        "altText": "Anak melakukan senam ringan dan peregangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan senam ringan dan peregangan."
+  }
+}

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import { open } from "@tauri-apps/plugin-dialog";
 import { PageHeader } from "../components/ui/PageHeader";
+import { AvatarEditor } from "../components/profile/AvatarEditor";
+import { ProfileAvatar } from "../components/profile/ProfileAvatar";
 import { canPersistLocally } from "../data/learningRepository";
 import {
   exportBackup,
@@ -11,11 +14,14 @@ import {
 } from "../data/backupRepository";
 import { exportDiagnostics, pickDiagnosticsDestination } from "../data/diagnosticsRepository";
 import {
+  clearProfileAvatar,
   createProfile,
   deleteProfile,
   getActiveProfile,
   listProfiles,
+  readAvatarSource,
   renameProfile,
+  saveProfileAvatar,
   setActiveProfile,
   type Profile
 } from "../data/profileRepository";
@@ -86,6 +92,11 @@ export function SettingsScreen() {
   const [renamingId, setRenamingId] = useState<string | null>(null);
   const [renameValue, setRenameValue] = useState("");
   const [deleteCandidate, setDeleteCandidate] = useState<DeleteCandidate | null>(null);
+  const [avatarEditor, setAvatarEditor] = useState<{
+    profileId: string;
+    profileName: string;
+    sourceUrl: string;
+  } | null>(null);
   const [preferences, setPreferencesState] = useState<Preferences | null>(null);
   const [preferencesMessage, setPreferencesMessage] = useState<string | null>(null);
   const [preferencesError, setPreferencesError] = useState<string | null>(null);
@@ -286,8 +297,67 @@ export function SettingsScreen() {
     }
   }
 
-  async function handleDeleteProfile(profile: Profile, deleteData: boolean) {
+  async function handleAvatarPick() {
+    if (!activeProfile) return;
     setProfileError(null);
+    setProfileMessage(null);
+    try {
+      const picked = await open({
+        multiple: false,
+        directory: false,
+        title: "Pilih foto profil",
+        filters: [{ name: "Gambar", extensions: ["png", "jpg", "jpeg", "webp"] }]
+      });
+      if (!picked || Array.isArray(picked)) return;
+      setProfileBusy(true);
+      const sourceUrl = await readAvatarSource(picked);
+      setAvatarEditor({
+        profileId: activeProfile.id,
+        profileName: activeProfile.displayName,
+        sourceUrl
+      });
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleAvatarSave(dataUrl: string) {
+    if (!avatarEditor) return;
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const updated = await saveProfileAvatar(avatarEditor.profileId, dataUrl);
+      await reloadProfiles();
+      const name = updated.displayName;
+      setAvatarEditor(null);
+      setProfileMessage(`Foto profil "${name}" diperbarui.`);
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleAvatarClear() {
+    if (!activeProfile) return;
+    setProfileError(null);
+    setProfileMessage(null);
+    setProfileBusy(true);
+    try {
+      const updated = await clearProfileAvatar(activeProfile.id);
+      await reloadProfiles();
+      setProfileMessage(`Foto profil "${updated.displayName}" dihapus.`);
+    } catch (caught) {
+      setProfileError(profileErrorDetails(caught).message);
+    } finally {
+      setProfileBusy(false);
+    }
+  }
+
+  async function handleDeleteProfile(profile: Profile, deleteData: boolean) {    setProfileError(null);
     setProfileMessage(null);
     setProfileBusy(true);
     try {
@@ -327,7 +397,7 @@ export function SettingsScreen() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       <PageHeader
         title="Pengaturan"
         description="Profil, preferensi perangkat, dan status sinkronisasi hasil belajar."
@@ -353,6 +423,10 @@ export function SettingsScreen() {
                     className="rounded-control border border-ink/10 bg-paper/60"
                   >
                     <div className="flex flex-wrap items-center gap-2 p-2">
+                      <ProfileAvatar
+                        profile={profile}
+                        className="h-11 w-11 shrink-0 rounded-full text-sm"
+                      />
                       <button
                         type="button"
                         aria-pressed={active}
@@ -425,7 +499,7 @@ export function SettingsScreen() {
                                 ? "Profil terakhir tidak dapat dihapus"
                                 : undefined
                             }
-                            className="min-h-11 rounded-control border border-danger/40 px-4 text-sm font-medium text-danger hover:bg-danger/5 disabled:opacity-40"
+                            className="min-h-11 rounded-control border border-danger/40 px-4 text-sm font-medium text-danger-strong hover:bg-danger/5 disabled:opacity-40"
                           >
                             Hapus
                           </button>
@@ -433,10 +507,36 @@ export function SettingsScreen() {
                       )}
                     </div>
 
+                    {active && (
+                      <div className="flex flex-wrap items-center gap-2 border-t border-ink/10 px-3 py-2">
+                        <button
+                          type="button"
+                          onClick={() => void handleAvatarPick()}
+                          disabled={profileBusy || isRenaming}
+                          className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                        >
+                          {profile.hasAvatar ? "Ganti foto…" : "Pilih foto…"}
+                        </button>
+                        {profile.hasAvatar && (
+                          <button
+                            type="button"
+                            onClick={() => void handleAvatarClear()}
+                            disabled={profileBusy}
+                            className="min-h-11 rounded-control border border-ink/15 px-4 text-sm font-medium hover:bg-paper disabled:opacity-40"
+                          >
+                            Hapus foto
+                          </button>
+                        )}
+                        <span className="text-xs text-muted">
+                          PNG/JPEG/WebP · dipotong persegi &amp; dikompres otomatis
+                        </span>
+                      </div>
+                    )}
+
                     {candidate && (
                       <div className="border-t border-ink/10 p-3">
                         {candidate.requiresData ? (
-                          <p className="text-sm text-danger">{candidate.message}</p>
+                          <p className="text-sm text-danger-strong">{candidate.message}</p>
                         ) : (
                           <p className="text-sm">
                             Hapus profil "{profile.displayName}"? Tindakan ini tidak dapat
@@ -505,7 +605,7 @@ export function SettingsScreen() {
             {profileMessage ?? ""}
           </p>
           {profileError && (
-            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
               {profileError}
             </p>
           )}
@@ -524,7 +624,7 @@ export function SettingsScreen() {
         )}
 
         {state.status === "error" && (
-          <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+          <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
             {state.message}
           </p>
         )}
@@ -581,7 +681,7 @@ export function SettingsScreen() {
         <section className="mt-6 rounded-card border border-ink/10 bg-surface p-5 md:p-6">
           <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">Backup & Restore</h2>
           <p className="mt-3 text-sm text-muted">
-            Backup berisi database lokal: profil, sesi, hasil belajar, outbox, dan lisensi. Konten impor tidak
+            Backup berisi database lokal: profil, foto profil, sesi, hasil belajar, outbox, dan lisensi. Konten impor tidak
             disertakan karena dapat diimpor ulang.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
@@ -607,7 +707,7 @@ export function SettingsScreen() {
             {backupMessage ?? ""}
           </p>
           {backupError && (
-            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+            <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
               {backupError}
             </p>
           )}
@@ -664,11 +764,15 @@ export function SettingsScreen() {
                 <option value="large">Besar</option>
               </select>
             </label>
+            <p className="text-xs text-muted">
+              Mode aplikasi (Belajar/Admin) diatur lewat tombol di bilah atas dan tersimpan per
+              perangkat. Mode Belajar menyembunyikan Konten, Lisensi, dan Pengaturan.
+            </p>
             <p aria-live="polite" className="text-sm text-muted">
               {preferencesMessage ?? ""}
             </p>
             {preferencesError && (
-              <p className="rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              <p className="rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
                 {preferencesError}
               </p>
             )}
@@ -695,7 +799,7 @@ export function SettingsScreen() {
               {diagnosticsMessage ?? ""}
             </p>
             {diagnosticsError && (
-              <p className="mt-2 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              <p className="mt-2 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
                 {diagnosticsError}
               </p>
             )}
@@ -709,8 +813,8 @@ export function SettingsScreen() {
         </h2>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li>
-            Nama profil, hasil belajar, dan review disimpan hanya di perangkat ini (tanpa akun
-            terpusat).
+            Nama profil, foto profil, hasil belajar, dan review disimpan hanya di perangkat ini
+            (tanpa akun terpusat).
           </li>
           <li>
             Backup dan ekspor CSV berisi nama profil/reviewer. File yang sudah diekspor tidak ikut
@@ -727,6 +831,21 @@ export function SettingsScreen() {
           </li>
         </ul>
       </section>
+
+      {avatarEditor && (
+        <AvatarEditor
+          sourceUrl={avatarEditor.sourceUrl}
+          profileName={avatarEditor.profileName}
+          busy={profileBusy}
+          error={profileError}
+          onCancel={() => {
+            if (profileBusy) return;
+            setAvatarEditor(null);
+            setProfileError(null);
+          }}
+          onSave={handleAvatarSave}
+        />
+      )}
     </div>
   );
 }

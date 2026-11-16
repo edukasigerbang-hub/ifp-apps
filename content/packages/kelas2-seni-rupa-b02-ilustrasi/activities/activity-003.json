@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Ilustrasi",
+        "right": "Gambar untuk menjelaskan cerita"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Langkah pertama",
+        "right": "Menentukan tema"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Langkah terakhir",
+        "right": "Mewarnai"
+      },
+      {
+        "pairId": "pasangan-sebelum-diwarnai-garis-hasil-ske",
+        "left": "Yang dilakukan pada garis sketsa sebelum mewarnai",
+        "right": "Ditebalkan"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-setelah-ilustra",
+        "left": "Langkah terakhir setelah ilustrasi diwarnai",
+        "right": "Merapikan karya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi sederhana dari bentuk dasar."
+  }
+}

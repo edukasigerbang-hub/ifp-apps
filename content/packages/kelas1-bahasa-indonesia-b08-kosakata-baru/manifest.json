@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-bahasa-indonesia-b08-kosakata-baru",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kosakata Baru — Bahasa Indonesia Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kosakata-baru.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 201840,
+      "sha256": "67b33ff42bbcd814d6d86d1114727c95316d42480da11ea0c6dcc1fea488b0d0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

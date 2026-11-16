@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-tolong-menolong",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menolong Teman",
+  "instructions": "Susun langkah menolong teman.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-lihat",
+        "text": "Melihat teman yang kesulitan"
+      },
+      {
+        "itemId": "langkah-tanya",
+        "text": "Menanyakan keadaannya"
+      },
+      {
+        "itemId": "langkah-bantu",
+        "text": "Membantu"
+      },
+      {
+        "itemId": "langkah-hibur",
+        "text": "Menghibur"
+      },
+      {
+        "itemId": "langkah-lapor",
+        "text": "Melapor kepada guru bila perlu"
+      }
+    ],
+    "correctOrder": [
+      "langkah-lihat",
+      "langkah-tanya",
+      "langkah-bantu",
+      "langkah-hibur",
+      "langkah-lapor"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak saling menolong di sekolah."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pjok-b02-non-lokomotor",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gerak Non-Lokomotor — PJOK Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/non-lokomotor-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 199252,
+      "sha256": "57860b66dd8631c4f4b26aa86d3e211490350bb35c2a8d989a7d797cdb678b5d"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Wujud es batu dan batu",
+        "right": "Padat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Es batu berubah menjadi air",
+        "right": "Mencair"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Air berubah menjadi uap",
+        "right": "Menguap"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Perubahan wujud dari gas menjadi cair",
+        "right": "Mengembun"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Wujud zat yang bentuk dan volumenya tetap",
+        "right": "Benda padat"
+      },
+      {
+        "pairId": "pasangan-air-yang-kita-minum-termasuk-zat",
+        "left": "Air yang kita minum termasuk zat berwujud",
+        "right": "cair"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
+  }
+}

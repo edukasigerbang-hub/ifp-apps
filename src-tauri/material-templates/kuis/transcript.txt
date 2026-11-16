@@ -1,0 +1,18 @@
+Naskah materi (transkrip)
+
+Kuis ini adalah kerangka dari Studio Materi. Sunting berkas assets/app.js pada
+bagian daftar soal untuk mengganti pertanyaan, pilihan jawaban, dan indeks
+jawaban yang benar. Tulis kembali naskah di bawah agar sesuai soal Anda.
+
+Soal 1
+Air laut berubah menjadi awan melalui proses apa? Jawabannya penguapan.
+
+Soal 2
+Proses ketika uap air berubah menjadi titik air di awan disebut kondensasi.
+
+Soal 3
+Hujan yang turun ke tanah mengalir kembali ke laut melalui sungai.
+
+Penutup
+Kemajuan dikirim ke aplikasi setiap kali murid menekan tombol "Periksa", dan
+skor akhir dikirim saat soal terakhir selesai.

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-aturan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Antrean Kelas",
+  "instructions": "Amati gambar, lalu diskusikan aturan dan manfaatnya.",
+  "assets": [
+    "assets/antrean-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Aturan apa yang terlihat pada gambar?",
+        "assetPath": "assets/antrean-kelas3.webp",
+        "altText": "Siswa berbaris tertib di depan kelas.",
+        "reveal": "Antre dengan tertib.",
+        "hint": "Amati barisan siswa."
+      },
+      {
+        "prompt": "Mengapa aturan diperlukan?",
+        "assetPath": "assets/antrean-kelas3.webp",
+        "altText": "Siswa berbaris tertib di depan kelas.",
+        "reveal": "Agar kegiatan berjalan aman dan teratur.",
+        "hint": "Bayangkan bila tidak ada aturan."
+      },
+      {
+        "prompt": "Apa akibat melanggar aturan?",
+        "assetPath": "assets/antrean-kelas3.webp",
+        "altText": "Siswa berbaris tertib di depan kelas.",
+        "reveal": "Kegiatan terganggu dan orang lain dirugikan.",
+        "hint": "Aturan melindungi semua."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Aturan di Rumah dan Sekolah?",
+        "reveal": "Mengenal aturan di rumah dan sekolah serta manfaat melaksanakannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/antrean-kelas3.webp",
+        "altText": "Siswa berbaris tertib di depan kelas."
+      },
+      {
+        "prompt": "Contoh aturan di rumah adalah ...",
+        "reveal": "Merapikan tempat tidur",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/antrean-kelas3.webp",
+        "altText": "Siswa berbaris tertib di depan kelas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di depan kelas."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Daftar faktor-faktor dari 12",
+        "right": "1, 2, 3, 4, 6, dan 12"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Faktor yang ada di kedua lingkaran (daerah oranye)",
+        "right": "1, 2, 3, dan 6 adalah faktor persekutuan 12 dan 18"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Banyak faktor persekutuan terbesar (FPB) dari 12 dan 18",
+        "right": "FPB 12 dan 18 adalah 6"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Bilangan berikut yang BUKAN faktor 12 adalah",
+        "right": "5"
+      },
+      {
+        "pairId": "pasangan-daftar-kelipatan-5-yang-kurang-d",
+        "left": "Daftar kelipatan 5 yang kurang dari 30",
+        "right": "5, 10, 15, 20, 25"
+      },
+      {
+        "pairId": "pasangan-faktor-persekutuan-terbesar-dari",
+        "left": "Faktor persekutuan terbesar dari 8 dan 12",
+        "right": "4"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram Venn dua lingkaran: faktor 12 di kiri, faktor 18 di kanan, dan faktor persekutuan di daerah oranye."
+  }
+}

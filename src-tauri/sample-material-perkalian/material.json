@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "materialId": "perkalian-kelompok-jeruk",
+  "version": "1.0.0",
+  "title": "Perkalian sebagai Penjumlahan Berulang",
+  "summary": "Susun kelompok jeruk untuk melihat bahwa 3 × 4 sama dengan 4 + 4 + 4.",
+  "locale": "id-ID",
+  "gradeLevels": [2],
+  "subjects": ["matematika"],
+  "topics": ["Perkalian"],
+  "estimatedMinutes": 4,
+  "entry": "index.html",
+  "cover": "assets/cover.webp",
+  "transcriptPath": "transcript.txt",
+  "accessibility": {
+    "hasAudio": false,
+    "keyboardNavigable": true,
+    "supportsReducedMotion": true,
+    "contrastChecked": true
+  },
+  "completion": { "mode": "signal", "minDwellSeconds": 2 },
+  "minAppVersion": "0.1.0",
+  "publisher": { "name": "Gerbang Edukasi" },
+  "reviewStatus": "reviewed",
+  "files": []
+}

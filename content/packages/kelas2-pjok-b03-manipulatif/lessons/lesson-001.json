@@ -1,0 +1,29 @@
+{
+  "lessonId": "manipulatif-kelas2",
+  "packageId": "kelas2-pjok-b03-manipulatif",
+  "title": "Gerak Manipulatif",
+  "summary": "Mempraktikkan melempar dan menangkap bola.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal gerak manipulatif.",
+    "Mempraktikkan lempar-tangkap.",
+    "Bekerja sama."
+  ],
+  "activityIds": [
+    "eksplorasi-manipulatif-kelas2",
+    "ordering-manipulatif-kelas2",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/manipulatif-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak melempar dan menangkap bola."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

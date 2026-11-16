@@ -1,0 +1,28 @@
+{
+  "lessonId": "bola-besar-lanjutan",
+  "packageId": "kelas5-pjok-b05-bola-besar-lanjutan",
+  "title": "Permainan Bola Besar Lanjutan",
+  "summary": "Mempraktikkan teknik lanjutan permainan bola besar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan teknik lanjutan.",
+    "Bekerja sama dalam tim.",
+    "Mematuhi aturan permainan."
+  ],
+  "activityIds": [
+    "eksplorasi-bola-besar-lanjutan",
+    "kuis-bola-besar-lanjutan",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-bola-besar-lanjutan"
+  ],
+  "assetRefs": [
+    "assets/bola-besar-lanjutan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-apresiasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menikmati Karya Sastra",
+  "instructions": "Amati gambar, lalu diskusikan cara menikmati dan menghargai karya sastra.",
+  "assets": [
+    "assets/apresiasi-sastra.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan anak pada gambar?",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
+        "reveal": "Anak membaca buku sastra dengan tenang.",
+        "hint": "Perhatikan buku dan suasana."
+      },
+      {
+        "prompt": "Apa yang bisa dinikmati dari sebuah puisi?",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
+        "reveal": "Rima, pilihan kata, irama, dan amanat.",
+        "hint": "Dengarkan bunyi dan maknanya."
+      },
+      {
+        "prompt": "Bagaimana cara memberi apresiasi yang baik?",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah.",
+        "reveal": "Menyebutkan hal menarik dan alasannya dengan sopan.",
+        "hint": "Hindari mengejek karya teman."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Apresiasi Sastra?",
+        "reveal": "Mengenali unsur puisi dan cerita, menyampaikan tanggapan, serta menghargai karya sastra.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+      },
+      {
+        "prompt": "Apresiasi yang baik terhadap karya teman adalah ...",
+        "reveal": "menyebutkan hal menarik beserta alasannya",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/apresiasi-sastra.webp",
+        "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+  }
+}

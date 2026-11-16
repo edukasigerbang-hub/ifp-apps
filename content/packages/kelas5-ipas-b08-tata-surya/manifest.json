@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b08-tata-surya",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bumi dan Tata Surya — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/tata-surya.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 180296,
+      "sha256": "fa182a54bc990808d47150aab932c1965ab4372581a161dc691ae045a38be18a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

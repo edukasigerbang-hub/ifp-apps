@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-pameran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pameran Kelas",
+  "instructions": "Amati gambar pameran kelas, lalu diskusikan cara menata karya.",
+  "assets": [
+    "assets/pameran-kelas.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dipamerkan di kelas?",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
+        "reveal": "Karya seni siswa, seperti gambar dan karya tiga dimensi.",
+        "hint": "Perhatikan dinding dan meja."
+      },
+      {
+        "prompt": "Bagaimana karya ditata agar menarik?",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
+        "reveal": "Karya dikelompokkan, diberi label, dan tidak berdesakan.",
+        "hint": "Perhatikan jarak antar-karya."
+      },
+      {
+        "prompt": "Mengapa pameran kelas bermanfaat?",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung.",
+        "reveal": "Melatih percaya diri, menghargai karya teman, dan berbagi hasil belajar.",
+        "hint": "Hubungkan dengan perasaan bangga dan saling menghargai."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Pameran Kelas?",
+        "reveal": "Memilih karya → Menata karya → Membuat label karya → Membuka pameran → Mengapresiasi karya",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
+        "reveal": "Merencanakan, menata, dan menyajikan karya seni dalam pameran kelas sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pameran-kelas.webp",
+        "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+  }
+}

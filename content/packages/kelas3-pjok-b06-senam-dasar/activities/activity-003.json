@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Guling depan, peregangan, dan keseimbangan",
+        "right": "Gerak senam"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang disiapkan agar aman",
+        "right": "Matras dan pendamping"
+      },
+      {
+        "pairId": "pasangan-alas-lantai-yang-dipakai-agar-be",
+        "left": "Alas lantai yang dipakai agar berguling terasa aman",
+        "right": "Matras"
+      },
+      {
+        "pairId": "pasangan-langkah-awal-yang-wajib-dilakuka",
+        "left": "Langkah awal yang wajib dilakukan sebelum guling depan",
+        "right": "Pemanasan"
+      },
+      {
+        "pairId": "pasangan-posisi-badan-saat-bersiap-bergul",
+        "left": "Posisi badan saat bersiap berguling dengan dagu menempel dada",
+        "right": "Jongkok"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan, peregangan, dan keseimbangan di matras."
+  }
+}

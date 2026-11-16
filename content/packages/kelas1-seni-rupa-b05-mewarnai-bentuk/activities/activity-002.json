@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-mewarnai-bentuk",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Mewarnai",
+  "instructions": "Susun langkah mewarnai bentuk.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-alat",
+        "text": "Menyiapkan alat"
+      },
+      {
+        "itemId": "langkah-warna",
+        "text": "Memilih warna"
+      },
+      {
+        "itemId": "langkah-warnai",
+        "text": "Mewarnai bentuk"
+      },
+      {
+        "itemId": "langkah-rapi",
+        "text": "Merapikan alat"
+      },
+      {
+        "itemId": "langkah-cuci",
+        "text": "Mencuci tangan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-alat",
+      "langkah-warna",
+      "langkah-warnai",
+      "langkah-rapi",
+      "langkah-cuci"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
+  }
+}

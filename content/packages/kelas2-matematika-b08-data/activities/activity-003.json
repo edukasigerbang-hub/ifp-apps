@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Isi tabel data",
+        "right": "Keterangan dan jumlah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Batang paling tinggi pada diagram menunjukkan",
+        "right": "Banyak data"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Mencari data terbanyak",
+        "right": "Lihat batang tertinggi"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Diagram batang dan tabel sederhana",
+        "right": "Penyajian data"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Diagram batang menunjukkan",
+        "right": "Perbandingan data"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  }
+}

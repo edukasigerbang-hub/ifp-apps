@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b07-bangun-datar",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bangun Datar Sederhana — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bangun-datar-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 119934,
+      "sha256": "5736480be9872d6cc8a9b255d20384723758c2545342b3b225a6a04389903074"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 30723,
+      "sha256": "3e5eaf23159957b37bce24cd7fe2cd9700b4fc78264ca25182ba112589cd481e"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10926,
+      "sha256": "0cfca827c73aa1f6097377b6687d50bc878c19029f1cbc77f9a3965da9298f35"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6977,
+      "sha256": "adce4d373619a54f6befcc30682aa5548634bde526fe4a93671dfd17a3c9d379"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9173,
+      "sha256": "be20062588a4264c933291dfeaac042d03acf20ba1dac67a17e683971ac71174"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6171,
+      "sha256": "3a9f816ea1a98900e0471d0237e093f31bb8e5b9437d02220fac960fd1ff7177"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

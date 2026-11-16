@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pjok-b04-kebugaran-kebersihan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kebugaran dan Kebersihan — PJOK Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kebugaran-kebersihan-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 188114,
+      "sha256": "8a4cfcf67e548b9c02719b1bbe8b0fafb2d0513d39f5f59cd4c793ddb23e4e41"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

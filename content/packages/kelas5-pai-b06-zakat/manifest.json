@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b06-zakat",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Zakat dan Infak — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/zakat-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168352,
+      "sha256": "3c50e9fabaf6b3ff54e2baaade4f1ff019c67138d4c89e8b76af980d8b356c57"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

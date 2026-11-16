@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b07-sejarah-islam",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Sejarah Islam — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sejarah-islam-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168430,
+      "sha256": "ef1f73b0c2d99be315fd62a24233b94eaaaf12b832029503de8a7250d4de1768"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

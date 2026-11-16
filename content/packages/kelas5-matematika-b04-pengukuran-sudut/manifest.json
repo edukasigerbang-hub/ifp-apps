@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b04-pengukuran-sudut",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pengukuran Sudut dan Bangun Datar — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pengukuran-sudut.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 137940,
+      "sha256": "3fc54f5b3539a1cddcf0f350d76b1d628854c80ce67ec3c7290f4463be45fe9e"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5621,
+      "sha256": "129d0900f24278de1ba83d637a64e68aade8bcdad56b6f03d65c196150362db4"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9490,
+      "sha256": "e8e7dda62982621e2d8e40124bb00377e62af968179ea928ef6e90a6611b90d4"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10183,
+      "sha256": "7dae8e690ab2a69426989254423a0ce23916dff7157ff9c7c8211198ffbf42fe"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7176,
+      "sha256": "1376767fc91438f75919ddba5d10a9d88f0c3a7bfcf73a705164f3b825fae332"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6275,
+      "sha256": "d605e1f55ae6cd1b9cb3bbc98779f23a9ffaeb02919a0990248a9aa1655e52f4"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

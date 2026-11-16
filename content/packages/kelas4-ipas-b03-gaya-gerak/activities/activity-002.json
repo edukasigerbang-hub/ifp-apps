@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-gaya-gerak",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Gaya dan Contohnya",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/gaya-gerak.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-dorong",
+        "left": "Gaya dorong",
+        "right": "Mendorong gerobak"
+      },
+      {
+        "pairId": "pasangan-tarik",
+        "left": "Gaya tarik",
+        "right": "Menarik tali"
+      },
+      {
+        "pairId": "pasangan-gesek",
+        "left": "Gaya gesek",
+        "right": "Bola berhenti di rumput"
+      },
+      {
+        "pairId": "pasangan-gravitasi",
+        "left": "Gaya gravitasi",
+        "right": "Apel jatuh ke tanah"
+      },
+      {
+        "pairId": "pasangan-magnet",
+        "left": "Gaya magnet",
+        "right": "Paku menempel pada magnet"
+      },
+      {
+        "pairId": "pasangan-arah-tarikan-gaya-gravitasi-bumi",
+        "left": "Arah tarikan gaya gravitasi bumi terhadap semua benda",
+        "right": "ke bawah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Masalah yang dipilih",
+        "right": "Masalah di sekitar sekolah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Merencanakan",
+        "right": "Tentukan tujuan, tugas, dan waktu"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah proyek",
+        "right": "Melaporkan hasil dan evaluasi"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-membagi-tugas-da",
+        "left": "Langkah setelah membagi tugas dalam proyek",
+        "right": "Melaksanakan proyek"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-sebuah-proyek-k",
+        "left": "Kegiatan penutup proyek selain melaporkan hasil",
+        "right": "Evaluasi"
+      },
+      {
+        "pairId": "pasangan-selain-tugas-dan-waktu-hal-yang",
+        "left": "Langkah sesudah menyusun rencana proyek",
+        "right": "Membagi tugas"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa melaksanakan proyek kebersihan sekolah."
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "_comment": "T-092 kelompok kelas 3 bagian C (PAI, PJOK, Seni Rupa). Item ditulis tangan per paket sesuai needs-kelas3-c.json: 24 paket, 54 soal kuis, 33 pasangan mencocokkan.",
+  "packages": {
+    "kelas3-pai-b01-surah-pendek": {
+      "quiz": [
+        { "prompt": "Surah yang menjadi pembuka Al-Qur'an adalah Surah ...", "answer": "Al-Fatihah", "distractors": ["Surah An-Nas", "Surah Al-Ikhlas"] },
+        { "prompt": "Membaca Al-Qur'an dengan pelan dan jelas berarti kita membaca dengan ...", "answer": "tartil", "distractors": ["adab membaca", "hafalan surah"] },
+        { "prompt": "Satu bab atau bagian dalam Al-Qur'an disebut ...", "answer": "surah", "distractors": ["ayat", "kalimat"] },
+        { "prompt": "Saat membaca Al-Qur'an kita bersikap sopan dan ...", "answer": "tenang", "distractors": ["berteriak keras", "sambil bermain"] }
+      ]
+    },
+    "kelas3-pai-b02-iman": {
+      "quiz": [
+        { "prompt": "Sifat Allah yang disebut Ar-Rahman berarti Allah Maha ...", "answer": "Pengasih", "distractors": ["Maha Tinggi", "Maha Kuasa"] },
+        { "prompt": "Iman berarti percaya dan ... kepada Allah.", "answer": "yakin", "distractors": ["ragu", "duga"] }
+      ],
+      "matching": [
+        { "left": "Makna sifat Allah Ar-Rahman yang kita pelajari", "right": "Maha Pengasih" },
+        { "left": "Perilaku baik kepada teman sebagai bukti iman", "right": "Berbuat baik" }
+      ]
+    },
+    "kelas3-pai-b03-akhlak": {
+      "quiz": [
+        { "prompt": "Anak yang selalu berkata jujur akan ... teman.", "answer": "dipercaya", "distractors": ["dijauhi", "dimarahi"] },
+        { "prompt": "Menahan diri saat mendapat musibah termasuk sikap ...", "answer": "sabar", "distractors": ["amanah", "kasih sayang"] },
+        { "prompt": "Orang yang selalu menepati titipan dan janji memiliki sifat ...", "answer": "amanah", "distractors": ["sopan", "dermawan"] },
+        { "prompt": "Bertutur kata baik kepada siapa saja adalah contoh akhlak ...", "answer": "sopan", "distractors": ["jujur", "sabar"] }
+      ]
+    },
+    "kelas3-pai-b04-salat": {
+      "matching": [
+        { "left": "Gerakan pembuka saat baru memulai salat", "right": "Takbiratul ihram" },
+        { "left": "Gerakan terakhir yang menutup rangkaian salat", "right": "Salam" }
+      ]
+    },
+    "kelas3-pai-b05-puasa": {
+      "quiz": [
+        { "prompt": "Saat puasa kita menahan makan dan minum hingga waktu ... tiba.", "answer": "magrib", "distractors": ["tengah malam", "siang hari"] },
+        { "prompt": "Puasa melatih kita bersabar dan bersikap ...", "answer": "disiplin", "distractors": ["malas", "mudah marah"] }
+      ],
+      "matching": [
+        { "left": "Waktu makan dan minum sebelum terbit fajar", "right": "Sahur" },
+        { "left": "Orang yang makan dan minum dengan sengaja saat puasa", "right": "Batalkan puasanya" }
+      ]
+    },
+    "kelas3-pai-b06-zakat-infak": {
+      "quiz": [
+        { "prompt": "Zakat wajib ditunaikan oleh orang yang ...", "answer": "mampu", "distractors": ["terpaksa", "enggan memberi"] },
+        { "prompt": "Zakat berbeda dari infak karena zakat bersifat ...", "answer": "wajib", "distractors": ["sumbangan", "sukarela"] },
+        { "prompt": "Petugas yang ditunjuk untuk mengelola zakat disebut ...", "answer": "amil", "distractors": ["mustahik", "dermawan"] },
+        { "prompt": "Zakat dan infak sama-sama ditujukan untuk menolong orang yang ...", "answer": "membutuhkan", "distractors": ["berkelebihan", "jauh mata pandangnya"] }
+      ]
+    },
+    "kelas3-pai-b07-sejarah-islam": {
+      "matching": [
+        { "left": "Kota tujuan Nabi Muhammad hijrah demi keselamatan umat", "right": "Madinah" },
+        { "left": "Kegiatan Nabi setelah menerima wahyu", "right": "Berdakwah" },
+        { "left": "Masjid yang dibangun Nabi setelah sampai di Madinah", "right": "Masjid Nabawi" }
+      ]
+    },
+    "kelas3-pai-b08-adab-kisah-teladan": {
+      "quiz": [
+        { "prompt": "Sikap kita saat guru menjelaskan pelajaran di kelas adalah ...", "answer": "mendengar", "distractors": ["mengobrol", "tidur"] },
+        { "prompt": "Selain jujur dan sabar, sifat terpuji yang kita teladani dari kisah teladan adalah ...", "answer": "peduli", "distractors": ["sombong", "egois"] }
+      ],
+      "matching": [
+        { "left": "Sikap kepada orang tua setelah menghormati", "right": "Membantu" },
+        { "left": "Adab kepada guru ketika pelajaran sedang berjalan", "right": "Mendengarkan dengan sopan" }
+      ]
+    },
+    "kelas3-pjok-b01-gerak-lokomotor": {
+      "quiz": [
+        { "prompt": "Gerak yang membuat tubuh berpindah tempat disebut gerak ...", "answer": "lokomotor", "distractors": ["non-lokomotor", "manipulatif"] },
+        { "prompt": "Saat melompat, kita mendarat dengan lutut ...", "answer": "ditekuk", "distractors": ["kaku", "lurus"] },
+        { "prompt": "Bertolak ketika melompat dilakukan dengan ...", "answer": "kaki", "distractors": ["tangan", "kepala"] },
+        { "prompt": "Sebelum berlatih di lapangan, ruang gerak diperiksa agar ...", "answer": "aman", "distractors": ["sempit", "licin"] }
+      ]
+    },
+    "kelas3-pjok-b02-gerak-non-lokomotor": {
+      "quiz": [
+        { "prompt": "Gerak menekuk dan memutar badan tanpa berpindah tempat termasuk gerak ...", "answer": "non-lokomotor", "distractors": ["lokomotor", "manipulatif"] },
+        { "prompt": "Pemanasan sebelum bergerak berguna menjaga tubuh dari ...", "answer": "cedera", "distractors": ["manfaat", "olahraga"] }
+      ],
+      "matching": [
+        { "left": "Gerak badan memutar poros tanpa berpindah tempat", "right": "Memutar badan" },
+        { "left": "Sikap tubuh ketika berlatih berdiri satu kaki", "right": "Keseimbangan" }
+      ]
+    },
+    "kelas3-pjok-b03-gerak-manipulatif": {
+      "matching": [
+        { "left": "Jenis gerak yang memakai bola atau alat", "right": "Manipulatif" },
+        { "left": "Langkah setelah memegang bola pada permainan lempar tangkap", "right": "Melempar ke teman" },
+        { "left": "Sikap yang perlu dijaga saat melempar tangkap bersama teman", "right": "Kerja sama" }
+      ]
+    },
+    "kelas3-pjok-b04-kebugaran": {
+      "quiz": [
+        { "prompt": "Tubuh menjadi bugar bila kita olahraga ..., makan bergizi, dan cukup istirahat.", "answer": "teratur", "distractors": ["sekali seminggu", "hanya saat hari Sabtu"] },
+        { "prompt": "Mencuci tangan pakai sabun dilakukan sebelum makan dan setelah ...", "answer": "bermain", "distractors": ["mandi", "tidur"] },
+        { "prompt": "Habis berolahraga, tenaga cepat pulih dengan cara ...", "answer": "istirahat", "distractors": ["begadang sampai larut", "tidak makan sama sekali"] },
+        { "prompt": "Supaya tidak dehidrasi sehabis berlatih, minuman paling baik adalah ...", "answer": "air putih", "distractors": ["soda", "sirop berwarna"] }
+      ]
+    },
+    "kelas3-pjok-b05-bola-kecil": {
+      "quiz": [
+        { "prompt": "Bulu tangkis dimainkan menggunakan raket dan ...", "answer": "kok", "distractors": ["bola tenis", "bola pingpong"] },
+        { "prompt": "Pemain permainan bola kecil wajib mematuhi aturan dan ...", "answer": "bekerja sama", "distractors": ["bertengkar", "curang"] }
+      ],
+      "matching": [
+        { "left": "Salah satu contoh permainan yang menggunakan bola kecil", "right": "Bulu tangkis" },
+        { "left": "Permainan yang alat pemukulnya bernama bet", "right": "Tenis meja" }
+      ]
+    },
+    "kelas3-pjok-b06-senam-dasar": {
+      "matching": [
+        { "left": "Alas lantai yang dipakai agar berguling terasa aman", "right": "Matras" },
+        { "left": "Langkah awal yang wajib dilakukan sebelum guling depan", "right": "Pemanasan" },
+        { "left": "Posisi badan saat bersiap berguling dengan dagu menempel dada", "right": "Jongkok" }
+      ]
+    },
+    "kelas3-pjok-b07-atletik-dasar": {
+      "quiz": [
+        { "prompt": "Sebelum berlari, kita bersikap siap dengan pandangan ke ...", "answer": "depan", "distractors": ["belakang", "bawah"] },
+        { "prompt": "Tahapan lompat jauh yang benar dimulai dari ...", "answer": "awalan, tolakan, melayang, mendarat", "distractors": ["tolakan, awalan, mendarat, melayang", "mendarat, melayang, tolakan, awalan"] },
+        { "prompt": "Penanda akhir lintasan lari pada gambar adalah ...", "answer": "pita finis", "distractors": ["balok start", "bak pasir"] },
+        { "prompt": "Mengakui kekalahan tanpa marah saat lomba berarti kita bersikap ...", "answer": "sportif", "distractors": ["melanggar aturan", "berkelahi dengan teman"] }
+      ]
+    },
+    "kelas3-pjok-b08-kesehatan": {
+      "quiz": [
+        { "prompt": "Mencuci tangan perlu dilakukan sebelum makan dan setelah ...", "answer": "bermain", "distractors": ["berhitung", "membaca"] },
+        { "prompt": "Istirahat yang cukup membuat tubuh menjadi ...", "answer": "segar", "distractors": ["lemas", "kantuk"] },
+        { "prompt": "Mandi menjaga tubuh tetap ...", "answer": "bersih dan sehat", "distractors": ["kotor dan gatal", "lemas dan pusing"] },
+        { "prompt": "Supaya gigi tetap sehat kita rajin ...", "answer": "sikat gigi", "distractors": ["jajan manis", "minum soda"] }
+      ]
+    },
+    "kelas3-seni-rupa-b01-unsur-garis": {
+      "quiz": [
+        { "prompt": "Berikut yang termasuk warna primer adalah ...", "answer": "biru", "distractors": ["hijau", "oranye"] },
+        { "prompt": "Campuran cat merah dan kuning menghasilkan warna ...", "answer": "oranye", "distractors": ["hijau", "cokelat"] },
+        { "prompt": "Garis yang berkelok tajam seperti gerigi disebut garis ...", "answer": "zigzag", "distractors": ["lengkung", "lurus"] },
+        { "prompt": "Selain garis lurus dan zigzag, gambar pada pelajaran memuat garis ...", "answer": "lengkung", "distractors": ["putus-putus", "berkelok"] }
+      ]
+    },
+    "kelas3-seni-rupa-b02-menggambar-bentuk": {
+      "matching": [
+        { "left": "Langkah sebelum mewarnai pada urutan menggambar", "right": "Menambahkan detail" },
+        { "left": "Bentuk dasar yang bersudut tiga pada gambar rumah", "right": "Segitiga" }
+      ]
+    },
+    "kelas3-seni-rupa-b03-tekstur-bahan": {
+      "quiz": [
+        { "prompt": "Bahan yang permukaannya tidak rata saat diraba disebut bertekstur ...", "answer": "kasar", "distractors": ["halus", "lembek"] },
+        { "prompt": "Setelah lem dioleskan tipis, bahan tempel ditekan dengan ...", "answer": "perlahan", "distractors": ["kasar", "terburu-buru"] }
+      ],
+      "matching": [
+        { "left": "Kesan yang terasa saat kita meraba permukaan batu", "right": "Kasar" },
+        { "left": "Cara mengoleskan lem agar bahan menempel rapi", "right": "Tipis" }
+      ]
+    },
+    "kelas3-seni-rupa-b04-kolase": {
+      "matching": [
+        { "left": "Langkah terakhir setelah semua bahan kolase menempel", "right": "Menjemur karya" },
+        { "left": "Kegiatan setelah menyiapkan bahan dan sebelum mengoles lem", "right": "Menyusun pola" },
+        { "left": "Bahan alam untuk kolase yang butirannya kecil dan keras", "right": "Biji" }
+      ]
+    },
+    "kelas3-seni-rupa-b05-seni-cetak": {
+      "matching": [
+        { "left": "Bahan dapur yang dapat dipotong lalu dijadikan alat cap", "right": "Kentang" },
+        { "left": "Langkah sesudah menekan alat cetak pada kertas", "right": "Mengangkat perlahan" },
+        { "left": "Barang bekas di meja guru yang dapat dipakai sebagai cap", "right": "Tutup botol" }
+      ]
+    },
+    "kelas3-seni-rupa-b06-kerajinan-bahan-alam": {
+      "quiz": [
+        { "prompt": "Pelepah pisang pada pelajaran kerajinan dipakai sebagai alat ...", "answer": "cetak", "distractors": ["potong", "gambar"] },
+        { "prompt": "Biji jagung yang ditempelkan rapat dan rapi menjadi karya ...", "answer": "mozaik", "distractors": ["anyaman", "bingkai hiasan"] },
+        { "prompt": "Tanah liat dapat dibentuk menjadi karya ...", "answer": "patung sederhana", "distractors": ["anyaman", "mozaik"] },
+        { "prompt": "Ranting yang kering dan aman dapat dirangkai menjadi ...", "answer": "bingkai hiasan", "distractors": ["tanah liat", "biji jagung"] }
+      ]
+    },
+    "kelas3-seni-rupa-b07-apresiasi-karya": {
+      "quiz": [
+        { "prompt": "Kegiatan mengamati sekaligus menghargai karya orang lain disebut ...", "answer": "apresiasi", "distractors": ["pameran karya", "kolase"] },
+        { "prompt": "Tujuan apresiasi karya seni adalah mengamati dan ...", "answer": "menghargai", "distractors": ["mengejek", "merusak"] }
+      ],
+      "matching": [
+        { "left": "Unsur karya yang dapat diamati selain garis dan bentuk", "right": "Warna" },
+        { "left": "Cara menanggapi karya teman yang menerima alasan", "right": "Sopan" }
+      ]
+    },
+    "kelas3-seni-rupa-b08-pameran-kelas": {
+      "quiz": [
+        { "prompt": "Karya yang dipajang pada pameran kelas adalah ...", "answer": "karya siswa", "distractors": ["barang dagangan", "buku perpustakaan"] },
+        { "prompt": "Kartu kecil berisi nama dan judul pada karya disebut ...", "answer": "label", "distractors": ["tiket masuk", "pamflet"] },
+        { "prompt": "Penjaga pameran bertugas menjelaskan karya dengan sopan kepada ...", "answer": "pengunjung", "distractors": ["penjaga lain", "tukang bersih-bersih"] },
+        { "prompt": "Karya ditata rapi supaya mudah ... oleh pengunjung.", "answer": "dilihat", "distractors": ["disentuh", "dibawa pulang"] }
+      ]
+    }
+  }
+}

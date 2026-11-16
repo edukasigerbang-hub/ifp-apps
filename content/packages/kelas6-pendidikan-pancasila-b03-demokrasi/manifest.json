@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pendidikan-pancasila-b03-demokrasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Demokrasi dan Pemilu — Pendidikan Pancasila Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/demokrasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 205696,
+      "sha256": "e6ea29be5f90f5d13a1b78927844fbcf8e3c609804a8de783cf6fab3fb736ab1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

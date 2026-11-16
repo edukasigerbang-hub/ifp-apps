@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Puasa",
+        "right": "Menahan makan dan minum"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Waktu berbuka",
+        "right": "Saat magrib"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Hikmahnya",
+        "right": "Melatih sabar"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Kurma dan air saat berbuka",
+        "right": "Berbuka puasa"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Waktu mulai berpuasa",
+        "right": "Terbit fajar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa dengan kurma dan air."
+  }
+}

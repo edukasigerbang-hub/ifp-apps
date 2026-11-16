@@ -1,0 +1,29 @@
+{
+  "lessonId": "pameran-kelas2",
+  "packageId": "kelas2-seni-rupa-b08-pameran",
+  "title": "Pameran Kelas",
+  "summary": "Menata dan memamerkan karya kelas.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memilih karya.",
+    "Menata karya.",
+    "Menjelaskan karya."
+  ],
+  "activityIds": [
+    "eksplorasi-pameran-kelas2",
+    "ordering-pameran-kelas2",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/pameran-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran karya siswa di kelas."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

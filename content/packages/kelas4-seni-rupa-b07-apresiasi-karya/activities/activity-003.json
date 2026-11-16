@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tujuan apresiasi karya seni",
+        "right": "Mengamati, menilai, dan menghargai karya"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Unsur yang dapat diamati",
+        "right": "Garis, warna, bentuk, tekstur, dan tema"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Memberi tanggapan yang baik",
+        "right": "Sopan, beralasan, dan memberi saran yang membangun"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Langkah pertama dalam mengapresiasi karya seni adalah",
+        "right": "Mengamati karya dengan teliti"
+      },
+      {
+        "pairId": "pasangan-sikap-ketika-menemukan-karya-yan",
+        "left": "Sikap ketika menemukan karya yang kurang menarik menurut kita",
+        "right": "Menanggapi dengan sopan"
+      },
+      {
+        "pairId": "pasangan-penyangga-pendapat-ketika-member",
+        "left": "Penyangga pendapat ketika memberi apresiasi, selain sopan",
+        "right": "Beralasan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alat yang dipakai",
+        "right": "Pensil, krayon, dan kertas"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang digambar",
+        "right": "Bebas sesuai ide"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Langkah terakhir",
+        "right": "Mewarnai"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-mewarnai-gambar",
+        "left": "Alat untuk mewarnai gambar",
+        "right": "Krayon"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-mewarnai",
+        "left": "Yang dilakukan setelah mewarnai",
+        "right": "Merapikan alat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  }
+}

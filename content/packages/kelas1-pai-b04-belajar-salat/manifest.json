@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pai-b04-belajar-salat",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Salat — PAI Kelas 1 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/belajar-salat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 94592,
+      "sha256": "c25d599b6444f7e26455125faf37c1c4fd3eb3a83ca6ebfa02cd5706a13d3251"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bagian cerita yang memperkenalkan tokoh dan latar",
+        "right": "Orientasi"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bagian cerita tempat masalah muncul",
+        "right": "Komplikasi"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Bagian cerita tempat masalah selesai",
+        "right": "Resolusi"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Tokoh, tempat, dan waktu dalam cerita",
+        "right": "Latar"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Urutan peristiwa dari awal sampai akhir",
+        "right": "Alur"
+      },
+      {
+        "pairId": "pasangan-benda-yang-dipakai-anak-menolong",
+        "left": "Benda yang dipakai anak menolong kucing dari hujan",
+        "right": "payung"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
+  }
+}

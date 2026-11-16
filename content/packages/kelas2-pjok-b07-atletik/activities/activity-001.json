@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-atletik-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Nomor Atletik",
+  "instructions": "Amati gambar, lalu diskusikan geraknya.",
+  "assets": [
+    "assets/atletik-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana sikap start?",
+        "assetPath": "assets/atletik-kelas2.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis.",
+        "reveal": "Siap dan pandangan ke depan.",
+        "hint": "Kaki menolak kuat."
+      },
+      {
+        "prompt": "Apa urutan lompat jauh?",
+        "assetPath": "assets/atletik-kelas2.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis.",
+        "reveal": "Awalan, tolakan, mendarat.",
+        "hint": "Tolak satu kaki."
+      },
+      {
+        "prompt": "Apa itu sportivitas?",
+        "assetPath": "assets/atletik-kelas2.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis.",
+        "reveal": "Menghargai lawan.",
+        "hint": "Tidak curang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lintasan lari, bak lompat, dan pita finis.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/atletik-kelas2.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Atletik Dasar?",
+        "reveal": "Mengenal lari dan lompat sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/atletik-kelas2.webp",
+        "altText": "Lintasan lari, bak lompat, dan pita finis."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  }
+}

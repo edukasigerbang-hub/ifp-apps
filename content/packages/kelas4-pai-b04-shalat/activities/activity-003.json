@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alas yang dipakai saat shalat",
+        "right": "Sajadah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Daftar lima shalat wajib",
+        "right": "Subuh, Dzuhur, Ashar, Maghrib, dan Isya"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan shalat wajib dikerjakan",
+        "right": "Kewajiban dan disiplin"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sajadah, masjid, dan jam waktu shalat",
+        "right": "Ilustrasi waktu shalat"
+      },
+      {
+        "pairId": "pasangan-shalat-wajib-yang-dikerjakan-seb",
+        "left": "Shalat wajib yang dikerjakan sebelum matahari terbit",
+        "right": "Subuh"
+      },
+      {
+        "pairId": "pasangan-sifat-yang-terbentuk-pada-anak-y",
+        "left": "Sifat yang terbentuk pada anak yang rutin mengerjakan shalat lima waktu",
+        "right": "Disiplin"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+  }
+}

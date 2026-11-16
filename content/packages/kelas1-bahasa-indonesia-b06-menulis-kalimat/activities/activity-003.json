@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kalimat dimulai dengan huruf",
+        "right": "Kapital"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Di akhir kalimat berita ada",
+        "right": "Titik"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menulis rapi",
+        "right": "Antar kata diberi jarak"
+      },
+      {
+        "pairId": "pasangan-alasan-antar-kata-diberi-jarak",
+        "left": "Alasan antar kata diberi jarak",
+        "right": "Supaya tulisan rapi"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-memberi-t",
+        "left": "Yang dilakukan setelah memberi tanda baca",
+        "right": "Memeriksa tulisan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis kalimat sederhana di buku."
+  }
+}

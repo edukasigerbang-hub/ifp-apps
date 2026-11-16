@@ -1,0 +1,29 @@
+{
+  "lessonId": "salat-ibadah",
+  "packageId": "kelas5-pai-b04-salat-ibadah",
+  "title": "Salat dan Ibadah",
+  "summary": "Mempelajari salat dan ibadah sehari-hari dengan tertib.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan kewajiban salat.",
+    "Menyebutkan waktu salat.",
+    "Mempraktikkan urutan salat."
+  ],
+  "activityIds": [
+    "eksplorasi-salat-ibadah",
+    "ordering-salat-ibadah",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/salat-ibadah.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan gerakan salat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

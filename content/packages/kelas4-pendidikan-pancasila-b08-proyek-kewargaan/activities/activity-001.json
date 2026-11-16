@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-proyek",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Proyek Kewargaan",
+  "instructions": "Amati gambar anak-anak mengerjakan proyek, lalu diskusikan langkahnya.",
+  "assets": [
+    "assets/proyek-kewargaan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan anak-anak pada gambar?",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
+        "reveal": "Mereka mengerjakan proyek bersama: membuat poster, papan rencana, dan menanam tanaman.",
+        "hint": "Perhatikan alat dan pembagian tugas."
+      },
+      {
+        "prompt": "Mengapa perlu pembagian tugas?",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
+        "reveal": "Agar pekerjaan cepat selesai dan setiap orang berkontribusi.",
+        "hint": "Bayangkan semua mengerjakan hal yang sama."
+      },
+      {
+        "prompt": "Apa manfaat proyek kewargaan?",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
+        "reveal": "Menumbuhkan kepedulian, tanggung jawab, dan kerja sama.",
+        "hint": "Hubungkan dengan lingkungan sekitar."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "reveal": "Menemukan masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan dan mengevaluasi",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/proyek-kewargaan.webp",
+        "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+  }
+}

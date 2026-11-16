@@ -26,7 +26,7 @@ async function clickButton(page, label) {
 async function buildPackage(artifactDir) {
   const source = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   const target = path.join(artifactDir, "activities-package");
   await mkdir(target, { recursive: true });
@@ -249,6 +249,29 @@ async function fillByLabel(page, ariaLabel, value) {
   `);
 }
 
+async function waitForSaved(page, label) {
+  const deadline = Date.now() + 30_000;
+  let banner = "";
+  let trail = "";
+  while (Date.now() < deadline) {
+    trail = await page.evaluate(`
+      (() => ({
+        banner: document.querySelector("[data-player-storage]")?.textContent.trim() ?? "",
+        panel: Boolean(document.querySelector("#activity-panel")),
+        heading: document.querySelector("main h1")?.textContent.trim() ?? "",
+        hash: window.location.hash
+      }))()
+    `);
+    banner = trail.banner;
+    if (banner.includes("Tersimpan lokal")) return;
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
+  assert(
+    false,
+    `Penyimpanan tidak selesai (${label}); banner "${banner}", panel ${trail.panel}, heading "${trail.heading}", hash "${trail.hash}".`
+  );
+}
+
 async function chooseRadio(page, name, value) {
   return page.evaluate(`
     (() => {
@@ -325,21 +348,152 @@ export async function run({ page, artifactDir, log }) {
     label: "paket impor aktif"
   });
 
+  const layout = await page.evaluate(`
+    (() => {
+      const grid = document.querySelector("[data-player-layout]");
+      const aside = document.querySelector("[data-player-aside]");
+      const panel = document.querySelector("#activity-panel");
+      if (!grid || !aside || !panel) return null;
+      const g = grid.getBoundingClientRect();
+      const a = aside.getBoundingClientRect();
+      const p = panel.getBoundingClientRect();
+      return {
+        viewport: window.innerWidth,
+        gridWidth: Math.round(g.width),
+        panelWidth: Math.round(p.width),
+        asideWidth: Math.round(a.width),
+        asideRightOfPanel: a.left >= p.right - 1,
+        asidePosition: getComputedStyle(aside).position,
+        asideHeight: Math.round(a.height),
+        gridHeight: Math.round(g.height),
+        asideHasObjectives: aside.textContent.includes("Tujuan pembelajaran"),
+        overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth
+      };
+    })()
+  `);
+  assert(layout, "Grid dua kolom Player (kolom samping + panel aktivitas) tidak ditemukan.");
+  assert(layout.asideHasObjectives, "Kartu Tujuan pembelajaran tidak berada di kolom samping.");
+  assert(!layout.overflowX, `Layout Player menyebabkan gulir horizontal (lebar ${layout.viewport}px).`);
+  if (layout.viewport >= 1024) {
+    assert(layout.asideRightOfPanel, "Pada layar lebar, kolom samping tidak berada di kanan panel aktivitas.");
+    assert(
+      layout.asidePosition === "sticky",
+      `Kolom samping tidak menempel (position: ${layout.asidePosition}).`
+    );
+    assert(
+      layout.panelWidth / layout.gridWidth > 0.55,
+      `Panel aktivitas hanya ${layout.panelWidth}px dari ${layout.gridWidth}px — kolom utama terlalu sempit.`
+    );
+    // Kuis satu-soal-per-halaman lebih pendek dari kartu samping, jadi ruang menempel
+    // diuji secara oportunistik lewat blok `sticky` di bawah saat halaman benar-benar bergulir.
+    log(
+      `Layout Player dua kolom pada ${layout.viewport}px: panel ${layout.panelWidth}px, samping ${layout.asideWidth}px (tinggi ${layout.asideHeight}px dalam grid ${layout.gridHeight}px, position ${layout.asidePosition}).`
+    );
+  } else {
+    assert(
+      layout.asideWidth <= layout.gridWidth,
+      "Kolom samping melebihi lebar kontainer pada layar sempit."
+    );
+    log(`Layout Player satu kolom pada ${layout.viewport}px (di bawah breakpoint lg).`);
+  }
+
+  const surfaces = await page.evaluate(`
+    (() => {
+      const hero = document.querySelector("[data-player-hero]");
+      const cover = document.querySelector("[data-player-cover] img[data-cover-art]");
+      const progress = document.querySelector("[data-player-progress]");
+      const bar = progress?.querySelector('[role="progressbar"]');
+      const summary = document.querySelector("[data-session-summary]");
+      return {
+        hero: Boolean(hero && hero.querySelector("h1")),
+        coverLoaded: Boolean(cover && cover.complete && cover.naturalWidth > 0),
+        coverSrc: cover ? cover.getAttribute("src") : null,
+        progress: Boolean(progress && bar),
+        progressMax: bar ? Number(bar.getAttribute("aria-valuemax")) : null,
+        summary: Boolean(summary && summary.textContent.includes("Ringkasan sesi"))
+      };
+    })()
+  `);
+  assert(surfaces.hero, "Header Player (data-player-hero) dengan judul tidak ditemukan.");
+  assert(surfaces.coverLoaded, `Cover header Player tidak termuat (src ${surfaces.coverSrc}).`);
+  assert(surfaces.progress && surfaces.progressMax > 0, "Kartu Aktivitas & kemajuan tidak ditemukan.");
+  assert(surfaces.summary, "Band Ringkasan sesi tidak ditemukan.");
+  log(
+    `Header Player memakai cover ${surfaces.coverSrc}; kartu kemajuan (maks ${surfaces.progressMax}) dan ringkasan sesi tampil.`
+  );
+
   await clickButton(page, "Benar atau Salah");
-  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+  await page.waitFor(`document.body.textContent.includes("Soal 1 dari 2")`, {
     label: "kuis benar-salah"
   });
+  const sequence = await page.evaluate(`
+    (() => {
+      const panel = document.querySelector("#activity-panel");
+      const progress = panel?.querySelector("[data-quiz-progress]")?.textContent.trim() ?? "";
+      const next = [...(panel?.querySelectorAll("button") ?? [])].find(
+        (button) => button.textContent.trim() === "Lanjut"
+      );
+      return {
+        fieldsets: panel?.querySelectorAll("fieldset").length ?? 0,
+        progress,
+        nextLabel: next?.textContent.trim() ?? null,
+        nextDisabled: next ? next.disabled : null
+      };
+    })()
+  `);
+  assert(
+    sequence.fieldsets === 1,
+    `Kuis merender ${sequence.fieldsets} soal sekaligus, harus 1 soal per halaman.`
+  );
+  assert(
+    sequence.progress === "Soal 1 dari 2",
+    `Penanda kemajuan "${sequence.progress}", harus "Soal 1 dari 2".`
+  );
+  assert(sequence.nextLabel === "Lanjut", `Tombol soal pertama "${sequence.nextLabel}", harus "Lanjut".`);
+  assert(sequence.nextDisabled === true, "Tombol Lanjut aktif sebelum soal pertama dijawab.");
+  log("Kuis tampil satu soal per halaman dengan tombol Lanjut terkunci sebelum dijawab.");
+
   assert(await chooseRadio(page, "bs-setengah", "true"), "Radio benar-salah 1 gagal.");
+  await clickButton(page, "Lanjut");
+  await page.waitFor(`document.body.textContent.includes("1/4 lebih besar daripada 1/2")`, {
+    label: "soal benar-salah 2"
+  });
   assert(await chooseRadio(page, "bs-seperempat", "false"), "Radio benar-salah 2 gagal.");
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor benar-salah"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan benar-salah",
-    timeoutMs: 30_000
+  await waitForSaved(page, "simpan benar-salah");
+  await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
+    label: "fokus kartu hasil benar-salah"
   });
-  log("Aktivitas benar-salah dinilai 100 dan tersimpan.");
+  log("Aktivitas benar-salah dinilai 100, tersimpan, dan kartu hasil difokuskan.");
+
+  const progress = await page.evaluate(`
+    (() => {
+      const card = document.querySelector("[data-player-progress]");
+      const bar = card?.querySelector('[role="progressbar"]');
+      const summary = document.querySelector("[data-session-summary]");
+      if (!card || !bar || !summary) return null;
+      return {
+        now: Number(bar.getAttribute("aria-valuenow")),
+        max: Number(bar.getAttribute("aria-valuemax")),
+        cardText: card.textContent,
+        summaryText: summary.textContent
+      };
+    })()
+  `);
+  assert(progress, "Kartu kemajuan atau ringkasan sesi hilang setelah penilaian.");
+  assert(
+    progress.now === 1 && progress.max === 5,
+    `Kemajuan ${progress.now}/${progress.max}, harus 1/5.`
+  );
+  assert(progress.cardText.includes("Skor 100"), "Skor aktivitas tidak tampil di kartu kemajuan.");
+  assert(
+    progress.summaryText.includes("1 dari 5") && progress.summaryText.includes("100"),
+    "Ringkasan sesi tidak memuat jumlah aktivitas dinilai dan skor terakhir."
+  );
+  log("Kartu kemajuan menandai 1/5 aktivitas berskor 100 dan ringkasan sesi ikut diperbarui.");
 
   await clickButton(page, "Jawaban Singkat");
   await page.waitFor(`document.body.textContent.includes("Tuliskan nama pecahan 1/2")`, {
@@ -349,6 +503,11 @@ export async function run({ page, artifactDir, log }) {
     await fillByLabel(page, "Tuliskan nama pecahan 1/2.", "Setengah"),
     "Input jawaban singkat 1 gagal."
   );
+  await clickButton(page, "Lanjut");
+  await page.waitFor(
+    `document.body.textContent.includes("Tuliskan pecahan untuk satu bagian dari empat bagian.")`,
+    { label: "soal jawaban singkat 2" }
+  );
   assert(
     await fillByLabel(
       page,
@@ -357,15 +516,83 @@ export async function run({ page, artifactDir, log }) {
     ),
     "Input jawaban singkat 2 gagal."
   );
-  await clickButton(page, "Periksa jawaban");
+
+  // Posisi soal harus bertahan setelah aplikasi dimuat ulang.
+  await page.send("Page.reload");
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri setelah muat ulang" }
+  );
+  await page.waitFor(
+    `[...document.querySelectorAll("button")].some(
+      (button) => button.textContent.trim() === "Player Pembelajaran"
+    )`,
+    { label: "navigasi utama setelah muat ulang", timeoutMs: 30_000 }
+  );
+  await clickButton(page, "Player Pembelajaran");
+  await page.waitFor(
+    `document.body.textContent.includes("Aktivitas Baru (E2E)") &&
+     document.body.textContent.includes("Paket impor v0.3.0")`,
+    { label: "lesson aktivitas baru setelah muat ulang" }
+  );
+  await clickButton(page, "Jawaban Singkat");
+  await page.waitFor(`document.body.textContent.includes("Soal 2 dari 2")`, {
+    label: "posisi soal kuis dipulihkan"
+  });
+  await clickButton(page, "Sebelumnya");
+  await page.waitFor(`document.body.textContent.includes("Tuliskan nama pecahan 1/2")`, {
+    label: "soal 1 setelah mundur"
+  });
+  const restoredAnswer = await page.evaluate(
+    `document.querySelector('input[aria-label="Tuliskan nama pecahan 1/2."]')?.value ?? null`
+  );
+  assert(
+    restoredAnswer === "Setengah",
+    `Jawaban soal 1 setelah muat ulang "${restoredAnswer}", harus "Setengah".`
+  );
+  log("Posisi soal dan jawaban kuis jawaban singkat dipulihkan setelah muat ulang.");
+  await clickButton(page, "Lanjut");
+  await page.waitFor(
+    `document.body.textContent.includes("Tuliskan pecahan untuk satu bagian dari empat bagian.")`,
+    { label: "soal jawaban singkat 2 setelah dipulihkan" }
+  );
+  // Jawaban soal 2 diketik tepat sebelum muat ulang, jadi masih dalam jeda
+  // penyimpanan; soal 2 diisi ulang seperti pengguna yang melanjutkan.
+  assert(
+    await fillByLabel(
+      page,
+      "Tuliskan pecahan untuk satu bagian dari empat bagian.",
+      "1/4"
+    ),
+    "Input jawaban singkat 2 setelah muat ulang gagal."
+  );
+
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor jawaban singkat"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan jawaban singkat",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan jawaban singkat");
   log("Aktivitas jawaban singkat dinilai 100 (normalisasi huruf) dan tersimpan.");
+
+  await clickButton(page, "Ulangi kuis");
+  const reset = await page.evaluate(`
+    (() => {
+      const panel = document.querySelector("#activity-panel");
+      const progress = panel?.querySelector("[data-quiz-progress]")?.textContent.trim() ?? "";
+      const checked = panel?.querySelectorAll("input:checked").length ?? 0;
+      const next = [...(panel?.querySelectorAll("button") ?? [])].find(
+        (button) => button.textContent.trim() === "Lanjut"
+      );
+      return { progress, checked, nextDisabled: next ? next.disabled : null };
+    })()
+  `);
+  assert(
+    reset.progress === "Soal 1 dari 2",
+    `Ulangi kuis kembali ke "${reset.progress}", harus "Soal 1 dari 2".`
+  );
+  assert(reset.checked === 0, `Ulangi kuis menyisakan ${reset.checked} jawaban terpilih.`);
+  assert(reset.nextDisabled === true, "Tombol Lanjut aktif setelah Ulangi kuis.");
+  log("Ulangi kuis mengosongkan jawaban dan kembali ke soal pertama.");
 
   await clickButton(page, "Pilihan Ganda (Pilih Semua)");
   await page.waitFor(`document.body.textContent.includes("Pilih semua pecahan yang senilai dengan 1/2")`, {
@@ -373,20 +600,25 @@ export async function run({ page, artifactDir, log }) {
   });
   for (const [name, value] of [
     ["mg-setengah", "opsi-2-4"],
-    ["mg-setengah", "opsi-3-6"],
+    ["mg-setengah", "opsi-3-6"]
+  ]) {
+    assert(await chooseCheckbox(page, name, value), `Checkbox ${name}/${value} gagal.`);
+  }
+  await clickButton(page, "Lanjut");
+  await page.waitFor(`document.body.textContent.includes("Pilih semua pecahan yang senilai dengan 1/4")`, {
+    label: "soal multi-jawaban 2"
+  });
+  for (const [name, value] of [
     ["mg-seperempat", "opsi-1-4"],
     ["mg-seperempat", "opsi-2-8"]
   ]) {
     assert(await chooseCheckbox(page, name, value), `Checkbox ${name}/${value} gagal.`);
   }
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor multi-jawaban"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan multi-jawaban",
-    timeoutMs: 30_000
-  });
+  await waitForSaved(page, "simpan multi-jawaban");
   log("Aktivitas pilihan ganda multi-jawaban dinilai 100 dan tersimpan.");
 
   await clickButton(page, "Mencocokkan Pecahan");
@@ -404,11 +636,11 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor mencocokkan"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan mencocokkan",
-    timeoutMs: 30_000
+  await waitForSaved(page, "simpan mencocokkan");
+  await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
+    label: "fokus kartu hasil mencocokkan"
   });
-  log("Aktivitas mencocokkan dinilai 100 dan tersimpan.");
+  log("Aktivitas mencocokkan dinilai 100, tersimpan, dan kartu hasil difokuskan.");
 
   await clickButton(page, "Mengurutkan Angka");
   await page.waitFor(`document.body.textContent.includes("Urutkan angka dari terkecil")`, {
@@ -420,11 +652,57 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor mengurutkan"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "simpan mengurutkan",
-    timeoutMs: 30_000
+  await waitForSaved(page, "simpan mengurutkan");
+  await page.waitFor(`document.activeElement?.textContent?.includes("Skor 100 dari 100")`, {
+    label: "fokus kartu hasil mengurutkan"
   });
-  log("Aktivitas mengurutkan dinilai 100 dan tersimpan.");
+  log("Aktivitas mengurutkan dinilai 100, tersimpan, dan kartu hasil difokuskan.");
+
+  const sticky = await page.evaluate(`
+    (async () => {
+      const aside = document.querySelector("[data-player-aside]");
+      const scroller = document.scrollingElement ?? document.documentElement;
+      if (!aside || !scroller) return null;
+      const maxScroll = scroller.scrollHeight - scroller.clientHeight;
+      if (maxScroll <= 120) {
+        return { exercised: false, viewport: window.innerWidth };
+      }
+      const frame = () => new Promise((resolve) => requestAnimationFrame(resolve));
+      scroller.scrollTop = 0;
+      await frame();
+      const topBefore = Math.round(aside.getBoundingClientRect().top);
+      const target = Math.min(maxScroll, Math.round(topBefore - 24) + 40);
+      const extra = target - Math.round(topBefore - 24);
+      scroller.scrollTop = target;
+      await frame();
+      const topAfter = Math.round(aside.getBoundingClientRect().top);
+      scroller.scrollTop = 0;
+      if (extra < 10) {
+        return { exercised: false, viewport: window.innerWidth, maxScroll, topBefore };
+      }
+      return {
+        exercised: true,
+        maxScroll,
+        topBefore,
+        topAfter,
+        extra,
+        stuck: Math.abs(topAfter - 24) <= 2
+      };
+    })()
+  `);
+  if (sticky?.exercised && layout.viewport >= 1024) {
+    assert(
+      sticky.stuck,
+      `Kolom samping tidak menempel saat menggulir ${sticky.extra}px (top ${sticky.topBefore} → ${sticky.topAfter}, harus 24).`
+    );
+    log(
+      `Kolom samping menempel: top ${sticky.topBefore} → ${sticky.topAfter}px setelah menggulir ${sticky.extra}px.`
+    );
+  } else {
+    log(
+      `Kolom samping menempel: tidak diuji (${sticky?.exercised === false ? `ruang gulir ${sticky.maxScroll ?? 0}px` : "elemen tidak ditemukan"}).`
+    );
+  }
 
   const profileId = await page.evaluate(
     `window.__TAURI_INTERNALS__.invoke("profile_get_active").then((profile) => profile.id)`
@@ -440,4 +718,20 @@ export async function run({ page, artifactDir, log }) {
 
   await page.screenshot(path.join(artifactDir, "activities.png"));
   log("Screenshot aktivitas baru tersimpan.");
+
+  await page.evaluate(
+    `(() => {
+      (document.scrollingElement ?? document.documentElement).scrollTop = 0;
+      return true;
+    })()`
+  );
+  await page.screenshot(path.join(artifactDir, "activities-hero.png"));
+  log("Screenshot header Player (cover + ringkasan) tersimpan.");
+
+  await clickButton(page, "Buka Hasil Belajar");
+  await page.waitFor(
+    `document.querySelector("h1")?.textContent.trim() === "Hasil Belajar"`,
+    { label: "layar Hasil Belajar dari ringkasan sesi" }
+  );
+  log("Tombol Buka Hasil Belajar pada ringkasan sesi membuka layar Hasil Belajar.");
 }

@@ -31,7 +31,7 @@ export async function run({ page, artifactDir, log }) {
 
   const packagePath = path.resolve(
     path.dirname(fileURLToPath(import.meta.url)),
-    "../../../content/packages/matematika-kelas3-pecahan"
+    "../fixtures/pilot-pecahan-kelas3"
   );
   assert(existsSync(path.join(packagePath, "manifest.json")), `Paket tidak ditemukan: ${packagePath}`);
   log(`Paket sumber: ${packagePath}`);
@@ -62,27 +62,132 @@ export async function run({ page, artifactDir, log }) {
   });
   log("Player memuat paket hasil impor (managed-first).");
 
-  await page.waitFor(`document.body.textContent.includes("Langkah 1 dari 4")`, {
+  await page.waitFor(`document.body.textContent.includes("Langkah 1 dari 6")`, {
     label: "eksplorasi langkah 1"
   });
+
+  const controls = await page.evaluate(`
+    (() => {
+      const progress = document.querySelector('[aria-label="Progres eksplorasi"]');
+      const scope = progress?.parentElement?.parentElement;
+      if (!scope) return { missing: "lingkup eksplorasi" };
+      const buttons = [...scope.querySelectorAll("button")];
+      const byLabel = (label) => buttons.find((b) => b.textContent.trim() === label);
+      const hint = byLabel("Petunjuk");
+      const reveal = byLabel("Pembahasan");
+      const next = byLabel("Lanjut");
+      const prev = byLabel("Sebelumnya");
+      if (!hint || !reveal || !next || !prev) {
+        return { missing: "salah satu tombol eksplorasi" };
+      }
+      const primary = (button) => button.className.includes("bg-primary");
+      const footer = next.parentElement;
+      return {
+        hintGroupedWithReveal: hint.parentElement === reveal.parentElement,
+        supportSecondary: !primary(hint) && !primary(reveal),
+        navSecondary: !primary(prev),
+        primaryCount: buttons.filter(primary).length,
+        footerShared: footer === prev.parentElement,
+        footerSeparated: getComputedStyle(footer).borderTopWidth !== "0px",
+        footerHoldsSupportButtons: footer.contains(hint) || footer.contains(reveal),
+        prevDisabled: prev.disabled,
+        hintControls: hint.getAttribute("aria-controls"),
+        revealControls: reveal.getAttribute("aria-controls")
+      };
+    })()
+  `);
+  assert(!controls.missing, `Kontrol eksplorasi tidak lengkap: ${controls.missing}.`);
+  assert(controls.hintGroupedWithReveal, "Tombol petunjuk & pembahasan tidak berada dalam satu grup.");
+  assert(controls.supportSecondary, "Tombol petunjuk/pembahasan masih memakai gaya primer.");
+  assert(controls.navSecondary, "Tombol Sebelumnya masih memakai gaya primer.");
+  assert(controls.primaryCount === 1, `Tombol primer pada langkah eksplorasi ${controls.primaryCount}, harus 1.`);
+  assert(controls.footerShared, "Sebelumnya dan Lanjut tidak berada dalam satu baris navigasi.");
+  assert(controls.footerSeparated, "Baris navigasi eksplorasi tidak dipisahkan garis atas.");
+  assert(!controls.footerHoldsSupportButtons, "Baris navigasi bercampur dengan tombol petunjuk/pembahasan.");
+  assert(controls.prevDisabled, "Tombol Sebelumnya aktif pada langkah pertama.");
+  log("Kontrol eksplorasi: 1 primer, petunjuk/pembahasan sekunder satu grup, navigasi terpisah.");
+
+  await clickButton(page, "Petunjuk");
+  const hintState = await page.evaluate(`
+    (() => {
+      const button = [...document.querySelectorAll("button")]
+        .find((b) => b.textContent.trim() === "Petunjuk");
+      const id = ${JSON.stringify(controls.hintControls)};
+      return {
+        expanded: button?.getAttribute("aria-expanded") === "true",
+        panel: Boolean(id && document.getElementById(id))
+      };
+    })()
+  `);
+  assert(hintState.expanded, "Tombol Petunjuk tidak menandai aria-expanded=true.");
+  assert(hintState.panel, `Panel petunjuk dengan id "${controls.hintControls}" tidak ditemukan.`);
+  log("Petunjuk terbuka dan terhubung lewat aria-controls.");
+
+  await clickButton(page, "Pembahasan");
+  await page.waitFor(
+    `(() => {
+      const id = ${JSON.stringify(controls.revealControls)};
+      return Boolean(id && document.getElementById(id));
+    })()`,
+    { label: "panel pembahasan eksplorasi" }
+  );
+  const revealExpanded = await page.evaluate(`
+    (() => {
+      const button = [...document.querySelectorAll("button")]
+        .find((b) => b.textContent.trim() === "Pembahasan");
+      return button?.getAttribute("aria-expanded") === "true";
+    })()
+  `);
+  assert(revealExpanded, "Tombol Pembahasan tidak menandai aria-expanded=true.");
+  await page.evaluate(`
+    (() => {
+      const button = [...document.querySelectorAll("button")]
+        .find((b) => b.textContent.trim() === "Pembahasan");
+      button?.scrollIntoView({ block: "center" });
+      return Boolean(button);
+    })()
+  `);
+  await page.screenshot(path.join(artifactDir, "exploration-buttons.png"));
+  log("Screenshot kontrol eksplorasi tersimpan.");
+
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
-  await page.waitFor(`document.body.textContent.includes("Langkah 4 dari 4")`, {
-    label: "eksplorasi langkah 4"
+  await clickButton(page, "Lanjut");
+  await clickButton(page, "Lanjut");
+  await page.waitFor(`document.body.textContent.includes("Langkah 6 dari 6")`, {
+    label: "eksplorasi langkah 6"
   });
   await clickButton(page, "Selesai");
   await page.waitFor(`document.body.textContent.includes("Aktivitas selesai")`, {
     label: "eksplorasi selesai"
   });
-  log("Eksplorasi 4 langkah selesai.");
+  log("Eksplorasi 6 langkah selesai.");
 
-  await clickButton(page, "Lanjut ke kuis");
-  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+  await clickButton(page, "Lanjut berlatih");
+  await page.waitFor(`document.body.textContent.includes("Soal 1 dari 8")`, {
     label: "kuis tampil"
   });
 
-  for (const optionId of ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"]) {
+  const quizOptions = [
+    "opsi-setengah",
+    "opsi-1-4",
+    "opsi-besar",
+    "opsi-2-3",
+    "opsi-5-1-3",
+    "opsi-dua-per-tiga",
+    "opsi-7-1-3",
+    "opsi-8-1-3"
+  ];
+  for (const [index, optionId] of quizOptions.entries()) {
+    await page.waitFor(
+      `document.body.textContent.includes("Soal ${index + 1} dari ${quizOptions.length}")`,
+      { label: `soal kuis ${index + 1}` }
+    );
+    const perPage = await page.evaluate(
+      `document.querySelectorAll("#activity-panel fieldset").length`
+    );
+    assert(perPage === 1, `Soal ${index + 1} dirender ${perPage} halaman, harus 1 soal per halaman.`);
     const chosen = await page.evaluate(`
       (() => {
         const input = document.querySelector('input[value="${optionId}"]');
@@ -92,10 +197,13 @@ export async function run({ page, artifactDir, log }) {
       })()
     `);
     assert(chosen, `Opsi ${optionId} tidak dapat dipilih.`);
+    if (index < quizOptions.length - 1) {
+      await clickButton(page, "Lanjut");
+    }
   }
-  log("4 jawaban kuis dipilih.");
+  log("8 soal kuis dijawab satu per satu.");
 
-  await clickButton(page, "Periksa jawaban");
+  await clickButton(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor kuis"
   });

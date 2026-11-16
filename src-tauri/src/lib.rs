@@ -6,11 +6,18 @@ mod diagnostics;
 mod error;
 mod learning;
 mod license;
+mod material;
+mod material_author;
+mod material_catalog;
+mod material_install;
+mod material_manifest;
+mod pins;
 mod preferences;
 mod profile;
 mod results;
 mod review;
 mod sync;
+mod ui_state;
 mod validation;
 
 use tauri::Manager;
@@ -19,6 +26,10 @@ use tauri::Manager;
 pub fn run() {
   tauri::Builder::default()
     .plugin(tauri_plugin_dialog::init())
+    .register_uri_scheme_protocol("ifp-content", |ctx, request| {
+      let state = ctx.app_handle().state::<material::MaterialState>();
+      material::handle_request(&state.root, &request)
+    })
     .setup(|app| {
       if cfg!(debug_assertions) {
         app.handle().plugin(
@@ -39,6 +50,14 @@ pub fn run() {
       app.manage(db::DbState(std::sync::Mutex::new(connection)));
       app.manage(content::ContentState { root: content_root });
       app.manage(license::LicenseState::from_env());
+
+      let material_root = data_dir.join("materials");
+      std::fs::create_dir_all(&material_root)?;
+      material::ensure_sample_material(&material_root).map_err(|error| {
+        std::io::Error::other(format!("{}: {}", error.code, error.message))
+      })?;
+      app.manage(material::MaterialState { root: material_root });
+      app.manage(material_install::MaterialKeyring::from_env());
 
       Ok(())
     })
@@ -79,9 +98,44 @@ pub fn run() {
       profile::profile_set_active,
       profile::profile_rename,
       profile::profile_delete,
+      profile::profile_avatar_set_data,
+      profile::profile_avatar_preview,
+      profile::profile_avatar_clear,
+      profile::profile_avatar_get,
       review::review_list,
       review::review_record,
       review::review_export_csv,
+      pins::pinned_list,
+      pins::pinned_set,
+      pins::pinned_material_list,
+      pins::pinned_material_set,
+      ui_state::ui_state_get,
+      ui_state::ui_state_set,
+      ui_state::ui_state_clear,
+      material::material_open_sample,
+      material_install::material_install_bundle,
+      material_install::material_list_installed,
+      material_install::material_open_installed,
+      material_install::material_installed_cover,
+      material_catalog::material_catalog_config_get,
+      material_catalog::material_catalog_config_set,
+      material_catalog::material_catalog_list,
+      material_catalog::material_catalog_install,
+      material_catalog::material_catalog_cover,
+      material_author::material_draft_templates,
+      material_author::material_draft_create,
+      material_author::material_draft_list,
+      material_author::material_draft_read,
+      material_author::material_draft_file_write,
+      material_author::material_draft_asset_add,
+      material_author::material_draft_asset_read,
+      material_author::material_draft_file_delete,
+      material_author::material_draft_manifest_set,
+      material_author::material_draft_mark_ready,
+      material_author::material_draft_check,
+      material_author::material_draft_open,
+      material_author::material_draft_export,
+      material_author::material_draft_delete,
       preferences::preferences_get,
       preferences::preferences_set
     ])

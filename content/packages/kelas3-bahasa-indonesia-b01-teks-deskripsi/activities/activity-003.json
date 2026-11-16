@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Teks deskripsi\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Menggambarkan objek"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Hijau"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Harum"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Penglihatan\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Menggambarkan objek"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Hijau"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Harum"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-tulisan-yang-menggambarkan-sebua",
+        "prompt": "Tulisan yang menggambarkan sebuah objek dengan jelas disebut teks ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tulisan-yang-menggambarkan-1",
+            "text": "prosedur"
+          },
+          {
+            "optionId": "opsi-soal-tulisan-yang-menggambarkan-2",
+            "text": "berita"
+          },
+          {
+            "optionId": "opsi-soal-tulisan-yang-menggambarkan-0",
+            "text": "deskripsi"
+          }
+        ],
+        "correctResponse": "opsi-soal-tulisan-yang-menggambarkan-0"
+      },
+      {
+        "questionId": "soal-kata-harum-saat-menggambarkan-bu",
+        "prompt": "Kata 'harum' saat menggambarkan bunga diperoleh melalui indra ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-harum-saat-menggambark-0",
+            "text": "penciuman"
+          },
+          {
+            "optionId": "opsi-soal-kata-harum-saat-menggambark-1",
+            "text": "pendengaran"
+          },
+          {
+            "optionId": "opsi-soal-kata-harum-saat-menggambark-2",
+            "text": "perabaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-harum-saat-menggambark-0"
+      },
+      {
+        "questionId": "soal-kata-merdu-pada-deskripsi-menunj",
+        "prompt": "Kata 'merdu' pada deskripsi menunjukkan bunyi yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-merdu-pada-deskripsi-m-1",
+            "text": "sedap dilihat"
+          },
+          {
+            "optionId": "opsi-soal-kata-merdu-pada-deskripsi-m-0",
+            "text": "enak didengar"
+          },
+          {
+            "optionId": "opsi-soal-kata-merdu-pada-deskripsi-m-2",
+            "text": "kasar diraba"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-merdu-pada-deskripsi-m-0"
+      },
+      {
+        "questionId": "soal-menulis-deskripsi-sebaiknya-dimu",
+        "prompt": "Menulis deskripsi sebaiknya dimulai dengan menyebutkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menulis-deskripsi-sebaiknya-1",
+            "text": "kesan"
+          },
+          {
+            "optionId": "opsi-soal-menulis-deskripsi-sebaiknya-2",
+            "text": "judul"
+          },
+          {
+            "optionId": "opsi-soal-menulis-deskripsi-sebaiknya-0",
+            "text": "objek"
+          }
+        ],
+        "correctResponse": "opsi-soal-menulis-deskripsi-sebaiknya-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera."
+  }
+}

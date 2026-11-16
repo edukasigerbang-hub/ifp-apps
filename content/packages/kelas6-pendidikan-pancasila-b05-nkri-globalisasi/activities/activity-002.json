@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-nkri-globalisasi",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis NKRI dan Globalisasi",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-globalisasi",
+        "prompt": "Globalisasi membuat negara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-terpisah",
+            "text": "Semakin terpisah"
+          },
+          {
+            "optionId": "opsi-tutup",
+            "text": "Menutup diri"
+          },
+          {
+            "optionId": "opsi-terhubung",
+            "text": "Semakin terhubung"
+          },
+          {
+            "optionId": "opsi-berhenti",
+            "text": "Berhenti berkomunikasi"
+          }
+        ],
+        "correctResponse": "opsi-terhubung"
+      },
+      {
+        "questionId": "soal-positif",
+        "prompt": "Dampak positif globalisasi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lupa",
+            "text": "Lupa budaya sendiri"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Menjadi malas"
+          },
+          {
+            "optionId": "opsi-boros",
+            "text": "Hidup boros"
+          },
+          {
+            "optionId": "opsi-teknologi",
+            "text": "Teknologi berkembang"
+          }
+        ],
+        "correctResponse": "opsi-teknologi"
+      },
+      {
+        "questionId": "soal-jati",
+        "prompt": "Cara menjaga jati diri bangsa adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-budaya",
+            "text": "Mencintai budaya sendiri"
+          },
+          {
+            "optionId": "opsi-tiru",
+            "text": "Meniru semua budaya asing"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang tradisi"
+          },
+          {
+            "optionId": "opsi-malu",
+            "text": "Malu berbahasa Indonesia"
+          }
+        ],
+        "correctResponse": "opsi-budaya"
+      },
+      {
+        "questionId": "soal-sikap",
+        "prompt": "Sikap menghadapi globalisasi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tolak",
+            "text": "Menolak semuanya"
+          },
+          {
+            "optionId": "opsi-selektif",
+            "text": "Selektif dan bijak"
+          },
+          {
+            "optionId": "opsi-ikut",
+            "text": "Mengikuti semuanya"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Mengabaikan"
+          }
+        ],
+        "correctResponse": "opsi-selektif"
+      },
+      {
+        "questionId": "soal-pengaruh-budaya-asing-yang-tidak",
+        "prompt": "Pengaruh budaya asing yang tidak sesuai nilai bangsa sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pengaruh-budaya-asing-yang-0",
+            "text": "Menyaring"
+          },
+          {
+            "optionId": "opsi-soal-pengaruh-budaya-asing-yang-1",
+            "text": "Meniru"
+          },
+          {
+            "optionId": "opsi-soal-pengaruh-budaya-asing-yang-2",
+            "text": "Melupakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-pengaruh-budaya-asing-yang-0"
+      },
+      {
+        "questionId": "soal-produk-buatan-dalam-negeri-sebai",
+        "prompt": "Produk buatan dalam negeri sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-produk-buatan-dalam-negeri-1",
+            "text": "Tinggalkan"
+          },
+          {
+            "optionId": "opsi-soal-produk-buatan-dalam-negeri-0",
+            "text": "Cintai"
+          },
+          {
+            "optionId": "opsi-soal-produk-buatan-dalam-negeri-2",
+            "text": "Ragukan"
+          }
+        ],
+        "correctResponse": "opsi-soal-produk-buatan-dalam-negeri-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol persatuan NKRI."
+  }
+}

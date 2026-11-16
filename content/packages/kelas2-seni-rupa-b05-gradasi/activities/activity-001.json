@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-gradasi-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gradasi",
+  "instructions": "Amati gambar, lalu diskusikan perubahan warnanya.",
+  "assets": [
+    "assets/gradasi-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gradasi?",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang.",
+        "reveal": "Perubahan warna bertahap.",
+        "hint": "Dari gelap ke terang."
+      },
+      {
+        "prompt": "Bagaimana mewarnai rapi?",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang.",
+        "reveal": "Jangan keluar garis.",
+        "hint": "Warnai pelan."
+      },
+      {
+        "prompt": "Apa yang diperiksa?",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang.",
+        "reveal": "Kerapian warna.",
+        "hint": "Kebersihan karya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Mewarnai dan Gradasi?",
+        "reveal": "Mewarnai dengan gradasi sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh gradasi warna dari gelap ke terang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gradasi-kelas2.webp",
+        "altText": "Contoh gradasi warna dari gelap ke terang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh gradasi warna dari gelap ke terang."
+  }
+}

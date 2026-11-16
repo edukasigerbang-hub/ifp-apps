@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-senam-kelas6",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Latihan Senam",
+  "instructions": "Susun langkah latihan senam.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pemanasan",
+        "text": "Pemanasan"
+      },
+      {
+        "itemId": "langkah-depan",
+        "text": "Guling depan"
+      },
+      {
+        "itemId": "langkah-belakang",
+        "text": "Guling belakang"
+      },
+      {
+        "itemId": "langkah-seimbang",
+        "text": "Keseimbangan"
+      },
+      {
+        "itemId": "langkah-pendinginan",
+        "text": "Pendinginan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pemanasan",
+      "langkah-depan",
+      "langkah-belakang",
+      "langkah-seimbang",
+      "langkah-pendinginan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan."
+  }
+}

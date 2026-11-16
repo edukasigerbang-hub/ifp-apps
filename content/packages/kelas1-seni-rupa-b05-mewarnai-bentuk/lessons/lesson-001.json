@@ -1,0 +1,29 @@
+{
+  "lessonId": "mewarnai-bentuk",
+  "packageId": "kelas1-seni-rupa-b05-mewarnai-bentuk",
+  "title": "Mewarnai Bentuk",
+  "summary": "Mewarnai bentuk dengan rapi dan warna yang sesuai.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Memilih warna.",
+    "Mewarnai dengan rapi.",
+    "Menjaga kebersihan karya."
+  ],
+  "activityIds": [
+    "eksplorasi-mewarnai-bentuk",
+    "ordering-mewarnai-bentuk",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/mewarnai-bentuk.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

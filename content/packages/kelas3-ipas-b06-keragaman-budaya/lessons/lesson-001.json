@@ -1,0 +1,28 @@
+{
+  "lessonId": "keragaman-budaya",
+  "packageId": "kelas3-ipas-b06-keragaman-budaya",
+  "title": "Keragaman Budaya di Sekitar",
+  "summary": "Mengenal keragaman budaya daerah dan sikap menghargainya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh budaya daerah.",
+    "Menghargai perbedaan budaya.",
+    "Menjaga budaya daerah."
+  ],
+  "activityIds": [
+    "eksplorasi-keragaman-budaya",
+    "matching-keragaman-budaya",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/keragaman-budaya-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

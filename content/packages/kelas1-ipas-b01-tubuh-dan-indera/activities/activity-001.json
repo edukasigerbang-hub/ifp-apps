@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-tubuh-dan-indera",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tubuh dan Indera",
+  "instructions": "Amati gambar, lalu jawab pertanyaan tentang tubuh dan inderamu.",
+  "assets": [
+    "assets/tubuh-dan-indera.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagian tubuh apa saja yang kamu punya?",
+        "assetPath": "assets/tubuh-dan-indera.webp",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas.",
+        "reveal": "Kepala, badan, tangan, dan kaki.",
+        "hint": "Lihat tubuhmu dari atas ke bawah."
+      },
+      {
+        "prompt": "Indera apa yang ada di wajahmu?",
+        "assetPath": "assets/tubuh-dan-indera.webp",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas.",
+        "reveal": "Mata untuk melihat, hidung untuk mencium, telinga untuk mendengar, dan lidah untuk merasakan.",
+        "hint": "Kulit juga indera peraba."
+      },
+      {
+        "prompt": "Bagaimana cara menjaga tubuh tetap sehat?",
+        "assetPath": "assets/tubuh-dan-indera.webp",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas.",
+        "reveal": "Mandi setiap hari, mencuci tangan dengan sabun, menyikat gigi, dan makan makanan bergizi.",
+        "hint": "Lakukan setiap hari, bukan hanya kadang-kadang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Tubuhku dan Inderaku?",
+        "reveal": "Mengenal bagian tubuh dan lima indera beserta kegunaannya dalam kegiatan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tubuh-dan-indera.webp",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas."
+      },
+      {
+        "prompt": "Indera apa yang kamu pakai saat mendengar bel sekolah?",
+        "reveal": "Telinga. Telinga adalah indera pendengar.",
+        "hint": "Ada di kedua sisi kepalamu.",
+        "assetPath": "assets/tubuh-dan-indera.webp",
+        "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu memegang cermin tangan kayu sambil menunjuk matanya, dan Bima menunjuk hidung serta telinganya di ruang kelas."
+  }
+}

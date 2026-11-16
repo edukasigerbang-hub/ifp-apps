@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-ilustrasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Ilustrasi",
+  "instructions": "Amati gambar, lalu diskusikan langkah membuat ilustrasi.",
+  "assets": [
+    "assets/ilustrasi.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu ilustrasi?",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
+        "reveal": "Gambar yang menjelaskan cerita atau teks.",
+        "hint": "Membantu memahami isi."
+      },
+      {
+        "prompt": "Apa langkah pertama?",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
+        "reveal": "Menentukan tema dan adegan.",
+        "hint": "Buat sketsa tipis."
+      },
+      {
+        "prompt": "Apa yang ditambahkan terakhir?",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar.",
+        "reveal": "Warna dan detail.",
+        "hint": "Rapikan garis."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menggambar Ilustrasi?",
+        "reveal": "Menentukan tema → Membuat sketsa → Menebalkan garis → Mewarnai → Menambahkan detail",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menggambar Ilustrasi?",
+        "reveal": "Membuat ilustrasi sederhana untuk cerita.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ilustrasi.webp",
+        "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+  }
+}

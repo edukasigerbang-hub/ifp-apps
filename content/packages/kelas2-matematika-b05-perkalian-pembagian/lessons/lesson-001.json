@@ -1,0 +1,28 @@
+{
+  "lessonId": "perkalian-pembagian-kelas2",
+  "packageId": "kelas2-matematika-b05-perkalian-pembagian",
+  "title": "Perkalian dan Pembagian",
+  "summary": "Menghubungkan perkalian dan pembagian.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menghitung perkalian.",
+    "Menghitung pembagian.",
+    "Menghubungkan keduanya."
+  ],
+  "activityIds": [
+    "eksplorasi-perkalian-pembagian-kelas2",
+    "matching-perkalian-pembagian-kelas2",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/perkalian-pembagian-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kelompok benda untuk perkalian dan pembagian."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

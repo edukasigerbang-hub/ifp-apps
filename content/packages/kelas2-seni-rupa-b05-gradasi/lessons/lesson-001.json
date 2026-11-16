@@ -1,0 +1,28 @@
+{
+  "lessonId": "gradasi-kelas2",
+  "packageId": "kelas2-seni-rupa-b05-gradasi",
+  "title": "Mewarnai dan Gradasi",
+  "summary": "Mewarnai dengan gradasi sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal gradasi.",
+    "Mewarnai dengan rapi.",
+    "Membuat gradasi sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-gradasi-kelas2",
+    "kuis-gradasi-kelas2",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-gradasi-kelas2"
+  ],
+  "assetRefs": [
+    "assets/gradasi-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh gradasi warna dari gelap ke terang."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

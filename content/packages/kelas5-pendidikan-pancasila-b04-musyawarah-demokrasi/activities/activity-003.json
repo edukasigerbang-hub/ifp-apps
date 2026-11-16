@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Musyawarah",
+        "right": "Membicarakan masalah bersama untuk kesepakatan"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Nilai demokrasi",
+        "right": "Kebebasan berpendapat dan menghargai perbedaan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menyampaikan pendapat",
+        "right": "Sopan dan tidak memotong"
+      },
+      {
+        "pairId": "pasangan-pembicaraan-bersama-untuk-mencap",
+        "left": "Langkah pertama dalam musyawarah",
+        "right": "Menyampaikan masalah"
+      },
+      {
+        "pairId": "pasangan-saat-teman-berbicara-dalam-disku",
+        "left": "Ketika teman menyampaikan pendapat, sebaiknya kita",
+        "right": "Mendengarkan"
+      },
+      {
+        "pairId": "pasangan-kesepakatan-yang-sudah-diambil-d",
+        "left": "Sikap terhadap keputusan hasil musyawarah",
+        "right": "Dilaksanakan bersama"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama."
+  }
+}

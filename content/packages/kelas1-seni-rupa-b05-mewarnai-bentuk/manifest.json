@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-seni-rupa-b05-mewarnai-bentuk",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Mewarnai Bentuk — Seni Rupa Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/mewarnai-bentuk.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 152686,
+      "sha256": "34625e43b119a70d224932a7c1ae702e30b16058b2650707ca634b3d5be8031f"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Langkah pertama sebelum mewarnai",
+        "right": "Menyiapkan alat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Mewarnai rapi",
+        "right": "Jangan keluar garis"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah mewarnai",
+        "right": "Merapikan alat"
+      },
+      {
+        "pairId": "pasangan-warna-primer-untuk-mewarnai",
+        "left": "Warna primer untuk mewarnai",
+        "right": "Merah, kuning, dan biru"
+      },
+      {
+        "pairId": "pasangan-setelah-mewarnai-tangan-kita",
+        "left": "Kegiatan terakhir dalam mewarnai bentuk",
+        "right": "Mencuci tangan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
+  }
+}

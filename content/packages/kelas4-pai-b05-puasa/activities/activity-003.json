@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Menahan makan dan minum sejak fajar",
+        "right": "Puasa"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Waktu berbuka puasa",
+        "right": "Saat matahari terbenam (magrib)"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sikap yang dilatih lewat puasa",
+        "right": "Sabar dan peduli"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Hikmah puasa yang benar adalah",
+        "right": "Melatih sabar dan disiplin"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Puasa dimulai pada waktu",
+        "right": "Terbit fajar"
+      },
+      {
+        "pairId": "pasangan-kegiatan-yang-dilakukan-saat-wak",
+        "left": "Kegiatan yang dilakukan saat waktu magrib tiba untuk mengakhiri puasa",
+        "right": "Berbuka"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Proyek kewargaan sebaiknya dimulai dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "membagi hadiah"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "memilih masalah"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "menutup laporan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Masalah yang dipilih untuk proyek kelas sebaiknya berada di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "kota lain yang jauh"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "negeri yang jauh"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "sekitar sekolah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Rencana proyek memuat tujuan, tugas, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "waktu"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "harga"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "warna"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Setelah rencana tersusun, langkah berikutnya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "melaporkan hasil"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "membagi tugas"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "memilih masalah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Kegiatan setelah seluruh tugas selesai dikerjakan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "mengulang rencana"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "membagi tugas lagi"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "melaporkan hasil"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Evaluasi dilakukan agar kegiatan berikutnya dapat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "diperbaiki"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "diperpanjang"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "diulang dari awal"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
+  }
+}

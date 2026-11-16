@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-operasi-pecahan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bagian Pecahan",
+  "instructions": "Amati batang pecahan, lalu diskusikan penjumlahan dan pengurangannya.",
+  "assets": [
+    "assets/aktivitas-operasi-pecahan-1.png",
+    "assets/aktivitas-operasi-pecahan-2.png",
+    "assets/aktivitas-operasi-pecahan-3.png",
+    "assets/aktivitas-operasi-pecahan-4.png",
+    "assets/aktivitas-operasi-pecahan-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa hasil 1/4 + 2/4?",
+        "assetPath": "assets/aktivitas-operasi-pecahan-1.png",
+        "altText": "Baris penjumlahan: batang seperempat ditambah batang dua perempat menghasilkan batang tiga perempat, dipisahkan tanda tambah dan sama dengan.",
+        "reveal": "3/4.",
+        "hint": "Penyebut sama, jumlahkan pembilang."
+      },
+      {
+        "prompt": "Berapa hasil 3/4 − 1/4?",
+        "assetPath": "assets/aktivitas-operasi-pecahan-2.png",
+        "altText": "Baris pengurangan: batang tiga perempat dikurangi batang seperempat menghasilkan batang dua perempat.",
+        "reveal": "2/4 atau 1/2.",
+        "hint": "Kurangi pembilang."
+      },
+      {
+        "prompt": "Apakah penyebut ikut dijumlahkan?",
+        "assetPath": "assets/aktivitas-operasi-pecahan-3.png",
+        "altText": "Tiga batang bertumpuk masing-masing terbagi empat; garis putus-putus tegak menghubungkan pembagian yang tetap sejajar, dengan tanda tambah dan sama dengan di kanan.",
+        "reveal": "Tidak, penyebut tetap.",
+        "hint": "Hanya pembilang yang dihitung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Operasi Hitung Pecahan?",
+        "reveal": "Menjumlahkan dan mengurangkan pecahan berpenyebut sama.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-operasi-pecahan-4.png",
+        "altText": "Tiga kartu rangkuman berisi batang seperempat, dua perempat, dan tiga perempat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-operasi-pecahan-5.png",
+        "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi operasi pecahan: penjumlahan seperempat dan dua perempat, pengurangan tiga perempat dan seperempat, tiga batang bertumpuk dengan pembagian sejajar, tiga kartu rangkuman, dan gabungan penjumlahan serta pengurangan."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menulis-cerita-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Cerita",
+  "instructions": "Amati gambar, lalu diskusikan langkah menulis cerita.",
+  "assets": [
+    "assets/menulis-cerita-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang ditentukan pertama?",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku.",
+        "reveal": "Tema cerita.",
+        "hint": "Pilih pengalaman menarik."
+      },
+      {
+        "prompt": "Bagaimana menyusun alur?",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku.",
+        "reveal": "Awal, tengah, dan akhir.",
+        "hint": "Buat kerangka dahulu."
+      },
+      {
+        "prompt": "Apa yang diperiksa?",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku.",
+        "reveal": "Ejaan, tanda baca, dan keruntutan.",
+        "hint": "Baca ulang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Cerita?",
+        "reveal": "Menentukan tema → Menyusun kerangka → Mengembangkan cerita → Memeriksa ejaan → Membacakan cerita",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Cerita?",
+        "reveal": "Menulis cerita dengan tokoh, latar, dan alur yang runtut.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-cerita-kelas5.webp",
+        "altText": "Anak menulis cerita di buku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita di buku."
+  }
+}

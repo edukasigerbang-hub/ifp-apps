@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b01-bilangan-cacah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bilangan Cacah Besar — Matematika Kelas 4 (Pilot)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pasar-nilai-tempat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 151986,
+      "sha256": "06253c3f7ae563cd85f7c3943060e19efc1cfc7146c43663580dec6b8a68b999"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-cacah-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8695,
+      "sha256": "af55aaee9611733ea7b4a4f9cb10a77ac0eb90c752ec55af31115ea59117a599"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-cacah-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9103,
+      "sha256": "1cd9139bdcef7995b2c549c4a45b5f2daf044c5043d9167647a7e38f785dc344"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-cacah-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8894,
+      "sha256": "6df51efc99e2eaba8b3d4e116f9bce457d4ba9a8aa3b3d487bd2e940878093e0"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-cacah-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10578,
+      "sha256": "c633e235bb15b4bd944f620939c6f2759b573be26e35bec0f05e1d782dde79c2"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-cacah-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10931,
+      "sha256": "b4ade102324bf284cabb32bf91848270b004b961edf7d92b0c28f8fdbd400062"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

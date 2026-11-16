@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kerajinan-bahan-alam",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bahan Alam",
+  "instructions": "Amati gambar, lalu diskusikan bahan kerajinan.",
+  "assets": [
+    "assets/kerajinan-bahan-alam-kelas1.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan alam apa yang terlihat?",
+        "assetPath": "assets/kerajinan-bahan-alam-kelas1.webp",
+        "altText": "Daun, ranting, dan biji untuk kerajinan.",
+        "reveal": "Daun, ranting, dan biji.",
+        "hint": "Dari sekitar rumah."
+      },
+      {
+        "prompt": "Bagaimana memilih bahan?",
+        "assetPath": "assets/kerajinan-bahan-alam-kelas1.webp",
+        "altText": "Daun, ranting, dan biji untuk kerajinan.",
+        "reveal": "Bersih dan tidak tajam.",
+        "hint": "Aman untuk tangan."
+      },
+      {
+        "prompt": "Bagaimana menempel bahan?",
+        "assetPath": "assets/kerajinan-bahan-alam-kelas1.webp",
+        "altText": "Daun, ranting, dan biji untuk kerajinan.",
+        "reveal": "Oles lem lalu tempel.",
+        "hint": "Tekan pelan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kerajinan Bahan Alam?",
+        "reveal": "Membuat kerajinan sederhana dari bahan alam.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-bahan-alam-kelas1.webp",
+        "altText": "Daun, ranting, dan biji untuk kerajinan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Daun, ranting, dan biji untuk kerajinan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-bahan-alam-kelas1.webp",
+        "altText": "Daun, ranting, dan biji untuk kerajinan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daun, ranting, dan biji untuk kerajinan."
+  }
+}

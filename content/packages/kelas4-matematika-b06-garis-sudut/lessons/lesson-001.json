@@ -1,0 +1,28 @@
+{
+  "lessonId": "garis-sudut",
+  "packageId": "kelas4-matematika-b06-garis-sudut",
+  "title": "Garis dan Sudut",
+  "summary": "Mengenali hubungan antar-garis dan jenis-jenis sudut serta mengukur sudut sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan garis sejajar, berpotongan, dan tegak lurus.",
+    "Mengenali sudut lancip, siku-siku, dan tumpul.",
+    "Mengukur besar sudut dengan busur derajat."
+  ],
+  "activityIds": [
+    "eksplorasi-garis-sudut",
+    "kuis-garis-sudut",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-garis-sudut"
+  ],
+  "assetRefs": [
+    "assets/garis-sudut.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

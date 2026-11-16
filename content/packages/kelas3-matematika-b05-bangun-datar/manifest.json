@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b05-bangun-datar",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bangun Datar dan Cirinya — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bangun-datar-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 103860,
+      "sha256": "c6b71edb4bf50f4412df2cf5b1d4950dd1e7cb18a7108671ae7856e986ff2fb4"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-ciri-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6645,
+      "sha256": "9c49e70135fafa503c05678e46653d815616ece21a913a7c943377f150fdaceb"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-ciri-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10523,
+      "sha256": "46815e744688c78cb505ce47c5bee7903645305a0224b4f4f165da8326b54a8a"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-ciri-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7287,
+      "sha256": "0e470eea76d3e334a29dcf43543c0987eb681c437d59be5409bc2b93364f076c"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-ciri-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8556,
+      "sha256": "2192731d45f574cdce79a612b1b99915109f79979d6809cabbf9330a4d2cc595"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-ciri-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 21095,
+      "sha256": "daa1f8fb640d27dc35ecc19c76672deb6addcf55bc16ae68742f10fd837c217d"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menyimak-cerita-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mendengarkan Cerita",
+  "instructions": "Amati gambar, lalu diskusikan cara menyimak.",
+  "assets": [
+    "assets/menyimak-cerita-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana sikap menyimak?",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan.",
+        "reveal": "Duduk tenang.",
+        "hint": "Tidak berbicara."
+      },
+      {
+        "prompt": "Apa yang dicatat?",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan.",
+        "reveal": "Tokoh dan peristiwa.",
+        "hint": "Dengarkan sampai selesai."
+      },
+      {
+        "prompt": "Apa yang diceritakan kembali?",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan.",
+        "reveal": "Isi cerita.",
+        "hint": "Sebutkan tokohnya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menyimak Cerita?",
+        "reveal": "Duduk tenang → Mendengarkan cerita → Menyebutkan tokoh → Menceritakan kembali → Menyimpulkan pesan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menyimak Cerita?",
+        "reveal": "Menyimak cerita dan menceritakannya kembali.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menyimak-cerita-kelas2.webp",
+        "altText": "Anak menyimak cerita yang dibacakan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita yang dibacakan."
+  }
+}

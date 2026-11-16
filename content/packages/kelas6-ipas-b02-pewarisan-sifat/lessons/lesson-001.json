@@ -1,0 +1,28 @@
+{
+  "lessonId": "pewarisan-sifat",
+  "packageId": "kelas6-ipas-b02-pewarisan-sifat",
+  "title": "Pewarisan Sifat",
+  "summary": "Memahami pewarisan sifat dari induk kepada keturunan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti pewarisan sifat.",
+    "Menyebutkan contoh sifat menurun.",
+    "Membedakan sifat bawaan dan lingkungan."
+  ],
+  "activityIds": [
+    "eksplorasi-pewarisan-sifat",
+    "matching-pewarisan-sifat",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/pewarisan-sifat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Induk dan anak dengan ciri fisik yang mirip."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

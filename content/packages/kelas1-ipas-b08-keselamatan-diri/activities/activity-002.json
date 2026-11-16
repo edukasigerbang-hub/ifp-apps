@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-keselamatan-diri",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Benda dan Manfaatnya",
+  "instructions": "Pasangkan setiap benda dengan manfaat keselamatannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-keselamatan-diri-1",
+        "left": "Kabel listrik",
+        "right": "Bisa tersengat listrik"
+      },
+      {
+        "pairId": "pasangan-keselamatan-diri-2",
+        "left": "Api kompor",
+        "right": "Bisa menyebabkan kebakaran"
+      },
+      {
+        "pairId": "pasangan-keselamatan-diri-3",
+        "left": "Pisau",
+        "right": "Benda tajam"
+      },
+      {
+        "pairId": "pasangan-keselamatan-diri-4",
+        "left": "Zebra cross",
+        "right": "Tempat menyeberang"
+      },
+      {
+        "pairId": "pasangan-keselamatan-diri-5",
+        "left": "Helm",
+        "right": "Pelindung kepala"
+      },
+      {
+        "pairId": "pasangan-keselamatan-diri-6",
+        "left": "Sabuk pengaman",
+        "right": "Pengaman di mobil"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Benda dan Manfaatnya\": Pasangkan setiap benda dengan manfaat keselamatannya."
+  }
+}

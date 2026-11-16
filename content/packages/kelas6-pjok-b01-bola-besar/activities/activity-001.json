@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-bola-besar-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Permainan",
+  "instructions": "Amati gambar, lalu diskusikan teknik dan aturan.",
+  "assets": [
+    "assets/bola-besar-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa teknik dasar sepak bola?",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli.",
+        "reveal": "Menendang, mengoper, menggiring.",
+        "hint": "Latih berpasangan."
+      },
+      {
+        "prompt": "Apa teknik dasar bola basket?",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli.",
+        "reveal": "Dribble, passing, shooting.",
+        "hint": "Gunakan kedua tangan."
+      },
+      {
+        "prompt": "Mengapa kerja sama penting?",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli.",
+        "reveal": "Agar tim mencetak skor.",
+        "hint": "Beri umpan tepat."
+      },
+      {
+        "prompt": "Agar tim menang, pemain harus ...",
+        "reveal": "Bekerja sama",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar?",
+        "reveal": "Mempraktikkan teknik dan kerja sama permainan bola besar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-besar-kelas6.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  }
+}

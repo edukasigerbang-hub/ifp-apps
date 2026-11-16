@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-bilangan-cacah",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "12.345",
+        "right": "Dua belas ribu tiga ratus empat puluh lima"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Angka 3 pada 12.345",
+        "right": "Ratusan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Angka 4 pada 12.345",
+        "right": "Puluhan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "12.354",
+        "right": "Lebih besar dari 12.345"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "12.435",
+        "right": "Bilangan terbesar"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Soal cerita",
+        "right": "Cerita bilangan cacah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kolom nilai tempat: satu puluh ribuan, dua ribuan, tiga ratusan, empat puluhan, dan lima satuan."
+  }
+}

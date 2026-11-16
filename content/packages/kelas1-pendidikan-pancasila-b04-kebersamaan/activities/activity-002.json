@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-kebersamaan",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Kegiatan di Sekolah",
+  "instructions": "Susun kegiatan kebersamaan di sekolah.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-datang",
+        "text": "Datang ke sekolah"
+      },
+      {
+        "itemId": "langkah-belajar",
+        "text": "Belajar bersama"
+      },
+      {
+        "itemId": "langkah-main",
+        "text": "Bermain bersama"
+      },
+      {
+        "itemId": "langkah-bantu",
+        "text": "Membantu teman"
+      },
+      {
+        "itemId": "langkah-pulang",
+        "text": "Pulang dengan rapi"
+      }
+    ],
+    "correctOrder": [
+      "langkah-datang",
+      "langkah-belajar",
+      "langkah-main",
+      "langkah-bantu",
+      "langkah-pulang"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa belajar dan bermain bersama di sekolah."
+  }
+}

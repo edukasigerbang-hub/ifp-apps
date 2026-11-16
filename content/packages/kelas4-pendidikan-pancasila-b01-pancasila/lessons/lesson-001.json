@@ -1,0 +1,35 @@
+{
+  "lessonId": "pancasila",
+  "packageId": "kelas4-pendidikan-pancasila-b01-pancasila",
+  "title": "Pancasila dalam Kehidupan",
+  "summary": "Mengenal lima sila, makna simbol, dan contoh penerapannya di kelas.",
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "learningObjectives": [
+    "Menyebutkan lima sila Pancasila.",
+    "Menjelaskan makna simbol sila.",
+    "Memberi contoh penerapan sila di kelas.",
+    "Menunjukkan sikap sesuai Pancasila."
+  ],
+  "activityIds": [
+    "eksplorasi-pancasila",
+    "matching-pancasila",
+    "kuis-singkat-pancasila"
+  ],
+  "assessmentRefs": [
+    "kuis-singkat-pancasila"
+  ],
+  "assetRefs": [
+    "assets/kelas-pancasila.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kegiatan kelas yang mencerminkan sila Pancasila: berdoa, menolong, belajar bersama, mengangkat tangan, dan menyapu."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

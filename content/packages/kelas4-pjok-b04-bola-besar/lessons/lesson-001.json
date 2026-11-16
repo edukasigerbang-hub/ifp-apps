@@ -1,0 +1,28 @@
+{
+  "lessonId": "bola-besar",
+  "packageId": "kelas4-pjok-b04-bola-besar",
+  "title": "Permainan Bola Besar",
+  "summary": "Mengenal sepak bola, bola basket, dan bola voli serta teknik dasar dan kerja samanya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis permainan bola besar.",
+    "Mempraktikkan teknik dasar salah satu permainan bola besar.",
+    "Menunjukkan kerja sama dan keselamatan saat bermain."
+  ],
+  "activityIds": [
+    "eksplorasi-bola-besar",
+    "matching-bola-besar",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/bola-besar.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga bola besar: bola sepak, bola basket, dan bola voli."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

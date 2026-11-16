@@ -1,0 +1,29 @@
+{
+  "lessonId": "laporan-kelas6",
+  "packageId": "kelas6-bahasa-indonesia-b01-laporan",
+  "title": "Teks Laporan",
+  "summary": "Menulis laporan pengamatan dengan struktur yang benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan struktur laporan.",
+    "Menggunakan bahasa baku.",
+    "Menulis laporan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-laporan-kelas6",
+    "ordering-laporan-kelas6",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/laporan-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

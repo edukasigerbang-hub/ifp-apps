@@ -1,0 +1,28 @@
+{
+  "lessonId": "pertumbuhan-manusia-hewan",
+  "packageId": "kelas2-ipas-b01-pertumbuhan-manusia-hewan",
+  "title": "Pertumbuhan Manusia dan Hewan",
+  "summary": "Mengenal perubahan tubuh manusia dan hewan ketika tumbuh.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan perubahan tubuh manusia saat tumbuh.",
+    "Menyebutkan contoh hewan yang tumbuh besar.",
+    "Mengurutkan tahap pertumbuhan sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-pertumbuhan-manusia-hewan",
+    "matching-pertumbuhan-manusia-hewan",
+    "kuis-pertumbuhan-manusia-hewan"
+  ],
+  "assessmentRefs": [
+    "kuis-pertumbuhan-manusia-hewan"
+  ],
+  "assetRefs": [
+    "assets/pertumbuhan-manusia-hewan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu dan Bima di samping bagan pertumbuhan kayu polos; tiga kucing berukuran berbeda duduk di atas tikar."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

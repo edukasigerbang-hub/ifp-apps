@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Suku\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kelompok masyarakat"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Keyakinan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Kebiasaan daerah"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Agama\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kelompok masyarakat"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Keyakinan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Kebiasaan daerah"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sikap-menerima-perbedaan-tanpa-m",
+        "prompt": "Sikap menerima perbedaan tanpa mengejek disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-ta-1",
+            "text": "Persatuan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-ta-2",
+            "text": "Kerja sama"
+          },
+          {
+            "optionId": "opsi-soal-sikap-menerima-perbedaan-ta-0",
+            "text": "Toleransi"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-menerima-perbedaan-ta-0"
+      },
+      {
+        "questionId": "soal-alasan-persatuan-penting-bagi-in",
+        "prompt": "Alasan persatuan penting bagi Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-alasan-persatuan-penting-ba-0",
+            "text": "Negara tetap kuat"
+          },
+          {
+            "optionId": "opsi-soal-alasan-persatuan-penting-ba-1",
+            "text": "Daerah mudah terpisah"
+          },
+          {
+            "optionId": "opsi-soal-alasan-persatuan-penting-ba-2",
+            "text": "Budaya daerah hilang"
+          }
+        ],
+        "correctResponse": "opsi-soal-alasan-persatuan-penting-ba-0"
+      },
+      {
+        "questionId": "soal-perbedaan-keyakinan-yang-dianut",
+        "prompt": "Perbedaan keyakinan yang dianut masyarakat disebut keberagaman ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perbedaan-keyakinan-yang-di-1",
+            "text": "Suku"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-keyakinan-yang-di-0",
+            "text": "Agama"
+          },
+          {
+            "optionId": "opsi-soal-perbedaan-keyakinan-yang-di-2",
+            "text": "Budaya"
+          }
+        ],
+        "correctResponse": "opsi-soal-perbedaan-keyakinan-yang-di-0"
+      },
+      {
+        "questionId": "soal-saat-teman-merayakan-hari-raya-y",
+        "prompt": "Saat teman merayakan hari raya yang berbeda, sikap kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-teman-merayakan-hari-r-1",
+            "text": "Mengejek"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-merayakan-hari-r-2",
+            "text": "Mengabaikan"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-merayakan-hari-r-0",
+            "text": "Menghormati"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-teman-merayakan-hari-r-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  }
+}

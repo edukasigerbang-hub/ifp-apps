@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-iman",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Memahami Iman dan Rukunnya",
+  "instructions": "Amati ilustrasi, lalu diskusikan arti iman dan rukun iman.",
+  "assets": [
+    "assets/iman-ilustrasi.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti iman?",
+        "assetPath": "assets/iman-ilustrasi.webp",
+        "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman.",
+        "reveal": "Iman adalah percaya dalam hati, diucapkan dengan lisan, dan diamalkan dengan perbuatan.",
+        "hint": "Iman bukan hanya diucapkan."
+      },
+      {
+        "prompt": "Sebutkan enam rukun iman.",
+        "assetPath": "assets/iman-ilustrasi.webp",
+        "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman.",
+        "reveal": "Iman kepada Allah, malaikat, kitab, rasul, hari akhir, serta qada dan qadar.",
+        "hint": "Enam bintang pada gambar melambangkan enam rukun iman."
+      },
+      {
+        "prompt": "Bagaimana cara meneladani akhlak Rasul?",
+        "assetPath": "assets/iman-ilustrasi.webp",
+        "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman.",
+        "reveal": "Dengan bersikap jujur, amanah, santun, dan menyampaikan kebaikan.",
+        "hint": "Contohkan perilaku sehari-hari di rumah dan sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Iman kepada Allah dan Rasul-Nya?",
+        "reveal": "Memahami arti iman, enam rukun iman, dan cara meneladani akhlak Rasul dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/iman-ilustrasi.webp",
+        "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/iman-ilustrasi.webp",
+        "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman."
+  }
+}

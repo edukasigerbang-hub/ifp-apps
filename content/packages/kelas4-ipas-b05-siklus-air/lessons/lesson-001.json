@@ -1,0 +1,29 @@
+{
+  "lessonId": "siklus-air",
+  "packageId": "kelas4-ipas-b05-siklus-air",
+  "title": "Bumi, Cuaca, dan Siklus Air",
+  "summary": "Memahami tahapan siklus air, hubungannya dengan cuaca, dan pentingnya menjaga air.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan tahapan siklus air.",
+    "Menghubungkan cuaca dengan siklus air.",
+    "Menunjukkan cara menghemat air."
+  ],
+  "activityIds": [
+    "eksplorasi-siklus-air",
+    "ordering-siklus-air",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/siklus-air.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

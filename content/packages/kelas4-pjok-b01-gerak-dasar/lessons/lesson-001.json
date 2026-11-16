@@ -1,0 +1,28 @@
+{
+  "lessonId": "gerak-dasar",
+  "packageId": "kelas4-pjok-b01-gerak-dasar",
+  "title": "Gerak Lokomotor dan Non-lokomotor",
+  "summary": "Membedakan gerak berpindah tempat dan gerak di tempat, serta mempraktikkannya dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan gerak lokomotor dan non-lokomotor.",
+    "Mempraktikkan contoh gerak lokomotor dan non-lokomotor.",
+    "Menerapkan keselamatan saat bergerak."
+  ],
+  "activityIds": [
+    "eksplorasi-gerak-dasar",
+    "matching-gerak-dasar",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gerak-dasar.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

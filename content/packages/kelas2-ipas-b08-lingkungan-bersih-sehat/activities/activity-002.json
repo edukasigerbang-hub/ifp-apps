@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-lingkungan-bersih-sehat",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Benda dan Kegunaannya",
+  "instructions": "Pasangkan setiap benda atau kegiatan dengan kegunaannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lingkungan-bersih-sehat-1",
+        "left": "Tempat sampah",
+        "right": "Tempat membuang sampah"
+      },
+      {
+        "pairId": "pasangan-lingkungan-bersih-sehat-2",
+        "left": "Sapu",
+        "right": "Membersihkan lantai"
+      },
+      {
+        "pairId": "pasangan-lingkungan-bersih-sehat-3",
+        "left": "Kerja bakti",
+        "right": "Membersihkan bersama-sama"
+      },
+      {
+        "pairId": "pasangan-lingkungan-bersih-sehat-4",
+        "left": "Genangan air",
+        "right": "Sarang nyamuk"
+      },
+      {
+        "pairId": "pasangan-lingkungan-bersih-sehat-5",
+        "left": "Pohon",
+        "right": "Membuat udara segar"
+      },
+      {
+        "pairId": "pasangan-lingkungan-bersih-sehat-6",
+        "left": "Cuci tangan",
+        "right": "Mencegah penyakit"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Benda dan Kegunaannya\": Pasangkan setiap benda atau kegiatan dengan kegunaannya."
+  }
+}

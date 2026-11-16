@@ -1,0 +1,28 @@
+{
+  "lessonId": "kosakata-baru",
+  "packageId": "kelas1-bahasa-indonesia-b08-kosakata-baru",
+  "title": "Kosakata Baru",
+  "summary": "Mengenal dan menggunakan kosakata baru.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal kosakata baru.",
+    "Menjelaskan arti kata.",
+    "Menggunakan kata dalam kalimat."
+  ],
+  "activityIds": [
+    "eksplorasi-kosakata-baru",
+    "matching-kosakata-baru",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kosakata-baru.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku dan belajar kosakata baru."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

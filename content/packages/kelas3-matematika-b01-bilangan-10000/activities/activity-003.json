@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak kubus pada gambar",
+        "right": "3.452 (tiga ribu empat ratus lima puluh dua)"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Nilai tempat angka 5 pada 3.452",
+        "right": "Puluhan, nilainya 50"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Membandingkan dua bilangan",
+        "right": "Bandingkan angka paling kiri lebih dahulu"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Balok ribuan, ratusan, puluhan, dan satuan",
+        "right": "Kolom nilai tempat"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-tersusun-dari-3-ri",
+        "left": "Bilangan yang tersusun dari 3 ribu, 5 ratus, dan 2 puluh",
+        "right": "3.520"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-tepat-berada-setel",
+        "left": "Bilangan yang tepat berada setelah 4.999",
+        "right": "5.000"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+  }
+}

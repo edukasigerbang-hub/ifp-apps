@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Nabi Muhammad dilahirkan di kota ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Madinah"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Thaif"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Makkah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Wahyu pertama diterima Nabi di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Gua Hira"
+          },
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Masjid Nabawi"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Gua Tsur"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Nabi Muhammad hijrah menuju kota ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Makkah"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Madinah"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Yaman"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Alasan Nabi hijrah adalah untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Mencari harta"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Menghindari perang"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Melindungi umat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Sesudah menerima wahyu, Nabi berdakwah di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Makkah"
+          },
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Madinah"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Mesir"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Bangunan yang didirikan Nabi di Madinah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "Masjidil Haram"
+          },
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "Masjid Nabawi"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "Masjid Al-Aqsa"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid."
+  }
+}

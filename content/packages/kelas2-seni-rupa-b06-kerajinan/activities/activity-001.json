@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kerajinan-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bahan Alam",
+  "instructions": "Amati gambar, lalu diskusikan bahan dan karyanya.",
+  "assets": [
+    "assets/kerajinan-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan alam apa yang terlihat?",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji.",
+        "reveal": "Daun, ranting, dan biji.",
+        "hint": "Dari sekitar."
+      },
+      {
+        "prompt": "Bagaimana memilih bahan?",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji.",
+        "reveal": "Bersih dan tidak tajam.",
+        "hint": "Aman untuk tangan."
+      },
+      {
+        "prompt": "Bagaimana menempel?",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji.",
+        "reveal": "Oles lem lalu tempel.",
+        "hint": "Tekan pelan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kerajinan Bahan Alam?",
+        "reveal": "Membuat kerajinan dari bahan alam.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kerajinan dari daun, ranting, dan biji.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-kelas2.webp",
+        "altText": "Kerajinan dari daun, ranting, dan biji."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerajinan dari daun, ranting, dan biji."
+  }
+}

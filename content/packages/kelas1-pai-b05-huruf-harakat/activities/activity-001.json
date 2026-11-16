@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-huruf-harakat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Harakat",
+  "instructions": "Amati gambar, lalu tirukan bacaan harakat.",
+  "assets": [
+    "assets/huruf-harakat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Harakat fathah dibaca ...",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat.",
+        "reveal": "a.",
+        "hint": "Di atas huruf."
+      },
+      {
+        "prompt": "Harakat kasrah dibaca ...",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat.",
+        "reveal": "i.",
+        "hint": "Di bawah huruf."
+      },
+      {
+        "prompt": "Harakat dammah dibaca ...",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat.",
+        "reveal": "u.",
+        "hint": "Di atas huruf."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak belajar huruf hijaiyah dan harakat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Huruf Hijaiyah dan Harakat?",
+        "reveal": "Mengenal huruf hijaiyah dengan harakat sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/huruf-harakat.webp",
+        "altText": "Anak belajar huruf hijaiyah dan harakat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar huruf hijaiyah dan harakat."
+  }
+}

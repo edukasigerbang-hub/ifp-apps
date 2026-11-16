@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b07-data",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Penyajian dan Interpretasi Data — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/data-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 116496,
+      "sha256": "3183c7f7174f7efd7eb09ff4f8d7599086080ff3291b23c3fcb1325ec33bfb75"
+    },
+    {
+      "path": "assets/aktivitas-data-kelas5-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6566,
+      "sha256": "c706879ba828cbb84a45d30b0b0d8b384998ec6a24ab8059772bf293aa28fdf8"
+    },
+    {
+      "path": "assets/aktivitas-data-kelas5-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6876,
+      "sha256": "2eaf096deb459447d6a4cf58018d87abfb1a3d3c2c5c2e48e0cbe58bbbeaeccf"
+    },
+    {
+      "path": "assets/aktivitas-data-kelas5-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8598,
+      "sha256": "3db350cc49e1896341dca7af88eb9ba685d93e93862e32ba55051522a94152d8"
+    },
+    {
+      "path": "assets/aktivitas-data-kelas5-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9001,
+      "sha256": "2a201e99bcfc5b9a87340ee24b7bc0750b82d88cd0c61c0be277527981dfcf65"
+    },
+    {
+      "path": "assets/aktivitas-data-kelas5-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6994,
+      "sha256": "42352287c34ba16250cc9f44763948ba48217fc1aadf3ff90546083fecb7a4d4"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

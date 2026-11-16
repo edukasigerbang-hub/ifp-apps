@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-tata-surya",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tata Surya",
+  "instructions": "Amati gambar, lalu diskusikan anggota dan gerak bumi.",
+  "assets": [
+    "assets/tata-surya.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa pusat tata surya?",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya.",
+        "reveal": "Matahari.",
+        "hint": "Planet mengelilinginya."
+      },
+      {
+        "prompt": "Apa itu rotasi bumi?",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya.",
+        "reveal": "Perputaran bumi pada porosnya.",
+        "hint": "Menimbulkan siang dan malam."
+      },
+      {
+        "prompt": "Apa itu revolusi bumi?",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya.",
+        "reveal": "Bumi mengelilingi matahari.",
+        "hint": "Memerlukan waktu satu tahun."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bumi dan Tata Surya?",
+        "reveal": "Mengenal tata surya, rotasi, dan revolusi bumi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Matahari dan planet-planet dalam tata surya.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/tata-surya.webp",
+        "altText": "Matahari dan planet-planet dalam tata surya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet dalam tata surya."
+  }
+}

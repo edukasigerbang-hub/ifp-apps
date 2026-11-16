@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-wujud-benda",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Benda",
+  "instructions": "Amati gambar, lalu diskusikan wujud benda di sekitarmu.",
+  "assets": [
+    "assets/wujud-benda.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Benda apa yang bentuknya tetap?",
+        "assetPath": "assets/wujud-benda.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati es batu di mangkuk, segelas air, dan uap dari ketel logam di meja kelas.",
+        "reveal": "Batu, meja, dan buku tetap bentuknya walaupun dipindahkan.",
+        "hint": "Coba pegang benda padat."
+      },
+      {
+        "prompt": "Benda apa yang mengikuti bentuk wadahnya?",
+        "assetPath": "assets/wujud-benda.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati es batu di mangkuk, segelas air, dan uap dari ketel logam di meja kelas.",
+        "reveal": "Air dan sirup mengikuti bentuk wadahnya.",
+        "hint": "Tuang air ke dalam gelas."
+      },
+      {
+        "prompt": "Apa perbedaan benda padat dan benda cair?",
+        "assetPath": "assets/wujud-benda.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati es batu di mangkuk, segelas air, dan uap dari ketel logam di meja kelas.",
+        "reveal": "Benda padat bentuknya tetap, benda cair mengikuti wadah.",
+        "hint": "Bandingkan batu dan air."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wujud Benda Padat dan Cair?",
+        "reveal": "Membedakan benda padat dan benda cair melalui pengamatan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wujud-benda.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati es batu di mangkuk, segelas air, dan uap dari ketel logam di meja kelas."
+      },
+      {
+        "prompt": "Sebutkan benda cair di dapurmu.",
+        "reveal": "Air, minyak, dan kecap adalah benda cair.",
+        "hint": "Benda cair bisa dituang.",
+        "assetPath": "assets/wujud-benda.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati es batu di mangkuk, segelas air, dan uap dari ketel logam di meja kelas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu dan Bima mengamati es batu di mangkuk, segelas air, dan uap dari ketel logam di meja kelas."
+  }
+}

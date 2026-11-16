@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-shalat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengenal Shalat",
+  "instructions": "Amati gambar, lalu diskusikan shalat wajib dan waktunya.",
+  "assets": [
+    "assets/shalat-ilustrasi.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang kamu lihat pada gambar?",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat.",
+        "reveal": "Sajadah, masjid, lentera, dan jam.",
+        "hint": "Perhatikan benda-benda yang berkaitan dengan ibadah."
+      },
+      {
+        "prompt": "Sebutkan lima shalat wajib.",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat.",
+        "reveal": "Subuh, Dzuhur, Ashar, Maghrib, dan Isya.",
+        "hint": "Urutkan dari pagi hingga malam."
+      },
+      {
+        "prompt": "Mengapa shalat penting?",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat.",
+        "reveal": "Shalat adalah kewajiban, mendekatkan diri kepada Allah, dan melatih disiplin.",
+        "hint": "Hubungkan dengan tanggung jawab dan ketenangan hati."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Shalat?",
+        "reveal": "Mengenal shalat wajib, urutan waktunya, dan pentingnya disiplin menjalankan shalat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/shalat-ilustrasi.webp",
+        "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+  }
+}

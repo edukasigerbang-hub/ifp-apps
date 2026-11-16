@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-energi",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Energi dan Contohnya",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/energi-perubahan.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-cahaya",
+        "left": "Energi cahaya",
+        "right": "Matahari menerangi bumi"
+      },
+      {
+        "pairId": "pasangan-listrik",
+        "left": "Energi listrik",
+        "right": "Lampu menyala"
+      },
+      {
+        "pairId": "pasangan-gerak",
+        "left": "Energi gerak",
+        "right": "Sepeda bergerak"
+      },
+      {
+        "pairId": "pasangan-bunyi",
+        "left": "Energi bunyi",
+        "right": "Gitar dipetik"
+      },
+      {
+        "pairId": "pasangan-panas",
+        "left": "Energi panas",
+        "right": "Kompor memanaskan air"
+      },
+      {
+        "pairId": "pasangan-perubahan-energi-yang-terjadi-pa",
+        "left": "Perubahan energi yang terjadi pada lampu saat menyala",
+        "right": "energi listrik menjadi energi cahaya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: matahari menyinari tanaman, lampu menyala, dan anak berlari."
+  }
+}

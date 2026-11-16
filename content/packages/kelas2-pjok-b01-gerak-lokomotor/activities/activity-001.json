@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-gerak-lokomotor-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Berpindah",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/gerak-lokomotor-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak lokomotor?",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Gerak berpindah tempat.",
+        "hint": "Jalan, lari, lompat."
+      },
+      {
+        "prompt": "Bagaimana mendarat saat lompat?",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Lutut ditekuk.",
+        "hint": "Mendarat pelan."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum bergerak?",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "reveal": "Pemanasan.",
+        "hint": "Agar tidak cedera."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berjalan, berlari, dan melompat di lapangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Lokomotor?",
+        "reveal": "Mempraktikkan gerak berpindah tempat dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-lokomotor-kelas2.webp",
+        "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  }
+}

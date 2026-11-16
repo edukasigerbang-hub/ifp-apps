@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-apresiasi-karya",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Apresiasi Karya",
+  "instructions": "Pilih satu jawaban yang paling tepat tentang apresiasi karya seni.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-langkah-pertama",
+        "prompt": "Langkah pertama dalam mengapresiasi karya seni adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-menilai",
+            "text": "Langsung memberi nilai"
+          },
+          {
+            "optionId": "opsi-mengejek",
+            "text": "Mengejek karya teman"
+          },
+          {
+            "optionId": "opsi-menjual",
+            "text": "Menjual karya teman"
+          },
+          {
+            "optionId": "opsi-mengamati",
+            "text": "Mengamati karya dengan teliti"
+          }
+        ],
+        "correctResponse": "opsi-mengamati"
+      },
+      {
+        "questionId": "soal-tekstur",
+        "prompt": "Unsur seni yang berkaitan dengan kesan permukaan karya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tekstur",
+            "text": "Tekstur"
+          },
+          {
+            "optionId": "opsi-warna",
+            "text": "Warna"
+          },
+          {
+            "optionId": "opsi-garis",
+            "text": "Garis"
+          },
+          {
+            "optionId": "opsi-tema",
+            "text": "Tema"
+          }
+        ],
+        "correctResponse": "opsi-tekstur"
+      },
+      {
+        "questionId": "soal-sikap-menanggapi",
+        "prompt": "Sikap yang tepat saat menanggapi karya teman adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-menertawakan",
+            "text": "Menertawakan karya teman"
+          },
+          {
+            "optionId": "opsi-sopan",
+            "text": "Menyampaikan pendapat dengan sopan"
+          },
+          {
+            "optionId": "opsi-merusak",
+            "text": "Merusak karya teman"
+          },
+          {
+            "optionId": "opsi-pergi",
+            "text": "Diam saja lalu pergi"
+          }
+        ],
+        "correctResponse": "opsi-sopan"
+      },
+      {
+        "questionId": "soal-manfaat",
+        "prompt": "Manfaat mengapresiasi karya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-merusak",
+            "text": "Membuat karya orang lain rusak"
+          },
+          {
+            "optionId": "opsi-bersaing",
+            "text": "Menumbuhkan persaingan tidak sehat"
+          },
+          {
+            "optionId": "opsi-menghargai",
+            "text": "Belajar menghargai dan menemukan ide baru"
+          },
+          {
+            "optionId": "opsi-menghindar",
+            "text": "Menghindari kegiatan berkarya"
+          }
+        ],
+        "correctResponse": "opsi-menghargai"
+      },
+      {
+        "questionId": "soal-saran-yang-kita-sampaikan-saat-m",
+        "prompt": "Saran yang kita sampaikan saat mengapresiasi karya teman sebaiknya bersifat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saran-yang-kita-sampaikan-s-1",
+            "text": "menjatuhkan"
+          },
+          {
+            "optionId": "opsi-soal-saran-yang-kita-sampaikan-s-2",
+            "text": "mengejek"
+          },
+          {
+            "optionId": "opsi-soal-saran-yang-kita-sampaikan-s-0",
+            "text": "membangun"
+          }
+        ],
+        "correctResponse": "opsi-soal-saran-yang-kita-sampaikan-s-0"
+      },
+      {
+        "questionId": "soal-selain-garis-warna-bentuk-dan-te",
+        "prompt": "Selain garis, warna, bentuk, dan tekstur, unsur karya yang dapat diamati adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-garis-warna-bentuk-d-0",
+            "text": "tema"
+          },
+          {
+            "optionId": "opsi-soal-selain-garis-warna-bentuk-d-1",
+            "text": "harga karya"
+          },
+          {
+            "optionId": "opsi-soal-selain-garis-warna-bentuk-d-2",
+            "text": "warna seragam sekolah"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-garis-warna-bentuk-d-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dinding pameran dengan tiga karya berbingkai dan seorang pengunjung mengamati."
+  }
+}

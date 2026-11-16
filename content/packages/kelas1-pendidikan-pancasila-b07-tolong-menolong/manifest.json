@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pendidikan-pancasila-b07-tolong-menolong",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kebersamaan dan Tolong-Menolong — Pendidikan Pancasila Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/tolong-menolong.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 100632,
+      "sha256": "743d4a5397d2551f1a169edcd55f8d01a318fdb15cbc87f520b291cfab8e030b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

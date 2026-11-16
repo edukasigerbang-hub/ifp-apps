@@ -1,0 +1,28 @@
+{
+  "lessonId": "adab",
+  "packageId": "kelas1-pai-b08-adab",
+  "title": "Adab Sehari-hari",
+  "summary": "Membiasakan adab baik setiap hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan adab sehari-hari.",
+    "Memberi contoh.",
+    "Membiasakan adab baik."
+  ],
+  "activityIds": [
+    "eksplorasi-adab",
+    "kuis-adab",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-adab"
+  ],
+  "assetRefs": [
+    "assets/adab-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

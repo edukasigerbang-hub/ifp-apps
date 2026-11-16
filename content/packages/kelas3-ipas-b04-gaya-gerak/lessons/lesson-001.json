@@ -1,0 +1,28 @@
+{
+  "lessonId": "gaya-gerak",
+  "packageId": "kelas3-ipas-b04-gaya-gerak",
+  "title": "Gaya dan Gerak di Sekitar",
+  "summary": "Mengenal jenis gaya dan pengaruhnya terhadap gerak benda.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal jenis gaya.",
+    "Menjelaskan pengaruh gaya terhadap gerak.",
+    "Memberi contoh gaya dalam kehidupan sehari-hari."
+  ],
+  "activityIds": [
+    "eksplorasi-gaya-gerak",
+    "matching-gaya-gerak",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gaya-gerak-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mendorong dan menarik benda, bola menggelinding, dan magnet menarik paku."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

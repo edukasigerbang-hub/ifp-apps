@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-gerak-manipulatif",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Lempar Tangkap",
+  "instructions": "Susun langkah melempar dan menangkap bola.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-siap",
+        "text": "Berdiri siap"
+      },
+      {
+        "itemId": "langkah-pegang",
+        "text": "Memegang bola"
+      },
+      {
+        "itemId": "langkah-lempar",
+        "text": "Melempar ke teman"
+      },
+      {
+        "itemId": "langkah-tangkap",
+        "text": "Teman menangkap"
+      },
+      {
+        "itemId": "langkah-kembali",
+        "text": "Mengembalikan bola"
+      }
+    ],
+    "correctOrder": [
+      "langkah-siap",
+      "langkah-pegang",
+      "langkah-lempar",
+      "langkah-tangkap",
+      "langkah-kembali"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak melempar dan menangkap bola."
+  }
+}

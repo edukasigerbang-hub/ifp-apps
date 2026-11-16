@@ -1,0 +1,29 @@
+{
+  "lessonId": "teks-narasi",
+  "packageId": "kelas4-bahasa-indonesia-b06-teks-narasi",
+  "title": "Memahami dan Menulis Teks Narasi",
+  "summary": "Mengenali struktur teks narasi, tokoh, dan latar, lalu menyusun cerita sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan struktur teks narasi.",
+    "Menyebutkan tokoh dan latar dalam cerita.",
+    "Menulis teks narasi sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-narasi",
+    "ordering-teks-narasi",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/teks-narasi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

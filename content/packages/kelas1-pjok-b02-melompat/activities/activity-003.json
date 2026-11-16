@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Melompat menggunakan",
+        "right": "Kaki"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Mendarat",
+        "right": "Lutut ditekuk sedikit"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan sebelum melompat",
+        "right": "Pemanasan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Agar aman, melompat di",
+        "right": "Ruang yang lapang"
+      },
+      {
+        "pairId": "pasangan-alasan-mendarat-dengan-lutut-dit",
+        "left": "Alasan mendarat dengan lutut ditekuk",
+        "right": "Agar kaki tidak sakit"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  }
+}

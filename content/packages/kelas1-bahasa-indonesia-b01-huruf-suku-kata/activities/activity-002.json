@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-huruf-suku-kata",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Huruf dan Kata",
+  "instructions": "Pasangkan setiap bagian dengan contohnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-vokal",
+        "left": "Huruf vokal",
+        "right": "a, i, u, e, o"
+      },
+      {
+        "pairId": "pasangan-konsonan",
+        "left": "Huruf konsonan",
+        "right": "b, c, d"
+      },
+      {
+        "pairId": "pasangan-suku",
+        "left": "Suku kata",
+        "right": "ba"
+      },
+      {
+        "pairId": "pasangan-buku",
+        "left": "bu + ku",
+        "right": "buku"
+      },
+      {
+        "pairId": "pasangan-membaca",
+        "left": "Membaca",
+        "right": "Melafalkan"
+      },
+      {
+        "pairId": "pasangan-menyimak",
+        "left": "Menyimak",
+        "right": "Mendengarkan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak belajar membaca huruf dan suku kata."
+  }
+}

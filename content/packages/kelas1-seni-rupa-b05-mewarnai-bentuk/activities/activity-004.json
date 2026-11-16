@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Tiga warna untuk mewarnai adalah merah, kuning, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "hitam"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "biru"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "putih"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Agar hasil rapi, kita mewarnai dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "tergesa-gesa"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "sambil berdiri"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "pelan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Saat mewarnai, warna jangan ... garis.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "keluar"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "mengikuti"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "menutup"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Sesudah dipakai, alat mewarnai ... ke tempatnya.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "dibuang ke lantai"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "disimpan"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "ditinggal di meja"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Setelah memegang krayon, tangan kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "dilipat"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "diangkat"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "dicuci"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk-bentuk yang diwarnai dengan warna berbeda."
+  }
+}

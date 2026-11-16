@@ -11,6 +11,7 @@ export async function connect(webSocketUrl) {
 
   let nextId = 0;
   const pending = new Map();
+  const handlers = new Map();
 
   socket.addEventListener("message", (event) => {
     const message = JSON.parse(event.data);
@@ -22,6 +23,16 @@ export async function connect(webSocketUrl) {
       } else {
         resolve(message.result);
       }
+      return;
+    }
+    // Event CDP (tanpa id) dipakai untuk diagnostik; kegagalan handler tidak boleh
+    // menjatuhkan skenario, jadi semua dilempar ke daftar terpisah.
+    for (const handler of handlers.get(message.method) ?? []) {
+      try {
+        handler(message.params);
+      } catch {
+        // abaikan
+      }
     }
   });
 
@@ -32,11 +43,15 @@ export async function connect(webSocketUrl) {
     pending.clear();
   });
 
-  function send(method, params = {}) {
+  function send(method, params = {}, sessionId) {
     return new Promise((resolve, reject) => {
       const id = ++nextId;
       pending.set(id, { resolve, reject });
-      socket.send(JSON.stringify({ id, method, params }));
+      const message = { id, method, params };
+      if (sessionId) {
+        message.sessionId = sessionId;
+      }
+      socket.send(JSON.stringify(message));
     });
   }
 
@@ -86,7 +101,19 @@ export async function connect(webSocketUrl) {
     await writeFile(filePath, Buffer.from(data, "base64"));
   }
 
-  return { send, evaluate, waitFor, screenshot, close: () => socket.close() };
+  function on(method, handler) {
+    const list = handlers.get(method) ?? [];
+    list.push(handler);
+    handlers.set(method, list);
+    return () => {
+      handlers.set(
+        method,
+        (handlers.get(method) ?? []).filter((entry) => entry !== handler)
+      );
+    };
+  }
+
+  return { send, evaluate, waitFor, screenshot, on, close: () => socket.close() };
 }
 
 export async function fetchTargets(port) {

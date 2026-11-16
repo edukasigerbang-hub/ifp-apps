@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-bola-besar-lanjutan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Teknik Lanjutan",
+  "instructions": "Amati gambar, lalu diskusikan teknik dan kerja sama tim.",
+  "assets": [
+    "assets/bola-besar-lanjutan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa teknik lanjutan sepak bola?",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli.",
+        "reveal": "Passing, dribbling, dan shooting.",
+        "hint": "Latih berpasangan."
+      },
+      {
+        "prompt": "Apa teknik lanjutan bola basket?",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli.",
+        "reveal": "Dribble, passing, dan shooting.",
+        "hint": "Gunakan kedua tangan."
+      },
+      {
+        "prompt": "Mengapa kerja sama penting?",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli.",
+        "reveal": "Agar tim mencetak skor.",
+        "hint": "Beri umpan tepat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Besar Lanjutan?",
+        "reveal": "Mempraktikkan teknik lanjutan permainan bola besar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
+      },
+      {
+        "prompt": "Agar tim menang, pemain harus ...",
+        "reveal": "Bekerja sama",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/bola-besar-lanjutan.webp",
+        "altText": "Bola sepak, bola basket, dan bola voli."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  }
+}

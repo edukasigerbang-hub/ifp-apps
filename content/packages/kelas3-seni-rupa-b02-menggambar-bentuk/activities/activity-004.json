@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Bentuk dasar yang menjadi atap rumah pada contoh gambar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "lingkaran"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "segitiga"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "persegi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Sketsa awal sebaiknya dibuat dengan garis ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "tebal"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "putus-putus"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "tipis"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Sebelum mewarnai, langkah yang harus dilakukan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "menambahkan detail"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "menghapus seluruh sketsa"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "memotong kertas gambar"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Setelah bentuk dasar selesai digambar, langkah berikutnya adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "mewarnai gambar"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "menyusun bentuk"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "menyiapkan alat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Alat tulis yang dipakai untuk membuat sketsa adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "gunting"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "lem"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "pensil"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Gambar rumah pada materi disusun dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "bentuk dasar"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "bahan alam"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "potongan kain"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
+  }
+}

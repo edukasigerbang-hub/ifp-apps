@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-eksposisi-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Eksposisi",
+  "instructions": "Amati gambar, lalu diskusikan ciri dan struktur.",
+  "assets": [
+    "assets/eksposisi-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan eksposisi?",
+        "assetPath": "assets/eksposisi-kelas6.webp",
+        "altText": "Anak membaca teks eksposisi.",
+        "reveal": "Menjelaskan informasi secara objektif.",
+        "hint": "Memberi pengetahuan."
+      },
+      {
+        "prompt": "Apa strukturnya?",
+        "assetPath": "assets/eksposisi-kelas6.webp",
+        "altText": "Anak membaca teks eksposisi.",
+        "reveal": "Tesis, argumen, penegasan.",
+        "hint": "Diawali pernyataan."
+      },
+      {
+        "prompt": "Bahasa apa yang dipakai?",
+        "assetPath": "assets/eksposisi-kelas6.webp",
+        "altText": "Anak membaca teks eksposisi.",
+        "reveal": "Baku dan jelas.",
+        "hint": "Hindari bahasa gaul."
+      },
+      {
+        "prompt": "Struktur eksposisi adalah ...",
+        "reveal": "Tesis, argumen, penegasan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/eksposisi-kelas6.webp",
+        "altText": "Anak membaca teks eksposisi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Eksposisi?",
+        "reveal": "Memahami dan menulis teks eksposisi.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/eksposisi-kelas6.webp",
+        "altText": "Anak membaca teks eksposisi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi."
+  }
+}

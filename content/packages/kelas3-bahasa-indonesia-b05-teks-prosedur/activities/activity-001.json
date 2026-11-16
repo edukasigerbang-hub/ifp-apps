@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-teks-prosedur",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Langkah Menanam",
+  "instructions": "Amati gambar, lalu diskusikan urutan langkah menanam biji.",
+  "assets": [
+    "assets/teks-prosedur-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan teks prosedur?",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
+        "reveal": "Memberi petunjuk melakukan sesuatu.",
+        "hint": "Ada alat dan langkah."
+      },
+      {
+        "prompt": "Bagaimana urutan langkah ditulis?",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
+        "reveal": "Berurutan dari awal sampai akhir.",
+        "hint": "Gunakan kata pertama, lalu, kemudian."
+      },
+      {
+        "prompt": "Kata apa yang biasa dipakai?",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram.",
+        "reveal": "Kata perintah seperti siapkan, masukkan, siram.",
+        "hint": "Mulai dengan kata kerja."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Prosedur Sederhana?",
+        "reveal": "Mengenal teks prosedur dan menyusun langkah kegiatannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Teks Prosedur Sederhana?",
+        "reveal": "Menyiapkan pot dan tanah → Menanam biji → Menyiram biji → Meletakkan di tempat terang → Merawat tanaman",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/teks-prosedur-kelas3.webp",
+        "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  }
+}

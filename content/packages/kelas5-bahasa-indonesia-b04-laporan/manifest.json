@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-bahasa-indonesia-b04-laporan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menulis Laporan Sederhana — Bahasa Indonesia Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/laporan-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 185526,
+      "sha256": "93097acce3d79314c5d4356a1efcf0ca69dfabd1f059a6c0dc919df9fef59f1b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

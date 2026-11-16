@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pjok-b03-atletik",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Atletik Dasar — PJOK Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/atletik-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 206258,
+      "sha256": "2271fc2ed1fd278a3a17a52fc48c76ba208ad85e5894e9ea485ac4784f50c1e8"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

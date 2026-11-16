@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-puisi-pantun-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Puisi dan Pantun",
+  "instructions": "Amati gambar, lalu diskusikan ciri keduanya.",
+  "assets": [
+    "assets/puisi-pantun-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri puisi?",
+        "assetPath": "assets/puisi-pantun-kelas2.webp",
+        "altText": "Anak membacakan puisi dan pantun.",
+        "reveal": "Bahasa indah.",
+        "hint": "Ada bait dan rima."
+      },
+      {
+        "prompt": "Apa ciri pantun?",
+        "assetPath": "assets/puisi-pantun-kelas2.webp",
+        "altText": "Anak membacakan puisi dan pantun.",
+        "reveal": "Empat baris.",
+        "hint": "Sampiran dan isi."
+      },
+      {
+        "prompt": "Bagaimana membacakan?",
+        "assetPath": "assets/puisi-pantun-kelas2.webp",
+        "altText": "Anak membacakan puisi dan pantun.",
+        "reveal": "Dengan ekspresi.",
+        "hint": "Suara jelas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membacakan puisi dan pantun.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/puisi-pantun-kelas2.webp",
+        "altText": "Anak membacakan puisi dan pantun."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Puisi dan Pantun Anak?",
+        "reveal": "Mengenal puisi dan pantun anak.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/puisi-pantun-kelas2.webp",
+        "altText": "Anak membacakan puisi dan pantun."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membacakan puisi dan pantun."
+  }
+}

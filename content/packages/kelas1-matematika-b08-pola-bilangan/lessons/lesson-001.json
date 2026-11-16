@@ -1,0 +1,28 @@
+{
+  "lessonId": "pola-bilangan",
+  "packageId": "kelas1-matematika-b08-pola-bilangan",
+  "title": "Pola Bilangan",
+  "summary": "Mengenal dan melanjutkan pola bilangan sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal pola bilangan.",
+    "Melanjutkan pola.",
+    "Membuat pola sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-pola-bilangan",
+    "kuis-pola-bilangan",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-pola-bilangan"
+  ],
+  "assetRefs": [
+    "assets/pola-bilangan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pola warna dan bilangan yang berulang."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

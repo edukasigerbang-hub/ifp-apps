@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-wawancara",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Wawancara",
+  "instructions": "Susun langkah melakukan wawancara.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-narasumber",
+        "text": "Menentukan narasumber"
+      },
+      {
+        "itemId": "langkah-pertanyaan",
+        "text": "Menyusun pertanyaan"
+      },
+      {
+        "itemId": "langkah-izin",
+        "text": "Meminta izin dan memperkenalkan diri"
+      },
+      {
+        "itemId": "langkah-tanya",
+        "text": "Bertanya dan mencatat jawaban"
+      },
+      {
+        "itemId": "langkah-terima",
+        "text": "Mengucapkan terima kasih"
+      }
+    ],
+    "correctOrder": [
+      "langkah-narasumber",
+      "langkah-pertanyaan",
+      "langkah-izin",
+      "langkah-tanya",
+      "langkah-terima"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak mewawancarai narasumber dengan sopan."
+  }
+}

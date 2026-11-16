@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-seni-rupa-b05-seni-cetak",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Seni Cetak — Seni Rupa Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/seni-cetak-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 178166,
+      "sha256": "bb7ed732126076a0966f54e0dd169d61708dffcdc204ac8e83c0dd22242ccdb2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Contoh hak warga",
+        "right": "Mendapat pendidikan dan pelayanan kesehatan"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Contoh kewajiban",
+        "right": "Menjaga kebersihan dan mematuhi aturan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan harus seimbang",
+        "right": "Agar kehidupan tertib dan adil"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Contoh kewajiban di sekolah adalah",
+        "right": "Mematuhi aturan"
+      },
+      {
+        "pairId": "pasangan-hak-dan-kewajiban-dilaksanakan-s",
+        "left": "Cara melaksanakan hak dan kewajiban",
+        "right": "Seimbang"
+      },
+      {
+        "pairId": "pasangan-selain-pendidikan-warga-negara-b",
+        "left": "Contoh kewajiban menjaga lingkungan",
+        "right": "Membuang sampah pada tempatnya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+  }
+}

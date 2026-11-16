@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Es, air, dan uap",
+        "right": "Tiga wujud zat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Sifat zat cair",
+        "right": "Bentuk mengikuti wadah, volume tetap"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Contoh perubahan wujud",
+        "right": "Es mencair, air menguap, uap mengembun"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Benda yang bentuknya tetap, air dalam wadah, uap di udara",
+        "right": "Padat, cair, gas"
+      },
+      {
+        "pairId": "pasangan-perubahan-wujud-uap-air-menjadi",
+        "left": "Perubahan wujud uap air menjadi titik-titik air pada gelas dingin",
+        "right": "mengembun"
+      },
+      {
+        "pairId": "pasangan-wujud-zat-yang-bentuk-dan-volume",
+        "left": "Wujud zat yang bentuk dan volumenya tetap",
+        "right": "padat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga wujud zat: benda padat, air dalam wadah, dan uap di udara."
+  }
+}

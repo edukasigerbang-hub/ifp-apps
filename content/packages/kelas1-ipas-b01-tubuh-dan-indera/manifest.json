@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-ipas-b01-tubuh-dan-indera",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Tubuhku dan Inderaku — IPAS Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/tubuh-dan-indera.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 143930,
+      "sha256": "c799ba514990d0ee43c8f7036028134bf815e3641298591c4cdc2fa34d93eb20"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

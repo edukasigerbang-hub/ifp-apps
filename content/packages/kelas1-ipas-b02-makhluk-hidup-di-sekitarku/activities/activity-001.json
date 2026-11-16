@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-makhluk-hidup-di-sekitarku",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Makhluk Hidup",
+  "instructions": "Amati gambar, lalu jawab pertanyaan tentang makhluk hidup di sekitarmu.",
+  "assets": [
+    "assets/makhluk-hidup-di-sekitarku.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Makhluk hidup apa yang kamu lihat di rumah?",
+        "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan.",
+        "reveal": "Kucing, ayam, burung, pohon, dan rumput.",
+        "hint": "Cari yang bisa bergerak atau tumbuh."
+      },
+      {
+        "prompt": "Apa bedanya makhluk hidup dan benda tak hidup?",
+        "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan.",
+        "reveal": "Makhluk hidup bernapas, tumbuh, dan butuh makanan. Batu tidak.",
+        "hint": "Bandingkan kucing dengan batu."
+      },
+      {
+        "prompt": "Apa kebutuhan makhluk hidup?",
+        "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan.",
+        "reveal": "Air, makanan, udara, dan tempat hidup.",
+        "hint": "Semua makhluk hidup butuh air."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Makhluk Hidup di Sekitar Kita?",
+        "reveal": "Mengenal makhluk hidup dan benda tak hidup di rumah dan di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan."
+      },
+      {
+        "prompt": "Sebutkan satu benda tak hidup di kelasmu.",
+        "reveal": "Meja, kursi, atau papan tulis. Benda tak hidup tidak bernapas.",
+        "hint": "Benda tak hidup tidak tumbuh.",
+        "assetPath": "assets/makhluk-hidup-di-sekitarku.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu dan Bima mengamati kupu-kupu di bunga taman sekolah; ada burung di ranting, kucing di rumput, dan kolam kecil berisi ikan."
+  }
+}

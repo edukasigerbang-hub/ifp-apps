@@ -1,0 +1,140 @@
+{
+  "_comment": "T-092 kelompok kelas 3 bagian A (Bahasa Indonesia b01-b08, Matematika b01-b08). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing dari digest-kelas3.txt, bukan template. Target per paket mengikuti needs-kelas3-a.json: total 36 soal kuis dan 23 pasangan mencocokkan. Diterapkan LEAD dengan node scripts/add-practice-items.mjs berkas-ini --apply.",
+  "packages": {
+    "kelas3-bahasa-indonesia-b01-teks-deskripsi": {
+      "quiz": [
+        { "prompt": "Tulisan yang menggambarkan sebuah objek dengan jelas disebut teks ...", "answer": "deskripsi", "distractors": ["prosedur", "berita"] },
+        { "prompt": "Kata 'harum' saat menggambarkan bunga diperoleh melalui indra ...", "answer": "penciuman", "distractors": ["pendengaran", "perabaan"] },
+        { "prompt": "Kata 'merdu' pada deskripsi menunjukkan bunyi yang ...", "answer": "enak didengar", "distractors": ["sedap dilihat", "kasar diraba"] },
+        { "prompt": "Menulis deskripsi sebaiknya dimulai dengan menyebutkan ...", "answer": "objek", "distractors": ["kesan", "judul"] }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b02-kalimat-efektif": {
+      "quiz": [
+        { "prompt": "Kalimat 'Siti sangat cantik sekali' tidak efektif karena memakai kata ...", "answer": "berulang", "distractors": ["baru", "asing"] },
+        { "prompt": "Agar kalimat menjadi efektif, kata yang tidak perlu sebaiknya ...", "answer": "dihapus", "distractors": ["diulang-ulang", "ditambah lagi"] }
+      ],
+      "matching": [
+        { "left": "Kata baru yang belum kita pahami sebaiknya", "right": "dicari artinya" },
+        { "left": "Kata 'indah' dan 'cantik' memiliki arti yang sama, disebut", "right": "sinonim" }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b03-ide-pokok": {
+      "matching": [
+        { "left": "Saat menyimak cerita, hal penting yang kita catat adalah", "right": "peristiwa penting" },
+        { "left": "Setelah menentukan ide pokok, kita dapat melakukan", "right": "menceritakan kembali" },
+        { "left": "Ide pokok paragraf biasanya terdapat pada", "right": "kalimat utama" }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b04-menulis-paragraf": {
+      "matching": [
+        { "left": "Kalimat yang tugasnya menjelaskan kalimat topik disebut kalimat", "right": "pendukung" },
+        { "left": "Hasil tulisan paragraf yang baik memakai huruf kapital, ejaan, dan", "right": "tanda baca" }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b05-teks-prosedur": {
+      "matching": [
+        { "left": "Kata 'siapkan', 'masukkan', dan 'siram' termasuk jenis kata", "right": "perintah" },
+        { "left": "Biji yang sudah ditanam lebih dahulu diletakkan di tempat yang", "right": "terang" },
+        { "left": "Langkah kegiatan yang ditulis berurutan dari awal sampai akhir menjadi teks", "right": "prosedur" }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b06-dongeng": {
+      "quiz": [
+        { "prompt": "Bagian cerita yang menyatakan tempat dan waktu kejadian disebut ...", "answer": "latar", "distractors": ["tokoh", "amanat"] },
+        { "prompt": "Cerita Kancil yang cerdik termasuk jenis cerita ...", "answer": "dongeng", "distractors": ["berita", "resep"] }
+      ],
+      "matching": [
+        { "left": "Waktu dan tempat terjadinya peristiwa dalam dongeng", "right": "latar cerita" },
+        { "left": "Perbuatan baik yang kita tiru dari sebuah dongeng", "right": "pesan cerita" }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b07-wawancara": {
+      "matching": [
+        { "left": "Tindakan pertama sebelum mulai bertanya kepada narasumber", "right": "meminta izin" },
+        { "left": "Alat yang dipakai untuk mencatat jawaban narasumber", "right": "buku catatan" },
+        { "left": "Ucapan yang harus dikatakan setelah wawancara selesai", "right": "terima kasih" }
+      ]
+    },
+    "kelas3-bahasa-indonesia-b08-menulis-cerita": {
+      "quiz": [
+        { "prompt": "Pengenalan tokoh dan tempat terjadi pada bagian cerita ...", "answer": "awal", "distractors": ["tengah", "akhir"] },
+        { "prompt": "Cerita tentang kejadian yang pernah kita alami sendiri disebut cerita ...", "answer": "pengalaman", "distractors": ["berita", "khayalan"] },
+        { "prompt": "Ide utama yang menjadi dasar penulisan sebuah cerita disebut ...", "answer": "tema", "distractors": ["judul", "latar"] },
+        { "prompt": "Masalah cerita biasa muncul pada bagian ...", "answer": "tengah", "distractors": ["awal", "akhir"] }
+      ]
+    },
+    "kelas3-matematika-b01-bilangan-10000": {
+      "quiz": [
+        { "prompt": "Bilangan 6.008 dibaca ...", "answer": "enam ribu delapan", "distractors": ["enam ribu nol delapan", "enam ribu delapan puluh"] },
+        { "prompt": "Pada bilangan 5.432, angka yang menempati tempat ratusan adalah ...", "answer": "4", "distractors": ["3", "5"] }
+      ],
+      "matching": [
+        { "left": "Bilangan yang tersusun dari 3 ribu, 5 ratus, dan 2 puluh", "right": "3.520" },
+        { "left": "Bilangan yang tepat berada setelah 4.999", "right": "5.000" }
+      ]
+    },
+    "kelas3-matematika-b02-penjumlahan-pengurangan": {
+      "quiz": [
+        { "prompt": "Hasil dari 3.250 + 1.475 adalah ...", "answer": "4.725", "distractors": ["4.625", "4.735"] },
+        { "prompt": "Perpustakaan punya 2.100 buku, sebanyak 850 buku sedang dipinjam. Sisa buku adalah ...", "answer": "1.250", "distractors": ["1.150", "1.350"] }
+      ],
+      "matching": [
+        { "left": "Bilangan yang ditambah 1.200 hasilnya 3.000", "right": "1.800" },
+        { "left": "Bilangan yang dikurangi 1.000 hasilnya 2.500", "right": "3.500" }
+      ]
+    },
+    "kelas3-matematika-b03-perkalian-pembagian": {
+      "quiz": [
+        { "prompt": "Hasil dari 7 × 6 adalah ...", "answer": "42", "distractors": ["36", "48"] },
+        { "prompt": "Perkalian 3 × 6 ditulis sebagai penjumlahan berulang ...", "answer": "6 + 6 + 6", "distractors": ["3 + 3", "6 + 6"] },
+        { "prompt": "Karena 6 × 7 = 42, maka 42 : 6 = ...", "answer": "7", "distractors": ["6", "42"] },
+        { "prompt": "Sebuah kotak berisi 8 jeruk. Banyak jeruk dalam 6 kotak adalah ...", "answer": "48", "distractors": ["42", "14"] }
+      ]
+    },
+    "kelas3-matematika-b04-pecahan": {
+      "quiz": [
+        { "prompt": "Pecahan untuk satu bagian dari empat bagian sama besar adalah ...", "answer": "1/4", "distractors": ["1/2", "1/3"] },
+        { "prompt": "Tanda yang tepat untuk 1/2 ... 1/4 adalah ...", "answer": ">", "distractors": ["<", "="] },
+        { "prompt": "Nama bagian bawah pada sebuah pecahan adalah ...", "answer": "penyebut", "distractors": ["pembilang", "nilai"] },
+        { "prompt": "Sepuluh kelereng dibagi dua sama besar. Setiap bagian berisi ... butir", "answer": "5", "distractors": ["2", "10"] }
+      ]
+    },
+    "kelas3-matematika-b05-bangun-datar": {
+      "quiz": [
+        { "prompt": "Bangun datar yang keempat sisinya sama panjang adalah ...", "answer": "persegi", "distractors": ["persegi panjang", "segitiga"] },
+        { "prompt": "Bangun datar yang dibatasi satu garis lengkung tertutup adalah ...", "answer": "lingkaran", "distractors": ["segitiga", "persegi"] },
+        { "prompt": "Banyak sudut pada sebuah persegi panjang adalah ...", "answer": "4", "distractors": ["3", "6"] },
+        { "prompt": "Bangun datar yang punya tiga sisi dan tiga sudut disebut ...", "answer": "segitiga", "distractors": ["persegi", "persegi panjang"] }
+      ]
+    },
+    "kelas3-matematika-b06-keliling-luas": {
+      "quiz": [
+        { "prompt": "Keliling persegi dengan sisi 8 cm adalah ...", "answer": "32 cm", "distractors": ["24 cm", "64 cm"] },
+        { "prompt": "Luas persegi panjang berukuran 9 cm × 3 cm adalah ...", "answer": "27 cm²", "distractors": ["24 cm²", "12 cm²"] }
+      ],
+      "matching": [
+        { "left": "Keliling persegi panjang dengan panjang 7 cm dan lebar 2 cm", "right": "18 cm" },
+        { "left": "Luas persegi yang sisinya 6 cm", "right": "36 cm²" }
+      ]
+    },
+    "kelas3-matematika-b07-waktu-panjang-berat": {
+      "quiz": [
+        { "prompt": "Dua jam sama dengan ...", "answer": "120 menit", "distractors": ["100 menit", "90 menit"] },
+        { "prompt": "Panjang tali 1 m 40 cm sama dengan ...", "answer": "140 cm", "distractors": ["40 cm", "1.040 cm"] },
+        { "prompt": "2 kilogram + 500 gram sama dengan ...", "answer": "2.500 gram", "distractors": ["2.050 gram", "1.500 gram"] },
+        { "prompt": "Ani belajar dari pukul 07.00 selama 1 jam 30 menit. Ia selesai pukul ...", "answer": "08.30", "distractors": ["08.00", "09.30"] }
+      ]
+    },
+    "kelas3-matematika-b08-penyajian-data": {
+      "quiz": [
+        { "prompt": "Banyak bola: merah 8, biru 5, kuning 9. Warna bola terbanyak adalah ...", "answer": "kuning", "distractors": ["merah", "biru"] },
+        { "prompt": "Tinggi Andi 128 cm dan tinggi Budi 132 cm. Selisih tinggi mereka ...", "answer": "4 cm", "distractors": ["2 cm", "6 cm"] }
+      ],
+      "matching": [
+        { "left": "Banyak buku: Senin 5, Selasa 7, Rabu 3. Jumlah seluruh buku", "right": "15" },
+        { "left": "Setiap kelompok data pada diagram digambarkan sebagai", "right": "batang" }
+      ]
+    }
+  }
+}

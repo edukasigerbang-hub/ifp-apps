@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b04-kesehatan-tubuh",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kesehatan Tubuh dan Pencegahan Penyakit — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kesehatan-tubuh.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 179154,
+      "sha256": "51d0ab405cd583c4f2c044d1e4d0024e2945876f058c4181e48d9f4e6a2781c6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

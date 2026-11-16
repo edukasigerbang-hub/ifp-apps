@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b05-bangun-datar",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bangun Datar — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bangun-datar.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 165874,
+      "sha256": "abb70ebe29dff3abb809e9a0e5981763b1a3984b5e0ab91c456fcb6c780b69a2"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas4-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6471,
+      "sha256": "0ef012ad00c417274f5b176489aa6e7ab45d7290aef9518a756a6c9699f30bb5"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas4-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8870,
+      "sha256": "51517353637a8daeae516b952a47654afde143ea6db6cfc14f412ee786627ec4"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas4-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5679,
+      "sha256": "2797f930ac971d1454e08ef496659a384c2f3d786ab7181758074acc832d507d"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas4-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7735,
+      "sha256": "f48cf1c65e1e39b2789d041bfd4b0094ae075684ba09ea6d890d637d4f098291"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas4-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6406,
+      "sha256": "9482d28bdf5b58bf55d4b6d6e43553aa3f325aa54c991019ed20818085cb205a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

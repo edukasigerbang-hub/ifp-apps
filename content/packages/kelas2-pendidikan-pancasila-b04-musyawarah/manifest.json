@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pendidikan-pancasila-b04-musyawarah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kebersamaan dan Musyawarah — Pendidikan Pancasila Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/musyawarah-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 150374,
+      "sha256": "2a8eb320217bf4eb491f42387602f14655a8cf36205821d3329de6307a1c5fbb"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

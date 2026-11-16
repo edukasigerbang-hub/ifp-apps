@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Seni cetak",
+        "right": "Membuat gambar berulang dengan alat cetak"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan yang dapat dijadikan cap",
+        "right": "Kentang, pelepah pisang, atau tutup botol"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Cara mencetak",
+        "right": "Oleskan cat, tekan ke kertas, lalu angkat perlahan"
+      },
+      {
+        "pairId": "pasangan-bahan-dapur-yang-dapat-dipotong",
+        "left": "Bahan dapur yang dapat dipotong lalu dijadikan alat cap",
+        "right": "Kentang"
+      },
+      {
+        "pairId": "pasangan-langkah-sesudah-menekan-alat-cet",
+        "left": "Langkah sesudah menekan alat cetak pada kertas",
+        "right": "Mengangkat perlahan"
+      },
+      {
+        "pairId": "pasangan-barang-bekas-di-meja-guru-yang-d",
+        "left": "Barang bekas di meja guru yang dapat dipakai sebagai cap",
+        "right": "Tutup botol"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pelepah pisang, cat, dan kertas berisi cetakan pola daun."
+  }
+}

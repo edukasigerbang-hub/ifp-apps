@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menggambar-bentuk",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menggambar",
+  "instructions": "Susun langkah menggambar bentuk sederhana.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-alat",
+        "text": "Menyiapkan alat"
+      },
+      {
+        "itemId": "langkah-dasar",
+        "text": "Menggambar bentuk dasar"
+      },
+      {
+        "itemId": "langkah-susun",
+        "text": "Menyusun bentuk"
+      },
+      {
+        "itemId": "langkah-detail",
+        "text": "Menambahkan detail"
+      },
+      {
+        "itemId": "langkah-warna",
+        "text": "Mewarnai"
+      }
+    ],
+    "correctOrder": [
+      "langkah-alat",
+      "langkah-dasar",
+      "langkah-susun",
+      "langkah-detail",
+      "langkah-warna"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar lingkaran, persegi, dan segitiga disusun menjadi gambar rumah."
+  }
+}

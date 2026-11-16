@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kolase",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bahan Kolase",
+  "instructions": "Amati gambar bahan dan contoh kolase, lalu diskusikan cara membuatnya.",
+  "assets": [
+    "assets/kolase.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan dan alat apa yang terlihat pada gambar?",
+        "assetPath": "assets/kolase.webp",
+        "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase.",
+        "reveal": "Kertas warna, lem, dan gunting.",
+        "hint": "Perhatikan benda di sekitar kertas."
+      },
+      {
+        "prompt": "Bagaimana potongan kertas ditempel?",
+        "assetPath": "assets/kolase.webp",
+        "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase.",
+        "reveal": "Kertas dipotong atau dirobek, lalu ditempel pada bidang dengan lem.",
+        "hint": "Perhatikan bentuk-bentuk pada kertas."
+      },
+      {
+        "prompt": "Apa yang membuat kolase terlihat menarik?",
+        "assetPath": "assets/kolase.webp",
+        "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase.",
+        "reveal": "Susunan warna, bentuk, dan ukuran yang seimbang.",
+        "hint": "Perhatikan sebaran bentuk."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Membuat Kolase?",
+        "reveal": "Mengenal kolase, menyiapkan bahan, dan menyusun potongan bentuk menjadi karya yang menarik.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kolase.webp",
+        "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase."
+      },
+      {
+        "prompt": "Langkah pertama membuat kolase adalah ...",
+        "reveal": "menyiapkan bahan dan merancang",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/kolase.webp",
+        "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kertas berisi potongan bentuk warna-warni, lem, dan gunting untuk membuat kolase."
+  }
+}

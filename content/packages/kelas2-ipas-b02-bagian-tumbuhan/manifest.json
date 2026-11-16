@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-ipas-b02-bagian-tumbuhan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bagian Tumbuhan dan Fungsinya — IPAS Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bagian-tumbuhan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 193470,
+      "sha256": "2c25c3235f28d36e62eedbf2aac687292e3ac874fa5ad14035dca5563aeb6936"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

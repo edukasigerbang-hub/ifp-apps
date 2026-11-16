@@ -1,0 +1,144 @@
+{
+  "activityId": "kuis-hewan-tumbuhan-peliharaan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan: Hewan dan Tumbuhan Peliharaan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-hewan-tumbuhan-peliharaan-1",
+        "prompt": "Hewan yang hidup di air adalah …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-1-1",
+            "text": "Ayam"
+          },
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-1-2",
+            "text": "Ikan"
+          },
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-1-3",
+            "text": "Kucing"
+          }
+        ],
+        "correctResponse": "opsi-hewan-tumbuhan-peliharaan-1-2"
+      },
+      {
+        "questionId": "soal-hewan-tumbuhan-peliharaan-2",
+        "prompt": "Tanaman peliharaan harus … setiap hari.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-2-2",
+            "text": "Dicabut"
+          },
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-2-3",
+            "text": "Dipetik"
+          },
+          {
+            "optionId": "opsi-hewan-tumbuhan-peliharaan-2-1",
+            "text": "Disiram"
+          }
+        ],
+        "correctResponse": "opsi-hewan-tumbuhan-peliharaan-2-1"
+      },
+      {
+        "questionId": "soal-hewan-peliharaan-setiap-hari-mem",
+        "prompt": "Hewan peliharaan setiap hari membutuhkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-1",
+            "text": "buku tulis"
+          },
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-2",
+            "text": "listrik"
+          },
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-3",
+            "text": "baju baru"
+          },
+          {
+            "optionId": "opsi-soal-hewan-peliharaan-setiap-har-0",
+            "text": "makanan dan air"
+          }
+        ],
+        "correctResponse": "opsi-soal-hewan-peliharaan-setiap-har-0"
+      },
+      {
+        "questionId": "soal-tanaman-menjadi-layu-karena",
+        "prompt": "Tanaman menjadi layu karena ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-0",
+            "text": "kurang air"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-1",
+            "text": "terlalu banyak tanah"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-2",
+            "text": "kelebihan makanan"
+          },
+          {
+            "optionId": "opsi-soal-tanaman-menjadi-layu-karena-3",
+            "text": "banyak teman"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanaman-menjadi-layu-karena-0"
+      },
+      {
+        "questionId": "soal-burung-peliharaan-biasanya-ditem",
+        "prompt": "Burung peliharaan biasanya ditempatkan di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-1",
+            "text": "panci"
+          },
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-0",
+            "text": "kandang"
+          },
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-2",
+            "text": "lemari"
+          },
+          {
+            "optionId": "opsi-soal-burung-peliharaan-biasanya-3",
+            "text": "sepatu"
+          }
+        ],
+        "correctResponse": "opsi-soal-burung-peliharaan-biasanya-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas kuis pilihan ganda berjudul \"Kuis Penguatan: Hewan dan Tumbuhan Peliharaan\": Pilih jawaban yang paling tepat."
+  }
+}

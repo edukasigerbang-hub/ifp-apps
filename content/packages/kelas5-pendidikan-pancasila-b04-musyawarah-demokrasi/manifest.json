@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Musyawarah dan Demokrasi — Pendidikan Pancasila Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/musyawarah-demokrasi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 171618,
+      "sha256": "13322340a307a2645db372435a4236e7bf7266e1187fba16e1b7ebc55621a340"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

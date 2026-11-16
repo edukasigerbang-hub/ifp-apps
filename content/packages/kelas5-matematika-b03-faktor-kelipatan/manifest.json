@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b03-faktor-kelipatan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Faktor, Kelipatan, KPK, dan FPB — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/faktor-kelipatan-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 143786,
+      "sha256": "fe09aa5f8f6fe5326e24925b5aac13bc9aeb0c25359ca47df339eb3240a00aec"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-kpk-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6568,
+      "sha256": "59ddf7752028b476e0754d4a89a8420bda84c0712d352a29e8c0b76d6ca0ec15"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-kpk-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4137,
+      "sha256": "359ec88d2acb675bb7a76619932d08026ecac441b02069c9422c70267d81d924"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-kpk-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5698,
+      "sha256": "9e95283ed0da2e543939405193d028a17732aa96d2f2405caaa1a58ae0e8eaa6"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-kpk-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9747,
+      "sha256": "1adc435b74d47ac6bfcd37e0d7cc4cf5538016040f2b40bf30fa70597d816d88"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-kpk-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 42452,
+      "sha256": "b191d1a370be99f2666495d15846ccb502c24303bdd227efc0a1c8c4810e30d9"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

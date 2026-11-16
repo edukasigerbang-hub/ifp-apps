@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Sikap tertib saat menunggu giliran",
+        "right": "Antre"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan diperlukan",
+        "right": "Agar kegiatan berjalan aman dan teratur"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Akibat melanggar aturan",
+        "right": "Kegiatan terganggu dan orang lain dirugikan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Contoh aturan di rumah adalah",
+        "right": "Merapikan tempat tidur"
+      },
+      {
+        "pairId": "pasangan-contoh-aturan-yang-wajib-ditaati",
+        "left": "Contoh aturan yang wajib ditaati sebelum masuk kelas",
+        "right": "memakai seragam"
+      },
+      {
+        "pairId": "pasangan-jika-semua-siswa-menaati-aturan",
+        "left": "Keadaan kerja kelompok bila semua siswa menaati aturan",
+        "right": "lancar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di depan kelas."
+  }
+}

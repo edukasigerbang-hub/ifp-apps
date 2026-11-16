@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-akhlak",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Perilaku Terpuji",
+  "instructions": "Amati gambar, lalu diskusikan akhlak terpuji yang ditunjukkan.",
+  "assets": [
+    "assets/akhlak-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Akhlak terpuji apa yang terlihat?",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman.",
+        "reveal": "Berbagi, jujur, dan membantu teman.",
+        "hint": "Amati tindakan anak-anak."
+      },
+      {
+        "prompt": "Mengapa jujur penting?",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman.",
+        "reveal": "Agar dipercaya orang lain.",
+        "hint": "Jujur membawa kebaikan."
+      },
+      {
+        "prompt": "Apa manfaat akhlak baik?",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman.",
+        "reveal": "Disayangi keluarga dan teman.",
+        "hint": "Hidup menjadi tenang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Akhlak Terpuji?",
+        "reveal": "Mengenal akhlak terpuji dan membiasakannya dalam kehidupan sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berbagi, berkata jujur, dan membantu teman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/akhlak-kelas3.webp",
+        "altText": "Anak berbagi, berkata jujur, dan membantu teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berbagi, berkata jujur, dan membantu teman."
+  }
+}

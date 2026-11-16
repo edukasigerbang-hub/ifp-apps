@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-simbol-warna",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Simbol dan Warna",
+  "instructions": "Amati gambar, lalu sebutkan simbol dan warnanya.",
+  "assets": [
+    "assets/simbol-warna-pancasila.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bintang berwarna ...",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya.",
+        "reveal": "Kuning emas.",
+        "hint": "Simbol sila pertama."
+      },
+      {
+        "prompt": "Pohon beringin berwarna ...",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya.",
+        "reveal": "Hijau.",
+        "hint": "Simbol sila ketiga."
+      },
+      {
+        "prompt": "Rantai berwarna ...",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya.",
+        "reveal": "Kuning emas.",
+        "hint": "Simbol sila kedua."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Lima simbol Pancasila dengan warna khasnya.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Simbol dan Warna Pancasila?",
+        "reveal": "Mengenal simbol dan warna Pancasila.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/simbol-warna-pancasila.webp",
+        "altText": "Lima simbol Pancasila dengan warna khasnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila dengan warna khasnya."
+  }
+}

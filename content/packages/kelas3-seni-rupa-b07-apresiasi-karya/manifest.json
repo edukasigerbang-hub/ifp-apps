@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-seni-rupa-b07-apresiasi-karya",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Mengapresiasi Karya Seni — Seni Rupa Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/apresiasi-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 134992,
+      "sha256": "da5825179408966aca335bf4676e6034862d84d246ea60b8be1fac031d3d71e9"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

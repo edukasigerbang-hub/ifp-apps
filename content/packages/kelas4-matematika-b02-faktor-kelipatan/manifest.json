@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b02-faktor-kelipatan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Faktor dan Kelipatan — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/faktor-kelipatan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 161078,
+      "sha256": "98a3c8c750e1591f3fe597fd165dbc29dfe218205a20a9ef63b6ea02cafb487d"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5991,
+      "sha256": "d4549100950496b12810296a67afb28fbb3f60795086c4b36ff42db9e0505180"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 42387,
+      "sha256": "58bb028c3d782688ed5dec45bea7055f33a7245862c055432ab5c61e0b13fc62"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 48436,
+      "sha256": "e9973dcd4d440f2a690d0f85535bd1b9f89d930b4a8789ba19565c18a4f056c7"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12739,
+      "sha256": "c94ee6fd90b6be553192cc3a186469254e10c777a116671c8302bbc1240e3008"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6394,
+      "sha256": "616ad886acd442ea6c7e1f38e000deac0e1f74415900054dacc16d64d742e5b2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

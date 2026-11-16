@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-dongeng",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyimak Dongeng",
+  "instructions": "Amati gambar, lalu diskusikan tokoh dan pesan dongeng.",
+  "assets": [
+    "assets/dongeng-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu dongeng?",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
+        "reveal": "Cerita khayalan yang diwariskan turun-temurun.",
+        "hint": "Sering berisi hewan yang dapat berbicara."
+      },
+      {
+        "prompt": "Siapa tokoh dalam dongeng?",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
+        "reveal": "Pelaku dalam cerita.",
+        "hint": "Ada tokoh baik dan tokoh jahat."
+      },
+      {
+        "prompt": "Apa pesan cerita?",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan.",
+        "reveal": "Nasihat atau pelajaran dari cerita.",
+        "hint": "Biasanya ada di akhir cerita."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Dongeng dan Pesan Cerita?",
+        "reveal": "Mengenal dongeng, tokohnya, dan pesan yang terkandung di dalamnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+      },
+      {
+        "prompt": "Dongeng adalah cerita ...",
+        "reveal": "Khayalan turun-temurun",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/dongeng-kelas3.webp",
+        "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+  }
+}

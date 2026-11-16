@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-shalat",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Shalat Wajib",
+  "instructions": "Susun lima shalat wajib sesuai urutan waktunya.",
+  "assets": [
+    "assets/shalat-ilustrasi.webp"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-subuh",
+        "text": "Subuh"
+      },
+      {
+        "itemId": "item-dzuhur",
+        "text": "Dzuhur"
+      },
+      {
+        "itemId": "item-ashar",
+        "text": "Ashar"
+      },
+      {
+        "itemId": "item-maghrib",
+        "text": "Maghrib"
+      },
+      {
+        "itemId": "item-isya",
+        "text": "Isya"
+      }
+    ],
+    "correctOrder": [
+      "item-subuh",
+      "item-dzuhur",
+      "item-ashar",
+      "item-maghrib",
+      "item-isya"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-mengenal-malaikat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Iman",
+  "instructions": "Amati gambar, lalu diskusikan malaikat dan tugasnya.",
+  "assets": [
+    "assets/mengenal-malaikat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa jumlah malaikat yang wajib diketahui?",
+        "assetPath": "assets/mengenal-malaikat.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada malaikat.",
+        "reveal": "Sepuluh.",
+        "hint": "Salah satunya Jibril."
+      },
+      {
+        "prompt": "Apa tugas malaikat Jibril?",
+        "assetPath": "assets/mengenal-malaikat.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada malaikat.",
+        "reveal": "Menyampaikan wahyu.",
+        "hint": "Kepada para nabi."
+      },
+      {
+        "prompt": "Apa sifat malaikat?",
+        "assetPath": "assets/mengenal-malaikat.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada malaikat.",
+        "reveal": "Tidak makan dan tidak tidur.",
+        "hint": "Selalu taat kepada Allah."
+      },
+      {
+        "prompt": "Malaikat Jibril bertugas ...",
+        "reveal": "Menyampaikan wahyu",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/mengenal-malaikat.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada malaikat."
+      },
+      {
+        "prompt": "Beriman kepada malaikat termasuk rukun iman ke ...",
+        "reveal": "Dua",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/mengenal-malaikat.webp",
+        "altText": "Anak berdoa sebagai wujud iman kepada malaikat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada malaikat."
+  }
+}

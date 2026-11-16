@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-unsur-seni",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur dan Contoh",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/unsur-seni.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-garis",
+        "left": "Garis",
+        "right": "Goresan panjang dan tipis"
+      },
+      {
+        "pairId": "pasangan-bentuk",
+        "left": "Bentuk",
+        "right": "Lingkaran dan persegi"
+      },
+      {
+        "pairId": "pasangan-warna",
+        "left": "Warna",
+        "right": "Merah, biru, dan kuning"
+      },
+      {
+        "pairId": "pasangan-tekstur",
+        "left": "Tekstur",
+        "right": "Kasar atau halus"
+      },
+      {
+        "pairId": "pasangan-ruang",
+        "left": "Ruang",
+        "right": "Area kosong di sekitar objek"
+      },
+      {
+        "pairId": "pasangan-bentuk-bentuk-yang-terlihat-pada",
+        "left": "Bentuk-bentuk yang terlihat pada contoh komposisi di paket ini",
+        "right": "Persegi, lingkaran, dan elips"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Komposisi seni rupa dengan persegi oranye, lingkaran teal, elips kuning, garis, tekstur titik, dan ruang kosong."
+  }
+}

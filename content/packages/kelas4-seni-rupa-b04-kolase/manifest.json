@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-seni-rupa-b04-kolase",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Membuat Kolase — Seni Rupa Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kolase.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 173868,
+      "sha256": "3a4fcc99fc14a14d2831c9588a17ddecf0314802d554dff2536224785952ad45"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

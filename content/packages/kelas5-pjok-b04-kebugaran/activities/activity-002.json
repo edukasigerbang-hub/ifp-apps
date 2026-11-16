@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kebugaran-kelas5",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kebiasaan Sehat",
+  "instructions": "Pasangkan setiap kebiasaan dengan manfaatnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-olahraga",
+        "left": "Olahraga",
+        "right": "Menjaga kebugaran"
+      },
+      {
+        "pairId": "pasangan-gizi",
+        "left": "Makan bergizi",
+        "right": "Menjaga kesehatan"
+      },
+      {
+        "pairId": "pasangan-istirahat",
+        "left": "Istirahat",
+        "right": "Memulihkan tenaga"
+      },
+      {
+        "pairId": "pasangan-air",
+        "left": "Air putih",
+        "right": "Menghindari dehidrasi"
+      },
+      {
+        "pairId": "pasangan-kebersihan",
+        "left": "Kebersihan diri",
+        "right": "Mencegah penyakit"
+      },
+      {
+        "pairId": "pasangan-pemanasan",
+        "left": "Pemanasan",
+        "right": "Mencegah cedera"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "lessonId": "proyek-kewargaan",
+  "packageId": "kelas3-pendidikan-pancasila-b08-proyek-kewargaan",
+  "title": "Proyek Kewargaan",
+  "summary": "Merancang dan melaksanakan proyek kewargaan sederhana di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Merancang proyek kewargaan.",
+    "Bekerja sama dalam proyek.",
+    "Melaporkan hasil proyek."
+  ],
+  "activityIds": [
+    "eksplorasi-proyek-kewargaan",
+    "ordering-proyek-kewargaan",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/proyek-kewargaan-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

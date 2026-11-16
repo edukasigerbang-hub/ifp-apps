@@ -1,0 +1,28 @@
+{
+  "lessonId": "diskusi-kelas6",
+  "packageId": "kelas6-bahasa-indonesia-b06-diskusi",
+  "title": "Teks Diskusi",
+  "summary": "Memahami teks diskusi dan menyampaikan pendapat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri teks diskusi.",
+    "Menyebutkan argumen mendukung dan menentang.",
+    "Menyimpulkan hasil diskusi."
+  ],
+  "activityIds": [
+    "eksplorasi-diskusi-kelas6",
+    "kuis-diskusi-kelas6",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-diskusi-kelas6"
+  ],
+  "assetRefs": [
+    "assets/diskusi-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berdiskusi dengan guru."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

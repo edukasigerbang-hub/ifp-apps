@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-teks-deskripsi-k3",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Deskripsi",
+  "instructions": "Pasangkan setiap istilah dengan contoh atau maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-deskripsi",
+        "left": "Teks deskripsi",
+        "right": "Menggambarkan objek"
+      },
+      {
+        "pairId": "pasangan-lihat",
+        "left": "Penglihatan",
+        "right": "Hijau"
+      },
+      {
+        "pairId": "pasangan-cium",
+        "left": "Penciuman",
+        "right": "Harum"
+      },
+      {
+        "pairId": "pasangan-dengar",
+        "left": "Pendengaran",
+        "right": "Merdu"
+      },
+      {
+        "pairId": "pasangan-topik",
+        "left": "Kalimat topik",
+        "right": "Kalimat utama"
+      },
+      {
+        "pairId": "pasangan-kesan",
+        "left": "Kesan",
+        "right": "Perasaan setelah membaca"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera."
+  }
+}

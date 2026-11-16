@@ -1,0 +1,28 @@
+{
+  "lessonId": "garis-warna",
+  "packageId": "kelas1-seni-rupa-b01-garis-warna",
+  "title": "Garis dan Warna",
+  "summary": "Mengenal garis dan warna untuk menggambar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal jenis garis.",
+    "Mengenal warna primer.",
+    "Membuat gambar dengan garis dan warna."
+  ],
+  "activityIds": [
+    "eksplorasi-garis-warna",
+    "matching-garis-warna",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/garis-warna-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, zigzag, dan warna primer."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

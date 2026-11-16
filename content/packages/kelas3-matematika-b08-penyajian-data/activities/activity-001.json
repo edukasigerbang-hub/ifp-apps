@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-penyajian-data",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Data",
+  "instructions": "Amati gambar, lalu diskusikan cara membaca tabel dan diagram.",
+  "assets": [
+    "assets/aktivitas-penyajian-data-1.png",
+    "assets/aktivitas-penyajian-data-2.png",
+    "assets/aktivitas-penyajian-data-3.png",
+    "assets/aktivitas-penyajian-data-4.png",
+    "assets/aktivitas-penyajian-data-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa isi tabel data?",
+        "assetPath": "assets/aktivitas-penyajian-data-1.png",
+        "altText": "Tabel empat kolom tiga baris; baris judul berwarna dan dua baris berikutnya berisi titik-titik jumlah yang berbeda.",
+        "reveal": "Keterangan dan jumlah.",
+        "hint": "Baca judul dan angkanya."
+      },
+      {
+        "prompt": "Apa yang ditunjukkan diagram batang?",
+        "assetPath": "assets/aktivitas-penyajian-data-2.png",
+        "altText": "Diagram batang empat batang berbeda tinggi di atas sumbu mendatar dan tegak.",
+        "reveal": "Banyak data pada setiap kelompok.",
+        "hint": "Bandingkan tinggi batang."
+      },
+      {
+        "prompt": "Bagaimana mencari data terbanyak?",
+        "assetPath": "assets/aktivitas-penyajian-data-3.png",
+        "altText": "Diagram batang dengan batang tertinggi berwarna oranye dan kaca pembesar di dekatnya.",
+        "reveal": "Lihat batang tertinggi.",
+        "hint": "Baca angka pada sumbu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Penyajian Data Sederhana?",
+        "reveal": "Membaca dan menyajikan data dalam tabel serta diagram batang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-penyajian-data-4.png",
+        "altText": "Tiga kartu rangkuman: tabel kecil, baris titik, dan diagram batang tiga batang dengan batang tertinggi ditandai."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-penyajian-data-5.png",
+        "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi penyajian data: tabel berisi titik jumlah, diagram batang empat batang, batang tertinggi disorot dengan kaca pembesar, tiga kartu rangkuman, dan gabungan diagram gambar, diagram batang, serta tabel."
+  }
+}

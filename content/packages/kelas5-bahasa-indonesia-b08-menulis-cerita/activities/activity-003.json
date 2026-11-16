@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang ditentukan pertama",
+        "right": "Tema cerita"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menyusun alur",
+        "right": "Awal, tengah, dan akhir"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang diperiksa",
+        "right": "Ejaan, tanda baca, dan keruntutan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-yang-dilakukan-setelah",
+        "left": "Kegiatan yang dilakukan setelah tema ditentukan",
+        "right": "Menyusun kerangka"
+      },
+      {
+        "pairId": "pasangan-penutup-urutan-menulis-cerita-di",
+        "left": "Penutup urutan menulis cerita di kelas",
+        "right": "Membacakan cerita"
+      },
+      {
+        "pairId": "pasangan-sifat-cerita-yang-alur-dan-bagia",
+        "left": "Sifat cerita yang alur dan bagian-bagiannya urut serta nyambung",
+        "right": "Runtut"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita di buku."
+  }
+}

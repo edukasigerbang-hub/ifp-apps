@@ -1,0 +1,284 @@
+{
+  "packages": {
+    "kelas5-ipas-b01-sistem-pencernaan": {
+      "quiz": [
+        {
+          "prompt": "Makanan dikunyah dan dihancurkan di dalam organ ...",
+          "answer": "Mulut",
+          "distractors": ["Lambung", "Usus halus", "Kerongkongan"]
+        },
+        {
+          "prompt": "Organ yang mencerna makanan dengan bantuan asam dan gerakan adalah ...",
+          "answer": "Lambung",
+          "distractors": ["Usus halus", "Usus besar", "Kerongkongan"]
+        },
+        {
+          "prompt": "Sari makanan diserap oleh tubuh di organ ...",
+          "answer": "Usus halus",
+          "distractors": ["Usus besar", "Lambung", "Anus"]
+        },
+        {
+          "prompt": "Fungsi usus besar dalam pencernaan adalah ...",
+          "answer": "Menyerap air",
+          "distractors": ["Mengunyah makanan", "Menyalurkan makanan", "Menyerap sari makanan"]
+        }
+      ]
+    },
+    "kelas5-ipas-b02-sistem-pernapasan": {
+      "quiz": [
+        {
+          "prompt": "Pertukaran gas terjadi di ...",
+          "answer": "Alveolus",
+          "distractors": ["Diafragma", "Hidung", "Tenggorokan"]
+        },
+        {
+          "prompt": "Udara yang masuk ke tubuh disaring oleh ...",
+          "answer": "Hidung",
+          "distractors": ["Paru-paru", "Diafragma", "Alveolus"]
+        },
+        {
+          "prompt": "Tenggorokan (trakea) merupakan saluran bagi ...",
+          "answer": "Udara",
+          "distractors": ["Makanan", "Darah", "Air"]
+        },
+        {
+          "prompt": "Kebiasaan yang menjaga kesehatan sistem pernapasan adalah ...",
+          "answer": "Memakai masker",
+          "distractors": ["Sering berada di tempat berasap", "Malas bergerak", "Jarang berolahraga"]
+        }
+      ]
+    },
+    "kelas5-ipas-b03-peredaran-darah": {
+      "quiz": [
+        {
+          "prompt": "Organ yang memompa darah ke seluruh tubuh adalah ...",
+          "answer": "Jantung",
+          "distractors": ["Paru-paru", "Ginjal", "Hati"]
+        },
+        {
+          "prompt": "Pembuluh darah yang membawa darah dari jantung disebut ...",
+          "answer": "Arteri",
+          "distractors": ["Vena", "Kapiler"]
+        },
+        {
+          "prompt": "Fungsi pembuluh vena adalah ...",
+          "answer": "Membawa darah ke jantung",
+          "distractors": ["Membawa darah dari jantung", "Memompa darah", "Menukar oksigen"]
+        },
+        {
+          "prompt": "Pembuluh tempat terjadinya pertukaran zat adalah ...",
+          "answer": "Kapiler",
+          "distractors": ["Arteri", "Pembuluh vena"]
+        }
+      ]
+    },
+    "kelas5-ipas-b04-kesehatan-tubuh": {
+      "quiz": [
+        {
+          "prompt": "Cara mencegah penyebaran kuman penyakit di sekolah adalah ...",
+          "answer": "Rajin mencuci tangan",
+          "distractors": ["Berbagi botol minum", "Jarang membersihkan diri", "Malas bergerak"]
+        },
+        {
+          "prompt": "Makan makanan bergizi penting karena ...",
+          "answer": "Menjaga daya tahan",
+          "distractors": ["Menyebabkan mudah sakit", "Menyebabkan kantuk", "Menambah kuman"]
+        },
+        {
+          "prompt": "Olahraga yang teratur membuat tubuh menjadi ...",
+          "answer": "Kuat dan bugar",
+          "distractors": ["Cepat lelah", "Sering sakit", "Mudah mengantuk"]
+        },
+        {
+          "prompt": "Kebiasaan yang menjaga gigi tetap sehat adalah ...",
+          "answer": "Sikat gigi",
+          "distractors": ["Istirahat cukup", "Minum air putih", "Sering jajan manis"]
+        }
+      ]
+    },
+    "kelas5-ipas-b05-ekosistem": {
+      "quiz": [
+        {
+          "prompt": "Makhluk hidup yang membuat makanannya sendiri disebut ...",
+          "answer": "Produsen",
+          "distractors": ["Konsumen", "Pengurai", "Hewan"]
+        },
+        {
+          "prompt": "Berikut yang berperan sebagai produsen adalah ...",
+          "answer": "Tumbuhan",
+          "distractors": ["Belalang", "Ular", "Burung elang"]
+        },
+        {
+          "prompt": "Makhluk hidup yang menguraikan sisa makhluk hidup disebut ...",
+          "answer": "Pengurai",
+          "distractors": ["Produsen", "Konsumen", "Tumbuhan"]
+        },
+        {
+          "prompt": "Urutan makhluk hidup yang makan dan dimakan dalam ekosistem disebut ...",
+          "answer": "Rantai makanan",
+          "distractors": ["Simbiosis", "Ekosistem", "Komponen ekosistem"]
+        }
+      ]
+    },
+    "kelas5-ipas-b06-siklus-air": {
+      "matching": [
+        { "left": "Proses air di laut atau darat berubah menjadi uap", "right": "Penguapan" },
+        { "left": "Uap air di udara berubah menjadi titik-titik air", "right": "Pengembunan" },
+        { "left": "Setelah hujan, air dari darat kembali ke laut melalui ...", "right": "Aliran sungai" }
+      ]
+    },
+    "kelas5-ipas-b07-energi-listrik": {
+      "quiz": [
+        {
+          "prompt": "Lampu yang dinyalakan mengubah energi listrik menjadi ...",
+          "answer": "Cahaya",
+          "distractors": ["Gelombang bunyi", "Angin", "Gerak"]
+        },
+        {
+          "prompt": "Berikut yang bukan sumber energi listrik adalah ...",
+          "answer": "Batu",
+          "distractors": ["Air", "Angin", "Matahari"]
+        }
+      ],
+      "matching": [
+        { "left": "Pembangkit listrik yang memakai kekuatan air mengalir", "right": "PLTA" },
+        { "left": "Mencabut alat listrik yang tidak dipakai termasuk ...", "right": "Penghematan listrik" }
+      ]
+    },
+    "kelas5-ipas-b08-tata-surya": {
+      "quiz": [
+        {
+          "prompt": "Pusat tata surya yang dikelilingi semua planet adalah ...",
+          "answer": "Matahari",
+          "distractors": ["Bulan", "Planet Bumi", "Bintang"]
+        },
+        {
+          "prompt": "Perputaran Bumi pada porosnya disebut ...",
+          "answer": "Rotasi",
+          "distractors": ["Revolusi", "Gerhana", "Orbit"]
+        },
+        {
+          "prompt": "Peristiwa Bumi mengelilingi matahari dinamakan ...",
+          "answer": "Revolusi",
+          "distractors": ["Rotasi", "Gerhana bulan", "Purnama"]
+        },
+        {
+          "prompt": "Benda langit yang menjadi satelit alami Bumi adalah ...",
+          "answer": "Bulan",
+          "distractors": ["Matahari", "Planet", "Bintang"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b01-sejarah-pancasila": {
+      "matching": [
+        { "left": "Panitia yang menyusun Piagam Jakarta", "right": "Panitia Sembilan" },
+        { "left": "Badan yang mengesahkan Pancasila sebagai dasar negara", "right": "PPKI" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b02-nilai-pancasila": {
+      "quiz": [
+        {
+          "prompt": "Sila kelima Pancasila memiliki nilai ...",
+          "answer": "Keadilan sosial",
+          "distractors": ["Kemanusiaan", "Persatuan dan kesatuan", "Musyawarah"]
+        },
+        {
+          "prompt": "Beribadah sesuai agama sendiri merupakan penerapan sila ...",
+          "answer": "Pertama",
+          "distractors": ["Kedua", "Keempat", "Kelima"]
+        },
+        {
+          "prompt": "Menolong teman yang sakit sesuai dengan nilai sila ...",
+          "answer": "Kedua",
+          "distractors": ["Pertama", "Ketiga", "Keempat"]
+        },
+        {
+          "prompt": "Memilih ketua kelas melalui musyawarah sesuai dengan sila ...",
+          "answer": "Keempat",
+          "distractors": ["Ketiga", "Kelima", "Kedua"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b03-hak-kewajiban": {
+      "quiz": [
+        {
+          "prompt": "Hak dan kewajiban yang dilaksanakan seimbang membuat kehidupan menjadi ...",
+          "answer": "Tertib dan adil",
+          "distractors": ["Penuh konflik", "Tidak adil", "Penuh pertengkaran"]
+        },
+        {
+          "prompt": "Mendapat pelayanan kesehatan menunjukkan warga negara memperoleh ...",
+          "answer": "Hak",
+          "distractors": ["Kewajiban", "Aturan", "Pajak"]
+        }
+      ],
+      "matching": [
+        { "left": "Hak dan kewajiban dilaksanakan secara ...", "right": "Seimbang" },
+        { "left": "Selain pendidikan, warga negara berhak memperoleh ...", "right": "Pelayanan kesehatan" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi": {
+      "matching": [
+        { "left": "Pembicaraan bersama untuk mencapai kesepakatan disebut ...", "right": "Musyawarah" },
+        { "left": "Saat teman berbicara dalam diskusi, kita tidak boleh ...", "right": "Memotong pembicaraannya" },
+        { "left": "Kesepakatan yang sudah diambil dalam musyawarah harus ...", "right": "Dilaksanakan bersama" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b05-keberagaman": {
+      "quiz": [
+        {
+          "prompt": "Perbedaan kebiasaan daerah yang dimiliki teman-teman merupakan keberagaman di bidang ...",
+          "answer": "Budaya",
+          "distractors": ["Agama", "Suku", "Keyakinan"]
+        },
+        {
+          "prompt": "Sikap menerima dan menghargai perbedaan disebut ...",
+          "answer": "Toleransi",
+          "distractors": ["Intoleransi", "Egois", "Acuh tak acuh"]
+        },
+        {
+          "prompt": "Jika semua siswa bersikap toleransi, kehidupan di kelas menjadi ...",
+          "answer": "Rukun dan damai",
+          "distractors": ["Sering bertengkar", "Penuh konflik", "Kacau"]
+        },
+        {
+          "prompt": "Agama teman berbeda dengan agama kita. Sikap kita sebaiknya ...",
+          "answer": "Menghormatinya",
+          "distractors": ["Memaksakan kehendak", "Menertawakannya", "Melarang ibadahnya"]
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b06-nkri-otonomi": {
+      "quiz": [
+        {
+          "prompt": "Dengan otonomi daerah, sebuah daerah memperoleh kewenangan untuk ...",
+          "answer": "Mengatur urusannya sendiri",
+          "distractors": ["Memisahkan diri dari Indonesia", "Menyerahkan semua urusan kepada pusat"]
+        },
+        {
+          "prompt": "Negara kita yang terdiri atas banyak pulau dan daerah disingkat ...",
+          "answer": "NKRI",
+          "distractors": ["Pancasila", "Garuda", "Merdeka"]
+        }
+      ],
+      "matching": [
+        { "left": "Kewenangan daerah untuk mengatur urusannya sendiri disebut ...", "right": "Otonomi daerah" },
+        { "left": "Negara Kesatuan Republik Indonesia disingkat ...", "right": "NKRI" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b07-gotong-royong": {
+      "matching": [
+        { "left": "Membersihkan selokan sekolah bersama-sama merupakan contoh kegiatan ...", "right": "Gotong royong" },
+        { "left": "Berkat gotong royong, pekerjaan terasa lebih ...", "right": "Cepat selesai" },
+        { "left": "Setelah pekerjaan selesai, alat-alat harus ...", "right": "Dirapikan" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "matching": [
+        { "left": "Langkah setelah membagi tugas dalam proyek adalah ...", "right": "Melaksanakan proyek" },
+        { "left": "Langkah terakhir sebuah proyek kewargaan adalah ...", "right": "Melaporkan hasil" },
+        { "left": "Selain tugas dan waktu, hal yang ditentukan saat menyusun rencana adalah ...", "right": "Tujuan" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+import path from "node:path";
+
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message);
+  }
+}
+
+async function clickModeButton(page, label) {
+  const result = await page.evaluate(`
+    (() => {
+      const target = [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
+        .find((button) => button.getAttribute("aria-label") === ${JSON.stringify(label)});
+      if (!target) return "missing";
+      if (target.disabled) return "disabled";
+      target.click();
+      return "clicked";
+    })()
+  `);
+  if (result !== "clicked") {
+    throw new Error(`Tombol mode "${label}" tidak dapat diklik (${result}).`);
+  }
+}
+
+export async function run({ page, artifactDir, log }) {
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri" }
+  );
+  await page.waitFor(`document.body.textContent.includes("Jelajah Materi")`, {
+    label: "shell aplikasi"
+  });
+
+  const adminView = await page.evaluate(`
+    ({
+      sidebar: Boolean(document.querySelector("aside")),
+      sidebarWidth: document.querySelector("aside")?.getBoundingClientRect().width ?? 0,
+      mainWidth: document.querySelector("main")?.getBoundingClientRect().width ?? 0,
+      viewport: document.documentElement.clientWidth,
+      modePressed: [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
+        .map((button) => ({ label: button.getAttribute("aria-label"), pressed: button.getAttribute("aria-pressed") }))
+    })
+  `);
+  assert(adminView.sidebar, "Mode admin harus menampilkan sidebar saat aplikasi dibuka.");
+  const adminPressed = adminView.modePressed.find((entry) => entry.label === "Admin");
+  assert(adminPressed?.pressed === "true", "Tombol mode Admin harus aktif saat aplikasi dibuka.");
+  log(`Mode admin tampil dengan sidebar (lebar konten ${Math.round(adminView.mainWidth)} px).`);
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "mode-admin.png"));
+
+  await clickModeButton(page, "Belajar");
+  await page.waitFor(`!document.querySelector("aside")`, { label: "sidebar tersembunyi" });
+  await page.waitFor(
+    `document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`,
+    { label: "navigasi belajar" }
+  );
+
+  const studentView = await page.evaluate(`
+    ({
+      sidebar: Boolean(document.querySelector("aside")),
+      railWidth:
+        document.querySelector('nav[aria-label="Navigasi belajar"]')?.getBoundingClientRect().width ?? 0,
+      mainWidth: document.querySelector("main")?.getBoundingClientRect().width ?? 0,
+      viewport: document.documentElement.clientWidth,
+      navLabels: [...document.querySelectorAll('nav[aria-label="Navigasi belajar"] button')]
+        .map((button) => button.textContent.trim()),
+      adminLabels: ["Konten & Pembaruan", "Lisensi Perangkat", "Pengaturan"].filter((label) =>
+        [...document.querySelectorAll("button")].some((button) => button.textContent.trim() === label)
+      )
+    })
+  `);
+  assert(!studentView.sidebar, "Mode belajar tidak boleh menampilkan sidebar admin.");
+  assert(
+    studentView.railWidth >= 64 && studentView.railWidth <= 120,
+    `Rail belajar harus ringkas (lebar ${studentView.railWidth} px).`
+  );
+  assert(
+    studentView.mainWidth >= studentView.viewport - studentView.railWidth - 1,
+    `Konten mode belajar harus mengisi lebar perangkat dikurangi rail (${studentView.mainWidth} vs ${studentView.viewport - studentView.railWidth}).`
+  );
+  assert(
+    studentView.railWidth < adminView.sidebarWidth,
+    `Rail belajar harus lebih ringkas daripada sidebar admin (${studentView.railWidth} vs ${adminView.sidebarWidth}).`
+  );
+  assert(
+    studentView.mainWidth > adminView.mainWidth + 100,
+    "Konten mode belajar harus lebih lebar daripada mode admin."
+  );
+  assert(
+    JSON.stringify(studentView.navLabels) ===
+      JSON.stringify(["Beranda", "Jelajah Materi", "Aktivitas Interaktif", "Hasil Belajar"]),
+    `Navigasi belajar tidak sesuai: ${studentView.navLabels.join(", ")}`
+  );
+  assert(
+    studentView.adminLabels.length === 0,
+    `Layar kelola masih tampil di mode belajar: ${studentView.adminLabels.join(", ")}`
+  );
+  log(
+    `Mode belajar memakai rail ikon ${Math.round(studentView.railWidth)} px; konten ${Math.round(studentView.mainWidth)} px dan ${studentView.navLabels.length} tujuan belajar.`
+  );
+  await page.evaluate(`document.querySelector("main")?.scrollTo(0, 0)`);
+  await new Promise((resolve) => setTimeout(resolve, 300));
+  await page.screenshot(path.join(artifactDir, "mode-belajar.png"));
+
+  await page.waitFor(
+    `window.__TAURI_INTERNALS__.invoke("preferences_get").then((prefs) => prefs.appMode === "belajar")`,
+    { label: "mode belajar tersimpan" }
+  );
+  log("Mode belajar tersimpan di preferensi perangkat.");
+
+  await page.send("Page.reload");
+  await page.waitFor(
+    `typeof window.__TAURI_INTERNALS__?.invoke === "function"`,
+    { label: "bridge Tauri setelah muat ulang", timeoutMs: 30_000 }
+  );
+  await page.waitFor(`document.body.textContent.includes("Jelajah Materi")`, {
+    label: "shell setelah muat ulang"
+  });
+  await page.waitFor(
+    `document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`,
+    { label: "mode belajar dipulihkan di shell" }
+  );
+  const restoredView = await page.evaluate(`
+    ({
+      sidebar: Boolean(document.querySelector("aside")),
+      navLabels: [...document.querySelectorAll('nav[aria-label="Navigasi belajar"] button')]
+        .map((button) => button.textContent.trim()),
+      pressed: [...document.querySelectorAll('[aria-label="Mode aplikasi"] button')]
+        .map((button) => ({ label: button.getAttribute("aria-label"), pressed: button.getAttribute("aria-pressed") }))
+    })
+  `);
+  assert(!restoredView.sidebar, "Setelah muat ulang, mode belajar harus tetap tanpa sidebar admin.");
+  assert(
+    JSON.stringify(restoredView.navLabels) ===
+      JSON.stringify(["Beranda", "Jelajah Materi", "Aktivitas Interaktif", "Hasil Belajar"]),
+    `Navigasi belajar tidak dipulihkan setelah muat ulang: ${restoredView.navLabels.join(", ")}`
+  );
+  assert(
+    restoredView.pressed.find((entry) => entry.label === "Belajar")?.pressed === "true",
+    "Tombol Belajar harus aktif setelah muat ulang."
+  );
+  log("Mode belajar dipulihkan setelah muat ulang (simulasi restart).");
+
+  await page.evaluate(`
+    (() => {
+      const target = [...document.querySelectorAll('nav[aria-label="Navigasi belajar"] button')]
+        .find((button) => button.textContent.trim() === "Hasil Belajar");
+      target?.click();
+    })()
+  `);
+  await page.waitFor(`document.body.textContent.includes("Aktivitas terbaru")`, {
+    label: "layar Hasil Belajar"
+  });
+  await page.waitFor(`window.location.hash === "#results"`, { label: "hash hasil" });
+  log("Navigasi belajar dari rail membuka Hasil Belajar.");
+
+  await clickModeButton(page, "Admin");
+  await page.waitFor(`document.querySelector("aside") !== null`, {
+    label: "sidebar kembali"
+  });
+  await page.waitFor(
+    `window.__TAURI_INTERNALS__.invoke("preferences_get").then((prefs) => prefs.appMode === "admin")`,
+    { label: "mode admin tersimpan" }
+  );
+  log("Kembali ke mode admin mengembalikan sidebar dan tersimpan.");
+}

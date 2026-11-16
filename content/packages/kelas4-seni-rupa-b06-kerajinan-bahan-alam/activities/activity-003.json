@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Daun kering\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Bingkai hiasan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Bahan kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Mozaik"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Ranting\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Bahan kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Mozaik"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Bingkai hiasan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bahan-alam-yang-aman-untuk-berka",
+        "prompt": "Bahan alam yang aman untuk berkarya harus memenuhi syarat, yaitu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-aman-untuk-0",
+            "text": "tidak tajam"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-aman-untuk-1",
+            "text": "rapuh dan basah"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-aman-untuk-2",
+            "text": "berujung runcing"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-alam-yang-aman-untuk-0"
+      },
+      {
+        "questionId": "soal-perekat-yang-aman-untuk-menempel",
+        "prompt": "Perekat yang aman untuk menempelkan ranting dan biji pada kerajinan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-1",
+            "text": "semen kuat"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-0",
+            "text": "lem kayu"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-2",
+            "text": "tepung kanji"
+          }
+        ],
+        "correctResponse": "opsi-soal-perekat-yang-aman-untuk-men-0"
+      },
+      {
+        "questionId": "soal-salah-satu-karya-yang-dapat-dibu",
+        "prompt": "Salah satu karya yang dapat dibuat dari bahan bambu adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-salah-satu-karya-yang-dapat-1",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-salah-satu-karya-yang-dapat-2",
+            "text": "patung sederhana"
+          },
+          {
+            "optionId": "opsi-soal-salah-satu-karya-yang-dapat-0",
+            "text": "anyaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-salah-satu-karya-yang-dapat-0"
+      },
+      {
+        "questionId": "soal-biji-bijian-yang-ditata-menempel",
+        "prompt": "Biji-bijian yang ditata menempel pada bidang hingga membentuk gambar disebut karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditata-men-0",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditata-men-1",
+            "text": "kolase"
+          },
+          {
+            "optionId": "opsi-soal-biji-bijian-yang-ditata-men-2",
+            "text": "anyaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-biji-bijian-yang-ditata-men-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu."
+  }
+}

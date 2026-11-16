@@ -30,10 +30,10 @@ Content-Type: application/json
       "createdAt": "2026-10-23T15:00:00.000Z",
       "payload": {
         "profileId": "<uuid>",
-        "packageId": "matematika-kelas3-pecahan",
+        "packageId": "kelas4-matematika-b03-pecahan",
         "packageVersion": "0.1.0",
-        "lessonId": "pecahan-sederhana",
-        "activityId": "kuis-pecahan-sederhana",
+        "lessonId": "pecahan-senilai",
+        "activityId": "kuis-pecahan-senilai",
         "attemptId": "<uuid>",
         "score": 100,
         "occurredAt": "2026-10-23T15:00:00.000Z",

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-ide-pokok",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyimak Cerita dan Ide Pokok",
+  "instructions": "Amati gambar, lalu baca paragraf pendek dan temukan ide pokoknya.",
+  "assets": [
+    "assets/mendengarkan-cerita.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dilakukan guru dan siswa pada gambar?",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak.",
+        "reveal": "Guru membacakan cerita dan siswa menyimak dengan saksama.",
+        "hint": "Perhatikan arah pandang siswa."
+      },
+      {
+        "prompt": "Bacalah: 'Setiap pagi, siswa kelas 4 menyapu kelas. Mereka juga merapikan meja dan menyiram tanaman. Kelas menjadi bersih dan nyaman.' Apa ide pokoknya?",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak.",
+        "reveal": "Ide pokoknya: siswa kelas 4 bekerja sama menjaga kebersihan kelas.",
+        "hint": "Apa hal utama yang dibahas seluruh kalimat?"
+      },
+      {
+        "prompt": "Sebutkan satu detail pendukung dari paragraf tadi.",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak.",
+        "reveal": "Contoh detail: menyapu kelas, merapikan meja, atau menyiram tanaman.",
+        "hint": "Detail mendukung ide pokok, bukan ide utamanya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menyimak dan Menentukan Ide Pokok?",
+        "reveal": "Menyimak informasi, menemukan ide pokok, dan membedakannya dari detail pendukung.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
+      },
+      {
+        "prompt": "Manakah yang merupakan detail pendukung dari bacaan tersebut?",
+        "reveal": "Menyapu kelas",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/mendengarkan-cerita.webp",
+        "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
+  }
+}

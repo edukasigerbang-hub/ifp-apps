@@ -1,0 +1,29 @@
+{
+  "lessonId": "wujud-zat",
+  "packageId": "kelas4-ipas-b02-wujud-zat",
+  "title": "Wujud Zat dan Perubahannya",
+  "summary": "Mengenali wujud padat, cair, dan gas serta perubahan wujud yang terjadi karena pemanasan atau pendinginan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan wujud padat, cair, dan gas.",
+    "Menjelaskan perubahan wujud mencair dan menguap.",
+    "Memberikan contoh perubahan wujud dalam kehidupan sehari-hari."
+  ],
+  "activityIds": [
+    "eksplorasi-wujud-zat",
+    "ordering-wujud-zat",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/wujud-zat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel: gelas berisi es batu, gelas berisi air, dan panci di atas kompor dengan uap air."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

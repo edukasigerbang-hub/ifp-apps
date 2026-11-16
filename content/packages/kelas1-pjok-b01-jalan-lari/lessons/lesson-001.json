@@ -1,0 +1,28 @@
+{
+  "lessonId": "jalan-lari",
+  "packageId": "kelas1-pjok-b01-jalan-lari",
+  "title": "Gerak Jalan dan Lari",
+  "summary": "Mempraktikkan gerak jalan dan lari dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan gerak jalan.",
+    "Mempraktikkan gerak lari.",
+    "Menjaga keselamatan."
+  ],
+  "activityIds": [
+    "eksplorasi-jalan-lari",
+    "matching-jalan-lari",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/jalan-lari.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan dan berlari di lapangan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

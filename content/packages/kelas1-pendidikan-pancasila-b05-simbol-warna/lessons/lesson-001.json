@@ -1,0 +1,28 @@
+{
+  "lessonId": "simbol-warna-pancasila",
+  "packageId": "kelas1-pendidikan-pancasila-b05-simbol-warna",
+  "title": "Simbol dan Warna Pancasila",
+  "summary": "Mengenal simbol dan warna Pancasila.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan simbol Pancasila.",
+    "Mengenal warna simbol.",
+    "Menunjukkan sikap sesuai sila."
+  ],
+  "activityIds": [
+    "eksplorasi-simbol-warna",
+    "matching-simbol-warna",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/simbol-warna-pancasila.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila dengan warna khasnya."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

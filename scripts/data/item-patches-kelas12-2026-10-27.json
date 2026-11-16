@@ -1,0 +1,104 @@
+{
+  "packages": {
+    "kelas1-seni-rupa-b08-pameran": {
+      "quiz": [
+        {
+          "questionId": "soal-kuis-4",
+          "options": {
+            "opsi-kuis-4-2": "menyimpan",
+            "opsi-kuis-4-3": "memindahkan"
+          }
+        },
+        {
+          "questionId": "soal-kuis-5",
+          "options": {
+            "opsi-kuis-5-2": "dihitung",
+            "opsi-kuis-5-3": "dipinjamkan"
+          }
+        }
+      ],
+      "matching": []
+    },
+    "kelas1-bahasa-indonesia-b03-menyimak-cerita": {
+      "quiz": [
+        {
+          "questionId": "soal-kuis-2",
+          "prompt": "Cerita yang kita dengarkan di kelas dibacakan oleh ...",
+          "options": {
+            "opsi-kuis-2-2": "teman sekelas",
+            "opsi-kuis-2-3": "penjaga perpustakaan"
+          }
+        }
+      ],
+      "matching": []
+    },
+    "kelas2-bahasa-indonesia-b07-bercerita": {
+      "quiz": [
+        {
+          "questionId": "soal-kuis-5",
+          "options": {
+            "opsi-kuis-5-3": "Ayo kita mulai"
+          }
+        }
+      ],
+      "matching": []
+    },
+    "kelas2-matematika-b08-data": {
+      "quiz": [
+        {
+          "questionId": "soal-diagram",
+          "prompt": "Batang yang tinggi dan pendek pada diagram batang menunjukkan ...",
+          "options": {
+            "opsi-warna": "Warna batang",
+            "opsi-berat": "Judul diagram",
+            "opsi-ukuran": "Ukuran kertas gambar"
+          }
+        },
+        {
+          "questionId": "soal-kumpul",
+          "prompt": "Data terbanyak pada diagram batang ditunjukkan oleh batang yang ...",
+          "options": {
+            "opsi-tebak": "paling pendek",
+            "opsi-lupa": "paling lebar",
+            "opsi-gambar": "paling gelap",
+            "opsi-hitung": "paling tinggi"
+          }
+        }
+      ],
+      "matching": [
+        {
+          "pairId": "pasangan-2",
+          "left": "Batang paling tinggi pada diagram menunjukkan",
+          "right": "Banyak data"
+        }
+      ]
+    },
+    "kelas2-pai-b04-salat": {
+      "quiz": [
+        {
+          "questionId": "soal-kuis-2",
+          "options": {
+            "opsi-kuis-2-2": "Bersisir rambut",
+            "opsi-kuis-2-3": "Memakai wangi-wangian"
+          }
+        }
+      ],
+      "matching": []
+    },
+    "kelas2-pai-b05-puasa": {
+      "quiz": [
+        {
+          "questionId": "soal-sahur",
+          "prompt": "Saat berpuasa, kita menahan ... sejak terbit fajar sampai magrib.",
+          "options": {
+            "opsi-sahur": "Makan dan minum",
+            "opsi-buka": "Bermain dan tidur",
+            "opsi-iftar": "Bercerita dan bernyanyi",
+            "opsi-tarawih": "Membaca dan menulis"
+          }
+        }
+      ],
+      "matching": []
+    }
+  }
+}

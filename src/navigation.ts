@@ -5,8 +5,18 @@ export type ScreenId =
   | "player"
   | "results"
   | "content"
+  | "studio"
   | "license"
   | "settings";
+
+export type AppMode = "belajar" | "admin";
+
+export const DEFAULT_APP_MODE: AppMode = "admin";
+
+export const appModeLabels: Record<AppMode, string> = {
+  belajar: "Belajar",
+  admin: "Admin"
+};
 
 export interface NavItem {
   id: ScreenId;
@@ -60,6 +70,13 @@ export const navigationItems: NavItem[] = [
     group: "kelola"
   },
   {
+    id: "studio",
+    label: "Studio Materi",
+    description: "Menyusun materi HTML5 lokal yang lolos kontrak bundel aplikasi.",
+    planned: ["Kerangka draft siap pakai", "Editor berkas dan aset cover", "Pemeriksaan, pratinjau, dan ekspor"],
+    group: "kelola"
+  },
+  {
     id: "license",
     label: "Lisensi Perangkat",
     description: "Melihat dan mengelola status lisensi perangkat.",
@@ -85,4 +102,21 @@ export function findNavItem(id: ScreenId): NavItem {
 
 export function isScreenId(value: string): value is ScreenId {
   return navigationItems.some((item) => item.id === value);
+}
+
+export function isAppMode(value: unknown): value is AppMode {
+  return value === "belajar" || value === "admin";
+}
+
+// Mode belajar hanya memuat layar grup "belajar"; Player dibuka dari materi, bukan dari navigasi.
+export const studentNavigationItems: NavItem[] = navigationItems.filter(
+  (item) => item.group === "belajar" && item.id !== "player"
+);
+
+export function navigationItemsForMode(mode: AppMode): NavItem[] {
+  return mode === "admin" ? navigationItems : studentNavigationItems;
+}
+
+export function isScreenAllowedInMode(mode: AppMode, id: ScreenId): boolean {
+  return mode === "admin" || findNavItem(id).group === "belajar";
 }

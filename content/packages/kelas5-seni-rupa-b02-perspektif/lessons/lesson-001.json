@@ -1,0 +1,29 @@
+{
+  "lessonId": "perspektif",
+  "packageId": "kelas5-seni-rupa-b02-perspektif",
+  "title": "Menggambar Perspektif Sederhana",
+  "summary": "Menggambar objek dengan kesan jarak menggunakan garis perspektif.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan prinsip perspektif.",
+    "Menentukan garis horizon dan titik hilang.",
+    "Menggambar objek dengan kesan jarak."
+  ],
+  "activityIds": [
+    "eksplorasi-perspektif",
+    "ordering-perspektif",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/perspektif.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

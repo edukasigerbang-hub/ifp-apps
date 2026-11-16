@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Olahraga\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Menjaga kesehatan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Menjaga kebugaran"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Memulihkan tenaga"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Makan bergizi\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Menjaga kebugaran"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Memulihkan tenaga"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Menjaga kesehatan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-selain-olahraga-kebugaran-dijaga",
+        "prompt": "Selain olahraga, kebugaran dijaga dengan makanan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-selain-olahraga-kebugaran-d-0",
+            "text": "Bergizi"
+          },
+          {
+            "optionId": "opsi-soal-selain-olahraga-kebugaran-d-1",
+            "text": "Manis"
+          },
+          {
+            "optionId": "opsi-soal-selain-olahraga-kebugaran-d-2",
+            "text": "Instan"
+          }
+        ],
+        "correctResponse": "opsi-soal-selain-olahraga-kebugaran-d-0"
+      },
+      {
+        "questionId": "soal-waktu-istirahat-yang-cukup-bagi",
+        "prompt": "Waktu istirahat yang cukup bagi anak sekitar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-waktu-istirahat-yang-cukup-1",
+            "text": "3 jam"
+          },
+          {
+            "optionId": "opsi-soal-waktu-istirahat-yang-cukup-0",
+            "text": "8 jam"
+          },
+          {
+            "optionId": "opsi-soal-waktu-istirahat-yang-cukup-2",
+            "text": "5 jam"
+          }
+        ],
+        "correctResponse": "opsi-soal-waktu-istirahat-yang-cukup-0"
+      },
+      {
+        "questionId": "soal-kegiatan-memanaskan-tubuh-sebelu",
+        "prompt": "Kegiatan memanaskan tubuh sebelum olahraga disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-memanaskan-tubuh-s-1",
+            "text": "Pendinginan"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-memanaskan-tubuh-s-2",
+            "text": "Perlombaan"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-memanaskan-tubuh-s-0",
+            "text": "Pemanasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-memanaskan-tubuh-s-0"
+      },
+      {
+        "questionId": "soal-kebugaran-dijaga-dengan-olahraga",
+        "prompt": "Kebugaran dijaga dengan olahraga, gizi, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kebugaran-dijaga-dengan-ola-0",
+            "text": "Istirahat"
+          },
+          {
+            "optionId": "opsi-soal-kebugaran-dijaga-dengan-ola-1",
+            "text": "Begadang"
+          },
+          {
+            "optionId": "opsi-soal-kebugaran-dijaga-dengan-ola-2",
+            "text": "Jajan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kebugaran-dijaga-dengan-ola-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-membaca-kalimat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Bersama",
+  "instructions": "Amati gambar, lalu baca kalimat bersama-sama.",
+  "assets": [
+    "assets/membaca-kalimat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Baca kalimat Siti membaca buku.",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca.",
+        "reveal": "Siti membaca buku.",
+        "hint": "Lafalkan dengan jelas."
+      },
+      {
+        "prompt": "Kalimat berita diakhiri ...",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca.",
+        "reveal": "Titik.",
+        "hint": "Tanda titik (.)."
+      },
+      {
+        "prompt": "Kalimat tanya diakhiri ...",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca.",
+        "reveal": "Tanda tanya.",
+        "hint": "Tanda tanya (?)."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca kalimat sederhana di sudut baca.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Membaca Kalimat Sederhana?",
+        "reveal": "Membaca kalimat sederhana dengan lafal dan intonasi yang tepat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/membaca-kalimat.webp",
+        "altText": "Anak membaca kalimat sederhana di sudut baca."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kalimat sederhana di sudut baca."
+  }
+}

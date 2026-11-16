@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-volume",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kubus Satuan",
+  "instructions": "Amati susunan kubus, lalu diskusikan cara menghitung volume.",
+  "assets": [
+    "assets/aktivitas-volume-luas-permukaan-1.png",
+    "assets/aktivitas-volume-luas-permukaan-2.png",
+    "assets/aktivitas-volume-luas-permukaan-3.png",
+    "assets/aktivitas-volume-luas-permukaan-4.png",
+    "assets/aktivitas-volume-luas-permukaan-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana menghitung volume balok?",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan-1.png",
+        "altText": "Balok tiga dimensi dengan sisi depan terbagi tiga kolom dua baris dan sisi samping terbagi dua lapis.",
+        "reveal": "Panjang × lebar × tinggi.",
+        "hint": "Hitung kubus satuan."
+      },
+      {
+        "prompt": "Apa satuan volume?",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan-2.png",
+        "altText": "Kubus tiga dimensi terbagi tiga pada setiap rusuk; satu kubus kecil di sudut depan disorot oranye.",
+        "reveal": "Sentimeter kubik (cm³).",
+        "hint": "Karena mengalikan tiga panjang."
+      },
+      {
+        "prompt": "Apa itu luas permukaan?",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan-3.png",
+        "altText": "Jaring-jaring enam persegi tersusun seperti huruf T: tiga persegi sebaris dan tiga persegi di bawah persegi tengah.",
+        "reveal": "Jumlah luas semua sisi bangun.",
+        "hint": "Bayangkan membuka kotak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Volume dan Luas Permukaan?",
+        "reveal": "Menghitung volume dan luas permukaan bangun ruang sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan-4.png",
+        "altText": "Tiga kartu rangkuman: kubus tiga dimensi, jaring-jaring enam persegi, dan petak empat kali empat dengan sembilan kotak diwarnai."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-volume-luas-permukaan-5.png",
+        "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi volume dan luas permukaan: kubus berpetak tiga kali dua, kubus tersusun tiga kubus kecil, jaring-jaring enam persegi, tiga kartu rangkuman, dan gabungan kubus berpetak dengan jaring-jaring."
+  }
+}

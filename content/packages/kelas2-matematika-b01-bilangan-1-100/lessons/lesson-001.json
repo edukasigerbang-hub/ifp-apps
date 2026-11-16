@@ -1,0 +1,28 @@
+{
+  "lessonId": "bilangan-1-100",
+  "packageId": "kelas2-matematika-b01-bilangan-1-100",
+  "title": "Bilangan 1–100",
+  "summary": "Membilang, mengenal nilai tempat, dan membandingkan bilangan 1–100.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membilang bilangan 1–100.",
+    "Mengenal nilai tempat puluhan dan satuan.",
+    "Membandingkan bilangan."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-1-100",
+    "kuis-bilangan-1-100",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-bilangan-1-100"
+  ],
+  "assetRefs": [
+    "assets/bilangan-1-100.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bagan seratus: sepuluh baris berisi sepuluh kotak."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

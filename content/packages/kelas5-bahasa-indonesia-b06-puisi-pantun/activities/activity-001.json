@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-puisi-pantun",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Puisi dan Pantun",
+  "instructions": "Amati gambar, lalu diskusikan ciri puisi dan pantun.",
+  "assets": [
+    "assets/puisi-pantun.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri puisi?",
+        "assetPath": "assets/puisi-pantun.webp",
+        "altText": "Anak membaca puisi dan pantun di kelas.",
+        "reveal": "Bahasa indah dan padat.",
+        "hint": "Ada bait dan rima."
+      },
+      {
+        "prompt": "Apa ciri pantun?",
+        "assetPath": "assets/puisi-pantun.webp",
+        "altText": "Anak membaca puisi dan pantun di kelas.",
+        "reveal": "Empat baris, sampiran dan isi.",
+        "hint": "Rima a-b-a-b."
+      },
+      {
+        "prompt": "Apa itu sampiran?",
+        "assetPath": "assets/puisi-pantun.webp",
+        "altText": "Anak membaca puisi dan pantun di kelas.",
+        "reveal": "Dua baris awal pantun.",
+        "hint": "Bagian isi ada di akhir."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Puisi dan Pantun?",
+        "reveal": "Mengenal ciri puisi dan pantun serta menulis pantun sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/puisi-pantun.webp",
+        "altText": "Anak membaca puisi dan pantun di kelas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca puisi dan pantun di kelas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/puisi-pantun.webp",
+        "altText": "Anak membaca puisi dan pantun di kelas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca puisi dan pantun di kelas."
+  }
+}

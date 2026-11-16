@@ -3,6 +3,8 @@
 **Tanggal:** 2026-10-23 · **Jenis:** review teknis otomatis (bukan review pedagogis manusia)
 **Keputusan:** **BELUM DISETUJUI** — `reviewStatus` tetap `draft`.
 
+> **Catatan 2026-10-24:** paket pilot dipindahkan ke `scripts/e2e/fixtures/pilot-pecahan-kelas3` sebagai fixture E2E dan tidak lagi menjadi paket produksi. Laporan ini dipertahankan sebagai bukti historis.
+
 ## Ringkasan
 
 | Kriteria | Status | Bukti |

@@ -97,6 +97,7 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 | POST | `/v1/licenses/transfer` | admin bearer | licenseId, machineId → binding baru |
 | POST | `/v1/activations/deactivate` | admin bearer | licenseId → machine dilepas |
 
+- Worker produksi: otorisasi memakai secret `ADMIN_API_TOKEN` (provisional, ADR-0032); endpoint aktif setelah secret diset dan Worker dideploy.
 - Serial disimpan sebagai SHA-256; aktivasi mengikat machine secara atomik; audit di `license_audit`.
 - Env: `LICENSE_SIGNING_KEY_PATH`, `LICENSE_KEY_ID`, `LICENSE_SEED_SERIALS`, `LICENSE_ADMIN_TOKEN`, `LICENSE_SUBSCRIPTION_DAYS`, `LICENSE_GRACE_DAYS`.
 - Bukan produksi (tanpa TLS, token admin statis, seed via env). Client: `VITE_LICENSE_SERVER_URL` + tombol Aktivasi online.
@@ -142,10 +143,15 @@ Error: `LICENSE_NOT_CONFIGURED`, `LICENSE_INVALID`, `LICENSE_SIGNATURE_INVALID`,
 | `profile_create` | `displayName`, `profileType` | profil baru |
 | `profile_get_active` | — | profil aktif (buat default bila kosong) |
 | `profile_set_active` | `profileId` | profil aktif |
-| `preferences_get` | — | `reducedMotion`, `fontScale` |
-| `preferences_set` | `reducedMotion`, `fontScale` | preferensi tersimpan |
+| `profile_avatar_preview` | `sourcePath` | data URL sumber (`data:image/...;base64,...`), tanpa menulis DB |
+| `profile_avatar_set_data` | `profileId`, `dataUrl` | profil dengan `hasAvatar: true` |
+| `profile_avatar_clear` | `profileId` | profil dengan `hasAvatar: false` |
+| `profile_avatar_get` | `profileId` | data URL (`data:image/...;base64,...`) atau `null` |
+| `preferences_get` | — | `reducedMotion`, `fontScale`, `appMode` |
+| `preferences_set` | `reducedMotion`, `fontScale`, `appMode` | preferensi tersimpan |
 
-- Profil aktif mengikat sesi/hasil belajar; preferensi diterapkan ke `<html>` (`reduce-motion`, `font-large`).
+- Profil aktif mengikat sesi/hasil belajar; preferensi diterapkan ke `<html>` (`reduce-motion`, `font-large`). `appMode` (`belajar|admin`) mengatur shell: mode belajar tanpa sidebar dan tanpa layar kelola. Rekaman lama tanpa `appMode` dibaca sebagai `admin`.
+- Foto profil disimpan di SQLite (`profile_avatars`, migrasi 0006) sehingga ikut backup DB. Alur UI: `profile_avatar_preview` membaca berkas lokal (maks **20 MB**, magic bytes PNG/JPEG/WebP, error `PROFILE_AVATAR_SOURCE_TOO_LARGE`/`PROFILE_AVATAR_UNREADABLE`/`PROFILE_AVATAR_INVALID`) → editor crop/kompres di webview menghasilkan persegi 512 px (WebP/JPEG, target ≤1 MB) → `profile_avatar_set_data` mendekode data URL, memvalidasi ulang magic bytes + batas **1,5 MB**, lalu UPSERT. Error: `PROFILE_AVATAR_INVALID`, `PROFILE_AVATAR_TOO_LARGE`. Webview menerima data URL dan menyimpannya di cache modul.
 
 - Validasi native: manifest, path traversal, symlink, batas file/ukuran, SHA-256 aset.
 - Aktivasi atomik: staging → rename → transaksi DB; rollback satu langkah.
@@ -182,7 +188,7 @@ Server: authorization → size/schema validation → idempotency → persist →
 { "code": "CONTENT_ASSET_HASH_MISMATCH", "message": "<aman untuk pengguna>", "retryable": false, "correlationId": "<id>" }
 ```
 
-Kode stabil: lihat [LLD ringkasan §Error codes](LLD.md#error-codes-subset-wajib).
+Kode stabil: lihat [LLD ringkasan §Error codes](../architecture/LLD.md#error-codes-subset-wajib).
 
 ## Status
 

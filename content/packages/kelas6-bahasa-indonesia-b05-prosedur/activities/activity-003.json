@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tujuan prosedur",
+        "right": "Memberi petunjuk melakukan sesuatu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Urutan langkah",
+        "right": "Berurutan dari awal sampai akhir"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kata yang dipakai",
+        "right": "Kata perintah"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Menanam biji dalam pot secara berurutan",
+        "right": "Teks prosedur"
+      },
+      {
+        "pairId": "pasangan-alat-yang-disiapkan-sebelum-mena",
+        "left": "Alat yang disiapkan sebelum menanam biji",
+        "right": "Pot dan tanah"
+      },
+      {
+        "pairId": "pasangan-langkah-menanam-biji-tepat-setel",
+        "left": "Langkah menanam biji tepat setelah menyiram",
+        "right": "Meletakkan di tempat terang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji dalam pot."
+  }
+}

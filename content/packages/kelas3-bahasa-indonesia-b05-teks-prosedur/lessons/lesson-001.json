@@ -1,0 +1,29 @@
+{
+  "lessonId": "teks-prosedur",
+  "packageId": "kelas3-bahasa-indonesia-b05-teks-prosedur",
+  "title": "Teks Prosedur Sederhana",
+  "summary": "Mengenal teks prosedur dan menyusun langkah kegiatannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri teks prosedur.",
+    "Menyusun langkah kegiatan secara berurutan.",
+    "Menulis prosedur sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-prosedur",
+    "ordering-teks-prosedur",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/teks-prosedur-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

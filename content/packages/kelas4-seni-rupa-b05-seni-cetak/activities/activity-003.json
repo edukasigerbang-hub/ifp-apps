@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Seni cetak",
+        "right": "Seni membuat gambar berulang dengan alat cetak"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan yang dapat dijadikan alat cetak",
+        "right": "Kentang, pelepah pisang, tutup botol, atau wortel"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Oles cat, tekan ke kertas, angkat perlahan",
+        "right": "Cara mencetak"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Pelepah pisang, cat, dan rol cetak",
+        "right": "Alat cetak sederhana"
+      },
+      {
+        "pairId": "pasangan-sayuran-yang-dapat-dipotong-dan",
+        "left": "Sayuran yang dapat dipotong dan dipakai sebagai alat cetak",
+        "right": "Wortel"
+      },
+      {
+        "pairId": "pasangan-ciri-hasil-karya-cetak-yang-dike",
+        "left": "Ciri hasil karya cetak yang dikerjakan dengan rapi",
+        "right": "Pola tercetak berulang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Meja seni dengan pelepah pisang, cat, rol, dan kertas berisi cetakan pola daun."
+  }
+}

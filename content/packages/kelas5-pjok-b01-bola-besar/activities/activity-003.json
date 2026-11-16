@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Permainan bola besar yang terlihat",
+        "right": "Sepak bola, bola basket, dan bola voli"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Teknik dasar sepak bola",
+        "right": "Menendang, mengoper, dan menggiring bola"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan kerja sama penting",
+        "right": "Agar tim dapat mencetak skor dan bermain adil"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sepak bola, bola basket, dan bola voli",
+        "right": "Bola besar"
+      },
+      {
+        "pairId": "pasangan-membawa-bola-dengan-kaki-sambil",
+        "left": "Membawa bola dengan kaki sambil bergerak dalam sepak bola",
+        "right": "Menggiring bola"
+      },
+      {
+        "pairId": "pasangan-kegiatan-sebelum-bermain-agar-tu",
+        "left": "Kegiatan sebelum bermain agar tubuh tidak cedera",
+        "right": "Pemanasan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga bola besar: sepak bola, bola basket, dan bola voli."
+  }
+}

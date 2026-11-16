@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-ipas-b05-cuaca-musim",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Cuaca dan Musim — IPAS Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/cuaca-musim.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 146434,
+      "sha256": "9c3d1a22b1ae7d5891bf79ebffa3021b77a6648536135988e839f003f6dc10c2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

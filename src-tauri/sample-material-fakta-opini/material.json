@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "materialId": "fakta-opini-kelas4",
+  "version": "1.0.0",
+  "title": "Memilah Fakta dan Opini",
+  "summary": "Pilah enam pernyataan sehari-hari menjadi fakta atau opini, lengkap dengan alasannya.",
+  "locale": "id-ID",
+  "gradeLevels": [4],
+  "subjects": ["bahasa-indonesia"],
+  "topics": ["Fakta dan opini"],
+  "estimatedMinutes": 6,
+  "entry": "index.html",
+  "cover": "assets/cover.webp",
+  "transcriptPath": "transcript.txt",
+  "accessibility": {
+    "hasAudio": false,
+    "keyboardNavigable": true,
+    "supportsReducedMotion": true,
+    "contrastChecked": true
+  },
+  "completion": { "mode": "signal", "minDwellSeconds": 2 },
+  "minAppVersion": "0.1.0",
+  "publisher": { "name": "Gerbang Edukasi" },
+  "reviewStatus": "reviewed",
+  "files": []
+}

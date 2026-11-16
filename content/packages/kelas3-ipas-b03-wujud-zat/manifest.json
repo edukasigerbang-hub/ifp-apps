@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-ipas-b03-wujud-zat",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Wujud Zat dan Perubahannya — IPAS Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/wujud-zat-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 91026,
+      "sha256": "3f702e18d0455af25f2ea2f51a2a5f5b269d4624dc9ab7a245b7ae5c3954d7fb"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

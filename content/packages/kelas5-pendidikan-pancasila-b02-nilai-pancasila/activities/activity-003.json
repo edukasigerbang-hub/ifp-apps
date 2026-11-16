@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Sila pertama\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Menolong sesama"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Beribadah"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Menjaga persatuan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Sila kedua\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Beribadah"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Menjaga persatuan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Menolong sesama"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-sila-kelima-pancasila-memiliki-n",
+        "prompt": "Sila kelima Pancasila memiliki nilai ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sila-kelima-pancasila-memil-1",
+            "text": "Kemanusiaan"
+          },
+          {
+            "optionId": "opsi-soal-sila-kelima-pancasila-memil-0",
+            "text": "Keadilan sosial"
+          },
+          {
+            "optionId": "opsi-soal-sila-kelima-pancasila-memil-2",
+            "text": "Persatuan dan kesatuan"
+          },
+          {
+            "optionId": "opsi-soal-sila-kelima-pancasila-memil-3",
+            "text": "Musyawarah"
+          }
+        ],
+        "correctResponse": "opsi-soal-sila-kelima-pancasila-memil-0"
+      },
+      {
+        "questionId": "soal-beribadah-sesuai-agama-sendiri-m",
+        "prompt": "Beribadah sesuai agama sendiri merupakan penerapan sila ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-beribadah-sesuai-agama-send-1",
+            "text": "Kedua"
+          },
+          {
+            "optionId": "opsi-soal-beribadah-sesuai-agama-send-2",
+            "text": "Keempat"
+          },
+          {
+            "optionId": "opsi-soal-beribadah-sesuai-agama-send-0",
+            "text": "Pertama"
+          },
+          {
+            "optionId": "opsi-soal-beribadah-sesuai-agama-send-3",
+            "text": "Kelima"
+          }
+        ],
+        "correctResponse": "opsi-soal-beribadah-sesuai-agama-send-0"
+      },
+      {
+        "questionId": "soal-menolong-teman-yang-sakit-sesuai",
+        "prompt": "Menolong teman yang sakit sesuai dengan nilai sila ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menolong-teman-yang-sakit-s-1",
+            "text": "Pertama"
+          },
+          {
+            "optionId": "opsi-soal-menolong-teman-yang-sakit-s-2",
+            "text": "Ketiga"
+          },
+          {
+            "optionId": "opsi-soal-menolong-teman-yang-sakit-s-3",
+            "text": "Keempat"
+          },
+          {
+            "optionId": "opsi-soal-menolong-teman-yang-sakit-s-0",
+            "text": "Kedua"
+          }
+        ],
+        "correctResponse": "opsi-soal-menolong-teman-yang-sakit-s-0"
+      },
+      {
+        "questionId": "soal-memilih-ketua-kelas-melalui-musy",
+        "prompt": "Memilih ketua kelas melalui musyawarah sesuai dengan sila ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-memilih-ketua-kelas-melalui-0",
+            "text": "Keempat"
+          },
+          {
+            "optionId": "opsi-soal-memilih-ketua-kelas-melalui-1",
+            "text": "Ketiga"
+          },
+          {
+            "optionId": "opsi-soal-memilih-ketua-kelas-melalui-2",
+            "text": "Kelima"
+          },
+          {
+            "optionId": "opsi-soal-memilih-ketua-kelas-melalui-3",
+            "text": "Kedua"
+          }
+        ],
+        "correctResponse": "opsi-soal-memilih-ketua-kelas-melalui-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Keberagaman siswa mencerminkan nilai-nilai Pancasila."
+  }
+}

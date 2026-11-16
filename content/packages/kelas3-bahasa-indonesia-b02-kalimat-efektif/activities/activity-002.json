@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-kalimat-efektif",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Kalimat Efektif",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-efektif",
+        "prompt": "Kalimat efektif adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-b",
+            "text": "Siti dia membaca buku buku di perpustakaan."
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Membaca Siti buku di perpustakaan sekolahnya sekolah."
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "Siti membaca buku di perpustakaan."
+          },
+          {
+            "optionId": "opsi-d",
+            "text": "Buku membaca Siti di perpustakaan buku."
+          }
+        ],
+        "correctResponse": "opsi-a"
+      },
+      {
+        "questionId": "soal-sinonim",
+        "prompt": "Sinonim kata indah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-jelek",
+            "text": "Jelek"
+          },
+          {
+            "optionId": "opsi-besar",
+            "text": "Besar"
+          },
+          {
+            "optionId": "opsi-cepat",
+            "text": "Cepat"
+          },
+          {
+            "optionId": "opsi-cantik",
+            "text": "Cantik"
+          }
+        ],
+        "correctResponse": "opsi-cantik"
+      },
+      {
+        "questionId": "soal-tidak-efektif",
+        "prompt": "Kalimat yang tidak efektif adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-a",
+            "text": "Budi dia sedang belajar belajar."
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Budi sedang belajar."
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Budi belajar matematika."
+          },
+          {
+            "optionId": "opsi-d",
+            "text": "Budi rajin belajar."
+          }
+        ],
+        "correctResponse": "opsi-a"
+      },
+      {
+        "questionId": "soal-tekun",
+        "prompt": "Arti kata tekun adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-malas",
+            "text": "Malas"
+          },
+          {
+            "optionId": "opsi-rajin",
+            "text": "Rajin dan bersungguh-sungguh"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Cepat marah"
+          },
+          {
+            "optionId": "opsi-main",
+            "text": "Suka bermain"
+          }
+        ],
+        "correctResponse": "opsi-rajin"
+      },
+      {
+        "questionId": "soal-kalimat-siti-sangat-cantik-sekal",
+        "prompt": "Kalimat 'Siti sangat cantik sekali' tidak efektif karena memakai kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kalimat-siti-sangat-cantik-1",
+            "text": "baru"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-siti-sangat-cantik-2",
+            "text": "asing"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-siti-sangat-cantik-0",
+            "text": "berulang"
+          }
+        ],
+        "correctResponse": "opsi-soal-kalimat-siti-sangat-cantik-0"
+      },
+      {
+        "questionId": "soal-agar-kalimat-menjadi-efektif-kat",
+        "prompt": "Agar kalimat menjadi efektif, kata yang tidak perlu sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-agar-kalimat-menjadi-efekti-0",
+            "text": "dihapus"
+          },
+          {
+            "optionId": "opsi-soal-agar-kalimat-menjadi-efekti-1",
+            "text": "diulang-ulang"
+          },
+          {
+            "optionId": "opsi-soal-agar-kalimat-menjadi-efekti-2",
+            "text": "ditambah lagi"
+          }
+        ],
+        "correctResponse": "opsi-soal-agar-kalimat-menjadi-efekti-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca."
+  }
+}

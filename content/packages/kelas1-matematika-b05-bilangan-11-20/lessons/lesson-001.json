@@ -1,0 +1,28 @@
+{
+  "lessonId": "bilangan-11-20",
+  "packageId": "kelas1-matematika-b05-bilangan-11-20",
+  "title": "Bilangan 11–20",
+  "summary": "Membilang, mengenal lambang, dan mengurutkan bilangan 11–20.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membilang benda 11–20.",
+    "Mengenal lambang bilangan 11–20.",
+    "Mengurutkan bilangan 11–20."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-11-20",
+    "matching-bilangan-11-20",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/bilangan-11-20.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

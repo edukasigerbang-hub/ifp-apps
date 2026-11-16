@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-seni-rupa-b06-kerajinan-bahan-alam",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kerajinan Bahan Alam — Seni Rupa Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kerajinan-bahan-alam-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 155860,
+      "sha256": "c750994eec10b8caa8ec3573fd925259ee56ba9156b91f69ce58ba2172e3704b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

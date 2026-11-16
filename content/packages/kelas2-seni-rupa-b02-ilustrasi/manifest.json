@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-seni-rupa-b02-ilustrasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menggambar Ilustrasi Sederhana — Seni Rupa Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/ilustrasi-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 153954,
+      "sha256": "d2cb03dc7d6f3dcbdbc7a74639cd5abe403911858d3ac322610d411e247b6f9a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

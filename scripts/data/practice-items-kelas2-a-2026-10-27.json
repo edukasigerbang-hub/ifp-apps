@@ -1,0 +1,113 @@
+{
+  "_comment": "T-092 kelompok kelas 2 bagian A (Bahasa Indonesia b01-b08, Matematika b01-b08). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing dari digest, bukan template. Target per paket mengikuti needs-kelas2-a.json: total 24 soal kuis dan 12 pasangan mencocokkan. Diterapkan LEAD dengan node scripts/add-practice-items.mjs berkas-ini --apply.",
+  "packages": {
+    "kelas2-bahasa-indonesia-b01-membaca-lancar": {
+      "quiz": [
+        { "prompt": "Tanda baca yang dipakai pada akhir kalimat tanya adalah ...", "answer": "tanda tanya", "distractors": ["tanda seru", "tanda titik"] }
+      ],
+      "matching": [
+        { "left": "Tinggi rendah suara waktu kita membaca kalimat", "right": "intonasi" }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b02-menulis-kalimat": {
+      "matching": [
+        { "left": "Sebelum menulis kalimat, kita menentukan", "right": "ide" },
+        { "left": "Setelah memberi tanda baca, tulisan perlu", "right": "diperiksa" }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b03-kosakata": {
+      "quiz": [
+        { "prompt": "Lawan kata dari 'panas' adalah ...", "answer": "dingin", "distractors": ["hangat", "gerah"] },
+        { "prompt": "Persamaan kata dari 'indah' adalah ...", "answer": "cantik", "distractors": ["bagus", "menawan"] },
+        { "prompt": "Dua kata yang memiliki arti sama disebut ...", "answer": "sinonim", "distractors": ["antonim", "kalimat"] }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b04-menyimak-cerita": {
+      "matching": [
+        { "left": "Setelah mendengarkan cerita, kita menyebutkan", "right": "tokoh" },
+        { "left": "Langkah terakhir saat menyimak cerita", "right": "menyimpulkan pesan" }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b05-membaca-pemahaman": {
+      "quiz": [
+        { "prompt": "Sebelum menjawab pertanyaan bacaan, kita membaca bacaan itu ...", "answer": "sampai selesai", "distractors": ["satu baris saja", "tanpa melihat"] }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b06-menulis-paragraf": {
+      "matching": [
+        { "left": "Langkah pertama saat menulis paragraf", "right": "menentukan ide pokok" },
+        { "left": "Setelah kalimat tersusun, kita memberi", "right": "tanda baca" }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b07-bercerita": {
+      "matching": [
+        { "left": "Hal pertama yang dilakukan sebelum bercerita", "right": "memilih cerita" },
+        { "left": "Ucapan setelah selesai bercerita di depan kelas", "right": "terima kasih" }
+      ]
+    },
+    "kelas2-bahasa-indonesia-b08-puisi-pantun": {
+      "quiz": [
+        { "prompt": "Pantun anak terdiri atas ...", "answer": "empat baris", "distractors": ["dua baris", "tiga baris"] },
+        { "prompt": "Dua baris pertama pada pantun disebut ...", "answer": "sampiran", "distractors": ["isi", "bait"] },
+        { "prompt": "Bunyi yang sama di akhir baris puisi disebut ...", "answer": "rima", "distractors": ["bait", "judul"] }
+      ]
+    },
+    "kelas2-matematika-b01-bilangan-1-100": {
+      "quiz": [
+        { "prompt": "Pada bilangan 63, angka 6 menempati tempat ...", "answer": "puluhan", "distractors": ["satuan", "ratusan"] }
+      ],
+      "matching": [
+        { "left": "Bilangan yang terletak di antara 69 dan 71", "right": "70" }
+      ]
+    },
+    "kelas2-matematika-b02-penjumlahan-100": {
+      "quiz": [
+        { "prompt": "36 + 21 = ...", "answer": "57", "distractors": ["55", "58"] }
+      ],
+      "matching": [
+        { "left": "Hasil dari 70 dikurangi 30", "right": "40" }
+      ]
+    },
+    "kelas2-matematika-b03-perkalian-dasar": {
+      "quiz": [
+        { "prompt": "Hasil dari 5 kali 3 adalah ...", "answer": "15", "distractors": ["10", "8"] },
+        { "prompt": "Hasil dari 4 kali 4 adalah ...", "answer": "16", "distractors": ["12", "8"] },
+        { "prompt": "Tiap anak mendapat 4 pensil. Tiga anak mendapat pensil sebanyak ...", "answer": "12", "distractors": ["7", "8"] }
+      ]
+    },
+    "kelas2-matematika-b04-pengukuran": {
+      "quiz": [
+        { "prompt": "Meteran merupakan alat untuk mengukur ...", "answer": "panjang", "distractors": ["berat", "waktu"] }
+      ],
+      "matching": [
+        { "left": "Benda yang lebih berat, buku tulis atau lemari", "right": "lemari" }
+      ]
+    },
+    "kelas2-matematika-b05-perkalian-pembagian": {
+      "quiz": [
+        { "prompt": "Hasil dari 12 dibagi 3 adalah ...", "answer": "4", "distractors": ["3", "6"] },
+        { "prompt": "Karena 4 kali 5 sama dengan 20, maka 20 dibagi 5 sama dengan ...", "answer": "4", "distractors": ["5", "20"] },
+        { "prompt": "24 permen dibagikan sama rata kepada 4 anak. Setiap anak mendapat ...", "answer": "6", "distractors": ["8", "5"] }
+      ]
+    },
+    "kelas2-matematika-b06-bangun-datar": {
+      "quiz": [
+        { "prompt": "Bangun datar yang memiliki tiga sisi adalah ...", "answer": "segitiga", "distractors": ["persegi", "lingkaran"] },
+        { "prompt": "Bangun datar yang tidak memiliki sudut adalah ...", "answer": "lingkaran", "distractors": ["segitiga", "persegi panjang"] },
+        { "prompt": "Garis batas pada bangun datar disebut ...", "answer": "sisi", "distractors": ["sudut", "titik"] }
+      ]
+    },
+    "kelas2-matematika-b07-waktu-uang": {
+      "quiz": [
+        { "prompt": "Satu minggu memiliki ...", "answer": "7 hari", "distractors": ["5 hari", "6 hari"] },
+        { "prompt": "Mata uang negara Indonesia adalah ...", "answer": "rupiah", "distractors": ["ringgit", "baht"] },
+        { "prompt": "Uang Rp2.000 dibaca ...", "answer": "dua ribu rupiah", "distractors": ["seribu rupiah", "dua ratus rupiah"] }
+      ]
+    },
+    "kelas2-matematika-b08-data": {
+      "quiz": [
+        { "prompt": "Banyak bola: merah 5, kuning 3, hijau 7. Warna bola terbanyak adalah ...", "answer": "hijau", "distractors": ["merah", "kuning"] }
+      ]
+    }
+  }
+}

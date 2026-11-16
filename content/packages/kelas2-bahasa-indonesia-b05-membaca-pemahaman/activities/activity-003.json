@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang dibaca",
+        "right": "Bacaan pendek"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menjawab pertanyaan",
+        "right": "Cari jawaban di bacaan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kesimpulan",
+        "right": "Inti bacaan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Membaca lalu memahami isinya",
+        "right": "Pemahaman bacaan"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Jawaban pertanyaan dicari di",
+        "right": "Bacaan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dan memahami isi bacaan."
+  }
+}

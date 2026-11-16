@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-ekosistem-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Rantai Makanan",
+  "instructions": "Amati gambar, lalu diskusikan keseimbangan ekosistem.",
+  "assets": [
+    "assets/ekosistem-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu produsen?",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Tumbuhan yang membuat makanan sendiri.",
+        "hint": "Sumber energi pertama."
+      },
+      {
+        "prompt": "Apa itu konsumen?",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Hewan yang memakan makhluk lain.",
+        "hint": "Ada konsumen puncak."
+      },
+      {
+        "prompt": "Apa itu pengurai?",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "reveal": "Bakteri dan jamur pengurai sisa.",
+        "hint": "Mengembalikan zat ke tanah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Ekosistem dan Keseimbangan?",
+        "reveal": "Mengenal komponen ekosistem dan menjaga keseimbangannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/ekosistem-kelas6.webp",
+        "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+  }
+}

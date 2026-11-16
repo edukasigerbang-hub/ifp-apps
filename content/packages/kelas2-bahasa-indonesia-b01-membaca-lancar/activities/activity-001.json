@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-membaca-lancar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Bersama",
+  "instructions": "Amati gambar, lalu baca kalimat bersama-sama.",
+  "assets": [
+    "assets/membaca-lancar.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana membaca lancar?",
+        "assetPath": "assets/membaca-lancar.webp",
+        "altText": "Anak membaca dengan lancar di sudut baca.",
+        "reveal": "Tidak terbata-bata.",
+        "hint": "Latih setiap hari."
+      },
+      {
+        "prompt": "Apa tanda berhenti?",
+        "assetPath": "assets/membaca-lancar.webp",
+        "altText": "Anak membaca dengan lancar di sudut baca.",
+        "reveal": "Titik.",
+        "hint": "Berhenti sejenak."
+      },
+      {
+        "prompt": "Apa tanda bertanya?",
+        "assetPath": "assets/membaca-lancar.webp",
+        "altText": "Anak membaca dengan lancar di sudut baca.",
+        "reveal": "Tanda tanya.",
+        "hint": "Intonasi naik."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Membaca Lancar?",
+        "reveal": "Membaca kalimat dengan lancar dan intonasi yang tepat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/membaca-lancar.webp",
+        "altText": "Anak membaca dengan lancar di sudut baca."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca dengan lancar di sudut baca.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/membaca-lancar.webp",
+        "altText": "Anak membaca dengan lancar di sudut baca."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dengan lancar di sudut baca."
+  }
+}

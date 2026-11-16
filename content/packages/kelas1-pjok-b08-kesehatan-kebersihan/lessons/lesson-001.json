@@ -1,0 +1,28 @@
+{
+  "lessonId": "kesehatan-kebersihan-kelas1",
+  "packageId": "kelas1-pjok-b08-kesehatan-kebersihan",
+  "title": "Kesehatan dan Kebersihan",
+  "summary": "Menjaga kesehatan dan kebersihan setiap hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan kebiasaan bersih.",
+    "Mempraktikkan kebiasaan sehat.",
+    "Menjelaskan manfaatnya."
+  ],
+  "activityIds": [
+    "eksplorasi-kesehatan-kebersihan",
+    "matching-kesehatan-kebersihan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kesehatan-kebersihan-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

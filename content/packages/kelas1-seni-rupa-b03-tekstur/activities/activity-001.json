@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-tekstur",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tekstur",
+  "instructions": "Amati gambar, lalu bandingkan teksturnya.",
+  "assets": [
+    "assets/tekstur-kelas1.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan yang kasar adalah ...",
+        "assetPath": "assets/tekstur-kelas1.webp",
+        "altText": "Bahan bertekstur kasar dan halus.",
+        "reveal": "Batu.",
+        "hint": "Terasa bergerigi."
+      },
+      {
+        "prompt": "Bahan yang halus adalah ...",
+        "assetPath": "assets/tekstur-kelas1.webp",
+        "altText": "Bahan bertekstur kasar dan halus.",
+        "reveal": "Kapas.",
+        "hint": "Terasa lembut."
+      },
+      {
+        "prompt": "Bagaimana menempel bahan?",
+        "assetPath": "assets/tekstur-kelas1.webp",
+        "altText": "Bahan bertekstur kasar dan halus.",
+        "reveal": "Gunakan lem.",
+        "hint": "Tekan pelan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bahan bertekstur kasar dan halus.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/tekstur-kelas1.webp",
+        "altText": "Bahan bertekstur kasar dan halus."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Tekstur Sederhana?",
+        "reveal": "Mengenal tekstur kasar dan halus.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tekstur-kelas1.webp",
+        "altText": "Bahan bertekstur kasar dan halus."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus."
+  }
+}

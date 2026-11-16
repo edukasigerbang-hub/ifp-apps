@@ -1,0 +1,28 @@
+{
+  "lessonId": "keberagaman-kelas5",
+  "packageId": "kelas5-pendidikan-pancasila-b05-keberagaman",
+  "title": "Keberagaman dan Toleransi",
+  "summary": "Menghargai keberagaman dan menerapkan toleransi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bentuk keberagaman.",
+    "Menjelaskan arti toleransi.",
+    "Menerapkan toleransi di sekolah."
+  ],
+  "activityIds": [
+    "eksplorasi-keberagaman-kelas5",
+    "matching-keberagaman-kelas5",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/keberagaman-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

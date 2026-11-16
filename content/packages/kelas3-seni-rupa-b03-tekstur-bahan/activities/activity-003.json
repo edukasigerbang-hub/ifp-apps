@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bahan yang bertekstur kasar",
+        "right": "Batu dan daun kering"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan yang bertekstur halus",
+        "right": "Kapas dan kain"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menempelkan bahan",
+        "right": "Oleskan lem tipis lalu tekan pelan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Batu, kain, daun, dan kapas yang diraba",
+        "right": "Tekstur bahan"
+      },
+      {
+        "pairId": "pasangan-kesan-yang-terasa-saat-kita-mera",
+        "left": "Kesan yang terasa saat kita meraba permukaan batu",
+        "right": "Kasar"
+      },
+      {
+        "pairId": "pasangan-cara-mengoleskan-lem-agar-bahan",
+        "left": "Cara mengoleskan lem agar bahan menempel rapi",
+        "right": "Tipis"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus: batu, kain, daun, dan kapas."
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Cuci tangan\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Mencegah kuman"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Membersihkan tubuh"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Menjaga gigi sehat"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Mandi\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Mencegah kuman"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Membersihkan tubuh"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Menjaga gigi sehat"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-cuci-tangan-sebaiknya-dilakukan",
+        "prompt": "Cuci tangan sebaiknya dilakukan sebelum ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cuci-tangan-sebaiknya-dilak-1",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-soal-cuci-tangan-sebaiknya-dilak-2",
+            "text": "Belajar"
+          },
+          {
+            "optionId": "opsi-soal-cuci-tangan-sebaiknya-dilak-0",
+            "text": "Makan"
+          }
+        ],
+        "correctResponse": "opsi-soal-cuci-tangan-sebaiknya-dilak-0"
+      },
+      {
+        "questionId": "soal-menyikat-gigi-bertujuan-agar-gig",
+        "prompt": "Menyikat gigi bertujuan agar gigi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-menyikat-gigi-bertujuan-aga-0",
+            "text": "Sehat"
+          },
+          {
+            "optionId": "opsi-soal-menyikat-gigi-bertujuan-aga-1",
+            "text": "Kuning"
+          },
+          {
+            "optionId": "opsi-soal-menyikat-gigi-bertujuan-aga-2",
+            "text": "Goyang"
+          }
+        ],
+        "correctResponse": "opsi-soal-menyikat-gigi-bertujuan-aga-0"
+      },
+      {
+        "questionId": "soal-mandi-setiap-hari-bertujuan-untu",
+        "prompt": "Mandi setiap hari bertujuan untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bertujuan-1",
+            "text": "Menambah tenaga"
+          },
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bertujuan-0",
+            "text": "Membersihkan tubuh"
+          },
+          {
+            "optionId": "opsi-soal-mandi-setiap-hari-bertujuan-2",
+            "text": "Menghilangkan lapar"
+          }
+        ],
+        "correctResponse": "opsi-soal-mandi-setiap-hari-bertujuan-0"
+      },
+      {
+        "questionId": "soal-olahraga-secara-teratur-membuat",
+        "prompt": "Olahraga secara teratur membuat tubuh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-olahraga-secara-teratur-mem-1",
+            "text": "Lemas"
+          },
+          {
+            "optionId": "opsi-soal-olahraga-secara-teratur-mem-2",
+            "text": "Sakit"
+          },
+          {
+            "optionId": "opsi-soal-olahraga-secara-teratur-mem-0",
+            "text": "Bugar"
+          }
+        ],
+        "correctResponse": "opsi-soal-olahraga-secara-teratur-mem-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+  }
+}

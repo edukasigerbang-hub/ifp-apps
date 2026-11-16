@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-ekonomi",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Pekerjaan dan Kegiatan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/ekonomi-pelestarian.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-petani",
+        "left": "Petani",
+        "right": "Menanam padi"
+      },
+      {
+        "pairId": "pasangan-nelayan",
+        "left": "Nelayan",
+        "right": "Menangkap ikan"
+      },
+      {
+        "pairId": "pasangan-pedagang",
+        "left": "Pedagang",
+        "right": "Mendistribusikan barang"
+      },
+      {
+        "pairId": "pasangan-konsumen",
+        "left": "Konsumen",
+        "right": "Menggunakan barang"
+      },
+      {
+        "pairId": "pasangan-pohon",
+        "left": "Menanam pohon",
+        "right": "Menjaga lingkungan"
+      },
+      {
+        "pairId": "pasangan-konsumen-menjalankan-kegiatan-te",
+        "left": "Konsumen menjalankan kegiatan ... terhadap barang",
+        "right": "konsumsi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Petani di sawah, nelayan dengan perahu, pasar, dan anak menanam pohon."
+  }
+}

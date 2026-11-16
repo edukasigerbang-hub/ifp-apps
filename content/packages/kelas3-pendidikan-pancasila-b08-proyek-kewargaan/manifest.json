@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pendidikan-pancasila-b08-proyek-kewargaan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Proyek Kewargaan — Pendidikan Pancasila Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/proyek-kewargaan-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 283848,
+      "sha256": "2605b7903cad69d48e0217180b597e6ad465120b298f68082cfe370cff77266e"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

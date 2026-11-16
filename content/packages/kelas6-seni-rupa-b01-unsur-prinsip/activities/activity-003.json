@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Garis\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Unsur visual"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Unsur memanjang"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Kesan permukaan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Warna\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Unsur memanjang"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Kesan permukaan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Unsur visual"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-kesan-permukaan-suatu-benda-dise",
+        "prompt": "Kesan permukaan suatu benda disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kesan-permukaan-suatu-benda-0",
+            "text": "Tekstur"
+          },
+          {
+            "optionId": "opsi-soal-kesan-permukaan-suatu-benda-1",
+            "text": "Bidang datar"
+          },
+          {
+            "optionId": "opsi-soal-kesan-permukaan-suatu-benda-2",
+            "text": "Ruang kosong"
+          }
+        ],
+        "correctResponse": "opsi-soal-kesan-permukaan-suatu-benda-0"
+      },
+      {
+        "questionId": "soal-susunan-gambar-yang-tidak-berat",
+        "prompt": "Susunan gambar yang tidak berat sebelah menunjukkan prinsip ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-susunan-gambar-yang-tidak-b-1",
+            "text": "Kesatuan bentuk"
+          },
+          {
+            "optionId": "opsi-soal-susunan-gambar-yang-tidak-b-0",
+            "text": "Keseimbangan"
+          },
+          {
+            "optionId": "opsi-soal-susunan-gambar-yang-tidak-b-2",
+            "text": "Garis lurus"
+          }
+        ],
+        "correctResponse": "opsi-soal-susunan-gambar-yang-tidak-b-0"
+      },
+      {
+        "questionId": "soal-unsur-seni-rupa-yang-memanjang-d",
+        "prompt": "Unsur seni rupa yang memanjang disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-memanj-1",
+            "text": "Bentuk"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-memanj-2",
+            "text": "Ruang"
+          },
+          {
+            "optionId": "opsi-soal-unsur-seni-rupa-yang-memanj-0",
+            "text": "Garis"
+          }
+        ],
+        "correctResponse": "opsi-soal-unsur-seni-rupa-yang-memanj-0"
+      },
+      {
+        "questionId": "soal-perpaduan-warna-dan-bentuk-yang",
+        "prompt": "Perpaduan warna dan bentuk yang saling mendukung menciptakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perpaduan-warna-dan-bentuk-0",
+            "text": "Kesatuan"
+          },
+          {
+            "optionId": "opsi-soal-perpaduan-warna-dan-bentuk-1",
+            "text": "Keseimbangan"
+          },
+          {
+            "optionId": "opsi-soal-perpaduan-warna-dan-bentuk-2",
+            "text": "Tekstur"
+          }
+        ],
+        "correctResponse": "opsi-soal-perpaduan-warna-dan-bentuk-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Unsur garis, warna, bentuk, dan prinsip komposisi."
+  }
+}

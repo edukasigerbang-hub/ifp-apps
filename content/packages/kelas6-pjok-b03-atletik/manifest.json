@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-pjok-b03-atletik",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Atletik — PJOK Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/atletik-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 221212,
+      "sha256": "ae5dc512b9897e228ba18a15de696620b73aebbe99a2f24d77590f286241c7e2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

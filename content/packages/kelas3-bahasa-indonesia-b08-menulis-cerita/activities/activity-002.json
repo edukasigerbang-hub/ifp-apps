@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-menulis-cerita",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bagian Cerita",
+  "instructions": "Pasangkan setiap bagian cerita dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-tema",
+        "left": "Tema",
+        "right": "Ide cerita"
+      },
+      {
+        "pairId": "pasangan-awal",
+        "left": "Awal",
+        "right": "Pengenalan"
+      },
+      {
+        "pairId": "pasangan-tengah",
+        "left": "Tengah",
+        "right": "Masalah"
+      },
+      {
+        "pairId": "pasangan-akhir",
+        "left": "Akhir",
+        "right": "Penyelesaian"
+      },
+      {
+        "pairId": "pasangan-tokoh",
+        "left": "Tokoh",
+        "right": "Pelaku cerita"
+      },
+      {
+        "pairId": "pasangan-latar",
+        "left": "Latar",
+        "right": "Tempat dan waktu"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis cerita pengalaman di buku."
+  }
+}

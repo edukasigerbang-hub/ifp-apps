@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Karya campuran",
+        "right": "Karya yang memakai beberapa bahan dan teknik"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan yang dapat dipakai",
+        "right": "Kertas, kain, daun, dan cat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menyusun karya",
+        "right": "Tentukan tema, susun bahan, lalu tempel atau gambar"
+      },
+      {
+        "pairId": "pasangan-langkah-awal-sebelum-membuat-kar",
+        "left": "Langkah awal sebelum membuat karya campuran",
+        "right": "Menentukan tema"
+      },
+      {
+        "pairId": "pasangan-sebelum-menempel-dan-menggambar",
+        "left": "Yang dibuat sebelum menempel dan menggambar",
+        "right": "Rancangan"
+      },
+      {
+        "pairId": "pasangan-bahan-karya-campuran-yang-berasa",
+        "left": "Bahan karya campuran yang berasal dari tumbuhan",
+        "right": "Daun"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya campuran dari kertas, kain, daun, dan cat."
+  }
+}

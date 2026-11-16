@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Jumlah salat wajib dalam sehari ada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "tiga waktu"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "lima waktu"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "empat waktu"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Bersuci yang dilakukan sebelum salat dinamakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "salat"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "salam"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "wudu"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Selain berwudu, hal yang harus dilakukan sebelum salat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "menutup aurat"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "berbicara"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "berlari"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Saat salat, badan dibungkukkan ke depan. Gerakan ini disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "sujud"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "rukuk"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "salam"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Gerakan duduk dalam salat disebut duduk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "sujud"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "rukuk"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "tasyahud"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Salat diakhiri dengan gerakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "salam"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "rukuk"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "takbir"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  }
+}

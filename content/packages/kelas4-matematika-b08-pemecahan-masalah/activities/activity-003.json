@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak buku dan harga satu buku pada soal cerita",
+        "right": "Informasi penting"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Operasi yang digunakan untuk menghitung total",
+        "right": "Perkalian: 3 × 5.000 = 15.000"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Uang 20.000 dikurangi harga 15.000",
+        "right": "Kembalian 5.000"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Lapak, keranjang, dan uang pada ilustrasi belanja",
+        "right": "Soal cerita belanja"
+      },
+      {
+        "pairId": "pasangan-uang-rp10-000-dibelanjakan-rp6-5",
+        "left": "Uang Rp10.000 dibelanjakan Rp6.500, sisa uangnya",
+        "right": "Rp3.500"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-sebelum-menulis",
+        "left": "Langkah terakhir sebelum menuliskan jawaban soal cerita",
+        "right": "memeriksa kembali perhitungan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lapak, keranjang, uang koin, dan uang kertas sebagai ilustrasi soal cerita belanja."
+  }
+}

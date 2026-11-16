@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-seni-cetak-kelas5",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Mencetak",
+  "instructions": "Susun langkah mencetak.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-siap",
+        "text": "Menyiapkan alat dan bahan"
+      },
+      {
+        "itemId": "langkah-potong",
+        "text": "Membuat alat cetak"
+      },
+      {
+        "itemId": "langkah-cat",
+        "text": "Mengoles cat"
+      },
+      {
+        "itemId": "langkah-tekan",
+        "text": "Menekan pada kertas"
+      },
+      {
+        "itemId": "langkah-angkat",
+        "text": "Mengangkat perlahan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-siap",
+      "langkah-potong",
+      "langkah-cat",
+      "langkah-tekan",
+      "langkah-angkat"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Alat cetak, cat, dan kertas berisi cetakan pola."
+  }
+}

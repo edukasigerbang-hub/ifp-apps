@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-bilangan-1-100",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bagan Seratus",
+  "instructions": "Amati bagan, lalu hitung bersama-sama.",
+  "assets": [
+    "assets/aktivitas-bilangan-1-100-1.png",
+    "assets/aktivitas-bilangan-1-100-2.png",
+    "assets/aktivitas-bilangan-1-100-3.png",
+    "assets/aktivitas-bilangan-1-100-4.png",
+    "assets/aktivitas-bilangan-1-100-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bilangan setelah 39 adalah ...",
+        "assetPath": "assets/aktivitas-bilangan-1-100-1.png",
+        "altText": "Tiga batang puluhan dan sembilan satuan, panah menuju empat batang puluhan.",
+        "reveal": "40.",
+        "hint": "Tambahkan satu."
+      },
+      {
+        "prompt": "Angka 47 terdiri dari ...",
+        "assetPath": "assets/aktivitas-bilangan-1-100-2.png",
+        "altText": "Tabel nilai tempat berisi empat batang puluhan di kolom kiri dan tujuh satuan di kolom kanan.",
+        "reveal": "4 puluhan dan 7 satuan.",
+        "hint": "Lihat nilai tempat."
+      },
+      {
+        "prompt": "Mana yang lebih besar, 58 atau 85?",
+        "assetPath": "assets/aktivitas-bilangan-1-100-3.png",
+        "altText": "Lima batang puluhan di baris atas dan delapan batang puluhan di baris bawah yang lebih panjang.",
+        "reveal": "85.",
+        "hint": "Bandingkan puluhannya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 1–100?",
+        "reveal": "Membilang, mengenal nilai tempat, dan membandingkan bilangan 1–100.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-bilangan-1-100-4.png",
+        "altText": "Tiga kartu rangkuman: batang puluhan dengan satuan, dua batang berbeda panjang, dan garis bilangan bertanda."
+      },
+      {
+        "prompt": "Bilangan yang lebih besar adalah ...",
+        "reveal": "85",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aktivitas-bilangan-1-100-5.png",
+        "altText": "Kelompok delapan batang puluhan dan lima satuan di kiri, kelompok lima batang puluhan dan delapan satuan di kanan, kelompok delapan ditandai oranye."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi bilangan 1–100: batang puluhan dengan sembilan satuan menuju empat puluhan, tabel nilai tempat empat puluhan dan tujuh satuan, perbandingan lima dan delapan batang, tiga kartu rangkuman, dan dua kelompok puluhan dengan satuan."
+  }
+}

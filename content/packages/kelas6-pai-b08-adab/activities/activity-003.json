@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Adab kepada orang tua",
+        "right": "Menghormati dan membantu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Adab kepada guru",
+        "right": "Sopan dan mendengarkan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sifat yang diteladani",
+        "right": "Jujur, sabar, dan peduli"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sifat Nabi Muhammad yang diteladani adalah",
+        "right": "Jujur dan amanah"
+      },
+      {
+        "pairId": "pasangan-sifat-yang-membuat-orang-lain-pe",
+        "left": "Sifat yang membuat orang lain percaya",
+        "right": "Jujur"
+      },
+      {
+        "pairId": "pasangan-sifat-menahan-diri-saat-menghada",
+        "left": "Sifat menahan diri saat menghadapi kesulitan",
+        "right": "Sabar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  }
+}

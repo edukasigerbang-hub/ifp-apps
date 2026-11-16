@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-proyek-kelas-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Proyek Kelas",
+  "instructions": "Amati gambar, lalu diskusikan kegiatan proyek.",
+  "assets": [
+    "assets/proyek-kelas-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa proyek kelas?",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "reveal": "Kegiatan bersama.",
+        "hint": "Contoh: membersihkan kelas."
+      },
+      {
+        "prompt": "Bagaimana membagi tugas?",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "reveal": "Adil untuk semua.",
+        "hint": "Sesuai kemampuan."
+      },
+      {
+        "prompt": "Apa setelah selesai?",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "reveal": "Melaporkan hasil.",
+        "hint": "Merapikan alat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kelas?",
+        "reveal": "Memilih kegiatan → Membagi tugas → Bekerja bersama → Menyelesaikan pekerjaan → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Siswa bekerja sama melaksanakan proyek kelas.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/proyek-kelas-kelas2.webp",
+        "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bekerja sama melaksanakan proyek kelas."
+  }
+}

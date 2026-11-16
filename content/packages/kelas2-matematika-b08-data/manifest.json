@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-matematika-b08-data",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Penyajian Data Sederhana — Matematika Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/data-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 181026,
+      "sha256": "d2d5c775e95779f59d84d5dc795f4946209b37a10865d276c01dd3b47f0c01ec"
+    },
+    {
+      "path": "assets/aktivitas-data-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5783,
+      "sha256": "8e54597e87a23fb73490d1a6bd18b5b929caf530971e9cdf773f73bfa775eece"
+    },
+    {
+      "path": "assets/aktivitas-data-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7138,
+      "sha256": "3dae9765edcdf401dfae3b6a06009a64e653037929d2a078b16234e385eea572"
+    },
+    {
+      "path": "assets/aktivitas-data-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12137,
+      "sha256": "fb0efc4e0d13278304e190553d533089ad985809781612f17c05adc35521f065"
+    },
+    {
+      "path": "assets/aktivitas-data-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7490,
+      "sha256": "1d0f7cc21aa647426235f26ae6e40638b902128838bb688f941f5e630222d48a"
+    },
+    {
+      "path": "assets/aktivitas-data-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9828,
+      "sha256": "0a1e6b31e213c4c383094abb3ff421f61961becba02d9eaeea6f61d2451a32e5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

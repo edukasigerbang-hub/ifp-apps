@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-seni-rupa-b03-tekstur-bahan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Tekstur dan Bahan — Seni Rupa Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/tekstur-bahan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 207414,
+      "sha256": "ca42d171bf16e21bb9f03ed2eae8fca95a7d0264ba93d1794b98ac5f198ce348"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-non-lokomotor-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak di Tempat",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/non-lokomotor-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak non-lokomotor?",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh.",
+        "reveal": "Gerak di tempat.",
+        "hint": "Menekuk dan memutar."
+      },
+      {
+        "prompt": "Bagaimana menjaga keseimbangan?",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh.",
+        "reveal": "Berdiri satu kaki.",
+        "hint": "Rentangkan tangan."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Lakukan dahulu."
+      },
+      {
+        "prompt": "Gerak non-lokomotor dilakukan ...",
+        "reveal": "Di tempat",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Non-Lokomotor?",
+        "reveal": "Mempraktikkan gerak di tempat dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/non-lokomotor-kelas2.webp",
+        "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan menyeimbangkan tubuh."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b05-puasa",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Puasa — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/puasa-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 182682,
+      "sha256": "daf602cb7b910c8244b2593f1fbda81182d85d7bf8cf797f25b992d36d403723"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

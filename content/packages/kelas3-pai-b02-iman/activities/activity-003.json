@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Arti iman",
+        "right": "Percaya dan yakin kepada Allah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Sifat Allah yang Maha Pengasih",
+        "right": "Ar-Rahman"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Wujud iman sehari-hari",
+        "right": "Rajin salat, jujur, dan berbuat baik"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Berdoa dan berbuat baik sebagai bukti iman",
+        "right": "Wujud iman"
+      },
+      {
+        "pairId": "pasangan-makna-sifat-allah-ar-rahman-yang",
+        "left": "Makna sifat Allah Ar-Rahman yang kita pelajari",
+        "right": "Maha Pengasih"
+      },
+      {
+        "pairId": "pasangan-perilaku-baik-kepada-teman-sebag",
+        "left": "Perilaku baik kepada teman sebagai bukti iman",
+        "right": "Berbuat baik"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+  }
+}

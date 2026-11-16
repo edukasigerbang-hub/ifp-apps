@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Siklus Air dalam Animasi</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main id="material" class="material" data-stage="0">
+      <header class="head">
+        <p class="eyebrow">Materi contoh · Kelas 3 · IPAS</p>
+        <h1>Siklus Air dalam Animasi</h1>
+        <p class="lede">Ikuti perjalanan setetes air dari laut ke awan lalu kembali ke sungai.</p>
+      </header>
+
+      <div class="scene" aria-hidden="true">
+        <span class="sun"></span>
+        <span class="cloud cloud-back"></span>
+        <span class="cloud cloud-front"></span>
+        <span class="rain"></span>
+        <span class="sea"></span>
+        <span class="drop"></span>
+      </div>
+
+      <ol class="steps" id="steps">
+        <li>Air laut menguap karena panas matahari.</li>
+        <li>Uap air naik dan berkumpul menjadi awan.</li>
+        <li>Awan menurunkan hujan ke sungai dan laut.</li>
+      </ol>
+
+      <div class="controls">
+        <button type="button" id="play">Jeda</button>
+        <button type="button" id="complete">Tandai selesai</button>
+        <button type="button" id="exit">Keluar dari materi</button>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite">
+        Animasi berjalan. Gunakan tombol Jeda untuk menghentikan sementara.
+      </p>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

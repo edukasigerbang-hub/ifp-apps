@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pancasila-uud",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Kenegaraan",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-pancasila",
+        "left": "Pancasila",
+        "right": "Dasar negara"
+      },
+      {
+        "pairId": "pasangan-uud",
+        "left": "UUD 1945",
+        "right": "Hukum dasar"
+      },
+      {
+        "pairId": "pasangan-pembukaan",
+        "left": "Pembukaan",
+        "right": "Bagian awal UUD"
+      },
+      {
+        "pairId": "pasangan-pasal",
+        "left": "Pasal",
+        "right": "Aturan dalam UUD"
+      },
+      {
+        "pairId": "pasangan-sila",
+        "left": "Sila",
+        "right": "Bagian Pancasila"
+      },
+      {
+        "pairId": "pasangan-bhinneka",
+        "left": "Bhinneka Tunggal Ika",
+        "right": "Semboyan bangsa"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Simbol Pancasila dan dokumen UUD 1945."
+  }
+}

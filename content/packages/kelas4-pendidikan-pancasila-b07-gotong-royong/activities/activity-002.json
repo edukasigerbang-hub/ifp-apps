@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-gotong-royong",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah dan Makna",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/gotong-royong.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-gotong",
+        "left": "Gotong royong",
+        "right": "Bekerja bersama"
+      },
+      {
+        "pairId": "pasangan-kerja-bakti",
+        "left": "Kerja bakti",
+        "right": "Membersihkan lingkungan"
+      },
+      {
+        "pairId": "pasangan-musyawarah",
+        "left": "Musyawarah",
+        "right": "Mufakat bersama"
+      },
+      {
+        "pairId": "pasangan-tolong",
+        "left": "Tolong-menolong",
+        "right": "Membantu tetangga"
+      },
+      {
+        "pairId": "pasangan-persatuan",
+        "left": "Persatuan",
+        "right": "Bersatu dalam perbedaan"
+      },
+      {
+        "pairId": "pasangan-contoh-kegiatan-gotong-royong-ya",
+        "left": "Contoh kegiatan gotong royong yang terjadwal di kelas",
+        "right": "piket kelas"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama membersihkan lingkungan dan membawa barang secara gotong royong."
+  }
+}

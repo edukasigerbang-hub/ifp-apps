@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Daftar permainan bola kecil pada gambar",
+        "right": "Tenis, bulu tangkis, dan tenis meja"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alat utama dalam bulu tangkis",
+        "right": "Raket dan kok"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan aturan dan keselamatan penting",
+        "right": "Agar permainan adil dan tidak ada yang cedera"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Bola tenis, kok, dan bola pingpong",
+        "right": "Permainan bola kecil"
+      },
+      {
+        "pairId": "pasangan-alat-pemukul-berbentuk-papan-unt",
+        "left": "Alat pemukul berbentuk papan untuk permainan tenis meja",
+        "right": "Bet"
+      },
+      {
+        "pairId": "pasangan-bola-kecil-yang-dipakai-dalam-pe",
+        "left": "Bola kecil yang dipakai dalam permainan tenis meja",
+        "right": "Bola pingpong"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel bola kecil: bola tenis dan raket, kok bulu tangkis, serta bet dan bola pingpong."
+  }
+}

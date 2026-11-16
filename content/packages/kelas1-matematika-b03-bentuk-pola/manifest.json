@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b03-bentuk-pola",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bentuk dan Pola — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bentuk-pola.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 101978,
+      "sha256": "476b4a7485c56b4ef24c361e3ad7c34e1faef2de8e963792efec3c82efd389d2"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 30792,
+      "sha256": "f5ae14b5fbd70a8ef4a4390679b6edb2b1415307f9fb0c382e998e797ba37b02"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 11082,
+      "sha256": "51d1638c019ed5d27d312892fec4d609c1b54ba5a4574845c4d0b48a0933109b"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10009,
+      "sha256": "109ff729ebe141cfc96c2a0051c4b9c319e7d95db5cde44866826e9de860da80"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8624,
+      "sha256": "768ae4637f74d29056861a33f0975f13c9f3804531c15b00d9d17232ba4330c1"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7290,
+      "sha256": "981e58c8f859b2cea9c2f27b94fde0fa7fa8a570b3256735c0dfd72f8a611143"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

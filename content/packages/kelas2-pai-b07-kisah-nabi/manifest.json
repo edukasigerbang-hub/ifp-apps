@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pai-b07-kisah-nabi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kisah Nabi — PAI Kelas 2 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kisah-nabi-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177788,
+      "sha256": "c775989643e7ba0b0d3dbf6180e940d960568fb884dfd98f6a9daca7852db91a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-bahasa-indonesia-b04-menulis-kata",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menulis Huruf dan Kata — Bahasa Indonesia Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menulis-kata.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 204354,
+      "sha256": "5f745c1e43a5d8a2c5a5133153ac13baac328ba937f93c71c40c0ce974f9c6e5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

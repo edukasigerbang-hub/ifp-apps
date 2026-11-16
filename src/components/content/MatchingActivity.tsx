@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { GradedOutcome } from "../../content/graded";
 import { readMatchingPairs, scoreMatching } from "../../content/interactions";
 import type { Activity } from "../../content/schema/activity";
@@ -11,11 +11,16 @@ interface MatchingActivityProps {
 export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) {
   const pairs = useMemo(() => readMatchingPairs(activity), [activity]);
   const threshold =
-    activity.completionPolicy.type === "score-threshold"
-      ? activity.completionPolicy.threshold ?? 70
-      : 70;
+    activity.completionPolicy.type === "score-threshold" ? (activity.completionPolicy.threshold ?? 70) : 70;
   const [selections, setSelections] = useState<Record<string, string>>({});
   const [result, setResult] = useState<{ score: number; passed: boolean } | null>(null);
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!result) return;
+    resultRef.current?.scrollIntoView({ block: "nearest" });
+    resultRef.current?.focus();
+  }, [result]);
 
   if (pairs.length === 0) {
     return <p className="text-sm text-muted">Aktivitas ini belum memiliki pasangan.</p>;
@@ -41,7 +46,7 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-5xl">
       <p className="text-sm text-muted">{activity.instructions}</p>
       <p className="mt-1 text-sm text-muted">
         Terjawab {answered} dari {pairs.length}.
@@ -82,7 +87,7 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
               </label>
               {correct !== null && (
                 <span
-                  className={`text-sm font-medium ${correct ? "text-teal" : "text-danger"}`}
+                  className={`text-sm font-medium ${correct ? "text-teal-strong" : "text-danger-strong"}`}
                 >
                   {correct ? "Benar" : "Salah"}
                 </span>
@@ -95,7 +100,9 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
       <div aria-live="polite" className="mt-6">
         {result && (
           <div
-            className={`rounded-card border p-5 ${
+            ref={resultRef}
+            tabIndex={-1}
+            className={`rounded-card border p-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
               result.passed ? "border-teal/30 bg-teal/5" : "border-warning/40 bg-warning/10"
             }`}
           >
@@ -106,16 +113,23 @@ export function MatchingActivity({ activity, onGraded }: MatchingActivityProps) 
         )}
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-6 flex flex-wrap items-center gap-4">
         {result === null ? (
-          <button
-            type="button"
-            onClick={submit}
-            disabled={!allAnswered}
-            className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            Periksa pasangan
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={submit}
+              disabled={!allAnswered}
+              className="min-h-11 rounded-control bg-primary px-5 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Periksa pasangan
+            </button>
+            {!allAnswered && (
+              <p className="text-sm text-muted">
+                Lengkapi {pairs.length - answered} pasangan lagi untuk memeriksa.
+              </p>
+            )}
+          </>
         ) : (
           <button
             type="button"

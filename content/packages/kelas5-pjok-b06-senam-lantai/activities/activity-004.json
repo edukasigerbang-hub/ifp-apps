@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Senam yang dilakukan di atas matras disebut senam ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Ritmik"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Lantai"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Artistik"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Alasan pemanasan sebelum senam adalah untuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Menghemat tenaga"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Mempercepat tidur"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Mencegah cedera"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Salah satu gerak senam lantai selain guling adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Keseimbangan"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Renang"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Lari estafet"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Latihan yang dilakukan sesudah guling depan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Latihan keseimbangan"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Guling belakang"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Pendinginan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Kegiatan yang dilakukan setelah semua latihan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Perlombaan"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Pendinginan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Saat berlatih senam lantai, kita perlu didampingi oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "Pendamping"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "Penonton"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "Wasit"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+  }
+}

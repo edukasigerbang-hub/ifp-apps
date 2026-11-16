@@ -30,11 +30,34 @@
 | Kontrak sinkronisasi | [`api/SYNC_CONTRACT.md`](api/SYNC_CONTRACT.md) |
 | Keamanan & privasi | [`security/SECURITY.md`](security/SECURITY.md) |
 | Kontrak konten v1 | [`content/SCHEMA.md`](content/SCHEMA.md) |
+| Kontrak bundel materi HTML5 v1 (DRAF, ADR-0035) | [`content/MATERIAL_BUNDLE_CONTRACT.md`](content/MATERIAL_BUNDLE_CONTRACT.md) |
 | Katalog konten | [`content/CATALOG.md`](content/CATALOG.md) |
 | Fixture input/output validator | [`content/FIXTURES.md`](content/FIXTURES.md) |
 | Proposal kurikulum (OD-1) | [`content/CURRICULUM_PROPOSAL.md`](content/CURRICULUM_PROPOSAL.md) |
+| Outline Kelas 4 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS4_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS4_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS4_SEMESTER2_MERDEKA_DRAFT.md) |
+| Outline Kelas 3 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS3_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS3_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS3_SEMESTER2_MERDEKA_DRAFT.md) |
+| Outline Kelas 5 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS5_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS5_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS5_SEMESTER2_MERDEKA_DRAFT.md) |
+| Outline Kelas 6 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS6_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS6_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS6_SEMESTER2_MERDEKA_DRAFT.md) |
+| Outline Kelas 1 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS1_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS1_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS1_SEMESTER2_MERDEKA_DRAFT.md) |
+| Outline Kelas 2 Kurikulum Merdeka (DRAF) | [induk](content/OUTLINE_KELAS2_MERDEKA_DRAFT.md) · [Semester 1](content/KELAS2_SEMESTER1_MERDEKA_DRAFT.md) · [Semester 2](content/KELAS2_SEMESTER2_MERDEKA_DRAFT.md) |
+| Review teknis seluruh paket draft (2026-10-24) | [`content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md`](content/REVIEW_REPORT_2026-10-24_ALL_DRAFTS.md) |
+| Review teknis seluruh paket draft (2026-10-26, pasca-pengayaan) | [`content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md`](content/REVIEW_REPORT_2026-10-26_ALL_DRAFTS.md) · [JSON](content/review-flags-2026-10-26.json) |
+| Lembar keputusan OD-1 D1–D8 (2026-10-26) | [`content/OD1_DECISION_SHEET_2026-10-26.md`](content/OD1_DECISION_SHEET_2026-10-26.md) |
+| Register blocker rilis (2026-10-24) | [`api/RELEASE_BLOCKERS_2026-10-24.md`](api/RELEASE_BLOCKERS_2026-10-24.md) |
+| Checklist B-01 signing & B-04 SMTP (2026-10-25) | [`release/CHECKLIST_B01_B04_2026-10-25.md`](release/CHECKLIST_B01_B04_2026-10-25.md) |
+| Checklist B-02, B-05, B-06, B-07, B-08 (2026-10-25) | [`release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md`](release/CHECKLIST_B02_B05_B06_B07_B08_2026-10-25.md) |
+| Lembar kerja review R1–R12 (2026-10-25) | [panduan](release/REVIEW_WORKSHEET_2026-10-25.md) · [CSV](release/review-worksheet-2026-10-25.csv) |
+| Pra-review agent R1–R6/R8–R9/R12 (2026-10-26, **bukan approval**) | [laporan](content/PEDAGOGICAL_PREREVIEW_2026-10-26.md) · [sampel baca 40 paket](content/PEDAGOGICAL_SAMPLE_2026-10-26.md) · [CSV flag](content/prereview-flags-2026-10-26.csv) · [JSON bukti](content/prereview-evidence-2026-10-26.json) |
+| Review UX/UI layout pembelajaran (2026-10-26, **bukan approval**; termasuk merge berkas `.md` eksternal; P0 5/6 selesai; UX-03 selesai; dua mode Belajar/Admin selesai — T-077; a11y/E2E PASS) | [`design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md`](design/UX_REVIEW_LAYOUT_PEMBELAJARAN_2026-10-26.md) |
+| Analisis gap kualitas 320 paket (2026-10-25) | [`content/QUALITY_GAP_2026-10-25.md`](content/QUALITY_GAP_2026-10-25.md) · [JSON](content/quality-gap-2026-10-25.json) |
+| Review 10 paket prioritas (2026-10-27; F-01…F-04 diperbaiki, F-05 ditutup, F-06 diputuskan sebagai utang desain) | [laporan](content/REVIEW_REPORT_2026-10-27_GURU_PRIORITAS_10.md) · [CSV 309 pasangan F-06](content/F06_MIRROR_PAIRS_2026-10-28.csv) |
+| Pilot gold Kelas 4 B01 (2026-10-25) | [`content/PILOT_GOLD_KELAS4_B01_2026-10-25.md`](content/PILOT_GOLD_KELAS4_B01_2026-10-25.md) |
+| Inventaris aset konten (2026-10-25) | [`content/ASSET_INVENTORY_2026-10-25.md`](content/ASSET_INVENTORY_2026-10-25.md) · [CSV](content/asset-inventory-2026-10-25.csv) |
+| Prompt pack aset — cover & materi (2026-10-25) | [`content/ASSET_PROMPTS_2026-10-25.md`](content/ASSET_PROMPTS_2026-10-25.md) · [CSV](content/asset-prompts-2026-10-25.csv) |
+| Jadwal produksi konten Kelas 1–6 | [`content/PRODUCTION_SCHEDULE.md`](content/PRODUCTION_SCHEDULE.md) |
 | Rubrik review pedagogis | [`content/REVIEW_RUBRIC.md`](content/REVIEW_RUBRIC.md) |
 | Laporan review teknis pilot | [`content/REVIEW_REPORT_2026-10-23.md`](content/REVIEW_REPORT_2026-10-23.md) |
+| Review teknis starter Kelas 4 (2026-10-24) | [`content/REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md`](content/REVIEW_REPORT_2026-10-24_KELAS4_STARTERS.md) |
 | Device spike readiness | [`device/DEVICE_SPIKE_READINESS.md`](device/DEVICE_SPIKE_READINESS.md) |
 | Release checklist (Windows RC) | [`release/RELEASE_CHECKLIST.md`](release/RELEASE_CHECKLIST.md) |
 | Register test gap | [`testing/TEST_GAPS.md`](testing/TEST_GAPS.md) |
@@ -51,7 +74,7 @@
 | Konteks aktif (L0) | [`.qoder/context.md`](.qoder/context.md) |
 | State mesin | [`.qoder/state.json`](.qoder/state.json) |
 | Status index kode | [`.qoder/index/index-state.json`](.qoder/index/index-state.json) |
-| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) |
+| Log sesi | [`logs/2026-10-23.md`](logs/2026-10-23.md) · [`logs/2026-10-24.md`](logs/2026-10-24.md) · [`logs/2026-10-25.md`](logs/2026-10-25.md) · [`logs/2026-10-26.md`](logs/2026-10-26.md) · [`logs/2026-10-27.md`](logs/2026-10-27.md) · [`logs/2026-10-28.md`](logs/2026-10-28.md) · [`logs/2026-10-29.md`](logs/2026-10-29.md) · [`logs/2026-10-30.md`](logs/2026-10-30.md) |
 
 ## Modul
 
@@ -88,16 +111,26 @@ Belum ada. `modules/` sengaja belum dibuat karena belum ada kode sumber (aturan:
 | [ADR-0025](decisions/ADR-0025-privacy-defaults.md) | Default privasi & retensi (provisional, OD-4) | Accepted (provisional) |
 | [ADR-0026](decisions/ADR-0026-license-policy-defaults.md) | Default kebijakan lisensi (provisional, OD-5) | Accepted (provisional) |
 | [ADR-0027](decisions/ADR-0027-device-auth-openapi.md) | OD-7 increment 1: auth perangkat & OpenAPI | Accepted (reference) |
+| [ADR-0031](decisions/ADR-0031-content-catalog-index.md) | Indeks katalog konten build-time untuk 320 paket | Accepted (implemented) |
+| [ADR-0032](decisions/ADR-0032-admin-api-token-provisional.md) | Token admin provisial untuk transfer/deaktivasi lisensi | Accepted (provisional) |
+| [ADR-0033](decisions/ADR-0033-curriculum-refs-d6-provisional.md) | Format & pengisian awal `curriculumRefs` (D6 provisional) | Accepted (provisional) |
+| [ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md) | OD-1 D1–D8: persetujuan Product Owner + Curriculum Lead | Accepted via sesi 2026-10-26; CP/ATP per bab belum diverifikasi |
+| [ADR-0035](decisions/ADR-0035-online-html5-materials.md) | Materi daring HTML5: jenis konten `material`, katalog + unduh-sekali, tanda tangan Ed25519, render di iframe sandbox | **Accepted 2026-10-28** — OD-10…14 dikunci; penampil prototipe lokal T-114 (E2E 8/8), pemasang ZIP bertanda tangan T-115 (tahap 3a, E2E 12/12), sematan materi di Beranda T-116 (E2E 12/12), klien katalog + unduhan + verifikasi `bundleSha256` T-117 (E2E `material-catalog` 8/8, server referensi lokal — endpoint platform belum) |
+| [ADR-0036](decisions/ADR-0036-declared-online-media.md) | Pengecualian daring terdeklarasi untuk blok video/sematan materi + sandbox pemutar diperluas | **Accepted 2026-10-30** — mengubah butir 3 & 5 ADR-0035 dan batas aset §3 kontrak; T-131 (Rust 131/131, E2E studio 31/31, `material-viewer` 8/8); **dikoreksi T-132 (butir 8):** lingkungan jalan juga harus mengizinkan — CSP materi kini `frame-src https:` + `media-src … https:` dan frame penampil `referrerPolicy="origin"` + `allow` pemutar, tanpa itu YouTube mati (Error 153) / iframe diblokir sebelum permintaan jaringan (Rust 132/132); pemutaran nyata di WebView2 belum dibuktikan otomatis |
+| [ADR-0037](decisions/ADR-0037-material-viewer-display-modes.md) | Tiga mode lebar penampil materi (Kartu/Lansekap/Layar penuh) + kolom baca responsif lewat media query | **Accepted 2026-10-30** — T-133; mode diingat per profil di `ui_state` (`material-view-mode`), layar penuh memakai API jendela Tauri bukan Fullscreen API DOM; konsekuensi: bundel yang sudah terpasang tetap 820 px sampai diterapkan ulang (E2E `material-viewer` 11/11, `material-scene-sample` 5/5) |
 | [ADR-0028](decisions/ADR-0028-supabase-cloudflare.md) | Stack backend: Supabase + Cloudflare | Accepted (increment 2) |
+| [ADR-0029](decisions/ADR-0029-ifp-devices-isolation.md) | Isolasi perangkat IFP dengan `ifp_devices` (project dipakai bersama Fanakon) | Accepted |
+| [ADR-0030](decisions/ADR-0030-worker-license-signing.md) | Penerbitan lisensi Ed25519 di Worker (kunci provisional `prod-1`) | Accepted (provisional) |
 
-Keputusan berikutnya yang perlu ADR: matriks kurikulum (OD-1 → ADR-0004), license semantics (OD-5), API contract (OD-7).
+OD-1 kini tercatat di ADR-0034 (PO + Curriculum Lead setuju via sesi; tanpa tanda tangan tertulis) — catatan: proposal lama menyebut “ADR-0004”, nomor itu sudah dipakai persistensi lokal. Keputusan berikutnya yang perlu ADR: license semantics (OD-5), API contract (OD-7).
 
 ### Proposal keputusan terbuka
 
 | ID | Proposal |
 |---|---|
-| OD-1 | [Matriks kurikulum & opsi](content/CURRICULUM_PROPOSAL.md) |
+| OD-1 | [Matriks kurikulum & opsi](content/CURRICULUM_PROPOSAL.md) — PO + Curriculum Lead setuju D1–D8 ([ADR-0034](decisions/ADR-0034-od1-curriculum-matrix-po-approval.md)); `curriculumRefs` 320/320, CP/ATP per bab belum diverifikasi |
 | OD-4 | [Privasi, retensi, penghapusan](decisions/PROPOSAL-OD-4-privacy-retention.md) |
 | OD-5 | [Kebijakan lisensi](decisions/PROPOSAL-OD-5-license-policy.md) |
 | OD-6 | [Identitas rilis & signing](decisions/PROPOSAL-OD-6-release-identity.md) |
 | OD-7 | [Backend/API produksi](api/PRODUCTION_BACKEND_PROPOSAL.md) |
+| OD-10…14 | Materi daring HTML5 — **DIKUNCI 2026-10-28**: katalog publik hanya `reviewed`/`approved`; private key di secret Worker; Supabase Storage + pre-signed 10 menit; 50 MB/bundel & 2 GB/perangkat (LRU); "selesai dibaca" tidak masuk Hasil Belajar — [ADR-0035](decisions/ADR-0035-online-html5-materials.md#keputusan-yang-dikonfirmasi-2026-10-28) |

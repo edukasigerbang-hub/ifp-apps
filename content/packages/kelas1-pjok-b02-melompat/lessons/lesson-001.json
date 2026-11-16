@@ -1,0 +1,28 @@
+{
+  "lessonId": "melompat",
+  "packageId": "kelas1-pjok-b02-melompat",
+  "title": "Gerak Melompat",
+  "summary": "Mempraktikkan gerak melompat dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mempraktikkan gerak melompat.",
+    "Mendarat dengan aman.",
+    "Menjaga keselamatan."
+  ],
+  "activityIds": [
+    "eksplorasi-melompat",
+    "kuis-melompat",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-melompat"
+  ],
+  "assetRefs": [
+    "assets/melompat.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

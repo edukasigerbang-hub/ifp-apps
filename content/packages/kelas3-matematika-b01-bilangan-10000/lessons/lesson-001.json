@@ -1,0 +1,28 @@
+{
+  "lessonId": "bilangan-10000",
+  "packageId": "kelas3-matematika-b01-bilangan-10000",
+  "title": "Bilangan sampai 10.000",
+  "summary": "Membaca, menulis, dan membandingkan bilangan sampai 10.000 melalui nilai tempat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca dan menulis bilangan sampai 10.000.",
+    "Menentukan nilai tempat ribuan, ratusan, puluhan, dan satuan.",
+    "Membandingkan dan mengurutkan bilangan."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-10000",
+    "kuis-bilangan-10000",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-bilangan-10000"
+  ],
+  "assetRefs": [
+    "assets/nilai-tempat-10000.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat kolom balok nilai tempat: tiga balok ribuan, empat balok ratusan, lima batang puluhan, dan dua balok satuan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pai-b08-adab",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Adab Sehari-hari — PAI Kelas 1 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/adab-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 115378,
+      "sha256": "f00d53688d333c54ce73d43566d252c60d6f5fd40c66fd12c6c3a92825503afa"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

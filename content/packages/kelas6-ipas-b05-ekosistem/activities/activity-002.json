@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-ekosistem-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Komponen Ekosistem",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-produsen",
+        "left": "Produsen",
+        "right": "Tumbuhan"
+      },
+      {
+        "pairId": "pasangan-konsumen",
+        "left": "Konsumen",
+        "right": "Hewan"
+      },
+      {
+        "pairId": "pasangan-pengurai",
+        "left": "Pengurai",
+        "right": "Bakteri"
+      },
+      {
+        "pairId": "pasangan-rantai",
+        "left": "Rantai makanan",
+        "right": "Urutan makan-dimakan"
+      },
+      {
+        "pairId": "pasangan-simbiosis",
+        "left": "Simbiosis",
+        "right": "Hubungan dua makhluk"
+      },
+      {
+        "pairId": "pasangan-seimbang",
+        "left": "Keseimbangan",
+        "right": "Tidak ada yang mendominasi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rantai makanan dari tumbuhan, belalang, burung, hingga ular."
+  }
+}

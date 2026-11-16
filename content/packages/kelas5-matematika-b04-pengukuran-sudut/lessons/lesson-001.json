@@ -1,0 +1,28 @@
+{
+  "lessonId": "pengukuran-sudut",
+  "packageId": "kelas5-matematika-b04-pengukuran-sudut",
+  "title": "Pengukuran Sudut dan Bangun Datar",
+  "summary": "Mengukur sudut dan mengenal sifat bangun datar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal jenis sudut.",
+    "Mengukur sudut dengan busur.",
+    "Menyebutkan sifat bangun datar."
+  ],
+  "activityIds": [
+    "eksplorasi-pengukuran-sudut",
+    "kuis-pengukuran-sudut",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-pengukuran-sudut"
+  ],
+  "assetRefs": [
+    "assets/pengukuran-sudut.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut lancip, siku, dan tumpul pada bangun datar."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

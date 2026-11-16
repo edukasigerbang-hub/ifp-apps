@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pendidikan-pancasila-b06-nkri-otonomi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "NKRI dan Otonomi Daerah — Pendidikan Pancasila Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/nkri-otonomi.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 177438,
+      "sha256": "3cdcaec8711f24c1d72e4c6ac8e60d8b7eaab5bb4a2a7543bca04f33b552583b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-listrik-magnet",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Listrik dan Magnet",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-konduktor",
+        "prompt": "Bahan yang menghantarkan listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kayu",
+            "text": "Kayu"
+          },
+          {
+            "optionId": "opsi-plastik",
+            "text": "Plastik"
+          },
+          {
+            "optionId": "opsi-karet",
+            "text": "Karet"
+          },
+          {
+            "optionId": "opsi-logam",
+            "text": "Logam"
+          }
+        ],
+        "correctResponse": "opsi-logam"
+      },
+      {
+        "questionId": "soal-isolator",
+        "prompt": "Bahan yang tidak menghantarkan listrik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-plastik",
+            "text": "Plastik"
+          },
+          {
+            "optionId": "opsi-tembaga",
+            "text": "Tembaga"
+          },
+          {
+            "optionId": "opsi-besi",
+            "text": "Besi"
+          },
+          {
+            "optionId": "opsi-aluminium",
+            "text": "Aluminium"
+          }
+        ],
+        "correctResponse": "opsi-plastik"
+      },
+      {
+        "questionId": "soal-magnet",
+        "prompt": "Magnet memiliki ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu kutub"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua kutub"
+          },
+          {
+            "optionId": "opsi-tiga",
+            "text": "Tiga kutub"
+          },
+          {
+            "optionId": "opsi-tanpa",
+            "text": "Tanpa kutub"
+          }
+        ],
+        "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-rangkaian",
+        "prompt": "Rangkaian yang tetap menyala saat satu lampu putus adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-seri",
+            "text": "Seri"
+          },
+          {
+            "optionId": "opsi-terbuka",
+            "text": "Terbuka"
+          },
+          {
+            "optionId": "opsi-paralel",
+            "text": "Paralel"
+          },
+          {
+            "optionId": "opsi-tertutup",
+            "text": "Tertutup"
+          }
+        ],
+        "correctResponse": "opsi-paralel"
+      },
+      {
+        "questionId": "soal-lapisan-pelindung-pada-kabel-lis",
+        "prompt": "Lapisan pelindung pada kabel listrik dibuat dari bahan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-lapisan-pelindung-pada-kabe-1",
+            "text": "Konduktor"
+          },
+          {
+            "optionId": "opsi-soal-lapisan-pelindung-pada-kabe-2",
+            "text": "Logam"
+          },
+          {
+            "optionId": "opsi-soal-lapisan-pelindung-pada-kabe-0",
+            "text": "Isolator"
+          }
+        ],
+        "correctResponse": "opsi-soal-lapisan-pelindung-pada-kabe-0"
+      },
+      {
+        "questionId": "soal-dua-kutub-magnet-yang-jenisnya-s",
+        "prompt": "Dua kutub magnet yang jenisnya sama akan saling ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dua-kutub-magnet-yang-jenis-0",
+            "text": "Menolak"
+          },
+          {
+            "optionId": "opsi-soal-dua-kutub-magnet-yang-jenis-1",
+            "text": "Menarik"
+          },
+          {
+            "optionId": "opsi-soal-dua-kutub-magnet-yang-jenis-2",
+            "text": "Menempel"
+          }
+        ],
+        "correctResponse": "opsi-soal-dua-kutub-magnet-yang-jenis-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rangkaian listrik dan magnet menarik benda logam."
+  }
+}

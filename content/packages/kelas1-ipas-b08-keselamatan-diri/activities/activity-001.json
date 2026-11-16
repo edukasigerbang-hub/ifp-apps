@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-keselamatan-diri",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Tempat Aman",
+  "instructions": "Amati gambar, lalu diskusikan cara menjaga keselamatan diri.",
+  "assets": [
+    "assets/keselamatan-diri.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahaya apa yang ada di rumah?",
+        "assetPath": "assets/keselamatan-diri.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya.",
+        "reveal": "Kabel listrik, api kompor, dan benda tajam.",
+        "hint": "Jangan bermain dengan benda berbahaya."
+      },
+      {
+        "prompt": "Bagaimana cara menyeberang jalan dengan aman?",
+        "assetPath": "assets/keselamatan-diri.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya.",
+        "reveal": "Pegang tangan orang dewasa, lihat kanan dan kiri, lalu lewati zebra cross.",
+        "hint": "Tunggu sampai jalan sepi."
+      },
+      {
+        "prompt": "Apa yang dilakukan jika tersesat?",
+        "assetPath": "assets/keselamatan-diri.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya.",
+        "reveal": "Tetap di tempat yang aman dan minta bantuan orang dewasa.",
+        "hint": "Jangan pergi dengan orang asing."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Keselamatan Diri?",
+        "reveal": "Mengenal bahaya di sekitar dan cara menjaga keselamatan diri.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/keselamatan-diri.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya."
+      },
+      {
+        "prompt": "Mengapa kita memakai helm saat bersepeda?",
+        "reveal": "Helm melindungi kepala jika terjatuh.",
+        "hint": "Kepala perlu dilindungi.",
+        "assetPath": "assets/keselamatan-diri.webp",
+        "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya."
+  }
+}

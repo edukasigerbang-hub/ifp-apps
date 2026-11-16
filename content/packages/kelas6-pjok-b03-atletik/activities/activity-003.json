@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Start jongkok",
+        "right": "Kaki menolak kuat, pandangan ke depan"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Urutan lompat jauh",
+        "right": "Awalan, tolakan, melayang, mendarat, keluar dari bak lompat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sportivitas",
+        "right": "Menghargai lawan dan aturan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Lintasan lari, bak lompat, dan pita finis",
+        "right": "Atletik"
+      },
+      {
+        "pairId": "pasangan-alat-penanda-garis-akhir-lomba-l",
+        "left": "Alat penanda garis akhir lomba lari",
+        "right": "Pita finis"
+      },
+      {
+        "pairId": "pasangan-tempat-mendarat-setelah-melompat",
+        "left": "Tempat mendarat setelah melompat",
+        "right": "Bak lompat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lintasan lari, bak lompat, dan pita finis."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Cuaca yang terlihat",
+        "right": "Cerah, hujan, dan berangin"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tanda cuaca hujan",
+        "right": "Awan gelap dan titik air turun"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Musim di Indonesia",
+        "right": "Musim hujan dan musim kemarau"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Cuaca cerah ditandai dengan",
+        "right": "Langit terang dan matahari bersinar"
+      },
+      {
+        "pairId": "pasangan-pakaian-yang-tepat-dipakai-saat",
+        "left": "Pakaian yang tepat dipakai saat pergi di tengah hujan",
+        "right": "jas hujan"
+      },
+      {
+        "pairId": "pasangan-cuaca-yang-terjadi-saat-matahari",
+        "left": "Cuaca yang terjadi saat matahari bersinar sepanjang hari",
+        "right": "cerah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cuaca: cerah, hujan, dan berangin."
+  }
+}

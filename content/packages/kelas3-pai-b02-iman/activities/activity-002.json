@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-iman",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Iman kepada Allah",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-iman",
+        "prompt": "Iman artinya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-percaya",
+            "text": "Percaya"
+          },
+          {
+            "optionId": "opsi-melihat",
+            "text": "Melihat"
+          },
+          {
+            "optionId": "opsi-mendengar",
+            "text": "Mendengar"
+          },
+          {
+            "optionId": "opsi-menulis",
+            "text": "Menulis"
+          }
+        ],
+        "correctResponse": "opsi-percaya"
+      },
+      {
+        "questionId": "soal-rahman",
+        "prompt": "Allah yang Maha Pengasih disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-rahim",
+            "text": "Ar-Rahim"
+          },
+          {
+            "optionId": "opsi-rahman",
+            "text": "Ar-Rahman"
+          },
+          {
+            "optionId": "opsi-malik",
+            "text": "Al-Malik"
+          },
+          {
+            "optionId": "opsi-khaliq",
+            "text": "Al-Khaliq"
+          }
+        ],
+        "correctResponse": "opsi-rahman"
+      },
+      {
+        "questionId": "soal-wujud",
+        "prompt": "Wujud iman dalam kehidupan sehari-hari adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bohong",
+            "text": "Berbohong"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Malas belajar"
+          },
+          {
+            "optionId": "opsi-salat",
+            "text": "Rajin salat"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Memarahi teman"
+          }
+        ],
+        "correctResponse": "opsi-salat"
+      },
+      {
+        "questionId": "soal-terpuji",
+        "prompt": "Sifat terpuji yang menunjukkan iman adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sombong",
+            "text": "Sombong"
+          },
+          {
+            "optionId": "opsi-iri",
+            "text": "Iri hati"
+          },
+          {
+            "optionId": "opsi-bohong",
+            "text": "Berbohong"
+          },
+          {
+            "optionId": "opsi-jujur",
+            "text": "Jujur"
+          }
+        ],
+        "correctResponse": "opsi-jujur"
+      },
+      {
+        "questionId": "soal-sifat-allah-yang-disebut-ar-rahm",
+        "prompt": "Sifat Allah yang disebut Ar-Rahman berarti Allah Maha ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-allah-yang-disebut-ar-1",
+            "text": "Maha Tinggi"
+          },
+          {
+            "optionId": "opsi-soal-sifat-allah-yang-disebut-ar-2",
+            "text": "Maha Kuasa"
+          },
+          {
+            "optionId": "opsi-soal-sifat-allah-yang-disebut-ar-0",
+            "text": "Pengasih"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-allah-yang-disebut-ar-0"
+      },
+      {
+        "questionId": "soal-iman-berarti-percaya-dan-kepada",
+        "prompt": "Iman berarti percaya dan ... kepada Allah.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-iman-berarti-percaya-dan-ke-0",
+            "text": "yakin"
+          },
+          {
+            "optionId": "opsi-soal-iman-berarti-percaya-dan-ke-1",
+            "text": "ragu"
+          },
+          {
+            "optionId": "opsi-soal-iman-berarti-percaya-dan-ke-2",
+            "text": "duga"
+          }
+        ],
+        "correctResponse": "opsi-soal-iman-berarti-percaya-dan-ke-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+  }
+}

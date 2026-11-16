@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Konduktor",
+        "right": "Bahan yang menghantarkan listrik"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Isolator",
+        "right": "Bahan yang tidak menghantarkan listrik"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kutub magnet",
+        "right": "Ujung magnet yang menarik atau menolak"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Rangkaian listrik dan magnet menarik logam",
+        "right": "Listrik dan magnet"
+      },
+      {
+        "pairId": "pasangan-benda-logam-yang-ditarik-kuat-ol",
+        "left": "Benda logam yang ditarik kuat oleh magnet",
+        "right": "Besi"
+      },
+      {
+        "pairId": "pasangan-rangkaian-listrik-yang-semua-lam",
+        "left": "Rangkaian listrik yang semua lampunya padam bila satu lampu putus",
+        "right": "Rangkaian seri"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rangkaian listrik dan magnet menarik benda logam."
+  }
+}

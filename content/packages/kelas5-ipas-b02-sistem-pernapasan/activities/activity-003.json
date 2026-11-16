@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Hidung\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Menyaring udara"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Saluran udara"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Organ pernapasan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Tenggorokan\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Menyaring udara"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Saluran udara"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Organ pernapasan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pertukaran-gas-terjadi-di",
+        "prompt": "Pertukaran gas terjadi di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pertukaran-gas-terjadi-di-1",
+            "text": "Diafragma"
+          },
+          {
+            "optionId": "opsi-soal-pertukaran-gas-terjadi-di-2",
+            "text": "Hidung"
+          },
+          {
+            "optionId": "opsi-soal-pertukaran-gas-terjadi-di-3",
+            "text": "Tenggorokan"
+          },
+          {
+            "optionId": "opsi-soal-pertukaran-gas-terjadi-di-0",
+            "text": "Alveolus"
+          }
+        ],
+        "correctResponse": "opsi-soal-pertukaran-gas-terjadi-di-0"
+      },
+      {
+        "questionId": "soal-udara-yang-masuk-ke-tubuh-disari",
+        "prompt": "Udara yang masuk ke tubuh disaring oleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-udara-yang-masuk-ke-tubuh-d-0",
+            "text": "Hidung"
+          },
+          {
+            "optionId": "opsi-soal-udara-yang-masuk-ke-tubuh-d-1",
+            "text": "Paru-paru"
+          },
+          {
+            "optionId": "opsi-soal-udara-yang-masuk-ke-tubuh-d-2",
+            "text": "Diafragma"
+          },
+          {
+            "optionId": "opsi-soal-udara-yang-masuk-ke-tubuh-d-3",
+            "text": "Alveolus"
+          }
+        ],
+        "correctResponse": "opsi-soal-udara-yang-masuk-ke-tubuh-d-0"
+      },
+      {
+        "questionId": "soal-tenggorokan-trakea-merupakan-sal",
+        "prompt": "Tenggorokan (trakea) merupakan saluran bagi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tenggorokan-trakea-merupaka-1",
+            "text": "Makanan"
+          },
+          {
+            "optionId": "opsi-soal-tenggorokan-trakea-merupaka-0",
+            "text": "Udara"
+          },
+          {
+            "optionId": "opsi-soal-tenggorokan-trakea-merupaka-2",
+            "text": "Darah"
+          },
+          {
+            "optionId": "opsi-soal-tenggorokan-trakea-merupaka-3",
+            "text": "Air"
+          }
+        ],
+        "correctResponse": "opsi-soal-tenggorokan-trakea-merupaka-0"
+      },
+      {
+        "questionId": "soal-kebiasaan-yang-menjaga-kesehatan",
+        "prompt": "Kebiasaan yang menjaga kesehatan sistem pernapasan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-kese-1",
+            "text": "Sering berada di tempat berasap"
+          },
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-kese-2",
+            "text": "Malas bergerak"
+          },
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-kese-0",
+            "text": "Memakai masker"
+          },
+          {
+            "optionId": "opsi-soal-kebiasaan-yang-menjaga-kese-3",
+            "text": "Jarang berolahraga"
+          }
+        ],
+        "correctResponse": "opsi-soal-kebiasaan-yang-menjaga-kese-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram paru-paru manusia dengan trakea dan diafragma."
+  }
+}

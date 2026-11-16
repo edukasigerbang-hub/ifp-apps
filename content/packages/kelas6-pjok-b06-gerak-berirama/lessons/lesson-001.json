@@ -1,0 +1,28 @@
+{
+  "lessonId": "gerak-berirama",
+  "packageId": "kelas6-pjok-b06-gerak-berirama",
+  "title": "Gerak Berirama",
+  "summary": "Mempraktikkan gerak berirama dengan hitungan dan musik.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan unsur gerak berirama.",
+    "Mempraktikkan gerak sesuai irama.",
+    "Bekerja sama dalam kelompok."
+  ],
+  "activityIds": [
+    "eksplorasi-gerak-berirama",
+    "matching-gerak-berirama",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gerak-berirama.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan gerak berirama mengikuti irama."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

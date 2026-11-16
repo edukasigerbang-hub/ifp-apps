@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-wawancara-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wawancara",
+  "instructions": "Amati gambar, lalu diskusikan cara bertanya dan mencatat.",
+  "assets": [
+    "assets/wawancara-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa pertanyaan yang baik?",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber.",
+        "reveal": "Singkat, jelas, dan relevan.",
+        "hint": "Satu pertanyaan satu ide."
+      },
+      {
+        "prompt": "Bagaimana sikap saat wawancara?",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber.",
+        "reveal": "Sopan dan mencatat jawaban.",
+        "hint": "Ucapkan terima kasih."
+      },
+      {
+        "prompt": "Apa yang disiapkan untuk presentasi?",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber.",
+        "reveal": "Urutan materi dan suara jelas.",
+        "hint": "Latih sebelumnya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Wawancara dan Presentasi?",
+        "reveal": "Menentukan narasumber → Menyusun pertanyaan → Melakukan wawancara → Mencatat jawaban → Mempresentasikan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Wawancara dan Presentasi?",
+        "reveal": "Melakukan wawancara dan mempresentasikan hasil.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/wawancara-kelas6.webp",
+        "altText": "Anak mewawancarai narasumber."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mewawancarai narasumber."
+  }
+}

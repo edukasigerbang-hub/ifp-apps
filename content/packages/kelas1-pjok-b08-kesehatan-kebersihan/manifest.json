@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pjok-b08-kesehatan-kebersihan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kesehatan dan Kebersihan — PJOK Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kesehatan-kebersihan-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 117330,
+      "sha256": "7213b1bc4590aeade46e12e3ea49ed28a8f8c20fa28a8575ffabc97cef2de710"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

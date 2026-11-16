@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-garis-sudut",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Garis dan Sudut",
+  "instructions": "Amati gambar, lalu diskusikan hubungan garis dan jenis sudut.",
+  "assets": [
+    "assets/aktivitas-garis-sudut-1.png",
+    "assets/aktivitas-garis-sudut-2.png",
+    "assets/aktivitas-garis-sudut-3.png",
+    "assets/aktivitas-garis-sudut-4.png",
+    "assets/aktivitas-garis-sudut-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Garis mana yang sejajar pada gambar?",
+        "assetPath": "assets/aktivitas-garis-sudut-1.png",
+        "altText": "Dua garis mendatar sejajar dan satu garis melintang teal yang memotong keduanya.",
+        "reveal": "Dua garis mendatar yang tidak berpotongan disebut sejajar.",
+        "hint": "Perhatikan dua garis yang arahnya sama."
+      },
+      {
+        "prompt": "Sudut apa yang besarnya 90°?",
+        "assetPath": "assets/aktivitas-garis-sudut-2.png",
+        "altText": "Sudut siku-siku biru dengan tanda kotak kecil di titik sudut dan busur penanda sudut.",
+        "reveal": "Sudut siku-siku, ditandai dengan kotak kecil.",
+        "hint": "Perhatikan tanda persegi pada pertemuan garis."
+      },
+      {
+        "prompt": "Apa perbedaan sudut lancip dan tumpul?",
+        "assetPath": "assets/aktivitas-garis-sudut-3.png",
+        "altText": "Dua sudut berjajar: sudut lancip teal di kiri dan sudut tumpul oranye yang lebih lebar di kanan.",
+        "reveal": "Sudut lancip kurang dari 90°, sudut tumpul lebih dari 90°.",
+        "hint": "Bandingkan dengan sudut siku-siku."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-garis-sudut-4.png",
+        "altText": "Dua garis sejajar dipotong satu garis melintang di bagian atas; sudut siku-siku, sudut lancip, dan sudut tumpul berjajar di bawah."
+      },
+      {
+        "prompt": "Alat yang digunakan untuk mengukur besar sudut adalah ...",
+        "reveal": "busur derajat",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aktivitas-garis-sudut-5.png",
+        "altText": "Busur derajat setengah lingkaran dengan garis skala dan satu sudut lancip teal yang diukur dari titik pusatnya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi garis dan sudut: dua garis sejajar dipotong garis melintang, sudut siku-siku bertanda kotak, sudut lancip dan tumpul berjajar, tiga sudut dengan dua garis sejajar, dan busur derajat."
+  }
+}

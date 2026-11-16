@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Keliling",
+        "right": "Jumlah panjang semua sisi"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menghitung luas persegi panjang",
+        "right": "Panjang × lebar"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Satuan luas",
+        "right": "Sentimeter persegi (cm²)"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Bangun datar pada kotak satuan dengan tepi berwarna",
+        "right": "Keliling dan luas"
+      },
+      {
+        "pairId": "pasangan-keliling-persegi-panjang-dengan",
+        "left": "Keliling persegi panjang dengan panjang 7 cm dan lebar 2 cm",
+        "right": "18 cm"
+      },
+      {
+        "pairId": "pasangan-luas-persegi-yang-sisinya-6-cm",
+        "left": "Luas persegi yang sisinya 6 cm",
+        "right": "36 cm²"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Persegi panjang dan persegi pada kotak satuan dengan garis keliling berwarna."
+  }
+}

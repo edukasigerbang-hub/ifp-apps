@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-bahasa-indonesia-b04-puisi-pantun",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Puisi dan Pantun — Bahasa Indonesia Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/puisi-pantun-kelas6.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 201012,
+      "sha256": "61056dfbf1530687c9762be48098394c0d665a1e43a5e813154465e3ec589a04"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

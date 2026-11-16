@@ -1,0 +1,28 @@
+{
+  "lessonId": "zakat-infak",
+  "packageId": "kelas4-pai-b06-zakat-infak",
+  "title": "Zakat dan Infak",
+  "summary": "Mengenal zakat dan infak serta manfaatnya bagi sesama.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian zakat dan infak.",
+    "Membedakan zakat dan infak.",
+    "Menunjukkan sikap peduli kepada yang membutuhkan."
+  ],
+  "activityIds": [
+    "eksplorasi-zakat-infak",
+    "matching-zakat-infak",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/zakat-infak.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

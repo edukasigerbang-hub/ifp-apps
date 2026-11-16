@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak 12 + 5",
+        "right": "17"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Banyak 18 − 4",
+        "right": "14"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Banyak 10 + 10",
+        "right": "20"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Garis berangka berurutan yang dipakai menjumlah sampai 20",
+        "right": "Garis bilangan"
+      },
+      {
+        "pairId": "pasangan-hasil-dari-15-tambah-5",
+        "left": "Hasil dari 15 tambah 5",
+        "right": "20"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 20."
+  }
+}

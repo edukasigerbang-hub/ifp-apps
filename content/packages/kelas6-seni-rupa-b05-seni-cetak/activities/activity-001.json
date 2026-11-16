@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-seni-cetak-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Cetakan",
+  "instructions": "Amati gambar, lalu diskusikan proses mencetak.",
+  "assets": [
+    "assets/seni-cetak-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu seni cetak?",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola.",
+        "reveal": "Membuat gambar berulang dengan alat cetak.",
+        "hint": "Pola dapat disusun."
+      },
+      {
+        "prompt": "Apa bahan alat cetak?",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola.",
+        "reveal": "Kentang, pelepah, atau tutup botol.",
+        "hint": "Permukaan rata."
+      },
+      {
+        "prompt": "Bagaimana mencetak?",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola.",
+        "reveal": "Oles cat, tekan, angkat.",
+        "hint": "Jangan terlalu banyak cat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Seni Cetak?",
+        "reveal": "Menyiapkan alat dan bahan → Membuat alat cetak → Mengoles cat → Menekan pada kertas → Mengangkat perlahan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Seni Cetak?",
+        "reveal": "Membuat karya seni cetak dengan pola berulang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/seni-cetak-kelas6.webp",
+        "altText": "Alat cetak dan kertas berisi pola."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Alat cetak dan kertas berisi pola."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b06-garis-sudut",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Garis dan Sudut — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/garis-sudut.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168000,
+      "sha256": "a8efc110dcc94402a4c41c6d9a3e1616e282a3a80f77eaf5c590242abf73e6f3"
+    },
+    {
+      "path": "assets/aktivitas-garis-sudut-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 13419,
+      "sha256": "022360efdac82ce86dc5bb3daac0d92abe51798979d61225fa891e07da549321"
+    },
+    {
+      "path": "assets/aktivitas-garis-sudut-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5467,
+      "sha256": "7f7b22a318ff0bc52f665cb33b0e9cfab4b802fcf3bc65702c061baaa6e62371"
+    },
+    {
+      "path": "assets/aktivitas-garis-sudut-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10958,
+      "sha256": "597b902d4e7f2c493a0fac2007a235a86d5104e4d8602214cc0aea86253c0d78"
+    },
+    {
+      "path": "assets/aktivitas-garis-sudut-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5419,
+      "sha256": "bc1c8c553e030bdbf337401c74f2069edafbb8343b65db229f165602e6efd7ab"
+    },
+    {
+      "path": "assets/aktivitas-garis-sudut-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 29074,
+      "sha256": "7bad6580f8553d399a2fae5b02296a21ace17e0ee52b11d6aeaf9d705c6dc29a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

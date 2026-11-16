@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menulis-kalimat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Kalimat",
+  "instructions": "Amati gambar, lalu susun kalimat bersama.",
+  "assets": [
+    "assets/menulis-kalimat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kalimat dimulai dengan huruf ...",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku.",
+        "reveal": "Kapital.",
+        "hint": "Contoh: Budi."
+      },
+      {
+        "prompt": "Di akhir kalimat berita ada ...",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku.",
+        "reveal": "Titik.",
+        "hint": "Tanda titik."
+      },
+      {
+        "prompt": "Bagaimana menulis rapi?",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku.",
+        "reveal": "Antar kata diberi jarak.",
+        "hint": "Jangan terlalu rapat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Kalimat Sederhana?",
+        "reveal": "Menentukan ide → Menulis kata → Menyusun kalimat → Memberi tanda baca → Memeriksa tulisan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Kalimat Sederhana?",
+        "reveal": "Menulis kalimat sederhana dengan huruf kapital dan tanda baca.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-kalimat.webp",
+        "altText": "Anak menulis kalimat sederhana di buku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis kalimat sederhana di buku."
+  }
+}

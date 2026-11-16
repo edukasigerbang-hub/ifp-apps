@@ -1,0 +1,29 @@
+{
+  "lessonId": "musyawarah-demokrasi",
+  "packageId": "kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi",
+  "title": "Musyawarah dan Demokrasi",
+  "summary": "Menerapkan musyawarah dan nilai demokrasi di kelas.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti musyawarah.",
+    "Menyebutkan nilai demokrasi.",
+    "Menghargai keputusan bersama."
+  ],
+  "activityIds": [
+    "eksplorasi-musyawarah-demokrasi",
+    "ordering-musyawarah-demokrasi",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/musyawarah-demokrasi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih kesepakatan bersama."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

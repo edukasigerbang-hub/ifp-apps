@@ -1,0 +1,35 @@
+{
+  "lessonId": "makhluk-hidup",
+  "packageId": "kelas4-ipas-b01-makhluk-hidup",
+  "title": "Makhluk Hidup dan Lingkungannya",
+  "summary": "Mengenali ciri makhluk hidup, mengelompokkannya, dan menjelaskan kebutuhan serta peran tumbuhan.",
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "learningObjectives": [
+    "Menyebutkan ciri makhluk hidup.",
+    "Mengelompokkan makhluk hidup dan benda tak hidup.",
+    "Menjelaskan kebutuhan makhluk hidup.",
+    "Menjelaskan peran tumbuhan."
+  ],
+  "activityIds": [
+    "eksplorasi-makhluk-hidup",
+    "matching-makhluk-hidup",
+    "kuis-singkat-makhluk-hidup"
+  ],
+  "assessmentRefs": [
+    "kuis-singkat-makhluk-hidup"
+  ],
+  "assetRefs": [
+    "assets/kolam-ekosistem.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

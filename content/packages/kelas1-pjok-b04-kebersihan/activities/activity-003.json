@@ -1,0 +1,144 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Mandi\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Menjaga gigi"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Mencegah kuman"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Membersihkan tubuh"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Sikat gigi\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Menjaga gigi"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Membersihkan tubuh"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Mencegah kuman"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-mandi-dilakukan-dua-kali-yaitu-p",
+        "prompt": "Mandi dilakukan dua kali, yaitu pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-1",
+            "text": "seminggu sekali"
+          },
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-2",
+            "text": "hanya saat libur"
+          },
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-3",
+            "text": "tengah malam"
+          },
+          {
+            "optionId": "opsi-soal-mandi-dilakukan-dua-kali-ya-0",
+            "text": "pagi dan sore"
+          }
+        ],
+        "correctResponse": "opsi-soal-mandi-dilakukan-dua-kali-ya-0"
+      },
+      {
+        "questionId": "soal-sikat-gigi-dilakukan-pada",
+        "prompt": "Sikat gigi dilakukan pada ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-0",
+            "text": "pagi dan sebelum tidur"
+          },
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-1",
+            "text": "siang dan sore"
+          },
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-2",
+            "text": "sebulan sekali"
+          },
+          {
+            "optionId": "opsi-soal-sikat-gigi-dilakukan-pada-3",
+            "text": "hanya saat libur"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikat-gigi-dilakukan-pada-0"
+      },
+      {
+        "questionId": "soal-kuku-yang-panjang-sebaiknya",
+        "prompt": "Kuku yang panjang sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-1",
+            "text": "dibiarkan"
+          },
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-0",
+            "text": "dipotong"
+          },
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-2",
+            "text": "dilukis"
+          },
+          {
+            "optionId": "opsi-soal-kuku-yang-panjang-sebaiknya-3",
+            "text": "dibasahi"
+          }
+        ],
+        "correctResponse": "opsi-soal-kuku-yang-panjang-sebaiknya-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mandi, sikat gigi, dan mencuci tangan."
+  }
+}

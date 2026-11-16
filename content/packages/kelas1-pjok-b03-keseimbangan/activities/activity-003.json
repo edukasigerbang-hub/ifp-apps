@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Berdiri satu kaki",
+        "right": "Angkat satu kaki"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang membantu keseimbangan",
+        "right": "Merentangkan tangan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Banyak lama berlatih",
+        "right": "Hitung sampai lima"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Berdiri satu kaki dengan tangan terentang",
+        "right": "Keseimbangan"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-menghitun",
+        "left": "Yang dilakukan setelah menghitung sampai lima",
+        "right": "Mengganti kaki"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdiri satu kaki dan merentangkan tangan."
+  }
+}

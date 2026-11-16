@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gotong royong",
+        "right": "Bekerja bersama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Contoh di sekolah",
+        "right": "Kerja bakti kelas"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Manfaatnya",
+        "right": "Pekerjaan cepat selesai"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-kerja-ba",
+        "left": "Langkah pertama sebelum kerja bakti dimulai",
+        "right": "menentukan kegiatan"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-pada-alat-setelah",
+        "left": "Yang dilakukan pada alat setelah pekerjaan selesai",
+        "right": "merapikan alat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama membersihkan lingkungan."
+  }
+}

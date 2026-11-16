@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-bahasa-indonesia-b05-membaca-pemahaman",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Membaca Pemahaman — Bahasa Indonesia Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/membaca-pemahaman-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 148516,
+      "sha256": "a83112fdd050c06d3f73ac14798e8aa238a1d58281371b0441bf4edcf7a46bf5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

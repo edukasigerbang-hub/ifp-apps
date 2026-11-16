@@ -1,0 +1,29 @@
+{
+  "lessonId": "musyawarah",
+  "packageId": "kelas3-pendidikan-pancasila-b04-musyawarah",
+  "title": "Musyawarah di Kelas",
+  "summary": "Mengenal musyawarah, tata caranya, dan sikap menghargai pendapat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti musyawarah.",
+    "Menyebutkan tata cara musyawarah.",
+    "Menghargai pendapat yang berbeda."
+  ],
+  "activityIds": [
+    "eksplorasi-musyawarah",
+    "ordering-musyawarah",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/musyawarah-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa duduk melingkar bermusyawarah dengan guru."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

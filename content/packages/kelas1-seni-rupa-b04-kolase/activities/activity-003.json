@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kolase",
+        "right": "Karya dari bahan yang ditempel"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan yang dipakai",
+        "right": "Daun kering dan kertas"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menempel",
+        "right": "Oles lem lalu tempel"
+      },
+      {
+        "pairId": "pasangan-bahan-alam-yang-biasa-ditempel-u",
+        "left": "Bahan alam yang biasa ditempel untuk kolase",
+        "right": "Daun kering"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-merekatkan-bahan-kola",
+        "left": "Alat untuk merekatkan bahan kolase",
+        "right": "Lem"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun dan kertas yang ditempel."
+  }
+}

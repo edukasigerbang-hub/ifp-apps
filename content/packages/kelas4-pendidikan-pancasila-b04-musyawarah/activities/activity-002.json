@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-musyawarah",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Langkah Musyawarah",
+  "instructions": "Susun langkah musyawarah dalam urutan yang benar.",
+  "assets": [
+    "assets/musyawarah-kelas.webp"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-pendapat",
+        "text": "Menyampaikan pendapat"
+      },
+      {
+        "itemId": "item-mendengar",
+        "text": "Mendengarkan pendapat orang lain"
+      },
+      {
+        "itemId": "item-catat",
+        "text": "Mencatat usulan"
+      },
+      {
+        "itemId": "item-simpul",
+        "text": "Menyimpulkan atau memilih keputusan"
+      },
+      {
+        "itemId": "item-laksana",
+        "text": "Melaksanakan keputusan bersama"
+      }
+    ],
+    "correctOrder": [
+      "item-pendapat",
+      "item-mendengar",
+      "item-catat",
+      "item-simpul",
+      "item-laksana"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "activityId": "kuis-kalimat-efektif",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Kalimat Efektif",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-ciri-efektif",
+        "prompt": "Ciri kalimat efektif adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-panjang",
+            "text": "Sangat panjang dan bertele-tele"
+          },
+          {
+            "optionId": "opsi-jelas-singkat",
+            "text": "Jelas, singkat, dan sesuai kaidah"
+          },
+          {
+            "optionId": "opsi-berulang",
+            "text": "Mengulang kata sebanyak mungkin"
+          },
+          {
+            "optionId": "opsi-tanpa-subjek",
+            "text": "Tidak memiliki subjek"
+          }
+        ],
+        "correctResponse": "opsi-jelas-singkat"
+      },
+      {
+        "questionId": "soal-para-siswa",
+        "prompt": "Kalimat yang paling efektif adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-siswa-siswa",
+            "text": "Para siswa-siswa masuk ke dalam kelas."
+          },
+          {
+            "optionId": "opsi-masuk-kedalam",
+            "text": "Siswa masuk ke dalam ke kelas."
+          },
+          {
+            "optionId": "opsi-para-siswa",
+            "text": "Para siswa masuk ke kelas."
+          },
+          {
+            "optionId": "opsi-para-masuk",
+            "text": "Para siswa-siswa masuk kelas ke dalam."
+          }
+        ],
+        "correctResponse": "opsi-para-siswa"
+      },
+      {
+        "questionId": "soal-kata-baku",
+        "prompt": "Kata baku yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-apotik",
+            "text": "apotik"
+          },
+          {
+            "optionId": "opsi-aktip",
+            "text": "aktip"
+          },
+          {
+            "optionId": "opsi-jadual",
+            "text": "jadual"
+          },
+          {
+            "optionId": "opsi-apotek",
+            "text": "apotek"
+          }
+        ],
+        "correctResponse": "opsi-apotek"
+      },
+      {
+        "questionId": "soal-perbaikan",
+        "prompt": "Perbaikan kalimat 'Dia sangat rajin sekali belajar.' adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sangat-rajin",
+            "text": "Dia sangat rajin belajar."
+          },
+          {
+            "optionId": "opsi-tetap",
+            "text": "Dia sangat rajin sekali belajar."
+          },
+          {
+            "optionId": "opsi-rajin-sekali",
+            "text": "Dia rajin sekali sekali belajar."
+          },
+          {
+            "optionId": "opsi-belajar-rajin",
+            "text": "Dia belajar sangat rajin sekali."
+          }
+        ],
+        "correctResponse": "opsi-sangat-rajin"
+      },
+      {
+        "questionId": "soal-kalimat-yang-memakai-kata-berleb",
+        "prompt": "Kalimat yang memakai kata berlebihan sampai maknanya berulang disebut kalimat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kalimat-yang-memakai-kata-b-1",
+            "text": "sangat efektif"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-yang-memakai-kata-b-2",
+            "text": "perintah"
+          },
+          {
+            "optionId": "opsi-soal-kalimat-yang-memakai-kata-b-0",
+            "text": "tidak efektif"
+          }
+        ],
+        "correctResponse": "opsi-soal-kalimat-yang-memakai-kata-b-0"
+      },
+      {
+        "questionId": "soal-bentuk-baku-dari-kata-praktek-ya",
+        "prompt": "Bentuk baku dari kata 'praktek' yang benar adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bentuk-baku-dari-kata-prakt-0",
+            "text": "praktik"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-baku-dari-kata-prakt-1",
+            "text": "praktek"
+          },
+          {
+            "optionId": "opsi-soal-bentuk-baku-dari-kata-prakt-2",
+            "text": "praktekan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bentuk-baku-dari-kata-prakt-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

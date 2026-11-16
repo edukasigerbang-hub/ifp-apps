@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-demokrasi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Demokrasi",
+  "instructions": "Amati gambar, lalu diskusikan nilai demokrasi.",
+  "assets": [
+    "assets/demokrasi.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu demokrasi?",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
+        "reveal": "Pemerintahan dari rakyat, oleh rakyat, untuk rakyat.",
+        "hint": "Ada kebebasan berpendapat."
+      },
+      {
+        "prompt": "Apa itu pemilu?",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
+        "reveal": "Pemilihan umum untuk memilih pemimpin.",
+        "hint": "Dilakukan secara jujur."
+      },
+      {
+        "prompt": "Bagaimana menghargai hasil?",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis.",
+        "reveal": "Menerima keputusan bersama.",
+        "hint": "Tidak memaksakan kehendak."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Demokrasi dan Pemilu?",
+        "reveal": "Memahami demokrasi dan tahapan pemilu.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Demokrasi dan Pemilu?",
+        "reveal": "Pendaftaran pemilih → Kampanye → Pemungutan suara → Penghitungan suara → Pelantikan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/demokrasi.webp",
+        "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  }
+}

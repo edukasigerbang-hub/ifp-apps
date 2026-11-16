@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pjok-b07-atletik",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Atletik Dasar — PJOK Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/atletik-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 205690,
+      "sha256": "c5908509a6fd2927c4db238a1081c148cf654629c9c2da4ae28591264bc18f6c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

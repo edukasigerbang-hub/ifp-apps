@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-iman-hari-akhir",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Iman",
+  "instructions": "Amati gambar, lalu diskusikan arti dan perilaku iman.",
+  "assets": [
+    "assets/iman-hari-akhir.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu hari akhir?",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman.",
+        "reveal": "Hari berakhirnya kehidupan dunia.",
+        "hint": "Semua makhluk akan dibangkitkan."
+      },
+      {
+        "prompt": "Apa tanda hari akhir?",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman.",
+        "reveal": "Terompet sangkakala ditiup.",
+        "hint": "Tidak ada yang mengetahui waktunya."
+      },
+      {
+        "prompt": "Bagaimana perilaku beriman?",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman.",
+        "reveal": "Rajin beribadah dan berbuat baik.",
+        "hint": "Menjauhi perbuatan buruk."
+      },
+      {
+        "prompt": "Perilaku beriman kepada hari akhir adalah ...",
+        "reveal": "Rajin berbuat baik",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman."
+      },
+      {
+        "prompt": "Tanda hari akhir adalah ...",
+        "reveal": "Terompet sangkakala ditiup",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/iman-hari-akhir.webp",
+        "altText": "Anak berdoa sebagai wujud iman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman."
+  }
+}

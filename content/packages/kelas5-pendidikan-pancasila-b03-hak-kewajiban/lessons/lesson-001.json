@@ -1,0 +1,28 @@
+{
+  "lessonId": "hak-kewajiban-warga",
+  "packageId": "kelas5-pendidikan-pancasila-b03-hak-kewajiban",
+  "title": "Hak dan Kewajiban Warga Negara",
+  "summary": "Membedakan hak dan kewajiban serta melaksanakannya dengan seimbang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan hak dan kewajiban.",
+    "Menyebutkan contoh hak dan kewajiban.",
+    "Melaksanakan keduanya dengan seimbang."
+  ],
+  "activityIds": [
+    "eksplorasi-hak-kewajiban-warga",
+    "kuis-hak-kewajiban-warga",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-hak-kewajiban-warga"
+  ],
+  "assetRefs": [
+    "assets/hak-kewajiban-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

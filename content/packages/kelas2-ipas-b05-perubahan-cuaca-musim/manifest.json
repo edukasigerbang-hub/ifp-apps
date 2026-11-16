@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-ipas-b05-perubahan-cuaca-musim",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Perubahan Cuaca dan Musim — IPAS Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/perubahan-cuaca-musim.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 218658,
+      "sha256": "f8125a23fa13316bf0f3974c1d26a9b3f6c27c0cee5c005c747dc50014c36a2c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

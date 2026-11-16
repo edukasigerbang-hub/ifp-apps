@@ -1,0 +1,136 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Daun kering\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Bingkai"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Mozaik"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kolase"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Ranting\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Bingkai"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Mozaik"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-biji-yang-ditempelkan-rapat-dan",
+        "prompt": "Biji yang ditempelkan rapat dan rapi menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-biji-yang-ditempelkan-rapat-1",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-biji-yang-ditempelkan-rapat-0",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-biji-yang-ditempelkan-rapat-2",
+            "text": "bingkai"
+          }
+        ],
+        "correctResponse": "opsi-soal-biji-yang-ditempelkan-rapat-0"
+      },
+      {
+        "questionId": "soal-bambu-biasa-dibuat-menjadi-karya",
+        "prompt": "Bambu biasa dibuat menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bambu-biasa-dibuat-menjadi-1",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-bambu-biasa-dibuat-menjadi-2",
+            "text": "bingkai"
+          },
+          {
+            "optionId": "opsi-soal-bambu-biasa-dibuat-menjadi-0",
+            "text": "anyaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-bambu-biasa-dibuat-menjadi-0"
+      },
+      {
+        "questionId": "soal-bahan-alam-untuk-kerajinan-harus",
+        "prompt": "Bahan alam untuk kerajinan harus dipilih yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-1",
+            "text": "berdebu"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-0",
+            "text": "bersih"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-2",
+            "text": "tajam"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-untuk-kerajinan-3",
+            "text": "berbau"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-alam-untuk-kerajinan-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerajinan dari daun, ranting, dan biji."
+  }
+}

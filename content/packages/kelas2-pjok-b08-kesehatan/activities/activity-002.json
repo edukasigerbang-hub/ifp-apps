@@ -1,0 +1,67 @@
+{
+  "activityId": "matching-kesehatan-kelas2",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kebiasaan Sehat",
+  "instructions": "Pasangkan setiap kebiasaan dengan manfaatnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-cuci",
+        "left": "Cuci tangan",
+        "right": "Mencegah kuman"
+      },
+      {
+        "pairId": "pasangan-mandi",
+        "left": "Mandi",
+        "right": "Membersihkan tubuh"
+      },
+      {
+        "pairId": "pasangan-sikat",
+        "left": "Sikat gigi",
+        "right": "Menjaga gigi"
+      },
+      {
+        "pairId": "pasangan-istirahat",
+        "left": "Istirahat",
+        "right": "Memulihkan tenaga"
+      },
+      {
+        "pairId": "pasangan-gizi",
+        "left": "Makan bergizi",
+        "right": "Menjaga kesehatan"
+      },
+      {
+        "pairId": "pasangan-air",
+        "left": "Air putih",
+        "right": "Menghindari dehidrasi"
+      },
+      {
+        "pairId": "pasangan-kelas2-7",
+        "left": "Cuci tangan dengan sabun",
+        "right": "Menghilangkan kuman"
+      },
+      {
+        "pairId": "pasangan-kelas2-8",
+        "left": "Menutup mulut saat bersin",
+        "right": "Mencegah penyebaran kuman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+  }
+}

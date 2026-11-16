@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-peluang",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Roda dan Dadu",
+  "instructions": "Amati gambar, lalu diskusikan kemungkinan hasilnya.",
+  "assets": [
+    "assets/aktivitas-peluang-1.png",
+    "assets/aktivitas-peluang-2.png",
+    "assets/aktivitas-peluang-3.png",
+    "assets/aktivitas-peluang-4.png",
+    "assets/aktivitas-peluang-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa hasil yang mungkin pada dadu?",
+        "assetPath": "assets/aktivitas-peluang-1.png",
+        "altText": "Enam dadu berjajar dua baris dengan mata satu sampai enam.",
+        "reveal": "6 hasil.",
+        "hint": "Angka 1 sampai 6."
+      },
+      {
+        "prompt": "Apa peluang muncul angka 3?",
+        "assetPath": "assets/aktivitas-peluang-2.png",
+        "altText": "Lingkaran terbagi enam dengan satu bagian diwarnai teal, dadu bermata tiga di sebelah kanan, dan panah oranye menunjuk ke lingkaran.",
+        "reveal": "1/6.",
+        "hint": "Satu hasil dari enam."
+      },
+      {
+        "prompt": "Berapa hasil yang mungkin pada mata uang?",
+        "assetPath": "assets/aktivitas-peluang-3.png",
+        "altText": "Dua koin besar bersebelahan, kiri bergambar bintang dan kanan bergambar lingkaran, dipisahkan garis putus-putus.",
+        "reveal": "2 hasil.",
+        "hint": "Angka dan gambar."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Peluang Sederhana?",
+        "reveal": "Mengenal ruang sampel dan menghitung peluang sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-peluang-4.png",
+        "altText": "Tiga kartu rangkuman: dadu bermata tiga, dua sisi koin, dan lingkaran berisi enam titik."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-peluang-5.png",
+        "altText": "Dadu dengan tiga mata dadu, dua sisi koin, dan enam titik hasil yang mungkin."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi peluang: enam sisi dadu, satu dari enam bagian lingkaran dengan dadu bermata tiga, dua sisi koin, tiga kartu rangkuman, dan dadu, koin, serta enam titik hasil."
+  }
+}

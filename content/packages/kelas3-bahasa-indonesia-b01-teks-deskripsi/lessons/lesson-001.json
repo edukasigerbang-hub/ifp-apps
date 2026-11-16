@@ -1,0 +1,28 @@
+{
+  "lessonId": "teks-deskripsi-kelas3",
+  "packageId": "kelas3-bahasa-indonesia-b01-teks-deskripsi",
+  "title": "Mengenal Teks Deskripsi",
+  "summary": "Mengenali teks deskripsi dan menuliskan ciri objek dengan kata indra.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri teks deskripsi.",
+    "Menyebutkan ciri objek menggunakan kata indra.",
+    "Menulis deskripsi sederhana dua sampai tiga kalimat."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-deskripsi-k3",
+    "matching-teks-deskripsi-k3",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/taman-sekolah.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman sekolah dengan pohon rindang, bunga berwarna, bangku, dan bendera."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

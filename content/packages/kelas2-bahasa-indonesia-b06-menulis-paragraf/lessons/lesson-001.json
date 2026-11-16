@@ -1,0 +1,29 @@
+{
+  "lessonId": "menulis-paragraf-kelas2",
+  "packageId": "kelas2-bahasa-indonesia-b06-menulis-paragraf",
+  "title": "Menulis Paragraf Sederhana",
+  "summary": "Menulis paragraf dua sampai tiga kalimat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan ide pokok.",
+    "Menulis kalimat.",
+    "Menyusun paragraf."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-paragraf-kelas2",
+    "ordering-menulis-paragraf-kelas2",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/menulis-paragraf-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf sederhana di buku."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

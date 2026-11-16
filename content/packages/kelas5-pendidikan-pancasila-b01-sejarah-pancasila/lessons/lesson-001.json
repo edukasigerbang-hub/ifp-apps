@@ -1,0 +1,29 @@
+{
+  "lessonId": "sejarah-pancasila",
+  "packageId": "kelas5-pendidikan-pancasila-b01-sejarah-pancasila",
+  "title": "Sejarah Perumusan Pancasila",
+  "summary": "Mengenal proses perumusan dan pengesahan Pancasila.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan proses perumusan Pancasila.",
+    "Menyebutkan tokoh dan perannya.",
+    "Menghargai hasil musyawarah para pendiri bangsa."
+  ],
+  "activityIds": [
+    "eksplorasi-sejarah-pancasila",
+    "ordering-sejarah-pancasila",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/sejarah-pancasila.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

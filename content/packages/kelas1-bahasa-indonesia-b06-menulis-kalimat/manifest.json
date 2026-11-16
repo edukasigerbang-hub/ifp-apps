@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-bahasa-indonesia-b06-menulis-kalimat",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menulis Kalimat Sederhana — Bahasa Indonesia Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menulis-kalimat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169806,
+      "sha256": "44751385d10e91562e8d5ef981671dc58bc8d38069a59714eda0415d62bc9b7c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

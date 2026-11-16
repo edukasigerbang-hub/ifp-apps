@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-menulis-kalimat-kelas2",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menulis Kalimat",
+  "instructions": "Susun langkah menulis kalimat.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-ide",
+        "text": "Menentukan ide"
+      },
+      {
+        "itemId": "langkah-kata",
+        "text": "Memilih kata"
+      },
+      {
+        "itemId": "langkah-susun",
+        "text": "Menyusun kalimat"
+      },
+      {
+        "itemId": "langkah-tanda",
+        "text": "Memberi tanda baca"
+      },
+      {
+        "itemId": "langkah-periksa",
+        "text": "Memeriksa tulisan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-ide",
+      "langkah-kata",
+      "langkah-susun",
+      "langkah-tanda",
+      "langkah-periksa"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis kalimat di buku."
+  }
+}

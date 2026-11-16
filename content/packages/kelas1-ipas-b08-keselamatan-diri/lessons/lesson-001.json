@@ -1,0 +1,28 @@
+{
+  "lessonId": "keselamatan-diri",
+  "packageId": "kelas1-ipas-b08-keselamatan-diri",
+  "title": "Keselamatan Diri",
+  "summary": "Mengenal bahaya di sekitar dan cara menjaga keselamatan diri.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bahaya di rumah dan di jalan.",
+    "Menjelaskan cara menjaga keselamatan diri.",
+    "Meminta bantuan orang dewasa saat dalam bahaya."
+  ],
+  "activityIds": [
+    "eksplorasi-keselamatan-diri",
+    "matching-keselamatan-diri",
+    "kuis-keselamatan-diri"
+  ],
+  "assessmentRefs": [
+    "kuis-keselamatan-diri"
+  ],
+  "assetRefs": [
+    "assets/keselamatan-diri.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu dan Bima menyeberang di zebra cross sambil bergandengan tangan, dipandu petugas sekolah; sepeda Bima dan helm ada di dekatnya."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

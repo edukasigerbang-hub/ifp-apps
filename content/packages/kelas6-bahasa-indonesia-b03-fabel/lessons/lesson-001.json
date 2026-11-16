@@ -1,0 +1,29 @@
+{
+  "lessonId": "fabel",
+  "packageId": "kelas6-bahasa-indonesia-b03-fabel",
+  "title": "Teks Narasi dan Fabel",
+  "summary": "Mengenal fabel dan menyusun cerita narasi.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri fabel.",
+    "Menyusun alur cerita.",
+    "Menemukan pesan cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-fabel",
+    "ordering-fabel",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/fabel.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca fabel tentang hewan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

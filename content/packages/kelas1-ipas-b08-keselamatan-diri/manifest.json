@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-ipas-b08-keselamatan-diri",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Keselamatan Diri — IPAS Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/keselamatan-diri.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 220784,
+      "sha256": "ceec4cfa92a230f2388d1a65aebf040b629e6c18632285f02a05f6c12f60ee0f"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

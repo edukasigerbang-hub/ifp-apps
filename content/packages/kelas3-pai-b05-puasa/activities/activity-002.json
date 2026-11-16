@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-puasa",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Puasa",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-waktu",
+        "prompt": "Puasa dimulai saat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-fajar",
+            "text": "Terbit fajar"
+          },
+          {
+            "optionId": "opsi-malam",
+            "text": "Tengah malam"
+          },
+          {
+            "optionId": "opsi-magrib",
+            "text": "Magrib"
+          },
+          {
+            "optionId": "opsi-pagi",
+            "text": "Setelah sarapan"
+          }
+        ],
+        "correctResponse": "opsi-fajar"
+      },
+      {
+        "questionId": "soal-sahur",
+        "prompt": "Makan sebelum fajar disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-buka",
+            "text": "Berbuka"
+          },
+          {
+            "optionId": "opsi-sahur",
+            "text": "Sahur"
+          },
+          {
+            "optionId": "opsi-iftar",
+            "text": "Iftar"
+          },
+          {
+            "optionId": "opsi-tarawih",
+            "text": "Tarawih"
+          }
+        ],
+        "correctResponse": "opsi-sahur"
+      },
+      {
+        "questionId": "soal-batal",
+        "prompt": "Hal yang membatalkan puasa adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-baca",
+            "text": "Membaca Al-Qur'an"
+          },
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan dengan sengaja"
+          },
+          {
+            "optionId": "opsi-bantu",
+            "text": "Membantu orang tua"
+          }
+        ],
+        "correctResponse": "opsi-makan"
+      },
+      {
+        "questionId": "soal-hikmah",
+        "prompt": "Hikmah puasa adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lemah",
+            "text": "Membuat lemah"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Menambah marah"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Menjadi malas"
+          },
+          {
+            "optionId": "opsi-sabar",
+            "text": "Melatih sabar"
+          }
+        ],
+        "correctResponse": "opsi-sabar"
+      },
+      {
+        "questionId": "soal-saat-puasa-kita-menahan-makan-da",
+        "prompt": "Saat puasa kita menahan makan dan minum hingga waktu ... tiba.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-puasa-kita-menahan-mak-1",
+            "text": "tengah malam"
+          },
+          {
+            "optionId": "opsi-soal-saat-puasa-kita-menahan-mak-0",
+            "text": "magrib"
+          },
+          {
+            "optionId": "opsi-soal-saat-puasa-kita-menahan-mak-2",
+            "text": "siang hari"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-puasa-kita-menahan-mak-0"
+      },
+      {
+        "questionId": "soal-puasa-melatih-kita-bersabar-dan",
+        "prompt": "Puasa melatih kita bersabar dan bersikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-puasa-melatih-kita-bersabar-1",
+            "text": "malas"
+          },
+          {
+            "optionId": "opsi-soal-puasa-melatih-kita-bersabar-2",
+            "text": "mudah marah"
+          },
+          {
+            "optionId": "opsi-soal-puasa-melatih-kita-bersabar-0",
+            "text": "disiplin"
+          }
+        ],
+        "correctResponse": "opsi-soal-puasa-melatih-kita-bersabar-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
+  }
+}

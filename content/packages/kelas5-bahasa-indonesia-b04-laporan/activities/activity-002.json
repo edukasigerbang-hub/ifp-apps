@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-laporan",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menulis Laporan",
+  "instructions": "Susun langkah menulis laporan.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tujuan",
+        "text": "Menentukan tujuan"
+      },
+      {
+        "itemId": "langkah-kegiatan",
+        "text": "Mencatat kegiatan"
+      },
+      {
+        "itemId": "langkah-hasil",
+        "text": "Menyusun hasil"
+      },
+      {
+        "itemId": "langkah-kesimpulan",
+        "text": "Menulis kesimpulan"
+      },
+      {
+        "itemId": "langkah-periksa",
+        "text": "Memeriksa bahasa"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tujuan",
+      "langkah-kegiatan",
+      "langkah-hasil",
+      "langkah-kesimpulan",
+      "langkah-periksa"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan di buku."
+  }
+}

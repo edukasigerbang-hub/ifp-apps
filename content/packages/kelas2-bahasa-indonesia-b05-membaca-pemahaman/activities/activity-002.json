@@ -1,0 +1,148 @@
+{
+  "activityId": "kuis-membaca-pemahaman-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Membaca Pemahaman",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-teliti",
+        "prompt": "Saat membaca, kita harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cepat",
+            "text": "Sangat cepat"
+          },
+          {
+            "optionId": "opsi-teliti",
+            "text": "Teliti"
+          },
+          {
+            "optionId": "opsi-lupa",
+            "text": "Melupakan isi"
+          },
+          {
+            "optionId": "opsi-diam",
+            "text": "Diam saja"
+          }
+        ],
+        "correctResponse": "opsi-teliti"
+      },
+      {
+        "questionId": "soal-jawab",
+        "prompt": "Jawaban pertanyaan dicari di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-gambar",
+            "text": "Gambar saja"
+          },
+          {
+            "optionId": "opsi-luar",
+            "text": "Luar kelas"
+          },
+          {
+            "optionId": "opsi-bacaan",
+            "text": "Bacaan"
+          },
+          {
+            "optionId": "opsi-teman",
+            "text": "Jawaban teman"
+          }
+        ],
+        "correctResponse": "opsi-bacaan"
+      },
+      {
+        "questionId": "soal-simpulan",
+        "prompt": "Kesimpulan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-judul",
+            "text": "Judul saja"
+          },
+          {
+            "optionId": "opsi-gambar",
+            "text": "Gambar"
+          },
+          {
+            "optionId": "opsi-awal",
+            "text": "Kalimat pertama saja"
+          },
+          {
+            "optionId": "opsi-inti",
+            "text": "Inti bacaan"
+          }
+        ],
+        "correctResponse": "opsi-inti"
+      },
+      {
+        "questionId": "soal-ulang",
+        "prompt": "Bila belum paham, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ulang",
+            "text": "Membaca ulang"
+          },
+          {
+            "optionId": "opsi-berhenti",
+            "text": "Berhenti"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-main",
+            "text": "Bermain"
+          }
+        ],
+        "correctResponse": "opsi-ulang"
+      },
+      {
+        "questionId": "soal-sebelum-menjawab-pertanyaan-baca",
+        "prompt": "Sebelum menjawab pertanyaan bacaan, kita membaca bacaan itu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-menjawab-pertanyaan-1",
+            "text": "satu baris saja"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-menjawab-pertanyaan-0",
+            "text": "sampai selesai"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-menjawab-pertanyaan-2",
+            "text": "tanpa melihat"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-menjawab-pertanyaan-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca dan memahami isi bacaan."
+  }
+}

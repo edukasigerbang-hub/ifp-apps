@@ -1,0 +1,28 @@
+{
+  "lessonId": "warna-komposisi",
+  "packageId": "kelas5-seni-rupa-b03-warna-komposisi",
+  "title": "Warna dan Komposisi",
+  "summary": "Mengenal warna hangat, dingin, dan komposisi seimbang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membedakan warna hangat dan dingin.",
+    "Menjelaskan komposisi.",
+    "Menyusun karya dengan komposisi seimbang."
+  ],
+  "activityIds": [
+    "eksplorasi-warna-komposisi",
+    "matching-warna-komposisi",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/warna-komposisi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna hangat, dingin, dan susunan komposisi seimbang."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

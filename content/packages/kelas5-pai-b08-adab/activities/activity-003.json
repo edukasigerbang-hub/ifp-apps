@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Adab kepada orang tua",
+        "right": "Menghormati dan membantu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Adab kepada guru",
+        "right": "Sopan dan mendengarkan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sifat yang diteladani",
+        "right": "Jujur, sabar, dan peduli"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Manfaat berkata jujur adalah",
+        "right": "Dipercaya orang lain"
+      },
+      {
+        "pairId": "pasangan-sikap-menahan-diri-ketika-mendap",
+        "left": "Sikap menahan diri ketika mendapat cobaan",
+        "right": "Sabar"
+      },
+      {
+        "pairId": "pasangan-orang-di-sekolah-yang-wajib-kita",
+        "left": "Orang di sekolah yang wajib kita hormati dan kita dengarkan",
+        "right": "Guru"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "bilangan-1000000",
+  "packageId": "kelas5-matematika-b01-bilangan-1000000",
+  "title": "Bilangan sampai 1.000.000",
+  "summary": "Membaca, menulis, dan membandingkan bilangan cacah sampai 1.000.000.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca dan menulis bilangan sampai 1.000.000.",
+    "Menentukan nilai tempat sampai ratus ribuan.",
+    "Membandingkan dan mengurutkan bilangan."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-1000000",
+    "kuis-bilangan-1000000",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-bilangan-1000000"
+  ],
+  "assetRefs": [
+    "assets/nilai-tempat-1000000.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pecahan-sederhana",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Pecahan dan Makna",
+  "instructions": "Pasangkan setiap pecahan atau istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-setengah",
+        "left": "1/2",
+        "right": "Satu dari dua bagian"
+      },
+      {
+        "pairId": "pasangan-sepertiga",
+        "left": "1/3",
+        "right": "Satu dari tiga bagian"
+      },
+      {
+        "pairId": "pasangan-seperempat",
+        "left": "1/4",
+        "right": "Satu dari empat bagian"
+      },
+      {
+        "pairId": "pasangan-pembilang",
+        "left": "Pembilang",
+        "right": "Angka di atas"
+      },
+      {
+        "pairId": "pasangan-penyebut",
+        "left": "Penyebut",
+        "right": "Angka di bawah"
+      },
+      {
+        "pairId": "pasangan-banding",
+        "left": "1/2 > 1/4",
+        "right": "Setengah lebih besar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian sama besar."
+  }
+}

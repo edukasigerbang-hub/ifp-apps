@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-seni-rupa-b05-seni-cetak",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Seni Cetak Sederhana — Seni Rupa Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/seni-cetak.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 171216,
+      "sha256": "4f7f8f89774e5b6fbb74901064b1bd06e07052cffea1d77abc8db18c65a0c09f"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

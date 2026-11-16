@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b02-iman-rasul",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Iman kepada Rasul — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/iman-rasul.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 187460,
+      "sha256": "55c27c4df2646816b29327e25d51f52c7fdf5ead5cfbd4c2c5f0cba9457aac27"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

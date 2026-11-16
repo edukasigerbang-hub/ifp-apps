@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { PageHeader } from "../components/ui/PageHeader";
+import { loadCatalog } from "../content/loadCatalog";
+import { loadContentPackages } from "../content/loadPackages";
 import {
   canPersistLocally,
   ensureLocalProfile,
@@ -32,7 +34,42 @@ export function ResultsScreen() {
   const [exportMessage, setExportMessage] = useState<string | null>(null);
   const [exportError, setExportError] = useState<string | null>(null);
   const [profileName, setProfileName] = useState<string | null>(null);
+  const [lessonTitles, setLessonTitles] = useState<Record<string, string>>({});
+  const [activityTitles, setActivityTitles] = useState<Record<string, string>>({});
   const desktop = canPersistLocally();
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const lessons: Record<string, string> = {};
+      const activities: Record<string, string> = {};
+      try {
+        const catalog = await loadCatalog();
+        for (const entry of catalog.entries) {
+          lessons[entry.lessonId] = entry.lessonTitle;
+        }
+      } catch {
+        // Judul lesson opsional; id mentah tetap ditampilkan bila katalog gagal dimuat.
+      }
+      try {
+        const { packages } = await loadContentPackages({ includeAssets: false });
+        for (const pkg of packages) {
+          for (const activity of pkg.data.activities) {
+            activities[activity.activityId] = activity.title;
+          }
+        }
+      } catch {
+        // Judul aktivitas opsional; paket impor tidak termasuk dalam pemetaan ini.
+      }
+      if (!cancelled) {
+        setLessonTitles(lessons);
+        setActivityTitles(activities);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     if (!canPersistLocally()) {
@@ -84,7 +121,7 @@ export function ResultsScreen() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       <PageHeader
         title="Hasil Belajar"
         description="Ringkasan hasil yang tersimpan di perangkat ini. Belum ada sinkronisasi cloud."
@@ -118,7 +155,7 @@ export function ResultsScreen() {
         </p>
       )}
       {exportError && (
-        <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+        <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
           {exportError}
         </p>
       )}
@@ -133,7 +170,7 @@ export function ResultsScreen() {
       )}
 
       {state.status === "error" && (
-        <div className="mt-6 rounded-card border border-danger/30 bg-danger/5 p-6 text-sm text-danger">
+        <div className="mt-6 rounded-card border border-danger/30 bg-danger/5 p-6 text-sm text-danger-strong">
           {state.message}
         </div>
       )}
@@ -163,12 +200,15 @@ export function ResultsScreen() {
                     className="flex flex-wrap items-center justify-between gap-3 py-3"
                   >
                     <div className="min-w-0">
-                      <p className="truncate text-sm font-medium">{attempt.activityId}</p>
+                      <p className="truncate text-sm font-medium">
+                        {activityTitles[attempt.activityId] ?? attempt.activityId}
+                      </p>
                       <p className="text-xs text-muted">
-                        {attempt.lessonId} · {formatDate(attempt.completedAt)}
+                        {lessonTitles[attempt.lessonId] ?? attempt.lessonId} ·{" "}
+                        {formatDate(attempt.completedAt)}
                       </p>
                     </div>
-                    <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold text-[#0b6f69]">
+                    <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold text-teal-strong">
                       Skor {Math.round(attempt.score)}
                     </span>
                   </li>

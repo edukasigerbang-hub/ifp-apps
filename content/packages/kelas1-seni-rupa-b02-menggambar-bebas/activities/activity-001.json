@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menggambar-bebas",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gambar",
+  "instructions": "Amati gambar, lalu diskusikan alat dan langkahnya.",
+  "assets": [
+    "assets/menggambar-bebas.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Alat apa yang dipakai?",
+        "assetPath": "assets/menggambar-bebas.webp",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
+        "reveal": "Pensil, krayon, dan kertas.",
+        "hint": "Pilih yang aman."
+      },
+      {
+        "prompt": "Apa yang digambar?",
+        "assetPath": "assets/menggambar-bebas.webp",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
+        "reveal": "Bebas sesuai ide.",
+        "hint": "Bisa rumah atau hewan."
+      },
+      {
+        "prompt": "Apa langkah terakhir?",
+        "assetPath": "assets/menggambar-bebas.webp",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana.",
+        "reveal": "Mewarnai.",
+        "hint": "Rapikan hasil."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menggambar Bebas?",
+        "reveal": "Menyiapkan alat → Memilih tema → Membuat sketsa → Mewarnai → Merapikan alat",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/menggambar-bebas.webp",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menggambar Bebas?",
+        "reveal": "Menggambar bebas dengan alat sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menggambar-bebas.webp",
+        "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bentuk dasar yang disusun menjadi gambar sederhana."
+  }
+}

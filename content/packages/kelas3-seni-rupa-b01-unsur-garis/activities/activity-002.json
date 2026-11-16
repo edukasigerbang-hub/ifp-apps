@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-unsur-garis",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Garis dan Warna",
+  "instructions": "Pasangkan setiap unsur dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lurus",
+        "left": "Garis lurus",
+        "right": "Tegak dan datar"
+      },
+      {
+        "pairId": "pasangan-lengkung",
+        "left": "Garis lengkung",
+        "right": "Melengkung"
+      },
+      {
+        "pairId": "pasangan-zigzag",
+        "left": "Garis zigzag",
+        "right": "Berkelok tajam"
+      },
+      {
+        "pairId": "pasangan-primer",
+        "left": "Merah, kuning, biru",
+        "right": "Warna primer"
+      },
+      {
+        "pairId": "pasangan-oranye",
+        "left": "Merah + kuning",
+        "right": "Oranye"
+      },
+      {
+        "pairId": "pasangan-hijau",
+        "left": "Biru + kuning",
+        "right": "Hijau"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh garis lurus, lengkung, dan zigzag serta warna merah, kuning, dan biru."
+  }
+}

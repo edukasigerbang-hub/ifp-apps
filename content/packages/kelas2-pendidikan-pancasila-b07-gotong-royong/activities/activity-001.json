@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-gotong-royong-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kerja Bersama",
+  "instructions": "Amati gambar, lalu diskusikan manfaat gotong royong.",
+  "assets": [
+    "assets/gotong-royong-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gotong royong?",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan.",
+        "reveal": "Bekerja bersama.",
+        "hint": "Untuk kepentingan bersama."
+      },
+      {
+        "prompt": "Contoh di sekolah?",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan.",
+        "reveal": "Kerja bakti kelas.",
+        "hint": "Dibagi tugas."
+      },
+      {
+        "prompt": "Apa manfaatnya?",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan.",
+        "reveal": "Pekerjaan cepat selesai.",
+        "hint": "Persahabatan erat."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Gotong Royong?",
+        "reveal": "Menentukan kegiatan → Membagi tugas → Bekerja bersama → Menyelesaikan pekerjaan → Merapikan alat",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gotong Royong?",
+        "reveal": "Menerapkan gotong royong di sekolah dan rumah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gotong-royong-kelas2.webp",
+        "altText": "Warga bekerja bersama membersihkan lingkungan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama membersihkan lingkungan."
+  }
+}

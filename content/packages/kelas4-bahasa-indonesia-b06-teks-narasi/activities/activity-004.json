@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Bagian cerita yang memperkenalkan tokoh dan tempat disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "komplikasi"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "orientasi"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "resolusi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Saat kucing kehujanan di bawah pohon, cerita masuk bagian ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "orientasi cerita"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "penutup cerita"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "komplikasi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Anak menolong kucing dengan payung. Bagian cerita itu disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "resolusi"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "orientasi"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "komplikasi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Keterangan tempat dan waktu terjadinya cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "alur"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "latar"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "amanat"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Jalan cerita dari peristiwa pertama sampai terakhir disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "latar"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "tokoh"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "alur"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Bagian akhir cerita yang memuat pesan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "penutup"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "orientasi"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "komplikasi"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel cerita: anak melihat kucing, kucing kehujanan di bawah pohon, lalu anak menolong dengan payung."
+  }
+}

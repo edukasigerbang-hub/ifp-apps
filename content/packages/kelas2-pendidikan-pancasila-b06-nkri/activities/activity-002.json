@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-nkri-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis NKRI",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-nkri",
+        "prompt": "NKRI singkatan dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-a",
+            "text": "Negara Kuat Republik Indonesia"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "Negara Kesatuan Rakyat Indonesia"
+          },
+          {
+            "optionId": "opsi-benar",
+            "text": "Negara Kesatuan Republik Indonesia"
+          },
+          {
+            "optionId": "opsi-c",
+            "text": "Negara Kepulauan Republik Indonesia"
+          }
+        ],
+        "correctResponse": "opsi-benar"
+      },
+      {
+        "questionId": "soal-bendera",
+        "prompt": "Bendera Indonesia berwarna ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-merah-biru",
+            "text": "Merah Biru"
+          },
+          {
+            "optionId": "opsi-putih-hijau",
+            "text": "Putih Hijau"
+          },
+          {
+            "optionId": "opsi-kuning-merah",
+            "text": "Kuning Merah"
+          },
+          {
+            "optionId": "opsi-merah-putih",
+            "text": "Merah Putih"
+          }
+        ],
+        "correctResponse": "opsi-merah-putih"
+      },
+      {
+        "questionId": "soal-lambang",
+        "prompt": "Lambang negara Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-garuda",
+            "text": "Garuda Pancasila"
+          },
+          {
+            "optionId": "opsi-banteng",
+            "text": "Kepala banteng"
+          },
+          {
+            "optionId": "opsi-padi",
+            "text": "Padi dan kapas"
+          },
+          {
+            "optionId": "opsi-bintang",
+            "text": "Bintang"
+          }
+        ],
+        "correctResponse": "opsi-garuda"
+      },
+      {
+        "questionId": "soal-bahasa",
+        "prompt": "Bahasa persatuan Indonesia adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-daerah",
+            "text": "Bahasa daerah"
+          },
+          {
+            "optionId": "opsi-indonesia",
+            "text": "Bahasa Indonesia"
+          },
+          {
+            "optionId": "opsi-inggris",
+            "text": "Bahasa Inggris"
+          },
+          {
+            "optionId": "opsi-asing",
+            "text": "Bahasa asing"
+          }
+        ],
+        "correctResponse": "opsi-indonesia"
+      },
+      {
+        "questionId": "soal-negara-tempat-kita-tinggal-berna",
+        "prompt": "Negara tempat kita tinggal bernama Republik ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-1",
+            "text": "Malaysia"
+          },
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-2",
+            "text": "Singapura"
+          },
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-0",
+            "text": "Indonesia"
+          },
+          {
+            "optionId": "opsi-soal-negara-tempat-kita-tinggal-3",
+            "text": "Thailand"
+          }
+        ],
+        "correctResponse": "opsi-soal-negara-tempat-kita-tinggal-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol negara."
+  }
+}

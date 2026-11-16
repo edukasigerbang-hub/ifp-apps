@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gerak non-lokomotor",
+        "right": "Gerak yang dilakukan di tempat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Gerak yang melatih keseimbangan",
+        "right": "Berdiri satu kaki"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan pemanasan penting",
+        "right": "Mencegah cedera otot"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Contoh gerak non-lokomotor adalah",
+        "right": "Menekuk lutut"
+      },
+      {
+        "pairId": "pasangan-gerak-badan-memutar-poros-tanpa",
+        "left": "Gerak badan memutar poros tanpa berpindah tempat",
+        "right": "Memutar badan"
+      },
+      {
+        "pairId": "pasangan-sikap-tubuh-ketika-berlatih-berd",
+        "left": "Sikap tubuh ketika berlatih berdiri satu kaki",
+        "right": "Keseimbangan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki."
+  }
+}

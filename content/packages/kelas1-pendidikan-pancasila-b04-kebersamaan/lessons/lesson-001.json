@@ -1,0 +1,29 @@
+{
+  "lessonId": "kebersamaan",
+  "packageId": "kelas1-pendidikan-pancasila-b04-kebersamaan",
+  "title": "Kebersamaan di Sekolah",
+  "summary": "Menjaga kebersamaan di sekolah.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti kebersamaan.",
+    "Memberi contoh kebersamaan.",
+    "Menjaga kebersamaan."
+  ],
+  "activityIds": [
+    "eksplorasi-kebersamaan",
+    "ordering-kebersamaan",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kebersamaan-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa belajar dan bermain bersama di sekolah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

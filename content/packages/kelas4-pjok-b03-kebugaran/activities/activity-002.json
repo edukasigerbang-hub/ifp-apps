@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-kebugaran",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Latihan dan Manfaat",
+  "instructions": "Pasangkan setiap latihan atau kebiasaan dengan manfaatnya.",
+  "assets": [
+    "assets/kebugaran.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-pushup",
+        "left": "Push-up",
+        "right": "Kekuatan otot"
+      },
+      {
+        "pairId": "pasangan-lari",
+        "left": "Lari jarak jauh",
+        "right": "Daya tahan"
+      },
+      {
+        "pairId": "pasangan-jangkau",
+        "left": "Duduk menjangkau",
+        "right": "Kelenturan"
+      },
+      {
+        "pairId": "pasangan-sprint",
+        "left": "Lari cepat",
+        "right": "Kecepatan"
+      },
+      {
+        "pairId": "pasangan-istirahat",
+        "left": "Istirahat cukup",
+        "right": "Pemulihan tubuh"
+      },
+      {
+        "pairId": "pasangan-pemanasan",
+        "left": "Pemanasan",
+        "right": "Mencegah cedera"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+  }
+}

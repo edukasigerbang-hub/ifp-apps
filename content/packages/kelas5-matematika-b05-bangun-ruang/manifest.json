@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b05-bangun-ruang",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bangun Ruang — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bangun-ruang-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 151492,
+      "sha256": "a880f304f0f590bbda3ad073b247c9bb3428498cea4e8945a49b5c15364b9071"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8586,
+      "sha256": "2716858f33c25a43c546664a9cfb625435455f1813ce70d83eaf7f4dcee6d650"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 14015,
+      "sha256": "881d0723ccf59db7b15c1977aedfe9e46fe0edf3e26b97192faeff5487f133f7"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 16667,
+      "sha256": "75834782848c6f9c5cd00ec208f6b2adcdf0315c929e2cec8a0c3a9f3e71741d"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8873,
+      "sha256": "42356ec697748b7b80ba9d7454efc43a6b3bdd3f86b5cc7510a755affbc5dc53"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9070,
+      "sha256": "12d917ce3eea7fb0400b7812fdff8cd0eec457b3a742ea99e3dd6ac217bf9ffa"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

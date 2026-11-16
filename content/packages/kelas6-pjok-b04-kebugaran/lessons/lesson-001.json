@@ -1,0 +1,28 @@
+{
+  "lessonId": "kebugaran-kelas6",
+  "packageId": "kelas6-pjok-b04-kebugaran",
+  "title": "Kebugaran Jasmani",
+  "summary": "Menjaga kebugaran melalui latihan dan pola hidup sehat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan komponen kebugaran.",
+    "Mempraktikkan latihan.",
+    "Menjaga pola hidup sehat."
+  ],
+  "activityIds": [
+    "eksplorasi-kebugaran-kelas6",
+    "matching-kebugaran-kelas6",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kebugaran-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

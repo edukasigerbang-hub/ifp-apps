@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kosakata-kelas2",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kata",
+  "instructions": "Pasangkan setiap kata dengan sinonim atau antonimnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-senang",
+        "left": "Senang",
+        "right": "Gembira"
+      },
+      {
+        "pairId": "pasangan-besar",
+        "left": "Besar",
+        "right": "Kecil"
+      },
+      {
+        "pairId": "pasangan-cepat",
+        "left": "Cepat",
+        "right": "Lambat"
+      },
+      {
+        "pairId": "pasangan-panas",
+        "left": "Panas",
+        "right": "Dingin"
+      },
+      {
+        "pairId": "pasangan-indah",
+        "left": "Indah",
+        "right": "Cantik"
+      },
+      {
+        "pairId": "pasangan-rajin",
+        "left": "Rajin",
+        "right": "Malas"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku untuk menambah kosakata."
+  }
+}

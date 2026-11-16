@@ -1,0 +1,28 @@
+{
+  "lessonId": "surah-pendek",
+  "packageId": "kelas4-pai-b01-surah-pendek",
+  "title": "Mengenal Surah Pendek dan Adab Membacanya",
+  "summary": "Mengenal beberapa surah pendek, memahami adab sebelum membaca Al-Qur'an, dan berlatih membaca dengan bimbingan guru.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan beberapa surah pendek.",
+    "Menjelaskan adab sebelum membaca Al-Qur'an.",
+    "Membaca surah pendek dengan bimbingan guru."
+  ],
+  "activityIds": [
+    "eksplorasi-surah-pendek",
+    "matching-surah-pendek",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/membaca-quran.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Al-Qur'an tertutup di atas rehal kayu, sajadah teal, jendela, dan lampu."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

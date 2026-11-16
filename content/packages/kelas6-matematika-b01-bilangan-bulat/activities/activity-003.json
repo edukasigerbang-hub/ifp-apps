@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bilangan bulat",
+        "right": "Bilangan positif, negatif, dan nol"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang lebih kecil, -3 atau 2",
+        "right": "-3"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Banyak hasil -5 + 3",
+        "right": "-2"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Garis berangka dari negatif, nol, sampai positif",
+        "right": "Bilangan bulat"
+      },
+      {
+        "pairId": "pasangan-lawan-dari-bilangan-bulat-7",
+        "left": "Lawan dari bilangan bulat 7",
+        "right": "-7"
+      },
+      {
+        "pairId": "pasangan-bilangan-bulat-yang-bukan-positi",
+        "left": "Bilangan bulat yang bukan positif dan bukan negatif",
+        "right": "Nol"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan bilangan negatif, nol, dan positif."
+  }
+}

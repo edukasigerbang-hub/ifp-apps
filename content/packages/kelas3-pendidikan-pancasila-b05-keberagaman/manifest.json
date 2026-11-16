@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pendidikan-pancasila-b05-keberagaman",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Keberagaman di Sekolah — Pendidikan Pancasila Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/keberagaman-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 243896,
+      "sha256": "f6b5a0bd88421ddb035e1d1c5f4bb7c0e32208a2ba0eca137a711ebb99d0b15b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

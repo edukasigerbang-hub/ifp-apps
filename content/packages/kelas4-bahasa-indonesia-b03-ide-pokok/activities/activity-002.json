@@ -1,0 +1,165 @@
+{
+  "activityId": "kuis-ide-pokok",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Ide Pokok",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-ide-pokok",
+        "prompt": "Bacaan: 'Setiap pagi, siswa kelas 4 menyapu kelas. Mereka juga merapikan meja dan menyiram tanaman. Kelas menjadi bersih dan nyaman.' Ide pokok bacaan tersebut adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pagi",
+            "text": "Kegiatan dimulai setiap pagi"
+          },
+          {
+            "optionId": "opsi-tanaman",
+            "text": "Tanaman perlu disiram"
+          },
+          {
+            "optionId": "opsi-meja",
+            "text": "Meja harus dirapikan"
+          },
+          {
+            "optionId": "opsi-kebersihan",
+            "text": "Siswa kelas 4 bekerja sama menjaga kebersihan kelas"
+          }
+        ],
+        "correctResponse": "opsi-kebersihan"
+      },
+      {
+        "questionId": "soal-detail",
+        "prompt": "Manakah yang merupakan detail pendukung dari bacaan tersebut?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-menyapu",
+            "text": "Menyapu kelas"
+          },
+          {
+            "optionId": "opsi-ide",
+            "text": "Bekerja sama menjaga kebersihan"
+          },
+          {
+            "optionId": "opsi-kesimpulan",
+            "text": "Kelas bersih dan nyaman"
+          },
+          {
+            "optionId": "opsi-judul",
+            "text": "Kelas Bersih"
+          }
+        ],
+        "correctResponse": "opsi-menyapu"
+      },
+      {
+        "questionId": "soal-judul",
+        "prompt": "Judul yang paling tepat untuk bacaan tersebut adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-liburan",
+            "text": "Liburan di Sekolah"
+          },
+          {
+            "optionId": "opsi-kelas-bersih",
+            "text": "Kelas Bersih, Belajar Nyaman"
+          },
+          {
+            "optionId": "opsi-olahraga",
+            "text": "Olahraga Pagi"
+          },
+          {
+            "optionId": "opsi-kantin",
+            "text": "Menu Kantin Sekolah"
+          }
+        ],
+        "correctResponse": "opsi-kelas-bersih"
+      },
+      {
+        "questionId": "soal-ringkasan",
+        "prompt": "Ringkasan yang tepat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ringkas-salah",
+            "text": "Siswa kelas 4 bermain di kelas setiap pagi."
+          },
+          {
+            "optionId": "opsi-ringkas-salah-2",
+            "text": "Guru menyiram tanaman di kelas."
+          },
+          {
+            "optionId": "opsi-ringkas-benar",
+            "text": "Siswa kelas 4 bergotong royong menjaga kebersihan kelas."
+          },
+          {
+            "optionId": "opsi-ringkas-salah-3",
+            "text": "Meja kelas dipindahkan setiap hari."
+          }
+        ],
+        "correctResponse": "opsi-ringkas-benar"
+      },
+      {
+        "questionId": "soal-gagasan-utama-yang-menjadi-dasar",
+        "prompt": "Gagasan utama yang menjadi dasar sebuah paragraf disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gagasan-utama-yang-menjadi-1",
+            "text": "judul paragraf"
+          },
+          {
+            "optionId": "opsi-soal-gagasan-utama-yang-menjadi-0",
+            "text": "ide pokok"
+          },
+          {
+            "optionId": "opsi-soal-gagasan-utama-yang-menjadi-2",
+            "text": "amanat cerita"
+          }
+        ],
+        "correctResponse": "opsi-soal-gagasan-utama-yang-menjadi-0"
+      },
+      {
+        "questionId": "soal-tugas-detail-pendukung-dalam-seb",
+        "prompt": "Tugas detail pendukung dalam sebuah paragraf adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tugas-detail-pendukung-dala-1",
+            "text": "memperpanjang judul bacaan"
+          },
+          {
+            "optionId": "opsi-soal-tugas-detail-pendukung-dala-2",
+            "text": "menutup paragraf"
+          },
+          {
+            "optionId": "opsi-soal-tugas-detail-pendukung-dala-0",
+            "text": "menjelaskan ide pokok"
+          }
+        ],
+        "correctResponse": "opsi-soal-tugas-detail-pendukung-dala-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

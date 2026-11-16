@@ -1,0 +1,28 @@
+{
+  "lessonId": "bilangan-1-10",
+  "packageId": "kelas1-matematika-b01-bilangan-1-10",
+  "title": "Bilangan 1–10",
+  "summary": "Membilang, mengenal lambang, dan mengurutkan bilangan 1–10.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membilang benda 1–10.",
+    "Mengenal lambang bilangan 1–10.",
+    "Mengurutkan bilangan 1–10."
+  ],
+  "activityIds": [
+    "eksplorasi-bilangan-1-10",
+    "kuis-bilangan-1-10",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-bilangan-1-10"
+  ],
+  "assetRefs": [
+    "assets/bilangan-1-10.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerangka sepuluh berisi tujuh buah apel."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

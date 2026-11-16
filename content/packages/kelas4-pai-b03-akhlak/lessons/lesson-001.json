@@ -1,0 +1,28 @@
+{
+  "lessonId": "akhlak-terpuji",
+  "packageId": "kelas4-pai-b03-akhlak",
+  "title": "Akhlak Terpuji",
+  "summary": "Membiasakan sikap jujur, amanah, santun, tolong-menolong, sabar, dan pemaaf dalam kehidupan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan contoh akhlak terpuji.",
+    "Menjelaskan manfaat akhlak terpuji.",
+    "Menerapkan akhlak terpuji di rumah dan sekolah."
+  ],
+  "activityIds": [
+    "eksplorasi-akhlak",
+    "matching-akhlak",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/akhlak-terpuji.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: anak mengembalikan buku kepada guru, dan anak menolong teman yang kesulitan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

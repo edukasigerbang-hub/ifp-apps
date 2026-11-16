@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Menghitung volume balok",
+        "right": "Panjang × lebar × tinggi"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Satuan volume",
+        "right": "Sentimeter kubik (cm³)"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Luas permukaan",
+        "right": "Jumlah luas semua sisi bangun"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Balok tersusun dari kubus satuan",
+        "right": "Volume"
+      },
+      {
+        "pairId": "pasangan-cara-menghitung-volume-kubus",
+        "left": "Cara menghitung volume kubus",
+        "right": "Sisi × sisi × sisi"
+      },
+      {
+        "pairId": "pasangan-satuan-untuk-luas-permukaan",
+        "left": "Satuan untuk luas permukaan",
+        "right": "Sentimeter persegi (cm²)"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Balok yang tersusun dari kubus satuan."
+  }
+}

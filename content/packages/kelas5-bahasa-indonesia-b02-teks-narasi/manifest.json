@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-bahasa-indonesia-b02-teks-narasi",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Teks Narasi: Tokoh dan Alur — Bahasa Indonesia Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/teks-narasi-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 174090,
+      "sha256": "e464cec4bd059c8165458245f63b7774bf1d2febb1adc2d0111a7614744d36af"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

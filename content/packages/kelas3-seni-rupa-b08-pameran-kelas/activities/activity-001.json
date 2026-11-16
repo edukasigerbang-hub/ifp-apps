@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-pameran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pameran Kelas",
+  "instructions": "Amati gambar, lalu diskusikan persiapan dan penataan karya.",
+  "assets": [
+    "assets/pameran-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dipamerkan?",
+        "assetPath": "assets/pameran-kelas3.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat.",
+        "reveal": "Karya siswa.",
+        "hint": "Pilih karya terbaik."
+      },
+      {
+        "prompt": "Bagaimana menata karya?",
+        "assetPath": "assets/pameran-kelas3.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat.",
+        "reveal": "Rapi, mudah dilihat, dan diberi nama.",
+        "hint": "Kelompokkan menurut jenis."
+      },
+      {
+        "prompt": "Apa yang dilakukan penjaga pameran?",
+        "assetPath": "assets/pameran-kelas3.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat.",
+        "reveal": "Menjelaskan karya dengan sopan.",
+        "hint": "Sambut pengunjung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
+        "reveal": "Merencanakan dan menata pameran karya kelas sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pameran-kelas3.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pameran-kelas3.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya siswa dipajang dan pengunjung melihat."
+  }
+}

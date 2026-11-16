@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pendidikan-pancasila-b06-nkri",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "NKRI dan Simbol Negara — Pendidikan Pancasila Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/nkri-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168736,
+      "sha256": "76311f623c02158f832511267b6b69321e0a293f04b1b56aa98310f47a32ee51"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

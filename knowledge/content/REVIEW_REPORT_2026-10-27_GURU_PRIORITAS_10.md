@@ -1,0 +1,198 @@
+# Review Pedagogis — 10 Paket Prioritas (2026-10-27)
+
+Sumber daftar: [BACKLOG.md § Review guru tertunda](../tasks/BACKLOG.md) — "Masih perlu penilaian guru".
+Cakupan: **10 paket, 141 item** (58 soal kuis, 58 pasangan mencocokkan, 25 langkah urutan).
+
+**Sifat review: AGENT, bukan guru.** Teks paket dan ilustrasi dibaca penuh, lalu setiap item dinilai terhadap materi paketnya.
+Tidak ada `reviewStatus` yang diubah. Semua paket tetap `draft`. Tanda tangan guru tetap diperlukan sebelum rilis.
+
+## 1. Putusan per paket
+
+| Paket | Kuis | Pasangan | Urutan | Putusan |
+|---|---|---|---|---|
+| `kelas2-matematika-b08-data` | 5 | 5 | — | LAYAK DENGAN CATATAN |
+| `kelas6-bahasa-indonesia-b02-eksposisi` | 6 | 6 | — | LAYAK DENGAN CATATAN |
+| `kelas3-pendidikan-pancasila-b06-nkri` | 6 | 6 | — | LAYAK DENGAN CATATAN |
+| `kelas4-ipas-b01-makhluk-hidup` | 6 | 6 | — | **LAYAK** (setelah perbaikan F-01/F-03) |
+| `kelas2-pai-b05-puasa` | 5 | 5 | — | LAYAK DENGAN CATATAN |
+| `kelas3-pjok-b06-senam-dasar` | 6 | 6 | 5 | LAYAK DENGAN CATATAN |
+| `kelas4-seni-rupa-b08-pameran-kelas` | 6 | 6 | 5 | LAYAK |
+| `kelas5-pjok-b06-senam-lantai` | 6 | 6 | 5 | LAYAK DENGAN CATATAN |
+| `kelas6-pai-b07-sejarah-islam` | 6 | 6 | 5 | LAYAK |
+| `kelas6-pjok-b03-atletik` | 6 | 6 | 5 | LAYAK (setelah perbaikan F-04)
+
+Tidak ditemukan jawaban salah, salah hitung, atau fakta keliru pada 58 soal kuis. Urutan pada 4 dari 5 aktivitas urutan
+sesuai prosedur (guling depan, menyiapkan pameran, latihan senam lantai, peristiwa awal Islam).
+
+**Perbaikan diterapkan 2026-10-27:** F-01, F-02, F-03, dan F-04 (lihat §2). Analisis ulang: 336/336 paket lolos validator,
+gerbang volume aktivitas lolos, `npm test` 110/110 (5 test baru untuk penilai jawaban teks), `npm run build` PASS.
+
+## 2. Temuan terverifikasi
+
+### F-01 — Ilustrasi dan altText tidak cocok dengan materi (Sedang) — `kelas4-ipas-b01-makhluk-hidup` — **DIPERBAIKI 2026-10-27**
+
+`assets/kolam-ekosistem.webp` menampilkan dua siswa (Bima mencatat, Ayu memegang kaca pembesar) di tepi kolam:
+**ikan, siput di atas batu, kupu-kupu, teratai, rumput, dan batu**. **Tidak ada katak dan tidak ada capung.** Namun:
+
+- eksplorasi langkah 1 menjawab "Katak, ikan, capung, dan tumbuhan air";
+- `altText` aset berbunyi "Kolam dengan katak, ikan, capung, teratai, batu, dan air" — deskripsi yang salah bagi pembaca layar;
+- pasangan `Katak => Bernapas dengan kulit dan paru-paru` dan `Capung => Bernapas dengan trakea` menguji hewan yang tidak ada di gambar;
+- soal "Capung bernapas dengan ..." bergantung pada hewan yang sama.
+
+Jalur yang dipilih: **teks menyesuaikan gambar** (tanpa kerja aset Flow). Alternatif membuat ulang ilustrasi dengan katak
+dan capung tidak diambil karena gambar yang ada sudah benar sebagai ekosistem kolam; yang salah adalah teksnya.
+
+- Langkah 1 eksplorasi kini menjawab **"Ikan, siput, kupu-kupu, dan tumbuhan air."**
+- `altText` (5 langkah + metadata aktivitas + lesson) menjadi **"Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."**
+- `pasangan-1` menjadi **`Siput => Merayap di atas batu`**; `pasangan-3` menjadi **`Kupu-kupu => Terbang menghisap madu bunga`**. Keduanya fakta yang terlihat pada gambar; jumlah pasangan tetap 6.
+- Soal kuis menjadi **"Kupu-kupu bernapas dengan ..."** (kunci `trakea` tetap, `questionId` `soal-kupu-kupu-bernapas-dengan`). Kupu-kupu serangga, jadi jawabannya tidak berubah; hewan yang ditanyakan kini ada di gambar.
+
+Catatan: mekanisme pernapasan serangga (trakea) tetap pengetahuan umum di luar teks eksplorasi — sama seperti soal lama.
+Tidak ada sisa kata "katak" atau "capung" di paket ini.
+
+### F-02 — Jawaban singkat dinilai persis satu string (Tinggi, lintas paket) — **DIPERBAIKI 2026-10-27**
+
+Sebelumnya `src/content/quiz.ts` membandingkan `answer.trim().toLowerCase() === correct.trim().toLowerCase()`.
+Tidak ada sinonim, tidak ada varian angka/kata, dan input tidak memberi petunjuk format.
+
+Terdampak **4 paket / 24 soal** (semua paket `short-answer` di korpus). Contoh nyata:
+
+| Paket | Soal | Kunci lama | Jawaban benar lain yang dulu dihukum |
+|---|---|---|---|
+| `kelas4-ipas-b01-makhluk-hidup` | Sebutkan satu ciri makhluk hidup | `bernapas` | "bergerak", "tumbuh", "berkembang biak" — semuanya ada di materi |
+| `kelas4-ipas-b01-makhluk-hidup` | Peran tumbuhan adalah menghasilkan ... | `oksigen` | "makanan" — materi menyebut "oksigen dan makanan" |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Sebutkan satu kata penglihatan pada gambar | `hijau` | "merah", "biru" — reveal menyebut ketiganya |
+| `kelas4-bahasa-indonesia-b01-teks-deskripsi` | Sebutkan satu kata pendengaran pada gambar | `kicau burung` | "gemericik air", "berkicau", "suara burung" |
+| `kelas4-pendidikan-pancasila-b01-pancasila` | Musyawarah termasuk sila ke ... | `4` | "empat", "keempat" |
+
+Perbaikan yang diterapkan (jalur akar, bukan menutupi empat soal):
+
+- **Mesin penilai** menerima `correctResponse` berupa **daftar jawaban** untuk `responseType: "text"` (skema sudah mengizinkannya sejak awal; hanya penilainya yang menolak). `isAnswerCorrect` kini mencocokkan jawaban dengan salah satu entri daftar.
+- **Normalisasi** sebelum membandingkan: NFKC, huruf kecil, tanda baca dibuang, spasi berlebih dirapatkan. `batu`, `Batu.`, dan `  batu  ` sama; `1/4` tetap `1/4` (garis miring tidak dibuang).
+- **Data**: daftar alternatif ditambahkan pada 14 soal di 4 paket — 10 soal lain tetap satu kunci karena memang hanya punya satu jawaban. Tidak ada soal baru dan jumlah soal tidak berubah.
+- **Test**: 5 test baru (`src/content/__tests__/quiz.test.ts`) menutup daftar jawaban, varian angka/kata, tanda baca, angka bertitik, dan penolakan jawaban non-teks. Suite **110/110**.
+
+Batasan: alternatif yang tidak terdaftar tetap dihukum (tidak ada penilaian semantik). Guru masih perlu menambah varian bila menemukannya saat uji coba.
+
+### F-03 — Soal "benda tak hidup" punya dua jawaban sah (Sedang) — `kelas4-ipas-b01-makhluk-hidup` — **DIPERBAIKI 2026-10-27**
+
+"Benda tak hidup pada gambar adalah ..." dikunci `batu`. Gambar juga menampilkan **air**, yang sama-sama benda tak hidup.
+Siswa yang menjawab "air" benar menurut gambar tetapi dihukum.
+
+Perbaikan yang diterapkan: prompt menjadi **"Benda tak hidup yang ada di tepi kolam pada gambar adalah ..."** (kunci tetap `batu`).
+Wording ini berbeda dari usul di draf pertama ("keras dan padat") karena gambar juga memuat pensil, buku, tiang bendera, dan
+bangunan — semuanya keras dan padat, sehingga masih ambigu. "Di tepi kolam" hanya menunjuk batu.
+
+### F-04 — Langkah urutan fiktif (Rendah) — `kelas6-pjok-b03-atletik` — **DIPERBAIKI 2026-10-27**
+
+`ordering-atletik-kelas6` berisi lima item dengan item ke-5 **"Merapikan posisi"**. Lompat jauh punya empat tahap
+(awalan, tolakan, melayang, mendarat); item kelima ditambahkan untuk memenuhi ambang 5 langkah.
+
+Perbaikan yang diterapkan: item ke-5 menjadi **"Keluar dari bak lompat"** (`itemId` `langkah-keluar-bak`), yaitu langkah nyata
+setelah mendarat. Agar materi tidak bertentangan dengan aktivitas, reveal langkah eksplorasi "Apa urutan lompat jauh?"
+dan pasangan `Urutan lompat jauh` diperbarui memuat langkah yang sama. Jumlah item, jumlah pasangan, dan posisi kunci lain tidak berubah.
+
+### F-05 — Petunjuk mencocokkan menyalin teks soal (Rendah, 27 paket) — **DIPERBAIKI 2026-10-28**
+
+**37 pasangan** di 27 paket memakai teks soal kuis sebagai sisi kiri, termasuk elipsis yang tertinggal
+(mis. `Bahasa persatuan Indonesia adalah ...`, `Bilangan 100 dibaca ...`). Di kartu mencocokkan, elipsis itu tidak berfungsi
+sebagai petunjuk dan terbaca seperti potongan soal yang belum selesai. Dua di antaranya ada di paket prioritas
+(`kelas3-pendidikan-pancasila-b06-nkri`, `kelas2-pai-b05-puasa`). Usul: buang elipsis dan ubah menjadi frasa petunjuk.
+
+Perbaikan yang diterapkan: **39 pasangan di 27 paket** — 37 elipsis diubah menjadi frasa petunjuk
+(mis. `Bilangan 100 dibaca ...` → `Nama bilangan 100`; `Bahasa persatuan Indonesia adalah ...` → `Alat pemersatu bangsa`),
+ditambah **2 pasangan** yang kartu jawabannya duplikat dengan pasangan lain di aktivitas yang sama
+(`kelas1-seni-rupa-b05-mewarnai-bentuk`: jawaban `Merah, kuning, dan biru` muncul dua kali;
+`kelas6-matematika-b03-rasio-proporsi`: jawaban `4 : 3` muncul dua kali). Setiap pengganti diambil dari
+langkah eksplorasi, petunjuk, atau opsi kuis paket itu sendiri — tidak ada fakta baru di luar materi.
+Jumlah pasangan tidak berubah (1.963 di korpus); tidak ada `pairId` yang ditambah/dihapus.
+
+Verifikasi: detektor elipsis ulang → **0 dari 1.963 pasangan**; pemeriksa duplikat kiri/kanan pada 27 paket
+terdampak → 0; validator korpus **336/336 VALID**; volume gate OK; `npm test` **110/110**; `npm run build` PASS.
+Bukti: `scripts/data/item-patches-2026-10-28-f05.json` dan `scripts/data/item-patches-2026-10-28-f05b.json`.
+
+### F-06 — Mencocokkan masih menyalin langkah eksplorasi (Struktural, Rendah)
+
+Detektor R5 melaporkan 0 cermin karena syaratnya prompt **dan** jawaban identik. Dengan pencocokan yang menormalkan
+tanda baca dan mengukur tumpang tindih kata pada sisi kiri, hasilnya:
+
+- **311 dari 1.963 pasangan (15,8%) di 159 paket** dapat dijawab dengan menyalin jawaban yang sudah tertulis di layar eksplorasi;
+- pada 10 paket prioritas: **28 dari 58 pasangan** (mis. `kelas2-matematika-b08-data` 4/5, `kelas2-pai-b05-puasa` 3/5).
+
+Ini bukan jawaban salah, melainkan beban kognitif rendah: aktivitas mencocokkan menjadi latihan menyalin, bukan cek pemahaman.
+Tidak diusulkan penulisan ulang massal; cukup aturan untuk batch berikutnya: sisi kiri pasangan harus berupa petunjuk
+yang tidak memuat kata kunci jawaban.
+
+**KEPUTUSAN 2026-10-28 (T-100) — diterima sebagai utang desain, tanpa penulisan ulang massal.**
+
+Diukur ulang pada korpus 1.963 pasangan memakai definisi §5: **309 pasangan di 160 paket** (angka historis 311/159;
+selisih kemungkinan berasal dari normalisasi detektor dan 39 pasangan yang berubah bentuk di F-05 — tidak diuji terpisah). Rinciannya: **84 pasangan**
+mencapai tumpang tindih 100% kata prompt (salinan paling telanjang), **40 paket** memuat ≥3 pasangan.
+Daftar per pasangan: [F06_MIRROR_PAIRS_2026-10-28.csv](F06_MIRROR_PAIRS_2026-10-28.csv).
+
+Aturan authoring yang mengikat untuk batch konten berikutnya:
+
+1. Sisi kiri berupa petunjuk yang menuntut pemahaman, bukan salinan prompt eksplorasi — tumpang tindih kata dengan
+   `prompt` langkah eksplorasi **< 70%** menurut definisi §5.
+2. Sisi kiri tidak memuat kata kunci jawaban (`right`) atau sinonim dekatnya.
+3. Sisi kanan boleh sama dengan `reveal`; yang dilarang adalah kombinasi `right == reveal` **dan** sisi kiri ≥70% kata prompt.
+4. Setiap batch baru diverifikasi dengan definisi §5; target **0 hit baru**.
+
+Alasan tidak menulis ulang 309 pasangan sekarang: bentuk yang ada adalah keluaran transform T-091b (soal → frasa
+petunjuk), jadi parafrase mekanis berikutnya hanya menurunkan angka detektor tanpa menambah tuntutan pemahaman —
+persis risiko yang sudah dicatat di T-091b. Memilih petunjuk mana yang membingungkan adalah penilaian guru, bukan
+aturan bahasa. Karena itu seleksi diserahkan ke guru lewat CSV di atas; `reviewStatus` tetap `draft`.
+Detektor baku (`scripts/pedagogical-prereview.mjs` R5) masih memakai kesamaan ketat sehingga melaporkan **0** untuk
+kelas ini; definisi longgar baru hidup di §5 dan skrip sekali-pakai — mempromosikannya ke skrip baku tetap utang alat.
+
+### F-07 — Utang "kunci selalu opsi terpanjang" ternyata positif palsu (Info)
+
+Diukur ulang pada 336 paket hari ini: **0 paket** dengan kunci selalu opsi **terpanjang-unik**.
+Enam paket (`kelas1-matematika-b01`, `kelas1-matematika-b06`, `kelas2-matematika-b01`, `kelas3-matematika-b02`,
+`kelas3-matematika-b06`, `kelas5-matematika-b06`) hanya **seri panjang** pada soal angka/urutan
+(mis. `1, 2, 3, 4` vs `4, 3, 2, 1` sama panjang). Bukan bias. Catatan utang di BACKLOG dapat ditutup.
+
+## 3. Catatan yang bukan cacat (keputusan guru)
+
+| Paket | Catatan |
+|---|---|
+| `kelas2-matematika-b08-data` | Soal "selisih" (6−5) memakai istilah yang biasanya baru muncul kelas 3; konfirmasi apakah masuk CP kelas 2. Data buku (Senin 4, Selasa 6, Rabu 5) tidak ada di materi, tetapi tertulis lengkap di soal sehingga tetap dapat dijawab. Pasangan `Batang paling tinggi ... => Banyak data` dan `Mencari data terbanyak => Lihat batang tertinggi` saling tumpang tindih sehingga dapat tertukar. |
+| `kelas6-bahasa-indonesia-b02-eksposisi` | Soal "bagian argumen berisi alasan dan bukti" (2 soal) bertumpu pada pengetahuan umum; materi hanya menyebut struktur tanpa menjelaskan isi argumen. Usul: tambah satu langkah eksplorasi. |
+| `kelas3-pendidikan-pancasila-b06-nkri` | Bahasa persatuan, sikap saat pengibaran bendera, dan arti "RI" tidak ada di materi (pengetahuan umum kelas 3). Dapat diterima bila guru menyetujui asesmen di luar teks. |
+| `kelas2-pai-b05-puasa` | Pasangan `Kurma dan air saat berbuka => Berbuka puasa` tautologis. Pengecoh soal hikmah lemah ("Menambah marah", "Menjadi malas"). Waktu mulai puasa (terbit fajar) dan pembatal puasa tidak ada di materi. |
+| `kelas3-pjok-b06-senam-dasar` | Soal "Gerak berguling ke depan disebut ..." → "guling depan": jawaban ada di dalam pertanyaan. Usul: ganti dengan soal posisi tengkuk atau urutan. |
+| `kelas4-seni-rupa-b08-pameran-kelas` | Semua item didukung materi. Pengecoh lemah ("disembunyikan", "ditumpuk rapat"), tetapi tidak menyesatkan. |
+| `kelas5-pjok-b06-senam-lantai` | "Senam di atas matras disebut senam lantai" tidak tertulis di materi; siswa yang tahu istilah "senam artistik" dapat ragu. Pasangan "hal yang harus dijaga => Keselamatan" adalah simpulan, bukan fakta tertulis. |
+| `kelas6-pai-b07-sejarah-islam` | Paling kuat dari sepuluh paket: semua soal tertopang materi, urutan peristiwa benar, pengecoh "Gua Tsur" dan "berdagang" relevan. Tidak ada perbaikan. |
+
+## 4. Batasan
+
+- Review ini menilai teks dan gambar yang ada; tidak menjalankan aplikasi untuk merasakan tampilan soal.
+- Kesesuaian dengan CP/ATP per bab tetap tugas Curriculum Lead (OD-1 sudah disetujui, verifikasi per bab belum).
+- Putusan "LAYAK" di sini berarti **tidak ditemukan cacat**, bukan persetujuan rilis.
+- Perbaikan F-02 diverifikasi lewat unit test dan `npm run build`; E2E `activities` menyusul **PASS 14/14**
+  (termasuk "Aktivitas jawaban singkat dinilai 100 (normalisasi huruf)"), tetapi skenario itu memakai paket
+  fixture sendiri — bukan teks IPAS yang disunting — sehingga kesesuaian gambar↔teks tetap dinilai dari berkas.
+
+## 5. Cara mengukur ulang temuan
+
+Tiga ukuran di bawah dihitung dengan skrip sekali-pakai pada sesi 2026-10-27 (tidak di-commit, agar tidak
+menimpa bukti bertanggal). Definisi yang dipakai:
+
+- **F-05**: pasangan `matching` dengan `left` berakhir `...` → 37 pasangan / 27 paket (sebelum perbaikan 2026-10-28; kini **0**).
+- **F-06**: pasangan `matching` yang memenuhi dua syarat sekaligus: `right` sama persis (setelah normalisasi
+  huruf kecil + buang tanda baca) dengan `reveal` salah satu langkah eksplorasi, **dan** ≥ 70% kata pada `left`
+  muncul di `prompt` langkah yang sama → 311 pasangan / 159 paket dari 1.963 pasangan. Diukur ulang 2026-10-28
+  (T-100) dengan `min(|L∩P|/|L|, |L∩P|/|P|)` dan token ≥3 huruf tanpa stopword: **309 pasangan / 160 paket**;
+  angka inilah yang dipakai pada aturan authoring dan CSV.
+- **F-07**: soal pilihan ganda dengan ≥ 2 opsi, dihitung per paket: kunci selalu **lebih panjang** dari semua opsi
+  lain (unik) → 0 paket; kunci selalu **≥** semua opsi lain (termasuk seri) → 6 paket, semuanya matematika.
+
+Validator dan uji konten tetap dapat dijalankan tanpa efek samping:
+
+```bash
+npm run content:validate   # hanya paket demo (demo-pecahan-kelas3) — bukan seluruh korpus
+npm test                   # vitest + fixture + katalog (336 entri)
+```
+
+Validasi seluruh 336 paket memakai `validatePackageDirectory` per direktori (skrip sekali-pakai, tidak di-commit).

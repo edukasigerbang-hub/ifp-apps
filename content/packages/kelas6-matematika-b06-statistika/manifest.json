@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-matematika-b06-statistika",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Statistika — Matematika Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/statistika.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 150974,
+      "sha256": "b6c536d2ad1757ce7496a555a7b829cfd6f4c601335813381d40012a0c2289c1"
+    },
+    {
+      "path": "assets/aktivitas-statistika-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 11801,
+      "sha256": "04019a98a2abd69b30ab4e95b701fe9531a3e8169017de6b862750da3e433bb4"
+    },
+    {
+      "path": "assets/aktivitas-statistika-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6708,
+      "sha256": "3d8201bc90afe7b978545bb0d6fcea447888d980ffe89efd0f4a8973e88889da"
+    },
+    {
+      "path": "assets/aktivitas-statistika-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 25384,
+      "sha256": "934185de48526b54283f60e87856e58a0b3de4fa387ac4b98b844400d3368df2"
+    },
+    {
+      "path": "assets/aktivitas-statistika-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7804,
+      "sha256": "81e9cf95f208df6b52cd7a62f8400cac88abed064be4beb6a5ce53f8c7461750"
+    },
+    {
+      "path": "assets/aktivitas-statistika-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7203,
+      "sha256": "d54ef734b3492ef11e07f6a7702597a012027bfd7910f4de2063b829981be9f8"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-ipas-b08-lingkungan-bersih-sehat",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Lingkungan Bersih dan Sehat — IPAS Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/lingkungan-bersih-sehat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 169270,
+      "sha256": "41832207936221c315d40ec8d150f8f9c1f3afdcd607e97ff5d66cd6dd5a12d2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

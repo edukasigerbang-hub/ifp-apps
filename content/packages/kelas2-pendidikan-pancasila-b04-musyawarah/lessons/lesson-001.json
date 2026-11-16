@@ -1,0 +1,29 @@
+{
+  "lessonId": "musyawarah-kelas2",
+  "packageId": "kelas2-pendidikan-pancasila-b04-musyawarah",
+  "title": "Kebersamaan dan Musyawarah",
+  "summary": "Menerapkan kebersamaan dan musyawarah di kelas.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan arti musyawarah.",
+    "Menyebutkan tata caranya.",
+    "Menghargai keputusan bersama."
+  ],
+  "activityIds": [
+    "eksplorasi-musyawarah-kelas2",
+    "ordering-musyawarah-kelas2",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/musyawarah-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah bersama guru."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

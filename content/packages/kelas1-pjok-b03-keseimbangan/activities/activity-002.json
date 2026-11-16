@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-keseimbangan",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Latihan Keseimbangan",
+  "instructions": "Susun langkah latihan keseimbangan.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pemanasan",
+        "text": "Pemanasan"
+      },
+      {
+        "itemId": "langkah-angkat",
+        "text": "Berdiri satu kaki"
+      },
+      {
+        "itemId": "langkah-tangan",
+        "text": "Merentangkan tangan"
+      },
+      {
+        "itemId": "langkah-hitung",
+        "text": "Menghitung sampai lima"
+      },
+      {
+        "itemId": "langkah-ganti",
+        "text": "Mengganti kaki"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pemanasan",
+      "langkah-angkat",
+      "langkah-tangan",
+      "langkah-hitung",
+      "langkah-ganti"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdiri satu kaki dan merentangkan tangan."
+  }
+}

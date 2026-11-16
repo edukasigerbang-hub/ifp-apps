@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-lingkungan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Lingkungan Bersih",
+  "instructions": "Amati gambar, lalu diskusikan cara menjaga lingkungan.",
+  "assets": [
+    "assets/lingkungan-pelestarian.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Mengapa lingkungan harus bersih?",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
+        "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah.",
+        "reveal": "Agar sehat dan nyaman.",
+        "hint": "Sampah dapat menimbulkan penyakit."
+      },
+      {
+        "prompt": "Apa penyebab lingkungan kotor?",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
+        "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah.",
+        "reveal": "Sampah dibuang sembarangan dan penebangan pohon.",
+        "hint": "Amati lingkungan sekitar."
+      },
+      {
+        "prompt": "Bagaimana menjaga lingkungan?",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
+        "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah.",
+        "reveal": "Membuang sampah pada tempatnya dan menanam pohon.",
+        "hint": "Mulai dari kelas."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Lingkungan dan Pelestariannya?",
+        "reveal": "Menyiapkan alat kebersihan → Membersihkan kelas → Memilah sampah → Membuang sampah → Mencuci tangan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
+        "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Lingkungan dan Pelestariannya?",
+        "reveal": "Menjaga lingkungan bersih dan melestarikannya di sekitar kita.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/lingkungan-pelestarian.webp",
+        "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah."
+  }
+}

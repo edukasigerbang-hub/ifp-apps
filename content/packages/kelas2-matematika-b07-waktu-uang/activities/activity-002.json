@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-waktu-uang",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Waktu dan Uang",
+  "instructions": "Pasangkan setiap istilah dengan nilainya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jam",
+        "left": "1 jam",
+        "right": "60 menit"
+      },
+      {
+        "pairId": "pasangan-hari",
+        "left": "1 hari",
+        "right": "24 jam"
+      },
+      {
+        "pairId": "pasangan-minggu",
+        "left": "1 minggu",
+        "right": "7 hari"
+      },
+      {
+        "pairId": "pasangan-rupiah",
+        "left": "Rupiah",
+        "right": "Mata uang Indonesia"
+      },
+      {
+        "pairId": "pasangan-seribu",
+        "left": "Rp1.000",
+        "right": "Seribu rupiah"
+      },
+      {
+        "pairId": "pasangan-duaribu",
+        "left": "Rp2.000",
+        "right": "Dua ribu rupiah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam dan uang untuk belajar waktu serta nilai uang."
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "last_validated_at": "2026-10-24T01:08:12+07:00",
-  "validation_mode": "static+web-smoke+unit",
+  "last_validated_at": "2026-10-24T21:20:16+07:00",
+  "validation_mode": "static+unit+e2e+web",
   "checks": [
     {
       "name": "json_parse",
@@ -19,7 +19,12 @@
     },
     {
       "name": "source_documents_unchanged",
-      "target": ["HLD.md", "LLD.md", "IMPLEMENTATION_CONTRACT.md", "DEVICE_VALIDATION.md"],
+      "target": [
+        "HLD.md",
+        "LLD.md",
+        "IMPLEMENTATION_CONTRACT.md",
+        "DEVICE_VALIDATION.md"
+      ],
       "command": "sha256sum",
       "result": "PASS",
       "details": "Hash identik sebelum dan sesudah implementasi"
@@ -228,6 +233,156 @@
       "name": "curriculum_signoff",
       "result": "NOT RUN",
       "details": "OD-1 berstatus PROPOSED; belum ada tanda tangan Product Owner/Curriculum Lead"
+    },
+    {
+      "name": "full_verification_2026_10_24",
+      "command": "cargo test; npm test; server:typecheck; server:test; worker:typecheck; (web) npm test; npm run build; npm run lint; node scripts/e2e/run.mjs <11 scenarios>",
+      "result": "PASS",
+      "details": "cargo 62; npm 79 (8 files); server 24; worker 7; web 13; next+OpenNext build; lint PASS; E2E: smoke 8, profile-lifecycle 7, learning-journey 11, content-rollback 9, license 10, license-online 7, home-catalog 8, activities 8, backup-restore 9, content-review 9, a11y 16 = 102 checks, 0 fail"
+    },
+    {
+      "name": "worker_api_production_deploy",
+      "command": "npx wrangler secret put (3 secrets); npx wrangler deploy; curl /healthz;/v1/devices/enroll;/v1/sync/events",
+      "result": "PASS",
+      "details": "https://gerbangedukasi-api.edukasigerbang.workers.dev — /healthz 200 {ok:true}; invalid enrollment 401 DEVICE_ENROLLMENT_INVALID; invalid token 401 SYNC_UNAUTHORIZED; CORS * (sementara); version 94c81a2b"
+    },
+    {
+      "name": "web_production_env_verified",
+      "command": "wrangler secret put; curl https://gerbangedukasi.edukasigerbang.workers.dev/{/,/support,/api/activation,/api/admin/enrollment-codes}",
+      "result": "PASS",
+      "details": "dashboard vars + 3 worker secrets; / 200; /support 200 with edukasigerbang@gmail.com; /api/activation 400 ACTIVATION_INVALID_REQUEST (env configured); /api/admin/enrollment-codes 401 UNAUTHORIZED. Manual deploy produced ChunkLoadError; rolled back to d111f184."
+    },
+    {
+      "name": "ifp_devices_isolation",
+      "command": "Supabase SQL 0003; curl ifp_devices REST; wrangler deploy; curl worker; bundle check",
+      "result": "PASS",
+      "details": "ifp_devices created + sync_events FK rewired; REST 200; Worker 872ec15d /healthz 200, invalid enrollment 401; web bundle contains ifp_devices; Fanakon devices/commands/events/telemetry untouched"
+    },
+    {
+      "name": "e2e_enrollment_live",
+      "command": "POST enrollment_codes (service role); curl POST /v1/devices/enroll; GET ifp_devices; DELETE test rows",
+      "result": "PASS",
+      "details": "code 201; enroll 201; response deviceId/token/tokenType/expiresAt; ifp_devices row status=active platform=windows owner_id=null; cleanup OK"
+    },
+    {
+      "name": "e2e_activation_live",
+      "command": "insert licenses test row; curl POST /api/activation twice; GET licenses/ifp_devices/activations/license_audit",
+      "result": "PASS",
+      "details": "license 1fb82320 trial→active; device d787259e active owner=admin; idempotent second call; audit rows 2"
+    },
+    {
+      "name": "e2e_live_app_sync",
+      "command": "temp E2E: tauri dev (2 phases, temp data dir) + Worker enroll + quiz + auto-sync; Supabase REST verify",
+      "result": "PASS",
+      "details": "installation f6f4a87e…; acknowledged 1; sync_events assessment.completed; ifp_devices last_seen_at updated; cleanup OK"
+    },
+    {
+      "name": "worker_license_endpoints",
+      "command": "vitest workers/api; curl /v1/activations x2 + conflict + /v1/licenses/verify",
+      "result": "PASS",
+      "details": "11/11 tests; live activation 200 signed (signature verified), idempotent 200, conflict 409, verify valid=true; worker 99ee8c80"
+    },
+    {
+      "name": "e2e_online_activation_app",
+      "command": "tauri dev with VITE_LICENSE_SERVER_URL + IFP_LICENSE_KEYS; CDP fill serial + click Aktivasi online",
+      "result": "PASS",
+      "details": "license_get_status valid=true; license f497b2a0; product ifp-learning; expires 2026-11-23; UI success message"
+    },
+    {
+      "name": "release_build_embedded_license",
+      "command": "IFP_LICENSE_KEYS=... VITE_LICENSE_SERVER_URL=... npm run tauri build; run release exe WITHOUT env",
+      "result": "PASS",
+      "details": "license valid=true via embedded public key; UI Aktivasi online shown; MSI sha e4b1c892…; NSIS sha 9a0bf503…"
+    },
+    {
+      "name": "grade4_starter_packages",
+      "command": "npm run content:validate (x4); content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "4 packages VALID; import 5 files each status active; build PASS; fixtures 4/4; warnings: draft + empty curriculumRefs"
+    },
+    {
+      "name": "grade4_batch2_packages",
+      "command": "content:validate x4; content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b01, ipas-b02, bindo-b02, pancasila-b02 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch3_packages",
+      "command": "content:validate x4; content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b02, ipas-b03, bindo-b03, pancasila-b03 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch4_packages",
+      "command": "content:validate x4; content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b04, ipas-b04, bindo-b04, pancasila-b04 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch5_packages",
+      "command": "content:validate x3; content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "seni-rupa-b01, pjok-b01, pai-b01 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch6_packages",
+      "command": "content:validate x3; content_import_package via CDP; npm run build; npm test",
+      "result": "PASS",
+      "details": "seni-rupa-b02, pjok-b02, pai-b02 VALID; import 5 files each active; build/fixtures PASS"
+    },
+    {
+      "name": "grade4_batch7_packages",
+      "command": "content:validate x3; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "seni-b03, pjok-b03, pai-b03 VALID; import 5 files each active; build PASS (chunk >500 kB warning)"
+    },
+    {
+      "name": "pilot_moved_to_fixture",
+      "command": "git mv; update E2E paths + Rust test; npm test; cargo test; E2E activities/journey/rollback/review",
+      "result": "PASS",
+      "details": "pilot removed from content/packages; fixture path works; 4 E2E PASS; catalog 25 Kelas 4 packages"
+    },
+    {
+      "name": "grade4_semester1_complete",
+      "command": "content:validate x3; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "seni-b04, pjok-b04, pai-b04 VALID; import 5 files each active; 28 grade-4 packages total; build PASS with chunk-size warning"
+    },
+    {
+      "name": "content_lazy_loading",
+      "command": "async import.meta.glob; npm test; npm run build; E2E home-catalog/learning-journey",
+      "result": "PASS",
+      "details": "main chunk 447 kB; no >500 kB warning; home-catalog 9 checks + journey 11 checks PASS"
+    },
+    {
+      "name": "grade4_batch9_packages",
+      "command": "content:validate x4; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b05, ipas-b05, bindo-b05, pancasila-b05 VALID; import 5 files each active; main chunk 452 kB"
+    },
+    {
+      "name": "grade4_batch10_packages",
+      "command": "content:validate x4; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b06, ipas-b06, bindo-b06, pancasila-b06 VALID; import 5 files each active; main chunk 456.8 kB"
+    },
+    {
+      "name": "grade4_batch11_packages",
+      "command": "content:validate x4; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b07, ipas-b07, bindo-b07, pancasila-b07 VALID; import 5 files each active; main chunk 461.6 kB"
+    },
+    {
+      "name": "grade4_batch12_packages",
+      "command": "content:validate x4; content_import_package; npm run build; npm test",
+      "result": "PASS",
+      "details": "matematika-b08, ipas-b08, bindo-b08, pancasila-b08 VALID; import 5 files each active; main chunk 466.5 kB"
+    },
+    {
+      "name": "seni_pjok_b04_alignment",
+      "command": "git mv; packageId update; content:validate x4; content_import_package x4; npm run build; npm test",
+      "result": "PASS",
+      "details": "pameran→seni-b08, kesehatan→pjok-b08; new kolase + bola-besar; all VALID/imported; 46 packages"
     }
   ],
   "environment": {
@@ -241,10 +396,30 @@
     "target_product": "Windows 11 + Android 14 (VALIDATE)"
   },
   "source_documents": [
-    { "path": "HLD.md", "version": "1.1", "sha256": "06c85df1fa34bd2c0a2a346d88306a3b15538f42ed2359f66c204849ae4f027b", "role": "source-of-truth" },
-    { "path": "LLD.md", "version": null, "sha256": "29f7fa3ef79911320bcf9f20df93abe50a36ee351823056349871b223af3f326", "role": "source-of-truth" },
-    { "path": "IMPLEMENTATION_CONTRACT.md", "version": null, "sha256": "356c1ae697a66f36ae29e04cbcaa36dd41b7751a27bdfcb1a4ec9c855c5b17b5", "role": "agent-contract" },
-    { "path": "DEVICE_VALIDATION.md", "version": null, "sha256": "c59df7be08e97440ca14ff8e04c470ce5425e8e8a933f3048021355a6b2069c4", "role": "device-plan" }
+    {
+      "path": "HLD.md",
+      "version": "1.1",
+      "sha256": "06c85df1fa34bd2c0a2a346d88306a3b15538f42ed2359f66c204849ae4f027b",
+      "role": "source-of-truth"
+    },
+    {
+      "path": "LLD.md",
+      "version": null,
+      "sha256": "29f7fa3ef79911320bcf9f20df93abe50a36ee351823056349871b223af3f326",
+      "role": "source-of-truth"
+    },
+    {
+      "path": "IMPLEMENTATION_CONTRACT.md",
+      "version": null,
+      "sha256": "356c1ae697a66f36ae29e04cbcaa36dd41b7751a27bdfcb1a4ec9c855c5b17b5",
+      "role": "agent-contract"
+    },
+    {
+      "path": "DEVICE_VALIDATION.md",
+      "version": null,
+      "sha256": "c59df7be08e97440ca14ff8e04c470ce5425e8e8a933f3048021355a6b2069c4",
+      "role": "device-plan"
+    }
   ],
   "platform_claims": {
     "windows_11": "VALIDATE",

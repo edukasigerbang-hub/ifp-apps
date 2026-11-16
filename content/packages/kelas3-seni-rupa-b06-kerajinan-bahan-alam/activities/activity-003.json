@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Daun kering\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Bingkai hiasan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Mozaik"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Ranting\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Bingkai hiasan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Mozaik"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-pelepah-pisang-pada-pelajaran-ke",
+        "prompt": "Pelepah pisang pada pelajaran kerajinan dipakai sebagai alat ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pelepah-pisang-pada-pelajar-1",
+            "text": "potong"
+          },
+          {
+            "optionId": "opsi-soal-pelepah-pisang-pada-pelajar-2",
+            "text": "gambar"
+          },
+          {
+            "optionId": "opsi-soal-pelepah-pisang-pada-pelajar-0",
+            "text": "cetak"
+          }
+        ],
+        "correctResponse": "opsi-soal-pelepah-pisang-pada-pelajar-0"
+      },
+      {
+        "questionId": "soal-biji-jagung-yang-ditempelkan-rap",
+        "prompt": "Biji jagung yang ditempelkan rapat dan rapi menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-biji-jagung-yang-ditempelka-0",
+            "text": "mozaik"
+          },
+          {
+            "optionId": "opsi-soal-biji-jagung-yang-ditempelka-1",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-biji-jagung-yang-ditempelka-2",
+            "text": "bingkai hiasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-biji-jagung-yang-ditempelka-0"
+      },
+      {
+        "questionId": "soal-tanah-liat-dapat-dibentuk-menjad",
+        "prompt": "Tanah liat dapat dibentuk menjadi karya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tanah-liat-dapat-dibentuk-m-1",
+            "text": "anyaman"
+          },
+          {
+            "optionId": "opsi-soal-tanah-liat-dapat-dibentuk-m-0",
+            "text": "patung sederhana"
+          },
+          {
+            "optionId": "opsi-soal-tanah-liat-dapat-dibentuk-m-2",
+            "text": "mozaik"
+          }
+        ],
+        "correctResponse": "opsi-soal-tanah-liat-dapat-dibentuk-m-0"
+      },
+      {
+        "questionId": "soal-ranting-yang-kering-dan-aman-dap",
+        "prompt": "Ranting yang kering dan aman dapat dirangkai menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-ranting-yang-kering-dan-ama-1",
+            "text": "tanah liat"
+          },
+          {
+            "optionId": "opsi-soal-ranting-yang-kering-dan-ama-2",
+            "text": "biji jagung"
+          },
+          {
+            "optionId": "opsi-soal-ranting-yang-kering-dan-ama-0",
+            "text": "bingkai hiasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-ranting-yang-kering-dan-ama-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
+  }
+}

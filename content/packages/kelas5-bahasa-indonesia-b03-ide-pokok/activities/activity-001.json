@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-ide-pokok-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mencari Ide Pokok",
+  "instructions": "Amati gambar, lalu diskusikan cara menemukan ide pokok.",
+  "assets": [
+    "assets/ide-pokok-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu ide pokok?",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
+        "altText": "Anak menyimak cerita dan mencatat ide pokok.",
+        "reveal": "Gagasan utama sebuah paragraf.",
+        "hint": "Menjadi inti pembicaraan."
+      },
+      {
+        "prompt": "Di mana letak kalimat utama?",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
+        "altText": "Anak menyimak cerita dan mencatat ide pokok.",
+        "reveal": "Sering di awal paragraf, bisa juga di akhir.",
+        "hint": "Perhatikan kalimat yang paling umum."
+      },
+      {
+        "prompt": "Bagaimana menemukannya?",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
+        "altText": "Anak menyimak cerita dan mencatat ide pokok.",
+        "reveal": "Baca seluruh paragraf lalu tentukan intinya.",
+        "hint": "Abaikan kalimat contoh."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Ide Pokok dan Kalimat Utama?",
+        "reveal": "Menemukan ide pokok dan kalimat utama dalam paragraf.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
+        "altText": "Anak menyimak cerita dan mencatat ide pokok."
+      },
+      {
+        "prompt": "Ide pokok adalah ...",
+        "reveal": "Gagasan utama paragraf",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/ide-pokok-kelas5.webp",
+        "altText": "Anak menyimak cerita dan mencatat ide pokok."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita dan mencatat ide pokok."
+  }
+}

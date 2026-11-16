@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-pecahan-senilai",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pecahan Senilai",
+  "instructions": "Perhatikan tiga batang pecahan pada gambar. Hitung bagian yang berwarna, lalu bandingkan dengan pecahan lain.",
+  "assets": [
+    "assets/aktivitas-pecahan-senilai-1.png",
+    "assets/aktivitas-pecahan-senilai-2.png",
+    "assets/aktivitas-pecahan-senilai-3.png",
+    "assets/aktivitas-pecahan-senilai-4.png",
+    "assets/aktivitas-pecahan-senilai-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Batang pertama dibagi menjadi berapa bagian sama besar? Berapa bagian yang berwarna?",
+        "assetPath": "assets/aktivitas-pecahan-senilai-1.png",
+        "altText": "Batang panjang terbagi dua sama besar dengan satu bagian diwarnai teal.",
+        "reveal": "Ada 2 bagian sama besar dan 1 bagian berwarna, sehingga bagian berwarna adalah 1/2.",
+        "hint": "Hitung semua bagian lebih dulu, lalu hitung bagian berwarna."
+      },
+      {
+        "prompt": "Batang kedua dibagi menjadi 4 bagian dan 2 bagian berwarna. Pecahan apa yang ditunjukkan?",
+        "assetPath": "assets/aktivitas-pecahan-senilai-2.png",
+        "altText": "Batang panjang terbagi empat sama besar dengan dua bagian diwarnai biru.",
+        "reveal": "2 dari 4 bagian berwarna, jadi pecahannya 2/4. Nilai 2/4 sama dengan 1/2.",
+        "hint": "Bandingkan panjang bagian berwarna dengan batang pertama."
+      },
+      {
+        "prompt": "Batang ketiga dibagi menjadi 8 bagian dan 4 bagian berwarna. Apakah nilainya sama dengan 1/2?",
+        "assetPath": "assets/aktivitas-pecahan-senilai-3.png",
+        "altText": "Batang panjang terbagi delapan sama besar dengan empat bagian diwarnai hijau.",
+        "reveal": "4 dari 8 bagian berwarna, jadi 4/8. Nilainya juga sama dengan 1/2. Jadi 1/2 = 2/4 = 4/8.",
+        "hint": "Pecahan senilai dapat diperoleh dengan mengalikan pembilang dan penyebut dengan bilangan yang sama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pecahan Senilai dan Membandingkan Pecahan?",
+        "reveal": "Mengenal pecahan senilai melalui gambar, membandingkan pecahan sederhana, dan menentukan bentuk paling sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-pecahan-senilai-4.png",
+        "altText": "Tiga kartu rangkuman berisi batang terbagi dua, empat, dan delapan dengan bagian yang diwarnai setara."
+      },
+      {
+        "prompt": "Bentuk paling sederhana dari 4/8 adalah ...",
+        "reveal": "1/2",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aktivitas-pecahan-senilai-5.png",
+        "altText": "Panel kiri batang delapan bagian dengan empat bagian diwarnai; panel kanan batang dua bagian dengan satu bagian diwarnai; tanda sama dengan di antaranya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi pecahan senilai: batang terbagi dua, batang terbagi empat, batang terbagi delapan, tiga kartu batang rangkuman, dan perbandingan empat per delapan dengan satu per dua."
+  }
+}

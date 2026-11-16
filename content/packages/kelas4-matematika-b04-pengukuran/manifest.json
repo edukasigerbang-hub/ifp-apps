@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b04-pengukuran",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pengukuran Panjang dan Berat — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pengukuran-panjang-berat.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 164610,
+      "sha256": "df35bb99415028f159cefc9908c74306df905ed1aca4c645af0f46ca5ac7fc9d"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3894,
+      "sha256": "872f55794c9a84e35b10cd5ae62bab3124b8b305b8713ef73429ed784b152e06"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 17038,
+      "sha256": "676f09a6b2fe7ce1e936fa905c3acb57f9f607a637a6c9b52d288aeb3cef7796"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5225,
+      "sha256": "7ea896dcca75240e301b98b148fc9bd0070e07ef413c66e4906e83778e7b5b63"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9920,
+      "sha256": "b2e7be6279e0aacba2ec571c29300d3081408c8df206697035d7177db6ff01f6"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7933,
+      "sha256": "68f0d1854048920b01cc2937b332bf8dbc602d00a53bb6c1ea9fb90d987d4f60"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

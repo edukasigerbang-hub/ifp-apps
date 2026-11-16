@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Arti NKRI",
+        "right": "Negara Kesatuan Republik Indonesia"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Semboyan bangsa Indonesia",
+        "right": "Bhinneka Tunggal Ika"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Otonomi daerah",
+        "right": "Kewenangan daerah mengatur urusannya sendiri"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Otonomi daerah berarti",
+        "right": "Daerah mengatur urusannya sendiri"
+      },
+      {
+        "pairId": "pasangan-kewenangan-daerah-untuk-mengatur",
+        "left": "Alat pemersatu bangsa",
+        "right": "Bahasa Indonesia"
+      },
+      {
+        "pairId": "pasangan-negara-kesatuan-republik-indones",
+        "left": "Sebutan negara yang terdiri atas banyak pulau dan daerah",
+        "right": "NKRI"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan peta daerah dalam NKRI."
+  }
+}

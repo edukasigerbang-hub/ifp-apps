@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-puasa",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Suasana Puasa",
+  "instructions": "Amati gambar, lalu diskusikan pengertian, waktu, dan hikmah puasa.",
+  "assets": [
+    "assets/puasa.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu puasa?",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
+        "reveal": "Menahan diri dari makan, minum, dan hal yang membatalkan sejak fajar hingga magrib.",
+        "hint": "Dilakukan dengan niat."
+      },
+      {
+        "prompt": "Kapan waktu berbuka puasa?",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
+        "reveal": "Saat matahari terbenam (magrib).",
+        "hint": "Ditandai azan magrib."
+      },
+      {
+        "prompt": "Apa hikmah puasa?",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam.",
+        "reveal": "Melatih sabar, disiplin, dan peduli kepada yang kekurangan.",
+        "hint": "Rasakan lapar agar tumbuh empati."
+      },
+      {
+        "prompt": "Hikmah puasa yang benar adalah ...",
+        "reveal": "Melatih sabar dan disiplin",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+      },
+      {
+        "prompt": "Puasa dimulai pada waktu ...",
+        "reveal": "Terbit fajar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa.webp",
+        "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+  }
+}

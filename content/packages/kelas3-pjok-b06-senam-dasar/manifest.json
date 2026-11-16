@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pjok-b06-senam-dasar",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Senam Dasar — PJOK Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/senam-dasar-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 147226,
+      "sha256": "391b2e76648e53955ff664cade50122a79b1b1b08bd87e61dae5688e381b5710"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

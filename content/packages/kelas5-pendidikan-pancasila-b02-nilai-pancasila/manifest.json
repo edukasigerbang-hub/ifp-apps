@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pendidikan-pancasila-b02-nilai-pancasila",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Nilai Pancasila dalam Kehidupan — Pendidikan Pancasila Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/nilai-pancasila.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 234336,
+      "sha256": "dd53f1463a508da41388b451d1cf3c0fee3f0d361eb1dfe6051f7d4c6cb5d398"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

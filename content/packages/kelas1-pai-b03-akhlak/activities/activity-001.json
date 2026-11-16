@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-akhlak",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Akhlak Terpuji",
+  "instructions": "Amati gambar, lalu diskusikan perilaku baik.",
+  "assets": [
+    "assets/akhlak-kelas1.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Akhlak terpuji apa yang terlihat?",
+        "assetPath": "assets/akhlak-kelas1.webp",
+        "altText": "Anak berbagi dan membantu teman.",
+        "reveal": "Berbagi dan membantu.",
+        "hint": "Amati tindakan."
+      },
+      {
+        "prompt": "Mengapa jujur penting?",
+        "assetPath": "assets/akhlak-kelas1.webp",
+        "altText": "Anak berbagi dan membantu teman.",
+        "reveal": "Agar dipercaya.",
+        "hint": "Jujur itu baik."
+      },
+      {
+        "prompt": "Apa manfaat akhlak baik?",
+        "assetPath": "assets/akhlak-kelas1.webp",
+        "altText": "Anak berbagi dan membantu teman.",
+        "reveal": "Disayangi orang.",
+        "hint": "Hidup tenang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Akhlak Terpuji?",
+        "reveal": "Membiasakan akhlak terpuji sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/akhlak-kelas1.webp",
+        "altText": "Anak berbagi dan membantu teman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berbagi dan membantu teman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/akhlak-kelas1.webp",
+        "altText": "Anak berbagi dan membantu teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berbagi dan membantu teman."
+  }
+}

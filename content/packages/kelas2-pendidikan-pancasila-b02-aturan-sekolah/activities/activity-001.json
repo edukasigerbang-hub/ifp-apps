@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-aturan-sekolah-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Aturan Sekolah",
+  "instructions": "Amati gambar, lalu diskusikan aturan sekolah.",
+  "assets": [
+    "assets/aturan-sekolah-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa contoh aturan sekolah?",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah.",
+        "reveal": "Datang tepat waktu.",
+        "hint": "Berbaris tertib."
+      },
+      {
+        "prompt": "Mengapa aturan penting?",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah.",
+        "reveal": "Agar belajar nyaman.",
+        "hint": "Semua tertib."
+      },
+      {
+        "prompt": "Apa akibat melanggar aturan?",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah.",
+        "reveal": "Kegiatan terganggu.",
+        "hint": "Teman dirugikan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Aturan di Sekolah?",
+        "reveal": "Mengenal dan melaksanakan aturan di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah."
+      },
+      {
+        "prompt": "Contoh aturan di sekolah adalah ...",
+        "reveal": "Datang tepat waktu",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aturan-sekolah-kelas2.webp",
+        "altText": "Siswa berbaris tertib di sekolah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di sekolah."
+  }
+}

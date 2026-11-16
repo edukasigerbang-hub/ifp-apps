@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b06-penjumlahan-20",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Penjumlahan dan Pengurangan sampai 20 — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/penjumlahan-20.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 155842,
+      "sha256": "dd988e57b914a4a9b320f48344b1fc9d3e9acbfddd4f3ba67bda25ba2fb444d2"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-20-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5841,
+      "sha256": "13850a58170eafcfc9169149dcad6d520a852c925cfe2aa746b2391d700388ed"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-20-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 26348,
+      "sha256": "dfa71b26542ca580425f496ffe41cbc3413068f0ef92965d026471783f5326cc"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-20-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 28306,
+      "sha256": "b483c2aa0b28a7fdee08cb49fc3def3937d9061d5bc99bdcf6559740b1fad3f0"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-20-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8058,
+      "sha256": "27ff4ba0d7973d307e95369b6217e07841cb3936ce4b738d1f822979fc138693"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-20-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7308,
+      "sha256": "cfb83f2a68726c7957684fc3a95d93852384419cf3e023477870c5c074997562"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Ide pokok",
+        "right": "Gagasan utama sebuah paragraf"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menyimak cerita dengan baik",
+        "right": "Dengarkan dengan tenang dan catat peristiwa penting"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan urutan peristiwa penting",
+        "right": "Agar cerita mudah dipahami"
+      },
+      {
+        "pairId": "pasangan-saat-menyimak-cerita-hal-penting",
+        "left": "Saat menyimak cerita, hal penting yang kita catat adalah",
+        "right": "peristiwa penting"
+      },
+      {
+        "pairId": "pasangan-setelah-menentukan-ide-pokok-kit",
+        "left": "Setelah menentukan ide pokok, kita dapat melakukan",
+        "right": "menceritakan kembali"
+      },
+      {
+        "pairId": "pasangan-ide-pokok-paragraf-biasanya-terd",
+        "left": "Ide pokok paragraf biasanya terdapat pada",
+        "right": "kalimat utama"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak menyimak cerita yang dibacakan di depan kelas."
+  }
+}

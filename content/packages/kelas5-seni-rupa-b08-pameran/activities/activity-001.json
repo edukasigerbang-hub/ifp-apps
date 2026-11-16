@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-pameran-kelas5",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pameran",
+  "instructions": "Amati gambar, lalu diskusikan persiapan pameran.",
+  "assets": [
+    "assets/pameran-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang dipamerkan?",
+        "assetPath": "assets/pameran-kelas5.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang.",
+        "reveal": "Karya siswa.",
+        "hint": "Pilih karya terbaik."
+      },
+      {
+        "prompt": "Bagaimana menata karya?",
+        "assetPath": "assets/pameran-kelas5.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang.",
+        "reveal": "Rapi dan mudah dilihat.",
+        "hint": "Beri label nama."
+      },
+      {
+        "prompt": "Apa tugas penjaga pameran?",
+        "assetPath": "assets/pameran-kelas5.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang.",
+        "reveal": "Menjelaskan karya dengan sopan.",
+        "hint": "Sambut pengunjung."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pameran Kelas?",
+        "reveal": "Merencanakan dan menata pameran karya kelas.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pameran-kelas5.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Pameran kelas dengan karya siswa dipajang.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pameran-kelas5.webp",
+        "altText": "Pameran kelas dengan karya siswa dipajang."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya siswa dipajang."
+  }
+}

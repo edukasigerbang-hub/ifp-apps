@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak hasil 2.450 + 1.275",
+        "right": "3.725"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Waktu kita menyimpan",
+        "right": "Saat jumlah satu tempat lebih dari 9"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Waktu kita meminjam saat mengurangi",
+        "right": "Saat angka atas lebih kecil dari angka bawah"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Lompatan maju dan mundur pada garis bilangan",
+        "right": "Penjumlahan dan pengurangan"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-ditambah-1-200-has",
+        "left": "Bilangan yang ditambah 1.200 hasilnya 3.000",
+        "right": "1.800"
+      },
+      {
+        "pairId": "pasangan-bilangan-yang-dikurangi-1-000-ha",
+        "left": "Bilangan yang dikurangi 1.000 hasilnya 2.500",
+        "right": "3.500"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dengan lompatan maju dan mundur, serta dua kelompok benda yang dijumlahkan."
+  }
+}

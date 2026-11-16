@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-hewan-tumbuhan-peliharaan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Peliharaan",
+  "instructions": "Amati gambar, lalu diskusikan cara merawat hewan dan tumbuhan peliharaan.",
+  "assets": [
+    "assets/hewan-tumbuhan-peliharaan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Hewan apa yang biasa dipelihara di rumah?",
+        "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku.",
+        "reveal": "Kucing, ayam, burung, dan ikan.",
+        "hint": "Hewan di sekitar rumahmu."
+      },
+      {
+        "prompt": "Tumbuhan apa yang bisa dipelihara?",
+        "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku.",
+        "reveal": "Tanaman hias, cabai, dan bunga.",
+        "hint": "Tumbuhan butuh air dan cahaya."
+      },
+      {
+        "prompt": "Apa kebutuhan hewan peliharaan?",
+        "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku.",
+        "reveal": "Makanan, air minum, dan tempat hidup yang bersih.",
+        "hint": "Beri makan setiap hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hewan dan Tumbuhan Peliharaan?",
+        "reveal": "Mengenal hewan dan tumbuhan peliharaan serta cara merawatnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku."
+      },
+      {
+        "prompt": "Apa yang terjadi jika tanaman tidak disiram?",
+        "reveal": "Tanaman menjadi layu karena kekurangan air.",
+        "hint": "Daunnya akan menggulung.",
+        "assetPath": "assets/hewan-tumbuhan-peliharaan.webp",
+        "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D Ayu memberi makan kelinci dan Bima menyiram tanaman pot di serambi; kucing abu-abu duduk di bangku."
+  }
+}

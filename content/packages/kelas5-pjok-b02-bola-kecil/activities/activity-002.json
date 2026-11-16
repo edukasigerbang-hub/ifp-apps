@@ -1,0 +1,176 @@
+{
+  "activityId": "kuis-bola-kecil-kelas5",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bola Kecil",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-raket",
+        "prompt": "Alat untuk memukul kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet"
+          },
+          {
+            "optionId": "opsi-tongkat",
+            "text": "Tongkat"
+          },
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket"
+          },
+          {
+            "optionId": "opsi-pemukul",
+            "text": "Pemukul kasti"
+          }
+        ],
+        "correctResponse": "opsi-raket"
+      },
+      {
+        "questionId": "soal-bet",
+        "prompt": "Tenis meja menggunakan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-raket",
+            "text": "Raket dan kok"
+          },
+          {
+            "optionId": "opsi-bola",
+            "text": "Bola sepak"
+          },
+          {
+            "optionId": "opsi-pemukul",
+            "text": "Pemukul dan bola kasti"
+          },
+          {
+            "optionId": "opsi-bet",
+            "text": "Bet dan bola pingpong"
+          }
+        ],
+        "correctResponse": "opsi-bet"
+      },
+      {
+        "questionId": "soal-pemanasan",
+        "prompt": "Sebelum bermain sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan besar"
+          },
+          {
+            "optionId": "opsi-duduk",
+            "text": "Duduk diam"
+          }
+        ],
+        "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-sportif",
+        "prompt": "Sikap setelah bertanding adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah bila kalah"
+          },
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman dengan lawan"
+          },
+          {
+            "optionId": "opsi-tinggal",
+            "text": "Pergi tanpa izin"
+          },
+          {
+            "optionId": "opsi-salah",
+            "text": "Menyalahkan teman"
+          }
+        ],
+        "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-permainan-yang-menggunakan-kok-a",
+        "prompt": "Permainan yang menggunakan kok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-1",
+            "text": "Tenis meja"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-2",
+            "text": "Tenis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-0",
+            "text": "Bulu tangkis"
+          },
+          {
+            "optionId": "opsi-soal-permainan-yang-menggunakan-3",
+            "text": "Bola voli"
+          }
+        ],
+        "correctResponse": "opsi-soal-permainan-yang-menggunakan-0"
+      },
+      {
+        "questionId": "soal-pemanasan-dilakukan-sebelum-berm",
+        "prompt": "Pemanasan dilakukan sebelum bermain dengan tujuan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-1",
+            "text": "Memulihkan tenaga"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-2",
+            "text": "Menambah berat badan"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-3",
+            "text": "Mencegah penyakit"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-dilakukan-sebelum-0",
+            "text": "Mencegah cedera"
+          }
+        ],
+        "correctResponse": "opsi-soal-pemanasan-dilakukan-sebelum-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok bulu tangkis, dan bet tenis meja."
+  }
+}

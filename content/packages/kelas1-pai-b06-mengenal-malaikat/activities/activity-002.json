@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-mengenal-malaikat",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Mengenal Malaikat",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-jumlah",
+        "prompt": "Jumlah malaikat yang wajib diketahui adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-5",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-20",
+            "text": "20"
+          },
+          {
+            "optionId": "opsi-1",
+            "text": "1"
+          },
+          {
+            "optionId": "opsi-10",
+            "text": "10"
+          }
+        ],
+        "correctResponse": "opsi-10"
+      },
+      {
+        "questionId": "soal-jibril",
+        "prompt": "Malaikat Jibril bertugas ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-wahyu",
+            "text": "Menyampaikan wahyu"
+          },
+          {
+            "optionId": "opsi-rezeki",
+            "text": "Membagi rezeki"
+          },
+          {
+            "optionId": "opsi-nyawa",
+            "text": "Mencabut nyawa"
+          },
+          {
+            "optionId": "opsi-catat",
+            "text": "Mencatat amal"
+          }
+        ],
+        "correctResponse": "opsi-wahyu"
+      },
+      {
+        "questionId": "soal-sifat",
+        "prompt": "Malaikat selalu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-makan",
+            "text": "Makan"
+          },
+          {
+            "optionId": "opsi-taat",
+            "text": "Taat kepada Allah"
+          },
+          {
+            "optionId": "opsi-tidur",
+            "text": "Tidur"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah"
+          }
+        ],
+        "correctResponse": "opsi-taat"
+      },
+      {
+        "questionId": "soal-iman",
+        "prompt": "Beriman kepada malaikat termasuk rukun iman ke ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu"
+          },
+          {
+            "optionId": "opsi-tiga",
+            "text": "Tiga"
+          },
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua"
+          },
+          {
+            "optionId": "opsi-lima",
+            "text": "Lima"
+          }
+        ],
+        "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-sifat-malaikat-adalah",
+        "prompt": "Sifat malaikat adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-1",
+            "text": "makan dan tidur"
+          },
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-2",
+            "text": "marah dan lupa"
+          },
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-3",
+            "text": "sakit dan lelah"
+          },
+          {
+            "optionId": "opsi-soal-sifat-malaikat-adalah-0",
+            "text": "tidak makan dan tidak tidur"
+          }
+        ],
+        "correctResponse": "opsi-soal-sifat-malaikat-adalah-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa sebagai wujud iman kepada malaikat."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kolase",
+        "right": "Karya yang dibuat dengan menempel bahan pada bidang"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan alam yang dapat dipakai",
+        "right": "Daun kering, biji, ranting, dan pelepah"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menyusun kolase",
+        "right": "Tata bahan membentuk pola, lalu tempel"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-setelah-semua-b",
+        "left": "Langkah terakhir setelah semua bahan kolase menempel",
+        "right": "Menjemur karya"
+      },
+      {
+        "pairId": "pasangan-kegiatan-setelah-menyiapkan-baha",
+        "left": "Kegiatan setelah menyiapkan bahan dan sebelum mengoles lem",
+        "right": "Menyusun pola"
+      },
+      {
+        "pairId": "pasangan-bahan-alam-untuk-kolase-yang-but",
+        "left": "Bahan alam untuk kolase yang butirannya kecil dan keras",
+        "right": "Biji"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun, kertas, dan biji yang ditempel pada kertas."
+  }
+}

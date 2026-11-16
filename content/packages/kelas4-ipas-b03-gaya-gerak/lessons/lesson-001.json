@@ -1,0 +1,28 @@
+{
+  "lessonId": "gaya-gerak",
+  "packageId": "kelas4-ipas-b03-gaya-gerak",
+  "title": "Gaya dan Gerak di Sekitar Kita",
+  "summary": "Mengenali jenis gaya, pengaruhnya terhadap gerak benda, dan contohnya dalam kehidupan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan jenis-jenis gaya.",
+    "Menjelaskan pengaruh gaya terhadap gerak benda.",
+    "Memberikan contoh gaya dorong, tarik, gesek, gravitasi, dan magnet."
+  ],
+  "activityIds": [
+    "eksplorasi-gaya-gerak",
+    "matching-gaya-gerak",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gaya-gerak.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat gambar: anak mendorong kotak, bola menggelinding, apel jatuh dari pohon, dan magnet menarik paku."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

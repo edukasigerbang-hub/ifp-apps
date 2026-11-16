@@ -1,0 +1,29 @@
+{
+  "lessonId": "gerak-manipulatif",
+  "packageId": "kelas3-pjok-b03-gerak-manipulatif",
+  "title": "Gerak Manipulatif",
+  "summary": "Mempraktikkan melempar, menangkap, dan menendang dengan kerja sama.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak manipulatif.",
+    "Mempraktikkan melempar dan menangkap.",
+    "Bekerja sama saat bermain."
+  ],
+  "activityIds": [
+    "eksplorasi-gerak-manipulatif",
+    "ordering-gerak-manipulatif",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gerak-manipulatif-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak melempar dan menangkap bola."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

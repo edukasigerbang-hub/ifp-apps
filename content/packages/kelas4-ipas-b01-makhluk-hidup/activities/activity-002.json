@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-makhluk-hidup",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Siput",
+        "right": "Merayap di atas batu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Ikan",
+        "right": "Bernapas dengan insang"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kupu-kupu",
+        "right": "Terbang menghisap madu bunga"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Tumbuhan air",
+        "right": "Berfotosintesis"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Batu",
+        "right": "Benda tak hidup"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Air",
+        "right": "Kebutuhan makhluk hidup"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."
+  }
+}

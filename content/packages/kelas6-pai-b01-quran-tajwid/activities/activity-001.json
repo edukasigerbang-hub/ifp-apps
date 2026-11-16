@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-quran-tajwid-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bacaan Tartil",
+  "instructions": "Amati gambar, lalu diskusikan tajwid dan adab.",
+  "assets": [
+    "assets/quran-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu tajwid?",
+        "assetPath": "assets/quran-kelas6.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil.",
+        "reveal": "Ilmu membaca Al-Qur'an dengan benar.",
+        "hint": "Mengatur panjang pendek."
+      },
+      {
+        "prompt": "Berapa harakat mad thabi'i?",
+        "assetPath": "assets/quran-kelas6.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil.",
+        "reveal": "Dua harakat.",
+        "hint": "Satu alif."
+      },
+      {
+        "prompt": "Apa adab membaca?",
+        "assetPath": "assets/quran-kelas6.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil.",
+        "reveal": "Bersih, sopan, dan tenang.",
+        "hint": "Mulai dengan ta'awuz."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca Al-Qur'an dengan tartil.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/quran-kelas6.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Al-Qur'an dan Tajwid?",
+        "reveal": "Membaca Al-Qur'an dengan tajwid dasar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/quran-kelas6.webp",
+        "altText": "Anak membaca Al-Qur'an dengan tartil."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-energi-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bentuk Energi",
+  "instructions": "Amati gambar, lalu diskusikan perubahan energinya.",
+  "assets": [
+    "assets/energi-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu energi?",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
+        "reveal": "Kemampuan melakukan kerja.",
+        "hint": "Tidak dapat diciptakan."
+      },
+      {
+        "prompt": "Apa perubahan energi pada lampu?",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
+        "reveal": "Listrik menjadi cahaya.",
+        "hint": "Juga panas."
+      },
+      {
+        "prompt": "Bagaimana menghemat energi?",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik.",
+        "reveal": "Matikan alat yang tidak dipakai.",
+        "hint": "Gunakan energi alternatif."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Energi dan Perubahannya?",
+        "reveal": "Mengenal bentuk energi dan perubahannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh energi gerak, panas, cahaya, dan listrik.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/energi-kelas6.webp",
+        "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh energi gerak, panas, cahaya, dan listrik."
+  }
+}

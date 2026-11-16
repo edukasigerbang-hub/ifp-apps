@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Sikap menyimak",
+        "right": "Duduk tenang"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang dicatat",
+        "right": "Tokoh dan peristiwa"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang diceritakan kembali",
+        "right": "Isi cerita"
+      },
+      {
+        "pairId": "pasangan-setelah-mendengarkan-cerita-kita",
+        "left": "Setelah mendengarkan cerita, kita menyebutkan",
+        "right": "tokoh"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-saat-menyimak-c",
+        "left": "Langkah terakhir saat menyimak cerita",
+        "right": "menyimpulkan pesan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita yang dibacakan."
+  }
+}

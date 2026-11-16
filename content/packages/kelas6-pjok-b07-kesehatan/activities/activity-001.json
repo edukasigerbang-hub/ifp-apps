@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kesehatan-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kesehatan-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kapan mencuci tangan?",
+        "assetPath": "assets/kesehatan-kelas6.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Sebelum makan dan setelah bermain.",
+        "hint": "Gunakan sabun."
+      },
+      {
+        "prompt": "Mengapa olahraga penting?",
+        "assetPath": "assets/kesehatan-kelas6.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Menjaga kebugaran.",
+        "hint": "Lakukan rutin."
+      },
+      {
+        "prompt": "Apa manfaat istirahat?",
+        "assetPath": "assets/kesehatan-kelas6.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "reveal": "Memulihkan tenaga.",
+        "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kesehatan dan Pola Hidup?",
+        "reveal": "Menjaga kesehatan dengan pola hidup bersih dan sehat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kesehatan-kelas6.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mencuci tangan, mandi, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kesehatan-kelas6.webp",
+        "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan beristirahat."
+  }
+}

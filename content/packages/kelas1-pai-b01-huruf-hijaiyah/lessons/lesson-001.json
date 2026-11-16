@@ -1,0 +1,28 @@
+{
+  "lessonId": "huruf-hijaiyah",
+  "packageId": "kelas1-pai-b01-huruf-hijaiyah",
+  "title": "Mengenal Huruf Hijaiyah",
+  "summary": "Mengenal huruf hijaiyah dan cara membacanya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal huruf hijaiyah.",
+    "Membaca huruf hijaiyah.",
+    "Menerapkan adab membaca."
+  ],
+  "activityIds": [
+    "eksplorasi-huruf-hijaiyah",
+    "matching-huruf-hijaiyah",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/huruf-hijaiyah.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca huruf hijaiyah di sajadah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

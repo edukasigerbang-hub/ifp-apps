@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-zakat-infak",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Zakat dan Infak",
+  "instructions": "Pasangkan setiap istilah dengan pengertiannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-zakat",
+        "left": "Zakat",
+        "right": "Kewajiban dengan kadar tertentu"
+      },
+      {
+        "pairId": "pasangan-infak",
+        "left": "Infak",
+        "right": "Pemberian sukarela"
+      },
+      {
+        "pairId": "pasangan-sedekah",
+        "left": "Sedekah",
+        "right": "Memberi tanpa mengharap balasan"
+      },
+      {
+        "pairId": "pasangan-amil",
+        "left": "Amil",
+        "right": "Petugas pengelola zakat"
+      },
+      {
+        "pairId": "pasangan-mustahik",
+        "left": "Mustahik",
+        "right": "Penerima zakat"
+      },
+      {
+        "pairId": "pasangan-kadar",
+        "left": "2,5%",
+        "right": "Kadar zakat uang atau emas"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kotak amal, karung beras, dan koin untuk zakat dan infak."
+  }
+}

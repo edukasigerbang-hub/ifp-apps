@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-bahasa-indonesia-b08-puisi-pantun",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Puisi dan Pantun Anak — Bahasa Indonesia Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/puisi-pantun-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 129050,
+      "sha256": "c843ed87ddf9fc23b9c63e0baf5af330060431b8352a7b81d63e82dd2a0432fc"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

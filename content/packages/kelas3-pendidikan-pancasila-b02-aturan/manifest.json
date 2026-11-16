@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pendidikan-pancasila-b02-aturan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Aturan di Rumah dan Sekolah — Pendidikan Pancasila Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/antrean-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 112312,
+      "sha256": "090113e32f12c6bd008eaf0bf9c8639a0b7e5466452587a91f55fa4d89f717f2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

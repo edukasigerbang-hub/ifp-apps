@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-demokrasi",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Tahapan Pemilu",
+  "instructions": "Susun tahapan pemilu.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-daftar",
+        "text": "Pendaftaran pemilih"
+      },
+      {
+        "itemId": "langkah-kampanye",
+        "text": "Kampanye"
+      },
+      {
+        "itemId": "langkah-vote",
+        "text": "Pemungutan suara"
+      },
+      {
+        "itemId": "langkah-hitung",
+        "text": "Penghitungan suara"
+      },
+      {
+        "itemId": "langkah-lantik",
+        "text": "Pelantikan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-daftar",
+      "langkah-kampanye",
+      "langkah-vote",
+      "langkah-hitung",
+      "langkah-lantik"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah dan memilih secara demokratis."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-bangun-datar",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bangun Datar",
+  "instructions": "Amati gambar, lalu diskusikan sisi dan sudut setiap bangun.",
+  "assets": [
+    "assets/aktivitas-bangun-datar-ciri-1.png",
+    "assets/aktivitas-bangun-datar-ciri-2.png",
+    "assets/aktivitas-bangun-datar-ciri-3.png",
+    "assets/aktivitas-bangun-datar-ciri-4.png",
+    "assets/aktivitas-bangun-datar-ciri-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bangun datar apa saja yang terlihat?",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri-1.png",
+        "altText": "Empat bangun datar berjajar: lingkaran teal, persegi kuning, segitiga biru, dan persegi panjang merah muda.",
+        "reveal": "Persegi, persegi panjang, segitiga, dan lingkaran.",
+        "hint": "Amati bentuknya."
+      },
+      {
+        "prompt": "Apa ciri persegi?",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri-2.png",
+        "altText": "Persegi besar dengan tanda pendek di tengah setiap sisi dan tanda sudut siku-siku di keempat sudutnya.",
+        "reveal": "Empat sisi sama panjang dan empat sudut.",
+        "hint": "Ukur sisinya."
+      },
+      {
+        "prompt": "Apa beda persegi dan persegi panjang?",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri-3.png",
+        "altText": "Panel kiri persegi dengan tanda sisi sama panjang; panel kanan persegi panjang dengan tanda sudut siku-siku dan sisi mendatar lebih panjang.",
+        "reveal": "Persegi semua sisi sama; persegi panjang memiliki dua pasang sisi sama.",
+        "hint": "Bandingkan sisinya."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Datar dan Cirinya?",
+        "reveal": "Mengenal bangun datar serta ciri sisi dan sudutnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri-4.png",
+        "altText": "Tiga kartu rangkuman: lingkaran persegi segitiga, persegi dan persegi panjang, serta dua ubin bangun datar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-bangun-datar-ciri-5.png",
+        "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi bangun datar: empat bangun berjajar, persegi dengan tanda sisi dan sudut siku-siku, perbandingan persegi dan persegi panjang, tiga kartu rangkuman, dan susunan bangun membentuk rumah."
+  }
+}

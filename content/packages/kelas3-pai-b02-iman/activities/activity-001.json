@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-iman",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Wujud Iman",
+  "instructions": "Amati gambar, lalu diskusikan arti iman dan perilakunya.",
+  "assets": [
+    "assets/iman-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti iman?",
+        "assetPath": "assets/iman-kelas3.webp",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "reveal": "Percaya dan yakin kepada Allah.",
+        "hint": "Diucapkan, diyakini, dan dilakukan."
+      },
+      {
+        "prompt": "Apa sifat Allah yang Maha Pengasih?",
+        "assetPath": "assets/iman-kelas3.webp",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "reveal": "Ar-Rahman.",
+        "hint": "Allah mengasihi semua makhluk."
+      },
+      {
+        "prompt": "Bagaimana wujud iman sehari-hari?",
+        "assetPath": "assets/iman-kelas3.webp",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "reveal": "Rajin salat, jujur, dan berbuat baik.",
+        "hint": "Iman tampak dalam perbuatan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Iman kepada Allah?",
+        "reveal": "Memahami arti iman dan mewujudkannya dalam perilaku sehari-hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/iman-kelas3.webp",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berdoa dan berbuat baik sebagai wujud iman.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/iman-kelas3.webp",
+        "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berdoa dan berbuat baik sebagai wujud iman."
+  }
+}

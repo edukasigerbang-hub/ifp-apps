@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-salat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerakan Salat",
+  "instructions": "Amati gambar, lalu diskusikan gerakan salat.",
+  "assets": [
+    "assets/salat-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa salat wajib sehari?",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Lima waktu.",
+        "hint": "Subuh sampai isya."
+      },
+      {
+        "prompt": "Apa yang dilakukan sebelum salat?",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Berwudu.",
+        "hint": "Membersihkan diri."
+      },
+      {
+        "prompt": "Apa gerakan terakhir?",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat.",
+        "reveal": "Salam.",
+        "hint": "Menoleh kanan dan kiri."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Salat?",
+        "reveal": "Mengenal salat dan gerakannya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berwudu dan melaksanakan salat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/salat-kelas2.webp",
+        "altText": "Anak berwudu dan melaksanakan salat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  }
+}

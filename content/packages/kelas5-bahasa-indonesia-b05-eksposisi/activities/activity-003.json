@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tujuan teks eksposisi",
+        "right": "Menjelaskan informasi secara objektif"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Strukturnya",
+        "right": "Tesis, argumen, dan penegasan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Bahasa yang dipakai",
+        "right": "Baku dan jelas"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Struktur teks eksposisi adalah",
+        "right": "Tesis, argumen, penegasan"
+      },
+      {
+        "pairId": "pasangan-bagian-teks-eksposisi-yang-mendu",
+        "left": "Bagian teks eksposisi yang mendukung pendapat dengan alasan dan bukti",
+        "right": "Argumen"
+      },
+      {
+        "pairId": "pasangan-bagian-awal-struktur-teks-ekspos",
+        "left": "Bagian awal struktur teks eksposisi",
+        "right": "Tesis"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi di sudut baca."
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Kearifan lokal\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Kebiasaan turun-temurun"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Hasil karya masyarakat"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Nilai masyarakat setempat"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Adat\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Kebiasaan turun-temurun"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Nilai masyarakat setempat"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Hasil karya masyarakat"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-nilai-dan-kebiasaan-baik-yang-di",
+        "prompt": "Nilai dan kebiasaan baik yang diwarisi masyarakat suatu daerah disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nilai-dan-kebiasaan-baik-ya-1",
+            "text": "Budaya asing"
+          },
+          {
+            "optionId": "opsi-soal-nilai-dan-kebiasaan-baik-ya-0",
+            "text": "Kearifan lokal"
+          },
+          {
+            "optionId": "opsi-soal-nilai-dan-kebiasaan-baik-ya-2",
+            "text": "Kemajuan zaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-nilai-dan-kebiasaan-baik-ya-0"
+      },
+      {
+        "questionId": "soal-pakaian-yang-dipakai-pada-upacar",
+        "prompt": "Pakaian yang dipakai pada upacara adat disebut pakaian ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pakaian-yang-dipakai-pada-u-1",
+            "text": "Seragam"
+          },
+          {
+            "optionId": "opsi-soal-pakaian-yang-dipakai-pada-u-2",
+            "text": "Modern"
+          },
+          {
+            "optionId": "opsi-soal-pakaian-yang-dipakai-pada-u-0",
+            "text": "Adat"
+          }
+        ],
+        "correctResponse": "opsi-soal-pakaian-yang-dipakai-pada-u-0"
+      },
+      {
+        "questionId": "soal-kearifan-lokal-dilestarikan-deng",
+        "prompt": "Kearifan lokal dilestarikan dengan mengenal, menghormati, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kearifan-lokal-dilestarikan-0",
+            "text": "Mempraktikkan"
+          },
+          {
+            "optionId": "opsi-soal-kearifan-lokal-dilestarikan-1",
+            "text": "Mengabaikannya"
+          },
+          {
+            "optionId": "opsi-soal-kearifan-lokal-dilestarikan-2",
+            "text": "Melupakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-kearifan-lokal-dilestarikan-0"
+      },
+      {
+        "questionId": "soal-kegiatan-kerja-bakti-warga-merup",
+        "prompt": "Kegiatan kerja bakti warga merupakan contoh kearifan lokal berupa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kegiatan-kerja-bakti-warga-1",
+            "text": "Pameran budaya"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-kerja-bakti-warga-0",
+            "text": "Gotong royong"
+          },
+          {
+            "optionId": "opsi-soal-kegiatan-kerja-bakti-warga-2",
+            "text": "Lomba kampung"
+          }
+        ],
+        "correctResponse": "opsi-soal-kegiatan-kerja-bakti-warga-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, dan budaya daerah."
+  }
+}

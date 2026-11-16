@@ -1,0 +1,176 @@
+{
+  "activityId": "kuis-pemecahan-masalah",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Pemecahan Masalah",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-total",
+        "prompt": "Ibu membeli 3 kg apel seharga Rp15.000 per kg. Totalnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-15000",
+            "text": "Rp15.000"
+          },
+          {
+            "optionId": "opsi-45000",
+            "text": "Rp45.000"
+          },
+          {
+            "optionId": "opsi-30000",
+            "text": "Rp30.000"
+          },
+          {
+            "optionId": "opsi-50000",
+            "text": "Rp50.000"
+          }
+        ],
+        "correctResponse": "opsi-45000"
+      },
+      {
+        "questionId": "soal-sisa",
+        "prompt": "Ana memiliki 10 pensil dan memberikan 3. Sisanya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-13",
+            "text": "13"
+          },
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-7",
+            "text": "7"
+          },
+          {
+            "optionId": "opsi-30",
+            "text": "30"
+          }
+        ],
+        "correctResponse": "opsi-7"
+      },
+      {
+        "questionId": "soal-langkah",
+        "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-jawab",
+            "text": "Langsung menjawab"
+          },
+          {
+            "optionId": "opsi-tebak",
+            "text": "Menebak"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Mengabaikan angka"
+          },
+          {
+            "optionId": "opsi-paham",
+            "text": "Memahami soal"
+          }
+        ],
+        "correctResponse": "opsi-paham"
+      },
+      {
+        "questionId": "soal-periksa",
+        "prompt": "Cara memeriksa jawaban adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hitung",
+            "text": "Menghitung ulang"
+          },
+          {
+            "optionId": "opsi-lupa",
+            "text": "Melupakan soal"
+          },
+          {
+            "optionId": "opsi-tebak",
+            "text": "Menebak lagi"
+          },
+          {
+            "optionId": "opsi-salin",
+            "text": "Menyalin jawaban teman"
+          }
+        ],
+        "correctResponse": "opsi-hitung"
+      },
+      {
+        "questionId": "soal-andi-membeli-4-buku-harga-tiap-b",
+        "prompt": "Andi membeli 4 buku. Harga tiap buku Rp5.000. Total harga buku Andi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-1",
+            "text": "Rp5.000"
+          },
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-0",
+            "text": "Rp20.000"
+          },
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-2",
+            "text": "Rp9.000"
+          },
+          {
+            "optionId": "opsi-soal-andi-membeli-4-buku-harga-t-3",
+            "text": "Rp25.000"
+          }
+        ],
+        "correctResponse": "opsi-soal-andi-membeli-4-buku-harga-t-0"
+      },
+      {
+        "questionId": "soal-kata-sisa-pada-soal-cerita-biasa",
+        "prompt": "Kata \"sisa\" pada soal cerita biasanya mengarahkan kita menggunakan operasi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-1",
+            "text": "penjumlahan"
+          },
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-2",
+            "text": "perkalian"
+          },
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-0",
+            "text": "pengurangan"
+          },
+          {
+            "optionId": "opsi-soal-kata-sisa-pada-soal-cerita-3",
+            "text": "pembagian"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-sisa-pada-soal-cerita-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyelesaikan soal cerita matematika."
+  }
+}

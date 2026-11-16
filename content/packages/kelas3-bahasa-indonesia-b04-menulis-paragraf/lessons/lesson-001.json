@@ -1,0 +1,29 @@
+{
+  "lessonId": "menulis-paragraf",
+  "packageId": "kelas3-bahasa-indonesia-b04-menulis-paragraf",
+  "title": "Menulis Paragraf Sederhana",
+  "summary": "Menyusun kalimat topik dan kalimat pendukung menjadi paragraf sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyusun kalimat menjadi paragraf.",
+    "Menggunakan kalimat topik.",
+    "Menulis paragraf tiga sampai empat kalimat."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-paragraf",
+    "ordering-menulis-paragraf",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/menulis-paragraf.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

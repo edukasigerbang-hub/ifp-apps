@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-bagian-tumbuhan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bagian Tumbuhan",
+  "instructions": "Amati gambar, lalu diskusikan bagian tumbuhan dan fungsinya.",
+  "assets": [
+    "assets/bagian-tumbuhan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagian apa saja yang ada pada tumbuhan?",
+        "assetPath": "assets/bagian-tumbuhan.webp",
+        "altText": "Ilustrasi 3D tanaman dalam pot bening dengan akar, batang, daun, dan bunga; Ayu menunjuk daun dan Bima mengamati dengan kaca pembesar.",
+        "reveal": "Akar, batang, daun, bunga, dan buah.",
+        "hint": "Lihat dari bawah ke atas."
+      },
+      {
+        "prompt": "Apa fungsi akar dan batang?",
+        "assetPath": "assets/bagian-tumbuhan.webp",
+        "altText": "Ilustrasi 3D tanaman dalam pot bening dengan akar, batang, daun, dan bunga; Ayu menunjuk daun dan Bima mengamati dengan kaca pembesar.",
+        "reveal": "Akar menyerap air dari tanah. Batang menopang tumbuhan.",
+        "hint": "Akar berada di dalam tanah."
+      },
+      {
+        "prompt": "Apa fungsi daun dan bunga?",
+        "assetPath": "assets/bagian-tumbuhan.webp",
+        "altText": "Ilustrasi 3D tanaman dalam pot bening dengan akar, batang, daun, dan bunga; Ayu menunjuk daun dan Bima mengamati dengan kaca pembesar.",
+        "reveal": "Daun membuat makanan. Bunga berkembang menjadi buah dan biji.",
+        "hint": "Daun berwarna hijau."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bagian Tumbuhan dan Fungsinya?",
+        "reveal": "Mengenal akar, batang, daun, bunga, dan buah beserta fungsinya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bagian-tumbuhan.webp",
+        "altText": "Ilustrasi 3D tanaman dalam pot bening dengan akar, batang, daun, dan bunga; Ayu menunjuk daun dan Bima mengamati dengan kaca pembesar."
+      },
+      {
+        "prompt": "Bagian tumbuhan apa yang biasa kamu makan?",
+        "reveal": "Misalnya daun bayam, buah apel, atau akar wortel.",
+        "hint": "Sayur dan buah berasal dari bagian tumbuhan.",
+        "assetPath": "assets/bagian-tumbuhan.webp",
+        "altText": "Ilustrasi 3D tanaman dalam pot bening dengan akar, batang, daun, dan bunga; Ayu menunjuk daun dan Bima mengamati dengan kaca pembesar."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi 3D tanaman dalam pot bening dengan akar, batang, daun, dan bunga; Ayu menunjuk daun dan Bima mengamati dengan kaca pembesar."
+  }
+}

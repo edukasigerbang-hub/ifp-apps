@@ -1,0 +1,59 @@
+{
+  "activityId": "ordering-salat-kelas6",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Salat",
+  "instructions": "Susun urutan berwudu dan salat.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-wudu",
+        "text": "Berwudu"
+      },
+      {
+        "itemId": "langkah-kiblat",
+        "text": "Berdiri menghadap kiblat"
+      },
+      {
+        "itemId": "langkah-takbir",
+        "text": "Takbiratul ihram"
+      },
+      {
+        "itemId": "langkah-rukuk",
+        "text": "Rukuk dan sujud"
+      },
+      {
+        "itemId": "langkah-duduk",
+        "text": "Duduk tasyahud"
+      },
+      {
+        "itemId": "langkah-salam",
+        "text": "Salam"
+      }
+    ],
+    "correctOrder": [
+      "langkah-wudu",
+      "langkah-kiblat",
+      "langkah-takbir",
+      "langkah-rukuk",
+      "langkah-duduk",
+      "langkah-salam"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  }
+}

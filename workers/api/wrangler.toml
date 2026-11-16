@@ -3,13 +3,29 @@ main = "src/index.ts"
 compatibility_date = "2026-10-24"
 
 [vars]
-SUPABASE_URL = "https://PROJECT.supabase.co"
-CORS_ORIGIN = "http://localhost:1420"
+SUPABASE_URL = "https://qbccunwxfrwauuepxcbo.supabase.co"
+CORS_ORIGIN = "*" # sementara: WebView2 Windows (https://tauri.localhost) & Android (http://tauri.localhost)
+LICENSE_KEY_ID = "prod-1"
+LICENSE_PRODUCT_ID = "ifp-learning"
+LICENSE_SUBSCRIPTION_DAYS = "30"
+LICENSE_GRACE_DAYS = "7"
+LICENSE_PUBLIC_KEY = "nb3tb7vCi+CY20D9xJe5B6LS7qmMpRK7+S5XXAG2gnU="
+
+# Katalog materi HTML5 (kontrak bundel v1 §6/§11, ADR-0035 OD-10…OD-13).
+# Nilai publik saja; kunci penandatangan konten adalah secret di bawah.
+CONTENT_KEY_ID = "content-dev-1"
+CONTENT_BUCKET = "material-bundles"
+MATERIAL_URL_TTL_SECONDS = "600"
 
 # Secrets (jangan commit):
 #   wrangler secret put SUPABASE_SERVICE_ROLE_KEY
 #   wrangler secret put DEVICE_TOKEN_SECRET
 #   wrangler secret put ENROLLMENT_CODE_PEPPER
+#   wrangler secret put ADMIN_API_TOKEN   # transfer/deactivate lisensi + publish/unpublish materi
+#   wrangler secret put CONTENT_SIGNING_KEY   # Ed25519 PKCS8 base64 — kunci konten, pasangan
+#                                             # publiknya dibakar ke aplikasi via IFP_CONTENT_KEYS
 #
 # Prasyarat Supabase: jalankan migrations repo `web` (0001_init.sql) lalu
-# `supabase/migrations/0002_app_backend.sql` dari repo ini pada project yang sama.
+# `supabase/migrations/0002_app_backend.sql`, `0003_ifp_devices.sql` dan
+# `0004_material_catalog.sql` dari repo ini pada project yang sama.
+# Prasyarat materi: buat bucket Storage `material-bundles` (private) lewat dashboard.

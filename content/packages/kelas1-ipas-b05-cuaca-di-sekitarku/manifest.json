@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-ipas-b05-cuaca-di-sekitarku",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Cuaca di Sekitarku — IPAS Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/cuaca-di-sekitarku.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 174826,
+      "sha256": "c0f1c24fdd32765727a7b3086f178547638557f430e6955ab5977fcef55c1da1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

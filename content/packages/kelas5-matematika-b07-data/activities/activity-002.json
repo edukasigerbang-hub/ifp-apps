@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-data-kelas5",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Data",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-diagram",
+        "left": "Diagram batang",
+        "right": "Perbandingan data"
+      },
+      {
+        "pairId": "pasangan-tabel",
+        "left": "Tabel",
+        "right": "Daftar data"
+      },
+      {
+        "pairId": "pasangan-rata",
+        "left": "Rata-rata",
+        "right": "Jumlah dibagi banyak data"
+      },
+      {
+        "pairId": "pasangan-tinggi",
+        "left": "Nilai tertinggi",
+        "right": "Data terbesar"
+      },
+      {
+        "pairId": "pasangan-rendah",
+        "left": "Nilai terendah",
+        "right": "Data terkecil"
+      },
+      {
+        "pairId": "pasangan-sumbu",
+        "left": "Sumbu",
+        "right": "Garis skala"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "lessonId": "shalat",
+  "packageId": "kelas4-pai-b04-shalat",
+  "title": "Shalat",
+  "summary": "Mengenal shalat wajib, urutan waktunya, dan pentingnya disiplin menjalankan shalat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian shalat.",
+    "Menyebutkan lima shalat wajib dan urutannya.",
+    "Menunjukkan sikap disiplin dalam menjalankan shalat."
+  ],
+  "activityIds": [
+    "eksplorasi-shalat",
+    "ordering-shalat",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/shalat-ilustrasi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sajadah, siluet masjid, lentera, dan jam sebagai ilustrasi shalat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

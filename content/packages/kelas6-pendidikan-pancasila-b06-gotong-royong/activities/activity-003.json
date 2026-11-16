@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gotong royong",
+        "right": "Bekerja bersama untuk kepentingan bersama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Manfaat musyawarah",
+        "right": "Mencapai keputusan bersama"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menerapkannya",
+        "right": "Berbagi tugas dan bermusyawarah"
+      },
+      {
+        "pairId": "pasangan-cara-menetapkan-keputusan-bersam",
+        "left": "Cara menetapkan keputusan bersama dalam kelompok",
+        "right": "Musyawarah"
+      },
+      {
+        "pairId": "pasangan-langkah-setelah-tugas-dibagi-dal",
+        "left": "Langkah setelah tugas dibagi dalam kerja kelompok",
+        "right": "Bekerja bersama"
+      },
+      {
+        "pairId": "pasangan-kegiatan-menyampaikan-hasil-kerj",
+        "left": "Kegiatan menyampaikan hasil kerja kelompok",
+        "right": "Melaporkan hasil"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga bekerja bersama dan bermusyawarah."
+  }
+}

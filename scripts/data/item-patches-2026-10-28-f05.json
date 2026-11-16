@@ -1,0 +1,152 @@
+{
+  "_catatan": "F-05 review 2026-10-27: 37 pasangan mencocokkan bersisi kiri soal kuis dengan elipsis menggantung. Sisi kiri ditulis ulang menjadi petunjuk; enam pasangan yang ternyata duplikat/cermin pasangan lain diganti dengan fakta lain dari materi paket. Jumlah pasangan, pairId, dan urutan tidak berubah.",
+  "packages": {
+    "kelas1-bahasa-indonesia-b02-membaca-kata": {
+      "matching": [
+        { "pairId": "pasangan-4", "left": "Huruf pertama pada kata bola" }
+      ]
+    },
+    "kelas1-matematika-b04-pengukuran": {
+      "matching": [
+        { "pairId": "pasangan-4", "left": "Benda yang panjangnya diukur dengan jengkal" }
+      ]
+    },
+    "kelas1-pai-b06-mengenal-malaikat": {
+      "matching": [
+        { "pairId": "pasangan-5", "left": "Malaikat selalu bersikap", "right": "Taat kepada Allah" }
+      ]
+    },
+    "kelas1-seni-rupa-b05-mewarnai-bentuk": {
+      "matching": [
+        { "pairId": "pasangan-1", "left": "Langkah pertama sebelum mewarnai", "right": "Menyiapkan alat" },
+        { "pairId": "pasangan-setelah-mewarnai-tangan-kita", "left": "Kegiatan terakhir dalam mewarnai bentuk", "right": "Mencuci tangan" }
+      ]
+    },
+    "kelas2-matematika-b01-bilangan-1-100": {
+      "matching": [
+        { "pairId": "pasangan-4", "left": "Nama bilangan 100" }
+      ]
+    },
+    "kelas2-pai-b05-puasa": {
+      "matching": [
+        { "pairId": "pasangan-5", "left": "Waktu mulai berpuasa" }
+      ]
+    },
+    "kelas2-pai-b07-kisah-nabi": {
+      "matching": [
+        { "pairId": "pasangan-nabi-muhammad-dijadikan-contoh-h", "left": "Sosok yang patut ditiru umat" }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b02-aturan-sekolah": {
+      "matching": [
+        { "pairId": "pasangan-4", "left": "Sikap saat berbaris di sekolah", "right": "Tertib" }
+      ]
+    },
+    "kelas2-seni-rupa-b02-ilustrasi": {
+      "matching": [
+        { "pairId": "pasangan-sebelum-diwarnai-garis-hasil-ske", "left": "Yang dilakukan pada garis sketsa sebelum mewarnai" }
+      ]
+    },
+    "kelas2-seni-rupa-b03-tekstur-bahan": {
+      "matching": [
+        { "pairId": "pasangan-5", "left": "Kesan yang diperoleh dari permukaan bahan" }
+      ]
+    },
+    "kelas2-seni-rupa-b08-pameran": {
+      "matching": [
+        { "pairId": "pasangan-supaya-penonton-mengenal-sebuah", "left": "Yang ditulis pada karya agar penonton mengenalnya" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b02-aturan": {
+      "matching": [
+        { "pairId": "pasangan-jika-semua-siswa-menaati-aturan", "left": "Keadaan kerja kelompok bila semua siswa menaati aturan" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b04-musyawarah": {
+      "matching": [
+        { "pairId": "pasangan-hasil-kesepakatan-musyawarah-waj", "left": "Sikap saat menjalankan hasil kesepakatan musyawarah" },
+        { "pairId": "pasangan-saat-pendapat-kita-tidak-dipilih", "left": "Sikap ketika pendapat kita tidak dipilih" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b06-nkri": {
+      "matching": [
+        { "pairId": "pasangan-4", "left": "Alat pemersatu bangsa" }
+      ]
+    },
+    "kelas3-pendidikan-pancasila-b07-gotong-royong": {
+      "matching": [
+        { "pairId": "pasangan-setelah-pekerjaan-gotong-royong", "left": "Yang dilakukan terhadap alat setelah gotong royong selesai" },
+        { "pairId": "pasangan-pekerjaan-yang-berat-saat-dikerj", "left": "Rasa pekerjaan berat bila dikerjakan bersama-sama" }
+      ]
+    },
+    "kelas5-ipas-b06-siklus-air": {
+      "matching": [
+        { "pairId": "pasangan-setelah-hujan-air-dari-darat-kem", "left": "Tahap siklus air setelah hujan", "right": "Penyerapan air" }
+      ]
+    },
+    "kelas5-ipas-b07-energi-listrik": {
+      "matching": [
+        { "pairId": "pasangan-mencabut-alat-listrik-yang-tidak", "left": "Bahan yang dapat menghantarkan listrik", "right": "Logam" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b03-hak-kewajiban": {
+      "matching": [
+        { "pairId": "pasangan-hak-dan-kewajiban-dilaksanakan-s", "left": "Cara melaksanakan hak dan kewajiban" },
+        { "pairId": "pasangan-selain-pendidikan-warga-negara-b", "left": "Contoh kewajiban menjaga lingkungan", "right": "Membuang sampah pada tempatnya" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b04-musyawarah-demokrasi": {
+      "matching": [
+        { "pairId": "pasangan-pembicaraan-bersama-untuk-mencap", "left": "Langkah pertama dalam musyawarah", "right": "Menyampaikan masalah" },
+        { "pairId": "pasangan-saat-teman-berbicara-dalam-disku", "left": "Ketika teman menyampaikan pendapat, sebaiknya kita", "right": "Mendengarkan" },
+        { "pairId": "pasangan-kesepakatan-yang-sudah-diambil-d", "left": "Sikap terhadap keputusan hasil musyawarah" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b06-nkri-otonomi": {
+      "matching": [
+        { "pairId": "pasangan-kewenangan-daerah-untuk-mengatur", "left": "Alat pemersatu bangsa", "right": "Bahasa Indonesia" },
+        { "pairId": "pasangan-negara-kesatuan-republik-indones", "left": "Sebutan negara yang terdiri atas banyak pulau dan daerah", "right": "NKRI" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b07-gotong-royong": {
+      "matching": [
+        { "pairId": "pasangan-membersihkan-selokan-sekolah-ber", "left": "Langkah pertama dalam kerja bakti", "right": "Menentukan kegiatan" },
+        { "pairId": "pasangan-berkat-gotong-royong-pekerjaan-t", "left": "Langkah sesudah menentukan kegiatan kerja bakti", "right": "Membagi tugas" },
+        { "pairId": "pasangan-setelah-pekerjaan-selesai-alat-a", "left": "Sikap terhadap alat kebersihan sesudah kerja bakti" }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "matching": [
+        { "pairId": "pasangan-langkah-setelah-membagi-tugas-da", "left": "Langkah setelah membagi tugas dalam proyek" },
+        { "pairId": "pasangan-langkah-terakhir-sebuah-proyek-k", "left": "Kegiatan penutup proyek selain melaporkan hasil", "right": "Evaluasi" },
+        { "pairId": "pasangan-selain-tugas-dan-waktu-hal-yang", "left": "Cara mengerjakan proyek kewargaan", "right": "Bersama" }
+      ]
+    },
+    "kelas5-seni-rupa-b02-perspektif": {
+      "matching": [
+        { "pairId": "pasangan-benda-yang-letaknya-dekat-dengan", "left": "Langkah setelah menentukan titik hilang", "right": "Menggambar garis bantu" }
+      ]
+    },
+    "kelas5-seni-rupa-b04-karya-campuran": {
+      "matching": [
+        { "pairId": "pasangan-sebelum-menempel-dan-menggambar", "left": "Yang dibuat sebelum menempel dan menggambar" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b06-diskusi": {
+      "matching": [
+        { "pairId": "pasangan-5", "left": "Sikap saat teman berbeda pendapat" }
+      ]
+    },
+    "kelas6-matematika-b03-rasio-proporsi": {
+      "matching": [
+        { "pairId": "pasangan-4", "left": "Rasio yang senilai dengan 3 : 4" },
+        { "pairId": "pasangan-hasil-penyederhanaan-rasio-8-6", "left": "Rasio 10 : 5 sama dengan", "right": "2 : 1" }
+      ]
+    },
+    "kelas6-pai-b02-iman-hari-akhir": {
+      "matching": [
+        { "pairId": "pasangan-5", "left": "Yang mengetahui waktu datangnya hari akhir" }
+      ]
+    }
+  }
+}

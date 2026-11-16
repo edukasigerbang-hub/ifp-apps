@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Daun kering\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Bingkai hiasan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Boneka sederhana"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kolase"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Ranting\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Bingkai hiasan"
+          },
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Boneka sederhana"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bahan-alam-yang-dipakai-untuk-me",
+        "prompt": "Bahan alam yang dipakai untuk membuat mozaik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-0",
+            "text": "Biji"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-1",
+            "text": "Bambu"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-2",
+            "text": "Kain perca"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alam-yang-dipakai-unt-3",
+            "text": "Lem"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-alam-yang-dipakai-unt-0"
+      },
+      {
+        "questionId": "soal-anyaman-pada-kerajinan-biasanya",
+        "prompt": "Anyaman pada kerajinan biasanya dibuat dari bahan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-1",
+            "text": "Biji"
+          },
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-0",
+            "text": "Bambu"
+          },
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-2",
+            "text": "Kain perca"
+          },
+          {
+            "optionId": "opsi-soal-anyaman-pada-kerajinan-bias-3",
+            "text": "Daun kering"
+          }
+        ],
+        "correctResponse": "opsi-soal-anyaman-pada-kerajinan-bias-0"
+      },
+      {
+        "questionId": "soal-bahan-kerajinan-yang-baik-harus",
+        "prompt": "Bahan kerajinan yang baik harus bersih, aman, dan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-1",
+            "text": "Sulit diperoleh"
+          },
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-2",
+            "text": "Berat"
+          },
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-0",
+            "text": "Mudah dibentuk"
+          },
+          {
+            "optionId": "opsi-soal-bahan-kerajinan-yang-baik-h-3",
+            "text": "Mahal"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-kerajinan-yang-baik-h-0"
+      },
+      {
+        "questionId": "soal-perekat-yang-aman-untuk-menempel",
+        "prompt": "Perekat yang aman untuk menempel bahan kerajinan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-1",
+            "text": "Tiner"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-2",
+            "text": "Benang jahit"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-3",
+            "text": "Cat air"
+          },
+          {
+            "optionId": "opsi-soal-perekat-yang-aman-untuk-men-0",
+            "text": "Lem serbaguna"
+          }
+        ],
+        "correctResponse": "opsi-soal-perekat-yang-aman-untuk-men-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerajinan dari daun, ranting, kain, dan biji."
+  }
+}

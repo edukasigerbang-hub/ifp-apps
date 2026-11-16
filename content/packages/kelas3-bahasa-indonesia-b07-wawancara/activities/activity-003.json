@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang diwawancarai",
+        "right": "Narasumber"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Pertanyaan yang baik",
+        "right": "Singkat, jelas, dan mudah dijawab"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan saat wawancara",
+        "right": "Bersikap sopan dan mencatat jawaban"
+      },
+      {
+        "pairId": "pasangan-tindakan-pertama-sebelum-mulai-b",
+        "left": "Tindakan pertama sebelum mulai bertanya kepada narasumber",
+        "right": "meminta izin"
+      },
+      {
+        "pairId": "pasangan-alat-yang-dipakai-untuk-mencatat",
+        "left": "Alat yang dipakai untuk mencatat jawaban narasumber",
+        "right": "buku catatan"
+      },
+      {
+        "pairId": "pasangan-ucapan-yang-harus-dikatakan-sete",
+        "left": "Ucapan yang harus dikatakan setelah wawancara selesai",
+        "right": "terima kasih"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua anak mewawancarai narasumber dengan sopan."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-ipas-b06-keragaman-budaya",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Keragaman Budaya di Sekitar — IPAS Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/keragaman-budaya-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 208068,
+      "sha256": "5188c3841a941f4c8af4c3d11f06a333bb4c30e654a4642c513e045a1756d408"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

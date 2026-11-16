@@ -1,0 +1,172 @@
+{
+  "activityId": "kuis-eksposisi",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Teks Eksposisi",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-tujuan",
+        "prompt": "Tujuan teks eksposisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-cerita",
+            "text": "Menceritakan khayalan"
+          },
+          {
+            "optionId": "opsi-jelas",
+            "text": "Menjelaskan informasi"
+          },
+          {
+            "optionId": "opsi-bujuk",
+            "text": "Membujuk membeli"
+          },
+          {
+            "optionId": "opsi-langkah",
+            "text": "Memberi langkah"
+          }
+        ],
+        "correctResponse": "opsi-jelas"
+      },
+      {
+        "questionId": "soal-struktur",
+        "prompt": "Struktur teks eksposisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-awal",
+            "text": "Awal, tengah, akhir"
+          },
+          {
+            "optionId": "opsi-sampiran",
+            "text": "Sampiran dan isi"
+          },
+          {
+            "optionId": "opsi-tesis",
+            "text": "Tesis, argumen, penegasan"
+          },
+          {
+            "optionId": "opsi-resep",
+            "text": "Alat dan langkah"
+          }
+        ],
+        "correctResponse": "opsi-tesis"
+      },
+      {
+        "questionId": "soal-bahasa",
+        "prompt": "Bahasa teks eksposisi sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-gaul",
+            "text": "Gaul"
+          },
+          {
+            "optionId": "opsi-puitis",
+            "text": "Puitis"
+          },
+          {
+            "optionId": "opsi-lucu",
+            "text": "Lucu"
+          },
+          {
+            "optionId": "opsi-baku",
+            "text": "Baku dan jelas"
+          }
+        ],
+        "correctResponse": "opsi-baku"
+      },
+      {
+        "questionId": "soal-isi",
+        "prompt": "Bagian argumen berisi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-alasan",
+            "text": "Alasan dan bukti"
+          },
+          {
+            "optionId": "opsi-tokoh",
+            "text": "Tokoh cerita"
+          },
+          {
+            "optionId": "opsi-langkah",
+            "text": "Langkah kegiatan"
+          },
+          {
+            "optionId": "opsi-sampiran",
+            "text": "Sampiran pantun"
+          }
+        ],
+        "correctResponse": "opsi-alasan"
+      },
+      {
+        "questionId": "soal-bagian-terakhir-struktur-teks-ek",
+        "prompt": "Bagian terakhir struktur teks eksposisi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-1",
+            "text": "tesis"
+          },
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-0",
+            "text": "penegasan"
+          },
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-2",
+            "text": "argumen"
+          },
+          {
+            "optionId": "opsi-soal-bagian-terakhir-struktur-te-3",
+            "text": "penjelasan"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-terakhir-struktur-te-0"
+      },
+      {
+        "questionId": "soal-informasi-pada-teks-eksposisi-di",
+        "prompt": "Informasi pada teks eksposisi disampaikan secara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-informasi-pada-teks-eksposi-0",
+            "text": "objektif"
+          },
+          {
+            "optionId": "opsi-soal-informasi-pada-teks-eksposi-1",
+            "text": "berlebihan"
+          },
+          {
+            "optionId": "opsi-soal-informasi-pada-teks-eksposi-2",
+            "text": "memihak"
+          }
+        ],
+        "correctResponse": "opsi-soal-informasi-pada-teks-eksposi-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi di sudut baca."
+  }
+}

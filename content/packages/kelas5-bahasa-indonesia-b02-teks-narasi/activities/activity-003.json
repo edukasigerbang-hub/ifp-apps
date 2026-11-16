@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Ciri teks narasi",
+        "right": "Menceritakan peristiwa dengan tokoh dan alur"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tokoh",
+        "right": "Pelaku dalam cerita"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Urutan awal, tengah, dan akhir cerita",
+        "right": "Alur cerita"
+      },
+      {
+        "pairId": "pasangan-masalah-yang-dialami-tokoh-pada",
+        "left": "Masalah yang dialami tokoh pada bagian tengah cerita",
+        "right": "Konflik"
+      },
+      {
+        "pairId": "pasangan-langkah-awal-menulis-teks-narasi",
+        "left": "Langkah awal menulis teks narasi",
+        "right": "Menentukan tema"
+      },
+      {
+        "pairId": "pasangan-bagian-akhir-cerita-narasi-beris",
+        "left": "Bagian akhir cerita narasi berisi",
+        "right": "Penyelesaian masalah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
+  }
+}

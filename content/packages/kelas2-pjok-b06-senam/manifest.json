@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pjok-b06-senam",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Senam Ringan — PJOK Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/senam-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 114422,
+      "sha256": "83fcefb087de4c19683bdccb1da2d28304b58e74a3fab8654287848c12e8f8ea"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "gerak-lokomotor",
+  "packageId": "kelas3-pjok-b01-gerak-lokomotor",
+  "title": "Gerak Lokomotor",
+  "summary": "Mempraktikkan gerak berpindah tempat dengan teknik dan keselamatan yang benar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak lokomotor.",
+    "Mempraktikkan jalan, lari, dan lompat.",
+    "Menjaga keselamatan saat bergerak."
+  ],
+  "activityIds": [
+    "eksplorasi-gerak-lokomotor",
+    "matching-gerak-lokomotor",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/gerak-lokomotor.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan, berlari, dan melompat di lapangan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

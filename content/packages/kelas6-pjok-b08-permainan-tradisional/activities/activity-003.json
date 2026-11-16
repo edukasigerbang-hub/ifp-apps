@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Permainan tradisional yang kamu tahu",
+        "right": "Gobak sodor, engklek, dan kasti"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan penting",
+        "right": "Agar permainan adil"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Manfaatnya",
+        "right": "Melatih gerak, kerja sama, dan sportivitas"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Permainan lapangan warisan budaya",
+        "right": "Permainan tradisional"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Contoh permainan tradisional adalah",
+        "right": "Gobak sodor"
+      },
+      {
+        "pairId": "pasangan-sikap-menghargai-lawan-dan-atura",
+        "left": "Sikap menghargai lawan dan aturan",
+        "right": "Sportivitas"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan tradisional di lapangan."
+  }
+}

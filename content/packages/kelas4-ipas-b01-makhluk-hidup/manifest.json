@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-ipas-b01-makhluk-hidup",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Makhluk Hidup & Lingkungan — IPAS Kelas 4 (Pilot)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/kolam-ekosistem.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 206894,
+      "sha256": "11b376f32107085a89e5d744d73c273fef212d9c22b3f57ee4db353bf4548d0f"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

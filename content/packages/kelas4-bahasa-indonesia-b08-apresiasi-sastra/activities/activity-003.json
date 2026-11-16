@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Membaca buku sastra dengan tenang",
+        "right": "Apresiasi sastra"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang bisa dinikmati dari sebuah puisi",
+        "right": "Rima, pilihan kata, irama, dan amanat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Cara memberi apresiasi yang baik",
+        "right": "Menyebutkan hal menarik dan alasannya dengan sopan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Apresiasi yang baik terhadap karya teman adalah",
+        "right": "menyebutkan hal menarik beserta alasannya"
+      },
+      {
+        "pairId": "pasangan-unsur-cerita-yang-berisi-pesan-p",
+        "left": "Unsur cerita yang berisi pesan penulis untuk pembacanya",
+        "right": "amanat"
+      },
+      {
+        "pairId": "pasangan-kumpulan-baris-yang-membentuk-sa",
+        "left": "Kumpulan baris yang membentuk satu bagian dalam puisi disebut",
+        "right": "bait"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak duduk membaca buku sastra di bawah pohon pada hari cerah."
+  }
+}

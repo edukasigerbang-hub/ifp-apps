@@ -118,6 +118,67 @@ impl AppError {
         )
     }
 
+    pub fn avatar_invalid() -> Self {
+        Self::new(
+            "PROFILE_AVATAR_INVALID",
+            "Foto profil harus berupa gambar PNG, JPEG, atau WebP.",
+        )
+    }
+
+    pub fn avatar_too_large() -> Self {
+        Self::new("PROFILE_AVATAR_TOO_LARGE", "Ukuran foto profil maksimal 1,5 MB.")
+    }
+
+    pub fn avatar_unreadable() -> Self {
+        Self::new("PROFILE_AVATAR_UNREADABLE", "File foto profil tidak dapat dibaca.")
+    }
+
+    pub fn avatar_source_too_large() -> Self {
+        Self::new(
+            "PROFILE_AVATAR_SOURCE_TOO_LARGE",
+            "Foto sumber maksimal 20 MB sebelum dipotong.",
+        )
+    }
+
+    pub fn material_not_found(message: &str) -> Self {
+        Self::new("MATERIAL_NOT_FOUND", message)
+    }
+
+    pub fn material_invalid(message: &str) -> Self {
+        Self::new("MATERIAL_INVALID", message)
+    }
+
+    pub fn material_too_large() -> Self {
+        Self::new("MATERIAL_TOO_LARGE", "Bundel materi melebihi batas 50 MB.")
+    }
+
+    pub fn material_hash_mismatch(message: &str) -> Self {
+        Self::new("MATERIAL_HASH_MISMATCH", message)
+    }
+
+    pub fn material_signature_invalid(message: &str) -> Self {
+        Self::new("MATERIAL_SIGNATURE_INVALID", message)
+    }
+
+    pub fn material_schema_unsupported(message: &str) -> Self {
+        Self::new("MATERIAL_SCHEMA_UNSUPPORTED", message)
+    }
+
+    pub fn material_not_self_contained(message: &str) -> Self {
+        Self::new("MATERIAL_NOT_SELF_CONTAINED", message)
+    }
+
+    pub fn material_incompatible_app(min_version: &str) -> Self {
+        Self::new(
+            "MATERIAL_INCOMPATIBLE_APP",
+            &format!("Materi membutuhkan aplikasi versi {min_version} atau lebih baru."),
+        )
+    }
+
+    pub fn material_fetch_failed(message: &str) -> Self {
+        Self::new("MATERIAL_FETCH_FAILED", message)
+    }
+
     pub fn write(error: impl Display) -> Self {
         eprintln!("database write error: {error}");
         Self::new("DATABASE_WRITE_FAILED", "Hasil belajar gagal disimpan.")

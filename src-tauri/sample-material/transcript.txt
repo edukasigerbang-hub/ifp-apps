@@ -1,0 +1,21 @@
+SIKLUS AIR DALAM ANIMASI
+Materi contoh prototipe materi HTML5 — Kelas 3, IPAS.
+
+Transkrip ini memuat seluruh isi naratif animasi. Materi ini belum diterbitkan;
+bundelnya hanya dipakai untuk menguji penampil di aplikasi desktop.
+
+ADEGAN 1 — PENGUAPAN
+Matahari menyinari permukaan laut. Air laut menjadi hangat lalu menguap
+menjadi uap air yang tidak terlihat.
+
+ADEGAN 2 — PENGEMBUNAN
+Uap air naik ke langit. Semakin tinggi, udara semakin dingin, sehingga uap air
+berubah menjadi titik-titik air kecil yang berkumpul membentuk awan.
+
+ADEGAN 3 — HUJAN
+Titik-titik air di awan semakin berat. Awan menurunkan hujan. Air hujan jatuh
+ke sungai, danau, dan laut, lalu siklus dimulai lagi.
+
+RINGKASAN
+Siklus air terdiri atas penguapan, pengembunan, dan hujan. Air yang sama terus
+berpindah dari laut ke langit dan kembali ke bumi.

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-ipas-b07-hemat-air-listrik",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Hemat Air dan Listrik — IPAS Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/hemat-air-listrik.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 158380,
+      "sha256": "f9ecb562d0e0f05e5cbf49a8f5b95732aa33f25bafcde3e0d7678c37f3915ebe"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

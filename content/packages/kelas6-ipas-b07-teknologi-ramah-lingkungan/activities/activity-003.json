@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Panel surya",
+        "right": "Alat pengubah energi matahari menjadi listrik"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kincir angin",
+        "right": "Pembangkit listrik tenaga angin"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Daur ulang",
+        "right": "Mengolah sampah menjadi barang baru"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Cara menghemat energi adalah",
+        "right": "Mematikan lampu saat tidak dipakai"
+      },
+      {
+        "pairId": "pasangan-sumber-energi-yang-ditangkap-pan",
+        "left": "Sumber energi yang ditangkap panel surya",
+        "right": "Matahari"
+      },
+      {
+        "pairId": "pasangan-sumber-energi-yang-memutar-kinci",
+        "left": "Sumber energi yang memutar kincir angin",
+        "right": "Angin"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Panel surya, kincir angin, dan daur ulang."
+  }
+}

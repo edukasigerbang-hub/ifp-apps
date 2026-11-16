@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-bercerita-kelas2",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Bercerita",
+  "instructions": "Susun langkah bercerita.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tema",
+        "text": "Memilih cerita"
+      },
+      {
+        "itemId": "langkah-awal",
+        "text": "Menceritakan awal"
+      },
+      {
+        "itemId": "langkah-tengah",
+        "text": "Menceritakan tengah"
+      },
+      {
+        "itemId": "langkah-akhir",
+        "text": "Menceritakan akhir"
+      },
+      {
+        "itemId": "langkah-terima",
+        "text": "Mengucapkan terima kasih"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tema",
+      "langkah-awal",
+      "langkah-tengah",
+      "langkah-akhir",
+      "langkah-terima"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bercerita di depan kelas."
+  }
+}

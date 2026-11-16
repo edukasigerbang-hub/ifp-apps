@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-bumi-tata-surya",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Bumi",
+  "instructions": "Amati gambar, lalu diskusikan rotasi dan revolusi.",
+  "assets": [
+    "assets/tata-surya-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu rotasi bumi?",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya.",
+        "reveal": "Perputaran bumi pada porosnya.",
+        "hint": "Sekali rotasi ±24 jam."
+      },
+      {
+        "prompt": "Apa akibat rotasi?",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya.",
+        "reveal": "Siang dan malam.",
+        "hint": "Perbedaan waktu."
+      },
+      {
+        "prompt": "Apa akibat revolusi?",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya.",
+        "reveal": "Pergantian musim.",
+        "hint": "Sekali revolusi ±365 hari."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bumi dan Tata Surya?",
+        "reveal": "Memahami rotasi, revolusi, dan akibatnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Bumi dan Tata Surya?",
+        "reveal": "Bumi berotasi → Terjadi siang dan malam → Bumi berevolusi → Terjadi pergantian musim → Terjadi gerhana",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/tata-surya-kelas6.webp",
+        "altText": "Matahari dan planet-planet tata surya."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet tata surya."
+  }
+}

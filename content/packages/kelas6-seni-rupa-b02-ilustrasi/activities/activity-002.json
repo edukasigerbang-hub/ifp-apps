@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-ilustrasi",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Membuat Ilustrasi",
+  "instructions": "Susun langkah membuat ilustrasi.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-tema",
+        "text": "Menentukan tema"
+      },
+      {
+        "itemId": "langkah-sketsa",
+        "text": "Membuat sketsa"
+      },
+      {
+        "itemId": "langkah-garis",
+        "text": "Menebalkan garis"
+      },
+      {
+        "itemId": "langkah-warna",
+        "text": "Mewarnai"
+      },
+      {
+        "itemId": "langkah-detail",
+        "text": "Menambahkan detail"
+      }
+    ],
+    "correctOrder": [
+      "langkah-tema",
+      "langkah-sketsa",
+      "langkah-garis",
+      "langkah-warna",
+      "langkah-detail"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+  }
+}

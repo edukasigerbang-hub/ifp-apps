@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-ipas-b07-lingkungan-pelestarian",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Lingkungan dan Pelestariannya — IPAS Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/lingkungan-pelestarian.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 166006,
+      "sha256": "28f2398b9c885d55221d700e24b73846fee484553d331247b54154c1c476f936"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

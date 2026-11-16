@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-seni-rupa-b01-unsur-garis",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Unsur Garis dan Warna — Seni Rupa Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/unsur-garis-warna.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 131914,
+      "sha256": "38be35409c3e71901e93cc3f33fad7ae5e5b7c0e299111e0ae00ee59f0219122"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

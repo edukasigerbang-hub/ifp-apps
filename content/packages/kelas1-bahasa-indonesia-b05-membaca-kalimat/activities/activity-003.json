@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kalimat yang dibaca: Siti membaca buku",
+        "right": "Siti membaca buku"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kalimat berita diakhiri",
+        "right": "Titik"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kalimat tanya diakhiri",
+        "right": "Tanda tanya"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Kegiatan membaca kalimat pendek di sudut baca",
+        "right": "Membaca kalimat"
+      },
+      {
+        "pairId": "pasangan-kegiatan-melihat-tulisan-dan-mel",
+        "left": "Kegiatan melihat tulisan dan melafalkannya",
+        "right": "Membaca"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kalimat sederhana di sudut baca."
+  }
+}

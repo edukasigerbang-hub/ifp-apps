@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bentuk dasar yang kamu lihat",
+        "right": "Kubus, bola, dan tabung"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Arah yang membuat sisi kiri gambar lebih terang",
+        "right": "Cahaya dari kiri atas"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan bayangan ditambahkan pada gambar",
+        "right": "Kesan tiga dimensi"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Kubus, bola, dan tabung di atas meja",
+        "right": "Bangun ruang"
+      },
+      {
+        "pairId": "pasangan-wadah-air-minum-di-rumah-yang-be",
+        "left": "Wadah air minum di rumah yang bentuknya mencontoh bangun tabung",
+        "right": "Botol"
+      },
+      {
+        "pairId": "pasangan-arah-jatuh-bayangan-bila-cahaya",
+        "left": "Arah jatuh bayangan bila cahaya datang dari kiri atas",
+        "right": "Ke sebelah kanan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Benda tiga dimensi sederhana di atas meja: kubus oranye, bola teal, dan tabung kuning dengan cahaya dari kiri atas."
+  }
+}

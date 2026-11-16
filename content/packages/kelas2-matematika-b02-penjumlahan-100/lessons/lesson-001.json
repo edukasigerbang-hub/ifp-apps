@@ -1,0 +1,28 @@
+{
+  "lessonId": "penjumlahan-100",
+  "packageId": "kelas2-matematika-b02-penjumlahan-100",
+  "title": "Penjumlahan dan Pengurangan sampai 100",
+  "summary": "Menjumlahkan dan mengurangkan bilangan sampai 100.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjumlahkan sampai 100.",
+    "Mengurangkan sampai 100.",
+    "Menyelesaikan soal cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-penjumlahan-100",
+    "kuis-penjumlahan-100",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penjumlahan-100"
+  ],
+  "assetRefs": [
+    "assets/penjumlahan-100.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

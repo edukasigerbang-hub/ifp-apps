@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Teknik lanjutan sepak bola",
+        "right": "Passing, dribbling, dan shooting"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Teknik lanjutan bola basket",
+        "right": "Dribble, passing, dan shooting"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan kerja sama penting",
+        "right": "Agar tim mencetak skor"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Agar tim menang, pemain harus",
+        "right": "Bekerja sama"
+      },
+      {
+        "pairId": "pasangan-teknik-menembak-bola-ke-arah-rin",
+        "left": "Teknik menembak bola ke arah ring atau gawang",
+        "right": "Shooting"
+      },
+      {
+        "pairId": "pasangan-istilah-teknik-mengoper-bola-dal",
+        "left": "Istilah teknik mengoper bola dalam permainan",
+        "right": "Passing"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  }
+}

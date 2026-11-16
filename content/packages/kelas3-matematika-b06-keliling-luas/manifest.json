@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b06-keliling-luas",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Keliling dan Luas Sederhana — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/keliling-luas.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 86498,
+      "sha256": "3ee6a950802ec1a96e70a7d459519f892f56eff4eaf3a71ecf475200286a22ee"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6427,
+      "sha256": "aba3c8135cbba425f5f3b43c7a803087cf52fb1aeeb354ec0e71233902d9cd88"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8385,
+      "sha256": "3ce4a23ffe31c6a59d6adecfb187c4a9b343a76d7b1704bb835bd5b97c632b57"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 14030,
+      "sha256": "b2f9764563c520a4e52c98be35a74acdde8561970832c78f53a88d2cbec2cde4"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7005,
+      "sha256": "d91027f648455ee55e8d9d6ba384f70c69ba4cf4759af8fca2b95579e3c6bbf4"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6138,
+      "sha256": "8fc068bffe1e0e5142b9065eb7b992504ccc4f1b897a828ce305f0be1f7cc808"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

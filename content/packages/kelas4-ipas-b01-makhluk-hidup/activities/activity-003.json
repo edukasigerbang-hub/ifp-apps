@@ -1,0 +1,68 @@
+{
+  "activityId": "kuis-singkat-makhluk-hidup",
+  "type": "short-answer",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Jawaban Singkat",
+  "instructions": "Tulis jawaban singkat yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-1",
+        "prompt": "Sebutkan satu ciri makhluk hidup.",
+        "responseType": "text",
+        "correctResponse": ["bernapas", "bergerak", "tumbuh", "berkembang biak"]
+      },
+      {
+        "questionId": "soal-2",
+        "prompt": "Ikan bernapas dengan ...",
+        "responseType": "text",
+        "correctResponse": "insang"
+      },
+      {
+        "questionId": "soal-3",
+        "prompt": "Benda tak hidup yang ada di tepi kolam pada gambar adalah ...",
+        "responseType": "text",
+        "correctResponse": "batu"
+      },
+      {
+        "questionId": "soal-4",
+        "prompt": "Peran tumbuhan adalah menghasilkan ...",
+        "responseType": "text",
+        "correctResponse": ["oksigen", "makanan"]
+      },
+      {
+        "questionId": "soal-kupu-kupu-bernapas-dengan",
+        "prompt": "Kupu-kupu bernapas dengan ...",
+        "responseType": "text",
+        "correctResponse": "trakea"
+      },
+      {
+        "questionId": "soal-selain-oksigen-tumbuhan-juga-men",
+        "prompt": "Selain oksigen, tumbuhan juga menghasilkan ... untuk makhluk hidup lain.",
+        "responseType": "text",
+        "correctResponse": "makanan"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua siswa mengamati kolam dengan ikan, siput di atas batu, kupu-kupu, dan teratai."
+  }
+}

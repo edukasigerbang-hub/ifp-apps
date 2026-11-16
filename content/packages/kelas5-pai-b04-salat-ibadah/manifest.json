@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b04-salat-ibadah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Salat dan Ibadah — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/salat-ibadah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 185206,
+      "sha256": "e15ce505089b4a7b420ff41b9db44a965ffb4a3e6085ac21dc70b548ca798913"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

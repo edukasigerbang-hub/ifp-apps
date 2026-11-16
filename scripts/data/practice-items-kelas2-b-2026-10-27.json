@@ -1,0 +1,254 @@
+{
+  "_comment": "T-092 kelompok kelas 2 bagian B (IPAS + Pendidikan Pancasila). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing dari digest, bukan template. Target per paket mengikuti needs-kelas2-b.json (total 35 soal, 6 pasangan). Diterapkan skrip oleh LEAD.",
+  "packages": {
+    "kelas2-ipas-b01-pertumbuhan-manusia-hewan": {
+      "quiz": [
+        {
+          "prompt": "Saat tumbuh, tubuh anak bertambah berat dan bertambah ...",
+          "answer": "tinggi",
+          "distractors": ["pendek", "kurus", "ringan"]
+        },
+        {
+          "prompt": "Hal baru yang menandakan kamu sudah tumbuh adalah ...",
+          "answer": "bisa menulis",
+          "distractors": ["belum bisa bicara", "masih menangis"]
+        },
+        {
+          "prompt": "Kegiatan yang membantu tubuh tumbuh sehat adalah ...",
+          "answer": "berolahraga",
+          "distractors": ["begadang", "tidur seharian"]
+        }
+      ]
+    },
+    "kelas2-ipas-b02-bagian-tumbuhan": {
+      "quiz": [
+        {
+          "prompt": "Sayur bayam yang kita makan berasal dari bagian tumbuhan, yaitu ...",
+          "answer": "daun",
+          "distractors": ["akar", "batang", "bunga"]
+        },
+        {
+          "prompt": "Bunga pada tumbuhan lama-kelamaan akan berkembang menjadi ...",
+          "answer": "buah",
+          "distractors": ["daun", "akar", "batang"]
+        },
+        {
+          "prompt": "Akar, batang, daun, bunga, dan buah adalah ... bagian utama tumbuhan.",
+          "answer": "lima",
+          "distractors": ["tiga", "empat", "tujuh"]
+        }
+      ]
+    },
+    "kelas2-ipas-b03-siklus-hidup-sederhana": {
+      "quiz": [
+        {
+          "prompt": "Tahap hidup kupu-kupu setelah menetas dari telur adalah ...",
+          "answer": "ulat",
+          "distractors": ["kepompong", "kupu-kupu", "telur"]
+        },
+        {
+          "prompt": "Makhluk hidup berkembang biak supaya jenisnya ...",
+          "answer": "tetap ada",
+          "distractors": ["mudah hilang", "segera punah"]
+        },
+        {
+          "prompt": "Hewan berikut yang menetas dari telur adalah ...",
+          "answer": "ayam",
+          "distractors": ["sapi", "kucing", "kambing"]
+        }
+      ]
+    },
+    "kelas2-ipas-b04-wujud-benda": {
+      "quiz": [
+        {
+          "prompt": "Benda padat mempunyai bentuk yang ...",
+          "answer": "tetap",
+          "distractors": ["berubah-ubah", "mengalir"]
+        },
+        {
+          "prompt": "Kecap dan minyak goreng di dapur termasuk benda ...",
+          "answer": "cair",
+          "distractors": ["padat", "keras"]
+        },
+        {
+          "prompt": "Benda berikut yang bentuknya tidak berubah saat dipindahkan adalah ...",
+          "answer": "batu",
+          "distractors": ["air", "susu", "sirup"]
+        }
+      ]
+    },
+    "kelas2-ipas-b05-perubahan-cuaca-musim": {
+      "quiz": [
+        {
+          "prompt": "Saat musim hujan, udara di sekitar terasa ...",
+          "answer": "lembap",
+          "distractors": ["panas", "kering", "berdebu"]
+        },
+        {
+          "prompt": "Musim yang jarang turun hujan di Indonesia adalah musim ...",
+          "answer": "kemarau",
+          "distractors": ["hujan", "semi"]
+        },
+        {
+          "prompt": "Kipas angin biasanya kita nyalakan ketika udara ...",
+          "answer": "panas",
+          "distractors": ["dingin", "sejuk"]
+        }
+      ]
+    },
+    "kelas2-ipas-b06-sumber-daya-alam": {
+      "quiz": [
+        {
+          "prompt": "Sumber daya alam yang berasal dari hewan adalah ...",
+          "answer": "ikan",
+          "distractors": ["padi", "jagung", "kedelai"]
+        },
+        {
+          "prompt": "Bahan bakar yang tidak dapat diperbarui adalah ...",
+          "answer": "batu bara",
+          "distractors": ["sinar matahari", "air sungai", "tumbuhan"]
+        },
+        {
+          "prompt": "Memakai air secukupnya dan tidak berlebih disebut ...",
+          "answer": "hemat",
+          "distractors": ["boros", "banyak"]
+        }
+      ]
+    },
+    "kelas2-ipas-b07-hemat-air-listrik": {
+      "quiz": [
+        {
+          "prompt": "Listrik di rumah kita pakai untuk ...",
+          "answer": "menyalakan lampu",
+          "distractors": ["menyiram tanaman", "menjemur pakaian"]
+        },
+        {
+          "prompt": "Pengisi daya ponsel sebaiknya ... setelah selesai mengisi.",
+          "answer": "dicabut",
+          "distractors": ["dibiarkan terpasang", "disambungkan lagi"]
+        },
+        {
+          "prompt": "Saat mencuci, air lebih sedikit terpakai jika kita memakai ...",
+          "answer": "ember",
+          "distractors": ["selang", "gayung"]
+        }
+      ]
+    },
+    "kelas2-ipas-b08-lingkungan-bersih-sehat": {
+      "quiz": [
+        {
+          "prompt": "Membersihkan kelas dan halaman bersama-sama disebut ...",
+          "answer": "kerja bakti",
+          "distractors": ["libur sekolah", "ujian kelas"]
+        },
+        {
+          "prompt": "Menanam pohon di halaman membuat udara menjadi ...",
+          "answer": "segar",
+          "distractors": ["pengap", "berdebu"]
+        },
+        {
+          "prompt": "Mencuci tangan sebelum makan mencegah kita ...",
+          "answer": "sakit",
+          "distractors": ["sehat", "kenyang", "lapar"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b01-simbol-pancasila": {
+      "quiz": [
+        {
+          "prompt": "Kepala banteng menjadi simbol sila yang bermakna ...",
+          "answer": "musyawarah",
+          "distractors": ["persatuan", "keadilan sosial"]
+        },
+        {
+          "prompt": "Sila yang dilambangkan padi dan kapas adalah sila ke-...",
+          "answer": "lima",
+          "distractors": ["dua", "empat"]
+        },
+        {
+          "prompt": "Siswa yang beribadah dengan tenang melaksanakan sila ke-...",
+          "answer": "pertama",
+          "distractors": ["kedua", "ketiga"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b02-aturan-sekolah": {
+      "quiz": [
+        {
+          "prompt": "Pelanggaran aturan membuat kegiatan belajar di kelas menjadi ...",
+          "answer": "terganggu",
+          "distractors": ["nyaman", "lebih cepat"]
+        }
+      ],
+      "matching": [
+        { "left": "Cara siswa mematuhi aturan di sekolah", "right": "melaksanakan aturan itu" }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b03-hak-kewajiban-siswa": {
+      "quiz": [
+        {
+          "prompt": "Pelajaran yang diterima siswa di kelas termasuk ...",
+          "answer": "hak",
+          "distractors": ["kewajiban", "hukuman"]
+        },
+        {
+          "prompt": "Menjaga kebersihan kelas termasuk ...",
+          "answer": "kewajiban",
+          "distractors": ["hak", "hadiah"]
+        },
+        {
+          "prompt": "Hak dan kewajiban dijalankan seimbang agar ...",
+          "answer": "kelas nyaman",
+          "distractors": ["kelas ribut", "kelas kosong"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b04-musyawarah": {
+      "matching": [
+        { "left": "Keputusan yang dihasilkan bersama lewat musyawarah", "right": "kesepakatan" }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b05-keberagaman": {
+      "quiz": [
+        {
+          "prompt": "Sikap terhadap teman yang berbeda suku adalah ...",
+          "answer": "menghargai",
+          "distractors": ["memusuhi", "menghindar"]
+        },
+        {
+          "prompt": "Manfaat keberagaman di sekolah adalah kita bisa belajar hal ...",
+          "answer": "baru",
+          "distractors": ["lama", "sulit"]
+        },
+        {
+          "prompt": "Menerima perbedaan antar teman disebut ...",
+          "answer": "toleransi",
+          "distractors": ["musyawarah", "gotong royong"]
+        }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b06-nkri": {
+      "quiz": [
+        {
+          "prompt": "Negara tempat kita tinggal bernama Republik ...",
+          "answer": "Indonesia",
+          "distractors": ["Malaysia", "Singapura", "Thailand"]
+        }
+      ],
+      "matching": [
+        { "left": "Kegiatan di sekolah untuk menghormati bendera negara", "right": "upacara bendera" }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b07-gotong-royong": {
+      "matching": [
+        { "left": "Langkah pertama sebelum kerja bakti dimulai", "right": "menentukan kegiatan" },
+        { "left": "Yang dilakukan pada alat setelah pekerjaan selesai", "right": "merapikan alat" }
+      ]
+    },
+    "kelas2-pendidikan-pancasila-b08-proyek-kelas": {
+      "matching": [
+        { "left": "Tahap awal sebelum tugas proyek kelas dibagikan", "right": "memilih kegiatan" }
+      ]
+    }
+  }
+}

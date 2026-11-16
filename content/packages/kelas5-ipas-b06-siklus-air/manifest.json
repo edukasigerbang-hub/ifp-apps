@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-ipas-b06-siklus-air",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Siklus Air dan Cuaca — IPAS Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/siklus-air-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 176290,
+      "sha256": "7c17e3d138f3371c019a4cfcf858805dd42cf5e25b7434ad2e8c7dedbe82503c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

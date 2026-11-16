@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-pemecahan-masalah-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyelesaikan Soal",
+  "instructions": "Amati gambar, lalu diskusikan langkah penyelesaian.",
+  "assets": [
+    "assets/aktivitas-pemecahan-masalah-kelas6-1.png",
+    "assets/aktivitas-pemecahan-masalah-kelas6-2.png",
+    "assets/aktivitas-pemecahan-masalah-kelas6-3.png",
+    "assets/aktivitas-pemecahan-masalah-kelas6-4.png",
+    "assets/aktivitas-pemecahan-masalah-kelas6-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa langkah pertama?",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas6-1.png",
+        "altText": "Kartu soal bergaris dengan kaca pembesar di atasnya dan satu langkah oranye di bawahnya sebagai langkah pertama.",
+        "reveal": "Memahami yang diketahui dan ditanya.",
+        "hint": "Tandai angka."
+      },
+      {
+        "prompt": "Bagaimana memilih strategi?",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas6-2.png",
+        "altText": "Empat kotak operasi hitung tersusun dua baris, kotak tambah di kiri atas ditandai lingkaran oranye.",
+        "reveal": "Pilih operasi atau rumus.",
+        "hint": "Buat model sederhana."
+      },
+      {
+        "prompt": "Mengapa memeriksa penting?",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas6-3.png",
+        "altText": "Kartu soal di kiri, kotak jawaban bertanda centang hijau di kanan, dan panah melengkung kembali ke kartu soal.",
+        "reveal": "Agar jawaban benar.",
+        "hint": "Hitung ulang."
+      },
+      {
+        "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
+        "reveal": "Memahami soal",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas6-4.png",
+        "altText": "Empat langkah berjajar dengan panah maju; langkah pertama berwarna oranye dan diperbesar oleh kaca pembesar."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Empat langkah penyelesaian berjajar dengan panah maju, satu panah kembali ke langkah pertama, dan tanda centang di langkah terakhir.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas6-5.png",
+        "altText": "Empat langkah penyelesaian berjajar dengan panah maju, satu panah kembali ke langkah pertama, dan tanda centang di langkah terakhir."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi pemecahan masalah: kartu soal dengan kaca pembesar, empat pilihan operasi, tanda centang dengan panah kembali, empat langkah dengan langkah pertama disorot, dan alur empat langkah lengkap."
+  }
+}

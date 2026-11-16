@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-gerak-berirama",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Berirama",
+  "instructions": "Amati gambar, lalu diskusikan gerak dan iramanya.",
+  "assets": [
+    "assets/gerak-berirama.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu gerak berirama?",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama.",
+        "reveal": "Gerak yang mengikuti irama musik atau hitungan.",
+        "hint": "Ada keluwesan."
+      },
+      {
+        "prompt": "Apa unsur utamanya?",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama.",
+        "reveal": "Gerak, irama, dan kekompakan.",
+        "hint": "Latihan bersama."
+      },
+      {
+        "prompt": "Mengapa kekompakan penting?",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama.",
+        "reveal": "Agar gerakan serasi.",
+        "hint": "Dengar hitungan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak melakukan gerak berirama mengikuti irama.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Berirama?",
+        "reveal": "Mempraktikkan gerak berirama dengan hitungan dan musik.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/gerak-berirama.webp",
+        "altText": "Anak melakukan gerak berirama mengikuti irama."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan gerak berirama mengikuti irama."
+  }
+}

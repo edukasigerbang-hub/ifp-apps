@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menulis-paragraf",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Paragraf",
+  "instructions": "Amati gambar, lalu diskusikan bagian-bagian paragraf.",
+  "assets": [
+    "assets/menulis-paragraf.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa bagian pertama paragraf?",
+        "assetPath": "assets/menulis-paragraf.webp",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "reveal": "Kalimat topik.",
+        "hint": "Berisi ide utama."
+      },
+      {
+        "prompt": "Bagaimana kalimat pendukung bekerja?",
+        "assetPath": "assets/menulis-paragraf.webp",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "reveal": "Menjelaskan kalimat topik.",
+        "hint": "Tambahkan contoh atau ciri."
+      },
+      {
+        "prompt": "Apa yang perlu diperiksa setelah menulis?",
+        "assetPath": "assets/menulis-paragraf.webp",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "reveal": "Huruf kapital, tanda baca, dan ejaan.",
+        "hint": "Baca ulang dengan suara pelan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Paragraf Sederhana?",
+        "reveal": "Menyusun kalimat topik dan kalimat pendukung menjadi paragraf sederhana.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-paragraf.webp",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/menulis-paragraf.webp",
+        "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+  }
+}

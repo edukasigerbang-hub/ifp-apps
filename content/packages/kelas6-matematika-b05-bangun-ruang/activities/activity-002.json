@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-bangun-ruang-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bangun dan Ciri",
+  "instructions": "Pasangkan setiap bangun atau istilah dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-prisma",
+        "left": "Prisma",
+        "right": "2 sisi sejajar"
+      },
+      {
+        "pairId": "pasangan-limas",
+        "left": "Limas",
+        "right": "1 titik puncak"
+      },
+      {
+        "pairId": "pasangan-tabung",
+        "left": "Tabung",
+        "right": "2 sisi lingkaran"
+      },
+      {
+        "pairId": "pasangan-kubus",
+        "left": "Kubus",
+        "right": "6 sisi sama"
+      },
+      {
+        "pairId": "pasangan-volume",
+        "left": "Volume",
+        "right": "Isi ruang"
+      },
+      {
+        "pairId": "pasangan-luas",
+        "left": "Luas permukaan",
+        "right": "Jumlah luas sisi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kubus, balok, tabung, dan kerucut."
+  }
+}

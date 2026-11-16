@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Sudut siku-siku",
+        "right": "Sudut yang besarnya 90 derajat"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Sudut lancip",
+        "right": "Sudut kurang dari 90 derajat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sudut tumpul",
+        "right": "Sudut lebih dari 90 derajat"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Sudut kurang, tepat, dan lebih dari 90°",
+        "right": "Jenis sudut"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-mengukur-besar-sudut",
+        "left": "Alat untuk mengukur besar sudut",
+        "right": "Busur derajat"
+      },
+      {
+        "pairId": "pasangan-besar-sudut-siku-siku",
+        "left": "Besar sudut siku-siku",
+        "right": "90 derajat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut lancip, siku, dan tumpul pada bangun datar."
+  }
+}

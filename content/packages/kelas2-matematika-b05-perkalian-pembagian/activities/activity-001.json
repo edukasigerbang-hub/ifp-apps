@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-perkalian-pembagian-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kelompok Benda",
+  "instructions": "Amati gambar, lalu diskusikan perkalian dan pembagian.",
+  "assets": [
+    "assets/aktivitas-perkalian-pembagian-1.png",
+    "assets/aktivitas-perkalian-pembagian-2.png",
+    "assets/aktivitas-perkalian-pembagian-3.png",
+    "assets/aktivitas-perkalian-pembagian-4.png",
+    "assets/aktivitas-perkalian-pembagian-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa 2 × 3?",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-1.png",
+        "altText": "Susunan tiga kolom dua baris titik dengan kurung, tanda sama dengan, lalu enam titik berjajar.",
+        "reveal": "6.",
+        "hint": "Dua kelompok berisi tiga."
+      },
+      {
+        "prompt": "Berapa 6 : 2?",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-2.png",
+        "altText": "Enam titik berjajar di atas, ubin bagi, lalu dua lingkaran berisi tiga titik.",
+        "reveal": "3.",
+        "hint": "Bagi menjadi dua kelompok."
+      },
+      {
+        "prompt": "Bagaimana hubungannya?",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-3.png",
+        "altText": "Kotak susunan tiga kali dua titik dan ubin kali di kiri atas, kotak dua lingkaran berisi tiga titik dan ubin bagi di kanan bawah, panah dua arah di antaranya.",
+        "reveal": "Pembagian kebalikan perkalian.",
+        "hint": "2 × 3 = 6, 6 : 2 = 3."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian dan Pembagian?",
+        "reveal": "Menghubungkan perkalian dan pembagian.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-4.png",
+        "altText": "Tiga kartu rangkuman: susunan tiga kali dua titik, dua lingkaran berisi tiga titik, dan ubin kali serta bagi."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-5.png",
+        "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi perkalian dan pembagian: susunan tiga kali dua titik, enam titik dibagi dua lingkaran, hubungan perkalian dan pembagian dengan panah dua arah, tiga kartu rangkuman, dan pengelompokan enam titik."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Siswa duduk melingkar berdiskusi",
+        "right": "Musyawarah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tokoh gambar dengan balon bicara",
+        "right": "Siswa berpendapat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan keputusan musyawarah harus dilaksanakan bersama",
+        "right": "Agar keputusan adil dan menjadi tanggung jawab bersama"
+      },
+      {
+        "pairId": "pasangan-langkah-musyawarah-setelah-menca",
+        "left": "Langkah musyawarah setelah mencatat usulan",
+        "right": "menyimpulkan atau memilih keputusan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-terakhir-musyawarah-set",
+        "left": "Kegiatan terakhir musyawarah setelah keputusan disepakati",
+        "right": "melaksanakan keputusan bersama"
+      },
+      {
+        "pairId": "pasangan-sikap-saat-pendapat-teman-berbed",
+        "left": "Sikap saat pendapat teman berbeda dari pendapat kita",
+        "right": "mendengarkan dan menghargai"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima siswa duduk mengelilingi meja melakukan musyawarah; satu siswa berbicara dan satu mencatat."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Arti NKRI",
+        "right": "Negara Kesatuan Republik Indonesia"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bendera Indonesia",
+        "right": "Merah Putih"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Lambang negara",
+        "right": "Garuda Pancasila"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Upacara bendera dan simbol negara",
+        "right": "NKRI"
+      },
+      {
+        "pairId": "pasangan-kegiatan-di-sekolah-untuk-mengho",
+        "left": "Kegiatan di sekolah untuk menghormati bendera negara",
+        "right": "upacara bendera"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Upacara bendera dan simbol negara."
+  }
+}

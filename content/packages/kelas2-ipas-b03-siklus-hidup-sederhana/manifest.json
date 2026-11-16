@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-ipas-b03-siklus-hidup-sederhana",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Siklus Hidup Sederhana — IPAS Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/siklus-hidup-sederhana.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 212196,
+      "sha256": "6503989dc00416096e769bae8c847fbed8d93c2a2be089f09d1ebff07266190c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

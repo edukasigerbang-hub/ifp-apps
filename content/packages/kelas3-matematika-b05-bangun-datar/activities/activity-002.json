@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-bangun-datar",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Bangun dan Ciri",
+  "instructions": "Pasangkan setiap bangun atau istilah dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-persegi",
+        "left": "Persegi",
+        "right": "4 sisi sama"
+      },
+      {
+        "pairId": "pasangan-persegi-panjang",
+        "left": "Persegi panjang",
+        "right": "2 pasang sisi sama"
+      },
+      {
+        "pairId": "pasangan-segitiga",
+        "left": "Segitiga",
+        "right": "3 sisi"
+      },
+      {
+        "pairId": "pasangan-lingkaran",
+        "left": "Lingkaran",
+        "right": "Tanpa sudut"
+      },
+      {
+        "pairId": "pasangan-sisi",
+        "left": "Sisi",
+        "right": "Garis batas"
+      },
+      {
+        "pairId": "pasangan-sudut",
+        "left": "Sudut",
+        "right": "Pertemuan dua sisi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bangun datar persegi, persegi panjang, segitiga, dan lingkaran."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kupu-kupu berkembang biak",
+        "right": "Bertelur"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tahapan setelah ulat",
+        "right": "Kepompong, lalu kupu-kupu"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Tumbuhan berkembang biak",
+        "right": "Dengan biji, tunas, atau cangkok"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Telur, ulat, kepompong, kupu-kupu",
+        "right": "Metamorfosis"
+      },
+      {
+        "pairId": "pasangan-tahap-pertama-pada-daur-hidup-ku",
+        "left": "Tahap pertama pada daur hidup kupu-kupu",
+        "right": "Telur"
+      },
+      {
+        "pairId": "pasangan-cara-tumbuhan-berkembang-biak-se",
+        "left": "Cara tumbuhan berkembang biak selain dengan biji",
+        "right": "Tunas dan cangkok"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+  }
+}

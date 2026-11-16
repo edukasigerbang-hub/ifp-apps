@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-pecahan-desimal",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Pecahan dan Desimal",
+  "instructions": "Amati batang pecahan, lalu diskusikan nilai desimalnya.",
+  "assets": [
+    "assets/aktivitas-pecahan-desimal-1.png",
+    "assets/aktivitas-pecahan-desimal-2.png",
+    "assets/aktivitas-pecahan-desimal-3.png",
+    "assets/aktivitas-pecahan-desimal-4.png",
+    "assets/aktivitas-pecahan-desimal-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Berapa nilai desimal 1/2?",
+        "assetPath": "assets/aktivitas-pecahan-desimal-1.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi dua dengan satu bagian diwarnai, dan garis putus-putus oranye di titik tengah keduanya.",
+        "reveal": "0,5.",
+        "hint": "Bagi 1 dengan 2."
+      },
+      {
+        "prompt": "Berapa nilai pecahan 0,25?",
+        "assetPath": "assets/aktivitas-pecahan-desimal-2.png",
+        "altText": "Lingkaran terbagi empat dengan satu bagian diwarnai biru dan kotak terbagi empat dengan satu kotak diwarnai biru.",
+        "reveal": "1/4.",
+        "hint": "25 per seratus disederhanakan."
+      },
+      {
+        "prompt": "Bagaimana menjumlahkan desimal?",
+        "assetPath": "assets/aktivitas-pecahan-desimal-3.png",
+        "altText": "Tiga kotak seratus berjajar; kotak pertama lima puluh sel diwarnai, kotak kedua dua puluh lima sel, dan kotak ketiga tujuh puluh lima sel, dihubungkan tanda tambah dan sama dengan.",
+        "reveal": "Sejajarkan tanda koma.",
+        "hint": "Jumlahkan per nilai tempat."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Operasi Pecahan dan Desimal?",
+        "reveal": "Mengubah dan menghitung pecahan serta desimal.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-pecahan-desimal-4.png",
+        "altText": "Tiga kartu rangkuman: kotak seratus dengan dua puluh lima sel, kerangka sepuluh berisi lima, dan garis bilangan bertitik."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-pecahan-desimal-5.png",
+        "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi pecahan dan desimal: setengah pada batang sepuluh, seperempat pada lingkaran dan kotak, penjumlahan tiga kotak seratus, tiga kartu rangkuman, dan batang sepuluh serta kotak seratus."
+  }
+}

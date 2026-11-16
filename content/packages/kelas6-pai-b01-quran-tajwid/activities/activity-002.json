@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-quran-tajwid-kelas6",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Tajwid",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-tajwid",
+        "left": "Tajwid",
+        "right": "Ilmu membaca Al-Qur'an"
+      },
+      {
+        "pairId": "pasangan-mad",
+        "left": "Mad thabi'i",
+        "right": "Panjang dua harakat"
+      },
+      {
+        "pairId": "pasangan-harakat",
+        "left": "Harakat",
+        "right": "Tanda baca"
+      },
+      {
+        "pairId": "pasangan-tartil",
+        "left": "Tartil",
+        "right": "Pelan dan jelas"
+      },
+      {
+        "pairId": "pasangan-adab",
+        "left": "Adab",
+        "right": "Sopan saat membaca"
+      },
+      {
+        "pairId": "pasangan-surah",
+        "left": "Surah",
+        "right": "Bab dalam Al-Qur'an"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil."
+  }
+}

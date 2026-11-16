@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-ipas-b02-makhluk-hidup-di-sekitarku",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Makhluk Hidup di Sekitar Kita — IPAS Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/makhluk-hidup-di-sekitarku.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 214484,
+      "sha256": "4b9ab79022c68787b18317ee3f663c4099b9415e583fd75c9d19c11f90e56cee"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

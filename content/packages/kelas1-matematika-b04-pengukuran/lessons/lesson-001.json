@@ -1,0 +1,28 @@
+{
+  "lessonId": "pengukuran-kelas1",
+  "packageId": "kelas1-matematika-b04-pengukuran",
+  "title": "Pengukuran Sederhana",
+  "summary": "Mengukur panjang, berat, dan waktu dengan cara sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengukur panjang dengan jengkal.",
+    "Mengenal alat ukur berat.",
+    "Mengenal waktu."
+  ],
+  "activityIds": [
+    "eksplorasi-pengukuran-kelas1",
+    "kuis-pengukuran-kelas1",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-pengukuran-kelas1"
+  ],
+  "assetRefs": [
+    "assets/pengukuran-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam, penggaris, dan timbangan sederhana."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-matematika-b02-penjumlahan-100",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Penjumlahan dan Pengurangan sampai 100 — Matematika Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/penjumlahan-100.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 160248,
+      "sha256": "b462492ae25855afca87f224203c15d3145825f28a73361c8a4b9431f436f4df"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-100-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5437,
+      "sha256": "f504cd673187ef6cae03890d20532512cca0fc4645184dac9aadf90247c67990"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-100-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5904,
+      "sha256": "7848f16bc40fa47e44a72173d8602885174cee58cc68e50f2f48bd22259d4cfe"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-100-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 17230,
+      "sha256": "80b9710ab5529b35af0bf52c71ae20dcccaf9131741ae5f1be183fc4e4866d2d"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-100-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7643,
+      "sha256": "6b472db1eff4f5b31d0b239b87ed34a6ff68a1a23d5665ea81df4c538a9e96eb"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-100-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6235,
+      "sha256": "ed68229bc6b730a2d2dcf3e02c692996874c601713957b7905a47eb55c3e1aa5"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "bangun-datar-kelas1",
+  "packageId": "kelas1-matematika-b07-bangun-datar",
+  "title": "Bangun Datar Sederhana",
+  "summary": "Mengenal bangun datar di sekitar.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bangun datar.",
+    "Menyebutkan ciri sederhana.",
+    "Menemukan bangun datar di sekitar."
+  ],
+  "activityIds": [
+    "eksplorasi-bangun-datar-kelas1",
+    "matching-bangun-datar-kelas1",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/bangun-datar-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bangun datar lingkaran, persegi, persegi panjang, dan segitiga."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

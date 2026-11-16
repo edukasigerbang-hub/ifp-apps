@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kebugaran-kelas1",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Bugar",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kebugaran-kelas1.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang membuat tubuh bugar?",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Olahraga.",
+        "hint": "Bergerak setiap hari."
+      },
+      {
+        "prompt": "Mengapa perlu istirahat?",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Agar tenaga pulih.",
+        "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa makanan bergizi?",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "reveal": "Sayur, buah, dan lauk.",
+        "hint": "Makan teratur."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kebugaran?",
+        "reveal": "Menjaga kebugaran dengan olahraga dan istirahat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berolahraga, makan bergizi, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kebugaran-kelas1.webp",
+        "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  }
+}

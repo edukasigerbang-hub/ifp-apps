@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b01-bilangan-1-10",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Bilangan 1–10 — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bilangan-1-10.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 99548,
+      "sha256": "4db685a34d631559643bf0ae6c90171e931d60a9fb3028c3960938afd2f34c2e"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1-10-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 15119,
+      "sha256": "6a619af6d63612da9f8aa587195f163ffd41bcc6650575298a3bc31184808f27"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1-10-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5577,
+      "sha256": "c68ac1993d6b7155d873cf6415bff70165d4691665d428e755bf3c0021e5e83d"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1-10-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7081,
+      "sha256": "bf1acf51769727f56cbded399cf87811f0e7e9d6f32c80299e68bd54d42b57eb"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1-10-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7624,
+      "sha256": "89bb494cd7a7b1d5bf2697b7f9c34d311a315477ad921f041b34969540561850"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1-10-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5672,
+      "sha256": "c4a8c5248ab8f73d2332f61540c8e859ff1b4bc4a75a2042d86424eb85db27c8"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-warna-teknik",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Warna dan Teknik",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-primer",
+        "prompt": "Warna primer adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hijau",
+            "text": "Hijau, ungu, oranye"
+          },
+          {
+            "optionId": "opsi-mkb",
+            "text": "Merah, kuning, biru"
+          },
+          {
+            "optionId": "opsi-hitam",
+            "text": "Hitam dan putih"
+          },
+          {
+            "optionId": "opsi-coklat",
+            "text": "Coklat dan abu"
+          }
+        ],
+        "correctResponse": "opsi-mkb"
+      },
+      {
+        "questionId": "soal-sekunder",
+        "prompt": "Merah dicampur biru menghasilkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-hijau",
+            "text": "Hijau"
+          },
+          {
+            "optionId": "opsi-oranye",
+            "text": "Oranye"
+          },
+          {
+            "optionId": "opsi-ungu",
+            "text": "Ungu"
+          },
+          {
+            "optionId": "opsi-coklat",
+            "text": "Coklat"
+          }
+        ],
+        "correctResponse": "opsi-ungu"
+      },
+      {
+        "questionId": "soal-gradasi",
+        "prompt": "Gradasi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sama",
+            "text": "Warna sama"
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Warna acak"
+          },
+          {
+            "optionId": "opsi-putih",
+            "text": "Warna putih saja"
+          },
+          {
+            "optionId": "opsi-bertahap",
+            "text": "Perubahan warna bertahap"
+          }
+        ],
+        "correctResponse": "opsi-bertahap"
+      },
+      {
+        "questionId": "soal-teknik",
+        "prompt": "Teknik mewarnai dengan cat air disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-basah",
+            "text": "Teknik basah"
+          },
+          {
+            "optionId": "opsi-kering",
+            "text": "Teknik kering"
+          },
+          {
+            "optionId": "opsi-cetak",
+            "text": "Teknik cetak"
+          },
+          {
+            "optionId": "opsi-lipat",
+            "text": "Teknik lipat"
+          }
+        ],
+        "correctResponse": "opsi-basah"
+      },
+      {
+        "questionId": "soal-warna-ungu-terbentuk-dari-campur",
+        "prompt": "Warna ungu terbentuk dari campuran ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-warna-ungu-terbentuk-dari-c-1",
+            "text": "Merah dan kuning"
+          },
+          {
+            "optionId": "opsi-soal-warna-ungu-terbentuk-dari-c-2",
+            "text": "Kuning dan biru"
+          },
+          {
+            "optionId": "opsi-soal-warna-ungu-terbentuk-dari-c-0",
+            "text": "Merah dan biru"
+          }
+        ],
+        "correctResponse": "opsi-soal-warna-ungu-terbentuk-dari-c-0"
+      },
+      {
+        "questionId": "soal-perubahan-warna-dari-gelap-ke-te",
+        "prompt": "Perubahan warna dari gelap ke terang secara bertahap disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-perubahan-warna-dari-gelap-0",
+            "text": "Gradasi"
+          },
+          {
+            "optionId": "opsi-soal-perubahan-warna-dari-gelap-1",
+            "text": "Kontras"
+          },
+          {
+            "optionId": "opsi-soal-perubahan-warna-dari-gelap-2",
+            "text": "Tekstur"
+          }
+        ],
+        "correctResponse": "opsi-soal-perubahan-warna-dari-gelap-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna dan tekstur dari berbagai teknik."
+  }
+}

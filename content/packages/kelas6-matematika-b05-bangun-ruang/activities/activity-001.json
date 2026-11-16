@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-bangun-ruang-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bangun Ruang",
+  "instructions": "Amati gambar, lalu diskusikan ciri dan rumusnya.",
+  "assets": [
+    "assets/aktivitas-bangun-ruang-kelas6-1.png",
+    "assets/aktivitas-bangun-ruang-kelas6-2.png",
+    "assets/aktivitas-bangun-ruang-kelas6-3.png",
+    "assets/aktivitas-bangun-ruang-kelas6-4.png",
+    "assets/aktivitas-bangun-ruang-kelas6-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa ciri prisma?",
+        "assetPath": "assets/aktivitas-bangun-ruang-kelas6-1.png",
+        "altText": "Prisma segitiga tiga dimensi dengan dua sisi segitiga sejajar di depan dan belakang diwarnai oranye.",
+        "reveal": "Dua sisi sejajar dan sisi tegak.",
+        "hint": "Alas dan atas sama."
+      },
+      {
+        "prompt": "Apa ciri limas?",
+        "assetPath": "assets/aktivitas-bangun-ruang-kelas6-2.png",
+        "altText": "Limas tiga dimensi dengan titik puncak ditandai oranye dan garis putus-putus dari puncak ke alas.",
+        "reveal": "Satu titik puncak.",
+        "hint": "Alas berbentuk bangun datar."
+      },
+      {
+        "prompt": "Apa rumus volume tabung?",
+        "assetPath": "assets/aktivitas-bangun-ruang-kelas6-3.png",
+        "altText": "Tabung tiga dimensi dengan garis oranye dari pusat tutup ke tepi sebagai jari-jari dan garis putus-putus oranye dari tutup ke alas sebagai tinggi.",
+        "reveal": "π × r² × t.",
+        "hint": "Luas alas dikali tinggi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Ruang?",
+        "reveal": "Mengenal bangun ruang dan menghitung volume serta luas permukaan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-bangun-ruang-kelas6-4.png",
+        "altText": "Tiga kartu rangkuman: prisma segitiga, limas, dan tabung."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Prisma segitiga, limas, dan tabung digambar tiga dimensi.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-bangun-ruang-kelas6-5.png",
+        "altText": "Prisma segitiga, limas, dan tabung digambar tiga dimensi."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi bangun ruang: prisma dengan dua sisi sejajar disorot, limas dengan titik puncak, tabung dengan jari-jari dan tinggi, tiga kartu rangkuman, dan prisma, limas, serta tabung."
+  }
+}

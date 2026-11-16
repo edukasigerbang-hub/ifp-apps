@@ -1,0 +1,28 @@
+{
+  "lessonId": "keberagaman-kelas6",
+  "packageId": "kelas6-pendidikan-pancasila-b04-keberagaman",
+  "title": "Keberagaman dan Persatuan",
+  "summary": "Menjaga persatuan dalam keberagaman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan bentuk keberagaman.",
+    "Menjelaskan pentingnya persatuan.",
+    "Menerapkan toleransi."
+  ],
+  "activityIds": [
+    "eksplorasi-keberagaman-kelas6",
+    "matching-keberagaman-kelas6",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/keberagaman-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbeda suku, agama, dan budaya belajar bersama."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

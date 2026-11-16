@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-pai-b05-puasa",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Puasa — PAI Kelas 3 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/puasa-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 69214,
+      "sha256": "9d8b13af8f4e57049ad2972f06755d6d18af675cd081c10d4e2fb856ddae2e47"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

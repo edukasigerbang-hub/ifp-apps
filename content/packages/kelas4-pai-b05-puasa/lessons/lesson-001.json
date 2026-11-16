@@ -1,0 +1,28 @@
+{
+  "lessonId": "puasa",
+  "packageId": "kelas4-pai-b05-puasa",
+  "title": "Puasa",
+  "summary": "Mengenal puasa, waktunya, hal yang membatalkan, dan hikmahnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian puasa.",
+    "Menyebutkan waktu puasa dan hal yang membatalkannya.",
+    "Menunjukkan sikap sabar dan disiplin."
+  ],
+  "activityIds": [
+    "eksplorasi-puasa",
+    "kuis-puasa",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-puasa"
+  ],
+  "assetRefs": [
+    "assets/puasa.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa: kurma, air, masjid, dan bulan sabit di langit malam."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

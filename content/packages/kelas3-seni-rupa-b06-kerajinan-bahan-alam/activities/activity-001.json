@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kerajinan-alam",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Bahan Alam",
+  "instructions": "Amati gambar, lalu diskusikan bahan dan hasil kerajinannya.",
+  "assets": [
+    "assets/kerajinan-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bahan alam apa yang terlihat?",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
+        "reveal": "Daun, ranting, biji, dan bambu.",
+        "hint": "Amati teksturnya."
+      },
+      {
+        "prompt": "Bagaimana memilih bahan?",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
+        "reveal": "Bersih, kering, dan aman.",
+        "hint": "Hindari bahan tajam."
+      },
+      {
+        "prompt": "Apa yang digunakan untuk menempel?",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
+        "reveal": "Lem yang aman.",
+        "hint": "Gunakan sedikit lem."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kerajinan Bahan Alam?",
+        "reveal": "Membuat kerajinan sederhana dari bahan alam di sekitar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kerajinan-kelas3.webp",
+        "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daun, ranting, biji, dan anyaman bambu sebagai bahan kerajinan."
+  }
+}

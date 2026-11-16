@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-keragaman-budaya",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Budaya dan Makna",
+  "instructions": "Pasangkan setiap unsur budaya dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-rumah",
+        "left": "Rumah adat",
+        "right": "Tempat tinggal khas daerah"
+      },
+      {
+        "pairId": "pasangan-pakaian",
+        "left": "Pakaian adat",
+        "right": "Busana khas daerah"
+      },
+      {
+        "pairId": "pasangan-tarian",
+        "left": "Tarian daerah",
+        "right": "Gerak khas daerah"
+      },
+      {
+        "pairId": "pasangan-bahasa",
+        "left": "Bahasa daerah",
+        "right": "Alat komunikasi setempat"
+      },
+      {
+        "pairId": "pasangan-makanan",
+        "left": "Makanan khas",
+        "right": "Olahan khas daerah"
+      },
+      {
+        "pairId": "pasangan-hargai",
+        "left": "Menghargai",
+        "right": "Sikap terhadap perbedaan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Rumah adat, pakaian adat, tarian, dan makanan khas daerah."
+  }
+}

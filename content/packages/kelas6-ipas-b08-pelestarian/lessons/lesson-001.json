@@ -1,0 +1,29 @@
+{
+  "lessonId": "pelestarian-kelas6",
+  "packageId": "kelas6-ipas-b08-pelestarian",
+  "title": "Pelestarian Lingkungan",
+  "summary": "Menjaga lingkungan melalui tindakan nyata.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pentingnya pelestarian.",
+    "Menyebutkan cara melestarikan.",
+    "Menerapkan di lingkungan sekitar."
+  ],
+  "activityIds": [
+    "eksplorasi-pelestarian",
+    "ordering-pelestarian",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/pelestarian-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menanam pohon dan menjaga sumber air."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"1/4 + 2/4\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "2/4"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "3/4"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "3/5"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"3/4 − 1/4\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "3/4"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "3/5"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "2/4"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-hasil-dari-2-7-3-7-adalah",
+        "prompt": "Hasil dari 2/7 + 3/7 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-hasil-dari-2-7-3-7-adalah-0",
+            "text": "5/7"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-2-7-3-7-adalah-1",
+            "text": "5/14"
+          },
+          {
+            "optionId": "opsi-soal-hasil-dari-2-7-3-7-adalah-2",
+            "text": "6/7"
+          }
+        ],
+        "correctResponse": "opsi-soal-hasil-dari-2-7-3-7-adalah-0"
+      },
+      {
+        "questionId": "soal-nilai-5-8-2-8-sama-dengan",
+        "prompt": "Nilai 5/8 − 2/8 sama dengan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nilai-5-8-2-8-sama-dengan-1",
+            "text": "3/16"
+          },
+          {
+            "optionId": "opsi-soal-nilai-5-8-2-8-sama-dengan-0",
+            "text": "3/8"
+          },
+          {
+            "optionId": "opsi-soal-nilai-5-8-2-8-sama-dengan-2",
+            "text": "7/8"
+          }
+        ],
+        "correctResponse": "opsi-soal-nilai-5-8-2-8-sama-dengan-0"
+      },
+      {
+        "questionId": "soal-pada-pecahan-3-5-angka-5-disebut",
+        "prompt": "Pada pecahan 3/5, angka 5 disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pada-pecahan-3-5-angka-5-di-1",
+            "text": "pembilang"
+          },
+          {
+            "optionId": "opsi-soal-pada-pecahan-3-5-angka-5-di-2",
+            "text": "bilangan cacah"
+          },
+          {
+            "optionId": "opsi-soal-pada-pecahan-3-5-angka-5-di-0",
+            "text": "penyebut"
+          }
+        ],
+        "correctResponse": "opsi-soal-pada-pecahan-3-5-angka-5-di-0"
+      },
+      {
+        "questionId": "soal-saat-menjumlahkan-pecahan-berpen",
+        "prompt": "Saat menjumlahkan pecahan berpenyebut sama, penyebutnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-menjumlahkan-pecahan-b-0",
+            "text": "tetap"
+          },
+          {
+            "optionId": "opsi-soal-saat-menjumlahkan-pecahan-b-1",
+            "text": "ikut dijumlahkan"
+          },
+          {
+            "optionId": "opsi-soal-saat-menjumlahkan-pecahan-b-2",
+            "text": "ikut dikurangkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-menjumlahkan-pecahan-b-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+  }
+}

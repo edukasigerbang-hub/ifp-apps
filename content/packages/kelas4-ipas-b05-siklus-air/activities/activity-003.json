@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Sumber panas yang menggerakkan siklus air",
+        "right": "Matahari"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Uap air berubah menjadi titik air dan awan",
+        "right": "Kondensasi"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Awan jenuh menjatuhkan titik air sebagai hujan",
+        "right": "Presipitasi"
+      },
+      {
+        "pairId": "pasangan-nama-proses-air-laut-berubah-men",
+        "left": "Nama proses air laut berubah menjadi uap air karena panas matahari",
+        "right": "evaporasi"
+      },
+      {
+        "pairId": "pasangan-tahap-siklus-air-yang-terjadi-te",
+        "left": "Tahap siklus air yang terjadi tepat setelah pengembunan uap air",
+        "right": "pembentukan awan"
+      },
+      {
+        "pairId": "pasangan-sebab-awan-dapat-menjatuhkan-tit",
+        "left": "Sebab awan dapat menjatuhkan titik-titik air menjadi hujan",
+        "right": "awan sudah jenuh air"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+  }
+}

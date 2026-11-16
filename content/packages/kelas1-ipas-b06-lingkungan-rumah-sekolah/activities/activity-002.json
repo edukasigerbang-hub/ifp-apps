@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-lingkungan-rumah-sekolah",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Tempat dan Kegunaannya",
+  "instructions": "Pasangkan setiap tempat dengan kegunaannya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-lingkungan-rumah-sekolah-1",
+        "left": "Dapur",
+        "right": "Tempat memasak"
+      },
+      {
+        "pairId": "pasangan-lingkungan-rumah-sekolah-2",
+        "left": "Kamar mandi",
+        "right": "Tempat mandi"
+      },
+      {
+        "pairId": "pasangan-lingkungan-rumah-sekolah-3",
+        "left": "Perpustakaan",
+        "right": "Tempat membaca buku"
+      },
+      {
+        "pairId": "pasangan-lingkungan-rumah-sekolah-4",
+        "left": "Kantin",
+        "right": "Tempat membeli makanan"
+      },
+      {
+        "pairId": "pasangan-lingkungan-rumah-sekolah-5",
+        "left": "Kelas",
+        "right": "Tempat belajar"
+      },
+      {
+        "pairId": "pasangan-lingkungan-rumah-sekolah-6",
+        "left": "Halaman",
+        "right": "Tempat bermain"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Tempat dan Kegunaannya\": Pasangkan setiap tempat dengan kegunaannya."
+  }
+}

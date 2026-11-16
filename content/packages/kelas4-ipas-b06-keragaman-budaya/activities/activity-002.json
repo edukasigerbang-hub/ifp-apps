@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-keragaman",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Budaya dan Daerah",
+  "instructions": "Pasangkan setiap budaya dengan daerah asalnya.",
+  "assets": [
+    "assets/keragaman-budaya.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-gadang",
+        "left": "Rumah Gadang",
+        "right": "Sumatera Barat"
+      },
+      {
+        "pairId": "pasangan-kecak",
+        "left": "Tari Kecak",
+        "right": "Bali"
+      },
+      {
+        "pairId": "pasangan-rendang",
+        "left": "Rendang",
+        "right": "Sumatera Barat"
+      },
+      {
+        "pairId": "pasangan-ulos",
+        "left": "Ulos",
+        "right": "Sumatera Utara"
+      },
+      {
+        "pairId": "pasangan-saman",
+        "left": "Tari Saman",
+        "right": "Aceh"
+      },
+      {
+        "pairId": "pasangan-joglo",
+        "left": "Rumah Joglo",
+        "right": "Jawa"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak."
+  }
+}

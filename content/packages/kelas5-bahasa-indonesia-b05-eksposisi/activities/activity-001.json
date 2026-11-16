@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-eksposisi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Teks Eksposisi",
+  "instructions": "Amati gambar, lalu diskusikan ciri dan struktur eksposisi.",
+  "assets": [
+    "assets/eksposisi-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa tujuan teks eksposisi?",
+        "assetPath": "assets/eksposisi-kelas5.webp",
+        "altText": "Anak membaca teks eksposisi di sudut baca.",
+        "reveal": "Menjelaskan informasi secara objektif.",
+        "hint": "Memberi pengetahuan."
+      },
+      {
+        "prompt": "Apa strukturnya?",
+        "assetPath": "assets/eksposisi-kelas5.webp",
+        "altText": "Anak membaca teks eksposisi di sudut baca.",
+        "reveal": "Tesis, argumen, dan penegasan.",
+        "hint": "Diawali pernyataan."
+      },
+      {
+        "prompt": "Bahasa apa yang dipakai?",
+        "assetPath": "assets/eksposisi-kelas5.webp",
+        "altText": "Anak membaca teks eksposisi di sudut baca.",
+        "reveal": "Baku dan jelas.",
+        "hint": "Hindari bahasa gaul."
+      },
+      {
+        "prompt": "Struktur teks eksposisi adalah ...",
+        "reveal": "Tesis, argumen, penegasan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/eksposisi-kelas5.webp",
+        "altText": "Anak membaca teks eksposisi di sudut baca."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Teks Eksposisi?",
+        "reveal": "Mengenal teks eksposisi dan strukturnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/eksposisi-kelas5.webp",
+        "altText": "Anak membaca teks eksposisi di sudut baca."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca teks eksposisi di sudut baca."
+  }
+}

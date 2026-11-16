@@ -1,0 +1,29 @@
+{
+  "lessonId": "teks-narasi-kelas5",
+  "packageId": "kelas5-bahasa-indonesia-b02-teks-narasi",
+  "title": "Teks Narasi: Tokoh dan Alur",
+  "summary": "Mengenal tokoh dan alur dalam teks narasi serta menulis cerita sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenali ciri teks narasi.",
+    "Menyebutkan tokoh dan wataknya.",
+    "Menyusun alur cerita."
+  ],
+  "activityIds": [
+    "eksplorasi-teks-narasi-kelas5",
+    "ordering-teks-narasi-kelas5",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/teks-narasi-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak membaca cerita narasi dengan tokoh dan alur."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

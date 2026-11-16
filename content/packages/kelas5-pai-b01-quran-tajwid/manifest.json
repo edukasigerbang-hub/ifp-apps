@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pai-b01-quran-tajwid",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Al-Qur'an dan Tajwid Dasar — PAI Kelas 5 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/quran-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 181256,
+      "sha256": "780679980e506c056cb85da09c2cfffc2cf798ca256d4043035e334ca12af8ab"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

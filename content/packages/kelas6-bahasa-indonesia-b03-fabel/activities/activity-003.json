@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Fabel",
+        "right": "Cerita hewan yang berperilaku seperti manusia"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tokoh fabel",
+        "right": "Hewan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Pesan fabel",
+        "right": "Nasihat dari cerita"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-menyusun-cerita",
+        "left": "Langkah pertama menyusun cerita fabel",
+        "right": "Menentukan tokoh hewan"
+      },
+      {
+        "pairId": "pasangan-bagian-cerita-fabel-tempat-masal",
+        "left": "Bagian cerita fabel tempat masalah mulai muncul",
+        "right": "Konflik"
+      },
+      {
+        "pairId": "pasangan-bagian-yang-mengakhiri-masalah-d",
+        "left": "Bagian yang mengakhiri masalah dalam cerita fabel",
+        "right": "Penyelesaian"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca fabel tentang hewan."
+  }
+}

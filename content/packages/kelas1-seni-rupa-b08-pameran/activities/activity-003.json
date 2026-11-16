@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang dipamerkan",
+        "right": "Karya siswa"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menata karya",
+        "right": "Rapi dan mudah dilihat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan penjaga",
+        "right": "Menjelaskan karya"
+      },
+      {
+        "pairId": "pasangan-kegiatan-sebelum-menata-karya-di",
+        "left": "Kegiatan sebelum menata karya di pameran",
+        "right": "Memilih karya"
+      },
+      {
+        "pairId": "pasangan-yang-dilakukan-setelah-pameran-s",
+        "left": "Yang dilakukan setelah pameran selesai",
+        "right": "Merapikan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran karya siswa di kelas."
+  }
+}

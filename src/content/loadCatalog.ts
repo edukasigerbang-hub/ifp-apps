@@ -1,7 +1,6 @@
 import { getPackage, listActivePackages } from "../data/contentRepository";
 import { canPersistLocally } from "../data/learningRepository";
 import { buildCatalog, type CatalogLessonEntry, type CatalogPackageInput } from "./catalog";
-import { loadContentPackages } from "./loadPackages";
 import { validateContentPackage } from "./validatePackage";
 
 export interface CatalogLoadResult {
@@ -9,19 +8,37 @@ export interface CatalogLoadResult {
   errors: string[];
 }
 
+let bundledPromise: Promise<CatalogLessonEntry[]> | null = null;
+
+function loadBundledEntries(): Promise<CatalogLessonEntry[]> {
+  if (!bundledPromise) {
+    bundledPromise = fetch("/content-catalog.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Indeks katalog tidak dapat dimuat (${response.status}).`);
+        }
+        return response.json() as Promise<{ entries: CatalogLessonEntry[] }>;
+      })
+      .then((data) => data.entries)
+      .catch((error) => {
+        bundledPromise = null;
+        throw error;
+      });
+  }
+  return bundledPromise;
+}
+
+function sortEntries(entries: CatalogLessonEntry[]): CatalogLessonEntry[] {
+  return entries.sort((left, right) => {
+    const grade = Math.min(...left.gradeLevels) - Math.min(...right.gradeLevels);
+    if (grade !== 0) return grade;
+    return left.lessonTitle.localeCompare(right.lessonTitle, "id");
+  });
+}
+
 export async function loadCatalog(): Promise<CatalogLoadResult> {
   const errors: string[] = [];
   const collected: CatalogPackageInput[] = [];
-
-  const bundled = loadContentPackages();
-  for (const pkg of bundled.packages) {
-    collected.push({ data: pkg.data, source: "bundled" });
-  }
-  for (const error of bundled.errors) {
-    errors.push(
-      `${error.packageDir}: ${error.issues.map((issue) => issue.message).join("; ")}`
-    );
-  }
 
   if (canPersistLocally()) {
     try {
@@ -56,5 +73,13 @@ export async function loadCatalog(): Promise<CatalogLoadResult> {
     }
   }
 
-  return { entries: buildCatalog(collected), errors };
+  const merged = new Map<string, CatalogLessonEntry>();
+  for (const entry of await loadBundledEntries()) {
+    merged.set(`${entry.packageId}::${entry.lessonId}`, entry);
+  }
+  for (const entry of buildCatalog(collected)) {
+    merged.set(`${entry.packageId}::${entry.lessonId}`, entry);
+  }
+
+  return { entries: sortEntries([...merged.values()]), errors };
 }

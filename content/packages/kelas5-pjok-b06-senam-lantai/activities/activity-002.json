@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-senam-lantai",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Latihan Senam",
+  "instructions": "Susun langkah latihan senam lantai.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-pemanasan",
+        "text": "Melakukan pemanasan"
+      },
+      {
+        "itemId": "langkah-depan",
+        "text": "Berlatih guling depan"
+      },
+      {
+        "itemId": "langkah-belakang",
+        "text": "Berlatih guling belakang"
+      },
+      {
+        "itemId": "langkah-seimbang",
+        "text": "Berlatih keseimbangan"
+      },
+      {
+        "itemId": "langkah-pendinginan",
+        "text": "Melakukan pendinginan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-pemanasan",
+      "langkah-depan",
+      "langkah-belakang",
+      "langkah-seimbang",
+      "langkah-pendinginan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+  }
+}

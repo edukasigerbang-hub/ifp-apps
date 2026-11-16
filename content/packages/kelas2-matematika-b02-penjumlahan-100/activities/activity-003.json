@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak 45 + 32",
+        "right": "77"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Banyak 80 − 25",
+        "right": "55"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Banyak 50 + 50",
+        "right": "100"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Garis berangka berurutan yang dipakai menjumlah sampai 100",
+        "right": "Garis bilangan"
+      },
+      {
+        "pairId": "pasangan-hasil-dari-70-dikurangi-30",
+        "left": "Hasil dari 70 dikurangi 30",
+        "right": "40"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis bilangan dan kelompok benda untuk hitungan sampai 100."
+  }
+}

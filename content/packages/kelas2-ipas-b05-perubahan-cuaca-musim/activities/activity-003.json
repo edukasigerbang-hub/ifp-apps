@@ -1,0 +1,136 @@
+{
+  "activityId": "kuis-perubahan-cuaca-musim",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan: Perubahan Cuaca dan Musim",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-perubahan-cuaca-musim-1",
+        "prompt": "Musim di Indonesia adalah …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-1-2",
+            "text": "Musim salju dan gugur"
+          },
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-1-1",
+            "text": "Musim hujan dan kemarau"
+          },
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-1-3",
+            "text": "Musim semi dan panas"
+          }
+        ],
+        "correctResponse": "opsi-perubahan-cuaca-musim-1-1"
+      },
+      {
+        "questionId": "soal-perubahan-cuaca-musim-2",
+        "prompt": "Saat musim kemarau kita harus …",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-2-2",
+            "text": "Bermain di genangan"
+          },
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-2-3",
+            "text": "Memakai jas hujan"
+          },
+          {
+            "optionId": "opsi-perubahan-cuaca-musim-2-1",
+            "text": "Hemat air"
+          }
+        ],
+        "correctResponse": "opsi-perubahan-cuaca-musim-2-1"
+      },
+      {
+        "questionId": "soal-saat-musim-hujan-udara-di-sekita",
+        "prompt": "Saat musim hujan, udara di sekitar terasa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-0",
+            "text": "lembap"
+          },
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-1",
+            "text": "panas"
+          },
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-2",
+            "text": "kering"
+          },
+          {
+            "optionId": "opsi-soal-saat-musim-hujan-udara-di-s-3",
+            "text": "berdebu"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-musim-hujan-udara-di-s-0"
+      },
+      {
+        "questionId": "soal-musim-yang-jarang-turun-hujan-di",
+        "prompt": "Musim yang jarang turun hujan di Indonesia adalah musim ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-musim-yang-jarang-turun-huj-1",
+            "text": "hujan"
+          },
+          {
+            "optionId": "opsi-soal-musim-yang-jarang-turun-huj-0",
+            "text": "kemarau"
+          },
+          {
+            "optionId": "opsi-soal-musim-yang-jarang-turun-huj-2",
+            "text": "semi"
+          }
+        ],
+        "correctResponse": "opsi-soal-musim-yang-jarang-turun-huj-0"
+      },
+      {
+        "questionId": "soal-kipas-angin-biasanya-kita-nyalak",
+        "prompt": "Kipas angin biasanya kita nyalakan ketika udara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kipas-angin-biasanya-kita-n-1",
+            "text": "dingin"
+          },
+          {
+            "optionId": "opsi-soal-kipas-angin-biasanya-kita-n-2",
+            "text": "sejuk"
+          },
+          {
+            "optionId": "opsi-soal-kipas-angin-biasanya-kita-n-0",
+            "text": "panas"
+          }
+        ],
+        "correctResponse": "opsi-soal-kipas-angin-biasanya-kita-n-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas kuis pilihan ganda berjudul \"Kuis Penguatan: Perubahan Cuaca dan Musim\": Pilih jawaban yang paling tepat."
+  }
+}

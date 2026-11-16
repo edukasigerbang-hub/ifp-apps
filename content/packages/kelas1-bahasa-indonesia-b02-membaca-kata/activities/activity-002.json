@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-membaca-kata",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Membaca Kata",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-suku",
+        "prompt": "Kata buku terdiri dari ... suku kata.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dua",
+            "text": "Dua"
+          },
+          {
+            "optionId": "opsi-satu",
+            "text": "Satu"
+          },
+          {
+            "optionId": "opsi-tiga",
+            "text": "Tiga"
+          },
+          {
+            "optionId": "opsi-empat",
+            "text": "Empat"
+          }
+        ],
+        "correctResponse": "opsi-dua"
+      },
+      {
+        "questionId": "soal-mata",
+        "prompt": "Suku kata ma-ta menjadi kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-mama",
+            "text": "mama"
+          },
+          {
+            "optionId": "opsi-mata",
+            "text": "mata"
+          },
+          {
+            "optionId": "opsi-tama",
+            "text": "tama"
+          },
+          {
+            "optionId": "opsi-mta",
+            "text": "mta"
+          }
+        ],
+        "correctResponse": "opsi-mata"
+      },
+      {
+        "questionId": "soal-awal",
+        "prompt": "Bunyi awal kata bola adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-o",
+            "text": "o"
+          },
+          {
+            "optionId": "opsi-l",
+            "text": "l"
+          },
+          {
+            "optionId": "opsi-b",
+            "text": "b"
+          },
+          {
+            "optionId": "opsi-a",
+            "text": "a"
+          }
+        ],
+        "correctResponse": "opsi-b"
+      },
+      {
+        "questionId": "soal-dua",
+        "prompt": "Kata yang memiliki dua suku kata adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dan",
+            "text": "dan"
+          },
+          {
+            "optionId": "opsi-di",
+            "text": "di"
+          },
+          {
+            "optionId": "opsi-ke",
+            "text": "ke"
+          },
+          {
+            "optionId": "opsi-buku",
+            "text": "buku"
+          }
+        ],
+        "correctResponse": "opsi-buku"
+      },
+      {
+        "questionId": "soal-kata-mata-tersusun-dari-suku-kat",
+        "prompt": "Kata 'mata' tersusun dari suku kata ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-0",
+            "text": "ma dan ta"
+          },
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-1",
+            "text": "m dan ata"
+          },
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-2",
+            "text": "ta dan ma"
+          },
+          {
+            "optionId": "opsi-soal-kata-mata-tersusun-dari-suk-3",
+            "text": "mta"
+          }
+        ],
+        "correctResponse": "opsi-soal-kata-mata-tersusun-dari-suk-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca kata sederhana di sudut baca."
+  }
+}

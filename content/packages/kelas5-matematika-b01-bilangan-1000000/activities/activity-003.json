@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bilangan 452.316 dibaca",
+        "right": "Empat ratus lima puluh dua ribu tiga ratus enam belas"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Nilai tempat angka 5 pada 452.316",
+        "right": "Puluh ribuan, nilainya 50.000"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Membandingkan dua bilangan",
+        "right": "Bandingkan angka paling kiri lebih dahulu"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Enam kolom angka dari ratus ribuan sampai satuan",
+        "right": "Nilai tempat"
+      },
+      {
+        "pairId": "pasangan-nilai-angka-4-pada-bilangan-452",
+        "left": "Nilai angka 4 pada bilangan 452.316",
+        "right": "400.000"
+      },
+      {
+        "pairId": "pasangan-nama-bilangan-1-000-000",
+        "left": "Nama bilangan 1.000.000",
+        "right": "Satu juta"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Enam kolom nilai tempat dari ratus ribuan hingga satuan dengan penanda berwarna."
+  }
+}

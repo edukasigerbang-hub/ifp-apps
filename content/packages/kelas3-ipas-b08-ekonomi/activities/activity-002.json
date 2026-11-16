@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-ekonomi",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kegiatan Ekonomi",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-produksi",
+        "left": "Produksi",
+        "right": "Membuat barang"
+      },
+      {
+        "pairId": "pasangan-distribusi",
+        "left": "Distribusi",
+        "right": "Mengantar barang"
+      },
+      {
+        "pairId": "pasangan-konsumsi",
+        "left": "Konsumsi",
+        "right": "Menggunakan barang"
+      },
+      {
+        "pairId": "pasangan-petani",
+        "left": "Petani",
+        "right": "Menghasilkan padi"
+      },
+      {
+        "pairId": "pasangan-pedagang",
+        "left": "Pedagang",
+        "right": "Menjual barang"
+      },
+      {
+        "pairId": "pasangan-pembeli",
+        "left": "Pembeli",
+        "right": "Menggunakan barang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Petani menanam padi, pedagang menjual, dan pembeli membeli barang."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-puisi-pantun",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Istilah Sastra",
+  "instructions": "Pasangkan setiap istilah dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-puisi",
+        "left": "Puisi",
+        "right": "Bahasa indah"
+      },
+      {
+        "pairId": "pasangan-pantun",
+        "left": "Pantun",
+        "right": "Sampiran dan isi"
+      },
+      {
+        "pairId": "pasangan-rima",
+        "left": "Rima",
+        "right": "Bunyi akhir"
+      },
+      {
+        "pairId": "pasangan-bait",
+        "left": "Bait",
+        "right": "Kumpulan baris"
+      },
+      {
+        "pairId": "pasangan-sampiran",
+        "left": "Sampiran",
+        "right": "Dua baris awal"
+      },
+      {
+        "pairId": "pasangan-isi",
+        "left": "Isi",
+        "right": "Dua baris akhir"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca puisi dan pantun di kelas."
+  }
+}

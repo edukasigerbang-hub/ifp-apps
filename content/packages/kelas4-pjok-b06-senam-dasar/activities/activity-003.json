@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alasan pemanasan penting sebelum senam",
+        "right": "Mencegah cedera dan menyiapkan otot"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tiga gerakan dasar di atas matras",
+        "right": "Gerak dasar senam"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang harus disiapkan agar aman",
+        "right": "Matras, ruang cukup, dan pendamping"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Posisi tubuh saat berlatih keseimbangan",
+        "right": "Berdiri dengan satu kaki"
+      },
+      {
+        "pairId": "pasangan-bagian-tubuh-yang-menempel-pada",
+        "left": "Bagian tubuh yang menempel pada dada saat jongkok sebelum guling depan",
+        "right": "Dagu"
+      },
+      {
+        "pairId": "pasangan-bagian-tubuh-yang-diletakkan-pad",
+        "left": "Bagian tubuh yang diletakkan pada matras sesaat sebelum berguling",
+        "right": "Tengkuk"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki."
+  }
+}

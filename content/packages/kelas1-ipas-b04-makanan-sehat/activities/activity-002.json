@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-makanan-sehat",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Makanan dan Jenisnya",
+  "instructions": "Pasangkan setiap makanan atau minuman dengan jenisnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-makanan-sehat-1",
+        "left": "Air putih",
+        "right": "Minuman sehat"
+      },
+      {
+        "pairId": "pasangan-makanan-sehat-2",
+        "left": "Sayur",
+        "right": "Makanan sehat"
+      },
+      {
+        "pairId": "pasangan-makanan-sehat-3",
+        "left": "Permen",
+        "right": "Makanan manis"
+      },
+      {
+        "pairId": "pasangan-makanan-sehat-4",
+        "left": "Buah",
+        "right": "Camilan sehat"
+      },
+      {
+        "pairId": "pasangan-makanan-sehat-5",
+        "left": "Susu",
+        "right": "Minuman bergizi"
+      },
+      {
+        "pairId": "pasangan-makanan-sehat-6",
+        "left": "Gorengan",
+        "right": "Makanan berminyak"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Makanan dan Jenisnya\": Pasangkan setiap makanan atau minuman dengan jenisnya."
+  }
+}

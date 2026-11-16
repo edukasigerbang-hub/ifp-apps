@@ -1,0 +1,28 @@
+{
+  "lessonId": "kerajinan-bahan-alam",
+  "packageId": "kelas4-seni-rupa-b06-kerajinan-bahan-alam",
+  "title": "Membuat Kerajinan dari Bahan Alam",
+  "summary": "Mengenal bahan alam di sekitar dan menyusunnya menjadi karya sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal bahan alam yang dapat dipakai berkarya.",
+    "Memilih bahan berdasarkan tekstur dan warna.",
+    "Membuat karya sederhana dari bahan alam."
+  ],
+  "activityIds": [
+    "eksplorasi-kerajinan-alam",
+    "matching-kerajinan-alam",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kerajinan-bahan-alam.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan alam: daun kering, ranting, biji, pelepah pisang, dan anyaman bambu."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

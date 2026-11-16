@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-ide-pokok-kelas5",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Ide Pokok",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-ide",
+        "prompt": "Ide pokok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-contoh",
+            "text": "Kalimat contoh"
+          },
+          {
+            "optionId": "opsi-judul",
+            "text": "Judul buku"
+          },
+          {
+            "optionId": "opsi-utama",
+            "text": "Gagasan utama paragraf"
+          },
+          {
+            "optionId": "opsi-akhir",
+            "text": "Kalimat terakhir saja"
+          }
+        ],
+        "correctResponse": "opsi-utama"
+      },
+      {
+        "questionId": "soal-letak",
+        "prompt": "Kalimat utama biasanya terletak di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-gambar",
+            "text": "Dalam gambar"
+          },
+          {
+            "optionId": "opsi-daftar",
+            "text": "Daftar isi"
+          },
+          {
+            "optionId": "opsi-sampul",
+            "text": "Sampul buku"
+          },
+          {
+            "optionId": "opsi-awal",
+            "text": "Awal paragraf"
+          }
+        ],
+        "correctResponse": "opsi-awal"
+      },
+      {
+        "questionId": "soal-cara",
+        "prompt": "Cara menemukan ide pokok adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-baca",
+            "text": "Membaca seluruh paragraf"
+          },
+          {
+            "optionId": "opsi-tebak",
+            "text": "Menebak judul"
+          },
+          {
+            "optionId": "opsi-hitung",
+            "text": "Menghitung kalimat"
+          },
+          {
+            "optionId": "opsi-akhir",
+            "text": "Membaca kalimat terakhir saja"
+          }
+        ],
+        "correctResponse": "opsi-baca"
+      },
+      {
+        "questionId": "soal-paragraf",
+        "prompt": "Paragraf adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kata",
+            "text": "Satu kata saja"
+          },
+          {
+            "optionId": "opsi-kumpulan",
+            "text": "Kumpulan kalimat yang satu gagasan"
+          },
+          {
+            "optionId": "opsi-gambar",
+            "text": "Kumpulan gambar"
+          },
+          {
+            "optionId": "opsi-bab",
+            "text": "Seluruh buku"
+          }
+        ],
+        "correctResponse": "opsi-kumpulan"
+      },
+      {
+        "questionId": "soal-setelah-mengetahui-ide-pokok-pem",
+        "prompt": "Setelah mengetahui ide pokok, pembaca dapat ... paragraf itu.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-setelah-mengetahui-ide-poko-0",
+            "text": "menyimpulkan isi"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mengetahui-ide-poko-1",
+            "text": "menentukan judul buku"
+          },
+          {
+            "optionId": "opsi-soal-setelah-mengetahui-ide-poko-2",
+            "text": "menghitung jumlah kalimat"
+          }
+        ],
+        "correctResponse": "opsi-soal-setelah-mengetahui-ide-poko-0"
+      },
+      {
+        "questionId": "soal-sebuah-paragraf-yang-baik-memuat",
+        "prompt": "Sebuah paragraf yang baik memuat ... gagasan.",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebuah-paragraf-yang-baik-m-1",
+            "text": "banyak"
+          },
+          {
+            "optionId": "opsi-soal-sebuah-paragraf-yang-baik-m-0",
+            "text": "satu"
+          },
+          {
+            "optionId": "opsi-soal-sebuah-paragraf-yang-baik-m-2",
+            "text": "lima"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebuah-paragraf-yang-baik-m-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita dan mencatat ide pokok."
+  }
+}

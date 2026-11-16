@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Pertanyaan yang baik",
+        "right": "Singkat, jelas, dan relevan"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Sikap saat wawancara",
+        "right": "Sopan dan mencatat jawaban"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang disiapkan untuk presentasi",
+        "right": "Urutan materi dan suara jelas"
+      },
+      {
+        "pairId": "pasangan-orang-yang-menjawab-pertanyaan-d",
+        "left": "Orang yang menjawab pertanyaan dalam wawancara",
+        "right": "Narasumber"
+      },
+      {
+        "pairId": "pasangan-langkah-wawancara-sebelum-melaku",
+        "left": "Langkah wawancara sebelum melakukan tanya jawab",
+        "right": "Menyusun pertanyaan"
+      },
+      {
+        "pairId": "pasangan-cara-menyampaikan-hasil-wawancar",
+        "left": "Cara menyampaikan hasil wawancara di depan kelas",
+        "right": "Presentasi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mewawancarai narasumber."
+  }
+}

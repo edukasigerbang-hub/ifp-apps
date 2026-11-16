@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-iman",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Rukun Iman dan Maknanya",
+  "instructions": "Pasangkan setiap rukun iman dengan maknanya.",
+  "assets": [
+    "assets/iman-ilustrasi.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-allah",
+        "left": "Iman kepada Allah",
+        "right": "Meyakini Allah Maha Esa"
+      },
+      {
+        "pairId": "pasangan-malaikat",
+        "left": "Iman kepada malaikat",
+        "right": "Meyakini keberadaan malaikat"
+      },
+      {
+        "pairId": "pasangan-kitab",
+        "left": "Iman kepada kitab",
+        "right": "Meyakini kitab suci"
+      },
+      {
+        "pairId": "pasangan-rasul",
+        "left": "Iman kepada rasul",
+        "right": "Meyakini utusan Allah"
+      },
+      {
+        "pairId": "pasangan-hari-akhir",
+        "left": "Iman kepada hari akhir",
+        "right": "Meyakini hari kiamat"
+      },
+      {
+        "pairId": "pasangan-qadar",
+        "left": "Iman kepada qada dan qadar",
+        "right": "Meyakini takdir Allah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Latar navy dengan hati merah, lentera emas, dan enam bintang melambangkan rukun iman."
+  }
+}

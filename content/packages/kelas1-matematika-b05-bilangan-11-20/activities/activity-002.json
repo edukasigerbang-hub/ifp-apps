@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-bilangan-11-20",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Angka dan Nama",
+  "instructions": "Pasangkan setiap angka dengan namanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-11",
+        "left": "11",
+        "right": "Sebelas"
+      },
+      {
+        "pairId": "pasangan-12",
+        "left": "12",
+        "right": "Dua belas"
+      },
+      {
+        "pairId": "pasangan-15",
+        "left": "15",
+        "right": "Lima belas"
+      },
+      {
+        "pairId": "pasangan-16",
+        "left": "16",
+        "right": "Enam belas"
+      },
+      {
+        "pairId": "pasangan-19",
+        "left": "19",
+        "right": "Sembilan belas"
+      },
+      {
+        "pairId": "pasangan-20",
+        "left": "20",
+        "right": "Dua puluh"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerangka sepuluh dan penanda untuk membilang 11–20."
+  }
+}

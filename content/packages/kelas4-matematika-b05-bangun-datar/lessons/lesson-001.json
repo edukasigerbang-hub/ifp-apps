@@ -1,0 +1,28 @@
+{
+  "lessonId": "bangun-datar",
+  "packageId": "kelas4-matematika-b05-bangun-datar",
+  "title": "Sifat, Keliling, dan Luas Bangun Datar",
+  "summary": "Mengenali sifat bangun datar serta menghitung keliling dan luas persegi dan persegi panjang.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan sifat-sifat bangun datar.",
+    "Menghitung keliling persegi dan persegi panjang.",
+    "Menghitung luas persegi dan persegi panjang."
+  ],
+  "activityIds": [
+    "eksplorasi-bangun-datar",
+    "kuis-bangun-datar",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-bangun-datar"
+  ],
+  "assetRefs": [
+    "assets/bangun-datar.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat bangun datar di atas kertas berpetak: persegi oranye, persegi panjang teal, segitiga kuning, dan lingkaran merah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

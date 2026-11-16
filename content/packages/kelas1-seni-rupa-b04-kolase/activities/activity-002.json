@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-kolase",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Membuat Kolase",
+  "instructions": "Susun langkah membuat kolase.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-bahan",
+        "text": "Menyiapkan bahan"
+      },
+      {
+        "itemId": "langkah-susun",
+        "text": "Menyusun pola"
+      },
+      {
+        "itemId": "langkah-lem",
+        "text": "Mengoles lem"
+      },
+      {
+        "itemId": "langkah-tempel",
+        "text": "Menempel bahan"
+      },
+      {
+        "itemId": "langkah-rapi",
+        "text": "Merapikan karya"
+      }
+    ],
+    "correctOrder": [
+      "langkah-bahan",
+      "langkah-susun",
+      "langkah-lem",
+      "langkah-tempel",
+      "langkah-rapi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kolase dari daun dan kertas yang ditempel."
+  }
+}

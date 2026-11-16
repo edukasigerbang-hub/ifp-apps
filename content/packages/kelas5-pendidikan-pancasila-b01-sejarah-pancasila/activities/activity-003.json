@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Badan yang dibentuk untuk menyiapkan kemerdekaan",
+        "right": "BPUPKI"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tokoh yang mengusulkan dasar negara",
+        "right": "Yamin, Soepomo, Soekarno"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Waktu Pancasila disahkan",
+        "right": "18 Agustus 1945 oleh PPKI"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Meja, dokumen, dan bendera pada sidang",
+        "right": "Sidang Pancasila"
+      },
+      {
+        "pairId": "pasangan-panitia-yang-menyusun-piagam-jak",
+        "left": "Panitia yang menyusun Piagam Jakarta",
+        "right": "Panitia Sembilan"
+      },
+      {
+        "pairId": "pasangan-badan-yang-mengesahkan-pancasila",
+        "left": "Badan yang mengesahkan Pancasila sebagai dasar negara",
+        "right": "PPKI"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sidang perumusan Pancasila dengan meja, dokumen, dan bendera Merah Putih."
+  }
+}

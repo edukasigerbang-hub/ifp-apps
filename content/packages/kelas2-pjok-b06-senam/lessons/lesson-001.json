@@ -1,0 +1,29 @@
+{
+  "lessonId": "senam-kelas2",
+  "packageId": "kelas2-pjok-b06-senam",
+  "title": "Senam Ringan",
+  "summary": "Melakukan senam ringan dengan aman.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal gerak senam.",
+    "Mempraktikkan gerak.",
+    "Menjaga keselamatan."
+  ],
+  "activityIds": [
+    "eksplorasi-senam-kelas2",
+    "ordering-senam-kelas2",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/senam-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan senam ringan dan peregangan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

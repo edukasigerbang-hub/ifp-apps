@@ -1,0 +1,28 @@
+{
+  "lessonId": "kebugaran",
+  "packageId": "kelas4-pjok-b03-kebugaran",
+  "title": "Kebugaran Jasmani",
+  "summary": "Mengenali komponen kebugaran, mempraktikkan latihan sederhana, dan membiasakan hidup sehat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan komponen kebugaran jasmani.",
+    "Mempraktikkan latihan kekuatan, daya tahan, kelenturan, dan kecepatan.",
+    "Menerapkan kebiasaan sehat untuk menjaga kebugaran."
+  ],
+  "activityIds": [
+    "eksplorasi-kebugaran",
+    "matching-kebugaran",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kebugaran.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel kebugaran: push-up, lari, duduk menjangkau, dan lari cepat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

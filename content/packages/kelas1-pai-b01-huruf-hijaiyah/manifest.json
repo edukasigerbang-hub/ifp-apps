@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pai-b01-huruf-hijaiyah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Mengenal Huruf Hijaiyah — PAI Kelas 1 (Islam) (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pai"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/huruf-hijaiyah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 191102,
+      "sha256": "eaac63674ca608ab3283be126f231997aa8bc2319af60dd8807e83f4865b427a"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bagian pertama paragraf",
+        "right": "Kalimat topik"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kalimat pendukung bekerja",
+        "right": "Menjelaskan kalimat topik"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang perlu diperiksa setelah menulis",
+        "right": "Huruf kapital, tanda baca, dan ejaan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Dua bagian yang ditulis anak pada gambar",
+        "right": "Topik dan kalimat pendukung"
+      },
+      {
+        "pairId": "pasangan-kalimat-yang-tugasnya-menjelaska",
+        "left": "Kalimat yang tugasnya menjelaskan kalimat topik disebut kalimat",
+        "right": "pendukung"
+      },
+      {
+        "pairId": "pasangan-hasil-tulisan-paragraf-yang-baik",
+        "left": "Hasil tulisan paragraf yang baik memakai huruf kapital, ejaan, dan",
+        "right": "tanda baca"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis paragraf di buku dengan kalimat topik dan kalimat pendukung."
+  }
+}

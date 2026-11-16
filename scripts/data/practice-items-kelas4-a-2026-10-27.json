@@ -1,0 +1,145 @@
+{
+  "_comment": "T-092 kelompok kelas 4 bagian A (Bahasa Indonesia b01-b08, Matematika b01-b08). Soal dan pasangan ditulis tangan berdasarkan isi paket masing-masing dari digest-kelas4.txt, bukan template. Target per paket mengikuti needs-kelas4-a.json: total 26 soal kuis dan 28 pasangan mencocokkan. Paket kelas4-bahasa-indonesia-b01 dan kelas4-matematika-b01 memakai kuis jawaban singkat sehingga answer dibuat satu kata/frasa pendek. Diterapkan LEAD dengan node scripts/add-practice-items.mjs berkas-ini --apply.",
+  "packages": {
+    "kelas4-bahasa-indonesia-b01-teks-deskripsi": {
+      "quiz": [
+        { "prompt": "Tempat duduk pengunjung yang ada pada deskripsi taman kota adalah ...", "answer": "bangku", "distractors": ["meja taman", "pintu"] },
+        { "prompt": "Hewan pada deskripsi taman kota yang suara kicaunya didengar adalah ...", "answer": "burung", "distractors": ["ayam hutan", "kucing"] }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b02-kalimat-efektif": {
+      "quiz": [
+        { "prompt": "Kalimat yang memakai kata berlebihan sampai maknanya berulang disebut kalimat ...", "answer": "tidak efektif", "distractors": ["sangat efektif", "perintah"] },
+        { "prompt": "Bentuk baku dari kata 'praktek' yang benar adalah ...", "answer": "praktik", "distractors": ["praktek", "praktekan"] }
+      ],
+      "matching": [
+        { "left": "Kata yang penulisannya sesuai kaidah bahasa dan kamus disebut kata", "right": "baku" },
+        { "left": "Pemakaian dua kata bermakna sama dalam satu kalimat termasuk", "right": "pemborosan kata" }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b03-ide-pokok": {
+      "quiz": [
+        { "prompt": "Gagasan utama yang menjadi dasar sebuah paragraf disebut ...", "answer": "ide pokok", "distractors": ["judul paragraf", "amanat cerita"] },
+        { "prompt": "Tugas detail pendukung dalam sebuah paragraf adalah ...", "answer": "menjelaskan ide pokok", "distractors": ["memperpanjang judul bacaan", "menutup paragraf"] }
+      ],
+      "matching": [
+        { "left": "Kegiatan pagi selain menyapu kelas yang menjadi detail pendukung bacaan", "right": "menyiram tanaman" },
+        { "left": "Uraian singkat seluruh isi bacaan dengan bahasa sendiri disebut", "right": "ringkasan" }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b04-menulis-deskripsi": {
+      "quiz": [
+        { "prompt": "Sebelum paragraf ditulis, ciri objek hasil amatan disusun lebih dulu dalam bentuk ...", "answer": "kerangka", "distractors": ["daftar harga", "laporan panjang"] },
+        { "prompt": "Suara kucing yang lembut pada deskripsi ditangkap melalui indra ...", "answer": "pendengaran", "distractors": ["penciuman", "perabaan"] }
+      ],
+      "matching": [
+        { "left": "Kesan yang dituliskan pada bagian akhir deskripsi kucing", "right": "lucu dan menyenangkan" },
+        { "left": "Hewan yang menemani anak menulis di buku pada gambar", "right": "kucing oranye" }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b05-teks-prosedur": {
+      "matching": [
+        { "left": "Bagian teks prosedur yang menyebut pot, tanah, dan biji", "right": "alat dan bahan" },
+        { "left": "Kata 'siapkan' dan 'sirami' pada teks prosedur termasuk jenis kata", "right": "perintah" },
+        { "left": "Setelah disiram, pot biji diletakkan di tempat yang", "right": "terang" }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b06-teks-narasi": {
+      "matching": [
+        { "left": "Benda yang dipakai anak menolong kucing dari hujan", "right": "payung" }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b07-wawancara-presentasi": {
+      "matching": [
+        { "left": "Orang yang ditanya dan menjawab pertanyaan kita saat wawancara", "right": "narasumber" },
+        { "left": "Hasil wawancara dipresentasikan di depan kelas dengan bantuan", "right": "diagram" },
+        { "left": "Kegiatan pertama sebelum menyusun pertanyaan wawancara", "right": "menentukan topik" }
+      ]
+    },
+    "kelas4-bahasa-indonesia-b08-apresiasi-sastra": {
+      "quiz": [
+        { "prompt": "Unsur puisi yang dapat dinikmati selain rima, irama, dan amanat adalah ...", "answer": "pilihan kata", "distractors": ["nama pengarang", "harga buku"] },
+        { "prompt": "Sikap yang tepat terhadap karya sastra buatan orang lain adalah ...", "answer": "menghargai", "distractors": ["mengejek karya", "meremehkan"] }
+      ],
+      "matching": [
+        { "left": "Unsur cerita yang berisi pesan penulis untuk pembacanya", "right": "amanat" },
+        { "left": "Kumpulan baris yang membentuk satu bagian dalam puisi disebut", "right": "bait" }
+      ]
+    },
+    "kelas4-matematika-b01-bilangan-cacah": {
+      "quiz": [
+        { "prompt": "Pada bilangan 24.518, angka 5 menempati nilai tempat ...", "answer": "ratusan", "distractors": ["puluhan", "satuan"] },
+        { "prompt": "Pada bilangan 36.702, angka yang menempati tempat satuan adalah ...", "answer": "2", "distractors": ["0", "6"] }
+      ]
+    },
+    "kelas4-matematika-b02-faktor-kelipatan": {
+      "quiz": [
+        { "prompt": "Faktor terbesar dari bilangan 10 adalah ...", "answer": "10", "distractors": ["5", "2"] },
+        { "prompt": "KPK dari 6 dan 8 adalah ...", "answer": "24", "distractors": ["12", "48"] }
+      ],
+      "matching": [
+        { "left": "Daftar kelipatan 5 yang kurang dari 30", "right": "5, 10, 15, 20, 25" },
+        { "left": "Faktor persekutuan terbesar dari 8 dan 12", "right": "4" }
+      ]
+    },
+    "kelas4-matematika-b03-pecahan": {
+      "quiz": [
+        { "prompt": "Bentuk paling sederhana dari pecahan 6/9 adalah ...", "answer": "2/3", "distractors": ["1/3", "3/2"] },
+        { "prompt": "Pecahan 3/5 menunjukkan sebuah benda dibagi sama besar menjadi ...", "answer": "5 bagian", "distractors": ["3 bagian", "2 bagian"] }
+      ],
+      "matching": [
+        { "left": "Bagian berwarna pada batang yang dibagi 4 sama besar dengan 1 bagian berwarna", "right": "1/4" },
+        { "left": "Dua pecahan yang menunjukkan besar bagian yang sama disebut pecahan", "right": "senilai" }
+      ]
+    },
+    "kelas4-matematika-b04-pengukuran": {
+      "quiz": [
+        { "prompt": "Tali sepanjang 3 meter sama dengan ... cm", "answer": "300", "distractors": ["30", "3.000"] },
+        { "prompt": "Berat apel 500 gram dan jeruk 1 kilogram. Total berat keduanya ... gram", "answer": "1.500", "distractors": ["1.000", "2.000"] }
+      ],
+      "matching": [
+        { "left": "Satuan berat yang cocok untuk menimbang sekantong beras", "right": "kilogram" },
+        { "left": "Pintu kelas setinggi 2 meter jika diukur dalam sentimeter menjadi", "right": "200 cm" }
+      ]
+    },
+    "kelas4-matematika-b05-bangun-datar": {
+      "quiz": [
+        { "prompt": "Keliling persegi panjang dengan panjang 6 cm dan lebar 3 cm adalah ...", "answer": "18 cm", "distractors": ["15 cm", "9 cm"] },
+        { "prompt": "Luas persegi yang sisinya 6 cm adalah ...", "answer": "36 cm²", "distractors": ["12 cm²", "24 cm²"] }
+      ],
+      "matching": [
+        { "left": "Bangun datar yang dibatasi satu garis lengkung dan tidak bersudut", "right": "lingkaran" },
+        { "left": "Cara menghitung luas persegi panjang", "right": "panjang × lebar" }
+      ]
+    },
+    "kelas4-matematika-b06-garis-sudut": {
+      "quiz": [
+        { "prompt": "Sudut yang besarnya lebih dari 90° disebut sudut ...", "answer": "tumpul", "distractors": ["lancip", "siku-siku"] },
+        { "prompt": "Dua garis yang berpotongan membentuk sudut 90° disebut saling ...", "answer": "tegak lurus", "distractors": ["sejajar", "berhimpit"] }
+      ],
+      "matching": [
+        { "left": "Tanda yang dipakai pada gambar untuk menunjukkan sudut siku-siku", "right": "kotak kecil" }
+      ]
+    },
+    "kelas4-matematika-b07-waktu-volume-data": {
+      "quiz": [
+        { "prompt": "Dua jam sama dengan ... menit", "answer": "120", "distractors": ["100", "200"] },
+        { "prompt": "Air 2 liter dituang habis ke gelas berukuran 500 mL. Banyak gelas yang dibutuhkan ...", "answer": "4", "distractors": ["2", "5"] }
+      ],
+      "matching": [
+        { "left": "Alat berkaca bertanda skala untuk mengukur volume air", "right": "gelas ukur" },
+        { "left": "Penyajian data yang tingginya menunjukkan banyaknya data", "right": "diagram batang" }
+      ]
+    },
+    "kelas4-matematika-b08-pemecahan-masalah": {
+      "quiz": [
+        { "prompt": "Lima buku harganya sama dan totalnya Rp10.000. Harga satu buku ...", "answer": "Rp2.000", "distractors": ["Rp1.500", "Rp5.000"] },
+        { "prompt": "Setelah informasi penting diketahui, langkah berikutnya pada soal cerita adalah memilih ...", "answer": "operasi hitung", "distractors": ["warna pensil", "tempat duduk"] }
+      ],
+      "matching": [
+        { "left": "Uang Rp10.000 dibelanjakan Rp6.500, sisa uangnya", "right": "Rp3.500" },
+        { "left": "Langkah terakhir sebelum menuliskan jawaban soal cerita", "right": "memeriksa kembali perhitungan" }
+      ]
+    }
+  }
+}

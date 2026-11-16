@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Musyawarah",
+        "right": "Membicarakan masalah bersama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menyampaikan pendapat",
+        "right": "Sopan dan tidak memotong"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan setelah sepakat",
+        "right": "Melaksanakan keputusan"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Siswa berdiskusi bersama guru",
+        "right": "Musyawarah"
+      },
+      {
+        "pairId": "pasangan-keputusan-yang-dihasilkan-bersam",
+        "left": "Keputusan yang dihasilkan bersama lewat musyawarah",
+        "right": "kesepakatan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa bermusyawarah bersama guru."
+  }
+}

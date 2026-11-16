@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-proyek-kewargaan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Proyek Kelas",
+  "instructions": "Amati gambar, lalu diskusikan langkah merancang proyek.",
+  "assets": [
+    "assets/proyek-kewargaan-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa masalah yang ingin diselesaikan?",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah.",
+        "reveal": "Masalah di sekitar sekolah.",
+        "hint": "Pilih yang dekat dan penting."
+      },
+      {
+        "prompt": "Bagaimana merencanakan proyek?",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah.",
+        "reveal": "Tentukan tujuan, tugas, dan waktu.",
+        "hint": "Bagi peran dengan adil."
+      },
+      {
+        "prompt": "Apa yang dilakukan setelah proyek?",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah.",
+        "reveal": "Melaporkan hasil dan evaluasi.",
+        "hint": "Ceritakan pengalaman."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "reveal": "Memilih masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Proyek Kewargaan?",
+        "reveal": "Merancang dan melaksanakan proyek kewargaan sederhana di sekolah.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/proyek-kewargaan-kelas3.webp",
+        "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa merancang dan melaksanakan proyek kebersihan sekolah."
+  }
+}

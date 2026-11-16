@@ -1,0 +1,28 @@
+{
+  "lessonId": "apresiasi-karya",
+  "packageId": "kelas3-seni-rupa-b07-apresiasi-karya",
+  "title": "Mengapresiasi Karya Seni",
+  "summary": "Mengamati karya seni dan memberi tanggapan dengan sopan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengamati karya seni dengan teliti.",
+    "Menyebutkan unsur seni pada karya.",
+    "Memberi tanggapan yang sopan."
+  ],
+  "activityIds": [
+    "eksplorasi-apresiasi",
+    "kuis-apresiasi",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-apresiasi"
+  ],
+  "assetRefs": [
+    "assets/apresiasi-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga karya berbingkai di dinding pameran dan pengunjung mengamati."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

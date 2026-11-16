@@ -1,0 +1,68 @@
+{
+  "activityId": "eksplorasi-keliling-luas",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Keliling dan Luas",
+  "instructions": "Amati gambar, lalu diskusikan cara menghitung keliling dan luas.",
+  "assets": [
+    "assets/aktivitas-keliling-luas-1.png",
+    "assets/aktivitas-keliling-luas-2.png",
+    "assets/aktivitas-keliling-luas-3.png",
+    "assets/aktivitas-keliling-luas-4.png",
+    "assets/aktivitas-keliling-luas-5.png"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu keliling?",
+        "assetPath": "assets/aktivitas-keliling-luas-1.png",
+        "altText": "Persegi panjang dengan panah teal mengelilingi keempat tepinya searah jarum jam.",
+        "reveal": "Jumlah panjang semua sisi.",
+        "hint": "Jelusuri tepi bangun."
+      },
+      {
+        "prompt": "Bagaimana menghitung luas persegi panjang?",
+        "assetPath": "assets/aktivitas-keliling-luas-2.png",
+        "altText": "Persegi panjang berpetak lima kolom empat baris; seluruh dua puluh kotak diwarnai teal.",
+        "reveal": "Panjang × lebar.",
+        "hint": "Hitung kotak satuan."
+      },
+      {
+        "prompt": "Apa satuan luas?",
+        "assetPath": "assets/aktivitas-keliling-luas-3.png",
+        "altText": "Persegi satuan tiga kali tiga, satu kotak tengah disorot oranye, dan kaca pembesar di atasnya.",
+        "reveal": "Sentimeter persegi (cm²).",
+        "hint": "Karena mengalikan dua panjang."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Keliling dan Luas Sederhana?",
+        "reveal": "Menghitung keliling dan luas persegi serta persegi panjang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/aktivitas-keliling-luas-4.png",
+        "altText": "Tiga kartu rangkuman: persegi panjang berpanah keliling, petak lima kali empat dengan tujuh kotak diwarnai, dan petak empat kali empat dengan sembilan kotak diwarnai."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Panel kiri: persegi panjang dengan panah mengelilingi keempat tepinya. Panel kanan: persegi panjang yang sama terbagi kotak-kotak satuan yang seluruhnya diwarnai.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/aktivitas-keliling-luas-5.png",
+        "altText": "Panel kiri: persegi panjang dengan panah mengelilingi keempat tepinya. Panel kanan: persegi panjang yang sama terbagi kotak-kotak satuan yang seluruhnya diwarnai."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima ilustrasi keliling dan luas: persegi panjang dengan panah keliling, persegi panjang berpetak lima kali empat, persegi satuan disorot dengan kaca pembesar, tiga kartu rangkuman, dan perbandingan keliling serta luas."
+  }
+}

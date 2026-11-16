@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-menulis-karya",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Unsur Karya",
+  "instructions": "Pasangkan setiap unsur dengan maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-tema",
+        "left": "Tema",
+        "right": "Ide cerita"
+      },
+      {
+        "pairId": "pasangan-tokoh",
+        "left": "Tokoh",
+        "right": "Pelaku cerita"
+      },
+      {
+        "pairId": "pasangan-latar",
+        "left": "Latar",
+        "right": "Tempat dan waktu"
+      },
+      {
+        "pairId": "pasangan-alur",
+        "left": "Alur",
+        "right": "Urutan peristiwa"
+      },
+      {
+        "pairId": "pasangan-amanat",
+        "left": "Amanat",
+        "right": "Pesan cerita"
+      },
+      {
+        "pairId": "pasangan-gaya",
+        "left": "Gaya bahasa",
+        "right": "Cara bercerita"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis karya sastra di buku."
+  }
+}

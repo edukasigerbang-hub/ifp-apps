@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alat yang digunakan untuk mengukur panjang pensil",
+        "right": "Penggaris, dengan satuan sentimeter (cm)"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alat yang digunakan untuk mengukur berat buah",
+        "right": "Timbangan, dengan satuan gram (g) atau kilogram (kg)"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Panjang satu meter dalam sentimeter",
+        "right": "100 sentimeter"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Alat yang tepat untuk mengukur berat badan adalah",
+        "right": "timbangan"
+      },
+      {
+        "pairId": "pasangan-satuan-berat-yang-cocok-untuk-me",
+        "left": "Satuan berat yang cocok untuk menimbang sekantong beras",
+        "right": "kilogram"
+      },
+      {
+        "pairId": "pasangan-pintu-kelas-setinggi-2-meter-jik",
+        "left": "Pintu kelas setinggi 2 meter jika diukur dalam sentimeter menjadi",
+        "right": "200 cm"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Dua panel: penggaris dengan pensil, dan timbangan dengan buah-buahan."
+  }
+}

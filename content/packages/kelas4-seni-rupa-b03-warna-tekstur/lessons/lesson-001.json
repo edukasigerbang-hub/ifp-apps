@@ -1,0 +1,28 @@
+{
+  "lessonId": "warna-tekstur",
+  "packageId": "kelas4-seni-rupa-b03-warna-tekstur",
+  "title": "Warna dan Tekstur",
+  "summary": "Mengenal warna primer dan sekunder, warna hangat dan dingin, serta tekstur kasar dan halus.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal warna primer dan sekunder.",
+    "Membedakan warna hangat dan dingin.",
+    "Membedakan tekstur kasar dan halus pada karya seni."
+  ],
+  "activityIds": [
+    "eksplorasi-warna-tekstur",
+    "matching-warna-tekstur",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/warna-tekstur.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Roda warna dengan enam warna dan tiga contoh tekstur: titik-titik, garis, dan permukaan halus."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

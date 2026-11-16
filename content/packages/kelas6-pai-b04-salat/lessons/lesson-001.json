@@ -1,0 +1,29 @@
+{
+  "lessonId": "salat-kelas6",
+  "packageId": "kelas6-pai-b04-salat",
+  "title": "Salat dan Ibadah",
+  "summary": "Melaksanakan salat dengan tertib dan khusyuk.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan kewajiban salat.",
+    "Menyebutkan waktu salat.",
+    "Mempraktikkan urutan salat."
+  ],
+  "activityIds": [
+    "eksplorasi-salat-kelas6",
+    "ordering-salat-kelas6",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/salat-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Batang dibagi 2 bagian, 1 bagian berwarna",
+        "right": "Pecahan 1/2"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Batang dibagi 4 bagian, 2 bagian berwarna",
+        "right": "Pecahan 2/4"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Batang dibagi 8 bagian, 4 bagian berwarna",
+        "right": "Pecahan 4/8"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Bentuk paling sederhana dari 4/8 adalah",
+        "right": "1/2"
+      },
+      {
+        "pairId": "pasangan-bagian-berwarna-pada-batang-yang",
+        "left": "Bagian berwarna pada batang yang dibagi 4 sama besar dengan 1 bagian berwarna",
+        "right": "1/4"
+      },
+      {
+        "pairId": "pasangan-dua-pecahan-yang-menunjukkan-bes",
+        "left": "Dua pecahan yang menunjukkan besar bagian yang sama disebut pecahan",
+        "right": "senilai"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga batang berukuran sama: batang pertama terbagi 2 dengan 1 bagian berwarna, batang kedua terbagi 4 dengan 2 bagian berwarna, batang ketiga terbagi 8 dengan 4 bagian berwarna."
+  }
+}

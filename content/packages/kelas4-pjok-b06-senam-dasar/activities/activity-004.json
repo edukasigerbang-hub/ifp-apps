@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Gerakan berguling ke depan di atas matras disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "guling belakang"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "guling depan"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "kayang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Sebelum senam, kita wajib melakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "pendinginan"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "peregangan berat"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "pemanasan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Pemanasan membuat otot siap dan mencegah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "cedera"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "keringat"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "lelah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Saat akan berguling, dagu ditekuk sampai menyentuh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "lutut"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "dada"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "matras"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Alas yang dipakai untuk berguling adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "bangku"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "karpet"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "matras"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Sikap akhir guling depan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "berdiri tegak"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "duduk bersila"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "berbaring telentang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matras senam dengan tiga gerakan: guling depan, peregangan, dan keseimbangan satu kaki."
+  }
+}

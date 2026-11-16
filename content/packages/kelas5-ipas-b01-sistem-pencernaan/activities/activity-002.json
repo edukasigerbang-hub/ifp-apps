@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-sistem-pencernaan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Organ dan Fungsi",
+  "instructions": "Pasangkan setiap organ dengan fungsinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-mulut",
+        "left": "Mulut",
+        "right": "Mengunyah makanan"
+      },
+      {
+        "pairId": "pasangan-kerongkongan",
+        "left": "Kerongkongan",
+        "right": "Menyalurkan makanan"
+      },
+      {
+        "pairId": "pasangan-lambung",
+        "left": "Lambung",
+        "right": "Mencerna makanan"
+      },
+      {
+        "pairId": "pasangan-usus-halus",
+        "left": "Usus halus",
+        "right": "Menyerap sari makanan"
+      },
+      {
+        "pairId": "pasangan-usus-besar",
+        "left": "Usus besar",
+        "right": "Menyerap air"
+      },
+      {
+        "pairId": "pasangan-anus",
+        "left": "Anus",
+        "right": "Mengeluarkan sisa"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram sistem pencernaan manusia: mulut, kerongkongan, lambung, usus halus, dan usus besar."
+  }
+}

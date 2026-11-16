@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kosakata-baru",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Belajar Kata Baru",
+  "instructions": "Amati gambar, lalu diskusikan arti kata.",
+  "assets": [
+    "assets/kosakata-baru.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa arti kata gembira?",
+        "assetPath": "assets/kosakata-baru.webp",
+        "altText": "Anak membaca buku dan belajar kosakata baru.",
+        "reveal": "Senang.",
+        "hint": "Hati senang."
+      },
+      {
+        "prompt": "Apa arti kata cepat?",
+        "assetPath": "assets/kosakata-baru.webp",
+        "altText": "Anak membaca buku dan belajar kosakata baru.",
+        "reveal": "Tidak lambat.",
+        "hint": "Bergerak sigap."
+      },
+      {
+        "prompt": "Bagaimana menggunakan kata baru?",
+        "assetPath": "assets/kosakata-baru.webp",
+        "altText": "Anak membaca buku dan belajar kosakata baru.",
+        "reveal": "Buat kalimat.",
+        "hint": "Contoh: Saya gembira."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kosakata Baru?",
+        "reveal": "Mengenal dan menggunakan kosakata baru.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kosakata-baru.webp",
+        "altText": "Anak membaca buku dan belajar kosakata baru."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak membaca buku dan belajar kosakata baru.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kosakata-baru.webp",
+        "altText": "Anak membaca buku dan belajar kosakata baru."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku dan belajar kosakata baru."
+  }
+}

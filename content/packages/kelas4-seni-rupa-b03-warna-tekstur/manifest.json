@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-seni-rupa-b03-warna-tekstur",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Warna dan Tekstur — Seni Rupa Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "seni-rupa"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/warna-tekstur.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 160350,
+      "sha256": "fc3541d411355f5bfa9ebb47bc9bc3c0f364233a607a7786c8740676d27d5579"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

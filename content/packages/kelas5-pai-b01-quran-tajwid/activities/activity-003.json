@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Tajwid\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Panjang dua harakat"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Ilmu membaca Al-Qur'an"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Tanda baca"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Mad thabi'i\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Ilmu membaca Al-Qur'an"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Tanda baca"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Panjang dua harakat"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-ilmu-yang-mengatur-cara-membaca",
+        "prompt": "Ilmu yang mengatur cara membaca Al-Qur'an dengan benar disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-ilmu-yang-mengatur-cara-mem-1",
+            "text": "Tartil"
+          },
+          {
+            "optionId": "opsi-soal-ilmu-yang-mengatur-cara-mem-0",
+            "text": "Tajwid"
+          },
+          {
+            "optionId": "opsi-soal-ilmu-yang-mengatur-cara-mem-2",
+            "text": "Harakat"
+          },
+          {
+            "optionId": "opsi-soal-ilmu-yang-mengatur-cara-mem-3",
+            "text": "Adab"
+          }
+        ],
+        "correctResponse": "opsi-soal-ilmu-yang-mengatur-cara-mem-0"
+      },
+      {
+        "questionId": "soal-panjang-bacaan-mad-thabi-i-adala",
+        "prompt": "Panjang bacaan mad thabi'i adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-1",
+            "text": "Satu harakat"
+          },
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-2",
+            "text": "Tiga harakat"
+          },
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-0",
+            "text": "Dua harakat"
+          },
+          {
+            "optionId": "opsi-soal-panjang-bacaan-mad-thabi-i-3",
+            "text": "Enam harakat"
+          }
+        ],
+        "correctResponse": "opsi-soal-panjang-bacaan-mad-thabi-i-0"
+      },
+      {
+        "questionId": "soal-membaca-al-qur-an-secara-pelan-d",
+        "prompt": "Membaca Al-Qur'an secara pelan dan jelas disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-secara-pe-1",
+            "text": "Mad thabi'i"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-secara-pe-2",
+            "text": "Tajwid"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-secara-pe-3",
+            "text": "Surah"
+          },
+          {
+            "optionId": "opsi-soal-membaca-al-qur-an-secara-pe-0",
+            "text": "Tartil"
+          }
+        ],
+        "correctResponse": "opsi-soal-membaca-al-qur-an-secara-pe-0"
+      },
+      {
+        "questionId": "soal-adab-membaca-al-qur-an-ditunjukk",
+        "prompt": "Adab membaca Al-Qur'an ditunjukkan dengan sikap ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-adab-membaca-al-qur-an-ditu-0",
+            "text": "Tenang"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-al-qur-an-ditu-1",
+            "text": "Tergesa-gesa"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-al-qur-an-ditu-2",
+            "text": "Ribut"
+          },
+          {
+            "optionId": "opsi-soal-adab-membaca-al-qur-an-ditu-3",
+            "text": "Bercanda"
+          }
+        ],
+        "correctResponse": "opsi-soal-adab-membaca-al-qur-an-ditu-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "activityId": "kuis-bola-besar-lanjutan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Bola Besar Lanjutan",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-passing",
+        "prompt": "Mengoper bola kepada teman disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dribble",
+            "text": "Dribbling"
+          },
+          {
+            "optionId": "opsi-shooting",
+            "text": "Shooting"
+          },
+          {
+            "optionId": "opsi-passing",
+            "text": "Passing"
+          },
+          {
+            "optionId": "opsi-servis",
+            "text": "Servis"
+          }
+        ],
+        "correctResponse": "opsi-passing"
+      },
+      {
+        "questionId": "soal-dribble",
+        "prompt": "Menggiring bola dalam bola basket disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-passing",
+            "text": "Passing"
+          },
+          {
+            "optionId": "opsi-servis",
+            "text": "Servis"
+          },
+          {
+            "optionId": "opsi-smash",
+            "text": "Smash"
+          },
+          {
+            "optionId": "opsi-dribble",
+            "text": "Dribbling"
+          }
+        ],
+        "correctResponse": "opsi-dribble"
+      },
+      {
+        "questionId": "soal-servis",
+        "prompt": "Pukulan awal dalam bola voli disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-servis",
+            "text": "Servis"
+          },
+          {
+            "optionId": "opsi-smash",
+            "text": "Smash"
+          },
+          {
+            "optionId": "opsi-passing",
+            "text": "Passing"
+          },
+          {
+            "optionId": "opsi-dribble",
+            "text": "Dribbling"
+          }
+        ],
+        "correctResponse": "opsi-servis"
+      },
+      {
+        "questionId": "soal-tim",
+        "prompt": "Agar tim menang, pemain harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-sendiri",
+            "text": "Bermain sendiri"
+          },
+          {
+            "optionId": "opsi-kerjasama",
+            "text": "Bekerja sama"
+          },
+          {
+            "optionId": "opsi-berebut",
+            "text": "Berebut bola"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah pada teman"
+          }
+        ],
+        "correctResponse": "opsi-kerjasama"
+      },
+      {
+        "questionId": "soal-tembakan-yang-diarahkan-ke-ring",
+        "prompt": "Tembakan yang diarahkan ke ring atau gawang lawan disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-1",
+            "text": "Passing"
+          },
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-2",
+            "text": "Dribbling"
+          },
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-0",
+            "text": "Shooting"
+          },
+          {
+            "optionId": "opsi-soal-tembakan-yang-diarahkan-ke-3",
+            "text": "Servis"
+          }
+        ],
+        "correctResponse": "opsi-soal-tembakan-yang-diarahkan-ke-0"
+      },
+      {
+        "questionId": "soal-dalam-permainan-bola-besar-seora",
+        "prompt": "Dalam permainan bola besar, seorang pemain tidak boleh ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-1",
+            "text": "Bekerja sama"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-2",
+            "text": "Berkomunikasi"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-3",
+            "text": "Berpindah posisi"
+          },
+          {
+            "optionId": "opsi-soal-dalam-permainan-bola-besar-0",
+            "text": "Bermain sendiri"
+          }
+        ],
+        "correctResponse": "opsi-soal-dalam-permainan-bola-besar-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola sepak, bola basket, dan bola voli."
+  }
+}

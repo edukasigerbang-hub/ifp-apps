@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-huruf-harakat",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Harakat",
+  "instructions": "Pasangkan setiap harakat dengan bunyinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-fathah",
+        "left": "Fathah",
+        "right": "a"
+      },
+      {
+        "pairId": "pasangan-kasrah",
+        "left": "Kasrah",
+        "right": "i"
+      },
+      {
+        "pairId": "pasangan-dammah",
+        "left": "Dammah",
+        "right": "u"
+      },
+      {
+        "pairId": "pasangan-harakat",
+        "left": "Harakat",
+        "right": "Tanda baca"
+      },
+      {
+        "pairId": "pasangan-alif",
+        "left": "Alif",
+        "right": "Huruf pertama"
+      },
+      {
+        "pairId": "pasangan-tartil",
+        "left": "Tartil",
+        "right": "Pelan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar huruf hijaiyah dan harakat."
+  }
+}

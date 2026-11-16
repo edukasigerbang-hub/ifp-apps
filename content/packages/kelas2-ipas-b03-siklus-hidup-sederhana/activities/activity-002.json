@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-siklus-hidup-sederhana",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Tahap dan Hasilnya",
+  "instructions": "Pasangkan setiap tahap hidup dengan tahap berikutnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-siklus-hidup-sederhana-1",
+        "left": "Telur",
+        "right": "Menetas menjadi ulat"
+      },
+      {
+        "pairId": "pasangan-siklus-hidup-sederhana-2",
+        "left": "Ulat",
+        "right": "Menjadi kepompong"
+      },
+      {
+        "pairId": "pasangan-siklus-hidup-sederhana-3",
+        "left": "Kepompong",
+        "right": "Menjadi kupu-kupu"
+      },
+      {
+        "pairId": "pasangan-siklus-hidup-sederhana-4",
+        "left": "Biji",
+        "right": "Tumbuh menjadi tunas"
+      },
+      {
+        "pairId": "pasangan-siklus-hidup-sederhana-5",
+        "left": "Tunas",
+        "right": "Menjadi tanaman muda"
+      },
+      {
+        "pairId": "pasangan-siklus-hidup-sederhana-6",
+        "left": "Tanaman berbunga",
+        "right": "Menghasilkan biji baru"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Aktivitas memasangkan berjudul \"Memasangkan Tahap dan Hasilnya\": Pasangkan setiap tahap hidup dengan tahap berikutnya."
+  }
+}

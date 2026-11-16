@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Ciri kalimat efektif",
+        "right": "Singkat, jelas, dan tidak berulang"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan kosakata baru perlu dicari artinya",
+        "right": "Agar kalimat mudah dipahami"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Memperbaiki kalimat berulang",
+        "right": "Hapus kata yang tidak perlu"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Kalimat efektif adalah",
+        "right": "Siti membaca buku di perpustakaan"
+      },
+      {
+        "pairId": "pasangan-kata-baru-yang-belum-kita-pahami",
+        "left": "Kata baru yang belum kita pahami sebaiknya",
+        "right": "dicari artinya"
+      },
+      {
+        "pairId": "pasangan-kata-indah-dan-cantik-memiliki-a",
+        "left": "Kata 'indah' dan 'cantik' memiliki arti yang sama, disebut",
+        "right": "sinonim"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku, meja, dan siswa membaca."
+  }
+}

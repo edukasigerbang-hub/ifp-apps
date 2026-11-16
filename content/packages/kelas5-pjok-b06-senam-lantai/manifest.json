@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-pjok-b06-senam-lantai",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Senam Lantai — PJOK Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "pjok"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/senam-lantai.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 143812,
+      "sha256": "6ad17ce580f5ffb4b81eb205d6a7e66dfa67d62756e4f99cc066269819b50697"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

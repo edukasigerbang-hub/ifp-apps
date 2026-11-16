@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Suku berbeda\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Saling menghormati"
+          },
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Menghormati ibadah"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Melestarikan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Agama berbeda\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Saling menghormati"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Menghormati ibadah"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Melestarikan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-penguatan-3",
+        "prompt": "Apa pasangan dari \"Bahasa daerah\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-3-1",
+            "text": "Saling menghormati"
+          },
+          {
+            "optionId": "opsi-penguatan-3-2",
+            "text": "Menghormati ibadah"
+          },
+          {
+            "optionId": "opsi-penguatan-3-3",
+            "text": "Melestarikan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-3-3"
+      },
+      {
+        "questionId": "soal-sikap-yang-tepat-terhadap-teman",
+        "prompt": "Sikap yang tepat terhadap teman yang berbeda suku adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-t-0",
+            "text": "menghargai"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-t-1",
+            "text": "membeda-bedakan"
+          },
+          {
+            "optionId": "opsi-soal-sikap-yang-tepat-terhadap-t-2",
+            "text": "mengejek"
+          }
+        ],
+        "correctResponse": "opsi-soal-sikap-yang-tepat-terhadap-t-0"
+      },
+      {
+        "questionId": "soal-keberagaman-suku-dan-budaya-di-i",
+        "prompt": "Keberagaman suku dan budaya di Indonesia seharusnya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-keberagaman-suku-dan-budaya-1",
+            "text": "memecah belah bangsa"
+          },
+          {
+            "optionId": "opsi-soal-keberagaman-suku-dan-budaya-0",
+            "text": "memperkuat persatuan"
+          },
+          {
+            "optionId": "opsi-soal-keberagaman-suku-dan-budaya-2",
+            "text": "menimbulkan pertengkaran"
+          }
+        ],
+        "correctResponse": "opsi-soal-keberagaman-suku-dan-budaya-0"
+      },
+      {
+        "questionId": "soal-saat-teman-dari-daerah-lain-berc",
+        "prompt": "Saat teman dari daerah lain bercerita, kita sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-teman-dari-daerah-lain-1",
+            "text": "menertawakannya"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-dari-daerah-lain-2",
+            "text": "memotong ucapannya"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-dari-daerah-lain-0",
+            "text": "mendengarkannya"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-teman-dari-daerah-lain-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima anak berbeda warna pakaian bergandengan tangan di dekat bendera merah putih."
+  }
+}

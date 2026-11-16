@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Rumah Gadang\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Bali"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Sumatera Barat"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Sumatera Utara"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Tari Kecak\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Sumatera Barat"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Sumatera Utara"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Bali"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-rumah-gadang-adalah-rumah-adat-d",
+        "prompt": "Rumah Gadang adalah rumah adat dari daerah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-rumah-gadang-adalah-rumah-a-0",
+            "text": "Sumatera Barat"
+          },
+          {
+            "optionId": "opsi-soal-rumah-gadang-adalah-rumah-a-1",
+            "text": "Sumatera Utara"
+          },
+          {
+            "optionId": "opsi-soal-rumah-gadang-adalah-rumah-a-2",
+            "text": "Aceh"
+          }
+        ],
+        "correctResponse": "opsi-soal-rumah-gadang-adalah-rumah-a-0"
+      },
+      {
+        "questionId": "soal-tari-saman-berasal-dari-daerah",
+        "prompt": "Tari Saman berasal dari daerah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-tari-saman-berasal-dari-dae-1",
+            "text": "Bali"
+          },
+          {
+            "optionId": "opsi-soal-tari-saman-berasal-dari-dae-0",
+            "text": "Aceh"
+          },
+          {
+            "optionId": "opsi-soal-tari-saman-berasal-dari-dae-2",
+            "text": "Jawa"
+          }
+        ],
+        "correctResponse": "opsi-soal-tari-saman-berasal-dari-dae-0"
+      },
+      {
+        "questionId": "soal-kain-tradisional-yang-berasal-da",
+        "prompt": "Kain tradisional yang berasal dari Sumatera Utara adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kain-tradisional-yang-beras-1",
+            "text": "batik"
+          },
+          {
+            "optionId": "opsi-soal-kain-tradisional-yang-beras-2",
+            "text": "songket"
+          },
+          {
+            "optionId": "opsi-soal-kain-tradisional-yang-beras-0",
+            "text": "ulos"
+          }
+        ],
+        "correctResponse": "opsi-soal-kain-tradisional-yang-beras-0"
+      },
+      {
+        "questionId": "soal-semua-budaya-daerah-di-indonesia",
+        "prompt": "Semua budaya daerah di Indonesia sebaiknya kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-semua-budaya-daerah-di-indo-0",
+            "text": "hargai"
+          },
+          {
+            "optionId": "opsi-soal-semua-budaya-daerah-di-indo-1",
+            "text": "lestarikan"
+          },
+          {
+            "optionId": "opsi-soal-semua-budaya-daerah-di-indo-2",
+            "text": "lupakan"
+          }
+        ],
+        "correctResponse": "opsi-soal-semua-budaya-daerah-di-indo-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat gambar budaya: rumah adat, penari, makanan rendang, dan kain bercorak."
+  }
+}

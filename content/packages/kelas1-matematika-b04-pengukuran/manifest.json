@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-matematika-b04-pengukuran",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pengukuran Sederhana — Matematika Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pengukuran-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 175668,
+      "sha256": "fafca6d37af0c0a2529225c85ea0d88a89c58d5215d26effc2e3300ad1987462"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 11002,
+      "sha256": "36a90090f90c7130e1fc6f0076f712e2f2cc733998b415bbe7e3f848c2b55269"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12659,
+      "sha256": "33634bbba9300ca7377bf1f0a451f51b61a1c3e1fd4a8976931ec0c7fc76dffa"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 30438,
+      "sha256": "f6c0d08a61e170024fe90155d3e9f572f767b736aa3cc0d4d89793da139815a3"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9732,
+      "sha256": "2e41f68b77fa00e62e0f03e8f7ef202e7c1a9a0d2a8b91ae0f0273182baae3d4"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4978,
+      "sha256": "8c23d17370702348e0e21eb1904703caacf4b5171c1d93ffd4af49f567bbd44c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

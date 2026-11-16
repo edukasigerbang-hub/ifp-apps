@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas6-matematika-b04-lingkaran",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Lingkaran — Matematika Kelas 6 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    6
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/lingkaran.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168192,
+      "sha256": "65010498c02609366f4bf3f8aaee5ecf1ce7f9bfb542261ff11341fdf93006f1"
+    },
+    {
+      "path": "assets/aktivitas-lingkaran-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 22316,
+      "sha256": "6852104106100b41632001efe3f90116641d8d4da66e2b2b152ef45e6123f4cb"
+    },
+    {
+      "path": "assets/aktivitas-lingkaran-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 26012,
+      "sha256": "91acaa384712040b2d9e954902525f113e602efa0ae3da1fbd9252dbfeb4f2f3"
+    },
+    {
+      "path": "assets/aktivitas-lingkaran-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 39398,
+      "sha256": "9740f86fd933b67080bbfbece82e0c0ca565e64292b08f123097dd77f339919a"
+    },
+    {
+      "path": "assets/aktivitas-lingkaran-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9458,
+      "sha256": "2aa74735ac04f1ff2658b8a94ff15361e06a76764adff8456b747acbe4fdd9a4"
+    },
+    {
+      "path": "assets/aktivitas-lingkaran-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 31694,
+      "sha256": "d670a6cde3fb2dffb33e0527abc675ef0e403d6b04e758819573f187bbf488cf"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

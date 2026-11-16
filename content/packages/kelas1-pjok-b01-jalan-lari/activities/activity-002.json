@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-jalan-lari",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Gerak dan Ciri",
+  "instructions": "Pasangkan setiap gerak dengan cirinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jalan",
+        "left": "Jalan",
+        "right": "Pelan"
+      },
+      {
+        "pairId": "pasangan-lari",
+        "left": "Lari",
+        "right": "Cepat"
+      },
+      {
+        "pairId": "pasangan-pemanasan",
+        "left": "Pemanasan",
+        "right": "Sebelum olahraga"
+      },
+      {
+        "pairId": "pasangan-kaki",
+        "left": "Kaki",
+        "right": "Melangkah"
+      },
+      {
+        "pairId": "pasangan-tangan",
+        "left": "Tangan",
+        "right": "Mengayun"
+      },
+      {
+        "pairId": "pasangan-ruang",
+        "left": "Ruang aman",
+        "right": "Tidak menabrak"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan dan berlari di lapangan."
+  }
+}

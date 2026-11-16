@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Dongeng",
+        "right": "Cerita khayalan yang diwariskan turun-temurun"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tokoh dalam dongeng",
+        "right": "Pelaku dalam cerita"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Pesan cerita",
+        "right": "Nasihat atau pelajaran dari cerita"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Dongeng adalah cerita",
+        "right": "Khayalan turun-temurun"
+      },
+      {
+        "pairId": "pasangan-waktu-dan-tempat-terjadinya-peri",
+        "left": "Waktu dan tempat terjadinya peristiwa dalam dongeng",
+        "right": "latar cerita"
+      },
+      {
+        "pairId": "pasangan-perbuatan-baik-yang-kita-tiru-da",
+        "left": "Perbuatan baik yang kita tiru dari sebuah dongeng",
+        "right": "pesan cerita"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+  }
+}

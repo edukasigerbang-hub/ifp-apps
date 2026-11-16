@@ -1,0 +1,29 @@
+{
+  "lessonId": "salat",
+  "packageId": "kelas2-pai-b04-salat",
+  "title": "Salat",
+  "summary": "Mengenal salat dan gerakannya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan kewajiban salat.",
+    "Menyebutkan waktu salat.",
+    "Mempraktikkan gerakan salat."
+  ],
+  "activityIds": [
+    "eksplorasi-salat",
+    "ordering-salat",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/salat-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

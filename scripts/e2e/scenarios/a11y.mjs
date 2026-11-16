@@ -269,6 +269,10 @@ const SCREENS = [
   },
   { label: "Hasil Belajar", wait: `document.body.textContent.includes("Aktivitas terbaru")` },
   { label: "Konten & Pembaruan", wait: `document.body.textContent.includes("Paket terpasang")` },
+  {
+    label: "Studio Materi",
+    wait: `document.querySelector("main h1")?.textContent.includes("Studio Materi")`
+  },
   { label: "Lisensi Perangkat", wait: `document.body.textContent.includes("Status lisensi")` },
   { label: "Pengaturan", wait: `document.body.textContent.includes("Profil")` }
 ];
@@ -347,8 +351,11 @@ function touchTargetsInPage() {
 async function clickLabel(page, label) {
   const result = await page.evaluate(`
     (() => {
-      const buttons = [...document.querySelectorAll("button")]
-        .filter((button) => button.textContent.trim() === ${JSON.stringify(label)});
+      const buttons = [...document.querySelectorAll("button")].filter(
+        (button) =>
+          button.textContent.trim() === ${JSON.stringify(label)} ||
+          button.getAttribute("aria-label") === ${JSON.stringify(label)}
+      );
       const target = buttons.find((button) => button.offsetParent !== null) ?? buttons[0];
       if (!target) return "missing";
       if (target.disabled) return "disabled";
@@ -602,11 +609,51 @@ export async function run({ page, artifactDir, log }) {
   await page.waitFor(`document.body.textContent.includes("Tujuan pembelajaran")`, {
     label: "Player untuk audit hasil kuis"
   });
-  await clickLabel(page, "Kuis Pecahan Sederhana");
-  await page.waitFor(`document.body.textContent.includes("Periksa jawaban")`, {
+  // Player membuka paket bawaan pertama (Kelas 1 Bahasa Indonesia) — pakai kuis aktualnya.
+  await clickLabel(page, "Kuis Penguatan");
+  await page.waitFor(`Boolean(document.querySelector("[data-quiz-progress]"))`, {
     label: "kuis tampil"
   });
-  for (const optionId of ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"]) {
+  // Kunci jawaban soal kuis paket bawaan pertama (kelas1-bahasa-indonesia-b01).
+  // Daftar ini WAJIB sama panjangnya dengan jumlah soal di paket itu — diperiksa di bawah.
+  const quizKeys = [
+    "opsi-penguatan-1-1",
+    "opsi-penguatan-2-2",
+    "opsi-soal-huruf-a-i-u-e-o-disebut-hur-0",
+    "opsi-soal-huruf-b-c-d-termasuk-huruf-0",
+    "opsi-soal-kegiatan-mendengarkan-cerit-0"
+  ];
+  const questionCount = await page.evaluate(`
+    (() => {
+      const text = document.querySelector("[data-quiz-progress]")?.textContent ?? "";
+      const match = text.match(/Soal\\s+1\\s+dari\\s+(\\d+)/);
+      return match ? Number(match[1]) : null;
+    })()
+  `);
+  if (questionCount !== quizKeys.length) {
+    throw new Error(
+      `Kuis paket pertama memuat ${questionCount} soal, skrip mengunci ${quizKeys.length} kunci — perbarui daftar quizKeys.`
+    );
+  }
+  const stepAudit = await page.evaluate(`(${auditInPage.toString()})()`);
+  const stepIssues = stepAudit.issues.filter((issue) => issue.severity === "error");
+  const stepWarnings = stepAudit.issues.filter((issue) => issue.severity === "warning");
+  errorCount += stepIssues.length;
+  warningCount += stepWarnings.length;
+  report.screens.push({
+    screen: "Player (soal kuis)",
+    stats: stepAudit.stats,
+    issues: stepAudit.issues
+  });
+  log(
+    `State soal kuis (satu per halaman): ${stepIssues.length} error, ${stepWarnings.length} warning.`
+  );
+  await page.screenshot(path.join(artifactDir, "a11y-quiz-step.png"));
+  for (const [index, optionId] of quizKeys.entries()) {
+    await page.waitFor(
+      `document.body.textContent.includes("Soal ${index + 1} dari ${questionCount}")`,
+      { label: `soal audit ${index + 1}` }
+    );
     const chosen = await page.evaluate(`
       (() => {
         const input = document.querySelector('input[value="${optionId}"]');
@@ -618,15 +665,41 @@ export async function run({ page, artifactDir, log }) {
     if (!chosen) {
       throw new Error(`Opsi ${optionId} tidak dapat dipilih saat audit.`);
     }
+    if (index < quizKeys.length - 1) {
+      await clickLabel(page, "Lanjut");
+    }
   }
-  await clickLabel(page, "Periksa jawaban");
+  await clickLabel(page, "Lihat hasil");
   await page.waitFor(`document.body.textContent.includes("Skor 100 dari 100")`, {
     label: "skor hasil kuis"
   });
-  await page.waitFor(`document.body.textContent.includes("Tersimpan lokal")`, {
-    label: "penyimpanan hasil kuis",
-    timeoutMs: 30_000
-  });
+  const saveStartedAt = Date.now();
+  // Batas 30 dtk dipertahankan, tetapi teks banner dicatat tiap perubahan: tanpa
+  // riwayat ini "timeout" tidak membedakan simpan lambat, simpan gagal, dan banner
+  // yang tertimpa status lain.
+  const bannerHistory = [];
+  let saved = false;
+  while (Date.now() - saveStartedAt < 30_000) {
+    const banner = await page.evaluate(`
+      (() => {
+        const node = document.querySelector("[data-player-storage]");
+        return (node?.textContent ?? "").replace(/\\s+/g, " ").trim();
+      })()
+    `);
+    if (bannerHistory.at(-1)?.text !== banner) {
+      bannerHistory.push({ ms: Date.now() - saveStartedAt, text: banner.slice(0, 160) });
+    }
+    if (banner.includes("Tersimpan lokal")) {
+      saved = true;
+      break;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 150));
+  }
+  if (!saved) {
+    throw new Error(
+      `Timeout menunggu penyimpanan hasil kuis — riwayat banner: ${JSON.stringify(bannerHistory)}`
+    );
+  }
   const quizAudit = await page.evaluate(`(${auditInPage.toString()})()`);
   const quizErrors = quizAudit.issues.filter((issue) => issue.severity === "error");
   const quizWarnings = quizAudit.issues.filter((issue) => issue.severity === "warning");
@@ -641,6 +714,56 @@ export async function run({ page, artifactDir, log }) {
     `State dinamis hasil kuis: ${quizErrors.length} error, ${quizWarnings.length} warning.`
   );
   await page.screenshot(path.join(artifactDir, "a11y-quiz-result.png"));
+
+  await clickLabel(page, "Belajar");
+  await page.waitFor(`document.querySelector('nav[aria-label="Navigasi utama"]') === null`, {
+    label: "mode belajar tanpa sidebar admin"
+  });
+  await page.waitFor(`document.querySelector('nav[aria-label="Navigasi belajar"]') !== null`, {
+    label: "rail navigasi belajar"
+  });
+  const modeReflow = [];
+  for (const width of [640, 320]) {
+    await setViewport(page, width);
+    const overflow = await horizontalOverflow(page);
+    if (overflow.scrollWidth > overflow.clientWidth + 1) {
+      modeReflow.push({
+        rule: "reflow",
+        severity: "error",
+        message: `Mode belajar overflow horizontal pada ${width}px: ${overflow.scrollWidth} > ${overflow.clientWidth}.`,
+        selector: "html"
+      });
+    }
+  }
+  await setViewport(page, 1600, 900);
+  const wideOverflow = await horizontalOverflow(page);
+  if (wideOverflow.scrollWidth > wideOverflow.clientWidth + 1) {
+    modeReflow.push({
+      rule: "reflow",
+      severity: "error",
+      message: `Player dua kolom overflow horizontal pada 1600px: ${wideOverflow.scrollWidth} > ${wideOverflow.clientWidth}.`,
+      selector: "html"
+    });
+  }
+  const modeAudit = await page.evaluate(`(${auditInPage.toString()})()`);
+  const modeIssues = [...modeAudit.issues, ...modeReflow];
+  const modeErrors = modeIssues.filter((issue) => issue.severity === "error");
+  const modeWarnings = modeIssues.filter((issue) => issue.severity === "warning");
+  errorCount += modeErrors.length;
+  warningCount += modeWarnings.length;
+  report.screens.push({
+    screen: "Mode belajar (Player)",
+    stats: modeAudit.stats,
+    issues: modeIssues
+  });
+  log(
+    `Mode belajar (rail ikon): ${modeErrors.length} error, ${modeWarnings.length} warning.`
+  );
+  await page.screenshot(path.join(artifactDir, "a11y-mode-belajar.png"));
+  await clickLabel(page, "Admin");
+  await page.waitFor(`document.querySelector('nav[aria-label="Navigasi utama"]') !== null`, {
+    label: "kembali mode admin"
+  });
 
   const { writeFile } = await import("node:fs/promises");
   const reportPath = `${artifactDir}/a11y-report.json`;

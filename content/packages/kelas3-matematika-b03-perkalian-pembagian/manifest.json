@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-matematika-b03-perkalian-pembagian",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Perkalian dan Pembagian — Matematika Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/perkalian-pembagian.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 71652,
+      "sha256": "1bfe0a069c99e901040660a5d9aa421b9badb14d9277cbc6f9d925a0cc820349"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-pembagian-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6865,
+      "sha256": "8f857d3aee62d1e90a99715ff732d6bd700348fa59438dd7c8aff6394eb5f7de"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-pembagian-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 47390,
+      "sha256": "21fda7ab15de36a53ecbde2e6edf9b500a3afe8789528f8462ab9496401a9e69"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-pembagian-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 38682,
+      "sha256": "31c911a24e519dc909b07cae0d9702367d41a2640c1cc0ee5bf87e8dfde4d2a9"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-pembagian-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9070,
+      "sha256": "de4aa2ab60c1cecfb0ee4f58cde9b6cc4e8e4b644d42abc4c6e1ebdccd28b1e5"
+    },
+    {
+      "path": "assets/aktivitas-perkalian-pembagian-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 62800,
+      "sha256": "188549f8c2534632adf2b4489d043c61eabadefd0799b608c36cf38f2e4c6cb2"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

@@ -7,11 +7,18 @@ use tauri::State;
 
 const PREFERENCES_KEY: &str = "preferences";
 
+fn default_app_mode() -> String {
+    "admin".to_string()
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Preferences {
     pub reduced_motion: bool,
     pub font_scale: String,
+    // Rekaman lama belum memuat appMode; default menjaga reducedMotion/fontScale tetap terbaca.
+    #[serde(default = "default_app_mode")]
+    pub app_mode: String,
 }
 
 impl Default for Preferences {
@@ -19,6 +26,7 @@ impl Default for Preferences {
         Self {
             reduced_motion: false,
             font_scale: "normal".to_string(),
+            app_mode: default_app_mode(),
         }
     }
 }
@@ -26,6 +34,9 @@ impl Default for Preferences {
 fn validate(preferences: &Preferences) -> Result<(), AppError> {
     if preferences.font_scale != "normal" && preferences.font_scale != "large" {
         return Err(AppError::validation("fontScale harus normal atau large."));
+    }
+    if preferences.app_mode != "belajar" && preferences.app_mode != "admin" {
+        return Err(AppError::validation("appMode harus belajar atau admin."));
     }
     Ok(())
 }
@@ -72,6 +83,7 @@ mod tests {
         let preferences = get_preferences(&connection).expect("defaults");
         assert!(!preferences.reduced_motion);
         assert_eq!(preferences.font_scale, "normal");
+        assert_eq!(preferences.app_mode, "admin");
     }
 
     #[test]
@@ -82,6 +94,7 @@ mod tests {
             &Preferences {
                 reduced_motion: true,
                 font_scale: "large".to_string(),
+                app_mode: "belajar".to_string(),
             },
         )
         .expect("save");
@@ -90,6 +103,55 @@ mod tests {
         let loaded = get_preferences(&connection).expect("load");
         assert!(loaded.reduced_motion);
         assert_eq!(loaded.font_scale, "large");
+        assert_eq!(loaded.app_mode, "belajar");
+    }
+
+    #[test]
+    fn app_mode_survives_database_reopen() {
+        let path = std::env::temp_dir().join(format!(
+            "ifp-preferences-{}.db",
+            std::process::id()
+        ));
+        let _ = std::fs::remove_file(&path);
+
+        {
+            let connection = crate::db::open(&path).expect("open");
+            set_preferences(
+                &connection,
+                &Preferences {
+                    reduced_motion: false,
+                    font_scale: "normal".to_string(),
+                    app_mode: "belajar".to_string(),
+                },
+            )
+            .expect("save");
+        }
+
+        {
+            let connection = crate::db::open(&path).expect("reopen");
+            let loaded = get_preferences(&connection).expect("load");
+            assert_eq!(loaded.app_mode, "belajar");
+        }
+
+        let _ = std::fs::remove_file(&path);
+        let _ = std::fs::remove_file(format!("{}-wal", path.display()));
+        let _ = std::fs::remove_file(format!("{}-shm", path.display()));
+    }
+
+    #[test]
+    fn legacy_record_without_app_mode_keeps_other_preferences() {
+        let connection = test_connection();
+        app_meta::set(
+            &connection,
+            PREFERENCES_KEY,
+            r#"{"reducedMotion":true,"fontScale":"large"}"#,
+        )
+        .expect("simulate legacy record");
+
+        let loaded = get_preferences(&connection).expect("load");
+        assert!(loaded.reduced_motion);
+        assert_eq!(loaded.font_scale, "large");
+        assert_eq!(loaded.app_mode, "admin");
     }
 
     #[test]
@@ -100,6 +162,22 @@ mod tests {
             &Preferences {
                 reduced_motion: false,
                 font_scale: "huge".to_string(),
+                app_mode: "admin".to_string(),
+            },
+        )
+        .expect_err("invalid");
+        assert_eq!(error.code, "VALIDATION_FAILED");
+    }
+
+    #[test]
+    fn rejects_invalid_app_mode() {
+        let connection = test_connection();
+        let error = set_preferences(
+            &connection,
+            &Preferences {
+                reduced_motion: false,
+                font_scale: "normal".to_string(),
+                app_mode: "siswa".to_string(),
             },
         )
         .expect_err("invalid");

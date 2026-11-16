@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-pancasila",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap istilah dengan pasangan yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bintang",
+        "right": "Sila pertama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Rantai",
+        "right": "Sila kedua"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Pohon beringin",
+        "right": "Sila ketiga"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Kepala banteng",
+        "right": "Sila keempat"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Padi dan kapas",
+        "right": "Sila kelima"
+      },
+      {
+        "pairId": "pasangan-6",
+        "left": "Musyawarah",
+        "right": "Sila keempat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima kegiatan kelas yang mencerminkan sila Pancasila: berdoa, menolong, belajar bersama, mengangkat tangan, dan menyapu."
+  }
+}

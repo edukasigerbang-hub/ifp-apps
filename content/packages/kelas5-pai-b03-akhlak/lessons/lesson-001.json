@@ -1,0 +1,28 @@
+{
+  "lessonId": "akhlak",
+  "packageId": "kelas5-pai-b03-akhlak",
+  "title": "Akhlak Terpuji",
+  "summary": "Membiasakan akhlak terpuji dalam kehidupan sehari-hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan akhlak terpuji.",
+    "Memberi contoh perilaku terpuji.",
+    "Membiasakan akhlak baik."
+  ],
+  "activityIds": [
+    "eksplorasi-akhlak-kelas5",
+    "matching-akhlak-kelas5",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/akhlak-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berbagi, berkata jujur, dan membantu teman."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

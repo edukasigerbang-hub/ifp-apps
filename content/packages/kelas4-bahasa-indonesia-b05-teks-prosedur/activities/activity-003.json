@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Menyiapkan pot, menanam biji, lalu menyiram",
+        "right": "Langkah menanam"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan langkah harus berurutan",
+        "right": "Agar kegiatan berhasil dan mudah diikuti orang lain"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Teks berisi langkah berurutan dan kata perintah",
+        "right": "Teks prosedur"
+      },
+      {
+        "pairId": "pasangan-bagian-teks-prosedur-yang-menyeb",
+        "left": "Bagian teks prosedur yang menyebut pot, tanah, dan biji",
+        "right": "alat dan bahan"
+      },
+      {
+        "pairId": "pasangan-kata-siapkan-dan-sirami-pada-tek",
+        "left": "Kata 'siapkan' dan 'sirami' pada teks prosedur termasuk jenis kata",
+        "right": "perintah"
+      },
+      {
+        "pairId": "pasangan-setelah-disiram-pot-biji-diletak",
+        "left": "Setelah disiram, pot biji diletakkan di tempat yang",
+        "right": "terang"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas."
+  }
+}

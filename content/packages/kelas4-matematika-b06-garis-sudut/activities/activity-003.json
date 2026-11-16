@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Dua garis yang tidak pernah berpotongan",
+        "right": "Garis sejajar"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Sudut yang besarnya 90°",
+        "right": "Sudut siku-siku, ditandai dengan kotak kecil"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Sudut di bawah 90° dan sudut di atas 90°",
+        "right": "Lancip dan tumpul"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Garis yang memotong dua garis sejajar",
+        "right": "Garis transversal"
+      },
+      {
+        "pairId": "pasangan-5",
+        "left": "Alat yang digunakan untuk mengukur besar sudut adalah",
+        "right": "busur derajat"
+      },
+      {
+        "pairId": "pasangan-tanda-yang-dipakai-pada-gambar-u",
+        "left": "Tanda yang dipakai pada gambar untuk menunjukkan sudut siku-siku",
+        "right": "kotak kecil"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis sejajar dengan garis transversal, sudut siku-siku, sudut lancip, dan sudut tumpul."
+  }
+}

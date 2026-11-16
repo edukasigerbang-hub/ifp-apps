@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kebugaran",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kebiasaan Sehat",
+  "instructions": "Pasangkan setiap kebiasaan dengan manfaatnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-olahraga",
+        "left": "Olahraga",
+        "right": "Menjaga kebugaran"
+      },
+      {
+        "pairId": "pasangan-cuci",
+        "left": "Cuci tangan",
+        "right": "Mencegah kuman"
+      },
+      {
+        "pairId": "pasangan-mandi",
+        "left": "Mandi",
+        "right": "Membersihkan tubuh"
+      },
+      {
+        "pairId": "pasangan-istirahat",
+        "left": "Istirahat",
+        "right": "Memulihkan tenaga"
+      },
+      {
+        "pairId": "pasangan-air",
+        "left": "Air putih",
+        "right": "Menghindari dehidrasi"
+      },
+      {
+        "pairId": "pasangan-gizi",
+        "left": "Makan bergizi",
+        "right": "Menjaga kesehatan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga ringan, mencuci tangan, dan beristirahat."
+  }
+}

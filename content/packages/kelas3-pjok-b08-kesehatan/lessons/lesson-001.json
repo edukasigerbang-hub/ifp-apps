@@ -1,0 +1,28 @@
+{
+  "lessonId": "kesehatan",
+  "packageId": "kelas3-pjok-b08-kesehatan",
+  "title": "Kesehatan dan Kebersihan Diri",
+  "summary": "Menjaga kesehatan dan kebersihan diri setiap hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara menjaga kesehatan.",
+    "Mempraktikkan kebersihan diri.",
+    "Menjelaskan manfaat hidup sehat."
+  ],
+  "activityIds": [
+    "eksplorasi-kesehatan",
+    "matching-kesehatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kesehatan-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, mandi, dan menjaga kebersihan tubuh."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

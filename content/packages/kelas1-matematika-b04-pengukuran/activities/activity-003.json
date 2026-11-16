@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alat ukur panjang sederhana adalah",
+        "right": "Jengkal"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alat ukur berat adalah",
+        "right": "Timbangan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alat penunjuk waktu adalah",
+        "right": "Jam"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Benda yang panjangnya diukur dengan jengkal",
+        "right": "Meja"
+      },
+      {
+        "pairId": "pasangan-alat-untuk-mengukur-panjang-bend",
+        "left": "Alat untuk mengukur panjang benda",
+        "right": "Penggaris"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jam, penggaris, dan timbangan sederhana."
+  }
+}

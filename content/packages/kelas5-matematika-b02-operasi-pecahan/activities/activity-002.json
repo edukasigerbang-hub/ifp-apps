@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-operasi-pecahan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Operasi Pecahan",
+  "instructions": "Pasangkan setiap operasi dengan hasilnya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-a",
+        "left": "1/4 + 2/4",
+        "right": "3/4"
+      },
+      {
+        "pairId": "pasangan-b",
+        "left": "3/4 − 1/4",
+        "right": "2/4"
+      },
+      {
+        "pairId": "pasangan-c",
+        "left": "2/5 + 1/5",
+        "right": "3/5"
+      },
+      {
+        "pairId": "pasangan-d",
+        "left": "4/6 − 2/6",
+        "right": "2/6"
+      },
+      {
+        "pairId": "pasangan-pembilang",
+        "left": "Pembilang",
+        "right": "Angka di atas"
+      },
+      {
+        "pairId": "pasangan-penyebut",
+        "left": "Penyebut",
+        "right": "Angka di bawah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Batang pecahan berwarna yang dibagi menjadi dua, tiga, dan empat bagian."
+  }
+}

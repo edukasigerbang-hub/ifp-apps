@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Bekerja bersama untuk kepentingan bersama disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "kerja pribadi"
+          },
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "gotong royong"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "lomba kelompok"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Contoh gotong royong di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "mengerjakan ulangan"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "bermain di kantin"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "membersihkan kelas"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Dengan gotong royong, pekerjaan berat menjadi terasa ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "ringan"
+          },
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "semakin berat"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "semakin lama"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Agar pekerjaan tidak menumpuk pada satu orang, kita perlu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "membeli alat baru"
+          },
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "membagi tugas"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "menghitung hasil"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Setelah pekerjaan selesai, alat-alat sebaiknya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "ditinggalkan"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "disembunyikan"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "dirapikan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      },
+      {
+        "questionId": "soal-kuis-6",
+        "prompt": "Dengan bergotong royong, hubungan antarwarga menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-6-1",
+            "text": "semakin akrab"
+          },
+          {
+            "optionId": "opsi-kuis-6-2",
+            "text": "semakin renggang"
+          },
+          {
+            "optionId": "opsi-kuis-6-3",
+            "text": "semakin tegang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-6-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan."
+  }
+}

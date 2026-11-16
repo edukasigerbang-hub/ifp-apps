@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-ipas-b07-hewan-tumbuhan-peliharaan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Hewan dan Tumbuhan Peliharaan — IPAS Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/hewan-tumbuhan-peliharaan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 173924,
+      "sha256": "c8acc2c2c3f0fa64b6f9e059ab37283110326dc3c3340a4b375af26feb72cce0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

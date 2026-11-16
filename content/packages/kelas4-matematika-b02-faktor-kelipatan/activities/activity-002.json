@@ -1,0 +1,165 @@
+{
+  "activityId": "kuis-faktor-kelipatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Faktor dan Kelipatan",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-bukan-faktor-12",
+        "prompt": "Bilangan berikut yang BUKAN faktor 12 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-1",
+            "text": "1"
+          },
+          {
+            "optionId": "opsi-5",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-6",
+            "text": "6"
+          }
+        ],
+        "correctResponse": "opsi-5"
+      },
+      {
+        "questionId": "soal-fpb",
+        "prompt": "FPB dari 12 dan 18 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-6",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12"
+          }
+        ],
+        "correctResponse": "opsi-6"
+      },
+      {
+        "questionId": "soal-kpk",
+        "prompt": "KPK dari 4 dan 6 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-6",
+            "text": "6"
+          },
+          {
+            "optionId": "opsi-8",
+            "text": "8"
+          },
+          {
+            "optionId": "opsi-24",
+            "text": "24"
+          },
+          {
+            "optionId": "opsi-12",
+            "text": "12"
+          }
+        ],
+        "correctResponse": "opsi-12"
+      },
+      {
+        "questionId": "soal-kelipatan-3",
+        "prompt": "Kelipatan 3 yang kurang dari 20 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-3-6-9",
+            "text": "3, 6, 9, 12, 15, 18"
+          },
+          {
+            "optionId": "opsi-3-6-10",
+            "text": "3, 6, 10, 13, 16, 19"
+          },
+          {
+            "optionId": "opsi-2-4-6",
+            "text": "2, 4, 6, 8, 10, 12"
+          },
+          {
+            "optionId": "opsi-3-5-7",
+            "text": "3, 5, 7, 9, 11, 13"
+          }
+        ],
+        "correctResponse": "opsi-3-6-9"
+      },
+      {
+        "questionId": "soal-faktor-terbesar-dari-bilangan-10",
+        "prompt": "Faktor terbesar dari bilangan 10 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-faktor-terbesar-dari-bilang-1",
+            "text": "5"
+          },
+          {
+            "optionId": "opsi-soal-faktor-terbesar-dari-bilang-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-soal-faktor-terbesar-dari-bilang-0",
+            "text": "10"
+          }
+        ],
+        "correctResponse": "opsi-soal-faktor-terbesar-dari-bilang-0"
+      },
+      {
+        "questionId": "soal-kpk-dari-6-dan-8-adalah",
+        "prompt": "KPK dari 6 dan 8 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kpk-dari-6-dan-8-adalah-0",
+            "text": "24"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-6-dan-8-adalah-1",
+            "text": "12"
+          },
+          {
+            "optionId": "opsi-soal-kpk-dari-6-dan-8-adalah-2",
+            "text": "48"
+          }
+        ],
+        "correctResponse": "opsi-soal-kpk-dari-6-dan-8-adalah-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

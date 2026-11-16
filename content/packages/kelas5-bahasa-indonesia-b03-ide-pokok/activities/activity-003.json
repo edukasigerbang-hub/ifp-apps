@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Ide pokok",
+        "right": "Gagasan utama sebuah paragraf"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tempat letak kalimat utama",
+        "right": "Sering di awal paragraf, bisa juga di akhir"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menemukannya",
+        "right": "Baca seluruh paragraf lalu tentukan intinya"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Ide pokok adalah",
+        "right": "Gagasan utama paragraf"
+      },
+      {
+        "pairId": "pasangan-selain-di-awal-kalimat-utama-dap",
+        "left": "Selain di awal, kalimat utama dapat berada di bagian ini",
+        "right": "Akhir paragraf"
+      },
+      {
+        "pairId": "pasangan-hal-yang-dilakukan-sebelum-menen",
+        "left": "Hal yang dilakukan sebelum menentukan inti paragraf",
+        "right": "Membaca seluruh paragraf"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyimak cerita dan mencatat ide pokok."
+  }
+}

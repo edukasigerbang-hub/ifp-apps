@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Saja benda yang ada di sudut baca",
+        "right": "Ada rak buku, buku, meja, kursi, jendela, dan tanaman"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Kalimat yang tidak mengulang makna kata",
+        "right": "Kalimat efektif"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Contoh kalimat efektif tentang sudut baca",
+        "right": "Sudut baca kelas kami nyaman"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Ciri kalimat efektif adalah",
+        "right": "Jelas, singkat, dan sesuai kaidah"
+      },
+      {
+        "pairId": "pasangan-kata-yang-penulisannya-sesuai-ka",
+        "left": "Kata yang penulisannya sesuai kaidah bahasa dan kamus disebut kata",
+        "right": "baku"
+      },
+      {
+        "pairId": "pasangan-pemakaian-dua-kata-bermakna-sama",
+        "left": "Pemakaian dua kata bermakna sama dalam satu kalimat termasuk",
+        "right": "pemborosan kata"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Sudut baca kelas dengan rak buku berisi banyak buku, meja, kursi, jendela, dan tanaman."
+  }
+}

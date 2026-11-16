@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-ipas-b03-merawat-tubuh",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Merawat Tubuh dan Kebersihan — IPAS Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/merawat-tubuh.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 168340,
+      "sha256": "a124000959933643c5e6c6ec7f6bf782db88917031b2ec92e731e0f180f0079c"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

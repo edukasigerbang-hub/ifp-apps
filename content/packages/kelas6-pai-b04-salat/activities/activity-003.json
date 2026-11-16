@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Banyak salat wajib sehari",
+        "right": "Lima waktu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Yang dilakukan sebelum salat",
+        "right": "Berwudu dan menutup aurat"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Urutan salat",
+        "right": "Berdiri, takbir, rukuk, sujud, duduk, salam"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Berwudu lalu melaksanakan salat",
+        "right": "Salat"
+      },
+      {
+        "pairId": "pasangan-membersihkan-diri-sebelum-salat",
+        "left": "Membersihkan diri sebelum salat",
+        "right": "Wudu"
+      },
+      {
+        "pairId": "pasangan-gerakan-membungkuk-dalam-salat",
+        "left": "Gerakan membungkuk dalam salat",
+        "right": "Rukuk"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berwudu dan melaksanakan salat."
+  }
+}

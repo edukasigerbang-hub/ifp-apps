@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-warna-teknik",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Warna dan Teknik",
+  "instructions": "Amati gambar, lalu diskusikan campuran warna.",
+  "assets": [
+    "assets/warna-teknik.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa warna primer?",
+        "assetPath": "assets/warna-teknik.webp",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik.",
+        "reveal": "Merah, kuning, dan biru.",
+        "hint": "Tidak dapat dicampur."
+      },
+      {
+        "prompt": "Apa hasil merah + biru?",
+        "assetPath": "assets/warna-teknik.webp",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik.",
+        "reveal": "Ungu.",
+        "hint": "Warna sekunder."
+      },
+      {
+        "prompt": "Apa itu gradasi?",
+        "assetPath": "assets/warna-teknik.webp",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik.",
+        "reveal": "Perubahan warna bertahap.",
+        "hint": "Dari gelap ke terang."
+      },
+      {
+        "prompt": "Teknik mewarnai dengan cat air disebut ...",
+        "reveal": "Teknik basah",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/warna-teknik.webp",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Contoh warna dan tekstur dari berbagai teknik.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/warna-teknik.webp",
+        "altText": "Contoh warna dan tekstur dari berbagai teknik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna dan tekstur dari berbagai teknik."
+  }
+}

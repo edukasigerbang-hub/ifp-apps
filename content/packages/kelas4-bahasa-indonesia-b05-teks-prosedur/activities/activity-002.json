@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-teks-prosedur",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menanam Biji",
+  "instructions": "Susun langkah menanam biji dalam urutan yang benar.",
+  "assets": [
+    "assets/menanam-biji.webp"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-pot",
+        "text": "Menyiapkan pot dan tanah"
+      },
+      {
+        "itemId": "item-biji",
+        "text": "Menanam biji"
+      },
+      {
+        "itemId": "item-siram",
+        "text": "Menyiram biji"
+      },
+      {
+        "itemId": "item-terang",
+        "text": "Meletakkan di tempat terang"
+      },
+      {
+        "itemId": "item-rawat",
+        "text": "Merawat tanaman"
+      }
+    ],
+    "correctOrder": [
+      "item-pot",
+      "item-biji",
+      "item-siram",
+      "item-terang",
+      "item-rawat"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Tiga panel menanam biji: menyiapkan pot dan tanah, menanam biji, lalu menyiram tunas."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-bola-kecil-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Alat Bola Kecil",
+  "instructions": "Amati gambar, lalu diskusikan teknik dasarnya.",
+  "assets": [
+    "assets/bola-kecil-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Permainan apa yang terlihat?",
+        "assetPath": "assets/bola-kecil-kelas6.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja.",
+        "reveal": "Tenis, bulu tangkis, tenis meja.",
+        "hint": "Amati alatnya."
+      },
+      {
+        "prompt": "Apa teknik dasar bulu tangkis?",
+        "assetPath": "assets/bola-kecil-kelas6.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja.",
+        "reveal": "Memegang raket dan memukul kok.",
+        "hint": "Perhatikan ayunan."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/bola-kecil-kelas6.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Lakukan sebelum bermain."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Permainan Bola Kecil?",
+        "reveal": "Mempraktikkan permainan bola kecil dengan teknik yang benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bola-kecil-kelas6.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Bola tenis, kok, dan bet tenis meja.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/bola-kecil-kelas6.webp",
+        "altText": "Bola tenis, kok, dan bet tenis meja."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bola tenis, kok, dan bet tenis meja."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas3-ipas-b04-gaya-gerak",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Gaya dan Gerak di Sekitar — IPAS Kelas 3 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    3
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/gaya-gerak-kelas3.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 130460,
+      "sha256": "9c283bfe873a6db24e2d4a45773a8709c75dcd999c3e52e5b87d2a1544896bc0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

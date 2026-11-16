@@ -1,0 +1,28 @@
+{
+  "lessonId": "surah-pendek",
+  "packageId": "kelas3-pai-b01-surah-pendek",
+  "title": "Membaca Surah Pendek",
+  "summary": "Mengenal surah pendek dan membacanya dengan tartil.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal surah pendek.",
+    "Membaca surah dengan tartil.",
+    "Memahami pesan surah pendek."
+  ],
+  "activityIds": [
+    "eksplorasi-surah-pendek",
+    "matching-surah-pendek",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/membaca-quran-kelas3.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca Al-Qur'an dengan tartil di sajadah."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

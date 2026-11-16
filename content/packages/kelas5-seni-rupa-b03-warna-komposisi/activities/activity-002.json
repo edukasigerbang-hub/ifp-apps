@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-warna-komposisi",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Warna dan Komposisi",
+  "instructions": "Pasangkan setiap istilah dengan contoh atau maknanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-hangat",
+        "left": "Warna hangat",
+        "right": "Merah dan kuning"
+      },
+      {
+        "pairId": "pasangan-dingin",
+        "left": "Warna dingin",
+        "right": "Biru dan hijau"
+      },
+      {
+        "pairId": "pasangan-kontras",
+        "left": "Kontras",
+        "right": "Perbedaan mencolok"
+      },
+      {
+        "pairId": "pasangan-komposisi",
+        "left": "Komposisi",
+        "right": "Susunan unsur"
+      },
+      {
+        "pairId": "pasangan-simetris",
+        "left": "Simetris",
+        "right": "Seimbang kiri-kanan"
+      },
+      {
+        "pairId": "pasangan-asimetris",
+        "left": "Asimetris",
+        "right": "Tidak sama sisi"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Contoh warna hangat, dingin, dan susunan komposisi seimbang."
+  }
+}

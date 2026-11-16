@@ -1,0 +1,28 @@
+{
+  "lessonId": "kebersihan",
+  "packageId": "kelas1-pjok-b04-kebersihan",
+  "title": "Kebersihan Diri",
+  "summary": "Menjaga kebersihan diri setiap hari.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara menjaga kebersihan.",
+    "Mempraktikkan kebiasaan bersih.",
+    "Menjelaskan manfaatnya."
+  ],
+  "activityIds": [
+    "eksplorasi-kebersihan",
+    "matching-kebersihan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kebersihan-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mandi, sikat gigi, dan mencuci tangan."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

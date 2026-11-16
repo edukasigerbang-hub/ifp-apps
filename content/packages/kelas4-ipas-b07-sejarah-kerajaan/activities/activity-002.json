@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-kerajaan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kerajaan dan Letaknya",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [
+    "assets/kerajaan-nusantara.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-sriwijaya",
+        "left": "Sriwijaya",
+        "right": "Kerajaan maritim di Sumatera"
+      },
+      {
+        "pairId": "pasangan-majapahit",
+        "left": "Majapahit",
+        "right": "Kerajaan besar di Jawa Timur"
+      },
+      {
+        "pairId": "pasangan-mataram",
+        "left": "Mataram Kuno",
+        "right": "Kerajaan di Jawa Tengah"
+      },
+      {
+        "pairId": "pasangan-kutai",
+        "left": "Kutai",
+        "right": "Kerajaan Hindu tertua di Kalimantan"
+      },
+      {
+        "pairId": "pasangan-tarumanegara",
+        "left": "Tarumanegara",
+        "right": "Kerajaan di Jawa Barat"
+      },
+      {
+        "pairId": "pasangan-bukti-aktivitas-pelayaran-dan-pe",
+        "left": "Bukti aktivitas pelayaran dan perdagangan pada masa kerajaan",
+        "right": "kapal layar"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Candi bertingkat, kapal layar, dan prasasti sebagai peninggalan kerajaan Nusantara."
+  }
+}

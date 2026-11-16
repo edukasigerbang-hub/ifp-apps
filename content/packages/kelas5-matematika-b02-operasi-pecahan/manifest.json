@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b02-operasi-pecahan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Operasi Hitung Pecahan — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/operasi-pecahan.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 140658,
+      "sha256": "76bfc30fce07b570f52a4a4e80e231958b9232a0e9ac778d9216327d38a74eaa"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5065,
+      "sha256": "68603574bc9c795088812ba58db39a5057bf71479793fa0e24c7d190f1b25cd6"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4957,
+      "sha256": "a6b0fbf767a6825b5dce346f8387771e81b7b7511de9be353d4ea7731743390a"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12935,
+      "sha256": "fef1de7bead7bc9c6ccb6bf6aa449e6927cbbeae7fe9d5ada14f2080cef764ad"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6717,
+      "sha256": "8c57696dc33a5517943ea21151ca0bb653ada236dd77d8b091eb4de0c65fb37f"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5460,
+      "sha256": "3296d510ed3764f613735ac74ac4119c56caadc0154858d526f42c1e394b69ce"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

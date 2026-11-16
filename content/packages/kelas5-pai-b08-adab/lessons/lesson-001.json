@@ -1,0 +1,28 @@
+{
+  "lessonId": "adab",
+  "packageId": "kelas5-pai-b08-adab",
+  "title": "Adab dan Kisah Teladan",
+  "summary": "Menerapkan adab baik dan meneladani kisah Nabi serta sahabat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan adab kepada orang tua dan guru.",
+    "Menjelaskan manfaat adab baik.",
+    "Meneladani sifat jujur dan peduli."
+  ],
+  "activityIds": [
+    "eksplorasi-adab",
+    "kuis-adab",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-adab"
+  ],
+  "assetRefs": [
+    "assets/adab-kelas5.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

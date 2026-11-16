@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-pewarisan-sifat",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Ciri Keturunan",
+  "instructions": "Amati gambar, lalu diskusikan ciri yang mirip induk.",
+  "assets": [
+    "assets/pewarisan-sifat.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu pewarisan sifat?",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip.",
+        "reveal": "Ciri induk menurun kepada anak.",
+        "hint": "Melalui gen."
+      },
+      {
+        "prompt": "Contoh sifat menurun?",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip.",
+        "reveal": "Warna mata, bentuk rambut, warna kulit.",
+        "hint": "Bisa dari ayah atau ibu."
+      },
+      {
+        "prompt": "Apa pengaruh lingkungan?",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip.",
+        "reveal": "Makanan dan kebiasaan juga memengaruhi.",
+        "hint": "Tinggi badan dipengaruhi gizi."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Pewarisan Sifat?",
+        "reveal": "Memahami pewarisan sifat dari induk kepada keturunan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Induk dan anak dengan ciri fisik yang mirip.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/pewarisan-sifat.webp",
+        "altText": "Induk dan anak dengan ciri fisik yang mirip."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Induk dan anak dengan ciri fisik yang mirip."
+  }
+}

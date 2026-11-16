@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Gotong royong",
+        "right": "Bekerja bersama untuk kepentingan bersama"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Contoh gotong royong di sekolah",
+        "right": "Membersihkan kelas dan menata kursi"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Manfaat gotong royong",
+        "right": "Pekerjaan cepat selesai dan mempererat persaudaraan"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-bekerja",
+        "left": "Langkah pertama sebelum bekerja bersama dalam kegiatan gotong royong",
+        "right": "membagi tugas"
+      },
+      {
+        "pairId": "pasangan-setelah-pekerjaan-gotong-royong",
+        "left": "Yang dilakukan terhadap alat setelah gotong royong selesai",
+        "right": "dirapikan kembali"
+      },
+      {
+        "pairId": "pasangan-pekerjaan-yang-berat-saat-dikerj",
+        "left": "Rasa pekerjaan berat bila dikerjakan bersama-sama",
+        "right": "lebih ringan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Warga dan siswa bekerja bersama membersihkan lingkungan."
+  }
+}

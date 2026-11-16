@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Contoh aturan di sekolah",
+        "right": "Datang tepat waktu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan aturan penting",
+        "right": "Agar belajar nyaman"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang dilakukan saat jam pelajaran",
+        "right": "Mendengarkan guru"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Manfaat aturan di sekolah adalah",
+        "right": "Belajar nyaman"
+      },
+      {
+        "pairId": "pasangan-kegiatan-sebelum-masuk-kelas",
+        "left": "Kegiatan sebelum masuk kelas",
+        "right": "Berbaris"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di sekolah."
+  }
+}

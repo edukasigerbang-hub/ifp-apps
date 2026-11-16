@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Daun kering\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Bingkai hiasan"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Boneka sederhana"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Ranting\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Boneka sederhana"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Bingkai hiasan"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-bahan-alami-yang-biasa-dibuat-mo",
+        "prompt": "Bahan alami yang biasa dibuat mozaik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-alami-yang-biasa-dibu-0",
+            "text": "Biji"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alami-yang-biasa-dibu-1",
+            "text": "Lem"
+          },
+          {
+            "optionId": "opsi-soal-bahan-alami-yang-biasa-dibu-2",
+            "text": "Gunting"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-alami-yang-biasa-dibu-0"
+      },
+      {
+        "questionId": "soal-bahan-untuk-merekatkan-bagian-ke",
+        "prompt": "Bahan untuk merekatkan bagian kerajinan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bahan-untuk-merekatkan-bagi-1",
+            "text": "Paku"
+          },
+          {
+            "optionId": "opsi-soal-bahan-untuk-merekatkan-bagi-0",
+            "text": "Lem"
+          },
+          {
+            "optionId": "opsi-soal-bahan-untuk-merekatkan-bagi-2",
+            "text": "Gunting"
+          }
+        ],
+        "correctResponse": "opsi-soal-bahan-untuk-merekatkan-bagi-0"
+      },
+      {
+        "questionId": "soal-salah-satu-syarat-memilih-bahan",
+        "prompt": "Salah satu syarat memilih bahan kerajinan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-salah-satu-syarat-memilih-b-1",
+            "text": "Mahal"
+          },
+          {
+            "optionId": "opsi-soal-salah-satu-syarat-memilih-b-2",
+            "text": "Baru"
+          },
+          {
+            "optionId": "opsi-soal-salah-satu-syarat-memilih-b-0",
+            "text": "Bersih"
+          }
+        ],
+        "correctResponse": "opsi-soal-salah-satu-syarat-memilih-b-0"
+      },
+      {
+        "questionId": "soal-kain-perca-dapat-dibuat-menjadi",
+        "prompt": "Kain perca dapat dibuat menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-kain-perca-dapat-dibuat-men-0",
+            "text": "Boneka"
+          },
+          {
+            "optionId": "opsi-soal-kain-perca-dapat-dibuat-men-1",
+            "text": "Kolase"
+          },
+          {
+            "optionId": "opsi-soal-kain-perca-dapat-dibuat-men-2",
+            "text": "Anyaman"
+          }
+        ],
+        "correctResponse": "opsi-soal-kain-perca-dapat-dibuat-men-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kerajinan dari daun, ranting, kain, dan biji."
+  }
+}

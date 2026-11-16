@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-dongeng",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Dongeng",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-dongeng",
+        "prompt": "Dongeng adalah cerita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-khayalan",
+            "text": "Khayalan turun-temurun"
+          },
+          {
+            "optionId": "opsi-nyata",
+            "text": "Kejadian nyata"
+          },
+          {
+            "optionId": "opsi-laporan",
+            "text": "Laporan kegiatan"
+          },
+          {
+            "optionId": "opsi-resep",
+            "text": "Resep masakan"
+          }
+        ],
+        "correctResponse": "opsi-khayalan"
+      },
+      {
+        "questionId": "soal-tokoh",
+        "prompt": "Tokoh utama dalam cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-latar",
+            "text": "Latar"
+          },
+          {
+            "optionId": "opsi-utama",
+            "text": "Tokoh utama"
+          },
+          {
+            "optionId": "opsi-amanat",
+            "text": "Amanat"
+          },
+          {
+            "optionId": "opsi-judul",
+            "text": "Judul"
+          }
+        ],
+        "correctResponse": "opsi-utama"
+      },
+      {
+        "questionId": "soal-amanat",
+        "prompt": "Pesan dalam cerita disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tokoh",
+            "text": "Tokoh"
+          },
+          {
+            "optionId": "opsi-latar",
+            "text": "Latar"
+          },
+          {
+            "optionId": "opsi-amanat",
+            "text": "Amanat"
+          },
+          {
+            "optionId": "opsi-judul",
+            "text": "Judul"
+          }
+        ],
+        "correctResponse": "opsi-amanat"
+      },
+      {
+        "questionId": "soal-sikap",
+        "prompt": "Sikap setelah membaca dongeng adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lupa",
+            "text": "Melupakan cerita"
+          },
+          {
+            "optionId": "opsi-takut",
+            "text": "Takut pada semua hewan"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah pada tokoh"
+          },
+          {
+            "optionId": "opsi-ambil",
+            "text": "Mengambil pesan baik"
+          }
+        ],
+        "correctResponse": "opsi-ambil"
+      },
+      {
+        "questionId": "soal-bagian-cerita-yang-menyatakan-te",
+        "prompt": "Bagian cerita yang menyatakan tempat dan waktu kejadian disebut ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-bagian-cerita-yang-menyatak-0",
+            "text": "latar"
+          },
+          {
+            "optionId": "opsi-soal-bagian-cerita-yang-menyatak-1",
+            "text": "tokoh"
+          },
+          {
+            "optionId": "opsi-soal-bagian-cerita-yang-menyatak-2",
+            "text": "amanat"
+          }
+        ],
+        "correctResponse": "opsi-soal-bagian-cerita-yang-menyatak-0"
+      },
+      {
+        "questionId": "soal-cerita-kancil-yang-cerdik-termas",
+        "prompt": "Cerita Kancil yang cerdik termasuk jenis cerita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-cerita-kancil-yang-cerdik-t-1",
+            "text": "berita"
+          },
+          {
+            "optionId": "opsi-soal-cerita-kancil-yang-cerdik-t-0",
+            "text": "dongeng"
+          },
+          {
+            "optionId": "opsi-soal-cerita-kancil-yang-cerdik-t-2",
+            "text": "resep"
+          }
+        ],
+        "correctResponse": "opsi-soal-cerita-kancil-yang-cerdik-t-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mendengarkan dongeng tentang hewan."
+  }
+}

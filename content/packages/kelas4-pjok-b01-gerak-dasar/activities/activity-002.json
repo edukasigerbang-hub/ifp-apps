@@ -1,0 +1,59 @@
+{
+  "activityId": "matching-gerak-dasar",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Gerak dan Jenisnya",
+  "instructions": "Pasangkan setiap gerakan dengan jenis geraknya.",
+  "assets": [
+    "assets/gerak-dasar.webp"
+  ],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-jalan",
+        "left": "Berjalan",
+        "right": "Lokomotor"
+      },
+      {
+        "pairId": "pasangan-lari",
+        "left": "Berlari",
+        "right": "Lokomotor"
+      },
+      {
+        "pairId": "pasangan-lompat",
+        "left": "Melompat",
+        "right": "Lokomotor"
+      },
+      {
+        "pairId": "pasangan-tekuk",
+        "left": "Menekuk",
+        "right": "Non-lokomotor"
+      },
+      {
+        "pairId": "pasangan-putar",
+        "left": "Memutar badan",
+        "right": "Non-lokomotor"
+      },
+      {
+        "pairId": "pasangan-ayun",
+        "left": "Mengayun lengan",
+        "right": "Non-lokomotor"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Empat panel gerak: anak berjalan, berlari, melompat, dan membungkuk."
+  }
+}

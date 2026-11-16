@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-bahasa-indonesia-b06-menulis-paragraf",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Menulis Paragraf Sederhana — Bahasa Indonesia Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "bahasa-indonesia"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/menulis-paragraf-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 144320,
+      "sha256": "93a7c9548dc5e0ce08f320c3ca83a80570723b512d447f802f08d6103f22bc69"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

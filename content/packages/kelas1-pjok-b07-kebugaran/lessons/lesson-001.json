@@ -1,0 +1,28 @@
+{
+  "lessonId": "kebugaran-kelas1",
+  "packageId": "kelas1-pjok-b07-kebugaran",
+  "title": "Kebugaran",
+  "summary": "Menjaga kebugaran dengan olahraga dan istirahat.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara menjaga kebugaran.",
+    "Mempraktikkan gerak ringan.",
+    "Menjaga pola hidup sehat."
+  ],
+  "activityIds": [
+    "eksplorasi-kebugaran-kelas1",
+    "matching-kebugaran-kelas1",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/kebugaran-kelas1.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berolahraga, makan bergizi, dan beristirahat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,28 @@
+{
+  "lessonId": "menulis-karya",
+  "packageId": "kelas6-bahasa-indonesia-b08-menulis-karya",
+  "title": "Menulis Karya",
+  "summary": "Menulis karya sastra dengan unsur yang lengkap.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan tema dan tokoh.",
+    "Menyusun alur dan latar.",
+    "Menyampaikan amanat."
+  ],
+  "activityIds": [
+    "eksplorasi-menulis-karya",
+    "matching-menulis-karya",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/menulis-karya.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis karya sastra di buku."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

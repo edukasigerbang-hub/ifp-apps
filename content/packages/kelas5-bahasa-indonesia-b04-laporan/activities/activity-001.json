@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-laporan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Laporan",
+  "instructions": "Amati gambar, lalu diskusikan bagian-bagian laporan.",
+  "assets": [
+    "assets/laporan-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa bagian laporan?",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku.",
+        "reveal": "Tujuan, kegiatan, hasil, dan kesimpulan.",
+        "hint": "Urut dan jelas."
+      },
+      {
+        "prompt": "Apa ciri bahasa laporan?",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku.",
+        "reveal": "Baku, jelas, dan tidak berlebihan.",
+        "hint": "Gunakan kalimat efektif."
+      },
+      {
+        "prompt": "Apa yang perlu diperiksa?",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku.",
+        "reveal": "Ejaan, tanda baca, dan kelengkapan isi.",
+        "hint": "Baca ulang."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Menulis Laporan Sederhana?",
+        "reveal": "Menentukan tujuan → Mencatat kegiatan → Menyusun hasil → Menulis kesimpulan → Memeriksa bahasa",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Laporan Sederhana?",
+        "reveal": "Menulis laporan hasil pengamatan dengan struktur yang benar.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/laporan-kelas5.webp",
+        "altText": "Anak menulis laporan hasil pengamatan di buku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan di buku."
+  }
+}

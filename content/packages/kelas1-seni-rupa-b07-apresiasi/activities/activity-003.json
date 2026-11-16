@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang terlihat pada karya",
+        "right": "Warna dan bentuk"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Menanggapi karya teman",
+        "right": "Sopan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Manfaat apresiasi",
+        "right": "Belajar menghargai"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Karya dipajang untuk diamati",
+        "right": "Apresiasi seni"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-mengapresiasi-ka",
+        "left": "Langkah pertama mengapresiasi karya",
+        "right": "Mengamati"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya seni dipajang dan anak mengamati."
+  }
+}

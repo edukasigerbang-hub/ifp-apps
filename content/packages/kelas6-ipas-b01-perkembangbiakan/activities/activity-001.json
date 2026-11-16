@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-perkembangbiakan",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Daur Hidup",
+  "instructions": "Amati gambar, lalu diskusikan tahapan perkembangbiakan.",
+  "assets": [
+    "assets/perkembangbiakan.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana kupu-kupu berkembang biak?",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "reveal": "Bertelur.",
+        "hint": "Telur menetas menjadi ulat."
+      },
+      {
+        "prompt": "Apa tahapan setelah ulat?",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "reveal": "Kepompong, lalu kupu-kupu.",
+        "hint": "Mengalami metamorfosis."
+      },
+      {
+        "prompt": "Bagaimana tumbuhan berkembang biak?",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "reveal": "Dengan biji, tunas, atau cangkok.",
+        "hint": "Contohnya padi dengan biji."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Perkembangbiakan Makhluk Hidup?",
+        "reveal": "Mengenal cara perkembangbiakan hewan dan tumbuhan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/perkembangbiakan.webp",
+        "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+  }
+}

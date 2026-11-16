@@ -1,0 +1,28 @@
+{
+  "lessonId": "faktor-kelipatan",
+  "packageId": "kelas4-matematika-b02-faktor-kelipatan",
+  "title": "Faktor, Kelipatan, KPK, dan FPB",
+  "summary": "Menentukan faktor dan kelipatan, lalu menggunakan FPB dan KPK untuk menyelesaikan masalah sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan faktor dan kelipatan suatu bilangan.",
+    "Menentukan FPB dan KPK dari dua bilangan.",
+    "Menyelesaikan masalah sehari-hari dengan FPB atau KPK."
+  ],
+  "activityIds": [
+    "eksplorasi-faktor-kelipatan",
+    "kuis-faktor-kelipatan",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-faktor-kelipatan"
+  ],
+  "assetRefs": [
+    "assets/faktor-kelipatan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram Venn dua lingkaran: faktor 12 di kiri, faktor 18 di kanan, dan faktor persekutuan di daerah oranye."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

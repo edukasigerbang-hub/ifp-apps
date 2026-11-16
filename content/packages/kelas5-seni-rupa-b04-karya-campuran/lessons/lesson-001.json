@@ -1,0 +1,29 @@
+{
+  "lessonId": "karya-campuran",
+  "packageId": "kelas5-seni-rupa-b04-karya-campuran",
+  "title": "Karya Campuran (Mixed Media)",
+  "summary": "Membuat karya campuran dari berbagai bahan dan teknik.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Mengenal karya campuran.",
+    "Memilih bahan yang sesuai.",
+    "Membuat karya campuran sederhana."
+  ],
+  "activityIds": [
+    "eksplorasi-karya-campuran",
+    "ordering-karya-campuran",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/karya-campuran.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Karya campuran dari kertas, kain, daun, dan cat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

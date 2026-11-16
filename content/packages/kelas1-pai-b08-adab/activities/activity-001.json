@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-adab",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Adab",
+  "instructions": "Amati gambar, lalu diskusikan adab baik.",
+  "assets": [
+    "assets/adab-kelas1.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana adab kepada orang tua?",
+        "assetPath": "assets/adab-kelas1.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman.",
+        "reveal": "Menghormati.",
+        "hint": "Mengucapkan salam."
+      },
+      {
+        "prompt": "Bagaimana adab kepada guru?",
+        "assetPath": "assets/adab-kelas1.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman.",
+        "reveal": "Sopan.",
+        "hint": "Mendengarkan."
+      },
+      {
+        "prompt": "Bagaimana adab kepada teman?",
+        "assetPath": "assets/adab-kelas1.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman.",
+        "reveal": "Baik dan tidak bertengkar.",
+        "hint": "Saling membantu."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Adab Sehari-hari?",
+        "reveal": "Membiasakan adab baik setiap hari.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/adab-kelas1.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
+      },
+      {
+        "prompt": "Sikap kepada teman adalah ...",
+        "reveal": "Baik dan membantu",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/adab-kelas1.webp",
+        "altText": "Anak menyapa orang tua dan membantu teman."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menyapa orang tua dan membantu teman."
+  }
+}

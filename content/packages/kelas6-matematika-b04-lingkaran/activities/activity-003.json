@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-penguatan-1",
+        "prompt": "Apa pasangan dari \"Pusat\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-1-2",
+            "text": "Setengah diameter"
+          },
+          {
+            "optionId": "opsi-penguatan-1-1",
+            "text": "Titik tengah"
+          },
+          {
+            "optionId": "opsi-penguatan-1-3",
+            "text": "Dua kali jari-jari"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-1-1"
+      },
+      {
+        "questionId": "soal-penguatan-2",
+        "prompt": "Apa pasangan dari \"Jari-jari\"?",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-penguatan-2-1",
+            "text": "Titik tengah"
+          },
+          {
+            "optionId": "opsi-penguatan-2-3",
+            "text": "Dua kali jari-jari"
+          },
+          {
+            "optionId": "opsi-penguatan-2-2",
+            "text": "Setengah diameter"
+          }
+        ],
+        "correctResponse": "opsi-penguatan-2-2"
+      },
+      {
+        "questionId": "soal-diameter-sebuah-lingkaran-10-cm",
+        "prompt": "Diameter sebuah lingkaran 10 cm. Panjang jari-jarinya ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-diameter-sebuah-lingkaran-1-1",
+            "text": "10 cm"
+          },
+          {
+            "optionId": "opsi-soal-diameter-sebuah-lingkaran-1-2",
+            "text": "20 cm"
+          },
+          {
+            "optionId": "opsi-soal-diameter-sebuah-lingkaran-1-3",
+            "text": "25 cm"
+          },
+          {
+            "optionId": "opsi-soal-diameter-sebuah-lingkaran-1-0",
+            "text": "5 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-diameter-sebuah-lingkaran-1-0"
+      },
+      {
+        "questionId": "soal-nilai-pi-sekitar",
+        "prompt": "Nilai π (pi) sekitar ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-nilai-pi-sekitar-0",
+            "text": "3,14"
+          },
+          {
+            "optionId": "opsi-soal-nilai-pi-sekitar-1",
+            "text": "3,41"
+          },
+          {
+            "optionId": "opsi-soal-nilai-pi-sekitar-2",
+            "text": "13,4"
+          },
+          {
+            "optionId": "opsi-soal-nilai-pi-sekitar-3",
+            "text": "31,4"
+          }
+        ],
+        "correctResponse": "opsi-soal-nilai-pi-sekitar-0"
+      },
+      {
+        "questionId": "soal-keliling-lingkaran-dengan-jari-j",
+        "prompt": "Keliling lingkaran dengan jari-jari 10 cm dan π = 3,14 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-keliling-lingkaran-dengan-j-1",
+            "text": "31,4 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-lingkaran-dengan-j-0",
+            "text": "62,8 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-lingkaran-dengan-j-2",
+            "text": "628 cm"
+          },
+          {
+            "optionId": "opsi-soal-keliling-lingkaran-dengan-j-3",
+            "text": "100 cm"
+          }
+        ],
+        "correctResponse": "opsi-soal-keliling-lingkaran-dengan-j-0"
+      },
+      {
+        "questionId": "soal-luas-lingkaran-dengan-jari-jari",
+        "prompt": "Luas lingkaran dengan jari-jari 10 cm dan π = 3,14 adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-luas-lingkaran-dengan-jari-1",
+            "text": "62,8 cm2"
+          },
+          {
+            "optionId": "opsi-soal-luas-lingkaran-dengan-jari-2",
+            "text": "31,4 cm2"
+          },
+          {
+            "optionId": "opsi-soal-luas-lingkaran-dengan-jari-0",
+            "text": "314 cm2"
+          },
+          {
+            "optionId": "opsi-soal-luas-lingkaran-dengan-jari-3",
+            "text": "3.140 cm2"
+          }
+        ],
+        "correctResponse": "opsi-soal-luas-lingkaran-dengan-jari-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+  }
+}

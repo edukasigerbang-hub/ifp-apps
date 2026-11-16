@@ -1,0 +1,152 @@
+{
+  "activityId": "kuis-permainan-sederhana",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Permainan Sederhana",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-aturan",
+        "prompt": "Aturan permainan harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dilanggar",
+            "text": "Dilanggar"
+          },
+          {
+            "optionId": "opsi-ditaati",
+            "text": "Ditaati"
+          },
+          {
+            "optionId": "opsi-abaikan",
+            "text": "Diabaikan"
+          },
+          {
+            "optionId": "opsi-ubah",
+            "text": "Diubah sendiri"
+          }
+        ],
+        "correctResponse": "opsi-ditaati"
+      },
+      {
+        "questionId": "soal-gilir",
+        "prompt": "Saat bermain, kita harus ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-berebut",
+            "text": "Berebut"
+          },
+          {
+            "optionId": "opsi-dorong",
+            "text": "Mendorong"
+          },
+          {
+            "optionId": "opsi-gilir",
+            "text": "Bergiliran"
+          },
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah"
+          }
+        ],
+        "correctResponse": "opsi-gilir"
+      },
+      {
+        "questionId": "soal-kalah",
+        "prompt": "Bila kalah, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-marah",
+            "text": "Marah"
+          },
+          {
+            "optionId": "opsi-tinggal",
+            "text": "Pergi"
+          },
+          {
+            "optionId": "opsi-salah",
+            "text": "Menyalahkan teman"
+          },
+          {
+            "optionId": "opsi-salaman",
+            "text": "Bersalaman"
+          }
+        ],
+        "correctResponse": "opsi-salaman"
+      },
+      {
+        "questionId": "soal-aman",
+        "prompt": "Agar aman, bermain di ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lapang",
+            "text": "Tempat lapang"
+          },
+          {
+            "optionId": "opsi-tangga",
+            "text": "Tangga"
+          },
+          {
+            "optionId": "opsi-jalan",
+            "text": "Jalan raya"
+          },
+          {
+            "optionId": "opsi-dekat",
+            "text": "Dekat kaca"
+          }
+        ],
+        "correctResponse": "opsi-lapang"
+      },
+      {
+        "questionId": "soal-saat-teman-jatuh-ketika-bermain",
+        "prompt": "Saat teman jatuh ketika bermain, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-1",
+            "text": "menertawakan"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-0",
+            "text": "membantu"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-2",
+            "text": "memarahi"
+          },
+          {
+            "optionId": "opsi-soal-saat-teman-jatuh-ketika-ber-3",
+            "text": "membiarkan"
+          }
+        ],
+        "correctResponse": "opsi-soal-saat-teman-jatuh-ketika-ber-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bermain permainan sederhana di lapangan."
+  }
+}

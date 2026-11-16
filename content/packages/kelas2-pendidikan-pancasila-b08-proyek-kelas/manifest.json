@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas2-pendidikan-pancasila-b08-proyek-kelas",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Proyek Kelas — Pendidikan Pancasila Kelas 2 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    2
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/proyek-kelas-kelas2.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 210944,
+      "sha256": "1e88f403b6b641e997011c5939e57d1c06a3a8d4b67ab69f632b3187412efb2b"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

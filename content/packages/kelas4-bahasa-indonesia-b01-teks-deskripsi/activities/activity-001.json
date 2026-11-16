@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-teks-deskripsi",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Eksplorasi Terbimbing",
+  "instructions": "Amati gambar, lalu ikuti lima langkah eksplorasi.",
+  "assets": [
+    "assets/taman-kota.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Objek apa yang digambarkan?",
+        "assetPath": "assets/taman-kota.webp",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Taman kota dengan air mancur, bangku, bunga, dan burung.",
+        "hint": "Amati bagian-bagian taman."
+      },
+      {
+        "prompt": "Kata penglihatan apa yang digunakan?",
+        "assetPath": "assets/taman-kota.webp",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Hijau, merah, dan biru.",
+        "hint": "Sebutkan warna yang terlihat."
+      },
+      {
+        "prompt": "Kata pendengaran apa yang digunakan?",
+        "assetPath": "assets/taman-kota.webp",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Gemericik air dan kicau burung.",
+        "hint": "Dengarkan suara di taman."
+      },
+      {
+        "prompt": "Kata penciuman apa yang digunakan?",
+        "assetPath": "assets/taman-kota.webp",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Harum bunga.",
+        "hint": "Bayangkan bau bunga."
+      },
+      {
+        "prompt": "Bagaimana menyusun teks deskripsi?",
+        "assetPath": "assets/taman-kota.webp",
+        "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung.",
+        "reveal": "Sebutkan objek, ciri, lalu kesan dalam tiga sampai empat kalimat.",
+        "hint": "Mulai dari kalimat topik."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Taman kota dengan air mancur, bangku, bunga, pohon, dan burung."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas5-matematika-b08-pemecahan-masalah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pemecahan Masalah — Matematika Kelas 5 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    5
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-c",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pemecahan-masalah-kelas5.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 145140,
+      "sha256": "f4b369fda65fd3ac18d0470682acd2ece0e745892c8de1d06f75067873d8e389"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas5-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 18766,
+      "sha256": "442e82fd897a1ff7ac0712ef576521d92f892887f6cedcd1ca4c2770aa8314d6"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas5-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 13347,
+      "sha256": "3a75e57ae82727c7577b39b34118e1b928f3e0cce1fc06124b6901a06d238938"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas5-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 14684,
+      "sha256": "b5c5a6cca48651e3d6671855f18c91a46def56149f3dbd03b3ca4e0b6eb4fc8f"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas5-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6357,
+      "sha256": "faa9b25bcaaca8d26a0332f6d735da29c25bc6bee93a6f10915be9f3d81c1b17"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas5-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7505,
+      "sha256": "1d056017d028c6c64c2cf771d0db1c911fd5dbee2a19e9fc07e0b816e694a0c0"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

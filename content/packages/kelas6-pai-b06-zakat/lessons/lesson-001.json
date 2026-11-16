@@ -1,0 +1,28 @@
+{
+  "lessonId": "zakat",
+  "packageId": "kelas6-pai-b06-zakat",
+  "title": "Zakat dan Infak",
+  "summary": "Memahami zakat dan infak serta manfaatnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan pengertian.",
+    "Membedakan keduanya.",
+    "Menunjukkan kepedulian."
+  ],
+  "activityIds": [
+    "eksplorasi-zakat",
+    "matching-zakat",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/zakat-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kotak amal, karung beras, dan koin."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

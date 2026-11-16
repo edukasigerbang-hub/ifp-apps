@@ -1,0 +1,29 @@
+{
+  "lessonId": "bumi-tata-surya",
+  "packageId": "kelas6-ipas-b06-bumi-tata-surya",
+  "title": "Bumi dan Tata Surya",
+  "summary": "Memahami rotasi, revolusi, dan akibatnya.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menjelaskan rotasi bumi.",
+    "Menjelaskan revolusi bumi.",
+    "Menyebutkan akibatnya."
+  ],
+  "activityIds": [
+    "eksplorasi-bumi-tata-surya",
+    "ordering-bumi-tata-surya",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/tata-surya-kelas6.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Matahari dan planet-planet tata surya."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

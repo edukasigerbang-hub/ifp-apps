@@ -1,0 +1,168 @@
+{
+  "activityId": "kuis-gerak-non-lokomotor",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Gerak Non-Lokomotor",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-contoh",
+        "prompt": "Contoh gerak non-lokomotor adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari"
+          },
+          {
+            "optionId": "opsi-jalan",
+            "text": "Berjalan"
+          },
+          {
+            "optionId": "opsi-tekuk",
+            "text": "Menekuk lutut"
+          },
+          {
+            "optionId": "opsi-lompat",
+            "text": "Melompat jauh"
+          }
+        ],
+        "correctResponse": "opsi-tekuk"
+      },
+      {
+        "questionId": "soal-memutar",
+        "prompt": "Gerak memutar badan dilakukan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-lapangan",
+            "text": "Sambil berpindah"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Saat berlari"
+          },
+          {
+            "optionId": "opsi-lompat",
+            "text": "Saat melompat"
+          },
+          {
+            "optionId": "opsi-tempat",
+            "text": "Di tempat"
+          }
+        ],
+        "correctResponse": "opsi-tempat"
+      },
+      {
+        "questionId": "soal-seimbang",
+        "prompt": "Gerak untuk melatih keseimbangan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-satu-kaki",
+            "text": "Berdiri satu kaki"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari cepat"
+          },
+          {
+            "optionId": "opsi-lompat",
+            "text": "Melompat tinggi"
+          },
+          {
+            "optionId": "opsi-guling",
+            "text": "Berguling"
+          }
+        ],
+        "correctResponse": "opsi-satu-kaki"
+      },
+      {
+        "questionId": "soal-aman",
+        "prompt": "Agar aman saat bergerak, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-berdesakan",
+            "text": "Berdesakan"
+          },
+          {
+            "optionId": "opsi-pemanasan",
+            "text": "Melakukan pemanasan"
+          },
+          {
+            "optionId": "opsi-mendorong",
+            "text": "Mendorong teman"
+          },
+          {
+            "optionId": "opsi-lantai",
+            "text": "Bergerak di lantai licin"
+          }
+        ],
+        "correctResponse": "opsi-pemanasan"
+      },
+      {
+        "questionId": "soal-gerak-menekuk-dan-memutar-badan",
+        "prompt": "Gerak menekuk dan memutar badan tanpa berpindah tempat termasuk gerak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-gerak-menekuk-dan-memutar-b-0",
+            "text": "non-lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerak-menekuk-dan-memutar-b-1",
+            "text": "lokomotor"
+          },
+          {
+            "optionId": "opsi-soal-gerak-menekuk-dan-memutar-b-2",
+            "text": "manipulatif"
+          }
+        ],
+        "correctResponse": "opsi-soal-gerak-menekuk-dan-memutar-b-0"
+      },
+      {
+        "questionId": "soal-pemanasan-sebelum-bergerak-bergu",
+        "prompt": "Pemanasan sebelum bergerak berguna menjaga tubuh dari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pemanasan-sebelum-bergerak-1",
+            "text": "manfaat"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-sebelum-bergerak-0",
+            "text": "cedera"
+          },
+          {
+            "optionId": "opsi-soal-pemanasan-sebelum-bergerak-2",
+            "text": "olahraga"
+          }
+        ],
+        "correctResponse": "opsi-soal-pemanasan-sebelum-bergerak-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki."
+  }
+}

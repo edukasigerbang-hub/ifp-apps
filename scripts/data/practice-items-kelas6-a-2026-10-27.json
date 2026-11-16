@@ -1,0 +1,281 @@
+{
+  "packages": {
+    "kelas6-bahasa-indonesia-b01-laporan": {
+      "matching": [
+        { "left": "Bagian penutup laporan pengamatan", "right": "Kesimpulan" },
+        { "left": "Hal pertama yang ditentukan sebelum menulis laporan", "right": "Tujuan" },
+        { "left": "Isi laporan ditulis apa adanya, tanpa memihak, bersifat", "right": "Objektif" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b02-eksposisi": {
+      "quiz": [
+        {
+          "prompt": "Teks eksposisi menyampaikan informasi dengan sikap ...",
+          "answer": "Objektif",
+          "distractors": ["Memihak", "Berlebihan", "Puitis"]
+        },
+        {
+          "prompt": "Bagian teks eksposisi yang berisi alasan dan bukti disebut ...",
+          "answer": "Argumen",
+          "distractors": ["Tesis", "Penegasan", "Judul"]
+        }
+      ],
+      "matching": [
+        { "left": "Bagian awal teks eksposisi", "right": "Tesis" },
+        { "left": "Alasan dan bukti pada teks eksposisi tertulis di bagian", "right": "Argumen" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b03-fabel": {
+      "matching": [
+        { "left": "Langkah pertama menyusun cerita fabel", "right": "Menentukan tokoh hewan" },
+        { "left": "Bagian cerita fabel tempat masalah mulai muncul", "right": "Konflik" },
+        { "left": "Bagian yang mengakhiri masalah dalam cerita fabel", "right": "Penyelesaian" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b04-puisi-pantun": {
+      "quiz": [
+        {
+          "prompt": "Baris pertama dan kedua pantun disebut ...",
+          "answer": "Sampiran",
+          "distractors": ["Isi pantun", "Rima bait", "Judul puisi"]
+        },
+        {
+          "prompt": "Dua baris akhir pantun berisi bagian yang disebut ...",
+          "answer": "Isi",
+          "distractors": ["Sampiran", "Bait", "Rima"]
+        },
+        {
+          "prompt": "Kumpulan baris dalam sebuah puisi disebut ...",
+          "answer": "Bait",
+          "distractors": ["Rima", "Sampiran", "Judul"]
+        },
+        {
+          "prompt": "Puisi menggunakan bahasa yang khas, yaitu ...",
+          "answer": "Indah dan padat",
+          "distractors": ["Gaya sehari-hari", "Kaku dan resmi", "Panjang dan bertele-tele"]
+        }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b05-prosedur": {
+      "matching": [
+        { "left": "Alat yang disiapkan sebelum menanam biji", "right": "Pot dan tanah" },
+        { "left": "Langkah menanam biji tepat setelah menyiram", "right": "Meletakkan di tempat terang" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b06-diskusi": {
+      "quiz": [
+        {
+          "prompt": "Pendapat teman yang berbeda dari pendapat kita dalam diskusi sebaiknya ...",
+          "answer": "Kita hormati",
+          "distractors": ["Kita tolak", "Kita ejek lebih dulu", "Kita diamkan"]
+        },
+        {
+          "prompt": "Argumen pendukung dan penentang dalam diskusi ditimbang untuk memperoleh ...",
+          "answer": "Kesimpulan",
+          "distractors": ["Narasumber", "Amanat", "Sampiran"]
+        }
+      ],
+      "matching": [
+        { "left": "Hasil akhir yang dibuat setelah semua argumen ditimbang", "right": "Kesimpulan" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b07-wawancara": {
+      "matching": [
+        { "left": "Orang yang menjawab pertanyaan dalam wawancara", "right": "Narasumber" },
+        { "left": "Langkah wawancara sebelum melakukan tanya jawab", "right": "Menyusun pertanyaan" },
+        { "left": "Cara menyampaikan hasil wawancara di depan kelas", "right": "Presentasi" }
+      ]
+    },
+    "kelas6-bahasa-indonesia-b08-menulis-karya": {
+      "quiz": [
+        {
+          "prompt": "Urutan alur cerita yang benar adalah ...",
+          "answer": "Awal, tengah, akhir",
+          "distractors": ["Akhir, awal, tengah", "Tengah, akhir, awal", "Awal, akhir, tengah"]
+        },
+        {
+          "prompt": "Pesan yang ingin disampaikan pengarang kepada pembaca disebut ...",
+          "answer": "Amanat",
+          "distractors": ["Alur", "Latar", "Gaya bahasa"]
+        },
+        {
+          "prompt": "Ide pokok yang menjadi dasar sebuah cerita disebut ...",
+          "answer": "Tema",
+          "distractors": ["Rima", "Latar", "Tokoh"]
+        },
+        {
+          "prompt": "Unsur karya sastra yang berkaitan dengan cara pengarang bercerita adalah ...",
+          "answer": "Gaya bahasa",
+          "distractors": ["Urutan peristiwa", "Isi cerita", "Tema pokok"]
+        }
+      ]
+    },
+    "kelas6-matematika-b01-bilangan-bulat": {
+      "quiz": [
+        {
+          "prompt": "Hasil -4 + 9 adalah ...",
+          "answer": "5",
+          "distractors": ["-5", "13", "-13"]
+        },
+        {
+          "prompt": "Pada garis bilangan, bilangan negatif terletak di sebelah ... nol.",
+          "answer": "Kiri",
+          "distractors": ["Kanan", "Atas", "Bawah"]
+        }
+      ],
+      "matching": [
+        { "left": "Lawan dari bilangan bulat 7", "right": "-7" },
+        { "left": "Bilangan bulat yang bukan positif dan bukan negatif", "right": "Nol" }
+      ]
+    },
+    "kelas6-matematika-b02-pecahan-desimal": {
+      "quiz": [
+        {
+          "prompt": "Nilai desimal dari pecahan 3/5 adalah ...",
+          "answer": "0,6",
+          "distractors": ["0,3", "0,5", "0,35"]
+        },
+        {
+          "prompt": "Hasil 0,4 + 0,25 adalah ...",
+          "answer": "0,65",
+          "distractors": ["0,29", "0,75", "0,55"]
+        },
+        {
+          "prompt": "Dari pecahan 1/2, 1/4, dan 1/5, pecahan yang nilainya paling besar adalah ...",
+          "answer": "1/2",
+          "distractors": ["1/4", "1/5", "ketiganya sama"]
+        },
+        {
+          "prompt": "Cara menjumlahkan bilangan desimal yang benar adalah ...",
+          "answer": "Menyejajarkan tanda koma",
+          "distractors": ["Menyejajarkan angka terakhir", "Menjumlahkan tanpa memperhatikan koma", "Membulatkan dulu semua angka"]
+        }
+      ]
+    },
+    "kelas6-matematika-b03-rasio-proporsi": {
+      "quiz": [
+        {
+          "prompt": "Rasio 12 : 18 disederhanakan menjadi ...",
+          "answer": "2 : 3",
+          "distractors": ["3 : 2", "6 : 9", "1 : 3"]
+        },
+        {
+          "prompt": "Perbandingan ayam dan bebek 3 : 5. Banyak ayam 12 ekor. Banyak bebek ...",
+          "answer": "20",
+          "distractors": ["15", "16", "25"]
+        }
+      ],
+      "matching": [
+        { "left": "Hasil penyederhanaan rasio 8 : 6", "right": "4 : 3" },
+        { "left": "Rasio merah dan biru 2 : 3. Jika merah 6, banyak biru", "right": "9" }
+      ]
+    },
+    "kelas6-matematika-b04-lingkaran": {
+      "quiz": [
+        {
+          "prompt": "Diameter sebuah lingkaran 10 cm. Panjang jari-jarinya ...",
+          "answer": "5 cm",
+          "distractors": ["10 cm", "20 cm", "25 cm"]
+        },
+        {
+          "prompt": "Nilai π (pi) sekitar ...",
+          "answer": "3,14",
+          "distractors": ["3,41", "13,4", "31,4"]
+        },
+        {
+          "prompt": "Keliling lingkaran dengan jari-jari 10 cm dan π = 3,14 adalah ...",
+          "answer": "62,8 cm",
+          "distractors": ["31,4 cm", "628 cm", "100 cm"]
+        },
+        {
+          "prompt": "Luas lingkaran dengan jari-jari 10 cm dan π = 3,14 adalah ...",
+          "answer": "314 cm2",
+          "distractors": ["62,8 cm2", "31,4 cm2", "3.140 cm2"]
+        }
+      ]
+    },
+    "kelas6-matematika-b05-bangun-ruang": {
+      "quiz": [
+        {
+          "prompt": "Bangun ruang yang memiliki 6 sisi sama besar adalah ...",
+          "answer": "Kubus",
+          "distractors": ["Balok", "Tabung", "Kerucut"]
+        },
+        {
+          "prompt": "Rumus volume tabung adalah ...",
+          "answer": "π × r² × t",
+          "distractors": ["2 × π × r", "Panjang × lebar × tinggi", "π × r²"]
+        },
+        {
+          "prompt": "Alas sebuah tabung berbentuk ...",
+          "answer": "Lingkaran",
+          "distractors": ["Segitiga", "Persegi panjang", "Persegi"]
+        },
+        {
+          "prompt": "Banyak sisi pada sebuah kubus adalah ...",
+          "answer": "6",
+          "distractors": ["4", "5", "8"]
+        }
+      ]
+    },
+    "kelas6-matematika-b06-statistika": {
+      "quiz": [
+        {
+          "prompt": "Modus dari data 4, 5, 5, 6, 7 adalah ...",
+          "answer": "5",
+          "distractors": ["4", "6", "7"]
+        },
+        {
+          "prompt": "Median dari data 50, 60, 80 adalah ...",
+          "answer": "60",
+          "distractors": ["50", "80", "63"]
+        }
+      ],
+      "matching": [
+        { "left": "Langkah pertama sebelum menentukan nilai tengah (median)", "right": "Mengurutkan data" },
+        { "left": "Hasil bagi jumlah data dengan banyak data", "right": "Mean" }
+      ]
+    },
+    "kelas6-matematika-b07-peluang": {
+      "quiz": [
+        {
+          "prompt": "Banyak hasil yang mungkin ketika melempar sebuah dadu adalah ...",
+          "answer": "6",
+          "distractors": ["2", "4", "12"]
+        },
+        {
+          "prompt": "Peluang muncul mata dadu genap adalah ...",
+          "answer": "1/2",
+          "distractors": ["1/3", "1/6", "2/3"]
+        },
+        {
+          "prompt": "Kejadian yang tidak mungkin terjadi memiliki peluang ...",
+          "answer": "0",
+          "distractors": ["1", "1/2", "6"]
+        },
+        {
+          "prompt": "Roda putar dibagi rata menjadi empat warna. Peluang muncul satu warna tertentu adalah ...",
+          "answer": "1/4",
+          "distractors": ["1/2", "4", "1/3"]
+        }
+      ]
+    },
+    "kelas6-matematika-b08-pemecahan-masalah": {
+      "quiz": [
+        {
+          "prompt": "24 donat dibagikan sama rata kepada 6 anak. Setiap anak mendapat ...",
+          "answer": "4 donat",
+          "distractors": ["5 donat", "6 donat", "18 donat"]
+        },
+        {
+          "prompt": "Setelah jawaban diperoleh, langkah terakhir yang sebaiknya dilakukan adalah ...",
+          "answer": "Memeriksa jawaban",
+          "distractors": ["Mengubah soal yang diberikan", "Langsung menebak jawaban lain", "Menghapus jawaban lama"]
+        }
+      ],
+      "matching": [
+        { "left": "Kelereng 15 diberikan 7 ke teman; sisanya dihitung dengan operasi", "right": "Pengurangan" }
+      ]
+    }
+  }
+}

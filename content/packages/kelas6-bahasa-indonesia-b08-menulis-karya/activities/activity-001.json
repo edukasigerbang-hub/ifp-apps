@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-menulis-karya",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Menyusun Karya",
+  "instructions": "Amati gambar, lalu diskusikan unsur karya sastra.",
+  "assets": [
+    "assets/menulis-karya.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa unsur karya sastra?",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku.",
+        "reveal": "Tema, tokoh, latar, alur, dan amanat.",
+        "hint": "Saling melengkapi."
+      },
+      {
+        "prompt": "Bagaimana menyusun alur?",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku.",
+        "reveal": "Awal, tengah, akhir.",
+        "hint": "Buat kerangka."
+      },
+      {
+        "prompt": "Apa itu amanat?",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku.",
+        "reveal": "Pesan untuk pembaca.",
+        "hint": "Disampaikan halus."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak menulis karya sastra di buku.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Menulis Karya?",
+        "reveal": "Menulis karya sastra dengan unsur yang lengkap.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/menulis-karya.webp",
+        "altText": "Anak menulis karya sastra di buku."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis karya sastra di buku."
+  }
+}

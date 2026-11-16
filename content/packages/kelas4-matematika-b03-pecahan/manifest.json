@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b03-pecahan",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pecahan Senilai — Matematika Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pecahan-senilai.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 149442,
+      "sha256": "bae1975467ec4c9ea41ba1025b9f7c893706d5ce52f4307255af68001fc1bee2"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-senilai-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3634,
+      "sha256": "ddc6a8479601e512627f19f1b504ef4cb899a22463aabab0a6a14f95702ff745"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-senilai-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3933,
+      "sha256": "ec5efc6de4d1b1c5053b4071eb40ad359fcff64ab49332673d341d6ec705ad4c"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-senilai-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4458,
+      "sha256": "e68c468b595a8c0e07537704601a7a534fbde854f1d42514a5af9453d36821b8"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-senilai-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6680,
+      "sha256": "91928b0cf146bc610b96a083df5c75318e7deab113f57ffd6280614d5e8ed189"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-senilai-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6697,
+      "sha256": "671db32341253c10159f9c8da4982c79fc9e8eb0b850f4d5512cb25e0ccf4dc1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

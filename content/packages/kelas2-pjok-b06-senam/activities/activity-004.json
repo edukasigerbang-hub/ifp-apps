@@ -1,0 +1,132 @@
+{
+  "activityId": "kuis-penguatan",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penguatan",
+  "instructions": "Pilih jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-kuis-1",
+        "prompt": "Senam ringan dilakukan dengan gerakan yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-1-1",
+            "text": "Pelan"
+          },
+          {
+            "optionId": "opsi-kuis-1-2",
+            "text": "Cepat"
+          },
+          {
+            "optionId": "opsi-kuis-1-3",
+            "text": "Sangat keras"
+          }
+        ],
+        "correctResponse": "opsi-kuis-1-1"
+      },
+      {
+        "questionId": "soal-kuis-2",
+        "prompt": "Pemanasan dilakukan agar tubuh tidak ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-2-2",
+            "text": "Berkeringat"
+          },
+          {
+            "optionId": "opsi-kuis-2-1",
+            "text": "Cedera"
+          },
+          {
+            "optionId": "opsi-kuis-2-3",
+            "text": "Lelah"
+          }
+        ],
+        "correctResponse": "opsi-kuis-2-1"
+      },
+      {
+        "questionId": "soal-kuis-3",
+        "prompt": "Saat senam, napas ditarik dengan cara ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-3-2",
+            "text": "Sekuatnya"
+          },
+          {
+            "optionId": "opsi-kuis-3-3",
+            "text": "Cepat-cepat"
+          },
+          {
+            "optionId": "opsi-kuis-3-1",
+            "text": "Perlahan"
+          }
+        ],
+        "correctResponse": "opsi-kuis-3-1"
+      },
+      {
+        "questionId": "soal-kuis-4",
+        "prompt": "Sebelum bergerak, tubuh perlu ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-4-1",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-kuis-4-2",
+            "text": "Pendinginan"
+          },
+          {
+            "optionId": "opsi-kuis-4-3",
+            "text": "Tidur siang"
+          }
+        ],
+        "correctResponse": "opsi-kuis-4-1"
+      },
+      {
+        "questionId": "soal-kuis-5",
+        "prompt": "Gerakan terakhir dalam senam ringan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-kuis-5-2",
+            "text": "Pemanasan"
+          },
+          {
+            "optionId": "opsi-kuis-5-1",
+            "text": "Pendinginan"
+          },
+          {
+            "optionId": "opsi-kuis-5-3",
+            "text": "Gerak kaki"
+          }
+        ],
+        "correctResponse": "opsi-kuis-5-1"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan senam ringan dan peregangan."
+  }
+}

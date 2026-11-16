@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Yang dipamerkan di kelas",
+        "right": "Karya seni siswa, seperti gambar dan karya tiga dimensi"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Karya ditata agar menarik",
+        "right": "Karya dikelompokkan, diberi label, dan tidak berdesakan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan karya siswa dipamerkan",
+        "right": "Melatih percaya diri"
+      },
+      {
+        "pairId": "pasangan-kartu-keterangan-singkat-yang-di",
+        "left": "Kartu keterangan singkat yang dipasang di dekat karya pameran",
+        "right": "Label karya"
+      },
+      {
+        "pairId": "pasangan-jenis-karya-yang-dipamerkan-sela",
+        "left": "Jenis karya yang dipamerkan selain gambar dua dimensi",
+        "right": "Karya tiga dimensi"
+      },
+      {
+        "pairId": "pasangan-langkah-pertama-sebelum-karya-di",
+        "left": "Langkah pertama sebelum karya ditata di pameran kelas",
+        "right": "Memilih karya"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+  }
+}

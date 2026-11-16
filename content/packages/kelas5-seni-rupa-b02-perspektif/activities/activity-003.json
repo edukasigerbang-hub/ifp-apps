@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Perspektif",
+        "right": "Cara menggambar agar objek terlihat memiliki jarak"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Titik hilang",
+        "right": "Titik tempat garis-garis bertemu di horizon"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan benda dekat tampak besar",
+        "right": "Karena jaraknya dekat dengan pengamat"
+      },
+      {
+        "pairId": "pasangan-garis-yang-ditentukan-lebih-dahu",
+        "left": "Garis yang ditentukan lebih dahulu sebelum mencari titik hilang",
+        "right": "Garis horizon"
+      },
+      {
+        "pairId": "pasangan-benda-yang-letaknya-dekat-dengan",
+        "left": "Langkah setelah menentukan titik hilang",
+        "right": "Menggambar garis bantu"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-dalam-menggamba",
+        "left": "Langkah terakhir dalam menggambar perspektif",
+        "right": "Menambahkan detail"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Jalan, pohon, dan rumah dengan garis perspektif menuju titik hilang."
+  }
+}

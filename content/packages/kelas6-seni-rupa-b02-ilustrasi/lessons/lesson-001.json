@@ -1,0 +1,29 @@
+{
+  "lessonId": "ilustrasi",
+  "packageId": "kelas6-seni-rupa-b02-ilustrasi",
+  "title": "Menggambar Ilustrasi",
+  "summary": "Membuat ilustrasi sederhana untuk cerita.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menentukan tema ilustrasi.",
+    "Membuat sketsa.",
+    "Menyelesaikan ilustrasi."
+  ],
+  "activityIds": [
+    "eksplorasi-ilustrasi",
+    "ordering-ilustrasi",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/ilustrasi.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Ilustrasi bentuk sederhana yang disusun menjadi gambar."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

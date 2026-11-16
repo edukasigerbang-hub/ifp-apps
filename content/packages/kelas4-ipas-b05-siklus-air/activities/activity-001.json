@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-siklus-air",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Siklus Air",
+  "instructions": "Amati gambar siklus air, lalu jawab pertanyaan tentang tahapannya.",
+  "assets": [
+    "assets/siklus-air.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa yang terjadi pada air laut saat terkena panas matahari?",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
+        "reveal": "Air menguap menjadi uap air (evaporasi).",
+        "hint": "Perhatikan panah naik dari laut."
+      },
+      {
+        "prompt": "Apa yang terjadi pada uap air di atmosfer?",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
+        "reveal": "Uap air mengembun menjadi titik-titik air dan membentuk awan (kondensasi).",
+        "hint": "Perhatikan awan di langit."
+      },
+      {
+        "prompt": "Mengapa hujan turun?",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung.",
+        "reveal": "Awan yang jenuh air menjatuhkan titik air sebagai hujan (presipitasi), lalu air kembali ke laut atau sungai.",
+        "hint": "Perhatikan panah turun dari awan."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bumi, Cuaca, dan Siklus Air?",
+        "reveal": "Memahami tahapan siklus air, hubungannya dengan cuaca, dan pentingnya menjaga air.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Bumi, Cuaca, dan Siklus Air?",
+        "reveal": "Penguapan air laut → Pengembunan uap air → Pembentukan awan → Hujan turun → Air kembali ke laut atau sungai",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/siklus-air.webp",
+        "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siklus air: matahari, laut, penguapan, awan, hujan, dan gunung."
+  }
+}

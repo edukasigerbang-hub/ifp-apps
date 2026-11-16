@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-senam-lantai",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Senam Lantai",
+  "instructions": "Amati gambar, lalu diskusikan teknik dan keselamatan.",
+  "assets": [
+    "assets/senam-lantai.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa gerak senam lantai?",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
+        "reveal": "Guling depan, guling belakang, dan keseimbangan.",
+        "hint": "Di atas matras."
+      },
+      {
+        "prompt": "Mengapa pemanasan penting?",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
+        "reveal": "Mencegah cedera.",
+        "hint": "Lakukan sebelum berguling."
+      },
+      {
+        "prompt": "Apa yang harus disiapkan?",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras.",
+        "reveal": "Matras dan pendamping.",
+        "hint": "Jangan bercanda."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Senam Lantai?",
+        "reveal": "Melakukan pemanasan → Berlatih guling depan → Berlatih guling belakang → Berlatih keseimbangan → Melakukan pendinginan",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Senam Lantai?",
+        "reveal": "Mempraktikkan gerak senam lantai dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/senam-lantai.webp",
+        "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak melakukan guling depan dan keseimbangan di matras."
+  }
+}

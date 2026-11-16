@@ -1,0 +1,148 @@
+{
+  "activityId": "kuis-data-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Penyajian Data",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-terbanyak",
+        "prompt": "Data buku: Senin 4, Selasa 6, Rabu 5. Terbanyak pada hari ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-selasa",
+            "text": "Selasa"
+          },
+          {
+            "optionId": "opsi-senin",
+            "text": "Senin"
+          },
+          {
+            "optionId": "opsi-rabu",
+            "text": "Rabu"
+          },
+          {
+            "optionId": "opsi-semua",
+            "text": "Semua sama"
+          }
+        ],
+        "correctResponse": "opsi-selasa"
+      },
+      {
+        "questionId": "soal-selisih",
+        "prompt": "Selisih buku Selasa dan Rabu adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-2",
+            "text": "2"
+          },
+          {
+            "optionId": "opsi-1",
+            "text": "1"
+          },
+          {
+            "optionId": "opsi-3",
+            "text": "3"
+          },
+          {
+            "optionId": "opsi-4",
+            "text": "4"
+          }
+        ],
+        "correctResponse": "opsi-1"
+      },
+      {
+        "questionId": "soal-diagram",
+        "prompt": "Batang yang tinggi dan pendek pada diagram batang menunjukkan ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-warna",
+            "text": "Warna batang"
+          },
+          {
+            "optionId": "opsi-berat",
+            "text": "Judul diagram"
+          },
+          {
+            "optionId": "opsi-banding",
+            "text": "Perbandingan data"
+          },
+          {
+            "optionId": "opsi-ukuran",
+            "text": "Ukuran kertas gambar"
+          }
+        ],
+        "correctResponse": "opsi-banding"
+      },
+      {
+        "questionId": "soal-kumpul",
+        "prompt": "Data terbanyak pada diagram batang ditunjukkan oleh batang yang ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-tebak",
+            "text": "paling pendek"
+          },
+          {
+            "optionId": "opsi-lupa",
+            "text": "paling lebar"
+          },
+          {
+            "optionId": "opsi-gambar",
+            "text": "paling gelap"
+          },
+          {
+            "optionId": "opsi-hitung",
+            "text": "paling tinggi"
+          }
+        ],
+        "correctResponse": "opsi-hitung"
+      },
+      {
+        "questionId": "soal-banyak-bola-merah-5-kuning-3-hij",
+        "prompt": "Banyak bola: merah 5, kuning 3, hijau 7. Warna bola terbanyak adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-5-kuning-1",
+            "text": "merah"
+          },
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-5-kuning-2",
+            "text": "kuning"
+          },
+          {
+            "optionId": "opsi-soal-banyak-bola-merah-5-kuning-0",
+            "text": "hijau"
+          }
+        ],
+        "correctResponse": "opsi-soal-banyak-bola-merah-5-kuning-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  }
+}

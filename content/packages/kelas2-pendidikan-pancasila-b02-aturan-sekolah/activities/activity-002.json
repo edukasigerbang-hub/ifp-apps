@@ -1,0 +1,148 @@
+{
+  "activityId": "kuis-aturan-sekolah-kelas2",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Aturan Sekolah",
+  "instructions": "Pilih jawaban yang benar.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-contoh",
+        "prompt": "Contoh aturan di sekolah adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-terlambat",
+            "text": "Datang terlambat"
+          },
+          {
+            "optionId": "opsi-ribut",
+            "text": "Ribut di kelas"
+          },
+          {
+            "optionId": "opsi-buang",
+            "text": "Membuang sampah sembarangan"
+          },
+          {
+            "optionId": "opsi-tepat",
+            "text": "Datang tepat waktu"
+          }
+        ],
+        "correctResponse": "opsi-tepat"
+      },
+      {
+        "questionId": "soal-manfaat",
+        "prompt": "Manfaat aturan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-nyaman",
+            "text": "Belajar nyaman"
+          },
+          {
+            "optionId": "opsi-ribut",
+            "text": "Kelas ribut"
+          },
+          {
+            "optionId": "opsi-kotor",
+            "text": "Kelas kotor"
+          },
+          {
+            "optionId": "opsi-malas",
+            "text": "Semua malas"
+          }
+        ],
+        "correctResponse": "opsi-nyaman"
+      },
+      {
+        "questionId": "soal-guru",
+        "prompt": "Saat guru menjelaskan, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-ngobrol",
+            "text": "Mengobrol"
+          },
+          {
+            "optionId": "opsi-dengar",
+            "text": "Mendengarkan"
+          },
+          {
+            "optionId": "opsi-lari",
+            "text": "Berlari"
+          },
+          {
+            "optionId": "opsi-teriak",
+            "text": "Berteriak"
+          }
+        ],
+        "correctResponse": "opsi-dengar"
+      },
+      {
+        "questionId": "soal-antre",
+        "prompt": "Saat berbaris, kita ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-dorong",
+            "text": "Mendorong"
+          },
+          {
+            "optionId": "opsi-serobot",
+            "text": "Menyerobot"
+          },
+          {
+            "optionId": "opsi-tertib",
+            "text": "Tertib"
+          },
+          {
+            "optionId": "opsi-keluar",
+            "text": "Keluar barisan"
+          }
+        ],
+        "correctResponse": "opsi-tertib"
+      },
+      {
+        "questionId": "soal-pelanggaran-aturan-membuat-kegia",
+        "prompt": "Pelanggaran aturan membuat kegiatan belajar di kelas menjadi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-pelanggaran-aturan-membuat-1",
+            "text": "nyaman"
+          },
+          {
+            "optionId": "opsi-soal-pelanggaran-aturan-membuat-2",
+            "text": "lebih cepat"
+          },
+          {
+            "optionId": "opsi-soal-pelanggaran-aturan-membuat-0",
+            "text": "terganggu"
+          }
+        ],
+        "correctResponse": "opsi-soal-pelanggaran-aturan-membuat-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa berbaris tertib di sekolah."
+  }
+}

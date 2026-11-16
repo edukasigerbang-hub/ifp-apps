@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Alasan lingkungan harus bersih",
+        "right": "Agar sehat dan nyaman"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Penyebab lingkungan kotor",
+        "right": "Sampah dibuang sembarangan dan penebangan pohon"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menjaga lingkungan",
+        "right": "Membuang sampah pada tempatnya dan menanam pohon"
+      },
+      {
+        "pairId": "pasangan-kegiatan-yang-membuat-lingkungan",
+        "left": "Kegiatan yang membuat lingkungan sekolah menjadi hijau dan teduh",
+        "right": "menanam pohon"
+      },
+      {
+        "pairId": "pasangan-akibat-jika-sampah-dibuang-ke-su",
+        "left": "Akibat jika sampah dibuang ke sungai saat musim hujan",
+        "right": "banjir"
+      },
+      {
+        "pairId": "pasangan-hasil-yang-dirasakan-jika-kelas",
+        "left": "Hasil yang dirasakan jika kelas dibersihkan bersama setiap hari",
+        "right": "belajar menjadi nyaman"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Kegiatan menjaga lingkungan: menanam pohon dan memilah sampah."
+  }
+}

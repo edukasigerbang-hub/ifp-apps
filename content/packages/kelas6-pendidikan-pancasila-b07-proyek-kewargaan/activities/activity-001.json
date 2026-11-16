@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-proyek-kewargaan-kelas6",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Proyek",
+  "instructions": "Amati gambar, lalu diskusikan langkah proyek.",
+  "assets": [
+    "assets/proyek-kewargaan-kelas6.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa masalah yang dipilih?",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
+        "reveal": "Masalah di lingkungan sekitar.",
+        "hint": "Pilih yang penting."
+      },
+      {
+        "prompt": "Bagaimana merencanakan?",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
+        "reveal": "Tentukan tujuan, tugas, dan waktu.",
+        "hint": "Bagi peran."
+      },
+      {
+        "prompt": "Apa yang dilakukan setelahnya?",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah.",
+        "reveal": "Melaporkan dan mengevaluasi.",
+        "hint": "Ceritakan pengalaman."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Proyek Kewargaan?",
+        "reveal": "Memilih masalah → Menyusun rencana → Membagi tugas → Melaksanakan proyek → Melaporkan hasil",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Proyek Kewargaan?",
+        "reveal": "Merancang dan melaksanakan proyek kewargaan.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/proyek-kewargaan-kelas6.webp",
+        "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Siswa melaksanakan proyek kewargaan di sekolah."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-hak-kewajiban-warga",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Hak dan Kewajiban",
+  "instructions": "Amati gambar, lalu diskusikan hak dan kewajiban warga.",
+  "assets": [
+    "assets/hak-kewajiban-kelas5.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa contoh hak warga?",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
+        "reveal": "Mendapat pendidikan dan pelayanan kesehatan.",
+        "hint": "Hak adalah yang diterima."
+      },
+      {
+        "prompt": "Apa contoh kewajiban?",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
+        "reveal": "Menjaga kebersihan dan mematuhi aturan.",
+        "hint": "Kewajiban adalah yang dilakukan."
+      },
+      {
+        "prompt": "Mengapa harus seimbang?",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah.",
+        "reveal": "Agar kehidupan tertib dan adil.",
+        "hint": "Hak dan kewajiban berjalan bersama."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Hak dan Kewajiban Warga Negara?",
+        "reveal": "Membedakan hak dan kewajiban serta melaksanakannya dengan seimbang.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+      },
+      {
+        "prompt": "Contoh kewajiban di sekolah adalah ...",
+        "reveal": "Mematuhi aturan",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/hak-kewajiban-kelas5.webp",
+        "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak belajar dan ikut menjaga kebersihan sekolah."
+  }
+}

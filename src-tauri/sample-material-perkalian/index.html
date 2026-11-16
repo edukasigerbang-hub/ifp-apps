@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perkalian sebagai Penjumlahan Berulang</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main id="material" class="material">
+      <header class="head">
+        <p class="eyebrow">Materi contoh · Kelas 2 · Matematika</p>
+        <h1>Perkalian sebagai Penjumlahan Berulang</h1>
+        <p class="lede">
+          Susun kelompok jeruk, lalu lihat bagaimana 3 × 4 sama dengan 4 + 4 + 4.
+        </p>
+      </header>
+
+      <section class="board" aria-labelledby="board-title">
+        <div class="board-head">
+          <h2 id="board-title">Kebun jeruk</h2>
+          <p class="hint">Setiap kelompok berisi 4 jeruk.</p>
+        </div>
+
+        <div
+          class="groups"
+          id="groups"
+          role="list"
+          aria-label="Kelompok jeruk yang sudah disusun"
+        ></div>
+        <p class="empty" id="empty">Belum ada kelompok jeruk.</p>
+        <p class="equation" id="equation">0 × 4 = 0 jeruk</p>
+
+        <div class="controls">
+          <button type="button" id="add" class="primary">Tambah kelompok</button>
+          <button type="button" id="reset">Ulangi</button>
+        </div>
+      </section>
+
+      <section class="quiz" aria-labelledby="quiz-title">
+        <h2 id="quiz-title">Coba sendiri</h2>
+        <p class="question" id="quiz-question">Berapa hasil 2 × 3?</p>
+        <div class="options" id="options" role="group" aria-labelledby="quiz-question">
+          <button type="button" data-answer="5">5</button>
+          <button type="button" data-answer="6">6</button>
+          <button type="button" data-answer="7">7</button>
+        </div>
+        <p class="note" id="quiz-note"></p>
+      </section>
+
+      <div class="controls footer">
+        <button type="button" id="complete" class="primary" disabled>Tandai selesai</button>
+        <button type="button" id="exit">Keluar dari materi</button>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite">
+        Tekan “Tambah kelompok” untuk mulai menyusun jeruk.
+      </p>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

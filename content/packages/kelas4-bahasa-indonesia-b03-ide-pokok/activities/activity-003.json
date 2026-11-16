@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kegiatan mendengarkan cerita yang dibacakan",
+        "right": "Menyimak"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Gagasan utama paragraf tentang kebersihan kelas",
+        "right": "Menjaga kebersihan kelas"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kalimat yang menjelaskan ide pokok",
+        "right": "Detail pendukung"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Contoh kegiatan pagi di kelas yang mendukung ide pokok",
+        "right": "Menyapu kelas"
+      },
+      {
+        "pairId": "pasangan-kegiatan-pagi-selain-menyapu-kel",
+        "left": "Kegiatan pagi selain menyapu kelas yang menjadi detail pendukung bacaan",
+        "right": "menyiram tanaman"
+      },
+      {
+        "pairId": "pasangan-uraian-singkat-seluruh-isi-bacaa",
+        "left": "Uraian singkat seluruh isi bacaan dengan bahasa sendiri disebut",
+        "right": "ringkasan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Guru membacakan cerita di depan tiga siswa yang duduk menyimak."
+  }
+}

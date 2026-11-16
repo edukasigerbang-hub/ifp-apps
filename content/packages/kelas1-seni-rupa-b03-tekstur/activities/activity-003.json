@@ -1,0 +1,52 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bahan yang kasar adalah",
+        "right": "Batu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Bahan yang halus adalah",
+        "right": "Kapas"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Menempel bahan",
+        "right": "Gunakan lem"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Permukaan bahan yang kasar dan halus",
+        "right": "Tekstur"
+      },
+      {
+        "pairId": "pasangan-kesan-saat-meraba-permukaan-bend",
+        "left": "Kesan saat meraba permukaan benda",
+        "right": "Tekstur"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Bahan bertekstur kasar dan halus."
+  }
+}

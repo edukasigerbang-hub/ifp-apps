@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Kegiatan yang terlihat pada gambar proyek",
+        "right": "Membuat poster dan menanam tanaman"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Alasan tugas dibagi dalam kerja kelompok",
+        "right": "Pekerjaan cepat selesai"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Manfaat proyek kewargaan",
+        "right": "Menumbuhkan kepedulian, tanggung jawab, dan kerja sama"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Kerja sama siswa untuk kepentingan bersama",
+        "right": "Proyek kewargaan"
+      },
+      {
+        "pairId": "pasangan-kegiatan-proyek-setelah-rencana",
+        "left": "Kegiatan proyek setelah rencana disusun dan tugas dibagi",
+        "right": "melaksanakan proyek"
+      },
+      {
+        "pairId": "pasangan-langkah-terakhir-proyek-kewargaa",
+        "left": "Langkah terakhir proyek kewargaan setelah kegiatan selesai",
+        "right": "melaporkan dan mengevaluasi hasil"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak-anak mengerjakan proyek kewargaan bersama: papan rencana, poster, dan menanam tanaman."
+  }
+}

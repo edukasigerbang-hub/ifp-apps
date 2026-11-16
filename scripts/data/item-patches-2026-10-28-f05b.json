@@ -1,0 +1,23 @@
+{
+  "_catatan": "Koreksi lanjutan F-05 setelah audit grounding: pasangan-5 kelas1-pai-b06 (wording 'bersikap' janggal) dan pasangan terakhir kelas5-ppkn-b08 ('Bersama' tidak berbasis materi). Pengganti diambil dari petunjuk eksplorasi dan urutan langkah paket.",
+  "packages": {
+    "kelas1-pai-b06-mengenal-malaikat": {
+      "matching": [
+        {
+          "pairId": "pasangan-5",
+          "left": "Sikap malaikat terhadap Allah",
+          "right": "Selalu taat"
+        }
+      ]
+    },
+    "kelas5-pendidikan-pancasila-b08-proyek-kewargaan": {
+      "matching": [
+        {
+          "pairId": "pasangan-selain-tugas-dan-waktu-hal-yang",
+          "left": "Langkah sesudah menyusun rencana proyek",
+          "right": "Membagi tugas"
+        }
+      ]
+    }
+  }
+}

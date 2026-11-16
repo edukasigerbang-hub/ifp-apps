@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tujuan teks prosedur",
+        "right": "Memberi petunjuk melakukan sesuatu"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Urutan langkah ditulis",
+        "right": "Berurutan dari awal sampai akhir"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Kata yang biasa dipakai",
+        "right": "Kata perintah seperti siapkan, masukkan, siram"
+      },
+      {
+        "pairId": "pasangan-kata-siapkan-masukkan-dan-siram",
+        "left": "Kata 'siapkan', 'masukkan', dan 'siram' termasuk jenis kata",
+        "right": "perintah"
+      },
+      {
+        "pairId": "pasangan-biji-yang-sudah-ditanam-lebih-da",
+        "left": "Biji yang sudah ditanam lebih dahulu diletakkan di tempat yang",
+        "right": "terang"
+      },
+      {
+        "pairId": "pasangan-langkah-kegiatan-yang-ditulis-be",
+        "left": "Langkah kegiatan yang ditulis berurutan dari awal sampai akhir menjadi teks",
+        "right": "prosedur"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Langkah menanam biji: menyiapkan pot, menanam, dan menyiram."
+  }
+}

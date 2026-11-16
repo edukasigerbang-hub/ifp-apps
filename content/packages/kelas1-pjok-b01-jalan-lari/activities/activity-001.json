@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-jalan-lari",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Gerak Jalan dan Lari",
+  "instructions": "Amati gambar, lalu tirukan gerakannya.",
+  "assets": [
+    "assets/jalan-lari.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Jalan dilakukan dengan ...",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan.",
+        "reveal": "Pelan.",
+        "hint": "Kaki melangkah."
+      },
+      {
+        "prompt": "Lari dilakukan dengan ...",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan.",
+        "reveal": "Cepat.",
+        "hint": "Kaki lebih cepat."
+      },
+      {
+        "prompt": "Sebelum bergerak kita ...",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan.",
+        "reveal": "Pemanasan.",
+        "hint": "Agar tidak cedera."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Gerak Jalan dan Lari?",
+        "reveal": "Mempraktikkan gerak jalan dan lari dengan aman.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak berjalan dan berlari di lapangan.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/jalan-lari.webp",
+        "altText": "Anak berjalan dan berlari di lapangan."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak berjalan dan berlari di lapangan."
+  }
+}

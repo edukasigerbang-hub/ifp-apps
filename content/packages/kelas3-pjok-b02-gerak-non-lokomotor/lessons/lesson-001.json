@@ -1,0 +1,28 @@
+{
+  "lessonId": "gerak-non-lokomotor",
+  "packageId": "kelas3-pjok-b02-gerak-non-lokomotor",
+  "title": "Gerak Non-Lokomotor",
+  "summary": "Mempraktikkan gerak di tempat: menekuk, memutar, mengayun, dan menyeimbangkan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan gerak non-lokomotor.",
+    "Mempraktikkan menekuk, memutar, dan menyeimbangkan.",
+    "Menjaga tubuh saat bergerak."
+  ],
+  "activityIds": [
+    "eksplorasi-gerak-non-lokomotor",
+    "kuis-gerak-non-lokomotor",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-gerak-non-lokomotor"
+  ],
+  "assetRefs": [
+    "assets/gerak-non-lokomotor.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menekuk, memutar badan, dan berdiri satu kaki."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-kesehatan-kebugaran",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kebiasaan Sehat",
+  "instructions": "Amati gambar, lalu diskusikan kebiasaan sehat.",
+  "assets": [
+    "assets/kesehatan-kebugaran.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Kapan mencuci tangan?",
+        "assetPath": "assets/kesehatan-kebugaran.webp",
+        "altText": "Anak mencuci tangan, berolahraga, dan beristirahat.",
+        "reveal": "Sebelum makan dan setelah bermain.",
+        "hint": "Gunakan sabun."
+      },
+      {
+        "prompt": "Mengapa olahraga penting?",
+        "assetPath": "assets/kesehatan-kebugaran.webp",
+        "altText": "Anak mencuci tangan, berolahraga, dan beristirahat.",
+        "reveal": "Menjaga kebugaran tubuh.",
+        "hint": "Lakukan rutin."
+      },
+      {
+        "prompt": "Apa manfaat istirahat?",
+        "assetPath": "assets/kesehatan-kebugaran.webp",
+        "altText": "Anak mencuci tangan, berolahraga, dan beristirahat.",
+        "reveal": "Memulihkan tenaga.",
+        "hint": "Tidur cukup."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Kesehatan dan Kebugaran?",
+        "reveal": "Menjaga kesehatan dan kebugaran dengan kebiasaan sehat.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/kesehatan-kebugaran.webp",
+        "altText": "Anak mencuci tangan, berolahraga, dan beristirahat."
+      },
+      {
+        "prompt": "Apa yang kamu amati pada gambar?",
+        "reveal": "Anak mencuci tangan, berolahraga, dan beristirahat.",
+        "hint": "Perhatikan gambar dengan saksama.",
+        "assetPath": "assets/kesehatan-kebugaran.webp",
+        "altText": "Anak mencuci tangan, berolahraga, dan beristirahat."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak mencuci tangan, berolahraga, dan beristirahat."
+  }
+}

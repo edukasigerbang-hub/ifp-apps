@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tahap pertama daur hidup kupu-kupu",
+        "right": "Telur"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tahap antara ulat dan kupu-kupu",
+        "right": "Kepompong"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Contoh daur hidup yang berbeda antar hewan",
+        "right": "Katak berudu, ayam dari telur"
+      },
+      {
+        "pairId": "pasangan-4",
+        "left": "Urutan telur, ulat, kepompong, kupu-kupu",
+        "right": "Daur hidup kupu-kupu"
+      },
+      {
+        "pairId": "pasangan-anak-katak-yang-hidup-dan-berena",
+        "left": "Anak katak yang hidup dan berenang di air",
+        "right": "berudu"
+      },
+      {
+        "pairId": "pasangan-tahap-akhir-daur-hidup-kupu-kupu",
+        "left": "Tahap akhir daur hidup kupu-kupu yang dapat terbang",
+        "right": "kupu-kupu"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, lalu kupu-kupu."
+  }
+}

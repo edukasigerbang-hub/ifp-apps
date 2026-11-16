@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-bercerita-kelas2",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Kegiatan Bercerita",
+  "instructions": "Amati gambar, lalu diskusikan cara bercerita.",
+  "assets": [
+    "assets/bercerita-kelas2.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Bagaimana suara saat bercerita?",
+        "assetPath": "assets/bercerita-kelas2.webp",
+        "altText": "Anak bercerita di depan kelas.",
+        "reveal": "Jelas dan cukup keras.",
+        "hint": "Agar didengar."
+      },
+      {
+        "prompt": "Bagaimana urutan cerita?",
+        "assetPath": "assets/bercerita-kelas2.webp",
+        "altText": "Anak bercerita di depan kelas.",
+        "reveal": "Awal, tengah, akhir.",
+        "hint": "Ceritakan berurutan."
+      },
+      {
+        "prompt": "Bagaimana sikap bercerita?",
+        "assetPath": "assets/bercerita-kelas2.webp",
+        "altText": "Anak bercerita di depan kelas.",
+        "reveal": "Percaya diri.",
+        "hint": "Melihat teman."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Bercerita?",
+        "reveal": "Bercerita dengan urut dan percaya diri.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/bercerita-kelas2.webp",
+        "altText": "Anak bercerita di depan kelas."
+      },
+      {
+        "prompt": "Bagaimana urutan yang benar untuk Bercerita?",
+        "reveal": "Memilih cerita → Menceritakan awal → Menceritakan tengah → Menceritakan akhir → Mengucapkan terima kasih",
+        "hint": "Ingat urutan langkah dari awal sampai akhir.",
+        "assetPath": "assets/bercerita-kelas2.webp",
+        "altText": "Anak bercerita di depan kelas."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak bercerita di depan kelas."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Bagian laporan",
+        "right": "Tujuan, kegiatan, hasil, dan kesimpulan"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Ciri bahasa laporan",
+        "right": "Baku, jelas, dan tidak berlebihan"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Yang perlu diperiksa",
+        "right": "Ejaan, tanda baca, dan kelengkapan isi"
+      },
+      {
+        "pairId": "pasangan-bagian-laporan-yang-menjadi-ring",
+        "left": "Bagian laporan yang menjadi ringkasan akhir",
+        "right": "Kesimpulan"
+      },
+      {
+        "pairId": "pasangan-bagian-yang-ditentukan-lebih-dah",
+        "left": "Bagian yang ditentukan lebih dahulu saat menulis laporan",
+        "right": "Tujuan"
+      },
+      {
+        "pairId": "pasangan-menulis-hasil-pengamatan-secara",
+        "left": "Menulis hasil pengamatan secara tertulis dengan struktur yang benar",
+        "right": "Menulis laporan"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak menulis laporan hasil pengamatan di buku."
+  }
+}

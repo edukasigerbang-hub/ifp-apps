@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-ipas-b08-ekonomi-pelestarian",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Kegiatan Ekonomi dan Pelestarian Lingkungan — IPAS Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "ipas"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/ekonomi-pelestarian.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 219176,
+      "sha256": "499dc9010d8dc090e02c365e5b3f1cd6864e84e9342be25c4782c90d94a73198"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

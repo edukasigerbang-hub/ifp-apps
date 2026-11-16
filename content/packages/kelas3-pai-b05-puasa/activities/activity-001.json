@@ -1,0 +1,64 @@
+{
+  "activityId": "eksplorasi-puasa",
+  "type": "exploration",
+  "schemaVersion": "1.0.0",
+  "title": "Mengamati Suasana Puasa",
+  "instructions": "Amati gambar, lalu diskusikan waktu dan hikmah puasa.",
+  "assets": [
+    "assets/puasa-kelas3.webp"
+  ],
+  "interactionConfig": {
+    "steps": [
+      {
+        "prompt": "Apa itu puasa?",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid.",
+        "reveal": "Menahan makan dan minum sejak fajar hingga magrib.",
+        "hint": "Dilakukan dengan niat."
+      },
+      {
+        "prompt": "Kapan berbuka?",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid.",
+        "reveal": "Saat magrib.",
+        "hint": "Ditandai azan magrib."
+      },
+      {
+        "prompt": "Apa hikmah puasa?",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid.",
+        "reveal": "Melatih sabar dan disiplin.",
+        "hint": "Peduli kepada yang kekurangan."
+      },
+      {
+        "prompt": "Hikmah puasa adalah ...",
+        "reveal": "Melatih sabar",
+        "hint": "Baca kembali langkah eksplorasi.",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
+      },
+      {
+        "prompt": "Apa hal penting yang kamu pelajari tentang Puasa?",
+        "reveal": "Mengenal puasa, waktunya, dan hikmahnya.",
+        "hint": "Baca kembali ringkasan pelajaran.",
+        "assetPath": "assets/puasa-kelas3.webp",
+        "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Suasana berbuka puasa dengan kurma, air, dan masjid."
+  }
+}

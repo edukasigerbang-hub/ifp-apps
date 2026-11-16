@@ -1,0 +1,28 @@
+{
+  "lessonId": "lingkaran",
+  "packageId": "kelas6-matematika-b04-lingkaran",
+  "title": "Lingkaran",
+  "summary": "Mengenal unsur lingkaran serta menghitung keliling dan luas.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan unsur lingkaran.",
+    "Menghitung keliling lingkaran.",
+    "Menghitung luas lingkaran."
+  ],
+  "activityIds": [
+    "eksplorasi-lingkaran",
+    "matching-lingkaran",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/lingkaran.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lingkaran dengan jari-jari, diameter, dan pusat."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

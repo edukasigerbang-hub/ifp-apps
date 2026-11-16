@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-simbol-pancasila",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Simbol dan Sila",
+  "instructions": "Pasangkan setiap simbol dengan silanya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-bintang",
+        "left": "Bintang",
+        "right": "Sila pertama"
+      },
+      {
+        "pairId": "pasangan-rantai",
+        "left": "Rantai",
+        "right": "Sila kedua"
+      },
+      {
+        "pairId": "pasangan-beringin",
+        "left": "Pohon beringin",
+        "right": "Sila ketiga"
+      },
+      {
+        "pairId": "pasangan-banteng",
+        "left": "Kepala banteng",
+        "right": "Sila keempat"
+      },
+      {
+        "pairId": "pasangan-padi",
+        "left": "Padi dan kapas",
+        "right": "Sila kelima"
+      },
+      {
+        "pairId": "pasangan-musyawarah",
+        "left": "Musyawarah",
+        "right": "Sila keempat"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Lima simbol Pancasila: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+  }
+}

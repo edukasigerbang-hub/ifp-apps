@@ -1,0 +1,56 @@
+{
+  "activityId": "ordering-pameran",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Menyiapkan Pameran",
+  "instructions": "Susun langkah menyiapkan pameran kelas dalam urutan yang benar.",
+  "assets": [
+    "assets/pameran-kelas.webp"
+  ],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "item-pilih",
+        "text": "Memilih karya"
+      },
+      {
+        "itemId": "item-tata",
+        "text": "Menata karya"
+      },
+      {
+        "itemId": "item-label",
+        "text": "Membuat label karya"
+      },
+      {
+        "itemId": "item-buka",
+        "text": "Membuka pameran"
+      },
+      {
+        "itemId": "item-apresiasi",
+        "text": "Mengapresiasi karya"
+      }
+    ],
+    "correctOrder": [
+      "item-pilih",
+      "item-tata",
+      "item-label",
+      "item-buka",
+      "item-apresiasi"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Pameran kelas dengan karya seni di dinding, meja berisi karya, dan dua pengunjung."
+  }
+}

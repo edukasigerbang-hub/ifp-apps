@@ -1,0 +1,28 @@
+{
+  "lessonId": "data-kelas2",
+  "packageId": "kelas2-matematika-b08-data",
+  "title": "Penyajian Data Sederhana",
+  "summary": "Membaca dan menyajikan data sederhana.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Membaca tabel.",
+    "Membaca diagram batang.",
+    "Menyimpulkan data."
+  ],
+  "activityIds": [
+    "eksplorasi-data-kelas2",
+    "kuis-data-kelas2",
+    "matching-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-data-kelas2"
+  ],
+  "assetRefs": [
+    "assets/data-kelas2.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Diagram batang dan tabel data sederhana."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

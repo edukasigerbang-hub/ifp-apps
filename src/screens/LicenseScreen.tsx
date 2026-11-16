@@ -143,7 +143,7 @@ export function LicenseScreen() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="mx-auto w-full max-w-4xl">
       <PageHeader
         title="Lisensi Perangkat"
         description="Status lisensi diverifikasi pada native layer, bukan dari tampilan UI."
@@ -216,7 +216,7 @@ export function LicenseScreen() {
               {message ?? ""}
             </p>
             {error && (
-              <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger">
+              <p className="mt-3 rounded-control border border-danger/30 bg-danger/5 px-4 py-3 text-sm text-danger-strong">
                 {error}
               </p>
             )}

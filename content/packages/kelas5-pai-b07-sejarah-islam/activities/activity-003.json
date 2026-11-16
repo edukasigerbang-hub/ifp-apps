@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-penguatan",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Latihan Mencocokkan",
+  "instructions": "Pasangkan setiap petunjuk dengan jawaban yang tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-1",
+        "left": "Tempat Nabi Muhammad lahir",
+        "right": "Makkah"
+      },
+      {
+        "pairId": "pasangan-2",
+        "left": "Tempat wahyu pertama diterima",
+        "right": "Gua Hira"
+      },
+      {
+        "pairId": "pasangan-3",
+        "left": "Alasan Nabi hijrah",
+        "right": "Melindungi umat dan menyebarkan Islam"
+      },
+      {
+        "pairId": "pasangan-kota-tujuan-hijrah-nabi-muhammad",
+        "left": "Kota tujuan hijrah Nabi Muhammad",
+        "right": "Madinah"
+      },
+      {
+        "pairId": "pasangan-bangunan-yang-didirikan-nabi-di",
+        "left": "Bangunan yang didirikan Nabi di kota tujuan hijrah",
+        "right": "Masjid Nabawi"
+      },
+      {
+        "pairId": "pasangan-kegiatan-nabi-sesudah-menerima-w",
+        "left": "Kegiatan Nabi sesudah menerima wahyu pertama",
+        "right": "Berdakwah di Makkah"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu dengan Ka'bah, Gua Hira, dan masjid."
+  }
+}

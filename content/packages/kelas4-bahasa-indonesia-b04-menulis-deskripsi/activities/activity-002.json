@@ -1,0 +1,165 @@
+{
+  "activityId": "kuis-menulis-deskripsi",
+  "type": "multiple-choice",
+  "schemaVersion": "1.0.0",
+  "title": "Kuis Menulis Deskripsi",
+  "instructions": "Pilih satu jawaban yang paling tepat.",
+  "assets": [],
+  "interactionConfig": {
+    "layout": "single-question"
+  },
+  "assessmentConfig": {
+    "questions": [
+      {
+        "questionId": "soal-langkah-pertama",
+        "prompt": "Langkah pertama menulis teks deskripsi adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-menghitung",
+            "text": "Menghitung jumlah kata"
+          },
+          {
+            "optionId": "opsi-menyalin",
+            "text": "Menyalin teks orang lain"
+          },
+          {
+            "optionId": "opsi-membeli",
+            "text": "Membeli buku baru"
+          },
+          {
+            "optionId": "opsi-menentukan-objek",
+            "text": "Menentukan objek yang dideskripsikan"
+          }
+        ],
+        "correctResponse": "opsi-menentukan-objek"
+      },
+      {
+        "questionId": "soal-indra-penglihatan",
+        "prompt": "Kata yang menunjukkan pengindraan penglihatan adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-oranye",
+            "text": "berwarna oranye"
+          },
+          {
+            "optionId": "opsi-lembut",
+            "text": "bersuara lembut"
+          },
+          {
+            "optionId": "opsi-harum",
+            "text": "berbau harum"
+          },
+          {
+            "optionId": "opsi-kasar",
+            "text": "terasa kasar"
+          }
+        ],
+        "correctResponse": "opsi-oranye"
+      },
+      {
+        "questionId": "soal-kalimat-baik",
+        "prompt": "Kalimat deskripsi yang paling baik adalah ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-pendek",
+            "text": "Kucing."
+          },
+          {
+            "optionId": "opsi-baik",
+            "text": "Kucingku berbulu oranye dan bermata bulat."
+          },
+          {
+            "optionId": "opsi-acak",
+            "text": "Oranye bulat kucing bermata."
+          },
+          {
+            "optionId": "opsi-pertanyaan",
+            "text": "Apakah kucing itu oranye?"
+          }
+        ],
+        "correctResponse": "opsi-baik"
+      },
+      {
+        "questionId": "soal-kesan",
+        "prompt": "Bagian akhir teks deskripsi biasanya berisi ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-daftar",
+            "text": "Daftar pustaka"
+          },
+          {
+            "optionId": "opsi-langkah",
+            "text": "Langkah-langkah kegiatan"
+          },
+          {
+            "optionId": "opsi-kesan",
+            "text": "Kesan atau perasaan penulis"
+          },
+          {
+            "optionId": "opsi-dialog",
+            "text": "Dialog panjang"
+          }
+        ],
+        "correctResponse": "opsi-kesan"
+      },
+      {
+        "questionId": "soal-sebelum-paragraf-ditulis-ciri-ob",
+        "prompt": "Sebelum paragraf ditulis, ciri objek hasil amatan disusun lebih dulu dalam bentuk ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-sebelum-paragraf-ditulis-ci-1",
+            "text": "daftar harga"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-paragraf-ditulis-ci-2",
+            "text": "laporan panjang"
+          },
+          {
+            "optionId": "opsi-soal-sebelum-paragraf-ditulis-ci-0",
+            "text": "kerangka"
+          }
+        ],
+        "correctResponse": "opsi-soal-sebelum-paragraf-ditulis-ci-0"
+      },
+      {
+        "questionId": "soal-suara-kucing-yang-lembut-pada-de",
+        "prompt": "Suara kucing yang lembut pada deskripsi ditangkap melalui indra ...",
+        "responseType": "single-choice",
+        "options": [
+          {
+            "optionId": "opsi-soal-suara-kucing-yang-lembut-pa-0",
+            "text": "pendengaran"
+          },
+          {
+            "optionId": "opsi-soal-suara-kucing-yang-lembut-pa-1",
+            "text": "penciuman"
+          },
+          {
+            "optionId": "opsi-soal-suara-kucing-yang-lembut-pa-2",
+            "text": "perabaan"
+          }
+        ],
+        "correctResponse": "opsi-soal-suara-kucing-yang-lembut-pa-0"
+      }
+    ],
+    "passingScore": 75
+  },
+  "completionPolicy": {
+    "type": "score-threshold",
+    "threshold": 75
+  },
+  "feedbackPolicy": {
+    "mode": "after-attempt",
+    "allowRetry": true,
+    "showCorrectAnswer": false
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ]
+}

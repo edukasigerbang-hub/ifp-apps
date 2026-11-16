@@ -1,0 +1,57 @@
+{
+  "activityId": "matching-kosakata-baru",
+  "type": "matching",
+  "schemaVersion": "1.0.0",
+  "title": "Memasangkan Kata dan Arti",
+  "instructions": "Pasangkan setiap kata dengan artinya.",
+  "assets": [],
+  "interactionConfig": {
+    "pairs": [
+      {
+        "pairId": "pasangan-gembira",
+        "left": "Gembira",
+        "right": "Senang"
+      },
+      {
+        "pairId": "pasangan-cepat",
+        "left": "Cepat",
+        "right": "Tidak lambat"
+      },
+      {
+        "pairId": "pasangan-buku",
+        "left": "Buku",
+        "right": "Bacaan"
+      },
+      {
+        "pairId": "pasangan-meja",
+        "left": "Meja",
+        "right": "Perabot"
+      },
+      {
+        "pairId": "pasangan-hujan",
+        "left": "Hujan",
+        "right": "Air turun"
+      },
+      {
+        "pairId": "pasangan-panas",
+        "left": "Panas",
+        "right": "Tidak dingin"
+      }
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Anak membaca buku dan belajar kosakata baru."
+  }
+}

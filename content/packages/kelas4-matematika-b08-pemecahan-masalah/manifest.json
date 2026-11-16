@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-matematika-b08-pemecahan-masalah",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Pemecahan Masalah Matematika — Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "matematika"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/pemecahan-masalah.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 146408,
+      "sha256": "24fd8cebb4eb4494c04fe52fda1d07f10b451469037fc3602d1abbaef7ec5911"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12850,
+      "sha256": "75b2c49da3a429f290aefb9adc28bc874243413680b95eceff433abfebf1e6da"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 14898,
+      "sha256": "562cb710069ec3d7173c7b9cd67a4339387f2585a22fd88eb807fad49ee271e4"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 34920,
+      "sha256": "1121b1cc1b4573cb4bc645f4ce66cfa2f3b682b7ba27be6149751010d7ce1e2b"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9044,
+      "sha256": "f8203ae9c6f8362aec5538708893fe40a454dd7e84153bd7fa4d2f61a0f86681"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8647,
+      "sha256": "47405c26bf1e7326592e7977d34beb5b44ae06e97484f56f199e18c0a6251289"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

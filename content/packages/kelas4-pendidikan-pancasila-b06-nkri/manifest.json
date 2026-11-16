@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas4-pendidikan-pancasila-b06-nkri",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Negara Kesatuan Republik Indonesia — Pendidikan Pancasila Kelas 4 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    4
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-b",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/upacara-bendera.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 172316,
+      "sha256": "d65cae3136b8d76fd887de207b39cfde2c0dc1394ae22d498d8a4a7b70ed81d6"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}

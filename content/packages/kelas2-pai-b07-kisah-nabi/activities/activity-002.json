@@ -1,0 +1,54 @@
+{
+  "activityId": "ordering-kisah-nabi",
+  "type": "ordering",
+  "schemaVersion": "1.0.0",
+  "title": "Urutan Peristiwa",
+  "instructions": "Susun peristiwa kisah Nabi.",
+  "assets": [],
+  "interactionConfig": {
+    "items": [
+      {
+        "itemId": "langkah-lahir",
+        "text": "Nabi lahir di Makkah"
+      },
+      {
+        "itemId": "langkah-kecil",
+        "text": "Nabi kecil belajar"
+      },
+      {
+        "itemId": "langkah-wahyu",
+        "text": "Menerima wahyu"
+      },
+      {
+        "itemId": "langkah-dakwah",
+        "text": "Berdakwah"
+      },
+      {
+        "itemId": "langkah-teladan",
+        "text": "Menjadi teladan"
+      }
+    ],
+    "correctOrder": [
+      "langkah-lahir",
+      "langkah-kecil",
+      "langkah-wahyu",
+      "langkah-dakwah",
+      "langkah-teladan"
+    ]
+  },
+  "completionPolicy": {
+    "type": "view"
+  },
+  "feedbackPolicy": {
+    "mode": "immediate",
+    "allowRetry": true,
+    "showCorrectAnswer": true
+  },
+  "runtimeCapabilities": [
+    "touch",
+    "keyboard"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Garis waktu sederhana dengan Ka'bah dan masjid."
+  }
+}

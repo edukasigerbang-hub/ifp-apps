@@ -1,0 +1,29 @@
+{
+  "lessonId": "perkembangbiakan",
+  "packageId": "kelas6-ipas-b01-perkembangbiakan",
+  "title": "Perkembangbiakan Makhluk Hidup",
+  "summary": "Mengenal cara perkembangbiakan hewan dan tumbuhan.",
+  "curriculumRefs": [],
+  "learningObjectives": [
+    "Menyebutkan cara perkembangbiakan.",
+    "Mengurutkan tahapan daur hidup.",
+    "Menjelaskan peran perkembangbiakan."
+  ],
+  "activityIds": [
+    "eksplorasi-perkembangbiakan",
+    "ordering-perkembangbiakan",
+    "matching-penguatan",
+    "kuis-penguatan"
+  ],
+  "assessmentRefs": [
+    "kuis-penguatan"
+  ],
+  "assetRefs": [
+    "assets/perkembangbiakan.webp"
+  ],
+  "accessibilityMetadata": {
+    "altText": "Daur hidup kupu-kupu: telur, ulat, kepompong, kupu-kupu."
+  },
+  "contentVersion": "0.2.0",
+  "reviewStatus": "draft"
+}

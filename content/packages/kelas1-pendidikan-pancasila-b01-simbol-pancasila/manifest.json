@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "packageId": "kelas1-pendidikan-pancasila-b01-simbol-pancasila",
+  "packageVersion": "0.2.0",
+  "schemaVersion": "1.0.0",
+  "title": "Simbol Pancasila — Pendidikan Pancasila Kelas 1 (Draft)",
+  "locale": "id-ID",
+  "gradeLevels": [
+    1
+  ],
+  "subjects": [
+    "pendidikan-pancasila"
+  ],
+  "curriculumRefs": [
+    {
+      "framework": "kurikulum-merdeka",
+      "id": "fase-a",
+      "version": "2024"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/simbol-pancasila-kelas1.webp",
+      "mediaType": "image/webp",
+      "sizeBytes": 178292,
+      "sha256": "c1ac889cf1a922da5d0c1d1762eaf5bb76f7e857d0b2c57bff9447ace5ad9ca1"
+    }
+  ],
+  "dependencies": [],
+  "signature": null,
+  "releaseState": "draft"
+}
