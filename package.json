@@ -16,6 +16,7 @@
     "content:asset-plan": "node scripts/generate-asset-plan.mjs",
     "content:assets": "node scripts/generate-activity-illustrations.mjs",
     "content:assets:wire": "node scripts/wire-activity-illustrations.mjs",
+    "content:gallery": "node scripts/build-illustration-gallery.mjs",
     "content:review-binding": "tsx scripts/check-review-binding.ts",
     "content:review-sample": "tsx scripts/sample-approved-reviews.ts",
     "preview": "vite preview",
