@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "63451fa",
+  "commit": "529c273",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,17 +35,17 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 72,
+  "context_version": 73,
   "skill_registry_version": 0,
-  "current_task": "T-141 selesai: pembahasan lengkap per aktivitas eksplorasi sebagai tampilan tersendiri. ExplorationActivity.tsx membaca interactionConfig.explanation opsional ({title?, paragraphs[]}) — tanpa perubahan skema karena interactionConfig bertipe record longgar. Pemicu: baris Pembahasan lengkap bergaris putus-putus teal di rel teks setiap langkah + Baca pembahasan lengkap di kartu selesai; tampilan explanation menggantikan langkah (eyebrow, h2 tabIndex -1 yang menerima fokus, isi max-w-[70ch] dengan gulir internal max-h-[clamp(160px,38vh,460px)], footer Kembali ke langkah + Lanjut berlatih bila selesai, fokus kembali ke tombol pemicu). Paket tanpa field tidak menampilkan pemicu. Contoh data: kelas1-matematika-b01-bilangan-1-10 activity-001 lima paragraf selaras lima langkah/tiga tujuan. Batas jujur: baru 1 paket, teks ditulis agen belum dinilai guru, E2E belum ada skenario pembahasan.",
-  "last_task": "T-141: src/components/content/ExplorationActivity.tsx (readExplanation, view steps|explanation, pemicu di rel + kartu selesai, footer + fokus) · content/packages/kelas1-matematika-b01-bilangan-1-10/activities/activity-001.json (explanation 5 paragraf). Commit feat d6b7ac5, docs 63451fa. Dokumentasi: CURRENT (klausa status + dua baris T-141), logs/2026-11-16 (T-141), context (fase, HEAD d6b7ac5, bullet kondisi + validasi, langkah pemeriksaan).",
+  "current_task": "T-141 selesai dan tervalidasi E2E: pembahasan lengkap per aktivitas eksplorasi sebagai tampilan tersendiri. ExplorationActivity.tsx membaca interactionConfig.explanation opsional ({title?, paragraphs[]}) tanpa perubahan skema; pemicu baris Pembahasan lengkap di rel teks setiap langkah + Baca pembahasan lengkap di kartu selesai; tampilan explanation menggantikan langkah (h2 tabIndex -1 menerima fokus, isi max-w-[70ch], gulir internal, footer Kembali ke langkah + Lanjut berlatih bila selesai, fokus balik ke pemicu). Contoh data kelas1-matematika-b01-bilangan-1-10 lima paragraf. E2E baru explanation PASS 7 membuktikan alur pemicu, fokus, kartu selesai, Lanjut berlatih ke tab kuis, dan paket tanpa field tidak menampilkan pemicu. Batas jujur: baru 1 paket, teks ditulis agen belum dinilai guru.",
+  "last_task": "T-141: src/components/content/ExplorationActivity.tsx · content/packages/kelas1-matematika-b01-bilangan-1-10/activities/activity-001.json (explanation 5 paragraf) · scripts/e2e/scenarios/explanation.mjs + package.json (e2e:explanation). Commit: feat d6b7ac5, docs 63451fa, chore state 75690c6, test e2e f45f79d, docs 529c273. Dokumentasi: CURRENT (klausa status + dua baris T-141), logs/2026-11-16 (T-141 + baris verifikasi E2E), context (fase, HEAD, bullet kondisi + validasi, langkah pemeriksaan).",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-11-16T23:36:00+07:00",
-  "last_validation": "T-141 (2026-11-16): npx tsc --noEmit bersih · npm run build PASS · npm test 173/173 (20 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS · npm run content:validate -- content/packages/kelas1-matematika-b01-bilangan-1-10 VALID (0 issue, 1 warning draft) · pengukuran CDP: 1366x768 pemicu 466-510, bagian 291-719, isi 292/381 (bergulir), kembali 675-719, fokus di h2, main.scrollHeight = clientHeight = 713; 1024x768 bagian 311-739, isi 292/381, kembali 695-739; 1920x1080 isi 381/381 muat, lebar isi 604 px · kartu selesai 1366 [\"Ulangi eksplorasi\",\"Baca pembahasan lengkap\",\"Lanjut berlatih\"] -> tampilan pembahasan [\"Kembali ke langkah\",\"Lanjut berlatih\"] · enam tangkapan layar .tmp-ui/explanation-* diperiksa. E2E belum dijalankan: ifp-apps.exe milik owner aktif dan belum ada skenario pembahasan.",
+  "last_updated": "2026-11-16T23:45:00+07:00",
+  "last_validation": "T-141 (2026-11-16): npx tsc --noEmit bersih · npm run build PASS · npm test 173/173 (20 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS · npm run content:validate -- content/packages/kelas1-matematika-b01-bilangan-1-10 VALID (0 issue, 1 warning draft) · pengukuran CDP: 1366x768 pemicu 466-510, bagian 291-719, isi 292/381 (bergulir), kembali 675-719, fokus di h2, main.scrollHeight = clientHeight = 713; 1024x768 bagian 311-739, isi 292/381, kembali 695-739; 1920x1080 isi 381/381 muat, lebar isi 604 px · kartu selesai 1366 [Ulangi eksplorasi, Baca pembahasan lengkap, Lanjut berlatih] -> tampilan pembahasan [Kembali ke langkah, Lanjut berlatih] · enam tangkapan layar .tmp-ui/explanation-* diperiksa · E2E DIJALANKAN (aplikasi dev owner ditutup atas persetujuan, commit f45f79d): explanation PASS 7 (pemicu tunggal di langkah 1, 5 paragraf, kolom 604 px, fokus judul -> kembali ke pemicu, kartu selesai 3 tombol, Lanjut berlatih membuka tab Kuis, paket Bilangan Cacah Besar 0 pemicu) · regresi activities 17/17, learning-journey 14/14, player-fullscreen 6/6, cover-illustration 7/7, smoke 8/8, a11y 19/19 (0 error, 8 warning reflow/target sentuh lama).",
   "last_test_status": "pass",
-  "last_command": "IMPLEMENT",
+  "last_command": "TEST",
   "last_command_status": "PASS",
   "open_wave": null,
   "dirty": false,
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "T-141 selesai dan tercommit (feat d6b7ac5 -> docs 63451fa -> chore state). Jalankan ulang aplikasi dev (npm run tauri dev dengan IFP_CONTENT_KEYS dari environment) lalu di paket Kelas 1 Matematika Bilangan 1-10 tekan Pembahasan lengkap di rel teks dan Baca pembahasan lengkap di kartu selesai: paragraf terbaca tanpa melebarkan kolom, fokus pindah ke judul, Kembali ke langkah memulihkan langkah + fokus; paket lain tidak boleh menampilkan pemicu. Setelah aplikasi ditutup, jalankan E2E learning-journey/player-fullscreen/activities/cover-illustration dan npm run a11y (belum jalan sejak T-140). Backlog: tulis pembahasan lengkap untuk 47 paket matematika lain dan mapel lain (butuh penilaian guru), plus backlog T-140 sebelumnya. Human-gated: seleksi guru F-06; reviewer manusia R1-R6/R8-R9/R12; D-UX-2/4/5/6; OD-1 IPAS Fase A; gate rilis B-07 -> B-02 -> B-03; T-123 deploy. reviewStatus seluruh paket tetap draft - agen tidak menaikkannya tanpa perintah PO."
+  "next_step": "T-141 selesai dan tercommit (feat d6b7ac5 -> docs 63451fa -> chore 75690c6 -> test f45f79d -> docs 529c273). Aplikasi dev kini TERTUTUP karena dipakai E2E; buka lagi dengan npm run tauri dev (IFP_CONTENT_KEYS dari environment) bila ingin memeriksa manual: di paket Kelas 1 Matematika Bilangan 1-10 tekan Pembahasan lengkap di rel teks dan Baca pembahasan lengkap di kartu selesai. Backlog: tulis pembahasan lengkap untuk 47 paket matematika lain dan mapel lain (butuh penilaian guru), perluas cakupan E2E pembahasan ke paket lain bila data ditambah, plus backlog T-140 sebelumnya (galeri 240 ilustrasi, penurunan ke draft + lencana approved, dsb). Human-gated: seleksi guru F-06; reviewer manusia R1-R6/R8-R9/R12; D-UX-2/4/5/6; OD-1 IPAS Fase A; gate rilis B-07 -> B-02 -> B-03; T-123 deploy. reviewStatus seluruh paket tetap draft - agen tidak menaikkannya tanpa perintah PO."
 }
