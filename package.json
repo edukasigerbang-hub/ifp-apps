@@ -38,6 +38,7 @@
     "e2e:deeplink": "node scripts/e2e/run.mjs player-deeplink",
     "e2e:cover": "node scripts/e2e/run.mjs cover-illustration",
     "e2e:explanation": "node scripts/e2e/run.mjs explanation",
+    "e2e:pen": "node scripts/e2e/run.mjs exploration-pen",
     "e2e:quiz-coverage": "node scripts/e2e/run.mjs quiz-coverage",
     "a11y": "node scripts/e2e/run.mjs a11y",
     "fixtures:check": "tsx scripts/check-fixtures.ts",
