@@ -5,28 +5,32 @@
   "title": "Mengamati Alat Ukur",
   "instructions": "Amati dua panel gambar: penggaris dengan pensil dan timbangan dengan buah.",
   "assets": [
-    "assets/aktivitas-pengukuran-panjang-berat.png"
+    "assets/aktivitas-pengukuran-panjang-berat-1.png",
+    "assets/aktivitas-pengukuran-panjang-berat-2.png",
+    "assets/aktivitas-pengukuran-panjang-berat-3.png",
+    "assets/aktivitas-pengukuran-panjang-berat-4.png",
+    "assets/aktivitas-pengukuran-panjang-berat-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Alat apa yang digunakan untuk mengukur panjang pensil?",
-        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
-        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian.",
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat-1.png",
+        "altText": "Penggaris berskala dengan pensil oranye di atasnya; ujung pensil sejajar dengan awal skala.",
         "reveal": "Penggaris, dengan satuan sentimeter (cm).",
         "hint": "Perhatikan garis-garis angka pada penggaris."
       },
       {
         "prompt": "Alat apa yang digunakan untuk mengukur berat buah?",
-        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
-        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian.",
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat-2.png",
+        "altText": "Timbangan dua lengan dengan tiga apel di lengan kiri dan satu beban biru di lengan kanan.",
         "reveal": "Timbangan, dengan satuan gram (g) atau kilogram (kg).",
         "hint": "Perhatikan buah di atas timbangan."
       },
       {
         "prompt": "1 meter sama dengan berapa sentimeter?",
-        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
-        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian.",
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat-3.png",
+        "altText": "Pita meter berwarna kuning di atas penggaris panjang dengan seratus pembagian, seluruh penggaris ditandai kotak oranye.",
         "reveal": "1 meter = 100 sentimeter.",
         "hint": "Kata 'senti' berarti seperseratus."
       },
@@ -34,15 +38,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Mengukur Panjang dan Berat?",
         "reveal": "Menggunakan alat ukur panjang dan berat, memahami satuan cm/m dan g/kg, serta menyelesaikan masalah sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
-        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian."
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat-4.png",
+        "altText": "Tiga kartu rangkuman: penggaris berskala, timbangan dua lengan, dan dua langkah berpanah dengan tanda centang."
       },
       {
         "prompt": "Alat yang tepat untuk mengukur berat badan adalah ...",
         "reveal": "timbangan",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-pengukuran-panjang-berat.png",
-        "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian."
+        "assetPath": "assets/aktivitas-pengukuran-panjang-berat-5.png",
+        "altText": "Timbangan badan besar dengan alas berpijak, jarum penunjuk merah, dan sosok orang berdiri di atasnya."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Penggaris dengan pensil, timbangan dapur dengan buah, dan tongkat meter dengan seratus pembagian."
+    "altText": "Lima ilustrasi pengukuran: pensil di atas penggaris, timbangan dengan apel dan beban, pita meter dan penggaris seratus pembagian, tiga kartu rangkuman, dan timbangan badan."
   }
 }

@@ -26,7 +26,31 @@
       "sha256": "3fc54f5b3539a1cddcf0f350d76b1d628854c80ce67ec3c7290f4463be45fe9e"
     },
     {
-      "path": "assets/aktivitas-pengukuran-sudut.png",
+      "path": "assets/aktivitas-pengukuran-sudut-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3427,
+      "sha256": "2964036a015fbaa7a2e4c08f22b9f88455fac06f67d0ff1a050bee447a84d415"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3542,
+      "sha256": "a450208ecdc125e8b6af4d98bd4efc8daddca9a4a7c8899f146b36146ec08af2"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3654,
+      "sha256": "83719c6d2cdf48b1c639ee976ef17eb881bb4771f6e7dc7bf0c5bbbbdbf8be34"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7176,
+      "sha256": "1376767fc91438f75919ddba5d10a9d88f0c3a7bfcf73a705164f3b825fae332"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sudut-5.png",
       "mediaType": "image/png",
       "sizeBytes": 6275,
       "sha256": "d605e1f55ae6cd1b9cb3bbc98779f23a9ffaeb02919a0990248a9aa1655e52f4"

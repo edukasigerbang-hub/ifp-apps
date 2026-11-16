@@ -26,7 +26,31 @@
       "sha256": "a0bd43694cfbe9bfabe4b3ef15982ce2d5eda3dcfa36404e8ba37ce6b9631fe7"
     },
     {
-      "path": "assets/aktivitas-bilangan-1000000.png",
+      "path": "assets/aktivitas-bilangan-1000000-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9820,
+      "sha256": "91cf3a6e37833e3b7f6b73458f787d4fd4b52bad1dfb6b326dd4c4a327362851"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1000000-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10317,
+      "sha256": "1351ac6b484675d72ab9c08f60e358facffeca62e3a8358042e40f5927b6f774"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1000000-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12861,
+      "sha256": "af49c81e31cac9af3e7734e76bfdbbde80b9cde9a849d84a0bdc72a339694977"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1000000-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7616,
+      "sha256": "2f9b610433164641b0ea5195a84621279be498aaea424328b0dddb7dba1b08db"
+    },
+    {
+      "path": "assets/aktivitas-bilangan-1000000-5.png",
       "mediaType": "image/png",
       "sizeBytes": 10258,
       "sha256": "96e3ac7cd593c4b162342d605b8080dea7e895f3ba14bf5e720a5672c6074fb7"

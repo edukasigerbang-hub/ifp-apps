@@ -5,28 +5,32 @@
   "title": "Menyelesaikan Soal Cerita",
   "instructions": "Amati gambar, lalu diskusikan langkah menyelesaikan soal.",
   "assets": [
-    "assets/aktivitas-pemecahan-masalah-kelas5.png"
+    "assets/aktivitas-pemecahan-masalah-kelas5-1.png",
+    "assets/aktivitas-pemecahan-masalah-kelas5-2.png",
+    "assets/aktivitas-pemecahan-masalah-kelas5-3.png",
+    "assets/aktivitas-pemecahan-masalah-kelas5-4.png",
+    "assets/aktivitas-pemecahan-masalah-kelas5-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa langkah pertama?",
-        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
-        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5-1.png",
+        "altText": "Kartu cerita bergaris putus-putus dengan kaca pembesar di sudutnya.",
         "reveal": "Memahami apa yang diketahui dan ditanya.",
         "hint": "Tandai angka penting."
       },
       {
         "prompt": "Bagaimana memilih operasi?",
-        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
-        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5-2.png",
+        "altText": "Empat ubin operasi berjajar: tanda tambah, kurang, kali, dan bagi.",
         "reveal": "Sesuaikan dengan kata kunci soal.",
         "hint": "Jumlah, selisih, atau bagi."
       },
       {
         "prompt": "Mengapa harus memeriksa?",
-        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
-        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5-3.png",
+        "altText": "Tanda centang hijau besar dengan panah melengkung kembali ke kiri sebagai tanda memeriksa ulang.",
         "reveal": "Agar jawaban benar.",
         "hint": "Hitung ulang dengan cara lain."
       },
@@ -34,15 +38,15 @@
         "prompt": "Langkah pertama menyelesaikan soal cerita adalah ...",
         "reveal": "Memahami soal",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
-        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah."
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5-4.png",
+        "altText": "Empat lingkaran langkah berjajar dengan panah; lingkaran pertama berwarna oranye lebih tebal sebagai langkah pertama."
       },
       {
         "prompt": "Cara memeriksa jawaban adalah ...",
         "reveal": "Menghitung ulang",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5.png",
-        "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah."
+        "assetPath": "assets/aktivitas-pemecahan-masalah-kelas5-5.png",
+        "altText": "Empat langkah berjajar dengan panah maju dan satu panah melengkung kembali ke langkah pertama."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Empat langkah penyelesaian soal berjajar: lingkaran bertitik satu, dua, tiga, dan empat, dihubungkan panah."
+    "altText": "Lima ilustrasi pemecahan masalah kelas 5: kartu cerita dengan kaca pembesar, empat ubin operasi, tanda centang memeriksa ulang, empat langkah dengan langkah pertama disorot, dan empat langkah dengan panah kembali."
   }
 }

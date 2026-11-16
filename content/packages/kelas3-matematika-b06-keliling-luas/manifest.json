@@ -26,7 +26,31 @@
       "sha256": "3ee6a950802ec1a96e70a7d459519f892f56eff4eaf3a71ecf475200286a22ee"
     },
     {
-      "path": "assets/aktivitas-keliling-luas.png",
+      "path": "assets/aktivitas-keliling-luas-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4512,
+      "sha256": "d8cc47dbda0c9d76c025353a8d09c127fad532c2e8d05cb35f85e3b95eedddba"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5854,
+      "sha256": "ad762719007f0b66efb87c7441b5a1eeb217f29ab65ac39db38f4d445642af4f"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6306,
+      "sha256": "09839e74236c2679be8629bc88211424dc977b599e535eaa7c92bdd48bd1e21c"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7005,
+      "sha256": "d91027f648455ee55e8d9d6ba384f70c69ba4cf4759af8fca2b95579e3c6bbf4"
+    },
+    {
+      "path": "assets/aktivitas-keliling-luas-5.png",
       "mediaType": "image/png",
       "sizeBytes": 6138,
       "sha256": "8fc068bffe1e0e5142b9065eb7b992504ccc4f1b897a828ce305f0be1f7cc808"

@@ -5,28 +5,32 @@
   "title": "Mengamati Kelompok Benda",
   "instructions": "Amati kotak berisi bintang dan titik, lalu diskusikan perkalian dan pembagiannya.",
   "assets": [
-    "assets/aktivitas-perkalian-pembagian.png"
+    "assets/aktivitas-perkalian-pembagian-1.png",
+    "assets/aktivitas-perkalian-pembagian-2.png",
+    "assets/aktivitas-perkalian-pembagian-3.png",
+    "assets/aktivitas-perkalian-pembagian-4.png",
+    "assets/aktivitas-perkalian-pembagian-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Ada berapa bintang seluruhnya?",
-        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
-        "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-1.png",
+        "altText": "Tiga lingkaran berjajar, masing-masing berisi empat bintang kuning, dengan tanda tambah di antaranya.",
         "reveal": "12 bintang; 3 kelompok × 4 = 12.",
         "hint": "Hitung setiap kelompok."
       },
       {
         "prompt": "Apa arti 4 × 3?",
-        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
-        "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-2.png",
+        "altText": "Empat lingkaran tersusun dua kali dua, masing-masing berisi tiga bintang kuning berjajar.",
         "reveal": "4 kelompok berisi 3, jumlahnya 12.",
         "hint": "Penjumlahan berulang 3 + 3 + 3 + 3."
       },
       {
         "prompt": "Bagaimana pembagian bekerja?",
-        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
-        "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang.",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-3.png",
+        "altText": "Dua belas bintang tersusun tiga baris empat kolom; setiap baris dikelilingi kotak garis putus-putus.",
         "reveal": "12 : 3 = 4, karena 3 × 4 = 12.",
         "hint": "Pembagian adalah kebalikan perkalian."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Perkalian dan Pembagian?",
         "reveal": "Memahami perkalian sebagai penjumlahan berulang dan pembagian sebagai kebalikannya.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
-        "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang."
+        "assetPath": "assets/aktivitas-perkalian-pembagian-4.png",
+        "altText": "Tiga kartu rangkuman: susunan bintang tiga kali empat, tiga lingkaran berisi empat titik, dan dua ubin tanda tambah serta kurang."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-perkalian-pembagian.png",
+        "assetPath": "assets/aktivitas-perkalian-pembagian-5.png",
         "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Susunan empat kolom tiga baris bintang, lalu dua belas bintang yang dikelompokkan menjadi tiga lingkaran berisi empat bintang."
+    "altText": "Lima ilustrasi perkalian dan pembagian: tiga lingkaran berisi empat bintang, empat lingkaran berisi tiga bintang, dua belas bintang dalam tiga baris berkotak, tiga kartu rangkuman, dan susunan bintang yang dikelompokkan."
   }
 }

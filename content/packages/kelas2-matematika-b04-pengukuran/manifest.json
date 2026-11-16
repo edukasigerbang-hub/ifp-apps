@@ -26,10 +26,34 @@
       "sha256": "aa541ccaf4a78cca5c270ab33da608fa273d1e01d5de34ea2505a78c8822b075"
     },
     {
-      "path": "assets/aktivitas-pengukuran.png",
+      "path": "assets/aktivitas-pengukuran-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 5791,
-      "sha256": "1b0886608af6367da43848152e29971d5c6c6a86ca860de033bf15467f71ab19"
+      "sizeBytes": 4684,
+      "sha256": "a2ca0a040a9abe849c4c8667ec16e47c56521eafb58f8b4fe272c2348558f872"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4928,
+      "sha256": "c1fda59ea3b1262b01b1d114601a7470309fd404677544d16e9b5af1d1557e49"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 3852,
+      "sha256": "ec77433311850f2c6a47e9f4493e270dcf252aa92def366cb5792a9e36e484a4"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8345,
+      "sha256": "9cf9e8328fbb2fac4a5ca489c484a3b6f63f88231c9c7cfd8d9f17d888156c03"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5438,
+      "sha256": "c749b08957e1f466b4d76030bac68459e474dc6e6d49e8772d4d97d126232d44"
     }
   ],
   "dependencies": [],

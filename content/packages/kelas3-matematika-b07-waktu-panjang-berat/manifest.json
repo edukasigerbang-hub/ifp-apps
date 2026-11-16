@@ -26,10 +26,34 @@
       "sha256": "acbdf4301d2aef2ab1ae967c2f4d3d45c38c5a99b84d52c951c12251328db122"
     },
     {
-      "path": "assets/aktivitas-waktu-panjang-berat.png",
+      "path": "assets/aktivitas-waktu-panjang-berat-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 7786,
-      "sha256": "02423a2e018cb6abfc3963d74721c2698d47fae166b8e5c32f0a2c97ba15f9dc"
+      "sizeBytes": 9165,
+      "sha256": "a7d94f28136c00587cdcc81292d4a126bb4bcf55cd4a3397b5016439c063e81e"
+    },
+    {
+      "path": "assets/aktivitas-waktu-panjang-berat-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4030,
+      "sha256": "4c6843d8d68ab3930e265b757a736db0fe6fd7e198b0ae9d705565841a530305"
+    },
+    {
+      "path": "assets/aktivitas-waktu-panjang-berat-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5398,
+      "sha256": "bcfb963cfddcf5046506d3c715e3c6c858de6a8d5e7ed09e492e95a4975e742f"
+    },
+    {
+      "path": "assets/aktivitas-waktu-panjang-berat-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9795,
+      "sha256": "5a10a703ee3267e92dd17267453d28e26e58c6fc269640487f8f4956fb692918"
+    },
+    {
+      "path": "assets/aktivitas-waktu-panjang-berat-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7783,
+      "sha256": "92cfefc475a8f130251db9c6a00bbd7bbe0b2d64223ecc1b7d94f143e1e0c3d0"
     }
   ],
   "dependencies": [],

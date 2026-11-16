@@ -5,28 +5,32 @@
   "title": "Menghitung Benda",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/aktivitas-bilangan-11-20.png"
+    "assets/aktivitas-bilangan-11-20-1.png",
+    "assets/aktivitas-bilangan-11-20-2.png",
+    "assets/aktivitas-bilangan-11-20-3.png",
+    "assets/aktivitas-bilangan-11-20-4.png",
+    "assets/aktivitas-bilangan-11-20-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bilangan setelah 15 adalah ...",
-        "assetPath": "assets/aktivitas-bilangan-11-20.png",
-        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
+        "assetPath": "assets/aktivitas-bilangan-11-20-1.png",
+        "altText": "Baris atas kerangka sepuluh penuh dan kerangka lima titik, panah ke bawah menuju kerangka sepuluh dan kerangka enam titik.",
         "reveal": "16.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Bilangan sebelum 20 adalah ...",
-        "assetPath": "assets/aktivitas-bilangan-11-20.png",
-        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
+        "assetPath": "assets/aktivitas-bilangan-11-20-2.png",
+        "altText": "Kerangka sepuluh penuh dan kerangka sembilan titik, satu kotak kosong terakhir ditandai garis putus-putus.",
         "reveal": "19.",
         "hint": "Kurangi satu."
       },
       {
         "prompt": "Angka 17 dibaca ...",
-        "assetPath": "assets/aktivitas-bilangan-11-20.png",
-        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
+        "assetPath": "assets/aktivitas-bilangan-11-20-3.png",
+        "altText": "Kerangka sepuluh penuh, kerangka tujuh titik merah, dan kaca pembesar di samping kelompok tujuh.",
         "reveal": "Tujuh belas.",
         "hint": "Baca lambangnya."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 11–20?",
         "reveal": "Membilang, mengenal lambang, dan mengurutkan bilangan 11–20.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-bilangan-11-20.png",
-        "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
+        "assetPath": "assets/aktivitas-bilangan-11-20-4.png",
+        "altText": "Tiga kartu rangkuman: kerangka sepuluh penuh, kerangka enam titik, dan garis bilangan bertanda."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-bilangan-11-20.png",
+        "assetPath": "assets/aktivitas-bilangan-11-20-5.png",
         "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
+    "altText": "Lima ilustrasi bilangan 11–20: kerangka sepuluh dengan lima lalu enam titik, kerangka sepuluh dengan sembilan titik, kerangka sepuluh dengan tujuh titik diamati, tiga kartu rangkuman, dan dua kerangka sepuluh penuh serta tujuh titik."
   }
 }

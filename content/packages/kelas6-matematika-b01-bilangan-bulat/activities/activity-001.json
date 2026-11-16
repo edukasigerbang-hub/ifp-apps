@@ -5,28 +5,32 @@
   "title": "Mengamati Garis Bilangan",
   "instructions": "Amati garis bilangan, lalu diskusikan posisi bilangan.",
   "assets": [
-    "assets/aktivitas-bilangan-bulat.png"
+    "assets/aktivitas-bilangan-bulat-1.png",
+    "assets/aktivitas-bilangan-bulat-2.png",
+    "assets/aktivitas-bilangan-bulat-3.png",
+    "assets/aktivitas-bilangan-bulat-4.png",
+    "assets/aktivitas-bilangan-bulat-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu bilangan bulat?",
-        "assetPath": "assets/aktivitas-bilangan-bulat.png",
-        "altText": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi.",
+        "assetPath": "assets/aktivitas-bilangan-bulat-1.png",
+        "altText": "Garis bilangan dengan daerah kiri berwarna merah muda untuk bilangan negatif, daerah kanan berwarna hijau muda untuk bilangan positif, dan titik nol ditandai lebih besar.",
         "reveal": "Bilangan positif, negatif, dan nol.",
         "hint": "Tanpa pecahan."
       },
       {
         "prompt": "Mana yang lebih kecil, -3 atau 2?",
-        "assetPath": "assets/aktivitas-bilangan-bulat.png",
-        "altText": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi.",
+        "assetPath": "assets/aktivitas-bilangan-bulat-2.png",
+        "altText": "Garis bilangan dengan titik merah di posisi minus tiga, titik teal di posisi dua, dan panah oranye di atasnya menunjuk ke kiri menuju bilangan yang lebih kecil.",
         "reveal": "-3.",
         "hint": "Semakin ke kiri semakin kecil."
       },
       {
         "prompt": "Berapa hasil -5 + 3?",
-        "assetPath": "assets/aktivitas-bilangan-bulat.png",
-        "altText": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi.",
+        "assetPath": "assets/aktivitas-bilangan-bulat-3.png",
+        "altText": "Garis bilangan dengan titik biru di posisi minus lima, tiga panah melengkung berurutan ke kanan, dan titik oranye di posisi minus dua.",
         "reveal": "-2.",
         "hint": "Maju 3 langkah dari -5."
       },
@@ -34,15 +38,15 @@
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-bilangan-bulat.png",
+        "assetPath": "assets/aktivitas-bilangan-bulat-4.png",
         "altText": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi."
       },
       {
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan Bulat?",
         "reveal": "Mengenal, membandingkan, dan menghitung bilangan bulat.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-bilangan-bulat.png",
-        "altText": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi."
+        "assetPath": "assets/aktivitas-bilangan-bulat-5.png",
+        "altText": "Tiga kartu rangkuman: garis bilangan bertitik, neraca pembanding, dan tiga langkah berjajar."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Garis bilangan dengan titik nol di tengah, bagian kiri bertanda negatif, panah melengkung tiga langkah ke kanan, dan dua penanda untuk membandingkan posisi."
+    "altText": "Lima ilustrasi bilangan bulat: garis bilangan dengan daerah negatif dan positif, dua penanda pembanding, tiga panah langkah penjumlahan, tampilan lengkap garis bilangan, dan tiga kartu rangkuman."
   }
 }

@@ -5,44 +5,48 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan datanya.",
   "assets": [
-    "assets/aktivitas-data.png"
+    "assets/aktivitas-data-1.png",
+    "assets/aktivitas-data-2.png",
+    "assets/aktivitas-data-3.png",
+    "assets/aktivitas-data-4.png",
+    "assets/aktivitas-data-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa isi tabel data?",
-        "assetPath": "assets/aktivitas-data.png",
-        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
+        "assetPath": "assets/aktivitas-data-1.png",
+        "altText": "Tabel tiga kolom tiga baris dengan baris judul berwarna dan titik-titik jumlah pada dua baris berikutnya.",
         "reveal": "Keterangan dan jumlah.",
         "hint": "Baca angkanya."
       },
       {
         "prompt": "Apa yang ditunjukkan diagram batang?",
-        "assetPath": "assets/aktivitas-data.png",
-        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
+        "assetPath": "assets/aktivitas-data-2.png",
+        "altText": "Diagram batang empat batang berbeda tinggi dengan sumbu mendatar dan tegak.",
         "reveal": "Banyak data.",
         "hint": "Bandingkan tinggi batang."
       },
       {
         "prompt": "Bagaimana mencari data terbanyak?",
-        "assetPath": "assets/aktivitas-data.png",
-        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
+        "assetPath": "assets/aktivitas-data-3.png",
+        "altText": "Diagram batang dengan batang tertinggi berwarna oranye dan kaca pembesar di atasnya.",
         "reveal": "Lihat batang tertinggi.",
         "hint": "Baca angkanya."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak.",
+        "reveal": "Tiga kartu rangkuman: tabel, diagram batang tiga batang, dan diagram batang dengan batang tertinggi ditandai.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-data.png",
-        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak."
+        "assetPath": "assets/aktivitas-data-4.png",
+        "altText": "Tiga kartu rangkuman: tabel, diagram batang tiga batang, dan diagram batang dengan batang tertinggi ditandai."
       },
       {
         "prompt": "Diagram batang menunjukkan ...",
         "reveal": "Perbandingan data",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-data.png",
-        "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak."
+        "assetPath": "assets/aktivitas-data-5.png",
+        "altText": "Diagram batang empat batang dengan dua batang berbeda tinggi dihubungkan garis putus-putus sebagai perbandingan."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Tabel kosong berkolom, lalu diagram batang empat batang dengan sumbu mendatar dan tegak."
+    "altText": "Lima ilustrasi penyajian data: tabel berisi keterangan dan titik jumlah, diagram batang empat batang, diagram batang dengan batang tertinggi ditandai, tiga kartu rangkuman, dan perbandingan dua batang."
   }
 }

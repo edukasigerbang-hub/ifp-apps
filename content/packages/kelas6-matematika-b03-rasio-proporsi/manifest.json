@@ -26,10 +26,34 @@
       "sha256": "63da46a86cdbf9a21539e0c402c8f58205fc4fedcf50617d8dd60cea2cc28157"
     },
     {
-      "path": "assets/aktivitas-rasio-proporsi.png",
+      "path": "assets/aktivitas-rasio-proporsi-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 4859,
-      "sha256": "c9f0f1173a31c9a90833ca0782c9ebe4301531c2132d63f90f317c193b96c543"
+      "sizeBytes": 5500,
+      "sha256": "9995d19baf1d0554c4c9ea52f5f4e846d92a907707de2c668ad160b4bd58ae87"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4265,
+      "sha256": "41f9ccc00a1d432da3f6eca600e38ba11442a719bcc4e025e22a14d806cf48e1"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7922,
+      "sha256": "3acb3a36943b5c9482878bb8f57d7aac359404483d0e1892ff8bba75da039f7e"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6689,
+      "sha256": "f0d41f0d3aacd6ef9ae7c786c21d927f3d5b8a6467b65982f34ad19f7d90b94b"
+    },
+    {
+      "path": "assets/aktivitas-rasio-proporsi-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4275,
+      "sha256": "47ee4b216bb36d00e4c9f153f37de8b60d02559b4cd10668ae69cf0a17468cc2"
     }
   ],
   "dependencies": [],

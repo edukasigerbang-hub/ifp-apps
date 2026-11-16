@@ -5,28 +5,32 @@
   "title": "Mengamati Pola",
   "instructions": "Amati gambar, lalu lanjutkan polanya.",
   "assets": [
-    "assets/aktivitas-pola-bilangan.png"
+    "assets/aktivitas-pola-bilangan-1.png",
+    "assets/aktivitas-pola-bilangan-2.png",
+    "assets/aktivitas-pola-bilangan-3.png",
+    "assets/aktivitas-pola-bilangan-4.png",
+    "assets/aktivitas-pola-bilangan-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Pola 1, 2, 3, ... berlanjut dengan ...",
-        "assetPath": "assets/aktivitas-pola-bilangan.png",
-        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
+        "assetPath": "assets/aktivitas-pola-bilangan-1.png",
+        "altText": "Tiga menara kubus bertambah satu, satu, dua, dan tiga, lalu menara kosong bergaris putus-putus setinggi empat.",
         "reveal": "4.",
         "hint": "Tambahkan satu."
       },
       {
         "prompt": "Pola 2, 4, 6, ... berlanjut dengan ...",
-        "assetPath": "assets/aktivitas-pola-bilangan.png",
-        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
+        "assetPath": "assets/aktivitas-pola-bilangan-2.png",
+        "altText": "Tiga menara kubus dua, empat, dan enam, lalu menara kosong bergaris putus-putus setinggi delapan.",
         "reveal": "8.",
         "hint": "Tambahkan dua."
       },
       {
         "prompt": "Pola 5, 10, 15, ... berlanjut dengan ...",
-        "assetPath": "assets/aktivitas-pola-bilangan.png",
-        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
+        "assetPath": "assets/aktivitas-pola-bilangan-3.png",
+        "altText": "Tiga tiang titik berisi lima, sepuluh, dan lima belas titik, lalu tiang kosong bergaris putus-putus.",
         "reveal": "20.",
         "hint": "Tambahkan lima."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Pola Bilangan?",
         "reveal": "Mengenal dan melanjutkan pola bilangan sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-pola-bilangan.png",
-        "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
+        "assetPath": "assets/aktivitas-pola-bilangan-4.png",
+        "altText": "Tiga kartu rangkuman: tiang titik satu sampai tiga, tiang dua sampai empat, dan tiang lima serta sepuluh."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-pola-bilangan.png",
+        "assetPath": "assets/aktivitas-pola-bilangan-5.png",
         "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Menara titik bertambah satu: satu, dua, tiga, empat titik. Di bawahnya menara dua, empat, dan enam titik, masing-masing diikuti menara kosong bergaris putus-putus."
+    "altText": "Lima ilustrasi pola bilangan: menara satu sampai tiga dengan menara kosong, menara dua sampai enam dengan menara kosong, tiang titik lima sepuluh lima belas dengan tiang kosong, tiga kartu rangkuman, dan menara titik bertambah."
   }
 }

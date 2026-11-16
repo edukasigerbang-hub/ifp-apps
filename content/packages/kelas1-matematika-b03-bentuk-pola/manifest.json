@@ -26,10 +26,34 @@
       "sha256": "476b4a7485c56b4ef24c361e3ad7c34e1faef2de8e963792efec3c82efd389d2"
     },
     {
-      "path": "assets/aktivitas-bentuk-pola.png",
+      "path": "assets/aktivitas-bentuk-pola-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 7250,
-      "sha256": "01403229816f14f56a8de202ba91c0d8fdc71149790df95019e6add9c2c2c59b"
+      "sizeBytes": 8019,
+      "sha256": "01d7b0b8c7c3551f6216ec758b174c9f8530a7272b16a7b1f154e056bb39ff4c"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4656,
+      "sha256": "4f0d0c0dbb6eeae8b0f86374bebac6b0501ea6d5607e789344ed4de30094da0a"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4234,
+      "sha256": "9a93a5621d24f45a802d69452100e0f98df2ee3481290c0e030bbb2d138e2deb"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8624,
+      "sha256": "768ae4637f74d29056861a33f0975f13c9f3804531c15b00d9d17232ba4330c1"
+    },
+    {
+      "path": "assets/aktivitas-bentuk-pola-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7290,
+      "sha256": "981e58c8f859b2cea9c2f27b94fde0fa7fa8a570b3256735c0dfd72f8a611143"
     }
   ],
   "dependencies": [],

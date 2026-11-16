@@ -26,10 +26,34 @@
       "sha256": "98a3c8c750e1591f3fe597fd165dbc29dfe218205a20a9ef63b6ea02cafb487d"
     },
     {
-      "path": "assets/aktivitas-faktor-kelipatan.png",
+      "path": "assets/aktivitas-faktor-kelipatan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5991,
+      "sha256": "d4549100950496b12810296a67afb28fbb3f60795086c4b36ff42db9e0505180"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-2.png",
       "mediaType": "image/png",
       "sizeBytes": 10063,
       "sha256": "3dbfa1df2fdc0e04f39afe80675bc29a520984f7570a4ae56a0a356524327764"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 11084,
+      "sha256": "7e4f49a2670f3f2277a2abe6a3b78ce203da30f6408668d384f9f352f2159872"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 12739,
+      "sha256": "c94ee6fd90b6be553192cc3a186469254e10c777a116671c8302bbc1240e3008"
+    },
+    {
+      "path": "assets/aktivitas-faktor-kelipatan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6394,
+      "sha256": "616ad886acd442ea6c7e1f38e000deac0e1f74415900054dacc16d64d742e5b2"
     }
   ],
   "dependencies": [],

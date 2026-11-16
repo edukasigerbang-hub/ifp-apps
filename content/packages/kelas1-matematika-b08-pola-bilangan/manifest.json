@@ -26,10 +26,34 @@
       "sha256": "01bdf19ee9fee6a787796f43553374a4ca9ae9bed26debcd1b67e9ad5018a936"
     },
     {
-      "path": "assets/aktivitas-pola-bilangan.png",
+      "path": "assets/aktivitas-pola-bilangan-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 5393,
-      "sha256": "7d120481a9dd90322552bfa7f5b7eacc693d313580fb4c281a0e93ad6fdc16ec"
+      "sizeBytes": 3975,
+      "sha256": "9e39eac71c54198fdac7d1310b4d5995600920a0c5c3987b8df3635e4797631f"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4065,
+      "sha256": "465e4ab4933e07fa4c9cb04380d59aa435780317580b7406725f69fc053a12df"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4801,
+      "sha256": "ebcf6eb19acfc76004132a4925f6d13ec730e13fccc2adc33f155c464c4f913b"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8011,
+      "sha256": "ed50b98b7107889a80f875b067eb8ede7f99900e123974e5a74758ffc1e9de9d"
+    },
+    {
+      "path": "assets/aktivitas-pola-bilangan-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5359,
+      "sha256": "0ca928ed07b61e94f1a08efdc05c242c5878b18db90e01b50871cc43dbc67b23"
     }
   ],
   "dependencies": [],

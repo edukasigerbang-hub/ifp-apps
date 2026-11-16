@@ -5,28 +5,32 @@
   "title": "Mengamati Sudut",
   "instructions": "Amati gambar, lalu diskusikan jenis dan besar sudut.",
   "assets": [
-    "assets/aktivitas-pengukuran-sudut.png"
+    "assets/aktivitas-pengukuran-sudut-1.png",
+    "assets/aktivitas-pengukuran-sudut-2.png",
+    "assets/aktivitas-pengukuran-sudut-3.png",
+    "assets/aktivitas-pengukuran-sudut-4.png",
+    "assets/aktivitas-pengukuran-sudut-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa sudut siku-siku?",
-        "assetPath": "assets/aktivitas-pengukuran-sudut.png",
-        "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul.",
+        "assetPath": "assets/aktivitas-pengukuran-sudut-1.png",
+        "altText": "Sudut siku-siku teal dengan lengan lebih panjang, tanda kotak di titik sudut, dan busur penanda sudut.",
         "reveal": "Sudut yang besarnya 90 derajat.",
         "hint": "Bentuk huruf L."
       },
       {
         "prompt": "Apa sudut lancip?",
-        "assetPath": "assets/aktivitas-pengukuran-sudut.png",
-        "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul.",
+        "assetPath": "assets/aktivitas-pengukuran-sudut-2.png",
+        "altText": "Sudut lancip teal yang lebih sempit daripada sudut siku-siku, dengan busur penanda sudut.",
         "reveal": "Sudut kurang dari 90 derajat.",
         "hint": "Lebih sempit dari siku."
       },
       {
         "prompt": "Apa sudut tumpul?",
-        "assetPath": "assets/aktivitas-pengukuran-sudut.png",
-        "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul.",
+        "assetPath": "assets/aktivitas-pengukuran-sudut-3.png",
+        "altText": "Sudut tumpul oranye yang lebih lebar daripada sudut siku-siku, dengan busur penanda sudut.",
         "reveal": "Sudut lebih dari 90 derajat.",
         "hint": "Lebih lebar dari siku."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Pengukuran Sudut dan Bangun Datar?",
         "reveal": "Mengukur sudut dan mengenal sifat bangun datar.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-pengukuran-sudut.png",
-        "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul."
+        "assetPath": "assets/aktivitas-pengukuran-sudut-4.png",
+        "altText": "Tiga kartu rangkuman berisi sudut siku-siku, sudut lancip, dan sudut tumpul."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-pengukuran-sudut.png",
+        "assetPath": "assets/aktivitas-pengukuran-sudut-5.png",
         "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul."
+    "altText": "Lima ilustrasi pengukuran sudut: sudut siku-siku biru bertanda kotak, sudut lancip teal, sudut tumpul oranye, tiga kartu sudut rangkuman, dan busur derajat bersama tiga sudut."
   }
 }

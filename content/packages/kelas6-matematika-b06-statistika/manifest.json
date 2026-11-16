@@ -26,10 +26,34 @@
       "sha256": "b6c536d2ad1757ce7496a555a7b829cfd6f4c601335813381d40012a0c2289c1"
     },
     {
-      "path": "assets/aktivitas-statistika.png",
+      "path": "assets/aktivitas-statistika-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 6812,
-      "sha256": "dd17aed4413f4188dbad28b52131ffebfbc1b2357c01522d0f1acbca0285e9ad"
+      "sizeBytes": 4877,
+      "sha256": "e8eb8ae27db89470dd52f265dbed1af307142f670dc609a25cf5c94677f28ea2"
+    },
+    {
+      "path": "assets/aktivitas-statistika-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6708,
+      "sha256": "3d8201bc90afe7b978545bb0d6fcea447888d980ffe89efd0f4a8973e88889da"
+    },
+    {
+      "path": "assets/aktivitas-statistika-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4873,
+      "sha256": "7734fb7776dcd03e88514c7540b8c85fc611b6e58c033177777b639f43c0a79d"
+    },
+    {
+      "path": "assets/aktivitas-statistika-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7804,
+      "sha256": "81e9cf95f208df6b52cd7a62f8400cac88abed064be4beb6a5ce53f8c7461750"
+    },
+    {
+      "path": "assets/aktivitas-statistika-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7203,
+      "sha256": "d54ef734b3492ef11e07f6a7702597a012027bfd7910f4de2063b829981be9f8"
     }
   ],
   "dependencies": [],

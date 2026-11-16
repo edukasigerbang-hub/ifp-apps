@@ -26,10 +26,34 @@
       "sha256": "df35bb99415028f159cefc9908c74306df905ed1aca4c645af0f46ca5ac7fc9d"
     },
     {
-      "path": "assets/aktivitas-pengukuran-panjang-berat.png",
+      "path": "assets/aktivitas-pengukuran-panjang-berat-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 6275,
-      "sha256": "17da298c03bc20467513a7c5f046960342b9e19b59c72ed13b25f716936110ca"
+      "sizeBytes": 3894,
+      "sha256": "872f55794c9a84e35b10cd5ae62bab3124b8b305b8713ef73429ed784b152e06"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5085,
+      "sha256": "3ac51d9f4b5dee4f38ec6f3ca3372b8a9be9d1d4d200f3d6f371613ff67ff799"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5225,
+      "sha256": "7ea896dcca75240e301b98b148fc9bd0070e07ef413c66e4906e83778e7b5b63"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9920,
+      "sha256": "b2e7be6279e0aacba2ec571c29300d3081408c8df206697035d7177db6ff01f6"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-panjang-berat-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7933,
+      "sha256": "68f0d1854048920b01cc2937b332bf8dbc602d00a53bb6c1ea9fb90d987d4f60"
     }
   ],
   "dependencies": [],

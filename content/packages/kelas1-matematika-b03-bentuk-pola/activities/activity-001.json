@@ -5,28 +5,32 @@
   "title": "Mengamati Bentuk dan Pola",
   "instructions": "Amati gambar, lalu sebutkan bentuk dan polanya.",
   "assets": [
-    "assets/aktivitas-bentuk-pola.png"
+    "assets/aktivitas-bentuk-pola-1.png",
+    "assets/aktivitas-bentuk-pola-2.png",
+    "assets/aktivitas-bentuk-pola-3.png",
+    "assets/aktivitas-bentuk-pola-4.png",
+    "assets/aktivitas-bentuk-pola-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bentuk yang bulat disebut ...",
-        "assetPath": "assets/aktivitas-bentuk-pola.png",
-        "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus.",
+        "assetPath": "assets/aktivitas-bentuk-pola-1.png",
+        "altText": "Lingkaran merah besar, satu koin bundar, dan satu jam bundar.",
         "reveal": "Lingkaran.",
         "hint": "Tidak punya sudut."
       },
       {
         "prompt": "Bentuk dengan 4 sisi sama disebut ...",
-        "assetPath": "assets/aktivitas-bentuk-pola.png",
-        "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus.",
+        "assetPath": "assets/aktivitas-bentuk-pola-2.png",
+        "altText": "Persegi kuning besar dengan tanda sisi sama panjang dan empat sudut siku-siku, dibagi menjadi empat jendela kecil.",
         "reveal": "Persegi.",
         "hint": "Semua sisi sama."
       },
       {
         "prompt": "Apa pola merah-kuning-merah?",
-        "assetPath": "assets/aktivitas-bentuk-pola.png",
-        "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus.",
+        "assetPath": "assets/aktivitas-bentuk-pola-3.png",
+        "altText": "Pita pola lingkaran merah dan persegi kuning bergantian, berakhir pada kotak kosong bergaris putus-putus.",
         "reveal": "Pola warna berulang.",
         "hint": "Lanjutkan polanya."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bentuk dan Pola?",
         "reveal": "Mengenal bentuk datar dan melanjutkan pola.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-bentuk-pola.png",
-        "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus."
+        "assetPath": "assets/aktivitas-bentuk-pola-4.png",
+        "altText": "Tiga kartu rangkuman: lingkaran merah, persegi kuning, dan pita pola tiga bentuk."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-bentuk-pola.png",
+        "assetPath": "assets/aktivitas-bentuk-pola-5.png",
         "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Dua pita pola berulang: lingkaran merah dan persegi kuning bergantian, lalu segitiga biru dan lingkaran teal; setiap pita berakhir pada kotak kosong bergaris putus-putus."
+    "altText": "Lima ilustrasi bentuk dan pola: lingkaran besar dengan benda bulat, persegi berjendela, pita pola merah-kuning, tiga kartu rangkuman, dan dua pita pola berulang."
   }
 }

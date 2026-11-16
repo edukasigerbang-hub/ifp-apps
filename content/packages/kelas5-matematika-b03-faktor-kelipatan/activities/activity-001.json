@@ -5,28 +5,32 @@
   "title": "Mengamati Faktor dan Kelipatan",
   "instructions": "Amati diagram, lalu diskusikan faktor dan kelipatan.",
   "assets": [
-    "assets/aktivitas-faktor-kelipatan-kpk.png"
+    "assets/aktivitas-faktor-kelipatan-kpk-1.png",
+    "assets/aktivitas-faktor-kelipatan-kpk-2.png",
+    "assets/aktivitas-faktor-kelipatan-kpk-3.png",
+    "assets/aktivitas-faktor-kelipatan-kpk-4.png",
+    "assets/aktivitas-faktor-kelipatan-kpk-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa faktor dari 12?",
-        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk.png",
-        "altText": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama.",
+        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk-1.png",
+        "altText": "Garis dua belas titik dengan tiga busur berwarna menghubungkan pasangan faktor satu dan dua belas, dua dan enam, serta tiga dan empat; titik pertama dan terakhir dilingkari oranye.",
         "reveal": "1, 2, 3, 4, 6, dan 12.",
         "hint": "Bilangan yang membagi habis."
       },
       {
         "prompt": "Apa kelipatan 4?",
-        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk.png",
-        "altText": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama.",
+        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk-2.png",
+        "altText": "Garis bilangan dua puluh empat dengan titik teal pada setiap kelipatan empat; titik kelipatan dua puluh empat ditandai lingkaran oranye.",
         "reveal": "4, 8, 12, 16, ...",
         "hint": "Kalikan dengan bilangan cacah."
       },
       {
         "prompt": "Berapa KPK 4 dan 6?",
-        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk.png",
-        "altText": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama.",
+        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk-3.png",
+        "altText": "Dua garis bilangan bertumpuk: kelipatan empat bertitik teal dan kelipatan enam bertitik biru; batang oranye tegak menandai bilangan dua belas.",
         "reveal": "12.",
         "hint": "Kelipatan persekutuan terkecil."
       },
@@ -34,15 +38,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Faktor, Kelipatan, KPK, dan FPB?",
         "reveal": "Menentukan faktor, kelipatan, KPK, dan FPB dua bilangan.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk.png",
-        "altText": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama."
+        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk-4.png",
+        "altText": "Tiga kartu rangkuman: busur pasangan faktor, garis bilangan bertitik kelipatan empat, dan dua langkah berpanah dengan tanda centang."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
-        "reveal": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama.",
+        "reveal": "Dua lingkaran beririsan berisi kelipatan empat di kiri dan kelipatan enam di kanan; dua titik di daerah irisan berwarna oranye menandai kelipatan persekutuan.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk.png",
-        "altText": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama."
+        "assetPath": "assets/aktivitas-faktor-kelipatan-kpk-5.png",
+        "altText": "Dua lingkaran beririsan berisi kelipatan empat di kiri dan kelipatan enam di kanan; dua titik di daerah irisan berwarna oranye menandai kelipatan persekutuan."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Dua garis bilangan: kelipatan empat dan kelipatan enam. Kelipatan persekutuan ditandai batang oranye, dan dua lingkaran beriris menunjukkan kelipatan bersama."
+    "altText": "Lima ilustrasi faktor dan kelipatan: busur pasangan faktor dua belas, garis bilangan kelipatan empat, dua garis bilangan dengan penanda kelipatan persekutuan, tiga kartu rangkuman, dan dua lingkaran kelipatan yang beririsan."
   }
 }

@@ -5,28 +5,32 @@
   "title": "Menghitung Bersama",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/aktivitas-penjumlahan-10.png"
+    "assets/aktivitas-penjumlahan-10-1.png",
+    "assets/aktivitas-penjumlahan-10-2.png",
+    "assets/aktivitas-penjumlahan-10-3.png",
+    "assets/aktivitas-penjumlahan-10-4.png",
+    "assets/aktivitas-penjumlahan-10-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 2 + 3?",
-        "assetPath": "assets/aktivitas-penjumlahan-10.png",
-        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
+        "assetPath": "assets/aktivitas-penjumlahan-10-1.png",
+        "altText": "Dua titik merah ditambah tiga titik biru menghasilkan lima titik teal.",
         "reveal": "5.",
         "hint": "Hitung 2 lalu tambah 3."
       },
       {
         "prompt": "Berapa 5 − 2?",
-        "assetPath": "assets/aktivitas-penjumlahan-10.png",
-        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
+        "assetPath": "assets/aktivitas-penjumlahan-10-2.png",
+        "altText": "Lima titik teal dengan dua titik terakhir dicoret, tanda sama dengan, lalu tiga titik teal.",
         "reveal": "3.",
         "hint": "Ambil 2 dari 5."
       },
       {
         "prompt": "Bagaimana menghitung dengan jari?",
-        "assetPath": "assets/aktivitas-penjumlahan-10.png",
-        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
+        "assetPath": "assets/aktivitas-penjumlahan-10-3.png",
+        "altText": "Dua tangan terbuka, tangan kiri mengangkat dua jari dan tangan kanan mengangkat tiga jari dengan tanda tambah di antaranya.",
         "reveal": "Buka jari sesuai bilangan.",
         "hint": "Hitung satu per satu."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 10?",
         "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 10.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-penjumlahan-10.png",
-        "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
+        "assetPath": "assets/aktivitas-penjumlahan-10-4.png",
+        "altText": "Tiga kartu rangkuman: lima titik, lima titik dengan dua dicoret, dan dua ubin tanda tambah serta kurang."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-penjumlahan-10.png",
+        "assetPath": "assets/aktivitas-penjumlahan-10-5.png",
         "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
+    "altText": "Lima ilustrasi penjumlahan dan pengurangan sampai 10: dua titik ditambah tiga titik, lima titik dengan dua dicoret, dua tangan dengan jari terangkat, tiga kartu rangkuman, dan baris hitung dua sampai lima titik."
   }
 }

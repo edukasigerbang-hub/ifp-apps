@@ -26,7 +26,31 @@
       "sha256": "8d3dee7018dbe2706c66760c799ec3f99914cafa8ed0f4640a17d6d53772ddf2"
     },
     {
-      "path": "assets/aktivitas-peluang.png",
+      "path": "assets/aktivitas-peluang-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7301,
+      "sha256": "d9d8b29259396e61b79b4896b3d0080530bfe7796c5ffe379517b4b527ce2f56"
+    },
+    {
+      "path": "assets/aktivitas-peluang-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8691,
+      "sha256": "307dba4c1f34634829646237e5f61dc526fe58257f9aaa3047ae23478bc31745"
+    },
+    {
+      "path": "assets/aktivitas-peluang-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10570,
+      "sha256": "64df5a10b9e993dcbd95784aa208545d83df9073ad8c9b195f56afdeca333a79"
+    },
+    {
+      "path": "assets/aktivitas-peluang-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 10664,
+      "sha256": "faaebeb10352bd48a804e836b4fc27627e02670f4a057b4fe8a734dd89c43e80"
+    },
+    {
+      "path": "assets/aktivitas-peluang-5.png",
       "mediaType": "image/png",
       "sizeBytes": 10664,
       "sha256": "0fcf7996758a458384d16c62a4fcd62712d1239a5e05330004fb6aaacf2228d1"

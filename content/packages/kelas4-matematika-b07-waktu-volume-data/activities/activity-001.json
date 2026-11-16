@@ -5,28 +5,32 @@
   "title": "Mengamati Waktu, Volume, dan Data",
   "instructions": "Amati tiga panel gambar, lalu jawab pertanyaan.",
   "assets": [
-    "assets/aktivitas-waktu-volume-data.png"
+    "assets/aktivitas-waktu-volume-data-1.png",
+    "assets/aktivitas-waktu-volume-data-2.png",
+    "assets/aktivitas-waktu-volume-data-3.png",
+    "assets/aktivitas-waktu-volume-data-4.png",
+    "assets/aktivitas-waktu-volume-data-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Pukul berapa waktu yang ditunjukkan jam pada panel pertama?",
-        "assetPath": "assets/aktivitas-waktu-volume-data.png",
-        "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom.",
+        "assetPath": "assets/aktivitas-waktu-volume-data-1.png",
+        "altText": "Jam dinding besar dengan jarum pendek di antara tujuh dan delapan serta jarum panjang di angka enam.",
         "reveal": "Pukul 07.30 (tujuh lewat tiga puluh menit).",
         "hint": "Jarum pendek di antara 7 dan 8; jarum panjang di angka 6."
       },
       {
         "prompt": "Berapa volume air pada gelas ukur?",
-        "assetPath": "assets/aktivitas-waktu-volume-data.png",
-        "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom.",
+        "assetPath": "assets/aktivitas-waktu-volume-data-2.png",
+        "altText": "Gelas ukur dengan garis skala di sisi kanan dan air terisi lebih dari separuh tinggi gelas.",
         "reveal": "Sekitar 600 mL, terbaca dari garis skala.",
         "hint": "Baca garis skala yang sejajar permukaan air."
       },
       {
         "prompt": "Data apa yang paling banyak pada diagram batang?",
-        "assetPath": "assets/aktivitas-waktu-volume-data.png",
-        "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom.",
+        "assetPath": "assets/aktivitas-waktu-volume-data-3.png",
+        "altText": "Diagram batang empat batang; batang kedua tertinggi berwarna oranye.",
         "reveal": "Batang berwarna merah paling tinggi, berarti datanya paling banyak.",
         "hint": "Bandingkan tinggi batang."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Waktu, Volume, dan Penyajian Data?",
         "reveal": "Membaca waktu dan volume, mengonversi satuan, serta membaca diagram batang.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-waktu-volume-data.png",
-        "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom."
+        "assetPath": "assets/aktivitas-waktu-volume-data-4.png",
+        "altText": "Tiga kartu rangkuman: jam dinding, gelas ukur kecil, dan diagram batang tiga batang dengan batang tertinggi ditandai."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-waktu-volume-data.png",
+        "assetPath": "assets/aktivitas-waktu-volume-data-5.png",
         "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Jam dinding, gelas ukur berisi air dengan tanda skala, diagram batang empat batang, dan tabel kosong tiga kolom."
+    "altText": "Lima ilustrasi waktu volume data: jam menunjukkan pukul tujuh lewat tiga puluh, gelas ukur berisi air, diagram batang dengan batang tertinggi disorot, tiga kartu rangkuman, dan gabungan jam gelas ukur diagram batang serta tabel."
   }
 }

@@ -26,7 +26,31 @@
       "sha256": "d3ee871eb8bdea1d0da9b6e2e6e8d3f55ccf6a3a3fce52245d15c54729e783e4"
     },
     {
-      "path": "assets/aktivitas-penyajian-data.png",
+      "path": "assets/aktivitas-penyajian-data-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6207,
+      "sha256": "affb8dd228a138816ac65522773cf4695dcf33a2a5965de0094a5d8c903cef8c"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5817,
+      "sha256": "c217aa94659ff3b489855cddd4afe92db1e7f01904081f473d6f44e372c52f80"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7276,
+      "sha256": "63c320b6db525b6097c9806fdc773245b2eae336e50df2880fddc1911b2220a2"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7510,
+      "sha256": "6b9656db6e6af1d4a29ebc6ad177612cf954dc078724d35bf738c83e2971c997"
+    },
+    {
+      "path": "assets/aktivitas-penyajian-data-5.png",
       "mediaType": "image/png",
       "sizeBytes": 7427,
       "sha256": "94e523f5df995dad628aaa63f0663a5de73a3b33ec80b4185c1563fe8e010927"

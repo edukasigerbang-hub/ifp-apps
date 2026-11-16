@@ -5,28 +5,32 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati empat bangun datar pada gambar, lalu diskusikan sifatnya.",
   "assets": [
-    "assets/aktivitas-bangun-datar-kelas4.png"
+    "assets/aktivitas-bangun-datar-kelas4-1.png",
+    "assets/aktivitas-bangun-datar-kelas4-2.png",
+    "assets/aktivitas-bangun-datar-kelas4-3.png",
+    "assets/aktivitas-bangun-datar-kelas4-4.png",
+    "assets/aktivitas-bangun-datar-kelas4-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Sebutkan bangun datar yang terlihat pada gambar.",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
-        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4-1.png",
+        "altText": "Empat bangun datar berjajar: lingkaran, persegi, persegi panjang, dan segitiga.",
         "reveal": "Persegi, persegi panjang, segitiga, dan lingkaran.",
         "hint": "Perhatikan jumlah sisi dan bentuknya."
       },
       {
         "prompt": "Bangun mana yang memiliki empat sisi sama panjang?",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
-        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4-2.png",
+        "altText": "Persegi biru muda besar dengan tanda pendek di setiap sisi dan tanda sudut siku-siku di keempat sudutnya.",
         "reveal": "Persegi memiliki empat sisi sama panjang dan empat sudut siku-siku.",
         "hint": "Bandingkan sisi-sisi pada persegi."
       },
       {
         "prompt": "Bagaimana cara menghitung keliling persegi panjang?",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
-        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4-3.png",
+        "altText": "Persegi panjang dengan panah teal di keempat sisinya; sisi mendatar lebih panjang daripada sisi tegak.",
         "reveal": "Keliling = 2 × (panjang + lebar).",
         "hint": "Jumlahkan semua sisi."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Sifat, Keliling, dan Luas Bangun Datar?",
         "reveal": "Mengenali sifat bangun datar serta menghitung keliling dan luas persegi dan persegi panjang.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
-        "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4-4.png",
+        "altText": "Tiga kartu rangkuman: bangun berjajar, persegi panjang berpanah keliling, dan petak empat kali lima dengan tujuh kotak diwarnai."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas4.png",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas4-5.png",
         "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
+    "altText": "Lima ilustrasi bangun datar kelas 4: empat bangun berjajar, persegi dengan tanda sisi dan sudut, persegi panjang berpanah keliling, tiga kartu rangkuman, dan persegi panjang berpetak dengan panah keliling."
   }
 }

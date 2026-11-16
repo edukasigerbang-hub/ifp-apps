@@ -26,7 +26,31 @@
       "sha256": "54b59a61d7ffd104e5587ef49a4d34ede70fe0aa2ab9bfc9c9130d583ea28c1f"
     },
     {
-      "path": "assets/aktivitas-bangun-datar-kelas2.png",
+      "path": "assets/aktivitas-bangun-datar-kelas2-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7379,
+      "sha256": "3679fd6e4743443c02837e3b28b661c710042964707e9866bf7f91492c44d09e"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas2-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5006,
+      "sha256": "e6dff16b8ba815bf6534e139aed75a81a23d50ee78b21c52c47bd9cb2bd2e4cb"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas2-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6975,
+      "sha256": "e6300cd2649ade2fe4d8b5685e2b36d5ffd41b7d6e2427572e19230d29d1b471"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas2-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8676,
+      "sha256": "a6159be7f278cc91db8f8fb2fbd6f7b47dca327389c4f7db5c0ba2dfe7cecefb"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-kelas2-5.png",
       "mediaType": "image/png",
       "sizeBytes": 6727,
       "sha256": "044cdcf37ba1a0b07a70510c68b2c69927d405f638cd23742b990878b0226271"

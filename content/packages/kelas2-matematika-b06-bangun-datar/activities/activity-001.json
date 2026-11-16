@@ -5,28 +5,32 @@
   "title": "Mengamati Bangun Datar",
   "instructions": "Amati gambar, lalu sebutkan bangunnya.",
   "assets": [
-    "assets/aktivitas-bangun-datar-kelas2.png"
+    "assets/aktivitas-bangun-datar-kelas2-1.png",
+    "assets/aktivitas-bangun-datar-kelas2-2.png",
+    "assets/aktivitas-bangun-datar-kelas2-3.png",
+    "assets/aktivitas-bangun-datar-kelas2-4.png",
+    "assets/aktivitas-bangun-datar-kelas2-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Bentuk bulat disebut ...",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas2.png",
-        "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas2-1.png",
+        "altText": "Lingkaran teal besar dengan dua benda bulat kecil di bawahnya.",
         "reveal": "Lingkaran.",
         "hint": "Tanpa sudut."
       },
       {
         "prompt": "Bentuk dengan 4 sisi sama disebut ...",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas2.png",
-        "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas2-2.png",
+        "altText": "Persegi kuning besar dengan tanda sisi sama panjang, empat sudut siku-siku, dan jendela empat petak.",
         "reveal": "Persegi.",
         "hint": "Semua sisi sama."
       },
       {
         "prompt": "Bentuk dengan 3 sisi disebut ...",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas2.png",
-        "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga.",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas2-3.png",
+        "altText": "Segitiga biru besar dengan tiga segitiga kecil berwarna teal, oranye, dan hijau di bawahnya.",
         "reveal": "Segitiga.",
         "hint": "Seperti atap."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bangun Datar?",
         "reveal": "Mengenal bangun datar dan cirinya.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas2.png",
-        "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga."
+        "assetPath": "assets/aktivitas-bangun-datar-kelas2-4.png",
+        "altText": "Tiga kartu rangkuman: lingkaran teal, persegi bertanda sisi, dan persegi panjang merah muda."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-bangun-datar-kelas2.png",
+        "assetPath": "assets/aktivitas-bangun-datar-kelas2-5.png",
         "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Persegi dengan tanda sisi sama panjang, persegi panjang, lingkaran, dan segitiga."
+    "altText": "Lima ilustrasi bangun datar: lingkaran besar dengan benda bulat, persegi berjendela dengan tanda sisi, segitiga dengan benda bersudut tiga, tiga kartu bangun, dan empat bangun dengan cirinya."
   }
 }

@@ -1,5 +1,21 @@
 import path from "node:path";
 
+const MATERIAL_URL = "#player/kelas4-matematika-b01-bilangan-cacah/bilangan-cacah-besar";
+const EXPECTED_ASSETS = [
+  "aktivitas-bilangan-cacah-1.png",
+  "aktivitas-bilangan-cacah-2.png",
+  "aktivitas-bilangan-cacah-3.png",
+  "aktivitas-bilangan-cacah-4.png",
+  "aktivitas-bilangan-cacah-5.png"
+];
+const EXPECTED_PROMPTS = [
+  "Berapa bilangan yang ditunjukkan balok?",
+  "Apa nilai tempat angka 3 pada 12.345?",
+  "Apa nilai tempat angka 4 pada 12.345?",
+  "Bagaimana membandingkan 12.345 dan 12.354?",
+  "Bagaimana mengurutkan 12.345, 12.354, dan 12.435?"
+];
+
 function assert(condition, message) {
   if (!condition) {
     throw new Error(message);
@@ -21,21 +37,43 @@ async function clickButton(page, label) {
   assert(result === "clicked", `Tombol "${label}" tidak dapat diklik (${result}).`);
 }
 
-function readIllustration() {
+function readStepIllustration() {
   return `(() => {
     const shared = document.querySelectorAll('[data-exploration-illustration="shared"]');
     const perStep = document.querySelectorAll('[data-exploration-illustration="step"]');
-    const img = shared[0] ?? null;
+    const img = perStep[0] ?? null;
     return {
       shared: shared.length,
       perStep: perStep.length,
-      marked: Boolean(img && img.dataset.e2eMark === "tetap"),
       loaded: Boolean(img && img.complete && img.naturalWidth > 0),
       src: img ? img.getAttribute("src") : null,
+      alt: img ? img.getAttribute("alt") : null,
       progress: document.querySelector('[role="progressbar"][aria-label="Progres eksplorasi"]')
         ?.getAttribute("aria-valuenow") ?? null
     };
   })()`;
+}
+
+async function waitForStep(page, index, prompt) {
+  const stepNumber = String(index + 1);
+  await page.waitFor(
+    `(() => {
+      const progress = document.querySelector('[role="progressbar"][aria-label="Progres eksplorasi"]');
+      const img = document.querySelector('[data-exploration-illustration="step"]');
+      const promptShown = document.body.textContent.includes(${JSON.stringify(prompt)});
+      return progress?.getAttribute("aria-valuenow") === ${JSON.stringify(stepNumber)}
+        && promptShown
+        && Boolean(img);
+    })()`,
+    { label: `langkah ${stepNumber}`, timeoutMs: 15_000 }
+  );
+  await page.waitFor(
+    `(() => {
+      const img = document.querySelector('[data-exploration-illustration="step"]');
+      return Boolean(img && img.complete && img.naturalWidth > 0);
+    })()`,
+    { label: `ilustrasi langkah ${stepNumber} termuat`, timeoutMs: 15_000 }
+  );
 }
 
 export async function run({ page, artifactDir, log }) {
@@ -44,9 +82,7 @@ export async function run({ page, artifactDir, log }) {
     { label: "bridge Tauri" }
   );
   const origin = await page.evaluate("window.location.origin");
-  await page.send("Page.navigate", {
-    url: `${origin}/?e2e=ilustrasi#player/kelas4-matematika-b01-bilangan-cacah/bilangan-cacah-besar`
-  });
+  await page.send("Page.navigate", { url: `${origin}/?e2e=ilustrasi${MATERIAL_URL}` });
   await page.waitFor(`window.location.search.includes("e2e=ilustrasi")`, {
     label: "dokumen baru",
     timeoutMs: 30_000
@@ -61,54 +97,45 @@ export async function run({ page, artifactDir, log }) {
   );
 
   await clickButton(page, "Eksplorasi Terbimbing");
-  await page.waitFor(`document.body.textContent.includes("Berapa bilangan yang ditunjukkan balok?")`, {
-    label: "langkah pertama eksplorasi"
-  });
-  await page.waitFor(
-    `(() => {
-      const img = document.querySelector('[data-exploration-illustration="shared"]');
-      return Boolean(img && img.complete && img.naturalWidth > 0);
-    })()`,
-    { label: "ilustrasi bersama termuat", timeoutMs: 15_000 }
-  );
 
-  const first = await page.evaluate(readIllustration());
-  assert(first.shared === 1, `Langkah 1 merender ${first.shared} ilustrasi bersama, harus 1.`);
-  assert(first.perStep === 0, `Langkah 1 masih merender ${first.perStep} gambar per langkah.`);
-  assert(first.loaded, `Ilustrasi bersama tidak termuat (src ${first.src}).`);
-  assert(first.progress === "1", `Progres langkah ${first.progress}, harus 1.`);
-  log(`Langkah 1: satu ilustrasi (${first.src}) di atas langkah, tanpa gambar per langkah.`);
-  await page.screenshot(path.join(artifactDir, "ilustrasi-langkah-1.png"));
-
-  await page.evaluate(`
-    (() => {
-      const img = document.querySelector('[data-exploration-illustration="shared"]');
-      img.dataset.e2eMark = "tetap";
-      return true;
-    })()
-  `);
-
-  for (const expected of ["2", "3"]) {
-    await clickButton(page, "Lanjut");
-    await page.waitFor(
-      `document.querySelector('[role="progressbar"][aria-label="Progres eksplorasi"]')?.getAttribute("aria-valuenow") === ${JSON.stringify(expected)}`,
-      { label: `langkah ${expected}` }
+  const sources = [];
+  const alts = [];
+  for (let index = 0; index < EXPECTED_PROMPTS.length; index += 1) {
+    const stepNumber = String(index + 1);
+    await waitForStep(page, index, EXPECTED_PROMPTS[index]);
+    const step = await page.evaluate(readStepIllustration());
+    assert(step.shared === 0, `Langkah ${stepNumber} masih merender ${step.shared} ilustrasi bersama.`);
+    assert(step.perStep === 1, `Langkah ${stepNumber} merender ${step.perStep} ilustrasi per langkah, harus 1.`);
+    assert(step.loaded, `Ilustrasi langkah ${stepNumber} tidak termuat (src ${step.src}).`);
+    assert(step.progress === stepNumber, `Progres langkah ${step.progress}, harus ${stepNumber}.`);
+    assert(
+      typeof step.src === "string" && step.src.endsWith(EXPECTED_ASSETS[index]),
+      `Langkah ${stepNumber} memakai ${step.src}, harus berakhir ${EXPECTED_ASSETS[index]}.`
     );
-    const step = await page.evaluate(readIllustration());
-    assert(step.shared === 1, `Langkah ${expected} merender ${step.shared} ilustrasi bersama, harus 1.`);
-    assert(step.perStep === 0, `Langkah ${expected} merender ${step.perStep} gambar per langkah.`);
-    assert(step.loaded, `Ilustrasi hilang pada langkah ${expected}.`);
-    assert(step.marked, `Ilustrasi langkah ${expected} dipasang ulang (node berganti).`);
-    await page.screenshot(path.join(artifactDir, `ilustrasi-langkah-${expected}.png`));
+    assert(
+      typeof step.alt === "string" && step.alt.trim().length >= 20,
+      `Alt ilustrasi langkah ${stepNumber} terlalu pendek (${step.alt}).`
+    );
+    sources.push(step.src);
+    alts.push(step.alt.trim());
+    log(`Langkah ${stepNumber}: ${step.src} · alt ${step.alt.trim().length} karakter.`);
+    await page.screenshot(path.join(artifactDir, `ilustrasi-langkah-${stepNumber}.png`));
+
+    if (index < EXPECTED_PROMPTS.length - 1) {
+      await clickButton(page, "Lanjut");
+    }
   }
-  log("Langkah 2 dan 3 tetap memakai simpul gambar yang sama (tidak dipasang ulang).");
+
+  assert(new Set(sources).size === sources.length, `Ada gambar langkah yang sama: ${sources.join(", ")}.`);
+  assert(new Set(alts).size === alts.length, "Ada alt langkah yang sama.");
+  log("Lima langkah memakai lima berkas gambar dan lima teks alt berbeda.");
 
   await clickButton(page, "Sebelumnya");
-  await page.waitFor(
-    `document.querySelector('[role="progressbar"][aria-label="Progres eksplorasi"]')?.getAttribute("aria-valuenow") === "2"`,
-    { label: "kembali ke langkah 2" }
-  );
-  const back = await page.evaluate(readIllustration());
-  assert(back.shared === 1 && back.marked, "Ilustrasi berganti saat mundur ke langkah sebelumnya.");
-  log("Mundur satu langkah tidak menggandakan atau memasang ulang ilustrasi.");
+  await waitForStep(page, 3, EXPECTED_PROMPTS[3]);
+  const back = await page.evaluate(readStepIllustration());
+  assert(back.shared === 0 && back.perStep === 1, "Ilustrasi per langkah hilang saat mundur satu langkah.");
+  assert(back.src === sources[3], `Mundur ke langkah 4 memuat ${back.src}, harus ${sources[3]}.`);
+  assert(back.alt.trim() === alts[3], "Alt langkah 4 berubah saat mundur.");
+  await page.screenshot(path.join(artifactDir, "ilustrasi-langkah-4-kembali.png"));
+  log("Mundur ke langkah 4 mengembalikan gambar dan alt langkah 4.");
 }

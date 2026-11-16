@@ -5,42 +5,46 @@
   "title": "Eksplorasi Terbimbing",
   "instructions": "Amati gambar, lalu ikuti lima langkah eksplorasi.",
   "assets": [
-    "assets/aktivitas-bilangan-cacah.png"
+    "assets/aktivitas-bilangan-cacah-1.png",
+    "assets/aktivitas-bilangan-cacah-2.png",
+    "assets/aktivitas-bilangan-cacah-3.png",
+    "assets/aktivitas-bilangan-cacah-4.png",
+    "assets/aktivitas-bilangan-cacah-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa bilangan yang ditunjukkan balok?",
-        "assetPath": "assets/aktivitas-bilangan-cacah.png",
-        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah-1.png",
+        "altText": "Papan nilai tempat lima kolom berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat batang puluhan, dan lima satuan.",
         "reveal": "12.345, sebuah bilangan cacah besar.",
         "hint": "Hitung setiap nilai tempat."
       },
       {
         "prompt": "Apa nilai tempat angka 3 pada 12.345?",
-        "assetPath": "assets/aktivitas-bilangan-cacah.png",
-        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah-2.png",
+        "altText": "Papan nilai tempat lima kolom dengan kolom ratusan berisi tiga ratusan disorot oranye.",
         "reveal": "Ratusan; nilainya 300.",
         "hint": "Urutan: puluh ribuan, ribuan, ratusan, puluhan, satuan."
       },
       {
         "prompt": "Apa nilai tempat angka 4 pada 12.345?",
-        "assetPath": "assets/aktivitas-bilangan-cacah.png",
-        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah-3.png",
+        "altText": "Papan nilai tempat lima kolom dengan kolom puluhan berisi empat batang disorot oranye.",
         "reveal": "Puluhan; nilainya 40.",
         "hint": "Lihat posisi dari kanan."
       },
       {
         "prompt": "Bagaimana membandingkan 12.345 dan 12.354?",
-        "assetPath": "assets/aktivitas-bilangan-cacah.png",
-        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah-4.png",
+        "altText": "Dua papan nilai tempat bertumpuk; keduanya sama pada tiga kolom kiri, kolom puluhan dan satuan disorot oranye dengan jumlah berbeda.",
         "reveal": "12.354 lebih besar; bandingkan dari kiri.",
         "hint": "Angka ribuan sama, lanjut ke ratusan."
       },
       {
         "prompt": "Bagaimana mengurutkan 12.345, 12.354, dan 12.435?",
-        "assetPath": "assets/aktivitas-bilangan-cacah.png",
-        "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan.",
+        "assetPath": "assets/aktivitas-bilangan-cacah-5.png",
+        "altText": "Tiga papan tiga kolom berjajar dari kiri ke kanan dengan panah di antaranya: tiga ratusan empat puluhan lima satuan, tiga ratusan lima puluhan empat satuan, dan empat ratusan tiga puluhan lima satuan.",
         "reveal": "12.345 < 12.354 < 12.435.",
         "hint": "Bandingkan angka pada nilai tempat yang sama."
       }
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Lima kolom nilai tempat berisi satu kubus puluh ribuan, dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan."
+    "altText": "Lima ilustrasi bilangan cacah: papan nilai tempat lima kolom, kolom ratusan disorot, kolom puluhan disorot, dua papan pembanding, dan tiga papan urutan dengan tanda panah."
   }
 }

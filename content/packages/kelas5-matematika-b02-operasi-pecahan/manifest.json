@@ -26,7 +26,31 @@
       "sha256": "76bfc30fce07b570f52a4a4e80e231958b9232a0e9ac778d9216327d38a74eaa"
     },
     {
-      "path": "assets/aktivitas-operasi-pecahan.png",
+      "path": "assets/aktivitas-operasi-pecahan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5065,
+      "sha256": "68603574bc9c795088812ba58db39a5057bf71479793fa0e24c7d190f1b25cd6"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4957,
+      "sha256": "a6b0fbf767a6825b5dce346f8387771e81b7b7511de9be353d4ea7731743390a"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6704,
+      "sha256": "0a5b27556a7d0990466aefe29deb8bac863ee1613a81f4776095a110b192dbc3"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6717,
+      "sha256": "8c57696dc33a5517943ea21151ca0bb653ada236dd77d8b091eb4de0c65fb37f"
+    },
+    {
+      "path": "assets/aktivitas-operasi-pecahan-5.png",
       "mediaType": "image/png",
       "sizeBytes": 5460,
       "sha256": "3296d510ed3764f613735ac74ac4119c56caadc0154858d526f42c1e394b69ce"

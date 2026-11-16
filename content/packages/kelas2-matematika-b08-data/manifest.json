@@ -26,10 +26,34 @@
       "sha256": "d2d5c775e95779f59d84d5dc795f4946209b37a10865d276c01dd3b47f0c01ec"
     },
     {
-      "path": "assets/aktivitas-data.png",
+      "path": "assets/aktivitas-data-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 6663,
-      "sha256": "43e79da3e890f528887365559e32ef80f583194fa812bd63f1e0d6a65488a2ba"
+      "sizeBytes": 5783,
+      "sha256": "8e54597e87a23fb73490d1a6bd18b5b929caf530971e9cdf773f73bfa775eece"
+    },
+    {
+      "path": "assets/aktivitas-data-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5945,
+      "sha256": "5bfb58fcfb3d2ad115bcd3d6bdc40989193bffd7795a791a67766640dfa62c65"
+    },
+    {
+      "path": "assets/aktivitas-data-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7188,
+      "sha256": "ca134f62edc2166952a8b9da579d7316ee8a6c1ff3d27996c84a12d6c747df28"
+    },
+    {
+      "path": "assets/aktivitas-data-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7490,
+      "sha256": "1d0f7cc21aa647426235f26ae6e40638b902128838bb688f941f5e630222d48a"
+    },
+    {
+      "path": "assets/aktivitas-data-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6214,
+      "sha256": "dc5665fbcc11573cdd9e959be26d2d183cfc9785525c8dfdd21bdd5eefeef0a3"
     }
   ],
   "dependencies": [],

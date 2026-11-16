@@ -26,10 +26,34 @@
       "sha256": "fafca6d37af0c0a2529225c85ea0d88a89c58d5215d26effc2e3300ad1987462"
     },
     {
-      "path": "assets/aktivitas-pengukuran-sederhana.png",
+      "path": "assets/aktivitas-pengukuran-sederhana-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 8399,
-      "sha256": "e831888ea5a2eacb235d297ecfd0a8031d4bfd14b62efba7187af9e1acb47af8"
+      "sizeBytes": 4388,
+      "sha256": "76354a958bfaf4741df91339e1da95b51b01e428b069e4380215c44f06775dfc"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4599,
+      "sha256": "b618925a6825e47b19ffed6e6ce438a55e424a850d98a6ae3a93727170528b52"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8215,
+      "sha256": "66e47e711a7ec501bd925e0c93d125f8d515529876c4cb14b482b863e1cb8d8c"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9732,
+      "sha256": "2e41f68b77fa00e62e0f03e8f7ef202e7c1a9a0d2a8b91ae0f0273182baae3d4"
+    },
+    {
+      "path": "assets/aktivitas-pengukuran-sederhana-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4978,
+      "sha256": "8c23d17370702348e0e21eb1904703caacf4b5171c1d93ffd4af49f567bbd44c"
     }
   ],
   "dependencies": [],

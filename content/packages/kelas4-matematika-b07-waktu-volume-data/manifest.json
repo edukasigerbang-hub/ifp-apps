@@ -26,7 +26,31 @@
       "sha256": "116ecaf5d3e824684caa5a619c5f9182e23f857ce8d2cd42363af73c8a211529"
     },
     {
-      "path": "assets/aktivitas-waktu-volume-data.png",
+      "path": "assets/aktivitas-waktu-volume-data-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6702,
+      "sha256": "cca300303268cb8014661c9c4dcbe464c6bfbb0a42b69935f977f3c78e0dbb4f"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4412,
+      "sha256": "feebba6962b1ad4e1877faeb96892d46e0404fb7dc1aa39a75d0ee2af903294b"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6032,
+      "sha256": "62d14a108a1a777c4d8b0b6e6f7802a89c0f80f0081fe627b08b3d09c375e9a1"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8936,
+      "sha256": "52ce042333f0a3629efc2a7cc86f3118a84794d2eede018b8402ef83aba22800"
+    },
+    {
+      "path": "assets/aktivitas-waktu-volume-data-5.png",
       "mediaType": "image/png",
       "sizeBytes": 8442,
       "sha256": "0417f7186e03f6e3070e64321351c7c215c20fb762a525eae8cb7a27264a8b1b"

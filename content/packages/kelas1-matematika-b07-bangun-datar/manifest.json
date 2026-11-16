@@ -26,7 +26,31 @@
       "sha256": "5736480be9872d6cc8a9b255d20384723758c2545342b3b225a6a04389903074"
     },
     {
-      "path": "assets/aktivitas-bangun-datar.png",
+      "path": "assets/aktivitas-bangun-datar-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8011,
+      "sha256": "06665d2dddd5379e87f515347da930f0a1b83e58ae10516276a2dc35239f1b5a"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4440,
+      "sha256": "bd9d5509ae4c90cf940cef71785c677a1b68800b3b5d2c6ab88c78368bc020d8"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6977,
+      "sha256": "adce4d373619a54f6befcc30682aa5548634bde526fe4a93671dfd17a3c9d379"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9173,
+      "sha256": "be20062588a4264c933291dfeaac042d03acf20ba1dac67a17e683971ac71174"
+    },
+    {
+      "path": "assets/aktivitas-bangun-datar-5.png",
       "mediaType": "image/png",
       "sizeBytes": 6171,
       "sha256": "3a9f816ea1a98900e0471d0237e093f31bb8e5b9437d02220fac960fd1ff7177"

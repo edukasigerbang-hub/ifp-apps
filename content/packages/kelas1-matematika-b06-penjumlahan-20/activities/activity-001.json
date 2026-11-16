@@ -5,28 +5,32 @@
   "title": "Menghitung Sampai 20",
   "instructions": "Amati gambar, lalu hitung bersama-sama.",
   "assets": [
-    "assets/aktivitas-penjumlahan-20.png"
+    "assets/aktivitas-penjumlahan-20-1.png",
+    "assets/aktivitas-penjumlahan-20-2.png",
+    "assets/aktivitas-penjumlahan-20-3.png",
+    "assets/aktivitas-penjumlahan-20-4.png",
+    "assets/aktivitas-penjumlahan-20-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Berapa 12 + 5?",
-        "assetPath": "assets/aktivitas-penjumlahan-20.png",
-        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
+        "assetPath": "assets/aktivitas-penjumlahan-20-1.png",
+        "altText": "Kerangka sepuluh dan dua titik ditambah lima titik, panah menuju kerangka sepuluh dan tujuh titik.",
         "reveal": "17.",
         "hint": "Hitung dari 12, maju 5."
       },
       {
         "prompt": "Berapa 18 − 4?",
-        "assetPath": "assets/aktivitas-penjumlahan-20.png",
-        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
+        "assetPath": "assets/aktivitas-penjumlahan-20-2.png",
+        "altText": "Kerangka sepuluh dan delapan titik dikurangi empat titik tercoret, panah menuju kerangka sepuluh dan empat titik.",
         "reveal": "14.",
         "hint": "Hitung mundur 4."
       },
       {
         "prompt": "Berapa 10 + 10?",
-        "assetPath": "assets/aktivitas-penjumlahan-20.png",
-        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
+        "assetPath": "assets/aktivitas-penjumlahan-20-3.png",
+        "altText": "Dua kerangka sepuluh penuh dengan tanda tambah, di bawahnya dua kerangka sepuluh penuh berdempet sebagai dua puluh titik.",
         "reveal": "20.",
         "hint": "Dua kelompok sepuluh."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Penjumlahan dan Pengurangan sampai 20?",
         "reveal": "Menjumlahkan dan mengurangkan bilangan sampai 20.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-penjumlahan-20.png",
-        "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
+        "assetPath": "assets/aktivitas-penjumlahan-20-4.png",
+        "altText": "Tiga kartu rangkuman: kerangka sepuluh, lima titik dengan dua dicoret, dan ubin tambah serta kurang."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-penjumlahan-20.png",
+        "assetPath": "assets/aktivitas-penjumlahan-20-5.png",
         "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kerangka sepuluh penuh ditambah dua titik, lalu tanda tambah dan lima titik di sampingnya."
+    "altText": "Lima ilustrasi penjumlahan dan pengurangan sampai 20: kerangka sepuluh dan dua titik ditambah lima titik, pengurangan delapan belas dikurangi empat, dua kerangka sepuluh, tiga kartu rangkuman, dan susunan kerangka dua puluh."
   }
 }

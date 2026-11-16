@@ -5,28 +5,32 @@
   "title": "Memahami Soal Cerita",
   "instructions": "Gunakan gambar untuk membantu memahami soal cerita tentang berbelanja.",
   "assets": [
-    "assets/aktivitas-pemecahan-masalah.png"
+    "assets/aktivitas-pemecahan-masalah-1.png",
+    "assets/aktivitas-pemecahan-masalah-2.png",
+    "assets/aktivitas-pemecahan-masalah-3.png",
+    "assets/aktivitas-pemecahan-masalah-4.png",
+    "assets/aktivitas-pemecahan-masalah-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Ani membeli 3 buku, masing-masing Rp5.000. Apa informasi pentingnya?",
-        "assetPath": "assets/aktivitas-pemecahan-masalah.png",
-        "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-1.png",
+        "altText": "Tiga buku bertumpuk dan satu lembar uang kertas di sebelahnya.",
         "reveal": "Jumlah buku 3 dan harga per buku Rp5.000.",
         "hint": "Catat angka dan satuannya."
       },
       {
         "prompt": "Operasi apa yang digunakan untuk menghitung total?",
-        "assetPath": "assets/aktivitas-pemecahan-masalah.png",
-        "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-2.png",
+        "altText": "Ubin besar bertanda kali di atas tiga kelompok berisi lima titik.",
         "reveal": "Perkalian: 3 × 5.000 = 15.000.",
         "hint": "Harga yang sama diulang."
       },
       {
         "prompt": "Jika Ani membayar Rp20.000, berapa kembaliannya?",
-        "assetPath": "assets/aktivitas-pemecahan-masalah.png",
-        "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian.",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-3.png",
+        "altText": "Lembar uang kertas di atas, panah ke bawah menuju tiga koin, dan panah melengkung kembali ke kiri.",
         "reveal": "20.000 − 15.000 = 5.000.",
         "hint": "Kurangi total belanja dari uang yang dibayar."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Pemecahan Masalah Matematika?",
         "reveal": "Menyelesaikan soal cerita dengan memahami informasi, memilih operasi, menghitung, dan memeriksa jawaban.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-pemecahan-masalah.png",
-        "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian."
+        "assetPath": "assets/aktivitas-pemecahan-masalah-4.png",
+        "altText": "Tiga kartu rangkuman: kartu cerita bergaris, dua ubin tanda tambah dan kurang, serta dua langkah berpanah dengan tanda centang."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-pemecahan-masalah.png",
+        "assetPath": "assets/aktivitas-pemecahan-masalah-5.png",
         "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Tiga buku bertumpuk, satu lembar uang kertas, dua koin, dan panah kembali menuju buku, menggambarkan pembelian dan kembalian."
+    "altText": "Lima ilustrasi pemecahan masalah: tiga buku dan uang kertas, ubin kali di atas tiga kelompok titik, uang dengan koin kembalian, tiga kartu rangkuman, dan gabungan buku uang koin serta langkah penyelesaian."
   }
 }

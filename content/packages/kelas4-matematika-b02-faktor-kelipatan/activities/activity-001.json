@@ -5,28 +5,32 @@
   "title": "Mengamati Faktor 12 dan 18",
   "instructions": "Amati diagram Venn. Lingkaran kiri berisi faktor 12, lingkaran kanan faktor 18, dan daerah oranye berisi faktor persekutuan.",
   "assets": [
-    "assets/aktivitas-faktor-kelipatan.png"
+    "assets/aktivitas-faktor-kelipatan-1.png",
+    "assets/aktivitas-faktor-kelipatan-2.png",
+    "assets/aktivitas-faktor-kelipatan-3.png",
+    "assets/aktivitas-faktor-kelipatan-4.png",
+    "assets/aktivitas-faktor-kelipatan-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Sebutkan faktor-faktor dari 12.",
-        "assetPath": "assets/aktivitas-faktor-kelipatan.png",
-        "altText": "Diagram Venn dua lingkaran: dua titik faktor khusus di kiri, empat faktor persekutuan di daerah irisan berwarna oranye, dan dua titik faktor khusus di kanan.",
+        "assetPath": "assets/aktivitas-faktor-kelipatan-1.png",
+        "altText": "Garis dua belas titik dengan tiga busur berwarna menghubungkan pasangan faktor satu dan dua belas, dua dan enam, serta tiga dan empat.",
         "reveal": "1, 2, 3, 4, 6, dan 12.",
         "hint": "Cari bilangan yang membagi 12 tanpa sisa."
       },
       {
         "prompt": "Faktor apa yang ada di kedua lingkaran (daerah oranye)?",
-        "assetPath": "assets/aktivitas-faktor-kelipatan.png",
-        "altText": "Diagram Venn dua lingkaran: dua titik faktor khusus di kiri, empat faktor persekutuan di daerah irisan berwarna oranye, dan dua titik faktor khusus di kanan.",
+        "assetPath": "assets/aktivitas-faktor-kelipatan-2.png",
+        "altText": "Diagram Venn dua lingkaran dengan dua titik biru di kiri, empat titik biru tua di daerah irisan berwarna oranye, dan dua titik merah di kanan.",
         "reveal": "1, 2, 3, dan 6 adalah faktor persekutuan 12 dan 18.",
         "hint": "Bandingkan titik di kedua lingkaran."
       },
       {
         "prompt": "Berapa faktor persekutuan terbesar (FPB) dari 12 dan 18?",
-        "assetPath": "assets/aktivitas-faktor-kelipatan.png",
-        "altText": "Diagram Venn dua lingkaran: dua titik faktor khusus di kiri, empat faktor persekutuan di daerah irisan berwarna oranye, dan dua titik faktor khusus di kanan.",
+        "assetPath": "assets/aktivitas-faktor-kelipatan-3.png",
+        "altText": "Diagram Venn dengan lingkaran berongga; satu titik di daerah irisan kanan bawah diperbesar dan disorot oranye.",
         "reveal": "FPB 12 dan 18 adalah 6.",
         "hint": "Ambil faktor persekutuan yang paling besar."
       },
@@ -34,15 +38,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Faktor, Kelipatan, KPK, dan FPB?",
         "reveal": "Menentukan faktor dan kelipatan, lalu menggunakan FPB dan KPK untuk menyelesaikan masalah sederhana.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-faktor-kelipatan.png",
-        "altText": "Diagram Venn dua lingkaran: dua titik faktor khusus di kiri, empat faktor persekutuan di daerah irisan berwarna oranye, dan dua titik faktor khusus di kanan."
+        "assetPath": "assets/aktivitas-faktor-kelipatan-4.png",
+        "altText": "Tiga kartu rangkuman: busur pasangan faktor, diagram Venn kecil, dan dua langkah berpanah dengan tanda centang."
       },
       {
         "prompt": "Bilangan berikut yang BUKAN faktor 12 adalah ...",
         "reveal": "5",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-faktor-kelipatan.png",
-        "altText": "Diagram Venn dua lingkaran: dua titik faktor khusus di kiri, empat faktor persekutuan di daerah irisan berwarna oranye, dan dua titik faktor khusus di kanan."
+        "assetPath": "assets/aktivitas-faktor-kelipatan-5.png",
+        "altText": "Garis dua belas titik dengan busur pasangan faktor; titik kelima dicoret merah karena bukan faktor dua belas."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Diagram Venn dua lingkaran: dua titik faktor khusus di kiri, empat faktor persekutuan di daerah irisan berwarna oranye, dan dua titik faktor khusus di kanan."
+    "altText": "Lima ilustrasi faktor dan kelipatan: dua belas titik dengan busur pasangan faktor, diagram Venn faktor persekutuan, titik terbesar disorot, tiga kartu rangkuman, dan titik kelima dicoret karena bukan faktor."
   }
 }

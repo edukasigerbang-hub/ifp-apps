@@ -26,7 +26,31 @@
       "sha256": "b5394c9e10dddbc0097d1a8baa012ef1e6ee13b4913339d9834af5cf481fd2c5"
     },
     {
-      "path": "assets/aktivitas-pemecahan-masalah-kelas6.png",
+      "path": "assets/aktivitas-pemecahan-masalah-kelas6-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6799,
+      "sha256": "8712e4e100090e6b07ac6f47bb7103098bcbdaa2556d67a39b5153edd94a49da"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas6-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8314,
+      "sha256": "dceb8165ae0c51de3e0b45bd284b3269e29102ec2009392840e1e4daabcf754e"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas6-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5939,
+      "sha256": "09b550926c5ff3b0e923b04773807b7e35315b5cd0974d33181d2682391a888b"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas6-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7797,
+      "sha256": "a6b77c9862a37b180345b6c21ce3589e3d6ecd9d3c6295c491f0887b8265c629"
+    },
+    {
+      "path": "assets/aktivitas-pemecahan-masalah-kelas6-5.png",
       "mediaType": "image/png",
       "sizeBytes": 6953,
       "sha256": "139a502a5726dd0dbca398af0a372c6cc6c5d0848be1f38e55a8ab766fd6545d"

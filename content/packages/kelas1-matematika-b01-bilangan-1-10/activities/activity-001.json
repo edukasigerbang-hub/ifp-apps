@@ -5,28 +5,32 @@
   "title": "Menghitung Apel",
   "instructions": "Amati gambar, lalu hitung apel bersama-sama.",
   "assets": [
-    "assets/aktivitas-bilangan-1-10.png"
+    "assets/aktivitas-bilangan-1-10-1.png",
+    "assets/aktivitas-bilangan-1-10-2.png",
+    "assets/aktivitas-bilangan-1-10-3.png",
+    "assets/aktivitas-bilangan-1-10-4.png",
+    "assets/aktivitas-bilangan-1-10-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Ada berapa apel?",
-        "assetPath": "assets/aktivitas-bilangan-1-10.png",
-        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
+        "assetPath": "assets/aktivitas-bilangan-1-10-1.png",
+        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong.",
         "reveal": "Tujuh.",
         "hint": "Hitung satu per satu."
       },
       {
         "prompt": "Angka untuk tujuh adalah ...",
-        "assetPath": "assets/aktivitas-bilangan-1-10.png",
-        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
+        "assetPath": "assets/aktivitas-bilangan-1-10-2.png",
+        "altText": "Baris tujuh apel merah, apel ketujuh ditandai lingkaran oranye.",
         "reveal": "7.",
         "hint": "Tujuh ditulis 7."
       },
       {
         "prompt": "Mana yang lebih banyak, 5 atau 3?",
-        "assetPath": "assets/aktivitas-bilangan-1-10.png",
-        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
+        "assetPath": "assets/aktivitas-bilangan-1-10-3.png",
+        "altText": "Panel kiri berisi lima titik teal bertanda centang, panel kanan tiga titik biru.",
         "reveal": "5.",
         "hint": "Bandingkan jumlahnya."
       },
@@ -34,14 +38,14 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Bilangan 1–10?",
         "reveal": "Membilang, mengenal lambang, dan mengurutkan bilangan 1–10.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-bilangan-1-10.png",
-        "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
+        "assetPath": "assets/aktivitas-bilangan-1-10-4.png",
+        "altText": "Tiga kartu rangkuman: kerangka sepuluh berisi tujuh apel, lima titik berjajar, dan garis bilangan bertanda."
       },
       {
         "prompt": "Apa yang kamu amati pada gambar?",
         "reveal": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik.",
         "hint": "Perhatikan gambar dengan saksama.",
-        "assetPath": "assets/aktivitas-bilangan-1-10.png",
+        "assetPath": "assets/aktivitas-bilangan-1-10-5.png",
         "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
       }
     ]
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Kerangka sepuluh berisi tujuh apel merah dan tiga kotak kosong, di samping dua kelompok titik berisi lima dan tiga titik."
+    "altText": "Lima ilustrasi bilangan 1–10: kerangka sepuluh berisi tujuh apel, baris tujuh apel, perbandingan lima dan tiga titik, tiga kartu rangkuman, dan kerangka sepuluh dengan kelompok lima serta tiga titik."
   }
 }

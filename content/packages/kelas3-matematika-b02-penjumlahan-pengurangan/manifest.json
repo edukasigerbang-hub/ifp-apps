@@ -26,7 +26,31 @@
       "sha256": "8e96b168724de808b923522ebba875ffb5f6668c8250ff280a89e2304bbd240e"
     },
     {
-      "path": "assets/aktivitas-penjumlahan-pengurangan.png",
+      "path": "assets/aktivitas-penjumlahan-pengurangan-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5008,
+      "sha256": "95cb9e5cd162e4b698b46fb161e08c25561ad4eed92950a1dd6a142ad37fdba2"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-pengurangan-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4363,
+      "sha256": "057b0a7d0922ae86b0b5414ce9224fd5ecd55853fddb12f9433f082f05a04751"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-pengurangan-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4376,
+      "sha256": "8d9ab9146cc63cd0a79b28897002136bfd1d2cb5b38a58f4a1b0f7dda51bddaa"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-pengurangan-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7811,
+      "sha256": "5999fef8ac83395c27eff7b705a695189f762ad88cece82095b246a742415b82"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-pengurangan-5.png",
       "mediaType": "image/png",
       "sizeBytes": 5269,
       "sha256": "0ccc35c828a71f96085c62cee02ad750d9cbb28b502d5c5f645c3bbfe11fe80a"

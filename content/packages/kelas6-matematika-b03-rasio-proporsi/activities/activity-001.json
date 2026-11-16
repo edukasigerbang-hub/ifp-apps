@@ -5,28 +5,32 @@
   "title": "Mengamati Perbandingan",
   "instructions": "Amati batang dan kelompok benda, lalu diskusikan rasionya.",
   "assets": [
-    "assets/aktivitas-rasio-proporsi.png"
+    "assets/aktivitas-rasio-proporsi-1.png",
+    "assets/aktivitas-rasio-proporsi-2.png",
+    "assets/aktivitas-rasio-proporsi-3.png",
+    "assets/aktivitas-rasio-proporsi-4.png",
+    "assets/aktivitas-rasio-proporsi-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa rasio 4 benda merah dan 3 benda biru?",
-        "assetPath": "assets/aktivitas-rasio-proporsi.png",
-        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga.",
+        "assetPath": "assets/aktivitas-rasio-proporsi-1.png",
+        "altText": "Baris empat titik merah dan baris tiga titik biru yang masing-masing dibingkai garis putus-putus, dengan dua titik navy sebagai tanda banding.",
         "reveal": "4 : 3.",
         "hint": "Tulis sesuai urutan."
       },
       {
         "prompt": "Bagaimana menyederhanakan 8 : 6?",
-        "assetPath": "assets/aktivitas-rasio-proporsi.png",
-        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga.",
+        "assetPath": "assets/aktivitas-rasio-proporsi-2.png",
+        "altText": "Batang delapan bagian merah dan enam bagian biru di atas, panah ke bawah, lalu batang empat bagian merah dan tiga bagian biru, dengan garis putus-putus oranye membagi kelompok dua bagian.",
         "reveal": "4 : 3.",
         "hint": "Bagi dengan faktor yang sama."
       },
       {
         "prompt": "Apa itu proporsi?",
-        "assetPath": "assets/aktivitas-rasio-proporsi.png",
-        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga.",
+        "assetPath": "assets/aktivitas-rasio-proporsi-3.png",
+        "altText": "Panel kiri dua titik merah dan tiga titik biru, tanda sama dengan di tengah, panel kanan empat titik merah dan enam titik biru.",
         "reveal": "Dua rasio yang senilai.",
         "hint": "3 : 4 = 9 : 12."
       },
@@ -34,15 +38,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Rasio dan Proporsi?",
         "reveal": "Menulis, menyederhanakan, dan menerapkan rasio.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-rasio-proporsi.png",
-        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga."
+        "assetPath": "assets/aktivitas-rasio-proporsi-4.png",
+        "altText": "Tiga kartu rangkuman: empat titik merah, tiga titik biru, dan sepasang batang empat banding tiga."
       },
       {
         "prompt": "Rasio 6 : 9 disederhanakan menjadi ...",
         "reveal": "2 : 3",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-rasio-proporsi.png",
-        "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga."
+        "assetPath": "assets/aktivitas-rasio-proporsi-5.png",
+        "altText": "Batang enam bagian merah dan sembilan bagian biru di atas, panah ke bawah, lalu batang dua bagian merah dan tiga bagian biru; garis putus-putus oranye membagi tiga bagian."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Empat titik merah dan tiga titik biru, sepasang batang delapan banding enam, lalu panah ke bawah menuju sepasang batang empat banding tiga."
+    "altText": "Lima ilustrasi rasio dan proporsi: empat titik merah dan tiga titik biru, batang delapan banding enam menjadi empat banding tiga, dua panel rasio senilai, tiga kartu rangkuman, dan batang enam banding sembilan menjadi dua banding tiga."
   }
 }

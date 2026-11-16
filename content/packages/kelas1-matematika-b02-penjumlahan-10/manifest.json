@@ -26,7 +26,31 @@
       "sha256": "e8fafc3e0599657c8ca54d034db80ac3ce17d0558fc9772e3d775a60ee3e1c76"
     },
     {
-      "path": "assets/aktivitas-penjumlahan-10.png",
+      "path": "assets/aktivitas-penjumlahan-10-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4419,
+      "sha256": "b5ec03002e3fc1c7b1bcaf041c9e56cb6bbd1ea2f94c39fd5825819f3cd74912"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-10-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 4349,
+      "sha256": "47f41c4145c3a7428f8768b458b74d623058d567c9e6d0b14667bf34b6dea937"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-10-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5060,
+      "sha256": "cbe55e5b3b5df9a9aca9f5a85181117119f88994c5a40503ebbfb3a1f03487a9"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-10-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7710,
+      "sha256": "a050a0c22e6ef81d900a150768bd1b7636c21df6636cb12f525998e13f0f2728"
+    },
+    {
+      "path": "assets/aktivitas-penjumlahan-10-5.png",
       "mediaType": "image/png",
       "sizeBytes": 5932,
       "sha256": "4656b9d9b669e830736bba2b7bdcbd240cbb701f8322f9730600674ed86cf0fd"

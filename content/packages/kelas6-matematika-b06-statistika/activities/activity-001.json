@@ -5,28 +5,32 @@
   "title": "Membaca Data",
   "instructions": "Amati diagram, lalu diskusikan mean, median, dan modus.",
   "assets": [
-    "assets/aktivitas-statistika.png"
+    "assets/aktivitas-statistika-1.png",
+    "assets/aktivitas-statistika-2.png",
+    "assets/aktivitas-statistika-3.png",
+    "assets/aktivitas-statistika-4.png",
+    "assets/aktivitas-statistika-5.png"
   ],
   "interactionConfig": {
     "steps": [
       {
         "prompt": "Apa itu mean?",
-        "assetPath": "assets/aktivitas-statistika.png",
-        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah.",
+        "assetPath": "assets/aktivitas-statistika-1.png",
+        "altText": "Tiga menara balok bertingkat enam, delapan, dan sepuluh, garis putus-putus oranye pada tingkat delapan, serta dua segitiga oranye menunjuk arah penyeimbangan.",
         "reveal": "Jumlah data dibagi banyak data.",
         "hint": "Rata-rata."
       },
       {
         "prompt": "Apa itu median?",
-        "assetPath": "assets/aktivitas-statistika.png",
-        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah.",
+        "assetPath": "assets/aktivitas-statistika-2.png",
+        "altText": "Lima kolom titik bertingkat empat sampai delapan, kolom tengah berwarna oranye, dan garis putus-putus oranye pada ketinggian kolom tengah.",
         "reveal": "Nilai tengah setelah data diurutkan.",
         "hint": "Bagi dua jika genap."
       },
       {
         "prompt": "Apa itu modus?",
-        "assetPath": "assets/aktivitas-statistika.png",
-        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah.",
+        "assetPath": "assets/aktivitas-statistika-3.png",
+        "altText": "Empat baris titik berisi tiga, enam, empat, dan dua titik; baris dengan enam titik berwarna teal dan dibingkai garis putus-putus oranye.",
         "reveal": "Data yang paling sering muncul.",
         "hint": "Bisa lebih dari satu."
       },
@@ -34,15 +38,15 @@
         "prompt": "Apa hal penting yang kamu pelajari tentang Statistika?",
         "reveal": "Menghitung mean, median, dan modus dari data.",
         "hint": "Baca kembali ringkasan pelajaran.",
-        "assetPath": "assets/aktivitas-statistika.png",
-        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah."
+        "assetPath": "assets/aktivitas-statistika-4.png",
+        "altText": "Tiga kartu rangkuman: diagram batang dengan garis rata-rata, diagram batang dengan batang tertinggi disorot, dan baris titik."
       },
       {
         "prompt": "Mean dari 70, 80, 90 adalah ...",
         "reveal": "80",
         "hint": "Baca kembali langkah eksplorasi.",
-        "assetPath": "assets/aktivitas-statistika.png",
-        "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah."
+        "assetPath": "assets/aktivitas-statistika-5.png",
+        "altText": "Tiga kolom titik bertingkat tujuh, delapan, dan sembilan, garis putus-putus oranye pada tingkat delapan, dan panah melengkung dari kolom tertinggi ke kolom terendah."
       }
     ]
   },
@@ -59,6 +63,6 @@
     "keyboard"
   ],
   "accessibilityMetadata": {
-    "altText": "Tiga tiang titik bertingkat tujuh, delapan, dan sembilan titik, dengan garis mendatar putus-putus pada tiang tengah sebagai penanda nilai tengah."
+    "altText": "Lima ilustrasi statistika: menara data dengan garis rata-rata, kolom data dengan nilai tengah disorot, baris titik dengan data tersering dibingkai, tiga kartu rangkuman, dan kolom titik dengan panah penyeimbang."
   }
 }

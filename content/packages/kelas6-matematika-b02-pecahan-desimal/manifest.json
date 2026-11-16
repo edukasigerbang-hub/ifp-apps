@@ -26,7 +26,31 @@
       "sha256": "f2302437db9c55747ea44faf24f61bf5e155678581173e07b224146ad79f20d8"
     },
     {
-      "path": "assets/aktivitas-pecahan-desimal.png",
+      "path": "assets/aktivitas-pecahan-desimal-1.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5448,
+      "sha256": "6953ea281dd66cd199da9fa621765b316090d6a5a8663db0c369cf7fe6bede54"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-desimal-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7068,
+      "sha256": "734429ed30e20c293760951e8890a35d05532f19b28e18f58362c95036988cde"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-desimal-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 5236,
+      "sha256": "ea2ab4dc0a45e3064800c1a0958a11c6084876d41de1d1333f729f6fd4408544"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-desimal-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7393,
+      "sha256": "a3f813d29d5c80af892769bbacb3be79b8f8f6efb51f902f68ff0b2f714f2d3b"
+    },
+    {
+      "path": "assets/aktivitas-pecahan-desimal-5.png",
       "mediaType": "image/png",
       "sizeBytes": 6384,
       "sha256": "ff8c89b44549a2ec728af9d761790f8dd1fb9b9754d5f167799aeae29f737cf2"

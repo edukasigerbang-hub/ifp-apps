@@ -26,10 +26,34 @@
       "sha256": "1a43c1ca902eb1d22866fbff5174bc3ae8d8789799982c1b408bf79d5736d9b6"
     },
     {
-      "path": "assets/aktivitas-bangun-ruang-kelas6.png",
+      "path": "assets/aktivitas-bangun-ruang-kelas6-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 8613,
-      "sha256": "8db8e7205c0dc842e97cc79a9c67e843e7a89359ad76ccf0124ed27fa7ed01cd"
+      "sizeBytes": 6106,
+      "sha256": "43f2f332bf1933496b736e0521f6827c64ddb5795fda7f18edcb3bae6052df77"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-kelas6-2.png",
+      "mediaType": "image/png",
+      "sizeBytes": 7624,
+      "sha256": "1a0be2bfa8e3fd9f0c8f09e040459acad50806688bc306ba70386a312c276e23"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-kelas6-3.png",
+      "mediaType": "image/png",
+      "sizeBytes": 6975,
+      "sha256": "53f9f3b22fcb91df44c038ebb4e2d1ff807bf3cb3de47fd8ed7b7f9547b4e2b1"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-kelas6-4.png",
+      "mediaType": "image/png",
+      "sizeBytes": 9634,
+      "sha256": "dd372289f66dd99143d77335eb38a8362a378ce83cfdc646134a4fe5f80e3c6e"
+    },
+    {
+      "path": "assets/aktivitas-bangun-ruang-kelas6-5.png",
+      "mediaType": "image/png",
+      "sizeBytes": 8732,
+      "sha256": "00e2644d0bc224caddab18bc10aa6edc29bf8df35993dcbea6bd56106bbfbcc7"
     }
   ],
   "dependencies": [],
