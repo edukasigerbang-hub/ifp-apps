@@ -970,7 +970,7 @@ mod tests {
         assert_eq!(active.package_id, "matematika-kelas3-pecahan");
         assert_eq!(active.version, "0.1.0");
         assert_eq!(active.lessons.len(), 1);
-        assert_eq!(active.activities.len(), 2);
+        assert_eq!(active.activities.len(), 3);
         assert_eq!(active.assets.len(), 4);
 
         let bytes = read_asset(

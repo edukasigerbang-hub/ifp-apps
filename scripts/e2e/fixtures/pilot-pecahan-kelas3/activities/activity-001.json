@@ -39,6 +39,20 @@
         "altText": "Persegi dibagi empat bagian sama besar; satu bagian kiri atas berwarna.",
         "reveal": "Ada 4 bagian sama besar. 1 bagian diwarnai, jadi bagian berwarna adalah 1/4 (seperempat).",
         "hint": "Perhatikan bahwa keempat bagian memiliki ukuran yang sama."
+      },
+      {
+        "prompt": "Ingat kembali lingkaran 1/2 pada langkah pertama, lalu lihat persegi 1/4 ini. Bagian mana yang lebih besar? Mengapa?",
+        "assetPath": "assets/pecahan-seperempat.png",
+        "altText": "Persegi dibagi empat bagian sama besar; satu bagian berwarna, dibandingkan dengan lingkaran 1/2 pada langkah pertama.",
+        "reveal": "1/2 lebih besar daripada 1/4. Pada 1/2, satu bagian berasal dari 2 bagian; pada 1/4, satu bagian berasal dari 4 bagian yang lebih kecil.",
+        "hint": "Semakin banyak bagian sama besar, semakin kecil ukuran setiap bagiannya."
+      },
+      {
+        "prompt": "Kembali ke gambar 2/3. Ada 3 bagian sama besar dan 2 bagian diwarnai. Berapa bagian yang tidak diwarnai?",
+        "assetPath": "assets/pecahan-dua-per-tiga.png",
+        "altText": "Persegi panjang dibagi tiga bagian sama besar; dua bagian diwarnai dan satu bagian tidak berwarna.",
+        "reveal": "3 bagian dikurangi 2 bagian berwarna menyisakan 1 bagian tidak berwarna, yaitu 1/3.",
+        "hint": "Kurangi jumlah bagian berwarna dari jumlah semua bagian."
       }
     ]
   },
@@ -46,6 +60,6 @@
   "feedbackPolicy": { "mode": "immediate", "allowRetry": true, "showCorrectAnswer": true },
   "runtimeCapabilities": ["touch", "keyboard"],
   "accessibilityMetadata": {
-    "altText": "Empat diagram: lingkaran dibagi 2 bagian dengan 1 bagian berwarna; persegi panjang dibagi 3 bagian dengan 1 bagian berwarna; persegi panjang dibagi 3 bagian dengan 2 bagian berwarna; persegi dibagi 4 bagian dengan 1 bagian berwarna."
+    "altText": "Enam langkah mengamati diagram: lingkaran dibagi 2 bagian dengan 1 bagian berwarna; persegi panjang dibagi 3 bagian dengan 1 bagian berwarna; persegi panjang dibagi 3 bagian dengan 2 bagian berwarna; persegi dibagi 4 bagian dengan 1 bagian berwarna; perbandingan 1/2 dengan 1/4; dan sisa bagian yang tidak berwarna pada 2/3."
   }
 }

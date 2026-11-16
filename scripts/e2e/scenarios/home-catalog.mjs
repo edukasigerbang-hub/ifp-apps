@@ -653,15 +653,26 @@ export async function run({ page, artifactDir, log }) {
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
   await clickButton(page, "Lanjut");
-  await page.waitFor(`document.body.textContent.includes("Langkah 4 dari 4")`, {
-    label: "eksplorasi langkah 4"
+  await clickButton(page, "Lanjut");
+  await clickButton(page, "Lanjut");
+  await page.waitFor(`document.body.textContent.includes("Langkah 6 dari 6")`, {
+    label: "eksplorasi langkah 6"
   });
   await clickButton(page, "Selesai");
   await clickButton(page, "Lanjut berlatih");
-  await page.waitFor(`document.body.textContent.includes("Soal 1 dari 4")`, {
+  await page.waitFor(`document.body.textContent.includes("Soal 1 dari 8")`, {
     label: "kuis tampil"
   });
-  const quizOptions = ["opsi-setengah", "opsi-1-4", "opsi-besar", "opsi-2-3"];
+  const quizOptions = [
+    "opsi-setengah",
+    "opsi-1-4",
+    "opsi-besar",
+    "opsi-2-3",
+    "opsi-5-1-3",
+    "opsi-dua-per-tiga",
+    "opsi-7-1-3",
+    "opsi-8-1-3"
+  ];
   for (const [index, optionId] of quizOptions.entries()) {
     await page.waitFor(
       `document.body.textContent.includes("Soal ${index + 1} dari ${quizOptions.length}")`,
