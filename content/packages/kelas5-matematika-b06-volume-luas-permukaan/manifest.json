@@ -28,20 +28,20 @@
     {
       "path": "assets/aktivitas-volume-luas-permukaan-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 6292,
-      "sha256": "96a8806160af2957c1159f01a06ae300d68dc275cbeed7a191b9a554d1452f90"
+      "sizeBytes": 15178,
+      "sha256": "f50cd3a79ef3d8695f9ef945cd3d3ad779253c12dd2ec70373dd56f182eba417"
     },
     {
       "path": "assets/aktivitas-volume-luas-permukaan-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 5968,
-      "sha256": "a30fcf9aba05929052f664002c7c796c4452514e0e36c316fe04bec099147841"
+      "sizeBytes": 8613,
+      "sha256": "9ee13ade1cfdd8113849c247909b642d825cfe8dce703dd2b0f8d3935fa9f98d"
     },
     {
       "path": "assets/aktivitas-volume-luas-permukaan-3.png",
       "mediaType": "image/png",
-      "sizeBytes": 4452,
-      "sha256": "12cb957ca4cb2d107f6706708fa01b3b4e4bf0538c745d8e1b9f09dd7efaebcc"
+      "sizeBytes": 5850,
+      "sha256": "e748ac919ff736ff373f0d833727078e0cda29b5ce964c31810381f8f8190a80"
     },
     {
       "path": "assets/aktivitas-volume-luas-permukaan-4.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-volume-luas-permukaan-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 6072,
-      "sha256": "43d9237d9c42911aaefd1a4a54f0aef244c24502a7c1e23dd0365e1d7e0d6ae6"
+      "sizeBytes": 10043,
+      "sha256": "ba968600f71c282cdd9700972fa67e248608fc699e676b14cf33a9188daefb48"
     }
   ],
   "dependencies": [],

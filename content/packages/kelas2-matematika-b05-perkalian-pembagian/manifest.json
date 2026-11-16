@@ -28,14 +28,14 @@
     {
       "path": "assets/aktivitas-perkalian-pembagian-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 4153,
-      "sha256": "b757b9a2dc53ab522f5823fd70b1713233db092e4984c66302984091ca8d5704"
+      "sizeBytes": 12433,
+      "sha256": "069a1ef7c9864fafb7327c3613d5b5e970d8488a6e7dd67c81e04c650578b72a"
     },
     {
       "path": "assets/aktivitas-perkalian-pembagian-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 6285,
-      "sha256": "c5dfff7aafb3a46ea75235161a4274a2ef54454b4d075fc05bdbf5819d207ca6"
+      "sizeBytes": 27359,
+      "sha256": "674c116b9558f6a3018a43cb598218a163af2e3e63d8668c7bf0b100dae3a9f0"
     },
     {
       "path": "assets/aktivitas-perkalian-pembagian-3.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-perkalian-pembagian-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 6288,
-      "sha256": "07c2bbcbe34dd5c5e814099213e22a308109cadcd4e9b7bd7683114655e37201"
+      "sizeBytes": 29755,
+      "sha256": "fe20e625a53133ff8d380ecf568e7cb568d951a301a35387675e615b6d15a0c8"
     }
   ],
   "dependencies": [],

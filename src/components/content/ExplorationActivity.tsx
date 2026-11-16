@@ -32,9 +32,69 @@ interface ExplorationActivityProps {
   activity: Activity;
   assets: Record<string, string>;
   onFinish?: () => void;
+  /** Layar penuh memberi ruang ilustrasi lebih tinggi karena chrome aplikasi disembunyikan. */
+  expanded?: boolean;
 }
 
-export function ExplorationActivity({ activity, assets, onFinish }: ExplorationActivityProps) {
+function HintIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+    >
+      <path d="M9 18h6M10 21h4" />
+      <path d="M12 3a6 6 0 0 0-3.6 10.8c.5.4.8 1 .8 1.6v.6h5.6v-.6c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3Z" />
+    </svg>
+  );
+}
+
+function RevealIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+    >
+      <path d="M12 6.5C10 4.9 7.6 4.2 4.5 4.2v13.4c3.1 0 5.5.7 7.5 2.3 2-1.6 4.4-2.3 7.5-2.3V4.2c-3.1 0-5.5.7-7.5 2.3Z" />
+      <path d="M12 6.5v13.4" />
+    </svg>
+  );
+}
+
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.9"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`ml-auto h-3.5 w-3.5 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
+export function ExplorationActivity({
+  activity,
+  assets,
+  onFinish,
+  expanded = false,
+}: ExplorationActivityProps) {
   const steps = readSteps(activity);
   const [index, setIndex] = useState(0);
   const [showHint, setShowHint] = useState(false);
@@ -66,7 +126,7 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
 
   if (finished) {
     return (
-      <div aria-live="polite" className="mx-auto max-w-5xl rounded-card border border-teal/30 bg-teal/5 p-6">
+      <div aria-live="polite" className="mx-auto w-full max-w-3xl rounded-card border border-teal/30 bg-teal/5 p-6">
         <h3 className="text-lg font-semibold">Aktivitas selesai</h3>
         <p className="mt-2 text-sm text-muted">
           Kamu sudah menyelesaikan {steps.length} langkah. Lanjut berlatih untuk menguji pemahamanmu.
@@ -93,98 +153,127 @@ export function ExplorationActivity({ activity, assets, onFinish }: ExplorationA
     );
   }
 
+  const illustrationUrl = sharedAssetUrl ?? stepAssetUrl;
+  const illustrationKind = sharedAssetUrl ? "shared" : "step";
+  const illustrationAlt =
+    (sharedAssetUrl ? steps[0].altText : step.altText) ??
+    activity.accessibilityMetadata?.altText ??
+    "Ilustrasi aktivitas";
+  const supportVisible = Boolean(step.hint || step.reveal);
+  const frameHeight = expanded
+    ? "h-[clamp(240px,56vh,720px)]"
+    : "h-[clamp(200px,38vh,520px)] xl:h-[clamp(220px,44vh,560px)]";
+
   return (
-    <div className="mx-auto max-w-5xl">
-      <div className="flex items-center justify-between gap-4 text-sm text-muted">
-        <span>
+    <div className="flex w-full flex-col">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
           Langkah {index + 1} dari {steps.length}
-        </span>
+        </p>
         <div
           role="progressbar"
           aria-label="Progres eksplorasi"
           aria-valuemin={1}
           aria-valuemax={steps.length}
           aria-valuenow={index + 1}
-          className="h-2 w-40 overflow-hidden rounded-full bg-ink/10"
+          aria-valuetext={`Langkah ${index + 1} dari ${steps.length}`}
+          className="flex items-center gap-1.5"
         >
-          <div
-            className="h-full rounded-full bg-teal transition-all"
-            style={{ width: `${((index + 1) / steps.length) * 100}%` }}
-          />
+          {steps.map((_, stepIndex) => (
+            <span
+              key={stepIndex}
+              aria-hidden="true"
+              className={`h-1.5 rounded-full transition-all ${
+                stepIndex <= index ? "w-7 bg-teal" : "w-4 bg-ink/15"
+              }`}
+            />
+          ))}
         </div>
       </div>
 
-      {sharedAssetUrl && (
-        <img
-          data-exploration-illustration="shared"
-          src={sharedAssetUrl}
-          alt={steps[0].altText ?? activity.accessibilityMetadata?.altText ?? "Ilustrasi aktivitas"}
-          className="mx-auto mt-5 block max-h-[60vh] w-auto max-w-full rounded-card border border-ink/10 bg-surface"
-        />
-      )}
+      <div
+        data-exploration-stage
+        className={`mt-3 grid min-w-0 gap-4 ${
+          illustrationUrl ? "lg:grid-cols-[minmax(0,1fr)_15rem] lg:items-start" : ""
+        }`}
+      >
+        {illustrationUrl && (
+          <figure
+            className={`flex ${frameHeight} max-w-full justify-self-center overflow-hidden rounded-control border border-ink/10 bg-white`}
+          >
+            <img
+              data-exploration-illustration={illustrationKind}
+              src={illustrationUrl}
+              alt={illustrationAlt}
+              className="h-full w-auto max-w-full object-contain"
+            />
+          </figure>
+        )}
 
-      {stepAssetUrl && (
-        <img
-          data-exploration-illustration="step"
-          src={stepAssetUrl}
-          alt={step.altText ?? activity.accessibilityMetadata?.altText ?? "Ilustrasi aktivitas"}
-          className="mx-auto mt-5 block max-h-[60vh] w-auto max-w-full rounded-card border border-ink/10 bg-surface"
-        />
-      )}
+        <div className="flex min-w-0 flex-col">
+          <h2 className="text-lg font-semibold leading-snug tracking-tight md:text-xl">{step.prompt}</h2>
 
-      <p className="mt-5 text-lg font-medium leading-relaxed">{step.prompt}</p>
-
-      {(step.hint || step.reveal) && (
-        <div className="mt-5 flex flex-wrap items-center gap-2">
-          {step.hint && (
-            <button
-              type="button"
-              onClick={() => setShowHint((value) => !value)}
-              aria-expanded={showHint}
-              aria-controls={hintId}
-              className={`min-h-11 rounded-control border px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
-                showHint
-                  ? "border-primary/40 bg-primary/5 text-ink"
-                  : "border-ink/15 bg-surface hover:bg-paper"
-              }`}
-            >
-              {showHint ? "Sembunyikan petunjuk" : "Lihat petunjuk"}
-            </button>
+          {supportVisible && (
+            <div className="mt-3 flex flex-col gap-2">
+              {step.hint && (
+                <button
+                  type="button"
+                  onClick={() => setShowHint((value) => !value)}
+                  aria-expanded={showHint}
+                  aria-controls={hintId}
+                  className={`flex min-h-11 w-full items-center gap-2 rounded-control border px-3 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
+                    showHint
+                      ? "border-teal/50 bg-teal/10 text-teal-strong"
+                      : "border-ink/15 bg-surface text-ink hover:bg-paper"
+                  }`}
+                >
+                  <HintIcon />
+                  Petunjuk
+                  <ChevronIcon open={showHint} />
+                </button>
+              )}
+              {step.reveal && (
+                <button
+                  type="button"
+                  onClick={() => setShowReveal((value) => !value)}
+                  aria-expanded={showReveal}
+                  aria-controls={revealId}
+                  className={`flex min-h-11 w-full items-center gap-2 rounded-control border px-3 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
+                    showReveal
+                      ? "border-teal/50 bg-teal/10 text-teal-strong"
+                      : "border-ink/15 bg-surface text-ink hover:bg-paper"
+                  }`}
+                >
+                  <RevealIcon />
+                  Pembahasan
+                  <ChevronIcon open={showReveal} />
+                </button>
+              )}
+            </div>
           )}
-          {step.reveal && (
-            <button
-              type="button"
-              onClick={() => setShowReveal((value) => !value)}
-              aria-expanded={showReveal}
-              aria-controls={revealId}
-              className={`min-h-11 rounded-control border px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
-                showReveal
-                  ? "border-primary/40 bg-primary/5 text-ink"
-                  : "border-ink/15 bg-surface hover:bg-paper"
-              }`}
-            >
-              {showReveal ? "Sembunyikan penjelasan" : "Tampilkan penjelasan"}
-            </button>
+
+          {(showHint || showReveal) && (
+            <div className="mt-3 max-h-[30vh] space-y-2 overflow-y-auto pr-1">
+              {showHint && step.hint && (
+                <div id={hintId} className="rounded-control bg-paper px-3.5 py-2.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted">Petunjuk</p>
+                  <p className="mt-1 text-sm leading-relaxed">{step.hint}</p>
+                </div>
+              )}
+              {showReveal && step.reveal && (
+                <div id={revealId} className="rounded-control border border-teal/30 bg-teal/5 px-3.5 py-2.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-teal-strong">
+                    Pembahasan
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed">{step.reveal}</p>
+                </div>
+              )}
+            </div>
           )}
         </div>
-      )}
+      </div>
 
-      {showHint && step.hint && (
-        <p id={hintId} className="mt-3 rounded-control bg-paper px-4 py-3 text-sm text-muted">
-          {step.hint}
-        </p>
-      )}
-
-      {showReveal && step.reveal && (
-        <p
-          id={revealId}
-          className="mt-3 rounded-control border border-teal/30 bg-teal/5 px-4 py-3 text-sm leading-relaxed"
-        >
-          {step.reveal}
-        </p>
-      )}
-
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 pt-5">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 pt-4">
         <button
           type="button"
           onClick={() => goToStep(index - 1)}

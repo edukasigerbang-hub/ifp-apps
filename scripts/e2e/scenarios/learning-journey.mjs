@@ -73,8 +73,8 @@ export async function run({ page, artifactDir, log }) {
       if (!scope) return { missing: "lingkup eksplorasi" };
       const buttons = [...scope.querySelectorAll("button")];
       const byLabel = (label) => buttons.find((b) => b.textContent.trim() === label);
-      const hint = byLabel("Lihat petunjuk");
-      const reveal = byLabel("Tampilkan penjelasan");
+      const hint = byLabel("Petunjuk");
+      const reveal = byLabel("Pembahasan");
       const next = byLabel("Lanjut");
       const prev = byLabel("Sebelumnya");
       if (!hint || !reveal || !next || !prev) {
@@ -97,45 +97,52 @@ export async function run({ page, artifactDir, log }) {
     })()
   `);
   assert(!controls.missing, `Kontrol eksplorasi tidak lengkap: ${controls.missing}.`);
-  assert(controls.hintGroupedWithReveal, "Tombol petunjuk & penjelasan tidak berada dalam satu baris.");
-  assert(controls.supportSecondary, "Tombol petunjuk/penjelasan masih memakai gaya primer.");
+  assert(controls.hintGroupedWithReveal, "Tombol petunjuk & pembahasan tidak berada dalam satu grup.");
+  assert(controls.supportSecondary, "Tombol petunjuk/pembahasan masih memakai gaya primer.");
   assert(controls.navSecondary, "Tombol Sebelumnya masih memakai gaya primer.");
   assert(controls.primaryCount === 1, `Tombol primer pada langkah eksplorasi ${controls.primaryCount}, harus 1.`);
   assert(controls.footerShared, "Sebelumnya dan Lanjut tidak berada dalam satu baris navigasi.");
   assert(controls.footerSeparated, "Baris navigasi eksplorasi tidak dipisahkan garis atas.");
-  assert(!controls.footerHoldsSupportButtons, "Baris navigasi bercampur dengan tombol petunjuk/penjelasan.");
+  assert(!controls.footerHoldsSupportButtons, "Baris navigasi bercampur dengan tombol petunjuk/pembahasan.");
   assert(controls.prevDisabled, "Tombol Sebelumnya aktif pada langkah pertama.");
-  log("Kontrol eksplorasi: 1 primer, petunjuk/penjelasan sekunder satu baris, navigasi terpisah.");
+  log("Kontrol eksplorasi: 1 primer, petunjuk/pembahasan sekunder satu grup, navigasi terpisah.");
 
-  await clickButton(page, "Lihat petunjuk");
+  await clickButton(page, "Petunjuk");
   const hintState = await page.evaluate(`
     (() => {
       const button = [...document.querySelectorAll("button")]
-        .find((b) => b.textContent.trim() === "Sembunyikan petunjuk");
+        .find((b) => b.textContent.trim() === "Petunjuk");
       const id = ${JSON.stringify(controls.hintControls)};
       return {
         expanded: button?.getAttribute("aria-expanded") === "true",
-        panel: Boolean(id && document.getElementById(id)),
-        label: button?.textContent.trim() ?? null
+        panel: Boolean(id && document.getElementById(id))
       };
     })()
   `);
-  assert(hintState.expanded, "Tombol petunjuk tidak menandai aria-expanded=true.");
+  assert(hintState.expanded, "Tombol Petunjuk tidak menandai aria-expanded=true.");
   assert(hintState.panel, `Panel petunjuk dengan id "${controls.hintControls}" tidak ditemukan.`);
   log("Petunjuk terbuka dan terhubung lewat aria-controls.");
 
-  await clickButton(page, "Tampilkan penjelasan");
+  await clickButton(page, "Pembahasan");
   await page.waitFor(
     `(() => {
       const id = ${JSON.stringify(controls.revealControls)};
       return Boolean(id && document.getElementById(id));
     })()`,
-    { label: "panel penjelasan eksplorasi" }
+    { label: "panel pembahasan eksplorasi" }
   );
+  const revealExpanded = await page.evaluate(`
+    (() => {
+      const button = [...document.querySelectorAll("button")]
+        .find((b) => b.textContent.trim() === "Pembahasan");
+      return button?.getAttribute("aria-expanded") === "true";
+    })()
+  `);
+  assert(revealExpanded, "Tombol Pembahasan tidak menandai aria-expanded=true.");
   await page.evaluate(`
     (() => {
       const button = [...document.querySelectorAll("button")]
-        .find((b) => b.textContent.trim() === "Sembunyikan penjelasan");
+        .find((b) => b.textContent.trim() === "Pembahasan");
       button?.scrollIntoView({ block: "center" });
       return Boolean(button);
     })()

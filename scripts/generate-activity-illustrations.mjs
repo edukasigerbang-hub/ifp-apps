@@ -1,7 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { createCanvas, toPng } from "./lib/illustrationKit.mjs";
+import { createCanvas, normalizeContent, toPng } from "./lib/illustrationKit.mjs";
 import { PLAN as GRADE1 } from "./lib/activityPlans/kelas1.mjs";
 import { PLAN as GRADE2 } from "./lib/activityPlans/kelas2.mjs";
 import { PLAN as GRADE3 } from "./lib/activityPlans/kelas3.mjs";
@@ -53,7 +53,7 @@ function checkPlan() {
 function renderStep(entry, index) {
   const canvas = createCanvas();
   entry.steps[index].draw(canvas);
-  return toPng(canvas);
+  return toPng(normalizeContent(canvas));
 }
 
 function main() {

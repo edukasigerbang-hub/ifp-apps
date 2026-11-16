@@ -34,8 +34,8 @@
     {
       "path": "assets/aktivitas-bangun-datar-ciri-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 4693,
-      "sha256": "68def6e64243255517dffba414e291242580c9cae9a6836d2621b1b0b3fe80ff"
+      "sizeBytes": 10523,
+      "sha256": "46815e744688c78cb505ce47c5bee7903645305a0224b4f4f165da8326b54a8a"
     },
     {
       "path": "assets/aktivitas-bangun-datar-ciri-3.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-bangun-datar-ciri-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 6954,
-      "sha256": "b7d3d304bb9db359e1499860827b7d213ea77a2856be7d7acb461836fadbca8a"
+      "sizeBytes": 21095,
+      "sha256": "daa1f8fb640d27dc35ecc19c76672deb6addcf55bc16ae68742f10fd837c217d"
     }
   ],
   "dependencies": [],

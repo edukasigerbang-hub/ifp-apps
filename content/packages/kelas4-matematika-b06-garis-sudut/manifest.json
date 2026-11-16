@@ -28,20 +28,20 @@
     {
       "path": "assets/aktivitas-garis-sudut-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 4209,
-      "sha256": "d31a20f1947182ff8a621b2f6aa24da5d886ed482aa8962af212ff60f5af7474"
+      "sizeBytes": 13419,
+      "sha256": "022360efdac82ce86dc5bb3daac0d92abe51798979d61225fa891e07da549321"
     },
     {
       "path": "assets/aktivitas-garis-sudut-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 3381,
-      "sha256": "bd515d427fc6f36ce95764be5ab4b886439663879f90f2036d483640e5aa198f"
+      "sizeBytes": 5467,
+      "sha256": "7f7b22a318ff0bc52f665cb33b0e9cfab4b802fcf3bc65702c061baaa6e62371"
     },
     {
       "path": "assets/aktivitas-garis-sudut-3.png",
       "mediaType": "image/png",
-      "sizeBytes": 4183,
-      "sha256": "c8da188fa97f6a8df61d81765783e08f96eda2ec6e9428692b4a04175b6a0949"
+      "sizeBytes": 10958,
+      "sha256": "597b902d4e7f2c493a0fac2007a235a86d5104e4d8602214cc0aea86253c0d78"
     },
     {
       "path": "assets/aktivitas-garis-sudut-4.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-garis-sudut-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 7795,
-      "sha256": "530f57af43770e26cc6bf8a25725a427d1fd33e134d6af6f47dc5aeceb93f0aa"
+      "sizeBytes": 29074,
+      "sha256": "7bad6580f8553d399a2fae5b02296a21ace17e0ee52b11d6aeaf9d705c6dc29a"
     }
   ],
   "dependencies": [],

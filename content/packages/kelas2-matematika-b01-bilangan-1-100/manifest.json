@@ -28,8 +28,8 @@
     {
       "path": "assets/aktivitas-bilangan-1-100-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 4564,
-      "sha256": "b51d911345e6a20715915032f0b0f8b7864ef9962c9094cf14883a34efceef8d"
+      "sizeBytes": 13298,
+      "sha256": "cfbe0d6557bfc66309fde69c87be7bfe3a5c444e45c08a324e6c090193a5e62a"
     },
     {
       "path": "assets/aktivitas-bilangan-1-100-2.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-bilangan-1-100-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 7202,
-      "sha256": "44c789838e8e22e35a14a42be04a3c1f2aa9a9bb6d076f72973241c2d5455460"
+      "sizeBytes": 25431,
+      "sha256": "1d691e4c1737321f18041d6390d8d9b3f6eb348bb1e7bb02285711063a521d6a"
     }
   ],
   "dependencies": [],

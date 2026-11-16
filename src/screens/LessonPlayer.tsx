@@ -494,8 +494,9 @@ function LessonView({
         ? "Sudah direview"
         : "DRAFT — belum direview";
 
-  // Di layar penuh hanya peringatan penyimpanan yang perlu terlihat.
-  const storageAlert = storage.status === "preview" || storage.status === "error";
+  // Status penyimpanan hanya ditampilkan bila ada kabar yang perlu dibaca guru.
+  const storageVisible =
+    storage.status === "preview" || storage.status === "error" || storage.status === "saved";
 
   if (!activeActivity) {
     return (
@@ -569,95 +570,92 @@ function LessonView({
       <header
         data-player-hero
         hidden={fullscreen}
-        className="overflow-hidden rounded-card border border-ink/10 bg-surface"
+        className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-card border border-ink/10 bg-surface px-3 py-2 md:flex-nowrap md:px-4"
       >
-        <div className="flex flex-col gap-4 p-4 md:flex-row md:items-center md:gap-5 md:p-5">
-          <div className="min-w-0 md:flex-1">
-            <div className="flex flex-wrap items-center gap-3">
-              <StatusBadge tone={reviewTone} label={reviewLabel} />
-              <StatusBadge
-                tone="neutral"
-                label={
-                  source === "managed"
-                    ? `Paket impor v${contentPackage.data.manifest.packageVersion}`
-                    : "Paket bawaan build"
-                }
-              />
-              <span className="text-sm text-muted">
-                Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
-                {contentPackage.data.manifest.subjects.map(subjectLabel).join(", ")} · v
-                {contentPackage.data.manifest.packageVersion}
-              </span>
-            </div>
-
-            <h1 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{lesson.title}</h1>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{lesson.summary}</p>
-
-            {canPersistLocally() && (
-              <div className="mt-4 flex flex-wrap items-center gap-3">
-                <button
-                  type="button"
-                  data-pin-toggle
-                  onClick={() => void togglePin()}
-                  aria-pressed={pinned}
-                  aria-label={pinned ? `Lepas sematan ${lesson.title}` : `Sematkan ${lesson.title}`}
-                  disabled={!profileId || pinBusy}
-                  className={`inline-flex min-h-11 items-center gap-2 rounded-control border px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:cursor-not-allowed disabled:opacity-50 ${
-                    pinned
-                      ? "border-teal/50 bg-teal/10 text-ink"
-                      : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
-                  }`}
-                >
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    fill={pinned ? "currentColor" : "none"}
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    className="h-4 w-4"
-                  >
-                    <path d="M7 4h10v16l-5-3.4L7 20z" strokeLinejoin="round" />
-                  </svg>
-                  {pinned ? "Disematkan" : "Sematkan"}
-                </button>
-                <p
-                  data-player-pin-status
-                  aria-live="polite"
-                  className={`min-w-0 text-xs ${pinError ? "text-danger-strong" : "text-muted"}`}
-                >
-                  {pinError ?? pinNotice}
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div data-player-cover className="w-full shrink-0 md:w-64 lg:w-72 xl:w-80">
-            <CoverArt url={coverUrl} className="aspect-[16/9] w-full rounded-control" />
-          </div>
+        <div data-player-cover className="hidden h-12 w-20 shrink-0 sm:block">
+          <CoverArt url={coverUrl} className="h-full w-full rounded-control" />
         </div>
+
+        <div className="min-w-0 flex-1">
+          <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+            <h1 className="truncate text-lg font-semibold tracking-tight md:text-xl">{lesson.title}</h1>
+            <StatusBadge tone={reviewTone} label={reviewLabel} />
+            <StatusBadge
+              tone="neutral"
+              label={
+                source === "managed"
+                  ? `Paket impor v${contentPackage.data.manifest.packageVersion}`
+                  : "Paket bawaan build"
+              }
+            />
+            <span className="text-xs text-muted">
+              Kelas {contentPackage.data.manifest.gradeLevels.join(", ")} ·{" "}
+              {contentPackage.data.manifest.subjects.map(subjectLabel).join(", ")} · v
+              {contentPackage.data.manifest.packageVersion}
+            </span>
+          </div>
+          <p className="mt-0.5 truncate text-xs leading-relaxed text-muted md:text-sm">{lesson.summary}</p>
+        </div>
+
+        {canPersistLocally() && (
+          <button
+            type="button"
+            data-pin-toggle
+            onClick={() => void togglePin()}
+            aria-pressed={pinned}
+            aria-label={pinned ? `Lepas sematan ${lesson.title}` : `Sematkan ${lesson.title}`}
+            disabled={!profileId || pinBusy}
+            className={`inline-flex min-h-11 shrink-0 items-center gap-2 rounded-control border px-3.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:cursor-not-allowed disabled:opacity-50 ${
+              pinned
+                ? "border-teal/50 bg-teal/10 text-ink"
+                : "border-ink/15 bg-surface text-muted hover:border-primary/40 hover:text-ink"
+            }`}
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill={pinned ? "currentColor" : "none"}
+              stroke="currentColor"
+              strokeWidth="1.6"
+              className="h-4 w-4"
+            >
+              <path d="M7 4h10v16l-5-3.4L7 20z" strokeLinejoin="round" />
+            </svg>
+            {pinned ? "Disematkan" : "Sematkan"}
+          </button>
+        )}
       </header>
+
+      <p
+        data-player-pin-status
+        aria-live="polite"
+        hidden={!pinError && !pinNotice}
+        className={`mt-1.5 text-xs ${pinError ? "text-danger-strong" : "text-muted"}`}
+      >
+        {pinError ?? pinNotice}
+      </p>
 
       <div
         data-player-layout
         className={
           fullscreen
-            ? "mt-3 grid"
-            : "mt-4 grid gap-x-6 gap-y-4 xl:grid-cols-[minmax(0,1fr)_20rem] xl:items-start 2xl:grid-cols-[minmax(0,1fr)_22rem]"
+            ? "mt-3 grid gap-3"
+            : "mt-4 grid gap-x-6 gap-y-4 xl:grid-cols-[minmax(0,1fr)_17.5rem] xl:items-start 2xl:grid-cols-[minmax(0,1fr)_20rem]"
         }
       >
         <div
           data-player-aside
           hidden={fullscreen}
-          className="order-last space-y-4 xl:order-none xl:sticky xl:top-6 xl:col-start-2 xl:row-span-2 xl:row-start-1"
+          className="order-last space-y-3 xl:order-none xl:sticky xl:top-6 xl:col-start-2 xl:row-span-2 xl:row-start-1"
         >
-          <section className="rounded-card border border-ink/10 bg-surface p-5">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+          <section className="rounded-card border border-ink/10 bg-surface p-4">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
               Tujuan pembelajaran
             </h2>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-2.5 space-y-1.5">
               {lesson.learningObjectives.map((objective) => (
-                <li key={objective} className="flex items-start gap-3 text-sm">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
+                <li key={objective} className="flex items-start gap-2.5 text-sm">
+                  <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
                   {objective}
                 </li>
               ))}
@@ -667,17 +665,20 @@ function LessonView({
           <section
             data-player-progress
             aria-labelledby="player-progress-heading"
-            className="rounded-card border border-ink/10 bg-surface p-5"
+            className="rounded-card border border-ink/10 bg-surface p-4"
           >
             <h2
               id="player-progress-heading"
-              className="text-sm font-semibold uppercase tracking-[0.12em] text-muted"
+              className="text-xs font-semibold uppercase tracking-[0.12em] text-muted"
             >
               Aktivitas &amp; kemajuan
             </h2>
-            <p className="mt-2 text-sm text-muted">
-              {gradedCount} dari {activities.length} aktivitas dinilai pada sesi ini.
-            </p>
+            <div className="mt-2 flex items-center justify-between gap-3 text-xs text-muted">
+              <span>
+                {gradedCount} dari {activities.length} dinilai
+              </span>
+              <span className="font-semibold text-ink">{progressPercent}%</span>
+            </div>
             <div
               role="progressbar"
               aria-label="Aktivitas dinilai"
@@ -685,7 +686,7 @@ function LessonView({
               aria-valuemax={activities.length}
               aria-valuenow={gradedCount}
               aria-valuetext={`${gradedCount} dari ${activities.length} aktivitas`}
-              className="mt-3 h-2 overflow-hidden rounded-full bg-ink/10"
+              className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-ink/10"
             >
               <span
                 aria-hidden="true"
@@ -693,7 +694,7 @@ function LessonView({
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-3 space-y-1.5">
               {activities.map((activity) => {
                 const score = scores[activity.activityId];
                 const opened = visited.includes(activity.activityId);
@@ -701,7 +702,7 @@ function LessonView({
                   <li key={activity.activityId} className="flex items-start justify-between gap-3 text-sm">
                     <span className="min-w-0">{activity.title}</span>
                     <span
-                      className={`shrink-0 text-xs font-semibold uppercase tracking-[0.08em] ${
+                      className={`shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] ${
                         score !== undefined ? "text-teal-strong" : opened ? "text-ink" : "text-muted"
                       }`}
                     >
@@ -712,10 +713,54 @@ function LessonView({
               })}
             </ul>
           </section>
+
+          <section
+            data-session-summary
+            aria-labelledby="session-summary-heading"
+            className="rounded-card border border-ink/10 bg-surface p-4"
+          >
+            <h2
+              id="session-summary-heading"
+              className="text-xs font-semibold uppercase tracking-[0.12em] text-muted"
+            >
+              Ringkasan sesi
+            </h2>
+            <dl className="mt-2.5 space-y-1 text-sm">
+              <div className="flex items-center justify-between gap-3">
+                <dt className="text-muted">Aktivitas dinilai</dt>
+                <dd className="shrink-0 font-semibold">
+                  {gradedCount} dari {activities.length}
+                </dd>
+              </div>
+              <div className="flex items-center justify-between gap-3">
+                <dt className="text-muted">Skor terakhir</dt>
+                <dd className="shrink-0 font-semibold">{lastScore === null ? "—" : lastScore}</dd>
+              </div>
+              <div className="flex items-center justify-between gap-3">
+                <dt className="text-muted">Rata-rata</dt>
+                <dd className="shrink-0 font-semibold">{averageScore === null ? "—" : averageScore}</dd>
+              </div>
+            </dl>
+            <p className="mt-2 text-[11px] leading-relaxed text-muted">
+              Diukur dari sesi ini; riwayat lengkap ada di Hasil Belajar.
+            </p>
+            <button
+              type="button"
+              onClick={() => onNavigate?.("results")}
+              className="mt-2.5 min-h-11 w-full rounded-control bg-navy px-4 text-sm font-medium text-white hover:bg-navy/90"
+            >
+              Buka Hasil Belajar
+            </button>
+          </section>
         </div>
 
         <div className="min-w-0 xl:col-start-1 xl:row-start-1">
-          <div role="tablist" aria-label="Aktivitas pembelajaran" className="flex min-w-0 flex-wrap gap-2">
+          <div className="flex min-w-0 items-center gap-2">
+            <div
+              role="tablist"
+              aria-label="Aktivitas pembelajaran"
+              className="flex min-w-0 flex-1 flex-wrap gap-1.5"
+            >
             {activities.map((activity) => {
               const isActive = activity.activityId === activeActivity.activityId;
               return (
@@ -757,27 +802,26 @@ function LessonView({
                     });
                   }}
                   onClick={() => setActiveActivityId(activity.activityId)}
-                  className={`min-h-11 rounded-control px-3 text-sm font-medium ${
+                  className={`inline-flex min-h-11 items-center rounded-control px-3 text-sm font-medium ${
                     isActive
                       ? "bg-navy text-white"
                       : "border border-ink/15 bg-surface text-ink hover:bg-paper"
                   }`}
                 >
                   {activity.title}
+                  {scores[activity.activityId] !== undefined && (
+                    <span
+                      aria-hidden="true"
+                      className={`ml-2 h-1.5 w-1.5 shrink-0 rounded-full ${
+                        isActive ? "bg-teal-strong" : "bg-teal"
+                      }`}
+                    />
+                  )}
                 </button>
               );
             })}
           </div>
 
-          <div className={`mt-2 flex flex-wrap items-center gap-2 ${fullscreen ? "justify-end" : ""}`}>
-            <p
-              data-player-storage
-              aria-live="polite"
-              hidden={fullscreen && !storageAlert}
-              className={`min-w-0 flex-1 rounded-control border px-3 py-1.5 text-xs ${storageClasses[storage.status]}`}
-            >
-              {storage.message}
-            </p>
             <button
               type="button"
               aria-pressed={fullscreen}
@@ -791,6 +835,16 @@ function LessonView({
               {fullscreen ? "Keluar layar penuh" : "Layar penuh"}
             </button>
           </div>
+
+          <p
+            data-player-storage
+            aria-live="polite"
+            hidden={!storageVisible}
+            title={storage.message}
+            className={`mt-1.5 truncate rounded-control border px-2.5 py-1 text-xs ${storageClasses[storage.status]}`}
+          >
+            {storage.message}
+          </p>
         </div>
 
         <section
@@ -798,13 +852,14 @@ function LessonView({
           role="tabpanel"
           aria-labelledby={`activity-tab-${activeActivity.activityId}`}
           tabIndex={0}
-          className="min-w-0 rounded-card border border-ink/10 bg-surface p-5 md:p-6 xl:col-start-1 xl:row-start-2"
+          className="min-w-0 rounded-card border border-ink/10 bg-surface p-4 md:p-5 xl:col-start-1 xl:row-start-2"
         >
           {activeActivity.type === "exploration" ? (
             <ExplorationActivity
               key={activeActivity.activityId}
               activity={activeActivity}
               assets={contentPackage.assets}
+              expanded={fullscreen}
               onFinish={assessmentActivityId ? () => setActiveActivityId(assessmentActivityId) : undefined}
             />
           ) : activeActivity.type === "multiple-choice" ||
@@ -845,49 +900,6 @@ function LessonView({
         </section>
       </div>
 
-      <section
-        data-session-summary
-        aria-labelledby="session-summary-heading"
-        hidden={fullscreen}
-        className="mt-4 rounded-card border border-ink/10 bg-surface p-5 md:p-6"
-      >
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div className="min-w-0">
-            <h2
-              id="session-summary-heading"
-              className="text-sm font-semibold uppercase tracking-[0.12em] text-muted"
-            >
-              Ringkasan sesi
-            </h2>
-            <dl className="mt-3 flex flex-wrap gap-x-10 gap-y-3">
-              <div>
-                <dt className="text-xs text-muted">Aktivitas dinilai</dt>
-                <dd className="text-lg font-semibold">
-                  {gradedCount} dari {activities.length}
-                </dd>
-              </div>
-              <div>
-                <dt className="text-xs text-muted">Skor terakhir</dt>
-                <dd className="text-lg font-semibold">{lastScore === null ? "—" : lastScore}</dd>
-              </div>
-              <div>
-                <dt className="text-xs text-muted">Rata-rata aktivitas</dt>
-                <dd className="text-lg font-semibold">{averageScore === null ? "—" : averageScore}</dd>
-              </div>
-            </dl>
-            <p className="mt-2 text-xs text-muted">
-              Diukur dari sesi ini; riwayat lengkap tersimpan di Hasil Belajar.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() => onNavigate?.("results")}
-            className="min-h-11 shrink-0 rounded-control bg-navy px-5 text-sm font-medium text-white"
-          >
-            Buka Hasil Belajar
-          </button>
-        </div>
-      </section>
     </div>
   );
 }

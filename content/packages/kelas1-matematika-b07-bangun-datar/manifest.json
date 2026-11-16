@@ -28,14 +28,14 @@
     {
       "path": "assets/aktivitas-bangun-datar-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 8011,
-      "sha256": "06665d2dddd5379e87f515347da930f0a1b83e58ae10516276a2dc35239f1b5a"
+      "sizeBytes": 30723,
+      "sha256": "3e5eaf23159957b37bce24cd7fe2cd9700b4fc78264ca25182ba112589cd481e"
     },
     {
       "path": "assets/aktivitas-bangun-datar-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 4440,
-      "sha256": "bd9d5509ae4c90cf940cef71785c677a1b68800b3b5d2c6ab88c78368bc020d8"
+      "sizeBytes": 10926,
+      "sha256": "0cfca827c73aa1f6097377b6687d50bc878c19029f1cbc77f9a3965da9298f35"
     },
     {
       "path": "assets/aktivitas-bangun-datar-3.png",

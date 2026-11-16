@@ -275,6 +275,71 @@ export function equalsSign(canvas, cx, cy, size, width, color) {
   strokeLine(canvas, cx - size, cy + size * 0.45, cx + size, cy + size * 0.45, width, color);
 }
 
+// Banyak scene menggambar objek kecil di tengah kanvas 800×600 sehingga di player
+// ilustrasi tampak mungil. Fungsi ini memotong ruang kosong di sekitar isi lalu
+// memperbesarnya kembali ke kanvas yang sama tanpa mengubah ukuran/rasio berkas.
+export function normalizeContent(canvas, { margin = 20, minGain = 1.25, maxGain = 1.9 } = {}) {
+  let minX = canvas.width;
+  let minY = canvas.height;
+  let maxX = -1;
+  let maxY = -1;
+  for (let y = 0; y < canvas.height; y += 1) {
+    for (let x = 0; x < canvas.width; x += 1) {
+      const i = (y * canvas.width + x) * 4;
+      if (canvas.pixels[i] < 250 || canvas.pixels[i + 1] < 250 || canvas.pixels[i + 2] < 250) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+    }
+  }
+  if (maxX < 0) return canvas;
+
+  const marginPx = margin * SS;
+  const contentWidth = maxX - minX + 1;
+  const contentHeight = maxY - minY + 1;
+  const fit = Math.min(
+    (canvas.width - marginPx * 2) / contentWidth,
+    (canvas.height - marginPx * 2) / contentHeight
+  );
+  if (!Number.isFinite(fit) || fit <= minGain) return canvas;
+  const scale = Math.min(fit, maxGain);
+
+  const out = { width: canvas.width, height: canvas.height, pixels: new Uint8Array(canvas.width * canvas.height * 4) };
+  for (let i = 0; i < out.pixels.length; i += 4) {
+    out.pixels[i] = 255;
+    out.pixels[i + 1] = 255;
+    out.pixels[i + 2] = 255;
+    out.pixels[i + 3] = 255;
+  }
+
+  const destWidth = contentWidth * scale;
+  const destHeight = contentHeight * scale;
+  const offsetX = (canvas.width - destWidth) / 2;
+  const offsetY = (canvas.height - destHeight) / 2;
+  for (let dy = 0; dy < Math.floor(destHeight); dy += 1) {
+    for (let dx = 0; dx < Math.floor(destWidth); dx += 1) {
+      const sx = minX + (dx + 0.5) / scale - 0.5;
+      const sy = minY + (dy + 0.5) / scale - 0.5;
+      const x0 = Math.max(minX, Math.floor(sx));
+      const y0 = Math.max(minY, Math.floor(sy));
+      const x1 = Math.min(maxX, x0 + 1);
+      const y1 = Math.min(maxY, y0 + 1);
+      const fx = Math.min(1, Math.max(0, sx - x0));
+      const fy = Math.min(1, Math.max(0, sy - y0));
+      const at = (px, py, channel) => canvas.pixels[(py * canvas.width + px) * 4 + channel];
+      const target = ((Math.round(dy + offsetY) * out.width) + Math.round(dx + offsetX)) * 4;
+      for (let channel = 0; channel < 3; channel += 1) {
+        const top = at(x0, y0, channel) * (1 - fx) + at(x1, y0, channel) * fx;
+        const bottom = at(x0, y1, channel) * (1 - fx) + at(x1, y1, channel) * fx;
+        out.pixels[target + channel] = Math.round(top * (1 - fy) + bottom * fy);
+      }
+    }
+  }
+  return out;
+}
+
 export function toPng(canvas) {
   const rowLength = WIDTH * 4 + 1;
   const raw = Buffer.alloc(rowLength * HEIGHT);

@@ -34,14 +34,14 @@
     {
       "path": "assets/aktivitas-data-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 5945,
-      "sha256": "5bfb58fcfb3d2ad115bcd3d6bdc40989193bffd7795a791a67766640dfa62c65"
+      "sizeBytes": 7138,
+      "sha256": "3dae9765edcdf401dfae3b6a06009a64e653037929d2a078b16234e385eea572"
     },
     {
       "path": "assets/aktivitas-data-3.png",
       "mediaType": "image/png",
-      "sizeBytes": 7188,
-      "sha256": "ca134f62edc2166952a8b9da579d7316ee8a6c1ff3d27996c84a12d6c747df28"
+      "sizeBytes": 12137,
+      "sha256": "fb0efc4e0d13278304e190553d533089ad985809781612f17c05adc35521f065"
     },
     {
       "path": "assets/aktivitas-data-4.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-data-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 6214,
-      "sha256": "dc5665fbcc11573cdd9e959be26d2d183cfc9785525c8dfdd21bdd5eefeef0a3"
+      "sizeBytes": 9828,
+      "sha256": "0a1e6b31e213c4c383094abb3ff421f61961becba02d9eaeea6f61d2451a32e5"
     }
   ],
   "dependencies": [],

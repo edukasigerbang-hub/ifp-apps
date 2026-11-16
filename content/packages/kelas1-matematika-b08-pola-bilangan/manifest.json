@@ -28,20 +28,20 @@
     {
       "path": "assets/aktivitas-pola-bilangan-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 3975,
-      "sha256": "9e39eac71c54198fdac7d1310b4d5995600920a0c5c3987b8df3635e4797631f"
+      "sizeBytes": 8340,
+      "sha256": "66dd75086d0cfd48c39b7bada0ac66fac2a7a2f414121afe8e8dd7f888c2422d"
     },
     {
       "path": "assets/aktivitas-pola-bilangan-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 4065,
-      "sha256": "465e4ab4933e07fa4c9cb04380d59aa435780317580b7406725f69fc053a12df"
+      "sizeBytes": 8606,
+      "sha256": "6371c4d3bfd10256845d0a5c186969fb75d280f89372c2eb3db5677fb29b67b9"
     },
     {
       "path": "assets/aktivitas-pola-bilangan-3.png",
       "mediaType": "image/png",
-      "sizeBytes": 4801,
-      "sha256": "ebcf6eb19acfc76004132a4925f6d13ec730e13fccc2adc33f155c464c4f913b"
+      "sizeBytes": 19873,
+      "sha256": "dcb6fd201b973a5f26b3c9e77e45f1ce288b55cae22ff15c21d92bbe0bc97c2b"
     },
     {
       "path": "assets/aktivitas-pola-bilangan-4.png",

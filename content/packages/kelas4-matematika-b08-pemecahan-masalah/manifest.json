@@ -28,20 +28,20 @@
     {
       "path": "assets/aktivitas-pemecahan-masalah-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 5531,
-      "sha256": "5a17cd3c3ec1313547363ecc3822adf03db4ee459c940d15636e838ae84dbb61"
+      "sizeBytes": 12850,
+      "sha256": "75b2c49da3a429f290aefb9adc28bc874243413680b95eceff433abfebf1e6da"
     },
     {
       "path": "assets/aktivitas-pemecahan-masalah-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 4462,
-      "sha256": "280235a952fc85667126e9af2a03a1f122dd031b73a81b53fe0027a185f132ab"
+      "sizeBytes": 14898,
+      "sha256": "562cb710069ec3d7173c7b9cd67a4339387f2585a22fd88eb807fad49ee271e4"
     },
     {
       "path": "assets/aktivitas-pemecahan-masalah-3.png",
       "mediaType": "image/png",
-      "sizeBytes": 7484,
-      "sha256": "4a393ce5ad4c88eb6992ccb53b113c6b01de17bbd3dfc14d2efd0a505c55545c"
+      "sizeBytes": 34920,
+      "sha256": "1121b1cc1b4573cb4bc645f4ce66cfa2f3b682b7ba27be6149751010d7ce1e2b"
     },
     {
       "path": "assets/aktivitas-pemecahan-masalah-4.png",

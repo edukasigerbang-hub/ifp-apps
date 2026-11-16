@@ -28,20 +28,20 @@
     {
       "path": "assets/aktivitas-lingkaran-1.png",
       "mediaType": "image/png",
-      "sizeBytes": 6442,
-      "sha256": "4d7720d17034eddda7497eda7ab7d0f880775952789af9e4894b50475c88fd12"
+      "sizeBytes": 22316,
+      "sha256": "6852104106100b41632001efe3f90116641d8d4da66e2b2b152ef45e6123f4cb"
     },
     {
       "path": "assets/aktivitas-lingkaran-2.png",
       "mediaType": "image/png",
-      "sizeBytes": 6924,
-      "sha256": "4d5e7b90fd1b1a6100da34833fee4c64c7dc8d46ddc5b7401585d2ca7713d5d7"
+      "sizeBytes": 26012,
+      "sha256": "91acaa384712040b2d9e954902525f113e602efa0ae3da1fbd9252dbfeb4f2f3"
     },
     {
       "path": "assets/aktivitas-lingkaran-3.png",
       "mediaType": "image/png",
-      "sizeBytes": 8927,
-      "sha256": "ed11f9b66686496c539306cc96ab700518b16603989081c4e43aeb33476a384a"
+      "sizeBytes": 39398,
+      "sha256": "9740f86fd933b67080bbfbece82e0c0ca565e64292b08f123097dd77f339919a"
     },
     {
       "path": "assets/aktivitas-lingkaran-4.png",
@@ -52,8 +52,8 @@
     {
       "path": "assets/aktivitas-lingkaran-5.png",
       "mediaType": "image/png",
-      "sizeBytes": 7611,
-      "sha256": "7b5e2f6bb79d098277db35eb9f3b6baa13f840529e261716ff71d6d02e06d86a"
+      "sizeBytes": 31694,
+      "sha256": "d670a6cde3fb2dffb33e0527abc675ef0e403d6b04e758819573f187bbf488cf"
     }
   ],
   "dependencies": [],
