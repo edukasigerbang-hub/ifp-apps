@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "629b6cc",
+  "commit": "540c30c",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -35,15 +35,15 @@
   "index_commit": "cafa23a",
   "index_mode": "LIGHTWEIGHT_GREP",
   "memory_version": 1,
-  "context_version": 75,
+  "context_version": 76,
   "skill_registry_version": 0,
-  "current_task": "T-143 selesai: ambang dua kolom pembahasan diturunkan 860 -> 760 px. ExplorationActivity.tsx memakai @min-[760px]:grid-cols-2 @min-[760px]:gap-x-10 (container query, splitParagraphs dan gulir internal max-h clamp(160px,44vh,520px) tidak berubah); ekspektasi E2E explanation.mjs ikut 760. Terukur: 1024 panel 647 satu kolom 338/381; 1366 panel 685 satu kolom 338/381; 1440 panel 774 dua kolom 365+365 386/386; 1536 panel 830 dua kolom 393+393 361/361; 1920 panel 1014 dua kolom 485+485 288/288; overflowX false. Batas jujur: teks baru 1 paket; panel 760-800 px memberi kolom ~355-375 px (~45 karakter).",
-  "last_task": "T-143: src/components/content/ExplorationActivity.tsx (@min-[760px]:grid-cols-2, gap-x-10) · scripts/e2e/scenarios/explanation.mjs (expectedColumns sectionWidth >= 760). Commit feat 4b9b69c, docs 3545247 + 629b6cc. Dokumentasi: CURRENT (klausa status T-143 + baris T-142 diperbarui + baris Verifikasi T-143), logs/2026-11-17 (bagian T-143), context (fase, bullet kondisi 760, bullet validasi T-143, HEAD).",
+  "current_task": "T-144 selesai: pembahasan lengkap (interactionConfig.explanation) kini ada di seluruh 48 paket Matematika kelas 1–6 — 47 paket baru diisi lima paragraf yang diturunkan dari langkah eksplorasi masing-masing (paket contoh Bilangan 1–10 sudah terisi sejak T-141). Teks modul: scripts/lib/mathExplanations/kelas1…6.mjs; wiring: scripts/wire-math-explanations.mjs (npm run content:explanation:wire, dry-run default, --apply, --force, menolak paket matematika tanpa teks). T-145 belum ditentukan.",
+  "last_task": "T-144: scripts/lib/mathExplanations/kelas1…6.mjs (47 entri) · scripts/wire-math-explanations.mjs · package.json (content:explanation:wire) · 47 × content/packages/<matematika>/activities/activity-001.json (blok explanation setelah steps) · scripts/e2e/scenarios/explanation.mjs (kasus negatif pindah ke kelas1-ipas-b01-tubuh-dan-indera). Commit feat be7d3c8, docs 8c37381, docs HEAD 540c30c. reviewStatus tidak diubah (tetap draft 336 paket).",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-11-17T00:14:38+07:00",
-  "last_validation": "T-143 (2026-11-17): npx tsc --noEmit bersih · npm run build \"built in 12.67s\" dan CSS memuat @container (width>=760px) (satu aturan @container (width>=860px) tetap ada tetapi tidak terpakai karena log mengutip kelas lama) · npm test 173/173 (20 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS · pengukuran CDP dengan Emulation.setDeviceMetricsOverride: 1024x768 panel/isi 647/647 satu kolom 338/381 (main 1309/1309), 1366x768 685/685 satu kolom 338/381 (main 727/727), 1440x900 774/774 dua kolom 365+365 386/386 (muat), 1536x960 830/830 dua kolom 393+393 361/361, 1920x1080 1014/1014 dua kolom 485+485 288/288; overflowX false · tangkapan layar .tmp-ui/explanation-lebar-1440.png diperiksa · E2E explanation PASS 7 (window harness panel 894 -> 2 kolom) · regresi activities 17/17, learning-journey 14/14, cover-illustration 7/7, player-fullscreen 6/6, smoke 8/8, a11y 19/19 (0 error, 8 warning lama).",
+  "last_updated": "2026-11-17T00:43:22+07:00",
+  "last_validation": "T-144 (2026-11-17): 48/48 paket matematika VALID (loop validatePackageDirectory via skrip sementara .tmp-e2e/validate-math.ts; npm run content:validate hanya memvalidasi satu direktori) · npx tsc --noEmit bersih · npm run build PASS · npm test 173/173 (20 berkas) + fixture 4/4 + katalog 336/336 + content:review-binding PASS · content:explanation:wire dijalankan apply lalu verifikasi: 0 paket perlu diperbarui · 47 sudah sinkron · 1 di luar data · E2E explanation PASS 7 · pengukuran CDP kelas1-matematika-b04-pengukuran dan kelas6-matematika-b04-lingkaran: 5 paragraf, tinggi isi = scrollHeight 239/239 dan 215/215, overflowX false; dua tangkapan layar diperiksa.",
   "last_test_status": "pass",
   "last_command": "IMPLEMENT",
   "last_command_status": "PASS",
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "T-143 selesai dan tercommit (feat 4b9b69c -> docs 3545247 -> docs HEAD 629b6cc -> chore state). Aplikasi dev ditutup untuk E2E; buka lagi dengan npm run tauri dev (IFP_CONTENT_KEYS dari environment). Periksa pembahasan Kelas 1 Matematika Bilangan 1-10 pada 1440 (dua kolom 365 px) dan 1366/1024 (satu kolom penuh); bila kolom ~45 karakter terasa terlalu pendek, alternatifnya ambang lain atau batas lebar maksimum, bukan menambah kolom ketiga. Backlog: tulis pembahasan lengkap untuk 47 paket matematika lain dan mapel lain (butuh penilaian guru). Human-gated: seleksi guru F-06; reviewer manusia R1-R6/R8-R9/R12; D-UX-2/4/5/6; OD-1 IPAS Fase A; gate rilis B-07 -> B-02 -> B-03; T-123 deploy. reviewStatus seluruh paket tetap draft - agen tidak menaikkannya tanpa perintah PO."
+  "next_step": "T-144 selesai dan tercommit (feat be7d3c8 -> docs 8c37381 -> docs HEAD 540c30c -> chore state); belum di-push. Aplikasi dev ditutup untuk E2E; buka lagi dengan npm run tauri dev (IFP_CONTENT_KEYS dari environment). Berikutnya: reviewer manusia menilai teks pembahasan 47 paket (agent tidak menaikkan reviewStatus) dan memutuskan apakah mapel lain (Bahasa Indonesia, IPAS, Pancasila, Seni, PJOK, PAI) juga diberi pembahasan."
 }
