@@ -131,9 +131,11 @@
 | `kelas3-seni-rupa-b07-apresiasi-karya` | 0.1.0 | 3 | seni-rupa | Mengapresiasi Karya Seni | **DRAFT** | VALID (2 warning) | belum |
 | `kelas3-seni-rupa-b08-pameran-kelas` | 0.1.0 | 3 | seni-rupa | Pameran Kelas | **DRAFT** | VALID (2 warning) | belum |
 
-## Pilot Kelas 3 — dipindahkan ke fixture
+## Pilot Kelas 3 — dipindahkan ke fixture, lalu dinaikkan jadi materi contoh
 
-Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. Folder dipindahkan ke [`scripts/e2e/fixtures/pilot-pecahan-kelas3/`](../../scripts/e2e/fixtures/pilot-pecahan-kelas3/) dan hanya dipakai oleh E2E/satu unit test Rust. Paket ini tidak dibundel ke aplikasi dan tidak muncul di katalog. Laporan review historis tetap tersimpan di [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
+Paket `matematika-kelas3-pecahan` v0.1.0 **tidak lagi menjadi paket produksi**. Folder dipindahkan ke [`scripts/e2e/fixtures/pilot-pecahan-kelas3/`](../../scripts/e2e/fixtures/pilot-pecahan-kelas3/) dan dipakai oleh E2E (tiga skenario) serta satu unit test Rust. Paket ini tidak dibundel ke aplikasi dan tidak muncul di katalog. Laporan review historis tetap tersimpan di [REVIEW_REPORT_2026-10-23.md](REVIEW_REPORT_2026-10-23.md).
+
+**2026-11-16 (T-136):** fixture dinaikkan jadi **acuan penulisan paket contoh** — 4 tujuan pembelajaran yang benar-benar selaras dengan isi dan penilaian, eksplorasi 6 langkah (ditambah satu langkah membandingkan 1/2 vs 1/4 dan satu langkah sisa bagian 2/3), kuis 8 soal dengan posisi kunci seimbang (2/3/3 di posisi 0/1/2) + `accessibilityMetadata`, dan aktivitas **mencocokkan 5 pasangan** sebagai aktivitas ketiga. Syarat isi yang juga dipenuhi: ≥5 langkah, ≥3 aktivitas, ≥8 item — ambang batch T-091. Catatan penting: kuis **tidak** bisa memuat gambar (skema soal menolak `assetPath`), jadi gambar tetap di aktivitas eksplorasi dan tujuan yang menyebut "dari gambar" sengaja dibatasi ke eksplorasi. Meski begitu, paket ini tetap **fixture**: tidak dibundel, tidak masuk katalog, `reviewStatus` `draft`, tanpa `curriculumRefs`, dan belum dinilai guru — status "contoh" di sini berarti acuan struktur & keseimbangan, bukan kelayakan pedagogis.
 
 ## Next
 
