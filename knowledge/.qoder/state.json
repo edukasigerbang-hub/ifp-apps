@@ -3,7 +3,7 @@
   "project": "Gerbang Edukasi — IFP Apps",
   "project_root": "F:/_ifp-apps",
   "branch": "main",
-  "commit": "9b6fca7",
+  "commit": "7a6f215",
   "status": "WIP",
   "autonomy": "L1",
   "runtime": {
@@ -37,15 +37,15 @@
   "memory_version": 1,
   "context_version": 77,
   "skill_registry_version": 0,
-  "current_task": "T-145 selesai: pena virtual aktif di seluruh panggung eksplorasi (ilustrasi + rel teks) — tombol Pena di footer membuka toolbar 4 warna/3 ketebalan/penghapus/urungkan 20 langkah/hapus semua/selesai, kanvas piksel CSS menutupi area (z-10) dengan kontrol tetap dapat diklik (z-20), coretan bertahan lintas langkah sampai dihapus tetapi hanya di memori (tidak disimpan per profil). T-146 belum ditentukan.",
-  "last_task": "T-145: src/components/content/penGeometry.ts + penGeometry.test.ts (7 uji) · ExplorationPen.tsx (PenCanvas/PenToolbar/PenToggle) · ExplorationActivity.tsx (surface + state pena + toolbar footer + z-20) · scripts/e2e/scenarios/exploration-pen.mjs · package.json (e2e:pen). Commit feat 9207ce4, docs 457d9fa, docs HEAD 9b6fca7. reviewStatus konten tidak diubah.",
+  "current_task": "T-145 selesai dan PR #20 (T-144 + T-145) sudah di-merge ke main: merge commit 9919f94, CI hijau (Web + server 26 dtk, Rust 2 mnt 28 dtk). Pena virtual aktif di seluruh panggung eksplorasi (ilustrasi + rel teks) — tombol Pena di footer membuka toolbar 4 warna/3 ketebalan/penghapus/urungkan 20 langkah/hapus semua/selesai, kanvas piksel CSS menutupi area (z-10) dengan kontrol tetap dapat diklik (z-20), coretan bertahan lintas langkah sampai dihapus tetapi hanya di memori (tidak disimpan per profil). T-146 belum ditentukan.",
+  "last_task": "T-145: src/components/content/penGeometry.ts + penGeometry.test.ts (7 uji) · ExplorationPen.tsx (PenCanvas/PenToolbar/PenToggle) · ExplorationActivity.tsx (surface + state pena + toolbar footer + z-20) · scripts/e2e/scenarios/exploration-pen.mjs · package.json (e2e:pen). Commit feat 9207ce4, docs 457d9fa, docs HEAD 9b6fca7, state 8a8bd2b; PR #20 di-merge sebagai 9919f94; docs merge 1dec7ae, docs HEAD 7a6f215. reviewStatus konten tidak diubah.",
   "last_session_id": "SESSION-2026-10-24-1",
   "last_scan": "2026-10-23T21:56:26+07:00",
   "last_index": "2026-10-23T23:08:14+07:00",
-  "last_updated": "2026-11-17T01:32:04+07:00",
+  "last_updated": "2026-11-17T08:16:49+07:00",
   "last_validation": "T-145 (2026-11-17): npx tsc --noEmit bersih · npm test 180/180 (21 berkas; 7 uji penGeometry baru) + fixture 4/4 + katalog 336/336 + content:review-binding PASS · npm run build PASS (11.82 dtk) · E2E pen PASS 11: kanvas 894x501 menutup seluruh area eksplorasi, toolbar 9 tombol 44 px tanpa mengubah tinggi ilustrasi (396 px), garis merah melintasi ilustrasi + rel teks (piksel rel rgb(220,38,38)), klik mouse CDP nyata pada Petunjuk tetap bekerja, penghapus/urungkan/buka-tutup toolbar, pena tertutup memblokir coretan, coretan bertahan di langkah 2 (12716 piksel/2 stroke), hapus semua → 0 piksel · regresi explanation 7/7, activities 17/17, a11y 19/19 (0 error, 8 warning lama) · tangkapan layar pena-seluruh-area.png dan pena-petunjuk-terbuka.png diperiksa. Aplikasi dev dihentikan untuk E2E (WebView2 satu instance) dan tidak dijalankan ulang oleh agen.",
   "last_test_status": "pass",
-  "last_command": "IMPLEMENT",
+  "last_command": "DOCUMENT",
   "last_command_status": "PASS",
   "open_wave": null,
   "dirty": false,
@@ -54,5 +54,5 @@
     "DOC_DRIFT"
   ],
   "drift_scope": "HLD §13 merujuk prototype index.html yang tidak ada (GAP-1)",
-  "next_step": "T-145 selesai dan tercommit (feat 9207ce4 -> docs 457d9fa -> docs HEAD 9b6fca7 -> chore state); belum di-push. Aplikasi dev ditutup untuk E2E; buka lagi dengan npm run tauri dev (IFP_CONTENT_KEYS dari environment). Berikutnya: coba pena dengan stylus/papan sentuh pada perangkat IFP nyata (E2E hanya mouse CDP), putuskan apakah coretan perlu disimpan per profil/sesi, dan selesaikan review manusia atas teks pembahasan 47 paket T-144."
+  "next_step": "PR #20 sudah di-merge ke main (merge commit 9919f94) setelah CI hijau; docs merge 1dec7ae lalu docs HEAD 7a6f215. Belum di-push ke origin (push hanya saat diminta). Aplikasi dev ditutup untuk E2E; buka lagi dengan npm run tauri dev (IFP_CONTENT_KEYS dari environment). Berikutnya: coba pena dengan stylus/papan sentuh pada perangkat IFP nyata (E2E hanya mouse CDP), putuskan apakah coretan perlu disimpan per profil/sesi, dan selesaikan review manusia atas teks pembahasan 47 paket T-144."
 }
