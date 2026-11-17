@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pengukuran-panjang-berat-5.png",
         "altText": "Timbangan badan besar dengan alas berpijak, jarum penunjuk merah, dan sosok orang berdiri di atasnya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Memilih alat ukur dan mengonversi satuan",
+      "paragraphs": [
+        "Hasil pengukuran yang benar memerlukan alat yang sesuai dan satuan yang tepat. Alat yang salah memberi angka yang tidak dapat dibandingkan dengan pengukuran lain.",
+        "Panjang benda pendek diukur dengan penggaris bersatuan sentimeter. Panjang ruangan atau jarak diukur dengan meteran bersatuan meter. Membaca penggaris dimulai dari angka nol pada ujung benda.",
+        "Berat diukur dengan timbangan. Timbangan dapur dipakai untuk bahan ringan bersatuan gram, sedangkan timbangan badan atau gantung dipakai untuk benda berat bersatuan kilogram.",
+        "Konversi yang perlu diingat: 1 m = 100 cm dan 1 kg = 1.000 g. Kata senti berarti seperseratus dan kilo berarti seribu.",
+        "Contoh: pita 2 m 40 cm = 240 cm, dan beras 1 kg 500 g = 1.500 g. Berat badan 35 kg sama dengan 35.000 g. Selalu sebutkan satuan pada jawaban akhir."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

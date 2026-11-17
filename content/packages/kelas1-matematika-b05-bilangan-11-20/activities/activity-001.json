@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bilangan-11-20-5.png",
         "altText": "Dua kerangka sepuluh: kerangka pertama penuh sepuluh titik, kerangka kedua berisi tujuh titik."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Bilangan 11–20 sebagai sepuluh dan sisa",
+      "paragraphs": [
+        "Bilangan 11 sampai 20 dibentuk dari satu kelompok sepuluh ditambah beberapa satuan. Karena itu 17 berarti 10 + 7, dan 20 berarti dua kelompok sepuluh.",
+        "Bilangan setelah 15 adalah 16 karena membilang maju menambah satu. Sebaliknya, bilangan sebelum 20 adalah 19 karena membilang mundur mengurangi satu.",
+        "Lambang 17 dibaca tujuh belas, yaitu tujuh di atas sepuluh. Saat menyebutnya, satuan disebut lebih dahulu, lalu kata belas.",
+        "Dua kerangka sepuluh pada gambar menunjukkan hal ini: kerangka pertama penuh berisi sepuluh titik, kerangka kedua berisi tujuh titik. Jumlahnya 10 + 7 = 17.",
+        "Contoh: 10 + 4 = 14 dibaca empat belas, dan 10 + 9 = 19 dibaca sembilan belas. Urutan bilangan 11 sampai 20 adalah 11, 12, 13, 14, 15, 16, 17, 18, 19, 20."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

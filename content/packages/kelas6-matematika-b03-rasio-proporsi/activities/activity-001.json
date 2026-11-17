@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-rasio-proporsi-5.png",
         "altText": "Batang enam bagian merah dan sembilan bagian biru di atas, panah ke bawah, lalu batang dua bagian merah dan tiga bagian biru; garis putus-putus oranye membagi tiga bagian."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Rasio, menyederhanakan, dan proporsi",
+      "paragraphs": [
+        "Rasio membandingkan dua besaran melalui pembagian. Perbandingan 4 benda merah dan 3 benda biru ditulis 4 : 3.",
+        "Urutan penting diperhatikan karena 4 : 3 berbeda artinya dengan 3 : 4. Angka pertama menunjukkan pihak yang dibandingkan lebih dahulu.",
+        "Rasio disederhanakan dengan membagi kedua bilangan dengan faktor yang sama, yaitu FPB-nya. 8 : 6 dibagi 2 menjadi 4 : 3, dan 6 : 9 dibagi 3 menjadi 2 : 3.",
+        "Proporsi adalah dua rasio yang senilai, misalnya 3 : 4 = 9 : 12 atau 3/4 = 9/12. Perkalian silangnya menghasilkan 3 × 12 = 4 × 9 = 36.",
+        "Contoh: resep memakai 2 gelas tepung untuk 3 gelas susu. Untuk 6 gelas tepung diperlukan 9 gelas susu karena 2 : 3 = 6 : 9. Jika resep dibuat tiga kali, semua bahan dikalikan tiga."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

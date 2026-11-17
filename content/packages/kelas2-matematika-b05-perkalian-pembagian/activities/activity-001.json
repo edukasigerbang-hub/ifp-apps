@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-perkalian-pembagian-5.png",
         "altText": "Susunan dua baris tiga titik, lalu enam titik yang sama dikelompokkan menjadi dua lingkaran berisi tiga titik."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Perkalian dan pembagian saling berkebalikan",
+      "paragraphs": [
+        "Perkalian menggabungkan beberapa kelompok yang sama banyak. Pembagian memecah sesuatu menjadi kelompok yang sama banyak. Keduanya saling berkebalikan.",
+        "2 × 3 = 6 karena ada dua kelompok berisi tiga. Jika enam benda dibagi menjadi dua kelompok sama banyak, tiap kelompok berisi tiga, sehingga 6 : 2 = 3.",
+        "Karena 2 × 3 = 6, maka 6 : 2 = 3 dan 6 : 3 = 2. Pembagian dapat diperiksa dengan perkalian, yaitu 3 × 2 = 6.",
+        "Tanda titik dua dibaca dibagi. Bilangan yang dibagi menunjukkan banyaknya benda, bilangan pembagi menunjukkan banyaknya kelompok, dan hasilnya adalah isi setiap kelompok.",
+        "Contoh: 4 × 5 = 20, maka 20 : 4 = 5 dan 20 : 5 = 4. Jika 18 kue dibagi rata ke 3 piring, setiap piring berisi 18 : 3 = 6 kue."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

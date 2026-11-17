@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bilangan-1-100-5.png",
         "altText": "Kelompok delapan batang puluhan dan lima satuan di kiri, kelompok lima batang puluhan dan delapan satuan di kanan, kelompok delapan ditandai oranye."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Nilai tempat puluhan dan satuan",
+      "paragraphs": [
+        "Bilangan dua angka tersusun dari puluhan dan satuan. Angka di kiri menunjukkan banyaknya puluhan, angka di kanan menunjukkan banyaknya satuan.",
+        "Bilangan setelah 39 adalah 40 karena sembilan satuan menjadi genap sepuluh, lalu berubah menjadi empat puluhan dan nol satuan. Setiap bilangan berakhiran 9 diikuti bilangan puluhan berikutnya yang berakhiran 0.",
+        "Bilangan 47 terdiri atas 4 puluhan yaitu 40 dan 7 satuan yaitu 7, sehingga 40 + 7 = 47. Menulis 74 berarti 7 puluhan dan 4 satuan, jadi nilainya berbeda walaupun angkanya sama.",
+        "Untuk membandingkan dua bilangan, lihat puluhannya lebih dahulu. Bilangan 85 memiliki 8 puluhan dan 58 memiliki 5 puluhan, sehingga 85 lebih besar walaupun angka 5 terlihat lebih besar daripada 8.",
+        "Contoh: 63 dan 69 sama-sama memiliki 6 puluhan. Karena 9 satuan lebih banyak daripada 3 satuan, 69 lebih besar. Urutan keempat bilangan: 58 < 63 < 69 < 85."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

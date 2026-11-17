@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-garis-sudut-5.png",
         "altText": "Busur derajat setengah lingkaran dengan garis skala dan satu sudut lancip teal yang diukur dari titik pusatnya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Hubungan garis dan jenis sudut",
+      "paragraphs": [
+        "Dua garis dapat sejajar, berpotongan, atau tegak lurus. Garis sejajar tidak pernah berpotongan, sedangkan garis tegak lurus berpotongan membentuk sudut 90 derajat.",
+        "Sudut siku-siku besarnya tepat 90 derajat dan ditandai kotak kecil pada pertemuan dua garis. Sudut lancip kurang dari 90 derajat, sedangkan sudut tumpul lebih dari 90 derajat.",
+        "Sudut diukur dengan busur derajat. Titik pusat busur diletakkan pada titik sudut, garis nol dihimpitkan pada salah satu kaki sudut, lalu besar sudut dibaca pada kaki yang lain.",
+        "Garis sejajar yang dipotong garis melintang membentuk sudut berpasangan yang sama besar, misalnya sudut sehadap dan sudut dalam berseberangan. Sifat ini dipakai untuk menentukan sudut tanpa mengukur ulang.",
+        "Contoh: 45 derajat adalah sudut lancip, 90 derajat siku-siku, dan 120 derajat tumpul. Jika satu sudut 65 derajat, sudut sehadapnya juga 65 derajat dan sudut berpelurusnya 180 − 65 = 115 derajat, yaitu tumpul."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

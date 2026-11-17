@@ -1,6 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import type { Activity } from "../../content/schema/activity";
 import { sharedStepAsset } from "./explorationIllustration";
+import {
+  PEN_COLORS,
+  PEN_WIDTHS,
+  PenCanvas,
+  PenToolbar,
+  PenToggle,
+  type PenMode,
+  type PenStroke
+} from "./ExplorationPen";
 
 interface ExplorationStep {
   prompt: string;
@@ -160,6 +169,12 @@ export function ExplorationActivity({
   const [showReveal, setShowReveal] = useState(false);
   const [finished, setFinished] = useState(false);
   const [view, setView] = useState<"steps" | "explanation">("steps");
+  const [penActive, setPenActive] = useState(false);
+  const [penMode, setPenMode] = useState<PenMode>("draw");
+  const [penColor, setPenColor] = useState<string>(PEN_COLORS[1].value);
+  const [penWidth, setPenWidth] = useState<number>(PEN_WIDTHS[1].value);
+  const [penStrokes, setPenStrokes] = useState<PenStroke[]>([]);
+  const [penHistory, setPenHistory] = useState<PenStroke[][]>([]);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
@@ -180,6 +195,32 @@ export function ExplorationActivity({
   function closeExplanation() {
     setView("steps");
     requestAnimationFrame(() => triggerRef.current?.focus());
+  }
+
+  function commitPenStrokes(next: PenStroke[]) {
+    setPenHistory((history) => [...history.slice(-19), penStrokes]);
+    setPenStrokes(next);
+  }
+
+  function undoPen() {
+    if (penHistory.length === 0) {
+      return;
+    }
+    setPenStrokes(penHistory[penHistory.length - 1]);
+    setPenHistory(penHistory.slice(0, -1));
+  }
+
+  function clearPen() {
+    if (penStrokes.length === 0) {
+      return;
+    }
+    commitPenStrokes([]);
+  }
+
+  function cyclePenWidth() {
+    const currentIndex = PEN_WIDTHS.findIndex((entry) => entry.value === penWidth);
+    const nextEntry = PEN_WIDTHS[(currentIndex + 1) % PEN_WIDTHS.length];
+    setPenWidth(nextEntry.value);
   }
 
   if (view === "explanation" && explanation) {
@@ -321,7 +362,15 @@ export function ExplorationActivity({
     : "h-[clamp(200px,38vh,520px)] xl:h-[clamp(220px,44vh,560px)]";
 
   return (
-    <div className="flex w-full flex-col">
+    <div data-exploration-pen-surface className="relative flex w-full flex-col">
+      <PenCanvas
+        active={penActive}
+        mode={penMode}
+        color={penColor}
+        width={penWidth}
+        strokes={penStrokes}
+        onChange={commitPenStrokes}
+      />
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
           Langkah {index + 1} dari {steps.length}
@@ -361,6 +410,7 @@ export function ExplorationActivity({
               data-exploration-illustration={illustrationKind}
               src={illustrationUrl}
               alt={illustrationAlt}
+              draggable={false}
               className="h-full w-auto max-w-full object-contain"
             />
           </figure>
@@ -377,7 +427,7 @@ export function ExplorationActivity({
                   onClick={() => setShowHint((value) => !value)}
                   aria-expanded={showHint}
                   aria-controls={hintId}
-                  className={`flex min-h-11 w-full items-center gap-2 rounded-control border px-3 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
+                  className={`relative z-20 flex min-h-11 w-full items-center gap-2 rounded-control border px-3 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 ${
                     showHint
                       ? "border-teal/50 bg-teal/10 text-teal-strong"
                       : "border-ink/15 bg-surface text-ink hover:bg-paper"
@@ -414,7 +464,7 @@ export function ExplorationActivity({
               type="button"
               data-exploration-explanation-open
               onClick={openExplanation}
-              className="mt-3 flex min-h-11 w-full items-center gap-2 rounded-control border border-dashed border-teal/40 bg-white px-3 text-left text-sm font-medium text-teal-strong hover:bg-teal/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+              className="relative z-20 mt-3 flex min-h-11 w-full items-center gap-2 rounded-control border border-dashed border-teal/40 bg-white px-3 text-left text-sm font-medium text-teal-strong hover:bg-teal/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
             >
               <SummaryIcon />
               Pembahasan lengkap
@@ -423,7 +473,7 @@ export function ExplorationActivity({
           )}
 
           {(showHint || showReveal) && (
-            <div className="mt-3 max-h-[30vh] space-y-2 overflow-y-auto pr-1">
+            <div className="relative z-20 mt-3 max-h-[30vh] space-y-2 overflow-y-auto pr-1">
               {showHint && step.hint && (
                 <div id={hintId} className="rounded-control bg-paper px-3.5 py-2.5">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted">Petunjuk</p>
@@ -448,14 +498,31 @@ export function ExplorationActivity({
           type="button"
           onClick={() => goToStep(index - 1)}
           disabled={index === 0}
-          className="min-h-11 rounded-control border border-ink/15 bg-surface px-5 text-sm font-medium hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-surface"
+          className="relative z-20 min-h-11 rounded-control border border-ink/15 bg-surface px-5 text-sm font-medium hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-surface"
         >
           Sebelumnya
         </button>
+        {penActive ? (
+          <PenToolbar
+            color={penColor}
+            width={penWidth}
+            mode={penMode}
+            canUndo={penHistory.length > 0}
+            canClear={penStrokes.length > 0}
+            onColor={setPenColor}
+            onCycleWidth={cyclePenWidth}
+            onMode={setPenMode}
+            onUndo={undoPen}
+            onClear={clearPen}
+            onClose={() => setPenActive(false)}
+          />
+        ) : (
+          <PenToggle onToggle={() => setPenActive(true)} />
+        )}
         <button
           type="button"
           onClick={() => (isLast ? setFinished(true) : goToStep(index + 1))}
-          className="min-h-11 rounded-control bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
+          className="relative z-20 min-h-11 rounded-control bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
         >
           {isLast ? "Selesai" : "Lanjut"}
         </button>

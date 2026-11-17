@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-keliling-luas-5.png",
         "altText": "Panel kiri: persegi panjang dengan panah mengelilingi keempat tepinya. Panel kanan: persegi panjang yang sama terbagi kotak-kotak satuan yang seluruhnya diwarnai."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Keliling mengelilingi, luas menutupi",
+      "paragraphs": [
+        "Keliling adalah jumlah panjang semua sisi, yaitu panjang tepi bangun. Luas adalah besarnya daerah yang ditutupi bangun.",
+        "Untuk persegi panjang dengan panjang p dan lebar l, keliling = 2 × (p + l), yang sama dengan p + l + p + l. Untuk persegi dengan sisi s, keliling = 4 × s.",
+        "Luas persegi panjang = panjang × lebar, sedangkan luas persegi = sisi × sisi. Kotak satuan yang menutupi seluruh bangun pada gambar menunjukkan luasnya.",
+        "Satuan keliling adalah satuan panjang seperti cm atau m. Satuan luas adalah satuan panjang pangkat dua seperti cm² atau m² karena mengalikan dua panjang.",
+        "Contoh: persegi panjang 6 cm × 4 cm. Keliling = 2 × (6 + 4) = 20 cm dan luas = 6 × 4 = 24 cm². Dua bangun dapat memiliki keliling sama tetapi luas berbeda, dan sebaliknya."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

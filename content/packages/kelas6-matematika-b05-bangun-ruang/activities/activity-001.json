@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bangun-ruang-kelas6-5.png",
         "altText": "Prisma segitiga, limas, dan tabung digambar tiga dimensi."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Prisma, limas, dan tabung",
+      "paragraphs": [
+        "Bangun ruang dibedakan dari bentuk alas dan atapnya. Prisma memiliki dua sisi sejajar yang sama bentuk dan ukuran, sedangkan limas memiliki satu titik puncak.",
+        "Prisma segitiga memiliki alas dan atap berbentuk segitiga serta sisi tegak berbentuk persegi panjang. Volume prisma = luas alas × tinggi.",
+        "Limas memiliki alas berbentuk bangun datar dan sisi tegak berupa segitiga yang bertemu di titik puncak. Volume limas = 1/3 × luas alas × tinggi.",
+        "Tabung adalah prisma dengan alas berbentuk lingkaran, sehingga volume tabung = luas alas × tinggi, yaitu π × r × r × t.",
+        "Contoh: tabung berjari-jari 7 cm dan tinggi 10 cm memiliki volume 22/7 × 49 × 10 = 1.540 cm³. Luas permukaannya 2 × π × r × (r + t) = 2 × 22/7 × 7 × 17 = 748 cm²."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-statistika-5.png",
         "altText": "Tiga kolom titik bertingkat tujuh, delapan, dan sembilan, garis putus-putus oranye pada tingkat delapan, dan panah melengkung dari kolom tertinggi ke kolom terendah."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Mean, median, dan modus",
+      "paragraphs": [
+        "Statistika meringkas data menjadi ukuran yang mudah dibaca. Tiga ukuran yang dipelajari adalah mean atau rata-rata, median atau nilai tengah, dan modus atau data yang paling sering muncul.",
+        "Mean = jumlah data dibagi banyaknya data. Untuk data 70, 80, dan 90, jumlahnya 240 dan banyaknya 3, sehingga mean-nya 80.",
+        "Median adalah nilai tengah setelah data diurutkan. Jika banyaknya data ganjil, ambil nilai yang tepat di tengah; jika genap, rata-ratakan dua nilai tengah.",
+        "Modus adalah data yang paling sering muncul dan bisa lebih dari satu. Jika semua data muncul sama banyak, data tersebut tidak memiliki satu modus tunggal.",
+        "Contoh data 5, 7, 7, 8, dan 10: mean = 37 : 5 = 7,4; median = 7; modus = 7. Untuk data 4, 6, 8, dan 10: median = (6 + 8) : 2 = 7 dan tidak ada modus tunggal."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

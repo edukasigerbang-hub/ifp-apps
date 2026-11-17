@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bilangan-1000000-5.png",
         "altText": "Enam kolom nilai tempat berisi empat kubus ratus ribuan, lima kubus puluh ribuan, dua ribuan, tiga ratusan, satu puluhan, dan enam satuan."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Enam nilai tempat sampai ratus ribuan",
+      "paragraphs": [
+        "Bilangan sampai 1.000.000 memiliki enam nilai tempat: ratus ribuan, puluh ribuan, ribuan, ratusan, puluhan, dan satuan.",
+        "Bilangan 452.316 dibaca empat ratus lima puluh dua ribu tiga ratus enam belas. Titik memisahkan kelompok ribuan agar mudah dibaca, bukan tanda desimal.",
+        "Angka 5 menempati puluh ribuan sehingga nilainya 50.000. Enam kolom pada gambar menampung 400.000 + 50.000 + 2.000 + 300 + 10 + 6 = 452.316.",
+        "Membandingkan dua bilangan dimulai dari angka paling kiri. Jika sama, pindah ke kanan sampai menemukan angka yang berbeda; angka yang lebih besar menunjukkan bilangan yang lebih besar.",
+        "Contoh: 452.316 dan 452.361 sama sampai ratusan, lalu pada puluhan 1 lebih kecil daripada 6, jadi 452.361 lebih besar. Bilangan 999.999 lebih kecil daripada 1.000.000 karena 1.000.000 memiliki tujuh angka."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

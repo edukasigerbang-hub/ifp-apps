@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-penyajian-data-5.png",
         "altText": "Diagram gambar berisi baris-baris titik, diagram batang dengan empat batang berbeda tinggi, dan tabel kosong dua baris."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Tabel, diagram gambar, dan diagram batang",
+      "paragraphs": [
+        "Data disajikan agar mudah dibaca dan dibandingkan. Tiga penyajian yang sering dipakai adalah tabel, diagram gambar, dan diagram batang.",
+        "Tabel memuat keterangan dan jumlah pada kolom yang sejajar. Judul tabel menunjukkan data apa yang sedang disajikan.",
+        "Diagram gambar memakai simbol yang mewakili jumlah tertentu, misalnya satu gambar buku mewakili 2 buku. Jumlah data dihitung dengan mengalikan banyaknya simbol dengan nilai satu simbol.",
+        "Diagram batang memakai tinggi batang untuk menunjukkan jumlah. Batang tertinggi berarti data terbanyak dan batang terendah berarti data tersedikit, karena semua batang dimulai dari garis dasar yang sama.",
+        "Contoh: data buku per kelas 8, 12, 10, dan 6. Pada diagram batang, batang kelas kedua paling tinggi dan kelas keempat paling rendah. Bila memakai diagram gambar dengan satu simbol mewakili 2 buku, kelas kedua memerlukan 6 simbol."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

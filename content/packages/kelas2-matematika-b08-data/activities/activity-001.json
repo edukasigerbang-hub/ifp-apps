@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-data-5.png",
         "altText": "Diagram batang empat batang dengan dua batang berbeda tinggi dihubungkan garis putus-putus sebagai perbandingan."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Membaca tabel dan diagram batang",
+      "paragraphs": [
+        "Data adalah kumpulan keterangan atau angka. Agar mudah dibaca dan dibandingkan, data disajikan dalam tabel atau diagram.",
+        "Tabel berisi keterangan seperti nama buah dan jumlahnya. Membaca tabel berarti mencocokkan baris keterangan dengan angka pada kolom jumlah.",
+        "Diagram batang menyajikan jumlah data sebagai tinggi batang. Semakin tinggi batang, semakin banyak datanya. Semua batang dimulai dari garis dasar yang sama agar perbandingannya adil.",
+        "Data terbanyak ditunjukkan oleh batang tertinggi dan data tersedikit oleh batang terendah. Membandingkan tinggi batang lebih cepat daripada menjumlah ulang setiap kelompok.",
+        "Contoh: tabel buah berisi apel 4, jeruk 6, dan mangga 3. Pada diagram batang, batang jeruk paling tinggi sehingga jeruk paling banyak, sedangkan mangga paling sedikit. Total seluruh buah 4 + 6 + 3 = 13."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

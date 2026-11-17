@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-waktu-uang-5.png",
         "altText": "Jam dinding, dua koin, dan satu lembar uang kertas."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Membaca waktu dan mengenal nilai uang",
+      "paragraphs": [
+        "Waktu diukur dengan jam dan dinyatakan dalam jam, menit, serta detik. Uang diukur dengan nilainya dan dinyatakan dalam rupiah.",
+        "Satu jam sama dengan 60 menit, dan satu menit sama dengan 60 detik. Jarum pendek pada jam menunjukkan jam, sedangkan jarum panjang menunjukkan menit.",
+        "Satu hari sama dengan 24 jam, mulai dari tengah malam sampai tengah malam berikutnya. Karena itu jam dinding menunjukkan angka 1 sampai 12 dua kali dalam sehari.",
+        "Mata uang Indonesia adalah rupiah, ditulis Rp. Uang kertas dan uang logam memiliki nilai berbeda, dan nilai itu tertulis pada permukaan uang.",
+        "Contoh: Rp5.000 + Rp2.000 = Rp7.000. Jika berangkat pukul 07.00 dan perjalanan memakan waktu 30 menit, maka tiba pukul 07.30. Membaca jam dan menghitung uang sama-sama memerlukan ketelitian pada angka."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

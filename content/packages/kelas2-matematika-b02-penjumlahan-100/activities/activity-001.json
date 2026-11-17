@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-penjumlahan-100-5.png",
         "altText": "Empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan; hasilnya tujuh batang puluhan dan tujuh satuan."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Menjumlah dan mengurang dengan puluhan dan satuan",
+      "paragraphs": [
+        "Bilangan sampai 100 dihitung dengan memisahkan puluhan dan satuan, lalu mengerjakan tiap nilai tempat secara terpisah.",
+        "Untuk 45 + 32: puluhan 4 + 3 = 7 sehingga 70, satuan 5 + 2 = 7, hasilnya 77. Pada gambar, empat batang puluhan dan lima satuan digabung dengan tiga batang puluhan dan dua satuan menjadi tujuh batang dan tujuh satuan.",
+        "Untuk 80 − 25: nol satuan tidak cukup dikurangi 5, sehingga satu puluhan dipinjam menjadi sepuluh satuan. 10 − 5 = 5 satuan, lalu 7 puluhan − 2 puluhan = 5 puluhan, hasilnya 55.",
+        "50 + 50 = 100 karena dua kelompok lima puluh memenuhi seratus. Seratus ditulis dengan tiga angka, yaitu 1 ratusan, 0 puluhan, dan 0 satuan.",
+        "Contoh: 36 + 27. Satuan 6 + 7 = 13, tulis 3 dan simpan 1 puluhan. Puluhan 3 + 2 + 1 = 6, sehingga hasilnya 63. Periksa dengan pengurangan: 63 − 27 = 36."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-faktor-kelipatan-kpk-5.png",
         "altText": "Dua lingkaran beririsan berisi kelipatan empat di kiri dan kelipatan enam di kanan; dua titik di daerah irisan berwarna oranye menandai kelipatan persekutuan."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Kelipatan, KPK, faktor, dan FPB",
+      "paragraphs": [
+        "Faktor adalah bilangan yang membagi habis, sedangkan kelipatan dihasilkan dengan mengalikan bilangan itu dengan bilangan cacah. KPK adalah kelipatan persekutuan terkecil dan FPB adalah faktor persekutuan terbesar.",
+        "Faktor 12 adalah 1, 2, 3, 4, 6, dan 12. Kelipatan 4 adalah 4, 8, 12, 16, 20, dan seterusnya, yang diperoleh dengan mengalikan 4 dengan 1, 2, 3, dan seterusnya.",
+        "KPK 4 dan 6 dicari dari kelipatan yang sama: kelipatan 4 = 4, 8, 12, 16, dan seterusnya; kelipatan 6 = 6, 12, 18, dan seterusnya. Yang sama dan terkecil adalah 12, yang pada diagram Venn berada di daerah irisan.",
+        "FPB dicari dari faktor persekutuan yang paling besar. FPB 12 dan 18 adalah 6 karena 6 adalah faktor bersama terbesar dari kedua bilangan itu.",
+        "Contoh: KPK 6 dan 8 adalah 24, sedangkan FPB 24 dan 36 adalah 12. KPK dipakai saat dua kejadian berulang dan ingin diketahui kapan terjadi bersamaan; FPB dipakai saat membagi rata sebanyak mungkin."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

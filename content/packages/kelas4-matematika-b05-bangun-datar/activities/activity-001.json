@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bangun-datar-kelas4-5.png",
         "altText": "Persegi panjang berpetak kotak satuan dengan panah mengelilingi keempat sisinya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Sifat bangun, keliling, dan luas",
+      "paragraphs": [
+        "Sifat bangun datar meliputi jumlah sisi, panjang sisi, dan besar sudut. Sifat inilah yang membedakan satu bangun dari bangun lainnya.",
+        "Persegi memiliki empat sisi sama panjang dan empat sudut siku-siku. Persegi panjang memiliki dua pasang sisi berhadapan sama panjang dan empat sudut siku-siku. Segitiga memiliki tiga sisi, sedangkan lingkaran memiliki satu tepi lengkung tanpa sudut.",
+        "Keliling persegi panjang = 2 × (panjang + lebar) dan keliling persegi = 4 × sisi. Keliling adalah panjang seluruh tepi, seperti panah yang mengelilingi bangun pada gambar.",
+        "Luas persegi panjang = panjang × lebar dan luas persegi = sisi × sisi. Luas dinyatakan dalam satuan persegi, misalnya cm².",
+        "Contoh: persegi panjang 8 cm × 5 cm memiliki keliling 2 × (8 + 5) = 26 cm dan luas 8 × 5 = 40 cm². Persegi bersisi 6 cm memiliki keliling 24 cm dan luas 36 cm²."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

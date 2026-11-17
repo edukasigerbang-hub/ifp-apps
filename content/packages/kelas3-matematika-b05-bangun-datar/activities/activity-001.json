@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bangun-datar-ciri-5.png",
         "altText": "Susunan bangun datar membentuk rumah: persegi sebagai badan, segitiga sebagai atap, persegi panjang sebagai pintu, lingkaran sebagai jendela, dan lingkaran matahari."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Sisi dan sudut pada bangun datar",
+      "paragraphs": [
+        "Bangun datar dibedakan oleh banyak sisinya, panjang sisinya, dan besar sudutnya. Sudut siku-siku besarnya 90 derajat dan ditandai kotak kecil.",
+        "Persegi memiliki empat sisi sama panjang dan empat sudut siku-siku. Persegi panjang memiliki empat sisi dengan dua pasang sisi berhadapan sama panjang dan empat sudut siku-siku.",
+        "Segitiga memiliki tiga sisi dan tiga sudut. Lingkaran hanya memiliki satu tepi melengkung, tanpa sisi lurus dan tanpa sudut.",
+        "Persegi adalah persegi panjang istimewa karena semua sisinya sama panjang. Sebaliknya, persegi panjang belum tentu persegi karena sisi-sisinya bisa berbeda panjang.",
+        "Pada gambar rumah, persegi menjadi badan rumah, segitiga menjadi atap, persegi panjang menjadi pintu, dan lingkaran menjadi jendela. Mengelompokkan bangun membantu kita mengenali bentuk di sekitar."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

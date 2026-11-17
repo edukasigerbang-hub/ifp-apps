@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-operasi-pecahan-5.png",
         "altText": "Baris atas: seperempat ditambah dua perempat menjadi tiga perempat. Baris bawah: tiga perempat dikurangi seperempat menjadi dua perempat."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Menjumlah dan mengurang pecahan berpenyebut sama",
+      "paragraphs": [
+        "Pecahan dapat langsung dijumlahkan atau dikurangkan bila penyebutnya sama, karena bagian-bagiannya berukuran sama.",
+        "Pada 1/4 + 2/4, pembilang 1 + 2 = 3 dan penyebut tetap 4, sehingga hasilnya 3/4. Kedua pecahan memakai satuan bagian yang sama, yaitu seperempat.",
+        "Pada 3/4 − 1/4, pembilang 3 − 1 = 2 dan penyebut tetap 4, sehingga hasilnya 2/4 yang dapat disederhanakan menjadi 1/2.",
+        "Penyebut tidak ikut dijumlahkan. Jika 1/4 + 2/4 ditulis 3/8, hasilnya salah karena 3/8 justru lebih kecil daripada 1/2.",
+        "Contoh: 2/5 + 2/5 = 4/5 dan 5/8 − 3/8 = 2/8 = 1/4. Jika penyebut berbeda, samakan penyebut lebih dahulu memakai KPK kedua penyebut."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pecahan-desimal-5.png",
         "altText": "Batang terbagi sepuluh dengan lima bagian diwarnai, batang terbagi empat dengan satu bagian diwarnai, dan kotak seratus dengan dua puluh lima kotak diwarnai."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Pecahan, desimal, dan tanda koma",
+      "paragraphs": [
+        "Pecahan dan desimal adalah dua cara menulis bilangan yang sama. Pecahan ditulis sebagai pembilang per penyebut, sedangkan desimal memakai tanda koma.",
+        "Pecahan 1/2 sama dengan 0,5 karena 1 dibagi 2. Pecahan 1/4 sama dengan 0,25 karena 25 per seratus disederhanakan dengan membagi pembilang dan penyebut dengan 25. Batang sepuluh dengan lima bagian berwarna menunjukkan 5/10 = 0,5.",
+        "Angka di belakang koma menunjukkan persepuluhan, perseratusan, dan perseribuan: 0,7 = 7/10, 0,25 = 25/100, dan 0,125 = 125/1.000.",
+        "Menjumlahkan atau mengurangkan desimal dilakukan dengan menyejajarkan tanda koma, karena angka pada posisi yang sama memiliki nilai tempat yang sama.",
+        "Contoh: 1/2 + 1/4 = 0,5 + 0,25 = 0,75 = 3/4, dan 1,2 − 0,35 = 0,85. Bila memakai bentuk pecahan, samakan penyebut lebih dahulu agar hasilnya setara."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

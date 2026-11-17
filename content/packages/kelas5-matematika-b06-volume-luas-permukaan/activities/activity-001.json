@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-volume-luas-permukaan-5.png",
         "altText": "Kubus tiga dimensi dengan petak tiga kali dua di sisi depan, dan jaring-jaring enam persegi tersusun seperti huruf T."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Volume dan luas permukaan balok",
+      "paragraphs": [
+        "Volume adalah banyaknya ruang yang diisi. Untuk balok dan kubus, volume dihitung dari banyaknya kubus satuan yang memenuhi bangun.",
+        "Volume balok = panjang × lebar × tinggi, sedangkan volume kubus = sisi × sisi × sisi. Kubus satuan memenuhi bangun lapisan demi lapisan, sehingga tiga panjang dikalikan.",
+        "Satuan volume adalah satuan panjang pangkat tiga, misalnya cm³, karena ada tiga arah yang dikalikan: panjang, lebar, dan tinggi. Satu liter sama dengan 1.000 cm³.",
+        "Luas permukaan adalah jumlah luas semua sisi. Jaring-jaring pada gambar menunjukkan enam persegi yang membentuk kubus, sehingga luas permukaan kubus = 6 × sisi × sisi.",
+        "Contoh: balok 5 cm × 4 cm × 3 cm memiliki volume 60 cm³ dan luas permukaan 2 × (5×4 + 5×3 + 4×3) = 94 cm². Kubus bersisi 4 cm memiliki volume 64 cm³ dan luas permukaan 96 cm²."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

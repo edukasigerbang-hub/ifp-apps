@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pengukuran-sudut-5.png",
         "altText": "Busur derajat setengah lingkaran dengan garis skala, dan tiga sudut: siku-siku, lancip, dan tumpul."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Jenis sudut dan cara mengukurnya",
+      "paragraphs": [
+        "Sudut terbentuk dari dua sinar yang bertemu di satu titik. Besar sudut diukur dalam derajat dan ditulis dengan tanda derajat.",
+        "Sudut siku-siku besarnya tepat 90 derajat, seperti bentuk huruf L. Sudut lancip kurang dari 90 derajat sehingga tampak lebih sempit, sedangkan sudut tumpul lebih dari 90 derajat sehingga tampak lebih lebar.",
+        "Busur derajat dipakai untuk mengukur sudut. Titik pusat busur diletakkan pada titik sudut dan garis nol dihimpitkan pada salah satu kaki sudut; karena ada dua deretan angka, pilih yang dimulai dari nol pada kaki acuan.",
+        "Sudut juga menjadi sifat bangun datar. Persegi dan persegi panjang memiliki empat sudut siku-siku, sedangkan segitiga sama sisi memiliki tiga sudut yang sama besar, yaitu 60 derajat.",
+        "Contoh: 30, 60, dan 80 derajat adalah sudut lancip, sedangkan 100 dan 150 derajat adalah sudut tumpul. Jumlah sudut dalam segitiga selalu 180 derajat; jika dua sudutnya 50 dan 60 derajat, sudut ketiga 70 derajat."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

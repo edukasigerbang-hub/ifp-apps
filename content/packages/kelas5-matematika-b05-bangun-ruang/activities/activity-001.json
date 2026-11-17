@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bangun-ruang-5.png",
         "altText": "Kubus, tabung, dan kerucut tiga dimensi; titik sudut kubus, tepi tabung, dan puncak kerucut ditandai oranye."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Sisi, rusuk, dan titik sudut bangun ruang",
+      "paragraphs": [
+        "Bangun ruang memiliki isi atau volume, sedangkan bangun datar hanya memiliki luas. Ciri bangun ruang dilihat dari sisi berupa bidang, rusuk berupa pertemuan dua sisi, dan titik sudut.",
+        "Kubus memiliki enam sisi persegi yang sama besar, dua belas rusuk sama panjang, dan delapan titik sudut. Balok memiliki ciri serupa, tetapi sisinya tidak semuanya sama.",
+        "Tabung memiliki dua sisi lingkaran sebagai alas dan atas serta satu sisi lengkung, tanpa titik sudut. Contohnya kaleng, gelas, dan drum.",
+        "Kerucut memiliki satu sisi lingkaran sebagai alas, satu sisi lengkung, dan satu titik puncak. Contohnya topi ulang tahun dan kerucut lalu lintas.",
+        "Contoh di sekitar: dadu berbentuk kubus, kotak sepatu berbentuk balok, kaleng susu berbentuk tabung, dan corong berbentuk kerucut. Menyebut sisi, rusuk, dan titik sudut membantu membedakan bangun ruang yang mirip."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pengukuran-5.png",
         "altText": "Penggaris panjang dengan pensil di atasnya, satu bagian sentimeter ditandai oranye dan diperbesar kaca pembesar."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Alat ukur, satuan, dan perbandingan",
+      "paragraphs": [
+        "Mengukur panjang berarti mengetahui jarak dari satu ujung ke ujung lain. Mengukur berat berarti mengetahui seberapa berat suatu benda. Keduanya memerlukan alat dan satuan yang tepat.",
+        "Panjang benda pendek diukur dengan penggaris, sedangkan benda panjang diukur dengan meteran. Satuannya sentimeter (cm) untuk benda kecil dan meter (m) untuk jarak yang lebih panjang.",
+        "Berat diukur dengan timbangan. Satuannya gram (g) untuk benda ringan dan kilogram (kg) untuk benda berat. Satu kilogram sama dengan 1.000 gram.",
+        "Untuk membandingkan dua ukuran, keduanya harus memakai satuan yang sama. Meja lebih panjang daripada pensil karena hasil ukur meja dalam sentimeter lebih besar.",
+        "Contoh: panjang pensil 15 cm dan panjang buku 25 cm, jadi buku 10 cm lebih panjang. Berat buku 200 g dan berat pensil 10 g, jadi buku 190 g lebih berat."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

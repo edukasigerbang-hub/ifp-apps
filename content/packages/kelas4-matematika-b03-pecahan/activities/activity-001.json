@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-pecahan-senilai-5.png",
         "altText": "Panel kiri batang delapan bagian dengan empat bagian diwarnai; panel kanan batang dua bagian dengan satu bagian diwarnai; tanda sama dengan di antaranya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Pecahan senilai dan bentuk paling sederhana",
+      "paragraphs": [
+        "Pecahan senilai adalah pecahan yang ditulis berbeda tetapi nilainya sama. Nilainya tidak berubah bila pembilang dan penyebut dikalikan atau dibagi dengan bilangan yang sama.",
+        "Batang pertama dibagi dua dengan satu bagian berwarna, yaitu 1/2. Batang kedua dibagi empat dengan dua bagian berwarna, yaitu 2/4. Batang ketiga dibagi delapan dengan empat bagian berwarna, yaitu 4/8.",
+        "Ketiga bagian berwarna itu panjangnya sama, sehingga 1/2 = 2/4 = 4/8. Pecahan senilai dapat diperoleh dengan mengalikan pembilang dan penyebut dengan bilangan yang sama.",
+        "Untuk membandingkan pecahan berpenyebut berbeda, samakan penyebutnya lebih dahulu. Contoh: 2/3 dan 3/5 disamakan menjadi 10/15 dan 9/15, sehingga 2/3 lebih besar daripada 3/5.",
+        "Bentuk paling sederhana diperoleh dengan membagi pembilang dan penyebut dengan FPB-nya. FPB 4 dan 8 adalah 4, sehingga 4/8 = 1/2. Contoh lain: 6/9 disederhanakan dengan FPB 3 menjadi 2/3."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

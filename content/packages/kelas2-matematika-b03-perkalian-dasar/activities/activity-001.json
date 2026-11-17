@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-perkalian-dasar-5.png",
         "altText": "Tiga kelompok berisi empat bintang dipisah tanda tambah, di bawahnya dua belas bintang berjajar."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Perkalian sebagai penjumlahan berulang",
+      "paragraphs": [
+        "Perkalian adalah cara singkat menulis penjumlahan bilangan yang sama secara berulang. Tulisan 2 × 3 berarti 3 + 3, yaitu dua kelompok yang masing-masing berisi tiga.",
+        "2 × 3 = 6 karena 3 + 3 = 6. Demikian pula 4 × 2 = 8 karena 2 + 2 + 2 + 2 = 8.",
+        "Tulisan 3 × 5 berarti tiga kelompok berisi lima, yaitu 5 + 5 + 5 = 15. Jadi 3 × 5 = 15.",
+        "Hasil perkalian tidak berubah ketika urutan kelompoknya ditukar: 2 × 3 sama dengan 3 × 2. Sifat ini disebut sifat pertukaran pada perkalian.",
+        "Contoh: 5 × 4 = 4 + 4 + 4 + 4 + 4 = 20. Perkalian 2, 5, dan 10 paling mudah dihafal karena polanya jelas: kelipatan 2 selalu genap, kelipatan 5 berakhiran 0 atau 5, kelipatan 10 berakhiran 0."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

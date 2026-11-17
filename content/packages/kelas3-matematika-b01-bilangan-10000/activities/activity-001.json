@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-bilangan-10000-5.png",
         "altText": "Tabel empat kolom nilai tempat berisi dua kubus ribuan, tiga ratusan, empat puluhan, dan lima satuan."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Nilai tempat pada bilangan sampai 10.000",
+      "paragraphs": [
+        "Bilangan sampai 10.000 memiliki empat nilai tempat: ribuan, ratusan, puluhan, dan satuan. Setiap posisi bernilai sepuluh kali posisi di kanannya.",
+        "Bilangan 3.452 dibaca tiga ribu empat ratus lima puluh dua. Rinciannya 3 ribuan = 3.000, 4 ratusan = 400, 5 puluhan = 50, dan 2 satuan = 2, sehingga jumlahnya 3.452.",
+        "Pada 3.452, angka 5 menempati puluhan sehingga nilainya 50, bukan 5. Angka yang sama dapat bernilai berbeda bergantung pada posisinya.",
+        "Untuk membandingkan dua bilangan, bandingkan angka paling kiri lebih dahulu. Jika sama, lanjutkan ke angka berikutnya sampai menemukan angka yang berbeda.",
+        "Contoh: 4.275 dan 4.257 memiliki ribuan dan ratusan yang sama. Pada puluhan, 7 lebih besar daripada 5, jadi 4.275 lebih besar. Titik pada bilangan besar hanya membantu membaca, bukan tanda desimal."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

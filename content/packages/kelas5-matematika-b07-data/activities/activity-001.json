@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-data-kelas5-5.png",
         "altText": "Diagram batang lima batang dengan garis rata-rata mendatar putus-putus di atasnya."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Rata-rata dan kesimpulan dari data",
+      "paragraphs": [
+        "Data yang disajikan dalam diagram dapat diolah menjadi informasi. Rata-rata atau mean adalah salah satu cara meringkas banyak data menjadi satu bilangan.",
+        "Rata-rata = jumlah semua data dibagi banyaknya data. Contoh data 6, 8, 7, 9, dan 10: jumlahnya 40, banyaknya data 5, sehingga rata-ratanya 8.",
+        "Garis mendatar putus-putus pada diagram menunjukkan nilai rata-rata. Batang yang melewati garis itu bernilai di atas rata-rata, sedangkan batang yang tidak mencapainya bernilai di bawah rata-rata.",
+        "Kesimpulan diambil dari nilai tertinggi, nilai terendah, dan rata-rata. Rata-rata berguna untuk membandingkan dua kelompok data yang banyaknya berbeda.",
+        "Contoh: nilai 70, 80, dan 90 memiliki rata-rata 240 : 3 = 80. Jika ditambahkan satu nilai 60, rata-ratanya menjadi 300 : 4 = 75, karena data baru lebih kecil daripada rata-rata sebelumnya."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"

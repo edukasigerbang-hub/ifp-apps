@@ -48,7 +48,17 @@
         "assetPath": "assets/aktivitas-penjumlahan-10-5.png",
         "altText": "Baris atas: dua titik ditambah tiga titik menghasilkan lima titik. Baris bawah: lima titik dikurangi dua titik, dua di antaranya dicoret."
       }
-    ]
+    ],
+    "explanation": {
+      "title": "Menambah dan mengurangi sampai 10",
+      "paragraphs": [
+        "Menjumlahkan berarti menggabungkan dua kelompok benda. Mengurangkan berarti mengambil sebagian benda dari suatu kelompok. Hasil penjumlahan disebut jumlah, hasil pengurangan disebut selisih.",
+        "Untuk menghitung 2 + 3, mulai dari 2 lalu maju 3 langkah: tiga, empat, lima. Hasilnya 5. Menambah membuat bilangan menjadi lebih besar, kecuali bila yang ditambahkan nol.",
+        "Untuk menghitung 5 − 2, mulai dari 5 lalu mundur 2 langkah: empat, tiga. Hasilnya 3. Mengurangi selalu membuat bilangan menjadi lebih kecil, dan sisanya disebut selisih.",
+        "Jari tangan dapat menjadi alat hitung karena selalu tersedia. Buka 2 jari lalu 3 jari lagi, kemudian hitung semua jari yang terbuka: 5. Untuk 5 − 2, buka 5 jari lalu tutup 2 jari, yang masih terbuka 3.",
+        "Contoh: Rani punya 4 kelereng lalu diberi 2 kelereng. 4 + 2 = 6 kelereng. Jika 1 kelereng hilang, 6 − 1 = 5 kelereng. Setelah menghitung, periksa dengan menghitung ulang bendanya satu per satu."
+      ]
+    }
   },
   "completionPolicy": {
     "type": "view"
